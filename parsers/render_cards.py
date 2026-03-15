@@ -135,7 +135,23 @@ def _tokenize_energy(text):
     return tokens
 
 
-def draw_description(draw, desc, fonts, center_x, start_y, canvas=None):
+def draw_description(draw, desc, fonts, center_x, start_y, canvas=None, base_desc=None):
+    # Build word-level diff map if we have base_desc
+    green_words = set()  # (line_idx, word) pairs that changed
+    if base_desc:
+        base_lines = base_desc.split('\n')
+        upg_lines = desc.split('\n')
+        for i, line in enumerate(upg_lines):
+            base_line = base_lines[i] if i < len(base_lines) else ''
+            if line != base_line:
+                # Word-level diff
+                bw = base_line.split()
+                uw = line.split()
+                for j, w in enumerate(uw):
+                    bword = bw[j] if j < len(bw) else ''
+                    if w != bword:
+                        green_words.add((i, j))
+
     # For text measurement, convert energy tokens to placeholder for wrapping
     desc_for_wrap = re.sub(r'\[(?:R|G|B|E|W)\]', '⚡', desc)
     lines = desc_for_wrap.split('\n')
@@ -168,10 +184,51 @@ def draw_description(draw, desc, fonts, center_x, start_y, canvas=None):
     line_height = 48
     y = start_y
     gold = (232, 193, 112)
+    green = (124, 230, 124)
     white = (220, 220, 210)
     orb_size = 32  # inline orb size
     
-    for line_orig in wrapped_data:
+    # Build per-original-line word diff
+    changed_words = {}  # (orig_line_idx, word_idx) → True
+    if base_desc:
+        base_olines = base_desc.split('\n')
+        upg_olines = desc.split('\n')
+        for li, uline in enumerate(upg_olines):
+            bline = base_olines[li] if li < len(base_olines) else ''
+            if uline != bline:
+                bwords = bline.split()
+                uwords = uline.split()
+                for wi, uw in enumerate(uwords):
+                    bw = bwords[wi] if wi < len(bwords) else ''
+                    if uw != bw:
+                        changed_words[(li, wi)] = True
+    
+    # Rebuild wrapped_data with orig line tracking
+    wrapped_with_line = []  # (text, orig_line_idx)
+    cur_orig = 0
+    for i, line in enumerate(lines):
+        orig = orig_lines[i] if i < len(orig_lines) else line
+        wlines = textwrap.wrap(line, width=24) or ['']
+        orig_remaining = orig
+        for wl in wlines:
+            oi = 0
+            for ch in wl:
+                if ch == '⚡':
+                    m = re.search(r'\[(?:R|G|B|E|W)\]', orig_remaining[oi:])
+                    if m:
+                        oi += m.end()
+                else:
+                    oi += 1
+            wrapped_with_line.append((orig_remaining[:oi], i))
+            orig_remaining = orig_remaining[oi:]
+    
+    # Track word index per original line across wrapped lines
+    word_idx_per_line = {}
+    
+    for line_orig, orig_li in wrapped_with_line:
+        if orig_li not in word_idx_per_line:
+            word_idx_per_line[orig_li] = 0
+        
         # Tokenize: split into text segments and energy orbs
         energy_tokens = _tokenize_energy(line_orig)
         # Then split text segments by keywords
@@ -202,13 +259,37 @@ def draw_description(draw, desc, fonts, center_x, start_y, canvas=None):
                     orb_img = orb_img.resize((orb_size, orb_size), Image.LANCZOS)
                     orb_y = y + (line_height - orb_size) // 2
                     canvas.paste(orb_img, (int(cur_x), int(orb_y)), orb_img)
+                # Count energy token as a word for diff tracking
+                if changed_words.get((orig_li, word_idx_per_line[orig_li])):
+                    pass  # orb is orb, can't really color it green
+                word_idx_per_line[orig_li] += 1
                 cur_x += orb_size + 2
             else:
-                color = gold if is_kw else white
-                font = fonts['desc_bold'] if is_kw else fonts['desc']
-                draw_outlined_text(draw, (cur_x, y), text, font, fill=color, outline=(20, 20, 30), outline_width=1)
-                tw = draw.textbbox((0, 0), text, font=font)[2] - draw.textbbox((0, 0), text, font=font)[0]
-                cur_x += tw
+                # Render word-by-word for green diff highlighting
+                if changed_words and text.strip():
+                    # Split into words preserving spacing
+                    word_parts = re.split(r'(\s+)', text)
+                    for wp in word_parts:
+                        if not wp:
+                            continue
+                        if wp.isspace():
+                            # Just advance cursor for spaces
+                            sw = draw.textbbox((0, 0), wp, font=fonts['desc'])[2] - draw.textbbox((0, 0), wp, font=fonts['desc'])[0]
+                            cur_x += sw
+                        else:
+                            is_green = changed_words.get((orig_li, word_idx_per_line[orig_li]), False)
+                            word_idx_per_line[orig_li] += 1
+                            c = green if is_green else (gold if is_kw else white)
+                            font = fonts['desc_bold'] if is_kw else fonts['desc']
+                            draw_outlined_text(draw, (cur_x, y), wp, font, fill=c, outline=(20, 20, 30), outline_width=1)
+                            ww = draw.textbbox((0, 0), wp, font=font)[2] - draw.textbbox((0, 0), wp, font=font)[0]
+                            cur_x += ww
+                else:
+                    color = gold if is_kw else white
+                    font = fonts['desc_bold'] if is_kw else fonts['desc']
+                    draw_outlined_text(draw, (cur_x, y), text, font, fill=color, outline=(20, 20, 30), outline_width=1)
+                    tw = draw.textbbox((0, 0), text, font=font)[2] - draw.textbbox((0, 0), text, font=font)[0]
+                    cur_x += tw
         y += line_height
     return y
 
@@ -344,6 +425,7 @@ def render_card(card, fonts, upgraded=False):
     
     # Description
     desc = card['description']
+    base_desc = card['description']
     if upgraded and card.get('upgrade', {}).get('description'):
         desc = card['upgrade']['description']
     
@@ -359,7 +441,8 @@ def render_card(card, fonts, upgraded=False):
     total_text_h = num_lines * line_height
     desc_start_y = DESC_TOP + (DESC_BOTTOM - DESC_TOP - total_text_h) // 2
     
-    draw_description(draw, desc, fonts, CX, desc_start_y, canvas=canvas)
+    draw_description(draw, desc, fonts, CX, desc_start_y, canvas=canvas,
+                     base_desc=base_desc if upgraded else None)
     
     # Scale to 768
     canvas = canvas.resize((1536, 1536), Image.LANCZOS)
