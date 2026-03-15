@@ -10,6 +10,14 @@ type Event = {
 
 type ApiResp<T> = { total: number; offset: number; limit: number; items: T[] };
 
+const ACT_LABELS: Record<string, string> = {
+  exordium: 'Act 1 — Exordium',
+  city: 'Act 2 — The City',
+  beyond: 'Act 3 — Beyond',
+  shrines: 'Shrines',
+};
+function actLabel(a: string) { return ACT_LABELS[a] ?? a.charAt(0).toUpperCase() + a.slice(1); }
+
 export default function EventsExplorer(props: { acts: string[]; initial?: ApiResp<Event> }) {
   const [q, setQ] = useState('');
   const [act, setAct] = useState('');
@@ -48,7 +56,7 @@ export default function EventsExplorer(props: { acts: string[]; initial?: ApiRes
           <option value="">All acts</option>
           {props.acts.map((a) => (
             <option key={a} value={a}>
-              {a}
+              {actLabel(a)}
             </option>
           ))}
         </select>
@@ -67,7 +75,7 @@ export default function EventsExplorer(props: { acts: string[]; initial?: ApiRes
             <a className="text-sm font-semibold hover:underline" href={`/events/${e.id}`}>
               {e.name}
             </a>
-            <div className="mt-1 text-xs text-slate-300">{e.act}</div>
+            <div className="mt-1 text-xs text-slate-300">{actLabel(e.act)}</div>
             <div className="mt-2 line-clamp-2 text-sm text-slate-200">{e.description}</div>
           </li>
         ))}
