@@ -31,7 +31,7 @@ export default function MonstersExplorer(props: { game?: string; acts: string[];
   const [offset, setOffset] = useState(0);
   const limit = 50;
 
-  const { data, loading, error } = useApiList<Monster>('/api/${game}/monsters', {
+  const { data, loading, error } = useApiList<Monster>(`/api/${game}/monsters`, {
     q: q || null,
     act: act || null,
     type: type || null,

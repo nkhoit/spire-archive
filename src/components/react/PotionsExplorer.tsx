@@ -18,7 +18,7 @@ export default function PotionsExplorer(props: { game?: string; rarities: string
   const [offset, setOffset] = useState(0);
   const limit = 50;
 
-  const { data, loading, error } = useApiList<Potion>('/api/${game}/potions', {
+  const { data, loading, error } = useApiList<Potion>(`/api/${game}/potions`, {
     q: q || null,
     rarity: rarity || null,
     offset,

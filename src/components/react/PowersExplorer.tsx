@@ -18,7 +18,7 @@ export default function PowersExplorer(props: { game?: string }) {
   const [offset, setOffset] = useState(0);
   const limit = 200;
 
-  const { data, loading, error } = useApiList<Power>('/api/${game}/effects', {
+  const { data, loading, error } = useApiList<Power>(`/api/${game}/effects`, {
     q: q || null,
     type: type || null,
     offset,

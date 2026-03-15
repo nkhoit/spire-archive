@@ -20,7 +20,7 @@ export default function RelicsExplorer(props: { game?: string; tiers: string[]; 
   const [offset, setOffset] = useState(0);
   const limit = 50;
 
-  const { data, loading, error } = useApiList<Relic>('/api/${game}/relics', {
+  const { data, loading, error } = useApiList<Relic>(`/api/${game}/relics`, {
     q: q || null,
     tier: tier || null,
     color: color || null,

@@ -25,7 +25,7 @@ export default function EventsExplorer(props: { game?: string; acts: string[]; i
   const [offset, setOffset] = useState(0);
   const limit = 50;
 
-  const { data, loading, error } = useApiList<Event>('/api/${game}/events', {
+  const { data, loading, error } = useApiList<Event>(`/api/${game}/events`, {
     q: q || null,
     act: act || null,
     offset,

@@ -123,7 +123,7 @@ export default function CardsExplorer(props: { game?: string;
     setLoading(true);
     setError(null);
     fetch(
-      buildUrl('/api/${game}/cards', {
+      buildUrl(`/api/${game}/cards`, {
         q: q || null,
         color: color || null,
         type: type || null,
