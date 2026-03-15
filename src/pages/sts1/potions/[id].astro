@@ -4,7 +4,7 @@ import Badge from '../../../components/Badge.astro';
 import { getData } from '../../../lib/data';
 
 const { id } = Astro.params;
-const data = await getData();
+const data = await getData('sts1');
 const potion = data.potionById.get(String(id));
 if (!potion) return new Response('Not found', { status: 404 });
 const title = `${potion.name} — Potion — Spire Archive`;

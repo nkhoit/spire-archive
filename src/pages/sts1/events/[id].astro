@@ -4,7 +4,7 @@ import Badge from '../../../components/Badge.astro';
 import { getData } from '../../../lib/data';
 
 const { id } = Astro.params;
-const data = await getData();
+const data = await getData('sts1');
 const event = data.eventById.get(String(id));
 if (!event) return new Response('Not found', { status: 404 });
 const title = `${event.name} — Event — Spire Archive`;

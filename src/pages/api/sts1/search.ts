@@ -11,7 +11,7 @@ export const GET: APIRoute = async ({ url }) => {
   const limit = Math.min(200, Math.max(1, getNumber(url, 'limit') ?? 20));
   if (!q) return jsonResponse({ total: 0, items: [] });
 
-  const data = await getData();
+  const data = await getData('sts1');
   const results: Array<{ type: string; id: string; name: string; snippet?: string }> = [];
 
   const pushMatches = (type: string, items: Array<{ id: string; name?: string; names?: string[] }>, getText: (it: any) => string) => {

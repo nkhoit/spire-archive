@@ -1,0 +1,14 @@
+---
+import Layout from '../../../components/Layout.astro';
+import MonstersExplorer from '../../../components/react/MonstersExplorer';
+import { getData } from '../../../lib/data';
+
+const { monsters } = await getData('sts2');
+const actOrder = ['exordium', 'city', 'beyond', 'ending'];
+const acts = actOrder.filter((a) => monsters.some((m) => String(m.act) === a));
+const types = Array.from(new Set(monsters.map((m) => String(m.type)))).sort();
+---
+<Layout game="sts2" title="Monsters — Spire Archive — STS2" description="Browse Slay the Spire 2 monsters with filters for act and type.">
+  <h1 class="text-xl font-semibold">Monsters</h1>
+  <MonstersExplorer game="sts2" client:load acts={acts} types={types} />
+</Layout>

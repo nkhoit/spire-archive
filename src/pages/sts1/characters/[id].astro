@@ -4,7 +4,7 @@ import Badge from '../../../components/Badge.astro';
 import { getData } from '../../../lib/data';
 
 const { id } = Astro.params;
-const data = await getData();
+const data = await getData('sts1');
 const ch = data.characterById.get(String(id));
 if (!ch) return new Response('Not found', { status: 404 });
 

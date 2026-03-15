@@ -2,7 +2,7 @@
 import Layout from '../../components/Layout.astro';
 import { getData } from '../../lib/data';
 
-const data = await getData();
+const data = await getData('sts1');
 ---
 <Layout game="sts1" title="Reference — Spire Archive" description="Reference data: keywords, orbs, stances, blights, characters, achievements.">
   <h1 class="text-xl font-semibold">Reference</h1>

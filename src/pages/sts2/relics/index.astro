@@ -1,0 +1,13 @@
+---
+import Layout from '../../../components/Layout.astro';
+import RelicsExplorer from '../../../components/react/RelicsExplorer';
+import { getData } from '../../../lib/data';
+
+const { relics } = await getData('sts2');
+const tiers = Array.from(new Set(relics.map((r) => String(r.tier)))).sort();
+const colors = Array.from(new Set(relics.map((r) => String(r.color ?? '')).filter(Boolean))).sort();
+---
+<Layout game="sts2" title="Relics — Spire Archive — STS2" description="Browse Slay the Spire 2 relics with filters for tier and color.">
+  <h1 class="text-xl font-semibold">Relics</h1>
+  <RelicsExplorer game="sts2" client:load tiers={tiers} colors={colors} />
+</Layout>

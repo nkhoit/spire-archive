@@ -1,0 +1,16 @@
+---
+import Layout from '../../../components/Layout.astro';
+import CardsExplorer from '../../../components/react/CardsExplorer';
+import { getData } from '../../../lib/data';
+
+const { cards } = await getData('sts2');
+const colors = Array.from(new Set(cards.map((c) => String(c.color)))).sort();
+const types = Array.from(new Set(cards.map((c) => String(c.type)))).sort();
+const rarities = Array.from(new Set(cards.map((c) => String(c.rarity)))).sort();
+---
+<Layout game="sts2" title="Cards — Spire Archive — STS2" description="Browse Slay the Spire 2 cards with filters for color, type, rarity, and cost.">
+  <h1 class="text-xl font-semibold">Cards</h1>
+
+
+  <CardsExplorer game="sts2" client:load colors={colors} types={types} rarities={rarities} />
+</Layout>

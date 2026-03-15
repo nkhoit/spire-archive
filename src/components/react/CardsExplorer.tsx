@@ -49,7 +49,7 @@ function BadgeSpan({ label, tone }: { label: string; tone?: string }) {
   return <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs ring-1 ${cls}`}>{cap(label)}</span>;
 }
 
-function CardTile({ c }: { c: Card }) {
+function CardTile({ c, game }: { c: Card; game: string }) {
   const [upgraded, setUpgraded] = useState(false);
   const hasUpgrade = c.upgrade && (c.upgrade.description || c.upgrade.cost != null);
   const imgSrc = upgraded
@@ -57,8 +57,8 @@ function CardTile({ c }: { c: Card }) {
     : `/images/rendered/thumbs/${c.id.toLowerCase()}.webp`;
   return (
     <div className="group flex flex-col items-center rounded-lg border border-white/10 bg-white/5 p-3 hover:bg-white/10 transition-colors relative">
-      <a href={`/sts1/cards/${c.id}`} className="text-sm font-semibold group-hover:underline truncate w-full text-center">{upgraded ? `${c.name}+` : c.name}</a>
-      <a href={`/sts1/cards/${c.id}`} className="w-full mt-2">
+      <a href={`/${game}/cards/${c.id}`} className="text-sm font-semibold group-hover:underline truncate w-full text-center">{upgraded ? `${c.name}+` : c.name}</a>
+      <a href={`/${game}/cards/${c.id}`} className="w-full mt-2">
         <img
           src={imgSrc}
           alt={c.name}
@@ -94,12 +94,13 @@ function buildUrl(base: string, params: Record<string, string | number | null>) 
   return u.toString();
 }
 
-export default function CardsExplorer(props: {
+export default function CardsExplorer(props: { game?: string;
   initial?: ApiResp<Card>;
   colors: string[];
   types: string[];
   rarities: string[];
 }) {
+  const game = props.game ?? 'sts1';
   const [q, setQ] = useState('');
   const [color, setColor] = useState('');
   const [type, setType] = useState('');
@@ -122,7 +123,7 @@ export default function CardsExplorer(props: {
     setLoading(true);
     setError(null);
     fetch(
-      buildUrl('/api/sts1/cards', {
+      buildUrl('/api/${game}/cards', {
         q: q || null,
         color: color || null,
         type: type || null,
@@ -247,7 +248,7 @@ export default function CardsExplorer(props: {
 
       <div className="mt-3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
         {(data?.items ?? []).map((c) => (
-          <CardTile key={c.id} c={c} />
+          <CardTile key={c.id} c={c} game={game} />
         ))}
       </div>
     </div>

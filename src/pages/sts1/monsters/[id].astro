@@ -4,7 +4,7 @@ import Badge from '../../../components/Badge.astro';
 import { getData } from '../../../lib/data';
 
 const { id } = Astro.params;
-const data = await getData();
+const data = await getData('sts1');
 const monster = data.monsterById.get(String(id));
 if (!monster) return new Response('Not found', { status: 404 });
 const actLabels: Record<string, string> = {

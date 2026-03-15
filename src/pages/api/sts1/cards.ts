@@ -3,7 +3,7 @@ import { getData } from '../../../lib/data';
 import { getNumber, getPaging, getString, jsonResponse } from '../_util';
 
 export const GET: APIRoute = async ({ url }) => {
-  const { cards } = await getData();
+  const { cards } = await getData('sts1');
 
   const q = getString(url, 'q')?.toLowerCase() ?? null;
   const color = getString(url, 'color');

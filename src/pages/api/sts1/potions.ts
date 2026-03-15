@@ -3,7 +3,7 @@ import { getData } from '../../../lib/data';
 import { getPaging, getString, jsonResponse } from '../_util';
 
 export const GET: APIRoute = async ({ url }) => {
-  const { potions } = await getData();
+  const { potions } = await getData('sts1');
 
   const q = getString(url, 'q')?.toLowerCase() ?? null;
   const rarity = getString(url, 'rarity');

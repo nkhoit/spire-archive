@@ -18,13 +18,14 @@ const ACT_LABELS: Record<string, string> = {
 };
 function actLabel(a: string) { return ACT_LABELS[a] ?? a.charAt(0).toUpperCase() + a.slice(1); }
 
-export default function EventsExplorer(props: { acts: string[]; initial?: ApiResp<Event> }) {
+export default function EventsExplorer(props: { game?: string; acts: string[]; initial?: ApiResp<Event> }) {
+  const game = props.game ?? 'sts1';
   const [q, setQ] = useState('');
   const [act, setAct] = useState('');
   const [offset, setOffset] = useState(0);
   const limit = 50;
 
-  const { data, loading, error } = useApiList<Event>('/api/sts1/events', {
+  const { data, loading, error } = useApiList<Event>('/api/${game}/events', {
     q: q || null,
     act: act || null,
     offset,
@@ -72,7 +73,7 @@ export default function EventsExplorer(props: { acts: string[]; initial?: ApiRes
       <ul className="mt-3 divide-y divide-white/10 rounded-lg border border-white/10 bg-white/5">
         {resp.items.map((e) => (
           <li key={e.id} className="p-3">
-            <a className="text-sm font-semibold hover:underline" href={`/sts1/events/${e.id}`}>
+            <a className="text-sm font-semibold hover:underline" href={`/${game}/events/${e.id}`}>
               {e.name}
             </a>
             <div className="mt-1 text-xs text-slate-300">{actLabel(e.act)}</div>

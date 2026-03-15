@@ -3,7 +3,7 @@ import Layout from '../../../components/Layout.astro';
 import Badge from '../../../components/Badge.astro';
 import { getData } from '../../../lib/data';
 
-const data = await getData();
+const data = await getData('sts1');
 
 const colorMap: Record<string, string> = {
   IRONCLAD: 'ironclad',

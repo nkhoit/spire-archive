@@ -3,7 +3,7 @@ import Layout from '../../../components/Layout.astro';
 import { getData } from '../../../lib/data';
 
 const { id } = Astro.params;
-const data = await getData();
+const data = await getData('sts1');
 const power = data.powers.find((p: any) => p.id === id);
 
 if (!power) {

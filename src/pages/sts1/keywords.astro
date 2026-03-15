@@ -2,7 +2,7 @@
 import Layout from '../../components/Layout.astro';
 import { getData } from '../../lib/data';
 
-const data = await getData();
+const data = await getData('sts1');
 const keywords = data.keywords.filter((k) => k.names?.length).sort((a, b) => (a.names[0] ?? '').localeCompare(b.names[0] ?? ''));
 ---
 <Layout game="sts1" title="Keywords — Spire Archive" description="Game keyword glossary for Slay the Spire.">

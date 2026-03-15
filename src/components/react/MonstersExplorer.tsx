@@ -23,14 +23,15 @@ function actLabel(act: string): string {
 
 type ApiResp<T> = { total: number; offset: number; limit: number; items: T[] };
 
-export default function MonstersExplorer(props: { acts: string[]; types: string[]; initial?: ApiResp<Monster> }) {
+export default function MonstersExplorer(props: { game?: string; acts: string[]; types: string[]; initial?: ApiResp<Monster> }) {
+  const game = props.game ?? 'sts1';
   const [q, setQ] = useState('');
   const [act, setAct] = useState('');
   const [type, setType] = useState('');
   const [offset, setOffset] = useState(0);
   const limit = 50;
 
-  const { data, loading, error } = useApiList<Monster>('/api/sts1/monsters', {
+  const { data, loading, error } = useApiList<Monster>('/api/${game}/monsters', {
     q: q || null,
     act: act || null,
     type: type || null,
@@ -94,7 +95,7 @@ export default function MonstersExplorer(props: { acts: string[]; types: string[
       <ul className="mt-3 divide-y divide-white/10 rounded-lg border border-white/10 bg-white/5">
         {resp.items.map((m) => (
           <li key={m.id} className="p-3">
-            <a className="text-sm font-semibold hover:underline" href={`/sts1/monsters/${m.id}`}>
+            <a className="text-sm font-semibold hover:underline" href={`/${game}/monsters/${m.id}`}>
               {m.name}
             </a>
             <div className="mt-1 text-xs text-slate-300">

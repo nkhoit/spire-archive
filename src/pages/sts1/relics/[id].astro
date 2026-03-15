@@ -4,7 +4,7 @@ import Badge from '../../../components/Badge.astro';
 import { getData } from '../../../lib/data';
 
 const { id } = Astro.params;
-const data = await getData();
+const data = await getData('sts1');
 const relic = data.relicById.get(String(id));
 if (!relic) return new Response('Not found', { status: 404 });
 const title = `${relic.name} — Relic — Spire Archive`;

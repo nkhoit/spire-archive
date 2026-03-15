@@ -5,7 +5,7 @@ import { getData } from '../../../lib/data';
 import { cardImagePath } from '../../../lib/images';
 
 const { id } = Astro.params;
-const data = await getData();
+const data = await getData('sts1');
 const card = data.cardById.get(String(id));
 if (!card) {
   return new Response('Not found', { status: 404 });

@@ -3,6 +3,6 @@ import { getData } from '../../../../lib/data';
 import { jsonResponse } from '../../_util';
 
 export const GET: APIRoute = async () => {
-  const { blights } = await getData();
+  const { blights } = await getData('sts1');
   return jsonResponse({ total: blights.length, items: blights });
 };
