@@ -1,4 +1,5 @@
 import fs from 'node:fs/promises';
+import { existsSync } from 'node:fs';
 import path from 'node:path';
 
 export type CardColor = 'ironclad' | 'silent' | 'defect' | 'watcher' | 'colorless' | 'curse' | string;
@@ -174,8 +175,15 @@ export interface Dataset {
 let cache: Dataset | null = null;
 
 function rootDir() {
-  // src/lib/data.ts -> project root
-  return path.resolve(path.dirname(new URL(import.meta.url).pathname), '../..');
+  // In production (built), data lives at /app/data; in dev, relative to source
+  const dir = path.dirname(new URL(import.meta.url).pathname);
+  // Walk up until we find a 'data' directory
+  let candidate = path.resolve(dir, '../..');
+  if (!existsSync(path.join(candidate, 'data'))) {
+    // Production: chunks are deeper, try process.cwd()
+    candidate = process.cwd();
+  }
+  return candidate;
 }
 
 async function readJson<T>(file: string): Promise<T> {
