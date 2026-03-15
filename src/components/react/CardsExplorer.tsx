@@ -8,6 +8,10 @@ type Card = {
   type: string;
   rarity: string;
   color: string;
+  upgrade?: {
+    cost?: number | null;
+    description?: string;
+  } | null;
 };
 
 type ApiResp<T> = { total: number; offset: number; limit: number; items: T[] };
@@ -43,6 +47,40 @@ function cap(s: string) { return s.charAt(0).toUpperCase() + s.slice(1); }
 function BadgeSpan({ label, tone }: { label: string; tone?: string }) {
   const cls = tone && colorClasses[tone] ? colorClasses[tone] : 'bg-white/10 text-slate-200 ring-white/10';
   return <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs ring-1 ${cls}`}>{cap(label)}</span>;
+}
+
+function CardTile({ c }: { c: Card }) {
+  const [upgraded, setUpgraded] = useState(false);
+  const hasUpgrade = c.upgrade && (c.upgrade.description || c.upgrade.cost != null);
+  const imgSrc = upgraded ? `/images/rendered/upgraded/${c.id.toLowerCase()}.png` : `/images/rendered/${c.id.toLowerCase()}.png`;
+  return (
+    <div className="group flex flex-col items-center rounded-lg border border-white/10 bg-white/5 p-3 hover:bg-white/10 transition-colors relative">
+      <a href={`/cards/${c.id}`} className="text-sm font-semibold group-hover:underline truncate w-full text-center">{upgraded ? `${c.name}+` : c.name}</a>
+      <a href={`/cards/${c.id}`} className="w-full mt-2">
+        <img
+          src={imgSrc}
+          alt={c.name}
+          className="w-full rounded-md drop-shadow-lg"
+          loading="lazy"
+        />
+      </a>
+      {hasUpgrade && (
+        <button
+          onClick={(e) => { e.preventDefault(); setUpgraded(!upgraded); }}
+          className={`absolute top-2 right-2 w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center transition-colors ${upgraded ? 'bg-emerald-500 text-white' : 'bg-white/10 text-slate-400 hover:bg-white/20'}`}
+          title={upgraded ? 'Show base' : 'Show upgraded'}
+        >
+          +
+        </button>
+      )}
+      <div className="mt-2 flex flex-wrap items-center justify-center gap-1">
+        <BadgeSpan label={c.color} tone={c.color} />
+        <BadgeSpan label={c.type} />
+        <BadgeSpan label={c.rarity} />
+        <BadgeSpan label={`Cost ${c.cost ?? 'X'}`} />
+      </div>
+    </div>
+  );
 }
 
 function buildUrl(base: string, params: Record<string, string | number | null>) {
@@ -207,21 +245,7 @@ export default function CardsExplorer(props: {
 
       <div className="mt-3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
         {(data?.items ?? []).map((c) => (
-          <a key={c.id} href={`/cards/${c.id}`} className="group flex flex-col items-center rounded-lg border border-white/10 bg-white/5 p-3 hover:bg-white/10 transition-colors">
-            <div className="text-sm font-semibold group-hover:underline truncate w-full text-center">{c.name}</div>
-            <img
-              src={`/images/rendered/${c.id.toLowerCase()}.png`}
-              alt={c.name}
-              className="w-full rounded-md drop-shadow-lg mt-2"
-              loading="lazy"
-            />
-            <div className="mt-2 flex flex-wrap items-center justify-center gap-1">
-              <BadgeSpan label={c.color} tone={c.color} />
-              <BadgeSpan label={c.type} />
-              <BadgeSpan label={c.rarity} />
-              <BadgeSpan label={`Cost ${c.cost ?? 'X'}`} />
-            </div>
-          </a>
+          <CardTile key={c.id} c={c} />
         ))}
       </div>
     </div>
