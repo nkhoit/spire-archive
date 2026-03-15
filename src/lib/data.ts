@@ -156,6 +156,7 @@ export interface Dataset {
   blights: Blight[];
   characters: Character[];
   achievements: Achievement[];
+  cardPowers: Record<string, Array<{name: string; description: string}>>;
 
   cardById: Map<string, Card>;
   relicById: Map<string, Relic>;
@@ -214,6 +215,7 @@ export async function getData(): Promise<Dataset> {
     blights,
     characters,
     achievements,
+    cardPowers,
   ] = await Promise.all([
     readJson<Card[]>('cards.json'),
     readJson<Relic[]>('relics.json'),
@@ -227,6 +229,7 @@ export async function getData(): Promise<Dataset> {
     readJson<Blight[]>('blights.json'),
     readJson<Character[]>('characters.json'),
     readJson<Achievement[]>('achievements.json'),
+    readJson<Record<string, Array<{name: string; description: string}>>>('card_powers.json'),
   ]);
 
   cache = {
@@ -242,6 +245,7 @@ export async function getData(): Promise<Dataset> {
     blights,
     characters,
     achievements,
+    cardPowers,
 
     cardById: toMap(cards),
     relicById: toMap(relics),
