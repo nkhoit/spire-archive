@@ -52,7 +52,9 @@ function BadgeSpan({ label, tone }: { label: string; tone?: string }) {
 function CardTile({ c }: { c: Card }) {
   const [upgraded, setUpgraded] = useState(false);
   const hasUpgrade = c.upgrade && (c.upgrade.description || c.upgrade.cost != null);
-  const imgSrc = upgraded ? `/images/rendered/upgraded/${c.id.toLowerCase()}.png` : `/images/rendered/${c.id.toLowerCase()}.png`;
+  const imgSrc = upgraded
+    ? `/images/rendered/upgraded/thumbs/${c.id.toLowerCase()}.webp`
+    : `/images/rendered/thumbs/${c.id.toLowerCase()}.webp`;
   return (
     <div className="group flex flex-col items-center rounded-lg border border-white/10 bg-white/5 p-3 hover:bg-white/10 transition-colors relative">
       <a href={`/cards/${c.id}`} className="text-sm font-semibold group-hover:underline truncate w-full text-center">{upgraded ? `${c.name}+` : c.name}</a>
