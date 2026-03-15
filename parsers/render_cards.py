@@ -466,7 +466,10 @@ def find_portrait(card_id, card_name):
         'FORCE_FIELD': 'forcefield', 'HYPERBEAM': 'hyper_beam',
         'J_A_X': 'jax', 'LESSONLEARNED': 'lessons_learned',
         'MULTI_CAST': 'multicast', 'THUNDERCLAP': 'thunder_clap',
-        'WREATHOFFLAME': 'wreathe_of_flame', 'LOCKON': 'bullseye',
+        'WREATHOFFLAME': 'wreathe_of_flame', 'LOCKON': 'lock_on',
+        'ALL_OUT_ATTACK': 'all_out_attack', 'AUTO_SHIELDS': 'auto_shields',
+        'CRIPPLING_POISON': 'crippling_poison', 'FOLLOWUP': 'follow_up',
+        'WELL_LAID_PLANS': 'well_laid_plans',
     }
     if card_id in OVERRIDES:
         fname = OVERRIDES[card_id] + '.png'
