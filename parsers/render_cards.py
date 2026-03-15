@@ -191,16 +191,27 @@ def draw_description(draw, desc, fonts, center_x, start_y, canvas=None, base_des
     # Build per-original-line word diff
     changed_words = {}  # (orig_line_idx, word_idx) → True
     if base_desc:
+        import difflib
         base_olines = base_desc.split('\n')
         upg_olines = desc.split('\n')
-        for li, uline in enumerate(upg_olines):
-            bline = base_olines[li] if li < len(base_olines) else ''
-            if uline != bline:
-                bwords = bline.split()
-                uwords = uline.split()
-                for wi, uw in enumerate(uwords):
-                    bw = bwords[wi] if wi < len(bwords) else ''
-                    if uw != bw:
+        sm = difflib.SequenceMatcher(None, base_olines, upg_olines)
+        for tag, i1, i2, j1, j2 in sm.get_opcodes():
+            if tag == 'equal':
+                continue
+            elif tag == 'replace':
+                for li in range(j1, j2):
+                    bline = base_olines[li - j1 + i1] if (li - j1 + i1) < len(base_olines) else ''
+                    uline = upg_olines[li]
+                    bwords = bline.split()
+                    uwords = uline.split()
+                    for wi, uw in enumerate(uwords):
+                        bw = bwords[wi] if wi < len(bwords) else ''
+                        if uw != bw:
+                            changed_words[(li, wi)] = True
+            elif tag == 'insert':
+                for li in range(j1, j2):
+                    uwords = upg_olines[li].split()
+                    for wi in range(len(uwords)):
                         changed_words[(li, wi)] = True
     
     # Rebuild wrapped_data with orig line tracking
