@@ -9,4 +9,4 @@ export interface Props {
 const { label, tone } = Astro.props;
 const cls = tone ? COLOR_CLASS[tone] : 'bg-white/10 text-slate-200 ring-white/10';
 ---
-<span class={`inline-flex items-center rounded-full px-2 py-0.5 text-xs ring-1 ${cls}`}>{label}</span>
+<span class={`inline-flex items-center rounded-full px-2 py-0.5 text-xs ring-1 capitalize ${cls}`}>{label}</span>

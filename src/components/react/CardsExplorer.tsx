@@ -29,6 +29,22 @@ function renderEnergy(text: string): string {
   return html.replace(/\n/g, ' ');
 }
 
+const colorClasses: Record<string, string> = {
+  ironclad: 'bg-red-500/15 text-red-200 ring-red-500/30',
+  silent: 'bg-green-500/15 text-green-200 ring-green-500/30',
+  defect: 'bg-blue-500/15 text-blue-200 ring-blue-500/30',
+  watcher: 'bg-purple-500/15 text-purple-200 ring-purple-500/30',
+  colorless: 'bg-zinc-400/15 text-zinc-100 ring-zinc-400/30',
+  curse: 'bg-zinc-800/60 text-zinc-200 ring-zinc-700/40',
+};
+
+function cap(s: string) { return s.charAt(0).toUpperCase() + s.slice(1); }
+
+function BadgeSpan({ label, tone }: { label: string; tone?: string }) {
+  const cls = tone && colorClasses[tone] ? colorClasses[tone] : 'bg-white/10 text-slate-200 ring-white/10';
+  return <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs ring-1 ${cls}`}>{cap(label)}</span>;
+}
+
 function buildUrl(base: string, params: Record<string, string | number | null>) {
   const u = new URL(base, window.location.origin);
   for (const [k, v] of Object.entries(params)) {
@@ -122,7 +138,7 @@ export default function CardsExplorer(props: {
           <option value="">All colors</option>
           {props.colors.map((c) => (
             <option key={c} value={c}>
-              {c}
+              {cap(c)}
             </option>
           ))}
         </select>
@@ -195,8 +211,11 @@ export default function CardsExplorer(props: {
             <a className="text-sm font-semibold hover:underline" href={`/cards/${c.id}`}>
               {c.name}
             </a>
-            <div className="mt-1 text-xs text-slate-300">
-              {c.color} · {c.type} · {c.rarity} · cost {c.cost ?? '—'}
+            <div className="mt-1 flex flex-wrap items-center gap-1.5">
+              <BadgeSpan label={c.color} tone={c.color} />
+              <BadgeSpan label={c.type} />
+              <BadgeSpan label={c.rarity} />
+              <span className="text-xs text-slate-400">Cost {c.cost ?? '—'}</span>
             </div>
             <div className="mt-2 line-clamp-2 text-sm text-slate-200" dangerouslySetInnerHTML={{ __html: renderEnergy(c.description) }}></div>
           </li>
