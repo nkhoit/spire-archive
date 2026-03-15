@@ -7,7 +7,7 @@ const { events } = await getData();
 const actOrder = ['exordium', 'city', 'beyond', 'shrines'];
 const acts = actOrder.filter((a) => events.some((e) => String(e.act) === a));
 ---
-<Layout title="Events — Spire Archive" description="Browse Slay the Spire events with filters for act.">
+<Layout game="sts1" title="Events — Spire Archive" description="Browse Slay the Spire events with filters for act.">
   <h1 class="text-xl font-semibold">Events</h1>
   <EventsExplorer client:load acts={acts} />
 </Layout>

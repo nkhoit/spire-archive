@@ -8,7 +8,7 @@ const colors = Array.from(new Set(cards.map((c) => String(c.color)))).sort();
 const types = Array.from(new Set(cards.map((c) => String(c.type)))).sort();
 const rarities = Array.from(new Set(cards.map((c) => String(c.rarity)))).sort();
 ---
-<Layout title="Cards — Spire Archive" description="Browse Slay the Spire cards with filters for color, type, rarity, and cost.">
+<Layout game="sts1" title="Cards — Spire Archive" description="Browse Slay the Spire cards with filters for color, type, rarity, and cost.">
   <h1 class="text-xl font-semibold">Cards</h1>
 
 

@@ -20,7 +20,7 @@ const hpAsc = (monster.min_hp_ascension != null || monster.max_hp_ascension != n
   ? `A+ HP ${monster.min_hp_ascension ?? '—'}–${monster.max_hp_ascension ?? '—'}`
   : null;
 ---
-<Layout title={title} description={`${actDisplay} · ${monster.type} · ${hp}`} ogTitle={monster.name} ogDescription={hp}>
+<Layout game="sts1" title={title} description={`${actDisplay} · ${monster.type} · ${hp}`} ogTitle={monster.name} ogDescription={hp}>
   <div class="flex items-start justify-between gap-4">
     <div>
       <h1 class="text-2xl font-semibold">{monster.name}</h1>

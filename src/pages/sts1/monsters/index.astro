@@ -8,7 +8,7 @@ const actOrder = ['exordium', 'city', 'beyond', 'ending'];
 const acts = actOrder.filter((a) => monsters.some((m) => String(m.act) === a));
 const types = Array.from(new Set(monsters.map((m) => String(m.type)))).sort();
 ---
-<Layout title="Monsters — Spire Archive" description="Browse Slay the Spire monsters with filters for act and type.">
+<Layout game="sts1" title="Monsters — Spire Archive" description="Browse Slay the Spire monsters with filters for act and type.">
   <h1 class="text-xl font-semibold">Monsters</h1>
   <MonstersExplorer client:load acts={acts} types={types} />
 </Layout>

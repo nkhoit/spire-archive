@@ -54,7 +54,7 @@ const charRelics = data.relics.filter((r) => (r as any).color === color);
 
 const title = `${ch.name} — Spire Archive`;
 ---
-<Layout title={title} description={desc}>
+<Layout game="sts1" title={title} description={desc}>
   <h1 class="text-2xl font-semibold">{ch.name}</h1>
   <div class="mt-2 flex flex-wrap gap-2">
     <Badge label={color} tone={color} />

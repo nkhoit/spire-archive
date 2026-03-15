@@ -5,7 +5,7 @@ import { getData } from '../../lib/data';
 const data = await getData();
 const keywords = data.keywords.filter((k) => k.names?.length).sort((a, b) => (a.names[0] ?? '').localeCompare(b.names[0] ?? ''));
 ---
-<Layout title="Keywords — Spire Archive" description="Game keyword glossary for Slay the Spire.">
+<Layout game="sts1" title="Keywords — Spire Archive" description="Game keyword glossary for Slay the Spire.">
   <h1 class="text-xl font-semibold">Keywords</h1>
   <p class="mt-1 text-sm text-slate-300">{keywords.length} game keywords and mechanics.</p>
 

@@ -9,7 +9,7 @@ const potion = data.potionById.get(String(id));
 if (!potion) return new Response('Not found', { status: 404 });
 const title = `${potion.name} — Potion — Spire Archive`;
 ---
-<Layout title={title} description={potion.description} ogTitle={potion.name} ogDescription={potion.rarity}>
+<Layout game="sts1" title={title} description={potion.description} ogTitle={potion.name} ogDescription={potion.rarity}>
   <div class="flex items-start justify-between gap-4">
     <div>
       <h1 class="text-2xl font-semibold">{potion.name}</h1>

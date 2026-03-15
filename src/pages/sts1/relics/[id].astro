@@ -9,7 +9,7 @@ const relic = data.relicById.get(String(id));
 if (!relic) return new Response('Not found', { status: 404 });
 const title = `${relic.name} — Relic — Spire Archive`;
 ---
-<Layout title={title} description={relic.description} ogTitle={relic.name} ogDescription={relic.tier}>
+<Layout game="sts1" title={title} description={relic.description} ogTitle={relic.name} ogDescription={relic.tier}>
   <div class="flex items-start justify-between gap-4">
     <div>
       <h1 class="text-2xl font-semibold">{relic.name}</h1>

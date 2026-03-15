@@ -6,7 +6,7 @@ import { getData } from '../../../lib/data';
 const { potions } = await getData();
 const rarities = Array.from(new Set(potions.map((p) => String(p.rarity)))).sort();
 ---
-<Layout title="Potions — Spire Archive" description="Browse Slay the Spire potions with filters for rarity.">
+<Layout game="sts1" title="Potions — Spire Archive" description="Browse Slay the Spire potions with filters for rarity.">
   <h1 class="text-xl font-semibold">Potions</h1>
   <PotionsExplorer client:load rarities={rarities} />
 </Layout>

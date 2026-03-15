@@ -16,7 +16,7 @@ const actLabels: Record<string, string> = {
 };
 const actDisplay = actLabels[event.act] ?? event.act;
 ---
-<Layout title={title} description={event.description} ogTitle={event.name} ogDescription={actDisplay}>
+<Layout game="sts1" title={title} description={event.description} ogTitle={event.name} ogDescription={actDisplay}>
   <div class="flex items-start justify-between gap-4">
     <div>
       <h1 class="text-2xl font-semibold">{event.name}</h1>

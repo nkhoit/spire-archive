@@ -6,9 +6,26 @@ export interface Props {
   description: string;
   ogTitle?: string;
   ogDescription?: string;
+  game?: 'sts1' | 'sts2';
 }
 
-const { title, description, ogTitle, ogDescription } = Astro.props;
+const { title, description, ogTitle, ogDescription, game } = Astro.props;
+
+const gameLabels: Record<string, string> = {
+  sts1: 'Slay the Spire',
+  sts2: 'Slay the Spire 2',
+};
+
+const navLinks = game ? [
+  { emoji: '⚔️', label: 'Characters', href: `/${game}/characters` },
+  { emoji: '🃏', label: 'Cards', href: `/${game}/cards` },
+  { emoji: '🏺', label: 'Relics', href: `/${game}/relics` },
+  { emoji: '🧪', label: 'Potions', href: `/${game}/potions` },
+  { emoji: '👹', label: 'Monsters', href: `/${game}/monsters` },
+  { emoji: '❓', label: 'Events', href: `/${game}/events` },
+  { emoji: '⚡', label: 'Buffs & Debuffs', href: `/${game}/effects` },
+  { emoji: '📖', label: 'Keywords', href: `/${game}/keywords` },
+] : [];
 ---
 <!doctype html>
 <html lang="en">
@@ -28,15 +45,15 @@ const { title, description, ogTitle, ogDescription } = Astro.props;
     <header class="sticky top-0 z-10 border-b border-white/10 bg-slate-950/80 backdrop-blur">
       <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3">
         <a href="/" class="text-sm font-semibold tracking-wide">Spire Archive</a>
-        <nav class="flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-200">
-          <a class="hover:text-white" href="/sts1/characters">⚔️ Characters</a>
-          <a class="hover:text-white" href="/sts1/cards">🃏 Cards</a>
-          <a class="hover:text-white" href="/sts1/relics">🏺 Relics</a>
-          <a class="hover:text-white" href="/sts1/potions">🧪 Potions</a>
-          <a class="hover:text-white" href="/sts1/monsters">👹 Monsters</a>
-          <a class="hover:text-white" href="/sts1/events">❓ Events</a>
-          <a class="hover:text-white" href="/sts1/effects">⚡ Buffs & Debuffs</a>
-          <a class="hover:text-white" href="/sts1/keywords">📖 Keywords</a>
+        <nav class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-200">
+          {game && (
+            <a href="/" class="rounded-full bg-white/10 px-2.5 py-0.5 text-xs font-medium text-slate-100 hover:bg-white/20 transition-colors">
+              {gameLabels[game]} ↩
+            </a>
+          )}
+          {navLinks.map((link) => (
+            <a class="hover:text-white" href={link.href}>{link.emoji} {link.label}</a>
+          ))}
         </nav>
       </div>
     </header>

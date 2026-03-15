@@ -7,7 +7,7 @@ const { relics } = await getData();
 const tiers = Array.from(new Set(relics.map((r) => String(r.tier)))).sort();
 const colors = Array.from(new Set(relics.map((r) => String(r.color ?? '')).filter(Boolean))).sort();
 ---
-<Layout title="Relics — Spire Archive" description="Browse Slay the Spire relics with filters for tier and color.">
+<Layout game="sts1" title="Relics — Spire Archive" description="Browse Slay the Spire relics with filters for tier and color.">
   <h1 class="text-xl font-semibold">Relics</h1>
   <RelicsExplorer client:load tiers={tiers} colors={colors} />
 </Layout>
