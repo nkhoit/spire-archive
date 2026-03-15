@@ -101,12 +101,14 @@ export interface Power {
   type: string;
   stackable?: boolean;
   triggers?: string[];
+  icon?: string;
 }
 
 export interface Keyword {
   id: string;
   names: string[];
   description: string;
+  effect_id?: string;
 }
 
 export interface Orb {
