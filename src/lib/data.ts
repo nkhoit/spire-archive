@@ -104,7 +104,7 @@ export interface Power {
 
 export interface Keyword {
   id: string;
-  name: string;
+  names: string[];
   description: string;
 }
 
