@@ -1,0 +1,31 @@
+---
+import Layout from '../../../components/Layout.astro';
+import Badge from '../../../components/Badge.astro';
+import { getData } from '../../../lib/data';
+
+const { id } = Astro.params;
+const data = await getData('sts2');
+const enchantment = data.enchantmentById.get(String(id));
+if (!enchantment) return new Response('Not found', { status: 404 });
+const title = `${enchantment.name} — Enchantment — Spire Archive — STS2`;
+---
+<Layout game="sts2" title={title} description={enchantment.description} ogTitle={enchantment.name} ogDescription={enchantment.rarity}>
+  <div class="flex items-start justify-between gap-4">
+    <div>
+      <h1 class="text-2xl font-semibold">{enchantment.name}</h1>
+      <div class="mt-2 flex flex-wrap gap-2">
+        <Badge label={enchantment.rarity} />
+      </div>
+    </div>
+    <div class="text-xs text-slate-400">ID: {enchantment.id}</div>
+  </div>
+
+  <section class="mt-6 rounded-lg border border-white/10 bg-white/5 p-4">
+    <h2 class="text-sm font-semibold">Description</h2>
+    <p class="mt-2 whitespace-pre-line text-sm text-slate-200">{enchantment.description}</p>
+  </section>
+
+  <div class="mt-6">
+    <a href="/sts2/enchantments" class="text-sm text-slate-400 hover:text-white">← Back to Enchantments</a>
+  </div>
+</Layout>

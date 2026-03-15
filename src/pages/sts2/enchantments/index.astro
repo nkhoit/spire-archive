@@ -1,0 +1,13 @@
+---
+import Layout from '../../../components/Layout.astro';
+import EnchantmentsExplorer from '../../../components/react/EnchantmentsExplorer';
+import { getData } from '../../../lib/data';
+
+const { enchantments } = await getData('sts2');
+const rarities = Array.from(new Set(enchantments.map((e) => String(e.rarity)))).sort();
+---
+<Layout game="sts2" title="Enchantments — Spire Archive — STS2" description="Browse Slay the Spire 2 enchantments with filters for rarity.">
+  <h1 class="text-xl font-semibold">Enchantments</h1>
+  <p class="mt-1 text-sm text-slate-400">Card enchantments that can be applied at Rest Sites.</p>
+  <EnchantmentsExplorer game="sts2" client:load rarities={rarities} />
+</Layout>

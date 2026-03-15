@@ -4,6 +4,29 @@ import path from 'node:path';
 
 export type CardColor = 'ironclad' | 'silent' | 'defect' | 'watcher' | 'colorless' | 'curse' | string;
 
+export interface Sts2Card {
+  id: string;
+  name: string;
+  cost: number | null;
+  type: string;
+  rarity: string;
+  target: string;
+  color: string;
+  keywords: string[];
+  tags: string[];
+  vars: Record<string, number>;
+  upgrade: Record<string, any>;
+  description: string;
+  image_url: string | null;
+}
+
+export interface Enchantment {
+  id: string;
+  name: string;
+  description: string;
+  rarity: string;
+}
+
 export interface CardUpgrade {
   cost: number | null;
   damage: string | null;
@@ -159,6 +182,7 @@ export interface Dataset {
   characters: Character[];
   achievements: Achievement[];
   cardPowers: Record<string, Array<{name: string; description: string}>>;
+  enchantments: Enchantment[];
 
   cardById: Map<string, Card>;
   relicById: Map<string, Relic>;
@@ -173,6 +197,7 @@ export interface Dataset {
   blightById: Map<string, Blight>;
   characterById: Map<string, Character>;
   achievementById: Map<string, Achievement>;
+  enchantmentById: Map<string, Enchantment>;
 }
 
 const cache = new Map<string, Dataset>();
@@ -219,6 +244,7 @@ export async function getData(game: 'sts1' | 'sts2' = 'sts1'): Promise<Dataset> 
     characters,
     achievements,
     cardPowers,
+    enchantments,
   ] = await Promise.all([
     readJson<Card[]>(game, 'cards.json'),
     readJson<Relic[]>(game, 'relics.json'),
@@ -233,6 +259,9 @@ export async function getData(game: 'sts1' | 'sts2' = 'sts1'): Promise<Dataset> 
     readJson<Character[]>(game, 'characters.json'),
     readJson<Achievement[]>(game, 'achievements.json'),
     readJson<Record<string, Array<{name: string; description: string}>>>(game, 'card_powers.json'),
+    existsSync(path.join(rootDir(), 'data', game, 'enchantments.json'))
+      ? readJson<Enchantment[]>(game, 'enchantments.json')
+      : Promise.resolve([] as Enchantment[]),
   ]);
 
   const dataset: Dataset = {
@@ -249,6 +278,7 @@ export async function getData(game: 'sts1' | 'sts2' = 'sts1'): Promise<Dataset> 
     characters,
     achievements,
     cardPowers,
+    enchantments,
 
     cardById: toMap(cards),
     relicById: toMap(relics),
@@ -263,6 +293,7 @@ export async function getData(game: 'sts1' | 'sts2' = 'sts1'): Promise<Dataset> 
     blightById: toMap(blights),
     characterById: toMap(characters),
     achievementById: toMap(achievements),
+    enchantmentById: toMap(enchantments),
   };
 
   cache.set(game, dataset);

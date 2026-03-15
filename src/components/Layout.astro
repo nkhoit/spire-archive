@@ -23,7 +23,12 @@ const navLinks = game ? [
   { emoji: '🧪', label: 'Potions', href: `/${game}/potions` },
   { emoji: '👹', label: 'Monsters', href: `/${game}/monsters` },
   { emoji: '❓', label: 'Events', href: `/${game}/events` },
-  { emoji: '⚡', label: 'Buffs & Debuffs', href: `/${game}/effects` },
+  ...(game === 'sts2' ? [
+    { emoji: '⚡', label: 'Powers', href: `/${game}/powers` },
+    { emoji: '✨', label: 'Enchantments', href: `/${game}/enchantments` },
+  ] : [
+    { emoji: '⚡', label: 'Buffs & Debuffs', href: `/${game}/effects` },
+  ]),
   { emoji: '📖', label: 'Keywords', href: `/${game}/keywords` },
 ] : [];
 ---

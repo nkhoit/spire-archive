@@ -1,0 +1,9 @@
+---
+import Layout from '../../components/Layout.astro';
+import Sts2PowersExplorer from '../../components/react/Sts2PowersExplorer';
+---
+<Layout game="sts2" title="Powers — Spire Archive — STS2" description="Browse all powers, buffs, and debuffs in Slay the Spire 2.">
+  <h1 class="text-xl font-semibold">Powers</h1>
+  <p class="mt-1 text-sm text-slate-400">Buffs, debuffs, and passive effects in STS2.</p>
+  <Sts2PowersExplorer client:load />
+</Layout>
