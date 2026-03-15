@@ -8,6 +8,54 @@ from pathlib import Path
 
 DECOMPILED = Path("/Users/kuro/code/sts2-research/decompiled")
 OUTPUT = Path("/Users/kuro/code/sts1-data/data/sts2")
+LOC_DIR = Path(__file__).parent.parent / "data/sts2-localization/eng"
+
+def load_loc(filename: str) -> dict:
+    """Load a localization JSON file and return as dict."""
+    path = LOC_DIR / filename
+    if not path.exists():
+        return {}
+    with open(path) as f:
+        return json.load(f)
+
+_bbcode_re = re.compile(r'\[/?[a-z]+\]')
+_var_fmt_re = re.compile(r'\{(\w+)(?::[^}]*)?\}')
+
+def clean_desc(text: str, vars: dict = None) -> str:
+    """Strip BBCode tags and resolve vars."""
+    if not text:
+        return text
+    # Strip [gold]...[/gold], [blue]...[/blue], [red]...[/red], etc.
+    text = re.sub(r'\[/?[a-z]+\]', '', text)
+    # Replace {VarName:format()} or {VarName} patterns
+    if vars:
+        def replace_var(m):
+            key = m.group(1)
+            # Direct match
+            if key.lower() in vars:
+                return str(vars[key.lower()])
+            # PowerVar pattern: DexterityPower → power_dexterity
+            if key.endswith('Power'):
+                derived = 'power_' + key[:-5].lower()
+                if derived in vars:
+                    return str(vars[derived])
+            # e.g. Damage → damage, Block → block
+            if key[0].isupper():
+                lower = key.lower()
+                if lower in vars:
+                    return str(vars[lower])
+            return m.group(0)  # leave as-is
+        text = _var_fmt_re.sub(replace_var, text)
+    return text.strip()
+
+def get_loc_name(loc: dict, entity_id: str) -> str | None:
+    return loc.get(f"{entity_id}.title")
+
+def get_loc_desc(loc: dict, entity_id: str, vars: dict = None) -> str | None:
+    raw = loc.get(f"{entity_id}.description")
+    if raw is None:
+        return None
+    return clean_desc(raw, vars)
 
 def class_to_id(name: str) -> str:
     s = re.sub(r'([a-z])([A-Z])', r'\1_\2', name)
@@ -54,6 +102,7 @@ def parse_dynamic_vars(text: str) -> dict:
 def parse_cards():
     cards_dir = DECOMPILED / "MegaCrit.Sts2.Core.Models.Cards"
     pools_dir = DECOMPILED / "MegaCrit.Sts2.Core.Models.CardPools"
+    loc = load_loc("cards.json")
     
     pool_map = {
         "IroncladCardPool": "ironclad", "SilentCardPool": "silent",
@@ -95,9 +144,11 @@ def parse_cards():
             upgrade.setdefault("remove_keywords", []).append(um.group(1))
         
         raw_cost = int(m.group(1))
+        card_id = class_to_id(name)
+        vars_data = parse_dynamic_vars(text)
         cards.append({
-            "id": class_to_id(name),
-            "name": humanize(name),
+            "id": card_id,
+            "name": get_loc_name(loc, card_id) or humanize(name),
             "cost": None if raw_cost < 0 or is_x_cost else raw_cost,
             "type": m.group(2),
             "rarity": m.group(3),
@@ -105,9 +156,10 @@ def parse_cards():
             "color": card_to_pool.get(name, "unknown"),
             "keywords": keywords,
             "tags": tags,
-            "vars": parse_dynamic_vars(text),
+            "vars": vars_data,
             "upgrade": upgrade,
-            "description": None,
+            "description": get_loc_desc(loc, card_id, vars_data),
+            "image_url": f"/images/sts2/cards/{card_id.lower()}.png",
         })
     return cards
 
@@ -115,6 +167,7 @@ def parse_cards():
 def parse_relics():
     relics_dir = DECOMPILED / "MegaCrit.Sts2.Core.Models.Relics"
     pools_dir = DECOMPILED / "MegaCrit.Sts2.Core.Models.RelicPools"
+    loc = load_loc("relics.json")
     
     pool_map = {
         "IroncladRelicPool": "ironclad", "SilentRelicPool": "silent",
@@ -136,10 +189,11 @@ def parse_relics():
         if m:
             rarity = m.group(1)
         
+        relic_id = class_to_id(name)
         relics.append({
-            "id": class_to_id(name),
-            "name": humanize(name),
-            "description": None,
+            "id": relic_id,
+            "name": get_loc_name(loc, relic_id) or humanize(name),
+            "description": get_loc_desc(loc, relic_id),
             "tier": rarity,
             "color": relic_to_pool.get(name, "shared"),
         })
@@ -149,6 +203,7 @@ def parse_relics():
 def parse_potions():
     potions_dir = DECOMPILED / "MegaCrit.Sts2.Core.Models.Potions"
     pools_dir = DECOMPILED / "MegaCrit.Sts2.Core.Models.PotionPools"
+    loc = load_loc("potions.json")
     
     pool_map = {
         "IroncladPotionPool": "ironclad", "SilentPotionPool": "silent",
@@ -175,10 +230,11 @@ def parse_potions():
         if m and m.group(1) != "None":
             target = m.group(1)
         
+        potion_id = class_to_id(name)
         potions.append({
-            "id": class_to_id(name),
-            "name": humanize(name),
-            "description": None,
+            "id": potion_id,
+            "name": get_loc_name(loc, potion_id) or humanize(name),
+            "description": get_loc_desc(loc, potion_id),
             "rarity": rarity,
             "color": potion_to_pool.get(name, "shared"),
             "target": target,
@@ -188,6 +244,7 @@ def parse_potions():
 # ============ POWERS ============
 def parse_powers():
     powers_dir = DECOMPILED / "MegaCrit.Sts2.Core.Models.Powers"
+    loc = load_loc("powers.json")
     
     powers = []
     for f in sorted(powers_dir.glob("*.cs")):
@@ -210,10 +267,12 @@ def parse_powers():
         if display_name.endswith(" Power"):
             display_name = display_name[:-6]
         
+        power_id = class_to_id(name)
+        loc_name = get_loc_name(loc, power_id)
         powers.append({
-            "id": class_to_id(name),
-            "name": display_name,
-            "description": None,
+            "id": power_id,
+            "name": loc_name or display_name,
+            "description": get_loc_desc(loc, power_id),
             "type": ptype,
             "stackable": stack_type == "Counter",
         })
@@ -222,6 +281,7 @@ def parse_powers():
 # ============ MONSTERS ============  
 def parse_monsters():
     monsters_dir = DECOMPILED / "MegaCrit.Sts2.Core.Models.Monsters"
+    loc = load_loc("monsters.json")
     
     monsters = []
     for f in sorted(monsters_dir.glob("*.cs")):
@@ -238,15 +298,16 @@ def parse_monsters():
         if m:
             max_hp = int(m.group(1))
         
+        monster_id = class_to_id(name)
         monsters.append({
-            "id": class_to_id(name),
-            "name": humanize(name),
+            "id": monster_id,
+            "name": get_loc_name(loc, monster_id) or humanize(name),
             "min_hp": min_hp,
             "max_hp": max_hp,
             "type": "Normal",  # hard to determine from code alone
             "act": "unknown",
             "moves": [],
-            "description": None,
+            "description": get_loc_desc(loc, monster_id),
         })
     return monsters
 
@@ -309,6 +370,7 @@ def parse_keywords():
 # ============ EVENTS ============
 def parse_events():
     events_dir = DECOMPILED / "MegaCrit.Sts2.Core.Models.Events"
+    loc = load_loc("events.json")
     
     events = []
     for f in sorted(events_dir.glob("*.cs")):
@@ -319,11 +381,12 @@ def parse_events():
         if "EventModel" not in text and "AbstractEvent" not in text:
             continue
         
+        event_id = class_to_id(name)
         events.append({
-            "id": class_to_id(name),
-            "name": humanize(name),
+            "id": event_id,
+            "name": get_loc_name(loc, event_id) or humanize(name),
             "act": "unknown",
-            "description": None,
+            "description": get_loc_desc(loc, event_id),
             "choices": [],
         })
     return events
@@ -331,6 +394,7 @@ def parse_events():
 # ============ ENCHANTMENTS ============
 def parse_enchantments():
     ench_dir = DECOMPILED / "MegaCrit.Sts2.Core.Models.Enchantments"
+    loc = load_loc("enchantments.json")
     
     enchantments = []
     for f in sorted(ench_dir.glob("*.cs")):
@@ -346,10 +410,11 @@ def parse_enchantments():
         if m:
             rarity = m.group(1)
         
+        ench_id = class_to_id(name)
         enchantments.append({
-            "id": class_to_id(name),
-            "name": humanize(name),
-            "description": None,
+            "id": ench_id,
+            "name": get_loc_name(loc, ench_id) or humanize(name),
+            "description": get_loc_desc(loc, ench_id),
             "rarity": rarity,
         })
     return enchantments
