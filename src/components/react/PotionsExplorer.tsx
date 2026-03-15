@@ -6,6 +6,7 @@ type Potion = {
   name: string;
   description: string;
   rarity: string;
+  icon?: string;
 };
 
 type ApiResp<T> = { total: number; offset: number; limit: number; items: T[] };
@@ -64,11 +65,18 @@ export default function PotionsExplorer(props: { rarities: string[]; initial?: A
       <ul className="mt-3 divide-y divide-white/10 rounded-lg border border-white/10 bg-white/5">
         {resp.items.map((p) => (
           <li key={p.id} className="p-3">
-            <a className="text-sm font-semibold hover:underline" href={`/potions/${p.id}`}>
-              {p.name}
+            <a className="flex items-center gap-3" href={`/potions/${p.id}`}>
+              {p.icon ? (
+                <img src={`/images/potions/${p.icon}`} alt="" className="w-10 h-10 flex-shrink-0" />
+              ) : (
+                <div className="w-10 h-10 flex-shrink-0 rounded bg-white/10" />
+              )}
+              <div className="min-w-0">
+                <span className="text-sm font-semibold hover:underline">{p.name}</span>
+                <div className="mt-1 text-xs text-slate-300">{p.rarity}</div>
+                <div className="mt-1 line-clamp-2 text-sm text-slate-200">{p.description}</div>
+              </div>
             </a>
-            <div className="mt-1 text-xs text-slate-300">{p.rarity}</div>
-            <div className="mt-2 line-clamp-2 text-sm text-slate-200">{p.description}</div>
           </li>
         ))}
       </ul>
