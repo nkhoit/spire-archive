@@ -19,7 +19,7 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Deploy infrastructure
+      - name: Deploy infrastructure (ACR + Environment)
         id: infra
         run: |
           RG="${APP_NAME}-rg"
@@ -33,8 +33,10 @@ jobs:
 
           ACR_NAME=$(echo "$DEPLOY_JSON" | jq -r '.properties.outputs.acrName.value')
           ACR_LOGIN=$(echo "$DEPLOY_JSON" | jq -r '.properties.outputs.acrLoginServer.value')
+          ENV_NAME=$(echo "$DEPLOY_JSON" | jq -r '.properties.outputs.envName.value')
           echo "acr_name=$ACR_NAME" >> "$GITHUB_OUTPUT"
           echo "acr_login=$ACR_LOGIN" >> "$GITHUB_OUTPUT"
+          echo "env_name=$ENV_NAME" >> "$GITHUB_OUTPUT"
 
       - name: Build and push image
         run: |
@@ -47,13 +49,38 @@ jobs:
           docker push "$ACR_LOGIN/$APP_NAME:$TAG"
           docker push "$ACR_LOGIN/$APP_NAME:latest"
 
-      - name: Update container app
+      - name: Deploy container app
         run: |
-          ACR_LOGIN="${{ steps.infra.outputs.acr_login }}"
-          TAG="${GITHUB_SHA::8}"
           RG="${APP_NAME}-rg"
+          ACR_NAME="${{ steps.infra.outputs.acr_name }}"
+          ACR_LOGIN="${{ steps.infra.outputs.acr_login }}"
+          ENV_NAME="${{ steps.infra.outputs.env_name }}"
+          TAG="${GITHUB_SHA::8}"
+          IMAGE="$ACR_LOGIN/$APP_NAME:$TAG"
 
-          az containerapp update \
-            -n "$APP_NAME" \
-            -g "$RG" \
-            --image "$ACR_LOGIN/$APP_NAME:$TAG"
+          # Get ACR credentials
+          ACR_USER=$(az acr credential show -n "$ACR_NAME" --query username -o tsv)
+          ACR_PASS=$(az acr credential show -n "$ACR_NAME" --query "passwords[0].value" -o tsv)
+
+          # Create or update the container app
+          if az containerapp show -n "$APP_NAME" -g "$RG" &>/dev/null; then
+            az containerapp update \
+              -n "$APP_NAME" \
+              -g "$RG" \
+              --image "$IMAGE"
+          else
+            az containerapp create \
+              -n "$APP_NAME" \
+              -g "$RG" \
+              --environment "$ENV_NAME" \
+              --image "$IMAGE" \
+              --registry-server "$ACR_LOGIN" \
+              --registry-username "$ACR_USER" \
+              --registry-password "$ACR_PASS" \
+              --target-port 4321 \
+              --ingress external \
+              --cpu 0.25 \
+              --memory 0.5Gi \
+              --min-replicas 0 \
+              --max-replicas 1
+          fi

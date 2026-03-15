@@ -23,54 +23,6 @@ resource env 'Microsoft.App/managedEnvironments@2023-05-01' = {
   properties: {}
 }
 
-var acrCreds = listCredentials(acr.id, acr.apiVersion)
-var acrUser = acrCreds.username
-var acrPass = acrCreds.passwords[0].value
-
-resource app 'Microsoft.App/containerApps@2023-05-01' = {
-  name: appName
-  location: location
-  properties: {
-    managedEnvironmentId: env.id
-    configuration: {
-      ingress: {
-        external: true
-        targetPort: 4321
-        transport: 'auto'
-      }
-      registries: [
-        {
-          server: acr.properties.loginServer
-          username: acrUser
-          passwordSecretRef: 'acr-password'
-        }
-      ]
-      secrets: [
-        {
-          name: 'acr-password'
-          value: acrPass
-        }
-      ]
-    }
-    template: {
-      containers: [
-        {
-          name: appName
-          image: '${acr.properties.loginServer}/${appName}:latest'
-          resources: {
-            cpu: json('0.25')
-            memory: '0.5Gi'
-          }
-        }
-      ]
-      scale: {
-        minReplicas: 0
-        maxReplicas: 1
-      }
-    }
-  }
-}
-
 output acrName string = acr.name
 output acrLoginServer string = acr.properties.loginServer
-output containerAppName string = app.name
+output envName string = env.name
