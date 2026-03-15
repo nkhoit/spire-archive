@@ -10,6 +10,17 @@ type Monster = {
   max_hp: number | null;
 };
 
+const ACT_LABELS: Record<string, string> = {
+  exordium: 'Act 1 — Exordium',
+  city: 'Act 2 — The City',
+  beyond: 'Act 3 — Beyond',
+  ending: 'Act 4 — The Ending',
+};
+
+function actLabel(act: string): string {
+  return ACT_LABELS[act] ?? act;
+}
+
 type ApiResp<T> = { total: number; offset: number; limit: number; items: T[] };
 
 export default function MonstersExplorer(props: { acts: string[]; types: string[]; initial?: ApiResp<Monster> }) {
@@ -52,7 +63,7 @@ export default function MonstersExplorer(props: { acts: string[]; types: string[
           <option value="">All acts</option>
           {props.acts.map((a) => (
             <option key={a} value={a}>
-              {a}
+              {actLabel(a)}
             </option>
           ))}
         </select>
@@ -87,7 +98,7 @@ export default function MonstersExplorer(props: { acts: string[]; types: string[
               {m.name}
             </a>
             <div className="mt-1 text-xs text-slate-300">
-              {m.act} · {m.type} · HP {m.min_hp ?? '—'}–{m.max_hp ?? '—'}
+              {actLabel(m.act)} · {m.type} · HP {m.min_hp ?? '—'}–{m.max_hp ?? '—'}
             </div>
           </li>
         ))}
