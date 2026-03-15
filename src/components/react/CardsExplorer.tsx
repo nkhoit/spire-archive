@@ -12,6 +12,23 @@ type Card = {
 
 type ApiResp<T> = { total: number; offset: number; limit: number; items: T[] };
 
+const energyMap: Record<string, string> = {
+  '[R]': '/images/cardui/card_red_orb.png',
+  '[G]': '/images/cardui/card_green_orb.png',
+  '[B]': '/images/cardui/card_blue_orb.png',
+  '[W]': '/images/cardui/card_purple_orb.png',
+};
+
+function renderEnergy(text: string): string {
+  let html = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  for (const [token, imgPath] of Object.entries(energyMap)) {
+    const escaped = token.replace('[', '\\[').replace(']', '\\]');
+    html = html.replace(new RegExp(escaped, 'g'),
+      `<img src="${imgPath}" alt="${token}" style="display:inline-block;height:1.1em;width:1.1em;vertical-align:text-bottom" />`);
+  }
+  return html.replace(/\n/g, ' ');
+}
+
 function buildUrl(base: string, params: Record<string, string | number | null>) {
   const u = new URL(base, window.location.origin);
   for (const [k, v] of Object.entries(params)) {
@@ -181,7 +198,7 @@ export default function CardsExplorer(props: {
             <div className="mt-1 text-xs text-slate-300">
               {c.color} · {c.type} · {c.rarity} · cost {c.cost ?? '—'}
             </div>
-            <div className="mt-2 line-clamp-2 text-sm text-slate-200">{c.description}</div>
+            <div className="mt-2 line-clamp-2 text-sm text-slate-200" dangerouslySetInnerHTML={{ __html: renderEnergy(c.description) }}></div>
           </li>
         ))}
       </ul>
