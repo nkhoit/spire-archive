@@ -208,20 +208,15 @@ export default function CardsExplorer(props: {
       <div className="mt-3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {(data?.items ?? []).map((c) => (
           <a key={c.id} href={`/cards/${c.id}`} className="group flex flex-col items-center rounded-lg border border-white/10 bg-white/5 p-2 hover:bg-white/10 transition-colors">
+            <div className="text-sm font-semibold group-hover:underline truncate w-full text-center">{c.name}</div>
             <img
               src={`/images/rendered/${c.id.toLowerCase()}.png`}
               alt={c.name}
-              className="w-full rounded-md drop-shadow-lg"
+              className="w-full rounded-md drop-shadow-lg mt-1"
               loading="lazy"
             />
-            <div className="mt-2 w-full text-center">
-              <div className="text-sm font-semibold group-hover:underline">{c.name}</div>
-              <div className="mt-1 flex flex-wrap items-center justify-center gap-1">
-                <BadgeSpan label={c.color} tone={c.color} />
-                <BadgeSpan label={c.type} />
-                <BadgeSpan label={c.rarity} />
-                <span className="text-xs text-slate-400">Cost {c.cost ?? '—'}</span>
-              </div>
+            <div className="mt-1.5 text-[10px] text-slate-400 whitespace-nowrap">
+              {cap(c.color)} · {c.type} · {c.rarity} · {c.cost ?? 'X'}
             </div>
           </a>
         ))}
