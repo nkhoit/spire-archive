@@ -14,7 +14,7 @@ const ACT_LABELS: Record<string, string> = {
   exordium: 'Act 1 — Exordium',
   city: 'Act 2 — The City',
   beyond: 'Act 3 — Beyond',
-  shrines: 'Shrines',
+  shrines: 'Any Act — Shrine',
 };
 function actLabel(a: string) { return ACT_LABELS[a] ?? a.charAt(0).toUpperCase() + a.slice(1); }
 
