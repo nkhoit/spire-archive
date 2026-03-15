@@ -25,7 +25,7 @@ export function getNumber(url: URL, key: string): number | null {
 export function getPaging(url: URL) {
   const offset = Math.max(0, getNumber(url, 'offset') ?? 0);
   const limitRaw = getNumber(url, 'limit');
-  const limit = Math.min(200, Math.max(1, limitRaw ?? 50));
+  const limit = Math.min(400, Math.max(1, limitRaw ?? 50));
   return { offset, limit };
 }
 
