@@ -17,6 +17,10 @@ ENV NODE_ENV=production
 ENV HOST=0.0.0.0
 ENV PORT=4321
 
+# Install production dependencies for SSR runtime
+COPY package.json package-lock.json* ./
+RUN npm ci --omit=dev
+
 # Astro standalone server output
 COPY --from=build /app/dist ./dist
 # Data files are read at runtime
