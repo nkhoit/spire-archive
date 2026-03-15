@@ -1,0 +1,59 @@
+name: Deploy to Azure Container Apps
+
+on:
+  push:
+    branches: [main]
+
+env:
+  APP_NAME: sts1-data
+  LOCATION: westus2
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Deploy infrastructure
+        id: infra
+        run: |
+          RG="${APP_NAME}-rg"
+          az group create -n "$RG" -l "$LOCATION" > /dev/null
+
+          DEPLOY_JSON=$(az deployment group create \
+            -g "$RG" \
+            -f infra/main.bicep \
+            -p location="$LOCATION" appName="$APP_NAME" \
+            -o json)
+
+          ACR_NAME=$(echo "$DEPLOY_JSON" | jq -r '.properties.outputs.acrName.value')
+          ACR_LOGIN=$(echo "$DEPLOY_JSON" | jq -r '.properties.outputs.acrLoginServer.value')
+          echo "acr_name=$ACR_NAME" >> "$GITHUB_OUTPUT"
+          echo "acr_login=$ACR_LOGIN" >> "$GITHUB_OUTPUT"
+
+      - name: Build and push image
+        run: |
+          ACR_NAME="${{ steps.infra.outputs.acr_name }}"
+          ACR_LOGIN="${{ steps.infra.outputs.acr_login }}"
+          TAG="${GITHUB_SHA::8}"
+
+          az acr login -n "$ACR_NAME"
+          docker build -t "$ACR_LOGIN/$APP_NAME:$TAG" -t "$ACR_LOGIN/$APP_NAME:latest" .
+          docker push "$ACR_LOGIN/$APP_NAME:$TAG"
+          docker push "$ACR_LOGIN/$APP_NAME:latest"
+
+      - name: Update container app
+        run: |
+          ACR_LOGIN="${{ steps.infra.outputs.acr_login }}"
+          TAG="${GITHUB_SHA::8}"
+          RG="${APP_NAME}-rg"
+
+          az containerapp update \
+            -n "$APP_NAME" \
+            -g "$RG" \
+            --image "$ACR_LOGIN/$APP_NAME:$TAG"
