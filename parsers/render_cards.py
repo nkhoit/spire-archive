@@ -178,7 +178,7 @@ def draw_description(draw, desc, fonts, center_x, start_y, canvas=None, base_des
                     orig_consumed += orig_remaining[oi]
                     oi += 1
             orig_consumed_full = orig_remaining[:oi]
-            orig_remaining = orig_remaining[oi:]
+            orig_remaining = orig_remaining[oi:].lstrip(' ')
             wrapped_data.append(orig_consumed_full)
     
     line_height = 48
@@ -220,7 +220,7 @@ def draw_description(draw, desc, fonts, center_x, start_y, canvas=None, base_des
                 else:
                     oi += 1
             wrapped_with_line.append((orig_remaining[:oi], i))
-            orig_remaining = orig_remaining[oi:]
+            orig_remaining = orig_remaining[oi:].lstrip(' ')
     
     # Track word index per original line across wrapped lines
     word_idx_per_line = {}
