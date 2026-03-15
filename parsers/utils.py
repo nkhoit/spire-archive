@@ -203,19 +203,22 @@ def extract_upgrade_fields(source: str) -> dict:
         result["cost"] = int(m.group(1))
     
     # upgradeDamage
-    m = re.search(r"upgradeDamage\s*\((\d+)\)", source)
+    m = re.search(r"upgradeDamage\s*\((-?\d+)\)", source)
     if m:
-        result["damage"] = f"+{m.group(1)}"
+        v = int(m.group(1))
+        result["damage"] = f"+{v}" if v >= 0 else str(v)
     
     # upgradeBlock
-    m = re.search(r"upgradeBlock\s*\((\d+)\)", source)
+    m = re.search(r"upgradeBlock\s*\((-?\d+)\)", source)
     if m:
-        result["block"] = f"+{m.group(1)}"
+        v = int(m.group(1))
+        result["block"] = f"+{v}" if v >= 0 else str(v)
     
     # upgradeMagicNumber
-    m = re.search(r"upgradeMagicNumber\s*\((\d+)\)", source)
+    m = re.search(r"upgradeMagicNumber\s*\((-?\d+)\)", source)
     if m:
-        result["magic_number"] = f"+{m.group(1)}"
+        v = int(m.group(1))
+        result["magic_number"] = f"+{v}" if v >= 0 else str(v)
     
     # has UPGRADE_DESCRIPTION
     result["has_upgrade_desc"] = bool(re.search(r"UPGRADE_DESCRIPTION", source))

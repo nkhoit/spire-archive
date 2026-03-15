@@ -40,14 +40,13 @@ KNOWN_DEBUFFS = {
 
 
 def infer_power_type(source: str, power_id: str) -> str:
-    """Infer Buff or Debuff."""
-    if power_id in KNOWN_DEBUFFS:
+    """Infer Buff or Debuff from Java source."""
+    # Check explicit type assignment first (most reliable)
+    if re.search(r"this\.type\s*=\s*(?:AbstractPower\.)?PowerType\.DEBUFF", source):
         return "Debuff"
-    # Check if it has isDebuff or type field
-    if re.search(r"this\.type\s*=\s*PowerType\.DEBUFF", source):
-        return "Debuff"
-    if re.search(r"this\.type\s*=\s*PowerType\.BUFF", source):
+    if re.search(r"this\.type\s*=\s*(?:AbstractPower\.)?PowerType\.BUFF", source):
         return "Buff"
+    # Default is Buff (AbstractPower default)
     return "Buff"
 
 
@@ -78,6 +77,10 @@ def parse_powers(source_dir: str, localization_dir: str) -> list[dict]:
     loc = load_localization(localization_dir, "powers.json")
     powers_dir = os.path.join(source_dir, "powers")
     java_files = find_java_files(powers_dir, recursive=False)
+    # Also scan watcher subdirectory
+    watcher_powers_dir = os.path.join(powers_dir, "watcher")
+    if os.path.isdir(watcher_powers_dir):
+        java_files = java_files + find_java_files(watcher_powers_dir, recursive=False)
 
     powers = []
     seen_ids = set()

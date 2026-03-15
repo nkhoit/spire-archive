@@ -78,11 +78,17 @@ def parse_relics(source_dir: str, localization_dir: str) -> list[dict]:
             continue
         if "DEPRECATED" in relic_id:
             continue
+        # Skip TEST relics
+        if relic_id_raw.startswith("TEST") or relic_id.startswith("TEST"):
+            continue
         seen_ids.add(relic_id)
 
         # Localization
         loc_entry = loc.get(relic_id_raw, {})
         name = loc_entry.get("NAME", relic_id_raw)
+        # Skip if name is empty
+        if not name or not name.strip():
+            continue
         descriptions = loc_entry.get("DESCRIPTIONS", [])
         flavor = loc_entry.get("FLAVOR", None)
 

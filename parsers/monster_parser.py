@@ -148,23 +148,44 @@ def parse_hp(source: str) -> dict:
         "max_hp_ascension": None,
     }
 
-    # Look for ascension-gated setHp calls
-    # Pattern: if (... ascensionLevel >= N) { this.setHp(a, b) } else { this.setHp(c, d) }
+    # Try: if (ascensionLevel >= N) { setHp(a[, b]) } else { setHp(c[, d]) }
+    # Handles both 1-arg setHp(max) and 2-arg setHp(min, max)
     asc_block = re.search(
-        r"ascensionLevel\s*>=\s*(\d+)\s*\)\s*\{[^}]*setHp\s*\(\s*(\d+)\s*,\s*(\d+)\s*\)[^}]*\}\s*else\s*\{[^}]*setHp\s*\(\s*(\d+)\s*,\s*(\d+)\s*\)",
+        r"ascensionLevel\s*>=\s*\d+\s*\)\s*\{[^}]*setHp\s*\(([^)]+)\)[^}]*\}\s*else\s*\{[^}]*setHp\s*\(([^)]+)\)",
         source
     )
     if asc_block:
-        hp["min_hp_ascension"] = int(asc_block.group(2))
-        hp["max_hp_ascension"] = int(asc_block.group(3))
-        hp["min_hp"] = int(asc_block.group(4))
-        hp["max_hp"] = int(asc_block.group(5))
+        asc_args = [x.strip() for x in asc_block.group(1).split(",")]
+        base_args = [x.strip() for x in asc_block.group(2).split(",")]
+        try:
+            if len(asc_args) == 1:
+                hp["min_hp_ascension"] = int(asc_args[0])
+                hp["max_hp_ascension"] = int(asc_args[0])
+            else:
+                hp["min_hp_ascension"] = int(asc_args[0])
+                hp["max_hp_ascension"] = int(asc_args[1])
+            if len(base_args) == 1:
+                hp["min_hp"] = int(base_args[0])
+                hp["max_hp"] = int(base_args[0])
+            else:
+                hp["min_hp"] = int(base_args[0])
+                hp["max_hp"] = int(base_args[1])
+        except (ValueError, IndexError):
+            pass
     else:
-        # Simple setHp(min, max)
-        set_hp_m = re.search(r"setHp\s*\(\s*(\d+)\s*,\s*(\d+)\s*\)", source)
+        # Simple setHp(min, max) or setHp(max)
+        set_hp_m = re.search(r"setHp\s*\(([^)]+)\)", source)
         if set_hp_m:
-            hp["min_hp"] = int(set_hp_m.group(1))
-            hp["max_hp"] = int(set_hp_m.group(2))
+            args = [x.strip() for x in set_hp_m.group(1).split(",")]
+            try:
+                if len(args) == 1:
+                    hp["min_hp"] = int(args[0])
+                    hp["max_hp"] = int(args[0])
+                else:
+                    hp["min_hp"] = int(args[0])
+                    hp["max_hp"] = int(args[1])
+            except ValueError:
+                pass
         else:
             # HP from super constructor: super(NAME, ID, maxHP, ...)
             super_m = re.search(r"super\s*\([^,]+,\s*[^,]+,\s*(\d+)\s*,", source)

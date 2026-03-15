@@ -90,7 +90,8 @@ def parse_cards(source_dir: str, localization_dir: str) -> list[dict]:
             card_rarity = CARD_RARITY_MAP.get(card_rarity_raw, card_rarity_raw.capitalize() if card_rarity_raw else "")
             card_target = CARD_TARGET_MAP.get(card_target_raw, card_target_raw.capitalize() if card_target_raw else "")
 
-            # Color: use the directory name first, then fallback to Java
+            # Color: use CardColor from Java source for status cards (they are COLORLESS, not "status")
+            # For other dirs, use directory name as primary
             if color_dir == "red":
                 card_color = "ironclad"
             elif color_dir == "green":
@@ -101,15 +102,13 @@ def parse_cards(source_dir: str, localization_dir: str) -> list[dict]:
                 card_color = "watcher"
             elif color_dir == "colorless":
                 card_color = "colorless"
-            elif color_dir in ("curses", "status"):
-                card_color = color_dir.rstrip("s") if color_dir == "curses" else "status"
+            elif color_dir == "curses":
+                card_color = "curse"
+            elif color_dir == "status":
+                # Use actual CardColor from Java source; status cards have COLORLESS
+                card_color = CARD_COLOR_MAP.get(card_color_raw, "colorless")
             else:
                 card_color = CARD_COLOR_MAP.get(card_color_raw, card_color_raw.lower() if card_color_raw else "")
-            # Normalize curses
-            if card_color == "curse" or color_dir == "curses":
-                card_color = "curse"
-            if card_color == "statu" or color_dir == "status":
-                card_color = "status"
 
             base = extract_base_fields(source)
             upgrade = extract_upgrade_fields(source)
