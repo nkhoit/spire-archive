@@ -7,6 +7,7 @@ type Relic = {
   description: string;
   tier: string;
   color: string | null;
+  icon?: string;
 };
 
 type ApiResp<T> = { total: number; offset: number; limit: number; items: T[] };
@@ -82,14 +83,21 @@ export default function RelicsExplorer(props: { tiers: string[]; colors: string[
       <ul className="mt-3 divide-y divide-white/10 rounded-lg border border-white/10 bg-white/5">
         {resp.items.map((r) => (
           <li key={r.id} className="p-3">
-            <a className="text-sm font-semibold hover:underline" href={`/relics/${r.id}`}>
-              {r.name}
+            <a className="flex items-center gap-3" href={`/relics/${r.id}`}>
+              {r.icon ? (
+                <img src={`/images/relics/${r.icon}`} alt="" className="w-10 h-10 flex-shrink-0" />
+              ) : (
+                <div className="w-10 h-10 flex-shrink-0 rounded bg-white/10" />
+              )}
+              <div className="min-w-0">
+                <span className="text-sm font-semibold hover:underline">{r.name}</span>
+                <div className="mt-1 text-xs text-slate-300">
+                  {r.tier}
+                  {r.color ? ` · ${r.color}` : ''}
+                </div>
+                <div className="mt-1 line-clamp-2 text-sm text-slate-200">{r.description}</div>
+              </div>
             </a>
-            <div className="mt-1 text-xs text-slate-300">
-              {r.tier}
-              {r.color ? ` · ${r.color}` : ''}
-            </div>
-            <div className="mt-2 line-clamp-2 text-sm text-slate-200">{r.description}</div>
           </li>
         ))}
       </ul>
