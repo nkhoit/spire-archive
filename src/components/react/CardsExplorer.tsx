@@ -8,6 +8,9 @@ type Card = {
   type: string;
   rarity: string;
   color: string;
+  vars?: Record<string, number>;
+  keywords?: string[];
+  tags?: string[];
   upgrade?: {
     cost?: number | null;
     description?: string;
@@ -52,21 +55,39 @@ function BadgeSpan({ label, tone }: { label: string; tone?: string }) {
 function CardTile({ c, game }: { c: Card; game: string }) {
   const [upgraded, setUpgraded] = useState(false);
   const hasUpgrade = c.upgrade && (c.upgrade.description || c.upgrade.cost != null);
+  const hasImages = game === 'sts1';
   const imgSrc = upgraded
     ? `/images/rendered/upgraded/thumbs/${c.id.toLowerCase()}.webp`
     : `/images/rendered/thumbs/${c.id.toLowerCase()}.webp`;
   return (
     <div className="group flex flex-col items-center rounded-lg border border-white/10 bg-white/5 p-3 hover:bg-white/10 transition-colors relative">
       <a href={`/${game}/cards/${c.id}`} className="text-sm font-semibold group-hover:underline truncate w-full text-center">{upgraded ? `${c.name}+` : c.name}</a>
-      <a href={`/${game}/cards/${c.id}`} className="w-full mt-2">
-        <img
-          src={imgSrc}
-          alt={c.name}
-          className="w-full rounded-md drop-shadow-lg"
-          loading="lazy"
-        />
-      </a>
-      {hasUpgrade && (
+      {hasImages ? (
+        <a href={`/${game}/cards/${c.id}`} className="w-full mt-2">
+          <img
+            src={imgSrc}
+            alt={c.name}
+            className="w-full rounded-md drop-shadow-lg"
+            loading="lazy"
+          />
+        </a>
+      ) : (
+        <a href={`/${game}/cards/${c.id}`} className="w-full mt-2 flex flex-col items-center gap-1 py-4 text-center">
+          {c.description ? (
+            <p className="text-xs text-slate-400 line-clamp-3">{c.description}</p>
+          ) : (
+            <p className="text-xs text-slate-500 italic">No description yet</p>
+          )}
+          {c.vars && Object.keys(c.vars).length > 0 && (
+            <div className="mt-1 flex flex-wrap justify-center gap-1">
+              {Object.entries(c.vars).map(([k, v]) => (
+                <span key={k} className="text-xs bg-white/5 px-1.5 py-0.5 rounded text-slate-300">{k.replace(/_/g, ' ')}: {String(v)}</span>
+              ))}
+            </div>
+          )}
+        </a>
+      )}
+      {hasImages && hasUpgrade && (
         <button
           onClick={(e) => { e.preventDefault(); setUpgraded(!upgraded); }}
           className={`absolute top-2 right-2 w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center transition-colors ${upgraded ? 'bg-emerald-500 text-white' : 'bg-white/10 text-slate-400 hover:bg-white/20'}`}
