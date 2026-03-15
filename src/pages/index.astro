@@ -27,6 +27,13 @@ const taglineMap: Record<string, string> = {
   DEFECT: 'Orbs & channeling',
   WATCHER: 'Stances & divine wrath',
 };
+
+const portraitMap: Record<string, string> = {
+  IRONCLAD: '/images/characters/ironclad.jpg',
+  THE_SILENT: '/images/characters/silent.jpg',
+  DEFECT: '/images/characters/defect.jpg',
+  WATCHER: '/images/characters/watcher.jpg',
+};
 ---
 <Layout title="Spire Archive" description="The complete database for Slay the Spire — browse cards, relics, potions, characters, monsters, events, and more.">
   <h1 class="text-2xl font-semibold">Spire Archive</h1>
@@ -41,13 +48,15 @@ const taglineMap: Record<string, string> = {
         const color = colorMap[ch.id] ?? '';
         const tagline = taglineMap[ch.id] ?? '';
         return (
-          <a href={`/characters/${ch.id}`} class="rounded-lg border border-white/10 bg-white/5 p-4 hover:bg-white/10 text-center">
-            <div class="text-sm font-semibold">{ch.name}</div>
-            <div class="mt-1">
-              <Badge label={color} tone={color} />
+          <a href={`/characters/${ch.id}`} class="rounded-lg border border-white/10 bg-white/5 overflow-hidden hover:bg-white/10 text-center">
+            <img src={portraitMap[ch.id]} alt={ch.name} class="w-full h-24 object-cover object-top" />
+            <div class="p-3">
+              <div class="text-sm font-semibold">{ch.name}</div>
+              <div class="mt-1">
+                <Badge label={color} tone={color} />
+              </div>
+              <div class="mt-2 text-xs text-slate-400">{tagline}</div>
             </div>
-            <div class="mt-2 text-xs text-slate-400">{tagline}</div>
-            <div class="mt-1 text-xs text-slate-400">{(ch as any).hp} HP · {(ch as any).energy_per_turn} Energy</div>
           </a>
         );
       })}
