@@ -85,9 +85,9 @@ export default function RelicsExplorer(props: { tiers: string[]; colors: string[
           <li key={r.id} className="p-3">
             <a className="flex items-center gap-3" href={`/relics/${r.id}`}>
               {r.icon ? (
-                <img src={`/images/relics/${r.icon}`} alt="" className="w-10 h-10 flex-shrink-0" />
+                <img src={`/images/relics/${r.icon}`} alt="" className="w-14 h-14 flex-shrink-0" />
               ) : (
-                <div className="w-10 h-10 flex-shrink-0 rounded bg-white/10" />
+                <div className="w-14 h-14 flex-shrink-0 rounded bg-white/10" />
               )}
               <div className="min-w-0">
                 <span className="text-sm font-semibold hover:underline">{r.name}</span>

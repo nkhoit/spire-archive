@@ -67,9 +67,9 @@ export default function PotionsExplorer(props: { rarities: string[]; initial?: A
           <li key={p.id} className="p-3">
             <a className="flex items-center gap-3" href={`/potions/${p.id}`}>
               {p.icon ? (
-                <img src={`/images/potions/${p.icon}`} alt="" className="w-10 h-10 flex-shrink-0" />
+                <img src={`/images/potions/${p.icon}`} alt="" className="w-14 h-14 flex-shrink-0" />
               ) : (
-                <div className="w-10 h-10 flex-shrink-0 rounded bg-white/10" />
+                <div className="w-14 h-14 flex-shrink-0 rounded bg-white/10" />
               )}
               <div className="min-w-0">
                 <span className="text-sm font-semibold hover:underline">{p.name}</span>
