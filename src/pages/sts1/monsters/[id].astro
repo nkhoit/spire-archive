@@ -1,0 +1,58 @@
+---
+import Layout from '../../../components/Layout.astro';
+import Badge from '../../../components/Badge.astro';
+import { getData } from '../../../lib/data';
+
+const { id } = Astro.params;
+const data = await getData();
+const monster = data.monsterById.get(String(id));
+if (!monster) return new Response('Not found', { status: 404 });
+const actLabels: Record<string, string> = {
+  exordium: 'Act 1 — Exordium',
+  city: 'Act 2 — The City',
+  beyond: 'Act 3 — Beyond',
+  ending: 'Act 4 — The Ending',
+};
+const actDisplay = actLabels[monster.act] ?? monster.act;
+const title = `${monster.name} — Monster — Spire Archive`;
+const hp = `HP ${monster.min_hp ?? '—'}–${monster.max_hp ?? '—'}`;
+const hpAsc = (monster.min_hp_ascension != null || monster.max_hp_ascension != null)
+  ? `A+ HP ${monster.min_hp_ascension ?? '—'}–${monster.max_hp_ascension ?? '—'}`
+  : null;
+---
+<Layout title={title} description={`${actDisplay} · ${monster.type} · ${hp}`} ogTitle={monster.name} ogDescription={hp}>
+  <div class="flex items-start justify-between gap-4">
+    <div>
+      <h1 class="text-2xl font-semibold">{monster.name}</h1>
+      <div class="mt-2 flex flex-wrap gap-2">
+        <Badge label={actDisplay} />
+        <Badge label={monster.type} />
+        <Badge label={hp} />
+        {hpAsc && <Badge label={hpAsc} />}
+      </div>
+    </div>
+    <div class="text-xs text-slate-400">ID: {monster.id}</div>
+  </div>
+
+  <section class="mt-6 rounded-lg border border-white/10 bg-white/5 p-4">
+    <h2 class="text-sm font-semibold">Moves</h2>
+    {monster.moves?.length ? (
+      <ul class="mt-3 space-y-2">
+        {monster.moves.map((mv) => (
+          <li class="rounded-md border border-white/10 bg-slate-950/30 p-3">
+            <div class="flex items-baseline justify-between gap-3">
+              <div class="text-sm font-semibold">{mv.name}</div>
+              <div class="text-xs text-slate-400">{mv.intent}</div>
+            </div>
+            <div class="mt-1 text-xs text-slate-300">
+              Damage: {mv.damage ?? '—'}
+              {mv.damage_ascension != null ? ` (A+: ${mv.damage_ascension})` : ''}
+            </div>
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <div class="mt-2 text-sm text-slate-300">—</div>
+    )}
+  </section>
+</Layout>

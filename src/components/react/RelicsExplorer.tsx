@@ -19,7 +19,7 @@ export default function RelicsExplorer(props: { tiers: string[]; colors: string[
   const [offset, setOffset] = useState(0);
   const limit = 50;
 
-  const { data, loading, error } = useApiList<Relic>('/api/relics', {
+  const { data, loading, error } = useApiList<Relic>('/api/sts1/relics', {
     q: q || null,
     tier: tier || null,
     color: color || null,
@@ -83,7 +83,7 @@ export default function RelicsExplorer(props: { tiers: string[]; colors: string[
       <ul className="mt-3 divide-y divide-white/10 rounded-lg border border-white/10 bg-white/5">
         {resp.items.map((r) => (
           <li key={r.id} className="p-3">
-            <a className="flex items-center gap-3" href={`/relics/${r.id}`}>
+            <a className="flex items-center gap-3" href={`/sts1/relics/${r.id}`}>
               {r.icon ? (
                 <img src={`/images/relics/${r.icon}`} alt="" className="w-14 h-14 flex-shrink-0" />
               ) : (

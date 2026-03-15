@@ -1,127 +1,25 @@
 ---
 import Layout from '../components/Layout.astro';
-import Badge from '../components/Badge.astro';
-import { getData } from '../lib/data';
-
-const data = await getData();
-const counts = {
-  cards: data.cards.length,
-  relics: data.relics.length,
-  potions: data.potions.length,
-  monsters: data.monsters.length,
-  events: data.events.length,
-  powers: data.powers.length,
-  keywords: data.keywords.length,
-};
-
-const colorMap: Record<string, string> = {
-  IRONCLAD: 'ironclad',
-  THE_SILENT: 'silent',
-  DEFECT: 'defect',
-  WATCHER: 'watcher',
-};
-
-const taglineMap: Record<string, string> = {
-  IRONCLAD: 'Strength & self-healing',
-  THE_SILENT: 'Poison & card draw',
-  DEFECT: 'Orbs & channeling',
-  WATCHER: 'Stances & divine wrath',
-};
-
-const portraitMap: Record<string, string> = {
-  IRONCLAD: '/images/characters/ironclad.jpg',
-  THE_SILENT: '/images/characters/silent.jpg',
-  DEFECT: '/images/characters/defect.jpg',
-  WATCHER: '/images/characters/watcher.jpg',
-};
-
-const positionMap: Record<string, string> = {
-  IRONCLAD: 'center 35%',
-  THE_SILENT: 'center 40%',
-  DEFECT: 'center 25%',
-  WATCHER: 'center 30%',
-};
 ---
-<Layout title="Spire Archive" description="The complete database for Slay the Spire — browse cards, relics, potions, characters, monsters, events, and more.">
+<Layout title="Spire Archive" description="Slay the Spire companion — browse cards, relics, and more for STS1 and STS2.">
   <h1 class="text-2xl font-semibold">Spire Archive</h1>
   <p class="mt-2 max-w-2xl text-sm text-slate-300">
-    The complete database for Slay the Spire
+    Choose a game to get started.
   </p>
 
-  <section class="mt-6">
-    <h2 class="text-sm font-semibold text-slate-400 uppercase tracking-wide">Characters</h2>
-    <div class="mt-3 grid grid-cols-2 gap-3 md:grid-cols-4">
-      {data.characters.map((ch) => {
-        const color = colorMap[ch.id] ?? '';
-        const tagline = taglineMap[ch.id] ?? '';
-        return (
-          <a href={`/characters/${ch.id}`} class="rounded-lg border border-white/10 bg-white/5 overflow-hidden hover:bg-white/10 text-center">
-            <img src={portraitMap[ch.id]} alt={ch.name} class="w-full h-28 object-cover" style={`object-position: ${positionMap[ch.id] ?? 'center 30%'}`} />
-            <div class="p-3">
-              <div class="text-sm font-semibold">{ch.name}</div>
-              <div class="mt-1">
-                <Badge label={color} tone={color} />
-              </div>
-              <div class="mt-2 text-xs text-slate-400">{tagline}</div>
-            </div>
-          </a>
-        );
-      })}
-    </div>
-  </section>
+  <div class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 max-w-2xl">
+    <a href="/sts1/" class="flex flex-col gap-2 rounded-xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition-colors">
+      <div class="text-3xl">⚔️</div>
+      <div class="text-lg font-semibold">Slay the Spire</div>
+      <div class="text-sm text-slate-400">Cards, relics, monsters, events, and more for the original game.</div>
+      <div class="mt-2 text-xs text-emerald-400 font-medium">Available →</div>
+    </a>
 
-  <section class="mt-8">
-    <h2 class="text-sm font-semibold text-slate-400 uppercase tracking-wide">Browse</h2>
-    <div class="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-      <a href="/cards" class="flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 p-4 hover:bg-white/10">
-        <span class="text-2xl">🃏</span>
-        <div>
-          <div class="text-sm font-medium">Cards</div>
-          <div class="mt-1 text-xs text-slate-400">{counts.cards} cards across all characters</div>
-        </div>
-      </a>
-      <a href="/relics" class="flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 p-4 hover:bg-white/10">
-        <span class="text-2xl">🏺</span>
-        <div>
-          <div class="text-sm font-medium">Relics</div>
-          <div class="mt-1 text-xs text-slate-400">{counts.relics} relics from starter to boss tier</div>
-        </div>
-      </a>
-      <a href="/potions" class="flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 p-4 hover:bg-white/10">
-        <span class="text-2xl">🧪</span>
-        <div>
-          <div class="text-sm font-medium">Potions</div>
-          <div class="mt-1 text-xs text-slate-400">{counts.potions} potions and their effects</div>
-        </div>
-      </a>
-      <a href="/monsters" class="flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 p-4 hover:bg-white/10">
-        <span class="text-2xl">👹</span>
-        <div>
-          <div class="text-sm font-medium">Monsters</div>
-          <div class="mt-1 text-xs text-slate-400">{counts.monsters} monsters, elites, and bosses</div>
-        </div>
-      </a>
-      <a href="/events" class="flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 p-4 hover:bg-white/10">
-        <span class="text-2xl">❓</span>
-        <div>
-          <div class="text-sm font-medium">Events</div>
-          <div class="mt-1 text-xs text-slate-400">{counts.events} non-combat events and choices</div>
-        </div>
-      </a>
-      <a href="/effects" class="flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 p-4 hover:bg-white/10">
-        <span class="text-2xl">⚡</span>
-        <div>
-          <div class="text-sm font-medium">Powers</div>
-          <div class="mt-1 text-xs text-slate-400">{counts.powers} buffs, debuffs, and status effects</div>
-        </div>
-      </a>
-      <a href="/keywords" class="flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 p-4 hover:bg-white/10">
-        <span class="text-2xl">📖</span>
-        <div>
-          <div class="text-sm font-medium">Keywords</div>
-          <div class="mt-1 text-xs text-slate-400">{counts.keywords} game mechanics and glossary</div>
-        </div>
-      </a>
+    <div class="flex flex-col gap-2 rounded-xl border border-white/10 bg-white/5 p-6 opacity-50 cursor-not-allowed">
+      <div class="text-3xl">🗡️</div>
+      <div class="text-lg font-semibold">Slay the Spire 2</div>
+      <div class="text-sm text-slate-400">Data and reference for the sequel.</div>
+      <div class="mt-2 text-xs text-slate-500 font-medium">Coming soon</div>
     </div>
-  </section>
+  </div>
 </Layout>

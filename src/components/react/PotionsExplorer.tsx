@@ -17,7 +17,7 @@ export default function PotionsExplorer(props: { rarities: string[]; initial?: A
   const [offset, setOffset] = useState(0);
   const limit = 50;
 
-  const { data, loading, error } = useApiList<Potion>('/api/potions', {
+  const { data, loading, error } = useApiList<Potion>('/api/sts1/potions', {
     q: q || null,
     rarity: rarity || null,
     offset,
@@ -65,7 +65,7 @@ export default function PotionsExplorer(props: { rarities: string[]; initial?: A
       <ul className="mt-3 divide-y divide-white/10 rounded-lg border border-white/10 bg-white/5">
         {resp.items.map((p) => (
           <li key={p.id} className="p-3">
-            <a className="flex items-center gap-3" href={`/potions/${p.id}`}>
+            <a className="flex items-center gap-3" href={`/sts1/potions/${p.id}`}>
               {p.icon ? (
                 <img src={`/images/potions/${p.icon}`} alt="" className="w-14 h-14 flex-shrink-0" />
               ) : (

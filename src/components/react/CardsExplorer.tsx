@@ -57,8 +57,8 @@ function CardTile({ c }: { c: Card }) {
     : `/images/rendered/thumbs/${c.id.toLowerCase()}.webp`;
   return (
     <div className="group flex flex-col items-center rounded-lg border border-white/10 bg-white/5 p-3 hover:bg-white/10 transition-colors relative">
-      <a href={`/cards/${c.id}`} className="text-sm font-semibold group-hover:underline truncate w-full text-center">{upgraded ? `${c.name}+` : c.name}</a>
-      <a href={`/cards/${c.id}`} className="w-full mt-2">
+      <a href={`/sts1/cards/${c.id}`} className="text-sm font-semibold group-hover:underline truncate w-full text-center">{upgraded ? `${c.name}+` : c.name}</a>
+      <a href={`/sts1/cards/${c.id}`} className="w-full mt-2">
         <img
           src={imgSrc}
           alt={c.name}
@@ -122,7 +122,7 @@ export default function CardsExplorer(props: {
     setLoading(true);
     setError(null);
     fetch(
-      buildUrl('/api/cards', {
+      buildUrl('/api/sts1/cards', {
         q: q || null,
         color: color || null,
         type: type || null,

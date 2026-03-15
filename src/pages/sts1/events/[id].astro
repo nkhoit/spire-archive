@@ -1,0 +1,51 @@
+---
+import Layout from '../../../components/Layout.astro';
+import Badge from '../../../components/Badge.astro';
+import { getData } from '../../../lib/data';
+
+const { id } = Astro.params;
+const data = await getData();
+const event = data.eventById.get(String(id));
+if (!event) return new Response('Not found', { status: 404 });
+const title = `${event.name} — Event — Spire Archive`;
+const actLabels: Record<string, string> = {
+  exordium: 'Act 1 — Exordium',
+  city: 'Act 2 — The City',
+  beyond: 'Act 3 — Beyond',
+  shrines: 'Any Act — Shrine',
+};
+const actDisplay = actLabels[event.act] ?? event.act;
+---
+<Layout title={title} description={event.description} ogTitle={event.name} ogDescription={actDisplay}>
+  <div class="flex items-start justify-between gap-4">
+    <div>
+      <h1 class="text-2xl font-semibold">{event.name}</h1>
+      <div class="mt-2 flex flex-wrap gap-2">
+        <Badge label={actDisplay} />
+      </div>
+    </div>
+    <div class="text-xs text-slate-400">ID: {event.id}</div>
+  </div>
+
+  <section class="mt-6 rounded-lg border border-white/10 bg-white/5 p-4">
+    <h2 class="text-sm font-semibold">Description</h2>
+    <p class="mt-2 whitespace-pre-line text-sm text-slate-200">{event.description}</p>
+  </section>
+
+  <section class="mt-4 rounded-lg border border-white/10 bg-white/5 p-4">
+    <h2 class="text-sm font-semibold">Choices</h2>
+    {event.choices?.length ? (
+      <ul class="mt-3 space-y-2">
+        {event.choices.map((c) => (
+          <li class="rounded-md border border-white/10 bg-slate-950/30 p-3">
+            <div class="text-sm font-semibold">{c.option}</div>
+            {c.outcome ? <div class="mt-1 text-sm text-slate-200">{c.outcome}</div> : null}
+            {c.description ? <div class="mt-1 text-xs text-slate-400">{c.description}</div> : null}
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <div class="mt-2 text-sm text-slate-300">—</div>
+    )}
+  </section>
+</Layout>

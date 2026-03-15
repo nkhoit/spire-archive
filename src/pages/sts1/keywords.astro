@@ -1,0 +1,26 @@
+---
+import Layout from '../../components/Layout.astro';
+import { getData } from '../../lib/data';
+
+const data = await getData();
+const keywords = data.keywords.filter((k) => k.names?.length).sort((a, b) => (a.names[0] ?? '').localeCompare(b.names[0] ?? ''));
+---
+<Layout title="Keywords — Spire Archive" description="Game keyword glossary for Slay the Spire.">
+  <h1 class="text-xl font-semibold">Keywords</h1>
+  <p class="mt-1 text-sm text-slate-300">{keywords.length} game keywords and mechanics.</p>
+
+  <ul class="mt-4 divide-y divide-white/10 rounded-lg border border-white/10 bg-white/5">
+    {keywords.map((k) => (
+      <li class="p-3">
+        <div class="flex items-center gap-2">
+          {k.effect_id ? (
+            <a href={`/effects/${k.effect_id}`} class="text-sm font-semibold capitalize text-sky-400 hover:text-sky-300 underline decoration-sky-400/30 hover:decoration-sky-300">{k.names[0]} ↗</a>
+          ) : (
+            <span class="text-sm font-semibold capitalize">{k.names[0]}</span>
+          )}
+        </div>
+        <div class="mt-1 text-sm text-slate-200">{k.description}</div>
+      </li>
+    ))}
+  </ul>
+</Layout>

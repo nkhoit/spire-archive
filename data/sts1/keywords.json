@@ -1,0 +1,379 @@
+[
+  {
+    "id": "ARTIFACT",
+    "names": [
+      "artifact"
+    ],
+    "description": "Negates the next debuff.",
+    "effect_id": "ARTIFACT"
+  },
+  {
+    "id": "BLOCK",
+    "names": [
+      "block",
+      "blocks"
+    ],
+    "description": "Until next turn, prevents damage."
+  },
+  {
+    "id": "BURN",
+    "names": [
+      "burn",
+      "burns"
+    ],
+    "description": "Burns are unplayable status cards that damage you."
+  },
+  {
+    "id": "CALM",
+    "names": [
+      "calm"
+    ],
+    "description": "Upon exiting this Stance, gain 2 Energy."
+  },
+  {
+    "id": "CHANNEL",
+    "names": [
+      "channel",
+      "channeled"
+    ],
+    "description": "Channeling an Orb puts it into your first empty slot. If you have no empty slots, your first Orb is automatically Evoked to make room."
+  },
+  {
+    "id": "CONFUSED",
+    "names": [
+      "confused"
+    ],
+    "description": "Whenever you draw a card, randomize its cost."
+  },
+  {
+    "id": "CURSE",
+    "names": [
+      "curse"
+    ],
+    "description": "Curse cards are negative cards that stay in your deck."
+  },
+  {
+    "id": "DARK",
+    "names": [
+      "dark",
+      "dark+"
+    ],
+    "description": "Orb: Increases damage every turn. When Evoked, deals damage to the enemy with the least HP."
+  },
+  {
+    "id": "DAZED",
+    "names": [
+      "dazed"
+    ],
+    "description": "Dazed are unplayable status cards."
+  },
+  {
+    "id": "DEXTERITY",
+    "names": [
+      "dexterity"
+    ],
+    "description": "Dexterity improves Block gained from cards.",
+    "effect_id": "DEXTERITY"
+  },
+  {
+    "id": "DIVINITY",
+    "names": [
+      "divinity"
+    ],
+    "description": "Upon entering this stance, gain 3 Energy. Attacks deal triple damage. Exit this Stance at the start of your next turn."
+  },
+  {
+    "id": "ETHEREAL",
+    "names": [
+      "ethereal"
+    ],
+    "description": "If this card is in your hand at the end of turn, it is exhausted. Exhausted cards are removed from your deck until the end of combat."
+  },
+  {
+    "id": "EVOKE",
+    "names": [
+      "evoke",
+      "evoked"
+    ],
+    "description": "Consume your rightmost Orb and use its Evoke effect."
+  },
+  {
+    "id": "EXHAUST",
+    "names": [
+      "exhaust",
+      "exhausted",
+      "exhausts"
+    ],
+    "description": "Removed until end of combat."
+  },
+  {
+    "id": "FATAL",
+    "names": [
+      "fatal"
+    ],
+    "description": "Triggers whenever this card kills a non-minion enemy."
+  },
+  {
+    "id": "FOCUS",
+    "names": [
+      "focus"
+    ],
+    "description": "Focus increases the effectiveness of Channeled Orbs.",
+    "effect_id": "FOCUS"
+  },
+  {
+    "id": "FRAIL",
+    "names": [
+      "frail"
+    ],
+    "description": "While Frail, gain 25% less Block from cards.",
+    "effect_id": "FRAIL"
+  },
+  {
+    "id": "FROST",
+    "names": [
+      "frost",
+      "frost+"
+    ],
+    "description": "Orb: Gains Block."
+  },
+  {
+    "id": "INNATE",
+    "names": [
+      "innate"
+    ],
+    "description": "Start each combat with this card in your hand."
+  },
+  {
+    "id": "INTANGIBLE",
+    "names": [
+      "intangible"
+    ],
+    "description": "Reduce ALL damage taken and HP loss to 1.",
+    "effect_id": "INTANGIBLEPLAYER"
+  },
+  {
+    "id": "LIGHTNING",
+    "names": [
+      "lightning",
+      "lightning+"
+    ],
+    "description": "Orb: Deals damage to random enemies."
+  },
+  {
+    "id": "LOCKED",
+    "names": [
+      "locked"
+    ],
+    "description": "This card has yet to be unlocked."
+  },
+  {
+    "id": "LOCK_ON",
+    "names": [
+      "lock-on"
+    ],
+    "description": "Lock-On targets receive 50% more damage from Orbs.",
+    "effect_id": "LOCKON"
+  },
+  {
+    "id": "OPENER",
+    "names": [
+      "opener"
+    ],
+    "description": "Opener cards may only be played as the first card each turn."
+  },
+  {
+    "id": "PLASMA",
+    "names": [
+      "plasma",
+      "plasma+"
+    ],
+    "description": "Orb: Gains Energy."
+  },
+  {
+    "id": "POISON",
+    "names": [
+      "poison",
+      "poisoned"
+    ],
+    "description": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1.",
+    "effect_id": "POISON"
+  },
+  {
+    "id": "PRAYER",
+    "names": [
+      "mantra",
+      "through violence"
+    ],
+    "description": "When you obtain 10 Mantra, enter Divinity.",
+    "effect_id": "MANTRA"
+  },
+  {
+    "id": "REGEN",
+    "names": [
+      "regen"
+    ],
+    "description": "Regen heals HP at the end of your turn. Each turn, Regen is reduced by 1.",
+    "effect_id": "REGENERATION"
+  },
+  {
+    "id": "RETAIN",
+    "names": [
+      "retain",
+      "retains",
+      "retained"
+    ],
+    "description": "Retained cards are not discarded at the end of turn."
+  },
+  {
+    "id": "RITUAL",
+    "names": [
+      "ritual"
+    ],
+    "description": "Gain Strength at the end of your turn.",
+    "effect_id": "RITUAL"
+  },
+  {
+    "id": "SCRY",
+    "names": [
+      "scry"
+    ],
+    "description": "Look at the top X cards of your draw pile. You may discard any of them."
+  },
+  {
+    "id": "SHIV",
+    "names": [
+      "shiv",
+      "shivs"
+    ],
+    "description": "Shivs are 0 cost Attack cards which Exhaust."
+  },
+  {
+    "id": "STANCE",
+    "names": [
+      "stance",
+      "stances"
+    ],
+    "description": "You can only have one stance at a time."
+  },
+  {
+    "id": "STATUS",
+    "names": [
+      "status"
+    ],
+    "description": "Status cards are removed at the end of combat."
+  },
+  {
+    "id": "STRENGTH",
+    "names": [
+      "strength"
+    ],
+    "description": "Strength adds additional damage to attacks.",
+    "effect_id": "STRENGTH"
+  },
+  {
+    "id": "STRIKE",
+    "names": [
+      "strike"
+    ],
+    "description": "Any card with the word \"Strike\" in its name."
+  },
+  {
+    "id": "THORNS",
+    "names": [
+      "thorns"
+    ],
+    "description": "When receiving Attack damage, deals damage back.",
+    "effect_id": "THORNS"
+  },
+  {
+    "id": "TODO",
+    "names": [
+      "todo",
+      "JUST FOR DEVS, DONT TRANSLATE",
+      "JUST FOR DEVS, DONT TRANSLATE",
+      "JUST FOR DEVS, DONT TRANSLATE",
+      "JUST FOR DEVS, DONT TRANSLATE"
+    ],
+    "description": "This card is NOT IMPLEMENTED. Someone should really fix that..."
+  },
+  {
+    "id": "TRANSFORM",
+    "names": [
+      "transform"
+    ],
+    "description": "Transformed cards become a random card of any rarity."
+  },
+  {
+    "id": "UNKNOWN",
+    "names": [
+      "unknown"
+    ],
+    "description": "This card has yet to be encountered."
+  },
+  {
+    "id": "UNPLAYABLE",
+    "names": [
+      "unplayable"
+    ],
+    "description": "Unplayable cards cannot be played from your hand."
+  },
+  {
+    "id": "UPGRADE",
+    "names": [
+      "upgrade",
+      "upgraded"
+    ],
+    "description": "Upgrading cards makes them more powerful. Cards can only be upgraded once."
+  },
+  {
+    "id": "VIGOR",
+    "names": [
+      "vigor"
+    ],
+    "description": "Your next Attack deals additional damage.",
+    "effect_id": "VIGOR"
+  },
+  {
+    "id": "VOID",
+    "names": [
+      "void",
+      "voids"
+    ],
+    "description": "Voids are unplayable status cards that consume energy when drawn."
+  },
+  {
+    "id": "VULNERABLE",
+    "names": [
+      "vulnerable"
+    ],
+    "description": "Vulnerable creatures take 50% more damage from Attacks.",
+    "effect_id": "VULNERABLE"
+  },
+  {
+    "id": "WEAK",
+    "names": [
+      "weak",
+      "weaken",
+      "weakened",
+      "weakens"
+    ],
+    "description": "Weakened creatures deal 25% less damage with Attacks.",
+    "effect_id": "WEAKENED"
+  },
+  {
+    "id": "WOUND",
+    "names": [
+      "wound",
+      "wounds"
+    ],
+    "description": "Wounds are unplayable status cards."
+  },
+  {
+    "id": "WRATH",
+    "names": [
+      "wrath"
+    ],
+    "description": "In this Stance, you deal and receive double attack damage."
+  }
+]

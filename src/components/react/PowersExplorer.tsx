@@ -17,7 +17,7 @@ export default function PowersExplorer() {
   const [offset, setOffset] = useState(0);
   const limit = 200;
 
-  const { data, loading, error } = useApiList<Power>('/api/effects', {
+  const { data, loading, error } = useApiList<Power>('/api/sts1/effects', {
     q: q || null,
     type: type || null,
     offset,
@@ -57,7 +57,7 @@ export default function PowersExplorer() {
       <ul className="mt-3 divide-y divide-white/10 rounded-lg border border-white/10 bg-white/5">
         {resp.items.map((p) => (
           <li key={p.id} className="p-3">
-            <a className="flex items-center gap-3 hover:bg-white/5 -m-3 p-3 rounded-lg" href={`/effects/${p.id}`}>
+            <a className="flex items-center gap-3 hover:bg-white/5 -m-3 p-3 rounded-lg" href={`/sts1/effects/${p.id}`}>
               {p.icon ? (
                 <img src={`/images/powers/${p.icon}`} alt="" className="w-10 h-10 flex-shrink-0" />
               ) : (

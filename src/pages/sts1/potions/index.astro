@@ -1,0 +1,12 @@
+---
+import Layout from '../../../components/Layout.astro';
+import PotionsExplorer from '../../../components/react/PotionsExplorer';
+import { getData } from '../../../lib/data';
+
+const { potions } = await getData();
+const rarities = Array.from(new Set(potions.map((p) => String(p.rarity)))).sort();
+---
+<Layout title="Potions — Spire Archive" description="Browse Slay the Spire potions with filters for rarity.">
+  <h1 class="text-xl font-semibold">Potions</h1>
+  <PotionsExplorer client:load rarities={rarities} />
+</Layout>

@@ -175,7 +175,7 @@ export interface Dataset {
   achievementById: Map<string, Achievement>;
 }
 
-let cache: Dataset | null = null;
+const cache = new Map<string, Dataset>();
 
 function rootDir() {
   // In production (built), data lives at /app/data; in dev, relative to source
@@ -189,8 +189,8 @@ function rootDir() {
   return candidate;
 }
 
-async function readJson<T>(file: string): Promise<T> {
-  const p = path.join(rootDir(), 'data', file);
+async function readJson<T>(game: string, file: string): Promise<T> {
+  const p = path.join(rootDir(), 'data', game, file);
   const raw = await fs.readFile(p, 'utf-8');
   return JSON.parse(raw) as T;
 }
@@ -201,8 +201,9 @@ function toMap<T extends { id: string }>(items: T[]): Map<string, T> {
   return m;
 }
 
-export async function getData(): Promise<Dataset> {
-  if (cache) return cache;
+export async function getData(game: 'sts1' | 'sts2' = 'sts1'): Promise<Dataset> {
+  const cached = cache.get(game);
+  if (cached) return cached;
 
   const [
     cards,
@@ -219,22 +220,22 @@ export async function getData(): Promise<Dataset> {
     achievements,
     cardPowers,
   ] = await Promise.all([
-    readJson<Card[]>('cards.json'),
-    readJson<Relic[]>('relics.json'),
-    readJson<Potion[]>('potions.json'),
-    readJson<Monster[]>('monsters.json'),
-    readJson<Event[]>('events.json'),
-    readJson<Power[]>('powers.json'),
-    readJson<Keyword[]>('keywords.json'),
-    readJson<Orb[]>('orbs.json'),
-    readJson<Stance[]>('stances.json'),
-    readJson<Blight[]>('blights.json'),
-    readJson<Character[]>('characters.json'),
-    readJson<Achievement[]>('achievements.json'),
-    readJson<Record<string, Array<{name: string; description: string}>>>('card_powers.json'),
+    readJson<Card[]>(game, 'cards.json'),
+    readJson<Relic[]>(game, 'relics.json'),
+    readJson<Potion[]>(game, 'potions.json'),
+    readJson<Monster[]>(game, 'monsters.json'),
+    readJson<Event[]>(game, 'events.json'),
+    readJson<Power[]>(game, 'powers.json'),
+    readJson<Keyword[]>(game, 'keywords.json'),
+    readJson<Orb[]>(game, 'orbs.json'),
+    readJson<Stance[]>(game, 'stances.json'),
+    readJson<Blight[]>(game, 'blights.json'),
+    readJson<Character[]>(game, 'characters.json'),
+    readJson<Achievement[]>(game, 'achievements.json'),
+    readJson<Record<string, Array<{name: string; description: string}>>>(game, 'card_powers.json'),
   ]);
 
-  cache = {
+  const dataset: Dataset = {
     cards,
     relics,
     potions,
@@ -264,5 +265,6 @@ export async function getData(): Promise<Dataset> {
     achievementById: toMap(achievements),
   };
 
-  return cache;
+  cache.set(game, dataset);
+  return dataset;
 }

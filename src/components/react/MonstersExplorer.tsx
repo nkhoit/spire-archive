@@ -30,7 +30,7 @@ export default function MonstersExplorer(props: { acts: string[]; types: string[
   const [offset, setOffset] = useState(0);
   const limit = 50;
 
-  const { data, loading, error } = useApiList<Monster>('/api/monsters', {
+  const { data, loading, error } = useApiList<Monster>('/api/sts1/monsters', {
     q: q || null,
     act: act || null,
     type: type || null,
@@ -94,7 +94,7 @@ export default function MonstersExplorer(props: { acts: string[]; types: string[
       <ul className="mt-3 divide-y divide-white/10 rounded-lg border border-white/10 bg-white/5">
         {resp.items.map((m) => (
           <li key={m.id} className="p-3">
-            <a className="text-sm font-semibold hover:underline" href={`/monsters/${m.id}`}>
+            <a className="text-sm font-semibold hover:underline" href={`/sts1/monsters/${m.id}`}>
               {m.name}
             </a>
             <div className="mt-1 text-xs text-slate-300">
