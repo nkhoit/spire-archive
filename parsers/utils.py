@@ -6,8 +6,11 @@ import re
 from pathlib import Path
 
 # Default paths
-DEFAULT_SOURCE_DIR = "/tmp/sts-full/com/megacrit/cardcrawl"
-DEFAULT_LOCALIZATION_DIR = "/tmp/sts-data/localization/eng"
+# These are only defaults for local dev; prefer passing explicit CLI args.
+# The paths are resolved relative to the project root (repo root).
+_PROJECT_ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_SOURCE_DIR = str(_PROJECT_ROOT / "sts-full" / "com" / "megacrit" / "cardcrawl")
+DEFAULT_LOCALIZATION_DIR = str(_PROJECT_ROOT / "sts-data" / "localization" / "eng")
 
 
 def load_localization(localization_dir: str, filename: str) -> dict:

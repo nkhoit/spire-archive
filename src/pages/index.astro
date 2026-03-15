@@ -1,0 +1,90 @@
+---
+import Layout from '../components/Layout.astro';
+import Badge from '../components/Badge.astro';
+import { getData } from '../lib/data';
+
+const data = await getData();
+const counts = {
+  cards: data.cards.length,
+  relics: data.relics.length,
+  potions: data.potions.length,
+  monsters: data.monsters.length,
+  events: data.events.length,
+  powers: data.powers.length,
+  keywords: data.keywords.length,
+};
+
+const colorMap: Record<string, string> = {
+  IRONCLAD: 'ironclad',
+  THE_SILENT: 'silent',
+  DEFECT: 'defect',
+  WATCHER: 'watcher',
+};
+
+const taglineMap: Record<string, string> = {
+  IRONCLAD: 'Strength & self-healing',
+  THE_SILENT: 'Poison & card draw',
+  DEFECT: 'Orbs & channeling',
+  WATCHER: 'Stances & divine wrath',
+};
+---
+<Layout title="Spire Archive" description="The complete database for Slay the Spire — browse cards, relics, potions, characters, monsters, events, and more.">
+  <h1 class="text-2xl font-semibold">Spire Archive</h1>
+  <p class="mt-2 max-w-2xl text-sm text-slate-300">
+    The complete database for Slay the Spire
+  </p>
+
+  <section class="mt-6">
+    <h2 class="text-sm font-semibold text-slate-400 uppercase tracking-wide">Characters</h2>
+    <div class="mt-3 grid grid-cols-2 gap-3 md:grid-cols-4">
+      {data.characters.map((ch) => {
+        const color = colorMap[ch.id] ?? '';
+        const tagline = taglineMap[ch.id] ?? '';
+        return (
+          <a href={`/characters/${ch.id}`} class="rounded-lg border border-white/10 bg-white/5 p-4 hover:bg-white/10 text-center">
+            <div class="text-sm font-semibold">{ch.name}</div>
+            <div class="mt-1">
+              <Badge label={color} tone={color} />
+            </div>
+            <div class="mt-2 text-xs text-slate-400">{tagline}</div>
+            <div class="mt-1 text-xs text-slate-400">{(ch as any).hp} HP · {(ch as any).energy_per_turn} Energy</div>
+          </a>
+        );
+      })}
+    </div>
+  </section>
+
+  <section class="mt-8">
+    <h2 class="text-sm font-semibold text-slate-400 uppercase tracking-wide">Browse</h2>
+    <div class="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <a href="/cards" class="rounded-lg border border-white/10 bg-white/5 p-4 hover:bg-white/10">
+        <div class="text-sm font-medium">Cards</div>
+        <div class="mt-1 text-xs text-slate-400">{counts.cards} cards across all characters</div>
+      </a>
+      <a href="/relics" class="rounded-lg border border-white/10 bg-white/5 p-4 hover:bg-white/10">
+        <div class="text-sm font-medium">Relics</div>
+        <div class="mt-1 text-xs text-slate-400">{counts.relics} relics from starter to boss tier</div>
+      </a>
+      <a href="/potions" class="rounded-lg border border-white/10 bg-white/5 p-4 hover:bg-white/10">
+        <div class="text-sm font-medium">Potions</div>
+        <div class="mt-1 text-xs text-slate-400">{counts.potions} potions and their effects</div>
+      </a>
+      <a href="/monsters" class="rounded-lg border border-white/10 bg-white/5 p-4 hover:bg-white/10">
+        <div class="text-sm font-medium">Monsters</div>
+        <div class="mt-1 text-xs text-slate-400">{counts.monsters} monsters, elites, and bosses</div>
+      </a>
+      <a href="/events" class="rounded-lg border border-white/10 bg-white/5 p-4 hover:bg-white/10">
+        <div class="text-sm font-medium">Events</div>
+        <div class="mt-1 text-xs text-slate-400">{counts.events} non-combat events and choices</div>
+      </a>
+      <a href="/powers" class="rounded-lg border border-white/10 bg-white/5 p-4 hover:bg-white/10">
+        <div class="text-sm font-medium">Powers</div>
+        <div class="mt-1 text-xs text-slate-400">{counts.powers} buffs, debuffs, and status effects</div>
+      </a>
+      <a href="/keywords" class="rounded-lg border border-white/10 bg-white/5 p-4 hover:bg-white/10">
+        <div class="text-sm font-medium">Keywords</div>
+        <div class="mt-1 text-xs text-slate-400">{counts.keywords} game mechanics and glossary</div>
+      </a>
+    </div>
+  </section>
+</Layout>

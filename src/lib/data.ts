@@ -1,0 +1,254 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+
+export type CardColor = 'ironclad' | 'silent' | 'defect' | 'watcher' | 'colorless' | 'curse' | string;
+
+export interface CardUpgrade {
+  cost: number | null;
+  damage: string | null;
+  block: string | null;
+  magic_number: string | null;
+  description: string | null;
+}
+
+export interface Card {
+  id: string;
+  name: string;
+  description: string;
+  cost: number | null;
+  type: string;
+  rarity: string;
+  target: string;
+  color: CardColor;
+  damage: number | null;
+  block: number | null;
+  magic_number: number | null;
+  hit_count: number | null;
+  exhaust: boolean;
+  ethereal: boolean;
+  innate: boolean;
+  retain: boolean;
+  self_retain: boolean;
+  purge_on_use: boolean;
+  tags: string[];
+  keywords: string[];
+  upgrade: CardUpgrade;
+}
+
+export interface Relic {
+  id: string;
+  name: string;
+  description: string;
+  flavor?: string | null;
+  tier: string;
+  color: CardColor | null;
+  counter?: number | null;
+  image_url?: string | null;
+}
+
+export interface Potion {
+  id: string;
+  name: string;
+  description: string;
+  rarity: string;
+  color: CardColor | null;
+  is_thrown?: boolean;
+  target?: string | null;
+  image_url?: string | null;
+}
+
+export interface MonsterMove {
+  id?: string;
+  name: string;
+  damage: number | null;
+  damage_ascension?: number | null;
+  intent: string;
+}
+
+export interface Monster {
+  id: string;
+  name: string;
+  type: string;
+  act: string;
+  min_hp: number | null;
+  max_hp: number | null;
+  min_hp_ascension?: number | null;
+  max_hp_ascension?: number | null;
+  moves: MonsterMove[];
+  image_url?: string | null;
+}
+
+export interface EventChoice {
+  option: string;
+  description: string;
+  outcome: string;
+}
+
+export interface Event {
+  id: string;
+  name: string;
+  act: string;
+  description: string;
+  choices: EventChoice[];
+  image_url?: string | null;
+}
+
+export interface Power {
+  id: string;
+  name: string;
+  description: string;
+  type: string;
+  stackable?: boolean;
+  triggers?: string[];
+}
+
+export interface Keyword {
+  id: string;
+  name: string;
+  description: string;
+}
+
+export interface Orb {
+  id: string;
+  name: string;
+  description: string;
+}
+
+export interface Stance {
+  id: string;
+  name: string;
+  description: string;
+}
+
+export interface Blight {
+  id: string;
+  name: string;
+  description: string;
+}
+
+export interface Character {
+  id: string;
+  name: string;
+  description?: string | null;
+  hp?: number;
+  energy_per_turn?: number;
+  starting_deck?: string[];
+  starting_relic?: string | null;
+}
+
+export interface Achievement {
+  id: string;
+  name: string;
+  description?: string | null;
+}
+
+export interface Dataset {
+  cards: Card[];
+  relics: Relic[];
+  potions: Potion[];
+  monsters: Monster[];
+  events: Event[];
+  powers: Power[];
+  keywords: Keyword[];
+  orbs: Orb[];
+  stances: Stance[];
+  blights: Blight[];
+  characters: Character[];
+  achievements: Achievement[];
+
+  cardById: Map<string, Card>;
+  relicById: Map<string, Relic>;
+  potionById: Map<string, Potion>;
+  monsterById: Map<string, Monster>;
+  eventById: Map<string, Event>;
+  powerById: Map<string, Power>;
+
+  keywordById: Map<string, Keyword>;
+  orbById: Map<string, Orb>;
+  stanceById: Map<string, Stance>;
+  blightById: Map<string, Blight>;
+  characterById: Map<string, Character>;
+  achievementById: Map<string, Achievement>;
+}
+
+let cache: Dataset | null = null;
+
+function rootDir() {
+  // src/lib/data.ts -> project root
+  return path.resolve(path.dirname(new URL(import.meta.url).pathname), '../..');
+}
+
+async function readJson<T>(file: string): Promise<T> {
+  const p = path.join(rootDir(), 'data', file);
+  const raw = await fs.readFile(p, 'utf-8');
+  return JSON.parse(raw) as T;
+}
+
+function toMap<T extends { id: string }>(items: T[]): Map<string, T> {
+  const m = new Map<string, T>();
+  for (const it of items) m.set(it.id, it);
+  return m;
+}
+
+export async function getData(): Promise<Dataset> {
+  if (cache) return cache;
+
+  const [
+    cards,
+    relics,
+    potions,
+    monsters,
+    events,
+    powers,
+    keywords,
+    orbs,
+    stances,
+    blights,
+    characters,
+    achievements,
+  ] = await Promise.all([
+    readJson<Card[]>('cards.json'),
+    readJson<Relic[]>('relics.json'),
+    readJson<Potion[]>('potions.json'),
+    readJson<Monster[]>('monsters.json'),
+    readJson<Event[]>('events.json'),
+    readJson<Power[]>('powers.json'),
+    readJson<Keyword[]>('keywords.json'),
+    readJson<Orb[]>('orbs.json'),
+    readJson<Stance[]>('stances.json'),
+    readJson<Blight[]>('blights.json'),
+    readJson<Character[]>('characters.json'),
+    readJson<Achievement[]>('achievements.json'),
+  ]);
+
+  cache = {
+    cards,
+    relics,
+    potions,
+    monsters,
+    events,
+    powers,
+    keywords,
+    orbs,
+    stances,
+    blights,
+    characters,
+    achievements,
+
+    cardById: toMap(cards),
+    relicById: toMap(relics),
+    potionById: toMap(potions),
+    monsterById: toMap(monsters),
+    eventById: toMap(events),
+    powerById: toMap(powers),
+
+    keywordById: toMap(keywords),
+    orbById: toMap(orbs),
+    stanceById: toMap(stances),
+    blightById: toMap(blights),
+    characterById: toMap(characters),
+    achievementById: toMap(achievements),
+  };
+
+  return cache;
+}
