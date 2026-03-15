@@ -5,4 +5,5 @@ export const COLOR_CLASS: Record<string, string> = {
   watcher: 'bg-purple-500/15 text-purple-200 ring-purple-500/30',
   colorless: 'bg-zinc-400/15 text-zinc-100 ring-zinc-400/30',
   curse: 'bg-zinc-800/60 text-zinc-200 ring-zinc-700/40',
+  new: 'bg-emerald-500/15 text-emerald-200 ring-emerald-500/30',
 };

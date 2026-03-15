@@ -3,6 +3,18 @@
 import argparse
 import json
 import os
+
+
+def _apply_delta(base, delta_str):
+    """Apply a delta like '+4' to a base value."""
+    if base is None or delta_str is None:
+        return base
+    delta_str = str(delta_str)
+    if delta_str.startswith('+'):
+        return base + int(delta_str[1:])
+    elif delta_str.startswith('-'):
+        return base - int(delta_str[1:])
+    return int(delta_str)
 import re
 import sys
 from pathlib import Path
@@ -121,11 +133,14 @@ def parse_cards(source_dir: str, localization_dir: str) -> list[dict]:
             raw_desc = loc_entry.get("DESCRIPTION", "")
             description = clean_description(raw_desc, base_damage, base_block, base_magic)
 
-            # Upgrade description
+            # Upgrade description — resolve !D!/!B!/!M! with upgraded values
             upg_desc_raw = loc_entry.get("UPGRADE_DESCRIPTION")
             upgrade_description = None
             if upg_desc_raw and upgrade.get("has_upgrade_desc"):
-                upgrade_description = clean_description(upg_desc_raw, base_damage, base_block, base_magic)
+                upg_damage = _apply_delta(base_damage, upgrade.get("damage"))
+                upg_block = _apply_delta(base_block, upgrade.get("block"))
+                upg_magic = _apply_delta(base_magic, upgrade.get("magic_number"))
+                upgrade_description = clean_description(upg_desc_raw, upg_damage, upg_block, upg_magic)
 
             # Multi-hit: detect from source
             hit_count = None
