@@ -219,7 +219,7 @@ export default function CardsExplorer(props: {
               <BadgeSpan label={c.color} tone={c.color} />
               <BadgeSpan label={c.type} />
               <BadgeSpan label={c.rarity} />
-              <span className="text-xs text-slate-400">Cost {c.cost ?? '—'}</span>
+              <BadgeSpan label={`Cost ${c.cost ?? 'X'}`} />
             </div>
           </a>
         ))}
