@@ -362,7 +362,7 @@ def render_card(card, fonts, upgraded=False):
     draw_description(draw, desc, fonts, CX, desc_start_y, canvas=canvas)
     
     # Scale to 768
-    canvas = canvas.resize((768, 768), Image.LANCZOS)
+    canvas = canvas.resize((1536, 1536), Image.LANCZOS)
     return canvas
 
 
