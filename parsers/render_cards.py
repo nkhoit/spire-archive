@@ -106,39 +106,109 @@ def draw_outlined_text(draw, xy, text, font, fill=(255, 255, 255), outline=(0, 0
     draw.text(xy, text, font=font, fill=fill)
 
 
+ENERGY_ORB_MAP = {
+    '[R]': 'card_red_orb.png',
+    '[G]': 'card_green_orb.png', 
+    '[B]': 'card_blue_orb.png',
+    '[E]': 'card_red_orb.png',
+    '[W]': 'card_purple_orb.png',
+}
+
 def _replace_energy(m):
     count = m.group().count('[')
     return f'[{count} Energy]' if count > 1 else '[Energy]'
 
 
-def draw_description(draw, desc, fonts, center_x, start_y):
-    desc = re.sub(r'(\[(?:R|G|B|E)\]\s*)+', _replace_energy, desc)
-    lines = desc.split('\n')
-    wrapped_lines = []
-    for line in lines:
+def _tokenize_energy(text):
+    """Split text into segments: (string, None) for text, (token, orb_file) for energy."""
+    import re
+    tokens = []
+    pattern = r'\[(?:R|G|B|E|W)\]'
+    last = 0
+    for m in re.finditer(pattern, text):
+        if m.start() > last:
+            tokens.append((text[last:m.start()], None))
+        tokens.append((m.group(), ENERGY_ORB_MAP.get(m.group())))
+        last = m.end()
+    if last < len(text):
+        tokens.append((text[last:], None))
+    return tokens
+
+
+def draw_description(draw, desc, fonts, center_x, start_y, canvas=None):
+    # For text measurement, convert energy tokens to placeholder for wrapping
+    desc_for_wrap = re.sub(r'\[(?:R|G|B|E|W)\]', '⚡', desc)
+    lines = desc_for_wrap.split('\n')
+    orig_lines = desc.split('\n')
+    wrapped_data = []  # list of (wrapped_text_for_measure, original_with_tokens)
+    for i, line in enumerate(lines):
+        orig = orig_lines[i] if i < len(orig_lines) else line
         wrapped = textwrap.wrap(line, width=24) or ['']
-        wrapped_lines.extend(wrapped)
+        # Rebuild original tokens per wrapped line
+        orig_remaining = orig
+        for wl in wrapped:
+            # Count chars consumed (⚡ = one energy token)
+            char_count = 0
+            orig_consumed = ''
+            oi = 0
+            for ch in wl:
+                if ch == '⚡':
+                    # Find next energy token in orig_remaining
+                    m = re.search(r'\[(?:R|G|B|E|W)\]', orig_remaining[oi:])
+                    if m:
+                        orig_consumed += orig_remaining[oi:oi + m.start()] + orig_remaining[oi + m.start():oi + m.end()]
+                        oi += m.end()
+                else:
+                    orig_consumed += orig_remaining[oi]
+                    oi += 1
+            orig_consumed_full = orig_remaining[:oi]
+            orig_remaining = orig_remaining[oi:]
+            wrapped_data.append(orig_consumed_full)
     
     line_height = 48
     y = start_y
     gold = (232, 193, 112)
     white = (220, 220, 210)
+    orb_size = 32  # inline orb size
     
-    for line in wrapped_lines:
-        parts = _split_keywords(line)
-        total_w = sum(
-            draw.textbbox((0, 0), p[0], font=fonts['desc_bold' if p[1] else 'desc'])[2] -
-            draw.textbbox((0, 0), p[0], font=fonts['desc_bold' if p[1] else 'desc'])[0]
-            for p in parts
-        )
-        cur_x = center_x - total_w // 2
+    for line_orig in wrapped_data:
+        # Tokenize: split into text segments and energy orbs
+        energy_tokens = _tokenize_energy(line_orig)
+        # Then split text segments by keywords
+        segments = []  # (text_or_orb, is_keyword, is_orb)
+        for seg_text, orb_file in energy_tokens:
+            if orb_file:
+                segments.append((seg_text, False, True, orb_file))
+            else:
+                for text, is_kw in _split_keywords(seg_text):
+                    segments.append((text, is_kw, False, None))
         
-        for text, is_keyword in parts:
-            color = gold if is_keyword else white
-            font = fonts['desc_bold'] if is_keyword else fonts['desc']
-            draw_outlined_text(draw, (cur_x, y), text, font, fill=color, outline=(20, 20, 30), outline_width=1)
-            tw = draw.textbbox((0, 0), text, font=font)[2] - draw.textbbox((0, 0), text, font=font)[0]
-            cur_x += tw
+        # Measure total width
+        total_w = 0
+        for text, is_kw, is_orb, orb_file in segments:
+            if is_orb:
+                total_w += orb_size + 2
+            else:
+                font = fonts['desc_bold'] if is_kw else fonts['desc']
+                tw = draw.textbbox((0, 0), text, font=font)[2] - draw.textbbox((0, 0), text, font=font)[0]
+                total_w += tw
+        
+        cur_x = center_x - total_w // 2
+        for text, is_kw, is_orb, orb_file in segments:
+            if is_orb and canvas:
+                orb_path = f"{CARDUI}/{orb_file}"
+                if os.path.exists(orb_path):
+                    orb_img = Image.open(orb_path).convert('RGBA')
+                    orb_img = orb_img.resize((orb_size, orb_size), Image.LANCZOS)
+                    orb_y = y + (line_height - orb_size) // 2
+                    canvas.paste(orb_img, (int(cur_x), int(orb_y)), orb_img)
+                cur_x += orb_size + 2
+            else:
+                color = gold if is_kw else white
+                font = fonts['desc_bold'] if is_kw else fonts['desc']
+                draw_outlined_text(draw, (cur_x, y), text, font, fill=color, outline=(20, 20, 30), outline_width=1)
+                tw = draw.textbbox((0, 0), text, font=font)[2] - draw.textbbox((0, 0), text, font=font)[0]
+                cur_x += tw
         y += line_height
     return y
 
@@ -278,7 +348,7 @@ def render_card(card, fonts, upgraded=False):
         desc = card['upgrade']['description']
     
     # Calculate line count for vertical centering
-    desc_for_count = re.sub(r'(\[(?:R|G|B|E)\]\s*)+', _replace_energy, desc)
+    desc_for_count = re.sub(r'\[(?:R|G|B|E|W)\]', '⚡', desc)
     lines = desc_for_count.split('\n')
     wrapped = []
     for line in lines:
@@ -289,7 +359,7 @@ def render_card(card, fonts, upgraded=False):
     total_text_h = num_lines * line_height
     desc_start_y = DESC_TOP + (DESC_BOTTOM - DESC_TOP - total_text_h) // 2
     
-    draw_description(draw, desc, fonts, CX, desc_start_y)
+    draw_description(draw, desc, fonts, CX, desc_start_y, canvas=canvas)
     
     # Scale to 768
     canvas = canvas.resize((768, 768), Image.LANCZOS)
