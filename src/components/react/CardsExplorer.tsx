@@ -60,8 +60,8 @@ function CardTile({ c, game }: { c: Card; game: string }) {
     ? `/images/rendered/upgraded/thumbs/${c.id.toLowerCase()}.webp`
     : `/images/rendered/thumbs/${c.id.toLowerCase()}.webp`;
   return (
-    <div className="group flex flex-col items-center rounded-lg border border-white/10 bg-white/5 p-3 hover:bg-white/10 transition-colors relative">
-      <a href={`/${game}/cards/${c.id}`} className="text-sm font-semibold group-hover:underline truncate w-full text-center">{upgraded ? `${c.name}+` : c.name}</a>
+    <div className="group flex flex-col items-center rounded-lg border border-white/10 bg-white/5 p-3 hover:bg-white/10 transition-colors">
+      <a href={`/${game}/cards/${c.id}`} className={`text-sm font-semibold group-hover:underline truncate w-full text-center ${upgraded ? 'text-emerald-400' : ''}`}>{upgraded ? `${c.name}+` : c.name}</a>
       {hasImages ? (
         <a href={`/${game}/cards/${c.id}`} className="w-full mt-2">
           <img
@@ -87,21 +87,20 @@ function CardTile({ c, game }: { c: Card; game: string }) {
           )}
         </a>
       )}
-      {hasImages && hasUpgrade && (
-        <button
-          onClick={(e) => { e.preventDefault(); setUpgraded(!upgraded); }}
-          className={`absolute top-2 right-2 w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center transition-colors ${upgraded ? 'bg-emerald-500 text-white' : 'bg-white/10 text-slate-400 hover:bg-white/20'}`}
-          title={upgraded ? 'Show base' : 'Show upgraded'}
-        >
-          +
-        </button>
-      )}
       <div className="mt-2 flex flex-wrap items-center justify-center gap-1">
         <BadgeSpan label={c.color} tone={c.color} />
         <BadgeSpan label={c.type} />
         <BadgeSpan label={c.rarity} />
         <BadgeSpan label={`Cost ${c.cost ?? 'X'}`} />
       </div>
+      {hasImages && hasUpgrade && (
+        <button
+          onClick={(e) => { e.preventDefault(); setUpgraded(!upgraded); }}
+          className={`mt-2 text-xs px-2 py-0.5 rounded-full ring-1 transition-colors ${upgraded ? 'bg-emerald-500/15 text-emerald-300 ring-emerald-500/30' : 'bg-white/5 text-slate-400 ring-white/10 hover:text-slate-200'}`}
+        >
+          {upgraded ? '✦ Upgraded' : '↑ Upgrade'}
+        </button>
+      )}
     </div>
   );
 }
