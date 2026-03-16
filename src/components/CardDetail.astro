@@ -39,7 +39,7 @@ function buildUpgradeDescription(card: any): { description: string; cost: number
   
   const varKeyMap: Record<string, string> = {};
   for (const uk of Object.keys(upg)) {
-    if (['add_keywords', 'remove_keywords', 'cost_change'].includes(uk)) continue;
+    if (['add_keywords', 'remove_keywords', 'cost_change', 'energy', 'stars'].includes(uk)) continue;
     if (uk in baseVars) {
       varKeyMap[uk] = uk;
     } else {
