@@ -10,12 +10,156 @@ export interface Props {
 const { game, card, data } = Astro.props;
 
 const upg = card.upgrade;
-const hasUpgrade = upg && (upg.description || upg.cost != null || upg.damage || upg.block || upg.magic_number);
+// STS1 upgrades have description/cost/damage/block/magic_number
+// STS2 upgrades have var deltas, cost_change, add_keywords, etc.
+const hasUpgrade = upg && Object.keys(upg).length > 0;
 
 // Rendered card image paths
 const imgPrefix = game === 'sts1' ? '/images/rendered' : '/images/sts2/rendered';
 const renderedBase = `${imgPrefix}/${card.id.toLowerCase()}.png`;
 const renderedUpgraded = hasUpgrade ? `${imgPrefix}/upgraded/${card.id.toLowerCase()}.png` : null;
+
+// Build upgrade description for STS2
+function buildUpgradeDescription(card: any): { description: string; cost: number | null; keywords: string[] } | null {
+  const upg = card.upgrade;
+  if (!upg || Object.keys(upg).length === 0) return null;
+  
+  let desc = card.description ?? '';
+  const baseVars: Record<string, number> = { ...(card.vars ?? {}) };
+  const newVars: Record<string, number> = { ...baseVars };
+  
+  const varKeyMap: Record<string, string> = {};
+  for (const uk of Object.keys(upg)) {
+    if (['add_keywords', 'remove_keywords', 'cost_change'].includes(uk)) continue;
+    if (uk in baseVars) {
+      varKeyMap[uk] = uk;
+    } else {
+      const puk = `power_${uk}`;
+      if (puk in baseVars) varKeyMap[uk] = puk;
+    }
+  }
+  
+  for (const [uk, vk] of Object.entries(varKeyMap)) {
+    newVars[vk] = baseVars[vk] + upg[uk];
+  }
+  
+  for (const vk of Object.values(varKeyMap)) {
+    const oldVal = baseVars[vk];
+    const newVal = newVars[vk];
+    if (oldVal !== newVal) {
+      desc = desc.replace(String(Math.floor(oldVal)), String(Math.floor(newVal)), );
+    }
+  }
+  
+  let cost = card.cost;
+  if ('cost_change' in upg) {
+    cost = Math.max(0, (cost ?? 0) + upg.cost_change);
+  }
+  
+  const kws = [...(card.keywords ?? [])];
+  for (const kw of (upg.add_keywords ?? [])) {
+    if (!kws.includes(kw)) kws.push(kw);
+  }
+  for (const kw of (upg.remove_keywords ?? [])) {
+    const idx = kws.indexOf(kw);
+    if (idx >= 0) kws.splice(idx, 1);
+  }
+  
+  return { description: desc, cost, keywords: kws };
+}
+
+const upgInfo = game === 'sts2' ? buildUpgradeDescription(card) : null;
+
+// Build highlighted description HTML
+function highlightDescription(desc: string, game: string, data: any): string {
+  if (!desc) return '';
+  let html = desc.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  
+  // Energy tokens
+  const energyMap: Record<string, string> = {
+    '[R]': '/images/cardui/card_red_orb.png',
+    '[G]': '/images/cardui/card_green_orb.png',
+    '[B]': '/images/cardui/card_blue_orb.png',
+    '[W]': '/images/cardui/card_purple_orb.png',
+  };
+  for (const [token, imgPath] of Object.entries(energyMap)) {
+    const escaped = token.replace('[', '\\[').replace(']', '\\]');
+    html = html.replace(new RegExp(escaped, 'g'),
+      `<img src="${imgPath}" alt="${token}" class="inline-block h-5 w-5 align-text-bottom" />`);
+  }
+  // [Energy] token
+  html = html.replace(/\[Energy\]/g, `<img src="/images/cardui/card_red_orb.png" alt="Energy" class="inline-block h-5 w-5 align-text-bottom" />`);
+  
+  // Collect highlight terms: keywords + power names
+  const highlightTerms: string[] = [];
+  if (data.keywords) {
+    for (const kw of data.keywords) {
+      for (const name of kw.names) {
+        highlightTerms.push(name);
+      }
+    }
+  }
+  if (data.powers) {
+    for (const p of data.powers) {
+      if (p.name && p.name.length > 2) {
+        highlightTerms.push(p.name);
+      }
+    }
+  }
+  
+  // Sort by length descending to match longer terms first
+  highlightTerms.sort((a, b) => b.length - a.length);
+  
+  // Replace terms with highlighted spans (case-insensitive, whole word)
+  for (const term of highlightTerms) {
+    const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const re = new RegExp(`\\b(${escaped})\\b`, 'gi');
+    html = html.replace(re, '<span class="text-amber-300 font-medium">$1</span>');
+  }
+  
+  html = html.replace(/\n/g, '<br>');
+  return html;
+}
+
+const descHtml = highlightDescription(card.description ?? '', game, data);
+
+// Build upgrade diff HTML for display
+function buildUpgradeDiffHtml(baseDesc: string, upgDesc: string, game: string, data: any): string {
+  if (!upgDesc) return '';
+  const baseLines = baseDesc.split('\n');
+  const upgLines = upgDesc.split('\n');
+  const result: string[] = [];
+  
+  for (let i = 0; i < upgLines.length; i++) {
+    const line = upgLines[i];
+    const baseLine = i < baseLines.length ? baseLines[i] : '';
+    if (line === baseLine) {
+      result.push(highlightDescription(line, game, data));
+    } else {
+      // Word-level diff
+      const baseWords = baseLine.split(/(\s+)/);
+      const upgWords = line.split(/(\s+)/);
+      let html = '';
+      for (let j = 0; j < upgWords.length; j++) {
+        const w = upgWords[j];
+        const bw = j < baseWords.length ? baseWords[j] : '';
+        if (w !== bw && w.trim()) {
+          html += `<span class="text-emerald-400 font-medium">${highlightDescription(w, game, data)}</span>`;
+        } else {
+          html += highlightDescription(w, game, data);
+        }
+      }
+      result.push(html);
+    }
+  }
+  return result.join('<br>');
+}
+
+const upgDescHtml = hasUpgrade
+  ? (game === 'sts2' && upgInfo
+    ? buildUpgradeDiffHtml(card.description ?? '', upgInfo.description, game, data)
+    : (upg?.description ? buildUpgradeDiffHtml(card.description ?? '', upg.description, game, data) : ''))
+  : '';
 
 // Collect flags
 const flags: string[] = [];
@@ -25,6 +169,13 @@ if (card.innate) flags.push('Innate');
 if (card.retain) flags.push('Retain');
 if (card.self_retain) flags.push('Self Retain');
 if (card.purge_on_use) flags.push('Purge on use');
+
+// STS2: also check keywords array for flags
+if (game === 'sts2' && card.keywords) {
+  for (const kw of card.keywords) {
+    if (!flags.includes(kw)) flags.push(kw);
+  }
+}
 
 // Keyword-to-power-icon mapping
 const keywordIcons: Record<string, string> = {
@@ -38,10 +189,11 @@ const keywordIcons: Record<string, string> = {
   'corruption': 'corruption', 'draw': 'carddraw', 'echo': 'echo',
   'envenom': 'envenom', 'flight': 'flight', 'flex': 'flex',
   'evolve': 'evolve', 'berserk': 'berserk', 'buffer': 'buffer',
+  'block': 'block', 'strength': 'strength',
 };
 
 // Find keywords mentioned in the card description
-const allText = card.description + (upg?.description ?? '');
+const allText = (card.description ?? '') + (upg?.description ?? '') + (upgInfo?.description ?? '');
 const mentionedKeywords = data.keywords.filter((kw: any) => {
   return kw.names.some((name: string) => {
     const re = new RegExp(`\\b${name}\\b`, 'i');
@@ -50,7 +202,20 @@ const mentionedKeywords = data.keywords.filter((kw: any) => {
 });
 
 // Related powers/buffs/debuffs applied by this card
-const relatedPowers = data.cardPowers[String(card.id)] ?? [];
+const relatedPowers = data.cardPowers?.[String(card.id)] ?? [];
+
+// Upgrade summary for STS2 (show what changed)
+const upgChanges: string[] = [];
+if (game === 'sts2' && upg) {
+  if (upg.cost_change) upgChanges.push(`Cost ${upg.cost_change > 0 ? '+' : ''}${upg.cost_change}`);
+  for (const kw of (upg.add_keywords ?? [])) upgChanges.push(`+${kw}`);
+  for (const kw of (upg.remove_keywords ?? [])) upgChanges.push(`-${kw}`);
+  for (const [k, v] of Object.entries(upg)) {
+    if (['add_keywords', 'remove_keywords', 'cost_change'].includes(k)) continue;
+    const val = v as number;
+    upgChanges.push(`${k} ${val > 0 ? '+' : ''}${val}`);
+  }
+}
 ---
 <div class="flex flex-col items-center gap-6 md:flex-row md:items-start">
   <!-- Rendered card image with toggle -->
@@ -85,6 +250,27 @@ const relatedPowers = data.cardPowers[String(card.id)] ?? [];
     {flags.length > 0 && (
       <div class="mt-3 flex flex-wrap gap-1.5">
         {flags.map(f => <Badge label={f} />)}
+      </div>
+    )}
+
+    <!-- Description -->
+    {descHtml && (
+      <section class="mt-4">
+        <div id="desc-base" class="text-sm text-slate-200 leading-relaxed" set:html={descHtml} />
+        {upgDescHtml && (
+          <div id="desc-upgraded" class="text-sm text-slate-200 leading-relaxed hidden" set:html={upgDescHtml} />
+        )}
+      </section>
+    )}
+
+    <!-- Upgrade summary -->
+    {upgChanges.length > 0 && (
+      <div class="mt-3 flex flex-wrap gap-1.5">
+        {upgChanges.map(c => (
+          <span class="inline-flex items-center rounded-full bg-emerald-500/15 px-2 py-0.5 text-xs text-emerald-300 ring-1 ring-emerald-500/30">
+            ↑ {c}
+          </span>
+        ))}
       </div>
     )}
 
@@ -146,6 +332,8 @@ const relatedPowers = data.cardPowers[String(card.id)] ?? [];
     const btnBase = document.getElementById('btn-base');
     const btnUpgraded = document.getElementById('btn-upgraded');
     const img = document.getElementById('card-img');
+    const descBase = document.getElementById('desc-base');
+    const descUpg = document.getElementById('desc-upgraded');
     const active = 'bg-white/10 text-white';
     const inactive = 'bg-transparent text-slate-400 hover:text-slate-200';
     function setActive(btn, other) {
@@ -156,10 +344,14 @@ const relatedPowers = data.cardPowers[String(card.id)] ?? [];
       btnBase.addEventListener('click', () => {
         img.src = renderedBase;
         setActive(btnBase, btnUpgraded);
+        if (descBase) descBase.classList.remove('hidden');
+        if (descUpg) descUpg.classList.add('hidden');
       });
       btnUpgraded.addEventListener('click', () => {
         img.src = renderedUpgraded;
         setActive(btnUpgraded, btnBase);
+        if (descBase) descBase.classList.add('hidden');
+        if (descUpg) descUpg.classList.remove('hidden');
       });
     }
   </script>
