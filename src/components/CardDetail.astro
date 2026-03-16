@@ -210,8 +210,19 @@ const mentionedKeywords = data.keywords.filter((kw: any) => {
   });
 });
 
-// Related powers/buffs/debuffs applied by this card
-const relatedPowers = data.cardPowers?.[String(card.id)] ?? [];
+// Related powers/buffs/debuffs: from cardPowers map OR mentioned in description
+const mappedPowers = data.cardPowers?.[String(card.id)] ?? [];
+const mentionedPowers = (data.powers ?? []).filter((p: any) => {
+  if (!p.name || p.name.length < 3) return false;
+  const re = new RegExp(`\\b${p.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i');
+  return re.test(allText);
+});
+// Dedupe by name
+const seenPowerNames = new Set(mappedPowers.map((p: any) => p.name));
+const relatedPowers = [
+  ...mappedPowers,
+  ...mentionedPowers.filter((p: any) => !seenPowerNames.has(p.name)),
+];
 
 // Upgrade summary for STS2 (show what changed)
 const upgChanges: string[] = [];
