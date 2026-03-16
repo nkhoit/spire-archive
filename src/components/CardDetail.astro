@@ -19,6 +19,15 @@ const imgPrefix = game === 'sts1' ? '/images/rendered' : '/images/sts2/rendered'
 const renderedBase = `${imgPrefix}/${card.id.toLowerCase()}.png`;
 const renderedUpgraded = hasUpgrade ? `${imgPrefix}/upgraded/${card.id.toLowerCase()}.png` : null;
 
+// Upgraded name and cost
+const upgName = hasUpgrade ? card.name + '+' : card.name;
+const upgCost = hasUpgrade
+  ? (game === 'sts2' && upg.cost_change != null
+    ? Math.max(0, (card.cost ?? 0) + upg.cost_change)
+    : (game === 'sts1' && upg.cost != null ? upg.cost : card.cost))
+  : card.cost;
+const costChanged = hasUpgrade && upgCost !== card.cost;
+
 // Build upgrade description for STS2
 function buildUpgradeDescription(card: any): { description: string; cost: number | null; keywords: string[] } | null {
   const upg = card.upgrade;
@@ -236,12 +245,12 @@ if (game === 'sts2' && upg) {
   <div class="flex-1 min-w-0">
     <div class="flex items-start justify-between gap-4">
       <div>
-        <h1 class="text-2xl font-semibold">{card.name}</h1>
+        <h1 id="card-name" class="text-2xl font-semibold">{card.name}</h1>
         <div class="mt-2 flex flex-wrap gap-2">
           <Badge label={String(card.color)} tone={String(card.color)} />
           <Badge label={String(card.type)} />
           <Badge label={String(card.rarity)} />
-          {card.cost != null && <Badge label={`Cost ${card.cost}`} />}
+          {card.cost != null && <span id="cost-badge"><Badge label={`Cost ${card.cost}`} /></span>}
         </div>
       </div>
       <div class="text-xs text-slate-400">ID: {card.id}</div>
@@ -328,12 +337,14 @@ if (game === 'sts2' && upg) {
 </div>
 
 {renderedUpgraded && (
-  <script define:vars={{ renderedBase, renderedUpgraded }}>
+  <script define:vars={{ renderedBase, renderedUpgraded, baseName: card.name, upgName, baseCost: card.cost, upgCost, costChanged }}>
     const btnBase = document.getElementById('btn-base');
     const btnUpgraded = document.getElementById('btn-upgraded');
     const img = document.getElementById('card-img');
     const descBase = document.getElementById('desc-base');
     const descUpg = document.getElementById('desc-upgraded');
+    const cardName = document.getElementById('card-name');
+    const costBadge = document.getElementById('cost-badge');
     const active = 'bg-white/10 text-white';
     const inactive = 'bg-transparent text-slate-400 hover:text-slate-200';
     function setActive(btn, other) {
@@ -346,12 +357,22 @@ if (game === 'sts2' && upg) {
         setActive(btnBase, btnUpgraded);
         if (descBase) descBase.classList.remove('hidden');
         if (descUpg) descUpg.classList.add('hidden');
+        if (cardName) { cardName.textContent = baseName; cardName.classList.remove('text-emerald-400'); }
+        if (costBadge) {
+          const span = costBadge.querySelector('span');
+          if (span) { span.textContent = 'Cost ' + baseCost; span.classList.remove('bg-emerald-500/15', 'text-emerald-300', 'ring-emerald-500/30'); span.classList.add('bg-white/10', 'text-slate-200', 'ring-white/10'); }
+        }
       });
       btnUpgraded.addEventListener('click', () => {
         img.src = renderedUpgraded;
         setActive(btnUpgraded, btnBase);
         if (descBase) descBase.classList.add('hidden');
         if (descUpg) descUpg.classList.remove('hidden');
+        if (cardName) { cardName.textContent = upgName; cardName.classList.add('text-emerald-400'); }
+        if (costBadge && costChanged) {
+          const span = costBadge.querySelector('span');
+          if (span) { span.textContent = 'Cost ' + upgCost; span.classList.remove('bg-white/10', 'text-slate-200', 'ring-white/10'); span.classList.add('bg-emerald-500/15', 'text-emerald-300', 'ring-emerald-500/30'); }
+        }
       });
     }
   </script>
