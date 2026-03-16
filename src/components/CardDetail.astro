@@ -52,12 +52,20 @@ function buildUpgradeDescription(card: any): { description: string; cost: number
     newVars[vk] = baseVars[vk] + upg[uk];
   }
   
+  // Replace values in reverse order of magnitude to avoid partial matches
+  const replacements: Array<[number, number]> = [];
   for (const vk of Object.values(varKeyMap)) {
-    const oldVal = baseVars[vk];
-    const newVal = newVars[vk];
+    const oldVal = Math.floor(baseVars[vk]);
+    const newVal = Math.floor(newVars[vk]);
     if (oldVal !== newVal) {
-      desc = desc.replace(String(Math.floor(oldVal)), String(Math.floor(newVal)), );
+      replacements.push([oldVal, newVal]);
     }
+  }
+  // Sort by old value descending so larger numbers are replaced first
+  replacements.sort((a, b) => b[0] - a[0]);
+  for (const [oldVal, newVal] of replacements) {
+    const re = new RegExp(`(?<!\\d)${oldVal}(?!\\d)`);
+    desc = desc.replace(re, String(newVal));
   }
   
   // Handle energy upgrade: add [E] markers
