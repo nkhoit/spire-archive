@@ -39,7 +39,7 @@ function buildUpgradeDescription(card: any): { description: string; cost: number
   
   const varKeyMap: Record<string, string> = {};
   for (const uk of Object.keys(upg)) {
-    if (['add_keywords', 'remove_keywords', 'cost_change', 'energy', 'stars'].includes(uk)) continue;
+    if (['add_keywords', 'remove_keywords', 'cost_change', 'energy', 'stars', 'description'].includes(uk)) continue;
     if (uk in baseVars) {
       varKeyMap[uk] = uk;
     } else {
@@ -192,8 +192,8 @@ function buildUpgradeDiffHtml(baseDesc: string, upgDesc: string, game: string, d
 }
 
 const upgDescHtml = hasUpgrade
-  ? (game === 'sts2' && upgInfo
-    ? buildUpgradeDiffHtml(card.description ?? '', upgInfo.description, game, data)
+  ? (game === 'sts2'
+    ? buildUpgradeDiffHtml(card.description ?? '', upg?.description ?? upgInfo?.description ?? card.description ?? '', game, data)
     : (upg?.description ? buildUpgradeDiffHtml(card.description ?? '', upg.description, game, data) : ''))
   : '';
 
