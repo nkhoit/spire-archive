@@ -77,6 +77,7 @@ function CardTile({ c, game }: { c: Card; game: string }) {
             src={imgSrc}
             alt={c.name}
             className="w-full rounded-md drop-shadow-lg"
+            style={{ aspectRatio: '300/398' }}
             loading="lazy"
           />
         </a>
