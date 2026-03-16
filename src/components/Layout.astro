@@ -57,13 +57,46 @@ const navLinks = game ? [
             </a>
           )}
         </div>
-        <nav class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-200">
-          {navLinks.map((link) => (
-            <a class="hover:text-white" href={link.href}>{link.emoji} {link.label}</a>
-          ))}
-        </nav>
+        {navLinks.length > 0 && (
+          <>
+            {/* Desktop nav */}
+            <nav class="hidden md:flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-200">
+              {navLinks.map((link) => (
+                <a class="hover:text-white" href={link.href}>{link.emoji} {link.label}</a>
+              ))}
+            </nav>
+            {/* Mobile hamburger */}
+            <button id="nav-toggle" class="md:hidden p-1.5 rounded-md text-slate-300 hover:text-white hover:bg-white/10 transition-colors" aria-label="Toggle menu">
+              <svg id="nav-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+              <svg id="nav-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+          </>
+        )}
       </div>
+      {navLinks.length > 0 && (
+        <nav id="nav-mobile" class="hidden md:hidden border-t border-white/10 px-4 py-3">
+          <div class="grid grid-cols-2 gap-2 text-sm text-slate-200">
+            {navLinks.map((link) => (
+              <a class="hover:text-white py-1.5" href={link.href}>{link.emoji} {link.label}</a>
+            ))}
+          </div>
+        </nav>
+      )}
     </header>
+
+    <script is:inline>
+      const toggle = document.getElementById('nav-toggle');
+      const mobile = document.getElementById('nav-mobile');
+      const iconOpen = document.getElementById('nav-icon-open');
+      const iconClose = document.getElementById('nav-icon-close');
+      if (toggle && mobile) {
+        toggle.addEventListener('click', () => {
+          const open = mobile.classList.toggle('hidden');
+          iconOpen?.classList.toggle('hidden', !open);
+          iconClose?.classList.toggle('hidden', open);
+        });
+      }
+    </script>
 
     <main class="mx-auto max-w-7xl px-4 py-6">
       <slot />
