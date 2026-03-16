@@ -201,13 +201,21 @@ const keywordIcons: Record<string, string> = {
   'block': 'block',
 };
 
-// Find keywords mentioned in the card description
+// Find keywords mentioned in the card description OR in the card's keywords array
 const allText = (card.description ?? '') + (upg?.description ?? '') + (upgInfo?.description ?? '');
+const cardKeywords = (card.keywords ?? []) as string[];
 const mentionedKeywords = data.keywords.filter((kw: any) => {
-  return kw.names.some((name: string) => {
+  // Match if keyword name appears in description text
+  const inDesc = kw.names.some((name: string) => {
     const re = new RegExp(`\\b${name}\\b`, 'i');
     return re.test(allText);
   });
+  // Or if the keyword is in the card's keywords array
+  const inCardKws = cardKeywords.some((ck: string) => 
+    kw.names.some((name: string) => name.toLowerCase() === ck.toLowerCase()) ||
+    kw.id?.toLowerCase() === ck.toLowerCase()
+  );
+  return inDesc || inCardKws;
 });
 
 // Related powers/buffs/debuffs: from cardPowers map OR mentioned in description
