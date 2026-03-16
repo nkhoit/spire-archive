@@ -881,7 +881,7 @@
     "upgrade": {
       "cards": 1
     },
-    "description": "Add 3 3 into your Hand.",
+    "description": "Add 3 Shivs into your Hand.",
     "image_url": "/images/sts2/rendered/blade_dance.png"
   },
   {
@@ -1652,7 +1652,7 @@
       "damage": 1,
       "cards": 1
     },
-    "description": "Enemy loses 3 HP.\nAdd 3 3 into your Draw Pile.",
+    "description": "Enemy loses 3 HP.\nAdd 3 Souls into your Draw Pile.",
     "image_url": "/images/sts2/rendered/capture_spirit.png"
   },
   {
@@ -1708,7 +1708,7 @@
     "upgrade": {
       "damage": 2
     },
-    "description": "Deal 6 damage 3 3.",
+    "description": "Deal 6 damage 3 times.",
     "image_url": "/images/sts2/rendered/celestial_might.png"
   },
   {
@@ -1744,7 +1744,7 @@
       "cards": 2
     },
     "upgrade": {},
-    "description": "Choose 2 2 in your Draw Pile to Transform into\n2|Minion Strikes}.",
+    "description": "Choose 2 cards in your Draw Pile to Transform into\nMinion Strikes.",
     "image_url": "/images/sts2/rendered/charge.png"
   },
   {
@@ -1904,7 +1904,7 @@
     "upgrade": {
       "cards": 1
     },
-    "description": "Gain 6 Block.\nAdd 1 1 into your Hand.",
+    "description": "Gain 6 Block.\nAdd 1 Shiv into your Hand.",
     "image_url": "/images/sts2/rendered/cloak_and_dagger.png"
   },
   {
@@ -2649,12 +2649,13 @@
     "tags": [],
     "vars": {
       "damage": 7,
-      "power_debilitate": 3
+      "power_debilitate": 3,
+      "debilitatepower": 3
     },
     "upgrade": {
       "damage": 2
     },
-    "description": "Deal 7 damage.\nVulnerable and Weak are twice as effective against the enemy for the next 3 3.",
+    "description": "Deal 7 damage.\nVulnerable and Weak are twice as effective against the enemy for the next 3 turns.",
     "image_url": "/images/sts2/rendered/debilitate.png"
   },
   {
@@ -3298,7 +3299,7 @@
         "Retain"
       ]
     },
-    "description": "Put 3 3 from your Discard Pile into your Hand.",
+    "description": "Put 3 cards from your Discard Pile into your Hand.",
     "image_url": "/images/sts2/rendered/dredge.png"
   },
   {
@@ -3570,7 +3571,7 @@
         "Innate"
       ]
     },
-    "description": "At the start of your turn, Transform 1 1 in your Hand.",
+    "description": "At the start of your turn, Transform 1 card in your Hand.",
     "image_url": "/images/sts2/rendered/entropy.png"
   },
   {
@@ -4662,7 +4663,7 @@
     "upgrade": {
       "cards": 1
     },
-    "description": "ALL players add 3 3 into their Draw Pile.",
+    "description": "ALL players add 3 Souls into their Draw Pile.",
     "image_url": "/images/sts2/rendered/glimpse_beyond.png"
   },
   {
@@ -4917,7 +4918,7 @@
     "upgrade": {
       "damage": 1
     },
-    "description": "Deal 4 damage 3 3.\nAdd a Slimed into your Discard Pile.",
+    "description": "Deal 4 damage 3 times.\nAdd a Slimed into your Discard Pile.",
     "image_url": "/images/sts2/rendered/gunk_up.png"
   },
   {
@@ -5260,10 +5261,11 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "cards": 2
+      "cards": 2,
+      "shivs": 2
     },
     "upgrade": {},
-    "description": "Discard 2 cards.\nAdd 2 2|Shivs} into your Hand.",
+    "description": "Discard 2 cards.\nAdd 2 Shivs into your Hand.",
     "image_url": "/images/sts2/rendered/hidden_daggers.png"
   },
   {
@@ -6069,12 +6071,13 @@
     "tags": [],
     "vars": {
       "block": 4,
-      "power_lightningrod": 2
+      "power_lightningrod": 2,
+      "lightningrodpower": 2
     },
     "upgrade": {
       "block": 3
     },
-    "description": "Gain 4 Block.\nAt the start of the next 2 turns}, Channel 1 Lightning.",
+    "description": "Gain 4 Block.\nAt the start of the next 2 turns, Channel 1 Lightning.",
     "image_url": "/images/sts2/rendered/lightning_rod.png"
   },
   {
@@ -6197,7 +6200,7 @@
     "upgrade": {
       "damage": 3
     },
-    "description": "Deal 6 damage.\nEvery 3 3 you play in a turn, put this into your Hand.",
+    "description": "Deal 6 damage.\nEvery 3 Skills you play in a turn, put this into your Hand.",
     "image_url": "/images/sts2/rendered/make_it_so.png"
   },
   {
@@ -6793,7 +6796,7 @@
     "upgrade": {
       "damage": 4
     },
-    "description": "Deal 10 damage.\nPut 2 random cards} from your Discard Pile into your Hand.",
+    "description": "Deal 10 damage.\nPut 2 random cards from your Discard Pile into your Hand.",
     "image_url": "/images/sts2/rendered/neows_fury.png"
   },
   {
@@ -7177,12 +7180,13 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "cards": 1
+      "cards": 1,
+      "cardplay": 5
     },
     "upgrade": {
       "cards": 1
     },
-    "description": "If you play 5 or more cards in a turn, draw 1 1 at the start of your next turn.",
+    "description": "If you play 5 or more cards in a turn, draw 1 card at the start of your next turn.",
     "image_url": "/images/sts2/rendered/pale_blue_dot.png"
   },
   {
@@ -7879,7 +7883,7 @@
     "upgrade": {
       "cost_change": -1
     },
-    "description": "Evoke your rightmost Orb 4 4.",
+    "description": "Evoke your rightmost Orb 4 times.",
     "image_url": "/images/sts2/rendered/quadcast.png"
   },
   {
@@ -8256,7 +8260,7 @@
       "cards": 1,
       "energy": 1
     },
-    "description": "Gain 15 Block.\nNext turn, draw 2 2 and gain [E][E].",
+    "description": "Gain 15 Block.\nNext turn, draw 2 cards and gain [E][E].",
     "image_url": "/images/sts2/rendered/relax.png"
   },
   {
@@ -9221,10 +9225,11 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "power_sloth": 3
+      "power_sloth": 3,
+      "slothpower": 3
     },
     "upgrade": {},
-    "description": "You cannot play more than 3 3 each turn.",
+    "description": "You cannot play more than 3 cards each turn.",
     "image_url": "/images/sts2/rendered/sloth.png"
   },
   {
@@ -10995,7 +11000,7 @@
     "upgrade": {
       "cards": 1
     },
-    "description": "Add 3 3 into your Hand.\nReduce this card's cost by 1.",
+    "description": "Add 3 Shivs into your Hand.\nReduce this card's cost by 1.",
     "image_url": "/images/sts2/rendered/up_my_sleeve.png"
   },
   {
@@ -11126,12 +11131,13 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "power_voidform": 2
+      "power_voidform": 2,
+      "voidformpower": 2
     },
     "upgrade": {
       "voidform": 1
     },
-    "description": "End your turn.\nThe first 2 cards} you play each turn 2 free to play.",
+    "description": "End your turn.\nThe first 2 cards you play each turn are free to play.",
     "image_url": "/images/sts2/rendered/void_form.png"
   },
   {
