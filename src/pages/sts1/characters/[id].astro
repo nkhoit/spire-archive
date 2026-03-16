@@ -69,7 +69,7 @@ const title = `${ch.name} — Spire Archive`;
       <ul class="mt-2 space-y-1">
         {Array.from(deckCards.entries()).map(([cardId, { card, count }]) => (
           <li class="text-sm">
-            <a href={`/cards/${cardId}`} class="text-sky-300 hover:text-sky-200 hover:underline">
+            <a href={`/sts1/cards/${cardId}`} class="text-sky-300 hover:text-sky-200 hover:underline">
               {card.name}{count > 1 ? ` ×${count}` : ''}
             </a>
           </li>
@@ -84,7 +84,7 @@ const title = `${ch.name} — Spire Archive`;
           {(() => {
             const relic = data.relics.find((r) => r.name === startingRelic);
             return relic ? (
-              <a href={`/relics/${relic.id}`} class="text-sm text-sky-300 hover:text-sky-200 hover:underline">{relic.name}</a>
+              <a href={`/sts1/relics/${relic.id}`} class="text-sm text-sky-300 hover:text-sky-200 hover:underline">{relic.name}</a>
             ) : (
               <span class="text-sm">{startingRelic}</span>
             );
@@ -107,7 +107,7 @@ const title = `${ch.name} — Spire Archive`;
           <ul class="mt-2 space-y-1">
             {cards.sort((a, b) => a.name.localeCompare(b.name)).map((c) => (
               <li>
-                <a href={`/cards/${c.id}`} class="text-sm text-sky-300 hover:text-sky-200 hover:underline">{c.name}</a>
+                <a href={`/sts1/cards/${c.id}`} class="text-sm text-sky-300 hover:text-sky-200 hover:underline">{c.name}</a>
                 <span class="text-xs text-slate-400"> · {c.rarity} · {c.cost ?? '—'}</span>
               </li>
             ))}
@@ -123,7 +123,7 @@ const title = `${ch.name} — Spire Archive`;
       <ul class="mt-3 divide-y divide-white/10 rounded-lg border border-white/10 bg-white/5">
         {charRelics.map((r) => (
           <li class="p-3">
-            <a href={`/relics/${r.id}`} class="text-sm font-semibold text-sky-300 hover:text-sky-200 hover:underline">{r.name}</a>
+            <a href={`/sts1/relics/${r.id}`} class="text-sm font-semibold text-sky-300 hover:text-sky-200 hover:underline">{r.name}</a>
             <span class="ml-2 text-xs text-slate-400">{(r as any).tier}</span>
             <p class="mt-1 text-sm text-slate-300">{r.description}</p>
           </li>
