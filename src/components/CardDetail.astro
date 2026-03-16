@@ -60,6 +60,25 @@ function buildUpgradeDescription(card: any): { description: string; cost: number
     }
   }
   
+  // Handle energy upgrade: add [E] markers
+  if (upg.energy) {
+    const added = '[E]'.repeat(upg.energy);
+    // Find last [E] and insert after it
+    const lastE = desc.lastIndexOf('[E]');
+    if (lastE >= 0) {
+      desc = desc.slice(0, lastE + 3) + added + desc.slice(lastE + 3);
+    }
+  }
+  
+  // Handle stars upgrade: add [S] markers
+  if (upg.stars) {
+    const added = '[S]'.repeat(upg.stars);
+    const lastS = desc.lastIndexOf('[S]');
+    if (lastS >= 0) {
+      desc = desc.slice(0, lastS + 3) + added + desc.slice(lastS + 3);
+    }
+  }
+  
   let cost = card.cost;
   if ('cost_change' in upg) {
     cost = Math.max(0, (cost ?? 0) + upg.cost_change);
