@@ -61,7 +61,16 @@ function CardTile({ c, game }: { c: Card; game: string }) {
     : `/images/rendered/thumbs/${c.id.toLowerCase()}.webp`;
   return (
     <div className="group flex flex-col items-center rounded-lg border border-white/10 bg-white/5 p-3 hover:bg-white/10 transition-colors">
-      <a href={`/${game}/cards/${c.id}`} className={`text-sm font-semibold group-hover:underline truncate w-full text-center ${upgraded ? 'text-emerald-400' : ''}`}>{upgraded ? `${c.name}+` : c.name}</a>
+      <div className="flex items-center w-full gap-1">
+        <a href={`/${game}/cards/${c.id}`} className={`text-sm font-semibold group-hover:underline truncate flex-1 text-center ${upgraded ? 'text-emerald-400' : ''}`}>{upgraded ? `${c.name}+` : c.name}</a>
+        {hasImages && hasUpgrade && (
+          <button
+            onClick={(e) => { e.preventDefault(); setUpgraded(!upgraded); }}
+            className={`shrink-0 w-5 h-5 rounded-full text-[10px] font-bold flex items-center justify-center transition-colors ${upgraded ? 'bg-emerald-500/20 text-emerald-300 ring-1 ring-emerald-500/30' : 'bg-white/10 text-slate-500 hover:text-slate-300'}`}
+            title={upgraded ? 'Show base' : 'Show upgraded'}
+          >↑</button>
+        )}
+      </div>
       {hasImages ? (
         <a href={`/${game}/cards/${c.id}`} className="w-full mt-2">
           <img
@@ -93,14 +102,6 @@ function CardTile({ c, game }: { c: Card; game: string }) {
         <BadgeSpan label={c.rarity} />
         <BadgeSpan label={`Cost ${c.cost ?? 'X'}`} />
       </div>
-      {hasImages && hasUpgrade && (
-        <button
-          onClick={(e) => { e.preventDefault(); setUpgraded(!upgraded); }}
-          className={`mt-2 text-xs px-2 py-0.5 rounded-full ring-1 transition-colors ${upgraded ? 'bg-emerald-500/15 text-emerald-300 ring-emerald-500/30' : 'bg-white/5 text-slate-400 ring-white/10 hover:text-slate-200'}`}
-        >
-          {upgraded ? '✦ Upgraded' : '↑ Upgrade'}
-        </button>
-      )}
     </div>
   );
 }
