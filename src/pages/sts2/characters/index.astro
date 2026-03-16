@@ -14,11 +14,11 @@ const colorMap: Record<string, string> = {
 };
 
 const portraitMap: Record<string, string> = {
-  IRONCLAD: '/images/sts2/characters/ironclad.png',
-  SILENT: '/images/sts2/characters/silent.png',
-  DEFECT: '/images/sts2/characters/defect.png',
-  NECROBINDER: '/images/sts2/characters/necrobinder.png',
-  REGENT: '/images/sts2/characters/regent.png',
+  IRONCLAD: '/images/sts2/characters/ironclad.jpg',
+  SILENT: '/images/sts2/characters/silent.jpg',
+  DEFECT: '/images/sts2/characters/defect.jpg',
+  NECROBINDER: '/images/sts2/characters/necrobinder.jpg',
+  REGENT: '/images/sts2/characters/regent.jpg',
 };
 
 const descMap: Record<string, string> = {
@@ -40,9 +40,7 @@ const descMap: Record<string, string> = {
       const desc = descMap[ch.id] ?? '';
       return (
         <a href={`/sts2/characters/${ch.id}`} class="block rounded-lg border border-white/10 bg-white/5 overflow-hidden hover:bg-white/10 transition-colors">
-          <div class="flex justify-center py-4 bg-black/20">
-            <img src={portraitMap[ch.id]} alt={ch.name} class="h-28 object-contain" />
-          </div>
+          <img src={portraitMap[ch.id]} alt={ch.name} class="w-full h-40 object-cover" style="object-position: right center" />
           <div class="p-4">
             <h2 class="text-lg font-semibold">{ch.name}</h2>
             <div class="mt-2 flex flex-wrap gap-2">
