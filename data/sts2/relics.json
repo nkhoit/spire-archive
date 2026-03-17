@@ -37,7 +37,7 @@
   {
     "id": "ARCHAIC_TOOTH",
     "name": "Archaic Tooth",
-    "description": "Upon pickup, Transform {StarterCard.StringValue:cond:{StarterCard} into {AncientCard}|a starter card with an ancient version}.",
+    "description": "Upon pickup, Transform a starter card with an ancient version.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -219,7 +219,7 @@
   {
     "id": "BREAD",
     "name": "Bread",
-    "description": "At the start of your first turn, lose {LoseEnergy:energyIcons()}. At the start of all other turns, gain {GainEnergy:energyIcons()}.",
+    "description": "At the start of your first turn, lose 1 Energy. At the start of all other turns, gain 1 Energy.",
     "tier": "Shop",
     "color": "shared"
   },
@@ -233,7 +233,7 @@
   {
     "id": "BRIMSTONE",
     "name": "Brimstone",
-    "description": "At the start of your turn, gain {SelfStrength} Strength and ALL enemies gain {EnemyStrength} Strength.",
+    "description": "At the start of your turn, gain 2 Strength and ALL enemies gain 1 Strength.",
     "tier": "Shop",
     "color": "ironclad"
   },
@@ -366,7 +366,7 @@
   {
     "id": "CROSSBOW",
     "name": "Crossbow",
-    "description": "At the start of your turn, add a random Attack into your Hand. It costs 0{energyPrefix:energyIcons(1)} this turn.",
+    "description": "At the start of your turn, add a random Attack into your Hand. It costs 0 Energy this turn.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -485,7 +485,7 @@
   {
     "id": "DUSTY_TOME",
     "name": "Dusty Tome",
-    "description": "Upon pickup, obtain {AncientCard.StringValue:cond:{}|an Ancient Card}.",
+    "description": "Upon pickup, obtain an Ancient Card.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -667,7 +667,7 @@
   {
     "id": "GALACTIC_DUST",
     "name": "Galactic Dust",
-    "description": "For every 10 {singleStarIcon} spent, gain 10 Block.",
+    "description": "For every 10 Stars spent, gain 10 Block.",
     "tier": "Uncommon",
     "color": "regent"
   },
@@ -821,7 +821,7 @@
   {
     "id": "IVORY_TILE",
     "name": "Ivory Tile",
-    "description": "Whenever you play a card that costs {EnergyThreshold:energyIcons()} or more, gain 1.",
+    "description": "Whenever you play a card that costs 1 Energy or more, gain 1.",
     "tier": "Rare",
     "color": "necrobinder"
   },
@@ -1052,7 +1052,7 @@
   {
     "id": "MINI_REGENT",
     "name": "Mini Regent",
-    "description": "The first time you spend {singleStarIcon} each turn, gain 1 Strength.",
+    "description": "The first time you spend Stars each turn, gain 1 Strength.",
     "tier": "Rare",
     "color": "regent"
   },
@@ -1199,7 +1199,7 @@
   {
     "id": "PAELS_CLAW",
     "name": "Pael's Claw",
-    "description": "Upon pickup, Enchant all Defends with {EnchantmentName}.",
+    "description": "Upon pickup, Enchant all Defends with Goopy.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -1220,7 +1220,7 @@
   {
     "id": "PAELS_GROWTH",
     "name": "Pael's Growth",
-    "description": "Upon pickup, Enchant a card with {EnchantmentName}.",
+    "description": "Upon pickup, Enchant a card with Clone.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -1241,14 +1241,14 @@
   {
     "id": "PAELS_TEARS",
     "name": "Pael's Tears",
-    "description": "If you end your turn with unspent {energyPrefix:energyIcons(1)}, gain an additional 2 next turn.",
+    "description": "If you end your turn with unspent Energy, gain an additional 2 next turn.",
     "tier": "Ancient",
     "color": "event"
   },
   {
     "id": "PAELS_TOOTH",
     "name": "Pael's Tooth",
-    "description": "Upon pickup, remove 5 5 from your Deck. After each combat, randomly add 1 back Upgraded.{CardTitles.StringValue:cond:\n\nCards in the Pot:\n{}|}",
+    "description": "Upon pickup, remove 5 cards from your Deck. After each combat, randomly add 1 back Upgraded.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -1339,7 +1339,7 @@
   {
     "id": "PHYLACTERY_UNBOUND",
     "name": "Phylactery Unbound",
-    "description": "At the start of each combat, Summon {StartOfCombat}. At the start of your turn, Summon {StartOfTurn}.",
+    "description": "At the start of each combat, Summon 5. At the start of your turn, Summon 1.",
     "tier": "Starter",
     "color": "event"
   },
@@ -1528,7 +1528,7 @@
   {
     "id": "ROYAL_STAMP",
     "name": "Royal Stamp",
-    "description": "Upon pickup, choose an Attack or Skill in your Deck to Enchant with {Enchantment}.",
+    "description": "Upon pickup, choose an Attack or Skill in your Deck to Enchant with Royally Approved.",
     "tier": "Shop",
     "color": "shared"
   },
@@ -1584,7 +1584,7 @@
   {
     "id": "SEA_GLASS",
     "name": "Sea Glass",
-    "description": "See 15 cards from {Character.StringValue:cond:{}|another character}. Choose any number of them to add to your Deck.",
+    "description": "See 15 cards from another character. Choose any number of them to add to your Deck.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -1682,7 +1682,7 @@
   {
     "id": "SPIKED_GAUNTLETS",
     "name": "Spiked Gauntlets",
-    "description": "Gain 1 at the start of each turn. Powers cost 1 more {energyPrefix:energyIcons(1)}.",
+    "description": "Gain 1 at the start of each turn. Powers cost 1 more Energy.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -1829,7 +1829,7 @@
   {
     "id": "TOUCH_OF_OROBAS",
     "name": "Touch of Orobas",
-    "description": "Upon pickup, replace {StarterRelic.StringValue:cond:{StarterRelic} with {UpgradedRelic}|your starter Relic with an Ancient version}.",
+    "description": "Upon pickup, replace your starter Relic with an Ancient version.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -1941,7 +1941,7 @@
   {
     "id": "VEXING_PUZZLEBOX",
     "name": "Vexing Puzzlebox",
-    "description": "At the start of each combat, add a random card into your Hand. It costs 0{energyPrefix:energyIcons(1)}.",
+    "description": "At the start of each combat, add a random card into your Hand. It costs 0 Energy.",
     "tier": "Rare",
     "color": "shared"
   },
