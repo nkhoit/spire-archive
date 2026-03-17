@@ -75,7 +75,7 @@ const colorMap: Record<string, string> = {
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
         {relatedCards.map((card) => (
           <a href={`/sts1/cards/${card.id}`} class="group flex items-center justify-center rounded-lg border border-white/10 bg-white/5 p-2 hover:bg-white/10 transition">
-            <CssCardRenderer client:load card={card} game="sts1" size="sm" />
+            <CssCardRenderer client:load card={card} game="sts1" size="xs" />
           </a>
         ))}
       </div>
