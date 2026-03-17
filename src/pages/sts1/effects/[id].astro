@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../components/Layout.astro';
 import { getData } from '../../../lib/data';
+import CssCardRenderer from '../../../components/react/CssCardRenderer';
 
 const { id } = Astro.params;
 const data = await getData('sts1');
@@ -73,13 +74,8 @@ const colorMap: Record<string, string> = {
       <h2 class="text-lg font-semibold mb-3">Cards that apply {power.name}</h2>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
         {relatedCards.map((card) => (
-          <a href={`/cards/${card.id}`} class="group rounded-lg border border-white/10 bg-white/5 p-2 hover:bg-white/10 transition">
-            <img
-              src={`/images/sts1/rendered/${card.id.toLowerCase()}.png`}
-              alt={card.name}
-              class="w-full rounded"
-              loading="lazy"
-            />
+          <a href={`/sts1/cards/${card.id}`} class="group rounded-lg border border-white/10 bg-white/5 p-2 hover:bg-white/10 transition">
+            <CssCardRenderer client:load card={card} game="sts1" size="sm" />
           </a>
         ))}
       </div>

@@ -16,11 +16,6 @@ const upg = card.upgrade;
 // STS2 upgrades have var deltas, cost_change, add_keywords, etc.
 const hasUpgrade = upg && Object.keys(upg).length > 0;
 
-// Rendered card image paths
-const imgPrefix = game === 'sts1' ? '/images/sts1/rendered' : '/images/sts2/rendered';
-const renderedBase = `${imgPrefix}/${card.id.toLowerCase()}.png`;
-const renderedUpgraded = hasUpgrade ? `${imgPrefix}/upgraded/${card.id.toLowerCase()}.png` : null;
-
 // Upgraded name and cost
 const upgName = hasUpgrade ? card.name + '+' : card.name;
 const upgCost = hasUpgrade
