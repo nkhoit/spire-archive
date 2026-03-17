@@ -293,7 +293,7 @@ if (game === 'sts2' && upg) {
           <Badge label={String(card.color)} tone={String(card.color)} />
           <Badge label={String(card.type)} />
           <Badge label={String(card.rarity)} />
-          {card.cost != null && <span id="cost-badge"><Badge label={`Cost ${card.cost}`} /></span>}
+          {card.cost != null && <Badge label={`Cost ${card.cost}`} />}
         </div>
       </div>
       <div class="text-xs text-slate-400">ID: {card.id}</div>
