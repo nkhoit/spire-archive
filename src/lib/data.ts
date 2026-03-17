@@ -67,6 +67,7 @@ export interface Relic {
   tier: string;
   color: CardColor | null;
   counter?: number | null;
+  icon?: string;
   image_url?: string | null;
 }
 
@@ -78,6 +79,7 @@ export interface Potion {
   color: CardColor | null;
   is_thrown?: boolean;
   target?: string | null;
+  icon?: string;
   image_url?: string | null;
 }
 
