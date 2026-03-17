@@ -69,7 +69,7 @@ function CardTile({ c, game }: { c: Card; game: string }) {
         )}
       </div>
       <a href={`/${game}/cards/${c.id}`} className="w-full mt-2 flex justify-center">
-        <CssCardRendererSts1 card={c} upgraded={upgraded} size="sm" />
+        <CssCardRendererSts1 card={c} upgraded={upgraded} size={isMobile ? 'xs' : 'sm'} />
       </a>
       <div className="mt-2 flex flex-wrap items-center justify-center gap-1">
         <BadgeSpan label={c.color} tone={c.color} />
@@ -107,6 +107,13 @@ export default function CardsExplorer(props: { game?: string;
 
   const [data, setData] = useState<ApiResp<Card> | null>(props.initial ?? null);
   const [loading, setLoading] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 640);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
   const [error, setError] = useState<string | null>(null);
 
   const queryKey = useMemo(

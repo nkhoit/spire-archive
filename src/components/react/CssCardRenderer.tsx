@@ -137,7 +137,7 @@ export default function CssCardRenderer({ card, upgraded = false, size = 'md' }:
 
   const typeLabel = card.type;
 
-  const scales: Record<string, number> = { sm: 0.4, md: 0.6, lg: 0.8 };
+  const scales: Record<string, number> = { xs: 0.25, sm: 0.4, md: 0.6, lg: 0.8 };
   const scale = scales[size] ?? 0.6;
 
   return (
