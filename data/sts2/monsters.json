@@ -12,31 +12,59 @@
   {
     "id": "ASSASSIN_RUBY_RAIDER",
     "name": "Assassin Ruby Raider",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 18,
+    "max_hp": 23,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Killshot",
+        "damage": 11,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "AXE_RUBY_RAIDER",
     "name": "Axe Ruby Raider",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 20,
+    "max_hp": 22,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "SwingMove",
+        "damage": 5,
+        "hits": null
+      },
+      {
+        "name": "Big Swing",
+        "damage": 12,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "AXEBOT",
     "name": "Axebot",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 40,
+    "max_hp": 44,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "The One-Two",
+        "damage": 5,
+        "hits": 2
+      },
+      {
+        "name": "Hammer Uppercut",
+        "damage": 8,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
@@ -47,7 +75,10 @@
     "type": "Normal",
     "act": "unknown",
     "moves": [],
-    "description": null
+    "description": null,
+    "powers": [
+      "BattlewornDummyTimeLimitPower 3"
+    ]
   },
   {
     "id": "BATTLE_FRIEND_V2",
@@ -57,7 +88,10 @@
     "type": "Normal",
     "act": "unknown",
     "moves": [],
-    "description": null
+    "description": null,
+    "powers": [
+      "BattlewornDummyTimeLimitPower 3"
+    ]
   },
   {
     "id": "BATTLE_FRIEND_V3",
@@ -67,7 +101,10 @@
     "type": "Normal",
     "act": "unknown",
     "moves": [],
-    "description": null
+    "description": null,
+    "powers": [
+      "BattlewornDummyTimeLimitPower 3"
+    ]
   },
   {
     "id": "BIG_DUMMY",
@@ -82,72 +119,116 @@
   {
     "id": "BOWLBUG_EGG",
     "name": "Bowlbug Egg",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 21,
+    "max_hp": 22,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Bite",
+        "damage": 7,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "BOWLBUG_NECTAR",
     "name": "Bowlbug Nectar",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 35,
+    "max_hp": 38,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Thrash",
+        "damage": 3,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "BOWLBUG_ROCK",
     "name": "Bowlbug Rock",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 45,
+    "max_hp": 48,
     "type": "Normal",
     "act": "unknown",
     "moves": [],
-    "description": null
+    "description": null,
+    "powers": [
+      "ImbalancedPower 1"
+    ]
   },
   {
     "id": "BOWLBUG_SILK",
     "name": "Bowlbug Silk",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 40,
+    "max_hp": 43,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "ThrashMove",
+        "damage": 4,
+        "hits": 2
+      }
+    ],
     "description": null
   },
   {
     "id": "BRUTE_RUBY_RAIDER",
     "name": "Brute Ruby Raider",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 30,
+    "max_hp": 33,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Beat",
+        "damage": 7,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "BYGONE_EFFIGY",
     "name": "Bygone Effigy",
-    "min_hp": null,
+    "min_hp": 127,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Elite",
     "act": "unknown",
     "moves": [],
-    "description": null
+    "description": null,
+    "powers": [
+      "SlowPower 1"
+    ]
   },
   {
     "id": "BYRDONIS",
     "name": "Byrdonis",
-    "min_hp": null,
-    "max_hp": null,
-    "type": "Normal",
+    "min_hp": 91,
+    "max_hp": 94,
+    "type": "Elite",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "Peck",
+        "damage": 3,
+        "hits": null
+      },
+      {
+        "name": "SwoopMove",
+        "damage": 16,
+        "hits": null
+      }
+    ],
+    "description": null,
+    "powers": [
+      "TerritorialPower 1"
+    ]
   },
   {
     "id": "BYRDPIP",
@@ -162,81 +243,169 @@
   {
     "id": "CALCIFIED_CULTIST",
     "name": "Calcified Cultist",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 38,
+    "max_hp": 41,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Dark Strike",
+        "damage": 9,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "CEREMONIAL_BEAST",
     "name": "Ceremonial Beast",
-    "min_hp": null,
+    "min_hp": 252,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Boss",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Stomp",
+        "damage": 15,
+        "hits": null
+      },
+      {
+        "name": "Crush",
+        "damage": 17,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "CHOMPER",
     "name": "Chomper",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 60,
+    "max_hp": 64,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "Clamp",
+        "damage": 8,
+        "hits": 2
+      }
+    ],
+    "description": null,
+    "powers": [
+      "ArtifactPower 2"
+    ]
   },
   {
     "id": "CORPSE_SLUG",
     "name": "Corpse Slug",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 25,
+    "max_hp": 27,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Whip Slap",
+        "damage": 3,
+        "hits": null
+      },
+      {
+        "name": "GlompMove",
+        "damage": 8,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "CROSSBOW_RUBY_RAIDER",
     "name": "Crossbow Ruby Raider",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 18,
+    "max_hp": 21,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Fire!",
+        "damage": 14,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "CRUSHER",
     "name": "Crusher",
-    "min_hp": null,
+    "min_hp": 199,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Boss",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "Thrash",
+        "damage": 12,
+        "hits": null
+      },
+      {
+        "name": "Bug Sting",
+        "damage": 6,
+        "hits": null
+      },
+      {
+        "name": "Enlarging Strike",
+        "damage": 4,
+        "hits": null
+      },
+      {
+        "name": "Guarded Strike",
+        "damage": 12,
+        "hits": null
+      }
+    ],
+    "description": null,
+    "powers": [
+      "BackAttackLeftPower 1",
+      "CrabRagePower 1"
+    ]
   },
   {
     "id": "CUBEX_CONSTRUCT",
     "name": "Cubex Construct",
-    "min_hp": null,
+    "min_hp": 65,
     "max_hp": null,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "RepeaterBlastMove",
+        "damage": 7,
+        "hits": null
+      },
+      {
+        "name": "ExpelBlastMove",
+        "damage": 5,
+        "hits": 2
+      }
+    ],
+    "description": null,
+    "powers": [
+      "ArtifactPower 1"
+    ]
   },
   {
     "id": "DAMP_CULTIST",
     "name": "Damp Cultist",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 51,
+    "max_hp": 53,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Dark Strike",
+        "damage": 1,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
@@ -252,52 +421,116 @@
   {
     "id": "DEVOTED_SCULPTOR",
     "name": "Devoted Sculptor",
-    "min_hp": null,
+    "min_hp": 162,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Weak",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "SavageMove",
+        "damage": 12,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "DOOR",
     "name": "Door",
-    "min_hp": null,
+    "min_hp": 155,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Boss",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "DramaticOpenMove",
+        "damage": 25,
+        "hits": null
+      },
+      {
+        "name": "EnforceMove",
+        "damage": 20,
+        "hits": null
+      },
+      {
+        "name": "DoorSlamMove",
+        "damage": 15,
+        "hits": null
+      }
+    ],
+    "description": null,
+    "powers": [
+      "DoorRevivalPower 1"
+    ]
   },
   {
     "id": "DOORMAKER",
     "name": "Doormaker",
-    "min_hp": null,
+    "min_hp": 489,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Boss",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "BeamMove",
+        "damage": 31,
+        "hits": null
+      },
+      {
+        "name": "GetBackInMove",
+        "damage": 40,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "ENTOMANCER",
     "name": "Entomancer",
-    "min_hp": null,
+    "min_hp": 145,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Elite",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "Beeeees!",
+        "damage": 3,
+        "hits": null
+      },
+      {
+        "name": "Spear!",
+        "damage": 18,
+        "hits": null
+      }
+    ],
+    "description": null,
+    "powers": [
+      "PersonalHivePower 1"
+    ]
   },
   {
     "id": "EXOSKELETON",
     "name": "Exoskeleton",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 24,
+    "max_hp": 28,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "Skitter",
+        "damage": 1,
+        "hits": null
+      },
+      {
+        "name": "MandiblesMove",
+        "damage": 8,
+        "hits": null
+      }
+    ],
+    "description": null,
+    "powers": [
+      "HardToKillPower 9"
+    ]
   },
   {
     "id": "EYE_WITH_TEETH",
@@ -307,33 +540,63 @@
     "type": "Normal",
     "act": "unknown",
     "moves": [],
-    "description": null
+    "description": null,
+    "powers": [
+      "IllusionPower 1"
+    ]
   },
   {
     "id": "FABRICATOR",
     "name": "Fabricator",
-    "min_hp": null,
+    "min_hp": 150,
     "max_hp": null,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "FabricatingStrikeMove",
+        "damage": 18,
+        "hits": null
+      },
+      {
+        "name": "Disintegrate",
+        "damage": 11,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "FAKE_MERCHANT_MONSTER",
     "name": "Fake Merchant Monster",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 165,
+    "max_hp": 165,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Swipe",
+        "damage": 13,
+        "hits": null
+      },
+      {
+        "name": "Spew Coins",
+        "damage": 2,
+        "hits": 8
+      },
+      {
+        "name": "Throw Relic",
+        "damage": 13,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "FAT_GREMLIN",
     "name": "Fat Gremlin",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 13,
+    "max_hp": 17,
     "type": "Normal",
     "act": "unknown",
     "moves": [],
@@ -352,48 +615,100 @@
   {
     "id": "FLYCONID",
     "name": "Flyconid",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 47,
+    "max_hp": 49,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Smash",
+        "damage": 11,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "FOGMOG",
     "name": "Fogmog",
-    "min_hp": null,
+    "min_hp": 74,
     "max_hp": null,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "SwipeMove",
+        "damage": 8,
+        "hits": null
+      },
+      {
+        "name": "HeadbuttMove",
+        "damage": 14,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "FOSSIL_STALKER",
     "name": "Fossil Stalker",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 51,
+    "max_hp": 53,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "Tackle",
+        "damage": 9,
+        "hits": null
+      },
+      {
+        "name": "Latch",
+        "damage": 12,
+        "hits": null
+      },
+      {
+        "name": "Lash",
+        "damage": 3,
+        "hits": null
+      }
+    ],
+    "description": null,
+    "powers": [
+      "SuckPower 3"
+    ]
   },
   {
     "id": "FROG_KNIGHT",
     "name": "Frog Knight",
-    "min_hp": null,
+    "min_hp": 191,
     "max_hp": null,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Strike Down Evil",
+        "damage": 21,
+        "hits": null
+      },
+      {
+        "name": "Tongue Lash",
+        "damage": 13,
+        "hits": null
+      },
+      {
+        "name": "Beetle Charge",
+        "damage": 35,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "FUZZY_WURM_CRAWLER",
     "name": "Fuzzy Wurm Crawler",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 55,
+    "max_hp": 57,
     "type": "Normal",
     "act": "unknown",
     "moves": [],
@@ -402,38 +717,75 @@
   {
     "id": "GAS_BOMB",
     "name": "Gas Bomb",
-    "min_hp": null,
+    "min_hp": 10,
     "max_hp": null,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "Explode",
+        "damage": 8,
+        "hits": null
+      }
+    ],
+    "description": null,
+    "powers": [
+      "MinionPower 1"
+    ]
   },
   {
     "id": "GLOBE_HEAD",
     "name": "Globe Head",
-    "min_hp": null,
+    "min_hp": 148,
     "max_hp": null,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "ThunderStrike",
+        "damage": 6,
+        "hits": 3
+      },
+      {
+        "name": "Shocking Slap",
+        "damage": 13,
+        "hits": null
+      },
+      {
+        "name": "GalvanicBurstMove",
+        "damage": 16,
+        "hits": null
+      }
+    ],
+    "description": null,
+    "powers": [
+      "GalvanicPower 6"
+    ]
   },
   {
     "id": "GREMLIN_MERC",
     "name": "Gremlin Merc",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 47,
+    "max_hp": 49,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "Double Smash",
+        "damage": 6,
+        "hits": null
+      }
+    ],
+    "description": null,
+    "powers": [
+      "SurprisePower 1"
+    ]
   },
   {
     "id": "GUARDBOT",
     "name": "Guardbot",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 21,
+    "max_hp": 25,
     "type": "Normal",
     "act": "unknown",
     "moves": [],
@@ -442,128 +794,291 @@
   {
     "id": "HAUNTED_SHIP",
     "name": "Haunted Ship",
-    "min_hp": null,
+    "min_hp": 63,
     "max_hp": null,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Ramming Speed",
+        "damage": 10,
+        "hits": null
+      },
+      {
+        "name": "Swipe",
+        "damage": 13,
+        "hits": null
+      },
+      {
+        "name": "Stomp",
+        "damage": 4,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "HUNTER_KILLER",
     "name": "Hunter Killer",
-    "min_hp": null,
+    "min_hp": 121,
     "max_hp": null,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Bite",
+        "damage": 17,
+        "hits": null
+      },
+      {
+        "name": "Puncture",
+        "damage": 7,
+        "hits": 3
+      }
+    ],
     "description": null
   },
   {
     "id": "INFESTED_PRISM",
     "name": "Infested Prism",
-    "min_hp": null,
+    "min_hp": 200,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Elite",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "Jab",
+        "damage": 22,
+        "hits": null
+      },
+      {
+        "name": "Radiate",
+        "damage": 16,
+        "hits": null
+      },
+      {
+        "name": "Whirlwind",
+        "damage": 9,
+        "hits": null
+      }
+    ],
+    "description": null,
+    "powers": [
+      "VitalSparkPower 1"
+    ]
   },
   {
     "id": "INKLET",
     "name": "Inklet",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 11,
+    "max_hp": 17,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "Jab",
+        "damage": 3,
+        "hits": null
+      },
+      {
+        "name": "WhirlwindMove",
+        "damage": 2,
+        "hits": 3
+      },
+      {
+        "name": "Piercing Gaze",
+        "damage": 10,
+        "hits": null
+      }
+    ],
+    "description": null,
+    "powers": [
+      "SlipperyPower 1"
+    ]
   },
   {
     "id": "KIN_FOLLOWER",
     "name": "Kin Follower",
-    "min_hp": null,
-    "max_hp": null,
-    "type": "Normal",
+    "min_hp": 58,
+    "max_hp": 59,
+    "type": "Boss",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "QuickSlashMove",
+        "damage": 5,
+        "hits": null
+      }
+    ],
+    "description": null,
+    "powers": [
+      "MinionPower 1"
+    ]
   },
   {
     "id": "KIN_PRIEST",
     "name": "Kin Priest",
-    "min_hp": null,
+    "min_hp": 190,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Boss",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "OrbOfFrailtyMove",
+        "damage": 8,
+        "hits": null
+      },
+      {
+        "name": "OrbOfWeaknessMove",
+        "damage": 8,
+        "hits": null
+      },
+      {
+        "name": "BeamMove",
+        "damage": 3,
+        "hits": 3
+      }
+    ],
     "description": null
   },
   {
     "id": "KNOWLEDGE_DEMON",
     "name": "Knowledge Demon",
-    "min_hp": null,
+    "min_hp": 379,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Boss",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "SlapMove",
+        "damage": 17,
+        "hits": null
+      },
+      {
+        "name": "Knowledge Overwhelming",
+        "damage": 8,
+        "hits": 3
+      },
+      {
+        "name": "Ponder",
+        "damage": 11,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "LAGAVULIN_MATRIARCH",
     "name": "Lagavulin Matriarch",
-    "min_hp": null,
+    "min_hp": 222,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Boss",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "Slash",
+        "damage": 19,
+        "hits": null
+      },
+      {
+        "name": "Slash2Move",
+        "damage": 12,
+        "hits": null
+      },
+      {
+        "name": "Disembowel",
+        "damage": 9,
+        "hits": null
+      }
+    ],
+    "description": null,
+    "powers": [
+      "PlatingPower 12",
+      "AsleepPower 3"
+    ]
   },
   {
     "id": "LEAF_SLIME_M",
     "name": "Leaf Slime M",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 32,
+    "max_hp": 35,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Clump Shot",
+        "damage": 8,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "LEAF_SLIME_S",
     "name": "Leaf Slime S",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 11,
+    "max_hp": 15,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "TackleMove",
+        "damage": 3,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "LIVING_FOG",
     "name": "Living Fog",
-    "min_hp": null,
+    "min_hp": 80,
     "max_hp": null,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "AdvancedGasMove",
+        "damage": 8,
+        "hits": null
+      },
+      {
+        "name": "SuperGasBlastMove",
+        "damage": 8,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "LIVING_SHIELD",
     "name": "Living Shield",
-    "min_hp": null,
+    "min_hp": 55,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Weak",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "Shield Slam",
+        "damage": 6,
+        "hits": null
+      },
+      {
+        "name": "SmashMove",
+        "damage": 16,
+        "hits": null
+      }
+    ],
+    "description": null,
+    "powers": [
+      "RampartPower 25"
+    ]
   },
   {
     "id": "LOUSE_PROGENITOR",
     "name": "Louse Progenitor",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 134,
+    "max_hp": 136,
     "type": "Normal",
     "act": "unknown",
     "moves": [],
@@ -572,32 +1087,68 @@
   {
     "id": "MAGI_KNIGHT",
     "name": "Magi Knight",
-    "min_hp": null,
+    "min_hp": 82,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Elite",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "PowerShieldMove",
+        "damage": 6,
+        "hits": null
+      },
+      {
+        "name": "Ram",
+        "damage": 10,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "MAWLER",
     "name": "Mawler",
-    "min_hp": null,
+    "min_hp": 72,
     "max_hp": null,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Rip and Tear",
+        "damage": 14,
+        "hits": null
+      },
+      {
+        "name": "Claw",
+        "damage": 4,
+        "hits": 2
+      }
+    ],
     "description": null
   },
   {
     "id": "MECHA_KNIGHT",
     "name": "Mecha Knight",
-    "min_hp": null,
+    "min_hp": 300,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Elite",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "Charge",
+        "damage": 25,
+        "hits": null
+      },
+      {
+        "name": "Heavy Cleave",
+        "damage": 35,
+        "hits": null
+      }
+    ],
+    "description": null,
+    "powers": [
+      "ArtifactPower 3"
+    ]
   },
   {
     "id": "MULTI_ATTACK_MOVE_MONSTER",
@@ -606,34 +1157,62 @@
     "max_hp": 999,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "PokeMove",
+        "damage": 1,
+        "hits": 5
+      }
+    ],
     "description": null
   },
   {
     "id": "MYTE",
     "name": "Myte",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 61,
+    "max_hp": 67,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Bite",
+        "damage": 13,
+        "hits": null
+      },
+      {
+        "name": "Suck",
+        "damage": 4,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "NIBBIT",
     "name": "Nibbit",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 42,
+    "max_hp": 46,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Butt",
+        "damage": 12,
+        "hits": null
+      },
+      {
+        "name": "SliceMove",
+        "damage": 6,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "NOISEBOT",
     "name": "Noisebot",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 23,
+    "max_hp": 28,
     "type": "Normal",
     "act": "unknown",
     "moves": [],
@@ -662,21 +1241,48 @@
   {
     "id": "OVICOPTER",
     "name": "Ovicopter",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 124,
+    "max_hp": 130,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Smash",
+        "damage": 16,
+        "hits": null
+      },
+      {
+        "name": "Tenderizer",
+        "damage": 7,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "OWL_MAGISTRATE",
     "name": "Owl Magistrate",
-    "min_hp": null,
+    "min_hp": 234,
     "max_hp": null,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Magistrate Scrutiny",
+        "damage": 16,
+        "hits": null
+      },
+      {
+        "name": "Peck Assault",
+        "damage": 4,
+        "hits": 6
+      },
+      {
+        "name": "Verdict",
+        "damage": 33,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
@@ -696,97 +1302,219 @@
     "max_hp": null,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "Slam",
+        "damage": 16,
+        "hits": null
+      }
+    ],
+    "description": null,
+    "powers": [
+      "IllusionPower 1"
+    ]
   },
   {
     "id": "PHANTASMAL_GARDENER",
     "name": "Phantasmal Gardener",
-    "min_hp": null,
-    "max_hp": null,
-    "type": "Normal",
+    "min_hp": 28,
+    "max_hp": 32,
+    "type": "Elite",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Bite",
+        "damage": 5,
+        "hits": null
+      },
+      {
+        "name": "Lash",
+        "damage": 7,
+        "hits": null
+      },
+      {
+        "name": "Flail",
+        "damage": 1,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "PHROG_PARASITE",
     "name": "Phrog Parasite",
-    "min_hp": null,
-    "max_hp": null,
-    "type": "Normal",
+    "min_hp": 61,
+    "max_hp": 64,
+    "type": "Elite",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "Lash",
+        "damage": 4,
+        "hits": 4
+      }
+    ],
+    "description": null,
+    "powers": [
+      "InfestedPower 4"
+    ]
   },
   {
     "id": "PUNCH_CONSTRUCT",
     "name": "Punch Construct",
-    "min_hp": null,
+    "min_hp": 55,
     "max_hp": null,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "Strong Punch",
+        "damage": 14,
+        "hits": null
+      },
+      {
+        "name": "Fast Punch",
+        "damage": 5,
+        "hits": null
+      }
+    ],
+    "description": null,
+    "powers": [
+      "ArtifactPower 1"
+    ]
   },
   {
     "id": "QUEEN",
     "name": "Queen",
-    "min_hp": null,
+    "min_hp": 400,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Boss",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Off with Your Head",
+        "damage": 3,
+        "hits": 5
+      },
+      {
+        "name": "Execution",
+        "damage": 15,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "ROCKET",
     "name": "Rocket",
-    "min_hp": null,
+    "min_hp": 189,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Boss",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "Targeting Reticle",
+        "damage": 3,
+        "hits": null
+      },
+      {
+        "name": "Precision Beam",
+        "damage": 18,
+        "hits": null
+      },
+      {
+        "name": "Laser",
+        "damage": 31,
+        "hits": null
+      }
+    ],
+    "description": null,
+    "powers": [
+      "SurroundedPower 1",
+      "BackAttackRightPower 1",
+      "CrabRagePower 1"
+    ]
   },
   {
     "id": "SCROLL_OF_BITING",
     "name": "Scroll Of Biting",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 31,
+    "max_hp": 38,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "Chomp",
+        "damage": 14,
+        "hits": null
+      },
+      {
+        "name": "Chew",
+        "damage": 5,
+        "hits": 2
+      }
+    ],
+    "description": null,
+    "powers": [
+      "PaperCutsPower 2"
+    ]
   },
   {
     "id": "SEAPUNK",
     "name": "Seapunk",
-    "min_hp": null,
-    "max_hp": null,
-    "type": "Normal",
+    "min_hp": 44,
+    "max_hp": 46,
+    "type": "Weak",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Sea Kick",
+        "damage": 11,
+        "hits": null
+      },
+      {
+        "name": "Spinning Kick",
+        "damage": 2,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "SEWER_CLAM",
     "name": "Sewer Clam",
-    "min_hp": null,
+    "min_hp": 56,
     "max_hp": null,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Jet",
+        "damage": 10,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "SHRINKER_BEETLE",
     "name": "Shrinker Beetle",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 38,
+    "max_hp": 40,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Chomp",
+        "damage": 7,
+        "hits": null
+      },
+      {
+        "name": "Stomp",
+        "damage": 13,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
@@ -796,64 +1524,130 @@
     "max_hp": 999,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "PokeMove",
+        "damage": 1,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "SKULKING_COLONY",
     "name": "Skulking Colony",
-    "min_hp": null,
+    "min_hp": 79,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Elite",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "Super Crab",
+        "damage": 6,
+        "hits": null
+      },
+      {
+        "name": "Zoom",
+        "damage": 16,
+        "hits": null
+      },
+      {
+        "name": "SmashMove",
+        "damage": 9,
+        "hits": null
+      }
+    ],
+    "description": null,
+    "powers": [
+      "HardenedShellPower 20"
+    ]
   },
   {
     "id": "SLIMED_BERSERKER",
     "name": "Slimed Berserker",
-    "min_hp": null,
+    "min_hp": 266,
     "max_hp": null,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "FuriousPummelingMove",
+        "damage": 4,
+        "hits": 4
+      },
+      {
+        "name": "SmotherMove",
+        "damage": 30,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "SLITHERING_STRANGLER",
     "name": "Slithering Strangler",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 53,
+    "max_hp": 55,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "ThwackMove",
+        "damage": 7,
+        "hits": null
+      },
+      {
+        "name": "Lash",
+        "damage": 12,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "SLUDGE_SPINNER",
     "name": "Sludge Spinner",
-    "min_hp": null,
-    "max_hp": null,
-    "type": "Normal",
+    "min_hp": 37,
+    "max_hp": 39,
+    "type": "Weak",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Oil Spray",
+        "damage": 8,
+        "hits": null
+      },
+      {
+        "name": "Slam",
+        "damage": 11,
+        "hits": null
+      },
+      {
+        "name": "Rage",
+        "damage": 6,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "SLUMBERING_BEETLE",
     "name": "Slumbering Beetle",
-    "min_hp": null,
+    "min_hp": 86,
     "max_hp": null,
     "type": "Normal",
     "act": "unknown",
     "moves": [],
-    "description": null
+    "description": null,
+    "powers": [
+      "SlumberPower 3"
+    ]
   },
   {
     "id": "SNAPPING_JAXFRUIT",
     "name": "Snapping Jaxfruit",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 31,
+    "max_hp": 33,
     "type": "Normal",
     "act": "unknown",
     "moves": [],
@@ -862,61 +1656,127 @@
   {
     "id": "SNEAKY_GREMLIN",
     "name": "Sneaky Gremlin",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 10,
+    "max_hp": 14,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Tackle",
+        "damage": 9,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "SOUL_FYSH",
     "name": "Soul Fysh",
-    "min_hp": null,
+    "min_hp": 211,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Boss",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "GazeMove",
+        "damage": 7,
+        "hits": null
+      },
+      {
+        "name": "De-Gas",
+        "damage": 16,
+        "hits": null
+      },
+      {
+        "name": "Scream",
+        "damage": 11,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "SOUL_NEXUS",
     "name": "Soul Nexus",
-    "min_hp": null,
+    "min_hp": 234,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Elite",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Soul Burn",
+        "damage": 29,
+        "hits": null
+      },
+      {
+        "name": "Maelstrom",
+        "damage": 6,
+        "hits": null
+      },
+      {
+        "name": "Drain Life",
+        "damage": 18,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "SPECTRAL_KNIGHT",
     "name": "Spectral Knight",
-    "min_hp": null,
+    "min_hp": 93,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Elite",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Soul Slash",
+        "damage": 15,
+        "hits": null
+      },
+      {
+        "name": "Soul Flame",
+        "damage": 3,
+        "hits": 3
+      }
+    ],
     "description": null
   },
   {
     "id": "SPINY_TOAD",
     "name": "Spiny Toad",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 116,
+    "max_hp": 119,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Spike Explosion",
+        "damage": 23,
+        "hits": null
+      },
+      {
+        "name": "Tongue Lash",
+        "damage": 17,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "STABBOT",
     "name": "Stabbot",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 23,
+    "max_hp": 28,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Stab",
+        "damage": 11,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
@@ -932,11 +1792,22 @@
   {
     "id": "TERROR_EEL",
     "name": "Terror Eel",
-    "min_hp": null,
+    "min_hp": 140,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Elite",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "CrashMove",
+        "damage": 17,
+        "hits": null
+      },
+      {
+        "name": "ThrashMove",
+        "damage": 3,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
@@ -944,10 +1815,44 @@
     "name": "Test Subject",
     "min_hp": null,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Boss",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "BiteMove",
+        "damage": 20,
+        "hits": null
+      },
+      {
+        "name": "SkullBashMove",
+        "damage": 14,
+        "hits": null
+      },
+      {
+        "name": "PounceMove",
+        "damage": 30,
+        "hits": null
+      },
+      {
+        "name": "MultiClawMove",
+        "damage": 10,
+        "hits": null
+      },
+      {
+        "name": "Phase3LacerateMove",
+        "damage": 10,
+        "hits": 3
+      },
+      {
+        "name": "BigPounceMove",
+        "damage": 45,
+        "hits": null
+      }
+    ],
+    "description": null,
+    "powers": [
+      "AdaptablePower 1"
+    ]
   },
   {
     "id": "THE_ADVERSARY_MK_ONE",
@@ -956,217 +1861,458 @@
     "max_hp": null,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "Smash",
+        "damage": 12,
+        "hits": null
+      },
+      {
+        "name": "Beam",
+        "damage": 15,
+        "hits": null
+      },
+      {
+        "name": "Barrage",
+        "damage": 8,
+        "hits": null
+      }
+    ],
+    "description": null,
+    "powers": [
+      "ArtifactPower 0"
+    ]
   },
   {
     "id": "THE_ADVERSARY_MK_THREE",
     "name": "The Adversary Mk Three",
-    "min_hp": null,
+    "min_hp": 300,
     "max_hp": null,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "Crash",
+        "damage": 15,
+        "hits": null
+      },
+      {
+        "name": "Flame Beam",
+        "damage": 18,
+        "hits": null
+      },
+      {
+        "name": "Barrage",
+        "damage": 10,
+        "hits": null
+      }
+    ],
+    "description": null,
+    "powers": [
+      "ArtifactPower 2"
+    ]
   },
   {
     "id": "THE_ADVERSARY_MK_TWO",
     "name": "The Adversary Mk Two",
-    "min_hp": null,
+    "min_hp": 200,
     "max_hp": null,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "Bash",
+        "damage": 13,
+        "hits": null
+      },
+      {
+        "name": "Flame Beam",
+        "damage": 16,
+        "hits": null
+      },
+      {
+        "name": "Barrage",
+        "damage": 9,
+        "hits": null
+      }
+    ],
+    "description": null,
+    "powers": [
+      "ArtifactPower 1"
+    ]
   },
   {
     "id": "THE_FORGOTTEN",
     "name": "The Forgotten",
-    "min_hp": null,
+    "min_hp": 106,
     "max_hp": null,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "Dread",
+        "damage": 15,
+        "hits": null
+      }
+    ],
+    "description": null,
+    "powers": [
+      "PossessSpeedPower 1"
+    ]
   },
   {
     "id": "THE_INSATIABLE",
     "name": "The Insatiable",
-    "min_hp": null,
+    "min_hp": 321,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Boss",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "ThrashMove",
+        "damage": 8,
+        "hits": 2
+      },
+      {
+        "name": "Lunging Bite",
+        "damage": 28,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "THE_LOST",
     "name": "The Lost",
-    "min_hp": null,
+    "min_hp": 93,
     "max_hp": null,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "Eye Lasers",
+        "damage": 4,
+        "hits": 2
+      }
+    ],
+    "description": null,
+    "powers": [
+      "PossessStrengthPower 1"
+    ]
   },
   {
     "id": "THE_OBSCURA",
     "name": "The Obscura",
-    "min_hp": null,
+    "min_hp": 123,
     "max_hp": null,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Piercing Gaze",
+        "damage": 10,
+        "hits": null
+      },
+      {
+        "name": "Hardening Strike",
+        "damage": 6,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "THIEVING_HOPPER",
     "name": "Thieving Hopper",
-    "min_hp": null,
+    "min_hp": 79,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Weak",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "Nab",
+        "damage": 14,
+        "hits": null
+      },
+      {
+        "name": "Hat Trick",
+        "damage": 21,
+        "hits": null
+      }
+    ],
+    "description": null,
+    "powers": [
+      "EscapeArtistPower 5"
+    ]
   },
   {
     "id": "TOADPOLE",
     "name": "Toadpole",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 21,
+    "max_hp": 25,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Spike Spit",
+        "damage": 3,
+        "hits": null
+      },
+      {
+        "name": "Whirl",
+        "damage": 7,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "TORCH_HEAD_AMALGAM",
     "name": "Torch Head Amalgam",
-    "min_hp": null,
+    "min_hp": 199,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Boss",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "TackleMove",
+        "damage": 18,
+        "hits": null
+      },
+      {
+        "name": "WeakTackleMove",
+        "damage": 14,
+        "hits": null
+      }
+    ],
+    "description": null,
+    "powers": [
+      "MinionPower 1"
+    ]
   },
   {
     "id": "TOUGH_EGG",
     "name": "Tough Egg",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 14,
+    "max_hp": 18,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "NibbleMove",
+        "damage": 4,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "TRACKER_RUBY_RAIDER",
     "name": "Tracker Ruby Raider",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 21,
+    "max_hp": 25,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Unleash the Hounds",
+        "damage": 1,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "TUNNELER",
     "name": "Tunneler",
-    "min_hp": null,
+    "min_hp": 87,
     "max_hp": null,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Bite",
+        "damage": 13,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "TURRET_OPERATOR",
     "name": "Turret Operator",
-    "min_hp": null,
+    "min_hp": 41,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Weak",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "UnloadMove",
+        "damage": 3,
+        "hits": 5
+      }
+    ],
     "description": null
   },
   {
     "id": "TWIG_SLIME_M",
     "name": "Twig Slime M",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 26,
+    "max_hp": 28,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "ClumpShotMove",
+        "damage": 11,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "TWIG_SLIME_S",
     "name": "Twig Slime S",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 7,
+    "max_hp": 11,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "TackleMove",
+        "damage": 4,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "TWO_TAILED_RAT",
     "name": "Two Tailed Rat",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 17,
+    "max_hp": 21,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Scratch",
+        "damage": 8,
+        "hits": null
+      },
+      {
+        "name": "Disease Bite",
+        "damage": 6,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "VANTOM",
     "name": "Vantom",
-    "min_hp": null,
+    "min_hp": 173,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Boss",
     "act": "unknown",
-    "moves": [],
-    "description": null
+    "moves": [
+      {
+        "name": "Ink Blot",
+        "damage": 7,
+        "hits": null
+      },
+      {
+        "name": "Inky Lance",
+        "damage": 6,
+        "hits": 2
+      }
+    ],
+    "description": null,
+    "powers": [
+      "SlipperyPower 9"
+    ]
   },
   {
     "id": "VINE_SHAMBLER",
     "name": "Vine Shambler",
-    "min_hp": null,
+    "min_hp": 61,
     "max_hp": null,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Grasping Vines",
+        "damage": 8,
+        "hits": null
+      },
+      {
+        "name": "Swipe",
+        "damage": 6,
+        "hits": 2
+      },
+      {
+        "name": "Chomp",
+        "damage": 16,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "WATERFALL_GIANT",
     "name": "Waterfall Giant",
-    "min_hp": null,
+    "min_hp": 250,
     "max_hp": null,
-    "type": "Normal",
+    "type": "Boss",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "PressureUpMove",
+        "damage": 13,
+        "hits": null
+      },
+      {
+        "name": "Stomp",
+        "damage": 15,
+        "hits": null
+      },
+      {
+        "name": "Ram",
+        "damage": 10,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "WRIGGLER",
     "name": "Wriggler",
-    "min_hp": null,
-    "max_hp": null,
-    "type": "Normal",
+    "min_hp": 17,
+    "max_hp": 21,
+    "type": "Elite",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "BiteMove",
+        "damage": 6,
+        "hits": null
+      }
+    ],
     "description": null
   },
   {
     "id": "ZAPBOT",
     "name": "Zapbot",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 23,
+    "max_hp": 28,
     "type": "Normal",
     "act": "unknown",
-    "moves": [],
+    "moves": [
+      {
+        "name": "Zap",
+        "damage": 14,
+        "hits": null
+      }
+    ],
     "description": null
   }
 ]
