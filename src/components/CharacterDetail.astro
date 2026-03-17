@@ -1,0 +1,112 @@
+---
+import Badge from './Badge.astro';
+
+interface Props {
+  game: 'sts1' | 'sts2';
+  character: any;
+  color: string;
+  description: string;
+  startingDeck: { cardId: string; card: any; count: number }[];
+  startingRelic: any | null;
+  charCards: any[];
+  charRelics: any[];
+}
+
+const { game, character, color, description, startingDeck, startingRelic, charCards, charRelics } = Astro.props;
+
+const cardsByType = new Map<string, any[]>();
+for (const c of charCards) {
+  const type = String(c.type);
+  if (!cardsByType.has(type)) cardsByType.set(type, []);
+  cardsByType.get(type)!.push(c);
+}
+
+const relicTierField = game === 'sts1' ? 'tier' : 'rarity';
+const cardImageDir = game === 'sts1' ? 'sts1/cards' : 'sts2/cards';
+const relicImageDir = game === 'sts1' ? 'sts1/relics' : 'sts2/relics';
+const hasRelicImages = true;
+const getRelicImgSrc = (r: any) => {
+  if (r.icon) return `/images/${relicImageDir}/${r.icon}`;
+  return `/images/${relicImageDir}/${r.id.toLowerCase()}.png`;
+};
+---
+<h1 class="text-2xl font-semibold">{character.name}</h1>
+<div class="mt-2 flex flex-wrap gap-2">
+  <Badge label={color} tone={color} />
+  <Badge label={`${character.hp} HP`} />
+  <Badge label={`${character.energy_per_turn} Energy / turn`} />
+</div>
+<p class="mt-3 text-sm text-slate-300">{description}</p>
+
+<div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+  <section class="rounded-lg border border-white/10 bg-white/5 p-4">
+    <h2 class="text-sm font-semibold">Starting Deck ({startingDeck.reduce((s, d) => s + d.count, 0)} cards)</h2>
+    <ul class="mt-2 space-y-1">
+      {startingDeck.map(({ cardId, card, count }) => (
+        <li class="text-sm flex items-center gap-2">
+          <img src={`/images/${cardImageDir}/${cardId.toLowerCase()}.png`} alt="" class="w-6 h-5 object-cover rounded-sm shrink-0" />
+          <a href={`/${game}/cards/${cardId}`} class="text-sky-300 hover:text-sky-200 hover:underline">
+            {card.name}{count > 1 ? ` ×${count}` : ''}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  {startingRelic && (
+    <section class="rounded-lg border border-white/10 bg-white/5 p-4">
+      <h2 class="text-sm font-semibold">Starting Relic</h2>
+      <div class="mt-2 flex items-center gap-2">
+        {hasRelicImages && (
+          <img src={getRelicImgSrc(startingRelic)} alt="" class="w-8 h-8 object-contain" />
+        )}
+        <a href={`/${game}/relics/${startingRelic.id}`} class="text-sm text-sky-300 hover:text-sky-200 hover:underline">{startingRelic.name}</a>
+      </div>
+      {startingRelic.description && <p class="mt-1 text-sm text-slate-300">{startingRelic.description}</p>}
+    </section>
+  )}
+</div>
+
+{charCards.length > 0 && (
+  <section class="mt-6">
+    <h2 class="text-lg font-semibold">Cards ({charCards.length})</h2>
+    <div class="mt-3 grid grid-cols-1 gap-4 md:grid-cols-3">
+      {Array.from(cardsByType.entries()).sort().map(([type, cards]) => (
+        <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+          <h3 class="text-sm font-semibold capitalize">{type}s ({cards.length})</h3>
+          <ul class="mt-2 space-y-1">
+            {cards.sort((a: any, b: any) => a.name.localeCompare(b.name)).map((c: any) => (
+              <li class="flex items-center gap-2">
+                <img src={`/images/${cardImageDir}/${c.id.toLowerCase()}.png`} alt="" class="w-6 h-5 object-cover rounded-sm shrink-0" />
+                <a href={`/${game}/cards/${c.id}`} class="text-sm text-sky-300 hover:text-sky-200 hover:underline">{c.name}</a>
+                <span class="text-xs text-slate-400"> · {c.rarity} · {c.cost ?? 'X'}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </section>
+)}
+
+{charRelics.length > 0 && (
+  <section class="mt-6">
+    <h2 class="text-lg font-semibold">Exclusive Relics ({charRelics.length})</h2>
+    <ul class="mt-3 divide-y divide-white/10 rounded-lg border border-white/10 bg-white/5">
+      {charRelics.map((r: any) => (
+        <li class="p-3">
+          <div class="flex items-center gap-2">
+            {hasRelicImages && (
+              <img src={getRelicImgSrc(r)} alt="" class="w-8 h-8 object-contain shrink-0" />
+            )}
+            <div>
+              <a href={`/${game}/relics/${r.id}`} class="text-sm font-semibold text-sky-300 hover:text-sky-200 hover:underline">{r.name}</a>
+              <span class="ml-2 text-xs text-slate-400">{r[relicTierField]}</span>
+            </div>
+          </div>
+          {r.description && <p class={`mt-1 text-sm text-slate-300 ${hasRelicImages ? 'pl-10' : ''}`}>{r.description}</p>}
+        </li>
+      ))}
+    </ul>
+  </section>
+)}

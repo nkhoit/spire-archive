@@ -1,6 +1,6 @@
 ---
 import Layout from '../../../components/Layout.astro';
-import Badge from '../../../components/Badge.astro';
+import CharacterDetail from '../../../components/CharacterDetail.astro';
 import { getData } from '../../../lib/data';
 
 const { id } = Astro.params;
@@ -25,107 +25,35 @@ const descMap: Record<string, string> = {
 };
 
 const color = colorMap[ch.id] ?? '';
-const desc = descMap[ch.id] ?? '';
 const chAny = ch as any;
-const startingDeck: string[] = chAny.starting_deck ?? [];
-const startingRelic: string | null = chAny.starting_relic ?? null;
+const startingDeckIds: string[] = chAny.starting_deck ?? [];
 
-// Get card details for starting deck (deduplicated with counts)
-const deckCards = new Map<string, { card: any; count: number }>();
-for (const cardId of startingDeck) {
-  const existing = deckCards.get(cardId);
-  if (existing) {
-    existing.count++;
-  } else {
+const deckMap = new Map<string, { cardId: string; card: any; count: number }>();
+for (const cardId of startingDeckIds) {
+  const existing = deckMap.get(cardId);
+  if (existing) { existing.count++; }
+  else {
     const card = data.cardById.get(cardId);
-    deckCards.set(cardId, { card: card ?? { id: cardId, name: cardId }, count: 1 });
+    deckMap.set(cardId, { cardId, card: card ?? { id: cardId, name: cardId }, count: 1 });
   }
 }
 
-// Starting relic
-const startRelic = startingRelic ? data.relicById?.get(startingRelic) ?? data.relics.find((r) => r.id === startingRelic) : null;
+const startRelic = chAny.starting_relic
+  ? data.relicById?.get(chAny.starting_relic) ?? data.relics.find((r) => r.id === chAny.starting_relic) ?? null
+  : null;
 
-// Get cards for this character's pool
 const charCards = data.cards.filter((c) => (c as any).color?.toLowerCase() === color);
-const cardsByType = new Map<string, any[]>();
-for (const c of charCards) {
-  const type = String(c.type);
-  if (!cardsByType.has(type)) cardsByType.set(type, []);
-  cardsByType.get(type)!.push(c);
-}
-
-// Get relics for this character
 const charRelics = data.relics.filter((r) => (r as any).color?.toLowerCase() === color);
-
-const title = `${ch.name} — Spire Archive — STS2`;
 ---
-<Layout game="sts2" title={title} description={desc}>
-  <h1 class="text-2xl font-semibold">{ch.name}</h1>
-  <div class="mt-2 flex flex-wrap gap-2">
-    <Badge label={color} tone={color} />
-    <Badge label={`${chAny.hp} HP`} />
-    <Badge label={`${chAny.energy_per_turn} Energy / turn`} />
-  </div>
-  <p class="mt-3 text-sm text-slate-300">{desc}</p>
-
-  <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
-    <section class="rounded-lg border border-white/10 bg-white/5 p-4">
-      <h2 class="text-sm font-semibold">Starting Deck ({startingDeck.length} cards)</h2>
-      <ul class="mt-2 space-y-1">
-        {Array.from(deckCards.entries()).map(([cardId, { card, count }]) => (
-          <li class="text-sm">
-            <a href={`/sts2/cards/${cardId}`} class="text-sky-300 hover:text-sky-200 hover:underline">
-              {card.name}{count > 1 ? ` ×${count}` : ''}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </section>
-
-    {startRelic && (
-      <section class="rounded-lg border border-white/10 bg-white/5 p-4">
-        <h2 class="text-sm font-semibold">Starting Relic</h2>
-        <div class="mt-2">
-          <a href={`/sts2/relics/${startRelic.id}`} class="text-sm text-sky-300 hover:text-sky-200 hover:underline">{startRelic.name}</a>
-        </div>
-        {startRelic.description && <p class="mt-1 text-sm text-slate-300">{startRelic.description}</p>}
-      </section>
-    )}
-  </div>
-
-  {charCards.length > 0 && (
-    <section class="mt-6">
-      <h2 class="text-lg font-semibold">Cards ({charCards.length})</h2>
-      <div class="mt-3 grid grid-cols-1 gap-4 md:grid-cols-3">
-        {Array.from(cardsByType.entries()).sort().map(([type, cards]) => (
-          <div class="rounded-lg border border-white/10 bg-white/5 p-4">
-            <h3 class="text-sm font-semibold capitalize">{type}s ({cards.length})</h3>
-            <ul class="mt-2 space-y-1">
-              {cards.sort((a: any, b: any) => a.name.localeCompare(b.name)).map((c: any) => (
-                <li>
-                  <a href={`/sts2/cards/${c.id}`} class="text-sm text-sky-300 hover:text-sky-200 hover:underline">{c.name}</a>
-                  <span class="text-xs text-slate-400"> · {c.rarity} · {c.cost ?? 'X'}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-    </section>
-  )}
-
-  {charRelics.length > 0 && (
-    <section class="mt-6">
-      <h2 class="text-lg font-semibold">Exclusive Relics ({charRelics.length})</h2>
-      <ul class="mt-3 divide-y divide-white/10 rounded-lg border border-white/10 bg-white/5">
-        {charRelics.map((r) => (
-          <li class="p-3">
-            <a href={`/sts2/relics/${r.id}`} class="text-sm font-semibold text-sky-300 hover:text-sky-200 hover:underline">{r.name}</a>
-            <span class="ml-2 text-xs text-slate-400">{(r as any).rarity}</span>
-            {r.description && <p class="mt-1 text-sm text-slate-300">{r.description}</p>}
-          </li>
-        ))}
-      </ul>
-    </section>
-  )}
+<Layout game="sts2" title={`${ch.name} — Spire Archive — STS2`} description={descMap[ch.id] ?? ''}>
+  <CharacterDetail
+    game="sts2"
+    character={chAny}
+    color={color}
+    description={descMap[ch.id] ?? ''}
+    startingDeck={Array.from(deckMap.values())}
+    startingRelic={startRelic}
+    charCards={charCards}
+    charRelics={charRelics}
+  />
 </Layout>
