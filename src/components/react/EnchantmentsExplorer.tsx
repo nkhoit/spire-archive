@@ -62,7 +62,7 @@ export default function EnchantmentsExplorer(props: { game?: string; rarities: s
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-2">
                   <span className="text-sm font-semibold">{e.name}</span>
-                  <span className="text-xs px-1.5 py-0.5 rounded bg-white/10 text-slate-300">{e.rarity}</span>
+                  {e.rarity && e.rarity !== 'Unknown' && <span className="text-xs px-1.5 py-0.5 rounded bg-white/10 text-slate-300">{e.rarity}</span>}
                 </div>
                 <p className="mt-0.5 text-sm text-slate-300 line-clamp-2">{e.description}</p>
               </div>
