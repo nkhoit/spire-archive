@@ -311,20 +311,15 @@ function Sts2Renderer({ card, upgraded, size }: { card: any; upgraded: boolean; 
         {cardName}
       </div>
       <div className="cr-type">{typeLabel}</div>
-      {keywords.length > 0 && (
-        <div className="cr-keywords">
-          {keywords.map((kw: string) => (
-            <span
-              key={kw}
-              className={`cr-kw${upgraded && (card.upgrade?.add_keywords ?? []).includes(kw) ? ' cr-kw-new' : ''}`}
-            >
-              {kw}
-            </span>
-          ))}
-        </div>
-      )}
       <div className="cr-desc">
-        <div className="cr-desc-inner" dangerouslySetInnerHTML={{ __html: descProcessed }} />
+        <div className="cr-desc-inner" dangerouslySetInnerHTML={{ __html:
+          (keywords.length > 0
+            ? keywords.map((kw: string) => {
+                const isNew = upgraded && (card.upgrade?.add_keywords ?? []).includes(kw);
+                return isNew ? `<span class="cr-green">${kw}.</span>` : `${kw}.`;
+              }).join('<br/>') + '<br/>'
+            : '') + descProcessed
+        }} />
       </div>
     </div>
   );

@@ -192,34 +192,6 @@
   margin: 0 1px;
 }
 
-.cr-keywords {
-  position: absolute;
-  top: 92%;
-  left: 14%;
-  right: 14%;
-  display: flex;
-  justify-content: center;
-  gap: calc(4px * var(--s));
-  flex-wrap: wrap;
-  z-index: 6;
-}
-.cr-kw {
-  background: rgba(0,0,0,.6);
-  color: #efc851;
-  font-family: 'KreonGame', 'Kreon', serif;
-  font-size: calc(26px * var(--s));
-  font-weight: 700;
-  padding: calc(2px * var(--s)) calc(8px * var(--s));
-  border-radius: calc(4px * var(--s));
-  text-transform: uppercase;
-  letter-spacing: .05em;
-  border: calc(1px * var(--s)) solid rgba(239,200,81,.4);
-}
-.cr-kw-new {
-  color: #50dc78;
-  border: 1px solid rgba(80,220,120,.3);
-}
-
 .cr-green { color: #50dc78; }
 .cr-keyword { color: #EFC851; }
 /* STS1 Card Renderer
