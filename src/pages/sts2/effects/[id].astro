@@ -17,12 +17,12 @@ const matchingKeyword = data.keywords.find((k: any) =>
 );
 
 // Find cards that apply this power (from card_powers.json)
-const relatedCards: Array<{id: string; name: string; type: string; color: string; cost: number | null}> = [];
+const relatedCards: any[] = [];
 for (const [cardId, powers] of Object.entries(data.cardPowers)) {
   if ((powers as any[]).some((p: any) => p.name === power.name)) {
     const card = data.cardById.get(cardId);
     if (card) {
-      relatedCards.push({ id: card.id, name: card.name, type: card.type, color: card.color, cost: card.cost });
+      relatedCards.push(card);
     }
   }
 }
@@ -32,7 +32,7 @@ const powerNameLower = power.name.toLowerCase();
 for (const card of data.cards) {
   if (relatedCards.some(rc => rc.id === card.id)) continue;
   if (card.description?.toLowerCase().includes(powerNameLower)) {
-    relatedCards.push({ id: card.id, name: card.name, type: card.type, color: card.color, cost: card.cost });
+    relatedCards.push(card);
   }
 }
 
