@@ -59,7 +59,7 @@ export default function EventsExplorer(props: { game?: string; initial?: ApiResp
               )}
               {e.choices?.length > 0 && (
                 <span className="text-xs text-slate-400">
-                  {e.choices.map(c => c.name).join(' · ')}
+                  {e.choices.length} choice{e.choices.length !== 1 ? 's' : ''}
                 </span>
               )}
             </a>

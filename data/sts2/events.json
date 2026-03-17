@@ -431,15 +431,127 @@
     "id": "NEOW",
     "name": "Neow",
     "act": "unknown",
-    "description": "Neow, the Mother of Resurrection, awaits you at the start of each run. She offers a choice of three blessings — two positive relics and one cursed option that comes with a powerful but risky relic.",
+    "description": "Neow, the Mother of Resurrection, awaits at the start of each run. She offers three blessings — two positive and one cursed. The options are drawn randomly from the pools below.",
     "choices": [
       {
-        "name": "Positive Blessing (2 offered)",
-        "description": "Receive one of: Arcane Scroll, Booming Conch, Pomander, Golden Pearl, Lead Paperweight, New Leaf, Neow's Torment, Precise Scissors, Lost Coffer, Nutritious Oyster, Stone Humidifier, Lava Rock, Small Capsule, or Massive Scroll (multiplayer)."
+        "name": "Arcane Scroll",
+        "description": "Upon pickup, obtain a random Rare Card to add to your Deck.",
+        "relic_id": "ARCANE_SCROLL",
+        "pool": "positive"
       },
       {
-        "name": "Cursed Blessing (1 offered)",
-        "description": "Receive a powerful relic with a drawback: Cursed Pearl, Large Capsule, Leafy Poultice, Precarious Shears, Scroll Boxes, or Silver Crucible (solo only)."
+        "name": "Booming Conch",
+        "description": "At the start of Elite combats, draw 2 additional 2.",
+        "relic_id": "BOOMING_CONCH",
+        "pool": "positive"
+      },
+      {
+        "name": "Pomander",
+        "description": "Upon pickup, Upgrade a card.",
+        "relic_id": "POMANDER",
+        "pool": "positive"
+      },
+      {
+        "name": "Golden Pearl",
+        "description": "Upon pickup, gain 150 Gold.",
+        "relic_id": "GOLDEN_PEARL",
+        "pool": "positive"
+      },
+      {
+        "name": "Lead Paperweight",
+        "description": "Upon pickup, choose 1 of 2 Colorless cards to add to your Deck.",
+        "relic_id": "LEAD_PAPERWEIGHT",
+        "pool": "positive"
+      },
+      {
+        "name": "New Leaf",
+        "description": "Upon pickup, Transform 1 card.",
+        "relic_id": "NEW_LEAF",
+        "pool": "positive"
+      },
+      {
+        "name": "Neow's Torment",
+        "description": "Upon pickup, add 1 Neow's Fury to your Deck.",
+        "relic_id": "NEOWS_TORMENT",
+        "pool": "positive"
+      },
+      {
+        "name": "Precise Scissors",
+        "description": "Upon pickup, remove 1 card from your Deck.",
+        "relic_id": "PRECISE_SCISSORS",
+        "pool": "positive"
+      },
+      {
+        "name": "Lost Coffer",
+        "description": "Upon pickup, gain 1 card reward and procure 1 random potion.",
+        "relic_id": "LOST_COFFER",
+        "pool": "positive"
+      },
+      {
+        "name": "Nutritious Oyster",
+        "description": "Upon pickup, raise your Max HP by 11.",
+        "relic_id": "NUTRITIOUS_OYSTER",
+        "pool": "positive"
+      },
+      {
+        "name": "Stone Humidifier",
+        "description": "Whenever you Rest at a Rest Site, raise your Max HP by 5.",
+        "relic_id": "STONE_HUMIDIFIER",
+        "pool": "positive"
+      },
+      {
+        "name": "Lava Rock",
+        "description": "The Act 1 Boss drops 2 Relics.",
+        "relic_id": "LAVA_ROCK",
+        "pool": "positive"
+      },
+      {
+        "name": "Small Capsule",
+        "description": "Upon pickup, obtain a random Relic.",
+        "relic_id": "SMALL_CAPSULE",
+        "pool": "positive"
+      },
+      {
+        "name": "Massive Scroll",
+        "description": "Upon pickup, choose 1 of 3 Multiplayer Colorless Cards to add to your Deck.",
+        "relic_id": "MASSIVE_SCROLL",
+        "pool": "positive"
+      },
+      {
+        "name": "Cursed Pearl",
+        "description": "Upon pickup, receive Greed. Gain 333 Gold.",
+        "relic_id": "CURSED_PEARL",
+        "pool": "cursed"
+      },
+      {
+        "name": "Large Capsule",
+        "description": "Upon pickup, obtain 2 random 2. Add an additional Strike and Defend to your Deck.",
+        "relic_id": "LARGE_CAPSULE",
+        "pool": "cursed"
+      },
+      {
+        "name": "Leafy Poultice",
+        "description": "Upon pickup, Transform 1 of your Strikes and 1 of your Defends and lose 10 Max HP.",
+        "relic_id": "LEAFY_POULTICE",
+        "pool": "cursed"
+      },
+      {
+        "name": "Precarious Shears",
+        "description": "Upon pickup, remove 2 cards from your Deck and take 13 damage.",
+        "relic_id": "PRECARIOUS_SHEARS",
+        "pool": "cursed"
+      },
+      {
+        "name": "Scroll Boxes",
+        "description": "Upon pickup, lose all Gold and choose 1 of 2 packs of cards to add to your Deck.",
+        "relic_id": "SCROLL_BOXES",
+        "pool": "cursed"
+      },
+      {
+        "name": "Silver Crucible",
+        "description": "The first 3 card rewards you see are Upgraded. The first Treasure Chest you open is empty.",
+        "relic_id": "SILVER_CRUCIBLE",
+        "pool": "cursed"
       }
     ]
   },

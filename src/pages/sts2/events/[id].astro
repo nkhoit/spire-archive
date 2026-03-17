@@ -7,6 +7,11 @@ const data = await getData('sts2');
 const event = data.eventById.get(String(id));
 if (!event) return new Response('Not found', { status: 404 });
 const title = `${event.name} — Event — Spire Archive — STS2`;
+
+const choices = event.choices ?? [];
+const pools = [...new Set(choices.map((c: any) => c.pool).filter(Boolean))];
+const hasPoolGroups = pools.length > 0;
+const ungrouped = choices.filter((c: any) => !c.pool);
 ---
 <Layout game="sts2" title={title} description={event.description ?? ''}>
   <a href="/sts2/events" class="text-xs text-sky-400 hover:underline">← Events</a>
@@ -18,11 +23,11 @@ const title = `${event.name} — Event — Spire Archive — STS2`;
     </section>
   )}
 
-  {event.choices?.length > 0 && (
+  {ungrouped.length > 0 && (
     <section class="mt-4">
       <h2 class="text-sm font-semibold text-slate-200">Choices</h2>
       <div class="mt-3 space-y-2">
-        {event.choices.map((c: any) => (
+        {ungrouped.map((c: any) => (
           <div class="rounded-md border border-white/10 bg-white/5 p-3">
             <div class="text-sm font-semibold text-sky-300">{c.name}</div>
             {c.description && <p class="mt-1 text-sm text-slate-300">{c.description}</p>}
@@ -31,4 +36,41 @@ const title = `${event.name} — Event — Spire Archive — STS2`;
       </div>
     </section>
   )}
+
+  {hasPoolGroups && pools.map((pool: string) => {
+    const poolChoices = choices.filter((c: any) => c.pool === pool);
+    const poolLabel = pool === 'positive' ? 'Positive Blessings (2 offered per run)' :
+                      pool === 'cursed' ? 'Cursed Blessings (1 offered per run)' : pool;
+    const borderColor = pool === 'cursed' ? 'border-red-500/30' : 'border-emerald-500/30';
+    return (
+      <section class="mt-4">
+        <h2 class:list={['text-sm font-semibold', pool === 'cursed' ? 'text-red-300' : 'text-emerald-300']}>
+          {poolLabel}
+        </h2>
+        <div class="mt-3 space-y-2">
+          {poolChoices.map((c: any) => (
+            <div class:list={['rounded-md border bg-white/5 p-3', borderColor]}>
+              <div class="flex items-center gap-2">
+                {c.relic_id && (
+                  <img
+                    src={`/images/sts2/relics/${c.relic_id.toLowerCase()}.png`}
+                    alt=""
+                    class="w-8 h-8 object-contain"
+                    loading="lazy"
+                  />
+                )}
+                <a
+                  href={c.relic_id ? `/sts2/relics/${c.relic_id}` : undefined}
+                  class:list={['text-sm font-semibold', c.relic_id ? 'text-sky-300 hover:underline' : 'text-sky-300']}
+                >
+                  {c.name}
+                </a>
+              </div>
+              {c.description && <p class="mt-1 text-sm text-slate-300 ml-10">{c.description}</p>}
+            </div>
+          ))}
+        </div>
+      </section>
+    );
+  })}
 </Layout>
