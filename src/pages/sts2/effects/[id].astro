@@ -27,11 +27,11 @@ for (const [cardId, powers] of Object.entries(data.cardPowers)) {
   }
 }
 
-// Also check cards whose description mentions this power name
+// Also check cards whose description mentions this power name, or cards with the same name
 const powerNameLower = power.name.toLowerCase();
 for (const card of data.cards) {
   if (relatedCards.some(rc => rc.id === card.id)) continue;
-  if (card.description?.toLowerCase().includes(powerNameLower)) {
+  if (card.name?.toLowerCase() === powerNameLower || card.description?.toLowerCase().includes(powerNameLower)) {
     relatedCards.push(card);
   }
 }
