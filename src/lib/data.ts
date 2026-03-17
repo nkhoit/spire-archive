@@ -107,9 +107,10 @@ export interface Monster {
 }
 
 export interface EventChoice {
-  option: string;
+  name?: string;
+  option?: string;
   description: string;
-  outcome: string;
+  outcome?: string;
 }
 
 export interface Event {

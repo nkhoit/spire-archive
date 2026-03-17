@@ -4,10 +4,9 @@ import EventsExplorer from '../../../components/react/EventsExplorer';
 import { getData } from '../../../lib/data';
 
 const { events } = await getData('sts1');
-const actOrder = ['exordium', 'city', 'beyond', 'shrines'];
-const acts = actOrder.filter((a) => events.some((e) => String(e.act) === a));
 ---
-<Layout game="sts1" title="Events — Spire Archive" description="Browse Slay the Spire events with filters for act.">
+<Layout game="sts1" title="Events — Spire Archive" description="Browse Slay the Spire events.">
   <h1 class="text-xl font-semibold">Events</h1>
-  <EventsExplorer game="sts1" client:load acts={acts} />
+  <p class="mt-1 text-sm text-slate-400">{events.length} events from Slay the Spire</p>
+  <EventsExplorer game="sts1" client:load />
 </Layout>
