@@ -244,7 +244,10 @@ const mentionedKeywords = data.keywords.filter((kw: any) => {
 });
 
 // Related powers/buffs/debuffs: from cardPowers map OR mentioned in description
-const mappedPowers = data.cardPowers?.[String(card.id)] ?? [];
+const mappedPowersRaw = data.cardPowers?.[String(card.id)] ?? [];
+// Enrich mapped powers with full data from powers list
+const powersById = new Map((data.powers ?? []).map((p: any) => [p.id, p]));
+const mappedPowers = mappedPowersRaw.map((mp: any) => powersById.get(mp.id) ?? mp);
 const mentionedPowers = (data.powers ?? []).filter((p: any) => {
   if (!p.name || p.name.length < 3) return false;
   const re = new RegExp(`\\b${p.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i');
