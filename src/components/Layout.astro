@@ -54,7 +54,7 @@ const navLinks = game ? [
           {game && (
             <>
               <span class="text-slate-500">—</span>
-              <span class="text-sm font-medium text-slate-200">{gameLabels[game]}</span>
+              <a href={`/${game}`} class="text-sm font-medium text-slate-200 hover:text-white">{gameLabels[game]}</a>
               <a href={game === 'sts1' ? '/sts2' : '/sts1'} class="rounded-full bg-white/10 px-2.5 py-0.5 text-xs font-medium text-slate-400 hover:text-slate-100 hover:bg-white/20 transition-colors">
                 {game === 'sts1' ? 'STS2' : 'STS1'} →
               </a>
