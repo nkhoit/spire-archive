@@ -14,7 +14,7 @@ const keywords = data.keywords.filter((k) => k.names?.length).sort((a, b) => (a.
       <li class="p-3">
         <div class="flex items-center gap-2">
           {k.effect_id ? (
-            <a href={`/effects/${k.effect_id}`} class="text-sm font-semibold capitalize text-sky-400 hover:text-sky-300 underline decoration-sky-400/30 hover:decoration-sky-300">{k.names[0]} ↗</a>
+            <a href={`/sts1/effects/${k.effect_id}`} class="text-sm font-semibold capitalize text-sky-400 hover:text-sky-300 underline decoration-sky-400/30 hover:decoration-sky-300">{k.names[0]} ↗</a>
           ) : (
             <span class="text-sm font-semibold capitalize">{k.names[0]}</span>
           )}
