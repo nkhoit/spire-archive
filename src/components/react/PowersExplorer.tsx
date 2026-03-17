@@ -61,6 +61,8 @@ export default function PowersExplorer(props: { game?: string }) {
             <a className="flex items-center gap-3 hover:bg-white/5 -m-3 p-3 rounded-lg" href={`/${game}/effects/${p.id}`}>
               {p.icon ? (
                 <img src={`/images/powers/${p.icon}`} alt="" className="w-10 h-10 flex-shrink-0" />
+              ) : game === 'sts2' ? (
+                <img src={`/images/sts2/powers/${p.id.toLowerCase()}.png`} alt="" className="w-10 h-10 flex-shrink-0" />
               ) : (
                 <div className="w-10 h-10 flex-shrink-0 rounded bg-white/10" />
               )}
