@@ -248,8 +248,10 @@ const mappedPowersRaw = data.cardPowers?.[String(card.id)] ?? [];
 // Enrich mapped powers with full data from powers list
 const powersById = new Map((data.powers ?? []).map((p: any) => [p.id, p]));
 const mappedPowers = mappedPowersRaw.map((mp: any) => powersById.get(mp.id) ?? mp);
+const genericPowerNames = new Set(['draw', 'draw card', 'block', 'heal', 'damage', 'gold', 'energy']);
 const mentionedPowers = (data.powers ?? []).filter((p: any) => {
   if (!p.name || p.name.length < 3) return false;
+  if (p.name.length <= 5 || genericPowerNames.has(p.name.toLowerCase())) return false;
   const re = new RegExp(`\\b${p.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i');
   return re.test(allText);
 });

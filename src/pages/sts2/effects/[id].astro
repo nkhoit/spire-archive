@@ -29,9 +29,13 @@ for (const [cardId, powers] of Object.entries(data.cardPowers)) {
 
 // Also check cards whose description mentions this power name, or cards with the same name
 const powerNameLower = power.name.toLowerCase();
+const genericNames = new Set(['draw', 'draw card', 'block', 'heal', 'damage', 'gold', 'energy']);
+const skipDescMatch = power.name.length <= 5 || genericNames.has(powerNameLower);
 for (const card of data.cards) {
   if (relatedCards.some(rc => rc.id === card.id)) continue;
-  if (card.name?.toLowerCase() === powerNameLower || card.description?.toLowerCase().includes(powerNameLower)) {
+  if (card.name?.toLowerCase() === powerNameLower) {
+    relatedCards.push(card);
+  } else if (!skipDescMatch && card.description?.toLowerCase().includes(powerNameLower)) {
     relatedCards.push(card);
   }
 }
