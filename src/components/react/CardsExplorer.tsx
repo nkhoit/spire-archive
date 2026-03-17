@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import CssCardRendererSts1 from './CssCardRendererSts1';
 
 type Card = {
   id: string;
@@ -55,15 +56,11 @@ function BadgeSpan({ label, tone }: { label: string; tone?: string }) {
 function CardTile({ c, game }: { c: Card; game: string }) {
   const [upgraded, setUpgraded] = useState(false);
   const hasUpgrade = c.upgrade && (c.upgrade.description || c.upgrade.cost != null);
-  const hasImages = game === 'sts1';
-  const imgSrc = upgraded
-    ? `/images/rendered/upgraded/thumbs/${c.id.toLowerCase()}.webp`
-    : `/images/rendered/thumbs/${c.id.toLowerCase()}.webp`;
   return (
     <div className="group flex flex-col items-center rounded-lg border border-white/10 bg-white/5 p-3 hover:bg-white/10 transition-colors">
       <div className="flex items-center w-full gap-1">
         <a href={`/${game}/cards/${c.id}`} className={`text-sm font-semibold group-hover:underline truncate flex-1 text-center ${upgraded ? 'text-emerald-400' : ''}`}>{upgraded ? `${c.name}+` : c.name}</a>
-        {hasImages && hasUpgrade && (
+        {hasUpgrade && (
           <button
             onClick={(e) => { e.preventDefault(); setUpgraded(!upgraded); }}
             className={`shrink-0 w-5 h-5 rounded-full text-[10px] font-bold flex items-center justify-center transition-colors ${upgraded ? 'bg-emerald-500/20 text-emerald-300 ring-1 ring-emerald-500/30' : 'bg-white/10 text-slate-500 hover:text-slate-300'}`}
@@ -71,32 +68,9 @@ function CardTile({ c, game }: { c: Card; game: string }) {
           >↑</button>
         )}
       </div>
-      {hasImages ? (
-        <a href={`/${game}/cards/${c.id}`} className="w-full mt-2">
-          <img
-            src={imgSrc}
-            alt={c.name}
-            className="w-full rounded-md drop-shadow-lg"
-            style={{ aspectRatio: '300/398' }}
-            loading="lazy"
-          />
-        </a>
-      ) : (
-        <a href={`/${game}/cards/${c.id}`} className="w-full mt-2 flex flex-col items-center gap-1 py-4 text-center">
-          {c.description ? (
-            <p className="text-xs text-slate-400 line-clamp-3">{c.description}</p>
-          ) : (
-            <p className="text-xs text-slate-500 italic">No description yet</p>
-          )}
-          {c.vars && Object.keys(c.vars).length > 0 && (
-            <div className="mt-1 flex flex-wrap justify-center gap-1">
-              {Object.entries(c.vars).map(([k, v]) => (
-                <span key={k} className="text-xs bg-white/5 px-1.5 py-0.5 rounded text-slate-300">{k.replace(/_/g, ' ')}: {String(v)}</span>
-              ))}
-            </div>
-          )}
-        </a>
-      )}
+      <a href={`/${game}/cards/${c.id}`} className="w-full mt-2 flex justify-center">
+        <CssCardRendererSts1 card={c} upgraded={upgraded} size="sm" />
+      </a>
       <div className="mt-2 flex flex-wrap items-center justify-center gap-1">
         <BadgeSpan label={c.color} tone={c.color} />
         <BadgeSpan label={c.type} />

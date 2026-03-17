@@ -135,7 +135,7 @@ let descProcessed = description
 
 const descHtml = descProcessed;
 
-const typeLabel = card.type + (card.rarity && !['Basic','Special'].includes(card.rarity) ? ` · ${card.rarity}` : '');
+const typeLabel = card.type;
 
 const scales: Record<string, number> = { sm: 0.4, md: 0.6, lg: 0.8 };
 const scale = scales[size] ?? 0.6;
@@ -176,7 +176,7 @@ const scale = scales[size] ?? 0.6;
   )}
   
   {/* Title text: on the banner */}
-  <div class={`cr-title ${upgraded ? 'cr-green' : ''}`} style={`-webkit-text-stroke: calc(12px * var(--s)) ${titleOutlineColor}`}>{cardName}</div>
+  <div class={`cr-title ${upgraded ? 'cr-green' : ''}`} style={`-webkit-text-stroke: calc(7px * var(--s)) ${titleOutlineColor}`}>{cardName}</div>
   
   {/* Type/rarity plaque: small centered area below portrait */}
   <div class="cr-type">{typeLabel}</div>
@@ -348,7 +348,7 @@ const scale = scales[size] ?? 0.6;
     align-items: center;
     justify-content: center;
     color: #fff6e2;
-    font-weight: 700;
+    font-weight: 400;
     font-size: calc(60px * var(--s));
     paint-order: stroke fill;
     text-shadow: calc(2px * var(--s)) calc(2px * var(--s)) calc(12px * var(--s)) rgba(0,0,0,.19);

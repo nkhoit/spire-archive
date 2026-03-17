@@ -1,0 +1,220 @@
+/* Canvas: 680×884 scaled by --s
+ * All % values are relative to this canvas.
+ * Frame rect: top=4.5% left=5.9% w=88.2% h=95.5%
+ * Banner:     top=5.4% left=2.1% w=96.2% h=18.8%
+ * Portrait:   top=14.3% left=13.2% w=73.5% h=43.0%
+ * PBorder:    top=15.2% left=9.6% w=80.9% h=47.5%
+ * Title:      top=6.1% left=19.1% w=61.8% h=12.2%
+ * Type:       top=52.5% left=41.0% w=17.9% h=8.4%
+ * Desc:       top=60.6% left=14.1% w=71.5% h=30.8%
+ * Energy:     top=0.9% left=1.2% w=18.8% h=14.5%
+ */
+
+.cr {
+  position: relative;
+  width: calc(680px * var(--s));
+  height: calc(884px * var(--s));
+  font-family: 'KreonGame', 'Kreon', serif;
+  flex-shrink: 0;
+}
+
+.cr-frame {
+  position: absolute;
+  top: 4.5%;
+  left: 5.9%;
+  width: 88.2%;
+  height: 95.5%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.cr-banner {
+  position: absolute;
+  top: 7.7%;
+  left: 2.1%;
+  width: 96.2%;
+  height: 18.8%;
+  object-fit: fill;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.cr-portrait-area {
+  position: absolute;
+  top: 14.3%;
+  left: 13.2%;
+  width: 73.5%;
+  height: 43.0%;
+  overflow: hidden;
+  z-index: 1;
+}
+.cr-portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cr-border {
+  position: absolute;
+  top: 15.2%;
+  left: 9.6%;
+  width: 80.9%;
+  height: 47.5%;
+  object-fit: fill;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.cr-plaque {
+  position: absolute;
+  top: 52.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(122px * var(--s));
+  height: calc(74px * var(--s));
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.cr-energy {
+  position: absolute;
+  top: 0.9%;
+  left: 1.2%;
+  width: 18.8%;
+  height: 14.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+.cr-energy-orb {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.cr-energy-num {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-weight: 700;
+  font-size: calc(78px * var(--s));
+  -webkit-text-stroke: calc(14px * var(--s)) rgba(77, 74, 67, 0.86);
+  paint-order: stroke fill;
+  text-shadow: calc(2px * var(--s)) calc(2px * var(--s)) calc(16px * var(--s)) rgba(0,0,0,.19);
+}
+
+.cr-star {
+  position: absolute;
+  top: calc(0.9% + 13% * var(--s) * 6);
+  left: 2%;
+  width: 12%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cr-star-img {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+.cr-star-num {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-weight: 700;
+  font-size: calc(40px * var(--s));
+  text-shadow: 0 1px 3px rgba(0,0,0,.9);
+}
+
+.cr-title {
+  position: absolute;
+  top: 6.5%;
+  left: 19.1%;
+  width: 61.8%;
+  height: 12.2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff6e2;
+  font-weight: 400;
+  font-size: calc(60px * var(--s));
+  paint-order: stroke fill;
+  text-shadow: calc(2px * var(--s)) calc(2px * var(--s)) calc(12px * var(--s)) rgba(0,0,0,.19);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 5;
+}
+
+.cr-type {
+  position: absolute;
+  top: 52.5%;
+  left: 25%;
+  width: 50%;
+  height: 8.4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.75);
+  font-weight: 700;
+  font-size: calc(30px * var(--s));
+  text-transform: capitalize;
+  letter-spacing: .02em;
+  z-index: 5;
+}
+
+.cr-desc {
+  position: absolute;
+  top: 59.6%;
+  left: 14.1%;
+  width: 71.5%;
+  height: 30.8%;
+  color: #fff6e2;
+  font-size: calc(43px * var(--s));
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  text-shadow: calc(2px * var(--s)) calc(2px * var(--s)) 0 rgba(0,0,0,.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 5;
+}
+.cr-icon {
+  display: inline;
+  width: calc(32px * var(--s));
+  height: calc(32px * var(--s));
+  vertical-align: middle;
+  margin: 0 1px;
+}
+
+.cr-keywords {
+  position: absolute;
+  bottom: 3%;
+  left: 14%;
+  right: 14%;
+  display: flex;
+  justify-content: center;
+  gap: calc(4px * var(--s));
+  flex-wrap: wrap;
+}
+.cr-kw {
+  background: rgba(255,246,226,.15);
+  color: #fff6e2;
+  font-size: calc(22px * var(--s));
+  padding: calc(2px * var(--s)) calc(6px * var(--s));
+  border-radius: calc(4px * var(--s));
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.cr-kw-new {
+  color: #50dc78;
+  border: 1px solid rgba(80,220,120,.3);
+}
+
+.cr-green { color: #50dc78; }
+.cr-keyword { color: #EFC851; }

@@ -1,5 +1,7 @@
 ---
 import Badge from './Badge.astro';
+import CardImageToggle from './react/CardImageToggle';
+import CardImageToggleSts1 from './react/CardImageToggleSts1';
 
 export interface Props {
   game: 'sts1' | 'sts2';
@@ -254,10 +256,13 @@ const mentionedPowers = (data.powers ?? []).filter((p: any) => {
 });
 // Dedupe by name
 const seenPowerNames = new Set(mappedPowers.map((p: any) => p.name));
-const relatedPowers = [
+const allRelatedPowers = [
   ...mappedPowers,
   ...mentionedPowers.filter((p: any) => !seenPowerNames.has(p.name)),
 ];
+// Exclude powers that already appear as keywords
+const keywordNameSet = new Set(mentionedKeywords.flatMap((kw: any) => kw.names.map((n: string) => n.toLowerCase())));
+const relatedPowers = allRelatedPowers.filter((p: any) => !keywordNameSet.has(p.name?.toLowerCase()));
 
 // Upgrade summary for STS2 (show what changed)
 const upgChanges: string[] = [];
@@ -274,18 +279,11 @@ if (game === 'sts2' && upg) {
 ---
 <div class="flex flex-col items-center gap-6 md:flex-row md:items-start">
   <!-- Rendered card image with toggle -->
-  <div class="flex flex-col items-center gap-3 shrink-0">
-    <div class="relative">
-      <img id="card-img" src={renderedBase} alt={card.name}
-        class="w-96 md:w-[28rem] rounded-lg drop-shadow-xl" />
-    </div>
-    {renderedUpgraded && (
-      <div id="upgrade-toggle" class="inline-flex rounded-lg border border-white/10 overflow-hidden text-sm font-medium">
-        <button id="btn-base" class="px-4 py-1.5 bg-white/10 text-white transition-colors">Base</button>
-        <button id="btn-upgraded" class="px-4 py-1.5 bg-transparent text-slate-400 hover:text-slate-200 transition-colors">Upgraded</button>
-      </div>
-    )}
-  </div>
+  {game === 'sts2' ? (
+    <CardImageToggle client:load card={card} hasUpgrade={hasUpgrade} />
+  ) : (
+    <CardImageToggleSts1 client:load card={card} hasUpgrade={hasUpgrade} />
+  )}
 
   <!-- Card info -->
   <div class="flex-1 min-w-0">
@@ -308,15 +306,7 @@ if (game === 'sts2' && upg) {
       </div>
     )}
 
-    <!-- Description -->
-    {descHtml && (
-      <section class="mt-4">
-        <div id="desc-base" class="text-sm text-slate-200 leading-relaxed" set:html={descHtml} />
-        {upgDescHtml && (
-          <div id="desc-upgraded" class="text-sm text-slate-200 leading-relaxed hidden" set:html={upgDescHtml} />
-        )}
-      </section>
-    )}
+    <!-- Description removed — visible on card render -->
 
     <!-- Upgrade summary -->
     {upgChanges.length > 0 && (
@@ -382,44 +372,4 @@ if (game === 'sts2' && upg) {
   </div>
 </div>
 
-{renderedUpgraded && (
-  <script define:vars={{ renderedBase, renderedUpgraded, baseName: card.name, upgName, baseCost: card.cost, upgCost, costChanged }}>
-    const btnBase = document.getElementById('btn-base');
-    const btnUpgraded = document.getElementById('btn-upgraded');
-    const img = document.getElementById('card-img');
-    const descBase = document.getElementById('desc-base');
-    const descUpg = document.getElementById('desc-upgraded');
-    const cardName = document.getElementById('card-name');
-    const costBadge = document.getElementById('cost-badge');
-    const active = 'bg-white/10 text-white';
-    const inactive = 'bg-transparent text-slate-400 hover:text-slate-200';
-    function setActive(btn, other) {
-      btn.className = `px-4 py-1.5 transition-colors ${active}`;
-      other.className = `px-4 py-1.5 transition-colors ${inactive}`;
-    }
-    if (btnBase && btnUpgraded && img) {
-      btnBase.addEventListener('click', () => {
-        img.src = renderedBase;
-        setActive(btnBase, btnUpgraded);
-        if (descBase) descBase.classList.remove('hidden');
-        if (descUpg) descUpg.classList.add('hidden');
-        if (cardName) { cardName.textContent = baseName; cardName.classList.remove('text-emerald-400'); }
-        if (costBadge) {
-          const span = costBadge.querySelector('span');
-          if (span) { span.textContent = 'Cost ' + baseCost; span.classList.remove('bg-emerald-500/15', 'text-emerald-300', 'ring-emerald-500/30'); span.classList.add('bg-white/10', 'text-slate-200', 'ring-white/10'); }
-        }
-      });
-      btnUpgraded.addEventListener('click', () => {
-        img.src = renderedUpgraded;
-        setActive(btnUpgraded, btnBase);
-        if (descBase) descBase.classList.add('hidden');
-        if (descUpg) descUpg.classList.remove('hidden');
-        if (cardName) { cardName.textContent = upgName; cardName.classList.add('text-emerald-400'); }
-        if (costBadge && costChanged) {
-          const span = costBadge.querySelector('span');
-          if (span) { span.textContent = 'Cost ' + upgCost; span.classList.remove('bg-white/10', 'text-slate-200', 'ring-white/10'); span.classList.add('bg-emerald-500/15', 'text-emerald-300', 'ring-emerald-500/30'); }
-        }
-      });
-    }
-  </script>
-)}
+
