@@ -44,24 +44,24 @@ function loadImageSet(subdir: string): Set<string> {
 }
 
 function cardImages(): Set<string> {
-  if (!_cardImages) _cardImages = loadImageSet('cards');
+  if (!_cardImages) _cardImages = loadImageSet('sts1/cards');
   return _cardImages;
 }
 
 function relicImages(): Set<string> {
-  if (!_relicImages) _relicImages = loadImageSet('relics');
+  if (!_relicImages) _relicImages = loadImageSet('sts1/relics');
   return _relicImages;
 }
 
 export function cardImagePath(id: string, name: string): string | null {
   const override = CARD_IMAGE_OVERRIDES[id];
-  if (override && cardImages().has(override)) return `/images/cards/${override}.png`;
+  if (override && cardImages().has(override)) return `/images/sts1/cards/${override}.png`;
 
   const idSlug = id.toLowerCase();
-  if (cardImages().has(idSlug)) return `/images/cards/${idSlug}.png`;
+  if (cardImages().has(idSlug)) return `/images/sts1/cards/${idSlug}.png`;
 
   const nameSlug = toSnake(name);
-  if (cardImages().has(nameSlug)) return `/images/cards/${nameSlug}.png`;
+  if (cardImages().has(nameSlug)) return `/images/sts1/cards/${nameSlug}.png`;
 
   return null;
 }
@@ -70,15 +70,15 @@ export function relicImagePath(id: string, name: string): string | null {
   const imgs = relicImages();
 
   // Try exact ID (relics often use camelCase IDs matching filenames)
-  if (imgs.has(id)) return `/images/relics/${id}.png`;
+  if (imgs.has(id)) return `/images/sts1/relics/${id}.png`;
 
   // Try snake_case of name
   const nameSlug = toSnake(name);
-  if (imgs.has(nameSlug)) return `/images/relics/${nameSlug}.png`;
+  if (imgs.has(nameSlug)) return `/images/sts1/relics/${nameSlug}.png`;
 
   // Try camelCase variations
   const idLower = id.toLowerCase();
-  if (imgs.has(idLower)) return `/images/relics/${idLower}.png`;
+  if (imgs.has(idLower)) return `/images/sts1/relics/${idLower}.png`;
 
   return null;
 }

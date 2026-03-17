@@ -17,7 +17,7 @@ const upg = card.upgrade;
 const hasUpgrade = upg && Object.keys(upg).length > 0;
 
 // Rendered card image paths
-const imgPrefix = game === 'sts1' ? '/images/rendered' : '/images/sts2/rendered';
+const imgPrefix = game === 'sts1' ? '/images/sts1/rendered' : '/images/sts2/rendered';
 const renderedBase = `${imgPrefix}/${card.id.toLowerCase()}.png`;
 const renderedUpgraded = hasUpgrade ? `${imgPrefix}/upgraded/${card.id.toLowerCase()}.png` : null;
 
@@ -114,11 +114,12 @@ function highlightDescription(desc: string, game: string, data: any): string {
   let html = desc.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   
   // Energy tokens
+  const carduiBase = game === 'sts1' ? '/images/sts1/cardui' : '/images/sts2/cardui';
   const energyMap: Record<string, string> = {
-    '[R]': '/images/cardui/card_red_orb.png',
-    '[G]': '/images/cardui/card_green_orb.png',
-    '[B]': '/images/cardui/card_blue_orb.png',
-    '[W]': '/images/cardui/card_purple_orb.png',
+    '[R]': `${carduiBase}/card_red_orb.png`,
+    '[G]': `${carduiBase}/card_green_orb.png`,
+    '[B]': `${carduiBase}/card_blue_orb.png`,
+    '[W]': `${carduiBase}/card_purple_orb.png`,
   };
   for (const [token, imgPath] of Object.entries(energyMap)) {
     const escaped = token.replace('[', '\\[').replace(']', '\\]');
@@ -126,7 +127,7 @@ function highlightDescription(desc: string, game: string, data: any): string {
       `<img src="${imgPath}" alt="${token}" class="inline-block h-5 w-5 align-text-bottom" />`);
   }
   // [Energy] token
-  html = html.replace(/\[Energy\]/g, `<img src="/images/cardui/card_red_orb.png" alt="Energy" class="inline-block h-5 w-5 align-text-bottom" />`);
+  html = html.replace(/\[Energy\]/g, `<img src="${carduiBase}/card_red_orb.png" alt="Energy" class="inline-block h-5 w-5 align-text-bottom" />`);
   
   // Collect highlight terms: keywords + power names
   const highlightTerms: string[] = [];
@@ -329,7 +330,7 @@ if (game === 'sts2' && upg) {
             return (
               <a href={`/${game}/keywords`} class="flex items-start gap-3 rounded-lg border border-white/10 bg-white/5 p-3 hover:bg-white/10 transition-colors">
                 {iconFile && (
-                  <img src={`/images/powers/${iconFile}.png`} alt={name} class="w-8 h-8 shrink-0 mt-0.5" />
+                  <img src={`/images/${game}/powers/${iconFile}.png`} alt={name} class="w-8 h-8 shrink-0 mt-0.5" />
                 )}
                 <div>
                   <span class="text-sm font-medium text-amber-300 capitalize">{name}</span>
@@ -349,7 +350,7 @@ if (game === 'sts2' && upg) {
           {relatedPowers.map((p: any) => (
             <div class="flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 p-3">
               {p.icon && (
-                <img src={`/images/powers/${p.icon}`} alt={p.name} class="w-8 h-8 flex-shrink-0" />
+                <img src={`/images/${game}/powers/${p.icon}`} alt={p.name} class="w-8 h-8 flex-shrink-0" />
               )}
               <div>
                 <span class="text-sm font-medium text-sky-300">{p.name}</span>

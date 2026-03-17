@@ -78,17 +78,17 @@ function Sts1Renderer({ card, upgraded, size }: { card: any; upgraded: boolean; 
   const rarity = (card.rarity ?? 'Common').toLowerCase();
   const assetRarity = ['common', 'uncommon', 'rare'].includes(rarity) ? rarity : 'common';
 
-  const bgAsset = `/images/cardui/bg_${frameType}_${assetColor}.png`;
-  const frameAsset = `/images/cardui/frame_${frameType}_${assetRarity}.png`;
-  const bannerAsset = `/images/cardui/banner_${assetRarity}.png`;
-  const trimLeft = `/images/cardui/${assetRarity}_left.png`;
-  const trimCenter = `/images/cardui/${assetRarity}_center.png`;
-  const trimRight = `/images/cardui/${assetRarity}_right.png`;
+  const bgAsset = `/images/sts1/cardui/bg_${frameType}_${assetColor}.png`;
+  const frameAsset = `/images/sts1/cardui/frame_${frameType}_${assetRarity}.png`;
+  const bannerAsset = `/images/sts1/cardui/banner_${assetRarity}.png`;
+  const trimLeft = `/images/sts1/cardui/${assetRarity}_left.png`;
+  const trimCenter = `/images/sts1/cardui/${assetRarity}_center.png`;
+  const trimRight = `/images/sts1/cardui/${assetRarity}_right.png`;
 
   const orbColor = ORB_COLOR_MAP[assetColor] ?? 'colorless';
-  const orbAsset = `/images/cardui/card_${orbColor}_orb.png`;
+  const orbAsset = `/images/sts1/cardui/card_${orbColor}_orb.png`;
 
-  const portrait = `/images/cards/${card.id.toLowerCase()}.png`;
+  const portrait = `/images/sts1/cards/${card.id.toLowerCase()}.png`;
 
   const isCurseOrStatus = ['curse', 'status'].includes(cardType);
   let displayCost: number | null = card.cost ?? null;
@@ -103,11 +103,11 @@ function Sts1Renderer({ card, upgraded, size }: { card: any; upgraded: boolean; 
   if (upgraded && card.upgrade?.description) description = card.upgrade.description;
 
   const inlineOrbMap: Record<string, string> = {
-    R: `/images/cardui/card_red_orb.png`,
-    G: `/images/cardui/card_green_orb.png`,
-    B: `/images/cardui/card_blue_orb.png`,
-    E: `/images/cardui/card_colorless_orb.png`,
-    W: `/images/cardui/card_purple_orb.png`,
+    R: `/images/sts1/cardui/card_red_orb.png`,
+    G: `/images/sts1/cardui/card_green_orb.png`,
+    B: `/images/sts1/cardui/card_blue_orb.png`,
+    E: `/images/sts1/cardui/card_colorless_orb.png`,
+    W: `/images/sts1/cardui/card_purple_orb.png`,
   };
 
   const highlightPattern = new RegExp(

@@ -33,10 +33,10 @@ const colorClasses: Record<string, string> = {
 
 // STS1 energy rendering helper (used in description previews if needed)
 const sts1EnergyMap: Record<string, string> = {
-  '[R]': '/images/cardui/card_red_orb.png',
-  '[G]': '/images/cardui/card_green_orb.png',
-  '[B]': '/images/cardui/card_blue_orb.png',
-  '[W]': '/images/cardui/card_purple_orb.png',
+  '[R]': '/images/sts1/cardui/card_red_orb.png',
+  '[G]': '/images/sts1/cardui/card_green_orb.png',
+  '[B]': '/images/sts1/cardui/card_blue_orb.png',
+  '[W]': '/images/sts1/cardui/card_purple_orb.png',
 };
 
 export function renderEnergy(text: string): string {

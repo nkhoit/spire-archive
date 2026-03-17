@@ -86,7 +86,7 @@ export default function RelicsExplorer(props: { game?: string; tiers: string[]; 
           <li key={r.id} className="p-3">
             <a className="flex items-center gap-3" href={`/${game}/relics/${r.id}`}>
               {r.icon ? (
-                <img src={`/images/relics/${r.icon}`} alt="" className="w-14 h-14 flex-shrink-0" />
+                <img src={`/images/${game}/relics/${r.icon}`} alt="" className="w-14 h-14 flex-shrink-0" />
               ) : (
                 <div className="w-14 h-14 flex-shrink-0 rounded bg-white/10" />
               )}

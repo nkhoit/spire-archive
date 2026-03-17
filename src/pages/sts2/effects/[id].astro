@@ -50,7 +50,7 @@ const colorMap: Record<string, string> = {
 
   <div class="mt-4 flex items-center gap-4">
     {power.icon ? (
-      <img src={`/images/powers/${power.icon}`} alt="" class="w-16 h-16" />
+      <img src={`/images/sts2/powers/${power.icon}`} alt="" class="w-16 h-16" />
     ) : (
       <img src={`/images/sts2/powers/${power.id.toLowerCase()}.png`} alt="" class="w-16 h-16" />
     )}
@@ -75,7 +75,7 @@ const colorMap: Record<string, string> = {
         {relatedCards.map((card) => (
           <a href={`/cards/${card.id}`} class="group rounded-lg border border-white/10 bg-white/5 p-2 hover:bg-white/10 transition">
             <img
-              src={`/images/rendered/${card.id.toLowerCase()}.png`}
+              src={`/images/sts2/rendered/${card.id.toLowerCase()}.png`}
               alt={card.name}
               class="w-full rounded"
               loading="lazy"
