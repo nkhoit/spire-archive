@@ -67,8 +67,8 @@ export default function PotionsExplorer(props: { game?: string; rarities: string
         {resp.items.map((p) => (
           <li key={p.id} className="p-3">
             <a className="flex items-center gap-3" href={`/${game}/potions/${p.id}`}>
-              {p.icon ? (
-                <img src={`/images/${game}/potions/${p.icon}`} alt="" className="w-14 h-14 flex-shrink-0" />
+              {game === 'sts2' || p.icon ? (
+                <img src={`/images/${game}/potions/${p.icon ?? p.id.toLowerCase() + '.png'}`} alt="" className="w-14 h-14 flex-shrink-0 object-contain" />
               ) : (
                 <div className="w-14 h-14 flex-shrink-0 rounded bg-white/10" />
               )}
