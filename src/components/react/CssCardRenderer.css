@@ -106,13 +106,14 @@
 
 .cr-star {
   position: absolute;
-  top: calc(0.9% + 13% * var(--s) * 6);
-  left: 2%;
-  width: 12%;
-  height: 10%;
+  top: 13.5%;
+  left: 1.2%;
+  width: 14%;
+  height: 11%;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 5;
 }
 .cr-star-img {
   position: absolute;
