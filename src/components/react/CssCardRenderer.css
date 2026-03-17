@@ -218,3 +218,188 @@
 
 .cr-green { color: #50dc78; }
 .cr-keyword { color: #EFC851; }
+/* STS1 Card Renderer
+ * Canvas: 1024×1024, scaled by --s
+ * Card content bbox: left=212 top=94 right=808 bottom=931
+ *
+ * % positions (relative to 1024×1024):
+ *   Portrait: centered at (512, 360), scale 1.05x
+ *   Orb: center at (245, 140), size 120px → left=23.9% top=13.7% w=11.7%
+ *   Title: centered horizontally, Y=164 (center) → top≈15.4%
+ *   Type: centered, Y=535 → top≈52.2%
+ *   Desc: Y=590–848 → top≈57.6% height≈25.2%
+ */
+
+.cr1 {
+  position: relative;
+  width: calc(1024px * var(--s));
+  height: calc(1024px * var(--s));
+  font-family: 'KreonGame', 'Kreon', serif;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+/* All full-canvas layers */
+.cr1-bg,
+.cr1-frame,
+.cr1-banner,
+.cr1-trim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+}
+
+.cr1-bg    { z-index: 1; }
+
+/* Portrait - centered at (512, 360) in 1024 space, 500x380 scaled 1.05x = 525x399
+ * Position: left=(512-262)/1024=24.4%, top=(360-199)/1024=15.7%
+ * Size: 525/1024=51.3% x 399/1024=39.0%
+ */
+.cr1-portrait-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 2;
+  pointer-events: none;
+}
+.cr1-portrait {
+  position: absolute;
+  top: 15.7%;
+  left: 24.4%;
+  width: 51.3%;
+  height: 39%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.cr1-frame  { z-index: 3; }
+.cr1-banner { z-index: 4; }
+.cr1-trim   { z-index: 5; }
+
+/* Energy orb: center at (245, 140), size 120px
+ * left = (245 - 60) / 1024 = 18.1%
+ * top  = (140 - 60) / 1024 = 7.8%
+ * width = 120 / 1024 = 11.7%
+ */
+.cr1-energy {
+  position: absolute;
+  top: 7.8%;
+  left: 18.1%;
+  width: 11.7%;
+  height: 11.7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 6;
+}
+.cr1-energy-orb {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.cr1-energy-num {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: calc(63px * var(--s));
+  -webkit-text-stroke: calc(5.5px * var(--s)) #000000;
+  paint-order: stroke fill;
+  line-height: 1;
+}
+
+/* Title: centered horizontally, vertical center at Y=164
+ * Height ~50px → top = (164 - 25) / 1024 = 13.6%
+ * left/right padding to keep it in center area
+ */
+.cr1-title {
+  position: absolute;
+  top: 14.8%;
+  left: 20%;
+  width: 60%;
+  height: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f0ebe0;
+  font-weight: 700;
+  font-size: calc(44px * var(--s));
+  -webkit-text-stroke: calc(4px * var(--s)) #1e0f00;
+  paint-order: stroke fill;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 7;
+}
+.cr1-title-long {
+  font-size: calc(37px * var(--s));
+}
+.cr1-title-upgraded {
+  color: #7ce67c;
+}
+
+/* Type label: centered at Y=535
+ * top = 535 / 1024 ≈ 52.2%
+ */
+.cr1-type {
+  position: absolute;
+  top: 51.6%;
+  left: 20%;
+  width: 60%;
+  height: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: calc(30px * var(--s));
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  z-index: 7;
+}
+
+/* Description: Y=590–848 centered
+ * top = 590 / 1024 = 57.6%
+ * height = (848 - 590) / 1024 = 25.2%
+ */
+.cr1-desc {
+  position: absolute;
+  top: 57.6%;
+  left: 27%;
+  width: 46%;
+  height: 25.2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #dcdcd2;
+  font-size: calc(47px * var(--s));
+  font-weight: 400;
+  line-height: 1.15;
+  -webkit-text-stroke: calc(1px * var(--s)) #14141e;
+  paint-order: stroke fill;
+  overflow: hidden;
+  z-index: 7;
+}
+.cr1-desc-inner {
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.cr1-icon {
+  display: inline;
+  width: calc(28px * var(--s));
+  height: calc(28px * var(--s));
+  vertical-align: middle;
+  margin: 0 1px;
+}
+
+.cr1-keyword { color: #e8c170; }
+.cr1-green   { color: #7ce67c; }

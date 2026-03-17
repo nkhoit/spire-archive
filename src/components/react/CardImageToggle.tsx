@@ -4,9 +4,10 @@ import CssCardRenderer from './CssCardRenderer';
 interface Props {
   card: any;
   hasUpgrade: boolean;
+  game?: 'sts1' | 'sts2';
 }
 
-export default function CardImageToggle({ card, hasUpgrade }: Props) {
+export default function CardImageToggle({ card, hasUpgrade, game = 'sts2' }: Props) {
   const [showUpgraded, setShowUpgraded] = useState(false);
 
   // Sync upgrade toggle state with server-rendered description/name elements
@@ -47,7 +48,7 @@ export default function CardImageToggle({ card, hasUpgrade }: Props) {
 
   return (
     <div className="flex flex-col items-center gap-3 shrink-0 max-w-sm">
-      <CssCardRenderer card={card} upgraded={showUpgraded} size="md" />
+      <CssCardRenderer card={card} upgraded={showUpgraded} size="md" game={game} />
       {hasUpgrade && (
         <div className="inline-flex rounded-lg border border-white/10 overflow-hidden text-sm font-medium">
           <button

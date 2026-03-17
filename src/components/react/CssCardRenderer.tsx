@@ -3,10 +3,177 @@ import './CssCardRenderer.css';
 export interface CssCardRendererProps {
   card: any;
   upgraded?: boolean;
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'xs' | 'sm' | 'md' | 'lg';
+  game?: 'sts1' | 'sts2';
 }
 
-export default function CssCardRenderer({ card, upgraded = false, size = 'md' }: CssCardRendererProps) {
+// ─── STS1 constants ──────────────────────────────────────────────────────────
+
+const COLOR_MAP: Record<string, string> = {
+  ironclad: 'red', silent: 'green', defect: 'blue', watcher: 'purple',
+  colorless: 'colorless', curse: 'black', status: 'black',
+};
+
+const ORB_COLOR_MAP: Record<string, string> = {
+  red: 'red', green: 'green', blue: 'blue', purple: 'purple',
+  colorless: 'colorless', black: 'colorless',
+};
+
+const TYPE_COLOR_MAP: Record<string, string> = {
+  red: 'rgb(120,98,83)', green: 'rgb(83,113,90)', blue: 'rgb(83,105,128)',
+  purple: 'rgb(105,90,120)', colorless: 'rgb(105,105,105)', black: 'rgb(90,90,90)',
+};
+
+const STS1_KEYWORDS = [
+  'Plated Armor',
+  'Strength', 'Dexterity', 'Block', 'Vulnerable', 'Weak', 'Frail',
+  'Poison', 'Exhaust', 'Ethereal', 'Innate', 'Retain', 'Scry',
+  'Channel', 'Evoke', 'Focus', 'Orb', 'Lightning', 'Frost', 'Dark',
+  'Plasma', 'Mantra', 'Wrath', 'Calm', 'Divinity', 'Vigor',
+  'Intangible', 'Artifact', 'Metallicize', 'Thorns',
+  'Shiv', 'Shivs', 'Burn', 'Wound', 'Dazed', 'Slimed', 'Void',
+  'Strikes', 'Power', 'Powers', 'Attack', 'Attacks', 'Skill', 'Skills',
+  'Unplayable', 'Energy',
+];
+
+// ─── STS2 constants ──────────────────────────────────────────────────────────
+
+const STS2_HIGHLIGHT_TERMS = [
+  'Vulnerable', 'Weak', 'Strength', 'Dexterity', 'Block', 'Thorns',
+  'Innate', 'Ethereal', 'Exhaust', 'Retain', 'Sly', 'Eternal',
+  'Wound', 'Burn', 'Daze', 'Slimed', 'Void',
+  'Poison', 'Focus', 'Frost', 'Lightning', 'Dark', 'Plasma',
+  'Scry', 'Mantra', 'Stance', 'Wrath', 'Calm', 'Divinity',
+  'Fragile', 'Summon', 'Forge', 'Hex', 'Ritual', 'Vigor',
+  'Intangible', 'Artifact', 'Plated Armor', 'Metallicize',
+  'Shiv', 'Shivs',
+];
+
+const TITLE_OUTLINE_COLORS: Record<string, string> = {
+  common: '#4D4B40', basic: '#4D4B40', uncommon: '#005C75',
+  rare: '#6B4B00', curse: '#550B9E', quest: '#7E3E15',
+  status: '#4F522F', special: '#1B6131',
+};
+
+export default function CssCardRenderer({
+  card,
+  upgraded = false,
+  size = 'md',
+  game = 'sts2',
+}: CssCardRendererProps) {
+  if (game === 'sts1') {
+    return <Sts1Renderer card={card} upgraded={upgraded} size={size} />;
+  }
+  return <Sts2Renderer card={card} upgraded={upgraded} size={size} />;
+}
+
+// ─── STS1 Renderer ───────────────────────────────────────────────────────────
+
+function Sts1Renderer({ card, upgraded, size }: { card: any; upgraded: boolean; size: string }) {
+  const cardType = (card.type ?? 'Skill').toLowerCase();
+  const cardColor = (card.color ?? 'colorless').toLowerCase();
+
+  const assetColor = COLOR_MAP[cardColor] ?? 'colorless';
+  const frameType = ['curse', 'status'].includes(cardType) ? 'skill' : cardType;
+  const rarity = (card.rarity ?? 'Common').toLowerCase();
+  const assetRarity = ['common', 'uncommon', 'rare'].includes(rarity) ? rarity : 'common';
+
+  const bgAsset = `/images/cardui/bg_${frameType}_${assetColor}.png`;
+  const frameAsset = `/images/cardui/frame_${frameType}_${assetRarity}.png`;
+  const bannerAsset = `/images/cardui/banner_${assetRarity}.png`;
+  const trimLeft = `/images/cardui/${assetRarity}_left.png`;
+  const trimCenter = `/images/cardui/${assetRarity}_center.png`;
+  const trimRight = `/images/cardui/${assetRarity}_right.png`;
+
+  const orbColor = ORB_COLOR_MAP[assetColor] ?? 'colorless';
+  const orbAsset = `/images/cardui/card_${orbColor}_orb.png`;
+
+  const portrait = `/images/cards/${card.id.toLowerCase()}.png`;
+
+  const isCurseOrStatus = ['curse', 'status'].includes(cardType);
+  let displayCost: number | null = card.cost ?? null;
+  const upgradedCost = upgraded && card.upgrade?.cost !== undefined ? card.upgrade.cost : undefined;
+  const costChanged = upgradedCost !== undefined && upgradedCost !== card.cost;
+  if (upgraded && upgradedCost !== undefined) displayCost = upgradedCost;
+
+  const cardName = upgraded ? card.name + '+' : card.name;
+  const longName = cardName.length > 14;
+
+  let description: string = card.description ?? '';
+  if (upgraded && card.upgrade?.description) description = card.upgrade.description;
+
+  const inlineOrbMap: Record<string, string> = {
+    R: `/images/cardui/card_red_orb.png`,
+    G: `/images/cardui/card_green_orb.png`,
+    B: `/images/cardui/card_blue_orb.png`,
+    E: `/images/cardui/card_colorless_orb.png`,
+    W: `/images/cardui/card_purple_orb.png`,
+  };
+
+  const highlightPattern = new RegExp(
+    `\\b(${STS1_KEYWORDS.map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})\\b`,
+    'g'
+  );
+
+  let descProcessed = description
+    .replace(/\[([RGBEW])\]/g, (_, token: string) => {
+      const src = inlineOrbMap[token] ?? inlineOrbMap['E'];
+      return `<img src="${src}" class="cr1-icon" alt="${token}" />`;
+    })
+    .replace(highlightPattern, '<span class="cr1-keyword">$1</span>')
+    .replace(/\n/g, '<br>');
+
+  if (upgraded && card.upgrade?.description) {
+    const baseDesc = card.description ?? '';
+    const upgradeDesc = card.upgrade.description;
+    const baseNums = new Set((baseDesc.match(/\d+/g) ?? []).map(Number));
+    const upgradeNums = (upgradeDesc.match(/\d+/g) ?? []).map(Number);
+    const changedNums = new Set(upgradeNums.filter((n: number) => !baseNums.has(n)));
+    for (const num of changedNums) {
+      descProcessed = descProcessed.replace(
+        new RegExp(`(?<!\\d)${num}(?!\\d)`, 'g'),
+        `<span class="cr1-green">${num}</span>`
+      );
+    }
+  }
+
+  const typeColor = TYPE_COLOR_MAP[assetColor] ?? TYPE_COLOR_MAP['colorless'];
+  const scales: Record<string, number> = { xs: 0.22, sm: 0.35, md: 0.5, lg: 0.7 };
+  const scale = scales[size] ?? 0.5;
+
+  return (
+    <div className="cr1" style={{ '--s': scale } as React.CSSProperties}>
+      <img src={bgAsset} className="cr1-bg" alt="" />
+      <div className="cr1-portrait-area">
+        <img src={portrait} className="cr1-portrait" alt="" loading="lazy" />
+      </div>
+      <img src={frameAsset} className="cr1-frame" alt="" />
+      <img src={bannerAsset} className="cr1-banner" alt="" />
+      <img src={trimLeft} className="cr1-trim" alt="" />
+      <img src={trimCenter} className="cr1-trim" alt="" />
+      <img src={trimRight} className="cr1-trim" alt="" />
+      {!isCurseOrStatus && displayCost !== null && (
+        <div className="cr1-energy">
+          <img src={orbAsset} className="cr1-energy-orb" alt="" />
+          <span className={`cr1-energy-num${costChanged ? ' cr1-green' : ''}`}>{displayCost}</span>
+        </div>
+      )}
+      <div className={`cr1-title${upgraded ? ' cr1-title-upgraded' : ''}${longName ? ' cr1-title-long' : ''}`}>
+        {cardName}
+      </div>
+      <div className="cr1-type" style={{ color: typeColor }}>
+        {card.type}
+      </div>
+      <div className="cr1-desc">
+        <div className="cr1-desc-inner" dangerouslySetInnerHTML={{ __html: descProcessed }} />
+      </div>
+    </div>
+  );
+}
+
+// ─── STS2 Renderer ───────────────────────────────────────────────────────────
+
+function Sts2Renderer({ card, upgraded, size }: { card: any; upgraded: boolean; size: string }) {
   const cardType = (card.type ?? 'Skill').toLowerCase();
   const cardColor = card.color ?? 'colorless';
 
@@ -19,17 +186,7 @@ export default function CssCardRenderer({ card, upgraded = false, size = 'md' }:
   const bannerAsset = `/images/sts2/cardui/frames/banner_${rarity}.png`;
   const plaqueAsset = `/images/sts2/cardui/frames/plaque_${rarity}.png`;
 
-  const titleOutlineColors: Record<string, string> = {
-    common: '#4D4B40',
-    basic: '#4D4B40',
-    uncommon: '#005C75',
-    rare: '#6B4B00',
-    curse: '#550B9E',
-    quest: '#7E3E15',
-    status: '#4F522F',
-    special: '#1B6131',
-  };
-  const titleOutlineColor = titleOutlineColors[rarity] ?? '#4D4B40';
+  const titleOutlineColor = TITLE_OUTLINE_COLORS[rarity] ?? '#4D4B40';
 
   const energyMap: Record<string, string> = {
     ironclad: 'energy_ironclad.png', silent: 'energy_silent.png',
@@ -105,17 +262,7 @@ export default function CssCardRenderer({ card, upgraded = false, size = 'md' }:
     }
   }
 
-  const highlightTerms = [
-    'Vulnerable', 'Weak', 'Strength', 'Dexterity', 'Block', 'Thorns',
-    'Innate', 'Ethereal', 'Exhaust', 'Retain', 'Sly', 'Eternal',
-    'Wound', 'Burn', 'Daze', 'Slimed', 'Void',
-    'Poison', 'Focus', 'Frost', 'Lightning', 'Dark', 'Plasma',
-    'Scry', 'Mantra', 'Stance', 'Wrath', 'Calm', 'Divinity',
-    'Fragile', 'Summon', 'Forge', 'Hex', 'Ritual', 'Vigor',
-    'Intangible', 'Artifact', 'Plated Armor', 'Metallicize',
-    'Shiv', 'Shivs',
-  ];
-  const highlightPattern = new RegExp(`\\b(${highlightTerms.join('|')})\\b`, 'g');
+  const highlightPattern = new RegExp(`\\b(${STS2_HIGHLIGHT_TERMS.join('|')})\\b`, 'g');
 
   let descProcessed = description
     .replace(/\[E\]/g, `<img src="${inlineEnergy}" class="cr-icon" alt="Energy" />`)
@@ -123,7 +270,6 @@ export default function CssCardRenderer({ card, upgraded = false, size = 'md' }:
     .replace(highlightPattern, '<span class="cr-keyword">$1</span>')
     .replace(/\n/g, '<br>');
 
-  // Highlight upgraded numbers in green
   if (upgraded && upgradedNumbers.size > 0) {
     for (const num of upgradedNumbers) {
       descProcessed = descProcessed.replace(
@@ -133,65 +279,41 @@ export default function CssCardRenderer({ card, upgraded = false, size = 'md' }:
     }
   }
 
-  const descHtml = descProcessed;
-
   const typeLabel = card.type;
-
   const scales: Record<string, number> = { xs: 0.25, sm: 0.4, md: 0.6, lg: 0.8 };
   const scale = scales[size] ?? 0.6;
 
   return (
     <div className="cr" style={{ '--s': scale } as React.CSSProperties}>
-      {/* Layer 1: Portrait art (bottom) */}
       <div className="cr-portrait-area">
         <img src={portrait} className="cr-portrait" alt="" loading="lazy" />
       </div>
-
-      {/* Layer 2: Frame (on top of portrait) */}
       <img src={frameAsset} className="cr-frame" alt="" />
-
-      {/* Layer 3: Portrait border (on top of frame) */}
       <img src={borderAsset} className="cr-border" alt="" />
-
-      {/* Layer 3b: Type plaque (centered below portrait) */}
       <img src={plaqueAsset} className="cr-plaque" alt="" />
-
-      {/* Layer 4: Banner */}
       <img src={bannerAsset} className="cr-banner" alt="" />
-
-      {/* Energy orb: top-left, overlapping frame edge */}
       {displayCost !== null && (
         <div className="cr-energy">
           <img src={energyOrb} className="cr-energy-orb" alt="" />
           <span className={`cr-energy-num${upgraded && card.upgrade?.cost_change ? ' cr-green' : ''}`}>{displayCost}</span>
         </div>
       )}
-
-      {/* Star cost (Regent): below energy orb */}
       {starCost !== null && (
         <div className="cr-star">
           <img src={inlineStar} className="cr-star-img" alt="" />
           <span className="cr-star-num">{starCost}</span>
         </div>
       )}
-
-      {/* Title text: on the banner */}
       <div
         className={`cr-title${upgraded ? ' cr-green' : ''}`}
         style={{ WebkitTextStroke: `calc(7px * var(--s)) ${titleOutlineColor}` } as React.CSSProperties}
       >
         {cardName}
       </div>
-
-      {/* Type/rarity plaque: small centered area below portrait */}
       <div className="cr-type">{typeLabel}</div>
-
-      {/* Description */}
       <div className="cr-desc">
-        <div className="cr-desc-inner" dangerouslySetInnerHTML={{ __html: descHtml }} />
+        <div className="cr-desc-inner" dangerouslySetInnerHTML={{ __html: descProcessed }} />
       </div>
-
-      {/* Keywords at bottom */}
       {keywords.length > 0 && (
         <div className="cr-keywords">
           {keywords.map((kw: string) => (
