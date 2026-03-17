@@ -29,11 +29,11 @@ const typeTones: Record<string, string> = {
     {hpText && <Badge label={hpText} />}
   </div>
 
-  {monster.powers?.length > 0 && (
+  {(monster.powers ?? []).length > 0 && (
     <section class="mt-6">
       <h2 class="text-sm font-semibold text-slate-200">Starting Powers</h2>
       <div class="mt-2 flex flex-wrap gap-2">
-        {monster.powers.map((p: string) => (
+        {(monster.powers ?? []).map((p: string) => (
           <span class="text-xs px-2 py-1 rounded bg-white/10 text-slate-200">{p}</span>
         ))}
       </div>

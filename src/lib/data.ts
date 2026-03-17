@@ -87,6 +87,7 @@ export interface MonsterMove {
   id?: string;
   name: string;
   damage: number | null;
+  hits?: number | null;
   damage_ascension?: number | null;
   intent: string;
 }
@@ -101,6 +102,7 @@ export interface Monster {
   min_hp_ascension?: number | null;
   max_hp_ascension?: number | null;
   moves: MonsterMove[];
+  powers?: string[];
   image_url?: string | null;
 }
 
