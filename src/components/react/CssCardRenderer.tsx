@@ -311,9 +311,6 @@ function Sts2Renderer({ card, upgraded, size }: { card: any; upgraded: boolean; 
         {cardName}
       </div>
       <div className="cr-type">{typeLabel}</div>
-      <div className="cr-desc">
-        <div className="cr-desc-inner" dangerouslySetInnerHTML={{ __html: descProcessed }} />
-      </div>
       {keywords.length > 0 && (
         <div className="cr-keywords">
           {keywords.map((kw: string) => (
@@ -326,6 +323,9 @@ function Sts2Renderer({ card, upgraded, size }: { card: any; upgraded: boolean; 
           ))}
         </div>
       )}
+      <div className="cr-desc">
+        <div className="cr-desc-inner" dangerouslySetInnerHTML={{ __html: descProcessed }} />
+      </div>
     </div>
   );
 }
