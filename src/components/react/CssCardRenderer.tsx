@@ -316,7 +316,7 @@ function Sts2Renderer({ card, upgraded, size }: { card: any; upgraded: boolean; 
           (keywords.length > 0
             ? keywords.map((kw: string) => {
                 const isNew = upgraded && (card.upgrade?.add_keywords ?? []).includes(kw);
-                return isNew ? `<span class="cr-green">${kw}.</span>` : `${kw}.`;
+                return isNew ? `<span class="cr-green">${kw}.</span>` : `<span class="cr-keyword">${kw}.</span>`;
               }).join('<br/>') + '<br/>'
             : '') + descProcessed
         }} />
