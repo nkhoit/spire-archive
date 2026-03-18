@@ -15,13 +15,66 @@
 
 :root {
   color-scheme: dark;
+  --bg-base: #0a0d13;
+  --bg-surface: rgba(255, 255, 255, 0.03);
+  --bg-surface-hover: rgba(255, 255, 255, 0.06);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --accent-amber: #d4a843;
+  --accent-amber-dim: rgba(212, 168, 67, 0.15);
 }
 
 html {
-  background: #0b0f16;
+  background: var(--bg-base);
   color: #e6edf3;
+}
+
+/* Ambient background */
+body {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(212, 168, 67, 0.04), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(56, 89, 120, 0.06), transparent),
+    var(--bg-base);
 }
 
 a {
   color: inherit;
 }
+
+/* Kreon headings */
+h1, h2, h3 {
+  font-family: 'KreonGame', 'Kreon', serif;
+}
+
+/* Glass panels */
+.glass-panel {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.75rem;
+  backdrop-filter: blur(12px);
+}
+
+.glass-panel-hover:hover {
+  background: var(--bg-surface-hover);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Card tilt on hover */
+.card-tilt {
+  perspective: 800px;
+}
+.card-tilt > * {
+  transition: transform 0.15s ease-out;
+}
+.card-tilt:hover > * {
+  transform: rotateY(-3deg) rotateX(2deg) scale(1.02);
+}
+
+/* Tier-colored left border */
+.tier-common { border-left: 3px solid rgba(148, 163, 184, 0.4); }
+.tier-uncommon { border-left: 3px solid rgba(34, 197, 94, 0.5); }
+.tier-rare { border-left: 3px solid rgba(59, 130, 246, 0.5); }
+.tier-boss { border-left: 3px solid rgba(239, 68, 68, 0.5); }
+.tier-shop { border-left: 3px solid rgba(234, 179, 8, 0.5); }
+.tier-event { border-left: 3px solid rgba(168, 85, 247, 0.5); }
+.tier-starter { border-left: 3px solid rgba(251, 191, 36, 0.5); }
+.tier-ancient { border-left: 3px solid rgba(236, 72, 153, 0.5); }

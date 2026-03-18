@@ -11,6 +11,12 @@ type Potion = {
 
 type ApiResp<T> = { total: number; offset: number; limit: number; items: T[] };
 
+const rarityCls: Record<string, string> = {
+  common: 'tier-common',
+  uncommon: 'tier-uncommon',
+  rare: 'tier-rare',
+};
+
 export default function PotionsExplorer(props: { game?: string; rarities: string[]; initial?: ApiResp<Potion> }) {
   const game = props.game ?? 'sts1';
   const [q, setQ] = useState('');
@@ -29,9 +35,10 @@ export default function PotionsExplorer(props: { game?: string; rarities: string
 
   return (
     <div className="mt-4">
-      <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
+      <div className="sticky top-[53px] z-[5] -mx-4 px-4 py-3 bg-[#0a0d13]/80 backdrop-blur-xl border-b border-white/[0.06]">
+        <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
         <input
-          className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm"
+          className="rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm focus:border-amber-500/40 focus:outline-none transition-colors"
           placeholder="Search potions…"
           value={q}
           onChange={(e) => {
@@ -40,7 +47,7 @@ export default function PotionsExplorer(props: { game?: string; rarities: string
           }}
         />
         <select
-          className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm"
+          className="rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm focus:border-amber-500/40 focus:outline-none transition-colors"
           value={rarity}
           onChange={(e) => {
             setOffset(0);
@@ -54,6 +61,7 @@ export default function PotionsExplorer(props: { game?: string; rarities: string
             </option>
           ))}
         </select>
+        </div>
       </div>
 
       <div className="mt-3 flex items-center justify-between text-xs text-slate-300">
@@ -63,19 +71,19 @@ export default function PotionsExplorer(props: { game?: string; rarities: string
         <Pager total={resp.total} offset={resp.offset} limit={resp.limit} onOffset={setOffset} />
       </div>
 
-      <ul className="mt-3 divide-y divide-white/10 rounded-lg border border-white/10 bg-white/5">
+      <ul className="mt-3 space-y-2">
         {resp.items.map((p) => (
-          <li key={p.id} className="p-3">
-            <a className="flex items-center gap-3" href={`/${game}/potions/${p.id}`}>
+          <li key={p.id} className={`rounded-lg border border-white/[0.06] bg-white/[0.03] hover:bg-white/[0.06] hover:border-white/[0.12] transition-all ${rarityCls[p.rarity.toLowerCase()] ?? ''}`}>
+            <a className="flex items-center gap-3 p-3" href={`/${game}/potions/${p.id}`}>
               {game === 'sts2' || p.icon ? (
-                <img src={`/images/${game}/potions/${p.icon ?? p.id.toLowerCase() + '.png'}`} alt="" className="w-14 h-14 flex-shrink-0 object-contain" />
+                <img src={`/images/${game}/potions/${p.icon ?? p.id.toLowerCase() + '.png'}`} alt="" className="w-14 h-14 flex-shrink-0 object-contain" loading="lazy" />
               ) : (
                 <div className="w-14 h-14 flex-shrink-0 rounded bg-white/10" />
               )}
               <div className="min-w-0">
                 <span className="text-sm font-semibold hover:underline">{p.name}</span>
-                <div className="mt-1 text-xs text-slate-300">{p.rarity}</div>
-                <div className="mt-1 line-clamp-2 text-sm text-slate-200">{p.description}</div>
+                <div className="mt-1 text-xs text-slate-500">{p.rarity}</div>
+                <div className="mt-1 line-clamp-2 text-sm text-slate-300">{p.description}</div>
               </div>
             </a>
           </li>

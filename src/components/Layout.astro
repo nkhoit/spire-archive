@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import GlobalSearch from './react/GlobalSearch';
 
 export interface Props {
   title: string;
@@ -47,21 +48,23 @@ const navLinks = game ? [
     <!-- favicon intentionally omitted (optional) -->
   </head>
   <body class="min-h-dvh bg-slate-950 text-slate-100">
-    <header class="sticky top-0 z-10 border-b border-white/10 bg-slate-950/80 backdrop-blur">
+    <header class="sticky top-0 z-10 border-b border-white/[0.06] bg-[#0a0d13]/70 backdrop-blur-xl">
       <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3">
         <div class="flex items-center gap-2">
-          <a href="/" class="text-sm font-semibold tracking-wide">Spire Archive</a>
+          <a href="/" class="font-['KreonGame','Kreon',serif] text-base font-bold tracking-wide text-amber-200/90 hover:text-amber-100 transition-colors">Spire Archive</a>
           {game && (
             <>
-              <span class="text-slate-500">—</span>
-              <a href={`/${game}`} class="text-sm font-medium text-slate-200 hover:text-white">{gameLabels[game]}</a>
-              <a href={game === 'sts1' ? '/sts2' : '/sts1'} class="rounded-full bg-white/10 px-2.5 py-0.5 text-xs font-medium text-slate-400 hover:text-slate-100 hover:bg-white/20 transition-colors">
+              <span class="text-white/15">|</span>
+              <a href={`/${game}`} class="text-sm font-medium text-slate-300 hover:text-white transition-colors">{gameLabels[game]}</a>
+              <a href={game === 'sts1' ? '/sts2' : '/sts1'} class="rounded-full bg-white/[0.06] border border-white/[0.08] px-2.5 py-0.5 text-xs font-medium text-slate-500 hover:text-slate-200 hover:bg-white/10 hover:border-white/15 transition-all">
                 {game === 'sts1' ? 'STS2' : 'STS1'} →
               </a>
             </>
           )}
         </div>
-        {navLinks.length > 0 && (
+        <div class="flex items-center gap-3">
+          <GlobalSearch client:load game={game} />
+          {navLinks.length > 0 && (
           <>
             {/* Desktop nav */}
             <nav class="hidden md:flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-200">
@@ -76,6 +79,7 @@ const navLinks = game ? [
             </button>
           </>
         )}
+        </div>
       </div>
       {navLinks.length > 0 && (
         <nav id="nav-mobile" class="hidden md:hidden border-t border-white/10 px-4 py-3">
@@ -106,9 +110,9 @@ const navLinks = game ? [
       <slot />
     </main>
 
-    <footer class="border-t border-white/10">
-      <div class="mx-auto max-w-7xl px-4 py-6 text-xs text-slate-400">
-        Spire Archive — a Slay the Spire companion
+    <footer class="border-t border-white/[0.06]">
+      <div class="mx-auto max-w-7xl px-4 py-6 text-xs text-slate-500">
+        <span class="font-['KreonGame','Kreon',serif] text-amber-200/40">Spire Archive</span> — a Slay the Spire companion
       </div>
     </footer>
   </body>

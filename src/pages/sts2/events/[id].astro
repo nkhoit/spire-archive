@@ -40,12 +40,24 @@ function renderChoices(choices: any[], eventRefs?: any[]) {
 }
 ---
 <Layout game="sts2" title={title} description={event.description ?? ''}>
-  <a href="/sts2/events" class="text-xs text-sky-400 hover:underline">← Events</a>
-  <h1 class="mt-2 text-2xl font-semibold">{event.name}</h1>
+  {/* Event hero with art background */}
+  <div class="relative -mx-4 -mt-6 mb-6 overflow-hidden" style="height: 220px;">
+    <img
+      src={`/images/sts2/events/${event.id.toLowerCase()}.png`}
+      alt=""
+      class="absolute inset-0 w-full h-full object-cover opacity-25 blur-md scale-110"
+      onerror="this.style.display='none'"
+    />
+    <div class="absolute inset-0 bg-gradient-to-b from-[#0a0d13]/30 via-[#0a0d13]/60 to-[#0a0d13]"></div>
+    <div class="absolute bottom-0 left-0 right-0 px-6 pb-5" style="z-index: 1;">
+      <a href="/sts2/events" class="text-xs text-sky-400/70 hover:text-sky-300 hover:underline transition-colors">← Events</a>
+      <h1 class="mt-1 text-2xl font-bold" style="font-family: 'KreonGame', 'Kreon', serif;">{event.name}</h1>
+    </div>
+  </div>
 
   {event.description && (
-    <section class="mt-4 rounded-lg border border-white/10 bg-white/5 p-4">
-      <p class="whitespace-pre-line text-sm text-slate-200 leading-relaxed" set:html={linkifyRefs(event.description, (event as any).references)} />
+    <section class="mt-4 rounded-lg border border-amber-900/20 bg-amber-950/10 p-5">
+      <p class="whitespace-pre-line text-sm text-amber-100/80 leading-relaxed italic" style="font-family: 'KreonGame', 'Kreon', serif;" set:html={linkifyRefs(event.description, (event as any).references)} />
     </section>
   )}
 

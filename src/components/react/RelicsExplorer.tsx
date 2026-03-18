@@ -32,9 +32,10 @@ export default function RelicsExplorer(props: { game?: string; tiers: string[]; 
 
   return (
     <div className="mt-4">
-      <div className="grid grid-cols-1 gap-2 md:grid-cols-3">
+      <div className="sticky top-[53px] z-[5] -mx-4 px-4 py-3 bg-[#0a0d13]/80 backdrop-blur-xl border-b border-white/[0.06]">
+        <div className="grid grid-cols-1 gap-2 md:grid-cols-3">
         <input
-          className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm"
+          className="rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm focus:border-amber-500/40 focus:outline-none transition-colors"
           placeholder="Search relics…"
           value={q}
           onChange={(e) => {
@@ -43,7 +44,7 @@ export default function RelicsExplorer(props: { game?: string; tiers: string[]; 
           }}
         />
         <select
-          className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm"
+          className="rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm focus:border-amber-500/40 focus:outline-none transition-colors"
           value={tier}
           onChange={(e) => {
             setOffset(0);
@@ -58,7 +59,7 @@ export default function RelicsExplorer(props: { game?: string; tiers: string[]; 
           ))}
         </select>
         <select
-          className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm"
+          className="rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm focus:border-amber-500/40 focus:outline-none transition-colors"
           value={color}
           onChange={(e) => {
             setOffset(0);
@@ -72,6 +73,7 @@ export default function RelicsExplorer(props: { game?: string; tiers: string[]; 
             </option>
           ))}
         </select>
+        </div>
       </div>
 
       <div className="mt-3 flex items-center justify-between text-xs text-slate-300">
@@ -81,10 +83,12 @@ export default function RelicsExplorer(props: { game?: string; tiers: string[]; 
         <Pager total={resp.total} offset={resp.offset} limit={resp.limit} onOffset={setOffset} />
       </div>
 
-      <ul className="mt-3 divide-y divide-white/10 rounded-lg border border-white/10 bg-white/5">
-        {resp.items.map((r) => (
-          <li key={r.id} className="p-3">
-            <a className="flex items-center gap-3" href={`/${game}/relics/${r.id}`}>
+      <ul className="mt-3 space-y-2">
+        {resp.items.map((r) => {
+          const tierCls = 'tier-' + r.tier.toLowerCase().replace(/\s+/g, '-');
+          return (
+          <li key={r.id} className={`rounded-lg border border-white/[0.06] bg-white/[0.03] hover:bg-white/[0.06] hover:border-white/[0.12] transition-all ${tierCls}`}>
+            <a className="flex items-center gap-3 p-3" href={`/${game}/relics/${r.id}`}>
               {game === 'sts2' || r.icon ? (
                 <img src={`/images/${game}/relics/${r.icon ?? r.id.toLowerCase() + '.png'}`} alt="" className="w-14 h-14 flex-shrink-0 object-contain" loading="lazy" />
               ) : (
@@ -92,15 +96,16 @@ export default function RelicsExplorer(props: { game?: string; tiers: string[]; 
               )}
               <div className="min-w-0">
                 <span className="text-sm font-semibold hover:underline">{r.name}</span>
-                <div className="mt-1 text-xs text-slate-300">
+                <div className="mt-1 text-xs text-slate-500">
                   {r.tier}
                   {r.color ? ` · ${r.color}` : ''}
                 </div>
-                <div className="mt-1 line-clamp-2 text-sm text-slate-200">{r.description}</div>
+                <div className="mt-1 line-clamp-2 text-sm text-slate-300">{r.description}</div>
               </div>
             </a>
           </li>
-        ))}
+          );
+        })}
       </ul>
     </div>
   );

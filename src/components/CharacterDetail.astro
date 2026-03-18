@@ -30,16 +30,28 @@ const getRelicImgSrc = (r: any) => {
   return `/images/${relicImageDir}/${r.id.toLowerCase()}.png`;
 };
 ---
-<h1 class="text-2xl font-semibold">{character.name}</h1>
-<div class="mt-2 flex flex-wrap gap-2">
-  <Badge label={color} tone={color} />
-  <Badge label={`${character.hp} HP`} />
-  <Badge label={`${character.energy_per_turn} Energy / turn`} />
+
+{/* Hero banner with character portrait background */}
+<div class="relative -mx-4 -mt-6 mb-8 overflow-hidden" style="height: 240px;">
+  <img
+    src={`/images/${game}/characters/${color || character.id.toLowerCase()}.jpg`}
+    alt=""
+    class="absolute inset-0 w-full h-full object-cover opacity-30 blur-lg scale-110"
+  />
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0d13]/50 to-[#0a0d13]"></div>
+  <div class="absolute bottom-0 left-0 right-0 px-6 pb-6" style="z-index: 1;">
+    <h1 class="text-3xl font-bold" style="font-family: 'KreonGame', 'Kreon', serif;">{character.name}</h1>
+    <p class="mt-1 text-sm text-slate-300 max-w-lg">{description}</p>
+    <div class="mt-3 flex flex-wrap gap-2">
+      <Badge label={color} tone={color} />
+      <Badge label={`${character.hp} HP`} />
+      <Badge label={`${character.energy_per_turn} Energy / turn`} />
+    </div>
+  </div>
 </div>
-<p class="mt-3 text-sm text-slate-300">{description}</p>
 
 <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
-  <section class="rounded-lg border border-white/10 bg-white/5 p-4">
+  <section class="rounded-lg border border-white/[0.06] bg-white/[0.03] p-4">
     <h2 class="text-sm font-semibold">Starting Deck ({startingDeck.reduce((s, d) => s + d.count, 0)} cards)</h2>
     <ul class="mt-2 space-y-1">
       {startingDeck.map(({ cardId, card, count }) => (
@@ -54,7 +66,7 @@ const getRelicImgSrc = (r: any) => {
   </section>
 
   {startingRelic && (
-    <section class="rounded-lg border border-white/10 bg-white/5 p-4">
+    <section class="rounded-lg border border-white/[0.06] bg-white/[0.03] p-4">
       <h2 class="text-sm font-semibold">Starting Relic</h2>
       <div class="mt-2 flex items-center gap-2">
         {hasRelicImages && (
@@ -72,7 +84,7 @@ const getRelicImgSrc = (r: any) => {
     <h2 class="text-lg font-semibold">Cards ({charCards.length})</h2>
     <div class="mt-3 grid grid-cols-1 gap-4 md:grid-cols-3">
       {Array.from(cardsByType.entries()).sort().map(([type, cards]) => (
-        <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+        <div class="rounded-lg border border-white/[0.06] bg-white/[0.03] p-4">
           <h3 class="text-sm font-semibold capitalize">{type}s ({cards.length})</h3>
           <ul class="mt-2 space-y-1">
             {cards.sort((a: any, b: any) => a.name.localeCompare(b.name)).map((c: any) => (
@@ -92,7 +104,7 @@ const getRelicImgSrc = (r: any) => {
 {charRelics.length > 0 && (
   <section class="mt-6">
     <h2 class="text-lg font-semibold">Exclusive Relics ({charRelics.length})</h2>
-    <ul class="mt-3 divide-y divide-white/10 rounded-lg border border-white/10 bg-white/5">
+    <ul class="mt-3 divide-y divide-white/10 rounded-lg border border-white/[0.06] bg-white/[0.03]">
       {charRelics.map((r: any) => (
         <li class="p-3">
           <div class="flex items-center gap-2">
