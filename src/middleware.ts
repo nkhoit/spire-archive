@@ -19,11 +19,18 @@ export const onRequest = defineMiddleware(async (context, next) => {
   const ua = context.request.headers.get('user-agent') || '';
   const referer = context.request.headers.get('referer') || '';
 
+  const query = url.search || undefined;
+  const size = response.headers.get('content-length') || undefined;
+  const method = context.request.method;
+
   console.log(JSON.stringify({
     t: new Date().toISOString(),
+    m: method,
     path,
+    ...(query && { q: query }),
     status: response.status,
     ms: duration,
+    ...(size && { sz: Number(size) }),
     ip,
     ua,
     ref: referer,
