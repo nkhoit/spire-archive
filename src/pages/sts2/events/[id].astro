@@ -34,7 +34,7 @@ function linkifyRefs(text: string, refs?: any[]): string {
 function renderChoices(choices: any[], eventRefs?: any[]) {
   return choices.map((c: any) => {
     const allRefs = [...(eventRefs ?? []), ...(c.references ?? [])];
-    return { ...c, _html: c.description ? linkifyRefs(c.description, allRefs) : '' };
+    return { ...c, _html: c.description ? linkifyRefs(c.description, allRefs) : '', _locked: c.locked ?? null };
   });
 }
 ---
@@ -69,6 +69,7 @@ function renderChoices(choices: any[], eventRefs?: any[]) {
                 <div class="rounded-md border border-white/10 bg-white/5 p-3">
                   <div class="text-sm font-semibold text-sky-300">{c.name}</div>
                   {c._html && <p class="mt-1 text-sm text-slate-300" set:html={c._html} />}
+                  {c._locked && <p class="mt-1 text-xs text-slate-500 italic">🔒 {c._locked}</p>}
                 </div>
               ))}
             </div>
@@ -87,6 +88,7 @@ function renderChoices(choices: any[], eventRefs?: any[]) {
           <div class="rounded-md border border-white/10 bg-white/5 p-3">
             <div class="text-sm font-semibold text-sky-300">{c.name}</div>
             {c._html && <p class="mt-1 text-sm text-slate-300" set:html={c._html} />}
+            {c._locked && <p class="mt-1 text-xs text-slate-500 italic">🔒 {c._locked}</p>}
           </div>
         ))}
       </div>
@@ -124,6 +126,7 @@ function renderChoices(choices: any[], eventRefs?: any[]) {
                 </a>
               </div>
               {c._html && <p class="mt-1 text-sm text-slate-300 ml-10" set:html={c._html} />}
+              {c._locked && <p class="mt-1 text-xs text-slate-500 italic ml-10">🔒 {c._locked}</p>}
             </div>
           ))}
         </div>

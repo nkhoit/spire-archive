@@ -1026,32 +1026,23 @@
     "description": "On the floor lies a tome,\n“Top 3 Ways to Conquer the Spire”\n\nThe book is encrusted with blood so you find this manuscript highly suspicious.\n\nWill you read it?",
     "choices": [
       {
-        "name": "Move On",
-        "description": "You don't have any cards that can be Enchanted."
-      },
-      {
         "name": "Read the Entire Book",
-        "description": "Choose a Power to Enchant with Swift 2."
-      },
-      {
-        "name": "Locked",
-        "description": "You don't have any Powers that can be Enchanted."
+        "description": "Choose a Power to Enchant with Swift 2.",
+        "locked": "You don't have any Powers that can be Enchanted."
       },
       {
         "name": "Read a Random Passage",
-        "description": "Choose a Skill to Enchant with Nimble 2."
-      },
-      {
-        "name": "Locked",
-        "description": "You don't have any Skills that can be Enchanted."
+        "description": "Choose a Skill to Enchant with Nimble 2.",
+        "locked": "You don't have any Skills that can be Enchanted."
       },
       {
         "name": "Read the Back",
-        "description": "Choose an Attack to Enchant with Sharp 2."
+        "description": "Choose an Attack to Enchant with Sharp 2.",
+        "locked": "You don't have any Attacks that can be Enchanted."
       },
       {
-        "name": "Locked",
-        "description": "You don't have any Attacks that can be Enchanted."
+        "name": "Move On",
+        "description": "Leave the book."
       }
     ]
   },
@@ -1235,7 +1226,8 @@
     "choices": [
       {
         "name": "Bone Tea",
-        "description": "Pay 50 Gold. Bone Tea relic effect",
+        "description": "Pay 50 Gold. Obtain Bone Tea.",
+        "locked": "Requires 50 Gold.",
         "references": [
           {
             "type": "relic",
@@ -1245,12 +1237,9 @@
         ]
       },
       {
-        "name": "Locked",
-        "description": "Requires 50 Gold."
-      },
-      {
         "name": "Ember Tea",
-        "description": "Pay 150 Gold. Ember Tea relic effect",
+        "description": "Pay 150 Gold. Obtain Ember Tea.",
+        "locked": "Requires 150 Gold.",
         "references": [
           {
             "type": "relic",
@@ -1260,12 +1249,8 @@
         ]
       },
       {
-        "name": "Locked",
-        "description": "Requires 150 Gold."
-      },
-      {
         "name": "Tea of Discourtesy",
-        "description": "Tea of Discourtesy relic effect",
+        "description": "Obtain Tea of Discourtesy. The Tea Master becomes hostile!",
         "references": [
           {
             "type": "relic",
