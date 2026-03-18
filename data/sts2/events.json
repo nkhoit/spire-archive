@@ -19,15 +19,29 @@
     "id": "AMALGAMATOR",
     "name": "Amalgamator",
     "act": "unknown",
-    "description": "CLANG! CLANG!!!\n\nYou hear the echoes of metal upon metal on the otherside of a wall...\n\nAs you press your head against the wall to listen in—the wall opens up, revealing a hulking six-armed figure toiling away.\nIts “face” is a swirling vortex of glowing sigils that shift about.\n\n“One with an Ascending Spirit has found my workshop? Let's get COMBINING!”",
+    "description": "CLANG! CLANG!!!\n\nYou hear the echoes of metal upon metal on the otherside of a wall...\n\nAs you press your head against the wall to listen in\u2014the wall opens up, revealing a hulking six-armed figure toiling away.\nIts \u201cface\u201d is a swirling vortex of glowing sigils that shift about.\n\n\u201cOne with an Ascending Spirit has found my workshop? Let's get COMBINING!\u201d",
     "choices": [
       {
         "name": "Combine Defends",
-        "description": "Remove 2 Defends. Add Ultimate Defend to your Deck."
+        "description": "Remove 2 Defends. Add Ultimate Defend to your Deck.",
+        "references": [
+          {
+            "type": "card",
+            "id": "ULTIMATE_DEFEND",
+            "name": "Ultimate Defend"
+          }
+        ]
       },
       {
         "name": "Combine Strikes",
-        "description": "Remove 2 Strikes. Add Ultimate Strike to your Deck."
+        "description": "Remove 2 Strikes. Add Ultimate Strike to your Deck.",
+        "references": [
+          {
+            "type": "card",
+            "id": "ULTIMATE_STRIKE",
+            "name": "Ultimate Strike"
+          }
+        ]
       }
     ]
   },
@@ -51,7 +65,7 @@
     "id": "BATTLEWORN_DUMMY",
     "name": "Battleworn Dummy",
     "act": "unknown",
-    "description": "As you approach, it begins to rumble and fizzle and lights up brilliantly!\n\n“BZZZT! TIME TO TRAIN!!! YOU HAVE 3 TURNS TO DEFEAT ME!\nCHOOSE A SETTING OR FACE LETHAL HUMILIATION.\nHere are the options:”\n\nAfter the terrifying message, the dummy carefully reads out detailed instructions.\n\nWhat do you choose?",
+    "description": "As you approach, it begins to rumble and fizzle and lights up brilliantly!\n\n\u201cBZZZT! TIME TO TRAIN!!! YOU HAVE 3 TURNS TO DEFEAT ME!\nCHOOSE A SETTING OR FACE LETHAL HUMILIATION.\nHere are the options:\u201d\n\nAfter the terrifying message, the dummy carefully reads out detailed instructions.\n\nWhat do you choose?",
     "choices": [
       {
         "name": "Setting 1",
@@ -71,7 +85,7 @@
     "id": "BRAIN_LEECH",
     "name": "Brain Leech",
     "act": "unknown",
-    "description": "*thunk*\n\nA sharp pain is felt atop your head and a thought stabs into your mind.\n\n“SHARE KNOWLEDGE???”\n\nYou are unsure how to proceed...",
+    "description": "*thunk*\n\nA sharp pain is felt atop your head and a thought stabs into your mind.\n\n\u201cSHARE KNOWLEDGE???\u201d\n\nYou are unsure how to proceed...",
     "choices": [
       {
         "name": "Rip the Leech Off",
@@ -87,15 +101,29 @@
     "id": "BUGSLAYER",
     "name": "Bugslayer",
     "act": "unknown",
-    "description": "As you're fending off a swarm of aggressive insects you suddenly notice a Mighty Rugged Warrior-Man fighting beside you this whole time!\n\nThe insects, sensing defeat, scatter. You turn to your fellow fighter.\n“Would you like any tips on exterminating these pests?”\n\nHow polite. You nod and accept his offer.",
+    "description": "As you're fending off a swarm of aggressive insects you suddenly notice a Mighty Rugged Warrior-Man fighting beside you this whole time!\n\nThe insects, sensing defeat, scatter. You turn to your fellow fighter.\n\u201cWould you like any tips on exterminating these pests?\u201d\n\nHow polite. You nod and accept his offer.",
     "choices": [
       {
         "name": "Learn Extermination Technique",
-        "description": "Add Exterminate to your Deck."
+        "description": "Add Exterminate to your Deck.",
+        "references": [
+          {
+            "type": "card",
+            "id": "EXTERMINATE",
+            "name": "Exterminate"
+          }
+        ]
       },
       {
         "name": "Learn Squash Technique",
-        "description": "Add Squash to your Deck."
+        "description": "Add Squash to your Deck.",
+        "references": [
+          {
+            "type": "card",
+            "id": "SQUASH",
+            "name": "Squash"
+          }
+        ]
       }
     ]
   },
@@ -111,7 +139,14 @@
       },
       {
         "name": "Take the Egg",
-        "description": "Add Byrdonis Egg to your Deck."
+        "description": "Add Byrdonis Egg to your Deck.",
+        "references": [
+          {
+            "type": "card",
+            "id": "BYRDONIS_EGG",
+            "name": "Byrdonis Egg"
+          }
+        ]
       }
     ]
   },
@@ -167,11 +202,18 @@
     "id": "CRYSTAL_SPHERE",
     "name": "Crystal Sphere",
     "act": "unknown",
-    "description": "“I predicted you'd enter...!”\n\nA raspy voice calls out as you enter a mystic hut.\n\n“Your destiny has brought you here. We must uncover your future and fortunes so you can SAVE US ALL!!”\n“Okay, here are the options for the Crystal Sphere reading. Be sure to sign this waiver as well,” she says while bringing out pen and parchment.",
+    "description": "\u201cI predicted you'd enter...!\u201d\n\nA raspy voice calls out as you enter a mystic hut.\n\n\u201cYour destiny has brought you here. We must uncover your future and fortunes so you can SAVE US ALL!!\u201d\n\u201cOkay, here are the options for the Crystal Sphere reading. Be sure to sign this waiver as well,\u201d she says while bringing out pen and parchment.",
     "choices": [
       {
         "name": "Payment Plan",
-        "description": "Gain a Debt. Divine 6 times."
+        "description": "Gain a Debt. Divine 6 times.",
+        "references": [
+          {
+            "type": "card",
+            "id": "DEBT",
+            "name": "Debt"
+          }
+        ]
       },
       {
         "name": "Uncover Future",
@@ -184,13 +226,75 @@
     "name": "Darv",
     "act": "unknown",
     "description": null,
-    "choices": []
+    "choices": [],
+    "references": [
+      {
+        "type": "relic",
+        "id": "DUSTY_TOME",
+        "name": "Dusty Tome"
+      },
+      {
+        "type": "relic",
+        "id": "ASTROLABE",
+        "name": "Astrolabe"
+      },
+      {
+        "type": "relic",
+        "id": "BLACK_STAR",
+        "name": "Black Star"
+      },
+      {
+        "type": "relic",
+        "id": "CALLING_BELL",
+        "name": "Calling Bell"
+      },
+      {
+        "type": "relic",
+        "id": "EMPTY_CAGE",
+        "name": "Empty Cage"
+      },
+      {
+        "type": "relic",
+        "id": "PANDORAS_BOX",
+        "name": "Pandoras Box"
+      },
+      {
+        "type": "relic",
+        "id": "RUNIC_PYRAMID",
+        "name": "Runic Pyramid"
+      },
+      {
+        "type": "relic",
+        "id": "SNECKO_EYE",
+        "name": "Snecko Eye"
+      },
+      {
+        "type": "relic",
+        "id": "ECTOPLASM",
+        "name": "Ectoplasm"
+      },
+      {
+        "type": "relic",
+        "id": "SOZU",
+        "name": "Sozu"
+      },
+      {
+        "type": "relic",
+        "id": "PHILOSOPHERS_STONE",
+        "name": "Philosophers Stone"
+      },
+      {
+        "type": "relic",
+        "id": "VELVET_CHOKER",
+        "name": "Velvet Choker"
+      }
+    ]
   },
   {
     "id": "DENSE_VEGETATION",
     "name": "Dense Vegetation",
     "act": "unknown",
-    "description": "Having taken the wrong path for a good while, you find yourself in a thick jungle of ferns, shrubs, and vines. Especially vines. Exhaustion sets in, and a dark thought comes to mind:\n\n“You are lost, unprepared, and the inevitability of death is approaching.”\n\nWhat do you do?",
+    "description": "Having taken the wrong path for a good while, you find yourself in a thick jungle of ferns, shrubs, and vines. Especially vines. Exhaustion sets in, and a dark thought comes to mind:\n\n\u201cYou are lost, unprepared, and the inevitability of death is approaching.\u201d\n\nWhat do you do?",
     "choices": [
       {
         "name": "Rest",
@@ -220,13 +324,30 @@
         "name": "Take Some Time",
         "description": "Lose 5 HP. Choose 1 of 2 Doll Relics."
       }
+    ],
+    "references": [
+      {
+        "type": "relic",
+        "id": "DAUGHTER_OF_THE_WIND",
+        "name": "Daughter Of The Wind"
+      },
+      {
+        "type": "relic",
+        "id": "MR_STRUGGLES",
+        "name": "Mr Struggles"
+      },
+      {
+        "type": "relic",
+        "id": "BING_BONG",
+        "name": "Bing Bong"
+      }
     ]
   },
   {
     "id": "DOORS_OF_LIGHT_AND_DARK",
     "name": "Doors of Light and Dark",
     "act": "unknown",
-    "description": "A doorway existed where none existed moments before...\n\nYou enter to find two shimmering doorways and a well-dressed doorman.\n“Finally, a visitor! Please please! Choose a door, any door!”\n\nAre we still in the Spire? How is this place so clean?",
+    "description": "A doorway existed where none existed moments before...\n\nYou enter to find two shimmering doorways and a well-dressed doorman.\n\u201cFinally, a visitor! Please please! Choose a door, any door!\u201d\n\nAre we still in the Spire? How is this place so clean?",
     "choices": [
       {
         "name": "Dark Door",
@@ -246,11 +367,25 @@
     "choices": [
       {
         "name": "Bottle",
-        "description": "Procure Glowwater Potion."
+        "description": "Procure Glowwater Potion.",
+        "references": [
+          {
+            "type": "potion",
+            "id": "GLOWWATER_POTION",
+            "name": "Glowwater Potion"
+          }
+        ]
       },
       {
         "name": "Climb",
-        "description": "Obtain Fresnel Lens. Lose 13 Max HP."
+        "description": "Obtain Fresnel Lens. Lose 13 Max HP.",
+        "references": [
+          {
+            "type": "relic",
+            "id": "FRESNEL_LENS",
+            "name": "Fresnel Lens"
+          }
+        ]
       }
     ]
   },
@@ -258,11 +393,18 @@
     "id": "ENDLESS_CONVEYOR",
     "name": "Endless Conveyor",
     "act": "unknown",
-    "description": "You lumber into a shack with a bright but crooked sign that reads:\n“ENDLESS FEAST - PAY WHAT YOU HUNGER!”\n\nInside, a willowy multi-armed chef is deftly preparing bites of food and placing them onto a winding chitinous belt.\n\nOne of the chef's arms point to a sign:\n35 Gold each",
+    "description": "You lumber into a shack with a bright but crooked sign that reads:\n\u201cENDLESS FEAST - PAY WHAT YOU HUNGER!\u201d\n\nInside, a willowy multi-armed chef is deftly preparing bites of food and placing them onto a winding chitinous belt.\n\nOne of the chef's arms point to a sign:\n35 Gold each",
     "choices": [
       {
         "name": "Observe the Chef",
         "description": "Upgrade a random card in your Deck."
+      }
+    ],
+    "references": [
+      {
+        "type": "card",
+        "id": "FEEDING_FRENZY",
+        "name": "Feeding Frenzy"
       }
     ]
   },
@@ -271,7 +413,59 @@
     "name": "The Merchant???",
     "act": "unknown",
     "description": "Placeholder",
-    "choices": []
+    "choices": [],
+    "references": [
+      {
+        "type": "relic",
+        "id": "FAKE_ANCHOR",
+        "name": "Fake Anchor"
+      },
+      {
+        "type": "relic",
+        "id": "FAKE_BLOOD_VIAL",
+        "name": "Fake Blood Vial"
+      },
+      {
+        "type": "relic",
+        "id": "FAKE_HAPPY_FLOWER",
+        "name": "Fake Happy Flower"
+      },
+      {
+        "type": "relic",
+        "id": "FAKE_LEES_WAFFLE",
+        "name": "Fake Lees Waffle"
+      },
+      {
+        "type": "relic",
+        "id": "FAKE_MANGO",
+        "name": "Fake Mango"
+      },
+      {
+        "type": "relic",
+        "id": "FAKE_ORICHALCUM",
+        "name": "Fake Orichalcum"
+      },
+      {
+        "type": "relic",
+        "id": "FAKE_SNECKO_EYE",
+        "name": "Fake Snecko Eye"
+      },
+      {
+        "type": "relic",
+        "id": "FAKE_STRIKE_DUMMY",
+        "name": "Fake Strike Dummy"
+      },
+      {
+        "type": "relic",
+        "id": "FAKE_VENERABLE_TEA_SET",
+        "name": "Fake Venerable Tea Set"
+      },
+      {
+        "type": "relic",
+        "id": "FAKE_MERCHANTS_RUG",
+        "name": "Fake Merchants Rug"
+      }
+    ]
   },
   {
     "id": "FIELD_OF_MAN_SIZED_HOLES",
@@ -285,7 +479,14 @@
       },
       {
         "name": "Resist",
-        "description": "Remove 2 cards from your Deck. Add Normality to your Deck."
+        "description": "Remove 2 cards from your Deck. Add Normality to your Deck.",
+        "references": [
+          {
+            "type": "card",
+            "id": "NORMALITY",
+            "name": "Normality"
+          }
+        ]
       }
     ]
   },
@@ -297,11 +498,25 @@
     "choices": [
       {
         "name": "Accept the Forgotten Soul",
-        "description": "Obtain Forgotten Soul."
+        "description": "Obtain Forgotten Soul.",
+        "references": [
+          {
+            "type": "relic",
+            "id": "FORGOTTEN_SOUL",
+            "name": "Forgotten Soul"
+          }
+        ]
       },
       {
         "name": "Confront with Truth",
-        "description": "Add Decay to your Deck. Enchant a card that Exhausts with Souls Power."
+        "description": "Add Decay to your Deck. Enchant a card that Exhausts with Souls Power.",
+        "references": [
+          {
+            "type": "card",
+            "id": "DECAY",
+            "name": "Decay"
+          }
+        ]
       },
       {
         "name": "Locked",
@@ -365,7 +580,14 @@
     "choices": [
       {
         "name": "Capture the Wisp",
-        "description": "Add Decay to your Deck. Obtain the Lost Wisp."
+        "description": "Add Decay to your Deck. Obtain the Lost Wisp.",
+        "references": [
+          {
+            "type": "card",
+            "id": "DECAY",
+            "name": "Decay"
+          }
+        ]
       },
       {
         "name": "Locked",
@@ -393,7 +615,14 @@
       },
       {
         "name": "Reach into the Flesh",
-        "description": "Remove 2 cards from your Deck. Add Spore Mind to your Deck."
+        "description": "Remove 2 cards from your Deck. Add Spore Mind to your Deck.",
+        "references": [
+          {
+            "type": "card",
+            "id": "SPORE_MIND",
+            "name": "Spore Mind"
+          }
+        ]
       }
     ]
   },
@@ -417,7 +646,7 @@
     "id": "NEOW",
     "name": "Neow",
     "act": "unknown",
-    "description": "Neow, the Mother of Resurrection, awaits at the start of each run. She offers three blessings — two positive and one cursed. The options are drawn randomly from the pools below.",
+    "description": "Neow, the Mother of Resurrection, awaits at the start of each run. She offers three blessings \u2014 two positive and one cursed. The options are drawn randomly from the pools below.",
     "choices": [
       {
         "name": "Arcane Scroll",
@@ -553,7 +782,24 @@
     "name": "Orobas",
     "act": "unknown",
     "description": null,
-    "choices": []
+    "choices": [],
+    "references": [
+      {
+        "type": "relic",
+        "id": "SEA_GLASS",
+        "name": "Sea Glass"
+      },
+      {
+        "type": "relic",
+        "id": "TOUCH_OF_OROBAS",
+        "name": "Touch Of Orobas"
+      },
+      {
+        "type": "relic",
+        "id": "ARCHAIC_TOOTH",
+        "name": "Archaic Tooth"
+      }
+    ]
   },
   {
     "id": "PAEL",
@@ -570,7 +816,14 @@
     "choices": [
       {
         "name": "Grab Potions",
-        "description": "Procure 3 Foul Potions."
+        "description": "Procure 3 Foul Potions.",
+        "references": [
+          {
+            "type": "potion",
+            "id": "FOUL_POTION",
+            "name": "Foul Potion"
+          }
+        ]
       },
       {
         "name": "Ransack",
@@ -590,7 +843,14 @@
       },
       {
         "name": "Nab",
-        "description": "Add Injury to your Deck. Obtain a random Relic."
+        "description": "Add Injury to your Deck. Obtain a random Relic.",
+        "references": [
+          {
+            "type": "card",
+            "id": "INJURY",
+            "name": "Injury"
+          }
+        ]
       }
     ]
   },
@@ -598,7 +858,7 @@
     "id": "RANWID_THE_ELDER",
     "name": "Ranwid the Elder",
     "act": "unknown",
-    "description": "You are approached by the oldest person you have ever seen.\n“We meet once more... it's me, Ranwid!”\n\nYou do not know this man.",
+    "description": "You are approached by the oldest person you have ever seen.\n\u201cWe meet once more... it's me, Ranwid!\u201d\n\nYou do not know this man.",
     "choices": [
       {
         "name": "Give 100 Gold",
@@ -630,7 +890,14 @@
     "choices": [
       {
         "name": "Shatter",
-        "description": "Duplicate your Deck. Receive Bad Luck."
+        "description": "Duplicate your Deck. Receive Bad Luck.",
+        "references": [
+          {
+            "type": "card",
+            "id": "BAD_LUCK",
+            "name": "Bad Luck"
+          }
+        ]
       },
       {
         "name": "Touch a Mirror",
@@ -642,7 +909,7 @@
     "id": "RELIC_TRADER",
     "name": "Relic Trader",
     "act": "unknown",
-    "description": "You turn a corner and suddenly, a shadowy figure is just standing there. He pivots to face you.\n\n“Welcome! What're ya trading?”\nThe figure inquires as he flares open his cloak to reveal a slew of suspicious wares.",
+    "description": "You turn a corner and suddenly, a shadowy figure is just standing there. He pivots to face you.\n\n\u201cWelcome! What're ya trading?\u201d\nThe figure inquires as he flares open his cloak to reveal a slew of suspicious wares.",
     "choices": [
       {
         "name": "Take the Bottom One",
@@ -678,11 +945,18 @@
     "id": "ROUND_TEA_PARTY",
     "name": "The Round Tea Party",
     "act": "unknown",
-    "description": "You find an invitation for a “Sir Galalot” to a tea party and decide to show up in his stead.\n\nUpon entering an unassuming rotunda, you find yourself in the midst of commanders, generals, warlords, and mercenaries having... tea?\nThe gigantic knight donning a golden crown speaks.\n\n“Thou art late for Tea?!”",
+    "description": "You find an invitation for a \u201cSir Galalot\u201d to a tea party and decide to show up in his stead.\n\nUpon entering an unassuming rotunda, you find yourself in the midst of commanders, generals, warlords, and mercenaries having... tea?\nThe gigantic knight donning a golden crown speaks.\n\n\u201cThou art late for Tea?!\u201d",
     "choices": [
       {
         "name": "Enjoy Your Tea",
-        "description": "Obtain Royal Poison. Heal to full HP."
+        "description": "Obtain Royal Poison. Heal to full HP.",
+        "references": [
+          {
+            "type": "relic",
+            "id": "ROYAL_POISON",
+            "name": "Royal Poison"
+          }
+        ]
       },
       {
         "name": "Pick a Fight",
@@ -710,7 +984,7 @@
     "id": "SELF_HELP_BOOK",
     "name": "Self-Help Book",
     "act": "unknown",
-    "description": "On the floor lies a tome,\n“Top 3 Ways to Conquer the Spire”\n\nThe book is encrusted with blood so you find this manuscript highly suspicious.\n\nWill you read it?",
+    "description": "On the floor lies a tome,\n\u201cTop 3 Ways to Conquer the Spire\u201d\n\nThe book is encrusted with blood so you find this manuscript highly suspicious.\n\nWill you read it?",
     "choices": [
       {
         "name": "Move On",
@@ -786,7 +1060,14 @@
     "choices": [
       {
         "name": "Let It In",
-        "description": "Heal 25 HP. Add Metamorphosis to your Deck."
+        "description": "Heal 25 HP. Add Metamorphosis to your Deck.",
+        "references": [
+          {
+            "type": "card",
+            "id": "METAMORPHOSIS",
+            "name": "Metamorphosis"
+          }
+        ]
       },
       {
         "name": "Rejection",
@@ -826,11 +1107,18 @@
     "choices": [
       {
         "name": "Dive into the Water",
-        "description": "Gain 101-121 (111±10) Gold. Lose 7 HP."
+        "description": "Gain 101-121 (111\u00b110) Gold. Lose 7 HP."
       },
       {
         "name": "Grab the Sword",
-        "description": "Obtain the Sword of Stone."
+        "description": "Obtain the Sword of Stone.",
+        "references": [
+          {
+            "type": "relic",
+            "id": "SWORD_OF_STONE",
+            "name": "Sword Of Stone"
+          }
+        ]
       }
     ]
   },
@@ -846,7 +1134,14 @@
       },
       {
         "name": "Second Chest",
-        "description": "Gain 333 Gold. Receive Greed."
+        "description": "Gain 333 Gold. Receive Greed.",
+        "references": [
+          {
+            "type": "card",
+            "id": "GREED",
+            "name": "Greed"
+          }
+        ]
       }
     ]
   },
@@ -901,7 +1196,14 @@
     "choices": [
       {
         "name": "Bone Tea",
-        "description": "Pay 50 Gold. Bone Tea relic effect"
+        "description": "Pay 50 Gold. Bone Tea relic effect",
+        "references": [
+          {
+            "type": "relic",
+            "id": "BONE_TEA",
+            "name": "Bone Tea"
+          }
+        ]
       },
       {
         "name": "Locked",
@@ -909,7 +1211,14 @@
       },
       {
         "name": "Ember Tea",
-        "description": "Pay 150 Gold. Ember Tea relic effect"
+        "description": "Pay 150 Gold. Ember Tea relic effect",
+        "references": [
+          {
+            "type": "relic",
+            "id": "EMBER_TEA",
+            "name": "Ember Tea"
+          }
+        ]
       },
       {
         "name": "Locked",
@@ -917,7 +1226,14 @@
       },
       {
         "name": "Tea of Discourtesy",
-        "description": "Tea of Discourtesy relic effect"
+        "description": "Tea of Discourtesy relic effect",
+        "references": [
+          {
+            "type": "relic",
+            "id": "TEA_OF_DISCOURTESY",
+            "name": "Tea Of Discourtesy"
+          }
+        ]
       }
     ]
   },
@@ -951,7 +1267,7 @@
     "id": "THE_LANTERN_KEY",
     "name": "The Lantern Key",
     "act": "unknown",
-    "description": "You come upon a faintly glowing key and go to pick it up.\n\n“Been looking all over for that key! Now if you don't mind...”\n\n This person looks like bad news but maybe it's not good to be judgy.",
+    "description": "You come upon a faintly glowing key and go to pick it up.\n\n\u201cBeen looking all over for that key! Now if you don't mind...\u201d\n\n This person looks like bad news but maybe it's not good to be judgy.",
     "choices": [
       {
         "name": "Keep the Key",
@@ -960,6 +1276,13 @@
       {
         "name": "Return the Key",
         "description": "Gain 100 Gold."
+      }
+    ],
+    "references": [
+      {
+        "type": "card",
+        "id": "LANTERN_KEY",
+        "name": "Lantern Key"
       }
     ]
   },
@@ -971,7 +1294,14 @@
     "choices": [
       {
         "name": "Nab the Map",
-        "description": "Receive the Spoils Map."
+        "description": "Receive the Spoils Map.",
+        "references": [
+          {
+            "type": "card",
+            "id": "SPOILS_MAP",
+            "name": "Spoils Map"
+          }
+        ]
       },
       {
         "name": "Slowly Find an Exit",
@@ -983,11 +1313,18 @@
     "id": "THIS_OR_THAT",
     "name": "This or That?",
     "act": "unknown",
-    "description": "Arms suddenly jut out from a nearby hole, clutching a suspicious bag of riches and a clearly cursed relic.\n\n“This... or That?”\na scratched-up voice whispers from below.",
+    "description": "Arms suddenly jut out from a nearby hole, clutching a suspicious bag of riches and a clearly cursed relic.\n\n\u201cThis... or That?\u201d\na scratched-up voice whispers from below.",
     "choices": [
       {
         "name": "That",
-        "description": "Add Clumsy to your Deck. Obtain a random Relic."
+        "description": "Add Clumsy to your Deck. Obtain a random Relic.",
+        "references": [
+          {
+            "type": "card",
+            "id": "CLUMSY",
+            "name": "Clumsy"
+          }
+        ]
       },
       {
         "name": "This",
@@ -999,11 +1336,18 @@
     "id": "TINKER_TIME",
     "name": "Tinker Time",
     "act": "unknown",
-    "description": "Navigating through an endless sea of corpses, you find a mad scientist scavenging for various scraps.\n\n“Yes. Hi, hello! You look like a capable fighter... I need a tester for my next atrocity device! How about it?”",
+    "description": "Navigating through an endless sea of corpses, you find a mad scientist scavenging for various scraps.\n\n\u201cYes. Hi, hello! You look like a capable fighter... I need a tester for my next atrocity device! How about it?\u201d",
     "choices": [
       {
         "name": "Accept",
         "description": "Create a custom card to add to your Deck."
+      }
+    ],
+    "references": [
+      {
+        "type": "card",
+        "id": "MAD_SCIENCE",
+        "name": "Mad Science"
       }
     ]
   },
@@ -1021,13 +1365,90 @@
         "name": "Grab Random Junk",
         "description": "Gain 100 Gold. Obtain a random forgotten card from the past."
       }
+    ],
+    "references": [
+      {
+        "type": "card",
+        "id": "CALTROPS",
+        "name": "Caltrops"
+      },
+      {
+        "type": "card",
+        "id": "CLASH",
+        "name": "Clash"
+      },
+      {
+        "type": "card",
+        "id": "DISTRACTION",
+        "name": "Distraction"
+      },
+      {
+        "type": "card",
+        "id": "DUAL_WIELD",
+        "name": "Dual Wield"
+      },
+      {
+        "type": "card",
+        "id": "ENTRENCH",
+        "name": "Entrench"
+      },
+      {
+        "type": "card",
+        "id": "HELLO_WORLD",
+        "name": "Hello World"
+      },
+      {
+        "type": "card",
+        "id": "OUTMANEUVER",
+        "name": "Outmaneuver"
+      },
+      {
+        "type": "card",
+        "id": "REBOUND",
+        "name": "Rebound"
+      },
+      {
+        "type": "card",
+        "id": "RIP_AND_TEAR",
+        "name": "Rip And Tear"
+      },
+      {
+        "type": "card",
+        "id": "STACK",
+        "name": "Stack"
+      },
+      {
+        "type": "relic",
+        "id": "DARKSTONE_PERIAPT",
+        "name": "Darkstone Periapt"
+      },
+      {
+        "type": "relic",
+        "id": "DREAM_CATCHER",
+        "name": "Dream Catcher"
+      },
+      {
+        "type": "relic",
+        "id": "HAND_DRILL",
+        "name": "Hand Drill"
+      },
+      {
+        "type": "relic",
+        "id": "MAW_BANK",
+        "name": "Maw Bank"
+      },
+      {
+        "type": "relic",
+        "id": "THE_BOOT",
+        "name": "The Boot"
+      }
     ]
   },
   {
     "id": "TRIAL",
     "name": "The Trial",
     "act": "unknown",
-    "description": "You join a line of people entering a massive building.\n\nAs you pass under a golden archway, horns blare, confetti explodes, and streamers glide down from the ceiling!\n\n“Entrant dynamically set during event, you are the DECIDER for today's Trial.”",
+    "description": "You join a line of people entering a massive building.\n\nAs you pass under a golden archway, horns blare, confetti explodes, and streamers glide down from the ceiling!\n\n\u201cEntrant dynamically set during event, you are the DECIDER for today's Trial.\u201d",
     "choices": [
       {
         "name": "Accept",
@@ -1036,6 +1457,23 @@
       {
         "name": "Reject",
         "description": "You are not allowed to Reject."
+      }
+    ],
+    "references": [
+      {
+        "type": "card",
+        "id": "REGRET",
+        "name": "Regret"
+      },
+      {
+        "type": "card",
+        "id": "SHAME",
+        "name": "Shame"
+      },
+      {
+        "type": "card",
+        "id": "DOUBT",
+        "name": "Doubt"
       }
     ]
   },
@@ -1051,7 +1489,14 @@
       },
       {
         "name": "Rest Anyways",
-        "description": "Heal to full HP. Receive Poor Sleep."
+        "description": "Heal to full HP. Receive Poor Sleep.",
+        "references": [
+          {
+            "type": "card",
+            "id": "POOR_SLEEP",
+            "name": "Poor Sleep"
+          }
+        ]
       }
     ]
   },
@@ -1066,15 +1511,34 @@
     "id": "WAR_HISTORIAN_REPY",
     "name": "War Historian, Repy",
     "act": "unknown",
-    "description": "An academic is trapped in a hanging cage next to a treasure chest.\n\nThe academic is muttering about “One-Time-Use Keys” while furiously writing something.\n\nLooks like you can unlock the cage or the chest.",
+    "description": "An academic is trapped in a hanging cage next to a treasure chest.\n\nThe academic is muttering about \u201cOne-Time-Use Keys\u201d while furiously writing something.\n\nLooks like you can unlock the cage or the chest.",
     "choices": [
       {
         "name": "Unlock the Cage",
-        "description": "Lose Lantern Key. Obtain History Course."
+        "description": "Lose Lantern Key. Obtain History Course.",
+        "references": [
+          {
+            "type": "card",
+            "id": "LANTERN_KEY",
+            "name": "Lantern Key"
+          },
+          {
+            "type": "relic",
+            "id": "HISTORY_COURSE",
+            "name": "History Course"
+          }
+        ]
       },
       {
         "name": "Unlock the Chest",
-        "description": "Lose Lantern Key. Procure 2 random Potions. Obtain 2 random Relics."
+        "description": "Lose Lantern Key. Procure 2 random Potions. Obtain 2 random Relics.",
+        "references": [
+          {
+            "type": "card",
+            "id": "LANTERN_KEY",
+            "name": "Lantern Key"
+          }
+        ]
       }
     ]
   },
@@ -1110,7 +1574,7 @@
     "id": "WELCOME_TO_WONGOS",
     "name": "Welcome to Wongo's",
     "act": "unknown",
-    "description": "“Welcome to Wongo's. We have what you want at Wongtastic prices.” says the least enthusiastic clerk you have ever met.\n\n“Peruse our wares and enjoy your time at Wongo's,” they continue, without even looking up.",
+    "description": "\u201cWelcome to Wongo's. We have what you want at Wongtastic prices.\u201d says the least enthusiastic clerk you have ever met.\n\n\u201cPeruse our wares and enjoy your time at Wongo's,\u201d they continue, without even looking up.",
     "choices": [
       {
         "name": "Wongo's Bargain Bin",
@@ -1150,7 +1614,14 @@
     "choices": [
       {
         "name": "Bathe",
-        "description": "Remove 1 card from your Deck. Add 1 Guilty to your Deck."
+        "description": "Remove 1 card from your Deck. Add 1 Guilty to your Deck.",
+        "references": [
+          {
+            "type": "card",
+            "id": "GUILTY",
+            "name": "Guilty"
+          }
+        ]
       },
       {
         "name": "Bottle",
@@ -1182,7 +1653,14 @@
     "choices": [
       {
         "name": "Bird",
-        "description": "Choose 1 starter card to Transform into Peck."
+        "description": "Choose 1 starter card to Transform into Peck.",
+        "references": [
+          {
+            "type": "card",
+            "id": "PECK",
+            "name": "Peck"
+          }
+        ]
       },
       {
         "name": "Snake",
@@ -1194,7 +1672,14 @@
       },
       {
         "name": "Torus",
-        "description": "Choose 1 starter card to Transform into Toric Toughness."
+        "description": "Choose 1 starter card to Transform into Toric Toughness.",
+        "references": [
+          {
+            "type": "card",
+            "id": "TORIC_TOUGHNESS",
+            "name": "Toric Toughness"
+          }
+        ]
       }
     ]
   },
@@ -1202,7 +1687,7 @@
     "id": "ZEN_WEAVER",
     "name": "Zen Weaver",
     "act": "unknown",
-    "description": "You walk through a spider web and PANIC!\nBut then, a wave of calm washes over you...\n\n“Calm down. I need you to quit fussing up my web.”\n\nHow did you calm down so quickly?\nAn itsy bitsy spider abseils down to meet you. It seems willing to impart some techniques for gold.",
+    "description": "You walk through a spider web and PANIC!\nBut then, a wave of calm washes over you...\n\n\u201cCalm down. I need you to quit fussing up my web.\u201d\n\nHow did you calm down so quickly?\nAn itsy bitsy spider abseils down to meet you. It seems willing to impart some techniques for gold.",
     "choices": [
       {
         "name": "Arachnid Acupuncture",
@@ -1210,7 +1695,14 @@
       },
       {
         "name": "Breathing Techniques",
-        "description": "Pay 50 Gold. Add 2 Enlightenment to your Deck."
+        "description": "Pay 50 Gold. Add 2 Enlightenment to your Deck.",
+        "references": [
+          {
+            "type": "card",
+            "id": "ENLIGHTENMENT",
+            "name": "Enlightenment"
+          }
+        ]
       },
       {
         "name": "Emotional Awareness",

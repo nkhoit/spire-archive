@@ -341,7 +341,8 @@ if (game === 'sts2' && upg) {
               ? `/images/${game}/powers/${p.icon}`
               : `/images/${game}/powers/${p.id?.toLowerCase() ?? p.name?.toLowerCase().replace(/\s+/g, '_')}.png`;
             const powerId = p.id ?? (p.name ? p.name.toUpperCase().replace(/\s+/g, '_') + '_POWER' : null);
-            const href = powerId ? `/${game}/effects/${powerId}` : null;
+            const powerExists = powerId ? powersById.has(powerId) : false;
+            const href = (powerId && powerExists) ? `/${game}/effects/${powerId}` : null;
             const Tag = href ? 'a' : 'div';
             return (
               <a href={href ?? '#'} class={`flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 p-3 ${href ? 'hover:bg-white/10 transition-colors' : ''}`}>
