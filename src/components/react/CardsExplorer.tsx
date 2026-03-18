@@ -56,29 +56,20 @@ function BadgeSpan({ label, tone }: { label: string; tone?: string }) {
   return <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs ring-1 ${cls}`}>{cap(label)}</span>;
 }
 
-function CardTile({ c, game, isMobile }: { c: Card; game: string; isMobile: boolean }) {
-  const [upgraded, setUpgraded] = useState(false);
+function CardTile({ c, game, isMobile, upgraded }: { c: Card; game: string; isMobile: boolean; upgraded: boolean }) {
   const hasUpgrade = c.upgrade && Object.keys(c.upgrade).length > 0;
+  const showUpgraded = upgraded && hasUpgrade;
 
   return (
     <div className="group flex flex-col items-center rounded-lg border border-white/10 bg-white/5 p-3 hover:bg-white/10 transition-colors">
-      <div className="flex items-center w-full gap-1">
-        <a
-          href={`/${game}/cards/${c.id}`}
-          className={`text-sm font-semibold group-hover:underline truncate flex-1 text-center ${upgraded ? 'text-emerald-400' : ''}`}
-        >
-          {upgraded ? `${c.name}+` : c.name}
-        </a>
-        {hasUpgrade && (
-          <button
-            onClick={(e) => { e.preventDefault(); setUpgraded(!upgraded); }}
-            className={`shrink-0 w-5 h-5 rounded-full text-[10px] font-bold flex items-center justify-center transition-colors ${upgraded ? 'bg-emerald-500/20 text-emerald-300 ring-1 ring-emerald-500/30' : 'bg-white/10 text-slate-500 hover:text-slate-300'}`}
-            title={upgraded ? 'Show base' : 'Show upgraded'}
-          >↑</button>
-        )}
-      </div>
+      <a
+        href={`/${game}/cards/${c.id}`}
+        className={`text-sm font-semibold group-hover:underline truncate text-center w-full ${showUpgraded ? 'text-emerald-400' : ''}`}
+      >
+        {showUpgraded ? `${c.name}+` : c.name}
+      </a>
       <a href={`/${game}/cards/${c.id}`} className="w-full mt-2 flex justify-center overflow-hidden">
-        <CssCardRenderer card={c} upgraded={upgraded} size={isMobile ? 'xs' : 'sm'} game={game as 'sts1' | 'sts2'} />
+        <CssCardRenderer card={c} upgraded={!!showUpgraded} size={isMobile ? 'xs' : 'sm'} game={game as 'sts1' | 'sts2'} />
       </a>
       <div className="mt-2 flex flex-wrap items-center justify-center gap-1">
         <BadgeSpan label={c.color} tone={c.color} />
@@ -87,6 +78,32 @@ function CardTile({ c, game, isMobile }: { c: Card; game: string; isMobile: bool
         <BadgeSpan label={`Cost ${c.cost ?? 'X'}`} />
       </div>
     </div>
+  );
+}
+
+function UpgradeToggle({ checked, onChange, game }: { checked: boolean; onChange: (v: boolean) => void; game: string }) {
+  const isSts2 = game === 'sts2';
+  const checkboxSrc = isSts2
+    ? checked ? '/images/sts2/ui/checkbox_ticked.png' : '/images/sts2/ui/checkbox_unticked.png'
+    : null;
+
+  return (
+    <button
+      onClick={() => onChange(!checked)}
+      className="fixed bottom-6 left-6 z-50 flex items-center gap-2 rounded-lg border border-amber-600/40 bg-slate-950/90 backdrop-blur-sm px-4 py-2.5 shadow-lg shadow-black/50 transition-all hover:border-amber-500/60 hover:bg-slate-900/95 active:scale-95"
+      style={{ fontFamily: "'KreonGame', 'Kreon', serif" }}
+    >
+      {checkboxSrc ? (
+        <img src={checkboxSrc} alt="" className="w-7 h-7" style={{ imageRendering: 'pixelated' }} />
+      ) : (
+        <span className={`w-5 h-5 rounded border-2 flex items-center justify-center text-xs font-bold ${checked ? 'border-emerald-400 bg-emerald-500/20 text-emerald-300' : 'border-slate-500 bg-white/5'}`}>
+          {checked ? '✓' : ''}
+        </span>
+      )}
+      <span className="text-base font-semibold" style={{ color: '#EFC851' }}>
+        View Upgrades
+      </span>
+    </button>
   );
 }
 
@@ -114,6 +131,7 @@ export default function CardsExplorer(props: {
   const [cost, setCost] = useState<string>('');
   const [offset, setOffset] = useState(0);
   const [limit] = useState(100);
+  const [upgraded, setUpgraded] = useState(false);
 
   const [data, setData] = useState<ApiResp<Card> | null>(props.initial ?? null);
   const [loading, setLoading] = useState(false);
@@ -226,9 +244,11 @@ export default function CardsExplorer(props: {
 
       <div className="mt-3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
         {(data?.items ?? []).map((c) => (
-          <CardTile key={c.id} c={c} game={game} isMobile={isMobile} />
+          <CardTile key={c.id} c={c} game={game} isMobile={isMobile} upgraded={upgraded} />
         ))}
       </div>
+
+      <UpgradeToggle checked={upgraded} onChange={setUpgraded} game={game} />
     </div>
   );
 }
