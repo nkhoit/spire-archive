@@ -92,7 +92,7 @@ function Sts1Renderer({ card, upgraded, size }: { card: any; upgraded: boolean; 
 
   const isCurseOrStatus = ['curse', 'status'].includes(cardType);
   let displayCost: number | null = card.cost ?? null;
-  const upgradedCost = upgraded && card.upgrade?.cost !== undefined ? card.upgrade.cost : undefined;
+  const upgradedCost = upgraded && card.upgrade?.cost != null ? card.upgrade.cost : undefined;
   const costChanged = upgradedCost !== undefined && upgradedCost !== card.cost;
   if (upgraded && upgradedCost !== undefined) displayCost = upgradedCost;
 
