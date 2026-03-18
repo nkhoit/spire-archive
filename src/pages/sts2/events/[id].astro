@@ -22,7 +22,8 @@ function linkifyRefs(text: string, refs?: any[]): string {
     const href = ref.type === 'card' ? `/sts2/cards/${ref.id}` :
                  ref.type === 'relic' ? `/sts2/relics/${ref.id}` :
                  ref.type === 'potion' ? `/sts2/potions/${ref.id}` :
-                 ref.type === 'effect' ? `/sts2/effects/${ref.id}` : null;
+                 ref.type === 'effect' ? `/sts2/effects/${ref.id}` :
+                 ref.type === 'character' ? `/sts2/characters/${ref.id}` : null;
     if (!href) continue;
     const escaped = ref.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const re = new RegExp(`(?<!<[^>]*)\\b(${escaped})\\b`, 'gi');
