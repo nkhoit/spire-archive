@@ -9,8 +9,13 @@ env:
   LOCATION: westus2
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+    outputs:
+      acr_name: ${{ steps.infra.outputs.acr_name }}
+      acr_login: ${{ steps.infra.outputs.acr_login }}
+      env_name: ${{ steps.infra.outputs.env_name }}
+      tag: ${{ steps.tag.outputs.tag }}
     steps:
       - uses: actions/checkout@v4
 
@@ -38,49 +43,51 @@ jobs:
           echo "acr_login=$ACR_LOGIN" >> "$GITHUB_OUTPUT"
           echo "env_name=$ENV_NAME" >> "$GITHUB_OUTPUT"
 
+      - name: Set tag
+        id: tag
+        run: echo "tag=${GITHUB_SHA::8}" >> "$GITHUB_OUTPUT"
+
       - name: Build and push image
         run: |
           ACR_NAME="${{ steps.infra.outputs.acr_name }}"
           ACR_LOGIN="${{ steps.infra.outputs.acr_login }}"
-          TAG="${GITHUB_SHA::8}"
+          TAG="${{ steps.tag.outputs.tag }}"
 
           az acr login -n "$ACR_NAME"
           docker build -t "$ACR_LOGIN/$APP_NAME:$TAG" -t "$ACR_LOGIN/$APP_NAME:latest" .
           docker push "$ACR_LOGIN/$APP_NAME:$TAG"
           docker push "$ACR_LOGIN/$APP_NAME:latest"
 
-      - name: Deploy container app
+  staging:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Deploy to staging
         run: |
-          RG="${APP_NAME}-rg"
-          ACR_NAME="${{ steps.infra.outputs.acr_name }}"
-          ACR_LOGIN="${{ steps.infra.outputs.acr_login }}"
-          ENV_NAME="${{ steps.infra.outputs.env_name }}"
-          TAG="${GITHUB_SHA::8}"
-          IMAGE="$ACR_LOGIN/$APP_NAME:$TAG"
+          az containerapp update \
+            -n "${APP_NAME}-staging" \
+            -g "${APP_NAME}-rg" \
+            --image "${{ needs.build.outputs.acr_login }}/$APP_NAME:${{ needs.build.outputs.tag }}"
 
-          # Get ACR credentials
-          ACR_USER=$(az acr credential show -n "$ACR_NAME" --query username -o tsv)
-          ACR_PASS=$(az acr credential show -n "$ACR_NAME" --query "passwords[0].value" -o tsv)
+  production:
+    needs: [build, staging]
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-          # Create or update the container app
-          if az containerapp show -n "$APP_NAME" -g "$RG" &>/dev/null; then
-            az containerapp update \
-              -n "$APP_NAME" \
-              -g "$RG" \
-              --image "$IMAGE"
-          else
-            az containerapp create \
-              -n "$APP_NAME" \
-              -g "$RG" \
-              --environment "$ENV_NAME" \
-              --image "$IMAGE" \
-              --registry-server "$ACR_LOGIN" \
-              --registry-username "$ACR_USER" \
-              --registry-password "$ACR_PASS" \
-              --target-port 4321 \
-              --ingress external \
-              --cpu 0.25 \
-              --memory 0.5Gi \
-              --min-replicas 0 \
-              --max-replicas 1
-          fi
+      - name: Deploy to production
+        run: |
+          az containerapp update \
+            -n "$APP_NAME" \
+            -g "${APP_NAME}-rg" \
+            --image "${{ needs.build.outputs.acr_login }}/$APP_NAME:${{ needs.build.outputs.tag }}"
