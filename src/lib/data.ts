@@ -106,11 +106,18 @@ export interface Monster {
   image_url?: string | null;
 }
 
+export interface EventReference {
+  type: string;
+  id: string;
+  name: string;
+}
+
 export interface EventChoice {
   name?: string;
   option?: string;
   description: string;
   outcome?: string;
+  references?: EventReference[];
 }
 
 export interface Event {
@@ -119,6 +126,7 @@ export interface Event {
   act: string;
   description: string;
   choices: EventChoice[];
+  references?: EventReference[];
   image_url?: string | null;
 }
 

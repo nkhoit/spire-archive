@@ -23,6 +23,26 @@ const ungrouped = choices.filter((c: any) => !c.pool);
     </section>
   )}
 
+  {(event.references ?? []).length > 0 && (
+    <div class="mt-3 flex flex-wrap gap-2">
+      {(event.references ?? []).map((ref: any) => {
+        const href = ref.type === 'card' ? `/sts2/cards/${ref.id}` :
+                     ref.type === 'relic' ? `/sts2/relics/${ref.id}` :
+                     ref.type === 'potion' ? `/sts2/potions/${ref.id}` :
+                     ref.type === 'effect' ? `/sts2/effects/${ref.id}` : null;
+        const imgSrc = ref.type === 'relic' ? `/images/sts2/relics/${ref.id.toLowerCase()}.png` :
+                       ref.type === 'potion' ? `/images/sts2/potions/${ref.id.toLowerCase()}.png` :
+                       ref.type === 'card' ? `/images/sts2/cards/${ref.id.toLowerCase()}.png` : null;
+        return (
+          <a href={href ?? '#'} class="inline-flex items-center gap-1.5 rounded-md border border-amber-500/20 bg-amber-500/5 px-2 py-1 text-xs font-medium text-amber-200 hover:bg-amber-500/15 transition-colors">
+            {imgSrc && <img src={imgSrc} alt="" class="w-5 h-5 object-contain" loading="lazy" />}
+            <span>{ref.name}</span>
+          </a>
+        );
+      })}
+    </div>
+  )}
+
   {ungrouped.length > 0 && (
     <section class="mt-4">
       <h2 class="text-sm font-semibold text-slate-200">Choices</h2>
@@ -31,6 +51,25 @@ const ungrouped = choices.filter((c: any) => !c.pool);
           <div class="rounded-md border border-white/10 bg-white/5 p-3">
             <div class="text-sm font-semibold text-sky-300">{c.name}</div>
             {c.description && <p class="mt-1 text-sm text-slate-300">{c.description}</p>}
+            {c.references?.length > 0 && (
+              <div class="mt-2 flex flex-wrap gap-1.5">
+                {c.references.map((ref: any) => {
+                  const href = ref.type === 'card' ? `/sts2/cards/${ref.id}` :
+                               ref.type === 'relic' ? `/sts2/relics/${ref.id}` :
+                               ref.type === 'potion' ? `/sts2/potions/${ref.id}` :
+                               ref.type === 'effect' ? `/sts2/effects/${ref.id}` : null;
+                  const imgSrc = ref.type === 'relic' ? `/images/sts2/relics/${ref.id.toLowerCase()}.png` :
+                                 ref.type === 'potion' ? `/images/sts2/potions/${ref.id.toLowerCase()}.png` :
+                                 ref.type === 'card' ? `/images/sts2/cards/${ref.id.toLowerCase()}.png` : null;
+                  return (
+                    <a href={href ?? '#'} class="inline-flex items-center gap-1.5 rounded border border-amber-500/20 bg-amber-500/5 px-2 py-0.5 text-xs text-amber-200 hover:bg-amber-500/15 transition-colors">
+                      {imgSrc && <img src={imgSrc} alt="" class="w-4 h-4 object-contain" loading="lazy" />}
+                      <span>{ref.name}</span>
+                    </a>
+                  );
+                })}
+              </div>
+            )}
           </div>
         ))}
       </div>
