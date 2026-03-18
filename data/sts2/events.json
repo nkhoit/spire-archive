@@ -19,15 +19,15 @@
     "id": "AMALGAMATOR",
     "name": "Amalgamator",
     "act": "unknown",
-    "description": "CLANG! CLANG!!!\n\nYou hear the echoes of metal upon metal on the otherside of a wall...\n\nAs you press your head against the wall to listen in—the wall opens up, revealing a hulking six-armed figure toiling away.\nIts “face” is a swirling vortex of glowing sigils that shift about.\n\n“One with an Ascending Spirit has found my workshop? Let's get COMBINING!”",
+    "description": "CLANG! CLANG!!!\n\nYou hear the echoes of metal upon metal on the otherside of a wall...\n\nAs you press your head against the wall to listen in\u2014the wall opens up, revealing a hulking six-armed figure toiling away.\nIts \u201cface\u201d is a swirling vortex of glowing sigils that shift about.\n\n\u201cOne with an Ascending Spirit has found my workshop? Let's get COMBINING!\u201d",
     "choices": [
       {
         "name": "Combine Defends",
-        "description": "Remove 2 Defends. Add {Card2} to your Deck."
+        "description": "Remove 2 Defends. Add Ultimate Defend to your Deck."
       },
       {
         "name": "Combine Strikes",
-        "description": "Remove 2 Strikes. Add {Card1} to your Deck."
+        "description": "Remove 2 Strikes. Add Ultimate Strike to your Deck."
       }
     ]
   },
@@ -51,19 +51,19 @@
     "id": "BATTLEWORN_DUMMY",
     "name": "Battleworn Dummy",
     "act": "unknown",
-    "description": "As you approach, it begins to rumble and fizzle and lights up brilliantly!\n\n“BZZZT! TIME TO TRAIN!!! YOU HAVE 3 TURNS TO DEFEAT ME!\nCHOOSE A SETTING OR FACE LETHAL HUMILIATION.\nHere are the options:”\n\nAfter the terrifying message, the dummy carefully reads out detailed instructions.\n\nWhat do you choose?",
+    "description": "As you approach, it begins to rumble and fizzle and lights up brilliantly!\n\n\u201cBZZZT! TIME TO TRAIN!!! YOU HAVE 3 TURNS TO DEFEAT ME!\nCHOOSE A SETTING OR FACE LETHAL HUMILIATION.\nHere are the options:\u201d\n\nAfter the terrifying message, the dummy carefully reads out detailed instructions.\n\nWhat do you choose?",
     "choices": [
       {
         "name": "Setting 1",
-        "description": "Fight a {Setting1Hp} HP dummy. Procure 1 random Potion."
+        "description": "Fight a 75 HP dummy. Procure 1 random Potion."
       },
       {
         "name": "Setting 2",
-        "description": "Fight a {Setting2Hp} HP dummy. Upgrade 2 random cards."
+        "description": "Fight a 100 HP dummy. Upgrade 2 random cards."
       },
       {
         "name": "Setting 3",
-        "description": "Fight a {Setting3Hp} HP dummy. Obtain a random Relic."
+        "description": "Fight a 150 HP dummy. Obtain a random Relic."
       }
     ]
   },
@@ -71,15 +71,15 @@
     "id": "BRAIN_LEECH",
     "name": "Brain Leech",
     "act": "unknown",
-    "description": "*thunk*\n\nA sharp pain is felt atop your head and a thought stabs into your mind.\n\n“SHARE KNOWLEDGE???”\n\nYou are unsure how to proceed...",
+    "description": "*thunk*\n\nA sharp pain is felt atop your head and a thought stabs into your mind.\n\n\u201cSHARE KNOWLEDGE???\u201d\n\nYou are unsure how to proceed...",
     "choices": [
       {
         "name": "Rip the Leech Off",
-        "description": "Lose {RipHpLoss} HP. Gain a Colorless card reward."
+        "description": "Lose 5 HP. Gain a Colorless card reward."
       },
       {
         "name": "Share Knowledge",
-        "description": "Choose {CardChoiceCount} of {FromCardChoiceCount} random cards to add to your Deck."
+        "description": "Choose 1 of 5 random cards to add to your Deck."
       }
     ]
   },
@@ -87,15 +87,15 @@
     "id": "BUGSLAYER",
     "name": "Bugslayer",
     "act": "unknown",
-    "description": "As you're fending off a swarm of aggressive insects you suddenly notice a Mighty Rugged Warrior-Man fighting beside you this whole time!\n\nThe insects, sensing defeat, scatter. You turn to your fellow fighter.\n“Would you like any tips on exterminating these pests?”\n\nHow polite. You nod and accept his offer.",
+    "description": "As you're fending off a swarm of aggressive insects you suddenly notice a Mighty Rugged Warrior-Man fighting beside you this whole time!\n\nThe insects, sensing defeat, scatter. You turn to your fellow fighter.\n\u201cWould you like any tips on exterminating these pests?\u201d\n\nHow polite. You nod and accept his offer.",
     "choices": [
       {
         "name": "Learn Extermination Technique",
-        "description": "Add {Card1} to your Deck."
+        "description": "Add Exterminate to your Deck."
       },
       {
         "name": "Learn Squash Technique",
-        "description": "Add {Card2} to your Deck."
+        "description": "Add Squash to your Deck."
       }
     ]
   },
@@ -111,7 +111,7 @@
       },
       {
         "name": "Take the Egg",
-        "description": "Add {Card} to your Deck."
+        "description": "Add Byrdonis Egg to your Deck."
       }
     ]
   },
@@ -123,7 +123,7 @@
     "choices": [
       {
         "name": "Blue",
-        "description": "Obtain {Cards} Defect {Cards:plural:card|cards}."
+        "description": "Obtain 3 Defect cards."
       },
       {
         "name": "Equality",
@@ -131,19 +131,19 @@
       },
       {
         "name": "Red",
-        "description": "Obtain {Cards} Ironclad {Cards:plural:card|cards}."
+        "description": "Obtain 3 Ironclad cards."
       },
       {
         "name": "Pink",
-        "description": "Obtain {Cards} Necrobinder {Cards:plural:card|cards}."
+        "description": "Obtain 3 Necrobinder cards."
       },
       {
         "name": "Orange",
-        "description": "Obtain {Cards} Regent {Cards:plural:card|cards}."
+        "description": "Obtain 3 Regent cards."
       },
       {
         "name": "Green",
-        "description": "Obtain {Cards} Silent {Cards:plural:card|cards}."
+        "description": "Obtain 3 Silent cards."
       }
     ]
   },
@@ -155,7 +155,7 @@
     "choices": [
       {
         "name": "Extract Nectar",
-        "description": "Gain {Prize1} Gold."
+        "description": "Gain 25 Gold."
       },
       {
         "name": "Reach Deeper",
@@ -167,11 +167,11 @@
     "id": "CRYSTAL_SPHERE",
     "name": "Crystal Sphere",
     "act": "unknown",
-    "description": "“I predicted you'd enter...!”\n\nA raspy voice calls out as you enter a mystic hut.\n\n“Your destiny has brought you here. We must uncover your future and fortunes so you can SAVE US ALL!!”\n“Okay, here are the options for the Crystal Sphere reading. Be sure to sign this waiver as well,” she says while bringing out pen and parchment.",
+    "description": "\u201cI predicted you'd enter...!\u201d\n\nA raspy voice calls out as you enter a mystic hut.\n\n\u201cYour destiny has brought you here. We must uncover your future and fortunes so you can SAVE US ALL!!\u201d\n\u201cOkay, here are the options for the Crystal Sphere reading. Be sure to sign this waiver as well,\u201d she says while bringing out pen and parchment.",
     "choices": [
       {
         "name": "Payment Plan",
-        "description": "Gain a {CurseTitle}. Divine 6 times."
+        "description": "Gain a Debt. Divine 6 times."
       },
       {
         "name": "Uncover Future",
@@ -190,7 +190,7 @@
     "id": "DENSE_VEGETATION",
     "name": "Dense Vegetation",
     "act": "unknown",
-    "description": "Having taken the wrong path for a good while, you find yourself in a thick jungle of ferns, shrubs, and vines. Especially vines. Exhaustion sets in, and a dark thought comes to mind:\n\n“You are lost, unprepared, and the inevitability of death is approaching.”\n\nWhat do you do?",
+    "description": "Having taken the wrong path for a good while, you find yourself in a thick jungle of ferns, shrubs, and vines. Especially vines. Exhaustion sets in, and a dark thought comes to mind:\n\n\u201cYou are lost, unprepared, and the inevitability of death is approaching.\u201d\n\nWhat do you do?",
     "choices": [
       {
         "name": "Rest",
@@ -210,7 +210,7 @@
     "choices": [
       {
         "name": "Examine Each and Make the Best Choice",
-        "description": "Lose {ExamineHpLoss} HP. Choose 1 of 3 Doll Relics."
+        "description": "Lose 15 HP. Choose 1 of 3 Doll Relics."
       },
       {
         "name": "Pick at Random",
@@ -218,7 +218,7 @@
       },
       {
         "name": "Take Some Time",
-        "description": "Lose {TakeTimeHpLoss} HP. Choose 1 of 2 Doll Relics."
+        "description": "Lose 5 HP. Choose 1 of 2 Doll Relics."
       }
     ]
   },
@@ -226,7 +226,7 @@
     "id": "DOORS_OF_LIGHT_AND_DARK",
     "name": "Doors of Light and Dark",
     "act": "unknown",
-    "description": "A doorway existed where none existed moments before...\n\nYou enter to find two shimmering doorways and a well-dressed doorman.\n“Finally, a visitor! Please please! Choose a door, any door!”\n\nAre we still in the Spire? How is this place so clean?",
+    "description": "A doorway existed where none existed moments before...\n\nYou enter to find two shimmering doorways and a well-dressed doorman.\n\u201cFinally, a visitor! Please please! Choose a door, any door!\u201d\n\nAre we still in the Spire? How is this place so clean?",
     "choices": [
       {
         "name": "Dark Door",
@@ -234,7 +234,7 @@
       },
       {
         "name": "Light Door",
-        "description": "Upgrade {Cards} random cards."
+        "description": "Upgrade 2 random cards."
       }
     ]
   },
@@ -246,11 +246,11 @@
     "choices": [
       {
         "name": "Bottle",
-        "description": "Procure {Potion}."
+        "description": "Procure Glowwater Potion."
       },
       {
         "name": "Climb",
-        "description": "Obtain {Relic}. Lose 13 Max HP."
+        "description": "Obtain Fresnel Lens. Lose 13 Max HP."
       }
     ]
   },
@@ -258,7 +258,7 @@
     "id": "ENDLESS_CONVEYOR",
     "name": "Endless Conveyor",
     "act": "unknown",
-    "description": "You lumber into a shack with a bright but crooked sign that reads:\n“ENDLESS FEAST - PAY WHAT YOU HUNGER!”\n\nInside, a willowy multi-armed chef is deftly preparing bites of food and placing them onto a winding chitinous belt.\n\nOne of the chef's arms point to a sign:\n35 Gold each",
+    "description": "You lumber into a shack with a bright but crooked sign that reads:\n\u201cENDLESS FEAST - PAY WHAT YOU HUNGER!\u201d\n\nInside, a willowy multi-armed chef is deftly preparing bites of food and placing them onto a winding chitinous belt.\n\nOne of the chef's arms point to a sign:\n35 Gold each",
     "choices": [
       {
         "name": "Observe the Chef",
@@ -281,11 +281,11 @@
     "choices": [
       {
         "name": "Enter Your Hole",
-        "description": "Enchant a card with {Enchantment}."
+        "description": "Enchant a card with Perfect Fit."
       },
       {
         "name": "Resist",
-        "description": "Remove {Cards} cards from your Deck. Add {ResistCurse} to your Deck."
+        "description": "Remove 2 cards from your Deck. Add Normality to your Deck."
       }
     ]
   },
@@ -296,12 +296,12 @@
     "description": "There is a single grave with a roiling blue flame...\n\nA prideful warrior died in battle but its soul is restless. It wants to keep fighting, you feel it begging to journey with you.\n\nBut perhaps it's better for it to face the truth?",
     "choices": [
       {
-        "name": "Accept the {Relic}",
-        "description": "Obtain {Relic}."
+        "name": "Accept the Forgotten Soul",
+        "description": "Obtain Forgotten Soul."
       },
       {
         "name": "Confront with Truth",
-        "description": "Add {Curse} to your Deck. Enchant a card that Exhausts with {Enchantment}."
+        "description": "Add Decay to your Deck. Enchant a card that Exhausts with Souls Power."
       },
       {
         "name": "Locked",
@@ -353,7 +353,7 @@
       },
       {
         "name": "Solo Quest",
-        "description": "Gain 150 Gold. Lose {SoloHp} HP."
+        "description": "Gain 150 Gold. Lose 18 HP."
       }
     ]
   },
@@ -365,7 +365,7 @@
     "choices": [
       {
         "name": "Capture the Wisp",
-        "description": "Add {Curse} to your Deck. Obtain the {Relic}."
+        "description": "Add Decay to your Deck. Obtain the Lost Wisp."
       },
       {
         "name": "Locked",
@@ -373,7 +373,7 @@
       },
       {
         "name": "Search the Nearby Area",
-        "description": "Gain {Gold} Gold."
+        "description": "Gain a random amount (45-75) Gold."
       }
     ]
   },
@@ -385,11 +385,11 @@
     "choices": [
       {
         "name": "Offer Tribute",
-        "description": "Pay {Gold} Gold. Obtain a random Relic."
+        "description": "Pay 149 Gold. Obtain a random Relic."
       },
       {
         "name": "Locked",
-        "description": "Requires {Gold} Gold."
+        "description": "Requires 149 Gold."
       },
       {
         "name": "Reach into the Flesh",
@@ -405,7 +405,7 @@
     "choices": [
       {
         "name": "Group",
-        "description": "Lose {Gold} Gold. Transform 2 cards."
+        "description": "Lose 100 Gold. Transform 2 cards."
       },
       {
         "name": "Loner",
@@ -417,7 +417,7 @@
     "id": "NEOW",
     "name": "Neow",
     "act": "unknown",
-    "description": "Neow, the Mother of Resurrection, awaits at the start of each run. She offers three blessings — two positive and one cursed. The options are drawn randomly from the pools below.",
+    "description": "Neow, the Mother of Resurrection, awaits at the start of each run. She offers three blessings \u2014 two positive and one cursed. The options are drawn randomly from the pools below.",
     "choices": [
       {
         "name": "Arcane Scroll",
@@ -570,7 +570,7 @@
     "choices": [
       {
         "name": "Grab Potions",
-        "description": "Procure 3 Foul {FoulPotions:plural:Potion|Potions}."
+        "description": "Procure 3 Foul Potions."
       },
       {
         "name": "Ransack",
@@ -598,14 +598,14 @@
     "id": "RANWID_THE_ELDER",
     "name": "Ranwid the Elder",
     "act": "unknown",
-    "description": "You are approached by the oldest person you have ever seen.\n“We meet once more... it's me, Ranwid!”\n\nYou do not know this man.",
+    "description": "You are approached by the oldest person you have ever seen.\n\u201cWe meet once more... it's me, Ranwid!\u201d\n\nYou do not know this man.",
     "choices": [
       {
-        "name": "Give {Gold} Gold",
+        "name": "Give 100 Gold",
         "description": "Obtain a random Relic."
       },
       {
-        "name": "Give {Potion}",
+        "name": "Give a Potion from your inventory",
         "description": "Obtain a random Relic."
       },
       {
@@ -613,7 +613,7 @@
         "description": "You don't have any Potions that can be given."
       },
       {
-        "name": "Give {Relic}",
+        "name": "Give a Relic you own",
         "description": "Obtain 2 random Relics."
       },
       {
@@ -642,19 +642,19 @@
     "id": "RELIC_TRADER",
     "name": "Relic Trader",
     "act": "unknown",
-    "description": "You turn a corner and suddenly, a shadowy figure is just standing there. He pivots to face you.\n\n“Welcome! What're ya trading?”\nThe figure inquires as he flares open his cloak to reveal a slew of suspicious wares.",
+    "description": "You turn a corner and suddenly, a shadowy figure is just standing there. He pivots to face you.\n\n\u201cWelcome! What're ya trading?\u201d\nThe figure inquires as he flares open his cloak to reveal a slew of suspicious wares.",
     "choices": [
       {
         "name": "Take the Bottom One",
-        "description": "Trade {BottomRelicOwned} for {BottomRelicNew}."
+        "description": "Trade a relic you own for a random relic."
       },
       {
         "name": "Take the Middle One",
-        "description": "Trade {MiddleRelicOwned} for {MiddleRelicNew}."
+        "description": "Trade a relic you own for a random relic."
       },
       {
         "name": "Take the Top One",
-        "description": "Trade {TopRelicOwned} for {TopRelicNew}."
+        "description": "Trade a relic you own for a random relic."
       }
     ]
   },
@@ -678,15 +678,15 @@
     "id": "ROUND_TEA_PARTY",
     "name": "The Round Tea Party",
     "act": "unknown",
-    "description": "You find an invitation for a “Sir Galalot” to a tea party and decide to show up in his stead.\n\nUpon entering an unassuming rotunda, you find yourself in the midst of commanders, generals, warlords, and mercenaries having... tea?\nThe gigantic knight donning a golden crown speaks.\n\n“Thou art late for Tea?!”",
+    "description": "You find an invitation for a \u201cSir Galalot\u201d to a tea party and decide to show up in his stead.\n\nUpon entering an unassuming rotunda, you find yourself in the midst of commanders, generals, warlords, and mercenaries having... tea?\nThe gigantic knight donning a golden crown speaks.\n\n\u201cThou art late for Tea?!\u201d",
     "choices": [
       {
         "name": "Enjoy Your Tea",
-        "description": "Obtain {Relic}. Heal to full HP."
+        "description": "Obtain Royal Poison. Heal to full HP."
       },
       {
         "name": "Pick a Fight",
-        "description": "Lose {Damage} HP. Obtain a random Relic."
+        "description": "Lose 11 HP. Obtain a random Relic."
       }
     ]
   },
@@ -702,7 +702,7 @@
       },
       {
         "name": "Plant and Nourish",
-        "description": "Enchant a card with {Enchantment}."
+        "description": "Enchant a card with Sown."
       }
     ]
   },
@@ -710,7 +710,7 @@
     "id": "SELF_HELP_BOOK",
     "name": "Self-Help Book",
     "act": "unknown",
-    "description": "On the floor lies a tome,\n“Top 3 Ways to Conquer the Spire”\n\nThe book is encrusted with blood so you find this manuscript highly suspicious.\n\nWill you read it?",
+    "description": "On the floor lies a tome,\n\u201cTop 3 Ways to Conquer the Spire\u201d\n\nThe book is encrusted with blood so you find this manuscript highly suspicious.\n\nWill you read it?",
     "choices": [
       {
         "name": "Move On",
@@ -718,7 +718,7 @@
       },
       {
         "name": "Read the Entire Book",
-        "description": "Choose a Power to Enchant with {Enchantment3} {Enchantment3Amount}."
+        "description": "Choose a Power to Enchant with Swift 2."
       },
       {
         "name": "Locked",
@@ -726,7 +726,7 @@
       },
       {
         "name": "Read a Random Passage",
-        "description": "Choose a Skill to Enchant with {Enchantment2} {Enchantment2Amount}."
+        "description": "Choose a Skill to Enchant with Nimble 2."
       },
       {
         "name": "Locked",
@@ -734,7 +734,7 @@
       },
       {
         "name": "Read the Back",
-        "description": "Choose an Attack to Enchant with {Enchantment1} {Enchantment1Amount}."
+        "description": "Choose an Attack to Enchant with Sharp 2."
       },
       {
         "name": "Locked",
@@ -750,11 +750,11 @@
     "choices": [
       {
         "name": "Hold On",
-        "description": "Lose {HpLoss} HP. The card in the above option is randomized."
+        "description": "Lose depends on current floor HP. The card in the above option is randomized."
       },
       {
         "name": "Overcome",
-        "description": "{RandomCard} is removed from your Deck."
+        "description": "a random card from your deck is removed from your Deck."
       }
     ]
   },
@@ -786,11 +786,11 @@
     "choices": [
       {
         "name": "Let It In",
-        "description": "Heal {LetItInHealAmount} HP. Add Metamorphosis to your Deck."
+        "description": "Heal 25 HP. Add Metamorphosis to your Deck."
       },
       {
         "name": "Rejection",
-        "description": "Lose {RejectionHpLoss} HP. Remove a card from your Deck."
+        "description": "Lose 9 HP. Remove a card from your Deck."
       }
     ]
   },
@@ -802,7 +802,7 @@
     "choices": [
       {
         "name": "Drink and Lift",
-        "description": "Lose {DrinkRandomPotion}. Gain 10 Max HP."
+        "description": "Lose a random potion. Gain 10 Max HP."
       },
       {
         "name": "Locked",
@@ -826,11 +826,11 @@
     "choices": [
       {
         "name": "Dive into the Water",
-        "description": "Gain {Gold} Gold. Lose {HpLoss} HP."
+        "description": "Gain 101-121 (111\u00b110) Gold. Lose 7 HP."
       },
       {
         "name": "Grab the Sword",
-        "description": "Obtain the {Relic}."
+        "description": "Obtain the Sword of Stone."
       }
     ]
   },
@@ -858,7 +858,7 @@
     "choices": [
       {
         "name": "Approach",
-        "description": "Enchant an Attack with {Enchantment}."
+        "description": "Enchant an Attack with Corrupted."
       },
       {
         "name": "Locked",
@@ -901,7 +901,7 @@
     "choices": [
       {
         "name": "Bone Tea",
-        "description": "Pay 50 Gold. {BoneTeaDescription}"
+        "description": "Pay 50 Gold. Bone Tea relic effect"
       },
       {
         "name": "Locked",
@@ -909,7 +909,7 @@
       },
       {
         "name": "Ember Tea",
-        "description": "Pay 150 Gold. {EmberTeaDescription}"
+        "description": "Pay 150 Gold. Ember Tea relic effect"
       },
       {
         "name": "Locked",
@@ -917,7 +917,7 @@
       },
       {
         "name": "Tea of Discourtesy",
-        "description": "{TeaOfDiscourtesyDescription}"
+        "description": "Tea of Discourtesy relic effect"
       }
     ]
   },
@@ -942,8 +942,8 @@
     "description": "You feel a faint rumbling as you round the corner to discover a gigantic spinning apparatus!\nIt has several slots which appear to convert liquids into a highly compressed digestible tablet.\n\nThe idea of turning these health tonics into a tiny morsel is uncomfortable but perhaps it's good to try new things?",
     "choices": [
       {
-        "name": "Insert {Rarity} Potion",
-        "description": "Lose {Potion}. Obtain an Upgraded {Rarity} {Type}."
+        "name": "Insert Potion rarity (Common/Uncommon/Rare) Potion",
+        "description": "Lose a Potion from your inventory. Obtain an Upgraded Potion rarity (Common/Uncommon/Rare) a random card type (Attack/Skill/Power)."
       }
     ]
   },
@@ -951,7 +951,7 @@
     "id": "THE_LANTERN_KEY",
     "name": "The Lantern Key",
     "act": "unknown",
-    "description": "You come upon a faintly glowing key and go to pick it up.\n\n“Been looking all over for that key! Now if you don't mind...”\n\n This person looks like bad news but maybe it's not good to be judgy.",
+    "description": "You come upon a faintly glowing key and go to pick it up.\n\n\u201cBeen looking all over for that key! Now if you don't mind...\u201d\n\n This person looks like bad news but maybe it's not good to be judgy.",
     "choices": [
       {
         "name": "Keep the Key",
@@ -959,7 +959,7 @@
       },
       {
         "name": "Return the Key",
-        "description": "Gain {Gold} Gold."
+        "description": "Gain 100 Gold."
       }
     ]
   },
@@ -983,15 +983,15 @@
     "id": "THIS_OR_THAT",
     "name": "This or That?",
     "act": "unknown",
-    "description": "Arms suddenly jut out from a nearby hole, clutching a suspicious bag of riches and a clearly cursed relic.\n\n“This... or That?”\na scratched-up voice whispers from below.",
+    "description": "Arms suddenly jut out from a nearby hole, clutching a suspicious bag of riches and a clearly cursed relic.\n\n\u201cThis... or That?\u201d\na scratched-up voice whispers from below.",
     "choices": [
       {
         "name": "That",
-        "description": "Add {Curse} to your Deck. Obtain a random Relic."
+        "description": "Add Clumsy to your Deck. Obtain a random Relic."
       },
       {
         "name": "This",
-        "description": "Lose {HpLoss} HP. Gain {Gold} Gold."
+        "description": "Lose 6 HP. Gain 41-68 (random) Gold."
       }
     ]
   },
@@ -999,7 +999,7 @@
     "id": "TINKER_TIME",
     "name": "Tinker Time",
     "act": "unknown",
-    "description": "Navigating through an endless sea of corpses, you find a mad scientist scavenging for various scraps.\n\n“Yes. Hi, hello! You look like a capable fighter... I need a tester for my next atrocity device! How about it?”",
+    "description": "Navigating through an endless sea of corpses, you find a mad scientist scavenging for various scraps.\n\n\u201cYes. Hi, hello! You look like a capable fighter... I need a tester for my next atrocity device! How about it?\u201d",
     "choices": [
       {
         "name": "Accept",
@@ -1019,7 +1019,7 @@
       },
       {
         "name": "Grab Random Junk",
-        "description": "Gain {Gold} Gold. Obtain a random forgotten card from the past."
+        "description": "Gain 100 Gold. Obtain a random forgotten card from the past."
       }
     ]
   },
@@ -1027,7 +1027,7 @@
     "id": "TRIAL",
     "name": "The Trial",
     "act": "unknown",
-    "description": "You join a line of people entering a massive building.\n\nAs you pass under a golden archway, horns blare, confetti explodes, and streamers glide down from the ceiling!\n\n“Entrant {EntrantNumber}, you are the DECIDER for today's Trial.”",
+    "description": "You join a line of people entering a massive building.\n\nAs you pass under a golden archway, horns blare, confetti explodes, and streamers glide down from the ceiling!\n\n\u201cEntrant dynamically set during event, you are the DECIDER for today's Trial.\u201d",
     "choices": [
       {
         "name": "Accept",
@@ -1066,7 +1066,7 @@
     "id": "WAR_HISTORIAN_REPY",
     "name": "War Historian, Repy",
     "act": "unknown",
-    "description": "An academic is trapped in a hanging cage next to a treasure chest.\n\nThe academic is muttering about “One-Time-Use Keys” while furiously writing something.\n\nLooks like you can unlock the cage or the chest.",
+    "description": "An academic is trapped in a hanging cage next to a treasure chest.\n\nThe academic is muttering about \u201cOne-Time-Use Keys\u201d while furiously writing something.\n\nLooks like you can unlock the cage or the chest.",
     "choices": [
       {
         "name": "Unlock the Cage",
@@ -1090,19 +1090,19 @@
       },
       {
         "name": "Prickly Sponge",
-        "description": "Pay {PricklySpongeGold} Gold. Enchant {Cards} {Cards:plural:card|cards} with Steady."
+        "description": "Pay 155 Gold. Enchant 2 cards with Steady."
       },
       {
         "name": "Locked",
-        "description": "Requires {PricklySpongeGold} Gold."
+        "description": "Requires 155 Gold."
       },
       {
         "name": "Tentacle Quill",
-        "description": "Pay {Gold} Gold. Enchant a card with Steady."
+        "description": "Pay 65 Gold. Enchant a card with Steady."
       },
       {
         "name": "Locked",
-        "description": "Requires {Gold} Gold."
+        "description": "Requires 65 Gold."
       }
     ]
   },
@@ -1110,23 +1110,23 @@
     "id": "WELCOME_TO_WONGOS",
     "name": "Welcome to Wongo's",
     "act": "unknown",
-    "description": "“Welcome to Wongo's. We have what you want at Wongtastic prices.” says the least enthusiastic clerk you have ever met.\n\n“Peruse our wares and enjoy your time at Wongo's,” they continue, without even looking up.",
+    "description": "\u201cWelcome to Wongo's. We have what you want at Wongtastic prices.\u201d says the least enthusiastic clerk you have ever met.\n\n\u201cPeruse our wares and enjoy your time at Wongo's,\u201d they continue, without even looking up.",
     "choices": [
       {
         "name": "Wongo's Bargain Bin",
-        "description": "Pay {BargainBinCost} Gold. Obtain 1 random Common Relic."
+        "description": "Pay 100 Gold. Obtain 1 random Common Relic."
       },
       {
         "name": "Locked",
-        "description": "Requires {BargainBinCost} Gold."
+        "description": "Requires 100 Gold."
       },
       {
         "name": "Wongo's Featured Item",
-        "description": "Pay {FeaturedItemCost} Gold. Obtain {RandomRelic}."
+        "description": "Pay 200 Gold. Obtain a featured rare relic."
       },
       {
         "name": "Locked",
-        "description": "Requires {FeaturedItemCost} Gold."
+        "description": "Requires 200 Gold."
       },
       {
         "name": "Leave",
@@ -1134,11 +1134,11 @@
       },
       {
         "name": "Wongo's Mystery Box",
-        "description": "Pay {MysteryBoxCost} Gold. Obtain {MysteryBoxRelicCount} random Relics after {MysteryBoxCombatCount} combats."
+        "description": "Pay 300 Gold. Obtain 3 random Relics after 5 combats."
       },
       {
         "name": "Locked",
-        "description": "Requires {MysteryBoxCost} Gold."
+        "description": "Requires 300 Gold."
       }
     ]
   },
@@ -1166,7 +1166,7 @@
     "choices": [
       {
         "name": "Exchange Gold",
-        "description": "Lose {Gold} Gold. Procure 2 random Potions."
+        "description": "Lose 50 Gold. Procure 2 random Potions."
       },
       {
         "name": "Hug the Tree",
@@ -1182,11 +1182,11 @@
     "choices": [
       {
         "name": "Bird",
-        "description": "Choose 1 starter card to Transform into {BirdCard}."
+        "description": "Choose 1 starter card to Transform into Peck."
       },
       {
         "name": "Snake",
-        "description": "Enchant 1 card with {SnakeEnchantment}."
+        "description": "Enchant 1 card with Slither."
       },
       {
         "name": "Locked",
@@ -1194,7 +1194,7 @@
       },
       {
         "name": "Torus",
-        "description": "Choose 1 starter card to Transform into {ToricCard}."
+        "description": "Choose 1 starter card to Transform into Toric Toughness."
       }
     ]
   },
@@ -1202,7 +1202,7 @@
     "id": "ZEN_WEAVER",
     "name": "Zen Weaver",
     "act": "unknown",
-    "description": "You walk through a spider web and PANIC!\nBut then, a wave of calm washes over you...\n\n“Calm down. I need you to quit fussing up my web.”\n\nHow did you calm down so quickly?\nAn itsy bitsy spider abseils down to meet you. It seems willing to impart some techniques for gold.",
+    "description": "You walk through a spider web and PANIC!\nBut then, a wave of calm washes over you...\n\n\u201cCalm down. I need you to quit fussing up my web.\u201d\n\nHow did you calm down so quickly?\nAn itsy bitsy spider abseils down to meet you. It seems willing to impart some techniques for gold.",
     "choices": [
       {
         "name": "Arachnid Acupuncture",
