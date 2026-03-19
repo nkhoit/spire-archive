@@ -97,6 +97,19 @@ const strings: Record<string, Partial<Record<Locale, string>>> = {
   'Purge on use': { ja: '使用時廃棄', ko: '사용 시 제거', zh: '使用后移除', de: 'Verbrauch', fr: 'Purge à l\'utilisation', es: 'Purgar al usar', pt: 'Purgar ao usar', it: 'Purga all\'uso', pl: 'Oczyszczenie po użyciu', ru: 'Удаляется при использовании', tr: 'Kullanınca arındır', th: 'ล้างเมื่อใช้' },
   'Self Retain': { ja: '自己保留', ko: '자체 보존', zh: '自我保留', de: 'Selbstbehalt', fr: 'Auto-retenue', es: 'Auto-retención', pt: 'Auto-manutenção', it: 'Auto-conservazione', pl: 'Samozachowanie', ru: 'Самосохранение', tr: 'Kendini sakla', th: 'คงสภาพตัวเอง' },
 
+  // Explorer UI
+  'Loading…': { ja: '読み込み中…', ko: '로딩 중…', zh: '加载中…', de: 'Laden…', fr: 'Chargement…', es: 'Cargando…', pt: 'Carregando…', it: 'Caricamento…', pl: 'Ładowanie…', ru: 'Загрузка…', tr: 'Yükleniyor…', th: 'กำลังโหลด…' },
+  'results': { ja: '件', ko: '개 결과', zh: '个结果', de: 'Ergebnisse', fr: 'résultats', es: 'resultados', pt: 'resultados', it: 'risultati', pl: 'wyników', ru: 'результатов', tr: 'sonuç', th: 'ผลลัพธ์' },
+  'Prev': { ja: '前へ', ko: '이전', zh: '上一页', de: 'Zurück', fr: 'Précédent', es: 'Anterior', pt: 'Anterior', it: 'Precedente', pl: 'Poprzednia', ru: 'Назад', tr: 'Önceki', th: 'ก่อนหน้า' },
+  'Next': { ja: '次へ', ko: '다음', zh: '下一页', de: 'Weiter', fr: 'Suivant', es: 'Siguiente', pt: 'Próximo', it: 'Successivo', pl: 'Następna', ru: 'Далее', tr: 'Sonraki', th: 'ถัดไป' },
+  'Cost (exact)': { ja: 'コスト（指定）', ko: '비용 (정확)', zh: '费用（精确）', de: 'Kosten (exakt)', fr: 'Coût (exact)', es: 'Coste (exacto)', pt: 'Custo (exato)', it: 'Costo (esatto)', pl: 'Koszt (dokładny)', ru: 'Стоимость (точная)', tr: 'Maliyet (tam)', th: 'ค่าใช้จ่าย (แน่นอน)' },
+  'Search cards, relics, events…': { ja: 'カード、レリック、イベントを検索…', ko: '카드, 유물, 이벤트 검색…', zh: '搜索卡牌、遗物、事件…', de: 'Karten, Relikte, Ereignisse suchen…', fr: 'Rechercher cartes, reliques, événements…', es: 'Buscar cartas, reliquias, eventos…', pt: 'Buscar cartas, relíquias, eventos…', it: 'Cerca carte, reliquie, eventi…', pl: 'Szukaj kart, reliktów, zdarzeń…', ru: 'Поиск карт, реликвий, событий…', tr: 'Kart, kalıntı, etkinlik ara…', th: 'ค้นหาการ์ด, เรลิค, เหตุการณ์…' },
+  'No results for': { ja: '該当なし:', ko: '결과 없음:', zh: '无结果:', de: 'Keine Ergebnisse für', fr: 'Aucun résultat pour', es: 'Sin resultados para', pt: 'Nenhum resultado para', it: 'Nessun risultato per', pl: 'Brak wyników dla', ru: 'Нет результатов для', tr: 'Sonuç bulunamadı:', th: 'ไม่พบผลลัพธ์สำหรับ' },
+  'Browse': { ja: 'ブラウズ', ko: '탐색', zh: '浏览', de: 'Durchsuchen', fr: 'Parcourir', es: 'Explorar', pt: 'Navegar', it: 'Sfoglia', pl: 'Przeglądaj', ru: 'Обзор', tr: 'Göz At', th: 'เรียกดู' },
+  'cards across all characters': { ja: '全キャラクターのカード', ko: '모든 캐릭터의 카드', zh: '所有角色的卡牌', de: 'Karten aller Charaktere', fr: 'cartes de tous les personnages', es: 'cartas de todos los personajes', pt: 'cartas de todos os personagens', it: 'carte di tutti i personaggi', pl: 'kart wszystkich postaci', ru: 'карт всех персонажей', tr: 'tüm karakterlerin kartları', th: 'การ์ดของทุกตัวละคร' },
+  'Upgrade Changes': { ja: 'アップグレード変更', ko: '업그레이드 변경', zh: '升级变化', de: 'Aufwertungsänderungen', fr: "Modifications d'amélioration", es: 'Cambios de mejora', pt: 'Mudanças de melhoria', it: 'Modifiche potenziamento', pl: 'Zmiany ulepszenia', ru: 'Изменения улучшения', tr: 'Yükseltme Değişiklikleri', th: 'การเปลี่ยนแปลงอัปเกรด' },
+  'Tags': { ja: 'タグ', ko: '태그', zh: '标签', de: 'Tags', fr: 'Tags', es: 'Etiquetas', pt: 'Tags', it: 'Tag', pl: 'Tagi', ru: 'Теги', tr: 'Etiketler', th: 'แท็ก' },
+
   // Misc
   'Description': { ja: '説明', ko: '설명', zh: '描述', de: 'Beschreibung', fr: 'Description', es: 'Descripción', pt: 'Descrição', it: 'Descrizione', pl: 'Opis', ru: 'Описание', tr: 'Açıklama', th: 'คำอธิบาย' },
   'Flavor': { ja: 'フレーバー', ko: '플레이버', zh: '背景', de: 'Beschreibung', fr: 'Ambiance', es: 'Ambientación', pt: 'Sabor', it: 'Ambientazione', pl: 'Opis fabularny', ru: 'Описание', tr: 'Lezzet', th: 'รสชาติ' },

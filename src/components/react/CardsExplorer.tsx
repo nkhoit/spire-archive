@@ -222,7 +222,7 @@ export default function CardsExplorer(props: {
         </select>
         <input
           className="rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm focus:border-amber-500/40 focus:outline-none transition-colors"
-          placeholder="Cost (exact)"
+          placeholder={t('Cost (exact)', locale)}
           value={cost}
           onChange={(e) => { setOffset(0); setCost(e.target.value.replace(/[^0-9\-]/g, '')); }}
         />
@@ -231,7 +231,7 @@ export default function CardsExplorer(props: {
 
       <div className="mt-3 flex items-center justify-between text-xs text-slate-300">
         <div>
-          {loading ? 'Loading…' : `${total} results`}{' '}
+          {loading ? t('Loading…', locale) : `${total} ${t('results', locale)}`}{' '}
           {error ? <span className="text-red-300">({error})</span> : null}
         </div>
         <div className="flex gap-2">
@@ -239,12 +239,12 @@ export default function CardsExplorer(props: {
             className="rounded-md border border-white/10 bg-white/5 px-2 py-1 disabled:opacity-40"
             disabled={!canPrev}
             onClick={() => setOffset((o) => Math.max(0, o - limit))}
-          >Prev</button>
+          >{t('Prev', locale)}</button>
           <button
             className="rounded-md border border-white/10 bg-white/5 px-2 py-1 disabled:opacity-40"
             disabled={!canNext}
             onClick={() => setOffset((o) => o + limit)}
-          >Next</button>
+          >{t('Next', locale)}</button>
         </div>
       </div>
 

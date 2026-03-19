@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { t } from '../../lib/ui-strings';
 
 type ApiResp<T> = { total: number; offset: number; limit: number; items: T[] };
 
@@ -54,7 +55,9 @@ export function Pager(props: {
   offset: number;
   limit: number;
   onOffset: (n: number) => void;
+  locale?: string;
 }) {
+  const locale = props.locale ?? 'en';
   const canPrev = props.offset > 0;
   const canNext = props.offset + props.limit < props.total;
   return (
@@ -64,14 +67,14 @@ export function Pager(props: {
         disabled={!canPrev}
         onClick={() => props.onOffset(Math.max(0, props.offset - props.limit))}
       >
-        Prev
+        {t('Prev', locale)}
       </button>
       <button
         className="rounded-md border border-white/10 bg-white/5 px-2 py-1 disabled:opacity-40"
         disabled={!canNext}
         onClick={() => props.onOffset(props.offset + props.limit)}
       >
-        Next
+        {t('Next', locale)}
       </button>
     </div>
   );

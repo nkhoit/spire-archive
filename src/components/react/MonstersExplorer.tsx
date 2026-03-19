@@ -70,9 +70,9 @@ export default function MonstersExplorer(props: { game?: string; acts: string[];
 
       <div className="mt-3 flex items-center justify-between text-xs text-slate-300">
         <div>
-          {loading ? 'Loading…' : `${resp.total} results`} {error ? <span className="text-red-300">({error})</span> : null}
+          {loading ? t('Loading…', locale) : `${resp.total} ${t('results', locale)}`} {error ? <span className="text-red-300">({error})</span> : null}
         </div>
-        <Pager total={resp.total} offset={resp.offset} limit={resp.limit} onOffset={setOffset} />
+        <Pager total={resp.total} offset={resp.offset} limit={resp.limit} onOffset={setOffset} locale={locale} />
       </div>
 
       <ul className="mt-3 divide-y divide-white/10 rounded-lg border border-white/10 bg-white/5">
@@ -103,7 +103,7 @@ export default function MonstersExplorer(props: { game?: string; acts: string[];
       </ul>
 
       <div className="mt-3 flex justify-end">
-        <Pager total={resp.total} offset={resp.offset} limit={resp.limit} onOffset={setOffset} />
+        <Pager total={resp.total} offset={resp.offset} limit={resp.limit} onOffset={setOffset} locale={locale} />
       </div>
     </div>
   );

@@ -46,7 +46,7 @@ export default function EventsExplorer(props: { game?: string; initial?: ApiResp
 
       <div className="mt-3 flex items-center justify-between text-xs text-slate-300">
         <div>
-          {loading ? 'Loading…' : `${resp.total} results`} {error ? <span className="text-red-300">({error})</span> : null}
+          {loading ? t('Loading…', locale) : `${resp.total} ${t('results', locale)}`} {error ? <span className="text-red-300">({error})</span> : null}
         </div>
         <Pager total={resp.total} offset={resp.offset} limit={resp.limit} onOffset={setOffset} />
       </div>

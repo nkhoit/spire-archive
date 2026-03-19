@@ -3,6 +3,7 @@ import Layout from '../../components/Layout.astro';
 import Badge from '../../components/Badge.astro';
 import { getData } from '../../lib/data';
 import { getLocale } from '../../lib/i18n';
+import { t } from '../../lib/ui-strings';
 
 const { locale, langPrefix } = getLocale(Astro);
 const data = await getData('sts2', locale);
@@ -33,7 +34,7 @@ const charColors: Record<string, string> = {
 };
 
 const browseLinks = [
-  { href: langPrefix + '/sts2/cards', icon: 'cards', label: 'Cards', desc: counts.cards + ' cards across all characters' },
+  { href: langPrefix + '/sts2/cards', icon: 'cards', label: 'Cards', desc: counts.cards + ' ' + t('cards across all characters', locale) },
   { href: langPrefix + '/sts2/relics', icon: 'relics', label: 'Relics', desc: counts.relics + ' relics' },
   { href: langPrefix + '/sts2/potions', icon: 'potions', label: 'Potions', desc: counts.potions + ' potions' },
   { href: langPrefix + '/sts2/monsters', icon: 'monsters', label: 'Monsters', desc: counts.monsters + ' monsters' },
@@ -65,7 +66,7 @@ const browseLinks = [
   </section>
 
   <section class="mt-8">
-    <h2 class="text-xs font-semibold text-amber-200/60 uppercase tracking-widest">Browse</h2>
+    <h2 class="text-xs font-semibold text-amber-200/60 uppercase tracking-widest">{t('Browse', locale)}</h2>
     <div class="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
       {browseLinks.map((item) => (
         <a href={item.href} class="group flex items-center gap-3 rounded-lg border border-white/[0.06] bg-white/[0.03] p-4 hover:bg-white/[0.06] hover:border-white/[0.12] transition-all">

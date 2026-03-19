@@ -166,7 +166,7 @@ export default function GlobalSearch({ game, locale = 'en' }: { game?: string; l
             ref={inputRef}
             type="text"
             className="flex-1 bg-transparent text-sm text-white placeholder-slate-500 outline-none"
-            placeholder="Search cards, relics, events…"
+            placeholder={t('Search cards, relics, events…', locale)}
             value={query}
             onChange={e => setQuery(e.target.value)}
             onKeyDown={handleKeyDown}
@@ -213,7 +213,7 @@ export default function GlobalSearch({ game, locale = 'en' }: { game?: string; l
 
         {query.trim() && results.length === 0 && (
           <div className="px-4 py-8 text-center text-sm text-slate-500">
-            No results for "{query}"
+            {t('No results for', locale)} "{query}"
           </div>
         )}
         </div>
