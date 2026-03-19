@@ -126,13 +126,20 @@ export interface EventPage {
   choices: EventChoice[];
 }
 
+export interface EventRelicPool {
+  name: string;
+  relics: string[];
+}
+
 export interface Event {
   id: string;
   name: string;
   act: string;
+  type?: string;
   description: string;
   choices: EventChoice[];
   pages?: EventPage[];
+  relic_pools?: EventRelicPool[];
   references?: EventReference[];
   image_url?: string | null;
 }

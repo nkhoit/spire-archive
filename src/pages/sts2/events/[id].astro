@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../components/Layout.astro';
+import Badge from '../../../components/Badge.astro';
 import { getData } from '../../../lib/data';
 import { getLocale } from '../../../lib/i18n';
 import { t } from '../../../lib/ui-strings';
@@ -16,6 +17,10 @@ const pages = (event as any).pages ?? [];
 const pools = [...new Set(choices.map((c: any) => c.pool).filter(Boolean))];
 const hasPoolGroups = pools.length > 0;
 const ungrouped = choices.filter((c: any) => !c.pool);
+const isAncient = event.type === 'ancient';
+const ancientRelicPools = event.relic_pools ?? [];
+const hasAncientRelicPools = isAncient && ancientRelicPools.length > 0;
+const showStandardChoices = !hasAncientRelicPools;
 
 function linkifyRefs(text: string, refs?: any[], langPrefix?: string): string {
   const prefix = langPrefix ?? '';
@@ -42,9 +47,14 @@ function renderChoices(choices: any[], eventRefs?: any[], langPrefix?: string) {
     return { ...c, _html: c.description ? linkifyRefs(c.description, allRefs, langPrefix) : '', _locked: c.locked ?? null };
   });
 }
+
+function getPoolLabel(name: string, locale: string) {
+  const match = name.match(/^Pool (\d+)$/i);
+  if (match) return `${t('Pool', locale)} ${match[1]}`;
+  return name;
+}
 ---
 <Layout game="sts2" title={title} description={event.description ?? ''}>
-  {/* Event hero with art background */}
   <div class="relative -mx-4 -mt-6 mb-6 overflow-hidden" style="height: 220px;">
     <img
       src={`/images/sts2/events/${event.id.toLowerCase()}.png`}
@@ -56,6 +66,11 @@ function renderChoices(choices: any[], eventRefs?: any[], langPrefix?: string) {
     <div class="absolute bottom-0 left-0 right-0 px-6 pb-5" style="z-index: 1;">
       <a href={langPrefix + '/sts2/events'} class="text-xs text-sky-400/70 hover:text-sky-300 hover:underline transition-colors">← Events</a>
       <h1 class="mt-1 text-2xl font-bold" style="font-family: 'KreonGame', 'Kreon', serif;">{event.name}</h1>
+      {isAncient && (
+        <div class="mt-2 flex flex-wrap gap-2">
+          <Badge label="Ancient" locale={locale} />
+        </div>
+      )}
     </div>
   </div>
 
@@ -65,21 +80,46 @@ function renderChoices(choices: any[], eventRefs?: any[], langPrefix?: string) {
     </section>
   )}
 
-  {/* Multi-page events (branching choices) */}
-  {pages.length > 0 && (
+  {hasAncientRelicPools && ancientRelicPools.map((pool) => (
+    <section class="mt-4">
+      <h2 class="text-sm font-semibold text-amber-300">{getPoolLabel(pool.name, locale)}</h2>
+      <div class="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {pool.relics.map((relicId) => {
+          const relic = data.relicById.get(relicId);
+          const relicName = relic?.name ?? relicId;
+          return (
+            <a
+              href={langPrefix + `/sts2/relics/${relicId}`}
+              class="group flex items-center gap-3 rounded-lg border border-amber-900/25 bg-white/5 p-3 transition-colors hover:border-amber-500/40 hover:bg-amber-500/5"
+            >
+              <img
+                src={`/images/sts2/relics/${relicId.toLowerCase()}.png`}
+                alt=""
+                class="h-12 w-12 shrink-0 object-contain"
+                loading="lazy"
+              />
+              <div class="min-w-0">
+                <div class="text-sm font-semibold text-sky-300 group-hover:underline">{relicName}</div>
+                <div class="text-xs text-slate-400 line-clamp-2">{relic?.description ?? ''}</div>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </section>
+  ))}
+
+  {showStandardChoices && pages.length > 0 && (
     <section class="mt-4">
       <div class="relative">
         {pages.map((page: any, i: number) => (
           <div class="relative pl-6 pb-6">
-            {/* Vertical connector line */}
             {i < pages.length - 1 && (
               <div class="absolute left-[11px] top-6 bottom-0 w-px bg-white/15" />
             )}
-            {/* Step dot */}
             <div class="absolute left-0 top-1 w-[23px] h-[23px] rounded-full border-2 border-amber-500/50 bg-slate-900 flex items-center justify-center">
               <span class="text-[10px] font-bold text-amber-300">{i + 1}</span>
             </div>
-            {/* Step label */}
             <h3 class="text-sm font-semibold text-slate-200 mb-2">{page.label}</h3>
             <div class="space-y-2">
               {renderChoices(page.choices ?? [], (event as any).references, langPrefix).map((c: any) => (
@@ -96,8 +136,7 @@ function renderChoices(choices: any[], eventRefs?: any[], langPrefix?: string) {
     </section>
   )}
 
-  {/* Single-page ungrouped choices */}
-  {ungrouped.length > 0 && (
+  {showStandardChoices && ungrouped.length > 0 && (
     <section class="mt-4">
       <h2 class="text-sm font-semibold text-slate-200">{t('Choices', locale)}</h2>
       <div class="mt-3 space-y-2">
@@ -112,8 +151,7 @@ function renderChoices(choices: any[], eventRefs?: any[], langPrefix?: string) {
     </section>
   )}
 
-  {/* Pool-grouped choices (e.g. Neow) */}
-  {hasPoolGroups && pools.map((pool: any) => {
+  {showStandardChoices && hasPoolGroups && pools.map((pool: any) => {
     const poolChoices = choices.filter((c: any) => c.pool === pool);
     const poolLabel = pool === 'positive' ? t('Positive Blessings (2 offered per run)', locale) :
                       pool === 'cursed' ? t('Cursed Blessings (1 offered per run)', locale) : pool;

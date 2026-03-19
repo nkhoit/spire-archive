@@ -295,7 +295,7 @@
     "id": "DARV",
     "name": "Darv",
     "act": "unknown",
-    "description": null,
+    "description": "Darv, the Hoarder, digs through a heap of powerful relics and presents a rotating stash. You are shown Dusty Tome plus three random relics drawn from the main pool and act-specific sets, with some options only appearing when their conditions are met.",
     "choices": [],
     "references": [
       {
@@ -357,6 +357,41 @@
         "type": "relic",
         "id": "VELVET_CHOKER",
         "name": "Velvet Choker"
+      }
+    ],
+    "type": "ancient",
+    "relic_pools": [
+      {
+        "name": "Main Pool",
+        "relics": [
+          "ASTROLABE",
+          "BLACK_STAR",
+          "CALLING_BELL",
+          "EMPTY_CAGE",
+          "PANDORAS_BOX",
+          "RUNIC_PYRAMID",
+          "SNECKO_EYE"
+        ]
+      },
+      {
+        "name": "Act 1 Set",
+        "relics": [
+          "ECTOPLASM",
+          "SOZU"
+        ]
+      },
+      {
+        "name": "Act 2 Set",
+        "relics": [
+          "PHILOSOPHERS_STONE",
+          "VELVET_CHOKER"
+        ]
+      },
+      {
+        "name": "Always Offered",
+        "relics": [
+          "DUSTY_TOME"
+        ]
       }
     ]
   },
@@ -829,20 +864,39 @@
         "relic_id": "SILVER_CRUCIBLE",
         "pool": "cursed"
       }
-    ]
+    ],
+    "type": "ancient"
   },
   {
     "id": "NONUPEIPE",
     "name": "Nonupeipe",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "Nonupeipe, Serendipity Incarnate, surrounds you with a glittering collection of lucky treasures. Each visit offers three random relics from the main pool, with Beautiful Bracelet appearing only when its special condition is met.",
+    "choices": [],
+    "type": "ancient",
+    "relic_pools": [
+      {
+        "name": "Main Pool",
+        "relics": [
+          "BLESSED_ANTLER",
+          "BRILLIANT_SCARF",
+          "DELICATE_FROND",
+          "DIAMOND_DIADEM",
+          "FUR_COAT",
+          "GLITTER",
+          "JEWELRY_BOX",
+          "LOOMING_FRUIT",
+          "SIGNET_RING",
+          "BEAUTIFUL_BRACELET"
+        ]
+      }
+    ]
   },
   {
     "id": "OROBAS",
     "name": "Orobas",
     "act": "unknown",
-    "description": null,
+    "description": "Orobas, the Living Rainbow, spreads a spectrum of relics across three distinct pools. Each encounter offers one relic from each pool, with Prismatic Gem joining the selection for characters who can channel Orbs.",
     "choices": [],
     "references": [
       {
@@ -860,14 +914,70 @@
         "id": "ARCHAIC_TOOTH",
         "name": "Archaic Tooth"
       }
+    ],
+    "type": "ancient",
+    "relic_pools": [
+      {
+        "name": "Pool 1",
+        "relics": [
+          "ELECTRIC_SHRYMP",
+          "GLASS_EYE",
+          "SAND_CASTLE"
+        ]
+      },
+      {
+        "name": "Pool 2",
+        "relics": [
+          "ALCHEMICAL_COFFER",
+          "DRIFTWOOD",
+          "RADIANT_PEARL"
+        ]
+      },
+      {
+        "name": "Pool 3",
+        "relics": [
+          "SEA_GLASS",
+          "TOUCH_OF_OROBAS",
+          "ARCHAIC_TOOTH",
+          "PRISMATIC_GEM"
+        ]
+      }
     ]
   },
   {
     "id": "PAEL",
     "name": "Pael",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "Pael, the Melting Dragon, offers three relic choices drawn from twisting pools of flesh, wing, and eye. Each visit presents one relic from Pool 1, one from Pool 2, and one from Pool 3, with extra options appearing when your deck or companions meet Pael's peculiar conditions.",
+    "choices": [],
+    "type": "ancient",
+    "relic_pools": [
+      {
+        "name": "Pool 1",
+        "relics": [
+          "PAELS_FLESH",
+          "PAELS_HORN",
+          "PAELS_TEARS"
+        ]
+      },
+      {
+        "name": "Pool 2",
+        "relics": [
+          "PAELS_WING",
+          "PAELS_GROWTH",
+          "PAELS_CLAW",
+          "PAELS_TOOTH"
+        ]
+      },
+      {
+        "name": "Pool 3",
+        "relics": [
+          "PAELS_EYE",
+          "PAELS_BLOOD",
+          "PAELS_LEGION"
+        ]
+      }
+    ]
   },
   {
     "id": "POTION_COURIER",
@@ -1222,8 +1332,26 @@
     "id": "TANX",
     "name": "Tanx",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "Tanx, the Khimera King, arms you from a brutal cache of weapons. Each meeting offers three random relics from Tanx's arsenal, with Tri-Boomerang added when you already carry enough weapons to impress the king.",
+    "choices": [],
+    "type": "ancient",
+    "relic_pools": [
+      {
+        "name": "Base Pool",
+        "relics": [
+          "CLAWS",
+          "CROSSBOW",
+          "IRON_CLUB",
+          "MEAT_CLEAVER",
+          "SAI",
+          "SPIKED_GAUNTLETS",
+          "TANXS_WHISTLE",
+          "THROWING_AXE",
+          "WAR_HAMMER",
+          "TRI_BOOMERANG"
+        ]
+      }
+    ]
   },
   {
     "id": "TEA_MASTER",
@@ -1272,15 +1400,44 @@
     "id": "TEZCATARA",
     "name": "Tezcatara",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "Tezcatara, It Which Feeds the Fire, sets out gifts in three carefully prepared pools. Each encounter offers one relic from each pool, ranging from comforting treats to strange keepsakes and treasured curios.",
+    "choices": [],
+    "type": "ancient",
+    "relic_pools": [
+      {
+        "name": "Pool 1",
+        "relics": [
+          "NUTRITIOUS_SOUP",
+          "VERY_HOT_COCOA",
+          "YUMMY_COOKIE"
+        ]
+      },
+      {
+        "name": "Pool 2",
+        "relics": [
+          "BIIIG_HUG",
+          "STORYBOOK",
+          "SEAL_OF_GOLD",
+          "TOASTY_MITTENS"
+        ]
+      },
+      {
+        "name": "Pool 3",
+        "relics": [
+          "GOLDEN_COMPASS",
+          "PUMPKIN_CANDLE",
+          "TOY_BOX"
+        ]
+      }
+    ]
   },
   {
     "id": "THE_ARCHITECT",
     "name": "The Architect",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "The Architect awaits at the end of each successful run. The encounter plays out as a dialogue with character-specific lines, culminating in a final confrontation.",
+    "choices": [],
+    "type": "ancient"
   },
   {
     "id": "THE_FUTURE_OF_POTIONS",
@@ -1535,8 +1692,36 @@
     "id": "VAKUU",
     "name": "Vakuu",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "Vakuu, the First Demon, tempts you with relics sorted into three ominous pools. Each encounter offers one relic from each pool, mixing bloody bargains, preserved trophies, and elegant demonic finery.",
+    "choices": [],
+    "type": "ancient",
+    "relic_pools": [
+      {
+        "name": "Pool 1",
+        "relics": [
+          "BLOOD_SOAKED_ROSE",
+          "WHISPERING_EARRING",
+          "FIDDLE"
+        ]
+      },
+      {
+        "name": "Pool 2",
+        "relics": [
+          "PRESERVED_FOG",
+          "SERE_TALON",
+          "DISTINGUISHED_CAPE"
+        ]
+      },
+      {
+        "name": "Pool 3",
+        "relics": [
+          "CHOICES_PARADOX",
+          "MUSIC_BOX",
+          "LORDS_PARASOL",
+          "JEWELED_MASK"
+        ]
+      }
+    ]
   },
   {
     "id": "WAR_HISTORIAN_REPY",
