@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Pager, useApiList } from './SimpleExplorer';
+import { t } from '../../lib/ui-strings';
 
 type EventChoice = {
   name: string;
@@ -16,8 +17,9 @@ type Event = {
 
 type ApiResp<T> = { total: number; offset: number; limit: number; items: T[] };
 
-export default function EventsExplorer(props: { game?: string; initial?: ApiResp<Event> }) {
+export default function EventsExplorer(props: { game?: string; initial?: ApiResp<Event>; locale?: string }) {
   const game = props.game ?? 'sts1';
+  const locale = props.locale ?? 'en';
   const [q, setQ] = useState('');
   const [offset, setOffset] = useState(0);
   const limit = 50;
@@ -34,7 +36,7 @@ export default function EventsExplorer(props: { game?: string; initial?: ApiResp
     <div className="mt-4">
       <input
         className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm"
-        placeholder="Search events…"
+        placeholder={t('Search', locale) + ' ' + t('Events', locale).toLowerCase() + '…'}
         value={q}
         onChange={(e) => {
           setOffset(0);

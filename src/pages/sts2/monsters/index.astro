@@ -3,13 +3,14 @@ import Layout from '../../../components/Layout.astro';
 import MonstersExplorer from '../../../components/react/MonstersExplorer';
 import { getData } from '../../../lib/data';
 import { getLocale } from '../../../lib/i18n';
+import { t } from '../../../lib/ui-strings';
 
 const { locale, langPrefix } = getLocale(Astro);
 const { monsters } = await getData('sts2', locale);
 const types = Array.from(new Set(monsters.map((m) => String(m.type)))).sort();
 ---
 <Layout game="sts2" title="Monsters — Spire Archive — STS2" description="Browse Slay the Spire 2 monsters with filters for type.">
-  <h1 class="text-xl font-semibold">Monsters</h1>
+  <h1 class="text-xl font-semibold">{t('Monsters', locale)}</h1>
   <p class="mt-1 text-sm text-slate-400">{monsters.length} monsters from Slay the Spire 2</p>
   <MonstersExplorer game="sts2" client:load acts={[]} types={types} />
 </Layout>

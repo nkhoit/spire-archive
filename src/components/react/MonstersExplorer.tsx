@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Pager, useApiList } from './SimpleExplorer';
+import { t } from '../../lib/ui-strings';
 
 type Monster = {
   id: string;
@@ -21,8 +22,9 @@ const TYPE_COLORS: Record<string, string> = {
 
 type ApiResp<T> = { total: number; offset: number; limit: number; items: T[] };
 
-export default function MonstersExplorer(props: { game?: string; acts: string[]; types: string[]; initial?: ApiResp<Monster> }) {
+export default function MonstersExplorer(props: { game?: string; acts: string[]; types: string[]; initial?: ApiResp<Monster>; locale?: string }) {
   const game = props.game ?? 'sts1';
+  const locale = props.locale ?? 'en';
   const [q, setQ] = useState('');
   const [type, setType] = useState('');
   const [offset, setOffset] = useState(0);
@@ -42,7 +44,7 @@ export default function MonstersExplorer(props: { game?: string; acts: string[];
       <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
         <input
           className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm"
-          placeholder="Search monsters…"
+          placeholder={t('Search', locale) + ' ' + t('Monsters', locale).toLowerCase() + '…'}
           value={q}
           onChange={(e) => {
             setOffset(0);
@@ -57,7 +59,7 @@ export default function MonstersExplorer(props: { game?: string; acts: string[];
             setType(e.target.value);
           }}
         >
-          <option value="">All types</option>
+          <option value="">{t('All Types', locale)}</option>
           {props.types.map((t) => (
             <option key={t} value={t}>
               {t}

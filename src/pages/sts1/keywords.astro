@@ -2,13 +2,14 @@
 import Layout from '../../components/Layout.astro';
 import { getData } from '../../lib/data';
 import { getLocale } from '../../lib/i18n';
+import { t } from '../../lib/ui-strings';
 
 const { locale, langPrefix } = getLocale(Astro);
 const data = await getData('sts1', locale);
 const keywords = data.keywords.filter((k) => k.names?.length).sort((a, b) => (a.names[0] ?? '').localeCompare(b.names[0] ?? ''));
 ---
 <Layout game="sts1" title="Keywords — Spire Archive" description="Game keyword glossary for Slay the Spire.">
-  <h1 class="text-xl font-semibold">Keywords</h1>
+  <h1 class="text-xl font-semibold">{t('Keywords', locale)}</h1>
   <p class="mt-1 text-sm text-slate-300">{keywords.length} game keywords and mechanics.</p>
 
   <ul class="mt-4 divide-y divide-white/10 rounded-lg border border-white/10 bg-white/5">

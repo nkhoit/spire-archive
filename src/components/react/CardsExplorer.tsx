@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import CssCardRenderer from './CssCardRenderer';
+import { t } from '../../lib/ui-strings';
 
 type Card = {
   id: string;
@@ -185,7 +186,7 @@ export default function CardsExplorer(props: {
         <div className="grid grid-cols-1 gap-2 md:grid-cols-5">
         <input
           className="rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm focus:border-amber-500/40 focus:outline-none transition-colors"
-          placeholder="Search cards…"
+          placeholder={t('Search', locale) + ' ' + t('Cards', locale).toLowerCase() + '…'}
           value={q}
           onChange={(e) => { setOffset(0); setQ(e.target.value); }}
         />
@@ -204,7 +205,7 @@ export default function CardsExplorer(props: {
           value={type}
           onChange={(e) => { setOffset(0); setType(e.target.value); }}
         >
-          <option value="">All types</option>
+          <option value="">{t('All Types', locale)}</option>
           {props.types.map((t) => (
             <option key={t} value={t}>{t}</option>
           ))}
@@ -214,7 +215,7 @@ export default function CardsExplorer(props: {
           value={rarity}
           onChange={(e) => { setOffset(0); setRarity(e.target.value); }}
         >
-          <option value="">All rarities</option>
+          <option value="">{t('All Rarities', locale)}</option>
           {props.rarities.map((r) => (
             <option key={r} value={r}>{r}</option>
           ))}

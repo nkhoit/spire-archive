@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Pager, useApiList } from './SimpleExplorer';
+import { t } from '../../lib/ui-strings';
 
 type Relic = {
   id: string;
@@ -12,8 +13,9 @@ type Relic = {
 
 type ApiResp<T> = { total: number; offset: number; limit: number; items: T[] };
 
-export default function RelicsExplorer(props: { game?: string; tiers: string[]; colors: string[]; initial?: ApiResp<Relic> }) {
+export default function RelicsExplorer(props: { game?: string; tiers: string[]; colors: string[]; initial?: ApiResp<Relic>; locale?: string }) {
   const game = props.game ?? 'sts1';
+  const locale = props.locale ?? 'en';
   const [q, setQ] = useState('');
   const [tier, setTier] = useState('');
   const [color, setColor] = useState('');
@@ -36,7 +38,7 @@ export default function RelicsExplorer(props: { game?: string; tiers: string[]; 
         <div className="grid grid-cols-1 gap-2 md:grid-cols-3">
         <input
           className="rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm focus:border-amber-500/40 focus:outline-none transition-colors"
-          placeholder="Search relics…"
+          placeholder={t('Search', locale) + ' ' + t('Relics', locale).toLowerCase() + '…'}
           value={q}
           onChange={(e) => {
             setOffset(0);
@@ -51,7 +53,7 @@ export default function RelicsExplorer(props: { game?: string; tiers: string[]; 
             setTier(e.target.value);
           }}
         >
-          <option value="">All tiers</option>
+          <option value="">{t('All Tiers', locale)}</option>
           {props.tiers.map((t) => (
             <option key={t} value={t}>
               {t}

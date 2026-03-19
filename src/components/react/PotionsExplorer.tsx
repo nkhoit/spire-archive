@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Pager, useApiList } from './SimpleExplorer';
+import { t } from '../../lib/ui-strings';
 
 type Potion = {
   id: string;
@@ -17,8 +18,9 @@ const rarityCls: Record<string, string> = {
   rare: 'tier-rare',
 };
 
-export default function PotionsExplorer(props: { game?: string; rarities: string[]; initial?: ApiResp<Potion> }) {
+export default function PotionsExplorer(props: { game?: string; rarities: string[]; initial?: ApiResp<Potion>; locale?: string }) {
   const game = props.game ?? 'sts1';
+  const locale = props.locale ?? 'en';
   const [q, setQ] = useState('');
   const [rarity, setRarity] = useState('');
   const [offset, setOffset] = useState(0);
@@ -39,7 +41,7 @@ export default function PotionsExplorer(props: { game?: string; rarities: string
         <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
         <input
           className="rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm focus:border-amber-500/40 focus:outline-none transition-colors"
-          placeholder="Search potions…"
+          placeholder={t('Search', locale) + ' ' + t('Potions', locale).toLowerCase() + '…'}
           value={q}
           onChange={(e) => {
             setOffset(0);
@@ -54,7 +56,7 @@ export default function PotionsExplorer(props: { game?: string; rarities: string
             setRarity(e.target.value);
           }}
         >
-          <option value="">All rarities</option>
+          <option value="">{t('All Rarities', locale)}</option>
           {props.rarities.map((r) => (
             <option key={r} value={r}>
               {r}

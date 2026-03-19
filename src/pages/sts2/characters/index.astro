@@ -3,6 +3,7 @@ import Layout from '../../../components/Layout.astro';
 import Badge from '../../../components/Badge.astro';
 import { getData } from '../../../lib/data';
 import { getLocale } from '../../../lib/i18n';
+import { t } from '../../../lib/ui-strings';
 
 const { locale, langPrefix } = getLocale(Astro);
 const data = await getData('sts2', locale);
@@ -33,7 +34,7 @@ const descMap: Record<string, string> = {
 
 ---
 <Layout game="sts2" title="Characters — Spire Archive" description="Browse the five playable characters of Slay the Spire 2.">
-  <h1 class="text-xl font-semibold">Characters</h1>
+  <h1 class="text-xl font-semibold">{t('Characters', locale)}</h1>
   <p class="mt-1 text-sm text-slate-300">The five playable characters of Slay the Spire 2.</p>
 
   <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">

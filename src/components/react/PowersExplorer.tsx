@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Pager, useApiList } from './SimpleExplorer';
+import { t } from '../../lib/ui-strings';
 
 type Power = {
   id: string;
@@ -11,8 +12,9 @@ type Power = {
 
 type ApiResp<T> = { total: number; offset: number; limit: number; items: T[] };
 
-export default function PowersExplorer(props: { game?: string }) {
+export default function PowersExplorer(props: { game?: string; locale?: string }) {
   const game = props.game ?? 'sts1';
+  const locale = props.locale ?? 'en';
   const [q, setQ] = useState('');
   const [type, setType] = useState('');
   const [offset, setOffset] = useState(0);
@@ -32,7 +34,7 @@ export default function PowersExplorer(props: { game?: string }) {
       <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
         <input
           className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm"
-          placeholder="Search effects…"
+          placeholder={t('Search', locale) + ' ' + t('Buffs & Debuffs', locale).toLowerCase() + '…'}
           value={q}
           onChange={(e) => { setOffset(0); setQ(e.target.value); }}
         />
@@ -41,7 +43,7 @@ export default function PowersExplorer(props: { game?: string }) {
           value={type}
           onChange={(e) => { setOffset(0); setType(e.target.value); }}
         >
-          <option value="">All types</option>
+          <option value="">{t('All Types', locale)}</option>
           <option value="Buff">Buff</option>
           <option value="Debuff">Debuff</option>
         </select>

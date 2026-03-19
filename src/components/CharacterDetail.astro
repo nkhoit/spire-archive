@@ -1,5 +1,7 @@
 ---
 import Badge from './Badge.astro';
+import { t } from '../lib/ui-strings';
+import { getLocale } from '../lib/i18n';
 
 interface Props {
   game: 'sts1' | 'sts2';
@@ -13,6 +15,7 @@ interface Props {
 }
 
 const { game, character, color, description, startingDeck, startingRelic, charCards, charRelics } = Astro.props;
+const { locale } = getLocale(Astro);
 
 const cardsByType = new Map<string, any[]>();
 for (const c of charCards) {
@@ -52,7 +55,7 @@ const getRelicImgSrc = (r: any) => {
 
 <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
   <section class="rounded-lg border border-white/[0.06] bg-white/[0.03] p-4">
-    <h2 class="text-sm font-semibold">Starting Deck ({startingDeck.reduce((s, d) => s + d.count, 0)} cards)</h2>
+    <h2 class="text-sm font-semibold">{t('Starting Deck', locale)} ({startingDeck.reduce((s, d) => s + d.count, 0)} {t('Cards', locale)})</h2>
     <ul class="mt-2 space-y-1">
       {startingDeck.map(({ cardId, card, count }) => (
         <li class="text-sm flex items-center gap-2">
@@ -67,7 +70,7 @@ const getRelicImgSrc = (r: any) => {
 
   {startingRelic && (
     <section class="rounded-lg border border-white/[0.06] bg-white/[0.03] p-4">
-      <h2 class="text-sm font-semibold">Starting Relic</h2>
+      <h2 class="text-sm font-semibold">{t('Starting Relic', locale)}</h2>
       <div class="mt-2 flex items-center gap-2">
         {hasRelicImages && (
           <img src={getRelicImgSrc(startingRelic)} alt="" class="w-8 h-8 object-contain" />

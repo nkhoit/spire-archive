@@ -3,6 +3,7 @@ import '../styles/global.css';
 import GlobalSearch from './react/GlobalSearch';
 import LanguagePicker from './react/LanguagePicker';
 import { getLocale } from '../lib/i18n';
+import { t } from '../lib/ui-strings';
 
 export interface Props {
   title: string;
@@ -21,19 +22,19 @@ const gameLabels: Record<string, string> = {
 };
 
 const navLinks = game ? [
-  { label: 'Characters', href: langPrefix + '/' + game + '/characters' },
-  { label: 'Cards', href: langPrefix + '/' + game + '/cards' },
-  { label: 'Relics', href: langPrefix + '/' + game + '/relics' },
-  { label: 'Potions', href: langPrefix + '/' + game + '/potions' },
-  { label: 'Monsters', href: langPrefix + '/' + game + '/monsters' },
-  { label: 'Events', href: langPrefix + '/' + game + '/events' },
+  { label: t('Characters', locale), href: langPrefix + '/' + game + '/characters' },
+  { label: t('Cards', locale), href: langPrefix + '/' + game + '/cards' },
+  { label: t('Relics', locale), href: langPrefix + '/' + game + '/relics' },
+  { label: t('Potions', locale), href: langPrefix + '/' + game + '/potions' },
+  { label: t('Monsters', locale), href: langPrefix + '/' + game + '/monsters' },
+  { label: t('Events', locale), href: langPrefix + '/' + game + '/events' },
   ...(game === 'sts2' ? [
-    { label: 'Buffs & Debuffs', href: langPrefix + '/' + game + '/effects' },
-    { label: 'Enchantments', href: langPrefix + '/' + game + '/enchantments' },
+    { label: t('Buffs & Debuffs', locale), href: langPrefix + '/' + game + '/effects' },
+    { label: t('Enchantments', locale), href: langPrefix + '/' + game + '/enchantments' },
   ] : [
-    { label: 'Buffs & Debuffs', href: langPrefix + '/' + game + '/effects' },
+    { label: t('Buffs & Debuffs', locale), href: langPrefix + '/' + game + '/effects' },
   ]),
-  { label: 'Keywords', href: langPrefix + '/' + game + '/keywords' },
+  { label: t('Keywords', locale), href: langPrefix + '/' + game + '/keywords' },
 ] : [];
 ---
 <!doctype html>
@@ -66,7 +67,7 @@ const navLinks = game ? [
           )}
         </div>
         <div class="flex items-center gap-3">
-          <GlobalSearch client:load game={game} />
+          <GlobalSearch client:load game={game} locale={locale} />
           {navLinks.length > 0 && (
           <>
             {/* Desktop nav */}
@@ -116,7 +117,7 @@ const navLinks = game ? [
 
     <footer class="border-t border-white/[0.06]">
       <div class="mx-auto max-w-7xl px-4 py-6 text-xs text-slate-500">
-        <span class="font-['KreonGame','Kreon',serif] text-amber-200/40">Spire Archive</span> — a Slay the Spire companion
+        <span class="font-['KreonGame','Kreon',serif] text-amber-200/40">Spire Archive</span> — {t('a Slay the Spire companion', locale)}
       </div>
     </footer>
   </body>

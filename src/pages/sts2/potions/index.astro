@@ -3,12 +3,13 @@ import Layout from '../../../components/Layout.astro';
 import PotionsExplorer from '../../../components/react/PotionsExplorer';
 import { getData } from '../../../lib/data';
 import { getLocale } from '../../../lib/i18n';
+import { t } from '../../../lib/ui-strings';
 
 const { locale, langPrefix } = getLocale(Astro);
 const { potions } = await getData('sts2', locale);
 const rarities = Array.from(new Set(potions.map((p) => String(p.rarity)))).sort();
 ---
 <Layout game="sts2" title="Potions — Spire Archive — STS2" description="Browse Slay the Spire 2 potions with filters for rarity.">
-  <h1 class="text-xl font-semibold">Potions</h1>
-  <PotionsExplorer game="sts2" client:load rarities={rarities} />
+  <h1 class="text-xl font-semibold">{t('Potions', locale)}</h1>
+  <PotionsExplorer game="sts2" client:load rarities={rarities} locale={locale} />
 </Layout>

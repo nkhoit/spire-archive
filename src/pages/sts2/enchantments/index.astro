@@ -3,13 +3,14 @@ import Layout from '../../../components/Layout.astro';
 import EnchantmentsExplorer from '../../../components/react/EnchantmentsExplorer';
 import { getData } from '../../../lib/data';
 import { getLocale } from '../../../lib/i18n';
+import { t } from '../../../lib/ui-strings';
 
 const { locale, langPrefix } = getLocale(Astro);
 const { enchantments } = await getData('sts2', locale);
 const rarities = Array.from(new Set(enchantments.map((e) => String(e.rarity)))).sort();
 ---
 <Layout game="sts2" title="Enchantments — Spire Archive — STS2" description="Browse Slay the Spire 2 enchantments with filters for rarity.">
-  <h1 class="text-xl font-semibold">Enchantments</h1>
+  <h1 class="text-xl font-semibold">{t('Enchantments', locale)}</h1>
   <p class="mt-1 text-sm text-slate-400">Card enchantments that can be applied at Rest Sites.</p>
-  <EnchantmentsExplorer game="sts2" client:load rarities={rarities} />
+  <EnchantmentsExplorer game="sts2" client:load rarities={rarities} locale={locale} />
 </Layout>

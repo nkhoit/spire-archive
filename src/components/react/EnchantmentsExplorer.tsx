@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Pager, useApiList } from './SimpleExplorer';
+import { t } from '../../lib/ui-strings';
 
 type Enchantment = {
   id: string;
@@ -8,8 +9,9 @@ type Enchantment = {
   rarity: string;
 };
 
-export default function EnchantmentsExplorer(props: { game?: string; rarities: string[] }) {
+export default function EnchantmentsExplorer(props: { game?: string; rarities: string[]; locale?: string }) {
   const game = props.game ?? 'sts2';
+  const locale = props.locale ?? 'en';
   const [q, setQ] = useState('');
   const [rarity, setRarity] = useState('');
   const [offset, setOffset] = useState(0);
@@ -31,7 +33,7 @@ export default function EnchantmentsExplorer(props: { game?: string; rarities: s
       <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
         <input
           className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm"
-          placeholder="Search enchantments…"
+          placeholder={t('Search', locale) + ' ' + t('Enchantments', locale).toLowerCase() + '…'}
           value={q}
           onChange={(e) => { setOffset(0); setQ(e.target.value); }}
         />
@@ -40,7 +42,7 @@ export default function EnchantmentsExplorer(props: { game?: string; rarities: s
           value={rarity}
           onChange={(e) => { setOffset(0); setRarity(e.target.value); }}
         >
-          <option value="">All rarities</option>
+          <option value="">{t('All Rarities', locale)}</option>
           {props.rarities.map((r) => (
             <option key={r} value={r}>{cap(r)}</option>
           ))}

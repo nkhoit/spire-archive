@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Fuse from 'fuse.js';
+import { t } from '../../lib/ui-strings';
 
 type Entry = {
   id: string;
@@ -68,7 +69,7 @@ function loadIndex(): Promise<void> {
   return loadingPromise;
 }
 
-export default function GlobalSearch({ game }: { game?: string }) {
+export default function GlobalSearch({ game, locale = 'en' }: { game?: string; locale?: string }) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<Entry[]>([]);
@@ -147,7 +148,7 @@ export default function GlobalSearch({ game }: { game?: string }) {
         className="flex items-center gap-2 rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-1.5 text-xs text-slate-400 hover:text-slate-200 hover:border-white/[0.15] transition-colors"
       >
         <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-        <span>Search</span>
+        <span>{t('Search', locale)}</span>
       </button>
     );
   }

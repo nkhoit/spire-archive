@@ -1,13 +1,15 @@
 import { useState, useEffect } from 'react';
 import CssCardRenderer from './CssCardRenderer';
+import { t } from '../../lib/ui-strings';
 
 interface Props {
   card: any;
   hasUpgrade: boolean;
   game?: 'sts1' | 'sts2';
+  locale?: string;
 }
 
-export default function CardImageToggle({ card, hasUpgrade, game = 'sts2' }: Props) {
+export default function CardImageToggle({ card, hasUpgrade, game = 'sts2', locale = 'en' }: Props) {
   const [showUpgraded, setShowUpgraded] = useState(false);
 
   // Sync upgrade toggle state with server-rendered description/name elements
@@ -54,11 +56,11 @@ export default function CardImageToggle({ card, hasUpgrade, game = 'sts2' }: Pro
           <button
             onClick={() => setShowUpgraded(false)}
             className={`px-4 py-1.5 transition-colors ${!showUpgraded ? 'bg-white/10 text-white' : 'bg-transparent text-slate-400 hover:text-slate-200'}`}
-          >Base</button>
+          >{t('Base', locale)}</button>
           <button
             onClick={() => setShowUpgraded(true)}
             className={`px-4 py-1.5 transition-colors ${showUpgraded ? 'bg-white/10 text-white' : 'bg-transparent text-slate-400 hover:text-slate-200'}`}
-          >Upgraded</button>
+          >{t('Upgraded', locale)}</button>
         </div>
       )}
     </div>
