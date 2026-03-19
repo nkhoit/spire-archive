@@ -213,6 +213,25 @@ export interface Dataset {
   enchantmentById: Map<string, Enchantment>;
 }
 
+export const SUPPORTED_LOCALES = ['en', 'de', 'fr', 'it', 'es', 'pt', 'pl', 'ru', 'tr', 'th', 'ja', 'ko', 'zh'] as const;
+export type Locale = typeof SUPPORTED_LOCALES[number];
+
+export const LOCALE_NAMES: Record<Locale, string> = {
+  en: 'English',
+  de: 'Deutsch',
+  fr: 'Français',
+  it: 'Italiano',
+  es: 'Español',
+  pt: 'Português',
+  pl: 'Polski',
+  ru: 'Русский',
+  tr: 'Türkçe',
+  th: 'ไทย',
+  ja: '日本語',
+  ko: '한국어',
+  zh: '中文',
+};
+
 const cache = new Map<string, Dataset>();
 
 function rootDir() {
@@ -239,9 +258,29 @@ function toMap<T extends { id: string }>(items: T[]): Map<string, T> {
   return m;
 }
 
-export async function getData(game: 'sts1' | 'sts2' = 'sts1'): Promise<Dataset> {
-  const cached = cache.get(game);
+export async function getData(game: 'sts1' | 'sts2' = 'sts1', locale: Locale = 'en'): Promise<Dataset> {
+  const cacheKey = `${game}:${locale}`;
+  const cached = cache.get(cacheKey);
   if (cached) return cached;
+
+  // Always load English base data first
+  const baseKey = `${game}:en`;
+  let base = cache.get(baseKey);
+  if (!base) {
+    base = await loadBaseData(game);
+    cache.set(baseKey, base);
+  }
+
+  // If English, just return base
+  if (locale === 'en') return base;
+
+  // Load localization overlay and apply
+  const localized = await applyLocalization(game, locale, base);
+  cache.set(cacheKey, localized);
+  return localized;
+}
+
+async function loadBaseData(game: string): Promise<Dataset> {
 
   const [
     cards,
@@ -310,5 +349,86 @@ export async function getData(game: 'sts1' | 'sts2' = 'sts1'): Promise<Dataset> 
   };
 
   cache.set(game, dataset);
+  return dataset;
+}
+
+interface LocData {
+  cards?: Record<string, { name?: string; description?: string; upgradeDescription?: string }>;
+  relics?: Record<string, { name?: string; description?: string; flavor?: string }>;
+  powers?: Record<string, { name?: string; description?: string }>;
+  potions?: Record<string, { name?: string; description?: string }>;
+  events?: Record<string, { name?: string; [key: string]: any }>;
+  keywords?: Record<string, { name?: string; names?: string[]; description?: string }>;
+  enchantments?: Record<string, { name?: string; description?: string }>;
+}
+
+async function applyLocalization(game: string, locale: Locale, base: Dataset): Promise<Dataset> {
+  const locPath = path.join(rootDir(), 'data', game, 'localization', `${locale}.json`);
+  if (!existsSync(locPath)) return base;
+
+  const loc: LocData = JSON.parse(await fs.readFile(locPath, 'utf-8'));
+
+  // Deep clone arrays to avoid mutating base cache
+  const cards = base.cards.map(c => {
+    const l = loc.cards?.[c.id];
+    if (!l) return c;
+    return { ...c, ...(l.name && { name: l.name }), ...(l.description && { description: l.description }) };
+  });
+
+  const relics = base.relics.map(r => {
+    const l = loc.relics?.[r.id];
+    if (!l) return r;
+    return { ...r, ...(l.name && { name: l.name }), ...(l.description && { description: l.description }) };
+  });
+
+  const powers = base.powers.map(p => {
+    const l = loc.powers?.[p.id];
+    if (!l) return p;
+    return { ...p, ...(l.name && { name: l.name }), ...(l.description && { description: l.description }) };
+  });
+
+  const potions = base.potions.map(p => {
+    const l = loc.potions?.[p.id];
+    if (!l) return p;
+    return { ...p, ...(l.name && { name: l.name }), ...(l.description && { description: l.description }) };
+  });
+
+  const events = base.events.map(e => {
+    const l = loc.events?.[e.id];
+    if (!l) return e;
+    return { ...e, ...(l.name && { name: l.name }) };
+  });
+
+  const keywords = base.keywords.map(k => {
+    const l = loc.keywords?.[k.id];
+    if (!l) return k;
+    return { ...k, ...(l.name && { name: l.name }), ...(l.description && { description: l.description }) };
+  });
+
+  const enchantments = base.enchantments.map(e => {
+    const l = loc.enchantments?.[e.id];
+    if (!l) return e;
+    return { ...e, ...(l.name && { name: l.name }), ...(l.description && { description: l.description }) };
+  });
+
+  const dataset: Dataset = {
+    ...base,
+    cards,
+    relics,
+    powers,
+    potions,
+    events,
+    keywords,
+    enchantments,
+
+    cardById: toMap(cards),
+    relicById: toMap(relics),
+    potionById: toMap(potions),
+    eventById: toMap(events),
+    powerById: toMap(powers),
+    keywordById: toMap(keywords),
+    enchantmentById: toMap(enchantments),
+  };
+
   return dataset;
 }
