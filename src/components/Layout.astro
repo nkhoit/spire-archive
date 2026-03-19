@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import GlobalSearch from './react/GlobalSearch';
-
+import LanguagePicker from './react/LanguagePicker';
 import { getLocale } from '../lib/i18n';
 
 export interface Props {
@@ -82,6 +82,7 @@ const navLinks = game ? [
             </button>
           </>
         )}
+          <LanguagePicker client:load locale={locale} />
         </div>
       </div>
       {navLinks.length > 0 && (
