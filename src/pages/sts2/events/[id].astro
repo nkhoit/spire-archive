@@ -115,8 +115,8 @@ function renderChoices(choices: any[], eventRefs?: any[], langPrefix?: string) {
   {/* Pool-grouped choices (e.g. Neow) */}
   {hasPoolGroups && pools.map((pool: any) => {
     const poolChoices = choices.filter((c: any) => c.pool === pool);
-    const poolLabel = pool === 'positive' ? 'Positive Blessings (2 offered per run)' :
-                      pool === 'cursed' ? 'Cursed Blessings (1 offered per run)' : pool;
+    const poolLabel = pool === 'positive' ? t('Positive Blessings (2 offered per run)', locale) :
+                      pool === 'cursed' ? t('Cursed Blessings (1 offered per run)', locale) : pool;
     const borderColor = pool === 'cursed' ? 'border-red-500/30' : 'border-emerald-500/30';
     return (
       <section class="mt-4">
