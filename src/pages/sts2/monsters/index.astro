@@ -11,6 +11,6 @@ const types = Array.from(new Set(monsters.map((m) => String(m.type)))).sort();
 ---
 <Layout game="sts2" title="Monsters — Spire Archive — STS2" description="Browse Slay the Spire 2 monsters with filters for type.">
   <h1 class="text-xl font-semibold">{t('Monsters', locale)}</h1>
-  <p class="mt-1 text-sm text-slate-400">{monsters.length} monsters from Slay the Spire 2</p>
+  <p class="mt-1 text-sm text-slate-400">{monsters.length} {t('monsters from Slay the Spire 2', locale)}</p>
   <MonstersExplorer game="sts2" client:load acts={[]} types={types} />
 </Layout>

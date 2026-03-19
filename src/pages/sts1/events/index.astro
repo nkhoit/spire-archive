@@ -10,6 +10,6 @@ const { events } = await getData('sts1', locale);
 ---
 <Layout game="sts1" title="Events — Spire Archive" description="Browse Slay the Spire events.">
   <h1 class="text-xl font-semibold">{t('Events', locale)}</h1>
-  <p class="mt-1 text-sm text-slate-400">{events.length} events from Slay the Spire</p>
+  <p class="mt-1 text-sm text-slate-400">{events.length} {t('events from Slay the Spire', locale)}</p>
   <EventsExplorer game="sts1" client:load locale={locale} />
 </Layout>
