@@ -50,7 +50,7 @@ export default function CardImageToggle({ card, hasUpgrade, game = 'sts2', local
 
   return (
     <div className="flex flex-col items-center gap-3 shrink-0 max-w-sm">
-      <CssCardRenderer card={card} upgraded={showUpgraded} size="md" game={game} />
+      <CssCardRenderer card={card} upgraded={showUpgraded} size="md" game={game} locale={locale} />
       {hasUpgrade && (
         <div className="inline-flex rounded-lg border border-white/10 overflow-hidden text-sm font-medium">
           <button

@@ -1,10 +1,12 @@
 import './CssCardRenderer.css';
+import { t } from '../../lib/ui-strings';
 
 export interface CssCardRendererProps {
   card: any;
   upgraded?: boolean;
   size?: 'xs' | 'sm' | 'md' | 'lg';
   game?: 'sts1' | 'sts2';
+  locale?: string;
 }
 
 // ─── STS1 constants ──────────────────────────────────────────────────────────
@@ -60,11 +62,12 @@ export default function CssCardRenderer({
   upgraded = false,
   size = 'md',
   game = 'sts2',
+  locale = 'en',
 }: CssCardRendererProps) {
   if (game === 'sts1') {
     return <Sts1Renderer card={card} upgraded={upgraded} size={size} />;
   }
-  return <Sts2Renderer card={card} upgraded={upgraded} size={size} />;
+  return <Sts2Renderer card={card} upgraded={upgraded} size={size} locale={locale} />;
 }
 
 // ─── STS1 Renderer ───────────────────────────────────────────────────────────
@@ -173,7 +176,7 @@ function Sts1Renderer({ card, upgraded, size }: { card: any; upgraded: boolean; 
 
 // ─── STS2 Renderer ───────────────────────────────────────────────────────────
 
-function Sts2Renderer({ card, upgraded, size }: { card: any; upgraded: boolean; size: string }) {
+function Sts2Renderer({ card, upgraded, size, locale = 'en' }: { card: any; upgraded: boolean; size: string; locale?: string }) {
   const cardType = (card.type ?? 'Skill').toLowerCase();
   const cardColor = card.color ?? 'colorless';
 
@@ -279,7 +282,7 @@ function Sts2Renderer({ card, upgraded, size }: { card: any; upgraded: boolean; 
     }
   }
 
-  const typeLabel = card.type;
+  const typeLabel = t(card.type, locale);
   const scales: Record<string, number> = { xs: 0.25, sm: 0.4, md: 0.6, lg: 0.8 };
   const scale = scales[size] ?? 0.6;
 
@@ -315,8 +318,9 @@ function Sts2Renderer({ card, upgraded, size }: { card: any; upgraded: boolean; 
         <div className="cr-desc-inner" dangerouslySetInnerHTML={{ __html:
           (keywords.length > 0
             ? keywords.map((kw: string) => {
+                const localizedKw = t(kw, locale);
                 const isNew = upgraded && (card.upgrade?.add_keywords ?? []).includes(kw);
-                return isNew ? `<span class="cr-green">${kw}.</span>` : `<span class="cr-keyword">${kw}.</span>`;
+                return isNew ? `<span class="cr-green">${localizedKw}.</span>` : `<span class="cr-keyword">${localizedKw}.</span>`;
               }).join('<br/>') + '<br/>'
             : '') + descProcessed
         }} />

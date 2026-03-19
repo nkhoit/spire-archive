@@ -70,7 +70,7 @@ function CardTile({ c, game, isMobile, upgraded, locale }: { c: Card; game: stri
         {showUpgraded ? `${c.name}+` : c.name}
       </a>
       <a href={(locale !== 'en' ? '/' + locale : '') + '/' + game + '/cards/' + c.id} className="w-full mt-2 flex justify-center overflow-hidden">
-        <CssCardRenderer card={c} upgraded={!!showUpgraded} size={isMobile ? 'xs' : 'sm'} game={game as 'sts1' | 'sts2'} />
+        <CssCardRenderer card={c} upgraded={!!showUpgraded} size={isMobile ? 'xs' : 'sm'} game={game as 'sts1' | 'sts2'} locale={locale} />
       </a>
       <div className="mt-2 flex flex-wrap items-center justify-center gap-1">
         <BadgeSpan label={c.color} tone={c.color} />

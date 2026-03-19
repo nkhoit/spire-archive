@@ -86,6 +86,17 @@ const strings: Record<string, Partial<Record<Locale, string>>> = {
   'View Upgrades': { ja: 'アップグレードを表示', ko: '업그레이드 보기', zh: '查看升级', de: 'Aufwertungen anzeigen', fr: 'Voir les améliorations', es: 'Ver mejoras', pt: 'Ver melhorias', it: 'Vedi potenziamenti', pl: 'Pokaż ulepszenia', ru: 'Показать улучшения', tr: 'Yükseltmeleri Göster', th: 'ดูอัปเกรด' },
   'Ancient': { ja: 'エンシェント', ko: '고대', zh: '远古', de: 'Uralte', fr: 'Ancienne', es: 'Antigua', pt: 'Antiga', it: 'Antica', pl: 'Starożytna', ru: 'Древняя', tr: 'Kadim', th: 'โบราณ' },
 
+  // Card keywords (from game localization)
+  'Exhaust': { ja: '廃棄', ko: '소멸', zh: '消耗', de: 'Erschöpft', fr: 'Épuisement', es: 'Agotamiento', pt: 'Exaurir', it: 'Esaurimento', pl: 'Wyczerpanie', ru: 'Сжигается', tr: 'Tüket', th: 'สลาย' },
+  'Ethereal': { ja: 'エセリアル', ko: '휘발성', zh: '虚无', de: 'Flüchtig', fr: 'Éthéré', es: 'Etérea', pt: 'Etérea', it: 'Evanescenza', pl: 'Eteryczna', ru: 'Эфирная', tr: 'Ruhani', th: 'กึ่งสลาย' },
+  'Innate': { ja: '天賦', ko: '선천성', zh: '固有', de: 'Angeboren', fr: 'Inné', es: 'Innata', pt: 'Inata', it: 'Innatismo', pl: 'Startowa', ru: 'Начальная', tr: 'Yerleşik', th: 'ติดตัว' },
+  'Retain': { ja: '保留', ko: '보존', zh: '保留', de: 'Behalten', fr: 'Retenue', es: 'Retención', pt: 'Manter', it: 'Conservazione', pl: 'Zachowanie', ru: 'Оставляется', tr: 'Sakla', th: 'คงสภาพ' },
+  'Eternal': { ja: '永劫', ko: '영구', zh: '永恒', de: 'Ewig', fr: 'Éternel', es: 'Eterna', pt: 'Perpétua', it: 'Eternità', pl: 'Wieczna', ru: 'Вечная', tr: 'Sonsuz', th: 'นิรันดร์' },
+  'Sly': { ja: 'スライ', ko: '교활', zh: '奇巧', de: 'Listig', fr: 'Ruse', es: 'Astucia', pt: 'Sagaz', it: 'Astuzia', pl: 'Chytra', ru: 'Коварная', tr: 'Kurnaz', th: 'เล่ห์เหลี่ยม' },
+  'Unplayable': { ja: 'プレイ不可', ko: '사용불가', zh: '不能被打出', de: 'Unspielbar', fr: 'Injouable', es: 'Injugable', pt: 'Injogável', it: 'Ingiocabilità', pl: 'Niezagrywalna', ru: 'Неиграбельная', tr: 'Oynanamaz', th: 'ถูกผนึก' },
+  'Purge on use': { ja: '使用時廃棄', ko: '사용 시 제거', zh: '使用后移除', de: 'Verbrauch', fr: 'Purge à l\'utilisation', es: 'Purgar al usar', pt: 'Purgar ao usar', it: 'Purga all\'uso', pl: 'Oczyszczenie po użyciu', ru: 'Удаляется при использовании', tr: 'Kullanınca arındır', th: 'ล้างเมื่อใช้' },
+  'Self Retain': { ja: '自己保留', ko: '자체 보존', zh: '自我保留', de: 'Selbstbehalt', fr: 'Auto-retenue', es: 'Auto-retención', pt: 'Auto-manutenção', it: 'Auto-conservazione', pl: 'Samozachowanie', ru: 'Самосохранение', tr: 'Kendini sakla', th: 'คงสภาพตัวเอง' },
+
   // Misc
   'Description': { ja: '説明', ko: '설명', zh: '描述', de: 'Beschreibung', fr: 'Description', es: 'Descripción', pt: 'Descrição', it: 'Descrizione', pl: 'Opis', ru: 'Описание', tr: 'Açıklama', th: 'คำอธิบาย' },
   'Flavor': { ja: 'フレーバー', ko: '플레이버', zh: '背景', de: 'Beschreibung', fr: 'Ambiance', es: 'Ambientación', pt: 'Sabor', it: 'Ambientazione', pl: 'Opis fabularny', ru: 'Описание', tr: 'Lezzet', th: 'รสชาติ' },

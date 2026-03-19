@@ -320,9 +320,9 @@ if (game === 'sts2' && upg) {
         <h1 id="card-name" class="text-2xl font-semibold">{card.name}</h1>
         <div class="mt-2 flex flex-wrap gap-2">
           <Badge label={String(card.color)} tone={String(card.color)} />
-          <Badge label={String(card.type)} />
-          <Badge label={String(card.rarity)} />
-          {card.cost != null && <Badge label={`Cost ${card.cost}`} />}
+          <Badge label={t(String(card.type), locale)} />
+          <Badge label={t(String(card.rarity), locale)} />
+          {card.cost != null && <Badge label={t('Cost', locale) + ' ' + card.cost} />}
         </div>
       </div>
       <div class="text-xs text-slate-400">ID: {card.id}</div>
@@ -330,7 +330,7 @@ if (game === 'sts2' && upg) {
 
     {flags.length > 0 && (
       <div class="mt-3 flex flex-wrap gap-1.5">
-        {flags.map(f => <Badge label={f} />)}
+        {flags.map(f => <Badge label={t(f, locale)} />)}
       </div>
     )}
 
@@ -341,7 +341,7 @@ if (game === 'sts2' && upg) {
         <h2 class="text-sm font-semibold text-slate-400 mb-3">{t('Keywords', locale)}</h2>
         <div class="space-y-2">
           {mentionedKeywords.map((kw: any) => {
-            const name = kw.names[0];
+            const name = kw.name ?? kw.names[0];
             const iconFile = keywordIcons[name.toLowerCase()];
             return (
               <a href={`/${game}/keywords`} class="flex items-start gap-3 rounded-lg border border-white/[0.06] bg-white/[0.03] p-3 hover:bg-white/[0.06] hover:border-white/[0.12] transition-colors">
