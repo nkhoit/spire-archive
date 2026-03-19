@@ -120,12 +120,19 @@ export interface EventChoice {
   references?: EventReference[];
 }
 
+export interface EventPage {
+  label: string;
+  description?: string;
+  choices: EventChoice[];
+}
+
 export interface Event {
   id: string;
   name: string;
   act: string;
   description: string;
   choices: EventChoice[];
+  pages?: EventPage[];
   references?: EventReference[];
   image_url?: string | null;
 }
@@ -396,7 +403,37 @@ async function applyLocalization(game: string, locale: Locale, base: Dataset): P
   const events = base.events.map(e => {
     const l = loc.events?.[e.id];
     if (!l) return e;
-    return { ...e, ...(l.name && { name: l.name }) };
+
+    const choices = l.choices
+      ? e.choices.map((choice: EventChoice, index: number) => ({
+          ...choice,
+          ...(l.choices?.[index]?.name && { name: l.choices[index].name }),
+          ...(l.choices?.[index]?.description && { description: l.choices[index].description }),
+        }))
+      : e.choices;
+
+    const pages = l.pages
+      ? (e.pages ?? []).map((page: EventPage, pageIndex: number) => ({
+          ...page,
+          ...(l.pages?.[pageIndex]?.label && { label: l.pages[pageIndex].label }),
+          ...(l.pages?.[pageIndex]?.description && { description: l.pages[pageIndex].description }),
+          choices: l.pages?.[pageIndex]?.choices
+            ? page.choices.map((choice: EventChoice, choiceIndex: number) => ({
+                ...choice,
+                ...(l.pages?.[pageIndex]?.choices?.[choiceIndex]?.name && { name: l.pages[pageIndex].choices![choiceIndex].name }),
+                ...(l.pages?.[pageIndex]?.choices?.[choiceIndex]?.description && { description: l.pages[pageIndex].choices![choiceIndex].description }),
+              }))
+            : page.choices,
+        }))
+      : e.pages;
+
+    return {
+      ...e,
+      ...(l.name && { name: l.name }),
+      ...(l.description && { description: l.description }),
+      choices,
+      ...(pages && { pages }),
+    };
   });
 
   const keywords = base.keywords.map(k => {

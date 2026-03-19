@@ -5524,7 +5524,17 @@
       "name": "Pozione Debilitante"
     }
   },
-  "events": {},
+  "events": {
+    "ABYSSAL_BATHS": {
+      "description": "Scopri una stanza appartata.\n\nIl vapore sale da pozze ribollenti di liquido caldo che cambia colore con un ritmo ipnotico. Erbe cirripedi pendono dal soffitto, gocciolando un fluido viscoso che sibila e si contorce quando tocca la superficie. L'aria è pesante, carica di sale e di qualcosa di inconfondibilmente organico .\n\nAvvicinandosi al bordo della piscina più grande, il liquido si increspa. Le acque ribollono più intensamente, come se anticipassero il tuo ingresso.",
+      "choices": [
+        {
+          "description": "Recuperi 10 PV."
+        },
+        {}
+      ]
+    }
+  },
   "keywords": {
     "ETERNAL": {
       "description": "Non può essere trasformata o rimossa dal tuo mazzo.",

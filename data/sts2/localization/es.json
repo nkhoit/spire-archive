@@ -5530,188 +5530,885 @@
   },
   "events": {
     "ABYSSAL_BATHS": {
-      "name": "Termas abisales"
+      "name": "Balneario abisal",
+      "description": "Descubres una cámara solitaria.\n\nEl vapor se eleva desde pozas burbujeantes de líquido caliente que cambia de color con un ritmo hipnótico. Del techo cuelgan formaciones con percebes que gotean un líquido viscoso que sisea y se retuerce al tocar la superficie. El aire se siente pesado, cargado de sal y algo inequívocamente orgánico.\n\nAl acercarte al borde de la poza más grande, el líquido ondula. Las aguas borbotean con mayor intensidad, como si anticiparan tu inmersión.",
+      "choices": [
+        {
+          "name": "Abstenerse",
+          "description": "Recuperas 10 PV."
+        },
+        {
+          "name": "Sumergirse",
+          "description": "Obtienes 2 PV máx. Recibes 3 de daño."
+        }
+      ]
     },
     "AMALGAMATOR": {
-      "name": "Amalgamador"
+      "name": "Amalgamador",
+      "description": "¡CLANG! ¡¡¡CLANG!!!\n\nOyes ecos de metal contra metal al otro lado de una pared.\n\nAl apoyar la cabeza contra la pared para escuchar, esta se abre y revela a una imponente figura de seis brazos, la cual trabaja sin descanso.\nSu «cara» es un vórtice giratorio de sigilos brillantes que se mueven.\n\n—¿Alguien con un espíritu ascendente encontró mi taller? ¡A COMBINAR!",
+      "choices": [
+        {
+          "name": "Combinar cartas Defensa",
+          "description": "Eliminas 2 cartas Defensa. Agregas {Card2} al mazo."
+        },
+        {
+          "name": "Combinar cartas Golpe",
+          "description": "Eliminas 2 cartas Golpe. Agregas {Card1} al mazo."
+        }
+      ]
     },
     "AROMA_OF_CHAOS": {
-      "name": "El aroma del Caos"
+      "name": "Aroma del caos",
+      "description": "Tras avanzar con afán entre una maleza espesa y llegar a un claro, te invade una nostalgia indescriptible.\n\nHay una mezcla de aromas florales, descomposición pútrida y algo completamente diferente. El olor se intensifica con cada paso y sientes como si el mundo a tu alrededor se estuviera deformando y retorciendo.\n\nTe abruma una sensación de caos cambiante y empiezas a perder la noción de quién eres.",
+      "choices": [
+        {
+          "name": "Dejarse llevar",
+          "description": "Transformas una carta en el mazo."
+        },
+        {
+          "name": "Mantener el control",
+          "description": "Mejoras una carta en el mazo."
+        }
+      ]
     },
     "BATTLEWORN_DUMMY": {
-      "name": "Muñeco de entrenamiento maltrecho"
+      "name": "Muñeco de entrenamiento maltrecho",
+      "description": "¡A medida que te acercas, comienza a gruñir, crepitar e iluminarse con un gran destello!\n\n—¡BRRR! ¡¡¡HORA DE ENTRENAR!!! ¡TIENES 3 TURNOS PARA DERROTARME!\nELIGE UNA OPCIÓN O ENFRENTA UNA HUMILLACIÓN LETAL.\nPresta atención antes de decidir.\n\nTras el aterrador mensaje, el muñeco lee atentamente las instrucciones detalladas.\n\n¿Cuál eliges?",
+      "choices": [
+        {
+          "name": "Opción 1",
+          "description": "Luchas contra un muñeco con {Setting1Hp} PV. Obtienes 1 poción al azar."
+        },
+        {
+          "name": "Opción 2",
+          "description": "Luchas contra un muñeco con {Setting2Hp} PV. Mejoras 2 cartas al azar."
+        },
+        {
+          "name": "Opción 3",
+          "description": "Luchas contra un muñeco con {Setting3Hp} PV. Obtienes una reliquia al azar."
+        }
+      ]
     },
     "BRAIN_LEECH": {
-      "name": "Parásito cerebral"
+      "name": "Sanguijuela cerebral",
+      "description": "*paf*\n\nSientes un dolor punzante en la coronilla y un pensamiento inunda tu mente.\n\n—¿¿¿COMPARTIRÁS TU CONOCIMIENTO???\n\nNo sabes cómo proceder.",
+      "choices": [
+        {
+          "name": "Arrancar la sanguijuela",
+          "description": "Pierdes {RipHpLoss} PV. Obtienes una recompensa de carta incolora."
+        },
+        {
+          "name": "Compartir conocimiento",
+          "description": "Eliges 1 de 5 cartas al azar para agregar al mazo."
+        }
+      ]
     },
     "BUGSLAYER": {
-      "name": "Triturabichos"
+      "name": "Aniquilainsectos",
+      "description": "Te estás defendiendo de un enjambre de insectos agresivos y, de repente, notas que un poderoso y rudo guerrero estuvo luchando a tu lado todo este tiempo.\n\nAl presentir la derrota, los insectos se dispersan. Miras hacia tu compañero de lucha.\n—¿Te gustaría recibir consejos para exterminar estas plagas?\n\nQué educado. Asientes y aceptas su oferta.",
+      "choices": [
+        {
+          "name": "Aprender la técnica Exterminio",
+          "description": "Agregas {Card1} al mazo."
+        },
+        {
+          "name": "Aprender la técnica Aplastabichos",
+          "description": "Agregas {Card2} al mazo."
+        }
+      ]
     },
     "BYRDONIS_NEST": {
-      "name": "Nido de Japarónix"
+      "name": "Nido de japaronis",
+      "description": "Ves cómo una enorme bestia tambaleante persigue a un jáparo verde herido.\n\nEn el nicho del que huyo el jáparo, yace un huevo desprotegido y abandonado.\n\nTe gruñe el estómago...",
+      "choices": [
+        {
+          "name": "Comerse el huevo",
+          "description": "Obtienes 7 PV máx."
+        },
+        {
+          "name": "Robarse el huevo",
+          "description": "Agregas {Card} al mazo."
+        }
+      ]
     },
     "COLORFUL_PHILOSOPHERS": {
-      "name": "Filósofos cromáticos"
+      "name": "Filósofos coloridos",
+      "description": "Ante ti yace un espectáculo bastante épico.\nTres estatuas de colores diferentes se alzan sobre un estrado y debaten acaloradamente las implicancias filosóficas del color.\n\nMientras escuchas, tienes la sensación de que la cuestión más importante recae sobre qué color es EL MEJOR.\n\nIntervienes con tus reflexiones.",
+      "choices": [
+        {
+          "name": "El mejor color es el azul",
+          "description": "Obtienes 3 carta de El Defectuoso."
+        },
+        {
+          "name": "Igualdad",
+          "description": "Obtienes Fragmento prismático."
+        },
+        {
+          "name": "El mejor color es el rojo",
+          "description": "Obtienes 3 carta de El Blindado."
+        },
+        {
+          "name": "El mejor color es el rosa",
+          "description": "Obtienes 3 carta de La Necrodescarte."
+        },
+        {
+          "name": "El mejor color es el naranja",
+          "description": "Obtienes 3 carta de El Monarca."
+        }
+      ]
     },
     "COLOSSAL_FLOWER": {
-      "name": "Flor gigantesca"
+      "name": "Flor colosal",
+      "description": "Una flor colosal crece sobre una montaña de huesos.\n\nMientras sus pétalos de color cambiante palpitan, percibes que en el centro hay un núcleo de polen poderoso, pero los pétalos ondulantes son afilados e impredecibles.\n\nPodrías tomar un poco del néctar dorado que se escurre, pero alcanzar el premio en el centro es muy tentador.",
+      "pages": [
+        {
+          "description": "Una flor colosal crece sobre una montaña de huesos.\n\nMientras sus pétalos de color cambiante palpitan, percibes que en el centro hay un núcleo de polen poderoso, pero los pétalos ondulantes son afilados e impredecibles.\n\nPodrías tomar un poco del néctar dorado que se escurre, pero alcanzar el premio en el centro es muy tentador.",
+          "choices": [
+            {
+              "name": "Extraer néctar",
+              "description": "Obtienes {Prize1} de oro."
+            },
+            {
+              "name": "Adentrarse a las profundidades",
+              "description": "Te adentras en las profundidades. Pierdes 5 PV."
+            }
+          ]
+        },
+        {
+          "description": "Pasas por una capa de pétalos afilados y recubiertos de una sustancia que te provoca un hormigueo en la piel. ¿Acaso anestesia tu dolor?\n\nQuizás por eso hay un montón de huesos aquí...",
+          "choices": [
+            {
+              "name": "Extraer néctar",
+              "description": "Obtienes {Prize2} de oro."
+            },
+            {
+              "name": "Adentrarse mucho más en las profundidades",
+              "description": "Te adentras en las profundidades. Pierdes 6 PV."
+            }
+          ]
+        },
+        {
+          "description": "El hormigueo se convierte en una debilidad palpitante a medida que sigues avanzando.\n\nEsta flor quiere comerme. ¿Por qué me metí en ella?",
+          "choices": [
+            {
+              "name": "Extraer néctar",
+              "description": "Obtienes {Prize3} de oro."
+            },
+            {
+              "name": "Adentrarse en el núcleo",
+              "description": "Pierdes 7 PV. Obtienes Núcleo polinoso."
+            }
+          ]
+        }
+      ]
     },
     "CRYSTAL_SPHERE": {
-      "name": "Esfera de cristal"
+      "name": "Bola de cristal",
+      "description": "—¡Predije que vendrías!\n\nUna voz ronca vocifera cuando entras en la cabaña mística.\n\n—Tu destino te trajo aquí. ¡¡Debemos revelar tu futuro y fortuna para que puedas SALVARNOS A TODOS!!\n—Bien, estas son las opciones de lectura de bola de cristal. También firma esta exención de responsabilidad —dice mientras saca una pluma y un pergamino.",
+      "choices": [
+        {
+          "name": "Pedir plan de pago",
+          "description": "Obtienes una carta {CurseTitle}. Puedes adivinar 6 veces."
+        },
+        {
+          "name": "Revelar el futuro",
+          "description": "Pagas 50 de oro. Puedes adivinar 3 veces."
+        }
+      ]
     },
     "DENSE_VEGETATION": {
-      "name": "Vegetación densa"
+      "name": "Vegetación densa",
+      "description": "Tras haber tomado el camino equivocado durante un buen rato, te encuentras en una espesa jungla de helechos, arbustos y enredaderas (muchísimas enredaderas). Tu cuerpo sucumbe ante el agotamiento y un pensamiento oscuro cruza por tu mente:\n\n—Te perdiste, no te preparaste y la inevitabilidad de la muerte se acerca.\n\n¿Qué haces?",
+      "choices": [
+        {
+          "name": "Descansar",
+          "description": "Recuperas 0 PV. Luchas contra algunos enemigos."
+        },
+        {
+          "name": "Avanzar a duras penas",
+          "description": "Quitas una carta del mazo. Pierdes 11 PV."
+        }
+      ]
     },
     "DEPRECATED_EVENT": {
       "name": "Evento eliminado"
     },
     "DOLL_ROOM": {
-      "name": "Sala de los muñecos"
+      "name": "Habitación de muñecas",
+      "description": "Entras en una habitación oculta.\n\nEstá repleta de una gran variedad de muñecas. Cada una es única, con expresiones que van desde la alegría hasta la tristeza. Además, sus atuendos abarcan siglos y reinos que trascienden el tuyo.\n\nUn coro de susurros suena cada vez más y más fuerte, hasta que las muñecas se gritan unas a otras y te llaman.\n\nDebes elegir una y marcharte de inmediato.",
+      "choices": [
+        {
+          "name": "Examinar cada una y toma la mejor decisión",
+          "description": "Pierdes {ExamineHpLoss} PV. Eliges 1 de 3 reliquias de muñeca."
+        },
+        {
+          "name": "Elegir al azar",
+          "description": "Obtienes una reliquia de muñeca al azar."
+        },
+        {
+          "name": "Tomarse un tiempo antes de decidir",
+          "description": "Pierdes {TakeTimeHpLoss} PV. Eliges 1 de 2 reliquias de muñeca."
+        }
+      ]
     },
     "DOORS_OF_LIGHT_AND_DARK": {
-      "name": "Portales de Luz y Oscuridad"
+      "name": "Puertas de luz y oscuridad",
+      "description": "Ahora hay una puerta donde momentos antes no había ninguna.\n\nEntras y encuentras dos puertas relucientes y un portero bien vestido.\n—¡Por fin tenemos visitas! Por favor, adelante. Elige una puerta, cualquiera.\n\n¿Seguimos en la Torre? ¿Cómo es que este lugar está tan limpio?",
+      "choices": [
+        {
+          "name": "Puerta oscura",
+          "description": "Quitas 1 carta del mazo."
+        },
+        {
+          "name": "Puerta luminosa",
+          "description": "Mejoras 2 cartas al azar."
+        }
+      ]
     },
     "DROWNING_BEACON": {
-      "name": "Faro inestable"
+      "name": "Faro hundiéndose",
+      "description": "Mientras cruzas un paisaje onírico de rocas y aguas tranquilas, emerges y te encuentras con un faro que se hunde y emite antiluz.\n\nPuedes embotellar el agua de brillo inquietante que se acumuló o trepar por la estructura deteriorada para recuperar la lente.",
+      "choices": [
+        {
+          "name": "Embotellar",
+          "description": "Obtienes {Potion}."
+        },
+        {
+          "name": "Trepar",
+          "description": "Obtienes {Relic}. Pierdes 13 PV máx."
+        }
+      ]
     },
     "ENDLESS_CONVEYOR": {
-      "name": "Cinta transportadora de la abundancia"
+      "name": "Cinta transportadora infinita",
+      "description": "Entras con torpeza en una choza con un letrero brillante y torcido que dice:\n«FESTÍN SIN FIN: ¡PAGA SEGÚN TU HAMBRE!»\n\nDentro, un chef grácil y con múltiples brazos prepara apetitosos manjares con destreza y los coloca sobre una sinuosa y quitinosa cinta transportadora.\n\nUno de los brazos del chef señala un cartel:\n35 de oro por cada alimento",
+      "choices": [
+        {
+          "name": "Observar al chef",
+          "description": "Mejoras una carta al azar en el mazo."
+        }
+      ]
     },
     "ERROR": {
       "description": "¡Has encontrado un error! Por favor, envíanos un informe usando el botón de Comentarios del menú de ajustes.",
       "name": "Bloqueado"
     },
     "FAKE_MERCHANT": {
-      "name": "¿¿¿El Comerciante???"
+      "name": "¿¿El comerciante??"
     },
     "FIELD_OF_MAN_SIZED_HOLES": {
-      "name": "Campo repleto de agujeros"
+      "name": "Campo de agujeros antropomorfos",
+      "description": "Te detienes en seco ante el repentino panorama de un vasto campo repleto de grandes siluetas corpóreas.\n\nUna de ellas coincide con la tuya.\n\nEs perfecta...",
+      "choices": [
+        {
+          "name": "Entrar en tu silueta",
+          "description": "Encantas una carta con {Enchantment}."
+        },
+        {
+          "name": "Resistir",
+          "description": "Quitas 2 cartas del mazo. Agregas {ResistCurse} al mazo."
+        }
+      ]
     },
     "GRAVE_OF_THE_FORGOTTEN": {
-      "name": "Tumba del Olvidado"
+      "name": "Tumba del olvidado",
+      "description": "Hay una tumba solitaria con una intensa llama azul.\n\nUn guerrero orgulloso murió en batalla, pero su alma yace inquieta. Quiere seguir luchando; sientes cómo te suplica acompañarte en el viaje.\n\nPero... Quizás sea mejor que se enfrente a la verdad.",
+      "choices": [
+        {
+          "name": "Aceptar {Relic}",
+          "description": "Obtienes {Relic}."
+        },
+        {
+          "name": "Enfrentar la verdad",
+          "description": "Agregas {Curse} al mazo. Usas {Enchantment} para encantar una carta con Agotamiento."
+        }
+      ]
     },
     "HUNGRY_FOR_MUSHROOMS": {
-      "name": "Banquete de setas"
+      "name": "Antojo fúngico",
+      "description": "¿Cuándo fue la última vez que comiste?\nUn momento... ¿Qué es ese olor fantástico?\n\nTras seguir el aroma, llegas a un acogedor campamento en el que se cocinan todo tipo de hongos deliciosos. No consideras si es seguro comerlos porque tienes demasiada hambre.\n(Tienes tanta hambre que no notas el cadáver de trotamundos).",
+      "choices": [
+        {
+          "name": "Hongo grande"
+        },
+        {
+          "name": "Hongo aromático"
+        }
+      ]
     },
     "INFESTED_AUTOMATON": {
-      "name": "Autómata infestado"
+      "name": "Autómata infestado",
+      "description": "Hay una cámara repleta de robots muertos.\n\nUn autómata solitario aún tiene un núcleo con un tenue brillo. Sin embargo, lo envuelve un matorral orgánico y grotesco, por lo que no responde.",
+      "choices": [
+        {
+          "name": "Estudiar",
+          "description": "Obtienes un poder al azar."
+        },
+        {
+          "name": "Tocar el núcleo",
+          "description": "Obtienes una carta de costo 0 al azar."
+        }
+      ]
     },
     "JUNGLE_MAZE_ADVENTURE": {
-      "name": "Aventura laberíntica"
+      "name": "Aventura en el laberinto selvático",
+      "description": "En un claro, te cruzas con un grupo variado de trotamundos que miran hacia abajo y señalan un laberinto gigante.\n\nTe ofrecen unir fuerzas en una misión épica para saquear las riquezas de este laberinto. Debido a tu experiencia, tienes claro que este lugar está lleno de trampas mortales y guardianes.\n\nSería más fácil si cooperan, pero entonces tendrían que dividir el botín.",
+      "choices": [
+        {
+          "name": "Unir fuerzas",
+          "description": "Obtienes 50 de oro."
+        },
+        {
+          "name": "Ir por tu cuenta",
+          "description": "Obtienes 150 de oro. Pierdes {SoloHp} PV."
+        }
+      ]
     },
     "LOST_WISP": {
-      "name": "El fuego fatuo perdido"
+      "name": "El fuego fatuo perdido",
+      "description": "A la distancia se alza un panorama inquietante: montones de insectos muertos rodean lo que parece ser una pequeña mota resplandeciente.\nParece atraer a todo tipo de insectos con eficacia, pero ves que lanza llamaradas.\n\nTe acercas para investigar.",
+      "choices": [
+        {
+          "name": "Capturar al fuego fatuo",
+          "description": "Agregas {Curse} al mazo. Obtienes {Relic}."
+        },
+        {
+          "name": "Sin desbloquear",
+          "description": "Tus PV máx. son demasiado bajos."
+        }
+      ]
     },
     "LUMINOUS_CHOIR": {
-      "name": "Coro luminoso"
+      "name": "Coro luminoso",
+      "description": "Te topas con un claro sobre el cual resplandece una luz azul antinatural. Unos hongos gigantescos laten con bioluminiscencia, con sus píleos hinchados y brillantes. A medida que te acercas, los hongos comienzan a emitir tonos melódicos y evocadores que resuenan en todo tu pecho.\n\nNotas algo brillante incrustado en la pulpa del hongo más grande que palpita al ritmo de la canción fúngica.",
+      "choices": [
+        {
+          "name": "Ofrecer tributo",
+          "description": "Pagas 149 de oro. Obtienes una reliquia al azar."
+        },
+        {
+          "name": "Sin desbloquear",
+          "description": "Necesitas 149 de oro."
+        }
+      ]
     },
     "MOCK_EVENT_MODEL": {
       "name": "Evento de prueba"
     },
     "MORPHIC_GROVE": {
-      "name": "Bosque Mórfico"
+      "name": "Arboleda mórfica",
+      "description": "Entras a una arboleda de árboles cristalinos, ¡los cuales empiezan a temblar de emoción!\nUn coro de saludos y bienvenidas te bombardea mientras un grupo de mórficos emerge desde los árboles.\n\nUno de los mórficos se mueve con nerviosismo en un rincón; es obvio que es menos sociable que los demás.\n\n¿A quién te acercas, al grupo o al mórfico solitario?",
+      "choices": [
+        {
+          "name": "Acercarse al grupo",
+          "description": "Pierdes 100 de oro. Transformas 2 cartas."
+        },
+        {
+          "name": "Acercarse al mórfico solitario",
+          "description": "Obtienes 5 PV máx."
+        }
+      ]
     },
     "POTION_COURIER": {
-      "name": "Repartidor de pociones"
+      "name": "Repartidor de pociones",
+      "description": "Hay un olor agrio en el aire. Poco después, encuentras a un repartidor de pociones desplomado en el suelo.\nEstá inmóvil, sin vida... ¿¡Acaso está muerto!?\nAunque saquearon sus pertenencias, hay un lote de pociones malolientes con una nota: «Para: Comerciante».",
+      "choices": [
+        {
+          "name": "Tomar pociones",
+          "description": "Obtienes 3 poción fétida."
+        },
+        {
+          "name": "Rebuscar",
+          "description": "Obtienes 1 poción infrecuente al azar."
+        }
+      ]
     },
     "PROCEED": {
       "name": "Continuar"
     },
     "PUNCH_OFF": {
-      "name": "A puñetazo limpio"
+      "name": "Puñetazo",
+      "description": "Dos constructos pugilistas están en plena lucha; entre ellos, visualizas un tesoro.\n\n¿Debería intentar robarlo?",
+      "choices": [
+        {
+          "name": "Vencerlos con confianza",
+          "description": "Luchas contra ellos por mejores recompensas."
+        },
+        {
+          "name": "Robar",
+          "description": "Agregas Herida al mazo. Obtienes una reliquia al azar."
+        }
+      ]
     },
     "RANWID_THE_ELDER": {
-      "name": "Ranwid el Viejo"
+      "name": "Ranwid el Viejo",
+      "description": "Se te acerca la persona más anciana que has visto en tu vida.\n—Nos volvemos a ver... ¡Soy yo, Ranwid!\n\nNo conoces a este hombre.",
+      "choices": [
+        {
+          "name": "Darle {Gold} de oro",
+          "description": "Obtienes una reliquia al azar."
+        },
+        {
+          "name": "Darle {Potion}",
+          "description": "Obtienes una reliquia al azar."
+        },
+        {
+          "name": "Sin desbloquear",
+          "description": "No tienes ninguna poción que puedas entregar."
+        }
+      ]
     },
     "REFLECTIONS": {
-      "name": "Reflejos sojelfeR"
+      "name": "Reflejos | sojelfeR",
+      "description": "¿Qué está pasando? Algo no anda bien por aquí...\n...íuqa neib adna on oglA ?odnasap átse éuQ¿",
+      "choices": [
+        {
+          "name": "Destrozar",
+          "description": "Duplicas el mazo. Recibes Mala suerte."
+        },
+        {
+          "name": "Tocar el espejo",
+          "description": "Desmejora 2 cartas al azar. Mejora 4 cartas al azar."
+        }
+      ]
     },
     "RELIC_TRADER": {
-      "name": "Comerciante de reliquias"
+      "name": "Comerciante de reliquias",
+      "description": "Doblas en una esquina y, de repente, una figura sombría aparece allí de pie. Se gira para mirarte.\n\n—¡Te doy la bienvenida! ¿Quieres hacer negocios?\nLa figura pregunta y abre la capa para revelar un montón de mercancías sospechosas.",
+      "choices": [
+        {
+          "name": "Tomar la de abajo",
+          "description": "Intercambias {BottomRelicOwned} por {BottomRelicNew}."
+        },
+        {
+          "name": "Tomar la del medio",
+          "description": "Intercambias {MiddleRelicOwned} por {MiddleRelicNew}."
+        },
+        {
+          "name": "Tomar la de arriba",
+          "description": "Intercambias {TopRelicOwned} por {TopRelicNew}."
+        }
+      ]
     },
     "ROOM_FULL_OF_CHEESE": {
-      "name": "Paraíso quesero"
+      "name": "Sala quesera",
+      "description": "Esta sala está llena de ¡¡¡queso!!!\n\nMiras a tu alrededor para ver si hay trampas. Encima de ti hay... más queso. Las velas parecen estar hechas de queso; los muebles también son de queso.\nDe repente, la puerta se cierra de golpe detrás de ti.\n\nSip, también está hecha de queso.",
+      "choices": [
+        {
+          "name": "Atiborrarse",
+          "description": "Eliges 2 de 8 cartas comunes al azar para agregarlas al mazo."
+        },
+        {
+          "name": "Buscar",
+          "description": "Pierdes 14 PV. Obtienes el Queso elegido."
+        }
+      ]
     },
     "ROUND_TEA_PARTY": {
-      "name": "El círculo del té"
+      "name": "La fiesta del té de la rotonda",
+      "description": "Encuentras una invitación para un tal «sir Galalot» a una fiesta de té y decides asistir en su lugar.\n\nAl entrar a través de una modesta rotonda, te encuentras entre comandantes, generales, líderes de guerra y mercenarios tomando... ¿té?\nEl gigantesco caballero con una corona dorada emite unas palabras.\n\n—¡¿Osáis llegar tarde al té?!",
+      "choices": [
+        {
+          "name": "Disfrutar el té",
+          "description": "Obtienes {Relic}. Recuperas todos tus PV."
+        },
+        {
+          "name": "Buscar pelea",
+          "description": "Pierdes 11 PV. Obtienes una reliquia al azar."
+        }
+      ]
     },
     "SAPPHIRE_SEED": {
-      "name": "Semilla zafírea"
+      "name": "Semilla de zafiro",
+      "description": "Por poco evitas pisar... ¿una semilla brillante y mordaz? ¡Su inconfundible color delata que es una semilla de zafiro! ¿No se suponía que estas semillas increíbles estaban extintas?\n\nLas leyendas dicen que consumir una puede aumentar enormemente tu resistencia, pero ¿y si la plantas y la nutres?",
+      "choices": [
+        {
+          "name": "Consumir",
+          "description": "Recuperas 9 PV. Mejoras una carta en el mazo."
+        },
+        {
+          "name": "Plantarla y nutrirla",
+          "description": "Encantas una carta con {Enchantment}."
+        }
+      ]
     },
     "SELF_HELP_BOOK": {
-      "name": "Libro de autoayuda"
+      "name": "Libro de autoayuda",
+      "description": "En el suelo hay un tomo:\n«Las tres mejores maneras de conquistar la Torre».\n\nEl libro está cubierto en sangre, así que este manuscrito te resulta muy sospechoso.\n\n¿Lo leerás?",
+      "choices": [
+        {
+          "name": "Continuar",
+          "description": "No tienes ninguna carta que pueda encantarse."
+        },
+        {
+          "name": "Leer el tomo entero",
+          "description": "Eliges un poder para encantarlo con {Enchantment3} 2."
+        },
+        {
+          "name": "Sin desbloquear",
+          "description": "No tienes ningún poder que pueda encantarse."
+        },
+        {
+          "name": "Leer un fragmento al azar",
+          "description": "Eliges una habilidad para encantarla con {Enchantment2} 2."
+        }
+      ]
     },
     "SLIPPERY_BRIDGE": {
-      "name": "Puente resbaladizo"
+      "name": "Puente resbaladizo",
+      "description": "Mientras cruzas un puente de madera destartalado, de repente, cae una lluvia torrencial. Enormes ráfagas de viento te azotan y amenazan con terminar tu viaje.",
+      "choices": [
+        {
+          "name": "Aguantar",
+          "description": "Pierdes {HpLoss} PV. La carta en la opción anterior se establece al azar."
+        },
+        {
+          "name": "Sobreponerte",
+          "description": "{RandomCard} se quita del mazo."
+        }
+      ]
     },
     "SPIRALING_WHIRLPOOL": {
-      "name": "Remolino turbulento"
+      "name": "Remolino voraginoso",
+      "description": "Te topas con un enorme remolino. El agua se arremolina con una precisión hermosa y las paredes circundantes están adornadas con patrones en espiral.\n\nDa vueltas y vueltas... y vueltas...\n... y vueltas... ¡Qué espectáculo!\n\n¿Qué haces?",
+      "choices": [
+        {
+          "name": "Beber",
+          "description": "Recuperas 0 PV."
+        },
+        {
+          "name": "Observar",
+          "description": "Encantas una carta Golpe o una carta Defensa con Espiral."
+        },
+        {
+          "name": "Tocar",
+          "description": "Obtienes una reliquia al azar. Agregas Retorcimiento al mazo."
+        }
+      ]
     },
     "SPIRIT_GRAFTER": {
-      "name": "Injertador espiritual"
+      "name": "Injertador espiritual",
+      "description": "Arriba, un capullo se agita y retuerce. ¡Está a punto de estallar!\n\nDeja de retorcerse... ¡El capullo comienza a brillar! ¿Qué está pasando?\nEn un destello de luz y llamas, un injertador espiritual se abalanza sobre ti y amenaza con fusionarse con tu ser para completarse.",
+      "choices": [
+        {
+          "name": "Permitir la fusión",
+          "description": "Recuperas {LetItInHealAmount} PV. Agregas Metamorfosis al mazo."
+        },
+        {
+          "name": "Rechazarlo",
+          "description": "Pierdes {RejectionHpLoss} PV. Quitas una carta del mazo."
+        }
+      ]
     },
     "STONE_OF_ALL_TIME": {
-      "name": "Piedra Atemporal"
+      "name": "Roca omnitemporal",
+      "description": "Una enorme roca yace en medio de una explanada abandonada.\n\nUna placa dice:\nRoca omnitemporal.\n\nSu presencia, forma y adornos indican que esta explanada se construyó alrededor de esta roca y que nunca se ha movido de este lugar.",
+      "choices": [
+        {
+          "name": "Beber y levantarla",
+          "description": "Pierdes {DrinkRandomPotion}. Obtienes 10 PV máx."
+        },
+        {
+          "name": "Sin desbloquear",
+          "description": "Necesitas una poción."
+        }
+      ]
     },
     "SUNKEN_STATUE": {
-      "name": "La estatua hundida"
+      "name": "La estatua sumergida",
+      "description": "Ves una estatua antigua medio sumergida en un estanque; sus manos descansan con cuidado sobre una espada pétrea.\n\nAlgo también resplandece en el fondo del estanque.\n¿Serán ofrendas votivas, quizás?\n\nTe vendría bien algo de dinero.",
+      "choices": [
+        {
+          "name": "Sumergirse en el agua",
+          "description": "Obtienes 111 de oro. Pierdes 7 PV."
+        },
+        {
+          "name": "Tomar la espada",
+          "description": "Obtienes la {Relic}."
+        }
+      ]
     },
     "SUNKEN_TREASURY": {
-      "name": "Tesoros sumergidos"
+      "name": "Tesoro sumergido",
+      "description": "Un camino te lleva a una bóveda parcialmente sumergida.\nHay dos cofres, pero solo una llave frágil.\n\nPrimer cofre: al agitarlo, se oyen ruidos tintineantes. Debe ser un poco de oro.\nSegundo cofre: es enorme, adornado y claramente maldito. ¡Debe tener un montón de oro!",
+      "choices": [
+        {
+          "name": "Primer cofre",
+          "description": "Obtienes 60 de oro."
+        },
+        {
+          "name": "Segundo cofre",
+          "description": "Obtienes 333 de oro. Recibes avaricia."
+        }
+      ]
     },
     "SYMBIOTE": {
-      "name": "Simbionte"
+      "name": "Simbionte",
+      "description": "Durante tus viajes, te topas con un pólipo oscuro y amorfo. Percibes que es muy antiguo y maligno.\n\n—Acércate...",
+      "choices": [
+        {
+          "name": "Acercarse",
+          "description": "Encantas un ataque con {Enchantment}."
+        },
+        {
+          "name": "Sin desbloquear",
+          "description": "No puedes encantar ninguno de tus ataques."
+        }
+      ]
     },
     "TABLET_OF_TRUTH": {
-      "name": "Tablilla de la Verdad"
+      "name": "Tablilla de la verdad",
+      "description": "Derrotas a un par de guardianes del Familiar y te abres paso a una bóveda protegida.\n\nDentro hay una tablilla con inscripciones conocidas. Tu intuición te dice que este idioma se puede descifrar con bastante facilidad... Sin embargo, una vez que empieces a descifrarlo, no podrás detenerte.\n\nLa tablilla emite una energía calmante y puedes romperla para recibir sus energías curativas.",
+      "choices": [
+        {
+          "name": "Descifrar",
+          "description": "Pierdes 3 PV máx. Mejoras una carta al azar."
+        },
+        {
+          "name": "Romperla",
+          "description": "Recuperas 20 PV."
+        }
+      ]
     },
     "TEA_MASTER": {
-      "name": "Maestro del té"
+      "name": "El maestro del té",
+      "description": "Entras en una choza apenas iluminada y te encuentras en un espacio muy tranquilo que alberga una variedad obsesiva de té.\n\nEl hombre dentro señala una selección de tés, cada uno etiquetado con cuidado con un precio prémium.",
+      "choices": [
+        {
+          "name": "Té de huesos",
+          "description": "Pagas 50 de oro. {BoneTeaDescription}"
+        },
+        {
+          "name": "Sin desbloquear",
+          "description": "Necestias 50 de oro."
+        },
+        {
+          "name": "Té de brasas",
+          "description": "Pagas 150 de oro. {EmberTeaDescription}"
+        }
+      ]
     },
     "THE_FUTURE_OF_POTIONS": {
-      "name": "¿El futuro de las pociones?"
+      "name": "¿El futuro de las pociones?",
+      "description": "Sientes un leve ruido al doblar la esquina y descubres un gigantesco aparato giratorio.\nTiene varias ranuras que parecen convertir líquidos en una pastilla digerible muy comprimida.\n\nLa idea de convertir estos tónicos para la salud en un bocadito es incómoda, pero ¿quizás sea bueno probar cosas nuevas?",
+      "choices": [
+        {
+          "name": "Insertar poción {Rarity}",
+          "description": "Pierdes {Potion}. Obtienes una poción {Rarity} de {Type} mejorada."
+        }
+      ]
     },
     "THE_LANTERN_KEY": {
-      "name": "La llave ígnea"
+      "name": "La llave ígnea",
+      "description": "Encuentras y recoges una llave que posee un tenue brillo.\n\n—¡La estuve buscando por todas partes! Si no te importa...\n\nEsta persona parece maliciosa, pero quizá no sea bueno juzgar por las apariencias.",
+      "choices": [
+        {
+          "name": "Quedarse con la llave",
+          "description": "Luchas para obtener la llave."
+        },
+        {
+          "name": "Devolver la llave",
+          "description": "Obtienes 100 de oro."
+        }
+      ]
     },
     "THE_LEGENDS_WERE_TRUE": {
-      "name": "Las leyendas eran ciertas"
+      "name": "Las leyendas eran ciertas",
+      "description": "Al entrar en una cámara completamente oscura, una luz repentina penetra la oscuridad desde arriba, justo cuando la puerta se cierra de golpe detrás de ti.\n\nIluminado ante ti, parece haber un podio con un mapa. Sientes el impulso de tomarlo.\n\nQué sospechoso.",
+      "choices": [
+        {
+          "name": "Tomar el mapa",
+          "description": "Recibes la carta Mapa del tesoro."
+        },
+        {
+          "name": "Encontrar una salida",
+          "description": "Pierdes 8 PV. Obtienes 1 poción al azar."
+        }
+      ]
     },
     "THIS_OR_THAT": {
-      "name": "¿Izquierda o derecha?"
+      "name": "¿Izquierda o derecha?",
+      "description": "De repente, unos brazos sobresalen de un agujero cercano, los cuales sostienen una bolsa de riquezas sospechosa y una evidente reliquia maldita.\n\n—¿Izquierda o derecha?\nSusurra una voz ronca desde abajo.",
+      "choices": [
+        {
+          "name": "Derecha",
+          "description": "Agregas {Curse} al mazo. Obtienes una reliquia al azar."
+        },
+        {
+          "name": "Izquierda",
+          "description": "Pierdes 6 PV. Obtienes 0 de oro."
+        }
+      ]
     },
     "TINKER_TIME": {
-      "name": "Bricomanía"
+      "name": "Hora de inventar",
+      "description": "Navegando por un mar infinito de cadáveres, encuentras a una científica loca rebuscando entre varios restos.\n\n—Sí. ¡Hola! Pareces alguien capaz en combate... ¡Necesito alguien que pruebe mi próximo dispositivo de atrocidades! ¿Qué te parece?",
+      "choices": [
+        {
+          "name": "Aceptar",
+          "description": "Creas una carta personalizada para agregar al mazo."
+        }
+      ]
     },
     "TRASH_HEAP": {
-      "name": "Montón de basura"
+      "name": "Montaña de basura",
+      "description": "Descubres una enorme montaña de armas, baratijas y otras rarezas desechadas. La enorme pila se mueve y retumba, como si creciera desde dentro.\n\nSi rebuscas en la superficie, puede que encuentres cosas decentes. Si te metes ahí dentro de verdad, sin embargo, puede que encuentres tesoros exóticos.",
+      "choices": [
+        {
+          "name": "Sumergirse",
+          "description": "Pierdes 8 PV. Obtienes una reliquia olvidada del pasado al azar."
+        },
+        {
+          "name": "Tomar cachivaches al azar",
+          "description": "Obtienes 100 de oro. Obtienes una carta olvidada del pasado al azar."
+        }
+      ]
     },
     "TRIAL": {
-      "name": "El juicio"
+      "name": "El juicio",
+      "description": "Te unes a una fila de personas que entran a un edificio enorme.\n\nAl pasar bajo un arco dorado, suenan las bocinas, explota el confeti y serpentinas descienden del techo.\n\n—Participante {EntrantNumber}, obtuviste el rol de DELIBERANTE del juicio de hoy.",
+      "choices": [
+        {
+          "name": "Aceptar",
+          "description": "Asumes el rol de deliberante para el juicio de hoy."
+        },
+        {
+          "name": "Rechazar",
+          "description": "No puedes rechazar la decisión."
+        }
+      ]
     },
     "UNREST_SITE": {
-      "name": "Lugar sin descanso"
+      "name": "Punto intranquilo",
+      "description": "Encuentras un punto de descanso inhóspito y enciendes una fogata para descansar.\nO eso creías.\n\nTras encender el fuego, empieza a crecer y a extenderse no hacia arriba, sino lateralmente hacia un bosque de árboles que rezuman aceite.\n\n¿Deberías intentar descansar de todas formas?",
+      "choices": [
+        {
+          "name": "Talar los árboles",
+          "description": "Pierdes 8 PV máx. Obtienes una reliquia al azar."
+        },
+        {
+          "name": "Descansar de todos modos",
+          "description": "Recuperas todos tus PV. Recibes Falta de sueño."
+        }
+      ]
     },
     "WAR_HISTORIAN_REPY": {
-      "name": "Repy, el historiador de guerra"
+      "name": "Repy, el historiador de guerra",
+      "description": "Un erudito está atrapado en una jaula colgante junto a un cofre del tesoro.\n\nEl académico murmura sobre «llaves de un solo uso» mientras escribe algo con fervor.\n\nParece que puedes abrir la jaula o el cofre.",
+      "choices": [
+        {
+          "name": "Abrir la jaula",
+          "description": "Pierdes Llave ígnea. Obtienes Clase de historia."
+        },
+        {
+          "name": "Abrir el cofre",
+          "description": "Pierdes Llave ígnea. Obtienes 2 pociones y 2 reliquias al azar."
+        }
+      ]
     },
     "WATERLOGGED_SCRIPTORIUM": {
-      "name": "Scriptorium anegado"
+      "name": "Escriba anegado",
+      "description": "Mientras caminas por los oscuros pasadizos, te topas con una figura marchita que trabaja en una pequeña tienda. Los numerosos estantes están repletos de pergaminos y rollos húmedos.\n\nAl notar que entró alguien, el escriba comerciante se pone firme y señala unos utensilios dispuestos sobre un escritorio.",
+      "choices": [
+        {
+          "name": "Tinta sangrienta",
+          "description": "Obtienes 6 PV máx."
+        },
+        {
+          "name": "Esponja espinosa",
+          "description": "Pagas {PricklySpongeGold} de oro. Encantas 2 carta con Firmeza."
+        },
+        {
+          "name": "Sin desbloquear",
+          "description": "Necesitas {PricklySpongeGold} de oro."
+        }
+      ]
     },
     "WELCOME_TO_WONGOS": {
-      "name": "Te damos la bienvenida a Wongo's"
+      "name": "¡Te damos la bienvenida a Wongo!",
+      "description": "—Te doy la bienvenida a Wongo. Tenemos lo que deseas a wontásticos precios. —dice el empleado menos entusiasta que hayas conocido.\n\n—Echa un vistazo a nuestros productos y disfruta de tu tiempo en Wongo. —continúa, sin siquiera levantar la vista.",
+      "choices": [
+        {
+          "name": "Rebajas de Wongo",
+          "description": "Pagas 100 de oro. Obtienes 1 reliquia común al azar."
+        },
+        {
+          "name": "Sin desbloquear",
+          "description": "Necesitas 100 de oro."
+        },
+        {
+          "name": "Especial de Wongo",
+          "description": "Pagas 200 de oro. Obtienes {RandomRelic}."
+        },
+        {
+          "name": "Sin desbloquear",
+          "description": "Necesitas 200 de oro."
+        }
+      ]
     },
     "WELLSPRING": {
-      "name": "Manantial brillante"
+      "name": "Manantial",
+      "description": "Rastreas un ruido sordo hasta su origen y te topas con un manantial tranquilo que te cautiva. El agua es de un verde esmeralda con cúmulos de motas brillantes.\n\nTe tienta sumergirte. ¿Qué podría salir mal?",
+      "choices": [
+        {
+          "name": "Bañarse",
+          "description": "Quitas 1 carta del mazo. Agregas 1 Culpa al mazo."
+        },
+        {
+          "name": "Embotellar",
+          "description": "Obtienes 1 poción al azar."
+        }
+      ]
     },
     "WHISPERING_HOLLOW": {
-      "name": "Hondonada susurrante"
+      "name": "Hondonada Susurrante",
+      "description": "Abriéndote paso por una hondonada de árboles muertos, te topas con un solo árbol blanco como el hueso. Adornos de arcilla cuelgan de sus ramas, las cuales se curvan hacia adentro como costillas protectoras.\n\nEs un árbol espeluznante. Además, te susurra.\n\n—... Intercambio ...",
+      "choices": [
+        {
+          "name": "Intercambiar oro",
+          "description": "Pierdes 50 de oro. Obtienes 2 pociones al azar."
+        },
+        {
+          "name": "Abrazar al árbol",
+          "description": "Pierdes 9 PV. Eliges una carta para transformarla."
+        }
+      ]
     },
     "WOOD_CARVINGS": {
-      "name": "Figuras de madera"
+      "name": "Esculturas de madera",
+      "description": "Abres una caja polvorienta y encuentras un conjunto de tres elaboradas esculturas de madera:\n\nUn pájaro, una serpiente y... ¿un toro?\n\nUn pedestal cercano tiene hendiduras que coinciden con la base de las esculturas. ¿Cuál colocarás en el pedestal?",
+      "choices": [
+        {
+          "name": "Colocar el pájaro",
+          "description": "Eliges 1 carta básica para transformarla en {BirdCard}."
+        },
+        {
+          "name": "Colocar la serpiente",
+          "description": "Encantas 1 carta con {SnakeEnchantment}."
+        },
+        {
+          "name": "Sin desbloquear",
+          "description": "No puedes encantar ninguna de tus cartas con Serpenteo."
+        }
+      ]
     },
     "ZEN_WEAVER": {
-      "name": "Tejedora zen"
+      "name": "Tejedora zen",
+      "description": "Caminas a través de una telaraña y ¡ENTRAS EN PÁNICO!\nPero entonces, una ola de calma te invade...\n\n—Tranquilízate; deja de ensuciar mi telaraña.\n\n¿Cómo te calmaste tan rápido?\nUna araña pequeñita desciende colgada en una telaraña hasta ti. Está dispuesta a enseñarte algunas técnicas a cambio de oro.",
+      "choices": [
+        {
+          "name": "Acupuntura arácnida",
+          "description": "Pagas 250 de oro. Quitas 2 cartas del mazo."
+        },
+        {
+          "name": "Técnicas de respiración",
+          "description": "Pagas 50 de oro. Agregas 2 Iluminación al mazo."
+        },
+        {
+          "name": "Conciencia emocional",
+          "description": "Pagas 125 de oro. Quitas 1 carta del mazo."
+        }
+      ]
     }
   },
   "keywords": {

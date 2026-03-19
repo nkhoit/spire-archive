@@ -12,6 +12,7 @@ const CS_DIRS = {
   cards: '/Users/kuro/code/sts2-research/decompiled/MegaCrit.Sts2.Core.Models.Cards',
   relics: '/Users/kuro/code/sts2-research/decompiled/MegaCrit.Sts2.Core.Models.Relics',
   potions: '/Users/kuro/code/sts2-research/decompiled/MegaCrit.Sts2.Core.Models.Potions',
+  events: '/Users/kuro/code/sts2-research/decompiled/MegaCrit.Sts2.Core.Models.Events',
 };
 const LOCALE_DIR = path.join(__dirname, '../data/sts2/localization');
 
@@ -295,7 +296,7 @@ const langs = fs.readdirSync(LOCALE_DIR).filter(f => f.endsWith('.json')).map(f 
 console.log(`Processing ${langs.length} languages: ${langs.join(', ')}`);
 
 const results = {};
-const CATEGORIES = ['cards', 'relics', 'potions'];
+const CATEGORIES = ['cards', 'relics', 'potions', 'events'];
 
 for (const lang of langs) {
   const filePath = path.join(LOCALE_DIR, lang + '.json');
@@ -310,23 +311,41 @@ for (const lang of langs) {
     const stillUnresolved = [];
 
     for (const [itemId, itemData] of Object.entries(items)) {
-      const desc = itemData.description || '';
-      if (!desc.includes('{')) { totalItems++; continue; }
       totalItems++;
-
       const vars = getVarsForId(itemId, category);
-      const newDesc = resolveTokens(desc, vars);
-      itemData.description = newDesc;
+      const unresolved = new Set();
+      let touched = false;
 
-      if (!newDesc.includes('{')) {
+      function collectTemplates(text) {
+        let match;
+        const re = /\{[^}]+\}/g;
+        while ((match = re.exec(text)) !== null) unresolved.add(match[0]);
+      }
+
+      function resolveField(obj, key) {
+        if (!obj || typeof obj[key] !== 'string' || !obj[key].includes('{')) return;
+        touched = true;
+        obj[key] = resolveTokens(obj[key], vars);
+        if (obj[key].includes('{')) collectTemplates(obj[key]);
+      }
+
+      if (category === 'events') {
+        resolveField(itemData, 'description');
+        for (const choice of itemData.choices || []) resolveField(choice, 'description');
+        for (const page of itemData.pages || []) {
+          resolveField(page, 'description');
+          for (const choice of page.choices || []) resolveField(choice, 'description');
+        }
+      } else {
+        resolveField(itemData, 'description');
+      }
+
+      if (!touched) continue;
+      if (unresolved.size === 0) {
         fullyResolved++;
       } else {
         unresolvedItems++;
-        const templates = [];
-        let match;
-        const re = /\{[^}]+\}/g;
-        while ((match = re.exec(newDesc)) !== null) templates.push(match[0]);
-        stillUnresolved.push({ itemId, templates, desc: newDesc.slice(0, 80) });
+        stillUnresolved.push({ itemId, templates: [...unresolved], desc: (itemData.description || '').slice(0, 80) });
       }
     }
 
@@ -341,8 +360,8 @@ for (const lang of langs) {
 
 // Summary of unique unresolved templates across all langs
 const allUnresolvedTemplates = new Set();
-for (const [lang, cats] of Object.entries(results)) {
-  for (const [cat, r] of Object.entries(cats)) {
+for (const cats of Object.values(results)) {
+  for (const r of Object.values(cats)) {
     for (const { templates } of r.stillUnresolved) {
       for (const t of templates) allUnresolvedTemplates.add(t);
     }
@@ -357,3 +376,4 @@ console.log('\nValidation (ja):');
 console.log('  BASH card:', jaData.cards?.BASH?.description);
 console.log('  AKABEKO relic:', jaData.relics?.AKABEKO?.description);
 console.log('  BEETLE_JUICE potion:', jaData.potions?.BEETLE_JUICE?.description);
+console.log('  ABYSSAL_BATHS event:', jaData.events?.ABYSSAL_BATHS?.choices?.[0]?.description);
