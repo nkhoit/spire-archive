@@ -15,7 +15,7 @@ interface Props {
 }
 
 const { game, character, color, description, startingDeck, startingRelic, charCards, charRelics } = Astro.props;
-const { locale } = getLocale(Astro);
+const { locale, langPrefix } = getLocale(Astro);
 
 const cardsByType = new Map<string, any[]>();
 for (const c of charCards) {
@@ -46,9 +46,9 @@ const getRelicImgSrc = (r: any) => {
     <h1 class="text-3xl font-bold" style="font-family: 'KreonGame', 'Kreon', serif;">{character.name}</h1>
     <p class="mt-1 text-sm text-slate-300 max-w-lg">{description}</p>
     <div class="mt-3 flex flex-wrap gap-2">
-      <Badge label={color} tone={color} />
-      <Badge label={`${character.hp} HP`} />
-      <Badge label={`${character.energy_per_turn} Energy / turn`} />
+      <Badge label={color} tone={color} locale={locale} />
+      <Badge label={`${character.hp} ${t('HP', locale)}`} />
+      <Badge label={`${character.energy_per_turn} ${t('Energy / turn', locale)}`} />
     </div>
   </div>
 </div>
@@ -60,7 +60,7 @@ const getRelicImgSrc = (r: any) => {
       {startingDeck.map(({ cardId, card, count }) => (
         <li class="text-sm flex items-center gap-2">
           <img src={`/images/${cardImageDir}/${cardId.toLowerCase()}.png`} alt="" class="w-6 h-5 object-cover rounded-sm shrink-0" />
-          <a href={`/${game}/cards/${cardId}`} class="text-sky-300 hover:text-sky-200 hover:underline">
+          <a href={`${langPrefix}/${game}/cards/${cardId}`} class="text-sky-300 hover:text-sky-200 hover:underline">
             {card.name}{count > 1 ? ` ×${count}` : ''}
           </a>
         </li>
@@ -75,7 +75,7 @@ const getRelicImgSrc = (r: any) => {
         {hasRelicImages && (
           <img src={getRelicImgSrc(startingRelic)} alt="" class="w-8 h-8 object-contain" />
         )}
-        <a href={`/${game}/relics/${startingRelic.id}`} class="text-sm text-sky-300 hover:text-sky-200 hover:underline">{startingRelic.name}</a>
+        <a href={`${langPrefix}/${game}/relics/${startingRelic.id}`} class="text-sm text-sky-300 hover:text-sky-200 hover:underline">{startingRelic.name}</a>
       </div>
       {startingRelic.description && <p class="mt-1 text-sm text-slate-300">{startingRelic.description}</p>}
     </section>
@@ -93,7 +93,7 @@ const getRelicImgSrc = (r: any) => {
             {cards.sort((a: any, b: any) => a.name.localeCompare(b.name)).map((c: any) => (
               <li class="flex items-center gap-2">
                 <img src={`/images/${cardImageDir}/${c.id.toLowerCase()}.png`} alt="" class="w-6 h-5 object-cover rounded-sm shrink-0" />
-                <a href={`/${game}/cards/${c.id}`} class="text-sm text-sky-300 hover:text-sky-200 hover:underline">{c.name}</a>
+                <a href={`${langPrefix}/${game}/cards/${c.id}`} class="text-sm text-sky-300 hover:text-sky-200 hover:underline">{c.name}</a>
                 <span class="text-xs text-slate-400"> · {c.rarity} · {c.cost ?? 'X'}</span>
               </li>
             ))}
@@ -115,7 +115,7 @@ const getRelicImgSrc = (r: any) => {
               <img src={getRelicImgSrc(r)} alt="" class="w-8 h-8 object-contain shrink-0" />
             )}
             <div>
-              <a href={`/${game}/relics/${r.id}`} class="text-sm font-semibold text-sky-300 hover:text-sky-200 hover:underline">{r.name}</a>
+              <a href={`${langPrefix}/${game}/relics/${r.id}`} class="text-sm font-semibold text-sky-300 hover:text-sky-200 hover:underline">{r.name}</a>
               <span class="ml-2 text-xs text-slate-400">{r[relicTierField]}</span>
             </div>
           </div>

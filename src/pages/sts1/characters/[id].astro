@@ -18,10 +18,10 @@ const colorMap: Record<string, string> = {
 };
 
 const descMap: Record<string, string> = {
-  IRONCLAD: 'A hardened warrior who wields powerful attacks and self-healing. Starts with the most HP and excels at strength-based strategies.',
-  THE_SILENT: 'A deadly huntress who relies on poisons, shivs, and card draw. Starts with the largest deck and a focus on discard synergies.',
-  DEFECT: 'An ancient automaton that channels elemental Orbs for passive and active effects. Unique focus on Lightning, Frost, Dark, and Plasma orbs.',
-  WATCHER: 'A blind ascetic who shifts between powerful Stances. Wrath doubles damage dealt and taken, while Calm grants energy on exit.',
+  IRONCLAD: t('A hardened warrior who wields powerful attacks and self-healing. Starts with the most HP and excels at strength-based strategies.', locale),
+  THE_SILENT: t('A deadly huntress who relies on poisons, shivs, and card draw. Starts with the largest deck and a focus on discard synergies.', locale),
+  DEFECT: t('An ancient automaton that channels elemental Orbs for passive and active effects. Unique focus on Lightning, Frost, Dark, and Plasma orbs.', locale),
+  WATCHER: t('A blind ascetic who shifts between powerful Stances. Wrath doubles damage dealt and taken, while Calm grants energy on exit.', locale),
 };
 
 const color = colorMap[ch.id] ?? '';
