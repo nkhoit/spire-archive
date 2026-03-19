@@ -5,7 +5,7 @@ import { getData } from '../../../lib/data';
 import { getLocale } from '../../../lib/i18n';
 import { t } from '../../../lib/ui-strings';
 
-const { locale, langPrefix } = getLocale(Astro);
+const { locale } = getLocale(Astro);
 const { relics } = await getData('sts2', locale);
 const tiers = Array.from(new Set(relics.map((r) => String(r.tier)))).sort();
 const colors = Array.from(new Set(relics.map((r) => String(r.color ?? '')).filter(Boolean))).sort();
