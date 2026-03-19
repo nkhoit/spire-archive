@@ -446,7 +446,7 @@ async function applyLocalization(game: string, locale: Locale, base: Dataset): P
   const keywords = base.keywords.map(k => {
     const l = loc.keywords?.[k.id];
     if (!l) return k;
-    return { ...k, ...(l.name && { name: l.name }), ...(l.description && { description: l.description }) };
+    return { ...k, ...(l.name && { names: [l.name] }), ...(l.description && { description: l.description }) };
   });
 
   const enchantments = base.enchantments.map(e => {
