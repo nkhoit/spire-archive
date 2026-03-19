@@ -111,7 +111,7 @@ export default function RelicsExplorer(props: { game?: string; tiers: string[]; 
               <div className="min-w-0">
                 <span className="text-sm font-semibold hover:underline">{r.name}</span>
                 <div className="mt-1 text-xs text-slate-500">
-                  {r.tier}
+                  {t(r.tier, locale)}
                   {r.color ? ` · ${r.color}` : ''}
                 </div>
                 <div className="mt-1 line-clamp-2 text-sm text-slate-300">{r.description}</div>

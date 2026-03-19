@@ -52,9 +52,9 @@ export function renderEnergy(text: string): string {
 
 function cap(s: string) { return s.charAt(0).toUpperCase() + s.slice(1); }
 
-function BadgeSpan({ label, tone }: { label: string; tone?: string }) {
+function BadgeSpan({ label, tone, locale }: { label: string; tone?: string; locale?: string }) {
   const cls = tone && colorClasses[tone] ? colorClasses[tone] : 'bg-white/10 text-slate-200 ring-white/10';
-  return <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs ring-1 ${cls}`}>{cap(label)}</span>;
+  return <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs ring-1 ${cls}`}>{t(cap(label), locale ?? 'en')}</span>;
 }
 
 function CardTile({ c, game, isMobile, upgraded, locale }: { c: Card; game: string; isMobile: boolean; upgraded: boolean; locale: string }) {
@@ -73,9 +73,9 @@ function CardTile({ c, game, isMobile, upgraded, locale }: { c: Card; game: stri
         <CssCardRenderer card={c} upgraded={!!showUpgraded} size={isMobile ? 'xs' : 'sm'} game={game as 'sts1' | 'sts2'} locale={locale} />
       </a>
       <div className="mt-2 flex flex-wrap items-center justify-center gap-1">
-        <BadgeSpan label={c.color} tone={c.color} />
-        <BadgeSpan label={c.type} />
-        <BadgeSpan label={c.rarity} />
+        <BadgeSpan label={c.color} tone={c.color} locale={locale} />
+        <BadgeSpan label={c.type} locale={locale} />
+        <BadgeSpan label={c.rarity} locale={locale} />
         <BadgeSpan label={`Cost ${c.cost ?? 'X'}`} />
       </div>
     </div>
