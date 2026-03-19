@@ -102,7 +102,7 @@ export default function RelicsExplorer(props: { game?: string; tiers: string[]; 
           const tierCls = 'tier-' + r.tier.toLowerCase().replace(/\s+/g, '-');
           return (
           <li key={r.id} className={`rounded-lg border border-white/[0.06] bg-white/[0.03] hover:bg-white/[0.06] hover:border-white/[0.12] transition-all ${tierCls}`}>
-            <a className="flex items-center gap-3 p-3" href={`/${game}/relics/${r.id}`}>
+            <a className="flex items-center gap-3 p-3" href={`${locale !== "en" ? "/" + locale : ""}/${game}/relics/${r.id}`}>
               {game === 'sts2' || r.icon ? (
                 <img src={`/images/${game}/relics/${r.icon ?? r.id.toLowerCase() + '.png'}`} alt="" className="w-14 h-14 flex-shrink-0 object-contain" loading="lazy" />
               ) : (

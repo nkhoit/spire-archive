@@ -77,7 +77,7 @@ export default function PotionsExplorer(props: { game?: string; rarities: string
       <ul className="mt-3 space-y-2">
         {resp.items.map((p) => (
           <li key={p.id} className={`rounded-lg border border-white/[0.06] bg-white/[0.03] hover:bg-white/[0.06] hover:border-white/[0.12] transition-all ${rarityCls[p.rarity.toLowerCase()] ?? ''}`}>
-            <a className="flex items-center gap-3 p-3" href={`/${game}/potions/${p.id}`}>
+            <a className="flex items-center gap-3 p-3" href={`${locale !== "en" ? "/" + locale : ""}/${game}/potions/${p.id}`}>
               {game === 'sts2' || p.icon ? (
                 <img src={`/images/${game}/potions/${p.icon ?? p.id.toLowerCase() + '.png'}`} alt="" className="w-14 h-14 flex-shrink-0 object-contain" loading="lazy" />
               ) : (

@@ -61,7 +61,7 @@ export default function PowersExplorer(props: { game?: string; locale?: string }
       <ul className="mt-3 divide-y divide-white/10 rounded-lg border border-white/10 bg-white/5">
         {resp.items.map((p) => (
           <li key={p.id} className="p-3">
-            <a className="flex items-center gap-3 hover:bg-white/5 -m-3 p-3 rounded-lg" href={`/${game}/effects/${p.id}`}>
+            <a className="flex items-center gap-3 hover:bg-white/5 -m-3 p-3 rounded-lg" href={`${locale !== "en" ? "/" + locale : ""}/${game}/effects/${p.id}`}>
               {p.icon ? (
                 <img src={`/images/${game}/powers/${p.icon}`} alt="" className="w-10 h-10 flex-shrink-0" />
               ) : game === 'sts2' ? (

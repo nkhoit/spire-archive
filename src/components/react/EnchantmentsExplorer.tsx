@@ -61,7 +61,7 @@ export default function EnchantmentsExplorer(props: { game?: string; rarities: s
       <ul className="mt-3 divide-y divide-white/10 rounded-lg border border-white/10 bg-white/5">
         {resp.items.map((e) => (
           <li key={e.id} className="p-3">
-            <a className="flex items-start gap-3 hover:bg-white/5 -m-3 p-3 rounded-lg" href={`/${game}/enchantments/${e.id}`}>
+            <a className="flex items-start gap-3 hover:bg-white/5 -m-3 p-3 rounded-lg" href={`${locale !== "en" ? "/" + locale : ""}/${game}/enchantments/${e.id}`}>
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-2">
                   <span className="text-sm font-semibold">{e.name}</span>

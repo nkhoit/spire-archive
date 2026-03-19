@@ -84,7 +84,7 @@ export default function MonstersExplorer(props: { game?: string; acts: string[];
           const typeColor = TYPE_COLORS[m.type] ?? 'text-slate-300';
           return (
             <li key={m.id} className="p-3">
-              <a className="flex items-start gap-3 hover:bg-white/5 -m-3 p-3 rounded-lg" href={`/${game}/monsters/${m.id}`}>
+              <a className="flex items-start gap-3 hover:bg-white/5 -m-3 p-3 rounded-lg" href={`${locale !== "en" ? "/" + locale : ""}/${game}/monsters/${m.id}`}>
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-2">
                     <span className="text-sm font-semibold">{m.name}</span>
