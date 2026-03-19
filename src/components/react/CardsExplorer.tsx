@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import CssCardRenderer from './CssCardRenderer';
 import { t } from '../../lib/ui-strings';
 
@@ -180,16 +180,27 @@ export default function CardsExplorer(props: {
   const canPrev = offset > 0;
   const canNext = offset + limit < total;
 
+  const [filtersOpen, setFiltersOpen] = React.useState(false);
+  const hasActiveFilters = color || type || rarity || cost;
+
   return (
     <div className="mt-4">
       <div className="sticky top-[53px] z-[5] -mx-4 px-4 py-3 bg-[#0a0d13]/80 backdrop-blur-xl border-b border-white/[0.06]">
-        <div className="grid grid-cols-1 gap-2 md:grid-cols-5">
-        <input
-          className="rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm focus:border-amber-500/40 focus:outline-none transition-colors"
-          placeholder={t('Search', locale) + ' ' + t('Cards', locale).toLowerCase() + '…'}
-          value={q}
-          onChange={(e) => { setOffset(0); setQ(e.target.value); }}
-        />
+        <div className="flex gap-2">
+          <input
+            className="flex-1 rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm focus:border-amber-500/40 focus:outline-none transition-colors"
+            placeholder={t('Search', locale) + ' ' + t('Cards', locale).toLowerCase() + '…'}
+            value={q}
+            onChange={(e) => { setOffset(0); setQ(e.target.value); }}
+          />
+          <button
+            className={`md:hidden rounded-md border px-3 py-2 text-xs font-medium transition-colors ${hasActiveFilters ? 'border-amber-500/40 bg-amber-500/10 text-amber-300' : 'border-white/[0.08] bg-white/[0.04] text-slate-400'}`}
+            onClick={() => setFiltersOpen(!filtersOpen)}
+          >
+            ⚙ {hasActiveFilters ? '✦' : ''}
+          </button>
+        </div>
+        <div className={`${filtersOpen ? 'grid' : 'hidden'} md:grid grid-cols-1 gap-2 md:grid-cols-4 mt-2`}>
         <select
           className="rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm focus:border-amber-500/40 focus:outline-none transition-colors"
           value={color}

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Pager, useApiList } from './SimpleExplorer';
 import { t } from '../../lib/ui-strings';
 
@@ -32,19 +32,30 @@ export default function RelicsExplorer(props: { game?: string; tiers: string[]; 
 
   const resp = data ?? { total: 0, offset, limit, items: [] };
 
+  const [filtersOpen, setFiltersOpen] = React.useState(false);
+  const hasActiveFilters = tier || color;
+
   return (
     <div className="mt-4">
       <div className="sticky top-[53px] z-[5] -mx-4 px-4 py-3 bg-[#0a0d13]/80 backdrop-blur-xl border-b border-white/[0.06]">
-        <div className="grid grid-cols-1 gap-2 md:grid-cols-3">
-        <input
-          className="rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm focus:border-amber-500/40 focus:outline-none transition-colors"
-          placeholder={t('Search', locale) + ' ' + t('Relics', locale).toLowerCase() + '…'}
-          value={q}
-          onChange={(e) => {
-            setOffset(0);
-            setQ(e.target.value);
-          }}
-        />
+        <div className="flex gap-2">
+          <input
+            className="flex-1 rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm focus:border-amber-500/40 focus:outline-none transition-colors"
+            placeholder={t('Search', locale) + ' ' + t('Relics', locale).toLowerCase() + '…'}
+            value={q}
+            onChange={(e) => {
+              setOffset(0);
+              setQ(e.target.value);
+            }}
+          />
+          <button
+            className={`md:hidden rounded-md border px-3 py-2 text-xs font-medium transition-colors ${hasActiveFilters ? 'border-amber-500/40 bg-amber-500/10 text-amber-300' : 'border-white/[0.08] bg-white/[0.04] text-slate-400'}`}
+            onClick={() => setFiltersOpen(!filtersOpen)}
+          >
+            ⚙ {hasActiveFilters ? '✦' : ''}
+          </button>
+        </div>
+        <div className={`${filtersOpen ? 'grid' : 'hidden'} md:grid grid-cols-1 gap-2 md:grid-cols-2 mt-2`}>
         <select
           className="rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm focus:border-amber-500/40 focus:outline-none transition-colors"
           value={tier}
