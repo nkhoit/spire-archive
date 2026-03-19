@@ -5,7 +5,8 @@ import { getPaging, getString, jsonResponse } from '../_util';
 const ACT_ORDER: Record<string, number> = { exordium: 1, city: 2, beyond: 3, shrines: 4 };
 
 export const GET: APIRoute = async ({ url }) => {
-  const { events } = await getData('sts2');
+  const locale = getString(url, 'locale') ?? 'en';
+  const { events } = await getData('sts2', locale);
 
   const q = getString(url, 'q')?.toLowerCase() ?? null;
   const act = getString(url, 'act');

@@ -28,6 +28,7 @@ export default function EventsExplorer(props: { game?: string; initial?: ApiResp
     q: q || null,
     offset,
     limit,
+    locale: locale !== 'en' ? locale : null,
   }, props.initial);
 
   const resp = data ?? { total: 0, offset, limit, items: [] };
@@ -54,14 +55,14 @@ export default function EventsExplorer(props: { game?: string; initial?: ApiResp
       <ul className="mt-3 divide-y divide-white/10 rounded-lg border border-white/10 bg-white/5">
         {resp.items.map((e) => (
           <li key={e.id} className="p-3">
-            <a className="flex flex-col gap-1 hover:bg-white/5 -m-3 p-3 rounded-lg" href={`/${game}/events/${e.id}`}>
+            <a className="flex flex-col gap-1 hover:bg-white/5 -m-3 p-3 rounded-lg" href={`${locale !== 'en' ? `/${locale}` : ''}/${game}/events/${e.id}`}>
               <span className="text-sm font-semibold">{e.name}</span>
               {e.description && (
                 <span className="text-sm text-slate-300 line-clamp-2">{e.description}</span>
               )}
               {e.choices?.length > 0 && (
                 <span className="text-xs text-slate-400">
-                  {e.choices.length} choice{e.choices.length !== 1 ? 's' : ''}
+                  {e.choices.length} {t('choices', locale)}
                 </span>
               )}
             </a>

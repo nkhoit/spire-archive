@@ -75,6 +75,7 @@ const strings: Record<string, Partial<Record<Locale, string>>> = {
 
   // Event detail
   'Choices': { ja: '選択肢', ko: '선택지', zh: '选项', de: 'Optionen', fr: 'Choix', es: 'Opciones', pt: 'Opções', it: 'Scelte', pl: 'Wybory', ru: 'Варианты', tr: 'Seçenekler', th: 'ตัวเลือก' },
+  'choices': { ja: '選択肢', ko: '선택지', zh: '个选项', de: 'Optionen', fr: 'choix', es: 'opciones', pt: 'opções', it: 'scelte', pl: 'wybory', ru: 'вариантов', tr: 'seçenek', th: 'ตัวเลือก' },
 
   // Footer / branding
   'a Slay the Spire companion': { ja: 'Slay the Spireの攻略サイト', ko: 'Slay the Spire 공략 사이트', zh: 'Slay the Spire 攻略网站', de: 'Ein Slay the Spire Begleiter', fr: 'Un compagnon Slay the Spire', es: 'Una guía de Slay the Spire', pt: 'Um companheiro de Slay the Spire', it: 'Un compagno di Slay the Spire', pl: 'Kompendium Slay the Spire', ru: 'Справочник Slay the Spire', tr: 'Bir Slay the Spire rehberi', th: 'คู่มือ Slay the Spire' },
