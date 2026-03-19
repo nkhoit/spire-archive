@@ -193,11 +193,11 @@ function resolveTokens(desc, vars) {
     }
     if (tag === 'energyPrefix' && rest.startsWith('energyIcons(')) {
       const m = rest.match(/energyIcons\((\d+)\)/);
-      result.push(m ? (parseInt(m[1]) === 1 ? '[Energy]' : `[${m[1]} Energy]`) : '[Energy]');
+      result.push(m ? (parseInt(m[1]) === 1 ? '[E]' : `${m[1]}[E]`) : '[E]');
       i = end; continue;
     }
     if (rest === 'energyIcons()') {
-      result.push('[Energy]');
+      result.push('[E]');
       i = end; continue;
     }
     if (rest.startsWith('plural:')) {
