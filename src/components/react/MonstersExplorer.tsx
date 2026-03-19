@@ -33,6 +33,7 @@ export default function MonstersExplorer(props: { game?: string; acts: string[];
   const { data, loading, error } = useApiList<Monster>(`/api/${game}/monsters`, {
     q: q || null,
     type: type || null,
+    locale: locale !== 'en' ? locale : null,
     offset,
     limit,
   }, props.initial);

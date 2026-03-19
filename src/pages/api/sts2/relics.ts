@@ -1,9 +1,11 @@
 import type { APIRoute } from 'astro';
-import { getData } from '../../../lib/data';
+import { getData, type Locale, SUPPORTED_LOCALES } from '../../../lib/data';
 import { getPaging, getString, jsonResponse } from '../_util';
 
 export const GET: APIRoute = async ({ url }) => {
-  const { relics } = await getData('sts2');
+  const localeParam = getString(url, 'locale');
+  const locale: Locale | undefined = localeParam && SUPPORTED_LOCALES.includes(localeParam as Locale) ? localeParam as Locale : undefined;
+  const { relics } = await getData('sts2', locale);
 
   const q = getString(url, 'q')?.toLowerCase() ?? null;
   const tier = getString(url, 'tier');

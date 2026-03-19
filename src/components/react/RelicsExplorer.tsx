@@ -26,6 +26,7 @@ export default function RelicsExplorer(props: { game?: string; tiers: string[]; 
     q: q || null,
     tier: tier || null,
     color: color || null,
+    locale: locale !== 'en' ? locale : null,
     offset,
     limit,
   }, props.initial);

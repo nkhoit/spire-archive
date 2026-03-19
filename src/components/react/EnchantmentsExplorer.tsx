@@ -20,6 +20,7 @@ export default function EnchantmentsExplorer(props: { game?: string; rarities: s
   const { data, loading, error } = useApiList<Enchantment>(`/api/${game}/enchantments`, {
     q: q || null,
     rarity: rarity || null,
+    locale: locale !== 'en' ? locale : null,
     offset,
     limit,
   });

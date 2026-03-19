@@ -1,10 +1,12 @@
 import type { APIRoute } from 'astro';
-import { getData } from '../../../../lib/data';
-import { jsonResponse } from '../../_util';
+import { getData, type Locale, SUPPORTED_LOCALES } from '../../../../lib/data';
+import { getString, jsonResponse } from '../../_util';
 
-export const GET: APIRoute = async ({ params }) => {
+export const GET: APIRoute = async ({ params, url }) => {
+  const localeParam = getString(url, 'locale');
+  const locale: Locale | undefined = localeParam && SUPPORTED_LOCALES.includes(localeParam as Locale) ? localeParam as Locale : undefined;
   const id = String(params.id ?? '');
-  const { relicById } = await getData('sts2');
+  const { relicById } = await getData('sts2', locale);
   const relic = relicById.get(id);
   if (!relic) return jsonResponse({ error: 'not found' }, { status: 404 });
   return jsonResponse(relic);
