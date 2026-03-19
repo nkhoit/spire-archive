@@ -2,8 +2,10 @@
 import Layout from '../../../components/Layout.astro';
 import CardsExplorer from '../../../components/react/CardsExplorer';
 import { getData } from '../../../lib/data';
+import { getLocale } from '../../../lib/i18n';
 
-const { cards } = await getData('sts1');
+const { locale, langPrefix } = getLocale(Astro);
+const { cards } = await getData('sts1', locale);
 const colors = Array.from(new Set(cards.map((c) => String(c.color)))).sort();
 const types = Array.from(new Set(cards.map((c) => String(c.type)))).sort();
 const rarities = Array.from(new Set(cards.map((c) => String(c.rarity)))).sort();
@@ -12,5 +14,5 @@ const rarities = Array.from(new Set(cards.map((c) => String(c.rarity)))).sort();
   <h1 class="text-xl font-semibold">Cards</h1>
 
 
-  <CardsExplorer game="sts1" client:load colors={colors} types={types} rarities={rarities} />
+  <CardsExplorer game="sts1" client:load colors={colors} types={types} rarities={rarities} locale={locale} />
 </Layout>

@@ -1,9 +1,11 @@
 ---
 import Layout from '../../../components/Layout.astro';
 import { getData } from '../../../lib/data';
+import { getLocale } from '../../../lib/i18n';
 
 const { id } = Astro.params;
-const data = await getData('sts2');
+const { locale, langPrefix } = getLocale(Astro);
+const data = await getData('sts2', locale);
 const event = data.eventById.get(String(id));
 if (!event) return new Response('Not found', { status: 404 });
 const title = `${event.name} — Event — Spire Archive — STS2`;
@@ -14,16 +16,17 @@ const pools = [...new Set(choices.map((c: any) => c.pool).filter(Boolean))];
 const hasPoolGroups = pools.length > 0;
 const ungrouped = choices.filter((c: any) => !c.pool);
 
-function linkifyRefs(text: string, refs?: any[]): string {
+function linkifyRefs(text: string, refs?: any[], langPrefix?: string): string {
+  const prefix = langPrefix ?? '';
   if (!refs?.length || !text) return text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   let html = text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   const sorted = [...refs].sort((a, b) => b.name.length - a.name.length);
   for (const ref of sorted) {
-    const href = ref.type === 'card' ? `/sts2/cards/${ref.id}` :
-                 ref.type === 'relic' ? `/sts2/relics/${ref.id}` :
-                 ref.type === 'potion' ? `/sts2/potions/${ref.id}` :
-                 ref.type === 'effect' ? `/sts2/effects/${ref.id}` :
-                 ref.type === 'character' ? `/sts2/characters/${ref.id}` : null;
+    const href = ref.type === 'card' ? `${prefix}/sts2/cards/${ref.id}` :
+                 ref.type === 'relic' ? `${prefix}/sts2/relics/${ref.id}` :
+                 ref.type === 'potion' ? `${prefix}/sts2/potions/${ref.id}` :
+                 ref.type === 'effect' ? `${prefix}/sts2/effects/${ref.id}` :
+                 ref.type === 'character' ? `${prefix}/sts2/characters/${ref.id}` : null;
     if (!href) continue;
     const escaped = ref.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const re = new RegExp(`(?<!<[^>]*)\\b(${escaped})\\b`, 'gi');
@@ -32,10 +35,10 @@ function linkifyRefs(text: string, refs?: any[]): string {
   return html;
 }
 
-function renderChoices(choices: any[], eventRefs?: any[]) {
+function renderChoices(choices: any[], eventRefs?: any[], langPrefix?: string) {
   return choices.map((c: any) => {
     const allRefs = [...(eventRefs ?? []), ...(c.references ?? [])];
-    return { ...c, _html: c.description ? linkifyRefs(c.description, allRefs) : '', _locked: c.locked ?? null };
+    return { ...c, _html: c.description ? linkifyRefs(c.description, allRefs, langPrefix) : '', _locked: c.locked ?? null };
   });
 }
 ---
@@ -50,14 +53,14 @@ function renderChoices(choices: any[], eventRefs?: any[]) {
     />
     <div class="absolute inset-0 bg-gradient-to-b from-[#0a0d13]/30 via-[#0a0d13]/60 to-[#0a0d13]"></div>
     <div class="absolute bottom-0 left-0 right-0 px-6 pb-5" style="z-index: 1;">
-      <a href="/sts2/events" class="text-xs text-sky-400/70 hover:text-sky-300 hover:underline transition-colors">← Events</a>
+      <a href={langPrefix + '/sts2/events'} class="text-xs text-sky-400/70 hover:text-sky-300 hover:underline transition-colors">← Events</a>
       <h1 class="mt-1 text-2xl font-bold" style="font-family: 'KreonGame', 'Kreon', serif;">{event.name}</h1>
     </div>
   </div>
 
   {event.description && (
     <section class="mt-4 rounded-lg border border-amber-900/20 bg-amber-950/10 p-5">
-      <p class="whitespace-pre-line text-sm text-amber-100/80 leading-relaxed italic" style="font-family: 'KreonGame', 'Kreon', serif;" set:html={linkifyRefs(event.description, (event as any).references)} />
+      <p class="whitespace-pre-line text-sm text-amber-100/80 leading-relaxed italic" style="font-family: 'KreonGame', 'Kreon', serif;" set:html={linkifyRefs(event.description, (event as any).references, langPrefix)} />
     </section>
   )}
 
@@ -78,7 +81,7 @@ function renderChoices(choices: any[], eventRefs?: any[]) {
             {/* Step label */}
             <h3 class="text-sm font-semibold text-slate-200 mb-2">{page.label}</h3>
             <div class="space-y-2">
-              {renderChoices(page.choices ?? [], (event as any).references).map((c: any) => (
+              {renderChoices(page.choices ?? [], (event as any).references, langPrefix).map((c: any) => (
                 <div class="rounded-md border border-white/10 bg-white/5 p-3">
                   <div class="text-sm font-semibold text-sky-300">{c.name}</div>
                   {c._html && <p class="mt-1 text-sm text-slate-300" set:html={c._html} />}
@@ -97,7 +100,7 @@ function renderChoices(choices: any[], eventRefs?: any[]) {
     <section class="mt-4">
       <h2 class="text-sm font-semibold text-slate-200">Choices</h2>
       <div class="mt-3 space-y-2">
-        {renderChoices(ungrouped, (event as any).references).map((c: any) => (
+        {renderChoices(ungrouped, (event as any).references, langPrefix).map((c: any) => (
           <div class="rounded-md border border-white/10 bg-white/5 p-3">
             <div class="text-sm font-semibold text-sky-300">{c.name}</div>
             {c._html && <p class="mt-1 text-sm text-slate-300" set:html={c._html} />}
@@ -120,7 +123,7 @@ function renderChoices(choices: any[], eventRefs?: any[]) {
           {poolLabel}
         </h2>
         <div class="mt-3 space-y-2">
-          {renderChoices(poolChoices, (event as any).references).map((c: any) => (
+          {renderChoices(poolChoices, (event as any).references, langPrefix).map((c: any) => (
             <div class:list={['rounded-md border bg-white/5 p-3', borderColor]}>
               <div class="flex items-center gap-2">
                 {c.relic_id && (
@@ -132,7 +135,7 @@ function renderChoices(choices: any[], eventRefs?: any[]) {
                   />
                 )}
                 <a
-                  href={c.relic_id ? `/sts2/relics/${c.relic_id}` : undefined}
+                  href={c.relic_id ? langPrefix + `/sts2/relics/${c.relic_id}` : undefined}
                   class:list={['text-sm font-semibold', c.relic_id ? 'text-sky-300 hover:underline' : 'text-sky-300']}
                 >
                   {c.name}

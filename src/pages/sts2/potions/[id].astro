@@ -2,9 +2,11 @@
 import Layout from '../../../components/Layout.astro';
 import Badge from '../../../components/Badge.astro';
 import { getData } from '../../../lib/data';
+import { getLocale } from '../../../lib/i18n';
 
 const { id } = Astro.params;
-const data = await getData('sts2');
+const { locale, langPrefix } = getLocale(Astro);
+const data = await getData('sts2', locale);
 const potion = data.potionById.get(String(id));
 if (!potion) return new Response('Not found', { status: 404 });
 const title = `${potion.name} — Potion — Spire Archive — STS2`;

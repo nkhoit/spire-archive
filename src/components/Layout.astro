@@ -2,6 +2,8 @@
 import '../styles/global.css';
 import GlobalSearch from './react/GlobalSearch';
 
+import { getLocale } from '../lib/i18n';
+
 export interface Props {
   title: string;
   description: string;
@@ -11,6 +13,7 @@ export interface Props {
 }
 
 const { title, description, ogTitle, ogDescription, game } = Astro.props;
+const { locale, langPrefix } = getLocale(Astro);
 
 const gameLabels: Record<string, string> = {
   sts1: 'Slay the Spire',
@@ -18,23 +21,23 @@ const gameLabels: Record<string, string> = {
 };
 
 const navLinks = game ? [
-  { label: 'Characters', href: `/${game}/characters` },
-  { label: 'Cards', href: `/${game}/cards` },
-  { label: 'Relics', href: `/${game}/relics` },
-  { label: 'Potions', href: `/${game}/potions` },
-  { label: 'Monsters', href: `/${game}/monsters` },
-  { label: 'Events', href: `/${game}/events` },
+  { label: 'Characters', href: langPrefix + '/' + game + '/characters' },
+  { label: 'Cards', href: langPrefix + '/' + game + '/cards' },
+  { label: 'Relics', href: langPrefix + '/' + game + '/relics' },
+  { label: 'Potions', href: langPrefix + '/' + game + '/potions' },
+  { label: 'Monsters', href: langPrefix + '/' + game + '/monsters' },
+  { label: 'Events', href: langPrefix + '/' + game + '/events' },
   ...(game === 'sts2' ? [
-    { label: 'Buffs & Debuffs', href: `/${game}/effects` },
-    { label: 'Enchantments', href: `/${game}/enchantments` },
+    { label: 'Buffs & Debuffs', href: langPrefix + '/' + game + '/effects' },
+    { label: 'Enchantments', href: langPrefix + '/' + game + '/enchantments' },
   ] : [
-    { label: 'Buffs & Debuffs', href: `/${game}/effects` },
+    { label: 'Buffs & Debuffs', href: langPrefix + '/' + game + '/effects' },
   ]),
-  { label: 'Keywords', href: `/${game}/keywords` },
+  { label: 'Keywords', href: langPrefix + '/' + game + '/keywords' },
 ] : [];
 ---
 <!doctype html>
-<html lang="en">
+<html lang={locale}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -55,8 +58,8 @@ const navLinks = game ? [
           {game && (
             <>
               <span class="text-white/15 hidden sm:inline">|</span>
-              <a href={`/${game}`} class="text-sm font-medium text-slate-300 hover:text-white transition-colors hidden sm:inline">{gameLabels[game]}</a>
-              <a href={game === 'sts1' ? '/sts2' : '/sts1'} class="shrink-0 rounded-full bg-white/[0.06] border border-white/[0.08] px-2.5 py-0.5 text-xs font-medium text-slate-500 hover:text-slate-200 hover:bg-white/10 hover:border-white/15 transition-all">
+              <a href={langPrefix + '/' + game} class="text-sm font-medium text-slate-300 hover:text-white transition-colors hidden sm:inline">{gameLabels[game]}</a>
+              <a href={langPrefix + (game === 'sts1' ? '/sts2' : '/sts1')} class="shrink-0 rounded-full bg-white/[0.06] border border-white/[0.08] px-2.5 py-0.5 text-xs font-medium text-slate-500 hover:text-slate-200 hover:bg-white/10 hover:border-white/15 transition-all">
                 {game === 'sts1' ? 'STS2' : 'STS1'} →
               </a>
             </>

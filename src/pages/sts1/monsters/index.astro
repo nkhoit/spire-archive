@@ -2,8 +2,10 @@
 import Layout from '../../../components/Layout.astro';
 import MonstersExplorer from '../../../components/react/MonstersExplorer';
 import { getData } from '../../../lib/data';
+import { getLocale } from '../../../lib/i18n';
 
-const { monsters } = await getData('sts1');
+const { locale, langPrefix } = getLocale(Astro);
+const { monsters } = await getData('sts1', locale);
 const actOrder = ['exordium', 'city', 'beyond', 'ending'];
 const acts = actOrder.filter((a) => monsters.some((m) => String(m.act) === a));
 const types = Array.from(new Set(monsters.map((m) => String(m.type)))).sort();

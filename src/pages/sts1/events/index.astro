@@ -2,8 +2,10 @@
 import Layout from '../../../components/Layout.astro';
 import EventsExplorer from '../../../components/react/EventsExplorer';
 import { getData } from '../../../lib/data';
+import { getLocale } from '../../../lib/i18n';
 
-const { events } = await getData('sts1');
+const { locale, langPrefix } = getLocale(Astro);
+const { events } = await getData('sts1', locale);
 ---
 <Layout game="sts1" title="Events — Spire Archive" description="Browse Slay the Spire events.">
   <h1 class="text-xl font-semibold">Events</h1>

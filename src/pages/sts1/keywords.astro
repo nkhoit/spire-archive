@@ -1,8 +1,10 @@
 ---
 import Layout from '../../components/Layout.astro';
 import { getData } from '../../lib/data';
+import { getLocale } from '../../lib/i18n';
 
-const data = await getData('sts1');
+const { locale, langPrefix } = getLocale(Astro);
+const data = await getData('sts1', locale);
 const keywords = data.keywords.filter((k) => k.names?.length).sort((a, b) => (a.names[0] ?? '').localeCompare(b.names[0] ?? ''));
 ---
 <Layout game="sts1" title="Keywords — Spire Archive" description="Game keyword glossary for Slay the Spire.">
@@ -14,7 +16,7 @@ const keywords = data.keywords.filter((k) => k.names?.length).sort((a, b) => (a.
       <li class="p-3">
         <div class="flex items-center gap-2">
           {k.effect_id ? (
-            <a href={`/sts1/effects/${k.effect_id}`} class="text-sm font-semibold capitalize text-sky-400 hover:text-sky-300 underline decoration-sky-400/30 hover:decoration-sky-300">{k.names[0]} ↗</a>
+            <a href={langPrefix + '/sts1/effects/' + k.effect_id} class="text-sm font-semibold capitalize text-sky-400 hover:text-sky-300 underline decoration-sky-400/30 hover:decoration-sky-300">{k.names[0]} ↗</a>
           ) : (
             <span class="text-sm font-semibold capitalize">{k.names[0]}</span>
           )}

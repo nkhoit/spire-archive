@@ -1,10 +1,12 @@
 ---
 import Layout from '../../../components/Layout.astro';
 import { getData } from '../../../lib/data';
+import { getLocale } from '../../../lib/i18n';
 import CssCardRenderer from '../../../components/react/CssCardRenderer';
 
 const { id } = Astro.params;
-const data = await getData('sts1');
+const { locale, langPrefix } = getLocale(Astro);
+const data = await getData('sts1', locale);
 const power = data.powers.find((p: any) => p.id === id);
 
 if (!power) {
@@ -52,7 +54,7 @@ const colorMap: Record<string, string> = {
 };
 ---
 <Layout game="sts1" title={`${power.name} — Spire Archive`} description={power.description}>
-  <a href="/sts1/effects" class="text-sm text-slate-400 hover:text-white">← Buffs & Debuffs</a>
+  <a href={langPrefix + '/sts1/effects'} class="text-sm text-slate-400 hover:text-white">← Buffs & Debuffs</a>
 
   <div class="mt-4 flex items-center gap-4">
     {power.icon ? (
@@ -71,7 +73,7 @@ const colorMap: Record<string, string> = {
   <p class="mt-4 text-slate-200">{power.description}</p>
 
   {matchingKeyword && (
-    <a href="/sts1/keywords" class="mt-2 inline-block text-sm text-sky-400 hover:text-sky-300">→ See keyword definition</a>
+    <a href={langPrefix + '/sts1/keywords'} class="mt-2 inline-block text-sm text-sky-400 hover:text-sky-300">→ See keyword definition</a>
   )}
 
   {relatedCards.length > 0 && (
@@ -79,7 +81,7 @@ const colorMap: Record<string, string> = {
       <h2 class="text-lg font-semibold mb-3">Cards that apply {power.name}</h2>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
         {relatedCards.map((card) => (
-          <a href={`/sts1/cards/${card.id}`} class="group flex items-center justify-center rounded-lg border border-white/10 bg-white/5 p-2 hover:bg-white/10 transition">
+          <a href={langPrefix + '/sts1/cards/' + card.id} class="group flex items-center justify-center rounded-lg border border-white/10 bg-white/5 p-2 hover:bg-white/10 transition">
             <CssCardRenderer client:load card={card} game="sts1" size="xs" />
           </a>
         ))}

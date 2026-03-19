@@ -56,19 +56,19 @@ function BadgeSpan({ label, tone }: { label: string; tone?: string }) {
   return <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs ring-1 ${cls}`}>{cap(label)}</span>;
 }
 
-function CardTile({ c, game, isMobile, upgraded }: { c: Card; game: string; isMobile: boolean; upgraded: boolean }) {
+function CardTile({ c, game, isMobile, upgraded, locale }: { c: Card; game: string; isMobile: boolean; upgraded: boolean; locale: string }) {
   const hasUpgrade = c.upgrade && Object.keys(c.upgrade).length > 0;
   const showUpgraded = upgraded && hasUpgrade;
 
   return (
     <div className="card-tilt group flex flex-col items-center rounded-lg border border-white/[0.06] bg-white/[0.03] p-3 hover:bg-white/[0.06] hover:border-white/[0.12] transition-all">
       <a
-        href={`/${game}/cards/${c.id}`}
+        href={(locale !== 'en' ? '/' + locale : '') + '/' + game + '/cards/' + c.id}
         className={`text-sm font-semibold group-hover:underline truncate text-center w-full ${showUpgraded ? 'text-emerald-400' : ''}`}
       >
         {showUpgraded ? `${c.name}+` : c.name}
       </a>
-      <a href={`/${game}/cards/${c.id}`} className="w-full mt-2 flex justify-center overflow-hidden">
+      <a href={(locale !== 'en' ? '/' + locale : '') + '/' + game + '/cards/' + c.id} className="w-full mt-2 flex justify-center overflow-hidden">
         <CssCardRenderer card={c} upgraded={!!showUpgraded} size={isMobile ? 'xs' : 'sm'} game={game as 'sts1' | 'sts2'} />
       </a>
       <div className="mt-2 flex flex-wrap items-center justify-center gap-1">
@@ -118,12 +118,14 @@ function buildUrl(base: string, params: Record<string, string | number | null>) 
 
 export default function CardsExplorer(props: {
   game?: 'sts1' | 'sts2';
+  locale?: string;
   initial?: ApiResp<Card>;
   colors: string[];
   types: string[];
   rarities: string[];
 }) {
   const game = props.game ?? 'sts1';
+  const locale = props.locale ?? 'en';
   const [q, setQ] = useState('');
   const [color, setColor] = useState('');
   const [type, setType] = useState('');
@@ -145,8 +147,8 @@ export default function CardsExplorer(props: {
   const [error, setError] = useState<string | null>(null);
 
   const queryKey = useMemo(
-    () => JSON.stringify({ q, color, type, rarity, cost, offset, limit }),
-    [q, color, type, rarity, cost, offset, limit]
+    () => JSON.stringify({ q, color, type, rarity, cost, offset, limit, locale }),
+    [q, color, type, rarity, cost, offset, limit, locale]
   );
 
   useEffect(() => {
@@ -160,6 +162,7 @@ export default function CardsExplorer(props: {
         type: type || null,
         rarity: rarity || null,
         cost: cost ? Number(cost) : null,
+        lang: locale !== 'en' ? locale : null,
         offset,
         limit,
       })
@@ -246,7 +249,7 @@ export default function CardsExplorer(props: {
 
       <div className="mt-3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
         {(data?.items ?? []).map((c) => (
-          <CardTile key={c.id} c={c} game={game} isMobile={isMobile} upgraded={upgraded} />
+          <CardTile key={c.id} c={c} game={game} isMobile={isMobile} upgraded={upgraded} locale={locale} />
         ))}
       </div>
 
