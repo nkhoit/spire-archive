@@ -137,6 +137,16 @@ const strings: Record<string, Partial<Record<Locale, string>>> = {
   'card enchantments': { ja: 'カードエンチャント', ko: 'カード 인챈트', zh: '卡牌附魔', de: 'Kartenverzauberungen', fr: 'enchantements de carte', es: 'encantamientos de carta', pt: 'encantamentos de carta', it: 'incantesimi carta', pl: 'zaklęć kart', ru: 'зачарований карт', tr: 'kart büyüsü', th: 'เสน่ห์การ์ด' },
   'keywords': { ja: 'キーワード', ko: '키워드', zh: '关键词', de: 'Schlüsselwörter', fr: 'mots-clés', es: 'palabras clave', pt: 'palavras-chave', it: 'parole chiave', pl: 'słów kluczowych', ru: 'ключевых слов', tr: 'anahtar kelime', th: 'คำสำคัญ' },
 
+  // Page subtitles & headings
+  'Buffs, debuffs, and passive effects in STS2.': { ja: 'STS2のバフ、デバフ、パッシブ効果。', ko: 'STS2의 버프, 디버프 및 패시브 효과.', zh: 'STS2中的增益、减益和被动效果。', de: 'Buffs, Debuffs und passive Effekte in STS2.', fr: 'Buffs, débuffs et effets passifs dans STS2.', es: 'Buffs, debuffs y efectos pasivos en STS2.', pt: 'Buffs, debuffs e efeitos passivos em STS2.', it: 'Buff, debuff ed effetti passivi in STS2.', pl: 'Buffy, debuffy i efekty pasywne w STS2.', ru: 'Баффы, дебаффы и пассивные эффекты в STS2.', tr: 'STS2\'deki buff, debuff ve pasif etkiler.', th: 'บัฟ ดีบัฟ และเอฟเฟกต์แฝงใน STS2' },
+  'Card enchantments that can be applied at Rest Sites.': { ja: '休憩所で付与できるカードエンチャント。', ko: '휴식 장소에서 적용할 수 있는 카드 인챈트.', zh: '可在篝火处施加的卡牌附魔。', de: 'Kartenverzauberungen, die an Rastplätzen angewendet werden.', fr: 'Enchantements de carte applicables aux Sites de repos.', es: 'Encantamientos de carta aplicables en Sitios de descanso.', pt: 'Encantamentos de carta aplicáveis em Locais de descanso.', it: 'Incantesimi carta applicabili ai Siti di riposo.', pl: 'Zaklęcia kart stosowane na Miejscach odpoczynku.', ru: 'Зачарования карт, доступные на Местах отдыха.', tr: 'Dinlenme Noktalarında uygulanabilen kart büyüleri.', th: 'เสน่ห์การ์ดที่สามารถใช้ได้ที่จุดพักผ่อน' },
+  'Reference': { ja: 'リファレンス', ko: '참조', zh: '参考', de: 'Referenz', fr: 'Référence', es: 'Referencia', pt: 'Referência', it: 'Riferimento', pl: 'Referencja', ru: 'Справочник', tr: 'Referans', th: 'อ้างอิง' },
+  'Orbs': { ja: 'オーブ', ko: '오브', zh: '球体', de: 'Orbs', fr: 'Orbes', es: 'Orbes', pt: 'Orbes', it: 'Sfere', pl: 'Kule', ru: 'Сферы', tr: 'Küreler', th: 'ออร์บ' },
+  'Stances': { ja: 'スタンス', ko: '자세', zh: '姿态', de: 'Haltungen', fr: 'Postures', es: 'Posturas', pt: 'Posturas', it: 'Posizioni', pl: 'Postawy', ru: 'Стойки', tr: 'Duruşlar', th: 'ท่าทาง' },
+  'Blights': { ja: 'ブライト', ko: '역병', zh: '灾厄', de: 'Seuchen', fr: 'Fléaux', es: 'Plagas', pt: 'Pragas', it: 'Flagelli', pl: 'Plagi', ru: 'Порчи', tr: 'Belalar', th: 'ภัยพิบัติ' },
+  'Achievements': { ja: '実績', ko: '업적', zh: '成就', de: 'Erfolge', fr: 'Succès', es: 'Logros', pt: 'Conquistas', it: 'Obiettivi', pl: 'Osiągnięcia', ru: 'Достижения', tr: 'Başarımlar', th: 'ความสำเร็จ' },
+  'Starting Powers': { ja: '初期パワー', ko: '시작 능력', zh: '初始能力', de: 'Startkräfte', fr: 'Pouvoirs de départ', es: 'Poderes iniciales', pt: 'Poderes iniciais', it: 'Poteri iniziali', pl: 'Startowe moce', ru: 'Начальные силы', tr: 'Başlangıç Güçleri', th: 'พลังเริ่มต้น' },
+  'Pool': { ja: 'プール', ko: '풀', zh: '池', de: 'Pool', fr: 'Pool', es: 'Pool', pt: 'Pool', it: 'Pool', pl: 'Pula', ru: 'Пул', tr: 'Havuz', th: 'พูล' },
   // Section headings
 };
 

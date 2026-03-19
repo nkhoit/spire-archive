@@ -11,6 +11,6 @@ const rarities = Array.from(new Set(enchantments.map((e) => String(e.rarity)))).
 ---
 <Layout game="sts2" title="Enchantments — Spire Archive — STS2" description="Browse Slay the Spire 2 enchantments with filters for rarity.">
   <h1 class="text-xl font-semibold">{t('Enchantments', locale)}</h1>
-  <p class="mt-1 text-sm text-slate-400">Card enchantments that can be applied at Rest Sites.</p>
+  <p class="mt-1 text-sm text-slate-400">{t('Card enchantments that can be applied at Rest Sites.', locale)}</p>
   <EnchantmentsExplorer game="sts2" client:load rarities={rarities} locale={locale} />
 </Layout>

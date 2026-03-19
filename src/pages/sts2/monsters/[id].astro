@@ -3,6 +3,7 @@ import Layout from '../../../components/Layout.astro';
 import Badge from '../../../components/Badge.astro';
 import { getData } from '../../../lib/data';
 import { getLocale } from '../../../lib/i18n';
+import { t } from '../../../lib/ui-strings';
 
 const { id } = Astro.params;
 const { locale, langPrefix } = getLocale(Astro);
@@ -24,7 +25,7 @@ const typeTones: Record<string, string> = {
 };
 ---
 <Layout game="sts2" title={title} description={`${monster.type} · ${hpText ?? 'HP unknown'}`}>
-  <a href={langPrefix + '/sts2/monsters'} class="text-xs text-sky-400 hover:underline">← Monsters</a>
+  <a href={langPrefix + '/sts2/monsters'} class="text-xs text-sky-400 hover:underline">← {t('Monsters', locale)}</a>
   <h1 class="mt-2 text-2xl font-semibold">{monster.name}</h1>
   <div class="mt-2 flex flex-wrap gap-2">
     <Badge label={monster.type} tone={typeTones[monster.type] ?? ''} />
@@ -33,7 +34,7 @@ const typeTones: Record<string, string> = {
 
   {(monster.powers ?? []).length > 0 && (
     <section class="mt-6">
-      <h2 class="text-sm font-semibold text-slate-200">Starting Powers</h2>
+      <h2 class="text-sm font-semibold text-slate-200">{t('Starting Powers', locale)}</h2>
       <div class="mt-2 flex flex-wrap gap-2">
         {(monster.powers ?? []).map((p: string) => (
           <span class="text-xs px-2 py-1 rounded bg-white/10 text-slate-200">{p}</span>
@@ -43,7 +44,7 @@ const typeTones: Record<string, string> = {
   )}
 
   <section class="mt-6">
-    <h2 class="text-sm font-semibold text-slate-200">Moves</h2>
+    <h2 class="text-sm font-semibold text-slate-200">{t('Moves', locale)}</h2>
     {monster.moves?.length ? (
       <div class="mt-3 space-y-2">
         {monster.moves.map((mv: any) => {
