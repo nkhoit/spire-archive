@@ -45,8 +45,8 @@ export default function PowersExplorer(props: { game?: string; locale?: string }
           onChange={(e) => { setOffset(0); setType(e.target.value); }}
         >
           <option value="">{t('All Types', locale)}</option>
-          <option value="Buff">Buff</option>
-          <option value="Debuff">Debuff</option>
+          <option value="Buff">{t('Buff', locale)}</option>
+          <option value="Debuff">{t('Debuff', locale)}</option>
         </select>
       </div>
 
@@ -74,7 +74,7 @@ export default function PowersExplorer(props: { game?: string; locale?: string }
                   <span className="text-sm font-semibold">{p.name}</span>
                   <span className={`text-xs px-1.5 py-0.5 rounded ${
                     p.type === 'Buff' ? 'bg-emerald-900/50 text-emerald-300' : 'bg-red-900/50 text-red-300'
-                  }`}>{p.type}</span>
+                  }`}>{t(p.type, locale)}</span>
                 </div>
                 <p className="mt-0.5 text-sm text-slate-300 line-clamp-2">{p.description}</p>
               </div>
