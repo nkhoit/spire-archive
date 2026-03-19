@@ -114,6 +114,23 @@ const strings: Record<string, Partial<Record<Locale, string>>> = {
   'Description': { ja: '説明', ko: '설명', zh: '描述', de: 'Beschreibung', fr: 'Description', es: 'Descripción', pt: 'Descrição', it: 'Descrizione', pl: 'Opis', ru: 'Описание', tr: 'Açıklama', th: 'คำอธิบาย' },
   'Flavor': { ja: 'フレーバー', ko: '플레이버', zh: '背景', de: 'Beschreibung', fr: 'Ambiance', es: 'Ambientación', pt: 'Sabor', it: 'Ambientazione', pl: 'Opis fabularny', ru: 'Описание', tr: 'Lezzet', th: 'รสชาติ' },
   'Back to': { ja: '戻る:', ko: '돌아가기:', zh: '返回', de: 'Zurück zu', fr: 'Retour à', es: 'Volver a', pt: 'Voltar para', it: 'Torna a', pl: 'Powrót do', ru: 'Назад к', tr: 'Geri dön:', th: 'กลับไป' },
+
+  // STS2 index page
+  'The complete database for Slay the Spire 2': { ja: 'Slay the Spire 2の完全データベース', ko: 'Slay the Spire 2 완전 데이터베이스', zh: 'Slay the Spire 2 完整数据库', de: 'Die komplette Datenbank für Slay the Spire 2', fr: 'La base de données complète de Slay the Spire 2', es: 'La base de datos completa de Slay the Spire 2', pt: 'O banco de dados completo de Slay the Spire 2', it: 'Il database completo di Slay the Spire 2', pl: 'Kompletna baza danych Slay the Spire 2', ru: 'Полная база данных Slay the Spire 2', tr: 'Slay the Spire 2 tam veritabanı', th: 'ฐานข้อมูลที่สมบูรณ์ของ Slay the Spire 2' },
+  'Strength & self-healing': { ja: '筋力と自己回復', ko: '힘과 자가 치유', zh: '力量与自愈', de: 'Stärke & Selbstheilung', fr: 'Force et auto-guérison', es: 'Fuerza y autocuración', pt: 'Força e autocura', it: 'Forza e autocura', pl: 'Siła i samoleczenie', ru: 'Сила и самоисцеление', tr: 'Güç ve kendini iyileştirme', th: 'พลังและการฟื้นฟูตัวเอง' },
+  'Poison & card draw': { ja: '毒とカードドロー', ko: '독과 카드 드로우', zh: '毒与抽牌', de: 'Gift & Kartenziehen', fr: 'Poison et pioche', es: 'Veneno y robo de cartas', pt: 'Veneno e compra de cartas', it: 'Veleno e pesca carte', pl: 'Trucizna i dobieranie', ru: 'Яд и добор карт', tr: 'Zehir ve kart çekme', th: 'พิษและดึงการ์ด' },
+  'Orbs & channeling': { ja: 'オーブとチャネリング', ko: '오브와 채널링', zh: '球体与引导', de: 'Orbs & Kanalisierung', fr: 'Orbes et canalisation', es: 'Orbes y canalización', pt: 'Orbes e canalização', it: 'Sfere e incanalamento', pl: 'Kule i kanałowanie', ru: 'Сферы и направление', tr: 'Küre ve kanalize etme', th: 'ออร์บและชาแนล' },
+  'Summons & sacrifice': { ja: '召喚と犠牲', ko: '소환과 희생', zh: '召唤与牺牲', de: 'Beschwörungen & Opfer', fr: 'Invocations et sacrifice', es: 'Invocaciones y sacrificio', pt: 'Invocações e sacrifício', it: 'Evocazioni e sacrificio', pl: 'Przywołania i poświęcenie', ru: 'Призыв и жертва', tr: 'Çağırma ve feda', th: 'เรียกและเสียสละ' },
+  'Stars & burst turns': { ja: '星とバーストターン', ko: '별과 폭발 턴', zh: '星辰与爆发回合', de: 'Sterne & Burst-Runden', fr: 'Étoiles et tours explosifs', es: 'Estrellas y turnos explosivos', pt: 'Estrelas e turnos explosivos', it: 'Stelle e turni esplosivi', pl: 'Gwiazdy i wybuchy', ru: 'Звёзды и взрывные ходы', tr: 'Yıldızlar ve patlama turları', th: 'ดาวและเทิร์นระเบิด' },
+  'relics': { ja: 'レリック', ko: '유물', zh: '遗物', de: 'Relikte', fr: 'reliques', es: 'reliquias', pt: 'relíquias', it: 'reliquie', pl: 'reliktów', ru: 'реликвий', tr: 'kalıntı', th: 'เรลิค' },
+  'potions': { ja: 'ポーション', ko: '물약', zh: '药水', de: 'Tränke', fr: 'potions', es: 'pociones', pt: 'poções', it: 'pozioni', pl: 'mikstur', ru: 'зелий', tr: 'iksir', th: 'ยา' },
+  'monsters': { ja: 'モンスター', ko: '몬스터', zh: '怪物', de: 'Monster', fr: 'monstres', es: 'monstruos', pt: 'monstros', it: 'mostri', pl: 'potworów', ru: 'монстров', tr: 'canavar', th: 'มอนสเตอร์' },
+  'events': { ja: 'イベント', ko: '이벤트', zh: '事件', de: 'Ereignisse', fr: 'événements', es: 'eventos', pt: 'eventos', it: 'eventi', pl: 'zdarzeń', ru: 'событий', tr: 'etkinlik', th: 'เหตุการณ์' },
+  'buffs & debuffs': { ja: 'バフ＆デバフ', ko: '버프 & 디버フ', zh: '增益与减益', de: 'Buffs & Debuffs', fr: 'effets', es: 'efectos', pt: 'efeitos', it: 'effetti', pl: 'efektów', ru: 'эффектов', tr: 'etki', th: 'บัฟและดีบัฟ' },
+  'card enchantments': { ja: 'カードエンチャント', ko: 'カード 인챈트', zh: '卡牌附魔', de: 'Kartenverzauberungen', fr: 'enchantements de carte', es: 'encantamientos de carta', pt: 'encantamentos de carta', it: 'incantesimi carta', pl: 'zaklęć kart', ru: 'зачарований карт', tr: 'kart büyüsü', th: 'เสน่ห์การ์ด' },
+  'keywords': { ja: 'キーワード', ko: '키워드', zh: '关键词', de: 'Schlüsselwörter', fr: 'mots-clés', es: 'palabras clave', pt: 'palavras-chave', it: 'parole chiave', pl: 'słów kluczowych', ru: 'ключевых слов', tr: 'anahtar kelime', th: 'คำสำคัญ' },
+
+  // Section headings
 };
 
 /**
