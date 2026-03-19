@@ -47,7 +47,7 @@ function deckSummary(deck: string[]) {
 ---
 <Layout game="sts1" title="Characters — Spire Archive" description="Browse the four playable characters of Slay the Spire.">
   <h1 class="text-xl font-semibold">{t('Characters', locale)}</h1>
-  <p class="mt-1 text-sm text-slate-300">The four playable characters of Slay the Spire.</p>
+  <p class="mt-1 text-sm text-slate-300">{t('The four playable characters of Slay the Spire.', locale)}</p>
 
   <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
     {data.characters.map((ch) => {
