@@ -21,7 +21,7 @@ const matchingKeyword = data.keywords.find((k: any) =>
 // Find cards that apply this power (from card_powers.json)
 const relatedCards: any[] = [];
 for (const [cardId, powers] of Object.entries(data.cardPowers)) {
-  if ((powers as any[]).some((p: any) => p.name === power.name)) {
+  if ((powers as any[]).some((p: any) => p.id === power.id)) {
     const card = data.cardById.get(cardId);
     if (card) {
       relatedCards.push(card);
@@ -29,16 +29,20 @@ for (const [cardId, powers] of Object.entries(data.cardPowers)) {
   }
 }
 
-// Also check cards whose description mentions this power name, or cards with the same name
-const powerNameLower = power.name.toLowerCase();
+// Also check cards whose description mentions this power name
+const basePower = (await getData('sts2')).powers.find((p: any) => p.id === id);
+const powerNameLower = (basePower?.name ?? power.name).toLowerCase();
 const genericNames = new Set(['draw', 'draw card', 'block', 'heal', 'damage', 'gold', 'energy']);
-const skipDescMatch = power.name.length <= 5 || genericNames.has(powerNameLower);
-for (const card of data.cards) {
-  if (relatedCards.some(rc => rc.id === card.id)) continue;
-  if (card.name?.toLowerCase() === powerNameLower) {
-    relatedCards.push(card);
-  } else if (!skipDescMatch && card.description?.toLowerCase().includes(powerNameLower)) {
-    relatedCards.push(card);
+const skipDescMatch = powerNameLower.length <= 5 || genericNames.has(powerNameLower);
+const baseData = await getData('sts2');
+for (const baseCard of baseData.cards) {
+  if (relatedCards.some(rc => rc.id === baseCard.id)) continue;
+  if (baseCard.name?.toLowerCase() === powerNameLower) {
+    const card = data.cardById.get(baseCard.id);
+    if (card) relatedCards.push(card);
+  } else if (!skipDescMatch && baseCard.description?.toLowerCase().includes(powerNameLower)) {
+    const card = data.cardById.get(baseCard.id);
+    if (card) relatedCards.push(card);
   }
 }
 
