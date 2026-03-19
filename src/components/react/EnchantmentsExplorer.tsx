@@ -44,7 +44,7 @@ export default function EnchantmentsExplorer(props: { game?: string; rarities: s
         >
           <option value="">{t('All Rarities', locale)}</option>
           {props.rarities.map((r) => (
-            <option key={r} value={r}>{cap(r)}</option>
+            <option key={r} value={r}>{t(cap(r), locale)}</option>
           ))}
         </select>
       </div>

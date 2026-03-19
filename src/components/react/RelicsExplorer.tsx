@@ -68,10 +68,10 @@ export default function RelicsExplorer(props: { game?: string; tiers: string[]; 
             setColor(e.target.value);
           }}
         >
-          <option value="">All colors</option>
+          <option value="">{t('All colors', locale)}</option>
           {props.colors.map((c) => (
             <option key={c} value={c}>
-              {c}
+              {t(c, locale)}
             </option>
           ))}
         </select>

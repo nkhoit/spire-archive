@@ -79,6 +79,13 @@ const strings: Record<string, Partial<Record<Locale, string>>> = {
   // Footer / branding
   'a Slay the Spire companion': { ja: 'Slay the Spireの攻略サイト', ko: 'Slay the Spire 공략 사이트', zh: 'Slay the Spire 攻略网站', de: 'Ein Slay the Spire Begleiter', fr: 'Un compagnon Slay the Spire', es: 'Una guía de Slay the Spire', pt: 'Um companheiro de Slay the Spire', it: 'Un compagno di Slay the Spire', pl: 'Kompendium Slay the Spire', ru: 'Справочник Slay the Spire', tr: 'Bir Slay the Spire rehberi', th: 'คู่มือ Slay the Spire' },
 
+  // Filter options
+  'All colors': { ja: '全カラー', ko: '모든 색상', zh: '所有颜色', de: 'Alle Farben', fr: 'Toutes les couleurs', es: 'Todos los colores', pt: 'Todas as cores', it: 'Tutti i colori', pl: 'Wszystkie kolory', ru: 'Все цвета', tr: 'Tüm Renkler', th: 'ทุกสี' },
+  'Colorless': { ja: '無色', ko: '무색', zh: '无色', de: 'Farblos', fr: 'Incolore', es: 'Sin color', pt: 'Incolor', it: 'Incolore', pl: 'Bezbarwna', ru: 'Бесцветная', tr: 'Renksiz', th: 'ไม่มีสี' },
+  'Token': { ja: 'トークン', ko: '토큰', zh: '衍生', de: 'Spielstein', fr: 'Jeton', es: 'Ficha', pt: 'Ficha', it: 'Gettone', pl: 'Żeton', ru: 'Жетон', tr: 'Jeton', th: 'โทเค็น' },
+  'View Upgrades': { ja: 'アップグレードを表示', ko: '업그레이드 보기', zh: '查看升级', de: 'Aufwertungen anzeigen', fr: 'Voir les améliorations', es: 'Ver mejoras', pt: 'Ver melhorias', it: 'Vedi potenziamenti', pl: 'Pokaż ulepszenia', ru: 'Показать улучшения', tr: 'Yükseltmeleri Göster', th: 'ดูอัปเกรด' },
+  'Ancient': { ja: 'エンシェント', ko: '고대', zh: '远古', de: 'Uralte', fr: 'Ancienne', es: 'Antigua', pt: 'Antiga', it: 'Antica', pl: 'Starożytna', ru: 'Древняя', tr: 'Kadim', th: 'โบราณ' },
+
   // Misc
   'Description': { ja: '説明', ko: '설명', zh: '描述', de: 'Beschreibung', fr: 'Description', es: 'Descripción', pt: 'Descrição', it: 'Descrizione', pl: 'Opis', ru: 'Описание', tr: 'Açıklama', th: 'คำอธิบาย' },
   'Flavor': { ja: 'フレーバー', ko: '플레이버', zh: '背景', de: 'Beschreibung', fr: 'Ambiance', es: 'Ambientación', pt: 'Sabor', it: 'Ambientazione', pl: 'Opis fabularny', ru: 'Описание', tr: 'Lezzet', th: 'รสชาติ' },

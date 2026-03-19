@@ -82,7 +82,7 @@ function CardTile({ c, game, isMobile, upgraded, locale }: { c: Card; game: stri
   );
 }
 
-function UpgradeToggle({ checked, onChange, game }: { checked: boolean; onChange: (v: boolean) => void; game: string }) {
+function UpgradeToggle({ checked, onChange, game, locale }: { checked: boolean; onChange: (v: boolean) => void; game: string; locale?: string }) {
   const isSts2 = game === 'sts2';
   const checkboxSrc = isSts2
     ? checked ? '/images/sts2/ui/checkbox_ticked.png' : '/images/sts2/ui/checkbox_unticked.png'
@@ -102,7 +102,7 @@ function UpgradeToggle({ checked, onChange, game }: { checked: boolean; onChange
         </span>
       )}
       <span className="text-base font-semibold" style={{ color: '#EFC851' }}>
-        View Upgrades
+        {t('View Upgrades', locale)}
       </span>
     </button>
   );
@@ -195,9 +195,9 @@ export default function CardsExplorer(props: {
           value={color}
           onChange={(e) => { setOffset(0); setColor(e.target.value); }}
         >
-          <option value="">All colors</option>
+          <option value="">{t('All colors', locale)}</option>
           {props.colors.map((c) => (
-            <option key={c} value={c}>{cap(c)}</option>
+            <option key={c} value={c}>{t(cap(c), locale)}</option>
           ))}
         </select>
         <select
@@ -206,8 +206,8 @@ export default function CardsExplorer(props: {
           onChange={(e) => { setOffset(0); setType(e.target.value); }}
         >
           <option value="">{t('All Types', locale)}</option>
-          {props.types.map((t) => (
-            <option key={t} value={t}>{t}</option>
+          {props.types.map((tp) => (
+            <option key={tp} value={tp}>{t(tp, locale)}</option>
           ))}
         </select>
         <select
@@ -217,7 +217,7 @@ export default function CardsExplorer(props: {
         >
           <option value="">{t('All Rarities', locale)}</option>
           {props.rarities.map((r) => (
-            <option key={r} value={r}>{r}</option>
+            <option key={r} value={r}>{t(r, locale)}</option>
           ))}
         </select>
         <input
@@ -254,7 +254,7 @@ export default function CardsExplorer(props: {
         ))}
       </div>
 
-      <UpgradeToggle checked={upgraded} onChange={setUpgraded} game={game} />
+      <UpgradeToggle checked={upgraded} onChange={setUpgraded} game={game} locale={locale} />
     </div>
   );
 }
