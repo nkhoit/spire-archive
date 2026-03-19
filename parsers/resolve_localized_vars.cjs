@@ -8,11 +8,15 @@
 const fs = require('fs');
 const path = require('path');
 
-const CS_DIR = '/Users/kuro/code/sts2-research/decompiled/MegaCrit.Sts2.Core.Models.Cards';
+const CS_DIRS = {
+  cards: '/Users/kuro/code/sts2-research/decompiled/MegaCrit.Sts2.Core.Models.Cards',
+  relics: '/Users/kuro/code/sts2-research/decompiled/MegaCrit.Sts2.Core.Models.Relics',
+  potions: '/Users/kuro/code/sts2-research/decompiled/MegaCrit.Sts2.Core.Models.Potions',
+};
 const LOCALE_DIR = path.join(__dirname, '../data/sts2/localization');
 
-function cardIdToFilename(cardId) {
-  return cardId.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join('') + '.cs';
+function idToFilename(id) {
+  return id.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join('') + '.cs';
 }
 
 function extractVarsFromCs(csContent) {
@@ -271,16 +275,18 @@ function resolveTokens(desc, vars) {
 // Cache for C# vars
 const csVarsCache = {};
 
-function getVarsForCard(cardId) {
-  if (cardId in csVarsCache) return csVarsCache[cardId];
-  const filename = cardIdToFilename(cardId);
-  const csPath = path.join(CS_DIR, filename);
+function getVarsForId(id, category) {
+  const cacheKey = `${category}:${id}`;
+  if (cacheKey in csVarsCache) return csVarsCache[cacheKey];
+  const filename = idToFilename(id);
+  const csDir = CS_DIRS[category];
+  const csPath = csDir ? path.join(csDir, filename) : null;
   let vars = {};
-  if (fs.existsSync(csPath)) {
+  if (csPath && fs.existsSync(csPath)) {
     const content = fs.readFileSync(csPath, 'utf8');
     vars = extractVarsFromCs(content);
   }
-  csVarsCache[cardId] = vars;
+  csVarsCache[cacheKey] = vars;
   return vars;
 }
 
@@ -289,56 +295,65 @@ const langs = fs.readdirSync(LOCALE_DIR).filter(f => f.endsWith('.json')).map(f 
 console.log(`Processing ${langs.length} languages: ${langs.join(', ')}`);
 
 const results = {};
+const CATEGORIES = ['cards', 'relics', 'potions'];
+
 for (const lang of langs) {
   const filePath = path.join(LOCALE_DIR, lang + '.json');
   const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-  const cards = data.cards || {};
+  results[lang] = {};
 
-  let totalCards = 0;
-  let resolvedCards = 0;
-  let unresolvedCards = 0;
-  let fullyResolved = 0;
-  const stillUnresolved = [];
+  for (const category of CATEGORIES) {
+    const items = data[category] || {};
+    let totalItems = 0;
+    let fullyResolved = 0;
+    let unresolvedItems = 0;
+    const stillUnresolved = [];
 
-  for (const [cardId, cardData] of Object.entries(cards)) {
-    const desc = cardData.description || '';
-    if (!desc.includes('{')) { totalCards++; continue; }
-    totalCards++;
+    for (const [itemId, itemData] of Object.entries(items)) {
+      const desc = itemData.description || '';
+      if (!desc.includes('{')) { totalItems++; continue; }
+      totalItems++;
 
-    const vars = getVarsForCard(cardId);
-    const newDesc = resolveTokens(desc, vars);
-    cardData.description = newDesc;
+      const vars = getVarsForId(itemId, category);
+      const newDesc = resolveTokens(desc, vars);
+      itemData.description = newDesc;
 
-    if (!newDesc.includes('{')) {
-      resolvedCards++;
-      fullyResolved++;
-    } else {
-      unresolvedCards++;
-      // Find unresolved templates
-      const templates = [];
-      let match;
-      const re = /\{[^}]+\}/g;
-      while ((match = re.exec(newDesc)) !== null) templates.push(match[0]);
-      stillUnresolved.push({ cardId, templates, desc: newDesc.slice(0, 80) });
+      if (!newDesc.includes('{')) {
+        fullyResolved++;
+      } else {
+        unresolvedItems++;
+        const templates = [];
+        let match;
+        const re = /\{[^}]+\}/g;
+        while ((match = re.exec(newDesc)) !== null) templates.push(match[0]);
+        stillUnresolved.push({ itemId, templates, desc: newDesc.slice(0, 80) });
+      }
+    }
+
+    results[lang][category] = { totalItems, fullyResolved, unresolvedItems, stillUnresolved };
+    if (fullyResolved > 0 || unresolvedItems > 0) {
+      console.log(`[${lang}/${category}] Total: ${totalItems}, Resolved: ${fullyResolved}, Still unresolved: ${unresolvedItems}`);
     }
   }
 
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
-  results[lang] = { totalCards, fullyResolved, unresolvedCards, stillUnresolved };
-  console.log(`[${lang}] Total: ${totalCards}, Resolved: ${fullyResolved}, Still unresolved: ${unresolvedCards}`);
 }
 
 // Summary of unique unresolved templates across all langs
 const allUnresolvedTemplates = new Set();
-for (const [lang, r] of Object.entries(results)) {
-  for (const { templates } of r.stillUnresolved) {
-    for (const t of templates) allUnresolvedTemplates.add(t);
+for (const [lang, cats] of Object.entries(results)) {
+  for (const [cat, r] of Object.entries(cats)) {
+    for (const { templates } of r.stillUnresolved) {
+      for (const t of templates) allUnresolvedTemplates.add(t);
+    }
   }
 }
 console.log(`\nUnique unresolved templates (${allUnresolvedTemplates.size}):`);
 for (const t of [...allUnresolvedTemplates].sort()) console.log(' ', t);
 
-// Validate BASH in Japanese
+// Validation
 const jaData = JSON.parse(fs.readFileSync(path.join(LOCALE_DIR, 'ja.json'), 'utf8'));
-const bashDesc = jaData.cards?.BASH?.description;
-console.log('\nValidation - BASH (ja):', bashDesc);
+console.log('\nValidation (ja):');
+console.log('  BASH card:', jaData.cards?.BASH?.description);
+console.log('  AKABEKO relic:', jaData.relics?.AKABEKO?.description);
+console.log('  BEETLE_JUICE potion:', jaData.potions?.BEETLE_JUICE?.description);

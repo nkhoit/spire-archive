@@ -82,6 +82,7 @@ const strings: Record<string, Partial<Record<Locale, string>>> = {
   // Filter options
   'All colors': { ja: '全カラー', ko: '모든 색상', zh: '所有颜色', de: 'Alle Farben', fr: 'Toutes les couleurs', es: 'Todos los colores', pt: 'Todas as cores', it: 'Tutti i colori', pl: 'Wszystkie kolory', ru: 'Все цвета', tr: 'Tüm Renkler', th: 'ทุกสี' },
   'Colorless': { ja: '無色', ko: '무색', zh: '无色', de: 'Farblos', fr: 'Incolore', es: 'Sin color', pt: 'Incolor', it: 'Incolore', pl: 'Bezbarwna', ru: 'Бесцветная', tr: 'Renksiz', th: 'ไม่มีสี' },
+  'Shared': { ja: '共有', ko: '공유', zh: '共享', de: 'Geteilt', fr: 'Partagé', es: 'Compartido', pt: 'Compartilhado', it: 'Condiviso', pl: 'Wspólny', ru: 'Общий', tr: 'Paylaşılan', th: 'ใช้ร่วม' },
   'Token': { ja: 'トークン', ko: '토큰', zh: '衍生', de: 'Spielstein', fr: 'Jeton', es: 'Ficha', pt: 'Ficha', it: 'Gettone', pl: 'Żeton', ru: 'Жетон', tr: 'Jeton', th: 'โทเค็น' },
   'View Upgrades': { ja: 'アップグレードを表示', ko: '업그레이드 보기', zh: '查看升级', de: 'Aufwertungen anzeigen', fr: 'Voir les améliorations', es: 'Ver mejoras', pt: 'Ver melhorias', it: 'Vedi potenziamenti', pl: 'Pokaż ulepszenia', ru: 'Показать улучшения', tr: 'Yükseltmeleri Göster', th: 'ดูอัปเกรด' },
   'Ancient': { ja: 'エンシェント', ko: '고대', zh: '远古', de: 'Uralte', fr: 'Ancienne', es: 'Antigua', pt: 'Antiga', it: 'Antica', pl: 'Starożytna', ru: 'Древняя', tr: 'Kadim', th: 'โบราณ' },

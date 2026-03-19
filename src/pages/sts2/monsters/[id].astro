@@ -28,8 +28,8 @@ const typeTones: Record<string, string> = {
   <a href={langPrefix + '/sts2/monsters'} class="text-xs text-sky-400 hover:underline">← {t('Monsters', locale)}</a>
   <h1 class="mt-2 text-2xl font-semibold">{monster.name}</h1>
   <div class="mt-2 flex flex-wrap gap-2">
-    <Badge label={monster.type} tone={typeTones[monster.type] ?? ''} />
-    {hpText && <Badge label={hpText} />}
+    <Badge label={monster.type} tone={typeTones[monster.type] ?? ''} locale={locale} />
+    {hpText && <Badge label={hpText} locale={locale} />}
   </div>
 
   {(monster.powers ?? []).length > 0 && (

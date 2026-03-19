@@ -1,12 +1,15 @@
 ---
 import { COLOR_CLASS } from '../lib/colors';
+import { t } from '../lib/ui-strings';
 
 export interface Props {
   label: string;
   tone?: string;
+  locale?: string;
 }
 
-const { label, tone } = Astro.props;
+const { label, tone, locale = 'en' } = Astro.props;
 const cls = tone ? COLOR_CLASS[tone] : 'bg-white/10 text-slate-200 ring-white/10';
+const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 ---
-<span class={`inline-flex items-center rounded-full px-2 py-0.5 text-xs ring-1 capitalize ${cls}`}>{label}</span>
+<span class={`inline-flex items-center rounded-full px-2 py-0.5 text-xs ring-1 capitalize ${cls}`}>{t(cap(label), locale)}</span>
