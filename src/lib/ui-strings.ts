@@ -58,6 +58,7 @@ const strings: Record<string, Partial<Record<Locale, string>>> = {
 
   // Monster detail
   'HP': { ja: 'HP', ko: 'HP', zh: 'HP', de: 'HP', fr: 'PV', es: 'PV', pt: 'PV', it: 'PV', pl: 'HP', ru: 'HP', tr: 'HP', th: 'HP' },
+  'Energy': { ja: 'エナジー', ko: '에너지', zh: '能量', de: 'Energie', fr: 'Énergie', es: 'Energía', pt: 'Energia', it: 'Energia', pl: 'Energia', ru: 'Энергия', tr: 'Enerji', th: 'พลังงาน' },
   'Moves': { ja: '行動', ko: '행동', zh: '招式', de: 'Züge', fr: 'Actions', es: 'Movimientos', pt: 'Movimentos', it: 'Mosse', pl: 'Ruchy', ru: 'Действия', tr: 'Hareketler', th: 'การเคลื่อนไหว' },
   'Encounter Type': { ja: '遭遇タイプ', ko: '조우 유형', zh: '遭遇类型', de: 'Begegnungstyp', fr: "Type de rencontre", es: 'Tipo de encuentro', pt: 'Tipo de encontro', it: 'Tipo di incontro', pl: 'Typ spotkania', ru: 'Тип встречи', tr: 'Karşılaşma Türü', th: 'ประเภทการเผชิญหน้า' },
 
