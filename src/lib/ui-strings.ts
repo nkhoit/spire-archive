@@ -185,6 +185,9 @@ const strings: Record<string, Partial<Record<Locale, string>>> = {
   'Unknown': { ja: '不明', ko: '알 수 없음', zh: '未知', de: 'Unbekannt', fr: 'Inconnu', es: 'Desconocido', pt: 'Desconhecido', it: 'Sconosciuto', pl: 'Nieznany', ru: 'Неизвестно', tr: 'Bilinmiyor', th: 'ไม่ทราบ' },
   'Heal': { ja: '回復', ko: '회복', zh: '治疗', de: 'Heilung', fr: 'Soin', es: 'Curación', pt: 'Cura', it: 'Cura', pl: 'Leczenie', ru: 'Исцеление', tr: 'İyileştirme', th: 'รักษา' },
   'Pool': { ja: 'プール', ko: '풀', zh: '池', de: 'Pool', fr: 'Pool', es: 'Pool', pt: 'Pool', it: 'Pool', pl: 'Pula', ru: 'Пул', tr: 'Havuz', th: 'พูล' },
+  'Patch Notes': { ja: 'パッチノート', ko: '패치 노트', zh: '更新日志', de: 'Patch-Notizen', fr: 'Notes de mise à jour', es: 'Notas del parche', pt: 'Notas de atualização', it: 'Note della patch', pl: 'Notatki z aktualizacji', ru: 'Примечания к обновлению', tr: 'Yama Notları', th: 'บันทึกการอัปเดต' },
+  'weekly updates': { ja: '件の週間アップデート', ko: '개의 주간 업데이트', zh: '次每周更新', de: 'wöchentliche Updates', fr: 'mises à jour hebdomadaires', es: 'actualizaciones semanales', pt: 'atualizações semanais', it: 'aggiornamenti settimanali', pl: 'tygodniowych aktualizacji', ru: 'еженедельных обновлений', tr: 'haftalık güncelleme', th: 'การอัปเดตรายสัปดาห์' },
+  'updates from the development of Slay the Spire 2': { ja: '件のSlay the Spire 2開発アップデート', ko: '개의 Slay the Spire 2 개발 업데이트', zh: '次Slay the Spire 2开发更新', de: 'Updates aus der Entwicklung von Slay the Spire 2', fr: 'mises à jour du développement de Slay the Spire 2', es: 'actualizaciones del desarrollo de Slay the Spire 2', pt: 'atualizações do desenvolvimento de Slay the Spire 2', it: 'aggiornamenti dallo sviluppo di Slay the Spire 2', pl: 'aktualizacji z rozwoju Slay the Spire 2', ru: 'обновлений из разработки Slay the Spire 2', tr: 'Slay the Spire 2 geliştirme güncellemesi', th: 'การอัปเดตจากการพัฒนา Slay the Spire 2' },
   // Section headings
 };
 
