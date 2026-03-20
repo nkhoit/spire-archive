@@ -12,8 +12,14 @@
   {
     "id": "ASSASSIN_RUBY_RAIDER",
     "name": "Assassin Ruby Raider",
-    "min_hp": 18,
-    "max_hp": 23,
+    "min_hp": {
+      "ascension": 19,
+      "normal": 18
+    },
+    "max_hp": {
+      "ascension": 24,
+      "normal": 23
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -23,13 +29,31 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Killshot",
+        "id": "KILLSHOT_MOVE",
+        "intent": {
+          "type": "attack"
+        },
+        "followUp": "KILLSHOT_MOVE",
+        "loops": true
+      }
+    ],
+    "start_move": "KILLSHOT_MOVE"
   },
   {
     "id": "AXE_RUBY_RAIDER",
     "name": "Axe Ruby Raider",
-    "min_hp": 20,
-    "max_hp": 22,
+    "min_hp": {
+      "ascension": 21,
+      "normal": 20
+    },
+    "max_hp": {
+      "ascension": 23,
+      "normal": 22
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -44,13 +68,62 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Swing 1",
+        "id": "SWING_1",
+        "intent": {
+          "type": "attack",
+          "damage": 5,
+          "ascension_damage": 6
+        },
+        "additional_intents": [
+          {
+            "type": "defend"
+          }
+        ],
+        "followUp": "SWING_2"
+      },
+      {
+        "name": "Swing 2",
+        "id": "SWING_2",
+        "intent": {
+          "type": "attack",
+          "damage": 5,
+          "ascension_damage": 6
+        },
+        "additional_intents": [
+          {
+            "type": "defend"
+          }
+        ],
+        "followUp": "BIG_SWING"
+      },
+      {
+        "name": "Big Swing",
+        "id": "BIG_SWING",
+        "intent": {
+          "type": "attack",
+          "damage": 12,
+          "ascension_damage": 13
+        },
+        "followUp": "SWING_1"
+      }
+    ],
+    "start_move": "SWING_1"
   },
   {
     "id": "AXEBOT",
     "name": "Axebot",
-    "min_hp": 40,
-    "max_hp": 44,
+    "min_hp": {
+      "ascension": 42,
+      "normal": 40
+    },
+    "max_hp": {
+      "ascension": 46,
+      "normal": 44
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -65,7 +138,71 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Boot Up",
+        "id": "BOOT_UP_MOVE",
+        "intent": {
+          "type": "defend"
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "RAND_MOVE",
+        "followUpType": "random"
+      },
+      {
+        "name": "One Two",
+        "id": "ONE_TWO_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 2,
+          "damage": 5,
+          "ascension_damage": 6
+        },
+        "followUp": "RAND_MOVE",
+        "followUpType": "random"
+      },
+      {
+        "name": "Sharpen",
+        "id": "SHARPEN_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "RAND_MOVE",
+        "followUpType": "random"
+      },
+      {
+        "name": "Hammer Uppercut",
+        "id": "HAMMER_UPPERCUT_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 8,
+          "ascension_damage": 10
+        },
+        "additional_intents": [
+          {
+            "type": "debuff"
+          }
+        ],
+        "followUp": "RAND_MOVE",
+        "followUpType": "random"
+      },
+      {
+        "name": "RAND MOVE",
+        "id": "RAND_MOVE",
+        "type": "random",
+        "branches": [
+          "ONE_TWO_MOVE",
+          "SHARPEN_MOVE",
+          "HAMMER_UPPERCUT_MOVE"
+        ]
+      }
+    ],
+    "start_move": "BOOT_UP_MOVE"
   },
   {
     "id": "BATTLE_FRIEND_V1",
@@ -114,13 +251,31 @@
     "type": "Normal",
     "act": "unknown",
     "moves": [],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Nothing",
+        "id": "NOTHING",
+        "intent": {
+          "type": "hidden"
+        },
+        "followUp": "NOTHING",
+        "loops": true
+      }
+    ],
+    "start_move": "NOTHING"
   },
   {
     "id": "BOWLBUG_EGG",
     "name": "Bowlbug Egg",
-    "min_hp": 21,
-    "max_hp": 22,
+    "min_hp": {
+      "ascension": 23,
+      "normal": 21
+    },
+    "max_hp": {
+      "ascension": 24,
+      "normal": 22
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -130,13 +285,38 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Bite",
+        "id": "BITE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 7,
+          "ascension_damage": 8
+        },
+        "additional_intents": [
+          {
+            "type": "defend"
+          }
+        ],
+        "followUp": "BITE_MOVE",
+        "loops": true
+      }
+    ],
+    "start_move": "BITE_MOVE"
   },
   {
     "id": "BOWLBUG_NECTAR",
     "name": "Bowlbug Nectar",
-    "min_hp": 35,
-    "max_hp": 38,
+    "min_hp": {
+      "ascension": 36,
+      "normal": 35
+    },
+    "max_hp": {
+      "ascension": 39,
+      "normal": 38
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -146,26 +326,84 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Thrash",
+        "id": "THRASH_MOVE",
+        "intent": {
+          "type": "attack"
+        },
+        "followUp": "BUFF_MOVE"
+      },
+      {
+        "name": "Buff",
+        "id": "BUFF_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "THRASH2_MOVE"
+      },
+      {
+        "name": "Thrash2",
+        "id": "THRASH2_MOVE",
+        "intent": {
+          "type": "attack"
+        },
+        "followUp": "THRASH2_MOVE",
+        "loops": true
+      }
+    ],
+    "start_move": "THRASH_MOVE"
   },
   {
     "id": "BOWLBUG_ROCK",
     "name": "Bowlbug Rock",
-    "min_hp": 45,
-    "max_hp": 48,
+    "min_hp": {
+      "ascension": 46,
+      "normal": 45
+    },
+    "max_hp": {
+      "ascension": 49,
+      "normal": 48
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [],
     "description": null,
     "powers": [
       "ImbalancedPower 1"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Headbutt",
+        "id": "HEADBUTT_MOVE",
+        "intent": {
+          "type": "attack"
+        }
+      },
+      {
+        "name": "Dizzy",
+        "id": "DIZZY_MOVE",
+        "intent": {
+          "type": "stun"
+        },
+        "followUp": "HEADBUTT_MOVE"
+      }
+    ],
+    "start_move": "HEADBUTT_MOVE"
   },
   {
     "id": "BOWLBUG_SILK",
     "name": "Bowlbug Silk",
-    "min_hp": 40,
-    "max_hp": 43,
+    "min_hp": {
+      "ascension": 41,
+      "normal": 40
+    },
+    "max_hp": {
+      "ascension": 44,
+      "normal": 43
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -175,13 +413,41 @@
         "hits": 2
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Trash",
+        "id": "TRASH_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 2,
+          "damage": 4,
+          "ascension_damage": 5
+        },
+        "followUp": "TOXIC_SPIT_MOVE"
+      },
+      {
+        "name": "Toxic Spit",
+        "id": "TOXIC_SPIT_MOVE",
+        "intent": {
+          "type": "debuff"
+        },
+        "followUp": "TRASH_MOVE"
+      }
+    ],
+    "start_move": "TOXIC_SPIT_MOVE"
   },
   {
     "id": "BRUTE_RUBY_RAIDER",
     "name": "Brute Ruby Raider",
-    "min_hp": 30,
-    "max_hp": 33,
+    "min_hp": {
+      "ascension": 31,
+      "normal": 30
+    },
+    "max_hp": {
+      "ascension": 34,
+      "normal": 33
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -191,26 +457,97 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Beat",
+        "id": "BEAT_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 7,
+          "ascension_damage": 8
+        },
+        "followUp": "ROAR_MOVE"
+      },
+      {
+        "name": "Roar",
+        "id": "ROAR_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "BEAT_MOVE"
+      }
+    ],
+    "start_move": "BEAT_MOVE"
   },
   {
     "id": "BYGONE_EFFIGY",
     "name": "Bygone Effigy",
-    "min_hp": 127,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 132,
+      "normal": 127
+    },
+    "max_hp": {
+      "ascension": 132,
+      "normal": 127
+    },
     "type": "Elite",
     "act": "unknown",
     "moves": [],
     "description": null,
     "powers": [
       "SlowPower 1"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Initial Sleep",
+        "id": "INITIAL_SLEEP_MOVE",
+        "intent": {
+          "type": "sleep"
+        },
+        "followUp": "WAKE_MOVE"
+      },
+      {
+        "name": "Wake",
+        "id": "WAKE_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "SLASHES_MOVE"
+      },
+      {
+        "name": "Sleep",
+        "id": "SLEEP_MOVE",
+        "intent": {
+          "type": "sleep"
+        },
+        "followUp": "SLASHES_MOVE"
+      },
+      {
+        "name": "Slashes",
+        "id": "SLASHES_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 15,
+          "ascension_damage": 17
+        },
+        "followUp": "SLASHES_MOVE",
+        "loops": true
+      }
+    ],
+    "start_move": "INITIAL_SLEEP_MOVE"
   },
   {
     "id": "BYRDONIS",
     "name": "Byrdonis",
-    "min_hp": 91,
-    "max_hp": 94,
+    "min_hp": {
+      "ascension": 99,
+      "normal": 91
+    },
+    "max_hp": {
+      "ascension": 99,
+      "normal": 94
+    },
     "type": "Elite",
     "act": "unknown",
     "moves": [
@@ -228,7 +565,26 @@
     "description": null,
     "powers": [
       "TerritorialPower 1"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Peck",
+        "id": "PECK_MOVE",
+        "intent": {
+          "type": "multi_attack"
+        },
+        "followUp": "SWOOP_MOVE"
+      },
+      {
+        "name": "Swoop",
+        "id": "SWOOP_MOVE",
+        "intent": {
+          "type": "attack"
+        },
+        "followUp": "PECK_MOVE"
+      }
+    ],
+    "start_move": "SWOOP_MOVE"
   },
   {
     "id": "BYRDPIP",
@@ -243,8 +599,14 @@
   {
     "id": "CALCIFIED_CULTIST",
     "name": "Calcified Cultist",
-    "min_hp": 38,
-    "max_hp": 41,
+    "min_hp": {
+      "ascension": 39,
+      "normal": 38
+    },
+    "max_hp": {
+      "ascension": 42,
+      "normal": 41
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -254,13 +616,41 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Incantation",
+        "id": "INCANTATION_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "DARK_STRIKE_MOVE"
+      },
+      {
+        "name": "Dark Strike",
+        "id": "DARK_STRIKE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 9,
+          "ascension_damage": 11
+        },
+        "followUp": "DARK_STRIKE_MOVE",
+        "loops": true
+      }
+    ],
+    "start_move": "INCANTATION_MOVE"
   },
   {
     "id": "CEREMONIAL_BEAST",
     "name": "Ceremonial Beast",
-    "min_hp": 252,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 262,
+      "normal": 252
+    },
+    "max_hp": {
+      "ascension": 262,
+      "normal": 252
+    },
     "type": "Boss",
     "act": "unknown",
     "moves": [
@@ -275,13 +665,87 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Stamp",
+        "id": "STAMP_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "PLOW_MOVE"
+      },
+      {
+        "name": "Plow",
+        "id": "PLOW_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 18,
+          "ascension_damage": 20
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "PLOW_MOVE",
+        "loops": true
+      },
+      {
+        "name": "Stun",
+        "id": "STUN_MOVE",
+        "intent": {
+          "type": "stun"
+        },
+        "followUp": "BEAST_CRY_MOVE"
+      },
+      {
+        "name": "Beast Cry",
+        "id": "BEAST_CRY_MOVE",
+        "intent": {
+          "type": "debuff"
+        },
+        "followUp": "STOMP_MOVE"
+      },
+      {
+        "name": "Stomp",
+        "id": "STOMP_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 15,
+          "ascension_damage": 17
+        },
+        "followUp": "CRUSH_MOVE"
+      },
+      {
+        "name": "Crush",
+        "id": "CRUSH_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 17,
+          "ascension_damage": 19
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "BEAST_CRY_MOVE"
+      }
+    ],
+    "start_move": "STAMP_MOVE"
   },
   {
     "id": "CHOMPER",
     "name": "Chomper",
-    "min_hp": 60,
-    "max_hp": 64,
+    "min_hp": {
+      "ascension": 63,
+      "normal": 60
+    },
+    "max_hp": {
+      "ascension": 67,
+      "normal": 64
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -294,13 +758,38 @@
     "description": null,
     "powers": [
       "ArtifactPower 2"
+    ],
+    "move_pattern": [
+      {
+        "name": "Clamp",
+        "id": "CLAMP_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 2
+        },
+        "followUp": "SCREECH_MOVE"
+      },
+      {
+        "name": "Screech",
+        "id": "SCREECH_MOVE",
+        "intent": {
+          "type": "status"
+        },
+        "followUp": "CLAMP_MOVE"
+      }
     ]
   },
   {
     "id": "CORPSE_SLUG",
     "name": "Corpse Slug",
-    "min_hp": 25,
-    "max_hp": 27,
+    "min_hp": {
+      "ascension": 27,
+      "normal": 25
+    },
+    "max_hp": {
+      "ascension": 29,
+      "normal": 27
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -315,13 +804,47 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Whip Slap",
+        "id": "WHIP_SLAP_MOVE",
+        "intent": {
+          "type": "multi_attack"
+        },
+        "followUp": "GLOMP_MOVE"
+      },
+      {
+        "name": "Glomp",
+        "id": "GLOMP_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 8,
+          "ascension_damage": 9
+        },
+        "followUp": "GOOP_MOVE"
+      },
+      {
+        "name": "Goop",
+        "id": "GOOP_MOVE",
+        "intent": {
+          "type": "debuff"
+        },
+        "followUp": "WHIP_SLAP_MOVE"
+      }
+    ]
   },
   {
     "id": "CROSSBOW_RUBY_RAIDER",
     "name": "Crossbow Ruby Raider",
-    "min_hp": 18,
-    "max_hp": 21,
+    "min_hp": {
+      "ascension": 19,
+      "normal": 18
+    },
+    "max_hp": {
+      "ascension": 22,
+      "normal": 21
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -331,13 +854,40 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Fire",
+        "id": "FIRE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 14,
+          "ascension_damage": 16
+        },
+        "followUp": "RELOAD_MOVE"
+      },
+      {
+        "name": "Reload",
+        "id": "RELOAD_MOVE",
+        "intent": {
+          "type": "defend"
+        },
+        "followUp": "FIRE_MOVE"
+      }
+    ],
+    "start_move": "RELOAD_MOVE"
   },
   {
     "id": "CRUSHER",
     "name": "Crusher",
-    "min_hp": 199,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 209,
+      "normal": 199
+    },
+    "max_hp": {
+      "ascension": 209,
+      "normal": 199
+    },
     "type": "Boss",
     "act": "unknown",
     "moves": [
@@ -366,13 +916,80 @@
     "powers": [
       "BackAttackLeftPower 1",
       "CrabRagePower 1"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Thrash",
+        "id": "THRASH_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 12,
+          "ascension_damage": 14
+        },
+        "followUp": "ENLARGING_STRIKE_MOVE"
+      },
+      {
+        "name": "Enlarging Strike",
+        "id": "ENLARGING_STRIKE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 4,
+          "ascension_damage": 4
+        },
+        "followUp": "BUG_STING_MOVE"
+      },
+      {
+        "name": "Bug Sting",
+        "id": "BUG_STING_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "damage": 6,
+          "ascension_damage": 7
+        },
+        "additional_intents": [
+          {
+            "type": "debuff"
+          }
+        ],
+        "followUp": "ADAPT_MOVE"
+      },
+      {
+        "name": "Adapt",
+        "id": "ADAPT_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "GUARDED_STRIKE_MOVE"
+      },
+      {
+        "name": "Guarded Strike",
+        "id": "GUARDED_STRIKE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 12,
+          "ascension_damage": 14
+        },
+        "additional_intents": [
+          {
+            "type": "defend"
+          }
+        ],
+        "followUp": "THRASH_MOVE"
+      }
+    ],
+    "start_move": "THRASH_MOVE"
   },
   {
     "id": "CUBEX_CONSTRUCT",
     "name": "Cubex Construct",
-    "min_hp": 65,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 70,
+      "normal": 65
+    },
+    "max_hp": {
+      "ascension": 70,
+      "normal": 65
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -390,13 +1007,79 @@
     "description": null,
     "powers": [
       "ArtifactPower 1"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Charge Up",
+        "id": "CHARGE_UP_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "REPEATER_MOVE"
+      },
+      {
+        "name": "Repeater",
+        "id": "REPEATER_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 7,
+          "ascension_damage": 8
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "REPEATER_MOVE_2"
+      },
+      {
+        "name": "Repeater Move 2",
+        "id": "REPEATER_MOVE_2",
+        "intent": {
+          "type": "attack",
+          "damage": 7,
+          "ascension_damage": 8
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "EXPEL_BLAST"
+      },
+      {
+        "name": "Expel Blast",
+        "id": "EXPEL_BLAST",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 2,
+          "damage": 5,
+          "ascension_damage": 6
+        },
+        "followUp": "REPEATER_MOVE"
+      },
+      {
+        "name": "Submerge",
+        "id": "SUBMERGE_MOVE",
+        "intent": {
+          "type": "defend"
+        },
+        "followUp": "CHARGE_UP_MOVE"
+      }
+    ],
+    "start_move": "CHARGE_UP_MOVE"
   },
   {
     "id": "DAMP_CULTIST",
     "name": "Damp Cultist",
-    "min_hp": 51,
-    "max_hp": 53,
+    "min_hp": {
+      "ascension": 52,
+      "normal": 51
+    },
+    "max_hp": {
+      "ascension": 54,
+      "normal": 53
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -406,23 +1089,119 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Incantation",
+        "id": "INCANTATION_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "DARK_STRIKE_MOVE"
+      },
+      {
+        "name": "Dark Strike",
+        "id": "DARK_STRIKE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 1,
+          "ascension_damage": 3
+        },
+        "followUp": "DARK_STRIKE_MOVE",
+        "loops": true
+      }
+    ],
+    "start_move": "INCANTATION_MOVE"
   },
   {
     "id": "DECIMILLIPEDE_SEGMENT",
     "name": "Decimillipede Segment",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 48,
+      "normal": 42
+    },
+    "max_hp": {
+      "ascension": 56,
+      "normal": 48
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Writhe",
+        "id": "WRITHE_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 2,
+          "damage": 5,
+          "ascension_damage": 6
+        },
+        "followUp": "CONSTRICT_MOVE"
+      },
+      {
+        "name": "Bulk",
+        "id": "BULK_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 6,
+          "ascension_damage": 7
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "WRITHE_MOVE"
+      },
+      {
+        "name": "Constrict",
+        "id": "CONSTRICT_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 8,
+          "ascension_damage": 9
+        },
+        "additional_intents": [
+          {
+            "type": "debuff"
+          }
+        ],
+        "followUp": "BULK_MOVE"
+      },
+      {
+        "name": "Reattach",
+        "id": "REATTACH_MOVE",
+        "intent": {
+          "type": "heal"
+        },
+        "followUp": "RAND",
+        "followUpType": "random"
+      },
+      {
+        "name": "RAND",
+        "id": "RAND",
+        "type": "random",
+        "branches": [
+          "WRITHE_MOVE",
+          "BULK_MOVE",
+          "CONSTRICT_MOVE"
+        ]
+      }
+    ]
   },
   {
     "id": "DEVOTED_SCULPTOR",
     "name": "Devoted Sculptor",
-    "min_hp": 162,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 172,
+      "normal": 162
+    },
+    "max_hp": {
+      "ascension": 172,
+      "normal": 162
+    },
     "type": "Weak",
     "act": "unknown",
     "moves": [
@@ -432,13 +1211,41 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Forbidden Incantation",
+        "id": "FORBIDDEN_INCANTATION_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "SAVAGE_MOVE"
+      },
+      {
+        "name": "Savage",
+        "id": "SAVAGE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 12,
+          "ascension_damage": 15
+        },
+        "followUp": "SAVAGE_MOVE",
+        "loops": true
+      }
+    ],
+    "start_move": "FORBIDDEN_INCANTATION_MOVE"
   },
   {
     "id": "DOOR",
     "name": "Door",
-    "min_hp": 155,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 165,
+      "normal": 155
+    },
+    "max_hp": {
+      "ascension": 165,
+      "normal": 155
+    },
     "type": "Boss",
     "act": "unknown",
     "moves": [
@@ -461,13 +1268,52 @@
     "description": null,
     "powers": [
       "DoorRevivalPower 1"
+    ],
+    "move_pattern": [
+      {
+        "name": "Dramatic Open",
+        "id": "DRAMATIC_OPEN_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 25,
+          "ascension_damage": 28
+        }
+      },
+      {
+        "name": "Enforce",
+        "id": "ENFORCE_MOVE",
+        "intent": {
+          "type": "attack"
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ]
+      },
+      {
+        "name": "Door Slam",
+        "id": "DOOR_SLAM_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "damage": 15,
+          "ascension_damage": 15
+        },
+        "followUp": "ENFORCE_MOVE"
+      }
     ]
   },
   {
     "id": "DOORMAKER",
     "name": "Doormaker",
-    "min_hp": 489,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 512,
+      "normal": 489
+    },
+    "max_hp": {
+      "ascension": 512,
+      "normal": 489
+    },
     "type": "Boss",
     "act": "unknown",
     "moves": [
@@ -482,13 +1328,59 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "What Is It",
+        "id": "WHAT_IS_IT_MOVE",
+        "intent": {
+          "type": "stun"
+        },
+        "followUp": "BEAM_MOVE"
+      },
+      {
+        "name": "Beam",
+        "id": "BEAM_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 31,
+          "ascension_damage": 34
+        },
+        "followUp": "GET_BACK_IN_MOVE"
+      },
+      {
+        "name": "Get Back In",
+        "id": "GET_BACK_IN_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 40,
+          "ascension_damage": 45
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          },
+          {
+            "type": "escape"
+          }
+        ],
+        "followUp": "GET_BACK_IN_MOVE",
+        "loops": true
+      }
+    ],
+    "start_move": "WHAT_IS_IT_MOVE"
   },
   {
     "id": "ENTOMANCER",
     "name": "Entomancer",
-    "min_hp": 145,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 155,
+      "normal": 145
+    },
+    "max_hp": {
+      "ascension": 155,
+      "normal": 145
+    },
     "type": "Elite",
     "act": "unknown",
     "moves": [
@@ -506,13 +1398,51 @@
     "description": null,
     "powers": [
       "PersonalHivePower 1"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Pheromone Spit",
+        "id": "PHEROMONE_SPIT_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "BEES_MOVE"
+      },
+      {
+        "name": "Bees",
+        "id": "BEES_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "damage": 3,
+          "ascension_damage": 3,
+          "hits": 7
+        },
+        "followUp": "SPEAR_MOVE"
+      },
+      {
+        "name": "Spear",
+        "id": "SPEAR_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 18,
+          "ascension_damage": 20
+        },
+        "followUp": "PHEROMONE_SPIT_MOVE"
+      }
+    ],
+    "start_move": "BEES_MOVE"
   },
   {
     "id": "EXOSKELETON",
     "name": "Exoskeleton",
-    "min_hp": 24,
-    "max_hp": 28,
+    "min_hp": {
+      "ascension": 25,
+      "normal": 24
+    },
+    "max_hp": {
+      "ascension": 29,
+      "normal": 28
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -530,26 +1460,84 @@
     "description": null,
     "powers": [
       "HardToKillPower 9"
+    ],
+    "move_pattern": [
+      {
+        "name": "Skitter",
+        "id": "SKITTER_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 3
+        },
+        "followUp": "RAND",
+        "followUpType": "random"
+      },
+      {
+        "name": "Mandible",
+        "id": "MANDIBLE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 8,
+          "ascension_damage": 9
+        },
+        "followUp": "ENRAGE_MOVE"
+      },
+      {
+        "name": "Enrage",
+        "id": "ENRAGE_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "RAND",
+        "followUpType": "random"
+      },
+      {
+        "name": "RAND",
+        "id": "RAND",
+        "type": "random",
+        "branches": [
+          "SKITTER_MOVE",
+          "MANDIBLE_MOVE"
+        ]
+      }
     ]
   },
   {
     "id": "EYE_WITH_TEETH",
     "name": "Eye With Teeth",
     "min_hp": 6,
-    "max_hp": null,
+    "max_hp": 6,
     "type": "Normal",
     "act": "unknown",
     "moves": [],
     "description": null,
     "powers": [
       "IllusionPower 1"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Distract",
+        "id": "DISTRACT_MOVE",
+        "intent": {
+          "type": "status"
+        },
+        "followUp": "DISTRACT_MOVE",
+        "loops": true
+      }
+    ],
+    "start_move": "DISTRACT_MOVE"
   },
   {
     "id": "FABRICATOR",
     "name": "Fabricator",
-    "min_hp": 150,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 155,
+      "normal": 150
+    },
+    "max_hp": {
+      "ascension": 155,
+      "normal": 150
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -564,13 +1552,60 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Fabricate",
+        "id": "FABRICATE_MOVE",
+        "intent": {
+          "type": "summon"
+        }
+      },
+      {
+        "name": "Fabricating Strike",
+        "id": "FABRICATING_STRIKE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 18,
+          "ascension_damage": 21
+        },
+        "additional_intents": [
+          {
+            "type": "summon"
+          }
+        ]
+      },
+      {
+        "name": "Disintegrate",
+        "id": "DISINTEGRATE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 11,
+          "ascension_damage": 13
+        }
+      },
+      {
+        "name": "RAND",
+        "id": "RAND",
+        "type": "random",
+        "branches": [
+          "FABRICATE_MOVE",
+          "FABRICATING_STRIKE_MOVE"
+        ]
+      }
+    ]
   },
   {
     "id": "FAKE_MERCHANT_MONSTER",
     "name": "Fake Merchant Monster",
-    "min_hp": 165,
-    "max_hp": 165,
+    "min_hp": {
+      "ascension": 175,
+      "normal": 165
+    },
+    "max_hp": {
+      "ascension": 175,
+      "normal": 165
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -590,33 +1625,171 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Swipe",
+        "id": "SWIPE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 13,
+          "ascension_damage": 15
+        },
+        "followUp": "RAND_MOVE",
+        "followUpType": "random"
+      },
+      {
+        "name": "Spew Coins",
+        "id": "SPEW_COINS_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 8,
+          "damage": 2
+        },
+        "followUp": "RAND_MOVE",
+        "followUpType": "random"
+      },
+      {
+        "name": "Throw Relic",
+        "id": "THROW_RELIC_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 9,
+          "ascension_damage": 10
+        },
+        "additional_intents": [
+          {
+            "type": "debuff"
+          }
+        ],
+        "followUp": "RAND_ATTACK_MOVE",
+        "followUpType": "random"
+      },
+      {
+        "name": "Enrage",
+        "id": "ENRAGE_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "RAND_MOVE",
+        "followUpType": "random"
+      },
+      {
+        "name": "RAND MOVE",
+        "id": "RAND_MOVE",
+        "type": "random",
+        "branches": [
+          "SWIPE_MOVE",
+          "SPEW_COINS_MOVE",
+          "THROW_RELIC_MOVE",
+          "ENRAGE_MOVE"
+        ]
+      },
+      {
+        "name": "RAND ATTACK MOVE",
+        "id": "RAND_ATTACK_MOVE",
+        "type": "random",
+        "branches": [
+          "SWIPE_MOVE",
+          "SPEW_COINS_MOVE",
+          "THROW_RELIC_MOVE"
+        ]
+      }
+    ],
+    "start_move": "SWIPE_MOVE"
   },
   {
     "id": "FAT_GREMLIN",
     "name": "Fat Gremlin",
-    "min_hp": 13,
-    "max_hp": 17,
+    "min_hp": {
+      "ascension": 14,
+      "normal": 13
+    },
+    "max_hp": {
+      "ascension": 18,
+      "normal": 17
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Spawned",
+        "id": "SPAWNED_MOVE",
+        "intent": {
+          "type": "stun"
+        },
+        "followUp": "FLEE_MOVE"
+      },
+      {
+        "name": "Flee",
+        "id": "FLEE_MOVE",
+        "intent": {
+          "type": "escape"
+        },
+        "followUp": "FLEE_MOVE",
+        "loops": true
+      }
+    ],
+    "start_move": "SPAWNED_MOVE"
   },
   {
     "id": "FLAIL_KNIGHT",
     "name": "Flail Knight",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 108,
+      "normal": 101
+    },
+    "max_hp": {
+      "ascension": 108,
+      "normal": 101
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "War Chant",
+        "id": "WAR_CHANT",
+        "intent": {
+          "type": "buff"
+        }
+      },
+      {
+        "name": "Flail",
+        "id": "FLAIL_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 2,
+          "damage": 9,
+          "ascension_damage": 10
+        }
+      },
+      {
+        "name": "Ram",
+        "id": "RAM_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 15,
+          "ascension_damage": 17
+        }
+      }
+    ],
+    "start_move": "RAM_MOVE"
   },
   {
     "id": "FLYCONID",
     "name": "Flyconid",
-    "min_hp": 47,
-    "max_hp": 49,
+    "min_hp": {
+      "ascension": 51,
+      "normal": 47
+    },
+    "max_hp": {
+      "ascension": 53,
+      "normal": 49
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -626,13 +1799,77 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Vulnerable Spores",
+        "id": "VULNERABLE_SPORES_MOVE",
+        "intent": {
+          "type": "debuff"
+        },
+        "followUp": "RAND",
+        "followUpType": "random"
+      },
+      {
+        "name": "Frail Spores",
+        "id": "FRAIL_SPORES_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 8,
+          "ascension_damage": 9
+        },
+        "additional_intents": [
+          {
+            "type": "debuff"
+          }
+        ],
+        "followUp": "RAND",
+        "followUpType": "random"
+      },
+      {
+        "name": "Smash",
+        "id": "SMASH_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 11,
+          "ascension_damage": 12
+        },
+        "followUp": "RAND",
+        "followUpType": "random"
+      },
+      {
+        "name": "RAND",
+        "id": "RAND",
+        "type": "random",
+        "branches": [
+          "VULNERABLE_SPORES_MOVE",
+          "FRAIL_SPORES_MOVE",
+          "SMASH_MOVE"
+        ]
+      },
+      {
+        "name": "INITIAL",
+        "id": "INITIAL",
+        "type": "random",
+        "branches": [
+          "FRAIL_SPORES_MOVE",
+          "SMASH_MOVE"
+        ]
+      }
+    ],
+    "start_move": "INITIAL"
   },
   {
     "id": "FOGMOG",
     "name": "Fogmog",
-    "min_hp": 74,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 78,
+      "normal": 74
+    },
+    "max_hp": {
+      "ascension": 78,
+      "normal": 74
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -647,13 +1884,80 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Illusion",
+        "id": "ILLUSION_MOVE",
+        "intent": {
+          "type": "summon"
+        },
+        "followUp": "SWIPE_MOVE"
+      },
+      {
+        "name": "Swipe",
+        "id": "SWIPE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 8,
+          "ascension_damage": 9
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "BRANCH",
+        "followUpType": "random"
+      },
+      {
+        "name": "Swipe Random",
+        "id": "SWIPE_RANDOM_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 8,
+          "ascension_damage": 9
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "HEADBUTT_MOVE"
+      },
+      {
+        "name": "Headbutt",
+        "id": "HEADBUTT_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 14,
+          "ascension_damage": 16
+        },
+        "followUp": "SWIPE_MOVE"
+      },
+      {
+        "name": "BRANCH",
+        "id": "BRANCH",
+        "type": "random",
+        "branches": [
+          "SWIPE_RANDOM_MOVE",
+          "HEADBUTT_MOVE"
+        ]
+      }
+    ],
+    "start_move": "ILLUSION_MOVE"
   },
   {
     "id": "FOSSIL_STALKER",
     "name": "Fossil Stalker",
-    "min_hp": 51,
-    "max_hp": 53,
+    "min_hp": {
+      "ascension": 54,
+      "normal": 51
+    },
+    "max_hp": {
+      "ascension": 56,
+      "normal": 53
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -676,13 +1980,54 @@
     "description": null,
     "powers": [
       "SuckPower 3"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Tackle",
+        "id": "TACKLE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 9,
+          "ascension_damage": 11
+        },
+        "additional_intents": [
+          {
+            "type": "debuff"
+          }
+        ]
+      },
+      {
+        "name": "Latch",
+        "id": "LATCH_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 12,
+          "ascension_damage": 14
+        }
+      },
+      {
+        "name": "Lash",
+        "id": "LASH_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "damage": 3,
+          "ascension_damage": 4
+        }
+      }
+    ],
+    "start_move": "LATCH_MOVE"
   },
   {
     "id": "FROG_KNIGHT",
     "name": "Frog Knight",
-    "min_hp": 191,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 199,
+      "normal": 191
+    },
+    "max_hp": {
+      "ascension": 199,
+      "normal": 191
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -702,23 +2047,111 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "For The Queen",
+        "id": "FOR_THE_QUEEN",
+        "intent": {
+          "type": "buff"
+        }
+      },
+      {
+        "name": "Strike Down Evil",
+        "id": "STRIKE_DOWN_EVIL",
+        "intent": {
+          "type": "attack",
+          "damage": 21,
+          "ascension_damage": 23
+        },
+        "followUp": "FOR_THE_QUEEN"
+      },
+      {
+        "name": "Tongue Lash",
+        "id": "TONGUE_LASH",
+        "intent": {
+          "type": "attack",
+          "damage": 13,
+          "ascension_damage": 14
+        },
+        "additional_intents": [
+          {
+            "type": "debuff"
+          }
+        ],
+        "followUp": "STRIKE_DOWN_EVIL"
+      },
+      {
+        "name": "Beetle Charge",
+        "id": "BEETLE_CHARGE",
+        "intent": {
+          "type": "attack",
+          "damage": 35,
+          "ascension_damage": 40
+        },
+        "followUp": "TONGUE_LASH"
+      }
+    ],
+    "start_move": "TONGUE_LASH"
   },
   {
     "id": "FUZZY_WURM_CRAWLER",
     "name": "Fuzzy Wurm Crawler",
-    "min_hp": 55,
-    "max_hp": 57,
+    "min_hp": {
+      "ascension": 58,
+      "normal": 55
+    },
+    "max_hp": {
+      "ascension": 59,
+      "normal": 57
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "First Acid Goop",
+        "id": "FIRST_ACID_GOOP",
+        "intent": {
+          "type": "attack",
+          "damage": 4,
+          "ascension_damage": 6
+        },
+        "followUp": "INHALE"
+      },
+      {
+        "name": "Acid Goop",
+        "id": "ACID_GOOP",
+        "intent": {
+          "type": "attack",
+          "damage": 4,
+          "ascension_damage": 6
+        },
+        "followUp": "FIRST_ACID_GOOP"
+      },
+      {
+        "name": "Inhale",
+        "id": "INHALE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "ACID_GOOP"
+      }
+    ],
+    "start_move": "FIRST_ACID_GOOP"
   },
   {
     "id": "GAS_BOMB",
     "name": "Gas Bomb",
-    "min_hp": 10,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 12,
+      "normal": 10
+    },
+    "max_hp": {
+      "ascension": 12,
+      "normal": 10
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -731,13 +2164,29 @@
     "description": null,
     "powers": [
       "MinionPower 1"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Explode",
+        "id": "EXPLODE_MOVE",
+        "intent": {
+          "type": "deathblow"
+        }
+      }
+    ],
+    "start_move": "EXPLODE_MOVE"
   },
   {
     "id": "GLOBE_HEAD",
     "name": "Globe Head",
-    "min_hp": 148,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 158,
+      "normal": 148
+    },
+    "max_hp": {
+      "ascension": 158,
+      "normal": 148
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -760,13 +2209,63 @@
     "description": null,
     "powers": [
       "GalvanicPower 6"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Thunder Strike",
+        "id": "THUNDER_STRIKE",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 3,
+          "damage": 6,
+          "ascension_damage": 7
+        },
+        "followUp": "GALVANIC_BURST"
+      },
+      {
+        "name": "Shocking Slap",
+        "id": "SHOCKING_SLAP",
+        "intent": {
+          "type": "attack",
+          "damage": 13,
+          "ascension_damage": 14
+        },
+        "additional_intents": [
+          {
+            "type": "debuff"
+          }
+        ],
+        "followUp": "THUNDER_STRIKE"
+      },
+      {
+        "name": "Galvanic Burst",
+        "id": "GALVANIC_BURST",
+        "intent": {
+          "type": "attack",
+          "damage": 16,
+          "ascension_damage": 17
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "SHOCKING_SLAP"
+      }
+    ],
+    "start_move": "SHOCKING_SLAP"
   },
   {
     "id": "GREMLIN_MERC",
     "name": "Gremlin Merc",
-    "min_hp": 47,
-    "max_hp": 49,
+    "min_hp": {
+      "ascension": 51,
+      "normal": 47
+    },
+    "max_hp": {
+      "ascension": 53,
+      "normal": 49
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -779,23 +2278,90 @@
     "description": null,
     "powers": [
       "SurprisePower 1"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Gimme",
+        "id": "GIMME_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "damage": 7,
+          "ascension_damage": 8
+        },
+        "followUp": "DOUBLE_SMASH_MOVE"
+      },
+      {
+        "name": "Double Smash",
+        "id": "DOUBLE_SMASH_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "damage": 6,
+          "ascension_damage": 7
+        },
+        "additional_intents": [
+          {
+            "type": "debuff"
+          }
+        ],
+        "followUp": "HEHE_MOVE"
+      },
+      {
+        "name": "Hehe",
+        "id": "HEHE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 8,
+          "ascension_damage": 9
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "GIMME_MOVE"
+      }
+    ],
+    "start_move": "GIMME_MOVE"
   },
   {
     "id": "GUARDBOT",
     "name": "Guardbot",
-    "min_hp": 21,
-    "max_hp": 25,
+    "min_hp": {
+      "ascension": 22,
+      "normal": 21
+    },
+    "max_hp": {
+      "ascension": 26,
+      "normal": 25
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Guard",
+        "id": "GUARD_MOVE",
+        "intent": {
+          "type": "defend"
+        },
+        "followUp": "GUARD_MOVE",
+        "loops": true
+      }
+    ],
+    "start_move": "GUARD_MOVE"
   },
   {
     "id": "HAUNTED_SHIP",
     "name": "Haunted Ship",
-    "min_hp": 63,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 67,
+      "normal": 63
+    },
+    "max_hp": {
+      "ascension": 67,
+      "normal": 63
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -815,13 +2381,61 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Ramming Speed",
+        "id": "RAMMING_SPEED_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 10,
+          "ascension_damage": 11
+        },
+        "additional_intents": [
+          {
+            "type": "status"
+          }
+        ]
+      },
+      {
+        "name": "Swipe",
+        "id": "SWIPE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 13,
+          "ascension_damage": 14
+        }
+      },
+      {
+        "name": "Stomp",
+        "id": "STOMP_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "damage": 4,
+          "ascension_damage": 5
+        }
+      },
+      {
+        "name": "Haunt",
+        "id": "HAUNT_MOVE",
+        "intent": {
+          "type": "debuff"
+        }
+      }
+    ],
+    "start_move": "RAMMING_SPEED_MOVE"
   },
   {
     "id": "HUNTER_KILLER",
     "name": "Hunter Killer",
-    "min_hp": 121,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 126,
+      "normal": 121
+    },
+    "max_hp": {
+      "ascension": 126,
+      "normal": 121
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -836,13 +2450,48 @@
         "hits": 3
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Tenderizing Goop",
+        "id": "TENDERIZING_GOOP_MOVE",
+        "intent": {
+          "type": "debuff"
+        }
+      },
+      {
+        "name": "Bite",
+        "id": "BITE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 17,
+          "ascension_damage": 19
+        }
+      },
+      {
+        "name": "Puncture",
+        "id": "PUNCTURE_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 3,
+          "damage": 7,
+          "ascension_damage": 8
+        }
+      }
+    ],
+    "start_move": "TENDERIZING_GOOP_MOVE"
   },
   {
     "id": "INFESTED_PRISM",
     "name": "Infested Prism",
-    "min_hp": 200,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 215,
+      "normal": 200
+    },
+    "max_hp": {
+      "ascension": 215,
+      "normal": 200
+    },
     "type": "Elite",
     "act": "unknown",
     "moves": [
@@ -865,13 +2514,70 @@
     "description": null,
     "powers": [
       "VitalSparkPower 1"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Jab",
+        "id": "JAB_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 22,
+          "ascension_damage": 24
+        },
+        "followUp": "RADIATE_MOVE"
+      },
+      {
+        "name": "Radiate",
+        "id": "RADIATE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 16,
+          "ascension_damage": 18
+        },
+        "additional_intents": [
+          {
+            "type": "defend"
+          }
+        ],
+        "followUp": "WHIRLWIND_MOVE"
+      },
+      {
+        "name": "Whirlwind",
+        "id": "WHIRLWIND_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "damage": 9,
+          "ascension_damage": 10
+        },
+        "followUp": "PULSATE_MOVE"
+      },
+      {
+        "name": "Pulsate",
+        "id": "PULSATE_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "additional_intents": [
+          {
+            "type": "defend"
+          }
+        ],
+        "followUp": "JAB_MOVE"
+      }
+    ],
+    "start_move": "JAB_MOVE"
   },
   {
     "id": "INKLET",
     "name": "Inklet",
-    "min_hp": 11,
-    "max_hp": 17,
+    "min_hp": {
+      "ascension": 12,
+      "normal": 11
+    },
+    "max_hp": {
+      "ascension": 18,
+      "normal": 17
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -894,13 +2600,60 @@
     "description": null,
     "powers": [
       "SlipperyPower 1"
+    ],
+    "move_pattern": [
+      {
+        "name": "Jab",
+        "id": "JAB_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 3,
+          "ascension_damage": 4
+        }
+      },
+      {
+        "name": "Whirlwind",
+        "id": "WHIRLWIND_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 3,
+          "damage": 2,
+          "ascension_damage": 3
+        },
+        "followUp": "JAB_MOVE"
+      },
+      {
+        "name": "Piercing Gaze",
+        "id": "PIERCING_GAZE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 10,
+          "ascension_damage": 11
+        },
+        "followUp": "JAB_MOVE"
+      },
+      {
+        "name": "INIT RAND",
+        "id": "INIT_RAND",
+        "type": "random",
+        "branches": [
+          "JAB_MOVE",
+          "WHIRLWIND_MOVE"
+        ]
+      }
     ]
   },
   {
     "id": "KIN_FOLLOWER",
     "name": "Kin Follower",
-    "min_hp": 58,
-    "max_hp": 59,
+    "min_hp": {
+      "ascension": 62,
+      "normal": 58
+    },
+    "max_hp": {
+      "ascension": 63,
+      "normal": 59
+    },
     "type": "Boss",
     "act": "unknown",
     "moves": [
@@ -913,13 +2666,50 @@
     "description": null,
     "powers": [
       "MinionPower 1"
+    ],
+    "move_pattern": [
+      {
+        "name": "Quick Slash",
+        "id": "QUICK_SLASH_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 5,
+          "ascension_damage": 5
+        },
+        "followUp": "BOOMERANG_MOVE"
+      },
+      {
+        "name": "Boomerang",
+        "id": "BOOMERANG_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 2,
+          "damage": 2,
+          "ascension_damage": 2
+        },
+        "followUp": "POWER_DANCE_MOVE"
+      },
+      {
+        "name": "Power Dance",
+        "id": "POWER_DANCE_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "QUICK_SLASH_MOVE"
+      }
     ]
   },
   {
     "id": "KIN_PRIEST",
     "name": "Kin Priest",
-    "min_hp": 190,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 199,
+      "normal": 190
+    },
+    "max_hp": {
+      "ascension": 199,
+      "normal": 190
+    },
     "type": "Boss",
     "act": "unknown",
     "moves": [
@@ -939,13 +2729,71 @@
         "hits": 3
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Orb Of Frailty",
+        "id": "ORB_OF_FRAILTY_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 8,
+          "ascension_damage": 9
+        },
+        "additional_intents": [
+          {
+            "type": "debuff"
+          }
+        ],
+        "followUp": "ORB_OF_WEAKNESS_MOVE"
+      },
+      {
+        "name": "Orb Of Weakness",
+        "id": "ORB_OF_WEAKNESS_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 8,
+          "ascension_damage": 9
+        },
+        "additional_intents": [
+          {
+            "type": "debuff"
+          }
+        ],
+        "followUp": "BEAM_MOVE"
+      },
+      {
+        "name": "Beam",
+        "id": "BEAM_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 3,
+          "damage": 3,
+          "ascension_damage": 3
+        },
+        "followUp": "RITUAL_MOVE"
+      },
+      {
+        "name": "Ritual",
+        "id": "RITUAL_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "ORB_OF_FRAILTY_MOVE"
+      }
+    ],
+    "start_move": "ORB_OF_FRAILTY_MOVE"
   },
   {
     "id": "KNOWLEDGE_DEMON",
     "name": "Knowledge Demon",
-    "min_hp": 379,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 399,
+      "normal": 379
+    },
+    "max_hp": {
+      "ascension": 399,
+      "normal": 379
+    },
     "type": "Boss",
     "act": "unknown",
     "moves": [
@@ -965,13 +2813,68 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Curse Of Knowledge",
+        "id": "CURSE_OF_KNOWLEDGE_MOVE",
+        "intent": {
+          "type": "debuff"
+        },
+        "followUp": "SLAP_MOVE"
+      },
+      {
+        "name": "Slap",
+        "id": "SLAP_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 17,
+          "ascension_damage": 18
+        },
+        "followUp": "KNOWLEDGE_OVERWHELMING_MOVE"
+      },
+      {
+        "name": "Knowledge Overwhelming",
+        "id": "KNOWLEDGE_OVERWHELMING_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 3,
+          "damage": 8,
+          "ascension_damage": 9
+        },
+        "followUp": "PONDER_MOVE"
+      },
+      {
+        "name": "Ponder",
+        "id": "PONDER_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 11,
+          "ascension_damage": 13
+        },
+        "additional_intents": [
+          {
+            "type": "heal"
+          },
+          {
+            "type": "buff"
+          }
+        ]
+      }
+    ],
+    "start_move": "CURSE_OF_KNOWLEDGE_MOVE"
   },
   {
     "id": "LAGAVULIN_MATRIARCH",
     "name": "Lagavulin Matriarch",
-    "min_hp": 222,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 233,
+      "normal": 222
+    },
+    "max_hp": {
+      "ascension": 233,
+      "normal": 222
+    },
     "type": "Boss",
     "act": "unknown",
     "moves": [
@@ -995,13 +2898,77 @@
     "powers": [
       "PlatingPower 12",
       "AsleepPower 3"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Sleep",
+        "id": "SLEEP_MOVE",
+        "intent": {
+          "type": "sleep"
+        }
+      },
+      {
+        "name": "Slash",
+        "id": "SLASH_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 19,
+          "ascension_damage": 21
+        },
+        "followUp": "DISEMBOWEL_MOVE"
+      },
+      {
+        "name": "Slash2",
+        "id": "SLASH2_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 12,
+          "ascension_damage": 14
+        },
+        "additional_intents": [
+          {
+            "type": "defend"
+          }
+        ],
+        "followUp": "SOUL_SIPHON_MOVE"
+      },
+      {
+        "name": "Disembowel",
+        "id": "DISEMBOWEL_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "damage": 9,
+          "ascension_damage": 10
+        },
+        "followUp": "SLASH2_MOVE"
+      },
+      {
+        "name": "Soul Siphon",
+        "id": "SOUL_SIPHON_MOVE",
+        "intent": {
+          "type": "debuff"
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "SLASH_MOVE"
+      }
+    ],
+    "start_move": "SLEEP_MOVE"
   },
   {
     "id": "LEAF_SLIME_M",
     "name": "Leaf Slime M",
-    "min_hp": 32,
-    "max_hp": 35,
+    "min_hp": {
+      "ascension": 33,
+      "normal": 32
+    },
+    "max_hp": {
+      "ascension": 36,
+      "normal": 35
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -1011,13 +2978,40 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Clump Shot",
+        "id": "CLUMP_SHOT",
+        "intent": {
+          "type": "attack",
+          "damage": 8,
+          "ascension_damage": 9
+        },
+        "followUp": "STICKY_SHOT"
+      },
+      {
+        "name": "Sticky Shot",
+        "id": "STICKY_SHOT",
+        "intent": {
+          "type": "status"
+        },
+        "followUp": "CLUMP_SHOT"
+      }
+    ],
+    "start_move": "STICKY_SHOT"
   },
   {
     "id": "LEAF_SLIME_S",
     "name": "Leaf Slime S",
-    "min_hp": 11,
-    "max_hp": 15,
+    "min_hp": {
+      "ascension": 12,
+      "normal": 11
+    },
+    "max_hp": {
+      "ascension": 16,
+      "normal": 15
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -1027,13 +3021,37 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Butt",
+        "id": "BUTT_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 3,
+          "ascension_damage": 4
+        }
+      },
+      {
+        "name": "Goop",
+        "id": "GOOP_MOVE",
+        "intent": {
+          "type": "status"
+        }
+      }
+    ]
   },
   {
     "id": "LIVING_FOG",
     "name": "Living Fog",
-    "min_hp": 80,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 82,
+      "normal": 80
+    },
+    "max_hp": {
+      "ascension": 82,
+      "normal": 80
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -1048,13 +3066,62 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Advanced Gas",
+        "id": "ADVANCED_GAS_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 8,
+          "ascension_damage": 9
+        },
+        "additional_intents": [
+          {
+            "type": "debuff"
+          }
+        ],
+        "followUp": "BLOAT_MOVE"
+      },
+      {
+        "name": "Bloat",
+        "id": "BLOAT_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 5,
+          "ascension_damage": 6
+        },
+        "additional_intents": [
+          {
+            "type": "summon"
+          }
+        ],
+        "followUp": "SUPER_GAS_BLAST_MOVE"
+      },
+      {
+        "name": "Super Gas Blast",
+        "id": "SUPER_GAS_BLAST_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 8,
+          "ascension_damage": 9
+        },
+        "followUp": "BLOAT_MOVE"
+      }
+    ],
+    "start_move": "ADVANCED_GAS_MOVE"
   },
   {
     "id": "LIVING_SHIELD",
     "name": "Living Shield",
-    "min_hp": 55,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 65,
+      "normal": 55
+    },
+    "max_hp": {
+      "ascension": 65,
+      "normal": 55
+    },
     "type": "Weak",
     "act": "unknown",
     "moves": [
@@ -1072,23 +3139,102 @@
     "description": null,
     "powers": [
       "RampartPower 25"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Shield Slam",
+        "id": "SHIELD_SLAM_MOVE",
+        "intent": {
+          "type": "attack"
+        }
+      },
+      {
+        "name": "Smash",
+        "id": "SMASH_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 16,
+          "ascension_damage": 18
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "SMASH_MOVE",
+        "loops": true
+      }
+    ],
+    "start_move": "SHIELD_SLAM_MOVE"
   },
   {
     "id": "LOUSE_PROGENITOR",
     "name": "Louse Progenitor",
-    "min_hp": 134,
-    "max_hp": 136,
+    "min_hp": {
+      "ascension": 138,
+      "normal": 134
+    },
+    "max_hp": {
+      "ascension": 141,
+      "normal": 136
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Web Cannon",
+        "id": "WEB_CANNON_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 9,
+          "ascension_damage": 10
+        },
+        "additional_intents": [
+          {
+            "type": "debuff"
+          }
+        ],
+        "followUp": "CURL_AND_GROW_MOVE"
+      },
+      {
+        "name": "Pounce",
+        "id": "POUNCE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 14,
+          "ascension_damage": 16
+        },
+        "followUp": "WEB_CANNON_MOVE"
+      },
+      {
+        "name": "Curl And Grow",
+        "id": "CURL_AND_GROW_MOVE",
+        "intent": {
+          "type": "defend"
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "POUNCE_MOVE"
+      }
+    ],
+    "start_move": "WEB_CANNON_MOVE"
   },
   {
     "id": "MAGI_KNIGHT",
     "name": "Magi Knight",
-    "min_hp": 82,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 89,
+      "normal": 82
+    },
+    "max_hp": {
+      "ascension": 89,
+      "normal": 82
+    },
     "type": "Elite",
     "act": "unknown",
     "moves": [
@@ -1103,13 +3249,73 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "First Power Shield",
+        "id": "FIRST_POWER_SHIELD_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 6,
+          "ascension_damage": 7
+        },
+        "additional_intents": [
+          {
+            "type": "defend"
+          }
+        ],
+        "followUp": "DAMPEN_MOVE"
+      },
+      {
+        "name": "Dampen",
+        "id": "DAMPEN_MOVE",
+        "intent": {
+          "type": "debuff"
+        },
+        "followUp": "RAM_MOVE"
+      },
+      {
+        "name": "Prep",
+        "id": "PREP_MOVE",
+        "intent": {
+          "type": "defend"
+        },
+        "followUp": "MAGIC_BOMB"
+      },
+      {
+        "name": "Magic Bomb",
+        "id": "MAGIC_BOMB",
+        "intent": {
+          "type": "attack",
+          "damage": 35,
+          "ascension_damage": 40
+        },
+        "followUp": "RAM_MOVE"
+      },
+      {
+        "name": "Ram",
+        "id": "RAM_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 10,
+          "ascension_damage": 11
+        },
+        "followUp": "PREP_MOVE"
+      }
+    ],
+    "start_move": "FIRST_POWER_SHIELD_MOVE"
   },
   {
     "id": "MAWLER",
     "name": "Mawler",
-    "min_hp": 72,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 76,
+      "normal": 72
+    },
+    "max_hp": {
+      "ascension": 76,
+      "normal": 72
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -1124,13 +3330,48 @@
         "hits": 2
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Rip And Tear",
+        "id": "RIP_AND_TEAR_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 14,
+          "ascension_damage": 16
+        }
+      },
+      {
+        "name": "Roar",
+        "id": "ROAR_MOVE",
+        "intent": {
+          "type": "debuff"
+        }
+      },
+      {
+        "name": "Claw",
+        "id": "CLAW_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 2,
+          "damage": 4,
+          "ascension_damage": 5
+        }
+      }
+    ],
+    "start_move": "CLAW_MOVE"
   },
   {
     "id": "MECHA_KNIGHT",
     "name": "Mecha Knight",
-    "min_hp": 300,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 320,
+      "normal": 300
+    },
+    "max_hp": {
+      "ascension": 320,
+      "normal": 300
+    },
     "type": "Elite",
     "act": "unknown",
     "moves": [
@@ -1148,7 +3389,47 @@
     "description": null,
     "powers": [
       "ArtifactPower 3"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Charge",
+        "id": "CHARGE_MOVE",
+        "intent": {
+          "type": "attack"
+        },
+        "followUp": "FLAMETHROWER_MOVE"
+      },
+      {
+        "name": "Flamethrower",
+        "id": "FLAMETHROWER_MOVE",
+        "intent": {
+          "type": "status"
+        },
+        "followUp": "WINDUP_MOVE"
+      },
+      {
+        "name": "Windup",
+        "id": "WINDUP_MOVE",
+        "intent": {
+          "type": "defend"
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "HEAVY_CLEAVE_MOVE"
+      },
+      {
+        "name": "Heavy Cleave",
+        "id": "HEAVY_CLEAVE_MOVE",
+        "intent": {
+          "type": "attack"
+        },
+        "followUp": "FLAMETHROWER_MOVE"
+      }
+    ],
+    "start_move": "CHARGE_MOVE"
   },
   {
     "id": "MULTI_ATTACK_MOVE_MONSTER",
@@ -1164,13 +3445,33 @@
         "hits": 5
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Poke",
+        "id": "POKE",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 5,
+          "damage": 1
+        },
+        "followUp": "POKE",
+        "loops": true
+      }
+    ],
+    "start_move": "POKE"
   },
   {
     "id": "MYTE",
     "name": "Myte",
-    "min_hp": 61,
-    "max_hp": 67,
+    "min_hp": {
+      "ascension": 64,
+      "normal": 61
+    },
+    "max_hp": {
+      "ascension": 69,
+      "normal": 67
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -1185,13 +3486,54 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Toxic",
+        "id": "TOXIC_MOVE",
+        "intent": {
+          "type": "status"
+        },
+        "followUp": "BITE_MOVE"
+      },
+      {
+        "name": "Bite",
+        "id": "BITE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 13,
+          "ascension_damage": 15
+        },
+        "followUp": "SUCK_MOVE"
+      },
+      {
+        "name": "Suck",
+        "id": "SUCK_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 4,
+          "ascension_damage": 6
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "TOXIC_MOVE"
+      }
+    ]
   },
   {
     "id": "NIBBIT",
     "name": "Nibbit",
-    "min_hp": 42,
-    "max_hp": 46,
+    "min_hp": {
+      "ascension": 44,
+      "normal": 42
+    },
+    "max_hp": {
+      "ascension": 48,
+      "normal": 46
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -1206,17 +3548,70 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Butt",
+        "id": "BUTT_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 12,
+          "ascension_damage": 13
+        },
+        "followUp": "SLICE_MOVE"
+      },
+      {
+        "name": "Slice",
+        "id": "SLICE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 6,
+          "ascension_damage": 6
+        },
+        "additional_intents": [
+          {
+            "type": "defend"
+          }
+        ],
+        "followUp": "HISS_MOVE"
+      },
+      {
+        "name": "Hiss",
+        "id": "HISS_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "BUTT_MOVE"
+      }
+    ]
   },
   {
     "id": "NOISEBOT",
     "name": "Noisebot",
-    "min_hp": 23,
-    "max_hp": 28,
+    "min_hp": {
+      "ascension": 24,
+      "normal": 23
+    },
+    "max_hp": {
+      "ascension": 29,
+      "normal": 28
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Noise",
+        "id": "NOISE_MOVE",
+        "intent": {
+          "type": "status"
+        },
+        "followUp": "NOISE_MOVE",
+        "loops": true
+      }
+    ],
+    "start_move": "NOISE_MOVE"
   },
   {
     "id": "ONE_HP_MONSTER",
@@ -1226,7 +3621,19 @@
     "type": "Normal",
     "act": "unknown",
     "moves": [],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Nothing",
+        "id": "NOTHING",
+        "intent": {
+          "type": "hidden"
+        },
+        "followUp": "NOTHING",
+        "loops": true
+      }
+    ],
+    "start_move": "NOTHING"
   },
   {
     "id": "OSTY",
@@ -1241,8 +3648,14 @@
   {
     "id": "OVICOPTER",
     "name": "Ovicopter",
-    "min_hp": 124,
-    "max_hp": 130,
+    "min_hp": {
+      "ascension": 126,
+      "normal": 124
+    },
+    "max_hp": {
+      "ascension": 132,
+      "normal": 130
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -1257,13 +3670,62 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Lay Eggs",
+        "id": "LAY_EGGS_MOVE",
+        "intent": {
+          "type": "summon"
+        },
+        "followUp": "SMASH_MOVE"
+      },
+      {
+        "name": "Smash",
+        "id": "SMASH_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 16,
+          "ascension_damage": 17
+        },
+        "followUp": "TENDERIZER_MOVE"
+      },
+      {
+        "name": "Tenderizer",
+        "id": "TENDERIZER_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 7,
+          "ascension_damage": 8
+        },
+        "additional_intents": [
+          {
+            "type": "debuff"
+          }
+        ]
+      },
+      {
+        "name": "Nutritional Paste",
+        "id": "NUTRITIONAL_PASTE_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "SMASH_MOVE"
+      }
+    ],
+    "start_move": "LAY_EGGS_MOVE"
   },
   {
     "id": "OWL_MAGISTRATE",
     "name": "Owl Magistrate",
-    "min_hp": 234,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 243,
+      "normal": 234
+    },
+    "max_hp": {
+      "ascension": 243,
+      "normal": 234
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -1283,7 +3745,54 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Magistrate Scrutiny",
+        "id": "MAGISTRATE_SCRUTINY",
+        "intent": {
+          "type": "attack",
+          "damage": 16,
+          "ascension_damage": 17
+        },
+        "followUp": "PECK_ASSAULT"
+      },
+      {
+        "name": "Peck Assault",
+        "id": "PECK_ASSAULT",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 6,
+          "damage": 4,
+          "ascension_damage": 4
+        },
+        "followUp": "JUDICIAL_FLIGHT"
+      },
+      {
+        "name": "Judicial Flight",
+        "id": "JUDICIAL_FLIGHT",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "VERDICT"
+      },
+      {
+        "name": "Verdict",
+        "id": "VERDICT",
+        "intent": {
+          "type": "attack",
+          "damage": 33,
+          "ascension_damage": 36
+        },
+        "additional_intents": [
+          {
+            "type": "debuff"
+          }
+        ],
+        "followUp": "MAGISTRATE_SCRUTINY"
+      }
+    ],
+    "start_move": "MAGISTRATE_SCRUTINY"
   },
   {
     "id": "PAELS_LEGION",
@@ -1299,7 +3808,7 @@
     "id": "PARAFRIGHT",
     "name": "Parafright",
     "min_hp": 21,
-    "max_hp": null,
+    "max_hp": 21,
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -1312,13 +3821,33 @@
     "description": null,
     "powers": [
       "IllusionPower 1"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Slam",
+        "id": "SLAM_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 16,
+          "ascension_damage": 17
+        },
+        "followUp": "SLAM_MOVE",
+        "loops": true
+      }
+    ],
+    "start_move": "SLAM_MOVE"
   },
   {
     "id": "PHANTASMAL_GARDENER",
     "name": "Phantasmal Gardener",
-    "min_hp": 28,
-    "max_hp": 32,
+    "min_hp": {
+      "ascension": 29,
+      "normal": 28
+    },
+    "max_hp": {
+      "ascension": 33,
+      "normal": 32
+    },
     "type": "Elite",
     "act": "unknown",
     "moves": [
@@ -1338,13 +3867,58 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Bite",
+        "id": "BITE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 5,
+          "ascension_damage": 5
+        },
+        "followUp": "LASH_MOVE"
+      },
+      {
+        "name": "Lash",
+        "id": "LASH_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 7,
+          "ascension_damage": 7
+        },
+        "followUp": "FLAIL_MOVE"
+      },
+      {
+        "name": "Flail",
+        "id": "FLAIL_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 3
+        },
+        "followUp": "ENLARGE_MOVE"
+      },
+      {
+        "name": "Enlarge",
+        "id": "ENLARGE_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "BITE_MOVE"
+      }
+    ]
   },
   {
     "id": "PHROG_PARASITE",
     "name": "Phrog Parasite",
-    "min_hp": 61,
-    "max_hp": 64,
+    "min_hp": {
+      "ascension": 66,
+      "normal": 61
+    },
+    "max_hp": {
+      "ascension": 68,
+      "normal": 64
+    },
     "type": "Elite",
     "act": "unknown",
     "moves": [
@@ -1357,13 +3931,50 @@
     "description": null,
     "powers": [
       "InfestedPower 4"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Infect",
+        "id": "INFECT_MOVE",
+        "intent": {
+          "type": "status"
+        },
+        "followUp": "LASH_MOVE"
+      },
+      {
+        "name": "Lash",
+        "id": "LASH_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 4,
+          "damage": 4,
+          "ascension_damage": 5
+        },
+        "followUp": "INFECT_MOVE"
+      },
+      {
+        "name": "RAND",
+        "id": "RAND",
+        "type": "random",
+        "branches": [
+          "INFECT_MOVE",
+          "LASH_MOVE"
+        ]
+      }
+    ],
+    "start_move": "INFECT_MOVE"
   },
   {
     "id": "PUNCH_CONSTRUCT",
     "name": "Punch Construct",
-    "min_hp": 55,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 60,
+      "normal": 55
+    },
+    "max_hp": {
+      "ascension": 60,
+      "normal": 55
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -1381,13 +3992,54 @@
     "description": null,
     "powers": [
       "ArtifactPower 1"
+    ],
+    "move_pattern": [
+      {
+        "name": "Ready",
+        "id": "READY_MOVE",
+        "intent": {
+          "type": "defend"
+        },
+        "followUp": "STRONG_PUNCH_MOVE"
+      },
+      {
+        "name": "Strong Punch",
+        "id": "STRONG_PUNCH_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 14,
+          "ascension_damage": 16
+        },
+        "followUp": "FAST_PUNCH_MOVE"
+      },
+      {
+        "name": "Fast Punch",
+        "id": "FAST_PUNCH_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "damage": 5,
+          "ascension_damage": 6
+        },
+        "additional_intents": [
+          {
+            "type": "debuff"
+          }
+        ],
+        "followUp": "READY_MOVE"
+      }
     ]
   },
   {
     "id": "QUEEN",
     "name": "Queen",
-    "min_hp": 400,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 419,
+      "normal": 400
+    },
+    "max_hp": {
+      "ascension": 419,
+      "normal": 400
+    },
     "type": "Boss",
     "act": "unknown",
     "moves": [
@@ -1402,13 +4054,78 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Puppet Strings",
+        "id": "PUPPET_STRINGS_MOVE",
+        "intent": {
+          "type": "debuff"
+        },
+        "followUp": "YOUR_MINE_MOVE"
+      },
+      {
+        "name": "Your Mine",
+        "id": "YOUR_MINE_MOVE",
+        "intent": {
+          "type": "debuff"
+        }
+      },
+      {
+        "name": "Burn Bright For Me",
+        "id": "BURN_BRIGHT_FOR_ME_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "additional_intents": [
+          {
+            "type": "defend"
+          }
+        ]
+      },
+      {
+        "name": "Off With Your Head",
+        "id": "OFF_WITH_YOUR_HEAD_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 5,
+          "damage": 3,
+          "ascension_damage": 4
+        },
+        "followUp": "EXECUTION_MOVE"
+      },
+      {
+        "name": "Execution",
+        "id": "EXECUTION_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 15,
+          "ascension_damage": 18
+        },
+        "followUp": "ENRAGE_MOVE"
+      },
+      {
+        "name": "Enrage",
+        "id": "ENRAGE_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "OFF_WITH_YOUR_HEAD_MOVE"
+      }
+    ],
+    "start_move": "PUPPET_STRINGS_MOVE"
   },
   {
     "id": "ROCKET",
     "name": "Rocket",
-    "min_hp": 189,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 199,
+      "normal": 189
+    },
+    "max_hp": {
+      "ascension": 199,
+      "normal": 189
+    },
     "type": "Boss",
     "act": "unknown",
     "moves": [
@@ -1433,13 +4150,68 @@
       "SurroundedPower 1",
       "BackAttackRightPower 1",
       "CrabRagePower 1"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Targeting Reticle",
+        "id": "TARGETING_RETICLE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 3,
+          "ascension_damage": 4
+        },
+        "followUp": "PRECISION_BEAM_MOVE"
+      },
+      {
+        "name": "Precision Beam",
+        "id": "PRECISION_BEAM_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 18,
+          "ascension_damage": 20
+        },
+        "followUp": "CHARGE_UP_MOVE"
+      },
+      {
+        "name": "Charge Up",
+        "id": "CHARGE_UP_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "LASER_MOVE"
+      },
+      {
+        "name": "Laser",
+        "id": "LASER_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 31,
+          "ascension_damage": 35
+        },
+        "followUp": "RECHARGE_MOVE"
+      },
+      {
+        "name": "Recharge",
+        "id": "RECHARGE_MOVE",
+        "intent": {
+          "type": "sleep"
+        },
+        "followUp": "TARGETING_RETICLE_MOVE"
+      }
+    ],
+    "start_move": "TARGETING_RETICLE_MOVE"
   },
   {
     "id": "SCROLL_OF_BITING",
     "name": "Scroll Of Biting",
-    "min_hp": 31,
-    "max_hp": 38,
+    "min_hp": {
+      "ascension": 32,
+      "normal": 31
+    },
+    "max_hp": {
+      "ascension": 39,
+      "normal": 38
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -1457,13 +4229,61 @@
     "description": null,
     "powers": [
       "PaperCutsPower 2"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Chomp",
+        "id": "CHOMP",
+        "intent": {
+          "type": "attack",
+          "damage": 14,
+          "ascension_damage": 16
+        },
+        "followUp": "MORE_TEETH"
+      },
+      {
+        "name": "Chew",
+        "id": "CHEW",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 2,
+          "damage": 5,
+          "ascension_damage": 6
+        },
+        "followUp": "rand",
+        "followUpType": "random"
+      },
+      {
+        "name": "More Teeth",
+        "id": "MORE_TEETH",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "CHEW"
+      },
+      {
+        "name": "Rand",
+        "id": "rand",
+        "type": "random",
+        "branches": [
+          "CHOMP",
+          "CHEW"
+        ]
+      }
+    ],
+    "start_move": "CHOMP"
   },
   {
     "id": "SEAPUNK",
     "name": "Seapunk",
-    "min_hp": 44,
-    "max_hp": 46,
+    "min_hp": {
+      "ascension": 47,
+      "normal": 44
+    },
+    "max_hp": {
+      "ascension": 49,
+      "normal": 46
+    },
     "type": "Weak",
     "act": "unknown",
     "moves": [
@@ -1478,13 +4298,53 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Sea Kick",
+        "id": "SEA_KICK_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 11,
+          "ascension_damage": 12
+        },
+        "followUp": "SPINNING_KICK_MOVE"
+      },
+      {
+        "name": "Spinning Kick",
+        "id": "SPINNING_KICK_MOVE",
+        "intent": {
+          "type": "multi_attack"
+        },
+        "followUp": "BUBBLE_BURP_MOVE"
+      },
+      {
+        "name": "Bubble Burp",
+        "id": "BUBBLE_BURP_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "additional_intents": [
+          {
+            "type": "defend"
+          }
+        ],
+        "followUp": "SEA_KICK_MOVE"
+      }
+    ],
+    "start_move": "SEA_KICK_MOVE"
   },
   {
     "id": "SEWER_CLAM",
     "name": "Sewer Clam",
-    "min_hp": 56,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 58,
+      "normal": 56
+    },
+    "max_hp": {
+      "ascension": 58,
+      "normal": 56
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -1494,13 +4354,40 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Pressurize",
+        "id": "PRESSURIZE_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "JET_MOVE"
+      },
+      {
+        "name": "Jet",
+        "id": "JET_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 10,
+          "ascension_damage": 11
+        },
+        "followUp": "PRESSURIZE_MOVE"
+      }
+    ],
+    "start_move": "JET_MOVE"
   },
   {
     "id": "SHRINKER_BEETLE",
     "name": "Shrinker Beetle",
-    "min_hp": 38,
-    "max_hp": 40,
+    "min_hp": {
+      "ascension": 40,
+      "normal": 38
+    },
+    "max_hp": {
+      "ascension": 42,
+      "normal": 40
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -1515,7 +4402,38 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Shrinker",
+        "id": "SHRINKER_MOVE",
+        "intent": {
+          "type": "debuff"
+        },
+        "followUp": "CHOMP_MOVE"
+      },
+      {
+        "name": "Chomp",
+        "id": "CHOMP_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 7,
+          "ascension_damage": 8
+        },
+        "followUp": "STOMP_MOVE"
+      },
+      {
+        "name": "Stomp",
+        "id": "STOMP_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 13,
+          "ascension_damage": 14
+        },
+        "followUp": "CHOMP_MOVE"
+      }
+    ],
+    "start_move": "SHRINKER_MOVE"
   },
   {
     "id": "SINGLE_ATTACK_MOVE_MONSTER",
@@ -1531,13 +4449,32 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Poke",
+        "id": "POKE",
+        "intent": {
+          "type": "attack",
+          "damage": 1
+        },
+        "followUp": "POKE",
+        "loops": true
+      }
+    ],
+    "start_move": "POKE"
   },
   {
     "id": "SKULKING_COLONY",
     "name": "Skulking Colony",
-    "min_hp": 79,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 84,
+      "normal": 79
+    },
+    "max_hp": {
+      "ascension": 84,
+      "normal": 79
+    },
     "type": "Elite",
     "act": "unknown",
     "moves": [
@@ -1560,13 +4497,70 @@
     "description": null,
     "powers": [
       "HardenedShellPower 20"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Inertia",
+        "id": "INERTIA_MOVE",
+        "intent": {
+          "type": "defend"
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "SUPER_CRAB_MOVE"
+      },
+      {
+        "name": "Zoom",
+        "id": "ZOOM_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 16,
+          "ascension_damage": 17
+        },
+        "followUp": "INERTIA_MOVE"
+      },
+      {
+        "name": "Super Crab",
+        "id": "SUPER_CRAB_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "damage": 6,
+          "ascension_damage": 7
+        },
+        "followUp": "SMASH_MOVE"
+      },
+      {
+        "name": "Smash",
+        "id": "SMASH_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 9,
+          "ascension_damage": 11
+        },
+        "additional_intents": [
+          {
+            "type": "status"
+          }
+        ],
+        "followUp": "ZOOM_MOVE"
+      }
+    ],
+    "start_move": "SMASH_MOVE"
   },
   {
     "id": "SLIMED_BERSERKER",
     "name": "Slimed Berserker",
-    "min_hp": 266,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 276,
+      "normal": 266
+    },
+    "max_hp": {
+      "ascension": 276,
+      "normal": 266
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -1581,13 +4575,64 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Vomit Ichor",
+        "id": "VOMIT_ICHOR_MOVE",
+        "intent": {
+          "type": "status"
+        },
+        "followUp": "FURIOUS_PUMMELING_MOVE"
+      },
+      {
+        "name": "Leeching Hug",
+        "id": "LEECHING_HUG_MOVE",
+        "intent": {
+          "type": "debuff"
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "SMOTHER_MOVE"
+      },
+      {
+        "name": "Smother",
+        "id": "SMOTHER_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 30,
+          "ascension_damage": 33
+        },
+        "followUp": "VOMIT_ICHOR_MOVE"
+      },
+      {
+        "name": "Furious Pummeling",
+        "id": "FURIOUS_PUMMELING_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 4,
+          "damage": 4,
+          "ascension_damage": 5
+        },
+        "followUp": "LEECHING_HUG_MOVE"
+      }
+    ],
+    "start_move": "VOMIT_ICHOR_MOVE"
   },
   {
     "id": "SLITHERING_STRANGLER",
     "name": "Slithering Strangler",
-    "min_hp": 53,
-    "max_hp": 55,
+    "min_hp": {
+      "ascension": 54,
+      "normal": 53
+    },
+    "max_hp": {
+      "ascension": 56,
+      "normal": 55
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -1602,13 +4647,54 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Constrict",
+        "id": "CONSTRICT",
+        "intent": {
+          "type": "debuff"
+        }
+      },
+      {
+        "name": "Twack",
+        "id": "TWACK",
+        "intent": {
+          "type": "attack",
+          "damage": 7,
+          "ascension_damage": 8
+        },
+        "additional_intents": [
+          {
+            "type": "defend"
+          }
+        ],
+        "followUp": "CONSTRICT"
+      },
+      {
+        "name": "Lash",
+        "id": "LASH",
+        "intent": {
+          "type": "attack",
+          "damage": 12,
+          "ascension_damage": 13
+        },
+        "followUp": "CONSTRICT"
+      }
+    ],
+    "start_move": "CONSTRICT"
   },
   {
     "id": "SLUDGE_SPINNER",
     "name": "Sludge Spinner",
-    "min_hp": 37,
-    "max_hp": 39,
+    "min_hp": {
+      "ascension": 41,
+      "normal": 37
+    },
+    "max_hp": {
+      "ascension": 42,
+      "normal": 39
+    },
     "type": "Weak",
     "act": "unknown",
     "moves": [
@@ -1628,36 +4714,139 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Oil Spray",
+        "id": "OIL_SPRAY_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 8,
+          "ascension_damage": 9
+        },
+        "additional_intents": [
+          {
+            "type": "debuff"
+          }
+        ]
+      },
+      {
+        "name": "Slam",
+        "id": "SLAM_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 11,
+          "ascension_damage": 12
+        }
+      },
+      {
+        "name": "Rage",
+        "id": "RAGE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 6,
+          "ascension_damage": 7
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ]
+      }
+    ],
+    "start_move": "OIL_SPRAY_MOVE"
   },
   {
     "id": "SLUMBERING_BEETLE",
     "name": "Slumbering Beetle",
-    "min_hp": 86,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 89,
+      "normal": 86
+    },
+    "max_hp": {
+      "ascension": 89,
+      "normal": 86
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [],
     "description": null,
     "powers": [
       "SlumberPower 3"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Snore",
+        "id": "SNORE_MOVE",
+        "intent": {
+          "type": "sleep"
+        }
+      },
+      {
+        "name": "Roll Out",
+        "id": "ROLL_OUT_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 16,
+          "ascension_damage": 18
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "ROLL_OUT_MOVE",
+        "loops": true
+      }
+    ],
+    "start_move": "SNORE_MOVE"
   },
   {
     "id": "SNAPPING_JAXFRUIT",
     "name": "Snapping Jaxfruit",
-    "min_hp": 31,
-    "max_hp": 33,
+    "min_hp": {
+      "ascension": 34,
+      "normal": 31
+    },
+    "max_hp": {
+      "ascension": 36,
+      "normal": 33
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Energy Orb",
+        "id": "ENERGY_ORB_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 3,
+          "ascension_damage": 4
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "ENERGY_ORB_MOVE",
+        "loops": true
+      }
+    ],
+    "start_move": "ENERGY_ORB_MOVE"
   },
   {
     "id": "SNEAKY_GREMLIN",
     "name": "Sneaky Gremlin",
-    "min_hp": 10,
-    "max_hp": 14,
+    "min_hp": {
+      "ascension": 11,
+      "normal": 10
+    },
+    "max_hp": {
+      "ascension": 15,
+      "normal": 14
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -1667,13 +4856,41 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Spawned",
+        "id": "SPAWNED_MOVE",
+        "intent": {
+          "type": "stun"
+        },
+        "followUp": "TACKLE_MOVE"
+      },
+      {
+        "name": "Tackle",
+        "id": "TACKLE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 9,
+          "ascension_damage": 10
+        },
+        "followUp": "TACKLE_MOVE",
+        "loops": true
+      }
+    ],
+    "start_move": "SPAWNED_MOVE"
   },
   {
     "id": "SOUL_FYSH",
     "name": "Soul Fysh",
-    "min_hp": 211,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 221,
+      "normal": 211
+    },
+    "max_hp": {
+      "ascension": 221,
+      "normal": 211
+    },
     "type": "Boss",
     "act": "unknown",
     "moves": [
@@ -1693,13 +4910,78 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Beckon",
+        "id": "BECKON_MOVE",
+        "intent": {
+          "type": "status"
+        },
+        "followUp": "DE_GAS_MOVE"
+      },
+      {
+        "name": "De Gas",
+        "id": "DE_GAS_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 16,
+          "ascension_damage": 17
+        },
+        "followUp": "GAZE_MOVE"
+      },
+      {
+        "name": "Gaze",
+        "id": "GAZE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 7,
+          "ascension_damage": 8
+        },
+        "additional_intents": [
+          {
+            "type": "status"
+          }
+        ],
+        "followUp": "FADE_MOVE"
+      },
+      {
+        "name": "Fade",
+        "id": "FADE_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "SCREAM_MOVE"
+      },
+      {
+        "name": "Scream",
+        "id": "SCREAM_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 11,
+          "ascension_damage": 12
+        },
+        "additional_intents": [
+          {
+            "type": "debuff"
+          }
+        ],
+        "followUp": "BECKON_MOVE"
+      }
+    ],
+    "start_move": "BECKON_MOVE"
   },
   {
     "id": "SOUL_NEXUS",
     "name": "Soul Nexus",
-    "min_hp": 234,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 254,
+      "normal": 234
+    },
+    "max_hp": {
+      "ascension": 254,
+      "normal": 234
+    },
     "type": "Elite",
     "act": "unknown",
     "moves": [
@@ -1719,13 +5001,55 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Soul Burn",
+        "id": "SOUL_BURN_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 29,
+          "ascension_damage": 31
+        }
+      },
+      {
+        "name": "Maelstrom",
+        "id": "MAELSTROM_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "damage": 6,
+          "ascension_damage": 7,
+          "hits": 4
+        }
+      },
+      {
+        "name": "Drain Life",
+        "id": "DRAIN_LIFE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 18,
+          "ascension_damage": 19
+        },
+        "additional_intents": [
+          {
+            "type": "debuff"
+          }
+        ]
+      }
+    ],
+    "start_move": "SOUL_BURN_MOVE"
   },
   {
     "id": "SPECTRAL_KNIGHT",
     "name": "Spectral Knight",
-    "min_hp": 93,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 97,
+      "normal": 93
+    },
+    "max_hp": {
+      "ascension": 97,
+      "normal": 93
+    },
     "type": "Elite",
     "act": "unknown",
     "moves": [
@@ -1740,13 +5064,62 @@
         "hits": 3
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Hex",
+        "id": "HEX",
+        "intent": {
+          "type": "debuff"
+        },
+        "followUp": "SOUL_SLASH"
+      },
+      {
+        "name": "Soul Slash",
+        "id": "SOUL_SLASH",
+        "intent": {
+          "type": "attack",
+          "damage": 15,
+          "ascension_damage": 17
+        },
+        "followUp": "RAND",
+        "followUpType": "random"
+      },
+      {
+        "name": "Soul Flame",
+        "id": "SOUL_FLAME",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 3,
+          "damage": 3,
+          "ascension_damage": 4
+        },
+        "followUp": "RAND",
+        "followUpType": "random"
+      },
+      {
+        "name": "RAND",
+        "id": "RAND",
+        "type": "random",
+        "branches": [
+          "SOUL_SLASH",
+          "SOUL_FLAME"
+        ]
+      }
+    ],
+    "start_move": "HEX"
   },
   {
     "id": "SPINY_TOAD",
     "name": "Spiny Toad",
-    "min_hp": 116,
-    "max_hp": 119,
+    "min_hp": {
+      "ascension": 121,
+      "normal": 116
+    },
+    "max_hp": {
+      "ascension": 124,
+      "normal": 119
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -1761,13 +5134,50 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Protruding Spikes",
+        "id": "PROTRUDING_SPIKES_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "SPIKE_EXPLOSION_MOVE"
+      },
+      {
+        "name": "Spike Explosion",
+        "id": "SPIKE_EXPLOSION_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 23,
+          "ascension_damage": 25
+        },
+        "followUp": "TONGUE_LASH_MOVE"
+      },
+      {
+        "name": "Tongue Lash",
+        "id": "TONGUE_LASH_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 17,
+          "ascension_damage": 19
+        },
+        "followUp": "PROTRUDING_SPIKES_MOVE"
+      }
+    ],
+    "start_move": "PROTRUDING_SPIKES_MOVE"
   },
   {
     "id": "STABBOT",
     "name": "Stabbot",
-    "min_hp": 23,
-    "max_hp": 28,
+    "min_hp": {
+      "ascension": 24,
+      "normal": 23
+    },
+    "max_hp": {
+      "ascension": 29,
+      "normal": 28
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -1777,7 +5187,26 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Stab",
+        "id": "STAB_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 11,
+          "ascension_damage": 12
+        },
+        "additional_intents": [
+          {
+            "type": "debuff"
+          }
+        ],
+        "followUp": "STAB_MOVE",
+        "loops": true
+      }
+    ],
+    "start_move": "STAB_MOVE"
   },
   {
     "id": "TEN_HP_MONSTER",
@@ -1787,13 +5216,31 @@
     "type": "Normal",
     "act": "unknown",
     "moves": [],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Nothing",
+        "id": "NOTHING",
+        "intent": {
+          "type": "hidden"
+        },
+        "followUp": "NOTHING",
+        "loops": true
+      }
+    ],
+    "start_move": "NOTHING"
   },
   {
     "id": "TERROR_EEL",
     "name": "Terror Eel",
-    "min_hp": 140,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 150,
+      "normal": 140
+    },
+    "max_hp": {
+      "ascension": 150,
+      "normal": 140
+    },
     "type": "Elite",
     "act": "unknown",
     "moves": [
@@ -1808,7 +5255,51 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Crash",
+        "id": "CRASH_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 17,
+          "ascension_damage": 19
+        },
+        "followUp": "ThrashMove"
+      },
+      {
+        "name": "Thrashmove",
+        "id": "ThrashMove",
+        "intent": {
+          "type": "multi_attack",
+          "damage": 3,
+          "ascension_damage": 4
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "CRASH_MOVE"
+      },
+      {
+        "name": "Stun",
+        "id": "STUN_MOVE",
+        "intent": {
+          "type": "stun"
+        },
+        "followUp": "TERROR_MOVE"
+      },
+      {
+        "name": "Terror",
+        "id": "TERROR_MOVE",
+        "intent": {
+          "type": "debuff"
+        },
+        "followUp": "CRASH_MOVE"
+      }
+    ],
+    "start_move": "CRASH_MOVE"
   },
   {
     "id": "TEST_SUBJECT",
@@ -1852,13 +5343,105 @@
     "description": null,
     "powers": [
       "AdaptablePower 1"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Respawn",
+        "id": "RESPAWN_MOVE",
+        "intent": {
+          "type": "heal"
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ]
+      },
+      {
+        "name": "Bite",
+        "id": "BITE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 20,
+          "ascension_damage": 22
+        },
+        "followUp": "SKULL_BASH_MOVE"
+      },
+      {
+        "name": "Skull Bash",
+        "id": "SKULL_BASH_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 14,
+          "ascension_damage": 16
+        },
+        "additional_intents": [
+          {
+            "type": "debuff"
+          }
+        ],
+        "followUp": "BITE_MOVE"
+      },
+      {
+        "name": "Pounce",
+        "id": "POUNCE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 30,
+          "ascension_damage": 32
+        },
+        "followUp": "MULTI_CLAW_MOVE"
+      },
+      {
+        "name": "Multi Claw",
+        "id": "MULTI_CLAW_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "damage": 10,
+          "ascension_damage": 11
+        },
+        "followUp": "POUNCE_MOVE"
+      },
+      {
+        "name": "Phase3 Lacerate",
+        "id": "PHASE3_LACERATE_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 3,
+          "damage": 10,
+          "ascension_damage": 11
+        },
+        "followUp": "BIG_POUNCE_MOVE"
+      },
+      {
+        "name": "Big Pounce",
+        "id": "BIG_POUNCE_MOVE",
+        "intent": {
+          "type": "attack"
+        },
+        "followUp": "BURNING_GROWL_MOVE"
+      },
+      {
+        "name": "Burning Growl",
+        "id": "BURNING_GROWL_MOVE",
+        "intent": {
+          "type": "status"
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "PHASE3_LACERATE_MOVE"
+      }
+    ],
+    "start_move": "BITE_MOVE"
   },
   {
     "id": "THE_ADVERSARY_MK_ONE",
     "name": "The Adversary Mk One",
     "min_hp": 100,
-    "max_hp": null,
+    "max_hp": 100,
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -1881,13 +5464,51 @@
     "description": null,
     "powers": [
       "ArtifactPower 0"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Smash",
+        "id": "SMASH_MOVE",
+        "intent": {
+          "type": "attack"
+        },
+        "followUp": "BEAM_MOVE"
+      },
+      {
+        "name": "Beam",
+        "id": "BEAM_MOVE",
+        "intent": {
+          "type": "attack"
+        },
+        "followUp": "BARRAGE_MOVE"
+      },
+      {
+        "name": "Barrage",
+        "id": "BARRAGE_MOVE",
+        "intent": {
+          "type": "multi_attack"
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "SMASH_MOVE"
+      }
+    ],
+    "start_move": "SMASH_MOVE"
   },
   {
     "id": "THE_ADVERSARY_MK_THREE",
     "name": "The Adversary Mk Three",
-    "min_hp": 300,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 300,
+      "normal": 300
+    },
+    "max_hp": {
+      "ascension": 300,
+      "normal": 300
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -1910,13 +5531,51 @@
     "description": null,
     "powers": [
       "ArtifactPower 2"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Crash",
+        "id": "CRASH_MOVE",
+        "intent": {
+          "type": "attack"
+        },
+        "followUp": "FLAME_BEAM_MOVE"
+      },
+      {
+        "name": "Flame Beam",
+        "id": "FLAME_BEAM_MOVE",
+        "intent": {
+          "type": "attack"
+        },
+        "followUp": "BARRAGE_MOVE"
+      },
+      {
+        "name": "Barrage",
+        "id": "BARRAGE_MOVE",
+        "intent": {
+          "type": "multi_attack"
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "CRASH_MOVE"
+      }
+    ],
+    "start_move": "CRASH_MOVE"
   },
   {
     "id": "THE_ADVERSARY_MK_TWO",
     "name": "The Adversary Mk Two",
-    "min_hp": 200,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 200,
+      "normal": 200
+    },
+    "max_hp": {
+      "ascension": 200,
+      "normal": 200
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -1939,13 +5598,51 @@
     "description": null,
     "powers": [
       "ArtifactPower 1"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Bash",
+        "id": "BASH_MOVE",
+        "intent": {
+          "type": "attack"
+        },
+        "followUp": "FLAME_BEAM_MOVE"
+      },
+      {
+        "name": "Flame Beam",
+        "id": "FLAME_BEAM_MOVE",
+        "intent": {
+          "type": "attack"
+        },
+        "followUp": "BARRAGE_MOVE"
+      },
+      {
+        "name": "Barrage",
+        "id": "BARRAGE_MOVE",
+        "intent": {
+          "type": "multi_attack"
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "BASH_MOVE"
+      }
+    ],
+    "start_move": "BASH_MOVE"
   },
   {
     "id": "THE_FORGOTTEN",
     "name": "The Forgotten",
-    "min_hp": 106,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 111,
+      "normal": 106
+    },
+    "max_hp": {
+      "ascension": 111,
+      "normal": 106
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -1958,13 +5655,48 @@
     "description": null,
     "powers": [
       "PossessSpeedPower 1"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Miasma",
+        "id": "MIASMA",
+        "intent": {
+          "type": "debuff"
+        },
+        "additional_intents": [
+          {
+            "type": "defend"
+          },
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "DREAD"
+      },
+      {
+        "name": "Dread",
+        "id": "DREAD",
+        "intent": {
+          "type": "attack",
+          "damage": 15,
+          "ascension_damage": 17
+        },
+        "followUp": "MIASMA"
+      }
+    ],
+    "start_move": "MIASMA"
   },
   {
     "id": "THE_INSATIABLE",
     "name": "The Insatiable",
-    "min_hp": 321,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 341,
+      "normal": 321
+    },
+    "max_hp": {
+      "ascension": 341,
+      "normal": 321
+    },
     "type": "Boss",
     "act": "unknown",
     "moves": [
@@ -1979,13 +5711,75 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Liquify Ground",
+        "id": "LIQUIFY_GROUND_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "additional_intents": [
+          {
+            "type": "status"
+          }
+        ],
+        "followUp": "THRASH_MOVE_1"
+      },
+      {
+        "name": "Thrash Move 1",
+        "id": "THRASH_MOVE_1",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 2,
+          "damage": 8,
+          "ascension_damage": 9
+        },
+        "followUp": "LUNGING_BITE_MOVE"
+      },
+      {
+        "name": "Thrash Move 2",
+        "id": "THRASH_MOVE_2",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 2,
+          "damage": 8,
+          "ascension_damage": 9
+        },
+        "followUp": "THRASH_MOVE_1"
+      },
+      {
+        "name": "Lunging Bite",
+        "id": "LUNGING_BITE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 28,
+          "ascension_damage": 31
+        },
+        "followUp": "SALIVATE_MOVE"
+      },
+      {
+        "name": "Salivate",
+        "id": "SALIVATE_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "THRASH_MOVE_2"
+      }
+    ],
+    "start_move": "LIQUIFY_GROUND_MOVE"
   },
   {
     "id": "THE_LOST",
     "name": "The Lost",
-    "min_hp": 93,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 99,
+      "normal": 93
+    },
+    "max_hp": {
+      "ascension": 99,
+      "normal": 93
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -1998,13 +5792,46 @@
     "description": null,
     "powers": [
       "PossessStrengthPower 1"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Debilitating Smog",
+        "id": "DEBILITATING_SMOG",
+        "intent": {
+          "type": "debuff"
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "EYE_LASERS"
+      },
+      {
+        "name": "Eye Lasers",
+        "id": "EYE_LASERS",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 2,
+          "damage": 4,
+          "ascension_damage": 5
+        },
+        "followUp": "DEBILITATING_SMOG"
+      }
+    ],
+    "start_move": "DEBILITATING_SMOG"
   },
   {
     "id": "THE_OBSCURA",
     "name": "The Obscura",
-    "min_hp": 123,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 129,
+      "normal": 123
+    },
+    "max_hp": {
+      "ascension": 129,
+      "normal": 123
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -2019,13 +5846,59 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Illusion",
+        "id": "ILLUSION_MOVE",
+        "intent": {
+          "type": "summon"
+        }
+      },
+      {
+        "name": "Piercing Gaze",
+        "id": "PIERCING_GAZE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 10,
+          "ascension_damage": 11
+        }
+      },
+      {
+        "name": "Sail",
+        "id": "SAIL_MOVE",
+        "intent": {
+          "type": "buff"
+        }
+      },
+      {
+        "name": "Hardening Strike",
+        "id": "HARDENING_STRIKE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 6,
+          "ascension_damage": 7
+        },
+        "additional_intents": [
+          {
+            "type": "defend"
+          }
+        ]
+      }
+    ],
+    "start_move": "ILLUSION_MOVE"
   },
   {
     "id": "THIEVING_HOPPER",
     "name": "Thieving Hopper",
-    "min_hp": 79,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 84,
+      "normal": 79
+    },
+    "max_hp": {
+      "ascension": 84,
+      "normal": 79
+    },
     "type": "Weak",
     "act": "unknown",
     "moves": [
@@ -2043,13 +5916,74 @@
     "description": null,
     "powers": [
       "EscapeArtistPower 5"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Thievery",
+        "id": "THIEVERY_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 17,
+          "ascension_damage": 19
+        },
+        "additional_intents": [
+          {
+            "type": "debuff"
+          }
+        ],
+        "followUp": "FLUTTER_MOVE"
+      },
+      {
+        "name": "Nab",
+        "id": "NAB_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 14,
+          "ascension_damage": 16
+        },
+        "followUp": "ESCAPE_MOVE"
+      },
+      {
+        "name": "Hat Trick",
+        "id": "HAT_TRICK_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 21,
+          "ascension_damage": 23
+        },
+        "followUp": "NAB_MOVE"
+      },
+      {
+        "name": "Flutter",
+        "id": "FLUTTER_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "HAT_TRICK_MOVE"
+      },
+      {
+        "name": "Escape",
+        "id": "ESCAPE_MOVE",
+        "intent": {
+          "type": "escape"
+        },
+        "followUp": "ESCAPE_MOVE",
+        "loops": true
+      }
+    ],
+    "start_move": "THIEVERY_MOVE"
   },
   {
     "id": "TOADPOLE",
     "name": "Toadpole",
-    "min_hp": 21,
-    "max_hp": 25,
+    "min_hp": {
+      "ascension": 22,
+      "normal": 21
+    },
+    "max_hp": {
+      "ascension": 26,
+      "normal": 25
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -2064,13 +5998,49 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Spike Spit",
+        "id": "SPIKE_SPIT_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "damage": 3,
+          "ascension_damage": 4
+        },
+        "followUp": "WHIRL_MOVE"
+      },
+      {
+        "name": "Whirl",
+        "id": "WHIRL_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 7,
+          "ascension_damage": 8
+        },
+        "followUp": "SPIKEN_MOVE"
+      },
+      {
+        "name": "Spiken",
+        "id": "SPIKEN_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "SPIKE_SPIT_MOVE"
+      }
+    ]
   },
   {
     "id": "TORCH_HEAD_AMALGAM",
     "name": "Torch Head Amalgam",
-    "min_hp": 199,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 211,
+      "normal": 199
+    },
+    "max_hp": {
+      "ascension": 211,
+      "normal": 199
+    },
     "type": "Boss",
     "act": "unknown",
     "moves": [
@@ -2088,13 +6058,73 @@
     "description": null,
     "powers": [
       "MinionPower 1"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Tackle 1",
+        "id": "TACKLE_1_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 18,
+          "ascension_damage": 19
+        },
+        "followUp": "TACKLE_2_MOVE"
+      },
+      {
+        "name": "Tackle 2",
+        "id": "TACKLE_2_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 18,
+          "ascension_damage": 19
+        },
+        "followUp": "BEAM_MOVE"
+      },
+      {
+        "name": "Beam",
+        "id": "BEAM_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 3,
+          "damage": 8,
+          "ascension_damage": 8
+        },
+        "followUp": "TACKLE_3_MOVE"
+      },
+      {
+        "name": "Tackle 3",
+        "id": "TACKLE_3_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 14,
+          "ascension_damage": 15
+        },
+        "followUp": "TACKLE_4_MOVE"
+      },
+      {
+        "name": "Tackle 4",
+        "id": "TACKLE_4_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 14,
+          "ascension_damage": 15
+        },
+        "followUp": "BEAM_MOVE"
+      }
+    ],
+    "start_move": "TACKLE_1_MOVE"
   },
   {
     "id": "TOUGH_EGG",
     "name": "Tough Egg",
-    "min_hp": 14,
-    "max_hp": 18,
+    "min_hp": {
+      "ascension": 15,
+      "normal": 14
+    },
+    "max_hp": {
+      "ascension": 19,
+      "normal": 18
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -2104,13 +6134,39 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Hatch",
+        "id": "HATCH_MOVE",
+        "intent": {
+          "type": "summon"
+        },
+        "followUp": "NIBBLE_MOVE"
+      },
+      {
+        "name": "Nibble",
+        "id": "NIBBLE_MOVE",
+        "intent": {
+          "type": "attack"
+        },
+        "followUp": "NIBBLE_MOVE",
+        "loops": true
+      }
+    ],
+    "start_move": "HATCH_MOVE"
   },
   {
     "id": "TRACKER_RUBY_RAIDER",
     "name": "Tracker Ruby Raider",
-    "min_hp": 21,
-    "max_hp": 25,
+    "min_hp": {
+      "ascension": 22,
+      "normal": 21
+    },
+    "max_hp": {
+      "ascension": 26,
+      "normal": 25
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -2120,13 +6176,42 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Track",
+        "id": "TRACK_MOVE",
+        "intent": {
+          "type": "debuff"
+        },
+        "followUp": "HOUNDS_MOVE"
+      },
+      {
+        "name": "Hounds",
+        "id": "HOUNDS_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "damage": 1,
+          "ascension_damage": 1,
+          "hits": 8
+        },
+        "followUp": "HOUNDS_MOVE",
+        "loops": true
+      }
+    ],
+    "start_move": "TRACK_MOVE"
   },
   {
     "id": "TUNNELER",
     "name": "Tunneler",
-    "min_hp": 87,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 92,
+      "normal": 87
+    },
+    "max_hp": {
+      "ascension": 92,
+      "normal": 87
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -2136,13 +6221,64 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Bite",
+        "id": "BITE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 13,
+          "ascension_damage": 15
+        },
+        "followUp": "BURROW_MOVE"
+      },
+      {
+        "name": "Burrow",
+        "id": "BURROW_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "additional_intents": [
+          {
+            "type": "defend"
+          }
+        ],
+        "followUp": "BELOW_MOVE_1"
+      },
+      {
+        "name": "Below Move 1",
+        "id": "BELOW_MOVE_1",
+        "intent": {
+          "type": "attack",
+          "damage": 23,
+          "ascension_damage": 26
+        },
+        "followUp": "BELOW_MOVE_1",
+        "loops": true
+      },
+      {
+        "name": "Dizzy",
+        "id": "DIZZY_MOVE",
+        "intent": {
+          "type": "stun"
+        },
+        "followUp": "BITE_MOVE"
+      }
+    ],
+    "start_move": "BITE_MOVE"
   },
   {
     "id": "TURRET_OPERATOR",
     "name": "Turret Operator",
-    "min_hp": 41,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 51,
+      "normal": 41
+    },
+    "max_hp": {
+      "ascension": 51,
+      "normal": 41
+    },
     "type": "Weak",
     "act": "unknown",
     "moves": [
@@ -2152,13 +6288,52 @@
         "hits": 5
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Unload Move 1",
+        "id": "UNLOAD_MOVE_1",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 5,
+          "damage": 3,
+          "ascension_damage": 4
+        },
+        "followUp": "UNLOAD_MOVE_2"
+      },
+      {
+        "name": "Unload Move 2",
+        "id": "UNLOAD_MOVE_2",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 5,
+          "damage": 3,
+          "ascension_damage": 4
+        },
+        "followUp": "RELOAD_MOVE"
+      },
+      {
+        "name": "Reload",
+        "id": "RELOAD_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "UNLOAD_MOVE_1"
+      }
+    ],
+    "start_move": "UNLOAD_MOVE_1"
   },
   {
     "id": "TWIG_SLIME_M",
     "name": "Twig Slime M",
-    "min_hp": 26,
-    "max_hp": 28,
+    "min_hp": {
+      "ascension": 27,
+      "normal": 26
+    },
+    "max_hp": {
+      "ascension": 29,
+      "normal": 28
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -2168,13 +6343,38 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Clump Shot",
+        "id": "CLUMP_SHOT_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 11,
+          "ascension_damage": 12
+        }
+      },
+      {
+        "name": "Sticky Shot",
+        "id": "STICKY_SHOT_MOVE",
+        "intent": {
+          "type": "status"
+        }
+      }
+    ],
+    "start_move": "STICKY_SHOT_MOVE"
   },
   {
     "id": "TWIG_SLIME_S",
     "name": "Twig Slime S",
-    "min_hp": 7,
-    "max_hp": 11,
+    "min_hp": {
+      "ascension": 8,
+      "normal": 7
+    },
+    "max_hp": {
+      "ascension": 12,
+      "normal": 11
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -2184,13 +6384,33 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Butt",
+        "id": "BUTT_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 4,
+          "ascension_damage": 5
+        },
+        "followUp": "BUTT_MOVE",
+        "loops": true
+      }
+    ],
+    "start_move": "BUTT_MOVE"
   },
   {
     "id": "TWO_TAILED_RAT",
     "name": "Two Tailed Rat",
-    "min_hp": 17,
-    "max_hp": 21,
+    "min_hp": {
+      "ascension": 18,
+      "normal": 17
+    },
+    "max_hp": {
+      "ascension": 22,
+      "normal": 21
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -2205,13 +6425,53 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Scratch",
+        "id": "SCRATCH_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 8,
+          "ascension_damage": 9
+        }
+      },
+      {
+        "name": "Disease Bite",
+        "id": "DISEASE_BITE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 6,
+          "ascension_damage": 7
+        }
+      },
+      {
+        "name": "Screech",
+        "id": "SCREECH_MOVE",
+        "intent": {
+          "type": "debuff"
+        }
+      },
+      {
+        "name": "Call For Backup",
+        "id": "CALL_FOR_BACKUP_MOVE",
+        "intent": {
+          "type": "summon"
+        }
+      }
+    ]
   },
   {
     "id": "VANTOM",
     "name": "Vantom",
-    "min_hp": 173,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 183,
+      "normal": 173
+    },
+    "max_hp": {
+      "ascension": 183,
+      "normal": 173
+    },
     "type": "Boss",
     "act": "unknown",
     "moves": [
@@ -2229,13 +6489,66 @@
     "description": null,
     "powers": [
       "SlipperyPower 9"
-    ]
+    ],
+    "move_pattern": [
+      {
+        "name": "Ink Blot",
+        "id": "INK_BLOT_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 7,
+          "ascension_damage": 8
+        },
+        "followUp": "INKY_LANCE_MOVE"
+      },
+      {
+        "name": "Inky Lance",
+        "id": "INKY_LANCE_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 2,
+          "damage": 6,
+          "ascension_damage": 7
+        },
+        "followUp": "DISMEMBER_MOVE"
+      },
+      {
+        "name": "Dismember",
+        "id": "DISMEMBER_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 27,
+          "ascension_damage": 30
+        },
+        "additional_intents": [
+          {
+            "type": "status"
+          }
+        ],
+        "followUp": "PREPARE_MOVE"
+      },
+      {
+        "name": "Prepare",
+        "id": "PREPARE_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "INK_BLOT_MOVE"
+      }
+    ],
+    "start_move": "INK_BLOT_MOVE"
   },
   {
     "id": "VINE_SHAMBLER",
     "name": "Vine Shambler",
-    "min_hp": 61,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 64,
+      "normal": 61
+    },
+    "max_hp": {
+      "ascension": 64,
+      "normal": 61
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -2255,13 +6568,58 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Grasping Vines",
+        "id": "GRASPING_VINES_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 8,
+          "ascension_damage": 9
+        },
+        "additional_intents": [
+          {
+            "type": "debuff"
+          }
+        ],
+        "followUp": "CHOMP_MOVE"
+      },
+      {
+        "name": "Swipe",
+        "id": "SWIPE_MOVE",
+        "intent": {
+          "type": "multi_attack",
+          "hits": 2,
+          "damage": 6,
+          "ascension_damage": 7
+        },
+        "followUp": "GRASPING_VINES_MOVE"
+      },
+      {
+        "name": "Chomp",
+        "id": "CHOMP_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 16,
+          "ascension_damage": 18
+        },
+        "followUp": "SWIPE_MOVE"
+      }
+    ],
+    "start_move": "SWIPE_MOVE"
   },
   {
     "id": "WATERFALL_GIANT",
     "name": "Waterfall Giant",
-    "min_hp": 250,
-    "max_hp": null,
+    "min_hp": {
+      "ascension": 260,
+      "normal": 250
+    },
+    "max_hp": {
+      "ascension": 260,
+      "normal": 250
+    },
     "type": "Boss",
     "act": "unknown",
     "moves": [
@@ -2281,13 +6639,121 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Pressurize",
+        "id": "PRESSURIZE_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "followUp": "STOMP_MOVE"
+      },
+      {
+        "name": "Stomp",
+        "id": "STOMP_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 15,
+          "ascension_damage": 16
+        },
+        "additional_intents": [
+          {
+            "type": "debuff"
+          },
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "RAM_MOVE"
+      },
+      {
+        "name": "Ram",
+        "id": "RAM_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 10,
+          "ascension_damage": 11
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "SIPHON_MOVE"
+      },
+      {
+        "name": "Siphon",
+        "id": "SIPHON_MOVE",
+        "intent": {
+          "type": "heal"
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "PRESSURE_GUN_MOVE"
+      },
+      {
+        "name": "Pressure Gun",
+        "id": "PRESSURE_GUN_MOVE",
+        "intent": {
+          "type": "attack"
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "PRESSURE_UP_MOVE"
+      },
+      {
+        "name": "Pressure Up",
+        "id": "PRESSURE_UP_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 13,
+          "ascension_damage": 14
+        },
+        "additional_intents": [
+          {
+            "type": "buff"
+          }
+        ],
+        "followUp": "STOMP_MOVE"
+      },
+      {
+        "name": "About To Blow",
+        "id": "ABOUT_TO_BLOW_MOVE",
+        "intent": {
+          "type": "stun"
+        },
+        "followUp": "EXPLODE_MOVE"
+      },
+      {
+        "name": "Explode",
+        "id": "EXPLODE_MOVE",
+        "intent": {
+          "type": "deathblow"
+        },
+        "followUp": "EXPLODE_MOVE",
+        "loops": true
+      }
+    ],
+    "start_move": "PRESSURIZE_MOVE"
   },
   {
     "id": "WRIGGLER",
     "name": "Wriggler",
-    "min_hp": 17,
-    "max_hp": 21,
+    "min_hp": {
+      "ascension": 18,
+      "normal": 17
+    },
+    "max_hp": {
+      "ascension": 22,
+      "normal": 21
+    },
     "type": "Elite",
     "act": "unknown",
     "moves": [
@@ -2297,13 +6763,51 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Nasty Bite",
+        "id": "NASTY_BITE_MOVE",
+        "intent": {
+          "type": "attack",
+          "damage": 6,
+          "ascension_damage": 7
+        },
+        "followUp": "WRIGGLE_MOVE"
+      },
+      {
+        "name": "Wriggle",
+        "id": "WRIGGLE_MOVE",
+        "intent": {
+          "type": "buff"
+        },
+        "additional_intents": [
+          {
+            "type": "status"
+          }
+        ],
+        "followUp": "NASTY_BITE_MOVE"
+      },
+      {
+        "name": "Spawned",
+        "id": "SPAWNED_MOVE",
+        "intent": {
+          "type": "stun"
+        }
+      }
+    ]
   },
   {
     "id": "ZAPBOT",
     "name": "Zapbot",
-    "min_hp": 23,
-    "max_hp": 28,
+    "min_hp": {
+      "ascension": 24,
+      "normal": 23
+    },
+    "max_hp": {
+      "ascension": 29,
+      "normal": 28
+    },
     "type": "Normal",
     "act": "unknown",
     "moves": [
@@ -2313,6 +6817,20 @@
         "hits": null
       }
     ],
-    "description": null
+    "description": null,
+    "move_pattern": [
+      {
+        "name": "Zap",
+        "id": "ZAP",
+        "intent": {
+          "type": "attack",
+          "damage": 14,
+          "ascension_damage": 15
+        },
+        "followUp": "ZAP",
+        "loops": true
+      }
+    ],
+    "start_move": "ZAP"
   }
 ]
