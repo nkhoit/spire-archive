@@ -100,7 +100,7 @@ const sequence = buildSequence(movePattern, startMove);
   <div class="mt-2 flex flex-wrap items-center gap-2">
     <Badge label={monster.type} tone={typeTones[monster.type] ?? ''} locale={locale} />
     {hpText && <Badge label={hpText} locale={locale} />}
-    {hpAscText && <span class="text-xs text-amber-400/80" title="Ascension HP">A: {hpAscText}</span>}
+    {hpAscText && <span class="text-xs text-amber-400/80" title="Ascension HP">Asc: {hpAscText}</span>}
   </div>
 
   {(monster.powers ?? []).length > 0 && (
@@ -169,7 +169,7 @@ const sequence = buildSequence(movePattern, startMove);
                   </span>
                   {ascDmg != null && ascDmg !== dmg && (
                     <span class="ml-2 text-xs text-amber-400/80" title="Ascension damage">
-                      A: {hits && hits > 1 ? `${ascDmg} × ${hits}` : ascDmg}
+                      Asc: {hits && hits > 1 ? `${ascDmg} × ${hits}` : ascDmg}
                     </span>
                   )}
                 </div>
