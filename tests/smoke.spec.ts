@@ -71,7 +71,9 @@ test.describe('Localization (Japanese)', () => {
 test.describe('Link integrity', () => {
   test('On /ja/sts2/potions, potion links have /ja/ prefix', async ({ page }) => {
     await page.goto('/ja/sts2/potions');
+    // Wait for React hydration — explorer renders items client-side
     const links = page.locator('a[href*="/potions/"]');
+    await expect(links.first()).toBeVisible({ timeout: 10000 });
     const count = await links.count();
     expect(count).toBeGreaterThan(0);
     for (let i = 0; i < Math.min(count, 5); i++) {
@@ -83,6 +85,7 @@ test.describe('Link integrity', () => {
   test('On /ja/sts2/relics, relic links have /ja/ prefix', async ({ page }) => {
     await page.goto('/ja/sts2/relics');
     const links = page.locator('a[href*="/relics/"]');
+    await expect(links.first()).toBeVisible({ timeout: 10000 });
     const count = await links.count();
     expect(count).toBeGreaterThan(0);
     for (let i = 0; i < Math.min(count, 5); i++) {
@@ -122,12 +125,15 @@ test.describe('Link integrity', () => {
 });
 
 test.describe('API endpoints', () => {
-  test('/api/sts2/cards returns valid JSON array', async ({ request }) => {
+  test('/api/sts2/cards returns valid JSON with data', async ({ request }) => {
     const response = await request.get('/api/sts2/cards');
     expect(response.status()).toBe(200);
     const body = await response.json();
-    expect(Array.isArray(body)).toBe(true);
-    expect(body.length).toBeGreaterThan(0);
+    // API returns { items: [...], total, offset, limit }
+    expect(body.items ?? body.data).toBeTruthy();
+    const items = body.items ?? body.data;
+    expect(Array.isArray(items)).toBe(true);
+    expect(items.length).toBeGreaterThan(0);
   });
 
   test('/api/sts2/events returns valid JSON', async ({ request }) => {
