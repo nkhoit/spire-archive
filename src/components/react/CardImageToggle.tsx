@@ -26,9 +26,8 @@ export default function CardImageToggle({ card, hasUpgrade, game = 'sts2', local
       if (costBadge) {
         const span = costBadge.querySelector('span');
         const upg = card.upgrade;
-        if (span && upg?.cost_change != null) {
-          const newCost = Math.max(0, (card.cost ?? 0) + upg.cost_change);
-          span.textContent = 'Cost ' + newCost;
+        if (span && upg?.cost != null && upg.cost !== card.cost) {
+          span.textContent = 'Cost ' + upg.cost;
           span.classList.remove('bg-white/10', 'text-slate-200', 'ring-white/10');
           span.classList.add('bg-emerald-500/15', 'text-emerald-300', 'ring-emerald-500/30');
         }

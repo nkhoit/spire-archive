@@ -64,8 +64,8 @@ const portrait = `/images/sts2/cards/${card.id.toLowerCase()}.png`;
 const cardName = upgraded ? card.name + '+' : card.name;
 
 let displayCost = card.cost ?? null;
-if (upgraded && card.upgrade?.cost_change) {
-  displayCost = Math.max(0, (card.cost ?? 0) + card.upgrade.cost_change);
+if (upgraded && card.upgrade?.cost != null) {
+  displayCost = card.upgrade.cost;
 }
 
 let starCost = card.star_cost ?? null;
@@ -89,7 +89,7 @@ if (upgraded) {
     const vars = { ...(card.vars ?? {}) };
     const replacements: [number, number][] = [];
     for (const [uk, delta] of Object.entries(upg)) {
-      if (['add_keywords', 'remove_keywords', 'cost_change', 'energy', 'stars', 'description'].includes(uk)) continue;
+      if (['add_keywords', 'remove_keywords', 'energy', 'stars', 'description'].includes(uk)) continue;
       const vk = uk in vars ? uk : `power_${uk}` in vars ? `power_${uk}` : null;
       if (vk) {
         const oldVal = Math.floor(vars[vk] as number);
@@ -163,7 +163,7 @@ const scale = scales[size] ?? 0.6;
   {displayCost !== null && (
     <div class="cr-energy">
       <img src={energyOrb} class="cr-energy-orb" alt="" />
-      <span class={`cr-energy-num ${upgraded && card.upgrade?.cost_change ? 'cr-green' : ''}`}>{displayCost}</span>
+      <span class={`cr-energy-num ${upgraded && card.upgrade?.cost != null && card.upgrade.cost !== card.cost ? 'cr-green' : ''}`}>{displayCost}</span>
     </div>
   )}
   

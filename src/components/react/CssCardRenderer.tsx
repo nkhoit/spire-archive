@@ -213,8 +213,8 @@ function Sts2Renderer({ card, upgraded, size, locale = 'en' }: { card: any; upgr
   const cardName = upgraded ? card.name + '+' : card.name;
 
   let displayCost: number | null = card.cost ?? null;
-  if (upgraded && card.upgrade?.cost_change) {
-    displayCost = Math.max(0, (card.cost ?? 0) + card.upgrade.cost_change);
+  if (upgraded && card.upgrade?.cost != null) {
+    displayCost = card.upgrade.cost;
   }
 
   const starCost: number | null = card.star_cost ?? null;
@@ -239,7 +239,7 @@ function Sts2Renderer({ card, upgraded, size, locale = 'en' }: { card: any; upgr
       const vars = { ...(card.vars ?? {}) };
       const replacements: [number, number][] = [];
       for (const [uk, delta] of Object.entries(upg)) {
-        if (['add_keywords', 'remove_keywords', 'cost_change', 'energy', 'stars', 'description'].includes(uk)) continue;
+        if (['add_keywords', 'remove_keywords', 'energy', 'stars', 'description'].includes(uk)) continue;
         const vk = uk in vars ? uk : `power_${uk}` in vars ? `power_${uk}` : null;
         if (vk) {
           const oldVal = Math.floor(vars[vk] as number);
@@ -298,7 +298,7 @@ function Sts2Renderer({ card, upgraded, size, locale = 'en' }: { card: any; upgr
       {displayCost !== null && (
         <div className="cr-energy">
           <img src={energyOrb} className="cr-energy-orb" alt="" />
-          <span className={`cr-energy-num${upgraded && card.upgrade?.cost_change ? ' cr-green' : ''}`}>{displayCost}</span>
+          <span className={`cr-energy-num${upgraded && card.upgrade?.cost != null && card.upgrade.cost !== card.cost ? ' cr-green' : ''}`}>{displayCost}</span>
         </div>
       )}
       {starCost !== null && (

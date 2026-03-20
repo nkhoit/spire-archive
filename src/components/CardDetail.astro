@@ -1,7 +1,6 @@
 ---
 import Badge from './Badge.astro';
 import CardImageToggle from './react/CardImageToggle';
-import CardImageToggleSts1 from './react/CardImageToggleSts1';
 import { t } from '../lib/ui-strings';
 import { getLocale } from '../lib/i18n';
 import { replaceGameTokens } from '../lib/energy-icons';
@@ -16,17 +15,12 @@ const { game, card, data } = Astro.props;
 const { locale, langPrefix } = getLocale(Astro);
 
 const upg = card.upgrade;
-// STS1 upgrades have description/cost/damage/block/magic_number
-// STS2 upgrades have var deltas, cost_change, add_keywords, etc.
+// STS1 and STS2 upgrades both have absolute cost in upgrade.cost
 const hasUpgrade = upg && Object.keys(upg).length > 0;
 
 // Upgraded name and cost
 const upgName = hasUpgrade ? card.name + '+' : card.name;
-const upgCost = hasUpgrade
-  ? (game === 'sts2' && upg.cost_change != null
-    ? Math.max(0, (card.cost ?? 0) + upg.cost_change)
-    : (game === 'sts1' && upg.cost != null ? upg.cost : card.cost))
-  : card.cost;
+const upgCost = hasUpgrade && upg.cost != null ? upg.cost : card.cost;
 const costChanged = hasUpgrade && upgCost !== card.cost;
 
 // Build upgrade description for STS2
@@ -40,7 +34,7 @@ function buildUpgradeDescription(card: any): { description: string; cost: number
   
   const varKeyMap: Record<string, string> = {};
   for (const uk of Object.keys(upg)) {
-    if (['add_keywords', 'remove_keywords', 'cost_change', 'energy', 'stars', 'description'].includes(uk)) continue;
+    if (['add_keywords', 'remove_keywords', 'energy', 'stars', 'description'].includes(uk)) continue;
     if (uk in baseVars) {
       varKeyMap[uk] = uk;
     } else {
@@ -88,10 +82,7 @@ function buildUpgradeDescription(card: any): { description: string; cost: number
     }
   }
   
-  let cost = card.cost;
-  if ('cost_change' in upg) {
-    cost = Math.max(0, (cost ?? 0) + upg.cost_change);
-  }
+  let cost = upg.cost != null ? upg.cost : card.cost;
   
   const kws = [...(card.keywords ?? [])];
   for (const kw of (upg.add_keywords ?? [])) {
@@ -276,11 +267,11 @@ const relatedPowers = allRelatedPowers.filter((p: any) => !keywordNameSet.has(p.
 // Upgrade summary for STS2 (show what changed)
 const upgChanges: string[] = [];
 if (game === 'sts2' && upg) {
-  if (upg.cost_change) upgChanges.push(`Cost ${upg.cost_change > 0 ? '+' : ''}${upg.cost_change}`);
+  if (upg.cost != null && upg.cost !== card.cost) upgChanges.push(`Cost ${upg.cost}`);
   for (const kw of (upg.add_keywords ?? [])) upgChanges.push(`+${kw}`);
   for (const kw of (upg.remove_keywords ?? [])) upgChanges.push(`-${kw}`);
   for (const [k, v] of Object.entries(upg)) {
-    if (['add_keywords', 'remove_keywords', 'cost_change'].includes(k)) continue;
+    if (['add_keywords', 'remove_keywords', 'cost'].includes(k)) continue;
     const val = v as number;
     upgChanges.push(`${k} ${val > 0 ? '+' : ''}${val}`);
   }
@@ -315,7 +306,7 @@ if (game === 'sts2' && upg) {
   {game === 'sts2' ? (
     <CardImageToggle client:load card={card} hasUpgrade={hasUpgrade} locale={locale} />
   ) : (
-    <CardImageToggleSts1 client:load card={card} hasUpgrade={hasUpgrade} locale={locale} />
+    <CardImageToggle client:load card={card} hasUpgrade={hasUpgrade} game="sts1" locale={locale} />
   )}
 
   <!-- Card info -->
@@ -327,7 +318,7 @@ if (game === 'sts2' && upg) {
           <Badge label={String(card.color)} tone={String(card.color)} />
           <Badge label={t(String(card.type), locale)} />
           <Badge label={t(String(card.rarity), locale)} />
-          {card.cost != null && <Badge label={t('Cost', locale) + ' ' + card.cost} />}
+          {card.cost != null && <span id="cost-badge"><Badge label={t('Cost', locale) + ' ' + card.cost} /></span>}
         </div>
       </div>
       <div class="text-xs text-slate-400">ID: {card.id}</div>

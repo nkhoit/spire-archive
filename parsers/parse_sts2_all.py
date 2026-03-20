@@ -129,9 +129,10 @@ def parse_cards():
             upgrade[key] = int(um.group(2))
         for um in re.finditer(r'UpgradeBaseCost\((\d+)\)', text):
             upgrade["cost"] = int(um.group(1))
-        # EnergyCost.UpgradeBy(-1) pattern
+        # EnergyCost.UpgradeBy(-1) pattern — convert delta to absolute cost
         for um in re.finditer(r'EnergyCost\.UpgradeBy\((\-?\d+)\)', text):
-            upgrade["cost_change"] = int(um.group(1))
+            delta = int(um.group(1))
+            upgrade["cost"] = max(0, raw_cost + delta) if raw_cost >= 0 else None
         for um in re.finditer(r'AddKeyword\(CardKeyword\.(\w+)\)', text):
             upgrade.setdefault("add_keywords", []).append(um.group(1))
         for um in re.finditer(r'RemoveKeyword\(CardKeyword\.(\w+)\)', text):
