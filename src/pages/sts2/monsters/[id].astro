@@ -80,7 +80,7 @@ const movePattern = monster.move_pattern ?? [];
 const startMove = monster.start_move;
 
 // Build the sequence description
-function buildSequence(pattern: any[], start: string | null): string[] {
+function buildSequence(pattern: any[], start: string | null | undefined): string[] {
   if (!pattern.length || !start) return [];
   const byId = new Map(pattern.map((m: any) => [m.id, m]));
   const seq: string[] = [];
@@ -98,6 +98,12 @@ function buildSequence(pattern: any[], start: string | null): string[] {
 }
 
 const sequence = buildSequence(movePattern, startMove);
+
+const powerDescriptions = new Map<string, string>();
+for (const p of data.powers ?? []) {
+  const key = (p as any).name?.toLowerCase();
+  if (key) powerDescriptions.set(key, (p as any).description ?? '');
+}
 ---
 <Layout game="sts2" title={title} description={`${monster.type} · ${hpText ?? 'HP unknown'}`}>
   <a href={langPrefix + '/sts2/monsters'} class="text-xs text-sky-400 hover:underline">← {t('Monsters', locale)}</a>
@@ -187,17 +193,24 @@ const sequence = buildSequence(movePattern, startMove);
                 <div class="mt-1 text-xs text-slate-500">↻ {t('Repeats', locale)}</div>
               )}
               {(mv.effects ?? []).length > 0 && (
-                <div class="mt-1.5 flex flex-wrap gap-1.5">
+                <div class="mt-1.5 space-y-1">
                   {(mv.effects ?? []).map((eff: any) => {
                     if (eff.type === 'power') {
                       const amt = typeof eff.amount === 'object' ? eff.amount.normal : eff.amount;
                       const ascAmt = typeof eff.amount === 'object' ? eff.amount.ascension : null;
                       const ascLvl = typeof eff.amount === 'object' ? eff.amount.ascLevel : null;
+                      const desc = powerDescriptions.get(eff.power.toLowerCase()) || '';
+                      const amtStr = amt != null ? String(amt) : '';
+                      // Replace the amount in the description so it reads naturally
+                      const descWithAmt = desc && amtStr ? desc.replace(amtStr, `**${amtStr}**`) : desc;
                       return (
-                        <span class={`text-xs px-2 py-0.5 rounded ${eff.target === 'player' ? 'bg-red-500/15 text-red-300' : 'bg-purple-500/15 text-purple-300'}`}>
-                          {eff.target === 'player' ? '→ ' : ''}{eff.power}{amt != null ? ` ${amt}` : ''}
-                          {ascAmt != null && ascAmt !== amt && <span class="text-amber-400/80"> (Asc {ascLvl}+: {ascAmt})</span>}
-                        </span>
+                        <div>
+                          <span class={`text-xs px-2 py-0.5 rounded ${eff.target === 'player' ? 'bg-red-500/15 text-red-300' : 'bg-purple-500/15 text-purple-300'}`}>
+                            {eff.target === 'player' ? '→ ' : ''}{eff.power}{amt != null ? ` ${amt}` : ''}
+                            {ascAmt != null && ascAmt !== amt && <span class="text-amber-400/80"> (Asc {ascLvl}+: {ascAmt})</span>}
+                          </span>
+                          {desc && <p class="mt-0.5 text-[11px] text-slate-400 pl-2">{desc}</p>}
+                        </div>
                       );
                     }
                     if (eff.type === 'block') {
