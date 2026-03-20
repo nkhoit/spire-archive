@@ -62,11 +62,19 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     environment: staging
+    outputs:
+      previous_image: ${{ steps.prev.outputs.image }}
     steps:
       - name: Azure Login
         uses: azure/login@v2
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Capture current image
+        id: prev
+        run: |
+          IMG=$(az containerapp show -n "${APP_NAME}-staging" -g "${APP_NAME}-rg" --query "properties.template.containers[0].image" -o tsv 2>/dev/null || echo "")
+          echo "image=$IMG" >> "$GITHUB_OUTPUT"
 
       - name: Deploy to staging
         run: |
@@ -76,7 +84,7 @@ jobs:
             --image "${{ needs.build.outputs.acr_login }}/$APP_NAME:${{ needs.build.outputs.tag }}"
 
   smoke-test-staging:
-    needs: staging
+    needs: [build, staging]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -105,15 +113,40 @@ jobs:
           path: playwright-report/
           retention-days: 7
 
-  production:
-    needs: [build, smoke-test-staging]
+  rollback-staging:
+    needs: [staging, smoke-test-staging]
+    if: failure() && needs.staging.outputs.previous_image != ''
     runs-on: ubuntu-latest
-    environment: production
     steps:
       - name: Azure Login
         uses: azure/login@v2
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Rollback staging
+        run: |
+          echo "Rolling back staging to ${{ needs.staging.outputs.previous_image }}"
+          az containerapp update \
+            -n "${APP_NAME}-staging" \
+            -g "${APP_NAME}-rg" \
+            --image "${{ needs.staging.outputs.previous_image }}"
+
+  production:
+    needs: [build, smoke-test-staging]
+    runs-on: ubuntu-latest
+    outputs:
+      previous_image: ${{ steps.prev.outputs.image }}
+    steps:
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Capture current image
+        id: prev
+        run: |
+          IMG=$(az containerapp show -n "$APP_NAME" -g "${APP_NAME}-rg" --query "properties.template.containers[0].image" -o tsv 2>/dev/null || echo "")
+          echo "image=$IMG" >> "$GITHUB_OUTPUT"
 
       - name: Deploy to production
         run: |
@@ -151,3 +184,21 @@ jobs:
           name: playwright-report-prod
           path: playwright-report/
           retention-days: 7
+
+  rollback-prod:
+    needs: [production, smoke-test-prod]
+    if: failure() && needs.production.outputs.previous_image != ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Rollback production
+        run: |
+          echo "Rolling back production to ${{ needs.production.outputs.previous_image }}"
+          az containerapp update \
+            -n "$APP_NAME" \
+            -g "${APP_NAME}-rg" \
+            --image "${{ needs.production.outputs.previous_image }}"
