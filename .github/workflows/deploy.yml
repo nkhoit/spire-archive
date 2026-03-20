@@ -157,7 +157,8 @@ jobs:
           az containerapp update \
             -n "$APP_NAME" \
             -g "${APP_NAME}-rg" \
-            --image "${{ needs.build.outputs.acr_login }}/$APP_NAME:${{ needs.build.outputs.tag }}"
+            --image "${{ needs.build.outputs.acr_login }}/$APP_NAME:${{ needs.build.outputs.tag }}" \
+            --min-replicas 1
 
   smoke-test-prod:
     needs: production
