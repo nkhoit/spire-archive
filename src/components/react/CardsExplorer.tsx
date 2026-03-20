@@ -250,12 +250,12 @@ export default function CardsExplorer(props: {
           <button
             className="rounded-md border border-white/10 bg-white/5 px-2 py-1 disabled:opacity-40"
             disabled={!canPrev}
-            onClick={() => setOffset((o) => Math.max(0, o - limit))}
+            onClick={() => setOffset(Math.max(0, offset - limit))}
           >{t('Prev', locale)}</button>
           <button
             className="rounded-md border border-white/10 bg-white/5 px-2 py-1 disabled:opacity-40"
             disabled={!canNext}
-            onClick={() => setOffset((o) => o + limit)}
+            onClick={() => setOffset(offset + limit)}
           >{t('Next', locale)}</button>
         </div>
       </div>
