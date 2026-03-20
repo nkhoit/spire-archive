@@ -9,6 +9,7 @@ type Power = {
   description: string;
   type: string;
   icon?: string;
+  stackable?: boolean;
 };
 
 type ApiResp<T> = { total: number; offset: number; limit: number; items: T[] };
@@ -76,6 +77,9 @@ export default function PowersExplorer(props: { game?: string; locale?: string }
                   <span className={`text-xs px-1.5 py-0.5 rounded ${
                     p.type === 'Buff' ? 'bg-emerald-900/50 text-emerald-300' : 'bg-red-900/50 text-red-300'
                   }`}>{t(p.type, locale)}</span>
+                  {p.stackable && (
+                    <span className="text-xs px-1.5 py-0.5 rounded bg-blue-900/50 text-blue-300">{t('Stackable', locale)}</span>
+                  )}
                 </div>
                 <p className="mt-0.5 text-sm text-slate-300 line-clamp-2"><DescriptionText text={p.description} /></p>
               </div>
