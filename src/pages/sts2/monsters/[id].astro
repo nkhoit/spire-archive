@@ -97,7 +97,41 @@ function buildSequence(pattern: any[], start: string | null | undefined): string
   return seq;
 }
 
-const sequence = buildSequence(movePattern, startMove);
+function buildAllSequences(pattern: any[], start: string | null | undefined): { label?: string; seq: string[] }[] {
+  if (!pattern.length) return [];
+  const byId = new Map(pattern.map((m: any) => [m.id, m]));
+  
+  // Find all moves that are followUp targets
+  const targeted = new Set<string>();
+  for (const m of pattern) {
+    if (m.followUp && m.followUp !== m.id) targeted.add(m.followUp);
+  }
+  
+  // Build chains starting from: 1) start move, 2) any unreachable moves from previous chains
+  const allVisited = new Set<string>();
+  const sequences: { label?: string; seq: string[] }[] = [];
+  
+  // First chain from start
+  if (start) {
+    const seq = buildSequence(pattern, start);
+    seq.forEach(id => allVisited.add(id));
+    if (seq.length) sequences.push({ seq });
+  }
+  
+  // Find secondary chains (moves not in any chain yet)
+  for (const m of pattern) {
+    if (m.type === 'random') continue;
+    if (allVisited.has(m.id)) continue;
+    // This move wasn't reached — it's a secondary chain entry
+    const seq = buildSequence(pattern, m.id);
+    seq.forEach(id => allVisited.add(id));
+    if (seq.length) sequences.push({ seq });
+  }
+  
+  return sequences;
+}
+
+const sequences = buildAllSequences(movePattern, startMove);
 
 const powerDescriptions = new Map<string, string>();
 for (const p of data.powers ?? []) {
@@ -132,22 +166,28 @@ for (const p of data.powers ?? []) {
     <section class="mt-6">
       <h2 class="text-sm font-semibold text-slate-200">{t('Move Pattern', locale)}</h2>
       
-      {sequence.length > 0 && (
-        <div class="mt-3 flex flex-wrap items-center gap-1 text-xs text-slate-300">
-          {sequence.map((moveId: string, i: number) => {
-            const move = movePattern.find((m: any) => m.id === moveId);
-            if (!move) return null;
-            const isLast = i === sequence.length - 1;
-            return (
-              <>
-                <span class={`px-2 py-1 rounded ${startMove === moveId ? 'bg-amber-500/20 text-amber-200 border border-amber-500/30' : 'bg-white/10'}`}>
-                  {intentIcons[move.intent?.type] ?? ''} {move.name}
-                </span>
-                {!isLast && <span class="text-slate-500">→</span>}
-                {isLast && move.loops && <span class="text-slate-500">↻</span>}
-              </>
-            );
-          })}
+      {sequences.length > 0 && (
+        <div class="mt-3 space-y-2">
+          {sequences.map((chain: any, ci: number) => (
+            <div class="flex flex-wrap items-center gap-1 text-xs text-slate-300">
+              {sequences.length > 1 && <span class="text-[10px] text-slate-500 uppercase tracking-wider mr-1">Phase {ci + 1}:</span>}
+              {chain.seq.map((moveId: string, i: number) => {
+                const move = movePattern.find((m: any) => m.id === moveId);
+                if (!move) return null;
+                const isLast = i === chain.seq.length - 1;
+                const isStart = ci === 0 && i === 0;
+                return (
+                  <>
+                    <span class={`px-2 py-1 rounded ${isStart ? 'bg-amber-500/20 text-amber-200 border border-amber-500/30' : 'bg-white/10'}`}>
+                      {intentIcons[move.intent?.type] ?? ''} {move.name}
+                    </span>
+                    {!isLast && <span class="text-slate-500">→</span>}
+                    {isLast && move.loops && <span class="text-slate-500">↻</span>}
+                  </>
+                );
+              })}
+            </div>
+          ))}
         </div>
       )}
 
