@@ -148,7 +148,11 @@ def parse_cards():
         raw_cost = int(m.group(1))
         card_id = class_to_id(name)
         vars_data = parse_dynamic_vars(text)
-        cards.append({
+        
+        # Star cost for Regent cards
+        star_match = re.search(r'CanonicalStarCost\s*=>\s*(\d+)', text)
+        
+        card = {
             "id": card_id,
             "name": get_loc_name(loc, card_id) or humanize(name),
             "cost": None if raw_cost < 0 or is_x_cost else raw_cost,
@@ -162,7 +166,10 @@ def parse_cards():
             "upgrade": upgrade,
             "description": get_loc_desc(loc, card_id, vars_data),
             "image_url": f"/images/sts2/cards/{card_id.lower()}.png",
-        })
+        }
+        if star_match:
+            card["star_cost"] = int(star_match.group(1))
+        cards.append(card)
     return cards
 
 # ============ RELICS ============

@@ -316,6 +316,25 @@ function applyManualFixes(events) {
       event.choices[0].description = 'Heal like resting at a Rest Site. Fight some enemies.';
     }
 
+    // Multi-page event: COLOSSAL_FLOWER has 3 dig depths
+    if (event.id === 'COLOSSAL_FLOWER') {
+      event.pages = [
+        { label: 'Initial', choices: [
+          { name: 'Extract Nectar', description: 'Gain 35 Gold.' },
+          { name: 'Reach Deeper', description: 'Take 5 damage. Go deeper.' },
+        ]},
+        { label: 'Deeper', choices: [
+          { name: 'Extract Nectar', description: 'Gain 75 Gold.' },
+          { name: 'Reach Deeper', description: 'Take 6 damage. Go even deeper.' },
+        ]},
+        { label: 'Deepest', choices: [
+          { name: 'Extract Instead', description: 'Gain 135 Gold.' },
+          { name: 'Obtain Pollinous Core', description: 'Take 7 damage. Obtain the Pollinous Core relic.',
+            references: [{ type: 'relic', id: 'POLLINOUS_CORE', name: 'Pollinous Core' }] },
+        ]},
+      ];
+    }
+
     if (event.id === 'COLORFUL_PHILOSOPHERS') {
       event.choices = (event.choices || [])
         .filter(choice => !/prismatic shard/i.test(choice.name) && !/prismatic shard/i.test(choice.description || ''))
@@ -328,6 +347,56 @@ function applyManualFixes(events) {
           ]);
           return { ...choice, references };
         });
+    }
+
+    // Event-level references for events with runtime-determined rewards
+    const MANUAL_EVENT_REFS = {
+      DOLL_ROOM: [
+        { type: 'relic', id: 'DAUGHTER_OF_THE_WIND', name: 'Daughter Of The Wind' },
+        { type: 'relic', id: 'MR_STRUGGLES', name: 'Mr Struggles' },
+        { type: 'relic', id: 'BING_BONG', name: 'Bing Bong' },
+      ],
+      ENDLESS_CONVEYOR: [{ type: 'card', id: 'FEEDING_FRENZY', name: 'Feeding Frenzy' }],
+      FAKE_MERCHANT: [
+        { type: 'relic', id: 'FAKE_ANCHOR', name: 'Fake Anchor' },
+        { type: 'relic', id: 'FAKE_BLOOD_VIAL', name: 'Fake Blood Vial' },
+        { type: 'relic', id: 'FAKE_HAPPY_FLOWER', name: 'Fake Happy Flower' },
+        { type: 'relic', id: 'FAKE_LEES_WAFFLE', name: "Fake Lee's Waffle" },
+        { type: 'relic', id: 'FAKE_MANGO', name: 'Fake Mango' },
+        { type: 'relic', id: 'FAKE_ORICHALCUM', name: 'Fake Orichalcum' },
+        { type: 'relic', id: 'FAKE_SNECKO_EYE', name: 'Fake Snecko Eye' },
+        { type: 'relic', id: 'FAKE_STRIKE_DUMMY', name: 'Fake Strike Dummy' },
+        { type: 'relic', id: 'FAKE_VENERABLE_TEA_SET', name: 'Fake Venerable Tea Set' },
+        { type: 'relic', id: 'FAKE_MERCHANTS_RUG', name: "Fake Merchant's Rug" },
+      ],
+      THE_LANTERN_KEY: [{ type: 'card', id: 'LANTERN_KEY', name: 'Lantern Key' }],
+      TINKER_TIME: [{ type: 'card', id: 'MAD_SCIENCE', name: 'Mad Science' }],
+      TRASH_HEAP: [
+        { type: 'card', id: 'CALTROPS', name: 'Caltrops' },
+        { type: 'card', id: 'CLASH', name: 'Clash' },
+        { type: 'card', id: 'DISTRACTION', name: 'Distraction' },
+        { type: 'card', id: 'DUAL_WIELD', name: 'Dual Wield' },
+        { type: 'card', id: 'ENTRENCH', name: 'Entrench' },
+        { type: 'card', id: 'HELLO_WORLD', name: 'Hello World' },
+        { type: 'card', id: 'OUTMANEUVER', name: 'Outmaneuver' },
+        { type: 'card', id: 'REBOUND', name: 'Rebound' },
+        { type: 'card', id: 'RIP_AND_TEAR', name: 'Rip And Tear' },
+        { type: 'card', id: 'STACK', name: 'Stack' },
+        { type: 'relic', id: 'DARKSTONE_PERIAPT', name: 'Darkstone Periapt' },
+        { type: 'relic', id: 'DREAM_CATCHER', name: 'Dream Catcher' },
+        { type: 'relic', id: 'HAND_DRILL', name: 'Hand Drill' },
+        { type: 'relic', id: 'MAW_BANK', name: 'Maw Bank' },
+        { type: 'relic', id: 'THE_BOOT', name: 'The Boot' },
+      ],
+      TRIAL: [
+        { type: 'card', id: 'REGRET', name: 'Regret' },
+        { type: 'card', id: 'SHAME', name: 'Shame' },
+        { type: 'card', id: 'DOUBT', name: 'Doubt' },
+      ],
+    };
+
+    if (MANUAL_EVENT_REFS[event.id]) {
+      event.references = dedupeReferences([...(event.references || []), ...MANUAL_EVENT_REFS[event.id]]);
     }
 
     const ancient = ANCIENT_EVENT_DATA[event.id];
