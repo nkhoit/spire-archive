@@ -282,9 +282,9 @@ for (const p of data.powers ?? []) {
                 <div class="mt-1.5 space-y-1">
                   {(mv.effects ?? []).map((eff: any) => {
                     if (eff.type === 'power') {
-                      const amt = typeof eff.amount === 'object' ? eff.amount.normal : eff.amount;
-                      const ascAmt = typeof eff.amount === 'object' ? eff.amount.ascension : null;
-                      const ascLvl = typeof eff.amount === 'object' ? eff.amount.ascLevel : null;
+                      const amt = eff.amount && typeof eff.amount === 'object' ? eff.amount.normal : eff.amount;
+                      const ascAmt = eff.amount && typeof eff.amount === 'object' ? eff.amount.ascension : null;
+                      const ascLvl = eff.amount && typeof eff.amount === 'object' ? eff.amount.ascLevel : null;
                       const desc = powerDescriptions.get(eff.power.toLowerCase()) || '';
                       const amtStr = amt != null ? String(amt) : '';
                       // Replace the amount in the description so it reads naturally
@@ -300,7 +300,7 @@ for (const p of data.powers ?? []) {
                       );
                     }
                     if (eff.type === 'block') {
-                      const amt = typeof eff.amount === 'object' ? eff.amount.normal : eff.amount;
+                      const amt = eff.amount && typeof eff.amount === 'object' ? eff.amount.normal : eff.amount;
                       return <span class="text-xs px-2 py-0.5 rounded bg-blue-500/15 text-blue-300">Block {amt ?? '?'}</span>;
                     }
                     if (eff.type === 'add_card') {
