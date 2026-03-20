@@ -135,6 +135,14 @@ jobs:
             -g "${APP_NAME}-rg" \
             --image "${{ needs.staging.outputs.previous_image }}"
 
+      - name: Notify Kuro
+        if: always()
+        run: |
+          curl -s -X POST "${{ secrets.OPENCLAW_HOOK_URL }}" \
+            -H "Authorization: Bearer ${{ secrets.OPENCLAW_HOOK_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d "{\"message\":\"🚨 Staging smoke tests failed and rolled back. Commit: ${{ github.sha }}. Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}. Investigate and fix.\",\"deliver\":true,\"channel\":\"telegram\",\"to\":\"8558222550\"}" || true
+
   production:
     needs: [build, smoke-test-staging]
     runs-on: ubuntu-latest
@@ -207,3 +215,11 @@ jobs:
             -n "$APP_NAME" \
             -g "${APP_NAME}-rg" \
             --image "${{ needs.production.outputs.previous_image }}"
+
+      - name: Notify Kuro
+        if: always()
+        run: |
+          curl -s -X POST "${{ secrets.OPENCLAW_HOOK_URL }}" \
+            -H "Authorization: Bearer ${{ secrets.OPENCLAW_HOOK_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d "{\"message\":\"🚨 Production smoke tests failed and rolled back. Commit: ${{ github.sha }}. Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}. Investigate and fix.\",\"deliver\":true,\"channel\":\"telegram\",\"to\":\"8558222550\"}" || true
