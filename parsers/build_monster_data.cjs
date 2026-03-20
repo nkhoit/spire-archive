@@ -6,6 +6,25 @@ const path = require('path');
 const CS_BASE = '/Users/kuro/code/sts2-research/decompiled';
 const MONSTERS_DIR = path.join(CS_BASE, 'MegaCrit.Sts2.Core.Models.Monsters');
 const OUTPUT_FILE = path.join(__dirname, '../data/sts2/monsters.json');
+const POWERS_FILE = path.join(__dirname, '../data/sts2/powers.json');
+
+// Build power class name → display name map from powers.json
+const powerClassToName = new Map();
+try {
+  const powersData = JSON.parse(fs.readFileSync(POWERS_FILE, 'utf8'));
+  for (const p of powersData) {
+    // ID like BACK_ATTACK_LEFT_POWER → class BackAttackLeftPower
+    const cls = p.id.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join('');
+    powerClassToName.set(cls, p.name);
+    // Also map without Power suffix
+    powerClassToName.set(cls.replace(/Power$/, ''), p.name);
+  }
+} catch (e) { /* powers.json optional */ }
+
+function resolvePowerName(className) {
+  const stripped = className.replace(/Power$/, '');
+  return powerClassToName.get(className) || powerClassToName.get(stripped) || stripped.replace(/([a-z])([A-Z])/g, '$1 $2');
+}
 
 // Convert PascalCase class name to SCREAMING_SNAKE_CASE
 function toSnakeCase(name) {
@@ -264,7 +283,7 @@ function extractMoveEffects(code, ascValues) {
     const powerRe = /PowerCmd\.Apply<(\w+)>\s*\(([^,]+),\s*([^,]+)/g;
     let pm;
     while ((pm = powerRe.exec(body)) !== null) {
-      const powerName = pm[1].replace(/Power$/, '');
+      const powerName = resolvePowerName(pm[1]);
       const targetRaw = pm[2].trim();
       const amountRaw = pm[3].trim();
       
@@ -326,6 +345,44 @@ function extractMoveEffects(code, ascValues) {
     }
   }
   return effects;
+}
+
+// Extract starting powers from AfterAddedToRoom method
+function extractStartingPowers(code, ascValues) {
+  const powers = [];
+  const methodRe = /AfterAddedToRoom\s*\(\s*\)\s*\{/;
+  const match = methodRe.exec(code);
+  if (!match) return powers;
+  
+  let depth = 1, idx = match.index + match[0].length;
+  while (depth > 0 && idx < code.length) {
+    if (code[idx] === '{') depth++;
+    if (code[idx] === '}') depth--;
+    idx++;
+  }
+  const body = code.substring(match.index, idx);
+  
+  const powerRe = /PowerCmd\.Apply<(\w+)>\s*\(([^,]+),\s*([^,]+)/g;
+  let pm;
+  while ((pm = powerRe.exec(body)) !== null) {
+    const name = resolvePowerName(pm[1]);
+    const targetRaw = pm[2].trim();
+    const amountRaw = pm[3].trim();
+    const target = /target|player/i.test(targetRaw) ? 'player' : 'self';
+    
+    let amount = null;
+    const numMatch = amountRaw.match(/^(\d+)/);
+    if (numMatch) amount = parseInt(numMatch[1]);
+    // Check for ascension-scaled amount
+    const ascRef = amountRaw.match(/(\w+)$/);
+    if (ascRef && ascValues[ascRef[1]]) {
+      const av = ascValues[ascRef[1]];
+      amount = { normal: av.normal, ascension: av.ascension, ascLevel: av.ascLevel };
+    }
+    
+    powers.push({ name, amount, target });
+  }
+  return powers;
 }
 
 // Main parse function for a single CS file
@@ -451,6 +508,10 @@ function parseFile(filePath, ascValuesGlobal) {
     }
   }
 
+  // Starting powers
+  const startingPowers = extractStartingPowers(code, ascValues);
+  if (startingPowers.length > 0) result.starting_powers = startingPowers;
+
   return result;
 }
 
@@ -486,6 +547,9 @@ function main() {
         if (parsed.move_pattern) {
           existing.move_pattern = parsed.move_pattern;
           existing.start_move = parsed.start_move;
+        }
+        if (parsed.starting_powers) {
+          existing.powers = parsed.starting_powers;
         }
         updated++;
       } else {

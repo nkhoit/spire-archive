@@ -252,6 +252,13 @@
     "start_move": "BOOT_UP_MOVE",
     "acts": [
       "Act 4"
+    ],
+    "powers": [
+      {
+        "name": "Stock",
+        "amount": null,
+        "target": "self"
+      }
     ]
   },
   {
@@ -264,7 +271,11 @@
     "moves": [],
     "description": null,
     "powers": [
-      "BattlewornDummyTimeLimitPower 3"
+      {
+        "name": "Time Limit",
+        "amount": 3,
+        "target": "self"
+      }
     ]
   },
   {
@@ -277,7 +288,11 @@
     "moves": [],
     "description": null,
     "powers": [
-      "BattlewornDummyTimeLimitPower 3"
+      {
+        "name": "Time Limit",
+        "amount": 3,
+        "target": "self"
+      }
     ]
   },
   {
@@ -290,7 +305,11 @@
     "moves": [],
     "description": null,
     "powers": [
-      "BattlewornDummyTimeLimitPower 3"
+      {
+        "name": "Time Limit",
+        "amount": 3,
+        "target": "self"
+      }
     ]
   },
   {
@@ -447,7 +466,11 @@
     "moves": [],
     "description": null,
     "powers": [
-      "ImbalancedPower 1"
+      {
+        "name": "Imbalanced",
+        "amount": 1,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -604,7 +627,11 @@
     "moves": [],
     "description": null,
     "powers": [
-      "SlowPower 1"
+      {
+        "name": "Slow",
+        "amount": 1,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -686,7 +713,11 @@
     ],
     "description": null,
     "powers": [
-      "TerritorialPower 1"
+      {
+        "name": "Territorial",
+        "amount": 1,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -946,7 +977,11 @@
     ],
     "description": null,
     "powers": [
-      "ArtifactPower 2"
+      {
+        "name": "Artifact",
+        "amount": 2,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -1038,6 +1073,17 @@
     ],
     "acts": [
       "Act 2"
+    ],
+    "powers": [
+      {
+        "name": "Ravenous",
+        "amount": {
+          "normal": 4,
+          "ascension": 5,
+          "ascLevel": 9
+        },
+        "target": "self"
+      }
     ]
   },
   {
@@ -1128,8 +1174,16 @@
     ],
     "description": null,
     "powers": [
-      "BackAttackLeftPower 1",
-      "CrabRagePower 1"
+      {
+        "name": "Back Attack",
+        "amount": 1,
+        "target": "self"
+      },
+      {
+        "name": "Crab Rage",
+        "amount": 1,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -1251,7 +1305,11 @@
     ],
     "description": null,
     "powers": [
-      "ArtifactPower 1"
+      {
+        "name": "Artifact",
+        "amount": 1,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -1504,6 +1562,13 @@
           "CONSTRICT_MOVE"
         ]
       }
+    ],
+    "powers": [
+      {
+        "name": "Reattach",
+        "amount": 25,
+        "target": "self"
+      }
     ]
   },
   {
@@ -1598,7 +1663,11 @@
     ],
     "description": null,
     "powers": [
-      "DoorRevivalPower 1"
+      {
+        "name": "Door Revival",
+        "amount": 1,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -1762,7 +1831,11 @@
     ],
     "description": null,
     "powers": [
-      "PersonalHivePower 1"
+      {
+        "name": "Personal Hive",
+        "amount": 1,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -1774,7 +1847,7 @@
         "effects": [
           {
             "type": "power",
-            "power": "PersonalHive",
+            "power": "Personal Hive",
             "amount": 1,
             "target": "self"
           },
@@ -1851,7 +1924,11 @@
     ],
     "description": null,
     "powers": [
-      "HardToKillPower 9"
+      {
+        "name": "Hard to Kill",
+        "amount": 9,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -1916,7 +1993,11 @@
     "moves": [],
     "description": null,
     "powers": [
-      "IllusionPower 1"
+      {
+        "name": "Illusion",
+        "amount": 1,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -2482,7 +2563,11 @@
     ],
     "description": null,
     "powers": [
-      "SuckPower 3"
+      {
+        "name": "Suck",
+        "amount": 3,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -2633,6 +2718,17 @@
     "start_move": "TONGUE_LASH",
     "acts": [
       "Act 4"
+    ],
+    "powers": [
+      {
+        "name": "Plating",
+        "amount": {
+          "normal": 15,
+          "ascension": 19,
+          "ascLevel": 8
+        },
+        "target": "self"
+      }
     ]
   },
   {
@@ -2713,7 +2809,11 @@
     ],
     "description": null,
     "powers": [
-      "MinionPower 1"
+      {
+        "name": "Minion",
+        "amount": 1,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -2763,7 +2863,11 @@
     ],
     "description": null,
     "powers": [
-      "GalvanicPower 6"
+      {
+        "name": "Galvanic",
+        "amount": 6,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -2848,7 +2952,11 @@
     ],
     "description": null,
     "powers": [
-      "SurprisePower 1"
+      {
+        "name": "Surprise",
+        "amount": 1,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -3153,7 +3261,11 @@
     ],
     "description": null,
     "powers": [
-      "VitalSparkPower 1"
+      {
+        "name": "Vital Spark",
+        "amount": 1,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -3259,7 +3371,11 @@
     ],
     "description": null,
     "powers": [
-      "SlipperyPower 1"
+      {
+        "name": "Slippery",
+        "amount": 1,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -3333,7 +3449,11 @@
     ],
     "description": null,
     "powers": [
-      "MinionPower 1"
+      {
+        "name": "Minion",
+        "amount": 1,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -3639,8 +3759,16 @@
     ],
     "description": null,
     "powers": [
-      "PlatingPower 12",
-      "AsleepPower 3"
+      {
+        "name": "Plating",
+        "amount": 12,
+        "target": "self"
+      },
+      {
+        "name": "Asleep",
+        "amount": 3,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -3937,7 +4065,11 @@
     ],
     "description": null,
     "powers": [
-      "RampartPower 25"
+      {
+        "name": "Rampart",
+        "amount": 25,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -4056,6 +4188,17 @@
     "start_move": "WEB_CANNON_MOVE",
     "acts": [
       "Act 3"
+    ],
+    "powers": [
+      {
+        "name": "Curl Up",
+        "amount": {
+          "normal": 14,
+          "ascension": 18,
+          "ascLevel": 8
+        },
+        "target": "self"
+      }
     ]
   },
   {
@@ -4247,7 +4390,11 @@
     ],
     "description": null,
     "powers": [
-      "ArtifactPower 3"
+      {
+        "name": "Artifact",
+        "amount": 3,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -4785,7 +4932,11 @@
     ],
     "description": null,
     "powers": [
-      "IllusionPower 1"
+      {
+        "name": "Illusion",
+        "amount": 1,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -4891,6 +5042,17 @@
     ],
     "acts": [
       "Act 2"
+    ],
+    "powers": [
+      {
+        "name": "Skittish",
+        "amount": {
+          "normal": 6,
+          "ascension": 7,
+          "ascLevel": 8
+        },
+        "target": "self"
+      }
     ]
   },
   {
@@ -4917,7 +5079,11 @@
     ],
     "description": null,
     "powers": [
-      "InfestedPower 4"
+      {
+        "name": "Infested",
+        "amount": 4,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -4984,7 +5150,11 @@
     ],
     "description": null,
     "powers": [
-      "ArtifactPower 1"
+      {
+        "name": "Artifact",
+        "amount": 1,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -5074,7 +5244,7 @@
         "effects": [
           {
             "type": "power",
-            "power": "ChainsOfBinding",
+            "power": "Chains of Binding",
             "amount": 3,
             "target": "player"
           }
@@ -5207,9 +5377,21 @@
     ],
     "description": null,
     "powers": [
-      "SurroundedPower 1",
-      "BackAttackRightPower 1",
-      "CrabRagePower 1"
+      {
+        "name": "Surrounded",
+        "amount": 1,
+        "target": "self"
+      },
+      {
+        "name": "Back Attack",
+        "amount": 1,
+        "target": "self"
+      },
+      {
+        "name": "Crab Rage",
+        "amount": 1,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -5304,7 +5486,11 @@
     ],
     "description": null,
     "powers": [
-      "PaperCutsPower 2"
+      {
+        "name": "Paper Cuts",
+        "amount": 2,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -5496,6 +5682,13 @@
     "start_move": "JET_MOVE",
     "acts": [
       "Act 2"
+    ],
+    "powers": [
+      {
+        "name": "Plating",
+        "amount": null,
+        "target": "self"
+      }
     ]
   },
   {
@@ -5634,7 +5827,11 @@
     ],
     "description": null,
     "powers": [
-      "HardenedShellPower 20"
+      {
+        "name": "Hardened Shell",
+        "amount": 20,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -5986,7 +6183,20 @@
     "moves": [],
     "description": null,
     "powers": [
-      "SlumberPower 3"
+      {
+        "name": "Plating",
+        "amount": {
+          "normal": 15,
+          "ascension": 18,
+          "ascLevel": 8
+        },
+        "target": "self"
+      },
+      {
+        "name": "Slumber",
+        "amount": 3,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -6655,6 +6865,17 @@
     "start_move": "CRASH_MOVE",
     "acts": [
       "Act 2"
+    ],
+    "powers": [
+      {
+        "name": "Shriek",
+        "amount": {
+          "normal": 70,
+          "ascension": 75,
+          "ascLevel": 8
+        },
+        "target": "self"
+      }
     ]
   },
   {
@@ -6698,7 +6919,20 @@
     ],
     "description": null,
     "powers": [
-      "AdaptablePower 1"
+      {
+        "name": "Adaptable",
+        "amount": 1,
+        "target": "self"
+      },
+      {
+        "name": "Enrage",
+        "amount": {
+          "normal": 2,
+          "ascension": 3,
+          "ascLevel": 9
+        },
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -6715,7 +6949,7 @@
         "effects": [
           {
             "type": "power",
-            "power": "PainfulStabs",
+            "power": "Painful Stabs",
             "amount": 1,
             "target": "self"
           },
@@ -6861,7 +7095,11 @@
     ],
     "description": null,
     "powers": [
-      "ArtifactPower 0"
+      {
+        "name": "Artifact",
+        "amount": 0,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -6938,7 +7176,11 @@
     ],
     "description": null,
     "powers": [
-      "ArtifactPower 2"
+      {
+        "name": "Artifact",
+        "amount": 2,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -7015,7 +7257,11 @@
     ],
     "description": null,
     "powers": [
-      "ArtifactPower 1"
+      {
+        "name": "Artifact",
+        "amount": 1,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -7082,7 +7328,11 @@
     ],
     "description": null,
     "powers": [
-      "PossessSpeedPower 1"
+      {
+        "name": "Possess Speed",
+        "amount": 1,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -7259,7 +7509,11 @@
     ],
     "description": null,
     "powers": [
-      "PossessStrengthPower 1"
+      {
+        "name": "Possess Strength",
+        "amount": 1,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -7418,7 +7672,11 @@
     ],
     "description": null,
     "powers": [
-      "EscapeArtistPower 5"
+      {
+        "name": "Escape Artist",
+        "amount": 5,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -7599,7 +7857,11 @@
     ],
     "description": null,
     "powers": [
-      "MinionPower 1"
+      {
+        "name": "Minion",
+        "amount": 1,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -7709,6 +7971,13 @@
     "start_move": "HATCH_MOVE",
     "acts": [
       "Act 3"
+    ],
+    "powers": [
+      {
+        "name": "Hatch",
+        "amount": null,
+        "target": "self"
+      }
     ]
   },
   {
@@ -8116,7 +8385,11 @@
     ],
     "description": null,
     "powers": [
-      "SlipperyPower 9"
+      {
+        "name": "Slippery",
+        "amount": 9,
+        "target": "self"
+      }
     ],
     "move_pattern": [
       {
@@ -8310,7 +8583,7 @@
         "effects": [
           {
             "type": "power",
-            "power": "SteamEruption",
+            "power": "Steam Eruption",
             "amount": {
               "normal": 15,
               "ascension": 20,
@@ -8347,7 +8620,7 @@
           },
           {
             "type": "power",
-            "power": "SteamEruption",
+            "power": "Steam Eruption",
             "amount": 3,
             "target": "self"
           }
@@ -8371,7 +8644,7 @@
         "effects": [
           {
             "type": "power",
-            "power": "SteamEruption",
+            "power": "Steam Eruption",
             "amount": 3,
             "target": "self"
           }
@@ -8392,7 +8665,7 @@
         "effects": [
           {
             "type": "power",
-            "power": "SteamEruption",
+            "power": "Steam Eruption",
             "amount": 3,
             "target": "self"
           }
@@ -8413,7 +8686,7 @@
         "effects": [
           {
             "type": "power",
-            "power": "SteamEruption",
+            "power": "Steam Eruption",
             "amount": 3,
             "target": "self"
           }
@@ -8437,7 +8710,7 @@
         "effects": [
           {
             "type": "power",
-            "power": "SteamEruption",
+            "power": "Steam Eruption",
             "amount": 3,
             "target": "self"
           }
@@ -8572,6 +8845,13 @@
         "loops": true
       }
     ],
-    "start_move": "ZAP"
+    "start_move": "ZAP",
+    "powers": [
+      {
+        "name": "High Voltage",
+        "amount": 2,
+        "target": "self"
+      }
+    ]
   }
 ]

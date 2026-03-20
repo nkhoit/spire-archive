@@ -163,10 +163,24 @@ for (const p of data.powers ?? []) {
   {(monster.powers ?? []).length > 0 && (
     <section class="mt-6">
       <h2 class="text-sm font-semibold text-slate-200">{t('Starting Powers', locale)}</h2>
-      <div class="mt-2 flex flex-wrap gap-2">
-        {(monster.powers ?? []).map((p: string) => (
-          <span class="text-xs px-2 py-1 rounded bg-white/10 text-slate-200">{p}</span>
-        ))}
+      <div class="mt-2 space-y-1.5">
+        {(monster.powers ?? []).map((p: any) => {
+          const name = typeof p === 'string' ? p : p.name;
+          const amt = typeof p === 'object' ? (typeof p.amount === 'object' ? p.amount.normal : p.amount) : null;
+          const ascAmt = typeof p === 'object' && typeof p.amount === 'object' ? p.amount.ascension : null;
+          const ascLvl = typeof p === 'object' && typeof p.amount === 'object' ? p.amount.ascLevel : null;
+          const target = typeof p === 'object' ? p.target : 'self';
+          const desc = powerDescriptions.get(name.toLowerCase()) || '';
+          return (
+            <div>
+              <span class={`text-xs px-2 py-0.5 rounded ${target === 'player' ? 'bg-red-500/15 text-red-300' : 'bg-purple-500/15 text-purple-300'}`}>
+                {target === 'player' ? '→ ' : ''}{name}{amt != null ? ` ${amt}` : ''}
+                {ascAmt != null && ascAmt !== amt && <span class="text-amber-400/80"> (Asc {ascLvl}+: {ascAmt})</span>}
+              </span>
+              {desc && <p class="mt-0.5 text-[11px] text-slate-400 pl-2">{desc}</p>}
+            </div>
+          );
+        })}
       </div>
     </section>
   )}
