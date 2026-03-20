@@ -632,7 +632,13 @@ function main() {
     }
   }
 
-  const output = Array.from(monsterMap.values());
+  // Filter out test/debug monsters
+  const TEST_MONSTERS = new Set([
+    'MULTI_ATTACK_MOVE_MONSTER', 'SINGLE_ATTACK_MOVE_MONSTER',
+    'ONE_HP_MONSTER', 'TEN_HP_MONSTER', 'TEST_SUBJECT',
+    'FAKE_MERCHANT_MONSTER',
+  ]);
+  const output = Array.from(monsterMap.values()).filter(m => !TEST_MONSTERS.has(m.id));
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(output, null, 2));
 
   console.log(`Updated: ${updated}, Skipped: ${skipped}, Total monsters: ${output.length}`);
