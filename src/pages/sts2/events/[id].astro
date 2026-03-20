@@ -4,7 +4,7 @@ import Badge from '../../../components/Badge.astro';
 import { getData } from '../../../lib/data';
 import { getLocale } from '../../../lib/i18n';
 import { t } from '../../../lib/ui-strings';
-import { replaceEnergyTokens } from '../../../lib/energy-icons';
+import { replaceGameTokens } from '../../../lib/energy-icons';
 
 const { id } = Astro.params;
 const { locale, langPrefix } = getLocale(Astro);
@@ -25,7 +25,7 @@ const showStandardChoices = !hasAncientRelicPools;
 
 function linkifyRefs(text: string, refs?: any[], langPrefix?: string): string {
   const prefix = langPrefix ?? '';
-  if (!refs?.length || !text) return replaceEnergyTokens(text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'));
+  if (!refs?.length || !text) return replaceGameTokens(text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'));
   let html = text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   const sorted = [...refs].sort((a, b) => b.name.length - a.name.length);
   for (const ref of sorted) {
@@ -39,7 +39,7 @@ function linkifyRefs(text: string, refs?: any[], langPrefix?: string): string {
     const re = new RegExp(`(?<!<[^>]*)\\b(${escaped})\\b`, 'gi');
     html = html.replace(re, `<a href="${href}" class="text-amber-200 underline decoration-amber-500/40 hover:decoration-amber-400 transition-colors">$1</a>`);
   }
-  return replaceEnergyTokens(html);
+  return replaceGameTokens(html);
 }
 
 function renderChoices(choices: any[], eventRefs?: any[], langPrefix?: string) {
@@ -101,7 +101,7 @@ function getPoolLabel(name: string, locale: string) {
               />
               <div class="min-w-0">
                 <div class="text-sm font-semibold text-sky-300 group-hover:underline">{relicName}</div>
-                <div class="text-xs text-slate-400 line-clamp-2" set:html={replaceEnergyTokens(relic?.description ?? '')} />
+                <div class="text-xs text-slate-400 line-clamp-2" set:html={replaceGameTokens(relic?.description ?? '')} />
               </div>
             </a>
           );

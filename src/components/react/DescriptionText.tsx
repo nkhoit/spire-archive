@@ -45,7 +45,9 @@ export default function DescriptionText({ text, color, className }: Props) {
         <img key={key++} src={getIconSrc(color)} alt="Energy" className="inline-block h-5 w-5 align-text-bottom" />
       );
     } else if (token === '[S]') {
-      parts.push('⭐');
+      parts.push(
+        <img key={key++} src="/images/sts2/cardui/star_icon.png" alt="Star" className="inline-block h-5 w-5 align-text-bottom" />
+      );
     } else {
       // [N Energy]
       const n = token.match(/\[(\d+)\s+Energy\]/)?.[1];

@@ -41,7 +41,10 @@ export function replaceEnergyTokens(html: string, color?: string): string {
   return html;
 }
 
-/** Replaces [S] star tokens with star icon */
+/** Replaces both [E]/[N Energy] and [S] tokens with inline icons */
+export function replaceGameTokens(html: string, color?: string): string {
+  return replaceStarTokens(replaceEnergyTokens(html, color));
+}
 export function replaceStarTokens(html: string): string {
-  return html.replace(/\[S\]/g, '⭐');
+  return html.replace(/\[S\]/g, '<img src="/images/sts2/cardui/star_icon.png" alt="Star" class="inline-block h-5 w-5 align-text-bottom" />');
 }

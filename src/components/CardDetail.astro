@@ -4,7 +4,7 @@ import CardImageToggle from './react/CardImageToggle';
 import CardImageToggleSts1 from './react/CardImageToggleSts1';
 import { t } from '../lib/ui-strings';
 import { getLocale } from '../lib/i18n';
-import { replaceEnergyTokens } from '../lib/energy-icons';
+import { replaceGameTokens } from '../lib/energy-icons';
 
 export interface Props {
   game: 'sts1' | 'sts2';
@@ -130,7 +130,7 @@ function highlightDescription(desc: string, game: string, data: any, color?: str
   
   // STS2 [E] and [N Energy] tokens — use character-specific energy icon
   if (game === 'sts2') {
-    html = replaceEnergyTokens(html, color);
+    html = replaceGameTokens(html, color);
   }
   // Collect highlight terms: keywords + power names
   const highlightTerms: string[] = [];

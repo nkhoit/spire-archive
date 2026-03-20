@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Pager, useApiList, useUrlOffset } from './SimpleExplorer';
 import { t } from '../../lib/ui-strings';
+import DescriptionText from './DescriptionText';
 
 type Power = {
   id: string;
@@ -76,7 +77,7 @@ export default function PowersExplorer(props: { game?: string; locale?: string }
                     p.type === 'Buff' ? 'bg-emerald-900/50 text-emerald-300' : 'bg-red-900/50 text-red-300'
                   }`}>{t(p.type, locale)}</span>
                 </div>
-                <p className="mt-0.5 text-sm text-slate-300 line-clamp-2">{p.description}</p>
+                <p className="mt-0.5 text-sm text-slate-300 line-clamp-2"><DescriptionText text={p.description} /></p>
               </div>
             </a>
           </li>
