@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Pager, useApiList, useUrlOffset } from './SimpleExplorer';
 import { t } from '../../lib/ui-strings';
+import DescriptionText from './DescriptionText';
 
 type Relic = {
   id: string;
@@ -114,7 +115,7 @@ export default function RelicsExplorer(props: { game?: string; tiers: string[]; 
                   {t(r.tier, locale)}
                   {r.color ? ` · ${t(r.color.charAt(0).toUpperCase() + r.color.slice(1), locale)}` : ''}
                 </div>
-                <div className="mt-1 line-clamp-2 text-sm text-slate-300">{r.description}</div>
+                <div className="mt-1 line-clamp-2 text-sm text-slate-300"><DescriptionText text={r.description} /></div>
               </div>
             </a>
           </li>

@@ -3,6 +3,7 @@ import Layout from '../../../components/Layout.astro';
 import { getData } from '../../../lib/data';
 import { getLocale } from '../../../lib/i18n';
 import { t } from '../../../lib/ui-strings';
+import { replaceEnergyTokens } from '../../../lib/energy-icons';
 import CssCardRenderer from '../../../components/react/CssCardRenderer';
 
 const { id } = Astro.params;
@@ -74,7 +75,7 @@ const colorMap: Record<string, string> = {
     </div>
   </div>
 
-  <p class="mt-4 text-slate-200">{power.description}</p>
+  <p class="mt-4 text-slate-200" set:html={replaceEnergyTokens(power.description ?? '')} />
 
   {matchingKeyword && (
     <a href={langPrefix + '/sts2/keywords'} class="mt-2 inline-block text-sm text-sky-400 hover:text-sky-300">→ {t('See keyword definition', locale)}</a>

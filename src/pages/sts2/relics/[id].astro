@@ -4,6 +4,7 @@ import Badge from '../../../components/Badge.astro';
 import { getData } from '../../../lib/data';
 import { getLocale } from '../../../lib/i18n';
 import { t } from '../../../lib/ui-strings';
+import { replaceEnergyTokens } from '../../../lib/energy-icons';
 
 const { id } = Astro.params;
 const { locale, langPrefix } = getLocale(Astro);
@@ -30,7 +31,7 @@ const imgSrc = `/images/sts2/relics/${relic.id.toLowerCase()}.png`;
 
   <section class="mt-6 rounded-lg border border-white/10 bg-white/5 p-4">
     <h2 class="text-sm font-semibold">{t('Description', locale)}</h2>
-    <p class="mt-2 whitespace-pre-line text-sm text-slate-200">{relic.description}</p>
+    <p class="mt-2 whitespace-pre-line text-sm text-slate-200" set:html={replaceEnergyTokens(relic.description ?? '')} />
     {relic.flavor ? <p class="mt-3 text-sm italic text-slate-400">{relic.flavor}</p> : null}
   </section>
 </Layout>

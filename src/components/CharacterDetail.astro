@@ -2,6 +2,7 @@
 import Badge from './Badge.astro';
 import { t } from '../lib/ui-strings';
 import { getLocale } from '../lib/i18n';
+import { replaceEnergyTokens } from '../lib/energy-icons';
 
 interface Props {
   game: 'sts1' | 'sts2';
@@ -77,7 +78,7 @@ const getRelicImgSrc = (r: any) => {
         )}
         <a href={`${langPrefix}/${game}/relics/${startingRelic.id}`} class="text-sm text-sky-300 hover:text-sky-200 hover:underline">{startingRelic.name}</a>
       </div>
-      {startingRelic.description && <p class="mt-1 text-sm text-slate-300">{startingRelic.description}</p>}
+      {startingRelic.description && <p class="mt-1 text-sm text-slate-300" set:html={replaceEnergyTokens(startingRelic.description, color)} />}
     </section>
   )}
 </div>
@@ -119,7 +120,7 @@ const getRelicImgSrc = (r: any) => {
               <span class="ml-2 text-xs text-slate-400">{r[relicTierField]}</span>
             </div>
           </div>
-          {r.description && <p class={`mt-1 text-sm text-slate-300 ${hasRelicImages ? 'pl-10' : ''}`}>{r.description}</p>}
+          {r.description && <p class={`mt-1 text-sm text-slate-300 ${hasRelicImages ? 'pl-10' : ''}`} set:html={replaceEnergyTokens(r.description, color)} />}
         </li>
       ))}
     </ul>

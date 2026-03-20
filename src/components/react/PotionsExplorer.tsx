@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Pager, useApiList, useUrlOffset } from './SimpleExplorer';
 import { t } from '../../lib/ui-strings';
+import DescriptionText from './DescriptionText';
 
 type Potion = {
   id: string;
@@ -86,7 +87,7 @@ export default function PotionsExplorer(props: { game?: string; rarities: string
               <div className="min-w-0">
                 <span className="text-sm font-semibold hover:underline">{p.name}</span>
                 <div className="mt-1 text-xs text-slate-500">{t(p.rarity, locale)}</div>
-                <div className="mt-1 line-clamp-2 text-sm text-slate-300">{p.description}</div>
+                <div className="mt-1 line-clamp-2 text-sm text-slate-300"><DescriptionText text={p.description} /></div>
               </div>
             </a>
           </li>

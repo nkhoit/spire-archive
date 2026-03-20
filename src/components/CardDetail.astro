@@ -4,6 +4,7 @@ import CardImageToggle from './react/CardImageToggle';
 import CardImageToggleSts1 from './react/CardImageToggleSts1';
 import { t } from '../lib/ui-strings';
 import { getLocale } from '../lib/i18n';
+import { replaceEnergyTokens } from '../lib/energy-icons';
 
 export interface Props {
   game: 'sts1' | 'sts2';
@@ -107,7 +108,7 @@ function buildUpgradeDescription(card: any): { description: string; cost: number
 const upgInfo = game === 'sts2' ? buildUpgradeDescription(card) : null;
 
 // Build highlighted description HTML
-function highlightDescription(desc: string, game: string, data: any): string {
+function highlightDescription(desc: string, game: string, data: any, color?: string): string {
   if (!desc) return '';
   let html = desc.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   
@@ -127,6 +128,10 @@ function highlightDescription(desc: string, game: string, data: any): string {
   // [Energy] token
   html = html.replace(/\[Energy\]/g, `<img src="${carduiBase}/card_red_orb.png" alt="Energy" class="inline-block h-5 w-5 align-text-bottom" />`);
   
+  // STS2 [E] and [N Energy] tokens — use character-specific energy icon
+  if (game === 'sts2') {
+    html = replaceEnergyTokens(html, color);
+  }
   // Collect highlight terms: keywords + power names
   const highlightTerms: string[] = [];
   if (data.keywords) {
@@ -158,7 +163,7 @@ function highlightDescription(desc: string, game: string, data: any): string {
   return html;
 }
 
-const descHtml = highlightDescription(card.description ?? '', game, data);
+const descHtml = highlightDescription(card.description ?? '', game, data, card.color);
 
 // Build upgrade diff HTML for display
 function buildUpgradeDiffHtml(baseDesc: string, upgDesc: string, game: string, data: any): string {
@@ -171,7 +176,7 @@ function buildUpgradeDiffHtml(baseDesc: string, upgDesc: string, game: string, d
     const line = upgLines[i];
     const baseLine = i < baseLines.length ? baseLines[i] : '';
     if (line === baseLine) {
-      result.push(highlightDescription(line, game, data));
+      result.push(highlightDescription(line, game, data, card.color));
     } else {
       // Word-level diff
       const baseWords = baseLine.split(/(\s+)/);
@@ -181,9 +186,9 @@ function buildUpgradeDiffHtml(baseDesc: string, upgDesc: string, game: string, d
         const w = upgWords[j];
         const bw = j < baseWords.length ? baseWords[j] : '';
         if (w !== bw && w.trim()) {
-          html += `<span class="text-emerald-400 font-medium">${highlightDescription(w, game, data)}</span>`;
+          html += `<span class="text-emerald-400 font-medium">${highlightDescription(w, game, data, card.color)}</span>`;
         } else {
-          html += highlightDescription(w, game, data);
+          html += highlightDescription(w, game, data, card.color);
         }
       }
       result.push(html);
