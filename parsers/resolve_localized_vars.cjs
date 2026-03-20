@@ -14,6 +14,7 @@ const CS_DIRS = {
   relics: path.join(DECOMPILED_DIR, 'MegaCrit.Sts2.Core.Models.Relics'),
   potions: path.join(DECOMPILED_DIR, 'MegaCrit.Sts2.Core.Models.Potions'),
   events: path.join(DECOMPILED_DIR, 'MegaCrit.Sts2.Core.Models.Events'),
+  enchantments: path.join(DECOMPILED_DIR, 'MegaCrit.Sts2.Core.Models.Enchantments'),
 };
 const LOCALE_DIR = path.join(OUTPUT_DIR, 'localization');
 
@@ -308,7 +309,7 @@ const langs = fs.readdirSync(LOCALE_DIR).filter(f => f.endsWith('.json')).map(f 
 console.log(`Processing ${langs.length} languages: ${langs.join(', ')}`);
 
 const results = {};
-const CATEGORIES = ['cards', 'relics', 'potions', 'events'];
+const CATEGORIES = ['cards', 'relics', 'potions', 'events', 'enchantments'];
 
 // Build entity name maps for resolving StringVar references per locale
 function buildEntityNameMap(localeData) {
