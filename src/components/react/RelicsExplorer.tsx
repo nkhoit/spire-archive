@@ -83,7 +83,7 @@ export default function RelicsExplorer(props: { game?: string; tiers: string[]; 
           <option value="">{t('All colors', locale)}</option>
           {props.colors.map((c) => (
             <option key={c} value={c}>
-              {t(c, locale)}
+              {t(c.charAt(0).toUpperCase() + c.slice(1), locale)}
             </option>
           ))}
         </select>
@@ -112,7 +112,7 @@ export default function RelicsExplorer(props: { game?: string; tiers: string[]; 
                 <span className="text-sm font-semibold hover:underline">{r.name}</span>
                 <div className="mt-1 text-xs text-slate-500">
                   {t(r.tier, locale)}
-                  {r.color ? ` · ${r.color}` : ''}
+                  {r.color ? ` · ${t(r.color.charAt(0).toUpperCase() + r.color.slice(1), locale)}` : ''}
                 </div>
                 <div className="mt-1 line-clamp-2 text-sm text-slate-300">{r.description}</div>
               </div>
