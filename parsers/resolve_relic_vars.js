@@ -141,100 +141,72 @@ function extractVars(content) {
   return vars;
 }
 
-/**
- * Build a map: relicId -> Map<varName, value>
- */
-function buildRelicVarsMap() {
-  const map = new Map();
-  const files = fs.readdirSync(RELICS_DIR).filter(f => f.endsWith('.cs'));
-
-  for (const file of files) {
-    const className = path.basename(file, '.cs');
-    const relicId = toRelicId(className);
-    const content = fs.readFileSync(path.join(RELICS_DIR, file), 'utf8');
-    const vars = extractVars(content);
-    if (vars.size > 0) {
-      map.set(relicId, vars);
-    }
-  }
-
-  return map;
-}
-
-/**
- * Format a value — if it's a whole number, show as integer
- */
 function formatValue(val) {
   return Number.isInteger(val) ? String(val) : String(val);
 }
 
-/**
- * Replace {VarName} (and {VarName:modifier...}) placeholders in a description.
- * Only replaces when the var name matches a known var.
- */
 function resolveDescription(desc, vars) {
   if (!desc || vars.size === 0) return { resolved: desc, changed: false };
-
   let changed = false;
-  // Match {Word} or {Word:...} patterns
-  const result = desc.replace(/\{(\w+)([^}]*)?\}/g, (match, name, suffix) => {
-    if (vars.has(name)) {
-      changed = true;
-      return formatValue(vars.get(name));
-    }
+  const result = desc.replace(/\{(\w+)([^}]*)?\}/g, (match, name) => {
+    if (vars.has(name)) { changed = true; return formatValue(vars.get(name)); }
     return match;
   });
-
   return { resolved: result, changed };
 }
 
-// Main
-const relicVarsMap = buildRelicVarsMap();
-const relics = JSON.parse(fs.readFileSync(RELICS_JSON, 'utf8'));
+// Main — resolve relics, potions, and cards
+const POTIONS_DIR = path.join(DECOMPILED_DIR, 'MegaCrit.Sts2.Core.Models.Potions');
+const POTIONS_JSON = path.join(OUTPUT_DIR, 'potions.json');
+const CARDS_DIR = path.join(DECOMPILED_DIR, 'MegaCrit.Sts2.Core.Models.Cards');
+const CARDS_JSON = path.join(OUTPUT_DIR, 'cards.json');
 
-let resolvedCount = 0;
-const examples = [];
+function buildVarsMap(dir) {
+  const map = new Map();
+  let files;
+  try { files = fs.readdirSync(dir).filter(f => f.endsWith('.cs')); } catch { return map; }
+  for (const file of files) {
+    const className = path.basename(file, '.cs');
+    const entityId = toRelicId(className); // same PascalCase → SCREAMING_SNAKE conversion
+    const content = fs.readFileSync(path.join(dir, file), 'utf8');
+    const vars = extractVars(content);
+    if (vars.size > 0) map.set(entityId, vars);
+  }
+  return map;
+}
 
-for (const relic of relics) {
-  const vars = relicVarsMap.get(relic.id);
-  if (!vars) continue;
+function resolveEntityFile(jsonPath, varsMap, label) {
+  const entities = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+  let resolvedCount = 0;
+  const examples = [];
 
-  let anyChanged = false;
+  for (const entity of entities) {
+    const vars = varsMap.get(entity.id);
+    if (!vars) continue;
 
-  if (relic.description) {
-    const { resolved, changed } = resolveDescription(relic.description, vars);
-    if (changed) {
-      if (examples.length < 5) {
-        examples.push({
-          id: relic.id,
-          before: relic.description,
-          after: resolved,
-          vars: Object.fromEntries(vars),
-        });
+    let anyChanged = false;
+    for (const field of ['description', 'flavor']) {
+      if (entity[field]) {
+        const { resolved, changed } = resolveDescription(entity[field], vars);
+        if (changed) { entity[field] = resolved; anyChanged = true; }
       }
-      relic.description = resolved;
-      anyChanged = true;
+    }
+    if (anyChanged) {
+      resolvedCount++;
+      if (examples.length < 3) examples.push({ id: entity.id, vars: Object.fromEntries(vars) });
     }
   }
 
-  if (relic.flavor) {
-    const { resolved, changed } = resolveDescription(relic.flavor, vars);
-    if (changed) {
-      relic.flavor = resolved;
-      anyChanged = true;
-    }
-  }
-
-  if (anyChanged) resolvedCount++;
+  fs.writeFileSync(jsonPath, JSON.stringify(entities, null, 2), 'utf8');
+  console.log(`✅ ${label}: Resolved vars in ${resolvedCount} / ${entities.length}`);
+  for (const ex of examples) console.log(`  [${ex.id}] vars: ${JSON.stringify(ex.vars)}`);
 }
 
-fs.writeFileSync(RELICS_JSON, JSON.stringify(relics, null, 2), 'utf8');
+const relicVarsMap = buildVarsMap(RELICS_DIR);
+resolveEntityFile(RELICS_JSON, relicVarsMap, 'Relics');
 
-console.log(`\n✅ Done! Resolved vars in ${resolvedCount} / ${relics.length} relics.\n`);
-console.log('📋 Examples:');
-for (const ex of examples) {
-  console.log(`\n  [${ex.id}]`);
-  console.log(`    vars:   ${JSON.stringify(ex.vars)}`);
-  console.log(`    before: ${ex.before}`);
-  console.log(`    after:  ${ex.after}`);
-}
+const potionVarsMap = buildVarsMap(POTIONS_DIR);
+resolveEntityFile(POTIONS_JSON, potionVarsMap, 'Potions');
+
+const cardVarsMap = buildVarsMap(CARDS_DIR);
+resolveEntityFile(CARDS_JSON, cardVarsMap, 'Cards');
