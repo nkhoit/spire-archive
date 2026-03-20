@@ -92,6 +92,8 @@ function buildSequence(pattern: any[], start: string | null | undefined): string
     if (!move) break;
     seq.push(move.id);
     if (move.loops) break;
+    // Random nodes: follow to first branch to check for loops, but the node itself terminates the visual chain
+    if (move.type === 'random') break;
     current = move.followUp;
   }
   return seq;
@@ -115,6 +117,13 @@ function buildAllSequences(pattern: any[], start: string | null | undefined): { 
   if (start) {
     const seq = buildSequence(pattern, start);
     seq.forEach(id => allVisited.add(id));
+    // Also mark random branch targets as visited
+    for (const id of seq) {
+      const move = byId.get(id);
+      if (move?.type === 'random') {
+        (move.branches ?? []).forEach((b: string) => allVisited.add(b));
+      }
+    }
     if (seq.length) sequences.push({ seq });
   }
   
@@ -176,6 +185,29 @@ for (const p of data.powers ?? []) {
                 if (!move) return null;
                 const isLast = i === chain.seq.length - 1;
                 const isStart = ci === 0 && i === 0;
+                
+                // Random node: show branches as alternatives
+                if (move.type === 'random') {
+                  const branches = (move.branches ?? []).map((bid: string) => movePattern.find((m: any) => m.id === bid)).filter(Boolean);
+                  return (
+                    <>
+                      <span class="text-slate-500">→</span>
+                      <span class="flex flex-wrap items-center gap-1 px-2 py-1 rounded bg-white/5 border border-dashed border-white/20">
+                        <span class="text-[10px] text-slate-500 mr-1">🎲</span>
+                        {branches.map((b: any, bi: number) => (
+                          <>
+                            <span class="px-1.5 py-0.5 rounded bg-white/10 text-xs">
+                              {intentIcons[b.intent?.type] ?? ''} {b.name}
+                            </span>
+                            {bi < branches.length - 1 && <span class="text-slate-500">/</span>}
+                          </>
+                        ))}
+                      </span>
+                      <span class="text-slate-500">↻</span>
+                    </>
+                  );
+                }
+                
                 return (
                   <>
                     <span class={`px-2 py-1 rounded ${isStart ? 'bg-amber-500/20 text-amber-200 border border-amber-500/30' : 'bg-white/10'}`}>
@@ -192,7 +224,7 @@ for (const p of data.powers ?? []) {
       )}
 
       <div class="mt-4 space-y-2">
-        {movePattern.map((mv: any) => {
+        {movePattern.filter((mv: any) => mv.type !== 'random').map((mv: any) => {
           const intent = mv.intent ?? {};
           const icon = intentIcons[intent.type] ?? '';
           const label = intentLabels[intent.type] ?? intent.type ?? 'Unknown';
