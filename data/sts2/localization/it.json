@@ -5778,5 +5778,937 @@
       "description": "La prima volta che questa carta viene giocata, infligge X di danno extra.",
       "name": "Vigorosità"
     }
+  },
+  "monsters": {
+    "ARCHITECT": {
+      "moves": {
+        "NOTHING": "Nulla"
+      },
+      "name": "L'Architetto"
+    },
+    "ASSASSIN_RUBY_RAIDER": {
+      "moves": {
+        "KILLSHOT": "Colpo mortale"
+      },
+      "name": "Assassino razziatore"
+    },
+    "ATTACK_MOVE_MONSTER": {
+      "moves": {
+        "POKE": "Stoccata"
+      },
+      "name": "Mostro d'attacco"
+    },
+    "AXEBOT": {
+      "moves": {
+        "BOOT_UP": "Accensione",
+        "HAMMER_UPPERCUT": "Gancio martellante",
+        "ONE_TWO": "Uno-due",
+        "SHARPEN": "Affilatura"
+      },
+      "name": "Affettabot"
+    },
+    "AXE_RUBY_RAIDER": {
+      "moves": {
+        "BIG_SWING": "Grande falciata"
+      },
+      "name": "Affettarazziatore"
+    },
+    "BATTLE_FRIEND_V1": {
+      "moves": {
+        "NOTHING": "Nulla"
+      },
+      "name": "Partner da battaglia V1.0"
+    },
+    "BATTLE_FRIEND_V2": {
+      "moves": {
+        "NOTHING": "Nulla"
+      },
+      "name": "Partner da battaglia V2.0"
+    },
+    "BATTLE_FRIEND_V3": {
+      "moves": {
+        "NOTHING": "Nulla"
+      },
+      "name": "Partner da battaglia V3.0"
+    },
+    "BIG_DUMMY": {
+      "moves": {
+        "NOTHING": "Nulla"
+      },
+      "name": "Manichino grande"
+    },
+    "BOWLBUG_EGG": {
+      "moves": {
+        "BITE": "Morso",
+        "PROTECT": "Protezione"
+      },
+      "name": "Scaraciotola (Uovo)"
+    },
+    "BOWLBUG_NECTAR": {
+      "moves": {
+        "BUFF": "Buff",
+        "THRASH": "Percossa",
+        "THRASH2": "Percossa"
+      },
+      "name": "Scaraciotola (Nettare)"
+    },
+    "BOWLBUG_ROCK": {
+      "moves": {
+        "HEADBUTT": "Testata"
+      },
+      "name": "Scaraciotola (Roccia)"
+    },
+    "BOWLBUG_SILK": {
+      "moves": {
+        "SPIN_WEB": "Ragnatela rotante",
+        "THRASH": "Percossa"
+      },
+      "name": "Scaraciotola (Seta)"
+    },
+    "BRUTE_RUBY_RAIDER": {
+      "moves": {
+        "BEAT": "Colpo",
+        "CLAP": "Colpetto"
+      },
+      "name": "Bruto razziatore"
+    },
+    "BYGONE_EFFIGY": {
+      "moves": {
+        "SLASHES": "Squarcio",
+        "SLEEP": "Letargo"
+      },
+      "name": "Effige antica"
+    },
+    "BYRDONIS": {
+      "moves": {
+        "BITE": "Morso",
+        "PECK": "Beccata",
+        "PROTECT": "Protezione"
+      },
+      "name": "Gryfone"
+    },
+    "BYRDONIS_NEST": {
+      "moves": {
+        "NOTHING": "Nulla"
+      },
+      "name": "Nido"
+    },
+    "BYRDPIP": {
+      "moves": {
+        "NOTHING": "Nulla"
+      },
+      "name": "Gryfoncino"
+    },
+    "CALCIFIED_CULTIST": {
+      "moves": {
+        "DARK_STRIKE": "Colpo oscuro",
+        "INCANTATION": "Incantesimo"
+      },
+      "name": "Cultista calcificato"
+    },
+    "CEREMONIAL_BEAST": {
+      "moves": {
+        "BEAST_CRY": "Urlo bestiale",
+        "CRUSH": "Frantumazione",
+        "PLOW": "Incornata",
+        "STAMP": "Pedata",
+        "STOMP": "Pestone"
+      },
+      "name": "Bestia solenne"
+    },
+    "CHOMPER": {
+      "moves": {
+        "CLAMP": "Fissaggio",
+        "SCREECH": "Stridio",
+        "THRASH": "Percossa"
+      },
+      "name": "Mordicchio"
+    },
+    "COCOON": {
+      "moves": {
+        "NOTHING": "Niente"
+      },
+      "name": "Bozzolo"
+    },
+    "CORPSE_SLUG": {
+      "moves": {
+        "TACKLE": "Azione",
+        "WHIP_SLAP": "Colpo di frusta"
+      },
+      "name": "Lumaca cadaverica"
+    },
+    "CROSSBOW_RUBY_RAIDER": {
+      "moves": {
+        "FIRE": "Fuoco!",
+        "RELOAD": "Ricarica"
+      },
+      "name": "Razziatore con balestra"
+    },
+    "CRUSHER": {
+      "moves": {
+        "ADAPT": "Adattamento",
+        "BUG_STING": "Puntura d'insetto",
+        "ENLARGING_STRIKE": "Colpo ampliante",
+        "GUARDED_STRIKE": "Colpo protettivo",
+        "THRASH": "Percossa"
+      },
+      "name": "Spaccaossa"
+    },
+    "CUBEX_CONSTRUCT": {
+      "moves": {
+        "CHARGE_UP": "Ricarica",
+        "REPEATER_BLAST": "Raggio ripetitore",
+        "SUBMERGE": "Immersione"
+      },
+      "name": "Assemblaggio cubico"
+    },
+    "DAMP_CULTIST": {
+      "moves": {
+        "DARK_STRIKE": "Colpo oscuro",
+        "INCANTATION": "Incantesimo"
+      },
+      "name": "Cultista zuppo"
+    },
+    "DECIMILLIPEDE_SEGMENT": {
+      "moves": {
+        "BULK": "Crescita",
+        "DEAD": "Morte",
+        "OUTGAS": "Gas",
+        "REATTACH": "Riattaccamento",
+        "TACKLE": "Azione",
+        "WRITHE": "Convulsioni"
+      },
+      "name": "Diecimilapiedi"
+    },
+    "DEVOTED_SCULPTOR": {
+      "name": "Scultore devoto"
+    },
+    "DOOR": {
+      "name": "Porta"
+    },
+    "DOORMAKER": {
+      "name": "Fabbricaporte"
+    },
+    "ENTOMANCER": {
+      "moves": {
+        "AGITATE_SWARM": "Sciame furioso",
+        "BEES": "Apiii!",
+        "PHEROMONE_SPIT": "Sputo di feromoni",
+        "SPEAR": "Lancia!"
+      },
+      "name": "Coleomago"
+    },
+    "EXOSKELETON": {
+      "moves": {
+        "ENRAGE": "Collera",
+        "MANDIBLES": "Mandibole",
+        "SKITTER": "Tagliare la corda"
+      },
+      "name": "Esoscheletro"
+    },
+    "EYE_WITH_TEETH": {
+      "moves": {
+        "DISTRACT": "Distrazione",
+        "STARTLE": "Sorpresa"
+      },
+      "name": "Occhio dentato"
+    },
+    "FABRICATOR": {
+      "moves": {
+        "DISINTEGRATE": "Disintegrazione",
+        "FABRICATE": "Fabricazione"
+      },
+      "name": "Mechacostruttore"
+    },
+    "FAKE_MERCHANT_MONSTER": {
+      "moves": {
+        "ENRAGE": "Ira",
+        "SPEW_COINS": "Lanciamonete",
+        "SWIPE": "Furto",
+        "THROW_RELIC": "Lancio delle reliquie"
+      },
+      "name": "Il mercante???"
+    },
+    "FAT_GREMLIN": {
+      "moves": {
+        "FLEE": "Fuga"
+      },
+      "name": "Gremlin grasso"
+    },
+    "FLAIL_KNIGHT": {
+      "moves": {
+        "BREAKER": "Distruzione",
+        "FLAIL": "Flagello",
+        "RAM": "Urto"
+      },
+      "name": "Cavaliere flagellatore"
+    },
+    "FLYCONID": {
+      "moves": {
+        "FRAIL_SPORES": "Spore fragili",
+        "SMASH": "Annientamento"
+      },
+      "name": "Fungalato"
+    },
+    "FOGMOG": {
+      "moves": {
+        "ILLUSORY_SPORES": "Spore illusorie",
+        "THWACK": "Botta"
+      },
+      "name": "Fungonebbia"
+    },
+    "FOSSIL_STALKER": {
+      "moves": {
+        "LASH": "Sferzata",
+        "LATCH": "Fissaggio",
+        "TACKLE": "Azione"
+      },
+      "name": "Cacciatore di fossili"
+    },
+    "FROG_KNIGHT": {
+      "moves": {
+        "BEETLE_CHARGE": "Carica scarabeo",
+        "FOR_THE_QUEEN": "Per la regina",
+        "STRIKE_DOWN_EVIL": "Espiare il male",
+        "TONGUE_LASH": "Sferzata con lingua"
+      },
+      "name": "Rana cavaliere"
+    },
+    "FUZZY_WURM_CRAWLER": {
+      "moves": {
+        "ACID_GOOP": "Acido appiccicoso"
+      },
+      "name": "Peloverme"
+    },
+    "GAS_BOMB": {
+      "moves": {
+        "EXPLODE": "Esplosione"
+      },
+      "name": "Gasbomba"
+    },
+    "GAZING_MOTH": {
+      "moves": {
+        "GLARE": "Sguardo",
+        "POWDER": "Polvere"
+      },
+      "name": "Falena osservatrice"
+    },
+    "GEM_EATER": {
+      "moves": {
+        "FOCUS_BEAM": "Raggio focalizzato",
+        "GEM_LASER": "Laser gemma"
+      },
+      "name": "Divoragemme"
+    },
+    "GLOBE_HEAD": {
+      "moves": {
+        "CHANNEL_LIGHTNING": "Luce canalizzata",
+        "DUAL_CAST": "Evocazione doppia",
+        "SHOCKING_SLAP": "Schiaffo scioccante"
+      },
+      "name": "Testaglobo"
+    },
+    "GREMLIN_MERC": {
+      "moves": {
+        "DOUBLE_SMASH": "Doppio colpo",
+        "GIMME": "Dammi",
+        "HEHE": "Eheh"
+      },
+      "name": "Gremlin mercenario"
+    },
+    "GUARDBOT": {
+      "moves": {
+        "GUARD": "Guardia"
+      },
+      "name": "Guardiabot"
+    },
+    "HATCHLING": {
+      "name": "Schiusa"
+    },
+    "HAUNTED_SHIP": {
+      "moves": {
+        "HAUNT": "Infestazione",
+        "RAMMING_SPEED": "Velocità di speronamento",
+        "STOMP": "Pestone",
+        "SWIPE": "Colpo"
+      },
+      "name": "Nave infestata"
+    },
+    "HUNTER_KILLER": {
+      "moves": {
+        "BITE": "Morso",
+        "PUNCTURE": "Puntura",
+        "TENDERIZING_GOOP": "Succo di decomposizione"
+      },
+      "name": "Predatore di cacciatori"
+    },
+    "INFESTED_PRISM": {
+      "moves": {
+        "JAB": "Colpo secco",
+        "PULSATE": "Pulsazione",
+        "RADIATE": "Radiazione",
+        "WHIRLWIND": "Vortice"
+      },
+      "name": "Prisma infestato"
+    },
+    "INKLET": {
+      "moves": {
+        "JAB": "Colpo secco",
+        "PIERCING_GAZE": "Sguardo penetrante",
+        "WINDUP_PUNCH": "Pugno a carica"
+      },
+      "name": "Inchiostrino"
+    },
+    "KIN_FOLLOWER": {
+      "moves": {
+        "BOOMERANG_MOVE": "Boomerang",
+        "POWER_DANCE_MOVE": "Danza potente",
+        "QUICK_SLASH_MOVE": "Sferzata rapida"
+      },
+      "name": "Discepolo della tribù"
+    },
+    "KIN_PRIEST": {
+      "moves": {
+        "BEAM_MOVE": "Raggio dell'anima",
+        "OR_OF_FRAILTY_MOVE": "Globo della fragilità",
+        "OR_OF_WEAKNESS_MOVE": "Globo della debolezza",
+        "RITUAL_MOVE": "Rituale oscuro"
+      },
+      "name": "Sacerdote della tribù"
+    },
+    "KNOWLEDGE_DEMON": {
+      "moves": {
+        "BLUE_FLAME": "Fiamma blu",
+        "CURSE_OF_KNOWLEDGE": "Maledizione della conoscenza",
+        "HAVE_A_TASTE": "Assaggio del dolore",
+        "KNOWLEDGE_OVERWHELMING": "Conoscenza travolgente",
+        "PONDER": "Riflessione"
+      },
+      "name": "Demone onnisciente"
+    },
+    "LAGAVULIN_MATRIARCH": {
+      "moves": {
+        "DISEMBOWEL": "Sventramento",
+        "SLASH": "Sferzata",
+        "SLEEP": "Riposo",
+        "SOUL_SIPHON": "Sottrazione dell'anima"
+      },
+      "name": "Matriarca Lagavulin"
+    },
+    "LEAF_SLIME_M": {
+      "moves": {
+        "CLUMP_SHOT": "Colpo a gruppo",
+        "STICKY_SHOT": "Colpo appiccicoso"
+      },
+      "name": "Melmerba (grande)"
+    },
+    "LEAF_SLIME_S": {
+      "moves": {
+        "GOOP": "Gelatina",
+        "TACKLE": "Azione"
+      },
+      "name": "Melmerba (piccola)"
+    },
+    "LIVING_FOG": {
+      "moves": {
+        "BLOAT": "Rigonfiamento"
+      },
+      "name": "Nebbia vivente"
+    },
+    "LIVING_SHIELD": {
+      "moves": {
+        "SHIELD_SLAM": "Colpo con scudo"
+      },
+      "name": "Scudo vivente"
+    },
+    "LOUSE_PROGENITOR": {
+      "moves": {
+        "ACID_DUST": "Polvere acida",
+        "CURL_AND_GROW": "Arriccia e cresci",
+        "WEB_CANNON": "Cannone di ragnatele"
+      },
+      "name": "Antenato delle pulci"
+    },
+    "MAGI_KNIGHT": {
+      "moves": {
+        "MAGIC_BOMB": "Bomba magica",
+        "POWER_SHIELD": "Scudo del potere",
+        "RAM": "Incornata"
+      },
+      "name": "Magicavaliere"
+    },
+    "MAWLER": {
+      "moves": {
+        "CLAW": "Artiglio",
+        "RIP_AND_TEAR": "Strappo e lacerazione",
+        "ROAR": "Ruggito"
+      },
+      "name": "Laceracarne"
+    },
+    "MECHA_KNIGHT": {
+      "moves": {
+        "CHARGE": "Carica",
+        "FLAMETHROWER": "Lanciafiamme",
+        "HEAVY_CLEAVE": "Mazzata pesante",
+        "WINDUP": "Carica"
+      },
+      "name": "Cavaliere meccanico"
+    },
+    "MOCK_ATTACK_AND_SUMMON_MINION_MONSTER": {
+      "moves": {
+        "ATTACK_AND_SUMMON_MINION": "Attacco ed Invocazione del seguace"
+      },
+      "name": "Attacco ed Invocazione del Seguace Mostro"
+    },
+    "MOCK_ATTACK_MONSTER": {
+      "moves": {
+        "ATTACK": "Attacco"
+      },
+      "name": "Attacco mostro"
+    },
+    "MYSTERIOUS_KNIGHT": {
+      "moves": {
+        "BREAKER": "Distruttore",
+        "FLAIL": "Flagello",
+        "RAM": "Incornata"
+      },
+      "name": "Cavaliere misterioso"
+    },
+    "MYTE": {
+      "moves": {
+        "BIG_SUCK": "Risucchio profondo",
+        "BITE": "Morso",
+        "SUCK": "Risucchio",
+        "TOXIC": "Abbondanza tossica"
+      },
+      "name": "Acaro"
+    },
+    "NIBBIT": {
+      "moves": {
+        "BUTT": "Didietro",
+        "HESITANT_SLICE": "Colpo esitante",
+        "HISS": "Sibillio"
+      },
+      "name": "Sgranocchiatore"
+    },
+    "NOISEBOT": {
+      "moves": {
+        "NOISE": "Suono"
+      },
+      "name": "Suonobot"
+    },
+    "OSTY": {
+      "name": "Osty"
+    },
+    "OVICOPTER": {
+      "moves": {
+        "LAY_EGGS": "Deposizione delle uova",
+        "NUTRITIONAL_PASTE": "Pasto nutriente",
+        "SMASH": "Colpo",
+        "TENDERIZER": "Batticarne"
+      },
+      "name": "Ovicoptero"
+    },
+    "OWL_MAGISTRATE": {
+      "moves": {
+        "JUDICIAL_FLIGHT": "Volo del giudizio",
+        "MAGISTRATE_SCRUTINY": "Sguardo magistrale",
+        "PECK_ASSAULT": "Assalto a beccate",
+        "VERDICT": "Verdetto"
+      },
+      "name": "Giudice gufo"
+    },
+    "PAELS_LEGION": {
+      "moves": {
+        "NOTHING": "Nulla"
+      },
+      "name": "Legione di Pael"
+    },
+    "PARAFRIGHT": {
+      "moves": {
+        "SLAM": "Colpo"
+      },
+      "name": "Seminaterrore"
+    },
+    "PHANTASMAL_GARDENER": {
+      "moves": {
+        "BITE": "Morso",
+        "ENLARGE": "Ingrandimento",
+        "FLAIL": "Flagello",
+        "LASH": "Sferzata"
+      },
+      "name": "Giardiniere spettrale"
+    },
+    "PHROG_PARASITE": {
+      "moves": {
+        "INFECT": "Infezione",
+        "LASH": "Sferzata",
+        "LEAP_SLAM": "Saltoschianto"
+      },
+      "name": "Parassita fungineo"
+    },
+    "PUNCH_CONSTRUCT": {
+      "moves": {
+        "FAST_PUNCH": "Pugno rapido",
+        "READY": "IN POSIZIONE",
+        "STRONG_PUNCH": "Pugno potente"
+      },
+      "name": "Assemblaggio pugile"
+    },
+    "QUEEN": {
+      "moves": {
+        "BARRIER": "Barriera",
+        "BURN_BRIGHT_FOR_ME": "Brucia luminoso per me",
+        "EXECUTION": "Esecuzione",
+        "IMPOSSIBLE": "Impossibile",
+        "OFF_WITH_YOUR_HEAD": "Gigliottina",
+        "SUMMON_1": "Invocazione",
+        "SUMMON_2": "Invocazione",
+        "YOURE_MINE": "Sei tra le mie grinfie"
+      },
+      "name": "Regina funesta"
+    },
+    "ROCKET": {
+      "moves": {
+        "CHARGE_UP": "Ricarica",
+        "LASER": "Laser",
+        "PRECISION_BEAM": "Raggio di precisione",
+        "RECHARGE": "Ricarica",
+        "TARGETING_RETICLE": "Mirino"
+      },
+      "name": "Razzo"
+    },
+    "SCROLL_OF_BITING": {
+      "moves": {
+        "CHEW": "Masticamento",
+        "CHOMP": "Sgranocchio",
+        "MORE_TEETH": "Denti a non finire"
+      },
+      "name": "Pergamena mordente"
+    },
+    "SEAPUNK": {
+      "moves": {
+        "BUBBLE_BURP": "Sparabolle",
+        "SEA_KICK": "Calcio marino",
+        "SPINNING_KICK": "Calcio rotante"
+      },
+      "name": "Teppista marino"
+    },
+    "SEWER_CLAM": {
+      "moves": {
+        "JET": "Jet",
+        "PRESSURIZE": "Pressione"
+      },
+      "name": "Vongola di fogna"
+    },
+    "SHRINKER_BEETLE": {
+      "moves": {
+        "CHOMP": "Sgranocchio",
+        "SHRINKER": "Riduttore",
+        "STOMP": "Pestone"
+      },
+      "name": "Scarabeo restringente"
+    },
+    "SKULKING_COLONY": {
+      "moves": {
+        "INERTIA": "Inerzia",
+        "SUPER_CRAB": "Super granchio",
+        "ZOOM": "Velocità"
+      },
+      "name": "Colonia furtiva"
+    },
+    "SLIMED_BERSERKER": {
+      "name": "Berserker viscido"
+    },
+    "SLITHERING_STRANGLER": {
+      "moves": {
+        "CONSTRICT": "Costrizione",
+        "LASH": "Sferzata",
+        "THWACK": "Colpo secco"
+      },
+      "name": "Strangolatore strisciante"
+    },
+    "SLUDGE_SPINNER": {
+      "moves": {
+        "OIL_SPRAY": "Spray olioso",
+        "RAGE": "Furia",
+        "SLAM": "Botta"
+      },
+      "name": "Poltiglia rotante"
+    },
+    "SLUMBERING_BEETLE": {
+      "moves": {
+        "CRASH": "Collisione",
+        "RESOLVE": "Determinazione",
+        "ROLL_OUT": "Rotolamento",
+        "SNORE": "Ronfo"
+      },
+      "name": "Scarabeo dormiente"
+    },
+    "SNAPPING_JAXFRUIT": {
+      "moves": {
+        "COLLECT_POWER": "Accumulo di potere",
+        "ENERGY_ORB": "Globo d'energia"
+      },
+      "name": "Bulbo azzannatore"
+    },
+    "SNEAKY_GREMLIN": {
+      "moves": {
+        "TACKLE": "Azione"
+      },
+      "name": "Gremlin furtivo"
+    },
+    "SOUL_FYSH": {
+      "moves": {
+        "BURP": "Eruttazione",
+        "DE_GAS": "Fuoriuscita di gas",
+        "SCREAM": "Urlo"
+      },
+      "name": "Animapesce"
+    },
+    "SOUL_NEXUS": {
+      "moves": {
+        "DRAIN_LIFE": "Prosciugamento vitale",
+        "MAELSTROM": "Turbine",
+        "SOUL_BURN": "Brucianima"
+      },
+      "name": "Nesso dell'anima"
+    },
+    "SPECTRAL_KNIGHT": {
+      "moves": {
+        "HEX": "Sortilegio",
+        "SOUL_FLAME": "Fiamma dell'anima",
+        "SOUL_SLASH": "Sferzata dell'anima"
+      },
+      "name": "Cavaliere spettrale"
+    },
+    "SPINY_TOAD": {
+      "moves": {
+        "PROTRUDING_SPIKES": "Punte sporgenti",
+        "SPIKE_EXPLOSION": "Esplosione di spine",
+        "TONGUE_LASH": "Sferzata con lingua"
+      },
+      "name": "Rospo spinoso"
+    },
+    "STABBOT": {
+      "moves": {
+        "STAB": "Pugnalata"
+      },
+      "name": "Pugnalebot"
+    },
+    "TERROR_EEL": {
+      "name": "Anguilla nefasta"
+    },
+    "TEST_SUBJECT": {
+      "moves": {
+        "BIG_POUNCE_MOVE": "Salto feroce",
+        "BITE_MOVE": "Morso",
+        "BURNING_GROWL_MOVE": "Ruggito bruciante",
+        "MULTI_CLAW_MOVE": "Multi-artiglio",
+        "PHASE3_LACERATE_MOVE": "Lacerazione",
+        "POUNCE_MOVE": "Salto",
+        "RESPAWN_MOVE": "Riapparizione",
+        "SKULL_BASH_MOVE": "Colpo di cranio"
+      },
+      "name": "Soggetto di prova #C{Count}"
+    },
+    "THE_ADVERSARY_MK_ONE": {
+      "moves": {
+        "BARRAGE": "Sbarramento",
+        "BEAM": "Raggio",
+        "SMASH": "Colpo"
+      },
+      "name": "L'Avversario Mk 1"
+    },
+    "THE_ADVERSARY_MK_THREE": {
+      "moves": {
+        "BARRAGE": "Sbarramento",
+        "CRASH": "Colpo",
+        "FLAME_BEAM": "Raggio di fiamma"
+      },
+      "name": "Avversario Mk 3"
+    },
+    "THE_ADVERSARY_MK_TWO": {
+      "moves": {
+        "BARRAGE": "Sbarramento",
+        "BASH": "Botta",
+        "FLAME_BEAM": "Raggio di fiamme"
+      },
+      "name": "Avversario Mk 2"
+    },
+    "THE_ARM": {
+      "moves": {
+        "GRAB": "Presa",
+        "PUNCH": "Pugno",
+        "WRESTLE": "Lotta"
+      },
+      "name": "Il Braccio"
+    },
+    "THE_BELL": {
+      "moves": {
+        "CACOPHONY": "Cacofonia",
+        "CLANG": "Risonanza",
+        "RING": "Suono"
+      },
+      "name": "La Campana"
+    },
+    "THE_DREAMER": {
+      "moves": {
+        "DREAM": "Sogno",
+        "FEND_OFF": "Respinta",
+        "RUMINATE": "Meditazione",
+        "SNORE": "Ronfo"
+      },
+      "name": "Il Sognatore"
+    },
+    "THE_FORGOTTEN": {
+      "moves": {
+        "DREAD": "Angoscia",
+        "MIASMA": "Miasma"
+      },
+      "name": "Il Dimenticato"
+    },
+    "THE_INSATIABLE": {
+      "moves": {
+        "LIQUIFY_GROUND": "Liquifazione del suolo",
+        "LUNGING_BITE": "Morso con affondo",
+        "SALIVATE": "Salivazione",
+        "THRASH": "Percossa"
+      },
+      "name": "L'Insaziabile"
+    },
+    "THE_LOST": {
+      "moves": {
+        "DEBILITATING_SMOG": "Smog debilitante",
+        "EYE_LASERS": "Laser oculari"
+      },
+      "name": "Il Perduto"
+    },
+    "THE_OBSCURA": {
+      "moves": {
+        "HARDENING_STRIKE": "Colpo temprante",
+        "ILLUSION": "Illusione",
+        "PIERCING_GAZE": "Sguardo penetrante",
+        "WAIL": "Pianto"
+      },
+      "name": "L'Obscura"
+    },
+    "THIEVING_HOPPER": {
+      "moves": {
+        "ESCAPE": "Fuga",
+        "FLUTTER": "Palpitazione",
+        "HAT_TRICK": "Triplo colpo",
+        "NAB": "Agguantare",
+        "THIEVERY": "Furto"
+      },
+      "name": "Mantide ladra"
+    },
+    "TOADPOLE": {
+      "moves": {
+        "SPIKEN": "Spine",
+        "SPIKE_SPIT": "Raffica di spine",
+        "WHIRL": "Turbine"
+      },
+      "name": "Girino"
+    },
+    "TORCH_HEAD_AMALGAM": {
+      "moves": {
+        "TACKLE": "Azione"
+      },
+      "name": "Torciamostro"
+    },
+    "TOUGH_EGG": {
+      "moves": {
+        "HATCH": "SCHIUSA"
+      },
+      "name": "Uovo forte"
+    },
+    "TRACKER_RUBY_RAIDER": {
+      "moves": {
+        "HOUNDS": "Scatena i segugi",
+        "TRACK": "Inseguimento"
+      },
+      "name": "Razziatore inseguitore"
+    },
+    "TUNNELER": {
+      "moves": {
+        "BELOW": "Attacco dal basso",
+        "BITE": "Morso",
+        "BURROW": "Nascondiglio",
+        "STRIKE": "Colpo emergente"
+      },
+      "name": "Scavatore"
+    },
+    "TURRET_OPERATOR": {
+      "moves": {
+        "LOADING": "Caricamento",
+        "UNLOAD": "Sfogo!"
+      },
+      "name": "Operatorretta"
+    },
+    "TWIG_SLIME_M": {
+      "moves": {
+        "CHOMP": "Sgranocchio",
+        "POKEY_POUNCE": "Piccolo salto",
+        "STICKY_SHOT": "Colpo appiccicoso"
+      },
+      "name": "Ramomelma (grande)"
+    },
+    "TWIG_SLIME_S": {
+      "moves": {
+        "GOOP": "Gelatina",
+        "TACKLE": "Azione"
+      },
+      "name": "Ramomelma (piccola)"
+    },
+    "TWO_TAILED_RAT": {
+      "moves": {
+        "CALL_FOR_BACKUP": "Rinforzi",
+        "DISEASE_BITE": "Morso patologico",
+        "SCRATCH": "Graffio",
+        "SCREECH": "Urlo"
+      },
+      "name": "Topo bicoda"
+    },
+    "VANTOM": {
+      "moves": {
+        "DISMEMBER": "Dismembrazione",
+        "INKY_LANCE": "Lancia a inchiostro",
+        "INK_BLOT": "Macchia d'inchiostro",
+        "PREPARE": "Preparazione"
+      },
+      "name": "Vantom"
+    },
+    "VINE_SHAMBLER": {
+      "moves": {
+        "CHOMP": "Sgranocchio",
+        "GRASPING_VINES": "Liane arrampicanti",
+        "SWIPE": "Colpo"
+      },
+      "name": "Groviglio di liane"
+    },
+    "WATERFALL_GIANT": {
+      "moves": {
+        "PRESSURE_GUN": "Pistola a pressione",
+        "PRESSURIZE": "Pressione",
+        "RAM": "Incornata",
+        "SIPHON": "Appropriazione",
+        "STOMP": "Pestone"
+      },
+      "name": "Gigante della cascata"
+    },
+    "WRIGGLER": {
+      "moves": {
+        "PARASITIZE_PLAYER": "Parassita",
+        "WRIGGLE_STRIKE": "Colpo con larve"
+      },
+      "name": "Larva"
+    },
+    "ZAPBOT": {
+      "moves": {
+        "ZAP": "Scarica"
+      },
+      "name": "Elettrobot"
+    }
   }
 }

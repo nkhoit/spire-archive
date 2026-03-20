@@ -377,6 +377,7 @@ interface LocData {
   events?: Record<string, { name?: string; [key: string]: any }>;
   keywords?: Record<string, { name?: string; names?: string[]; description?: string }>;
   enchantments?: Record<string, { name?: string; description?: string }>;
+  monsters?: Record<string, { name?: string; moves?: Record<string, string> }>;
 }
 
 async function applyLocalization(game: string, locale: Locale, base: Dataset): Promise<Dataset> {
@@ -458,12 +459,36 @@ async function applyLocalization(game: string, locale: Locale, base: Dataset): P
     return { ...e, ...(l.name && { name: l.name }), ...(l.description && { description: l.description }) };
   });
 
+  const monsters = base.monsters.map(m => {
+    const l = loc.monsters?.[m.id];
+    if (!l) return m;
+    const moves = l.moves ? m.moves.map((mv: MonsterMove) => {
+      // Move IDs in data use _MOVE suffix, localization keys may or may not
+      const moveKey = mv.id?.replace(/_MOVE$/, '') ?? '';
+      const locName = l.moves![mv.id ?? ''] ?? l.moves![moveKey] ?? null;
+      return locName ? { ...mv, name: locName } : mv;
+    }) : m.moves;
+    const movePattern = (m as any).move_pattern ? (m as any).move_pattern.map((mp: any) => {
+      if (mp.type === 'random') return mp;
+      const moveKey = mp.id?.replace(/_MOVE$/, '') ?? '';
+      const locName = l.moves?.[mp.id ?? ''] ?? l.moves?.[moveKey] ?? null;
+      return locName ? { ...mp, name: locName } : mp;
+    }) : (m as any).move_pattern;
+    return {
+      ...m,
+      ...(l.name && { name: l.name }),
+      moves,
+      ...(movePattern && { move_pattern: movePattern }),
+    };
+  });
+
   const dataset: Dataset = {
     ...base,
     cards,
     relics,
     powers,
     potions,
+    monsters,
     events,
     keywords,
     enchantments,
@@ -471,6 +496,7 @@ async function applyLocalization(game: string, locale: Locale, base: Dataset): P
     cardById: toMap(cards),
     relicById: toMap(relics),
     potionById: toMap(potions),
+    monsterById: toMap(monsters),
     eventById: toMap(events),
     powerById: toMap(powers),
     keywordById: toMap(keywords),

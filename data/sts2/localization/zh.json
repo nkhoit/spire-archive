@@ -6650,5 +6650,937 @@
       "description": "第一次打出这张牌时，造成X点额外伤害。",
       "name": "活力"
     }
+  },
+  "monsters": {
+    "ARCHITECT": {
+      "moves": {
+        "NOTHING": "无"
+      },
+      "name": "建筑师"
+    },
+    "ASSASSIN_RUBY_RAIDER": {
+      "moves": {
+        "KILLSHOT": "致命射击"
+      },
+      "name": "劫掠者刺客"
+    },
+    "ATTACK_MOVE_MONSTER": {
+      "moves": {
+        "POKE": "戳击"
+      },
+      "name": "攻击行动怪物"
+    },
+    "AXEBOT": {
+      "moves": {
+        "BOOT_UP": "启动",
+        "HAMMER_UPPERCUT": "上勾锤击",
+        "ONE_TWO": "两连击",
+        "SHARPEN": "打磨"
+      },
+      "name": "巨斧机器人"
+    },
+    "AXE_RUBY_RAIDER": {
+      "moves": {
+        "BIG_SWING": "大力挥舞"
+      },
+      "name": "劫掠者斧手"
+    },
+    "BATTLE_FRIEND_V1": {
+      "moves": {
+        "NOTHING": "无"
+      },
+      "name": "战斗好伙伴V1.0"
+    },
+    "BATTLE_FRIEND_V2": {
+      "moves": {
+        "NOTHING": "无"
+      },
+      "name": "战斗好伙伴V2.0"
+    },
+    "BATTLE_FRIEND_V3": {
+      "moves": {
+        "NOTHING": "无"
+      },
+      "name": "战斗好伙伴V3.0"
+    },
+    "BIG_DUMMY": {
+      "moves": {
+        "NOTHING": "无"
+      },
+      "name": "大型假人"
+    },
+    "BOWLBUG_EGG": {
+      "moves": {
+        "BITE": "啃咬",
+        "PROTECT": "保护"
+      },
+      "name": "盛碗虫（卵）"
+    },
+    "BOWLBUG_NECTAR": {
+      "moves": {
+        "BUFF": "强化",
+        "THRASH": "撕扯",
+        "THRASH2": "撕扯"
+      },
+      "name": "盛碗虫（蜜）"
+    },
+    "BOWLBUG_ROCK": {
+      "moves": {
+        "HEADBUTT": "头槌"
+      },
+      "name": "盛碗虫（石）"
+    },
+    "BOWLBUG_SILK": {
+      "moves": {
+        "SPIN_WEB": "吐网",
+        "THRASH": "撕扯"
+      },
+      "name": "盛碗虫（丝）"
+    },
+    "BRUTE_RUBY_RAIDER": {
+      "moves": {
+        "BEAT": "殴打",
+        "CLAP": "拍击"
+      },
+      "name": "劫掠者暴徒"
+    },
+    "BYGONE_EFFIGY": {
+      "moves": {
+        "SLASHES": "斩击",
+        "SLEEP": "沉睡"
+      },
+      "name": "旧日雕像"
+    },
+    "BYRDONIS": {
+      "moves": {
+        "BITE": "啃咬",
+        "PECK": "啄击",
+        "PROTECT": "保护"
+      },
+      "name": "多尼斯异鸟"
+    },
+    "BYRDONIS_NEST": {
+      "moves": {
+        "NOTHING": "无"
+      },
+      "name": "巢"
+    },
+    "BYRDPIP": {
+      "moves": {
+        "NOTHING": "无"
+      },
+      "name": "异鸟宝宝"
+    },
+    "CALCIFIED_CULTIST": {
+      "moves": {
+        "DARK_STRIKE": "黑暗打击",
+        "INCANTATION": "念咒"
+      },
+      "name": "钙化邪教徒"
+    },
+    "CEREMONIAL_BEAST": {
+      "moves": {
+        "BEAST_CRY": "野兽咆哮",
+        "CRUSH": "碾碎",
+        "PLOW": "横冲直撞",
+        "STAMP": "跺地",
+        "STOMP": "踩踏"
+      },
+      "name": "仪式兽"
+    },
+    "CHOMPER": {
+      "moves": {
+        "CLAMP": "猛夹",
+        "SCREECH": "尖锐鸣叫",
+        "THRASH": "撕扯"
+      },
+      "name": "啃咬机"
+    },
+    "COCOON": {
+      "moves": {
+        "NOTHING": "无"
+      },
+      "name": "茧"
+    },
+    "CORPSE_SLUG": {
+      "moves": {
+        "TACKLE": "冲撞",
+        "WHIP_SLAP": "鞭打"
+      },
+      "name": "噬尸蛞蝓"
+    },
+    "CROSSBOW_RUBY_RAIDER": {
+      "moves": {
+        "FIRE": "射击！",
+        "RELOAD": "装填"
+      },
+      "name": "劫掠者弩手"
+    },
+    "CRUSHER": {
+      "moves": {
+        "ADAPT": "适应",
+        "BUG_STING": "虫蛰",
+        "ENLARGING_STRIKE": "巨化打击",
+        "GUARDED_STRIKE": "戒备打击",
+        "THRASH": "撕扯"
+      },
+      "name": "碾碎爪"
+    },
+    "CUBEX_CONSTRUCT": {
+      "moves": {
+        "CHARGE_UP": "蓄能",
+        "REPEATER_BLAST": "重复轰击",
+        "SUBMERGE": "下潜"
+      },
+      "name": "立柱构造体"
+    },
+    "DAMP_CULTIST": {
+      "moves": {
+        "DARK_STRIKE": "黑暗打击",
+        "INCANTATION": "念咒"
+      },
+      "name": "潮湿邪教徒"
+    },
+    "DECIMILLIPEDE_SEGMENT": {
+      "moves": {
+        "BULK": "胀大",
+        "DEAD": "死亡",
+        "OUTGAS": "释放气体",
+        "REATTACH": "接续",
+        "TACKLE": "冲撞",
+        "WRITHE": "扭动"
+      },
+      "name": "残杀千足虫"
+    },
+    "DEVOTED_SCULPTOR": {
+      "name": "虔诚雕刻师"
+    },
+    "DOOR": {
+      "name": "门扉"
+    },
+    "DOORMAKER": {
+      "name": "门扉缔造者"
+    },
+    "ENTOMANCER": {
+      "moves": {
+        "AGITATE_SWARM": "煽动蜂群",
+        "BEES": "蜜——蜂——！",
+        "PHEROMONE_SPIT": "喷射信息素",
+        "SPEAR": "矛击！"
+      },
+      "name": "蜂群术士"
+    },
+    "EXOSKELETON": {
+      "moves": {
+        "ENRAGE": "激怒",
+        "MANDIBLES": "啃食",
+        "SKITTER": "忙乱"
+      },
+      "name": "外骨骼虫"
+    },
+    "EYE_WITH_TEETH": {
+      "moves": {
+        "DISTRACT": "牵制",
+        "STARTLE": "惊觉"
+      },
+      "name": "利齿之眼"
+    },
+    "FABRICATOR": {
+      "moves": {
+        "DISINTEGRATE": "瓦解",
+        "FABRICATE": "组装"
+      },
+      "name": "组装师"
+    },
+    "FAKE_MERCHANT_MONSTER": {
+      "moves": {
+        "ENRAGE": "激怒",
+        "SPEW_COINS": "喷吐硬币",
+        "SWIPE": "顺走",
+        "THROW_RELIC": "投掷遗物"
+      },
+      "name": "商人？？？"
+    },
+    "FAT_GREMLIN": {
+      "moves": {
+        "FLEE": "逃跑"
+      },
+      "name": "胖地精"
+    },
+    "FLAIL_KNIGHT": {
+      "moves": {
+        "BREAKER": "砸碎",
+        "FLAIL": "连枷",
+        "RAM": "撞击"
+      },
+      "name": "连枷骑士"
+    },
+    "FLYCONID": {
+      "moves": {
+        "FRAIL_SPORES": "脆弱孢子",
+        "SMASH": "猛砸"
+      },
+      "name": "飞蝇菌子"
+    },
+    "FOGMOG": {
+      "moves": {
+        "ILLUSORY_SPORES": "幻象孢子",
+        "THWACK": "重击"
+      },
+      "name": "雾菇"
+    },
+    "FOSSIL_STALKER": {
+      "moves": {
+        "LASH": "甩动",
+        "LATCH": "缠上",
+        "TACKLE": "冲撞"
+      },
+      "name": "化石追踪者"
+    },
+    "FROG_KNIGHT": {
+      "moves": {
+        "BEETLE_CHARGE": "甲虫冲锋",
+        "FOR_THE_QUEEN": "为了女王",
+        "STRIKE_DOWN_EVIL": "惩恶一击",
+        "TONGUE_LASH": "吐舌"
+      },
+      "name": "青蛙骑士"
+    },
+    "FUZZY_WURM_CRAWLER": {
+      "moves": {
+        "ACID_GOOP": "酸液黏球"
+      },
+      "name": "毛绒伏地虫"
+    },
+    "GAS_BOMB": {
+      "moves": {
+        "EXPLODE": "爆炸"
+      },
+      "name": "气态炸弹"
+    },
+    "GAZING_MOTH": {
+      "moves": {
+        "GLARE": "瞪视",
+        "POWDER": "鳞粉"
+      },
+      "name": "凝视蛾"
+    },
+    "GEM_EATER": {
+      "moves": {
+        "FOCUS_BEAM": "集中光束",
+        "GEM_LASER": "宝石激光"
+      },
+      "name": "吞宝石者"
+    },
+    "GLOBE_HEAD": {
+      "moves": {
+        "CHANNEL_LIGHTNING": "生成闪电",
+        "DUAL_CAST": "双重释放",
+        "SHOCKING_SLAP": "电击掌"
+      },
+      "name": "电球头"
+    },
+    "GREMLIN_MERC": {
+      "moves": {
+        "DOUBLE_SMASH": "双重猛击",
+        "GIMME": "拿来",
+        "HEHE": "嘿嘿"
+      },
+      "name": "地精佣兵"
+    },
+    "GUARDBOT": {
+      "moves": {
+        "GUARD": "守护"
+      },
+      "name": "守护机器人"
+    },
+    "HATCHLING": {
+      "name": "幼虫"
+    },
+    "HAUNTED_SHIP": {
+      "moves": {
+        "HAUNT": "纠缠",
+        "RAMMING_SPEED": "撞击速度",
+        "STOMP": "践踏",
+        "SWIPE": "扫击"
+      },
+      "name": "幽灵船"
+    },
+    "HUNTER_KILLER": {
+      "moves": {
+        "BITE": "啃咬",
+        "PUNCTURE": "刺穿",
+        "TENDERIZING_GOOP": "嫩化黏液"
+      },
+      "name": "猎人杀手"
+    },
+    "INFESTED_PRISM": {
+      "moves": {
+        "JAB": "刺击",
+        "PULSATE": "脉动",
+        "RADIATE": "辐射",
+        "WHIRLWIND": "旋风"
+      },
+      "name": "感染棱柱"
+    },
+    "INKLET": {
+      "moves": {
+        "JAB": "刺击",
+        "PIERCING_GAZE": "锐利凝视",
+        "WINDUP_PUNCH": "蓄力拳"
+      },
+      "name": "墨宝"
+    },
+    "KIN_FOLLOWER": {
+      "moves": {
+        "BOOMERANG_MOVE": "回旋镖",
+        "POWER_DANCE_MOVE": "力量之舞",
+        "QUICK_SLASH_MOVE": "快速斩击"
+      },
+      "name": "同族信徒"
+    },
+    "KIN_PRIEST": {
+      "moves": {
+        "BEAM_MOVE": "灵魂光束",
+        "OR_OF_FRAILTY_MOVE": "脆弱球",
+        "OR_OF_WEAKNESS_MOVE": "虚弱球",
+        "RITUAL_MOVE": "黑暗仪式"
+      },
+      "name": "同族神官"
+    },
+    "KNOWLEDGE_DEMON": {
+      "moves": {
+        "BLUE_FLAME": "蓝色火焰",
+        "CURSE_OF_KNOWLEDGE": "知识的诅咒",
+        "HAVE_A_TASTE": "不妨一品",
+        "KNOWLEDGE_OVERWHELMING": "知识过载",
+        "PONDER": "思考"
+      },
+      "name": "知识恶魔"
+    },
+    "LAGAVULIN_MATRIARCH": {
+      "moves": {
+        "DISEMBOWEL": "开膛破肚",
+        "SLASH": "斩击",
+        "SLEEP": "沉睡",
+        "SOUL_SIPHON": "灵魂汲取"
+      },
+      "name": "乐加维林族母"
+    },
+    "LEAF_SLIME_M": {
+      "moves": {
+        "CLUMP_SHOT": "团块射击",
+        "STICKY_SHOT": "黏糊射击"
+      },
+      "name": "树叶史莱姆（中）"
+    },
+    "LEAF_SLIME_S": {
+      "moves": {
+        "GOOP": "黏液",
+        "TACKLE": "冲撞"
+      },
+      "name": "树叶史莱姆（小）"
+    },
+    "LIVING_FOG": {
+      "moves": {
+        "BLOAT": "膨胀"
+      },
+      "name": "活雾"
+    },
+    "LIVING_SHIELD": {
+      "moves": {
+        "SHIELD_SLAM": "盾击"
+      },
+      "name": "活体盾"
+    },
+    "LOUSE_PROGENITOR": {
+      "moves": {
+        "ACID_DUST": "酸性尘",
+        "CURL_AND_GROW": "蜷身成长",
+        "WEB_CANNON": "吐网炮"
+      },
+      "name": "虱虫之祖"
+    },
+    "MAGI_KNIGHT": {
+      "moves": {
+        "MAGIC_BOMB": "魔法炸弹",
+        "POWER_SHIELD": "强力护盾",
+        "RAM": "撞击"
+      },
+      "name": "魔法骑士"
+    },
+    "MAWLER": {
+      "moves": {
+        "CLAW": "爪击",
+        "RIP_AND_TEAR": "狂乱撕扯",
+        "ROAR": "怒吼"
+      },
+      "name": "蛮兽"
+    },
+    "MECHA_KNIGHT": {
+      "moves": {
+        "CHARGE": "冲锋",
+        "FLAMETHROWER": "喷火器",
+        "HEAVY_CLEAVE": "重斩",
+        "WINDUP": "举起蓄力"
+      },
+      "name": "机甲骑士"
+    },
+    "MOCK_ATTACK_AND_SUMMON_MINION_MONSTER": {
+      "moves": {
+        "ATTACK_AND_SUMMON_MINION": "攻击并召唤爪牙"
+      },
+      "name": "攻击并召唤爪牙怪物"
+    },
+    "MOCK_ATTACK_MONSTER": {
+      "moves": {
+        "ATTACK": "攻击"
+      },
+      "name": "攻击怪物"
+    },
+    "MYSTERIOUS_KNIGHT": {
+      "moves": {
+        "BREAKER": "砸碎",
+        "FLAIL": "连枷",
+        "RAM": "撞击"
+      },
+      "name": "神秘骑士"
+    },
+    "MYTE": {
+      "moves": {
+        "BIG_SUCK": "大吸一口",
+        "BITE": "啃咬",
+        "SUCK": "吸吮",
+        "TOXIC": "浓毒"
+      },
+      "name": "异螨"
+    },
+    "NIBBIT": {
+      "moves": {
+        "BUTT": "顶撞",
+        "HESITANT_SLICE": "犹豫斩击",
+        "HISS": "哈气"
+      },
+      "name": "小啃兽"
+    },
+    "NOISEBOT": {
+      "moves": {
+        "NOISE": "噪音"
+      },
+      "name": "噪音机器人"
+    },
+    "OSTY": {
+      "name": "奥斯提"
+    },
+    "OVICOPTER": {
+      "moves": {
+        "LAY_EGGS": "产卵",
+        "NUTRITIONAL_PASTE": "高营养糊糊",
+        "SMASH": "猛砸",
+        "TENDERIZER": "嫩化"
+      },
+      "name": "直飞产卵虫"
+    },
+    "OWL_MAGISTRATE": {
+      "moves": {
+        "JUDICIAL_FLIGHT": "飞法行为",
+        "MAGISTRATE_SCRUTINY": "法官审查",
+        "PECK_ASSAULT": "猛啄袭击",
+        "VERDICT": "裁决"
+      },
+      "name": "猫头鹰法官"
+    },
+    "PAELS_LEGION": {
+      "moves": {
+        "NOTHING": "无"
+      },
+      "name": "佩尔的士兵"
+    },
+    "PARAFRIGHT": {
+      "moves": {
+        "SLAM": "砸击"
+      },
+      "name": "寄生惧魔"
+    },
+    "PHANTASMAL_GARDENER": {
+      "moves": {
+        "BITE": "啃咬",
+        "ENLARGE": "变大",
+        "FLAIL": "猛晃",
+        "LASH": "甩动"
+      },
+      "name": "花园幽灵鳗"
+    },
+    "PHROG_PARASITE": {
+      "moves": {
+        "INFECT": "感染",
+        "LASH": "甩动",
+        "LEAP_SLAM": "跳跃猛砸"
+      },
+      "name": "异蛙寄生虫"
+    },
+    "PUNCH_CONSTRUCT": {
+      "moves": {
+        "FAST_PUNCH": "快速拳",
+        "READY": "准备就绪",
+        "STRONG_PUNCH": "强力拳"
+      },
+      "name": "拳击构装体"
+    },
+    "QUEEN": {
+      "moves": {
+        "BARRIER": "屏障",
+        "BURN_BRIGHT_FOR_ME": "为我尽力燃烧吧",
+        "EXECUTION": "处决",
+        "IMPOSSIBLE": "绝无可能",
+        "OFF_WITH_YOUR_HEAD": "将头砍下",
+        "SUMMON_1": "召唤",
+        "SUMMON_2": "召唤",
+        "YOURE_MINE": "你是我的了"
+      },
+      "name": "女王"
+    },
+    "ROCKET": {
+      "moves": {
+        "CHARGE_UP": "蓄能",
+        "LASER": "激光",
+        "PRECISION_BEAM": "精准光束",
+        "RECHARGE": "重新充能",
+        "TARGETING_RETICLE": "瞄准十字"
+      },
+      "name": "火箭"
+    },
+    "SCROLL_OF_BITING": {
+      "moves": {
+        "CHEW": "咀嚼",
+        "CHOMP": "大啃",
+        "MORE_TEETH": "更多牙齿"
+      },
+      "name": "咬人卷轴"
+    },
+    "SEAPUNK": {
+      "moves": {
+        "BUBBLE_BURP": "吐泡泡",
+        "SEA_KICK": "海洋踢",
+        "SPINNING_KICK": "回旋踢"
+      },
+      "name": "海洋混混"
+    },
+    "SEWER_CLAM": {
+      "moves": {
+        "JET": "喷射",
+        "PRESSURIZE": "增压"
+      },
+      "name": "下水道蚌"
+    },
+    "SHRINKER_BEETLE": {
+      "moves": {
+        "CHOMP": "大啃",
+        "SHRINKER": "缩小",
+        "STOMP": "践踏"
+      },
+      "name": "缩小甲虫"
+    },
+    "SKULKING_COLONY": {
+      "moves": {
+        "INERTIA": "惯性",
+        "SUPER_CRAB": "超级蟹",
+        "ZOOM": "猛冲"
+      },
+      "name": "鬼祟珊瑚群"
+    },
+    "SLIMED_BERSERKER": {
+      "name": "史莱姆狂战士"
+    },
+    "SLITHERING_STRANGLER": {
+      "moves": {
+        "CONSTRICT": "缠身",
+        "LASH": "甩动",
+        "THWACK": "重击"
+      },
+      "name": "蛇行扼杀者"
+    },
+    "SLUDGE_SPINNER": {
+      "moves": {
+        "OIL_SPRAY": "喷油",
+        "RAGE": "狂怒",
+        "SLAM": "砸击"
+      },
+      "name": "淤泥旋螺"
+    },
+    "SLUMBERING_BEETLE": {
+      "moves": {
+        "CRASH": "冲击",
+        "RESOLVE": "坚毅",
+        "ROLL_OUT": "出击",
+        "SNORE": "打鼾"
+      },
+      "name": "熟睡甲虫"
+    },
+    "SNAPPING_JAXFRUIT": {
+      "moves": {
+        "COLLECT_POWER": "积蓄力量",
+        "ENERGY_ORB": "能量球"
+      },
+      "name": "闪光贾克斯果"
+    },
+    "SNEAKY_GREMLIN": {
+      "moves": {
+        "TACKLE": "冲撞"
+      },
+      "name": "卑鄙地精"
+    },
+    "SOUL_FYSH": {
+      "moves": {
+        "BURP": "打嗝",
+        "DE_GAS": "排气",
+        "SCREAM": "尖叫"
+      },
+      "name": "灵魂异鱼"
+    },
+    "SOUL_NEXUS": {
+      "moves": {
+        "DRAIN_LIFE": "汲取生命",
+        "MAELSTROM": "大漩涡",
+        "SOUL_BURN": "灵魂灼烧"
+      },
+      "name": "灵魂枢纽"
+    },
+    "SPECTRAL_KNIGHT": {
+      "moves": {
+        "HEX": "恶咒",
+        "SOUL_FLAME": "灵魂火焰",
+        "SOUL_SLASH": "灵魂斩击"
+      },
+      "name": "幽灵骑士"
+    },
+    "SPINY_TOAD": {
+      "moves": {
+        "PROTRUDING_SPIKES": "伸出尖刺",
+        "SPIKE_EXPLOSION": "尖刺爆破",
+        "TONGUE_LASH": "吐舌"
+      },
+      "name": "棘刺蟾蜍"
+    },
+    "STABBOT": {
+      "moves": {
+        "STAB": "戳刺"
+      },
+      "name": "戳刺机器人"
+    },
+    "TERROR_EEL": {
+      "name": "骇鳗"
+    },
+    "TEST_SUBJECT": {
+      "moves": {
+        "BIG_POUNCE_MOVE": "猛扑",
+        "BITE_MOVE": "啃咬",
+        "BURNING_GROWL_MOVE": "燃烧咆哮",
+        "MULTI_CLAW_MOVE": "多爪攻击",
+        "PHASE3_LACERATE_MOVE": "裂伤",
+        "POUNCE_MOVE": "扑击",
+        "RESPAWN_MOVE": "重生",
+        "SKULL_BASH_MOVE": "颅骨重击"
+      },
+      "name": "实验体 #C{Count}"
+    },
+    "THE_ADVERSARY_MK_ONE": {
+      "moves": {
+        "BARRAGE": "弹幕",
+        "BEAM": "光束",
+        "SMASH": "砸击"
+      },
+      "name": "对手1型"
+    },
+    "THE_ADVERSARY_MK_THREE": {
+      "moves": {
+        "BARRAGE": "弹幕",
+        "CRASH": "冲击",
+        "FLAME_BEAM": "火焰光束"
+      },
+      "name": "对手3型"
+    },
+    "THE_ADVERSARY_MK_TWO": {
+      "moves": {
+        "BARRAGE": "弹幕",
+        "BASH": "猛击",
+        "FLAME_BEAM": "火焰光束"
+      },
+      "name": "对手2型"
+    },
+    "THE_ARM": {
+      "moves": {
+        "GRAB": "抓取",
+        "PUNCH": "拳击",
+        "WRESTLE": "擒抱"
+      },
+      "name": "手臂"
+    },
+    "THE_BELL": {
+      "moves": {
+        "CACOPHONY": "杂音",
+        "CLANG": "铛啷啷",
+        "RING": "叮铃铃"
+      },
+      "name": "铃铛"
+    },
+    "THE_DREAMER": {
+      "moves": {
+        "DREAM": "做梦",
+        "FEND_OFF": "抵御",
+        "RUMINATE": "沉思",
+        "SNORE": "打鼾"
+      },
+      "name": "梦者"
+    },
+    "THE_FORGOTTEN": {
+      "moves": {
+        "DREAD": "恐惧",
+        "MIASMA": "瘴气"
+      },
+      "name": "遗忘之物"
+    },
+    "THE_INSATIABLE": {
+      "moves": {
+        "LIQUIFY_GROUND": "液化地面",
+        "LUNGING_BITE": "前扑啃咬",
+        "SALIVATE": "分泌唾液",
+        "THRASH": "撕扯"
+      },
+      "name": "无厌沙虫"
+    },
+    "THE_LOST": {
+      "moves": {
+        "DEBILITATING_SMOG": "致残雾霾",
+        "EYE_LASERS": "眼部激光"
+      },
+      "name": "失落之物"
+    },
+    "THE_OBSCURA": {
+      "moves": {
+        "HARDENING_STRIKE": "硬化攻击",
+        "ILLUSION": "幻象",
+        "PIERCING_GAZE": "锐利凝视",
+        "WAIL": "哭号"
+      },
+      "name": "胧光怪"
+    },
+    "THIEVING_HOPPER": {
+      "moves": {
+        "ESCAPE": "逃跑",
+        "FLUTTER": "振翅",
+        "HAT_TRICK": "帽子戏法",
+        "NAB": "抢夺",
+        "THIEVERY": "偷盗"
+      },
+      "name": "偷窃草蜢"
+    },
+    "TOADPOLE": {
+      "moves": {
+        "SPIKEN": "带刺",
+        "SPIKE_SPIT": "吐刺",
+        "WHIRL": "旋转"
+      },
+      "name": "蟾蜍蝌蚪"
+    },
+    "TORCH_HEAD_AMALGAM": {
+      "moves": {
+        "TACKLE": "冲撞"
+      },
+      "name": "火炬头聚合体"
+    },
+    "TOUGH_EGG": {
+      "moves": {
+        "HATCH": "孵化"
+      },
+      "name": "结实的卵"
+    },
+    "TRACKER_RUBY_RAIDER": {
+      "moves": {
+        "HOUNDS": "放狗",
+        "TRACK": "追踪"
+      },
+      "name": "劫掠者追踪手"
+    },
+    "TUNNELER": {
+      "moves": {
+        "BELOW": "下方攻击",
+        "BITE": "啃咬",
+        "BURROW": "钻洞",
+        "STRIKE": "冒头打击"
+      },
+      "name": "地道虫"
+    },
+    "TURRET_OPERATOR": {
+      "moves": {
+        "LOADING": "上弹",
+        "UNLOAD": "弹雨！"
+      },
+      "name": "高塔炮手"
+    },
+    "TWIG_SLIME_M": {
+      "moves": {
+        "CHOMP": "大啃",
+        "POKEY_POUNCE": "戳刺扑击",
+        "STICKY_SHOT": "黏糊射击"
+      },
+      "name": "树枝史莱姆（中）"
+    },
+    "TWIG_SLIME_S": {
+      "moves": {
+        "GOOP": "黏液",
+        "TACKLE": "冲撞"
+      },
+      "name": "树枝史莱姆（小）"
+    },
+    "TWO_TAILED_RAT": {
+      "moves": {
+        "CALL_FOR_BACKUP": "呼唤后援",
+        "DISEASE_BITE": "疾病啃咬",
+        "SCRATCH": "抓挠",
+        "SCREECH": "尖声嘶吼"
+      },
+      "name": "双尾鼠"
+    },
+    "VANTOM": {
+      "moves": {
+        "DISMEMBER": "肢解",
+        "INKY_LANCE": "墨水长枪",
+        "INK_BLOT": "墨迹",
+        "PREPARE": "准备"
+      },
+      "name": "墨影幻灵"
+    },
+    "VINE_SHAMBLER": {
+      "moves": {
+        "CHOMP": "大啃",
+        "GRASPING_VINES": "紧绕藤蔓",
+        "SWIPE": "挥击"
+      },
+      "name": "藤蔓蹒跚者"
+    },
+    "WATERFALL_GIANT": {
+      "moves": {
+        "PRESSURE_GUN": "压力炮",
+        "PRESSURIZE": "增压",
+        "RAM": "撞击",
+        "SIPHON": "虹吸",
+        "STOMP": "践踏"
+      },
+      "name": "瀑布巨兽"
+    },
+    "WRIGGLER": {
+      "moves": {
+        "PARASITIZE_PLAYER": "寄生",
+        "WRIGGLE_STRIKE": "扭动打击"
+      },
+      "name": "扭动虫"
+    },
+    "ZAPBOT": {
+      "moves": {
+        "ZAP": "电击"
+      },
+      "name": "电击机器人"
+    }
   }
 }

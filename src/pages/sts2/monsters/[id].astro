@@ -142,10 +142,20 @@ function buildAllSequences(pattern: any[], start: string | null | undefined): { 
 
 const sequences = buildAllSequences(movePattern, startMove);
 
-const powerDescriptions = new Map<string, string>();
-for (const p of data.powers ?? []) {
-  const key = (p as any).name?.toLowerCase();
-  if (key) powerDescriptions.set(key, (p as any).description ?? '');
+// Build power lookup maps
+// English base data for key matching (effects reference English names)
+const baseData = await getData('sts2');
+const powerDescByEnName = new Map<string, string>();
+const powerLocName = new Map<string, string>();
+for (const bp of baseData.powers ?? []) {
+  const enName = (bp as any).name?.toLowerCase();
+  if (!enName) continue;
+  // Find localized version
+  const lp = data.powers.find((p: any) => p.id === (bp as any).id);
+  powerDescByEnName.set(enName, (lp as any)?.description ?? (bp as any).description ?? '');
+  if (lp && (lp as any).name !== (bp as any).name) {
+    powerLocName.set(enName, (lp as any).name);
+  }
 }
 ---
 <Layout game="sts2" title={title} description={`${monster.type} · ${hpText ?? 'HP unknown'}`}>
@@ -170,11 +180,12 @@ for (const p of data.powers ?? []) {
           const ascAmt = typeof p === 'object' && p.amount && typeof p.amount === 'object' ? p.amount.ascension : null;
           const ascLvl = typeof p === 'object' && p.amount && typeof p.amount === 'object' ? p.amount.ascLevel : null;
           const target = typeof p === 'object' ? p.target : 'self';
-          const desc = powerDescriptions.get(name.toLowerCase()) || '';
+          const desc = powerDescByEnName.get(name.toLowerCase()) || '';
+          const displayName = powerLocName.get(name.toLowerCase()) || name;
           return (
             <div>
               <span class={`text-xs px-2 py-0.5 rounded ${target === 'player' ? 'bg-red-500/15 text-red-300' : 'bg-purple-500/15 text-purple-300'}`}>
-                {target === 'player' ? '→ ' : ''}{name}{amt != null ? ` ${amt}` : ''}
+                {target === 'player' ? '→ ' : ''}{displayName}{amt != null ? ` ${amt}` : ''}
                 {ascAmt != null && ascAmt !== amt && <span class="text-amber-400/80"> (Asc {ascLvl}+: {ascAmt})</span>}
               </span>
               {desc && <p class="mt-0.5 text-[11px] text-slate-400 pl-2">{desc}</p>}
@@ -285,14 +296,15 @@ for (const p of data.powers ?? []) {
                       const amt = eff.amount && typeof eff.amount === 'object' ? eff.amount.normal : eff.amount;
                       const ascAmt = eff.amount && typeof eff.amount === 'object' ? eff.amount.ascension : null;
                       const ascLvl = eff.amount && typeof eff.amount === 'object' ? eff.amount.ascLevel : null;
-                      const desc = powerDescriptions.get(eff.power.toLowerCase()) || '';
+                      const desc = powerDescByEnName.get(eff.power.toLowerCase()) || '';
+                      const effDisplayName = powerLocName.get(eff.power.toLowerCase()) || eff.power;
                       const amtStr = amt != null ? String(amt) : '';
                       // Replace the amount in the description so it reads naturally
                       const descWithAmt = desc && amtStr ? desc.replace(amtStr, `**${amtStr}**`) : desc;
                       return (
                         <div>
                           <span class={`text-xs px-2 py-0.5 rounded ${eff.target === 'player' ? 'bg-red-500/15 text-red-300' : 'bg-purple-500/15 text-purple-300'}`}>
-                            {eff.target === 'player' ? '→ ' : ''}{eff.power}{amt != null ? ` ${amt}` : ''}
+                            {eff.target === 'player' ? '→ ' : ''}{effDisplayName}{amt != null ? ` ${amt}` : ''}
                             {ascAmt != null && ascAmt !== amt && <span class="text-amber-400/80"> (Asc {ascLvl}+: {ascAmt})</span>}
                           </span>
                           {desc && <p class="mt-0.5 text-[11px] text-slate-400 pl-2">{desc}</p>}
