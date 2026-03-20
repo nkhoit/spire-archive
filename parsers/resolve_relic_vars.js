@@ -210,3 +210,40 @@ resolveEntityFile(POTIONS_JSON, potionVarsMap, 'Potions');
 
 const cardVarsMap = buildVarsMap(CARDS_DIR);
 resolveEntityFile(CARDS_JSON, cardVarsMap, 'Cards');
+
+// Post-process: convert icon templates to display tokens
+function resolveIconTemplates(jsonPath, label) {
+  const entities = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+  let count = 0;
+  for (const entity of entities) {
+    for (const field of ['description']) {
+      if (!entity[field]) continue;
+      const before = entity[field];
+      let text = entity[field];
+      // {energyPrefix:energyIcons(N)} → [E] for 1, [N Energy] for N>1
+      text = text.replace(/\{energyPrefix:energyIcons\((\d+)\)\}/g, (_, n) => {
+        const num = parseInt(n);
+        return num === 1 ? '[E]' : `[${num} Energy]`;
+      });
+      // {singleStarIcon} → [S]
+      text = text.replace(/\{singleStarIcon\}/g, '[S]');
+      if (text !== before) { entity[field] = text; count++; }
+    }
+    // Also handle upgrade descriptions
+    if (entity.upgrade?.description) {
+      let text = entity.upgrade.description;
+      text = text.replace(/\{energyPrefix:energyIcons\((\d+)\)\}/g, (_, n) => {
+        const num = parseInt(n);
+        return num === 1 ? '[E]' : `[${num} Energy]`;
+      });
+      text = text.replace(/\{singleStarIcon\}/g, '[S]');
+      entity.upgrade.description = text;
+    }
+  }
+  if (count) {
+    fs.writeFileSync(jsonPath, JSON.stringify(entities, null, 2), 'utf8');
+    console.log(`✅ ${label}: Resolved ${count} icon templates`);
+  }
+}
+
+resolveIconTemplates(CARDS_JSON, 'Cards');
