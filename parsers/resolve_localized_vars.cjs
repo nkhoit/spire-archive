@@ -129,6 +129,17 @@ function extractVarsFromCs(csContent) {
   for (const [, v] of csContent.matchAll(/private int _currentDamage\s*=\s*(\d+)/g)) setDefault('Damage', fmtVal(v));
   for (const [, v] of csContent.matchAll(/private int _currentBlock\s*=\s*(\d+)/g)) setDefault('Block', fmtVal(v));
 
+  // StringVar with entity reference: StringVar("VarName", ModelDb.Xyz<ClassName>().Title...)
+  // Store as __entity_ref__ClassName for later resolution with localized names
+  for (const [, varName, className] of csContent.matchAll(/new StringVar\("(\w+)",\s*ModelDb\.\w+<(\w+)>\(\)\.Title/g)) {
+    // Convert PascalCase to SCREAMING_SNAKE_CASE
+    const entityId = className.replace(/([a-z])([A-Z])/g, '$1_$2').replace(/([A-Z]+)([A-Z][a-z])/g, '$1_$2').toUpperCase();
+    vars[varName] = `__entity_ref__${entityId}`;
+  }
+
+  // Named SummonVar: SummonVar("Name", Xm)
+  for (const [, name, v] of blockContent.matchAll(/new SummonVar\("(\w+)",\s*(\d+(?:\.\d+)?)m/g)) setDefault(name, fmtVal(v));
+
   return vars;
 }
 
@@ -299,9 +310,37 @@ console.log(`Processing ${langs.length} languages: ${langs.join(', ')}`);
 const results = {};
 const CATEGORIES = ['cards', 'relics', 'potions', 'events'];
 
+// Build entity name maps for resolving StringVar references per locale
+function buildEntityNameMap(localeData) {
+  const nameMap = {};
+  for (const cat of ['cards', 'relics', 'potions', 'enchantments', 'powers']) {
+    const items = localeData[cat] || {};
+    for (const [id, item] of Object.entries(items)) {
+      if (item && item.name) nameMap[id] = item.name;
+    }
+  }
+  return nameMap;
+}
+
+function resolveEntityRefs(vars, nameMap) {
+  const resolved = { ...vars };
+  for (const [k, v] of Object.entries(resolved)) {
+    if (typeof v === 'string' && v.startsWith('__entity_ref__')) {
+      const entityId = v.slice('__entity_ref__'.length);
+      if (nameMap[entityId]) {
+        resolved[k] = nameMap[entityId];
+      } else {
+        delete resolved[k]; // Can't resolve, leave template unresolved
+      }
+    }
+  }
+  return resolved;
+}
+
 for (const lang of langs) {
   const filePath = path.join(LOCALE_DIR, lang + '.json');
   const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  const entityNameMap = buildEntityNameMap(data);
   results[lang] = {};
 
   for (const category of CATEGORIES) {
@@ -313,7 +352,8 @@ for (const lang of langs) {
 
     for (const [itemId, itemData] of Object.entries(items)) {
       totalItems++;
-      const vars = getVarsForId(itemId, category);
+      const rawVars = getVarsForId(itemId, category);
+      const vars = resolveEntityRefs(rawVars, entityNameMap);
       const unresolved = new Set();
       let touched = false;
 

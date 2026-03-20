@@ -144,7 +144,7 @@
       "name": "狠揍"
     },
     "BEAT_INTO_SHAPE": {
-      "description": "造成5点伤害。\n铸造5。\n本回合此前你击中过该敌人几次，就额外铸造5。",
+      "description": "造成5点伤害。\n铸造5。\n本回合此前你每击中过该敌人一次，铸造值就上升5。",
       "name": "锻打成型"
     },
     "BECKON": {
@@ -168,7 +168,7 @@
       "name": "大爆炸"
     },
     "BLACK_HOLE": {
-      "description": "每当你使用或获得⭐时, 对所有敌人造成3点伤害。",
+      "description": "每当你花费或获得⭐时，对所有敌人造成3点伤害。",
       "name": "黑洞"
     },
     "BLADE_DANCE": {
@@ -220,7 +220,7 @@
       "name": "碎骨"
     },
     "BOOST_AWAY": {
-      "description": "获得6点格挡。\n将一张眩晕添加到你的弃牌堆中。",
+      "description": "获得6点格挡。\n将一张晕眩添加到你的弃牌堆中。",
       "name": "高速脱离"
     },
     "BOOT_SEQUENCE": {
@@ -288,7 +288,7 @@
       "name": "燃烧契约"
     },
     "BURST": {
-      "description": "在这个回合，你打出的下张技能牌会被额外打出一次。",
+      "description": "在这个回合，你打出的下一张技能牌会被额外打出一次。",
       "name": "爆发"
     },
     "BURY": {
@@ -380,7 +380,7 @@
       "name": "爪击"
     },
     "CLEANSE": {
-      "description": "召唤3。\n从你的抽牌堆中选一张牌消耗。",
+      "description": "召唤3。\n从你的抽牌堆中选择一张牌将其消耗。",
       "name": "洁净"
     },
     "CLOAK_AND_DAGGER": {
@@ -696,11 +696,11 @@
       "name": "回响形态"
     },
     "EIDOLON": {
-      "description": "消耗所有手牌。\n如果有至少9张牌通过这个方法被消耗了，则获得1层无实体。",
+      "description": "消耗所有手牌。\n如果有至少9张牌被通过这个方法消耗，则获得1层无实体。",
       "name": "幻景"
     },
     "END_OF_DAYS": {
-      "description": "给予所有敌人29层灾厄。\n杀死所有灾厄大于等于自身生命值的敌人。",
+      "description": "给予所有敌人29层灾厄。\n杀死所有灾厄大于等于当前生命值的敌人。",
       "name": "末日降临"
     },
     "ENERGY_SURGE": {
@@ -748,7 +748,7 @@
       "name": "永恒铠甲"
     },
     "EVIL_EYE": {
-      "description": "获得8点格挡。\n如果你在本回合获得消耗过卡牌，则额外获得8点格挡。",
+      "description": "获得8点格挡。\n如果你在本回合消耗过卡牌，则额外获得8点格挡。",
       "name": "邪眼"
     },
     "EXPECT_A_FIGHT": {
@@ -757,7 +757,7 @@
     },
     "EXPERTISE": {
       "description": "抽牌直至你的手牌有6张牌。",
-      "name": "独门绝技"
+      "name": "独门技术"
     },
     "EXPOSE": {
       "description": "去除敌人身上的所有格挡值和人工制品。\n并给予2层易伤。",
@@ -796,6 +796,7 @@
       "name": "无惧疼痛"
     },
     "FERAL": {
+      "description": "你每回合打出的第一张\n耗能为0[E]的攻击牌，\n会放回你的手牌。",
       "name": "野性"
     },
     "FETCH": {
@@ -914,7 +915,7 @@
       "name": "伽马爆破"
     },
     "GANG_UP": {
-      "description": "造成5点伤害。\n本回合其他玩家攻击该敌人时，该牌就造成5点伤害。",
+      "description": "造成5点伤害。\n本回合其他玩家每攻击过一次该敌人，该牌造成的伤害就额外增加5点。",
       "name": "群起攻之"
     },
     "GATHER_LIGHT": {
@@ -1085,7 +1086,7 @@
       "name": "未掘宝石"
     },
     "HIGH_FIVE": {
-      "description": "奥斯提造成11点伤害\n并且给予所有敌人\n2层易伤。",
+      "description": "奥斯提对所有敌人\n造成11点伤害并给予它们\n2层易伤。",
       "name": "击掌"
     },
     "HOLOGRAM": {
@@ -1470,7 +1471,7 @@
       "name": "连环拳"
     },
     "ORBIT": {
-      "description": "你每花费[4 Energy]，\n就获得[E]。",
+      "description": "你每花费4[E]，\n就获得[E]。",
       "name": "环绕轨道"
     },
     "OUTBREAK": {
@@ -1797,7 +1798,7 @@
       "name": "潦草急就"
     },
     "SCULPTING_STRIKE": {
-      "description": "造成8点伤害。\n将虚无添加至一张手牌。",
+      "description": "造成8点伤害。\n为一张手牌添加虚无。",
       "name": "雕琢打击"
     },
     "SEANCE": {
@@ -1938,7 +1939,7 @@
     },
     "SNAP": {
       "description": "奥斯提造成7点伤害。\n给手牌中的一张牌添加保留。",
-      "name": "抓取"
+      "name": "响指"
     },
     "SNEAKY": {
       "description": "每当其他玩家攻击一名敌人时，获得1点格挡。",
@@ -2243,7 +2244,7 @@
       "name": "毒素"
     },
     "TRACKING": {
-      "description": "有虚弱状态的敌人，所受的攻击伤害翻倍。",
+      "description": "对虚弱状态的敌人，造成的攻击伤害翻倍。",
       "name": "跟踪"
     },
     "TRAINING_STRIKE": {
@@ -2371,12 +2372,12 @@
       "name": "旋风斩"
     },
     "WHISTLE": {
-      "description": "造成33点伤害。\n眩晕该敌人",
+      "description": "造成33点伤害。\n击晕该敌人。",
       "name": "吹哨"
     },
     "WHITE_NOISE": {
       "description": "将一张随机能力牌加入你的手牌。这张牌在本回合内免费打出。",
-      "name": "白噪音"
+      "name": "白噪声"
     },
     "WISH": {
       "description": "将你抽牌堆中的一张牌放入你的手牌。",
@@ -2494,7 +2495,7 @@
     "BING_BONG": {
       "description": "每当你往牌组中增添卡牌时，都将额外添加一张相同的牌。",
       "flavor": "这个遗物的细节将在未来揭晓……",
-      "name": "冰梆"
+      "name": "宾邦"
     },
     "BLACK_BLOOD": {
       "description": "在战斗结束时，回复12点生命。",
@@ -2532,7 +2533,7 @@
       "name": "骨茶"
     },
     "BOOKMARK": {
-      "description": "在每个回合结束时，将随机一张被保留的牌，直到被打出前耗能减少1。",
+      "description": "每回合结束时，随机一张被保留的牌在被打出前的耗能减少1。",
       "flavor": "这个遗物的细节将在未来揭晓……",
       "name": "书签"
     },
@@ -2637,7 +2638,7 @@
       "name": "化学物X"
     },
     "CHOICES_PARADOX": {
-      "description": "在每场战斗开始时，你可以从5张随机牌中选择1张放入你的手牌。然后被选定的那张牌获得保留。",
+      "description": "在每场战斗开始时，从5张随机牌中选择1张放入你的手牌。被选中的牌获得保留。",
       "flavor": "这个遗物的细节将在未来揭晓……",
       "name": "选择悖论"
     },
@@ -2782,6 +2783,7 @@
       "name": "情感芯片"
     },
     "EMPTY_CAGE": {
+      "description": "拾起时，选择移除牌组中的2张牌。",
       "flavor": "这个遗物的细节将在未来揭晓……",
       "name": "空鸟笼"
     },
@@ -2921,7 +2923,7 @@
       "name": "玻璃眼珠"
     },
     "GLITTER": {
-      "description": "为所有的卡牌奖励附魔：[purple]华彩[/purple]。",
+      "description": "为之后的所有卡牌奖励附魔：[purple]华彩[/purple]。",
       "flavor": "这个遗物的细节将在未来揭晓……",
       "name": "亮片"
     },
@@ -3136,7 +3138,7 @@
       "name": "芒果"
     },
     "MASSIVE_SCROLL": {
-      "description": "拾起时，从3张多人游戏无色牌中选择1张加入你的牌组。",
+      "description": "拾起时，从3张多人游戏牌中选择1张加入你的牌组。",
       "flavor": "这个遗物的细节将在未来揭晓……",
       "name": "巨大卷轴"
     },
@@ -3203,7 +3205,7 @@
     "MR_STRUGGLES": {
       "description": "在你的回合开始时，对所有敌人造成等量于当前回合数的伤害。",
       "flavor": "这个遗物的细节将在未来揭晓……",
-      "name": "挣扎先生"
+      "name": "抱抱先生"
     },
     "MUMMIFIED_HAND": {
       "description": "你每打出一张能力牌，手牌中就有一张随机牌在这个回合可以免费打出。",
@@ -3236,6 +3238,7 @@
       "name": "新叶"
     },
     "NINJA_SCROLL": {
+      "description": "每场战斗开始时，将3张小刀加入你的手牌。",
       "flavor": "这个遗物的细节将在未来揭晓……",
       "name": "忍术卷轴"
     },
@@ -3290,7 +3293,7 @@
       "name": "佩尔之血"
     },
     "PAELS_CLAW": {
-      "description": "拾起时，为所有的“防御”附魔：[purple]{EnchantmentName}[/purple]。",
+      "description": "拾起时，为所有的“防御”附魔：[purple]黏糊[/purple]。",
       "flavor": "这个遗物的细节将在未来揭晓……",
       "name": "佩尔之爪"
     },
@@ -3305,7 +3308,7 @@
       "name": "佩尔之肉"
     },
     "PAELS_GROWTH": {
-      "description": "拾起时，从牌组中选择一张牌，为其附魔：[purple]{EnchantmentName}[/purple]。",
+      "description": "拾起时，从牌组中选择一张牌，为其附魔：[purple]克隆[/purple]。",
       "flavor": "这个遗物的细节将在未来揭晓……",
       "name": "佩尔的增生组织"
     },
@@ -3390,7 +3393,7 @@
       "name": "贤者之石"
     },
     "PHYLACTERY_UNBOUND": {
-      "description": "在每场战斗开始时，召唤{StartOfCombat}。在你的回合开始时，召唤{StartOfTurn}。",
+      "description": "在每场战斗开始时，召唤5。在你的回合开始时，召唤2。",
       "flavor": "这个遗物的细节将在未来揭晓……",
       "name": "无界命匣"
     },
@@ -3530,7 +3533,7 @@
       "name": "王室猛毒"
     },
     "ROYAL_STAMP": {
-      "description": "拾起时，从牌组中选择一张攻击牌或技能牌，为它附魔：[purple]{Enchantment}[/purple]。",
+      "description": "拾起时，从牌组中选择一张攻击牌或技能牌，为它附魔：[purple]王室认证[/purple]。",
       "flavor": "这个遗物的细节将在未来揭晓……",
       "name": "王室印章"
     },
@@ -3700,7 +3703,7 @@
       "name": "坦克斯的哨子"
     },
     "TEA_OF_DISCOURTESY": {
-      "description": "在下一场战斗开始时，将2张眩晕放入你的抽牌堆。",
+      "description": "在下一场战斗开始时，将2张晕眩放入你的抽牌堆。",
       "flavor": "这个遗物的细节将在未来揭晓……",
       "name": "无礼之茶"
     },
@@ -4276,7 +4279,7 @@
     },
     "FERAL_POWER": {
       "description": "每回合你第一次打出0{energyPrefix:energyIcons(1)}攻击牌时，将其放回你的手牌中。",
-      "smartDescription": "每回合你第{Amount}次打出0{energyPrefix:energyIcons(1)}攻击牌时，将其放回你的手牌中。",
+      "smartDescription": "每回合你前{Amount}次打出0{energyPrefix:energyIcons(1)}攻击牌时，将其放回你的手牌中。",
       "name": "野性"
     },
     "FLAME_BARRIER_POWER": {
@@ -4619,6 +4622,7 @@
     },
     "NIGHTMARE_POWER": {
       "description": "在下个回合，将所选牌的3张复制品加入你的手牌。",
+      "smartDescription": "在下个回合，将{Amount}张{Card}{Amount:plural:|}的复制品加入你的手牌。",
       "name": "夜魇"
     },
     "NOSTALGIA_POWER": {
@@ -4726,7 +4730,7 @@
       "name": "横冲直撞"
     },
     "POISON_POWER": {
-      "description": "中毒的生物还在自身回合开始时失去生命。中毒层数每回合减少1。",
+      "description": "中毒的生物会在自身回合开始时失去生命。中毒层数每回合减少1。",
       "smartDescription": "在{OnPlayer:你的回合|其回合}开始时失去{Amount}点生命，然后将中毒层数减少1。",
       "name": "中毒"
     },
@@ -4777,7 +4781,7 @@
     },
     "REAPER_FORM_POWER": {
       "description": "每当你的攻击造成伤害时，同时给予等量的灾厄。",
-      "smartDescription": "每当你的攻击造成伤害时，同时给予{Amount:choose(1):等量的|{}其倍的}灾厄。",
+      "smartDescription": "每当你的攻击造成伤害时，同时给予{Amount:choose(1):等量的|其{}倍的}灾厄。",
       "name": "死神形态"
     },
     "REATTACH_POWER": {
@@ -4937,7 +4941,7 @@
     },
     "SLOW_POWER": {
       "description": "你在本回合内每打出一张牌，该敌人本回合从攻击牌中受到的伤害增加10%。",
-      "smartDescription": "你在本回合内每打出一张牌，{OnPlayer:你|该敌人}本回合从攻击牌中受到的伤害增加10%。（额外受到{Amount}%伤害）",
+      "smartDescription": "你在本回合内每打出一张牌，{OnPlayer:你|该敌人}本回合从攻击牌中受到的伤害增加10%。{Amount:plural:|}",
       "name": "缓慢"
     },
     "SLUMBER_POWER": {
@@ -5300,7 +5304,7 @@
       "name": "瓶装潜能"
     },
     "CLARITY": {
-      "description": "抽1张牌。在你的下3个回合开始时，额外1张牌。",
+      "description": "抽1张牌。在你的下3个回合开始时，额外抽1张牌。",
       "name": "明晰提取物"
     },
     "COLORLESS_POTION": {
@@ -5545,11 +5549,11 @@
       "choices": [
         {
           "name": "融合防御",
-          "description": "移除2张防御。并将一张{Card2}添加至你的牌组。"
+          "description": "移除2张防御。并将一张究极防御添加至你的牌组。"
         },
         {
           "name": "融合打击",
-          "description": "移除2张打击。并将一张{Card1}添加至你的牌组。"
+          "description": "移除2张打击。并将一张究极打击添加至你的牌组。"
         }
       ]
     },
@@ -5605,11 +5609,11 @@
       "choices": [
         {
           "name": "学习杀灭的技巧",
-          "description": "将一张{Card1}添加至你的牌组。"
+          "description": "将一张杀灭添加至你的牌组。"
         },
         {
           "name": "学习压扁的技巧",
-          "description": "将一张{Card2}添加至你的牌组"
+          "description": "将一张压扁添加至你的牌组"
         }
       ]
     },
@@ -5623,7 +5627,7 @@
         },
         {
           "name": "带走这颗蛋",
-          "description": "将一张{Card}加入你的牌组。"
+          "description": "将一张多尼斯异鸟蛋加入你的牌组。"
         }
       ]
     },
@@ -5650,12 +5654,26 @@
         {
           "name": "橙色",
           "description": "获得3张储君的卡牌。"
+        },
+        {
+          "name": "绿色",
+          "description": "获得3张静默猎手的卡牌。"
         }
       ]
     },
     "COLOSSAL_FLOWER": {
       "name": "巨大花卉",
       "description": "一朵巨型花卉正生长在一座骸骨堆积而成的山上。\n\n随着它那变换色彩的花瓣不断搏动，你感觉到中心处一定有一团强力花粉，但那起伏的花瓣如刀锋般锋利且捉摸不定。\n\n你本可以只采集一些金色花蜜，但中心处的那个奖赏实在是太诱人了…",
+      "choices": [
+        {
+          "name": "采集花蜜",
+          "description": "获得{Prize1}金币。"
+        },
+        {
+          "name": "深入探索",
+          "description": "深入。失去5点生命值"
+        }
+      ],
       "pages": [
         {
           "description": "一朵巨型花卉正生长在一座骸骨堆积而成的山上。\n\n随着它那变换色彩的花瓣不断搏动，你感觉到中心处一定有一团强力花粉，但那起伏的花瓣如刀锋般锋利且捉摸不定。\n\n你本可以只采集一些金色花蜜，但中心处的那个奖赏实在是太诱人了…",
@@ -5704,7 +5722,7 @@
       "choices": [
         {
           "name": "分期付款",
-          "description": "获得一张{CurseTitle}。占卜6次。"
+          "description": "获得一张债务。占卜6次。"
         },
         {
           "name": "揭幕未来",
@@ -5767,11 +5785,11 @@
       "choices": [
         {
           "name": "装瓶",
-          "description": "获得一瓶{Potion}。"
+          "description": "获得一瓶发光水。"
         },
         {
           "name": "攀爬",
-          "description": "获得{Relic}。失去13点最大生命。"
+          "description": "获得菲涅耳透镜。失去13点最大生命。"
         }
       ]
     },
@@ -5798,11 +5816,11 @@
       "choices": [
         {
           "name": "进入你的洞",
-          "description": "为一张牌附魔：{Enchantment}。"
+          "description": "为一张牌附魔：完美契合。"
         },
         {
           "name": "抵抗诱惑",
-          "description": "从你的牌组中移除2张牌。将一张{ResistCurse}添加到你的牌组中。"
+          "description": "从你的牌组中移除2张牌。将一张凡庸添加到你的牌组中。"
         }
       ]
     },
@@ -5812,11 +5830,11 @@
       "choices": [
         {
           "name": "接受这颗{Relic}",
-          "description": "获得{Relic}。"
+          "description": "获得遗忘之魂。"
         },
         {
           "name": "让它直面真相",
-          "description": "将一张{Curse}到你的牌组。 为一张带有消耗的牌附魔：{Enchantment}。"
+          "description": "将一张腐朽到你的牌组。 为一张带有消耗的牌附魔：灵魂之力。"
         }
       ]
     },
@@ -5866,7 +5884,7 @@
       "choices": [
         {
           "name": "抓住这团鬼火",
-          "description": "将一张{Curse}添加到你的牌组。获得{Relic}。"
+          "description": "将一张腐朽添加到你的牌组。获得{Relic}。"
         },
         {
           "name": "已锁定",
@@ -5970,7 +5988,7 @@
     },
     "RELIC_TRADER": {
       "name": "遗物交换商",
-      "description": "你走过一个拐角，一个黑影突然矗立在前方。他转过身来，正对着你。\n\n“欢迎！想做点什么买卖？”\n他开口询问，同时猛地掀开斗篷，露出一大堆可疑货物。",
+      "description": "你走过一个拐角，一个黑影突然矗立在前方。他转过身来，正对着你。\n\n“欢迎！你想换点什么吶？”\n他开口询问，同时猛地掀开斗篷，露出一大堆可疑货物。",
       "choices": [
         {
           "name": "拿下面那件",
@@ -6006,7 +6024,7 @@
       "choices": [
         {
           "name": "喝杯好茶",
-          "description": "获得{Relic}。回复全部生命。"
+          "description": "获得王室猛毒。回复全部生命。"
         },
         {
           "name": "挑事斗殴",
@@ -6024,7 +6042,7 @@
         },
         {
           "name": "种植培育",
-          "description": "给一张牌附魔：{Enchantment}。"
+          "description": "给一张牌附魔：播种。"
         }
       ]
     },
@@ -6038,7 +6056,7 @@
         },
         {
           "name": "读完整本书",
-          "description": "选择一张能力牌附魔：{Enchantment3}2。"
+          "description": "选择一张能力牌附魔：迅速2。"
         },
         {
           "name": "锁定",
@@ -6046,7 +6064,7 @@
         },
         {
           "name": "随便读个一段",
-          "description": "选择一张技能牌附魔：{Enchantment2}2。"
+          "description": "选择一张技能牌附魔：灵巧2。"
         }
       ]
     },
@@ -6120,7 +6138,7 @@
         },
         {
           "name": "拿起石剑",
-          "description": "获得{Relic}。"
+          "description": "获得石之剑。"
         }
       ]
     },
@@ -6144,7 +6162,7 @@
       "choices": [
         {
           "name": "靠近",
-          "description": "将一张攻击牌附魔：{Enchantment}。"
+          "description": "将一张攻击牌附魔：腐化。"
         },
         {
           "name": "锁定",
@@ -6228,7 +6246,7 @@
       "choices": [
         {
           "name": "那个",
-          "description": "将一张{Curse}加入你的牌组。获得一件随机遗物。"
+          "description": "将一张笨拙加入你的牌组。获得一件随机遗物。"
         },
         {
           "name": "这个",
@@ -6348,7 +6366,7 @@
       "choices": [
         {
           "name": "沐浴",
-          "description": "从你的牌组中移除1张牌。将1张内疚添加到你的牌组。"
+          "description": "从你的牌组中移除1张牌。将1张愧疚添加到你的牌组。"
         },
         {
           "name": "装瓶",
@@ -6376,11 +6394,11 @@
       "choices": [
         {
           "name": "鸟",
-          "description": "选择1张初始牌变化为{BirdCard}。"
+          "description": "选择1张初始牌变化为啄击。"
         },
         {
           "name": "蛇",
-          "description": "给1张牌附魔：{SnakeEnchantment}。"
+          "description": "给1张牌附魔：蛇行。"
         },
         {
           "name": "锁定",
@@ -6406,122 +6424,163 @@
         }
       ]
     },
+    "DARV": {
+      "name": "达弗",
+      "description": "达尔弗，囤积者，会在一堆强力遗物中翻找，并拿出一批不断变化的收藏。你会看到 Dusty Tome，以及从主池和章节专属池中抽出的三件随机遗物；其中部分选项只有满足条件时才会出现。"
+    },
     "NEOW": {
-      "name": "Neow",
-      "description": "复活之母尼奥在每次冒险开始时等候着你。她提供三种祝福——两种正面祝福和一种诅咒祝福。选项从以下池中随机抽取。",
+      "name": "涅奥",
+      "description": "涅奥（复活之母）在每次冒险开始时等待着你。她提供三个祝福——两个正面祝福和一个诅咒祝福。选项从以下池中随机抽取。",
       "choices": [
         {
           "name": "奥术卷轴",
-          "description": "拾起时，将一张随机稀有牌加入你的牌组。"
+          "description": "拾起时，将一张随机稀有牌加入你的牌组。",
+          "relic_id": "ARCANE_SCROLL",
+          "pool": "positive"
         },
         {
           "name": "轰鸣海螺",
-          "description": "在精英战的战斗开始时，额外抽2张牌。"
+          "description": "在精英战的战斗开始时，额外抽{Cards}张牌。",
+          "relic_id": "BOOMING_CONCH",
+          "pool": "positive"
         },
         {
           "name": "橙型香盒",
-          "description": "拾起时，升级一张牌。"
+          "description": "拾起时，升级一张牌。",
+          "relic_id": "POMANDER",
+          "pool": "positive"
         },
         {
           "name": "金色珍珠",
-          "description": "拾起时，获得150金币。"
+          "description": "拾起时，获得{Gold}金币。",
+          "relic_id": "GOLDEN_PEARL",
+          "pool": "positive"
         },
         {
           "name": "铅制镇纸",
-          "description": "拾起时，从2张无色牌中选择1张加入你的牌组。"
+          "description": "拾起时，从2张无色牌中选择1张加入你的牌组。",
+          "relic_id": "LEAD_PAPERWEIGHT",
+          "pool": "positive"
         },
         {
           "name": "新叶",
-          "description": "拾起时，变化1张牌。"
+          "description": "拾起时，变化{Cards}张牌。",
+          "relic_id": "NEW_LEAF",
+          "pool": "positive"
         },
         {
           "name": "涅奥的苦痛",
-          "description": "拾起时，将1张涅奥之怒加入你的牌组。"
+          "description": "拾起时，将1张涅奥之怒加入你的牌组。",
+          "relic_id": "NEOWS_TORMENT",
+          "pool": "positive"
         },
         {
           "name": "精准剪刀",
-          "description": "拾起时，从你的牌组中移除1张牌。"
+          "description": "拾起时，从你的牌组中移除{Cards}张牌。",
+          "relic_id": "PRECISE_SCISSORS",
+          "pool": "positive"
         },
         {
           "name": "失物盒",
-          "description": "拾起时，获得1组卡牌奖励和1瓶随机药水。"
-        },
-        {
-          "name": "营养牡蛎",
-          "description": "拾起时，将你的最大生命值提升11。"
-        },
-        {
-          "name": "石炉加湿器",
-          "description": "每当你在休息处休息时，将你的最大生命值提升5点。"
-        },
-        {
-          "name": "熔岩石",
-          "description": "第一阶段的Boss敌人额外掉落2件遗物。"
-        },
-        {
-          "name": "小型扭蛋",
-          "description": "拾起时，获得一件随机遗物。"
-        },
-        {
-          "name": "巨大卷轴",
-          "description": "拾起时，从3张多人游戏无色牌中选择1张加入你的牌组。"
+          "description": "拾起时，获得1组卡牌奖励和1瓶随机药水。",
+          "relic_id": "LOST_COFFER",
+          "pool": "positive"
         },
         {
           "name": "诅咒珍珠",
-          "description": "拾起时，获得一张贪婪，获得333金币。"
+          "description": "拾起时，获得一张贪婪，获得{Gold}金币。",
+          "relic_id": "CURSED_PEARL",
+          "pool": "cursed"
         },
         {
           "name": "巨大扭蛋",
-          "description": "拾起时，获得2件随机遗物。额外将一对打击和防御，加入你的牌组。"
+          "description": "拾起时，获得{Relics}件随机遗物。额外将一对打击和防御，加入你的牌组。",
+          "relic_id": "LARGE_CAPSULE",
+          "pool": "cursed"
         },
         {
           "name": "树叶药膏",
-          "description": "拾起时，变化你的1张打击和1张防御，然后失去10点最大生命。"
+          "description": "拾起时，变化你的1张打击和1张防御，然后失去{MaxHp}点最大生命。",
+          "relic_id": "LEAFY_POULTICE",
+          "pool": "cursed"
         },
         {
           "name": "松动羊毛剪",
-          "description": "拾起时，从你的牌组中移除2张牌，并受到13点伤害。"
+          "description": "拾起时，从你的牌组中移除{Cards}张牌，并受到{Damage}点伤害。",
+          "relic_id": "PRECARIOUS_SHEARS",
+          "pool": "cursed"
         },
         {
-          "name": "卷轴箱",
-          "description": "拾起时，失去所有金币，并从2个卡牌包中选择1包加入你的牌组。"
+          "name": "营养牡蛎",
+          "description": "拾起时，将你的最大生命值提升{MaxHp}。",
+          "relic_id": "NUTRITIOUS_OYSTER",
+          "pool": "positive"
+        },
+        {
+          "name": "石炉加湿器",
+          "description": "每当你在休息处休息时，将你的最大生命值提升{MaxHp}点。",
+          "relic_id": "STONE_HUMIDIFIER",
+          "pool": "positive"
+        },
+        {
+          "name": "巨大卷轴",
+          "description": "拾起时，从3张多人游戏牌中选择1张加入你的牌组。",
+          "relic_id": "MASSIVE_SCROLL",
+          "pool": "positive"
+        },
+        {
+          "name": "熔岩石",
+          "description": "第一阶段的Boss敌人额外掉落{Relics}件遗物。",
+          "relic_id": "LAVA_ROCK",
+          "pool": "positive"
+        },
+        {
+          "name": "小型扭蛋",
+          "description": "拾起时，获得一件随机遗物。",
+          "relic_id": "SMALL_CAPSULE",
+          "pool": "positive"
         },
         {
           "name": "白银熔炉",
-          "description": "你遇到的前3组卡牌奖励将是被升级过的。你打开的第一个宝箱将是空的"
+          "description": "你遇到的前{Cards}组卡牌奖励将是被升级过的。你打开的第一个宝箱将是空的",
+          "relic_id": "SILVER_CRUCIBLE",
+          "pool": "cursed"
+        },
+        {
+          "name": "卷轴箱",
+          "description": "拾起时，失去所有金币，并从2个卡牌包中选择1包加入你的牌组。",
+          "relic_id": "SCROLL_BOXES",
+          "pool": "cursed"
         }
       ]
     },
-    "PAEL": {
-      "description": "帕艾尔，融化巨龙，会从血肉、翅翼与眼瞳构成的扭曲池中提供三件遗物候选。每次相遇都会从三个池子里各给出一件；如果你的牌组或伙伴满足帕艾尔那些古怪条件，还会混入额外选项。",
-      "epithet": "融化巨龙"
-    },
-    "DARV": {
-      "description": "达尔弗，囤积者，会在一堆强力遗物中翻找，并拿出一批不断变化的收藏。你会看到 Dusty Tome，以及从主池和章节专属池中抽出的三件随机遗物；其中部分选项只有满足条件时才会出现。",
-      "epithet": "囤积者"
+    "NONUPEIPE": {
+      "name": "诺奴佩普",
+      "description": "诺努佩佩，机缘的化身，会用一整套闪耀的幸运珍宝将你包围。每次造访都会从主池中提供三件随机遗物；Beautiful Bracelet 只有在满足特殊条件时才会出现。"
     },
     "OROBAS": {
-      "description": "欧罗巴斯，活体虹光，将一整道遗物光谱铺陈为三个不同的池子。每次相遇都会从每个池子里各提供一件；对拥有充能球栏位的角色，还会额外加入 Prismatic Gem。",
-      "epithet": "活体虹光"
+      "name": "欧洛巴斯",
+      "description": "欧罗巴斯，活体虹光，将一整道遗物光谱铺陈为三个不同的池子。每次相遇都会从每个池子里各提供一件；对拥有充能球栏位的角色，还会额外加入 Prismatic Gem。"
+    },
+    "PAEL": {
+      "name": "佩尔",
+      "description": "帕艾尔，融化巨龙，会从血肉、翅翼与眼瞳构成的扭曲池中提供三件遗物候选。每次相遇都会从三个池子里各给出一件；如果你的牌组或伙伴满足帕艾尔那些古怪条件，还会混入额外选项。"
     },
     "TANX": {
-      "description": "坦克斯，嵌合兽之王，会从残酷的武器库中为你挑选装备。每次相遇都会从坦克斯的武器库中提供三件随机遗物；如果你已持有足够多的武器，还会加入 Tri-Boomerang。",
-      "epithet": "嵌合兽之王"
+      "name": "坦克斯",
+      "description": "坦克斯，嵌合兽之王，会从残酷的武器库中为你挑选装备。每次相遇都会从坦克斯的武器库中提供三件随机遗物；如果你已持有足够多的武器，还会加入 Tri-Boomerang。"
     },
     "TEZCATARA": {
-      "description": "特兹卡塔拉，饲火者，会把赠礼分放在三个精心准备的池子里。每次相遇都会从每个池子里各提供一件，从令人安心的食物到古怪纪念品与珍贵奇物一应俱全。",
-      "epithet": "饲火者"
-    },
-    "NONUPEIPE": {
-      "description": "诺努佩佩，机缘的化身，会用一整套闪耀的幸运珍宝将你包围。每次造访都会从主池中提供三件随机遗物；Beautiful Bracelet 只有在满足特殊条件时才会出现。",
-      "epithet": "机缘的化身"
-    },
-    "VAKUU": {
-      "description": "瓦库，第一个恶魔，会用分成三个不祥池子的遗物诱惑你。每次相遇都会从每个池子里各提供一件，既有血腥契约，也有保存完好的战利品与华丽的恶魔饰物。",
-      "epithet": "第一个恶魔"
+      "name": "特兹卡塔拉",
+      "description": "特兹卡塔拉，饲火者，会把赠礼分放在三个精心准备的池子里。每次相遇都会从每个池子里各提供一件，从令人安心的食物到古怪纪念品与珍贵奇物一应俱全。"
     },
     "THE_ARCHITECT": {
+      "name": "建筑师",
       "description": "建筑师会在每次成功通关的终点等待你。这场遭遇以带有角色专属台词的对话展开，并最终走向最后的决战。"
+    },
+    "VAKUU": {
+      "name": "瓦库",
+      "description": "瓦库，第一个恶魔，会用分成三个不祥池子的遗物诱惑你。每次相遇都会从每个池子里各提供一件，既有血腥契约，也有保存完好的战利品与华丽的恶魔饰物。"
     }
   },
   "keywords": {
@@ -6556,7 +6615,7 @@
   },
   "enchantments": {
     "ADROIT": {
-      "description": "获得X点格挡。",
+      "description": "获得{Block:diff()}点格挡。",
       "name": "伶俐"
     },
     "CLONE": {
@@ -6595,11 +6654,11 @@
       "name": "临时免费附魔"
     },
     "MOMENTUM": {
-      "description": "在本场战斗中，每次打出就增加这张牌的攻击伤害X点。",
+      "description": "在本场战斗中，每次打出就增加这张牌的攻击伤害{Amount}点。",
       "name": "动量"
     },
     "NIMBLE": {
-      "description": "这张牌获得的格挡值增加X点。",
+      "description": "这张牌获得的格挡值增加{Amount}点。",
       "name": "灵巧"
     },
     "PERFECT_FIT": {
@@ -6608,10 +6667,10 @@
     },
     "ROYALLY_APPROVED": {
       "description": "这张牌拥有固有和保留。",
-      "name": "皇室认证"
+      "name": "王室认证"
     },
     "SHARP": {
-      "description": "这张牌上的伤害值增加X点。",
+      "description": "这张牌上的伤害值增加{Amount}点。",
       "name": "锋利"
     },
     "SLITHER": {
@@ -6627,7 +6686,7 @@
       "name": "灵魂之力"
     },
     "SOWN": {
-      "description": "你在每场战斗中第一次打出这张牌时，获得X。",
+      "description": "你在每场战斗中第一次打出这张牌时，获得{Amount:energyIcons()}。",
       "name": "播种"
     },
     "SPIRAL": {
@@ -6639,7 +6698,7 @@
       "name": "稳定"
     },
     "SWIFT": {
-      "description": "你第一次打出这张牌时，抽X张牌。",
+      "description": "你第一次打出这张牌时，抽{Amount}张牌。",
       "name": "迅速"
     },
     "TEZCATARAS_EMBER": {
@@ -6647,7 +6706,7 @@
       "name": "特兹卡塔拉的余烬"
     },
     "VIGOROUS": {
-      "description": "第一次打出这张牌时，造成X点额外伤害。",
+      "description": "第一次打出这张牌时，造成{Amount}点额外伤害。",
       "name": "活力"
     }
   },

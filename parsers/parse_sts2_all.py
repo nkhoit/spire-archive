@@ -24,30 +24,11 @@ _bbcode_re = re.compile(r'\[/?[a-z]+\]')
 _var_fmt_re = re.compile(r'\{(\w+)(?::[^}]*)?\}')
 
 def clean_desc(text: str, vars: dict = None) -> str:
-    """Strip BBCode tags and resolve vars."""
+    """Strip BBCode tags. Var resolution is handled by resolve_sts2_vars.py."""
     if not text:
         return text
     # Strip [gold]...[/gold], [blue]...[/blue], [red]...[/red], etc.
     text = re.sub(r'\[/?[a-z]+\]', '', text)
-    # Replace {VarName:format()} or {VarName} patterns
-    if vars:
-        def replace_var(m):
-            key = m.group(1)
-            # Direct match
-            if key.lower() in vars:
-                return str(vars[key.lower()])
-            # PowerVar pattern: DexterityPower → power_dexterity
-            if key.endswith('Power'):
-                derived = 'power_' + key[:-5].lower()
-                if derived in vars:
-                    return str(vars[derived])
-            # e.g. Damage → damage, Block → block
-            if key[0].isupper():
-                lower = key.lower()
-                if lower in vars:
-                    return str(vars[lower])
-            return m.group(0)  # leave as-is
-        text = _var_fmt_re.sub(replace_var, text)
     return text.strip()
 
 def get_loc_name(loc: dict, entity_id: str) -> str | None:
@@ -133,8 +114,19 @@ def parse_cards():
         tags = list(set(t for t in re.findall(r'CardTag\.(\w+)', text) if t != "None"))
         
         upgrade = {}
+        # Simple pattern: VarName.UpgradeValueBy(Xm)
         for um in re.finditer(r'(\w+)\.UpgradeValueBy\((\-?\d+)m\)', text):
             upgrade[um.group(1).lower()] = int(um.group(2))
+        # DynamicVars["VarName"].UpgradeValueBy(Xm) pattern
+        for um in re.finditer(r'DynamicVars\["(\w+)"\]\.UpgradeValueBy\((\-?\d+)m\)', text):
+            var_name = um.group(1)
+            # Normalize: strip "Power" suffix to match CardDetail.astro convention
+            # e.g., ThornsPower → thorns, AccuracyPower → accuracy
+            if var_name.endswith('Power'):
+                key = var_name[:-5].lower()
+            else:
+                key = var_name.lower()
+            upgrade[key] = int(um.group(2))
         for um in re.finditer(r'UpgradeBaseCost\((\d+)\)', text):
             upgrade["cost"] = int(um.group(1))
         # EnergyCost.UpgradeBy(-1) pattern
@@ -375,21 +367,47 @@ def parse_characters():
 
 # ============ KEYWORDS ============
 def parse_keywords():
-    """Extract keyword definitions from CardKeyword enum + any keyword data."""
-    keywords_map = {
-        "Exhaust": "When played, remove this card from your deck for the rest of combat.",
-        "Ethereal": "If this card is in your hand at the end of your turn, it is Exhausted.",
-        "Innate": "This card will always appear in your opening hand.",
-        "Retain": "This card is kept in your hand at the end of your turn.",
-        "Unplayable": "This card cannot be played.",
-        "Sly": "This card will not be visible to your opponent in multiplayer.",
-        "Eternal": "This card cannot be removed from your deck.",
+    """Extract keyword definitions from localization data."""
+    loc = load_loc("card_keywords.json")
+    
+    # Fallback hardcoded map in case localization is missing
+    fallback = {
+        "Exhaust": "Removed until the end of combat.",
+        "Ethereal": "If this card is in your Hand at the end of this turn, it is Exhausted.",
+        "Innate": "Start each combat with this card in your Hand.",
+        "Retain": "Retained cards are not discarded at the end of turn.",
+        "Unplayable": "Unplayable cards cannot be played.",
+        "Sly": "If this card is discarded from your Hand before the end of your turn, play it for free.",
+        "Eternal": "Cannot be removed or transformed from your Deck.",
     }
     
-    return [
-        {"id": k.upper(), "names": [k], "description": v}
-        for k, v in keywords_map.items()
-    ]
+    keywords = []
+    # Collect keyword IDs from localization
+    seen_ids = set()
+    for key in loc:
+        if key.endswith(".title"):
+            kid = key.replace(".title", "")
+            seen_ids.add(kid)
+    
+    # Also ensure fallback keywords are included
+    for name in fallback:
+        seen_ids.add(name.upper())
+    
+    for kid in sorted(seen_ids):
+        title_key = f"{kid}.title"
+        desc_key = f"{kid}.description"
+        name = loc.get(title_key, kid.capitalize())
+        desc = loc.get(desc_key, fallback.get(name, ""))
+        # Strip BBCode tags
+        desc = clean_desc(desc)
+        if desc:
+            keywords.append({
+                "id": kid,
+                "names": [name],
+                "description": desc,
+            })
+    
+    return keywords
 
 # ============ EVENTS ============
 def parse_events():
@@ -487,7 +505,11 @@ def main():
         print(f"{name}: {len(data)}{suffix}", file=sys.stderr)
     
     for name, data in stubs.items():
-        with open(OUTPUT / f"{name}.json", "w") as f:
+        path = OUTPUT / f"{name}.json"
+        if path.exists():
+            print(f"{name}: (skipped, already exists)", file=sys.stderr)
+            continue
+        with open(path, "w") as f:
             json.dump(data, f, indent=2)
         print(f"{name}: (stub)", file=sys.stderr)
     

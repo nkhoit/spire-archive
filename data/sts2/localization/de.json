@@ -17,7 +17,7 @@
       "name": "Akrobatik"
     },
     "ADAPTIVE_STRIKE": {
-      "description": "Füge 18 Schaden zu.\nErhalte eine 0[E]-Kopie dieser Karte auf deinen Abwurfstapel.",
+      "description": "Füge 18 Schaden zu.\nErhalte eine 0[E]-Kopie dieser Karte in deinen Abwurfstapel.",
       "name": "Adaptivschlag"
     },
     "ADRENALINE": {
@@ -69,7 +69,7 @@
       "name": "Apparieren"
     },
     "ARMAMENTS": {
-      "description": "Erhalte 5 Block.\nVerbessere eine Karte auf deiner Hand.",
+      "description": "Erhalte 5 Block.\nVerbessere eine deiner Handkarten.",
       "name": "Aufrüsten"
     },
     "ARSENAL": {
@@ -145,7 +145,7 @@
     },
     "BEAT_INTO_SHAPE": {
       "description": "Füge 5 Schaden zu.\nSchmiede 5.\nSchmiedet 5 mehr für jeden vorherigen Treffer auf diesen Gegner in diesem Zug.",
-      "name": "In Form Hauen"
+      "name": "In Form hauen"
     },
     "BECKON": {
       "description": "Falls diese Karte am Ende deines Zuges auf deiner Hand ist, verliere 6 TP.",
@@ -348,7 +348,7 @@
       "name": "Chaos"
     },
     "CHARGE": {
-      "description": "Wähle 2 Karte aus deinem Nachziehstapel, die du zu \n",
+      "description": "Wähle 2 Karte aus deinem Nachziehstapel, die du zu \n{IfUpgraded:show:Diener-Schlag+ transformierst.",
       "name": "ATTACKE!!"
     },
     "CHARGE_BATTERY": {
@@ -427,7 +427,7 @@
       "name": "Eroberer"
     },
     "CONSUMING_SHADOW": {
-      "description": "Erschaffe 2 Schatten.\nEntlade immer am Ende deines Zuges deinen letzten Orb.",
+      "description": "Erschaffe 2 Schatten.\nEntlade immer am Ende deines Zuges deinen hintersten Orb.",
       "name": "Schatten verzehren"
     },
     "CONVERGENCE": {
@@ -530,7 +530,7 @@
     },
     "DEATHS_DOOR": {
       "description": "Erhalte 6 Block.\nFalls du in diesem Zug Verderben angewandt hast, erhalte 2 weiteres Mal Block.",
-      "name": "Todestür"
+      "name": "Schwelle zum Tod"
     },
     "DEATH_MARCH": {
       "description": "Füge 8 Schaden zu.\nFügt 3 Schaden mehr zu pro Karte, die in deinem Zug gezogen wurde.",
@@ -804,7 +804,7 @@
       "name": "Fass"
     },
     "FIEND_FIRE": {
-      "description": "Erschöpfe deine Hand.\nFüge 7 Schaden für jede erschöpfte Karte.",
+      "description": "Erschöpfe deine Hand.\nFüge 7 Schaden für jede erschöpfte Karte zu.",
       "name": "Teufelsfeuer"
     },
     "FIGHT_ME": {
@@ -1078,12 +1078,12 @@
       "name": "Versteckter Schatz"
     },
     "HIDDEN_DAGGERS": {
-      "description": "Wirf 2 Karte ab.\nErhalte 2 ",
+      "description": "Wirf 2 Karte ab.\nErhalte 2 {IfUpgraded:show:Messer+ auf deine Hand.",
       "name": "Versteckte Dolche"
     },
     "HIDDEN_GEM": {
-      "description": "Gib einer zufälligen Karte aus deinem Nachziehstapel Erneut spielen 2.",
-      "name": "Versteckter Juwel"
+      "description": "Gib einer zufälligen Karte aus deinem Nachziehstapel Erneut Spielen 2.",
+      "name": "Verstecktes Juwel"
     },
     "HIGH_FIVE": {
       "description": "Osty fügt ALLEN Gegnern 11 Schaden zu.\nWende auf ALLE Gegner \n2 Verwundbar an.",
@@ -1249,11 +1249,11 @@
       "name": "Anheben"
     },
     "LIGHTNING_ROD": {
-      "description": "Erhalte 4 Block.\nErschaffe zu Beginn des nächsten Zuges 1 Blitz.",
+      "description": "Erhalte 4 Block.\nErschaffe zu Beginn deines nächsten Zuges 1 Blitz.",
       "name": "Blitzableiter"
     },
     "LOOP": {
-      "description": "Löse zu Beginn deines Zuges die passive Fähigkeit deines ersten Orbs aus.",
+      "description": "Löse zu Beginn deines Zuges die passive Fähigkeit deines vordersten Orbs aus.",
       "name": "Schleife"
     },
     "LUMINESCE": {
@@ -1265,7 +1265,7 @@
       "name": "Mondschuss"
     },
     "MACHINE_LEARNING": {
-      "description": "Ziehe immer zu Beginn deines Zuges 1 weitere Karte.",
+      "description": "Ziehe immer zu Beginn deines Zuges 1 Karte mehr.",
       "name": "Lernende Maschine"
     },
     "MAD_SCIENCE": {
@@ -1403,7 +1403,7 @@
       "name": "Ermorden"
     },
     "NECRO_MASTERY": {
-      "description": "Beschwöre 5.\nImmer wenn Osty TP verliert, verlieren ALLE Gegner ebensoviele TP.",
+      "description": "Beschwöre 5.\nImmer wenn Osty TP verliert, verlieren ALLE Gegner ebenso viele TP.",
       "name": "Nekro-Meisterin"
     },
     "NEGATIVE_PULSE": {
@@ -1463,7 +1463,7 @@
       "name": "Eins daneben"
     },
     "OMNISLICE": {
-      "description": "Füge 8 Schaden zu.\nFüge ALLEN anderen Gegnern ebensoviel Schaden zu.",
+      "description": "Füge 8 Schaden zu.\nFüge ALLEN anderen Gegnern ebenso viel Schaden zu.",
       "name": "Omnischnitt"
     },
     "ONE_TWO_PUNCH": {
@@ -1471,7 +1471,7 @@
       "name": "Doppeltreffer"
     },
     "ORBIT": {
-      "description": "Für je [4 Energy], die du ausgibst,\nerhältst du [E].",
+      "description": "Für je 4[E], die du ausgibst,\nerhältst du [E].",
       "name": "Orbit"
     },
     "OUTBREAK": {
@@ -1504,7 +1504,7 @@
     },
     "PANACHE": {
       "description": "Immer wenn du 5 Karten in einem Zug spielst, füge ALLEN Gegnern 10 Schaden zu.",
-      "name": "Elan"
+      "name": "Ausstrahlung"
     },
     "PANIC_BUTTON": {
       "description": "Erhalte 30 Block.\nDu kannst für 2 Zug keinen Block von Karten erhalten.",
@@ -1686,7 +1686,7 @@
       "name": "Niedermähen"
     },
     "REAPER_FORM": {
-      "description": "Immer wenn Angriffe Schaden zufügen, wenden sie ebensoviel Verderben an.",
+      "description": "Immer wenn Angriffe Schaden zufügen, wenden sie ebenso viel Verderben an.",
       "name": "Schnitterform"
     },
     "REAVE": {
@@ -1747,7 +1747,7 @@
     },
     "RIGHT_HAND_HAND": {
       "description": "Osty fügt 4 Schaden zu.\nImmer wenn du eine Karte spielst, die [E] oder mehr kostet, nimm diese Karte vom Abwurfstapel auf deine Hand.",
-      "name": "Hand zur rechten Hand"
+      "name": "Rechte Hand-Hand"
     },
     "RIP_AND_TEAR": {
       "description": "Füge einem zufälligen Gegner zweimal 7 Schaden zu.",
@@ -2252,7 +2252,7 @@
       "name": "Trainingsschlag"
     },
     "TRANSFIGURE": {
-      "description": "Gib einer deiner Handkarten Erneut spielen.\nSie kostet eine weitere [E].",
+      "description": "Gib einer deiner Handkarten Erneut Spielen.\nSie kostet eine weitere [E].",
       "name": "Verwandeln"
     },
     "TRASH_TO_TREASURE": {
@@ -2296,7 +2296,7 @@
       "name": "Aufhetzen"
     },
     "UNMOVABLE": {
-      "description": "Wenn du das erste Mal in jedem Zug durch eine Karte Block erhältst, verdopple die erhaltene Menge.",
+      "description": "Wenn du zum ersten Mal in einem Zug durch eine Karte Block erhältst, verdopple die erhaltene Menge.",
       "name": "Standfest"
     },
     "UNRELENTING": {
@@ -2433,7 +2433,7 @@
       "name": "Arkane Schriftrolle"
     },
     "ARCHAIC_TOOTH": {
-      "description": "Transformiere beim Aufheben einer Startkarte mit einer Ahnen-Variante.",
+      "description": "Transformiere beim Aufheben eine Startkarte zu einer Ahnen-Variante.",
       "flavor": "Näheres zu diesem Relikt wird zukünftig aufgedeckt werden...",
       "name": "Archaischer Zahn"
     },
@@ -2453,7 +2453,7 @@
       "name": "Murmelsack"
     },
     "BAG_OF_PREPARATION": {
-      "description": "Ziehe zu Beginn jedes Kampfes 2 weitere Karte.",
+      "description": "Ziehe zu Beginn jedes Kampfes 2 Karte mehr.",
       "flavor": "Näheres zu diesem Relikt wird zukünftig aufgedeckt werden...",
       "name": "Tasche der Vorbereitung"
     },
@@ -2478,7 +2478,7 @@
       "name": "Gürtelschnalle"
     },
     "BIG_HAT": {
-      "description": "Erhalte zu Beginn jedes Kampfes 2 zufällige flüchtige Karte auf deine Hand.",
+      "description": "Erhalte zu Beginn jedes Kampfes 2 zufällige Flüchtige Karte auf deine Hand.",
       "flavor": "Näheres zu diesem Relikt wird zukünftig aufgedeckt werden...",
       "name": "Großer Hut"
     },
@@ -2588,7 +2588,7 @@
       "name": "Brennendes Blut"
     },
     "BURNING_STICKS": {
-      "description": "Das erste Mal in jedem Kampf, wenn du eine Fertigkeit erschöpfst, erhalte eine Kopie davon auf deine Hand.",
+      "description": "Wenn du zum ersten Mal in einem Kampf eine Fertigkeit erschöpfst, erhalte eine Kopie davon auf deine Hand.",
       "flavor": "Näheres zu diesem Relikt wird zukünftig aufgedeckt werden...",
       "name": "Zündhölzer"
     },
@@ -2618,7 +2618,7 @@
       "name": "Kessel"
     },
     "CENTENNIAL_PUZZLE": {
-      "description": "Das erste Mal in jedem Kampf, wenn du TP verlierst, ziehe 3 Karte.",
+      "description": "Wenn du zum ersten Mal in einem Kampf TP verlierst, ziehe 3 Karte.",
       "flavor": "Näheres zu diesem Relikt wird zukünftig aufgedeckt werden...",
       "name": "Zentenniumspuzzle"
     },
@@ -2798,7 +2798,7 @@
       "name": "Ewige Feder"
     },
     "FAKE_ANCHOR": {
-      "description": "Beginne jeden Kampf mit 4 Block.",
+      "description": "Beginne jeden Kampf mit 4 Block.",
       "flavor": "Näheres zu diesem Relikt wird zukünftig aufgedeckt werden...",
       "name": "Anker???"
     },
@@ -2858,7 +2858,7 @@
       "name": "Konfettiwerfer"
     },
     "FIDDLE": {
-      "description": "Ziehe zu Beginn jedes Zuges 2 weitere Karte. Du kannst in deinem Zug keine Karten ziehen.",
+      "description": "Ziehe zu Beginn jedes Zuges 2 Karte mehr. Du kannst in deinem Zug keine Karten ziehen.",
       "flavor": "Näheres zu diesem Relikt wird zukünftig aufgedeckt werden...",
       "name": "Fiedel"
     },
@@ -3015,7 +3015,7 @@
     "IVORY_TILE": {
       "description": "Immer wenn du eine Karte spielst, die [E] oder mehr kostet, erhalte [E].",
       "flavor": "Näheres zu diesem Relikt wird zukünftig aufgedeckt werden...",
-      "name": "Elfenbeinfliese"
+      "name": "Elfenbeinstein"
     },
     "JEWELED_MASK": {
       "description": "Nimm zu Beginn des Kampfes eine zufällige Macht aus deinem Nachziehstapel auf deine Hand, sie ist kostenlos spielbar.",
@@ -3068,7 +3068,7 @@
       "name": "Dauerbonbons"
     },
     "LAVA_LAMP": {
-      "description": "Verbessere am Ende des Kampfes alle Kartenbelohnungen, falls du keinen Schaden genommen hast.",
+      "description": "Verbessere am Ende des Kampfes alle Karten-belohnungen, falls du keinen Schaden genommen hast.",
       "flavor": "Näheres zu diesem Relikt wird zukünftig aufgedeckt werden...",
       "name": "Lavalampe"
     },
@@ -3138,7 +3138,7 @@
       "name": "Mango"
     },
     "MASSIVE_SCROLL": {
-      "description": "Wähle beim Aufheben 1 von 3 farblosen Mehrspieler-Karten, die du deinem Deck hinzufügst.",
+      "description": "Wähle beim Aufheben 1 von 3 Mehrspieler-Karten, die du deinem Deck hinzufügst.",
       "flavor": "Näheres zu diesem Relikt wird zukünftig aufgedeckt werden...",
       "name": "Wuchtige Schriftrolle"
     },
@@ -3178,7 +3178,7 @@
       "name": "Quecksilber-Sanduhr"
     },
     "METRONOME": {
-      "description": "Das erste Mal in jedem Kampf, wenn du 7 Orbs erschaffen hast, füge ALLEN Gegnern 30 Schaden zu.",
+      "description": "Wenn du zum ersten Mal in einem Kampf 7 Orbs erschaffen hast, füge ALLEN Gegnern 30 Schaden zu.",
       "flavor": "Näheres zu diesem Relikt wird zukünftig aufgedeckt werden...",
       "name": "Metronom"
     },
@@ -3193,12 +3193,12 @@
       "name": "Miniaturzelt"
     },
     "MINI_REGENT": {
-      "description": "Das erste Mal in jedem Zug, wenn du ⭐ ausgibst, erhalte 1 Stärke.",
+      "description": "Wenn du zum ersten Mal in einem Zug ⭐ ausgibst, erhalte 1 Stärke.",
       "flavor": "Näheres zu diesem Relikt wird zukünftig aufgedeckt werden...",
       "name": "Mini-Regent"
     },
     "MOLTEN_EGG": {
-      "description": "Immer wenn du deinem Deck eine Angriffskarte hinzufügst, verbessere sie.",
+      "description": "Immer wenn du deinem Deck einen Angriff hinzufügst, verbessere sie.",
       "flavor": "Näheres zu diesem Relikt wird zukünftig aufgedeckt werden...",
       "name": "Geschmolzenes Ei"
     },
@@ -3213,7 +3213,7 @@
       "name": "Mumifizierte Hand"
     },
     "MUSIC_BOX": {
-      "description": "Erschaffe in jedem Zug eine flüchtige Kopie deiner ersten gespielten Karte.",
+      "description": "Erschaffe in jedem Zug eine Flüchtige Kopie deines ersten gespielten Angriffs.",
       "flavor": "Näheres zu diesem Relikt wird zukünftig aufgedeckt werden...",
       "name": "Spieluhr"
     },
@@ -3293,12 +3293,12 @@
       "name": "Paels Blut"
     },
     "PAELS_CLAW": {
-      "description": "Verzaubere beim Aufheben alle Verteidigen mit [purple]{EnchantmentName}[/purple].",
+      "description": "Verzaubere beim Aufheben alle Verteidigen mit [purple]Klebrig[/purple].",
       "flavor": "Näheres zu diesem Relikt wird zukünftig aufgedeckt werden...",
       "name": "Paels Kralle"
     },
     "PAELS_EYE": {
-      "description": "Das erste Mal in jedem Kampf, wenn du deinen Zug beendest, ohne Karten zu spielen, erschöpfe deine Hand und mache einen Extrazug.",
+      "description": "Wenn du zum ersten Mal in einem Kampf deinen Zug beendest, ohne Karten zu spielen, erschöpfe deine Hand und mache einen Extrazug.",
       "flavor": "Näheres zu diesem Relikt wird zukünftig aufgedeckt werden...",
       "name": "Paels Auge"
     },
@@ -3308,7 +3308,7 @@
       "name": "Paels Fleisch"
     },
     "PAELS_GROWTH": {
-      "description": "Verzaubere beim Aufheben eine Karte mit [purple]{EnchantmentName}[/purple].",
+      "description": "Verzaubere beim Aufheben eine Karte mit [purple]Klon[/purple].",
       "flavor": "Näheres zu diesem Relikt wird zukünftig aufgedeckt werden...",
       "name": "Paels Wachstum"
     },
@@ -3378,7 +3378,7 @@
       "name": "Schreibfeder"
     },
     "PERMAFROST": {
-      "description": "Das erste Mal in jedem Kampf, wenn du eine Macht spielst, erhalte 6 Block.",
+      "description": "Wenn du zum ersten Mal in einem Kampf eine Macht spielst, erhalte 6 Block.",
       "flavor": "Näheres zu diesem Relikt wird zukünftig aufgedeckt werden...",
       "name": "Permafrost"
     },
@@ -3393,7 +3393,7 @@
       "name": "Stein der Weisen"
     },
     "PHYLACTERY_UNBOUND": {
-      "description": "Beschwöre {StartOfCombat} zu Beginn jedes Kampfes. Beschwöre {StartOfTurn} zu Beginn deines Zuges.",
+      "description": "Beschwöre 5 zu Beginn jedes Kampfes. Beschwöre 2 zu Beginn deines Zuges.",
       "flavor": "Näheres zu diesem Relikt wird zukünftig aufgedeckt werden...",
       "name": "Entfesseltes Phylakterium"
     },
@@ -3408,7 +3408,7 @@
       "name": "Taschenuhr"
     },
     "POLLINOUS_CORE": {
-      "description": "Ziehe in jedem Zug 2 weitere Karte.",
+      "description": "Ziehe in jedem Zug 2 weitere Karte.",
       "flavor": "Näheres zu diesem Relikt wird zukünftig aufgedeckt werden...",
       "name": "Pollenreicher Kern"
     },
@@ -3533,7 +3533,7 @@
       "name": "Königliches Gift"
     },
     "ROYAL_STAMP": {
-      "description": "Wähle beim Aufheben einen Angriff oder eine Fertigkeit in deinem Deck, die du mit [purple]{Enchantment}[/purple] verzauberst.",
+      "description": "Wähle beim Aufheben einen Angriff oder eine Fertigkeit in deinem Deck, die du mit [purple]Königliche Zusage[/purple] verzauberst.",
       "flavor": "Näheres zu diesem Relikt wird zukünftig aufgedeckt werden...",
       "name": "Königlicher Stempel"
     },
@@ -3663,7 +3663,7 @@
       "name": "Steinerner Luftbefeuchter"
     },
     "STORYBOOK": {
-      "description": "Erhalte 1 Hellste Flamme in dein Deck.",
+      "description": "Erhalte beim Aufheben 1 Hellste Flamme in dein Deck.",
       "flavor": "Näheres zu diesem Relikt wird zukünftig aufgedeckt werden...",
       "name": "Märchenbuch"
     },
@@ -3798,7 +3798,7 @@
       "name": "Siegel der Unsterblichkeit"
     },
     "UNSETTLING_LAMP": {
-      "description": "Das erste Mal in jedem Kampf, wenn du eine Karte spielst, die einen Gegner debufft, verdopple jenen Effekt.",
+      "description": "Wenn du zum ersten Mal in einem Kampf eine Karte spielst, die einen Gegner debufft, verdopple jenen Effekt.",
       "flavor": "Näheres zu diesem Relikt wird zukünftig aufgedeckt werden...",
       "name": "Verstörende Lampe"
     },
@@ -3808,7 +3808,7 @@
       "name": "Vajra"
     },
     "VAMBRACE": {
-      "description": "Das erste Mal in jedem Kampf, wenn du von einer Karte Block erhältst, verdopple die erhaltene Menge.",
+      "description": "Wenn du zum ersten Mal in einem Kampf von einer Karte Block erhältst, verdopple die erhaltene Menge.",
       "flavor": "Näheres zu diesem Relikt wird zukünftig aufgedeckt werden...",
       "name": "Armschiene"
     },
@@ -3818,7 +3818,7 @@
       "name": "Samthalsband"
     },
     "VENERABLE_TEA_SET": {
-      "description": "Immer wenn du an ein Lagerfeuer kommst, beginne den nächsten Kampf mit einer weiteren [E].",
+      "description": "Immer wenn du an ein Lagerfeuer kommst, beginne den nächsten Kampf mit [E] mehr.",
       "flavor": "Näheres zu diesem Relikt wird zukünftig aufgedeckt werden...",
       "name": "Uraltes Teeservice"
     },
@@ -4028,8 +4028,8 @@
       "name": "Ruf der Leere"
     },
     "CHAINS_OF_BINDING_POWER": {
-      "description": "Die ersten 3 gezogenen Karten in jedem Zug werden mit Gebunden beschädigt.",
-      "smartDescription": "Die ersten {Amount} gezogenen Karten in jedem Zug werden mit Gebunden beschädigt.",
+      "description": "Die ersten 3 gezogenen Karten in jedem Zug werden mit Gebunden gestört.",
+      "smartDescription": "Die ersten {Amount} gezogenen Karten in jedem Zug werden mit Gebunden gestört.",
       "name": "Ketten des Bindens"
     },
     "CHILD_OF_THE_STARS_POWER": {
@@ -4040,11 +4040,11 @@
     "CLARITY_POWER": {
       "description": "Ziehe zu Beginn deines nächsten Zuges 1 Karte mehr.",
       "smartDescription": "Ziehe zu Beginn {Amount:plural:deines nächsten Zuges|deiner nächsten {} Züge} 1 Karte mehr.",
-      "name": "Weitere Karte ziehen"
+      "name": "Klarheit"
     },
     "COLOSSUS_POWER": {
-      "description": "Du nimmst in diesem Zug 50% weniger Schaden von verwundbaren Gegnern.",
-      "smartDescription": "Du nimmst {Amount:plural:in diesem Zug|für {} Züge} {DamageDecrease:percentweniger()}% weniger Schaden von verwundbaren Gegnern.",
+      "description": "Du nimmst in diesem Zug 50% weniger Schaden von Verwundbaren Gegnern.",
+      "smartDescription": "Du nimmst {Amount:plural:in diesem Zug|für {} Züge} {DamageDecrease:percentLess()}% weniger Schaden von Verwundbaren Gegnern.",
       "name": "Koloss"
     },
     "CONFUSED_POWER": {
@@ -4075,7 +4075,7 @@
     "COOLANT_POWER": {
       "description": "Erhalte zu Beginn deines Zuges 3 Block für jeden unterschiedlichen Orb, den du hast.",
       "smartDescription": "Erhalte zu Beginn deines Zuges {Amount} Block für jeden unterschiedlichen Orb, den du hast.",
-      "name": "Kühlmittel"
+      "name": "Kühlung"
     },
     "CORROSIVE_WAVE_POWER": {
       "description": "Wenn du in diesem Zug eine Karte ziehst, wende 2 Gift auf ALLE Gegner an.",
@@ -4278,7 +4278,7 @@
       "name": "Schmerzfrei"
     },
     "FERAL_POWER": {
-      "description": "Das erste Mal in jedem Zug, wenn du einen 0{energyPrefix:energyIcons(1)}-Angriff spielst, nimm ihn zurück auf deine Hand.",
+      "description": "Wenn du zum ersten Mal in einem Zug einen 0{energyPrefix:energyIcons(1)}-Angriff spielst, nimm ihn zurück auf deine Hand.",
       "smartDescription": "{Amount:plural:Das erste Mal|Die ersten {} Male} in jedem Zug, wenn du einen 0{energyPrefix:energyIcons(1)}-Angriff spielst, nimm ihn zurück auf deine Hand.",
       "name": "Ungezähmt"
     },
@@ -4495,8 +4495,8 @@
       "name": "Dazwischengehen"
     },
     "ITERATION_POWER": {
-      "description": "Das erste Mal in jedem Zug, wenn du eine Status-Karte ziehst, ziehe mehr Karten.",
-      "smartDescription": "Das erste Mal in jedem Zug, wenn du eine Status-Karte ziehst, ziehe {Amount} {Amount:plural:Karte|Karten} mehr.",
+      "description": "Wenn du zum ersten Mal in einem Zug eine Status-Karte ziehst, ziehe mehr Karten.",
+      "smartDescription": "Wenn du zum ersten Mal in einem Zug eine Status-Karte ziehst, ziehe {Amount} {Amount:plural:Karte|Karten} mehr.",
       "name": "Iteration"
     },
     "JUGGERNAUT_POWER": {
@@ -4525,13 +4525,13 @@
       "name": "Tödlichkeit"
     },
     "LIGHTNING_ROD_POWER": {
-      "description": "Erschaffe zu Beginn der nächsten 2 Züge 1 Blitz.",
-      "smartDescription": "Erschaffe zu Beginn {Amount:plural:des nächsten Zuges|der nächsten {} Züge} 1 Blitz.",
+      "description": "Erschaffe zu Beginn deiner nächsten 2 Züge 1 Blitz.",
+      "smartDescription": "Erschaffe zu Beginn {Amount:plural:deines nächsten Zuges|deiner nächsten {} Züge} 1 Blitz.",
       "name": "Blitzableiter"
     },
     "LOOP_POWER": {
-      "description": "Löse zu Beginn deines Zuges die passive Fähigkeit deines ersten Orbs aus.",
-      "smartDescription": "Löse zu Beginn deines Zuges die passive Fähigkeit deines ersten Orbs {Amount} {Amount:plural:Mal|Mal} aus.",
+      "description": "Löse zu Beginn deines Zuges die passive Fähigkeit deines vordersten Orbs aus.",
+      "smartDescription": "Löse zu Beginn deines Zuges die passive Fähigkeit deines vordersten Orbs {Amount} {Amount:plural:Mal|Mal} aus.",
       "name": "Schleife"
     },
     "MACHINE_LEARNING_POWER": {
@@ -4606,8 +4606,8 @@
       "name": "Monolog"
     },
     "NECRO_MASTERY_POWER": {
-      "description": "Wenn Osty TP verliert, verlieren ALLE Gegner ebensoviele TP.",
-      "smartDescription": "Wenn Osty TP verliert, verlieren ALLE Gegner {Amount:plural:ebensoviele|{Amount} Mal so viele} TP.",
+      "description": "Wenn Osty TP verliert, verlieren ALLE Gegner ebenso viele TP.",
+      "smartDescription": "Wenn Osty TP verliert, verlieren ALLE Gegner {Amount:plural:ebenso viele|{Amount} Mal so viele} TP.",
       "name": "Nekro-Meisterin"
     },
     "NEMESIS_POWER": {
@@ -4726,7 +4726,7 @@
     },
     "PLOW_POWER": {
       "description": "Wenn die TP dieser Kreatur erstmals 150 oder weniger erreichen, wird sie betäubt.",
-      "smartDescription": "Wenn die TP des {OwnerName}es zum ersten Mal {Amount} oder weniger erreichen, wird es betäubt und verliert all ihre Stärke.",
+      "smartDescription": "Wenn die TP des {OwnerName}es zum ersten Mal {Amount} oder weniger erreichen, wird es betäubt und verliert all seine Stärke.",
       "name": "Pflügen"
     },
     "POISON_POWER": {
@@ -4762,7 +4762,7 @@
     "RAGE_POWER": {
       "description": "Wenn du in diesem Zug einen Angriff spielst, erhalte 3 Block.",
       "smartDescription": "Wenn du in diesem Zug einen Angriff spielst, erhalte {Amount} Block.",
-      "name": "Zorn"
+      "name": "Wut"
     },
     "RAMPART_POWER": {
       "description": "Zu Beginn des Spielerzuges erhält Geschütz-Operateur 25 Block.",
@@ -4920,8 +4920,8 @@
       "name": "Signal Verstärken"
     },
     "SKITTISH_POWER": {
-      "description": "Das erste Mal in jedem Zug, wenn diese Kreatur getroffen wird, erhält sie 1 Block.",
-      "smartDescription": "Das erste Mal in jedem Zug, wenn {OwnerName} getroffen wird, erhält er {Amount} Block.",
+      "description": "Wenn diese Kreatur zum ersten Mal in einem Zug getroffen wird, erhält sie 1 Block.",
+      "smartDescription": "Wenn {OwnerName} zum ersten Mal in einem Zug getroffen wird, erhält er {Amount} Block.",
       "name": "Unberechenbar"
     },
     "SLEIGHT_OF_FLESH_POWER": {
@@ -5015,7 +5015,7 @@
       "name": "Dampf-Eruption"
     },
     "STOCK_POWER": {
-      "description": "Wenn getötet, wird ein neuer Axtbot an seiner Stelle beschwört.",
+      "description": "Wenn getötet, wird ein neuer Axtbot an seiner Stelle beschworen.",
       "name": "Nachschub"
     },
     "STORM_POWER": {
@@ -5196,7 +5196,7 @@
       "name": "Tyrannei"
     },
     "UNMOVABLE_POWER": {
-      "description": "Wenn du zum ersten Mal in jedem Zug durch eine Karte Block erhältst, verdopple die erhaltene Menge.",
+      "description": "Wenn du zum ersten Mal in einem Zug durch eine Karte Block erhältst, verdopple die erhaltene Menge.",
       "smartDescription": "Wenn du {Amount:plural:zum ersten Mal|die ersten {} Male} in jedem Zug durch eine Karte Block erhältst, verdopple die erhaltene Menge.",
       "name": "Standfest"
     },
@@ -5230,8 +5230,8 @@
       "name": "Nur Visuell"
     },
     "VITAL_SPARK_POWER": {
-      "description": "Das erste Mal in jedem Zug, wenn dieser Gegner Angriffsschaden nimmt, erhält der Angreifer 1 Energie.",
-      "smartDescription": "Das erste Mal in jedem Zug, wenn {OwnerName} Angriffsschaden nimmt, erhält der Angreifer {Energy:energyIcons()}.",
+      "description": "Wenn dieser Gegner zum ersten Mal in einem Zug Angriffsschaden nimmt, erhält der Angreifer 1 Energie.",
+      "smartDescription": "Wenn {OwnerName} zum ersten Mal in einem Zug Angriffsschaden nimmt, erhält der Angreifer {Energy:energyIcons()}.",
       "name": "Lebensfunke"
     },
     "VOID_FORM_POWER": {
@@ -5549,11 +5549,11 @@
       "choices": [
         {
           "name": "Verteidigen kombinieren",
-          "description": "Entferne 2 Verteidigen. Erhalte {Card2} in dein Deck."
+          "description": "Entferne 2 Verteidigen. Erhalte Ultimatives Verteidigen in dein Deck."
         },
         {
           "name": "Schläge kombinieren",
-          "description": "Entferne 2 Schläge. Erhalte {Card1} in dein Deck."
+          "description": "Entferne 2 Schläge. Erhalte Ultimativer Schlag in dein Deck."
         }
       ]
     },
@@ -5609,16 +5609,16 @@
       "choices": [
         {
           "name": "Ausrottungstechnik lernen",
-          "description": "Erhalte {Card1} in dein Deck."
+          "description": "Erhalte Ausrotten in dein Deck."
         },
         {
           "name": "Quetschtechnik lernen",
-          "description": "Erhalte {Card2} in dein Deck."
+          "description": "Erhalte Zerdrücken in dein Deck."
         }
       ]
     },
     "BYRDONIS_NEST": {
-      "name": "Byrdonis-Nest",
+      "name": "Foglonis-Nest",
       "description": "Du beobachtest, wie ein riesiges Schlurfendes Biest einen verletzten Grünen Fogl davonjagt.\n\nIn der Nische, aus der der Fogl geflohen ist, liegt zurückgelassen ein einziges unbewachtes Ei.\n\nDein Magen knurrt...",
       "choices": [
         {
@@ -5627,7 +5627,7 @@
         },
         {
           "name": "Das Ei nehmen",
-          "description": "Erhalte {Card} in dein Deck."
+          "description": "Erhalte Foglonis-Ei in dein Deck."
         }
       ]
     },
@@ -5654,12 +5654,26 @@
         {
           "name": "Orange",
           "description": "Erhalte 3 Regenten-Karte."
+        },
+        {
+          "name": "Grün",
+          "description": "Erhalte 3 Stille-Karte."
         }
       ]
     },
     "COLOSSAL_FLOWER": {
       "name": "Riesige Blume",
       "description": "Da ist eine riesige Blume, die auf einem Berg aus Knochen wächst.\n\nIhre farbwechselnden Blütenblätter pulsieren und du ahnst, dass in der Mitte ein Machtvoller Pollenklumpen ist, aber die wiegenden Blätter sind messerscharf und unvorhersehbar.\n\nDu könntest ein wenig von dem goldenen Nektar nehmen, aber bist verlockt, den Preis in der Mitte zu erreichen...",
+      "choices": [
+        {
+          "name": "Nektar gewinnen",
+          "description": "Erhalte {Prize1} Gold."
+        },
+        {
+          "name": "Tiefer greifen",
+          "description": "Dringe tiefer ein. Verliere 5 TP."
+        }
+      ],
       "pages": [
         {
           "description": "Da ist eine riesige Blume, die auf einem Berg aus Knochen wächst.\n\nIhre farbwechselnden Blütenblätter pulsieren und du ahnst, dass in der Mitte ein Machtvoller Pollenklumpen ist, aber die wiegenden Blätter sind messerscharf und unvorhersehbar.\n\nDu könntest ein wenig von dem goldenen Nektar nehmen, aber bist verlockt, den Preis in der Mitte zu erreichen...",
@@ -5708,7 +5722,7 @@
       "choices": [
         {
           "name": "Zahlungsplan",
-          "description": "Erhalte {CurseTitle}. Weissage 6 Mal."
+          "description": "Erhalte Schulden. Weissage 6 Mal."
         },
         {
           "name": "Zukunft enthüllen",
@@ -5767,15 +5781,15 @@
     },
     "DROWNING_BEACON": {
       "name": "Sinkendes Fanal",
-      "description": "Du kommst durch eine Traumlandschaft aus Felsen und stillen Gewässern und tauchst vor einer Quelle von Anti-Licht auf, welche aus einem versinkenden Leuchtturm kommt.\n\nDu könntest das schaurig-leuchtende Wasser abfüllen, das sich hier gesammelt hat – oder das marode Bauwerk erklimmen, um die Linse zu bergen.",
+      "description": "Du durchquerst eine Traumlandschaft aus Felsen und stillen Gewässern und tauchst vor einem versinkenden Leuchtturm auf, der Anti-Licht ausstrahlt.\n\nDu könntest das schaurig-leuchtende Wasser abfüllen, das sich hier gesammelt hat – oder das marode Bauwerk erklimmen, um die Linse zu bergen.",
       "choices": [
         {
           "name": "Abfüllen",
-          "description": "Beschaffe {Potion}."
+          "description": "Beschaffe Glühwasser-Trank."
         },
         {
           "name": "Erklimmen",
-          "description": "Erhalte {Relic}. Verliere 13 max. TP."
+          "description": "Erhalte Fresnel-Linse. Verliere 13 max. TP."
         }
       ]
     },
@@ -5802,11 +5816,11 @@
       "choices": [
         {
           "name": "Dein Loch betreten",
-          "description": "Verzaubere eine Karte mit {Enchantment}."
+          "description": "Verzaubere eine Karte mit Passt perfekt."
         },
         {
           "name": "Widerstehen",
-          "description": "Entferne 2 Karten aus deinem Deck. Erhalte {ResistCurse} in dein Deck."
+          "description": "Entferne 2 Karten aus deinem Deck. Erhalte Normalität in dein Deck."
         }
       ]
     },
@@ -5816,11 +5830,11 @@
       "choices": [
         {
           "name": "Die {Relic} annehmen",
-          "description": "Erhalte {Relic}."
+          "description": "Erhalte Vergessene Seele."
         },
         {
           "name": "Mit der Wahrheit konfrontieren",
-          "description": "Erhalte {Curse} in dein Deck. Verzaubere eine Karte, die Erschöpft, mit {Enchantment}."
+          "description": "Erhalte Verfall in dein Deck. Verzaubere eine Karte, die Erschöpft, mit Seelenkraft."
         }
       ]
     },
@@ -5829,7 +5843,7 @@
       "description": "Wie lange hast du nicht mehr gegessen?\n...Moment, was ist das für ein großartiger Geruch?\n\nDu folgst dem Geruch und erreichst einen gemütlichen Lagerplatz, auf dem allerlei leckere Pilze gegart werden! Dir ist egal, ob diese Pilze sicher zu verzehren sind, weil du so hungrig bist.\n(So hungrig, dass du die tote Abenteurerin nicht bemerkst)",
       "choices": [
         {
-          "name": "Großer Kerl"
+          "name": "Großer Pilz"
         },
         {
           "name": "Wohlriechender Pilz"
@@ -5838,7 +5852,7 @@
     },
     "INFESTED_AUTOMATON": {
       "name": "Infiziertes Automaton",
-      "description": "Da ist eine Kammer, die voller toter Roboter ist.\n\nEin einsames Automaton hat noch einen schwach leuchtenden Kern, aber ist von einem grotesken organischen Gewächs überwachsen und antwortet nicht.",
+      "description": "Da ist eine Kammer, die voller toter Roboter ist.\n\nEin einsames Automaton hat noch einen schwach leuchtenden Kern, aber ist von einem grotesken organischen Wuchs überwachsen und antwortet nicht.",
       "choices": [
         {
           "name": "Untersuchen",
@@ -5870,7 +5884,7 @@
       "choices": [
         {
           "name": "Das Irrlicht fangen",
-          "description": "Erhalte {Curse} in dein Deck. Erhalte {Relic}."
+          "description": "Erhalte Verfall in dein Deck. Erhalte {Relic}."
         },
         {
           "name": "Gesperrt",
@@ -6010,7 +6024,7 @@
       "choices": [
         {
           "name": "Deinen Tee genießen",
-          "description": "Erhalte {Relic}. Heile auf volle TP."
+          "description": "Erhalte Königliches Gift. Heile auf volle TP."
         },
         {
           "name": "Schlägerei anzetteln",
@@ -6028,7 +6042,7 @@
         },
         {
           "name": "Einpflanzen und pflegen",
-          "description": "Verzaubere eine Karte mit {Enchantment}."
+          "description": "Verzaubere eine Karte mit Eingesät."
         }
       ]
     },
@@ -6042,7 +6056,7 @@
         },
         {
           "name": "Das ganze Buch lesen",
-          "description": "Wähle eine Macht, die du mit {Enchantment3} 2 verzauberst."
+          "description": "Wähle eine Macht, die du mit Flott 2 verzauberst."
         },
         {
           "name": "Gesperrt",
@@ -6050,7 +6064,7 @@
         },
         {
           "name": "Irgendeinen Abschnitt lesen",
-          "description": "Wähle eine Fertigkeit, die du mit {Enchantment2} 2 verzauberst."
+          "description": "Wähle eine Fertigkeit, die du mit Geschickt 2 verzauberst."
         }
       ]
     },
@@ -6087,8 +6101,8 @@
       ]
     },
     "SPIRIT_GRAFTER": {
-      "name": "Geisterschieber",
-      "description": "Über {IsMultiplayer:euch|dir} wackelt und zappelt ein Kokon – kurz vor dem Aufplatzen!\n\n...er hört auf zu zappeln. Der Kokon geht in Feuer auf! Was ist hier los?\nIn einem Blitz aus Licht und Flamme fährt ein Geisterschieber in dich hinein und droht, sich mit deinem Wesen zu vereinen, um vollkommen zu werden.",
+      "name": "Geistespfropfer",
+      "description": "Über {IsMultiplayer:euch|dir} wackelt und zappelt ein Kokon – kurz vor dem Aufplatzen!\n\n...er hört auf zu zappeln. Der Kokon geht in Feuer auf! Was ist hier los?\nIn einem Blitz aus Licht und Flamme fährt ein Geistespfropfer in dich hinein und droht, sich mit deinem Wesen zu vereinen, um sich zu vervollkommnen.",
       "choices": [
         {
           "name": "Ihn hereinlassen",
@@ -6116,7 +6130,7 @@
     },
     "SUNKEN_STATUE": {
       "name": "Die Versunkene Statue",
-      "description": "Du sichtest eine alte Statue, die halb in einem Teich versunken ist; ihre Hände ruhen friedlich auf einem Steinschwert.\n\nAußerdem glitzert etwas an Boden des Teiches.\nVielleicht Opferspenden?\n\nDu könntest wirklich etwas Geld gebrauchen...",
+      "description": "Du sichtest eine alte Statue, die halb in einem Teich versunken ist; ihre Hände ruhen friedlich auf einem Steinschwert.\n\nAußerdem glitzert etwas am Boden des Teiches.\nVielleicht Opfergaben?\n\nDu könntest wirklich etwas Geld gebrauchen...",
       "choices": [
         {
           "name": "Ins Wasser tauchen",
@@ -6124,7 +6138,7 @@
         },
         {
           "name": "Das Schwert mitnehmen",
-          "description": "Erhalte das {Relic}."
+          "description": "Erhalte das Schwert aus Stein."
         }
       ]
     },
@@ -6148,7 +6162,7 @@
       "choices": [
         {
           "name": "Näherkommen",
-          "description": "Verzaubere einen Angriff mit {Enchantment}."
+          "description": "Verzaubere einen Angriff mit Korrumpiert."
         },
         {
           "name": "Gesperrt",
@@ -6190,11 +6204,11 @@
     },
     "THE_FUTURE_OF_POTIONS": {
       "name": "Die Zukunft der Tränke?",
-      "description": "Du spürst ein entferntes Rumpeln, dann entdeckst du hinter der nächsten Ecke einen riesigen drehenden Apparat!\nEr hat verschiedene Öffnungen, die anscheinend Flüssigkeiten zu einer stark komprimierten essbaren Tablette umwandeln.\n\nDer Gedanke, aus diesen starken Tränken einen winzigen Happen zu machen, klingt unangenehm. Aber vielleicht ist es gut, neue Dinge auszuprobieren?",
+      "description": "Du spürst ein entferntes Rumpeln, dann entdeckst du hinter der nächsten Ecke einen riesigen drehenden Apparat!\nEr hat verschiedene Öffnungen, die anscheinend Flüssigkeiten in eine sehr komprimierte essbare Tablette umwandeln.\n\nDer Gedanke, aus diesen starken Tränken einen winzigen Happen zu machen, klingt unangenehm. Aber vielleicht ist es gut, neue Dinge auszuprobieren?",
       "choices": [
         {
           "name": "{Rarity:choose(Ereignis|Token):Ereignis-Trank|Token-Trank|{}en Trank} einfüllen",
-          "description": "Verliere {Potion}. Erhalte {Type:choose(Attack):einen verbesserten|eine verbesserte} {Rarity}e{Type:choose(Attack):n {}| {}}."
+          "description": "Verliere {Potion}. Erhalte {Type:choose(Angriff):einen verbesserten|eine verbesserte} {Rarity}e{Type:choose(Angriff):n {}| {}}."
         }
       ]
     },
@@ -6232,7 +6246,7 @@
       "choices": [
         {
           "name": "Das",
-          "description": "Erhalte {Curse} in dein Deck. Erhalte ein zufälliges Relikt."
+          "description": "Erhalte Ungeschickt in dein Deck. Erhalte ein zufälliges Relikt."
         },
         {
           "name": "Dies",
@@ -6266,11 +6280,11 @@
     },
     "TRIAL": {
       "name": "Der Prozess",
-      "description": "Du stellst dich hinter einigen Leuten an, die ein riesiges Gebäude betreten.\n\nAls du unter einem goldenen Torbogen durchgehst, schmettert eine Fanfare, Konfetti explodiert und Luftschlangen gleiten von der Decke herab!\n\n“Teilnehmer {EntrantNumber}, du bist ENTSCHEIDER für den heutigen Prozess.”",
+      "description": "Du stellst dich hinter einigen Leuten an, die ein riesiges Gebäude betreten.\n\nAls du unter einem goldenen Torbogen durchgehst, schmettert eine Fanfare, Konfetti explodiert und Luftschlangen gleiten von der Decke herab!\n\n“Teilnehmer{characterGender:choose(feminine):in|} {EntrantNumber}, du bist ENTSCHEIDER{characterGender:choose(feminine):IN|} für den heutigen Prozess.”",
       "choices": [
         {
           "name": "Akzeptieren",
-          "description": "Diene als heutiger Entscheider."
+          "description": "Diene als {characterGender:choose(feminine):heutige Entscheiderin|heutiger Entscheider}."
         },
         {
           "name": "Ablehnen",
@@ -6380,11 +6394,11 @@
       "choices": [
         {
           "name": "Vogel",
-          "description": "Wähle 1 Startkarte, die du zu {BirdCard} Transformierst."
+          "description": "Wähle 1 Startkarte, die du zu Picken Transformierst."
         },
         {
           "name": "Schlange",
-          "description": "Verzaubere 1 Karte mit {SnakeEnchantment}."
+          "description": "Verzaubere 1 Karte mit Schlängeln."
         },
         {
           "name": "Gesperrt",
@@ -6410,122 +6424,163 @@
         }
       ]
     },
+    "DARV": {
+      "name": "Darv",
+      "description": "Darv, Der Hortende, wühlt in einem Haufen mächtiger Relikte und präsentiert dir einen wechselnden Vorrat. Du siehst Dusty Tome sowie drei zufällige Relikte aus dem Hauptpool und aktspezifischen Sets, wobei manche Optionen nur unter bestimmten Bedingungen erscheinen."
+    },
     "NEOW": {
       "name": "Neow",
-      "description": "Neow, die Mutter der Auferstehung, wartet am Anfang jedes Laufs. Sie bietet drei Segnungen an — zwei positive und eine verfluchte. Die Optionen werden zufällig aus den folgenden Pools gezogen.",
+      "description": "Neow, die Mutter der Auferstehung, erwartet dich zu Beginn jedes Laufs. Sie bietet drei Segnungen – zwei positive und einen verfluchten. Die Optionen werden zufällig aus den unten stehenden Pools gezogen.",
       "choices": [
         {
           "name": "Arkane Schriftrolle",
-          "description": "Erhalte beim Aufheben eine zufällige seltene Karte für dein Deck."
+          "description": "Erhalte beim Aufheben eine zufällige seltene Karte für dein Deck.",
+          "relic_id": "ARCANE_SCROLL",
+          "pool": "positive"
         },
         {
           "name": "Brausende Muschel",
-          "description": "Ziehe zu Beginn von Elite-Kämpfen 2 Karte mehr."
+          "description": "Ziehe zu Beginn von Elite-Kämpfen {Cards} Karte mehr.",
+          "relic_id": "BOOMING_CONCH",
+          "pool": "positive"
         },
         {
           "name": "Bisamapfel",
-          "description": "Verbessere beim Aufheben eine Karte."
+          "description": "Verbessere beim Aufheben eine Karte.",
+          "relic_id": "POMANDER",
+          "pool": "positive"
         },
         {
           "name": "Goldene Perle",
-          "description": "Erhalte beim Aufheben 150 Gold."
+          "description": "Erhalte beim Aufheben {Gold} Gold.",
+          "relic_id": "GOLDEN_PEARL",
+          "pool": "positive"
         },
         {
           "name": "Bleierner Briefbeschwerer",
-          "description": "Wähle beim Aufheben 1 von 2 farblosen Karten, die in dein Deck erhältst."
+          "description": "Wähle beim Aufheben 1 von 2 farblosen Karten, die in dein Deck erhältst.",
+          "relic_id": "LEAD_PAPERWEIGHT",
+          "pool": "positive"
         },
         {
           "name": "Neues Blatt",
-          "description": "Transformiere beim Aufheben 1 Karte."
+          "description": "Transformiere beim Aufheben {Cards} Karte.",
+          "relic_id": "NEW_LEAF",
+          "pool": "positive"
         },
         {
           "name": "Neows Folter",
-          "description": "Erhalte beim Aufheben 1 Neows Wut in dein Deck."
+          "description": "Erhalte beim Aufheben 1 Neows Wut in dein Deck.",
+          "relic_id": "NEOWS_TORMENT",
+          "pool": "positive"
         },
         {
           "name": "Präzise Schere",
-          "description": "Entferne beim Aufheben 1 Karte aus deinem Deck."
+          "description": "Entferne beim Aufheben {Cards} Karte aus deinem Deck.",
+          "relic_id": "PRECISE_SCISSORS",
+          "pool": "positive"
         },
         {
           "name": "Verlorene Truhe",
-          "description": "Erhalte beim Aufheben 1 Kartenbelohnung und beschaffe 1 zufälligen Trank."
-        },
-        {
-          "name": "Nahrhafte Auster",
-          "description": "Erhöhe beim Aufheben deine max. TP um 11."
-        },
-        {
-          "name": "Steinerner Luftbefeuchter",
-          "description": "Immer wenn du dich an einem Lagerfeuer ausruhst, erhöhe deine max. TP um 5."
-        },
-        {
-          "name": "Lavastein",
-          "description": "Der Akt-1-Boss hinterlässt 2 Relikte."
-        },
-        {
-          "name": "Kleine Kapsel",
-          "description": "Erhalte beim Aufheben ein zufälliges Relikt."
-        },
-        {
-          "name": "Wuchtige Schriftrolle",
-          "description": "Wähle beim Aufheben 1 von 3 farblosen Mehrspieler-Karten, die du deinem Deck hinzufügst."
+          "description": "Erhalte beim Aufheben 1 Kartenbelohnung und beschaffe 1 zufälligen Trank.",
+          "relic_id": "LOST_COFFER",
+          "pool": "positive"
         },
         {
           "name": "Verfluchte Perle",
-          "description": "Erhalte beim Aufheben Gier. Erhalte 333 Gold."
+          "description": "Erhalte beim Aufheben Gier. Erhalte {Gold} Gold.",
+          "relic_id": "CURSED_PEARL",
+          "pool": "cursed"
         },
         {
           "name": "Große Kapsel",
-          "description": "Erhalte beim Aufheben 2 zufälliges Relikt. Erhalte einen zusätzlichen Schlag und Verteidigen in dein Deck."
+          "description": "Erhalte beim Aufheben {Relics} zufälliges Relikt. Erhalte einen zusätzlichen Schlag und Verteidigen in dein Deck.",
+          "relic_id": "LARGE_CAPSULE",
+          "pool": "cursed"
         },
         {
           "name": "Blätterwickel",
-          "description": "Transformiere beim Aufheben 1 deiner Schläge und 1 deiner Verteidigen und verliere 10 max. TP."
+          "description": "Transformiere beim Aufheben 1 deiner Schläge und 1 deiner Verteidigen und verliere {MaxHp} max. TP.",
+          "relic_id": "LEAFY_POULTICE",
+          "pool": "cursed"
         },
         {
           "name": "Heikle Schere",
-          "description": "Entferne beim Aufheben 2 Karte aus deinem Deck und nimm 13 Schaden."
+          "description": "Entferne beim Aufheben {Cards} Karte aus deinem Deck und nimm {Damage} Schaden.",
+          "relic_id": "PRECARIOUS_SHEARS",
+          "pool": "cursed"
         },
         {
-          "name": "Kisten mit Schriftrollen",
-          "description": "Verliere beim Aufheben alles Gold und wähle 1 von 2 Kartenpaketen, das du deinem Deck hinzufügst."
+          "name": "Nahrhafte Auster",
+          "description": "Erhöhe beim Aufheben deine max. TP um {MaxHp}.",
+          "relic_id": "NUTRITIOUS_OYSTER",
+          "pool": "positive"
+        },
+        {
+          "name": "Steinerner Luftbefeuchter",
+          "description": "Immer wenn du dich an einem Lagerfeuer ausruhst, erhöhe deine max. TP um {MaxHp}.",
+          "relic_id": "STONE_HUMIDIFIER",
+          "pool": "positive"
+        },
+        {
+          "name": "Wuchtige Schriftrolle",
+          "description": "Wähle beim Aufheben 1 von 3 Mehrspieler-Karten, die du deinem Deck hinzufügst.",
+          "relic_id": "MASSIVE_SCROLL",
+          "pool": "positive"
+        },
+        {
+          "name": "Lavastein",
+          "description": "Der Akt-1-Boss hinterlässt {Relics} Relikte.",
+          "relic_id": "LAVA_ROCK",
+          "pool": "positive"
+        },
+        {
+          "name": "Kleine Kapsel",
+          "description": "Erhalte beim Aufheben ein zufälliges Relikt.",
+          "relic_id": "SMALL_CAPSULE",
+          "pool": "positive"
         },
         {
           "name": "Silbertiegel",
-          "description": "Die ersten 3 Kartenbelohnungen, die du siehst, sind verbessert. Die erste Schatztruhe, die du öffnest, ist leer."
+          "description": "Die ersten {Cards} Kartenbelohnungen, die du siehst, sind verbessert. Die erste Schatztruhe, die du öffnest, ist leer.",
+          "relic_id": "SILVER_CRUCIBLE",
+          "pool": "cursed"
+        },
+        {
+          "name": "Kisten mit Schriftrollen",
+          "description": "Verliere beim Aufheben alles Gold und wähle 1 von 2 Kartenpaketen, das du deinem Deck hinzufügst.",
+          "relic_id": "SCROLL_BOXES",
+          "pool": "cursed"
         }
       ]
     },
-    "PAEL": {
-      "description": "Pael, der Schmelzende Drache, bietet dir drei Reliktoptionen aus verdrehten Pools aus Fleisch, Flügeln und Augen an. Bei jeder Begegnung erscheint je ein Relikt aus Pool 1, Pool 2 und Pool 3; zusätzliche Optionen können auftauchen, wenn dein Deck oder deine Begleiter Paels seltsame Bedingungen erfüllen.",
-      "epithet": "Schmelzender Drache"
-    },
-    "DARV": {
-      "description": "Darv, Der Hortende, wühlt in einem Haufen mächtiger Relikte und präsentiert dir einen wechselnden Vorrat. Du siehst Dusty Tome sowie drei zufällige Relikte aus dem Hauptpool und aktspezifischen Sets, wobei manche Optionen nur unter bestimmten Bedingungen erscheinen.",
-      "epithet": "Der Hortende"
+    "NONUPEIPE": {
+      "name": "Nonupeipe",
+      "description": "Nonupeipe, Personifiziertes Glück, umgibt dich mit einer funkelnden Sammlung glücksbringender Schätze. Bei jedem Besuch werden drei zufällige Relikte aus dem Hauptpool angeboten; Beautiful Bracelet erscheint nur, wenn seine besondere Bedingung erfüllt ist."
     },
     "OROBAS": {
-      "description": "Orobas, der Lebendige Regenbogen, breitet ein Spektrum von Relikten über drei verschiedene Pools aus. Bei jeder Begegnung wird dir ein Relikt aus jedem Pool angeboten; Prismatic Gem kommt für Charaktere hinzu, die Orbs kanalisieren können.",
-      "epithet": "Lebendiger Regenbogen"
+      "name": "Orobas",
+      "description": "Orobas, der Lebendige Regenbogen, breitet ein Spektrum von Relikten über drei verschiedene Pools aus. Bei jeder Begegnung wird dir ein Relikt aus jedem Pool angeboten; Prismatic Gem kommt für Charaktere hinzu, die Orbs kanalisieren können."
+    },
+    "PAEL": {
+      "name": "Pael",
+      "description": "Pael, der Schmelzende Drache, bietet dir drei Reliktoptionen aus verdrehten Pools aus Fleisch, Flügeln und Augen an. Bei jeder Begegnung erscheint je ein Relikt aus Pool 1, Pool 2 und Pool 3; zusätzliche Optionen können auftauchen, wenn dein Deck oder deine Begleiter Paels seltsame Bedingungen erfüllen."
     },
     "TANX": {
-      "description": "Tanx, der Khimären-König, rüstet dich aus einem brutalen Waffenlager aus. Bei jeder Begegnung werden drei zufällige Relikte aus Tanx' Arsenal angeboten; Tri-Boomerang kommt hinzu, wenn du bereits genug Waffen trägst, um den König zu beeindrucken.",
-      "epithet": "Khimären-König"
+      "name": "Tanx",
+      "description": "Tanx, der Khimären-König, rüstet dich aus einem brutalen Waffenlager aus. Bei jeder Begegnung werden drei zufällige Relikte aus Tanx' Arsenal angeboten; Tri-Boomerang kommt hinzu, wenn du bereits genug Waffen trägst, um den König zu beeindrucken."
     },
     "TEZCATARA": {
-      "description": "Tezcatara, Das, was das Feuer füttert, legt seine Gaben in drei sorgfältig vorbereiteten Pools aus. Bei jeder Begegnung wird dir ein Relikt aus jedem Pool angeboten, von stärkenden Leckereien bis zu seltsamen Erinnerungsstücken und kostbaren Kuriositäten.",
-      "epithet": "Das, was das Feuer füttert"
-    },
-    "NONUPEIPE": {
-      "description": "Nonupeipe, Personifiziertes Glück, umgibt dich mit einer funkelnden Sammlung glücksbringender Schätze. Bei jedem Besuch werden drei zufällige Relikte aus dem Hauptpool angeboten; Beautiful Bracelet erscheint nur, wenn seine besondere Bedingung erfüllt ist.",
-      "epithet": "Personifiziertes Glück"
-    },
-    "VAKUU": {
-      "description": "Vakuu, der Erste Dämon, lockt dich mit Relikten aus drei unheilvollen Pools. Bei jeder Begegnung wird dir ein Relikt aus jedem Pool angeboten — blutige Abmachungen, konservierte Trophäen und elegante dämonische Zierstücke.",
-      "epithet": "Der erste Dämon"
+      "name": "Tezcatara",
+      "description": "Tezcatara, Das, was das Feuer füttert, legt seine Gaben in drei sorgfältig vorbereiteten Pools aus. Bei jeder Begegnung wird dir ein Relikt aus jedem Pool angeboten, von stärkenden Leckereien bis zu seltsamen Erinnerungsstücken und kostbaren Kuriositäten."
     },
     "THE_ARCHITECT": {
+      "name": "Der Architekt",
       "description": "Der Architekt erwartet dich am Ende jedes erfolgreichen Laufs. Die Begegnung entfaltet sich als Dialog mit charakterspezifischen Zeilen und gipfelt in einer letzten Konfrontation."
+    },
+    "VAKUU": {
+      "name": "Vakuu",
+      "description": "Vakuu, der Erste Dämon, lockt dich mit Relikten aus drei unheilvollen Pools. Bei jeder Begegnung wird dir ein Relikt aus jedem Pool angeboten — blutige Abmachungen, konservierte Trophäen und elegante dämonische Zierstücke."
     }
   },
   "keywords": {
@@ -6560,7 +6615,7 @@
   },
   "enchantments": {
     "ADROIT": {
-      "description": "Erhalte X Block.",
+      "description": "Erhalte {Block:diff()} Block.",
       "name": "Gewandt"
     },
     "CLONE": {
@@ -6580,7 +6635,7 @@
       "name": "Begünstigt"
     },
     "GLAM": {
-      "description": "Diese Karte hat einmal pro Kampf Erneut spielen.",
+      "description": "Diese Karte hat einmal pro Kampf Erneut Spielen.",
       "name": "Schick"
     },
     "GOOPY": {
@@ -6599,11 +6654,11 @@
       "name": "Test kostenlose Verzauberung"
     },
     "MOMENTUM": {
-      "description": "Erhöhe den Angriffsschaden dieser Karte für diesen Kampf um X, wenn du sie spielst.",
+      "description": "Erhöhe den Angriffsschaden dieser Karte für diesen Kampf um {Amount}, wenn du sie spielst.",
       "name": "Schwung"
     },
     "NIMBLE": {
-      "description": "Erhöhe den Block dieser Karte um X.",
+      "description": "Erhöhe den Block dieser Karte um {Amount}.",
       "name": "Geschickt"
     },
     "PERFECT_FIT": {
@@ -6615,7 +6670,7 @@
       "name": "Königliche Zusage"
     },
     "SHARP": {
-      "description": "Erhöhe den Schaden dieser Karte um X.",
+      "description": "Erhöhe den Schaden dieser Karte um {Amount}.",
       "name": "Scharf"
     },
     "SLITHER": {
@@ -6631,11 +6686,11 @@
       "name": "Seelenkraft"
     },
     "SOWN": {
-      "description": "Wenn du diese Karte zum ersten Mal in einem Kampf spielst, erhalte X.",
+      "description": "Wenn du diese Karte zum ersten Mal in einem Kampf spielst, erhalte {Amount:energyIcons()}.",
       "name": "Eingesät"
     },
     "SPIRAL": {
-      "description": "Diese Karte bekommt Erneut spielen 1.",
+      "description": "Diese Karte bekommt Erneut Spielen 1.",
       "name": "Spirale"
     },
     "STEADY": {
@@ -6643,7 +6698,7 @@
       "name": "Beständig"
     },
     "SWIFT": {
-      "description": "Wenn du diese Karte zum ersten Mal in einem Kampf spielst, ziehe X X.",
+      "description": "Wenn du diese Karte zum ersten Mal in einem Kampf spielst, ziehe {Amount} {Amount:plural:Karte|Karten}.",
       "name": "Flott"
     },
     "TEZCATARAS_EMBER": {
@@ -6651,7 +6706,7 @@
       "name": "Tezcataras Glut"
     },
     "VIGOROUS": {
-      "description": "Wenn du diese Karte zum ersten Mal in einem Kampf spielst, fügt sie X Schaden mehr zu.",
+      "description": "Wenn du diese Karte zum ersten Mal in einem Kampf spielst, fügt sie {Amount} Schaden mehr zu.",
       "name": "Kräftig"
     }
   },
@@ -7233,17 +7288,17 @@
     },
     "FOGMOG": {
       "moves": {
-        "ILLUSORY_SPORES": "Illusionssporen",
-        "THWACK": "Wuchtschlag"
+        "ILLUSORY_SPORES": "Schwummrige Sporen",
+        "THWACK": "Schwumms"
       },
-      "name": "Fogmog",
+      "name": "Schwummschwamm",
       "move_names": {
-        "Illusory Spores": "Illusionssporen",
-        "Thwack": "Wuchtschlag"
+        "Illusory Spores": "Schwummrige Sporen",
+        "Thwack": "Schwumms"
       },
       "move_titles": [
-        "Illusionssporen",
-        "Wuchtschlag"
+        "Schwummrige Sporen",
+        "Schwumms"
       ]
     },
     "FOSSIL_STALKER": {

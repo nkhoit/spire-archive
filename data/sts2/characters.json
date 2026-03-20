@@ -1,11 +1,31 @@
 [
   {
+    "id": "DEFECT",
+    "name": "Defect",
+    "hp": 75,
+    "starting_gold": 99,
+    "energy_per_turn": 3,
+    "starting_deck": [
+      "STRIKE_DEFECT",
+      "STRIKE_DEFECT",
+      "STRIKE_DEFECT",
+      "STRIKE_DEFECT",
+      "DEFEND_DEFECT",
+      "DEFEND_DEFECT",
+      "DEFEND_DEFECT",
+      "DEFEND_DEFECT",
+      "ZAP",
+      "DUALCAST"
+    ],
+    "starting_relic": "CRACKED_CORE",
+    "description": null
+  },
+  {
     "id": "IRONCLAD",
     "name": "Ironclad",
     "hp": 80,
     "starting_gold": 99,
     "energy_per_turn": 3,
-    "description": null,
     "starting_deck": [
       "STRIKE_IRONCLAD",
       "STRIKE_IRONCLAD",
@@ -18,7 +38,50 @@
       "DEFEND_IRONCLAD",
       "BASH"
     ],
-    "starting_relic": "BURNING_BLOOD"
+    "starting_relic": "BURNING_BLOOD",
+    "description": null
+  },
+  {
+    "id": "NECROBINDER",
+    "name": "Necrobinder",
+    "hp": 66,
+    "starting_gold": 99,
+    "energy_per_turn": 3,
+    "starting_deck": [
+      "STRIKE_NECROBINDER",
+      "STRIKE_NECROBINDER",
+      "STRIKE_NECROBINDER",
+      "STRIKE_NECROBINDER",
+      "DEFEND_NECROBINDER",
+      "DEFEND_NECROBINDER",
+      "DEFEND_NECROBINDER",
+      "DEFEND_NECROBINDER",
+      "BODYGUARD",
+      "UNLEASH"
+    ],
+    "starting_relic": "BOUND_PHYLACTERY",
+    "description": null
+  },
+  {
+    "id": "REGENT",
+    "name": "Regent",
+    "hp": 75,
+    "starting_gold": 99,
+    "energy_per_turn": 3,
+    "starting_deck": [
+      "STRIKE_REGENT",
+      "STRIKE_REGENT",
+      "STRIKE_REGENT",
+      "STRIKE_REGENT",
+      "DEFEND_REGENT",
+      "DEFEND_REGENT",
+      "DEFEND_REGENT",
+      "DEFEND_REGENT",
+      "FALLING_STAR",
+      "VENERATE"
+    ],
+    "starting_relic": "DIVINE_RIGHT",
+    "description": null
   },
   {
     "id": "SILENT",
@@ -26,7 +89,6 @@
     "hp": 70,
     "starting_gold": 99,
     "energy_per_turn": 3,
-    "description": null,
     "starting_deck": [
       "STRIKE_SILENT",
       "STRIKE_SILENT",
@@ -41,69 +103,7 @@
       "NEUTRALIZE",
       "SURVIVOR"
     ],
-    "starting_relic": "RING_OF_THE_SNAKE"
-  },
-  {
-    "id": "REGENT",
-    "name": "Regent",
-    "hp": 75,
-    "starting_gold": 99,
-    "energy_per_turn": 3,
-    "description": null,
-    "starting_deck": [
-      "STRIKE_REGENT",
-      "STRIKE_REGENT",
-      "STRIKE_REGENT",
-      "STRIKE_REGENT",
-      "DEFEND_REGENT",
-      "DEFEND_REGENT",
-      "DEFEND_REGENT",
-      "DEFEND_REGENT",
-      "FALLING_STAR",
-      "VENERATE"
-    ],
-    "starting_relic": "DIVINE_RIGHT"
-  },
-  {
-    "id": "NECROBINDER",
-    "name": "Necrobinder",
-    "hp": 66,
-    "starting_gold": 99,
-    "energy_per_turn": 3,
-    "description": null,
-    "starting_deck": [
-      "STRIKE_NECROBINDER",
-      "STRIKE_NECROBINDER",
-      "STRIKE_NECROBINDER",
-      "STRIKE_NECROBINDER",
-      "DEFEND_NECROBINDER",
-      "DEFEND_NECROBINDER",
-      "DEFEND_NECROBINDER",
-      "DEFEND_NECROBINDER",
-      "BODYGUARD",
-      "UNLEASH"
-    ],
-    "starting_relic": "BOUND_PHYLACTERY"
-  },
-  {
-    "id": "DEFECT",
-    "name": "Defect",
-    "hp": 75,
-    "starting_gold": 99,
-    "energy_per_turn": 3,
-    "description": null,
-    "starting_deck": [
-      "STRIKE_DEFECT",
-      "STRIKE_DEFECT",
-      "STRIKE_DEFECT",
-      "STRIKE_DEFECT",
-      "DEFEND_DEFECT",
-      "DEFEND_DEFECT",
-      "DEFEND_DEFECT",
-      "DEFEND_DEFECT",
-      "ZAP",
-      "DUALCAST"
-    ],
-    "starting_relic": "CRACKED_CORE"
+    "starting_relic": "RING_OF_THE_SNAKE",
+    "description": null
   }
 ]

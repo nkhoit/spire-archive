@@ -282,8 +282,7 @@
       "name": "สัญญาเพลิง"
     },
     "BURST": {
-      "name": "ระเบิดพลัง",
-      "description": "ในเทิร์นนี้ การ์ดทักษะใบถัดไปจะถูกเล่นซ้ำอีกครั้ง"
+      "name": "ระเบิดพลัง"
     },
     "BURY": {
       "description": "สร้างความเสียหาย 52"
@@ -332,7 +331,7 @@
       "name": "ความวุ่นวาย"
     },
     "CHARGE": {
-      "description": "เลือกการ์ด 2 ใบในกองจั่วเพื่อแปรสภาพเป็น",
+      "description": "เลือกการ์ด 2 ใบในกองจั่วเพื่อแปรสภาพเป็น{IfUpgraded:show:ลูกน้องจู่โจม+",
       "name": "ลุย!!"
     },
     "CHARGE_BATTERY": {
@@ -985,7 +984,7 @@
       "name": "แก้ไขเร่งด่วน"
     },
     "HOWL_FROM_BEYOND": {
-      "description": "สร้างความเสียหาย 16 ใส่ศัตรูทั้งหมด\nตอนเริ่มต้นเทิร์น เล่นจากกองทิ้ง",
+      "description": "สร้างความเสียหาย 16 ใส่ศัตรูทั้งหมด\nตอนเริ่มต้นเทิร์น เล่นจากกองสลาย",
       "name": "เสียงหอนจากเบื้องบน"
     },
     "HUDDLE_UP": {
@@ -1284,7 +1283,7 @@
       "description": "ในเทิร์นนี้ การ์ดโจมตีอีก 1 ใบจะถูกเล่นอีกครั้ง"
     },
     "ORBIT": {
-      "description": "ทุกการจ่าย [4 Energy]\nจะได้รับ [E]"
+      "description": "ทุกการจ่าย 4[E]\nจะได้รับ [E]"
     },
     "OUTBREAK": {
       "description": "ทุกครั้งที่คุณสร้างพิษ สร้างความเสียหาย 11 ใส่ศัตรูทั้งหมด"
@@ -1999,7 +1998,7 @@
       "name": "ความว่างเปล่า"
     },
     "VOID_FORM": {
-      "description": "จบเทิร์น\nการ์ดใบแรกที่คุณเล่นในแต่ละเทิร์นจะเล่นฟรี"
+      "description": "จบเทิร์นทันที แต่หลังจากนี้\nการ์ดใบแรกที่คุณเล่นในแต่ละเทิร์นจะเล่นฟรี"
     },
     "VOLLEY": {
       "description": "สร้างความเสียหาย 10 ใส่ศัตรู 1 ตัวแบบสุ่ม จำนวน X ครั้ง"
@@ -2758,7 +2757,7 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "PAELS_CLAW": {
-      "description": "เมื่อรับมา ร่ายมนตร์ป้องกันทั้งหมดด้วย[purple]{EnchantmentName}[/purple]",
+      "description": "เมื่อรับมา ร่ายมนตร์ป้องกันทั้งหมดด้วย[purple]มนตร์หนังเหนียว[/purple]",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "PAELS_EYE": {
@@ -2770,7 +2769,7 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "PAELS_GROWTH": {
-      "description": "เมื่อรับมา ร่ายมนต์การ์ด 1 ใบด้วย[purple]{EnchantmentName}[/purple]",
+      "description": "เมื่อรับมา ร่ายมนต์การ์ด 1 ใบด้วย[purple]มนตร์โคลนนิ่ง[/purple]",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "PAELS_HORN": {
@@ -2839,7 +2838,7 @@
       "name": "ศิลานักปราชญ์"
     },
     "PHYLACTERY_UNBOUND": {
-      "description": "ตอนเริ่มต้นการต่อสู้ อัญเชิญ {StartOfCombat} และตอนเริ่มต้นเทิร์น อัญเชิญ {StartOfTurn}",
+      "description": "ตอนเริ่มต้นการต่อสู้ อัญเชิญ 5 และตอนเริ่มต้นเทิร์น อัญเชิญ 2",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "PLANISPHERE": {
@@ -2946,7 +2945,7 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "ROYAL_STAMP": {
-      "description": "เมื่อรับมา เลือกการ์ดโจมตีหรือทักษะ 1 ใบในกองการ์ดเพื่อร่ายมนตร์ด้วย[purple]{Enchantment}[/purple]",
+      "description": "เมื่อรับมา เลือกการ์ดโจมตีหรือทักษะ 1 ใบในกองการ์ดเพื่อร่ายมนตร์ด้วย[purple]มนตร์พระราชทาน[/purple]",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "RUINED_HELMET": {
@@ -4708,6 +4707,10 @@
         {
           "name": "ส้ม",
           "description": "ได้รับการ์ดของRegent 3 ใบ"
+        },
+        {
+          "name": "เขียว",
+          "description": "ได้รับการ์ดนักฆ่าแห่งความเงียบ 3 ใบ"
         }
       ]
     },
@@ -4762,7 +4765,7 @@
         },
         {
           "name": "อ่านทั้งเล่ม",
-          "description": "เลือกการ์ดพลัง 1 ใบเพื่อร่ายมนตร์ด้วย{Enchantment3} 2"
+          "description": "เลือกการ์ดพลัง 1 ใบเพื่อร่ายมนตร์ด้วยมนตร์ฉับพลัน 2"
         },
         {
           "name": "ล็อก",
@@ -4770,7 +4773,7 @@
         },
         {
           "name": "สุ่มอ่าน 1 ย่อหน้า",
-          "description": "เลือกการ์ดทักษะ 1 ใบเพื่อร่ายมนตร์ด้วย{Enchantment2} 2"
+          "description": "เลือกการ์ดทักษะ 1 ใบเพื่อร่ายมนตร์ด้วยมนตร์ปราดเปรียว 2"
         }
       ]
     },
@@ -4792,7 +4795,7 @@
       "choices": [
         {
           "name": "อันนั้น",
-          "description": "เพิ่ม{Curse}เข้ากองการ์ด ได้รับเครื่องราง 1 ชิ้นแบบสุ่ม"
+          "description": "เพิ่มความซุ่มซ่ามเข้ากองการ์ด ได้รับเครื่องราง 1 ชิ้นแบบสุ่ม"
         },
         {
           "name": "อันนี้",
@@ -4825,6 +4828,16 @@
     },
     "COLOSSAL_FLOWER": {
       "description": "มีดอกไม้มหึมาเติบโตอยู่บนกองภูเขากระดูก\n\nในขณะที่กลีบดอกเปลี่ยนสีได้กำลังขยับเป็นช่วงๆ คุณก็สัมผัสได้ว่ามีกองเกสรทรงพลังอยู่ใจกลาง แต่กลีบดอกที่ขยับขึ้นลงอยู่นั้นแหลมคมมากและคาดเดาไม่ได้\n\nคุณสามารถเก็บน้ำหวานทองคำได้ แต่รางวัล ณ ใจกลางก็เย้ายวนใจเหลือเกิน...",
+      "choices": [
+        {
+          "name": "สกัดน้ำหวาน",
+          "description": "ได้รับ {Prize1} ทอง"
+        },
+        {
+          "name": "ลึกเข้าไปอีก",
+          "description": "เข้าไปลึกขึ้นอีก เสีย 5 HP"
+        }
+      ],
       "pages": [
         {
           "description": "มีดอกไม้มหึมาเติบโตอยู่บนกองภูเขากระดูก\n\nในขณะที่กลีบดอกเปลี่ยนสีได้กำลังขยับเป็นช่วงๆ คุณก็สัมผัสได้ว่ามีกองเกสรทรงพลังอยู่ใจกลาง แต่กลีบดอกที่ขยับขึ้นลงอยู่นั้นแหลมคมมากและคาดเดาไม่ได้\n\nคุณสามารถเก็บน้ำหวานทองคำได้ แต่รางวัล ณ ใจกลางก็เย้ายวนใจเหลือเกิน...",
@@ -4984,88 +4997,128 @@
       ]
     },
     "NEOW": {
-      "name": "Neow",
-      "description": "นีโอ มารดาแห่งการฟื้นคืนชีพ รออยู่ที่จุดเริ่มต้นของแต่ละรอบ เธอมอบพร 3 ประการ — 2 พรดี และ 1 พรสาป ตัวเลือกจะสุ่มจากกลุ่มด้านล่าง",
+      "name": "เนียว",
+      "description": "นีโอว์ มารดาแห่งการฟื้นคืนชีพ รอคอยที่จุดเริ่มต้นของแต่ละรอบ เธอมอบพร 3 ประการ — 2 พรเชิงบวกและ 1 พรต้องสาป ตัวเลือกจะถูกสุ่มจากกลุ่มด้านล่าง",
       "choices": [
         {
           "name": "Arcane Scroll",
-          "description": "เมื่อรับมา จะได้รับการ์ดหายาก 1 ใบแบบสุ่มเข้ากองการ์ด"
+          "description": "เมื่อรับมา จะได้รับการ์ดหายาก 1 ใบแบบสุ่มเข้ากองการ์ด",
+          "relic_id": "ARCANE_SCROLL",
+          "pool": "positive"
         },
         {
           "name": "Booming Conch",
-          "description": "At the start of Elite combats, draw 2 additional 2."
+          "description": "At the start of Elite combats, draw {Cards} additional card.",
+          "relic_id": "BOOMING_CONCH",
+          "pool": "positive"
         },
         {
           "name": "Pomander",
-          "description": "Upon pickup, Upgrade a card."
+          "description": "Upon pickup, Upgrade a card.",
+          "relic_id": "POMANDER",
+          "pool": "positive"
         },
         {
           "name": "ไข่มุกทองคำ",
-          "description": "เมื่อรับมา ได้รับ 150 ทอง"
+          "description": "เมื่อรับมา ได้รับ {Gold} ทอง",
+          "relic_id": "GOLDEN_PEARL",
+          "pool": "positive"
         },
         {
           "name": "ตะกั่วทับกระดาษ",
-          "description": "เมื่อรับมา เลือกการ์ดไร้สี 1 จาก 2 ใบเพื่อเพิ่มเข้ากองการ์ด"
+          "description": "เมื่อรับมา เลือกการ์ดไร้สี 1 จาก 2 ใบเพื่อเพิ่มเข้ากองการ์ด",
+          "relic_id": "LEAD_PAPERWEIGHT",
+          "pool": "positive"
         },
         {
           "name": "New Leaf",
-          "description": "เมื่อรับมา แปรสภาพการ์ด 1 ใบ"
+          "description": "เมื่อรับมา แปรสภาพการ์ด {Cards} ใบ",
+          "relic_id": "NEW_LEAF",
+          "pool": "positive"
         },
         {
           "name": "Neow's Torment",
-          "description": "เมื่อรับมา เพิ่มNeow's Fury 1 ใบเข้ากองการ์ด"
+          "description": "เมื่อรับมา เพิ่มNeow's Fury 1 ใบเข้ากองการ์ด",
+          "relic_id": "NEOWS_TORMENT",
+          "pool": "positive"
         },
         {
           "name": "Precise Scissors",
-          "description": "เมื่อรับมา กำจัดการ์ด 1 ใบจากกองการ์ด"
+          "description": "เมื่อรับมา กำจัดการ์ด {Cards} ใบจากกองการ์ด",
+          "relic_id": "PRECISE_SCISSORS",
+          "pool": "positive"
         },
         {
           "name": "Lost Coffer",
-          "description": "Upon pickup, gain 1 card reward and procure 1 random potion."
-        },
-        {
-          "name": "Nutritious Oyster",
-          "description": "เมื่อรับมา เพิ่ม 11 HP สูงสุด"
-        },
-        {
-          "name": "Stone Humidifier",
-          "description": "ทุกครั้งที่คุณพักผ่อนที่จุดพัก เพิ่ม 5 HP สูงสุด"
-        },
-        {
-          "name": "หินลาวา",
-          "description": "The Act 1 Boss drops 2 Relics."
-        },
-        {
-          "name": "Small Capsule",
-          "description": "เมื่อรับมา ได้รับเครื่องราง 1 ชิ้นแบบสุ่ม"
-        },
-        {
-          "name": "Massive Scroll",
-          "description": "เมื่อรับมา เลือกการ์ดไร้สีแบบหลายคน 1 จาก 3 ใบเพื่อเพิ่มเข้ากองการ์ด"
+          "description": "Upon pickup, gain 1 card reward and procure 1 random potion.",
+          "relic_id": "LOST_COFFER",
+          "pool": "positive"
         },
         {
           "name": "Cursed Pearl",
-          "description": "เมื่อรับมา ได้รับGreed ได้รับ 333 ทอง"
+          "description": "เมื่อรับมา ได้รับGreed ได้รับ {Gold} ทอง",
+          "relic_id": "CURSED_PEARL",
+          "pool": "cursed"
         },
         {
           "name": "Large Capsule",
-          "description": "เมื่อรับมา ได้รับเครื่องราง 2 ชิ้นแบบสุ่ม เพิ่มจู่โจมและป้องกันเข้ากองการ์ด"
+          "description": "เมื่อรับมา ได้รับเครื่องราง {Relics} ชิ้นแบบสุ่ม เพิ่มจู่โจมและป้องกันเข้ากองการ์ด",
+          "relic_id": "LARGE_CAPSULE",
+          "pool": "cursed"
         },
         {
           "name": "Leafy Poultice",
-          "description": "เมื่อรับมา แปรสภาพจู่โจม 1 ใบ และป้องกัน 1 ใบ และเสีย 10 HP สูงสุด"
+          "description": "เมื่อรับมา แปรสภาพจู่โจม 1 ใบ และป้องกัน 1 ใบ และเสีย {MaxHp} HP สูงสุด",
+          "relic_id": "LEAFY_POULTICE",
+          "pool": "cursed"
         },
         {
           "name": "Precarious Shears",
-          "description": "เมื่อรับมา กำจัดการ์ด 2 ใบจากกองการ์ดและได้รับความเสียหาย 13"
+          "description": "เมื่อรับมา กำจัดการ์ด {Cards} ใบจากกองการ์ดและได้รับความเสียหาย {Damage}",
+          "relic_id": "PRECARIOUS_SHEARS",
+          "pool": "cursed"
         },
         {
-          "name": "Scroll Boxes",
-          "description": "เมื่อรับมา เสียทองทั้งหมด แล้วเลือกซองการ์ด 1 จาก 2 ซองเพื่อเพิ่มเข้ากองการ์ด"
+          "name": "Nutritious Oyster",
+          "description": "เมื่อรับมา เพิ่ม {MaxHp} HP สูงสุด",
+          "relic_id": "NUTRITIOUS_OYSTER",
+          "pool": "positive"
+        },
+        {
+          "name": "Stone Humidifier",
+          "description": "ทุกครั้งที่คุณพักผ่อนที่จุดพัก เพิ่ม {MaxHp} HP สูงสุด",
+          "relic_id": "STONE_HUMIDIFIER",
+          "pool": "positive"
+        },
+        {
+          "name": "Massive Scroll",
+          "description": "เมื่อรับมา เลือกการ์ดไร้สีแบบหลายคน 1 จาก 3 ใบเพื่อเพิ่มเข้ากองการ์ด",
+          "relic_id": "MASSIVE_SCROLL",
+          "pool": "positive"
+        },
+        {
+          "name": "หินลาวา",
+          "description": "The Act 1 Boss drops {Relics} Relics.",
+          "relic_id": "LAVA_ROCK",
+          "pool": "positive"
+        },
+        {
+          "name": "Small Capsule",
+          "description": "เมื่อรับมา ได้รับเครื่องราง 1 ชิ้นแบบสุ่ม",
+          "relic_id": "SMALL_CAPSULE",
+          "pool": "positive"
         },
         {
           "name": "Silver Crucible",
-          "description": "รางวัลการ์ด 3 รางวัลแรกที่คุณเปิดจะพัฒนาแล้ว แต่กล่องสมบัติแรกที่คุณเปิดจะว่างเปล่า"
+          "description": "รางวัลการ์ด {Cards} รางวัลแรกที่คุณเปิดจะพัฒนาแล้ว แต่กล่องสมบัติแรกที่คุณเปิดจะว่างเปล่า",
+          "relic_id": "SILVER_CRUCIBLE",
+          "pool": "cursed"
+        },
+        {
+          "name": "Scroll Boxes",
+          "description": "เมื่อรับมา เสียทองทั้งหมด แล้วเลือกซองการ์ด 1 จาก 2 ซองเพื่อเพิ่มเข้ากองการ์ด",
+          "relic_id": "SCROLL_BOXES",
+          "pool": "cursed"
         }
       ]
     },
@@ -5126,7 +5179,7 @@
   },
   "enchantments": {
     "ADROIT": {
-      "description": "ได้รับ X บล็อก",
+      "description": "ได้รับ {Block:diff()} บล็อก",
       "name": "มนตร์คล่องแคล่ว"
     },
     "CLONE": {
@@ -5165,11 +5218,11 @@
       "name": "Mock Free Enchantment"
     },
     "MOMENTUM": {
-      "description": "เมื่อเล่น เพิ่มพลังโจมตีให้การ์ดนี้ X ในการต่อสู้นี้",
+      "description": "เมื่อเล่น เพิ่มพลังโจมตีให้การ์ดนี้ {Amount} ในการต่อสู้นี้",
       "name": "มนตร์แรงเหวี่ยง"
     },
     "NIMBLE": {
-      "description": "เพิ่มบล็อกที่ได้รับจากการ์ดนี้ X",
+      "description": "เพิ่มบล็อกที่ได้รับจากการ์ดนี้ {Amount}",
       "name": "มนตร์ปราดเปรียว"
     },
     "PERFECT_FIT": {
@@ -5181,7 +5234,7 @@
       "name": "มนตร์พระราชทาน"
     },
     "SHARP": {
-      "description": "เพิ่มความเสียหายของการ์ดนี้ X",
+      "description": "เพิ่มความเสียหายของการ์ดนี้ {Amount}",
       "name": "มนตร์แหลมคม"
     },
     "SLITHER": {
@@ -5197,7 +5250,7 @@
       "name": "มนตร์พลังวิญญาณ"
     },
     "SOWN": {
-      "description": "ครั้งแรกที่คุณเล่นการ์ดนี้ในแต่ละการต่อสู้ ได้รับX",
+      "description": "ครั้งแรกที่คุณเล่นการ์ดนี้ในแต่ละการต่อสู้ ได้รับ{Amount:energyIcons()}",
       "name": "มนตร์หว่านเมล็ด"
     },
     "SPIRAL": {
@@ -5209,7 +5262,7 @@
       "name": "มนตร์มั่นคง"
     },
     "SWIFT": {
-      "description": "ครั้งแรกที่คุณเล่นการ์ดนี้ จั่ว X X",
+      "description": "ครั้งแรกที่คุณเล่นการ์ดนี้ จั่ว {Amount} {Amount:plural:การ์ด|การ์ด}",
       "name": "มนตร์ฉับพลัน"
     },
     "TEZCATARAS_EMBER": {
@@ -5217,7 +5270,7 @@
       "name": "เพลิงของเทซคาทารา"
     },
     "VIGOROUS": {
-      "description": "ครั้งแรกที่เล่นการ์ดนี้ สร้างความเสียหายเพิ่ม X",
+      "description": "ครั้งแรกที่เล่นการ์ดนี้ สร้างความเสียหายเพิ่ม {Amount}",
       "name": "มนตร์ชีวิตชีวา"
     }
   },

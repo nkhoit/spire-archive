@@ -372,7 +372,78 @@ function mergeLockedChoices(choices = []) {
   return merged;
 }
 
-function applyManualFixes(events) {
+function buildNeowChoices(relicsData) {
+  // Parse Neow.cs to extract blessing relic pools automatically
+  const neowPath = path.join(DECOMPILED_DIR, 'MegaCrit.Sts2.Core.Models.Events', 'Neow.cs');
+  if (!fs.existsSync(neowPath)) {
+    console.warn('  Neow.cs not found, skipping Neow choices');
+    return null;
+  }
+  const cs = fs.readFileSync(neowPath, 'utf-8');
+
+  const relicMap = {};
+  for (const r of relicsData) relicMap[r.id] = r;
+
+  // Extract relic class names from RelicOption<ClassName> calls
+  function extractRelicClasses(blockLabel) {
+    // Find the property block
+    const patterns = {
+      positive: /private IEnumerable<EventOption> PositiveOptions\s*=>\s*new[^{]*\{([\s\S]*?)\}\);/,
+      cursed: /private IEnumerable<EventOption> CurseOptions\s*=>\s*new[^{]*\{([\s\S]*?)\}\);/,
+    };
+    if (patterns[blockLabel]) {
+      const m = cs.match(patterns[blockLabel]);
+      if (m) return [...m[1].matchAll(/RelicOption<(\w+)>/g)].map(x => x[1]);
+    }
+    return [];
+  }
+
+  // Extract individual conditional options: private EventOption XxxOption => RelicOption<ClassName>(...)
+  function extractConditionalOptions() {
+    const opts = [];
+    for (const [, optName, className] of cs.matchAll(/private EventOption (\w+)Option\s*=>\s*RelicOption<(\w+)>/g)) {
+      // Determine pool from the done description override
+      const line = cs.match(new RegExp(`private EventOption ${optName}Option[^;]+;`));
+      const isCursed = line && line[0].includes('CURSED');
+      opts.push({ className, pool: isCursed ? 'cursed' : 'positive', conditional: true });
+    }
+    return opts;
+  }
+
+  const positiveClasses = extractRelicClasses('positive');
+  const cursedClasses = extractRelicClasses('cursed');
+  const conditionals = extractConditionalOptions();
+
+  function classToRelicId(className) {
+    return className.replace(/([a-z])([A-Z])/g, '$1_$2').replace(/([A-Z]+)([A-Z][a-z])/g, '$1_$2').toUpperCase();
+  }
+
+  function makeChoice(className, pool) {
+    const relicId = classToRelicId(className);
+    const relic = relicMap[relicId];
+    return {
+      name: relic ? relic.name : className,
+      description: relic ? relic.description : '',
+      relic_id: relicId,
+      pool,
+    };
+  }
+
+  const choices = [];
+  for (const cls of positiveClasses) choices.push(makeChoice(cls, 'positive'));
+  for (const cls of cursedClasses) choices.push(makeChoice(cls, 'cursed'));
+  for (const opt of conditionals) {
+    // Skip if already in positive/cursed arrays
+    const rid = classToRelicId(opt.className);
+    if (!choices.find(c => c.relic_id === rid)) {
+      choices.push(makeChoice(opt.className, opt.pool));
+    }
+  }
+
+  return choices;
+}
+
+function applyManualFixes(events, relicsData = []) {
   const filtered = events.filter(event => !new Set(['DEPRECATED_EVENT', 'DEPRECATED_ANCIENT_EVENT']).has(event.id));
 
   for (const event of filtered) {
@@ -477,6 +548,15 @@ function applyManualFixes(events) {
       event.type = ancient.type;
       if (ancient.description) event.description = ancient.description;
       if (ancient.relic_pools) event.relic_pools = ancient.relic_pools;
+
+      // Auto-generate Neow choices from C# source
+      if (event.id === 'NEOW') {
+        const neowChoices = buildNeowChoices(relicsData);
+        if (neowChoices && neowChoices.length > 0) {
+          event.choices = neowChoices;
+          event.description = "Neow, the Mother of Resurrection, awaits at the start of each run. She offers three blessings \u2014 two positive and one cursed. The options are drawn randomly from the pools below.";
+        }
+      }
       if (ancient.references) event.references = dedupeReferences([...(event.references || []), ...ancient.references]);
     }
   }
@@ -569,7 +649,7 @@ async function parseEvents() {
     }
   }
 
-  events = applyManualFixes(events);
+  events = applyManualFixes(events, relicsData);
 
   fs.writeFileSync(eventsPath, JSON.stringify(events, null, 2) + '\n', 'utf-8');
 

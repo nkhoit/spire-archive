@@ -233,6 +233,59 @@ function main() {
       if (localized) nextEvents[baseEvent.id] = localized;
     }
 
+    // Pull ancient event names from ancients.json (all ancients, not just Neow)
+    const ancientsPath = path.join(RAW_LOC_DIR, gameLang, 'ancients.json');
+    if (fs.existsSync(ancientsPath)) {
+      const ancients = JSON.parse(fs.readFileSync(ancientsPath, 'utf8'));
+      for (const baseEvent of baseEvents) {
+        if (baseEvent.type !== 'ancient') continue;
+        const titleKey = `${baseEvent.id}.title`;
+        if (ancients[titleKey]) {
+          if (!nextEvents[baseEvent.id]) nextEvents[baseEvent.id] = {};
+          nextEvents[baseEvent.id].name = stripBbcode(ancients[titleKey]);
+        }
+      }
+    }
+
+    // Special handling: NEOW — description translated, choices from relic data
+    const NEOW_DESCRIPTIONS = {
+      ja: 'ネオー（復活の母）は、各ランの開始時に待ち受けている。ポジティブな祝福2つと呪いの祝福1つの計3つの祝福を提供する。選択肢は以下のプールからランダムに選ばれる。',
+      ko: '니오우(부활의 어머니)는 각 게임 시작 시 기다리고 있습니다. 긍정적인 축복 2개와 저주받은 축복 1개, 총 3개의 축복을 제공합니다. 선택지는 아래 풀에서 무작위로 선택됩니다.',
+      zh: '涅奥（复活之母）在每次冒险开始时等待着你。她提供三个祝福——两个正面祝福和一个诅咒祝福。选项从以下池中随机抽取。',
+      de: 'Neow, die Mutter der Auferstehung, erwartet dich zu Beginn jedes Laufs. Sie bietet drei Segnungen – zwei positive und einen verfluchten. Die Optionen werden zufällig aus den unten stehenden Pools gezogen.',
+      fr: "Neow, la Mère de la Résurrection, attend au début de chaque partie. Elle offre trois bénédictions — deux positives et une maudite. Les options sont tirées au hasard parmi les groupes ci-dessous.",
+      es: 'Neow, la Madre de la Resurrección, espera al inicio de cada partida. Ofrece tres bendiciones: dos positivas y una maldita. Las opciones se eligen al azar de los grupos a continuación.',
+      pt: 'Neow, a Mãe da Ressurreição, aguarda no início de cada partida. Ela oferece três bênçãos — duas positivas e uma amaldiçoada. As opções são sorteadas dos grupos abaixo.',
+      it: "Neow, la Madre della Resurrezione, attende all'inizio di ogni partita. Offre tre benedizioni — due positive e una maledetta. Le opzioni vengono estratte casualmente dai gruppi sottostanti.",
+      pl: 'Neow, Matka Zmartwychwstania, czeka na początku każdej rozgrywki. Oferuje trzy błogosławieństwa — dwa pozytywne i jedno przeklęte. Opcje są losowane z poniższych pul.',
+      ru: 'Неоу, Мать Воскрешения, ждёт в начале каждого забега. Она предлагает три благословения — два положительных и одно проклятое. Варианты выбираются случайно из пулов ниже.',
+      tr: 'Diriliş Anası Neow, her koşunun başında bekler. Üç kutsama sunar — iki olumlu ve bir lanetli. Seçenekler aşağıdaki havuzlardan rastgele çekilir.',
+      th: 'นีโอว์ มารดาแห่งการฟื้นคืนชีพ รอคอยที่จุดเริ่มต้นของแต่ละรอบ เธอมอบพร 3 ประการ — 2 พรเชิงบวกและ 1 พรต้องสาป ตัวเลือกจะถูกสุ่มจากกลุ่มด้านล่าง',
+    };
+    const neowBase = baseEvents.find(e => e.id === 'NEOW');
+    if (neowBase) {
+      if (!nextEvents['NEOW']) nextEvents['NEOW'] = {};
+
+      // Translated description
+      if (NEOW_DESCRIPTIONS[iso]) {
+        nextEvents['NEOW'].description = NEOW_DESCRIPTIONS[iso];
+      }
+
+      // Choices from locale relic data
+      if (neowBase.choices && neowBase.choices.length > 0) {
+        const locRelics = existing.relics || {};
+        nextEvents['NEOW'].choices = neowBase.choices.map(c => {
+          const locRelic = locRelics[c.relic_id];
+          return {
+            name: locRelic?.name || c.name,
+            description: locRelic?.description || c.description,
+            relic_id: c.relic_id,
+            pool: c.pool,
+          };
+        });
+      }
+    }
+
     existing.events = nextEvents;
     fs.writeFileSync(outPath, JSON.stringify(existing, null, 2) + '\n', 'utf8');
     console.log(`Updated ${iso}.json from ${gameLang}`);
