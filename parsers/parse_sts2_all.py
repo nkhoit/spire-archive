@@ -422,6 +422,14 @@ def parse_enchantments():
     return enchantments
 
 
+# IDs to exclude from output — deprecated/test entities that exist in C# but shouldn't be on the site
+EXCLUDED_IDS = {
+    "DEPRECATED_CARD", "DEPRECATED_RELIC", "DEPRECATED_POTION",
+    "MULTI_ATTACK_MOVE_MONSTER", "SINGLE_ATTACK_MOVE_MONSTER",
+    "ONE_HP_MONSTER", "TEN_HP_MONSTER", "TEST_SUBJECT", "FAKE_MERCHANT_MONSTER",
+}
+
+
 def main():
     OUTPUT.mkdir(parents=True, exist_ok=True)
     
@@ -448,9 +456,13 @@ def main():
     
     for name, parser in datasets.items():
         data = parser()
+        before = len(data)
+        data = [item for item in data if item.get("id") not in EXCLUDED_IDS]
+        excluded = before - len(data)
         with open(OUTPUT / f"{name}.json", "w") as f:
             json.dump(data, f, indent=2)
-        print(f"{name}: {len(data)}", file=sys.stderr)
+        suffix = f" (filtered {excluded})" if excluded else ""
+        print(f"{name}: {len(data)}{suffix}", file=sys.stderr)
     
     for name, data in stubs.items():
         with open(OUTPUT / f"{name}.json", "w") as f:
