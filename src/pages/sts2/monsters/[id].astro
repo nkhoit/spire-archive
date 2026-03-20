@@ -166,9 +166,9 @@ for (const p of data.powers ?? []) {
       <div class="mt-2 space-y-1.5">
         {(monster.powers ?? []).map((p: any) => {
           const name = typeof p === 'string' ? p : p.name;
-          const amt = typeof p === 'object' ? (typeof p.amount === 'object' ? p.amount.normal : p.amount) : null;
-          const ascAmt = typeof p === 'object' && typeof p.amount === 'object' ? p.amount.ascension : null;
-          const ascLvl = typeof p === 'object' && typeof p.amount === 'object' ? p.amount.ascLevel : null;
+          const amt = typeof p === 'object' ? (p.amount && typeof p.amount === 'object' ? p.amount.normal : p.amount) : null;
+          const ascAmt = typeof p === 'object' && p.amount && typeof p.amount === 'object' ? p.amount.ascension : null;
+          const ascLvl = typeof p === 'object' && p.amount && typeof p.amount === 'object' ? p.amount.ascLevel : null;
           const target = typeof p === 'object' ? p.target : 'self';
           const desc = powerDescriptions.get(name.toLowerCase()) || '';
           return (
