@@ -6,9 +6,10 @@ type Monster = {
   id: string;
   name: string;
   act: string;
+  acts?: string[];
   type: string;
-  min_hp: number | null;
-  max_hp: number | null;
+  min_hp: number | { ascension: number; normal: number } | null;
+  max_hp: number | { ascension: number; normal: number } | null;
   moves: { name: string; damage?: number | null; hits?: number | null }[];
   powers: string[];
 };
@@ -27,6 +28,7 @@ export default function MonstersExplorer(props: { game?: string; acts: string[];
   const locale = props.locale ?? 'en';
   const [q, setQ] = useState('');
   const [type, setType] = useState('');
+  const [act, setAct] = useState('');
   const [offset, setOffset] = useState(0);
   const limit = 50;
 
@@ -39,10 +41,13 @@ export default function MonstersExplorer(props: { game?: string; acts: string[];
   }, props.initial);
 
   const resp = data ?? { total: 0, offset, limit, items: [] };
+  const filtered = act
+    ? { ...resp, items: resp.items.filter(m => (m.acts ?? []).includes(act)), total: resp.items.filter(m => (m.acts ?? []).includes(act)).length }
+    : resp;
 
   return (
     <div className="mt-4">
-      <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-2 md:grid-cols-3">
         <input
           className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm"
           placeholder={t('Search', locale) + ' ' + t('Monsters', locale).toLowerCase() + '…'}
@@ -61,9 +66,24 @@ export default function MonstersExplorer(props: { game?: string; acts: string[];
           }}
         >
           <option value="">{t('All Types', locale)}</option>
-          {props.types.map((t) => (
-            <option key={t} value={t}>
-              {t}
+          {props.types.map((tp) => (
+            <option key={tp} value={tp}>
+              {tp}
+            </option>
+          ))}
+        </select>
+        <select
+          className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm"
+          value={act}
+          onChange={(e) => {
+            setOffset(0);
+            setAct(e.target.value);
+          }}
+        >
+          <option value="">{t('All Acts', locale)}</option>
+          {props.acts.map((a) => (
+            <option key={a} value={a}>
+              {a}
             </option>
           ))}
         </select>
@@ -71,15 +91,18 @@ export default function MonstersExplorer(props: { game?: string; acts: string[];
 
       <div className="mt-3 flex items-center justify-between text-xs text-slate-300">
         <div>
-          {loading ? t('Loading…', locale) : `${resp.total} ${t('results', locale)}`} {error ? <span className="text-red-300">({error})</span> : null}
+          {loading ? t('Loading…', locale) : `${filtered.total} ${t('results', locale)}`} {error ? <span className="text-red-300">({error})</span> : null}
         </div>
-        <Pager total={resp.total} offset={resp.offset} limit={resp.limit} onOffset={setOffset} locale={locale} />
+        <Pager total={filtered.total} offset={filtered.offset} limit={filtered.limit} onOffset={setOffset} locale={locale} />
       </div>
 
       <ul className="mt-3 divide-y divide-white/10 rounded-lg border border-white/10 bg-white/5">
-        {resp.items.map((m) => {
-          const hpText = m.min_hp && m.min_hp !== 9999
-            ? m.min_hp === m.max_hp ? `${m.min_hp} HP` : `${m.min_hp}–${m.max_hp} HP`
+        {filtered.items.map((m) => {
+          const rawHp = (v: any) => v == null ? null : typeof v === 'object' ? v.normal : v;
+          const minHp = rawHp(m.min_hp);
+          const maxHp = rawHp(m.max_hp);
+          const hpText = minHp && minHp !== 9999
+            ? minHp === maxHp ? `${minHp} HP` : `${minHp}–${maxHp} HP`
             : null;
           const typeColor = TYPE_COLORS[m.type] ?? 'text-slate-300';
           return (
@@ -89,6 +112,9 @@ export default function MonstersExplorer(props: { game?: string; acts: string[];
                   <div className="flex items-center gap-2">
                     <span className="text-sm font-semibold">{m.name}</span>
                     <span className={`text-xs font-medium ${typeColor}`}>{m.type}</span>
+                    {(m.acts ?? []).map(a => (
+                      <span key={a} className="text-xs px-1.5 py-0.5 rounded-full bg-sky-500/15 text-sky-300 ring-1 ring-sky-500/30">{a}</span>
+                    ))}
                     {hpText && <span className="text-xs text-slate-400">{hpText}</span>}
                   </div>
                   {m.moves.length > 0 && (
@@ -104,7 +130,7 @@ export default function MonstersExplorer(props: { game?: string; acts: string[];
       </ul>
 
       <div className="mt-3 flex justify-end">
-        <Pager total={resp.total} offset={resp.offset} limit={resp.limit} onOffset={setOffset} locale={locale} />
+        <Pager total={filtered.total} offset={filtered.offset} limit={filtered.limit} onOffset={setOffset} locale={locale} />
       </div>
     </div>
   );

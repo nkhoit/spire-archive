@@ -104,6 +104,9 @@ const sequence = buildSequence(movePattern, startMove);
   <h1 class="mt-2 text-2xl font-semibold">{monster.name}</h1>
   <div class="mt-2 flex flex-wrap items-center gap-2">
     <Badge label={monster.type} tone={typeTones[monster.type] ?? ''} locale={locale} />
+    {(monster.acts ?? []).map((act: string) => (
+      <Badge label={act} tone="blue" locale={locale} />
+    ))}
     {hpText && <Badge label={hpText} locale={locale} />}
     {hpAscText && <span class="text-xs text-amber-400/80">Asc {hpAscLvl}+: {hpAscText}</span>}
   </div>

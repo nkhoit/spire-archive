@@ -3,7 +3,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const MONSTERS_DIR = '/Users/kuro/code/sts2-research/decompiled/MegaCrit.Sts2.Core.Models.Monsters';
+const CS_BASE = '/Users/kuro/code/sts2-research/decompiled';
+const MONSTERS_DIR = path.join(CS_BASE, 'MegaCrit.Sts2.Core.Models.Monsters');
 const OUTPUT_FILE = path.join(__dirname, '../data/sts2/monsters.json');
 
 // Convert PascalCase class name to SCREAMING_SNAKE_CASE
@@ -499,6 +500,47 @@ function main() {
     } catch (err) {
       warnings.push(`Failed to parse ${className}.cs: ${err.message}`);
       skipped++;
+    }
+  }
+
+  // --- Act & encounter type mapping ---
+  const ACTS_DIR = path.join(CS_BASE, 'MegaCrit.Sts2.Core.Models.Acts');
+  const ENC_DIR = path.join(CS_BASE, 'MegaCrit.Sts2.Core.Models.Encounters');
+  const ACT_NAMES = { Overgrowth: 'Act 1', Underdocks: 'Act 2', Hive: 'Act 3', Glory: 'Act 4' };
+
+  // Encounter -> monsters
+  const encMonsters = {};
+  if (fs.existsSync(ENC_DIR)) {
+    for (const f of fs.readdirSync(ENC_DIR).filter(f => f.endsWith('.cs'))) {
+      const encName = f.replace('.cs', '');
+      const code = fs.readFileSync(path.join(ENC_DIR, f), 'utf8');
+      const monsters = [...code.matchAll(/ModelDb\.Monster<(\w+)>/g)].map(m => toSnakeCase(m[1]));
+      if (monsters.length) encMonsters[encName] = [...new Set(monsters)];
+    }
+  }
+
+  // Act -> encounters -> monsters
+  const monsterActs = {};   // id -> Set of act labels
+  if (fs.existsSync(ACTS_DIR)) {
+    for (const f of fs.readdirSync(ACTS_DIR).filter(f => f.endsWith('.cs'))) {
+      const actName = f.replace('.cs', '');
+      const actLabel = ACT_NAMES[actName] || actName;
+      const code = fs.readFileSync(path.join(ACTS_DIR, f), 'utf8');
+      const encounters = [...code.matchAll(/ModelDb\.Encounter<(\w+)>/g)].map(m => m[1]);
+      for (const enc of encounters) {
+        for (const mid of (encMonsters[enc] || [])) {
+          if (!monsterActs[mid]) monsterActs[mid] = new Set();
+          monsterActs[mid].add(actLabel);
+        }
+      }
+    }
+  }
+
+  // Apply act data
+  for (const [mid, acts] of Object.entries(monsterActs)) {
+    const m = monsterMap.get(mid);
+    if (m) {
+      m.acts = [...acts].sort();
     }
   }
 

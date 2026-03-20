@@ -8,9 +8,10 @@ import { t } from '../../../lib/ui-strings';
 const { locale, langPrefix } = getLocale(Astro);
 const { monsters } = await getData('sts2', locale);
 const types = Array.from(new Set(monsters.map((m) => String(m.type)))).sort();
+const acts = Array.from(new Set(monsters.flatMap((m) => (m as any).acts ?? []))).sort();
 ---
 <Layout game="sts2" title="Monsters — Spire Archive — STS2" description="Browse Slay the Spire 2 monsters with filters for type.">
   <h1 class="text-xl font-semibold">{t('Monsters', locale)}</h1>
   <p class="mt-1 text-sm text-slate-400">{monsters.length} {t('monsters from Slay the Spire 2', locale)}</p>
-  <MonstersExplorer game="sts2" client:load acts={[]} types={types} />
+  <MonstersExplorer game="sts2" client:load acts={acts} types={types} locale={locale} />
 </Layout>

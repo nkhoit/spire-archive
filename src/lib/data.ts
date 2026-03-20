@@ -105,6 +105,7 @@ export interface Monster {
   powers?: string[];
   move_pattern?: any[];
   start_move?: string;
+  acts?: string[];
   image_url?: string | null;
 }
 
