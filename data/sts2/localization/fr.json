@@ -288,7 +288,8 @@
       "name": "Pacte brûlant"
     },
     "BURST": {
-      "name": "Déflagration"
+      "name": "Déflagration",
+      "description": "La prochaine Compétence que vous jouez ce tour est jouée une fois supplémentaire."
     },
     "BURY": {
       "description": "Infligez 52 dégâts.",
@@ -347,7 +348,7 @@
       "name": "Chaos"
     },
     "CHARGE": {
-      "description": "Sélectionnez 2 carte de votre Pioche à Transformer en {IfUpgraded:show:Frappe de sbire+.",
+      "description": "Sélectionnez 2 carte de votre Pioche à Transformer en ",
       "name": "CHARGEZ !!"
     },
     "CHARGE_BATTERY": {
@@ -1077,7 +1078,7 @@
       "name": "Cache secrète"
     },
     "HIDDEN_DAGGERS": {
-      "description": "Défaussez 2 carte.\nAjoutez 2 {IfUpgraded:show:Surin+ à votre Main.",
+      "description": "Défaussez 2 carte.\nAjoutez 2 ",
       "name": "Poignards dissimulés"
     },
     "HIDDEN_GEM": {
@@ -1470,7 +1471,7 @@
       "name": "Droite-gauche"
     },
     "ORBIT": {
-      "description": "Pour tous les 4[E] que vous dépensez,\nvous gagnez [E].",
+      "description": "Pour tous les [4 Energy] que vous dépensez,\nvous gagnez [E].",
       "name": "Orbite"
     },
     "OUTBREAK": {
@@ -5659,16 +5660,6 @@
     "COLOSSAL_FLOWER": {
       "name": "Fleur colossale",
       "description": "Une fleur colossale pousse au sommet d’un monticule d’ossements.\n\nAu rythme des pulsations de ses pétales aux couleurs changeantes, vous gagnez la sensation qu’un Puissant amas de pollen niche en son centre ; mais les pétales ondoyantes sont aussi tranchants que des lames de rasoir, et leurs mouvements imprévisibles.\n\nVous pourriez vous contenter d’un peu de nectar doré, mais la tentation du trésor au centre est extrêmement forte...",
-      "choices": [
-        {
-          "name": "Extraire du nectar",
-          "description": "Obtenez {Prize1} Pièces d’or."
-        },
-        {
-          "name": "Pénétrer plus loin",
-          "description": "Enfoncez votre main plus loin. Perdez 5 PV."
-        }
-      ],
       "pages": [
         {
           "description": "Une fleur colossale pousse au sommet d’un monticule d’ossements.\n\nAu rythme des pulsations de ses pétales aux couleurs changeantes, vous gagnez la sensation qu’un Puissant amas de pollen niche en son centre ; mais les pétales ondoyantes sont aussi tranchants que des lames de rasoir, et leurs mouvements imprévisibles.\n\nVous pourriez vous contenter d’un peu de nectar doré, mais la tentation du trésor au centre est extrêmement forte...",
@@ -6419,6 +6410,92 @@
         }
       ]
     },
+    "NEOW": {
+      "name": "Neow",
+      "description": "Neow, la Mère de la Résurrection, attend au début de chaque aventure. Elle offre trois bénédictions — deux positives et une maudite. Les options sont tirées au hasard des réserves ci-dessous.",
+      "choices": [
+        {
+          "name": "Parchemin arcanique",
+          "description": "Lorsque vous obtenez cette relique, ajoutez une Carte Rare aléatoire à votre Deck."
+        },
+        {
+          "name": "Conque retentissante",
+          "description": "Au début des combats d'Élite, piochez 2 carte supplémentaire."
+        },
+        {
+          "name": "Pommandre",
+          "description": "Lorsque vous obtenez cette relique, Améliorez une carte."
+        },
+        {
+          "name": "Perle dorée",
+          "description": "Lorsque vous obtenez cette relique, gagnez 150 Pièces d'or."
+        },
+        {
+          "name": "Presse-papier en plomb",
+          "description": "Lorsque vous obtenez cette relique, choisissez 1 carte Incolore parmi 2 à ajoutez à votre Deck."
+        },
+        {
+          "name": "Nouvelle page",
+          "description": "Lorsque vous obtenez cette relique, Transformez 1 carte."
+        },
+        {
+          "name": "Tourment de Neow",
+          "description": "Lorsque vous obtenez cette relique, ajoutez 1 Fureur de Neow à votre Deck."
+        },
+        {
+          "name": "Ciseaux précis",
+          "description": "Lorsque vous obtenez cette relique, retirez 1 carte de votre Deck."
+        },
+        {
+          "name": "Coffret perdu",
+          "description": "Lorsque vous obtenez cette relique, gagnez 1 récompense de carte et obtenez 1 potion aléatoire."
+        },
+        {
+          "name": "Huître nourrissante",
+          "description": "Lorsque vous obtenez cette relique, augmentez vos PV Max de 11."
+        },
+        {
+          "name": "Humidificateur en pierre",
+          "description": "Lorsque vous vous Reposez à un Site de repos, augmentez vos PV Max de 5."
+        },
+        {
+          "name": "Pierre volcanique",
+          "description": "Le Boss de l'Acte 1 octroie 2 Reliques lorsqu'il est vaincu."
+        },
+        {
+          "name": "Petite capsule",
+          "description": "Lorsque vous obtenez cette relique, obtenez une Relique aléatoire."
+        },
+        {
+          "name": "Parchemin énorme",
+          "description": "Lorsque vous obtenez cette relique, choisissez 1 Carte Incolore Multijoueur parmi 3 à ajouter à votre Deck."
+        },
+        {
+          "name": "Perle maudite",
+          "description": "Lorsque vous obtenez cette relique, recevez Cupidité. Obtenez 333 Pièces d'or."
+        },
+        {
+          "name": "Grande capsule",
+          "description": "Lorsque vous obtenez cette relique, obtenez 2 Relique aléatoire. Ajoutez une Frappe et une Défense à votre Deck."
+        },
+        {
+          "name": "Cataplasme",
+          "description": "Lorsque vous obtenez cette relique, Transformez 1 Frappe et 1 Défense et perdez 10 PV Max."
+        },
+        {
+          "name": "Forces précaires",
+          "description": "Lorsque vous obtenez cette relique, retirez 2 carte de votre Deck et subissez 13 dégâts."
+        },
+        {
+          "name": "Caisse de parchemins",
+          "description": "Lorsque vous obtenez cette relique, perdez toutes vos Pièces d'or et choisissez 1 pack de cartes parmi 2 à ajouter à votre Deck."
+        },
+        {
+          "name": "Creuset en argent",
+          "description": "Vos 3 premières récompenses de carte sont Améliorées. Le premier Coffre trésor que vous ouvrez est vide."
+        }
+      ]
+    },
     "PAEL": {
       "description": "Pael, le Dragon de Cire, propose trois choix de reliques tirés de pools de chair, d'ailes et d'yeux déformés. À chaque rencontre, une relique de chaque pool est proposée, avec des options supplémentaires qui peuvent apparaître si votre deck ou vos compagnons remplissent les étranges conditions de Pael.",
       "epithet": "Dragon de Cire"
@@ -6483,7 +6560,7 @@
   },
   "enchantments": {
     "ADROIT": {
-      "description": "Gagnez {Block:diff()} d'Armure.",
+      "description": "Gagnez X d'Armure.",
       "name": "Adroit"
     },
     "CLONE": {
@@ -6522,11 +6599,11 @@
       "name": "Envoûtement gratuit (simulé)"
     },
     "MOMENTUM": {
-      "description": "Lorsque cette carte est jouée, augmentez ses dégâts d'attaque de {Amount} pour le restant du combat.",
+      "description": "Lorsque cette carte est jouée, augmentez ses dégâts d'attaque de X pour le restant du combat.",
       "name": "Élan"
     },
     "NIMBLE": {
-      "description": "Augmente l'Armure que confère cette carte de {Amount}.",
+      "description": "Augmente l'Armure que confère cette carte de X.",
       "name": "Agilité"
     },
     "PERFECT_FIT": {
@@ -6538,7 +6615,7 @@
       "name": "Sceau royal"
     },
     "SHARP": {
-      "description": "Augmente les dégâts de cette carte de {Amount}",
+      "description": "Augmente les dégâts de cette carte de X",
       "name": "Tranchant"
     },
     "SLITHER": {
@@ -6554,7 +6631,7 @@
       "name": "Puissance animique"
     },
     "SOWN": {
-      "description": "La première fois que vous jouez cette carte chaque combat, gagnez {Amount:energyIcons()}.",
+      "description": "La première fois que vous jouez cette carte chaque combat, gagnez X.",
       "name": "Semence"
     },
     "SPIRAL": {
@@ -6566,7 +6643,7 @@
       "name": "Stabilité"
     },
     "SWIFT": {
-      "description": "La première fois que vous jouez cette carte, piochez {Amount} {Amount:plural:carte|cartes}.",
+      "description": "La première fois que vous jouez cette carte, piochez X X.",
       "name": "Rapide"
     },
     "TEZCATARAS_EMBER": {
@@ -6574,7 +6651,7 @@
       "name": "Braise de Tezcatara"
     },
     "VIGOROUS": {
-      "description": "La première fois que cette carte est jouée, elle inflige {Amount} dégâts supplémentaires.",
+      "description": "La première fois que cette carte est jouée, elle inflige X dégâts supplémentaires.",
       "name": "Vigoureux"
     }
   },

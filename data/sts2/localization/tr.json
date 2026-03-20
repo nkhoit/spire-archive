@@ -348,7 +348,7 @@
       "name": "Kaos"
     },
     "CHARGE": {
-      "description": "Çekme Deste'nden 2 kart seç ve onları\n{IfUpgraded:show:Uşak Saldırısı+ kartlarına Dönüştür.",
+      "description": "Çekme Deste'nden 2 kart seç ve onları\n",
       "name": "İLERİ!!"
     },
     "CHARGE_BATTERY": {
@@ -1078,7 +1078,7 @@
       "name": "Gizli Sandık"
     },
     "HIDDEN_DAGGERS": {
-      "description": "Elinden 2 kartı çıkar.\nEl'ine 2 {IfUpgraded:show:Kama+ ekle.",
+      "description": "Elinden 2 kartı çıkar.\nEl'ine 2 ",
       "name": "Gizli Hançerler"
     },
     "HIDDEN_GEM": {
@@ -1471,7 +1471,7 @@
       "name": "Sollu Sağlı"
     },
     "ORBIT": {
-      "description": "Harcadığın her 4[E] için\n[E] elde et.",
+      "description": "Harcadığın her [4 Energy] için\n[E] elde et.",
       "name": "Yörünge"
     },
     "OUTBREAK": {
@@ -5658,16 +5658,6 @@
     "COLOSSAL_FLOWER": {
       "name": "Devasa Çiçek",
       "description": "Kemiklerden oluşan bir dağın tepesinde devasa bir çiçek büyümektedir.\n\nRenk değiştiren taç yaprakları nabız gibi atarken, merkezinde Güçlü Bir Polen Kümesi olduğunu sezersin; ancak dalgalanan yapraklar ustura keskinliğindedir ve son derece öngörülemezdir.\n\nBiraz altın nektar alabilirsin... ama merkezdeki ödüle uzanmak da fazlasıyla cezbedicidir.",
-      "choices": [
-        {
-          "name": "Nektarı Topla",
-          "description": "{Prize1} Altın elde et."
-        },
-        {
-          "name": "Daha Derine Ulaş",
-          "description": "Daha derine ilerle. 5 CP kaybet."
-        }
-      ],
       "pages": [
         {
           "description": "Kemiklerden oluşan bir dağın tepesinde devasa bir çiçek büyümektedir.\n\nRenk değiştiren taç yaprakları nabız gibi atarken, merkezinde Güçlü Bir Polen Kümesi olduğunu sezersin; ancak dalgalanan yapraklar ustura keskinliğindedir ve son derece öngörülemezdir.\n\nBiraz altın nektar alabilirsin... ama merkezdeki ödüle uzanmak da fazlasıyla cezbedicidir.",
@@ -6418,6 +6408,92 @@
         }
       ]
     },
+    "NEOW": {
+      "name": "Neow",
+      "description": "Diriliş'in Annesi Neow, her koşunun başında bekler. Üç kutsama sunar — iki olumlu ve bir lanetli. Seçenekler aşağıdaki havuzlardan rastgele çekilir.",
+      "choices": [
+        {
+          "name": "Büyü Parşömeni",
+          "description": "Bu kalıntıyı aldığında rastgele bir Nadir Kartı Deste'ne ekle."
+        },
+        {
+          "name": "Yankılı Denizkabuğu",
+          "description": "Elit savaşların başında fazladan 2 kart çek."
+        },
+        {
+          "name": "Parfüm Topu",
+          "description": "Bu kalıntıyı aldığında bir kartını Geliştir."
+        },
+        {
+          "name": "Altın İnci",
+          "description": "Bu kalıntıyı aldığında 150 Altın elde et."
+        },
+        {
+          "name": "Kurşun Ağırlık",
+          "description": "Bu kalıntıyı aldığında Deste'ne eklemek için 2 Renksiz karttan 1 tanesini seç."
+        },
+        {
+          "name": "Yeni Yaprak",
+          "description": "Bu kalıntıyı aldığında 1 kartı Dönüştür."
+        },
+        {
+          "name": "Neow'un Azabı",
+          "description": "Bu kalıntıyı aldığında, Deste'ne 1 Neow'un Öfkesi ekle."
+        },
+        {
+          "name": "Keskin Makas",
+          "description": "Bu kalıntıyı aldığında Deste'nden 1 kartı çıkar."
+        },
+        {
+          "name": "Kayıp Sandık",
+          "description": "Bu kalıntıyı aldığında 1 kart ödülü ve rastgele 1 iksir elde et."
+        },
+        {
+          "name": "Besleyici İstiridye",
+          "description": "Bu kalıntıyı aldığında Maksimum CP'ni 11 artır."
+        },
+        {
+          "name": "Taş Nemlendirici",
+          "description": "Bir Dinlenme Yeri'nde Dinlendiğinde Maksimum CP'ni 5 artır."
+        },
+        {
+          "name": "Lav Taşı",
+          "description": "1. Sahne'nin Boss'u 2 Kalıntı düşürür."
+        },
+        {
+          "name": "Küçük Kapsül",
+          "description": "Bu kalıntıyı aldığında rastgele bir Kalıntı elde et."
+        },
+        {
+          "name": "Devasa Parşömen",
+          "description": "Bu kalıntıyı aldığında, Deste'ne eklemek için 3 Çok Oyunculu Renksiz Kart'tan 1 tanesini seç."
+        },
+        {
+          "name": "Lanetli İnci",
+          "description": "Bu kalıntıyı aldığında Açgözlülük elde et. 333 Altın elde et."
+        },
+        {
+          "name": "İri Kapsül",
+          "description": "Bu kalıntıyı aldığında rastgele 2 Kalıntı elde et. Deste'ne fazladan bir Saldırı ve Savunma ekle."
+        },
+        {
+          "name": "Yapraklı Merhem",
+          "description": "Bu kalıntıyı aldığında Saldırı kartlarından 1 tanesini ve Savunma kartlarından 1 tanesini Dönüştür. 10 Maksimum CP kaybet."
+        },
+        {
+          "name": "Tehlikeli Makas",
+          "description": "Bu kalıntıyı aldığında Deste'nden 2 kartı çıkar ve 13 hasar al."
+        },
+        {
+          "name": "Parşömen Kutuları",
+          "description": "Bu kalıntıyı aldığında tüm Altın'ını kaybet ve Deste'ne eklemek için 2 kart paketinden 1 tanesini seç."
+        },
+        {
+          "name": "Gümüş Eritme Potası",
+          "description": "Alacağın ilk 3 kart ödülü Geliştirilir. Açtığın ilk Hazine Sandığı boş çıkar."
+        }
+      ]
+    },
     "PAEL": {
       "description": "Pael, Eriyen Ejderha, et, kanat ve göz temalı tuhaf havuzlardan üç kalıntı seçeneği sunar. Her karşılaşmada her havuzdan bir kalıntı görünür; desteniz ya da yoldaşlarınız Pael'in garip koşullarını karşılıyorsa ek seçenekler de çıkabilir.",
       "epithet": "Eriyen Ejderha"
@@ -6482,7 +6558,7 @@
   },
   "enchantments": {
     "ADROIT": {
-      "description": "{Block:diff()}Blok elde et.",
+      "description": "XBlok elde et.",
       "name": "Becerikli"
     },
     "CLONE": {
@@ -6521,11 +6597,11 @@
       "name": "Sahte Ücretsiz Büyüleme"
     },
     "MOMENTUM": {
-      "description": "Oynandığında bu kartın saldırı hasarını bu savaş için {Amount} artır.",
+      "description": "Oynandığında bu kartın saldırı hasarını bu savaş için X artır.",
       "name": "İvme"
     },
     "NIMBLE": {
-      "description": "Bu karttan elde edilen Blok miktarını {Amount} artırır.",
+      "description": "Bu karttan elde edilen Blok miktarını X artırır.",
       "name": "Atik"
     },
     "PERFECT_FIT": {
@@ -6537,7 +6613,7 @@
       "name": "Kraliyet Onaylı"
     },
     "SHARP": {
-      "description": "Bu karttaki hasarı {Amount} artırır.",
+      "description": "Bu karttaki hasarı X artırır.",
       "name": "Keskin"
     },
     "SLITHER": {
@@ -6553,7 +6629,7 @@
       "name": "Ruh'un Gücü"
     },
     "SOWN": {
-      "description": "Bu kartı her savaşta ilk kez oynadığında {Amount:energyIcons()} elde et.",
+      "description": "Bu kartı her savaşta ilk kez oynadığında X elde et.",
       "name": "Yatırım"
     },
     "SPIRAL": {
@@ -6565,7 +6641,7 @@
       "name": "Sabit"
     },
     "SWIFT": {
-      "description": "Bu kartı her ilk oynayışında {Amount} {Amount:plural:kart|kart} çek.",
+      "description": "Bu kartı her ilk oynayışında X X çek.",
       "name": "Hızlı"
     },
     "TEZCATARAS_EMBER": {
@@ -6573,7 +6649,7 @@
       "name": "Tezcatara'nın Koru"
     },
     "VIGOROUS": {
-      "description": "Bu kart ilk oynanışında fazladan {Amount} hasar verir.",
+      "description": "Bu kart ilk oynanışında fazladan X hasar verir.",
       "name": "Güçlü"
     }
   },

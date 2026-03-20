@@ -348,7 +348,7 @@
       "name": "Caos"
     },
     "CHARGE": {
-      "description": "Scegli 2 carta nel tuo mazzo di pesca da trasformare in\n{IfUpgraded:show:Colpo del Seguace+.",
+      "description": "Scegli 2 carta nel tuo mazzo di pesca da trasformare in\n",
       "name": "ALLA CARICA!"
     },
     "CHARGE_BATTERY": {
@@ -1078,7 +1078,7 @@
       "name": "Tesoro Segreto"
     },
     "HIDDEN_DAGGERS": {
-      "description": "Scarti 2 carta.\nAggiungi 2 {IfUpgraded:show:carta Pugnale+ alla tua mano.",
+      "description": "Scarti 2 carta.\nAggiungi 2 ",
       "name": "Pugnali Celati"
     },
     "HIDDEN_GEM": {
@@ -1471,7 +1471,7 @@
       "name": "Doppio Pugno"
     },
     "ORBIT": {
-      "description": "Ogni 4[E] che consumi,\nottieni [E].",
+      "description": "Ogni [4 Energy] che consumi,\nottieni [E].",
       "name": "Orbita"
     },
     "OUTBREAK": {
@@ -5534,6 +5534,92 @@
         {}
       ]
     },
+    "NEOW": {
+      "name": "Neow",
+      "description": "Neow, la Madre della Resurrezione, attende all'inizio di ogni run. Offre tre benedizioni — due positive e una maledetta. Le opzioni vengono estratte casualmente dai gruppi sottostanti.",
+      "choices": [
+        {
+          "name": "Pergamena Arcana",
+          "description": "Dopo aver ottenuto questa reliquia, ottieni una carta rara casuale da aggiungere al tuo mazzo."
+        },
+        {
+          "name": "Conchiglia Rimbombante",
+          "description": "All'inizio dei combattimenti contro nemici Élite, peschi 2 carta extra,"
+        },
+        {
+          "name": "Pomo d'Ambra",
+          "description": "Dopo aver ottenuto questa reliquia, potenzi una carta."
+        },
+        {
+          "name": "Perla d'Oro",
+          "description": "Dopo aver ottenuto questa reliquia ottieni 150 unità d'oro."
+        },
+        {
+          "name": "Fermacarte in Piombo",
+          "description": "Dopo aver ottenuto questa reliquia, scegli 1 tra 2 carte incolori da aggiungere al tuo mazzo."
+        },
+        {
+          "name": "Foglia Nuova",
+          "description": "Dopo aver ottenuto questa reliquia, trasformi 1 carta."
+        },
+        {
+          "name": "Tormento di Neow",
+          "description": "Dopo aver ottenuto questa reliquia, aggiungi 1 carta Furia di Neow al tuo mazzo."
+        },
+        {
+          "name": "Forbici Precise",
+          "description": "Dopo aver ottenuto questa reliquia, rimuovi 1 carta dal tuo mazzo."
+        },
+        {
+          "name": "Forziere Perduto",
+          "description": "Dopo aver ottenuto questa reliquia, ottieni 1 carta ricompensa e ricevi 1 pozione casuale."
+        },
+        {
+          "name": "Ostrica Nutriente",
+          "description": "Dopo aver ottenuto questa reliquia, aumenti i tuoi PV massimi di 11."
+        },
+        {
+          "name": "Umidificatore in Pietra",
+          "description": "Ogni volta che riposi presso un luogo di riposo, aumenti i tuoi PV massimi di 5."
+        },
+        {
+          "name": "Roccia Vulcanica",
+          "description": "Il boss dell'Atto 1 fa ottenere 2 reliquie."
+        },
+        {
+          "name": "Capsula Piccola",
+          "description": "Dopo aver ottenuto questa reliquia, ricevi una reliquia casuale."
+        },
+        {
+          "name": "Pergamena Enorme",
+          "description": "Dopo aver ottenuto questa reliquia, scegli 1 tra 3 carte incolori Multigiocatore da aggiungere al tuo mazzo."
+        },
+        {
+          "name": "Perla Maledetta",
+          "description": "Dopo aver ottenuto questa reliquia, ricevi la carta Avidità. Ottieni 333 unità d'oro."
+        },
+        {
+          "name": "Capsula Grande",
+          "description": "Dopo aver ottenuto questa reliquia, ricevi 2 reliquia casuale. Aggiungi una carta Colpo e una carta Difendi al tuo mazzo."
+        },
+        {
+          "name": "Impacco di Foglie",
+          "description": "Dopo aver ottenuto questa reliquia trasformi 1 delle tue carte Colpo e 1 delle tue carte Difendi e i tuoi PV massimi si riducono di 10."
+        },
+        {
+          "name": "Forbici Precarie",
+          "description": "Dopo aver ottenuto questa reliquia, rimuovi 2 carta dal tuo mazzo e subisci 13 di danno."
+        },
+        {
+          "name": "Cassa di Pergamene",
+          "description": "Dopo aver ottenuto questa reliquia, perdi tutto l'oro e scegli 1 tra 2 pacchetti di carte da aggiungere al tuo mazzo."
+        },
+        {
+          "name": "Crogiolo d'Argento",
+          "description": "Le prime 3 carte ricompensa che vedi sono potenziate. La prima cassa del tesoro che apri è vuota."
+        }
+      ]
+    },
     "PAEL": {
       "description": "Pael, il Drago fuso, offre tre reliquie pescate da pool contorti di carne, ali e occhi. In ogni incontro compare una reliquia da ciascun pool, con opzioni aggiuntive che possono apparire se il tuo mazzo o i tuoi compagni soddisfano le strane condizioni di Pael.",
       "epithet": "Drago fuso"
@@ -5598,7 +5684,7 @@
   },
   "enchantments": {
     "ADROIT": {
-      "description": "Ottieni {Block:diff()} di Blocco.",
+      "description": "Ottieni X di Blocco.",
       "name": "Attitudine"
     },
     "CLONE": {
@@ -5637,11 +5723,11 @@
       "name": "Mock Free Enchantment"
     },
     "MOMENTUM": {
-      "description": "Quando viene giocata, aumenti il danno dell'attacco di questa carta di {Amount} durante questo combattimento.",
+      "description": "Quando viene giocata, aumenti il danno dell'attacco di questa carta di X durante questo combattimento.",
       "name": "Inerzia"
     },
     "NIMBLE": {
-      "description": "Il Blocco ottenuto da questa carta aumenta di {Amount}.",
+      "description": "Il Blocco ottenuto da questa carta aumenta di X.",
       "name": "Scioltezza"
     },
     "PERFECT_FIT": {
@@ -5653,7 +5739,7 @@
       "name": "Approvazione Regale"
     },
     "SHARP": {
-      "description": "Aumenta il danno che infligge questa carta di {Amount}.",
+      "description": "Aumenta il danno che infligge questa carta di X.",
       "name": "Affilatura"
     },
     "SLITHER": {
@@ -5669,7 +5755,7 @@
       "name": "Potere dell'Anima"
     },
     "SOWN": {
-      "description": "La prima volta che giochi questa carta in ogni combattimento, ottieni {Amount:energyIcons()}.",
+      "description": "La prima volta che giochi questa carta in ogni combattimento, ottieni X.",
       "name": "Semina"
     },
     "SPIRAL": {
@@ -5681,7 +5767,7 @@
       "name": "Stabilità"
     },
     "SWIFT": {
-      "description": "La prima volta che giochi questa carta, peschi {Amount} {Amount:plural:carta|carte}.",
+      "description": "La prima volta che giochi questa carta, peschi X X.",
       "name": "Rapidità"
     },
     "TEZCATARAS_EMBER": {
@@ -5689,7 +5775,7 @@
       "name": "Brace di Tezcatara"
     },
     "VIGOROUS": {
-      "description": "La prima volta che questa carta viene giocata, infligge {Amount} di danno extra.",
+      "description": "La prima volta che questa carta viene giocata, infligge X di danno extra.",
       "name": "Vigorosità"
     }
   },

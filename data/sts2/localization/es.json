@@ -348,7 +348,7 @@
       "name": "Caos"
     },
     "CHARGE": {
-      "description": "Elige 2 carta de tu Pila de robo y Transfórmalas en\n{IfUpgraded:show:Golpe de esbirro+.",
+      "description": "Elige 2 carta de tu Pila de robo y Transfórmalas en\n",
       "name": "¡A LA CARGA!"
     },
     "CHARGE_BATTERY": {
@@ -1078,7 +1078,7 @@
       "name": "Tesoro oculto"
     },
     "HIDDEN_DAGGERS": {
-      "description": "Descarta 2 carta.\nAñade 2 {IfUpgraded:show:Navaja+ a tu Mano.",
+      "description": "Descarta 2 carta.\nAñade 2 ",
       "name": "Dagas ocultas"
     },
     "HIDDEN_GEM": {
@@ -1471,7 +1471,7 @@
       "name": "Puñetazo doble"
     },
     "ORBIT": {
-      "description": "Cada 4[E] que gastes,\ngana [E].",
+      "description": "Cada [4 Energy] que gastes,\ngana [E].",
       "name": "Órbita"
     },
     "OUTBREAK": {
@@ -5660,16 +5660,6 @@
     "COLOSSAL_FLOWER": {
       "name": "Flor colosal",
       "description": "Una flor colosal crece sobre una montaña de huesos.\n\nMientras sus pétalos de color cambiante palpitan, percibes que en el centro hay un núcleo de polen poderoso, pero los pétalos ondulantes son afilados e impredecibles.\n\nPodrías tomar un poco del néctar dorado que se escurre, pero alcanzar el premio en el centro es muy tentador.",
-      "choices": [
-        {
-          "name": "Extraer néctar",
-          "description": "Obtienes {Prize1} de oro."
-        },
-        {
-          "name": "Adentrarse a las profundidades",
-          "description": "Te adentras en las profundidades. Pierdes 5 PV."
-        }
-      ],
       "pages": [
         {
           "description": "Una flor colosal crece sobre una montaña de huesos.\n\nMientras sus pétalos de color cambiante palpitan, percibes que en el centro hay un núcleo de polen poderoso, pero los pétalos ondulantes son afilados e impredecibles.\n\nPodrías tomar un poco del néctar dorado que se escurre, pero alcanzar el premio en el centro es muy tentador.",
@@ -6420,6 +6410,92 @@
         }
       ]
     },
+    "NEOW": {
+      "name": "Neow",
+      "description": "Neow, la Madre de la Resurrección, espera al inicio de cada partida. Ofrece tres bendiciones: dos positivas y una maldita. Las opciones se eligen al azar de los grupos a continuación.",
+      "choices": [
+        {
+          "name": "Pergamino arcano",
+          "description": "Al recoger esta reliquia, añade una Carta Rara aleatoria a tu Mazo."
+        },
+        {
+          "name": "Concha explosiva",
+          "description": "Al comienzo de los combates contra Élites, roba 2 carta adicional."
+        },
+        {
+          "name": "Incensario",
+          "description": "Al recoger esta reliquia, Mejora una carta."
+        },
+        {
+          "name": "Perla dorada",
+          "description": "Al recoger esta reliquia, gana 150 de Oro."
+        },
+        {
+          "name": "Pisapapeles de plomo",
+          "description": "Al recoger esta reliquia, elige 1 de entre 2 cartas incoloras y añádela a tu Mazo."
+        },
+        {
+          "name": "Hoja nueva",
+          "description": "Al recoger esta reliquia, Transforma 1 carta."
+        },
+        {
+          "name": "Tormento de Neow",
+          "description": "Al recoger esta reliquia, añade 1 Furia de Neow a tu Mazo."
+        },
+        {
+          "name": "Tijeras precisas",
+          "description": "Al recoger esta reliquia, elimina 1 carta de tu Mazo."
+        },
+        {
+          "name": "Cofre perdido",
+          "description": "Al recoger esta reliquia, gana 1 recompensa de cartas y 1 Poción aleatoria."
+        },
+        {
+          "name": "Ostra nutritiva",
+          "description": "Al recoger esta reliquia, aumenta tus PV máx. en 11."
+        },
+        {
+          "name": "Humidificador de piedra",
+          "description": "Cuando Descanses en un Lugar de descanso, aumenta tus PV máx. en 5."
+        },
+        {
+          "name": "Roca volcánica",
+          "description": "El Jefe del Acto 1 suelta 2 Reliquias."
+        },
+        {
+          "name": "Cápsula pequeña",
+          "description": "Al recoger esta reliquia, obtén una Reliquia aleatoria."
+        },
+        {
+          "name": "Pergamino enorme",
+          "description": "Al recoger esta reliquia, elige 1 de entre 3 cartas multijugador incoloras y añádela a tu Mazo."
+        },
+        {
+          "name": "Perla maldita",
+          "description": "Al recoger esta reliquia, obtén Codicia. Gana 333 de Oro."
+        },
+        {
+          "name": "Cápsula grande",
+          "description": "Al recoger esta reliquia, obtén 2 Reliquia aleatoria. Añade un Golpe y un Defender adicionales a tu Mazo."
+        },
+        {
+          "name": "Cataplasma",
+          "description": "Al recoger esta reliquia, Transforma 1 Golpe y 1 Defender y pierde 10 PV máx."
+        },
+        {
+          "name": "Tijeras peligrosas",
+          "description": "Al recoger esta reliquia, elimina 2 carta de tu Mazo y recibe 13 de daño."
+        },
+        {
+          "name": "Caja de pergaminos",
+          "description": "Al recoger esta reliquia, pierde todo tu Oro, elige 1 de entre 2 paquetes de cartas y añádelo a tu Mazo."
+        },
+        {
+          "name": "Crisol de plata",
+          "description": "Las siguientes 3 recompensas de cartas que veas estarán Mejoradas. El primer cofre del tesoro que abras estará vacío."
+        }
+      ]
+    },
     "PAEL": {
       "description": "Pael, el Dragón fundido, ofrece tres reliquias extraídas de retorcidos conjuntos de carne, alas y ojos. Cada encuentro muestra una reliquia de cada grupo, con opciones extra que pueden aparecer si tu mazo o tus compañeros cumplen las peculiares condiciones de Pael.",
       "epithet": "Dragón fundido"
@@ -6484,7 +6560,7 @@
   },
   "enchantments": {
     "ADROIT": {
-      "description": "Gana {Block:diff()} de Bloqueo.",
+      "description": "Gana X de Bloqueo.",
       "name": "Hábil"
     },
     "CLONE": {
@@ -6523,11 +6599,11 @@
       "name": "Mock Free Enchantment"
     },
     "MOMENTUM": {
-      "description": "Al jugarla, aumenta el daño de ataque de esta carta en {Amount} durante este combate.",
+      "description": "Al jugarla, aumenta el daño de ataque de esta carta en X durante este combate.",
       "name": "Impulso"
     },
     "NIMBLE": {
-      "description": "Aumenta el Bloqueo obtenido por esta carta en {Amount}.",
+      "description": "Aumenta el Bloqueo obtenido por esta carta en X.",
       "name": "Agilidad"
     },
     "PERFECT_FIT": {
@@ -6539,7 +6615,7 @@
       "name": "Sigilo real"
     },
     "SHARP": {
-      "description": "Aumenta el daño de esta carta en {Amount}.",
+      "description": "Aumenta el daño de esta carta en X.",
       "name": "Filo"
     },
     "SLITHER": {
@@ -6555,7 +6631,7 @@
       "name": "Poder del alma"
     },
     "SOWN": {
-      "description": "La primera vez que juegues esta carta cada combate, gana {Amount:energyIcons()}.",
+      "description": "La primera vez que juegues esta carta cada combate, gana X.",
       "name": "Siembra"
     },
     "SPIRAL": {
@@ -6567,7 +6643,7 @@
       "name": "Firmeza"
     },
     "SWIFT": {
-      "description": "La primera vez que juegues esta carta, roba {Amount} {Amount:plural:carta|cartas}.",
+      "description": "La primera vez que juegues esta carta, roba X X.",
       "name": "Rapidez"
     },
     "TEZCATARAS_EMBER": {
@@ -6575,7 +6651,7 @@
       "name": "Ascua de Tezcatara"
     },
     "VIGOROUS": {
-      "description": "La primera vez que juegues esta carta, inflige {Amount} de daño adicional.",
+      "description": "La primera vez que juegues esta carta, inflige X de daño adicional.",
       "name": "Robustez"
     }
   },

@@ -348,7 +348,7 @@
       "name": "Caos"
     },
     "CHARGE": {
-      "description": "Escolha 2 carta na sua Pilha de Compra para Transformar em\n{IfUpgraded:show:Golpe de Lacaio+.",
+      "description": "Escolha 2 carta na sua Pilha de Compra para Transformar em\n",
       "name": "AVANTE!!"
     },
     "CHARGE_BATTERY": {
@@ -1078,7 +1078,7 @@
       "name": "Tesouro Oculto"
     },
     "HIDDEN_DAGGERS": {
-      "description": "Descarte 2 carta.\nAdicione 2 {IfUpgraded:show:Lâmina+ na sua Mão.",
+      "description": "Descarte 2 carta.\nAdicione 2 ",
       "name": "Adagas Ocultas"
     },
     "HIDDEN_GEM": {
@@ -1471,7 +1471,7 @@
       "name": "Soco Duplo"
     },
     "ORBIT": {
-      "description": "Para cada 4[E] que você gastar,\nreceba [E].",
+      "description": "Para cada [4 Energy] que você gastar,\nreceba [E].",
       "name": "Órbita"
     },
     "OUTBREAK": {
@@ -5660,16 +5660,6 @@
     "COLOSSAL_FLOWER": {
       "name": "Flor Colossal",
       "description": "Você avista uma flor colossal crescendo no topo de uma montanha de ossos.\n\nConforme suas pétalas de cores oscilantes pulsam, você nota um Poderoso Aglomerado de Pólen localizado no centro da flor, mas as pétalas ondulantes parecem extremamente afiadas e imprevisíveis.\n\nVocê poderia pegar apenas um pouco de néctar dourado, mas alcançar o prêmio no centro da flor é tão tentador...",
-      "choices": [
-        {
-          "name": "Extrair Néctar",
-          "description": "Receba {Prize1} de Ouro."
-        },
-        {
-          "name": "Adentrar",
-          "description": "Adentre mais fundo. Perca 5 PV."
-        }
-      ],
       "pages": [
         {
           "description": "Você avista uma flor colossal crescendo no topo de uma montanha de ossos.\n\nConforme suas pétalas de cores oscilantes pulsam, você nota um Poderoso Aglomerado de Pólen localizado no centro da flor, mas as pétalas ondulantes parecem extremamente afiadas e imprevisíveis.\n\nVocê poderia pegar apenas um pouco de néctar dourado, mas alcançar o prêmio no centro da flor é tão tentador...",
@@ -6420,6 +6410,92 @@
         }
       ]
     },
+    "NEOW": {
+      "name": "Neow",
+      "description": "Neow, a Mãe da Ressurreição, aguarda no início de cada corrida. Ela oferece três bênçãos — duas positivas e uma amaldiçoada. As opções são sorteadas aleatoriamente dos grupos abaixo.",
+      "choices": [
+        {
+          "name": "Pergaminho Arcano",
+          "description": "Ao coletar esta relíquia, receba uma Carta Rara aleatória para adicionar ao seu Baralho."
+        },
+        {
+          "name": "Concha Expansiva",
+          "description": "No início de combates contra Elites, compre 2 carta adicional."
+        },
+        {
+          "name": "Pomandro",
+          "description": "Ao coletar esta relíquia, Aprimore uma carta."
+        },
+        {
+          "name": "Pérola Dourada",
+          "description": "Ao coletar esta relíquia, receba 150 de Ouro."
+        },
+        {
+          "name": "Peso de Papel",
+          "description": "Ao coletar esta relíquia, escolha 1 entre 2 cartas Incolores para adicionar ao seu Baralho."
+        },
+        {
+          "name": "Folha da Renovação",
+          "description": "Ao coletar esta relíquia, Transforme 1 carta."
+        },
+        {
+          "name": "Tormento de Neow",
+          "description": "Ao coletar esta relíquia, adicione 1 Fúria de Neow ao seu Baralho."
+        },
+        {
+          "name": "Tesoura Precisa",
+          "description": "Ao coletar esta relíquia, remova 1 carta do seu Baralho."
+        },
+        {
+          "name": "Arca Perdida",
+          "description": "Ao coletar esta relíquia, receba 1 recompensa de cartas e 1 poção aleatória."
+        },
+        {
+          "name": "Ostra Nutritiva",
+          "description": "Ao coletar esta relíquia, aumente seus PV Máximos em 11."
+        },
+        {
+          "name": "Umidificador de Pedra",
+          "description": "Sempre que você Descansar em um Local de Descanso, aumente seus PV Máximos em 5."
+        },
+        {
+          "name": "Rocha Vulcânica",
+          "description": "O Chefe do Ato 1 concede 2 Relíquias."
+        },
+        {
+          "name": "Cápsula Pequena",
+          "description": "Ao coletar esta relíquia, receba uma Relíquia aleatória."
+        },
+        {
+          "name": "Pergaminho Extenso",
+          "description": "Ao coletar esta relíquia, escolha 1 entre 3 Cartas Incolores de Multijogador para adicionar ao seu Baralho."
+        },
+        {
+          "name": "Pérola Amaldiçoada",
+          "description": "Ao coletar esta relíquia, receba Ganância. Receba 333 de Ouro."
+        },
+        {
+          "name": "Cápsula Grande",
+          "description": "Ao coletar esta relíquia, receba 2 Relíquia aleatória. Adicione um Golpe e uma Defesa ao seu Baralho."
+        },
+        {
+          "name": "Cataplasma de Ervas",
+          "description": "Ao coletar esta relíquia, Transforme 1 dos seus Golpes e 1 das suas Defesas e perca 10 PV Máximos."
+        },
+        {
+          "name": "Tesoura Precária",
+          "description": "Ao coletar esta relíquia, remova 2 carta do seu Baralho e sofra 13 de dano."
+        },
+        {
+          "name": "Caixa de Pergaminhos",
+          "description": "Ao coletar esta relíquia, perca todo o Ouro e escolha 1 entre 2 conjuntos de cartas para adicionar ao seu Baralho."
+        },
+        {
+          "name": "Crisol de Prata",
+          "description": "As primeiras 3 recompensas de cartas que você encontrar serão Aprimoradas. O primeiro Baú de Tesouro que você encontrar estará vazio."
+        }
+      ]
+    },
     "PAEL": {
       "description": "Pael, o Dragão Fundente, oferece três escolhas de relíquias vindas de conjuntos distorcidos de carne, asas e olhos. Em cada encontro aparece uma relíquia de cada conjunto, com opções extras surgindo se seu baralho ou seus companheiros atenderem às condições peculiares de Pael.",
       "epithet": "Dragão Fundente"
@@ -6484,7 +6560,7 @@
   },
   "enchantments": {
     "ADROIT": {
-      "description": "Receba {Block:diff()} de Proteção.",
+      "description": "Receba X de Proteção.",
       "name": "Hábil"
     },
     "CLONE": {
@@ -6523,11 +6599,11 @@
       "name": "Mock Free Enchantment"
     },
     "MOMENTUM": {
-      "description": "Aumenta o dano de ataque desta carta em {Amount} quando jogada neste combate.",
+      "description": "Aumenta o dano de ataque desta carta em X quando jogada neste combate.",
       "name": "Impulso"
     },
     "NIMBLE": {
-      "description": "Aumenta a Proteção recebida por esta carta em {Amount}.",
+      "description": "Aumenta a Proteção recebida por esta carta em X.",
       "name": "Ágil"
     },
     "PERFECT_FIT": {
@@ -6539,7 +6615,7 @@
       "name": "Aprovação Real"
     },
     "SHARP": {
-      "description": "Aumenta o dano desta carta em {Amount}.",
+      "description": "Aumenta o dano desta carta em X.",
       "name": "Afiada"
     },
     "SLITHER": {
@@ -6555,7 +6631,7 @@
       "name": "Poder Espiritual"
     },
     "SOWN": {
-      "description": "Na primeira vez que jogar estar carta em cada combate, receba {Amount:energyIcons()}.",
+      "description": "Na primeira vez que jogar estar carta em cada combate, receba X.",
       "name": "Semeada"
     },
     "SPIRAL": {
@@ -6567,7 +6643,7 @@
       "name": "Prontidão"
     },
     "SWIFT": {
-      "description": "Na primeira vez que você jogar esta carta, compre {Amount} {Amount:plural:carta|cartas}.",
+      "description": "Na primeira vez que você jogar esta carta, compre X X.",
       "name": "Célere"
     },
     "TEZCATARAS_EMBER": {
@@ -6575,7 +6651,7 @@
       "name": "Centelha de Tezcatara"
     },
     "VIGOROUS": {
-      "description": "Na primeira vez que esta carta for jogada, ela causa {Amount} de dano adicional.",
+      "description": "Na primeira vez que esta carta for jogada, ela causa X de dano adicional.",
       "name": "Vigorosa"
     }
   },

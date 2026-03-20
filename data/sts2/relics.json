@@ -37,7 +37,7 @@
   {
     "id": "ARCHAIC_TOOTH",
     "name": "Archaic Tooth",
-    "description": "Upon pickup, Transform {StarterCard.StringValue:cond:{StarterCard} into {AncientCard}|a starter card with an ancient version}.",
+    "description": "Upon pickup, Transform a starter card with an ancient version.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -51,7 +51,7 @@
   {
     "id": "ASTROLABE",
     "name": "Astrolabe",
-    "description": "Upon pickup, Transform 3 3, then Upgrade them.",
+    "description": "Upon pickup, Transform 3 cards, then Upgrade them.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -79,7 +79,7 @@
   {
     "id": "BEAUTIFUL_BRACELET",
     "name": "Beautiful Bracelet",
-    "description": "Upon pickup, choose 3 3 in your Deck. Enchant them with Swift 3.",
+    "description": "Upon pickup, choose 3 cards in your Deck. Enchant them with Swift 3.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -177,7 +177,7 @@
   {
     "id": "BOOK_OF_FIVE_RINGS",
     "name": "Book of Five Rings",
-    "description": "Every 5 5 you add to your Deck, heal 15 HP.",
+    "description": "Every 5 cards you add to your Deck, heal 15 HP.",
     "tier": "Common",
     "color": "shared"
   },
@@ -219,7 +219,7 @@
   {
     "id": "BREAD",
     "name": "Bread",
-    "description": "At the start of your first turn, lose {LoseEnergy:energyIcons()}. At the start of all other turns, gain {GainEnergy:energyIcons()}.",
+    "description": "At the start of your first turn, lose 1 Energy. At the start of all other turns, gain 1 Energy.",
     "tier": "Shop",
     "color": "shared"
   },
@@ -233,7 +233,7 @@
   {
     "id": "BRIMSTONE",
     "name": "Brimstone",
-    "description": "At the start of your turn, gain {SelfStrength} Strength and ALL enemies gain {EnemyStrength} Strength.",
+    "description": "At the start of your turn, gain 2 Strength and ALL enemies gain 1 Strength.",
     "tier": "Shop",
     "color": "ironclad"
   },
@@ -289,14 +289,14 @@
   {
     "id": "CAULDRON",
     "name": "Cauldron",
-    "description": "Upon pickup, brews 5 random 5.",
+    "description": "Upon pickup, brews 5 random Potions.",
     "tier": "Shop",
     "color": "shared"
   },
   {
     "id": "CENTENNIAL_PUZZLE",
     "name": "Centennial Puzzle",
-    "description": "The first time you lose HP each combat, draw 3 3.",
+    "description": "The first time you lose HP each combat, draw 3 cards.",
     "tier": "Common",
     "color": "shared"
   },
@@ -345,7 +345,7 @@
   {
     "id": "CLAWS",
     "name": "Claws",
-    "description": "Upon pickup, Transform up to 6 6 into Maul.",
+    "description": "Upon pickup, Transform up to 6 cards into Maul.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -366,7 +366,7 @@
   {
     "id": "CROSSBOW",
     "name": "Crossbow",
-    "description": "At the start of your turn, add a random Attack into your Hand. It costs 0{energyPrefix:energyIcons(1)} this turn.",
+    "description": "At the start of your turn, add a random Attack into your Hand. It costs 0 Energy this turn.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -429,7 +429,7 @@
   {
     "id": "DISTINGUISHED_CAPE",
     "name": "Distinguished Cape",
-    "description": "Upon pickup, lose 9 Max HP. Add 3 3 to your Deck.",
+    "description": "Upon pickup, lose 9 Max HP. Add 3 cards to your Deck.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -478,7 +478,7 @@
   {
     "id": "DUSTY_TOME",
     "name": "Dusty Tome",
-    "description": "Upon pickup, obtain {AncientCard.StringValue:cond:{}|an Ancient Card}.",
+    "description": "Upon pickup, obtain an Ancient Card.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -513,7 +513,7 @@
   {
     "id": "EMPTY_CAGE",
     "name": "Empty Cage",
-    "description": "Upon pickup, remove 2 2 from your Deck.",
+    "description": "Upon pickup, remove 2 cards from your Deck.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -541,7 +541,7 @@
   {
     "id": "FAKE_HAPPY_FLOWER",
     "name": "Happy Flower???",
-    "description": "Every 5 5, gain 1.",
+    "description": "Every 5 turns, gain 1 Energy.",
     "tier": "Event",
     "color": "event"
   },
@@ -646,7 +646,7 @@
   {
     "id": "FUNERARY_MASK",
     "name": "Funerary Mask",
-    "description": "At the start of each combat, add 3 3 into your Draw Pile.",
+    "description": "At the start of each combat, add 3 Souls into your Draw Pile.",
     "tier": "Uncommon",
     "color": "necrobinder"
   },
@@ -660,7 +660,7 @@
   {
     "id": "GALACTIC_DUST",
     "name": "Galactic Dust",
-    "description": "For every 10 {singleStarIcon} spent, gain 10 Block.",
+    "description": "For every 10 Stars spent, gain 10 Block.",
     "tier": "Uncommon",
     "color": "regent"
   },
@@ -674,7 +674,7 @@
   {
     "id": "GAME_PIECE",
     "name": "Game Piece",
-    "description": "Whenever you play a Power, draw 1 1.",
+    "description": "Whenever you play a Power, draw 1 card.",
     "tier": "Rare",
     "color": "shared"
   },
@@ -709,7 +709,7 @@
   {
     "id": "GNARLED_HAMMER",
     "name": "Gnarled Hammer",
-    "description": "Upon pickup, Enchant up to 3 3 with Sharp 3.",
+    "description": "Upon pickup, Enchant up to 3 cards with Sharp 3.",
     "tier": "Shop",
     "color": "shared"
   },
@@ -744,7 +744,7 @@
   {
     "id": "GREMLIN_HORN",
     "name": "Gremlin Horn",
-    "description": "Whenever an enemy dies, gain 1 and draw 1 1.",
+    "description": "Whenever an enemy dies, gain 1 Energy and draw 1 card.",
     "tier": "Uncommon",
     "color": "shared"
   },
@@ -758,7 +758,7 @@
   {
     "id": "HAPPY_FLOWER",
     "name": "Happy Flower",
-    "description": "Every 3 3, gain 1.",
+    "description": "Every 3 turns, gain 1 Energy.",
     "tier": "Common",
     "color": "shared"
   },
@@ -807,14 +807,14 @@
   {
     "id": "IRON_CLUB",
     "name": "Iron Club",
-    "description": "Every 4 4 you play, draw 1 card.",
+    "description": "Every 4 cards you play, draw 1 card.",
     "tier": "Ancient",
     "color": "event"
   },
   {
     "id": "IVORY_TILE",
     "name": "Ivory Tile",
-    "description": "Whenever you play a card that costs {EnergyThreshold:energyIcons()} or more, gain 1.",
+    "description": "Whenever you play a card that costs 1 Energy or more, gain 1.",
     "tier": "Rare",
     "color": "necrobinder"
   },
@@ -835,7 +835,7 @@
   {
     "id": "JOSS_PAPER",
     "name": "Joss Paper",
-    "description": "Every 5 times you Exhaust a card, draw 1 1.",
+    "description": "Every 5 times you Exhaust a card, draw 1 card.",
     "tier": "Uncommon",
     "color": "shared"
   },
@@ -849,7 +849,7 @@
   {
     "id": "KIFUDA",
     "name": "Kifuda",
-    "description": "Upon pickup, Enchant up to 3 3 with Adroit.",
+    "description": "Upon pickup, Enchant up to 3 cards with Adroit.",
     "tier": "Shop",
     "color": "shared"
   },
@@ -863,7 +863,7 @@
   {
     "id": "KUSARIGAMA",
     "name": "Kusarigama",
-    "description": "Every time you play 3 3 in a single turn, deal 6 damage to a random enemy.",
+    "description": "Every time you play 3 Attacks in a single turn, deal 6 damage to a random enemy.",
     "tier": "Uncommon",
     "color": "shared"
   },
@@ -926,7 +926,7 @@
   {
     "id": "LETTER_OPENER",
     "name": "Letter Opener",
-    "description": "Every time you play 3 3 in a single turn, deal 5 damage to ALL enemies.",
+    "description": "Every time you play 3 Skills in a single turn, deal 5 damage to ALL enemies.",
     "tier": "Uncommon",
     "color": "shared"
   },
@@ -1045,7 +1045,7 @@
   {
     "id": "MINI_REGENT",
     "name": "Mini Regent",
-    "description": "The first time you spend {singleStarIcon} each turn, gain 1 Strength.",
+    "description": "The first time you spend Stars each turn, gain 1 Strength.",
     "tier": "Rare",
     "color": "regent"
   },
@@ -1108,14 +1108,14 @@
   {
     "id": "NEW_LEAF",
     "name": "New Leaf",
-    "description": "Upon pickup, Transform 1 1.",
+    "description": "Upon pickup, Transform 1 card.",
     "tier": "Ancient",
     "color": "event"
   },
   {
     "id": "NINJA_SCROLL",
     "name": "Ninja Scroll",
-    "description": "At the start of each combat, add 3 3 into your Hand.",
+    "description": "At the start of each combat, add 3 Shivs into your Hand.",
     "tier": "Shop",
     "color": "silent"
   },
@@ -1192,7 +1192,7 @@
   {
     "id": "PAELS_CLAW",
     "name": "Pael's Claw",
-    "description": "Upon pickup, Enchant all Defends with {EnchantmentName}.",
+    "description": "Upon pickup, Enchant all Defends with Goopy.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -1213,7 +1213,7 @@
   {
     "id": "PAELS_GROWTH",
     "name": "Pael's Growth",
-    "description": "Upon pickup, Enchant a card with {EnchantmentName}.",
+    "description": "Upon pickup, Enchant a card with Clone.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -1227,21 +1227,21 @@
   {
     "id": "PAELS_LEGION",
     "name": "Pael's Legion",
-    "description": "Doubles Block gained from a card, then goes to sleep for 2 2.",
+    "description": "Doubles Block gained from a card, then goes to sleep for 2 turns.",
     "tier": "Ancient",
     "color": "event"
   },
   {
     "id": "PAELS_TEARS",
     "name": "Pael's Tears",
-    "description": "If you end your turn with unspent {energyPrefix:energyIcons(1)}, gain an additional 2 next turn.",
+    "description": "If you end your turn with unspent Energy, gain an additional 2 next turn.",
     "tier": "Ancient",
     "color": "event"
   },
   {
     "id": "PAELS_TOOTH",
     "name": "Pael's Tooth",
-    "description": "Upon pickup, remove 5 5 from your Deck. After each combat, randomly add 1 back Upgraded.{CardTitles.StringValue:cond:\n\nCards in the Pot:\n{}|}",
+    "description": "Upon pickup, remove 5 cards from your Deck. After each combat, randomly add 1 back Upgraded.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -1332,7 +1332,7 @@
   {
     "id": "PHYLACTERY_UNBOUND",
     "name": "Phylactery Unbound",
-    "description": "At the start of each combat, Summon {StartOfCombat}. At the start of your turn, Summon {StartOfTurn}.",
+    "description": "At the start of each combat, Summon 5. At the start of your turn, Summon 1.",
     "tier": "Starter",
     "color": "event"
   },
@@ -1353,7 +1353,7 @@
   {
     "id": "POLLINOUS_CORE",
     "name": "Pollinous Core",
-    "description": "Every 4 4, draw 2 additional 2.",
+    "description": "Every 4 turns, draw 2 additional cards.",
     "tier": "Event",
     "color": "event"
   },
@@ -1388,21 +1388,21 @@
   {
     "id": "PRECARIOUS_SHEARS",
     "name": "Precarious Shears",
-    "description": "Upon pickup, remove 2 2 from your Deck and take 13 damage.",
+    "description": "Upon pickup, remove 2 cards from your Deck and take 13 damage.",
     "tier": "Ancient",
     "color": "event"
   },
   {
     "id": "PRECISE_SCISSORS",
     "name": "Precise Scissors",
-    "description": "Upon pickup, remove 1 1 from your Deck.",
+    "description": "Upon pickup, remove 1 card from your Deck.",
     "tier": "Ancient",
     "color": "event"
   },
   {
     "id": "PRESERVED_FOG",
     "name": "Preserved Fog",
-    "description": "Upon pickup, remove 5 5 from your Deck. Add Folly to your Deck.",
+    "description": "Upon pickup, remove 5 cards from your Deck. Add Folly to your Deck.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -1430,7 +1430,7 @@
   {
     "id": "RADIANT_PEARL",
     "name": "Radiant Pearl",
-    "description": "At the start of each combat, add 1 1 into your Hand.",
+    "description": "At the start of each combat, add 1 card into your Hand.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -1521,7 +1521,7 @@
   {
     "id": "ROYAL_STAMP",
     "name": "Royal Stamp",
-    "description": "Upon pickup, choose an Attack or Skill in your Deck to Enchant with {Enchantment}.",
+    "description": "Upon pickup, choose an Attack or Skill in your Deck to Enchant with Royally Approved.",
     "tier": "Shop",
     "color": "shared"
   },
@@ -1577,7 +1577,7 @@
   {
     "id": "SEA_GLASS",
     "name": "Sea Glass",
-    "description": "See 15 cards from {Character.StringValue:cond:{}|another character}. Choose any number of them to add to your Deck.",
+    "description": "See 15 cards from another character. Choose any number of them to add to your Deck.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -1675,7 +1675,7 @@
   {
     "id": "SPIKED_GAUNTLETS",
     "name": "Spiked Gauntlets",
-    "description": "Gain 1 at the start of each turn. Powers cost 1 more {energyPrefix:energyIcons(1)}.",
+    "description": "Gain 1 at the start of each turn. Powers cost 1 more Energy.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -1738,7 +1738,7 @@
   {
     "id": "SWORD_OF_STONE",
     "name": "Sword of Stone",
-    "description": "Transforms into a powerful Relic after defeating 5 5.",
+    "description": "Transforms into a powerful Relic after defeating 5 Elites.",
     "tier": "Event",
     "color": "event"
   },
@@ -1822,7 +1822,7 @@
   {
     "id": "TOUCH_OF_OROBAS",
     "name": "Touch of Orobas",
-    "description": "Upon pickup, replace {StarterRelic.StringValue:cond:{StarterRelic} with {UpgradedRelic}|your starter Relic with an Ancient version}.",
+    "description": "Upon pickup, replace your starter Relic with an Ancient version.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -1843,14 +1843,14 @@
   {
     "id": "TOY_BOX",
     "name": "Toy Box",
-    "description": "Upon pickup, obtain 4 Wax 4. Every 3 3, your left-most Wax Relic will melt away.",
+    "description": "Upon pickup, obtain 4 Wax Relics. Every 3 combats, your left-most Wax Relic will melt away.",
     "tier": "Ancient",
     "color": "event"
   },
   {
     "id": "TRI_BOOMERANG",
     "name": "Tri-Boomerang",
-    "description": "Choose 3 3 in your Deck. Enchant them with Instinct.",
+    "description": "Choose 3 cards in your Deck. Enchant them with Instinct.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -1913,7 +1913,7 @@
   {
     "id": "VELVET_CHOKER",
     "name": "Velvet Choker",
-    "description": "Gain 1 at the start of each turn. You cannot play more than 6 6 per turn.",
+    "description": "Gain 1 Energy at the start of each turn. You cannot play more than 6 cards per turn.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -1934,7 +1934,7 @@
   {
     "id": "VEXING_PUZZLEBOX",
     "name": "Vexing Puzzlebox",
-    "description": "At the start of each combat, add a random card into your Hand. It costs 0{energyPrefix:energyIcons(1)}.",
+    "description": "At the start of each combat, add a random card into your Hand. It costs 0 Energy.",
     "tier": "Rare",
     "color": "shared"
   },
@@ -2004,14 +2004,14 @@
   {
     "id": "WONGOS_MYSTERY_TICKET",
     "name": "Wongo's Mystery Ticket",
-    "description": "Receive 3 random 3 after 5 5.",
+    "description": "Receive 3 random Relics after 5 combats.",
     "tier": "Event",
     "color": "event"
   },
   {
     "id": "YUMMY_COOKIE",
     "name": "Yummy Cookie",
-    "description": "Upon pickup, Upgrade 4 4.",
+    "description": "Upon pickup, Upgrade 4 cards.",
     "tier": "Ancient",
     "color": "event"
   }

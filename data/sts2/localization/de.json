@@ -348,7 +348,7 @@
       "name": "Chaos"
     },
     "CHARGE": {
-      "description": "Wähle 2 Karte aus deinem Nachziehstapel, die du zu \n{IfUpgraded:show:Diener-Schlag+ transformierst.",
+      "description": "Wähle 2 Karte aus deinem Nachziehstapel, die du zu \n",
       "name": "ATTACKE!!"
     },
     "CHARGE_BATTERY": {
@@ -1078,7 +1078,7 @@
       "name": "Versteckter Schatz"
     },
     "HIDDEN_DAGGERS": {
-      "description": "Wirf 2 Karte ab.\nErhalte 2 {IfUpgraded:show:Messer+ auf deine Hand.",
+      "description": "Wirf 2 Karte ab.\nErhalte 2 ",
       "name": "Versteckte Dolche"
     },
     "HIDDEN_GEM": {
@@ -1471,7 +1471,7 @@
       "name": "Doppeltreffer"
     },
     "ORBIT": {
-      "description": "Für je 4[E], die du ausgibst,\nerhältst du [E].",
+      "description": "Für je [4 Energy], die du ausgibst,\nerhältst du [E].",
       "name": "Orbit"
     },
     "OUTBREAK": {
@@ -5660,16 +5660,6 @@
     "COLOSSAL_FLOWER": {
       "name": "Riesige Blume",
       "description": "Da ist eine riesige Blume, die auf einem Berg aus Knochen wächst.\n\nIhre farbwechselnden Blütenblätter pulsieren und du ahnst, dass in der Mitte ein Machtvoller Pollenklumpen ist, aber die wiegenden Blätter sind messerscharf und unvorhersehbar.\n\nDu könntest ein wenig von dem goldenen Nektar nehmen, aber bist verlockt, den Preis in der Mitte zu erreichen...",
-      "choices": [
-        {
-          "name": "Nektar gewinnen",
-          "description": "Erhalte {Prize1} Gold."
-        },
-        {
-          "name": "Tiefer greifen",
-          "description": "Dringe tiefer ein. Verliere 5 TP."
-        }
-      ],
       "pages": [
         {
           "description": "Da ist eine riesige Blume, die auf einem Berg aus Knochen wächst.\n\nIhre farbwechselnden Blütenblätter pulsieren und du ahnst, dass in der Mitte ein Machtvoller Pollenklumpen ist, aber die wiegenden Blätter sind messerscharf und unvorhersehbar.\n\nDu könntest ein wenig von dem goldenen Nektar nehmen, aber bist verlockt, den Preis in der Mitte zu erreichen...",
@@ -6420,6 +6410,92 @@
         }
       ]
     },
+    "NEOW": {
+      "name": "Neow",
+      "description": "Neow, die Mutter der Auferstehung, wartet am Anfang jedes Laufs. Sie bietet drei Segnungen an — zwei positive und eine verfluchte. Die Optionen werden zufällig aus den folgenden Pools gezogen.",
+      "choices": [
+        {
+          "name": "Arkane Schriftrolle",
+          "description": "Erhalte beim Aufheben eine zufällige seltene Karte für dein Deck."
+        },
+        {
+          "name": "Brausende Muschel",
+          "description": "Ziehe zu Beginn von Elite-Kämpfen 2 Karte mehr."
+        },
+        {
+          "name": "Bisamapfel",
+          "description": "Verbessere beim Aufheben eine Karte."
+        },
+        {
+          "name": "Goldene Perle",
+          "description": "Erhalte beim Aufheben 150 Gold."
+        },
+        {
+          "name": "Bleierner Briefbeschwerer",
+          "description": "Wähle beim Aufheben 1 von 2 farblosen Karten, die in dein Deck erhältst."
+        },
+        {
+          "name": "Neues Blatt",
+          "description": "Transformiere beim Aufheben 1 Karte."
+        },
+        {
+          "name": "Neows Folter",
+          "description": "Erhalte beim Aufheben 1 Neows Wut in dein Deck."
+        },
+        {
+          "name": "Präzise Schere",
+          "description": "Entferne beim Aufheben 1 Karte aus deinem Deck."
+        },
+        {
+          "name": "Verlorene Truhe",
+          "description": "Erhalte beim Aufheben 1 Kartenbelohnung und beschaffe 1 zufälligen Trank."
+        },
+        {
+          "name": "Nahrhafte Auster",
+          "description": "Erhöhe beim Aufheben deine max. TP um 11."
+        },
+        {
+          "name": "Steinerner Luftbefeuchter",
+          "description": "Immer wenn du dich an einem Lagerfeuer ausruhst, erhöhe deine max. TP um 5."
+        },
+        {
+          "name": "Lavastein",
+          "description": "Der Akt-1-Boss hinterlässt 2 Relikte."
+        },
+        {
+          "name": "Kleine Kapsel",
+          "description": "Erhalte beim Aufheben ein zufälliges Relikt."
+        },
+        {
+          "name": "Wuchtige Schriftrolle",
+          "description": "Wähle beim Aufheben 1 von 3 farblosen Mehrspieler-Karten, die du deinem Deck hinzufügst."
+        },
+        {
+          "name": "Verfluchte Perle",
+          "description": "Erhalte beim Aufheben Gier. Erhalte 333 Gold."
+        },
+        {
+          "name": "Große Kapsel",
+          "description": "Erhalte beim Aufheben 2 zufälliges Relikt. Erhalte einen zusätzlichen Schlag und Verteidigen in dein Deck."
+        },
+        {
+          "name": "Blätterwickel",
+          "description": "Transformiere beim Aufheben 1 deiner Schläge und 1 deiner Verteidigen und verliere 10 max. TP."
+        },
+        {
+          "name": "Heikle Schere",
+          "description": "Entferne beim Aufheben 2 Karte aus deinem Deck und nimm 13 Schaden."
+        },
+        {
+          "name": "Kisten mit Schriftrollen",
+          "description": "Verliere beim Aufheben alles Gold und wähle 1 von 2 Kartenpaketen, das du deinem Deck hinzufügst."
+        },
+        {
+          "name": "Silbertiegel",
+          "description": "Die ersten 3 Kartenbelohnungen, die du siehst, sind verbessert. Die erste Schatztruhe, die du öffnest, ist leer."
+        }
+      ]
+    },
     "PAEL": {
       "description": "Pael, der Schmelzende Drache, bietet dir drei Reliktoptionen aus verdrehten Pools aus Fleisch, Flügeln und Augen an. Bei jeder Begegnung erscheint je ein Relikt aus Pool 1, Pool 2 und Pool 3; zusätzliche Optionen können auftauchen, wenn dein Deck oder deine Begleiter Paels seltsame Bedingungen erfüllen.",
       "epithet": "Schmelzender Drache"
@@ -6484,7 +6560,7 @@
   },
   "enchantments": {
     "ADROIT": {
-      "description": "Erhalte {Block:diff()} Block.",
+      "description": "Erhalte X Block.",
       "name": "Gewandt"
     },
     "CLONE": {
@@ -6523,11 +6599,11 @@
       "name": "Test kostenlose Verzauberung"
     },
     "MOMENTUM": {
-      "description": "Erhöhe den Angriffsschaden dieser Karte für diesen Kampf um {Amount}, wenn du sie spielst.",
+      "description": "Erhöhe den Angriffsschaden dieser Karte für diesen Kampf um X, wenn du sie spielst.",
       "name": "Schwung"
     },
     "NIMBLE": {
-      "description": "Erhöhe den Block dieser Karte um {Amount}.",
+      "description": "Erhöhe den Block dieser Karte um X.",
       "name": "Geschickt"
     },
     "PERFECT_FIT": {
@@ -6539,7 +6615,7 @@
       "name": "Königliche Zusage"
     },
     "SHARP": {
-      "description": "Erhöhe den Schaden dieser Karte um {Amount}.",
+      "description": "Erhöhe den Schaden dieser Karte um X.",
       "name": "Scharf"
     },
     "SLITHER": {
@@ -6555,7 +6631,7 @@
       "name": "Seelenkraft"
     },
     "SOWN": {
-      "description": "Wenn du diese Karte zum ersten Mal in einem Kampf spielst, erhalte {Amount:energyIcons()}.",
+      "description": "Wenn du diese Karte zum ersten Mal in einem Kampf spielst, erhalte X.",
       "name": "Eingesät"
     },
     "SPIRAL": {
@@ -6567,7 +6643,7 @@
       "name": "Beständig"
     },
     "SWIFT": {
-      "description": "Wenn du diese Karte zum ersten Mal in einem Kampf spielst, ziehe {Amount} {Amount:plural:Karte|Karten}.",
+      "description": "Wenn du diese Karte zum ersten Mal in einem Kampf spielst, ziehe X X.",
       "name": "Flott"
     },
     "TEZCATARAS_EMBER": {
@@ -6575,7 +6651,7 @@
       "name": "Tezcataras Glut"
     },
     "VIGOROUS": {
-      "description": "Wenn du diese Karte zum ersten Mal in einem Kampf spielst, fügt sie {Amount} Schaden mehr zu.",
+      "description": "Wenn du diese Karte zum ersten Mal in einem Kampf spielst, fügt sie X Schaden mehr zu.",
       "name": "Kräftig"
     }
   },
