@@ -116,6 +116,7 @@ const COLORFUL_CHARACTER_LINKS = {
   Pink: { id: 'NECROBINDER', name: 'Necrobinder' },
   Orange: { id: 'REGENT', name: 'Regent' },
   Green: { id: 'SILENT', name: 'Silent' },
+  Equality: { type: 'relic', id: 'PRISMATIC_SHARD', name: 'Prismatic Shard' },
 };
 
 function parseCanonicalVars(csDir) {
@@ -221,9 +222,27 @@ function stripBBCode(text) {
 
 function substituteVars(text, vars) {
   if (!text || !vars) return text;
-  return text.replace(/\{([^}]+)\}/g, (match, varName) => {
-    if (Object.prototype.hasOwnProperty.call(vars, varName)) {
-      return String(vars[varName]);
+  return text.replace(/\{([^}]+)\}/g, (match, expr) => {
+    // Handle {VarName:plural:singular|plural} syntax
+    const pluralMatch = expr.match(/^(\w+):plural:([^|]+)\|(.+)$/);
+    if (pluralMatch) {
+      const [, varName, singular, plural] = pluralMatch;
+      if (Object.prototype.hasOwnProperty.call(vars, varName)) {
+        const val = vars[varName];
+        return val === 1 ? singular : plural;
+      }
+      return match;
+    }
+    // Handle {VarName:diff()} — just use the value
+    const diffMatch = expr.match(/^(\w+):diff\(\)$/);
+    if (diffMatch) {
+      const varName = diffMatch[1];
+      if (Object.prototype.hasOwnProperty.call(vars, varName)) return String(vars[varName]);
+      return match;
+    }
+    // Simple {VarName}
+    if (Object.prototype.hasOwnProperty.call(vars, expr)) {
+      return String(vars[expr]);
     }
     return match;
   });
@@ -390,15 +409,16 @@ function applyManualFixes(events) {
 
     if (event.id === 'COLORFUL_PHILOSOPHERS') {
       event.choices = (event.choices || [])
-        .filter(choice => !/prismatic shard/i.test(choice.name) && !/prismatic shard/i.test(choice.description || ''))
         .map(choice => {
           const link = COLORFUL_CHARACTER_LINKS[choice.name];
-          if (!link) return choice;
-          const references = dedupeReferences([
-            ...(choice.references || []),
-            { type: 'character', id: link.id, name: link.name },
-          ]);
-          return { ...choice, references };
+          if (link) {
+            const references = dedupeReferences([
+              ...(choice.references || []),
+              { type: link.type || 'character', id: link.id, name: link.name },
+            ]);
+            return { ...choice, references };
+          }
+          return choice;
         });
     }
 

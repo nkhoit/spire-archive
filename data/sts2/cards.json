@@ -31,7 +31,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "Poison is triggered {Accelerant:diff()} additional {Accelerant:plural:time|times}.",
+    "description": "Poison is triggered 1 additional 1.",
     "image_url": "/images/sts2/cards/accelerant.png"
   },
   {
@@ -88,7 +88,7 @@
     "upgrade": {
       "damage": 5
     },
-    "description": "Deal 18 damage.\nAdd a 0{energyPrefix:energyIcons(1)} copy of this card into your Discard Pile.",
+    "description": "Deal 18 damage.\nAdd a 0[E] copy of this card into your Discard Pile.",
     "image_url": "/images/sts2/cards/adaptive_strike.png"
   },
   {
@@ -152,7 +152,7 @@
     "upgrade": {
       "summon": 3
     },
-    "description": "Summon {Summon:diff()}.",
+    "description": "Summon 6.",
     "image_url": "/images/sts2/cards/afterlife.png"
   },
   {
@@ -231,7 +231,7 @@
     "upgrade": {
       "damage": 4
     },
-    "description": "Deal 10 damage.\nPut ALL 0{energyPrefix:energyIcons(1)} cards from your Discard Pile into your Hand.",
+    "description": "Deal 10 damage.\nPut ALL 0[E] cards from your Discard Pile into your Hand.",
     "image_url": "/images/sts2/cards/all_for_one.png"
   },
   {
@@ -262,8 +262,8 @@
     "target": "Self",
     "color": "colorless",
     "keywords": [
-      "Retain",
-      "Exhaust"
+      "Exhaust",
+      "Retain"
     ],
     "tags": [],
     "vars": {},
@@ -381,9 +381,9 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Eternal",
+      "Unplayable",
       "Ethereal",
-      "Unplayable"
+      "Eternal"
     ],
     "tags": [],
     "vars": {},
@@ -409,7 +409,7 @@
     "upgrade": {
       "extradamage": 1
     },
-    "description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for each card in your Exhaust Pile.",
+    "description": "Deal {CalculatedDamage:diff()} damage.\nDeals 3 additional damage for each card in your Exhaust Pile.",
     "image_url": "/images/sts2/cards/ashen_strike.png"
   },
   {
@@ -421,8 +421,8 @@
     "target": "AnyEnemy",
     "color": "silent",
     "keywords": [
-      "Innate",
-      "Exhaust"
+      "Exhaust",
+      "Innate"
     ],
     "tags": [],
     "vars": {
@@ -526,15 +526,15 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Eternal",
-      "Unplayable"
+      "Unplayable",
+      "Eternal"
     ],
     "tags": [],
     "vars": {
       "hp_loss": 13
     },
     "upgrade": {},
-    "description": "At the end of your turn, if this is in your Hand, lose {HpLoss:diff()} HP.",
+    "description": "At the end of your turn, if this is in your Hand, lose 13 HP.",
     "image_url": "/images/sts2/cards/bad_luck.png"
   },
   {
@@ -735,7 +735,7 @@
       "calculationbase": 2,
       "calculationextra": 2
     },
-    "description": "Deal 5 damage.\nForge {CalculatedForge:diff()}.\nForges an additional {CalculationExtra:diff()} for every other time you've hit the enemy this turn.",
+    "description": "Deal 5 damage.\nForge {CalculatedForge:diff()}.\nForges an additional 5 for every other time you've hit the enemy this turn.",
     "image_url": "/images/sts2/cards/beat_into_shape.png"
   },
   {
@@ -752,7 +752,7 @@
       "hp_loss": 6
     },
     "upgrade": {},
-    "description": "At the end of your turn, if this is in your Hand,\n lose {HpLoss} HP.",
+    "description": "At the end of your turn, if this is in your Hand,\n lose 6 HP.",
     "image_url": "/images/sts2/cards/beckon.png"
   },
   {
@@ -833,7 +833,7 @@
         "Innate"
       ]
     },
-    "description": "Draw 1 1.\nGain 1.\nGain {Stars:starIcons()}.\nForge {Forge:diff()}.",
+    "description": "Draw 1 1.\nGain 1.\nGain 1.\nForge 5.",
     "image_url": "/images/sts2/cards/big_bang.png"
   },
   {
@@ -850,7 +850,7 @@
       "power_blackhole": 3
     },
     "upgrade": {},
-    "description": "Whenever you spend or gain {singleStarIcon}, deal 3 damage to ALL enemies.",
+    "description": "Whenever you spend or gain [S], deal 3 damage to ALL enemies.",
     "image_url": "/images/sts2/cards/black_hole.png"
   },
   {
@@ -931,7 +931,7 @@
     "upgrade": {
       "block": 4
     },
-    "description": "Lose {HpLoss:diff()} HP.\nGain 16 Block.",
+    "description": "Lose 2 HP.\nGain 16 Block.",
     "image_url": "/images/sts2/cards/blood_wall.png"
   },
   {
@@ -951,7 +951,7 @@
     "upgrade": {
       "energy": 1
     },
-    "description": "Lose {HpLoss:diff()} HP.\nGain 2.",
+    "description": "Lose 3 HP.\nGain 2.",
     "image_url": "/images/sts2/cards/bloodletting.png"
   },
   {
@@ -1023,7 +1023,7 @@
     "upgrade": {
       "summon": 2
     },
-    "description": "Summon {Summon:diff()}.",
+    "description": "Summon 5.",
     "image_url": "/images/sts2/cards/bodyguard.png"
   },
   {
@@ -1085,7 +1085,7 @@
       "ostydamage": 3,
       "block": 3
     },
-    "description": "If Osty is alive, he deals {OstyDamage:diff()} damage to ALL enemies and you gain 9 Block.\nOsty dies.",
+    "description": "If Osty is alive, he deals 9 damage to ALL enemies and you gain 9 Block.\nOsty dies.",
     "image_url": "/images/sts2/cards/bone_shards.png"
   },
   {
@@ -1116,8 +1116,8 @@
     "target": "Self",
     "color": "defect",
     "keywords": [
-      "Innate",
-      "Exhaust"
+      "Exhaust",
+      "Innate"
     ],
     "tags": [],
     "vars": {
@@ -1188,7 +1188,7 @@
     "upgrade": {
       "strength": 1
     },
-    "description": "Lose {HpLoss:diff()} HP.\nExhaust 1 card.\nGain 1 Strength.",
+    "description": "Lose 1 HP.\nExhaust 1 card.\nGain 1 Strength.",
     "image_url": "/images/sts2/cards/brand.png"
   },
   {
@@ -1229,7 +1229,7 @@
     "upgrade": {
       "damage": 4
     },
-    "description": "Lose {HpLoss:diff()} HP.\nDeal 9 damage to ALL enemies.",
+    "description": "Lose 1 HP.\nDeal 9 damage to ALL enemies.",
     "image_url": "/images/sts2/cards/breakthrough.png"
   },
   {
@@ -1250,7 +1250,7 @@
       "energy": 1,
       "cards": 1
     },
-    "description": "Gain 2.\nDraw 2 2.\nLose {MaxHp:diff()} Max HP.",
+    "description": "Gain 2.\nDraw 2 2.\nLose 1 Max HP.",
     "image_url": "/images/sts2/cards/brightest_flame.png"
   },
   {
@@ -1307,7 +1307,7 @@
       "strength": 1,
       "dexterity": 1
     },
-    "description": "Lose {OrbSlots:diff()} Orb {OrbSlots:plural:Slot|Slots}.\nGain 2 Strength.\nGain 2 Dexterity.",
+    "description": "Lose 1 Orb 1.\nGain 2 Strength.\nGain 2 Dexterity.",
     "image_url": "/images/sts2/cards/bulk_up.png"
   },
   {
@@ -1341,7 +1341,7 @@
     "upgrade": {
       "extradamage": 1
     },
-    "description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for each Vulnerable on the enemy.",
+    "description": "Deal {CalculatedDamage:diff()} damage.\nDeals 2 additional damage for each Vulnerable on the enemy.",
     "image_url": "/images/sts2/cards/bully.png"
   },
   {
@@ -1361,7 +1361,7 @@
       "block": 3,
       "forge": 3
     },
-    "description": "Gain 13 Block.\nForge {Forge:diff()}.",
+    "description": "Gain 13 Block.\nForge 10.",
     "image_url": "/images/sts2/cards/bulwark.png"
   },
   {
@@ -1437,7 +1437,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "This turn, your next{IfUpgraded:show: 2} {Skills:plural:Skill is|Skills are} played an extra time.",
+    "description": "This turn, your next{IfUpgraded:show: 2} 1 played an extra time.",
     "image_url": "/images/sts2/cards/burst.png"
   },
   {
@@ -1538,8 +1538,8 @@
     "target": "Self",
     "color": "silent",
     "keywords": [
-      "Retain",
-      "Exhaust"
+      "Exhaust",
+      "Retain"
     ],
     "tags": [],
     "vars": {},
@@ -1560,8 +1560,8 @@
     "target": "Self",
     "color": "necrobinder",
     "keywords": [
-      "Innate",
-      "Ethereal"
+      "Ethereal",
+      "Innate"
     ],
     "tags": [],
     "vars": {
@@ -1756,7 +1756,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "Whenever you spend {singleStarIcon}, gain {BlockForStars:diff()} Block for each {singleStarIcon} spent.",
+    "description": "Whenever you spend [S], gain 2 Block for each [S] spent.",
     "image_url": "/images/sts2/cards/child_of_the_stars.png"
   },
   {
@@ -1836,7 +1836,7 @@
     "upgrade": {
       "damage": 1
     },
-    "description": "Deal 3 damage.\nIncrease the damage of ALL Claw cards by {Increase:diff()} this combat.",
+    "description": "Deal 3 damage.\nIncrease the damage of ALL Claw cards by 2 this combat.",
     "image_url": "/images/sts2/cards/claw.png"
   },
   {
@@ -1855,7 +1855,7 @@
     "upgrade": {
       "summon": 2
     },
-    "description": "Summon {Summon:diff()}.\nExhaust 1 card from your Draw Pile.",
+    "description": "Summon 3.\nExhaust 1 card from your Draw Pile.",
     "image_url": "/images/sts2/cards/cleanse.png"
   },
   {
@@ -1907,8 +1907,8 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Ethereal",
-      "Unplayable"
+      "Unplayable",
+      "Ethereal"
     ],
     "tags": [],
     "vars": {},
@@ -2048,7 +2048,7 @@
       "calculationbase": 1,
       "extradamage": 1
     },
-    "description": "Deal {CalculatedDamage:diff()} damage to ALL enemies.\nDeals {ExtraDamage:diff()} additional damage for each other Attack you've played this turn.",
+    "description": "Deal {CalculatedDamage:diff()} damage to ALL enemies.\nDeals 2 additional damage for each other Attack you've played this turn.",
     "image_url": "/images/sts2/cards/conflagration.png"
   },
   {
@@ -2065,7 +2065,7 @@
     "upgrade": {
       "forge": 2
     },
-    "description": "Forge {Forge:diff()}.\nSovereign Blade deals double damage to the enemy this turn.",
+    "description": "Forge 3.\nSovereign Blade deals double damage to the enemy this turn.",
     "image_url": "/images/sts2/cards/conqueror.png"
   },
   {
@@ -2106,7 +2106,7 @@
     "upgrade": {
       "stars": 1
     },
-    "description": "Next turn,\ngain 1 and {Stars:starIcons()}.\nRetain your Hand this turn.",
+    "description": "Next turn,\ngain 1 and 1.\nRetain your Hand this turn.",
     "image_url": "/images/sts2/cards/convergence.png"
   },
   {
@@ -2176,7 +2176,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "Whenever you draw a card this turn, apply {CorrosiveWave:diff()} Poison to ALL enemies.",
+    "description": "Whenever you draw a card this turn, apply 3 Poison to ALL enemies.",
     "image_url": "/images/sts2/cards/corrosive_wave.png"
   },
   {
@@ -2195,7 +2195,7 @@
     "upgrade": {
       "cost_change": -1
     },
-    "description": "Skills cost 0 {energyPrefix:energyIcons(1)}.\nWhenever you play a Skill, Exhaust it.",
+    "description": "Skills cost 0 [E].\nWhenever you play a Skill, Exhaust it.",
     "image_url": "/images/sts2/cards/corruption.png"
   },
   {
@@ -2284,7 +2284,7 @@
     "upgrade": {
       "extradamage": 1
     },
-    "description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for ALL your cards that have a {singleStarIcon} cost.",
+    "description": "Deal {CalculatedDamage:diff()} damage.\nDeals 2 additional damage for ALL your cards that have a [S] cost.",
     "image_url": "/images/sts2/cards/crescent_spear.png",
     "star_cost": 1
   },
@@ -2338,7 +2338,7 @@
     "upgrade": {
       "damage": 1
     },
-    "description": "Deal 7 damage to ALL enemies. All enemies lose {StrengthLoss:diff()} Strength this turn.",
+    "description": "Deal 7 damage to ALL enemies. All enemies lose 1 Strength this turn.",
     "image_url": "/images/sts2/cards/crush_under.png"
   },
   {
@@ -2350,8 +2350,8 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Eternal",
-      "Unplayable"
+      "Unplayable",
+      "Eternal"
     ],
     "tags": [],
     "vars": {},
@@ -2448,7 +2448,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "Enemy loses {StrengthLoss:diff()} Strength this turn.",
+    "description": "Enemy loses 9 Strength this turn.",
     "image_url": "/images/sts2/cards/dark_shackles.png"
   },
   {
@@ -2496,8 +2496,8 @@
     "target": "None",
     "color": "status",
     "keywords": [
-      "Ethereal",
-      "Unplayable"
+      "Unplayable",
+      "Ethereal"
     ],
     "tags": [],
     "vars": {},
@@ -2539,7 +2539,7 @@
       "calculationbase": 1,
       "extradamage": 1
     },
-    "description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for each card drawn during your turn.",
+    "description": "Deal {CalculatedDamage:diff()} damage.\nDeals 3 additional damage for each card drawn during your turn.",
     "image_url": "/images/sts2/cards/death_march.png"
   },
   {
@@ -2633,7 +2633,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "At the end of your turn, if this is in your Hand, lose {Gold:diff()} Gold.",
+    "description": "At the end of your turn, if this is in your Hand, lose 10 Gold.",
     "image_url": "/images/sts2/cards/debt.png"
   },
   {
@@ -2944,7 +2944,7 @@
         "Exhaust"
       ]
     },
-    "description": "Lose {HpLoss:diff()} HP.\nGive another player Block equal to your Block.{InCombat:\n(Gives {CalculatedBlock:diff()} Block)|}",
+    "description": "Lose 1 HP.\nGive another player Block equal to your Block.{InCombat:\n(Gives {CalculatedBlock:diff()} Block)|}",
     "image_url": "/images/sts2/cards/demonic_shield.png"
   },
   {
@@ -2998,7 +2998,7 @@
     "upgrade": {
       "summon": 1
     },
-    "description": "Summon {Summon:diff()} X times.\nAdd X {IfUpgraded:show:Souls+|Souls} into your Draw Pile.",
+    "description": "Summon 3 X times.\nAdd X {IfUpgraded:show:Souls+|Souls} into your Draw Pile.",
     "image_url": "/images/sts2/cards/dirge.png"
   },
   {
@@ -3019,7 +3019,7 @@
         "Exhaust"
       ]
     },
-    "description": "Choose 1 of 3 random cards to add into your Hand. It costs 0 {energyPrefix:energyIcons(1)} this turn.",
+    "description": "Choose 1 of 3 random cards to add into your Hand. It costs 0 [E] this turn.",
     "image_url": "/images/sts2/cards/discovery.png"
   },
   {
@@ -3114,7 +3114,7 @@
         "Exhaust"
       ]
     },
-    "description": "Gain {StrengthPerVulnerable:diff()} Strength for each Vulnerable on the enemy.",
+    "description": "Gain 1 Strength for each Vulnerable on the enemy.",
     "image_url": "/images/sts2/cards/dominate.png"
   },
   {
@@ -3207,8 +3207,8 @@
     "target": "Self",
     "color": "necrobinder",
     "keywords": [
-      "Retain",
-      "Exhaust"
+      "Exhaust",
+      "Retain"
     ],
     "tags": [],
     "vars": {
@@ -3298,7 +3298,7 @@
     "upgrade": {
       "damage": 2
     },
-    "description": "Deal 9 damage to ALL enemies. ALL enemies lose {StrengthLoss:diff()} Strength this turn.",
+    "description": "Deal 9 damage to ALL enemies. ALL enemies lose 9 Strength this turn.",
     "image_url": "/images/sts2/cards/dying_star.png",
     "star_cost": 3
   },
@@ -3415,7 +3415,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "Enemy loses {StrengthLoss:diff()} Strength this turn.",
+    "description": "Enemy loses 8 Strength this turn.",
     "image_url": "/images/sts2/cards/enfeebling_touch.png"
   },
   {
@@ -3624,7 +3624,7 @@
     "upgrade": {
       "cost_change": -1
     },
-    "description": "Gain {energyPrefix:energyIcons(1)} for each Attack in your Hand.{InCombat:\n(Gain {CalculatedEnergy:energyIcons()}.)|}",
+    "description": "Gain [E] for each Attack in your Hand.{InCombat:\n(Gain {CalculatedEnergy:energyIcons()}.)|}",
     "image_url": "/images/sts2/cards/expect_a_fight.png"
   },
   {
@@ -3660,7 +3660,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "Remove all Artifact and Block from the enemy.\nApply {Power:diff()} Vulnerable.",
+    "description": "Remove all Artifact and Block from the enemy.\nApply 2 Vulnerable.",
     "image_url": "/images/sts2/cards/expose.png"
   },
   {
@@ -3734,7 +3734,7 @@
     ],
     "vars": {},
     "upgrade": {},
-    "description": "Gain an additional {ExtraBlock:diff()} Block from Defend cards.",
+    "description": "Gain an additional 5 Block from Defend cards.",
     "image_url": "/images/sts2/cards/fasten.png"
   },
   {
@@ -3779,7 +3779,7 @@
       "damage": 2,
       "maxhp": 1
     },
-    "description": "Deal 10 damage.\nIf Fatal, raise your Max HP by {MaxHp:diff()}.",
+    "description": "Deal 10 damage.\nIf Fatal, raise your Max HP by 3.",
     "image_url": "/images/sts2/cards/feed.png"
   },
   {
@@ -3815,7 +3815,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "Whenever a card is Exhausted, gain {Power:diff()} Block.",
+    "description": "Whenever a card is Exhausted, gain 3 Block.",
     "image_url": "/images/sts2/cards/feel_no_pain.png"
   },
   {
@@ -3834,7 +3834,7 @@
     "upgrade": {
       "cost_change": -1
     },
-    "description": "The first 1 times} you play a\n0{energyPrefix:energyIcons(1)} Attack each turn,\nreturn it to your Hand.",
+    "description": "The first 1 times} you play a\n0[E] Attack each turn,\nreturn it to your Hand.",
     "image_url": "/images/sts2/cards/feral.png"
   },
   {
@@ -3855,7 +3855,7 @@
     "upgrade": {
       "ostydamage": 3
     },
-    "description": "Osty deals {OstyDamage:diff()} damage.\nIf this is the first time this card has been played this turn, draw 1 1.",
+    "description": "Osty deals 3 damage.\nIf this is the first time this card has been played this turn, draw 1 1.",
     "image_url": "/images/sts2/cards/fetch.png"
   },
   {
@@ -3898,7 +3898,7 @@
       "damage": 1,
       "strength": 1
     },
-    "description": "Deal 5 damage twice.\nGain 2 Strength.\nThe enemy gains {EnemyStrength:diff()} Strength.",
+    "description": "Deal 5 damage twice.\nGain 2 Strength.\nThe enemy gains 1 Strength.",
     "image_url": "/images/sts2/cards/fight_me.png"
   },
   {
@@ -4015,7 +4015,7 @@
     "upgrade": {
       "block": 4
     },
-    "description": "Gain 12 Block.\nWhenever you are attacked this turn, deal {DamageBack:diff()} damage back.",
+    "description": "Gain 12 Block.\nWhenever you are attacked this turn, deal 4 damage back.",
     "image_url": "/images/sts2/cards/flame_barrier.png"
   },
   {
@@ -4071,7 +4071,7 @@
     "upgrade": {
       "ostydamage": 4
     },
-    "description": "Osty deals {OstyDamage:diff()} damage.\nThis card costs 0 {energyPrefix:energyIcons(1)} if Osty has attacked this turn.",
+    "description": "Osty deals 12 damage.\nThis card costs 0 [E] if Osty has attacked this turn.",
     "image_url": "/images/sts2/cards/flatten.png"
   },
   {
@@ -4166,9 +4166,9 @@
     "target": "None",
     "color": "curse",
     "keywords": [
+      "Unplayable",
       "Eternal",
-      "Innate",
-      "Unplayable"
+      "Innate"
     ],
     "tags": [],
     "vars": {},
@@ -4304,7 +4304,7 @@
     "upgrade": {
       "damage": 1
     },
-    "description": "Deal 5 damage.\nIf you have played fewer than {PlayMax:diff()} cards this turn, draw 1 card.",
+    "description": "Deal 5 damage.\nIf you have played fewer than 3 cards this turn, draw 1 card.",
     "image_url": "/images/sts2/cards/ftl.png"
   },
   {
@@ -4343,7 +4343,7 @@
     "upgrade": {
       "forge": 2
     },
-    "description": "At the start of your turn, Forge {Forge:diff()}.",
+    "description": "At the start of your turn, Forge 4.",
     "image_url": "/images/sts2/cards/furnace.png"
   },
   {
@@ -4399,7 +4399,7 @@
     "upgrade": {
       "extradamage": 2
     },
-    "description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for each time another player has attacked the enemy this turn.",
+    "description": "Deal {CalculatedDamage:diff()} damage.\nDeals 5 additional damage for each time another player has attacked the enemy this turn.",
     "image_url": "/images/sts2/cards/gang_up.png"
   },
   {
@@ -4418,7 +4418,7 @@
     "upgrade": {
       "block": 3
     },
-    "description": "Gain 7 Block.\nGain {Stars:starIcons()}.",
+    "description": "Gain 7 Block.\nGain 1.",
     "image_url": "/images/sts2/cards/gather_light.png"
   },
   {
@@ -4433,7 +4433,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "At the start of your turn, gain {StarsPerTurn:starIcons()}.",
+    "description": "At the start of your turn, gain 2.",
     "image_url": "/images/sts2/cards/genesis.png"
   },
   {
@@ -4450,7 +4450,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "Gain {Block:diff()} Block.\nPermanently increase this card's Block by {Increase:diff()}.",
+    "description": "Gain {Block:diff()} Block.\nPermanently increase this card's Block by 3.",
     "image_url": "/images/sts2/cards/genetic_algorithm.png"
   },
   {
@@ -4526,7 +4526,7 @@
     "upgrade": {
       "cards": 1
     },
-    "description": "Draw 3 3.\nPut {PutBack:diff()} {PutBack:plural:card|cards} from your Hand on top of your Draw Pile.",
+    "description": "Draw 3 3.\nPut 1 1 from your Hand on top of your Draw Pile.",
     "image_url": "/images/sts2/cards/glimmer.png"
   },
   {
@@ -4585,7 +4585,7 @@
     "upgrade": {
       "stars": 1
     },
-    "description": "Gain {Stars:starIcons()}.\nDraw 2 2.",
+    "description": "Gain 1.\nDraw 2 2.",
     "image_url": "/images/sts2/cards/glow.png"
   },
   {
@@ -4722,8 +4722,8 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Eternal",
-      "Unplayable"
+      "Unplayable",
+      "Eternal"
     ],
     "tags": [],
     "vars": {},
@@ -4784,7 +4784,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "Removed from your Deck after {Combats:diff()} {Combats:plural:combat|combats}.",
+    "description": "Removed from your Deck after 5 5.",
     "image_url": "/images/sts2/cards/guilty.png"
   },
   {
@@ -4857,7 +4857,7 @@
     "upgrade": {
       "damage": 5
     },
-    "description": "Deal 20 damage.\nIf Fatal, gain {Gold:diff()} Gold.",
+    "description": "Deal 20 damage.\nIf Fatal, gain 20 Gold.",
     "image_url": "/images/sts2/cards/hand_of_greed.png"
   },
   {
@@ -4916,7 +4916,7 @@
     "upgrade": {
       "hploss": 2
     },
-    "description": "Whenever you play a Soul, a random enemy loses {HpLoss:diff()} HP.",
+    "description": "Whenever you play a Soul, a random enemy loses 6 HP.",
     "image_url": "/images/sts2/cards/haunt.png"
   },
   {
@@ -5055,7 +5055,7 @@
     "upgrade": {
       "damage": 2
     },
-    "description": "Deal 3 damage for each {energyPrefix:energyIcons(1)} previously spent this turn.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}",
+    "description": "Deal 3 damage for each [E] previously spent this turn.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}",
     "image_url": "/images/sts2/cards/helix_drill.png"
   },
   {
@@ -5093,7 +5093,7 @@
     "upgrade": {
       "cost_change": -1
     },
-    "description": "Whenever you draw a card containing \u201cStrike\u201d, it is played against a random enemy.",
+    "description": "Whenever you draw a card containing “Strike”, it is played against a random enemy.",
     "image_url": "/images/sts2/cards/hellraiser.png"
   },
   {
@@ -5113,7 +5113,7 @@
     "upgrade": {
       "damage": 5
     },
-    "description": "Lose {HpLoss:diff()} HP.\nDeal 14 damage.",
+    "description": "Lose 2 HP.\nDeal 14 damage.",
     "image_url": "/images/sts2/cards/hemokinesis.png"
   },
   {
@@ -5130,7 +5130,7 @@
       "power_starnextturn": 3
     },
     "upgrade": {},
-    "description": "Gain {Stars:starIcons()}.\nNext turn, gain 3.",
+    "description": "Gain 1.\nNext turn, gain 3.",
     "image_url": "/images/sts2/cards/hidden_cache.png"
   },
   {
@@ -5147,7 +5147,7 @@
       "cards": 2
     },
     "upgrade": {},
-    "description": "Discard 2 2.\nAdd {Shivs:diff()} 2|{IfUpgraded:show:Shivs+|Shivs}} into your Hand.",
+    "description": "Discard 2 2.\nAdd 2 2|{IfUpgraded:show:Shivs+|Shivs}} into your Hand.",
     "image_url": "/images/sts2/cards/hidden_daggers.png"
   },
   {
@@ -5164,7 +5164,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "A random card in your Draw Pile gains Replay {Replay:diff()}.",
+    "description": "A random card in your Draw Pile gains Replay 2.",
     "image_url": "/images/sts2/cards/hidden_gem.png"
   },
   {
@@ -5186,7 +5186,7 @@
       "ostydamage": 2,
       "vulnerable": 1
     },
-    "description": "Osty deals {OstyDamage:diff()} damage\nand applies 2 Vulnerable\nto ALL enemies.",
+    "description": "Osty deals 11 damage\nand applies 2 Vulnerable\nto ALL enemies.",
     "image_url": "/images/sts2/cards/high_five.png"
   },
   {
@@ -5536,7 +5536,7 @@
       "summon": 1,
       "energy": 1
     },
-    "description": "Next turn, Summon {Summon:diff()} and gain 2.",
+    "description": "Next turn, Summon 2 and gain 2.",
     "image_url": "/images/sts2/cards/invoke.png"
   },
   {
@@ -5615,7 +5615,7 @@
     "upgrade": {
       "damage": 5
     },
-    "description": "Deal 25 damage.\nAdd 3 random{IfUpgraded:show: Upgraded} 0{energyPrefix:energyIcons(1)} 3 into your Hand.",
+    "description": "Deal 25 damage.\nAdd 3 random{IfUpgraded:show: Upgraded} 0[E] 3 into your Hand.",
     "image_url": "/images/sts2/cards/jackpot.png"
   },
   {
@@ -5689,7 +5689,7 @@
       "damage": 8
     },
     "upgrade": {},
-    "description": "Deal 8 damage.\nWhenever you draw this card, increase its damage by {Increase:diff()} this combat.",
+    "description": "Deal 8 damage.\nWhenever you draw this card, increase its damage by 3 this combat.",
     "image_url": "/images/sts2/cards/kingly_punch.png"
   },
   {
@@ -5745,7 +5745,7 @@
     "upgrade": {
       "damage": 8
     },
-    "description": "Deal 30 damage.\nIf this kills an enemy, gain {Stars:starIcons()}.",
+    "description": "Deal 30 damage.\nIf this kills an enemy, gain 5.",
     "image_url": "/images/sts2/cards/knockout_blow.png"
   },
   {
@@ -5881,7 +5881,7 @@
     "upgrade": {
       "summon": 2
     },
-    "description": "ALL players Summon {Summon:diff()}.",
+    "description": "ALL players Summon 6.",
     "image_url": "/images/sts2/cards/legion_of_bone.png"
   },
   {
@@ -5966,8 +5966,8 @@
     "target": "Self",
     "color": "token",
     "keywords": [
-      "Retain",
-      "Exhaust"
+      "Exhaust",
+      "Retain"
     ],
     "tags": [],
     "vars": {
@@ -6042,7 +6042,7 @@
         "Innate"
       ]
     },
-    "description": "{CardType:choose(Attack|Skill|Power):Deal {Damage:diff()} damage{Violence: {ViolenceHits:diff()} times|}.|Gain 8 Block.|}{HasRider:{Sapping:\nApply {SappingWeak:diff()} Weak.\nApply {SappingVulnerable:diff()} Vulnerable.|}{Choking:\nWhenever you play a card this turn, the enemy loses {ChokingDamage:diff()} HP.|}{Energized:\nGain {EnergizedEnergy:energyIcons()}.|}{Wisdom:\nDraw {WisdomCards:diff()} cards.|}{Chaos:\nAdd a random card into your Hand. It costs 0 {energyPrefix:energyIcons(1)} this turn.|}{Expertise:Gain {ExpertiseStrength:diff()} Strength.\nGain {ExpertiseDexterity:diff()} Dexterity.|}{Curious:Powers cost {CuriousReduction:diff()} {energyPrefix:energyIcons(1)} less.|}{Improvement:At the end of combat, Upgrade a random card.|}|{CardType:choose(Attack|Skill|Power):\n???|\n???|???}}",
+    "description": "{CardType:choose(Attack|Skill|Power):Deal {Damage:diff()} damage{Violence: {ViolenceHits:diff()} times|}.|Gain 8 Block.|}{HasRider:{Sapping:\nApply {SappingWeak:diff()} Weak.\nApply {SappingVulnerable:diff()} Vulnerable.|}{Choking:\nWhenever you play a card this turn, the enemy loses {ChokingDamage:diff()} HP.|}{Energized:\nGain {EnergizedEnergy:energyIcons()}.|}{Wisdom:\nDraw {WisdomCards:diff()} cards.|}{Chaos:\nAdd a random card into your Hand. It costs 0 [E] this turn.|}{Expertise:Gain {ExpertiseStrength:diff()} Strength.\nGain {ExpertiseDexterity:diff()} Dexterity.|}{Curious:Powers cost {CuriousReduction:diff()} [E] less.|}{Improvement:At the end of combat, Upgrade a random card.|}|{CardType:choose(Attack|Skill|Power):\n???|\n???|???}}",
     "image_url": "/images/sts2/cards/mad_science.png"
   },
   {
@@ -6098,7 +6098,7 @@
     "upgrade": {
       "damage": 5
     },
-    "description": "Deal 15 damage.\nEnemy loses {StrengthLoss:diff()} Strength this turn.",
+    "description": "Deal 15 damage.\nEnemy loses 10 Strength this turn.",
     "image_url": "/images/sts2/cards/mangle.png"
   },
   {
@@ -6176,7 +6176,7 @@
     "upgrade": {
       "damage": 1
     },
-    "description": "Deal 5 damage twice.\nIncrease the damage of ALL Maul cards by {Increase:diff()} this combat.",
+    "description": "Deal 5 damage twice.\nIncrease the damage of ALL Maul cards by 1 this combat.",
     "image_url": "/images/sts2/cards/maul.png"
   },
   {
@@ -6231,7 +6231,7 @@
       "calculationbase": 2,
       "extradamage": 1
     },
-    "description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for each card discarded this turn.",
+    "description": "Deal {CalculatedDamage:diff()} damage.\nDeals 4 additional damage for each card discarded this turn.",
     "image_url": "/images/sts2/cards/memento_mori.png"
   },
   {
@@ -6413,8 +6413,8 @@
       "Exhaust"
     ],
     "tags": [
-      "Strike",
-      "Minion"
+      "Minion",
+      "Strike"
     ],
     "vars": {
       "damage": 7,
@@ -6528,7 +6528,7 @@
     "upgrade": {
       "damage": 3
     },
-    "description": "Deal 10 damage.\nReduce this card's cost to 0 {energyPrefix:energyIcons(1)}.",
+    "description": "Deal 10 damage.\nReduce this card's cost to 0 [E].",
     "image_url": "/images/sts2/cards/momentum_strike.png"
   },
   {
@@ -6545,7 +6545,7 @@
     "upgrade": {
       "cost_change": -1
     },
-    "description": "Whenever you attack an enemy, it loses {StrengthLoss:diff()} Strength this turn.",
+    "description": "Whenever you attack an enemy, it loses 1 Strength this turn.",
     "image_url": "/images/sts2/cards/monarchs_gaze.png"
   },
   {
@@ -6566,7 +6566,7 @@
         "Retain"
       ]
     },
-    "description": "Whenever you play a card this turn, gain {Power:diff()} Strength this turn.",
+    "description": "Whenever you play a card this turn, gain 1 Strength this turn.",
     "image_url": "/images/sts2/cards/monologue.png"
   },
   {
@@ -6598,7 +6598,7 @@
     "upgrade": {
       "cost_change": -1
     },
-    "description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for each card drawn this combat.",
+    "description": "Deal {CalculatedDamage:diff()} damage.\nDeals 1 additional damage for each card drawn this combat.",
     "image_url": "/images/sts2/cards/murder.png"
   },
   {
@@ -6615,7 +6615,7 @@
     "upgrade": {
       "summon": 3
     },
-    "description": "Summon {Summon:diff()}.\nWhenever Osty loses HP,\nALL enemies lose that much HP as well.",
+    "description": "Summon 5.\nWhenever Osty loses HP,\nALL enemies lose that much HP as well.",
     "image_url": "/images/sts2/cards/necro_mastery.png"
   },
   {
@@ -6754,7 +6754,7 @@
     "upgrade": {
       "calculationbase": 5
     },
-    "description": "Apply {CalculationBase:diff()} Doom, plus an additional {CalculationExtra:diff()} Doom for every {DoomThreshold:diff()} Doom already on this enemy.{IsTargeting:\n(Apply {CalculatedDoom:diff()} Doom)|}",
+    "description": "Apply 10 Doom, plus an additional 5 Doom for every 10 Doom already on this enemy.{IsTargeting:\n(Apply {CalculatedDoom:diff()} Doom)|}",
     "image_url": "/images/sts2/cards/no_escape.png"
   },
   {
@@ -6803,7 +6803,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "At the start of your turn, apply {PoisonPerTurn:diff()} Poison to ALL enemies.",
+    "description": "At the start of your turn, apply 2 Poison to ALL enemies.",
     "image_url": "/images/sts2/cards/noxious_fumes.png"
   },
   {
@@ -6866,7 +6866,7 @@
     "upgrade": {
       "cards": 2
     },
-    "description": "Lose {HpLoss:diff()} HP.\nGain 2.\nDraw 3 cards.",
+    "description": "Lose 6 HP.\nGain 2.\nDraw 3 cards.",
     "image_url": "/images/sts2/cards/offering.png"
   },
   {
@@ -6900,7 +6900,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "This turn, your next {Attacks:cond:>1?{Attacks:diff()} Attacks are|Attack is} played an extra time.",
+    "description": "This turn, your next 1 Attacks are|Attack is} played an extra time.",
     "image_url": "/images/sts2/cards/one_two_punch.png"
   },
   {
@@ -6919,7 +6919,7 @@
     "upgrade": {
       "cost_change": -1
     },
-    "description": "Every {energyPrefix:energyIcons(4)} you spend,\ngain 1.",
+    "description": "Every [4 Energy] you spend,\ngain 1.",
     "image_url": "/images/sts2/cards/orbit.png"
   },
   {
@@ -7035,7 +7035,7 @@
     "upgrade": {
       "cards": 1
     },
-    "description": "If you play {CardPlay} or more cards in a turn, draw 1 1 at the start of your next turn.",
+    "description": "If you play 5 or more cards in a turn, draw 1 1 at the start of your next turn.",
     "image_url": "/images/sts2/cards/pale_blue_dot.png"
   },
   {
@@ -7050,7 +7050,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "Every time you play 5 cards in a single turn, deal {PanacheDamage:diff()} damage to ALL enemies.",
+    "description": "Every time you play 5 cards in a single turn, deal 10 damage to ALL enemies.",
     "image_url": "/images/sts2/cards/panache.png"
   },
   {
@@ -7071,7 +7071,7 @@
     "upgrade": {
       "block": 10
     },
-    "description": "Gain 30 Block.\nYou cannot gain Block from cards for {Turns:diff()} {Turns:plural:turn|turns}.",
+    "description": "Gain 30 Block.\nYou cannot gain Block from cards for 2 2.",
     "image_url": "/images/sts2/cards/panic_button.png"
   },
   {
@@ -7188,7 +7188,7 @@
     "upgrade": {
       "extradamage": 1
     },
-    "description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for ALL your cards containing \u201cStrike\u201d.",
+    "description": "Deal {CalculatedDamage:diff()} damage.\nDeals 2 additional damage for ALL your cards containing “Strike”.",
     "image_url": "/images/sts2/cards/perfected_strike.png"
   },
   {
@@ -7245,7 +7245,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "ALL enemies lose {StrengthLoss:diff()} Strength this turn.",
+    "description": "ALL enemies lose 6 Strength this turn.",
     "image_url": "/images/sts2/cards/piercing_wail.png"
   },
   {
@@ -7302,7 +7302,7 @@
     "upgrade": {
       "damage": 5
     },
-    "description": "Deal 17 damage.\nCosts 1 less {energyPrefix:energyIcons(1)} for each Skill played this turn.",
+    "description": "Deal 17 damage.\nCosts 1 less [E] for each Skill played this turn.",
     "image_url": "/images/sts2/cards/pinpoint.png"
   },
   {
@@ -7342,7 +7342,7 @@
     "upgrade": {
       "ostydamage": 3
     },
-    "description": "Osty deals {OstyDamage:diff()} damage.",
+    "description": "Osty deals 6 damage.",
     "image_url": "/images/sts2/cards/poke.png"
   },
   {
@@ -7377,8 +7377,8 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Retain",
-      "Unplayable"
+      "Unplayable",
+      "Retain"
     ],
     "tags": [],
     "vars": {},
@@ -7402,7 +7402,7 @@
     "upgrade": {
       "damage": 6
     },
-    "description": "Deal 12 damage.\nThe next Skill you play costs 0 {energyPrefix:energyIcons(1)}.",
+    "description": "Deal 12 damage.\nThe next Skill you play costs 0 [E].",
     "image_url": "/images/sts2/cards/pounce.png"
   },
   {
@@ -7419,7 +7419,7 @@
     "upgrade": {
       "calculationbase": 3
     },
-    "description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:inverseDiff()} less damage for each other card in your Hand.",
+    "description": "Deal {CalculatedDamage:diff()} damage.\nDeals 2 less damage for each other card in your Hand.",
     "image_url": "/images/sts2/cards/precise_cut.png"
   },
   {
@@ -7613,7 +7613,7 @@
       "summon": 1,
       "block": 2
     },
-    "description": "Summon {Summon:diff()}.\nGain 7 Block.",
+    "description": "Summon 4.\nGain 7 Block.",
     "image_url": "/images/sts2/cards/pull_aggro.png"
   },
   {
@@ -7646,8 +7646,8 @@
     "target": "Self",
     "color": "colorless",
     "keywords": [
-      "Retain",
-      "Exhaust"
+      "Exhaust",
+      "Retain"
     ],
     "tags": [],
     "vars": {
@@ -7673,7 +7673,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "Apply {Power:diff()} Weak.\nApply {Power:diff()} Vulnerable.",
+    "description": "Apply 2 Weak.\nApply 2 Vulnerable.",
     "image_url": "/images/sts2/cards/putrefy.png"
   },
   {
@@ -7746,7 +7746,7 @@
     "upgrade": {
       "damage": 1
     },
-    "description": "Deal 3 damage to ALL enemies for each {Stars:starIcons()} gained this turn.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}",
+    "description": "Deal 3 damage to ALL enemies for each 1 gained this turn.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}",
     "image_url": "/images/sts2/cards/radiate.png"
   },
   {
@@ -7761,7 +7761,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "Whenever you play an Attack this turn, gain {Power:diff()} Block.",
+    "description": "Whenever you play an Attack this turn, gain 3 Block.",
     "image_url": "/images/sts2/cards/rage.png"
   },
   {
@@ -7818,7 +7818,7 @@
       "damage": 9
     },
     "upgrade": {},
-    "description": "Deal 9 damage.\nIncrease this card's damage by {Increase:diff()} this combat.",
+    "description": "Deal 9 damage.\nIncrease this card's damage by 5 this combat.",
     "image_url": "/images/sts2/cards/rampage.png"
   },
   {
@@ -7837,7 +7837,7 @@
     "upgrade": {
       "ostydamage": 2
     },
-    "description": "Osty deals {OstyDamage:diff()} damage.\nHits an additional time for each other time he has attacked this turn.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}",
+    "description": "Osty deals 7 damage.\nHits an additional time for each other time he has attacked this turn.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}",
     "image_url": "/images/sts2/cards/rattle.png"
   },
   {
@@ -7856,7 +7856,7 @@
     "upgrade": {
       "summon": 5
     },
-    "description": "Summon {Summon:diff()}.",
+    "description": "Summon 20.",
     "image_url": "/images/sts2/cards/reanimate.png"
   },
   {
@@ -7977,7 +7977,7 @@
     "upgrade": {
       "forge": 4
     },
-    "description": "Forge {Forge:diff()}.\nNext turn, gain 1.",
+    "description": "Forge 6.\nNext turn, gain 1.",
     "image_url": "/images/sts2/cards/refine_blade.png"
   },
   {
@@ -8098,7 +8098,7 @@
       "extradamage": 3,
       "calculationbase": 3
     },
-    "description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for each unique debuff on the enemy.",
+    "description": "Deal {CalculatedDamage:diff()} damage.\nDeals 5 additional damage for each unique debuff on the enemy.",
     "image_url": "/images/sts2/cards/rend.png"
   },
   {
@@ -8182,7 +8182,7 @@
     "upgrade": {
       "ostydamage": 2
     },
-    "description": "Osty deals {OstyDamage:diff()} damage.\nWhenever you play a card that costs 2 or more, return this to your Hand from the Discard Pile.",
+    "description": "Osty deals 4 damage.\nWhenever you play a card that costs 2 or more, return this to your Hand from the Discard Pile.",
     "image_url": "/images/sts2/cards/right_hand_hand.png"
   },
   {
@@ -8222,7 +8222,7 @@
       "damage": 1,
       "cards": 1
     },
-    "description": "Deal 13 damage.\nDraw 1 1.\nWhen a Status card is created, reduce this card's cost to 0 {energyPrefix:energyIcons(1)} this turn.",
+    "description": "Deal 13 damage.\nDraw 1 1.\nWhen a Status card is created, reduce this card's cost to 0 [E] this turn.",
     "image_url": "/images/sts2/cards/rocket_punch.png"
   },
   {
@@ -8239,7 +8239,7 @@
       "power_rollingboulder": 5
     },
     "upgrade": {},
-    "description": "At the start of your turn, deal 5 damage to ALL enemies and increase this damage by {IncrementAmount:diff()}.",
+    "description": "At the start of your turn, deal 5 damage to ALL enemies and increase this damage by 5.",
     "image_url": "/images/sts2/cards/rolling_boulder.png"
   },
   {
@@ -8251,8 +8251,8 @@
     "target": "Self",
     "color": "regent",
     "keywords": [
-      "Retain",
-      "Exhaust"
+      "Exhaust",
+      "Retain"
     ],
     "tags": [],
     "vars": {},
@@ -8261,7 +8261,7 @@
         "Retain"
       ]
     },
-    "description": "Gain {Stars:diff()} {singleStarIcon}.",
+    "description": "Gain 9 [S].",
     "image_url": "/images/sts2/cards/royal_gamble.png",
     "star_cost": 5
   },
@@ -8279,7 +8279,7 @@
     "upgrade": {
       "gold": 5
     },
-    "description": "At the end of combat, gain {Gold:diff()} Gold.",
+    "description": "At the end of combat, gain 30 Gold.",
     "image_url": "/images/sts2/cards/royalties.png"
   },
   {
@@ -8401,7 +8401,7 @@
       "damage": 3,
       "cards": 1
     },
-    "description": "Deal 7 damage.\nDraw 4 cards.\nDiscard all cards drawn this way that do not cost 0 {energyPrefix:energyIcons(1)}.",
+    "description": "Deal 7 damage.\nDraw 4 cards.\nDiscard all cards drawn this way that do not cost 0 [E].",
     "image_url": "/images/sts2/cards/scrape.png"
   },
   {
@@ -8413,8 +8413,8 @@
     "target": "Self",
     "color": "colorless",
     "keywords": [
-      "Retain",
-      "Exhaust"
+      "Exhaust",
+      "Retain"
     ],
     "tags": [],
     "vars": {},
@@ -8567,7 +8567,7 @@
     "upgrade": {
       "forge": 4
     },
-    "description": "Forge {Forge:diff()}.\nSovereign Blade now deals damage to ALL enemies.",
+    "description": "Forge 7.\nSovereign Blade now deals damage to ALL enemies.",
     "image_url": "/images/sts2/cards/seeking_edge.png"
   },
   {
@@ -8738,7 +8738,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "At the end of your turn, if this is in your Hand, gain {Frail:diff()} Frail.",
+    "description": "At the end of your turn, if this is in your Hand, gain 1 Frail.",
     "image_url": "/images/sts2/cards/shame.png"
   },
   {
@@ -8755,7 +8755,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "Lose {PlayerStrengthLoss:diff()} Strength.\nEnemy loses {EnemyStrengthLoss:diff()} Strength.",
+    "description": "Lose 2 Strength.\nEnemy loses 2 Strength.",
     "image_url": "/images/sts2/cards/shared_fate.png"
   },
   {
@@ -8797,7 +8797,7 @@
     "upgrade": {
       "damage": 3
     },
-    "description": "Deal 8 damage.\nGain {Stars:starIcons()}.\nPut this card on top of your Draw Pile.",
+    "description": "Deal 8 damage.\nGain 2.\nPut this card on top of your Draw Pile.",
     "image_url": "/images/sts2/cards/shining_strike.png"
   },
   {
@@ -8837,7 +8837,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "Apply {Power:diff()} Weak and Vulnerable to ALL enemies.",
+    "description": "Apply 3 Weak and Vulnerable to ALL enemies.",
     "image_url": "/images/sts2/cards/shockwave.png"
   },
   {
@@ -8897,7 +8897,7 @@
     "upgrade": {
       "ostydamage": 1
     },
-    "description": "Osty deals {OstyDamage:diff()} damage.\nWhenever Osty hits this enemy this turn, Summon 2.",
+    "description": "Osty deals 5 damage.\nWhenever Osty hits this enemy this turn, Summon 2.",
     "image_url": "/images/sts2/cards/sic_em.png"
   },
   {
@@ -9087,7 +9087,7 @@
     "upgrade": {
       "ostydamage": 3
     },
-    "description": "Osty deals {OstyDamage:diff()} damage.\nAdd Retain to a card in your Hand.",
+    "description": "Osty deals 7 damage.\nAdd Retain to a card in your Hand.",
     "image_url": "/images/sts2/cards/snap.png"
   },
   {
@@ -9128,7 +9128,7 @@
       "damage": 1,
       "stars": 1
     },
-    "description": "Deal 8 damage.\nGain {Stars:starIcons()}.",
+    "description": "Deal 8 damage.\nGain 1.",
     "image_url": "/images/sts2/cards/solar_strike.png"
   },
   {
@@ -9183,7 +9183,7 @@
     "upgrade": {
       "extradamage": 1
     },
-    "description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for each Soul in your Exhaust Pile.",
+    "description": "Deal {CalculatedDamage:diff()} damage.\nDeals 2 additional damage for each Soul in your Exhaust Pile.",
     "image_url": "/images/sts2/cards/soul_storm.png"
   },
   {
@@ -9296,7 +9296,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "Whenever you play an Ethereal card, gain {BlockOnExhaust:diff()} Block.",
+    "description": "Whenever you play an Ethereal card, gain 4 Block.",
     "image_url": "/images/sts2/cards/spirit_of_ash.png"
   },
   {
@@ -9348,7 +9348,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "Marks a site of {Gold:diff()} extra Gold in the next Act.",
+    "description": "Marks a site of 600 extra Gold in the next Act.",
     "image_url": "/images/sts2/cards/spoils_map.png"
   },
   {
@@ -9365,7 +9365,7 @@
     "upgrade": {
       "forge": 5
     },
-    "description": "Forge {Forge:diff()}.",
+    "description": "Forge 10.",
     "image_url": "/images/sts2/cards/spoils_of_battle.png"
   },
   {
@@ -9404,7 +9404,7 @@
       "summon": 2,
       "heal": 2
     },
-    "description": "Summon {Summon:diff()}.\nOsty heals 5 HP.",
+    "description": "Summon 3.\nOsty heals 5 HP.",
     "image_url": "/images/sts2/cards/spur.png"
   },
   {
@@ -9445,7 +9445,7 @@
       "calculationbase": 5,
       "extradamage": 1
     },
-    "description": "Osty deals {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for ALL your other Osty Attacks.",
+    "description": "Osty deals {CalculatedDamage:diff()} damage.\nDeals 5 additional damage for ALL your other Osty Attacks.",
     "image_url": "/images/sts2/cards/squeeze.png"
   },
   {
@@ -9479,7 +9479,7 @@
     "upgrade": {
       "cost_change": -1
     },
-    "description": "At the end of your turn, {Power:diff()} random {Power:plural:Attack in your Hand is played against a random enemy.|Attacks in your Hand are played against random enemies.}",
+    "description": "At the end of your turn, 1 random 1",
     "image_url": "/images/sts2/cards/stampede.png"
   },
   {
@@ -9536,7 +9536,7 @@
     "upgrade": {
       "damage": 3
     },
-    "description": "Deal 12 damage to ALL enemies.\nCosts 1 less {energyPrefix:energyIcons(1)} for each Attack played this turn.",
+    "description": "Deal 12 damage to ALL enemies.\nCosts 1 less [E] for each Attack played this turn.",
     "image_url": "/images/sts2/cards/stomp.png"
   },
   {
@@ -9744,7 +9744,7 @@
     "upgrade": {
       "cost_change": -1
     },
-    "description": "Whenever you play a Power, gain {energyPrefix:energyIcons(1)}.",
+    "description": "Whenever you play a Power, gain [E].",
     "image_url": "/images/sts2/cards/subroutine.png"
   },
   {
@@ -9784,7 +9784,7 @@
     "upgrade": {
       "forge": 3
     },
-    "description": "Forge {Forge:diff()}.\nPut Sovereign Blade into your Hand from anywhere.",
+    "description": "Forge 8.\nPut Sovereign Blade into your Hand from anywhere.",
     "image_url": "/images/sts2/cards/summon_forth.png"
   },
   {
@@ -9842,7 +9842,7 @@
     "upgrade": {
       "extradamage": 1
     },
-    "description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for each card you created this combat.",
+    "description": "Deal {CalculatedDamage:diff()} damage.\nDeals 3 additional damage for each card you created this combat.",
     "image_url": "/images/sts2/cards/supermassive.png"
   },
   {
@@ -9926,7 +9926,7 @@
     "upgrade": {
       "ostydamage": 5
     },
-    "description": "Osty deals {OstyDamage:diff()} damage to a random enemy.",
+    "description": "Osty deals 10 damage to a random enemy.",
     "image_url": "/images/sts2/cards/sweeping_gaze.png"
   },
   {
@@ -9986,7 +9986,7 @@
         "Exhaust"
       ]
     },
-    "description": "Gain {CalculationExtra:diff()} Focus this turn for each unique Orb you have.{InCombat:\n(Gain {CalculatedFocus:diff()} Focus)|}",
+    "description": "Gain 2 Focus this turn for each unique Orb you have.{InCombat:\n(Gain {CalculatedFocus:diff()} Focus)|}",
     "image_url": "/images/sts2/cards/synchronize.png"
   },
   {
@@ -10005,7 +10005,7 @@
     "upgrade": {
       "damage": 6
     },
-    "description": "Deal 12 damage.\nThe next Power you play costs 0 {energyPrefix:energyIcons(1)}.",
+    "description": "Deal 12 damage.\nThe next Power you play costs 0 [E].",
     "image_url": "/images/sts2/cards/synthesis.png"
   },
   {
@@ -10169,7 +10169,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "At the end of {Turns:diff()} {Turns:plural:turn|turns}, deal {BombDamage:diff()} damage to ALL enemies.",
+    "description": "At the end of 3 3, deal 40 damage to ALL enemies.",
     "image_url": "/images/sts2/cards/the_bomb.png"
   },
   {
@@ -10226,7 +10226,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "Deal {Damage:diff()} damage.\nPermanently increase this card's damage by {Increase:diff()}.",
+    "description": "Deal {Damage:diff()} damage.\nPermanently increase this card's damage by 3.",
     "image_url": "/images/sts2/cards/the_scythe.png"
   },
   {
@@ -10247,7 +10247,7 @@
         "Innate"
       ]
     },
-    "description": "Whenever you play a card, gain {singleStarIcon}.",
+    "description": "Whenever you play a card, gain [S].",
     "image_url": "/images/sts2/cards/the_sealed_throne.png",
     "star_cost": 3
   },
@@ -10265,7 +10265,7 @@
     "upgrade": {
       "forge": 10
     },
-    "description": "Forge {Forge:diff()}.",
+    "description": "Forge 30.",
     "image_url": "/images/sts2/cards/the_smith.png",
     "star_cost": 4
   },
@@ -10378,8 +10378,8 @@
     "target": "AnyEnemy",
     "color": "necrobinder",
     "keywords": [
-      "Retain",
-      "Exhaust"
+      "Exhaust",
+      "Retain"
     ],
     "tags": [],
     "vars": {},
@@ -10424,7 +10424,7 @@
     "upgrade": {
       "block": 2
     },
-    "description": "Gain 5 Block.\nGain 5 Block at the start of the next {Turns:diff()} {Turns:plural:turn|turns}.",
+    "description": "Gain 5 Block.\nGain 5 Block at the start of the next 2 2.",
     "image_url": "/images/sts2/cards/toric_toughness.png"
   },
   {
@@ -10722,7 +10722,7 @@
     "upgrade": {
       "damage": 6
     },
-    "description": "Deal 12 damage.\nThe next Attack you play costs 0 {energyPrefix:energyIcons(1)}.",
+    "description": "Deal 12 damage.\nThe next Attack you play costs 0 [E].",
     "image_url": "/images/sts2/cards/unrelenting.png"
   },
   {
@@ -10779,7 +10779,7 @@
       "damage": 13
     },
     "upgrade": {},
-    "description": "Deal 13 damage.\nApply {Power:diff()} Weak.\nApply {Power:diff()} Vulnerable.",
+    "description": "Deal 13 damage.\nApply 1 Weak.\nApply 1 Vulnerable.",
     "image_url": "/images/sts2/cards/uppercut.png"
   },
   {
@@ -10821,7 +10821,7 @@
     "upgrade": {
       "damage": 3
     },
-    "description": "Deal 10 damage.\nThe next Ethereal card you play costs 0 {energyPrefix:energyIcons(1)}.",
+    "description": "Deal 10 damage.\nThe next Ethereal card you play costs 0 [E].",
     "image_url": "/images/sts2/cards/veilpiercer.png"
   },
   {
@@ -10838,7 +10838,7 @@
     "upgrade": {
       "stars": 1
     },
-    "description": "Gain {Stars:starIcons()}.",
+    "description": "Gain 2.",
     "image_url": "/images/sts2/cards/venerate.png"
   },
   {
@@ -10869,8 +10869,8 @@
     "target": "None",
     "color": "status",
     "keywords": [
-      "Ethereal",
-      "Unplayable"
+      "Unplayable",
+      "Ethereal"
     ],
     "tags": [],
     "vars": {
@@ -10951,7 +10951,7 @@
       "power_wasteaway": 1
     },
     "upgrade": {},
-    "description": "Gain 1 less {energyPrefix:energyIcons(1)} per turn.",
+    "description": "Gain 1 less [E] per turn.",
     "image_url": "/images/sts2/cards/waste_away.png"
   },
   {
@@ -10968,7 +10968,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {},
-    "description": "At the end of your turn, Retain up to {RetainAmount:diff()} {RetainAmount:plural:card|cards}.",
+    "description": "At the end of your turn, Retain up to 1 1.",
     "image_url": "/images/sts2/cards/well_laid_plans.png"
   },
   {
@@ -11039,8 +11039,8 @@
     "target": "Self",
     "color": "event",
     "keywords": [
-      "Retain",
-      "Exhaust"
+      "Exhaust",
+      "Retain"
     ],
     "tags": [],
     "vars": {},
@@ -11061,8 +11061,8 @@
     "target": "Self",
     "color": "necrobinder",
     "keywords": [
-      "Retain",
-      "Exhaust"
+      "Exhaust",
+      "Retain"
     ],
     "tags": [],
     "vars": {
@@ -11120,8 +11120,8 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Innate",
-      "Unplayable"
+      "Unplayable",
+      "Innate"
     ],
     "tags": [],
     "vars": {},
@@ -11146,7 +11146,7 @@
       "damage": 2,
       "forge": 2
     },
-    "description": "Deal 7 damage.\nForge {Forge:diff()}.",
+    "description": "Deal 7 damage.\nForge 5.",
     "image_url": "/images/sts2/cards/wrought_in_war.png"
   },
   {

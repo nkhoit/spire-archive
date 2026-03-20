@@ -348,7 +348,7 @@
       "name": "Kaos"
     },
     "CHARGE": {
-      "description": "Çekme Deste'nden 2 kart seç ve onları\n",
+      "description": "Çekme Deste'nden 2 kart seç ve onları\n{IfUpgraded:show:Uşak Saldırısı+ kartlarına Dönüştür.",
       "name": "İLERİ!!"
     },
     "CHARGE_BATTERY": {
@@ -1078,7 +1078,7 @@
       "name": "Gizli Sandık"
     },
     "HIDDEN_DAGGERS": {
-      "description": "Elinden 2 kartı çıkar.\nEl'ine 2 ",
+      "description": "Elinden 2 kartı çıkar.\nEl'ine 2 {IfUpgraded:show:Kama+ ekle.",
       "name": "Gizli Hançerler"
     },
     "HIDDEN_GEM": {
@@ -5666,6 +5666,47 @@
         {
           "name": "Daha Derine Ulaş",
           "description": "Daha derine ilerle. 5 CP kaybet."
+        }
+      ],
+      "pages": [
+        {
+          "description": "Kemiklerden oluşan bir dağın tepesinde devasa bir çiçek büyümektedir.\n\nRenk değiştiren taç yaprakları nabız gibi atarken, merkezinde Güçlü Bir Polen Kümesi olduğunu sezersin; ancak dalgalanan yapraklar ustura keskinliğindedir ve son derece öngörülemezdir.\n\nBiraz altın nektar alabilirsin... ama merkezdeki ödüle uzanmak da fazlasıyla cezbedicidir.",
+          "choices": [
+            {
+              "name": "Nektarı Topla",
+              "description": "{Prize1} Altın elde et."
+            },
+            {
+              "name": "Daha Derine Ulaş",
+              "description": "Daha derine ilerle. 5 CP kaybet."
+            }
+          ]
+        },
+        {
+          "description": "Ustura keskinliğindeki taç yapraklardan bir katmanı zorla aşarsın. Üzerleri, tenini karıncalandıran bir maddeyle kaplıdır. Bu his, sanki acıyı uyuşturuyor gibidir.\n\nBelki de burada bir kemik yığınının olmasının sebebi budur...",
+          "choices": [
+            {
+              "name": "Nektarı Topla",
+              "description": "{Prize2} Altın elde et."
+            },
+            {
+              "name": "Derine İlerle",
+              "description": "Daha da derine ilerle. 6 CP kaybet."
+            }
+          ]
+        },
+        {
+          "description": "İçeri ilerledikçe karıncalanma, zonklayan bir güçsüzlüğe dönüşür...\n\nBu çiçek beni yemek istiyor. Neden içine girdim ki?",
+          "choices": [
+            {
+              "name": "Nektarı Topla",
+              "description": "{Prize3} Altın elde et."
+            },
+            {
+              "name": "Merkezine Gir",
+              "description": "7 CP kaybet. Polenli Çekirdek'i elde et."
+            }
+          ]
         }
       ]
     },

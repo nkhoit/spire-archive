@@ -347,7 +347,7 @@
       "name": "Chaos"
     },
     "CHARGE": {
-      "description": "Sélectionnez 2 carte de votre Pioche à Transformer en ",
+      "description": "Sélectionnez 2 carte de votre Pioche à Transformer en {IfUpgraded:show:Frappe de sbire+.",
       "name": "CHARGEZ !!"
     },
     "CHARGE_BATTERY": {
@@ -1077,7 +1077,7 @@
       "name": "Cache secrète"
     },
     "HIDDEN_DAGGERS": {
-      "description": "Défaussez 2 carte.\nAjoutez 2 ",
+      "description": "Défaussez 2 carte.\nAjoutez 2 {IfUpgraded:show:Surin+ à votre Main.",
       "name": "Poignards dissimulés"
     },
     "HIDDEN_GEM": {
@@ -5667,6 +5667,47 @@
         {
           "name": "Pénétrer plus loin",
           "description": "Enfoncez votre main plus loin. Perdez 5 PV."
+        }
+      ],
+      "pages": [
+        {
+          "description": "Une fleur colossale pousse au sommet d’un monticule d’ossements.\n\nAu rythme des pulsations de ses pétales aux couleurs changeantes, vous gagnez la sensation qu’un Puissant amas de pollen niche en son centre ; mais les pétales ondoyantes sont aussi tranchants que des lames de rasoir, et leurs mouvements imprévisibles.\n\nVous pourriez vous contenter d’un peu de nectar doré, mais la tentation du trésor au centre est extrêmement forte...",
+          "choices": [
+            {
+              "name": "Extraire du nectar",
+              "description": "Obtenez {Prize1} Pièces d’or."
+            },
+            {
+              "name": "Pénétrer plus loin",
+              "description": "Enfoncez votre main plus loin. Perdez 5 PV."
+            }
+          ]
+        },
+        {
+          "description": "Vous forcez votre passage à travers une couche de pétales aussi tranchants que des lames de rasoir, enduits d’une substance qui vous picote la peau. La douleur semble s’anesthésier ?\n\nC’est peut-être pour cela qu’il y a autant d’ossements ici...",
+          "choices": [
+            {
+              "name": "Extraire du nectar",
+              "description": "Obtenez {Prize2} Pièces d’or."
+            },
+            {
+              "name": "Pénétrer plus loin",
+              "description": "Enfoncez votre main encore plus loin. Perdez 6 PV."
+            }
+          ]
+        },
+        {
+          "description": "Les picotements laissent place à une faiblesse lancinante à mesure que vous forcez le passage...\n\nCette fleur cherche à me manger. Pourquoi m’y suis-je engagé{characterGender:choose(feminine):e|} ?",
+          "choices": [
+            {
+              "name": "Extraire du nectar",
+              "description": "Obtenez {Prize3} Pièces d’or."
+            },
+            {
+              "name": "Atteindre le centre",
+              "description": "Perdez 7 PV. Obtenez Cœur pollinique."
+            }
+          ]
         }
       ]
     },

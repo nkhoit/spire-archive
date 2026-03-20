@@ -348,7 +348,7 @@
       "name": "Caos"
     },
     "CHARGE": {
-      "description": "Elige 2 carta de tu Pila de robo y Transfórmalas en\n",
+      "description": "Elige 2 carta de tu Pila de robo y Transfórmalas en\n{IfUpgraded:show:Golpe de esbirro+.",
       "name": "¡A LA CARGA!"
     },
     "CHARGE_BATTERY": {
@@ -1078,7 +1078,7 @@
       "name": "Tesoro oculto"
     },
     "HIDDEN_DAGGERS": {
-      "description": "Descarta 2 carta.\nAñade 2 ",
+      "description": "Descarta 2 carta.\nAñade 2 {IfUpgraded:show:Navaja+ a tu Mano.",
       "name": "Dagas ocultas"
     },
     "HIDDEN_GEM": {
@@ -5668,6 +5668,47 @@
         {
           "name": "Adentrarse a las profundidades",
           "description": "Te adentras en las profundidades. Pierdes 5 PV."
+        }
+      ],
+      "pages": [
+        {
+          "description": "Una flor colosal crece sobre una montaña de huesos.\n\nMientras sus pétalos de color cambiante palpitan, percibes que en el centro hay un núcleo de polen poderoso, pero los pétalos ondulantes son afilados e impredecibles.\n\nPodrías tomar un poco del néctar dorado que se escurre, pero alcanzar el premio en el centro es muy tentador.",
+          "choices": [
+            {
+              "name": "Extraer néctar",
+              "description": "Obtienes {Prize1} de oro."
+            },
+            {
+              "name": "Adentrarse a las profundidades",
+              "description": "Te adentras en las profundidades. Pierdes 5 PV."
+            }
+          ]
+        },
+        {
+          "description": "Pasas por una capa de pétalos afilados y recubiertos de una sustancia que te provoca un hormigueo en la piel. ¿Acaso anestesia tu dolor?\n\nQuizás por eso hay un montón de huesos aquí...",
+          "choices": [
+            {
+              "name": "Extraer néctar",
+              "description": "Obtienes {Prize2} de oro."
+            },
+            {
+              "name": "Adentrarse mucho más en las profundidades",
+              "description": "Te adentras en las profundidades. Pierdes 6 PV."
+            }
+          ]
+        },
+        {
+          "description": "El hormigueo se convierte en una debilidad palpitante a medida que sigues avanzando.\n\nEsta flor quiere comerme. ¿Por qué me metí en ella?",
+          "choices": [
+            {
+              "name": "Extraer néctar",
+              "description": "Obtienes {Prize3} de oro."
+            },
+            {
+              "name": "Adentrarse en el núcleo",
+              "description": "Pierdes 7 PV. Obtienes Núcleo polinoso."
+            }
+          ]
         }
       ]
     },

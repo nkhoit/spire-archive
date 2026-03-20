@@ -348,7 +348,7 @@
       "name": "Chaos"
     },
     "CHARGE": {
-      "description": "Wähle 2 Karte aus deinem Nachziehstapel, die du zu \n",
+      "description": "Wähle 2 Karte aus deinem Nachziehstapel, die du zu \n{IfUpgraded:show:Diener-Schlag+ transformierst.",
       "name": "ATTACKE!!"
     },
     "CHARGE_BATTERY": {
@@ -1078,7 +1078,7 @@
       "name": "Versteckter Schatz"
     },
     "HIDDEN_DAGGERS": {
-      "description": "Wirf 2 Karte ab.\nErhalte 2 ",
+      "description": "Wirf 2 Karte ab.\nErhalte 2 {IfUpgraded:show:Messer+ auf deine Hand.",
       "name": "Versteckte Dolche"
     },
     "HIDDEN_GEM": {
@@ -5668,6 +5668,47 @@
         {
           "name": "Tiefer greifen",
           "description": "Dringe tiefer ein. Verliere 5 TP."
+        }
+      ],
+      "pages": [
+        {
+          "description": "Da ist eine riesige Blume, die auf einem Berg aus Knochen wächst.\n\nIhre farbwechselnden Blütenblätter pulsieren und du ahnst, dass in der Mitte ein Machtvoller Pollenklumpen ist, aber die wiegenden Blätter sind messerscharf und unvorhersehbar.\n\nDu könntest ein wenig von dem goldenen Nektar nehmen, aber bist verlockt, den Preis in der Mitte zu erreichen...",
+          "choices": [
+            {
+              "name": "Nektar gewinnen",
+              "description": "Erhalte {Prize1} Gold."
+            },
+            {
+              "name": "Tiefer greifen",
+              "description": "Dringe tiefer ein. Verliere 5 TP."
+            }
+          ]
+        },
+        {
+          "description": "Du schiebst dich an einer Lage messerscharfer Blütenblätter vorbei. Sie sind umhüllt mit einer Substanz, die deine Haut zum Kribbeln bringt. Das scheint den Schmerz zu betäuben?\n\nVielleicht ist deshalb hier ein Haufen Knochen...",
+          "choices": [
+            {
+              "name": "Nektar gewinnen",
+              "description": "Erhalte {Prize2} Gold."
+            },
+            {
+              "name": "Tiefer greifen",
+              "description": "Dringe noch tiefer ein. Verliere 6 TP."
+            }
+          ]
+        },
+        {
+          "description": "Bei deinem Vordringen wird aus dem Kribbeln eine pochende Schwachheit...\n\nDiese Blume möchte mich fressen. Warum bin ich hineingegangen?",
+          "choices": [
+            {
+              "name": "Nektar gewinnen",
+              "description": "Erhalte {Prize3} Gold."
+            },
+            {
+              "name": "Zur Mitte gelangen",
+              "description": "Verliere 7 TP. Erhalte Pollenreicher Kern."
+            }
+          ]
         }
       ]
     },
