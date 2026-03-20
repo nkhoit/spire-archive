@@ -91,6 +91,16 @@
             "type": "defend"
           }
         ],
+        "effects": [
+          {
+            "type": "block",
+            "amount": {
+              "normal": 5,
+              "ascension": 6,
+              "ascLevel": 9
+            }
+          }
+        ],
         "followUp": "SWING_2"
       },
       {
@@ -105,6 +115,16 @@
         "additional_intents": [
           {
             "type": "defend"
+          }
+        ],
+        "effects": [
+          {
+            "type": "block",
+            "amount": {
+              "normal": 5,
+              "ascension": 6,
+              "ascLevel": 9
+            }
           }
         ],
         "followUp": "BIG_SWING"
@@ -172,6 +192,10 @@
             "power": "Strength",
             "amount": 1,
             "target": "self"
+          },
+          {
+            "type": "block",
+            "amount": 10
           }
         ],
         "followUp": "RAND_MOVE",
@@ -370,6 +394,16 @@
         "additional_intents": [
           {
             "type": "defend"
+          }
+        ],
+        "effects": [
+          {
+            "type": "block",
+            "amount": {
+              "normal": 7,
+              "ascension": 8,
+              "ascLevel": 9
+            }
           }
         ],
         "followUp": "BITE_MOVE",
@@ -1127,6 +1161,12 @@
         "intent": {
           "type": "defend"
         },
+        "effects": [
+          {
+            "type": "block",
+            "amount": 3
+          }
+        ],
         "followUp": "FIRE_MOVE"
       }
     ],
@@ -1268,6 +1308,12 @@
             "type": "defend"
           }
         ],
+        "effects": [
+          {
+            "type": "block",
+            "amount": 18
+          }
+        ],
         "followUp": "THRASH_MOVE"
       }
     ],
@@ -1394,6 +1440,12 @@
         "intent": {
           "type": "defend"
         },
+        "effects": [
+          {
+            "type": "block",
+            "amount": 15
+          }
+        ],
         "followUp": "CHARGE_UP_MOVE"
       }
     ],
@@ -3048,6 +3100,12 @@
         "intent": {
           "type": "defend"
         },
+        "effects": [
+          {
+            "type": "block",
+            "amount": 15
+          }
+        ],
         "followUp": "GUARD_MOVE",
         "loops": true
       }
@@ -3293,6 +3351,16 @@
             "type": "defend"
           }
         ],
+        "effects": [
+          {
+            "type": "block",
+            "amount": {
+              "normal": 16,
+              "ascension": 18,
+              "ascLevel": 9
+            }
+          }
+        ],
         "followUp": "WHIRLWIND_MOVE"
       },
       {
@@ -3327,6 +3395,14 @@
               "ascLevel": 9
             },
             "target": "self"
+          },
+          {
+            "type": "block",
+            "amount": {
+              "normal": 20,
+              "ascension": 22,
+              "ascLevel": 8
+            }
           }
         ],
         "followUp": "JAB_MOVE"
@@ -3803,6 +3879,16 @@
             "type": "defend"
           }
         ],
+        "effects": [
+          {
+            "type": "block",
+            "amount": {
+              "normal": 12,
+              "ascension": 14,
+              "ascLevel": 8
+            }
+          }
+        ],
         "followUp": "SOUL_SIPHON_MOVE"
       },
       {
@@ -4180,6 +4266,14 @@
             "power": "Strength",
             "amount": 5,
             "target": "self"
+          },
+          {
+            "type": "block",
+            "amount": {
+              "normal": 14,
+              "ascension": 18,
+              "ascLevel": 8
+            }
           }
         ],
         "followUp": "POUNCE_MOVE"
@@ -4244,6 +4338,16 @@
             "type": "defend"
           }
         ],
+        "effects": [
+          {
+            "type": "block",
+            "amount": {
+              "normal": 5,
+              "ascension": 9,
+              "ascLevel": 8
+            }
+          }
+        ],
         "followUp": "DAMPEN_MOVE"
       },
       {
@@ -4260,6 +4364,16 @@
         "intent": {
           "type": "defend"
         },
+        "effects": [
+          {
+            "type": "block",
+            "amount": {
+              "normal": 5,
+              "ascension": 9,
+              "ascLevel": 8
+            }
+          }
+        ],
         "followUp": "MAGIC_BOMB"
       },
       {
@@ -4430,6 +4544,10 @@
             "power": "Strength",
             "amount": 5,
             "target": "self"
+          },
+          {
+            "type": "block",
+            "amount": 15
           }
         ],
         "followUp": "HEAVY_CLEAVE_MOVE"
@@ -4611,6 +4729,16 @@
         "additional_intents": [
           {
             "type": "defend"
+          }
+        ],
+        "effects": [
+          {
+            "type": "block",
+            "amount": {
+              "normal": 5,
+              "ascension": 5,
+              "ascLevel": 9
+            }
           }
         ],
         "followUp": "HISS_MOVE"
@@ -5163,6 +5291,12 @@
         "intent": {
           "type": "defend"
         },
+        "effects": [
+          {
+            "type": "block",
+            "amount": 10
+          }
+        ],
         "followUp": "STRONG_PUNCH_MOVE"
       },
       {
@@ -5295,6 +5429,10 @@
             "power": "Strength",
             "amount": null,
             "target": "player"
+          },
+          {
+            "type": "block",
+            "amount": 20
           }
         ]
       },
@@ -5617,6 +5755,14 @@
               "ascLevel": 9
             },
             "target": "self"
+          },
+          {
+            "type": "block",
+            "amount": {
+              "normal": 7,
+              "ascension": 8,
+              "ascLevel": 8
+            }
           }
         ],
         "followUp": "SEA_KICK_MOVE"
@@ -5851,6 +5997,14 @@
             "power": "Strength",
             "amount": 3,
             "target": "self"
+          },
+          {
+            "type": "block",
+            "amount": {
+              "normal": 10,
+              "ascension": 13,
+              "ascLevel": 8
+            }
           }
         ],
         "followUp": "SUPER_CRAB_MOVE"
@@ -6048,6 +6202,12 @@
         "additional_intents": [
           {
             "type": "defend"
+          }
+        ],
+        "effects": [
+          {
+            "type": "block",
+            "amount": 5
           }
         ],
         "followUp": "CONSTRICT"
@@ -7361,6 +7521,10 @@
             "power": "Dexterity",
             "amount": 2,
             "target": "self"
+          },
+          {
+            "type": "block",
+            "amount": 8
           }
         ],
         "followUp": "DREAD"
@@ -7634,6 +7798,16 @@
         "additional_intents": [
           {
             "type": "defend"
+          }
+        ],
+        "effects": [
+          {
+            "type": "block",
+            "amount": {
+              "normal": 6,
+              "ascension": 7,
+              "ascLevel": 9
+            }
           }
         ]
       }
@@ -8091,6 +8265,14 @@
             "power": "Burrowed",
             "amount": 1,
             "target": "self"
+          },
+          {
+            "type": "block",
+            "amount": {
+              "normal": 32,
+              "ascension": 37,
+              "ascLevel": 8
+            }
           }
         ],
         "followUp": "BELOW_MOVE_1"

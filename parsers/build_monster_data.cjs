@@ -312,8 +312,8 @@ function extractMoveEffects(code, ascValues) {
       moveEffects.push({ type: 'power', power: powerName, amount, target });
     }
 
-    // CreatureCmd.Block(creature, amount)
-    const blockRe = /CreatureCmd\.Block\s*\([^,]+,\s*([^,)]+)/g;
+    // CreatureCmd.Block / CreatureCmd.GainBlock(creature, amount)
+    const blockRe = /CreatureCmd\.(?:Block|GainBlock)\s*\([^,]+,\s*([^,)]+)/g;
     while ((pm = blockRe.exec(body)) !== null) {
       const amountRaw = pm[1].trim();
       let amount = null;
