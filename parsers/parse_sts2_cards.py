@@ -6,7 +6,9 @@ import json
 import sys
 from pathlib import Path
 
-DECOMPILED = Path("/Users/kuro/code/sts2-research/decompiled")
+from config import DECOMPILED_DIR, OUTPUT_DIR
+
+DECOMPILED = DECOMPILED_DIR
 CARDS_DIR = DECOMPILED / "MegaCrit.Sts2.Core.Models.Cards"
 POOLS_DIR = DECOMPILED / "MegaCrit.Sts2.Core.Models.CardPools"
 
@@ -214,7 +216,7 @@ def main():
     for color, cards_list in sorted(by_color.items()):
         print(f"  {color}: {len(cards_list)}", file=sys.stderr)
     
-    output = Path("/Users/kuro/code/sts1-data/data/sts2")
+    output = OUTPUT_DIR
     output.mkdir(parents=True, exist_ok=True)
     
     with open(output / "cards.json", "w") as f:

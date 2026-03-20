@@ -6,8 +6,10 @@ import json
 import sys
 from pathlib import Path
 
-DECOMPILED = Path("/Users/kuro/code/sts2-research/decompiled")
-OUTPUT = Path("/Users/kuro/code/sts1-data/data/sts2")
+from config import DECOMPILED_DIR, OUTPUT_DIR
+
+DECOMPILED = DECOMPILED_DIR
+OUTPUT = OUTPUT_DIR
 LOC_DIR = Path(__file__).parent.parent / "data/sts2-localization/eng"
 
 def load_loc(filename: str) -> dict:

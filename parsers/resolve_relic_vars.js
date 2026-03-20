@@ -8,9 +8,10 @@
 
 import fs from 'fs';
 import path from 'path';
+import { DECOMPILED_DIR, OUTPUT_DIR } from './config.mjs';
 
-const RELICS_DIR = '/Users/kuro/code/sts2-research/decompiled/MegaCrit.Sts2.Core.Models.Relics';
-const RELICS_JSON = '/Users/kuro/code/sts1-data/data/sts2/relics.json';
+const RELICS_DIR = path.join(DECOMPILED_DIR, 'MegaCrit.Sts2.Core.Models.Relics');
+const RELICS_JSON = path.join(OUTPUT_DIR, 'relics.json');
 
 // Convert PascalCase class name to SCREAMING_SNAKE_CASE relic ID
 function toRelicId(className) {

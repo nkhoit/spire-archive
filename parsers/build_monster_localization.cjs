@@ -6,8 +6,9 @@
  */
 const fs = require('fs');
 const path = require('path');
+const { PROJECT_ROOT, PCK_DIR, DECOMPILED_DIR, OUTPUT_DIR } = require('./config.cjs');
 
-const RAW_DIR = '/tmp/sts2-pck/localization';
+const RAW_DIR = path.join(PCK_DIR, 'localization');
 const OUT_DIR = path.join(__dirname, '..', 'data', 'sts2', 'localization');
 
 const LANG_MAP = {

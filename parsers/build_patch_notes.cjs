@@ -2,9 +2,10 @@
 
 const fs = require('fs');
 const path = require('path');
+const { PROJECT_ROOT, PCK_DIR, DECOMPILED_DIR, OUTPUT_DIR } = require('./config.cjs');
 
-const PATCH_DIR = '/tmp/sts2-pck/localization/eng/patch_notes';
-const OUTPUT_FILE = path.join(__dirname, '../data/sts2/patch_notes.json');
+const PATCH_DIR = path.join(PCK_DIR, 'localization', 'eng', 'patch_notes');
+const OUTPUT_FILE = path.join(OUTPUT_DIR, 'patch_notes.json');
 
 // Convert BBCode-style tags to HTML
 function convertTags(text) {

@@ -2,26 +2,12 @@
 
 import fs from "fs";
 import path from "path";
-import { fileURLToPath } from "url";
+import { DECOMPILED_DIR, PCK_DIR, OUTPUT_DIR } from './config.mjs';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Paths
-const MONSTERS_DIR = path.join(
-  __dirname,
-  "..",
-  "..",
-  "sts2-research/decompiled/MegaCrit.Sts2.Core.Models.Monsters"
-);
-const ENCOUNTERS_DIR = path.join(
-  __dirname,
-  "..",
-  "..",
-  "sts2-research/decompiled/MegaCrit.Sts2.Core.Models.Encounters"
-);
-const LOCALIZATION_FILE = "/tmp/sts2-pck/localization/eng/monsters.json";
-const OUTPUT_FILE = path.join(__dirname, "..", "data", "sts2", "monsters.json");
+const MONSTERS_DIR = path.join(DECOMPILED_DIR, 'MegaCrit.Sts2.Core.Models.Monsters');
+const ENCOUNTERS_DIR = path.join(DECOMPILED_DIR, 'MegaCrit.Sts2.Core.Models.Encounters');
+const LOCALIZATION_FILE = path.join(PCK_DIR, 'localization', 'eng', 'monsters.json');
+const OUTPUT_FILE = path.join(OUTPUT_DIR, 'monsters.json');
 
 // Load existing monsters.json
 const existingMonsters = JSON.parse(

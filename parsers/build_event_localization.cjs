@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+const { PROJECT_ROOT, PCK_DIR, DECOMPILED_DIR, OUTPUT_DIR } = require('./config.cjs');
 
-const ROOT = path.join(__dirname, '..');
-const RAW_LOC_DIR = '/tmp/sts2-pck/localization';
-const OUTPUT_DIR = path.join(ROOT, 'data/sts2/localization');
-const BASE_EVENTS_PATH = path.join(ROOT, 'data/sts2/events.json');
+const ROOT = PROJECT_ROOT;
+const RAW_LOC_DIR = path.join(PCK_DIR, 'localization');
+const LOCALIZATION_OUTPUT_DIR = path.join(OUTPUT_DIR, 'localization');
+const BASE_EVENTS_PATH = path.join(OUTPUT_DIR, 'events.json');
 
 const LANG_MAP = {
   deu: 'de',
@@ -223,7 +224,7 @@ function main() {
     if (!fs.existsSync(rawPath)) continue;
 
     const rawEvents = parseRawEvents(JSON.parse(fs.readFileSync(rawPath, 'utf8')));
-    const outPath = path.join(OUTPUT_DIR, `${iso}.json`);
+    const outPath = path.join(LOCALIZATION_OUTPUT_DIR, `${iso}.json`);
     const existing = JSON.parse(fs.readFileSync(outPath, 'utf8'));
     const nextEvents = { ...(existing.events || {}) };
 

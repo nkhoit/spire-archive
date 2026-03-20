@@ -18,7 +18,7 @@
   {
     "id": "BEETLE_JUICE",
     "name": "Beetle Juice",
-    "description": "Enemy's attacks deal 30% less damage for the next 4 turns.",
+    "description": "Enemy's attacks deal {DamageDecrease}% less damage {Repeat:plural:next turn|for the next {} turns}.",
     "rarity": "Rare",
     "color": "shared",
     "target": "AnyEnemy"
@@ -34,7 +34,7 @@
   {
     "id": "BLOCK_POTION",
     "name": "Block Potion",
-    "description": "Gain 12 Block.",
+    "description": "Gain {Block} Block.",
     "rarity": "Common",
     "color": "shared",
     "target": "AnyPlayer"
@@ -42,7 +42,7 @@
   {
     "id": "BLOOD_POTION",
     "name": "Blood Potion",
-    "description": "Heal for 20% of your Max HP.",
+    "description": "Heal for {HealPercent}% of your Max HP.",
     "rarity": "Common",
     "color": "shared",
     "target": "AnyPlayer"
@@ -50,7 +50,7 @@
   {
     "id": "BONE_BREW",
     "name": "Bone Brew",
-    "description": "Summon 15.",
+    "description": "Summon {Summon}.",
     "rarity": "Uncommon",
     "color": "shared",
     "target": "Self"
@@ -58,7 +58,7 @@
   {
     "id": "BOTTLED_POTENTIAL",
     "name": "Bottled Potential",
-    "description": "Shuffle ALL your cards into your Draw Pile. Draw 5 cards.",
+    "description": "Shuffle ALL your cards into your Draw Pile. Draw {Cards} {Cards:plural:card|cards}.",
     "rarity": "Rare",
     "color": "shared",
     "target": "AnyPlayer"
@@ -66,7 +66,7 @@
   {
     "id": "CLARITY",
     "name": "Clarity Extract",
-    "description": "Draw 1 card. At the start of your next 3 turns, draw 1 additional card.",
+    "description": "Draw {Cards} {Cards:plural:card|cards}. At the start of your next {ClarityPower:plural:turn|{} turns}, draw 1 additional card.",
     "rarity": "Uncommon",
     "color": "shared",
     "target": "AnyPlayer"
@@ -82,7 +82,7 @@
   {
     "id": "COSMIC_CONCOCTION",
     "name": "Cosmic Concoction",
-    "description": "Add 3 Upgraded Colorless cards into your Hand.",
+    "description": "Add {Cards} Upgraded Colorless {Cards:plural:card|cards} into your Hand.",
     "rarity": "Rare",
     "color": "shared",
     "target": "Self"
@@ -90,7 +90,7 @@
   {
     "id": "CUNNING_POTION",
     "name": "Cunning Potion",
-    "description": "Add 3 Upgraded Shivs into your Hand.",
+    "description": "Add {Cards} Upgraded {Cards:plural:Shiv|Shivs} into your Hand.",
     "rarity": "Uncommon",
     "color": "shared",
     "target": "Self"
@@ -98,15 +98,23 @@
   {
     "id": "CURE_ALL",
     "name": "Cure All",
-    "description": "Gain 1 Energy. Draw 2 cards.",
+    "description": "Gain {Energy:energyIcons()}. Draw {Cards} {Cards:plural:card|cards}.",
     "rarity": "Uncommon",
     "color": "shared",
     "target": "AnyPlayer"
   },
   {
+    "id": "DEPRECATED_POTION",
+    "name": "Deprecated Potion",
+    "description": "This potion has been removed from the game.",
+    "rarity": "None",
+    "color": "shared",
+    "target": "AnyEnemy"
+  },
+  {
     "id": "DEXTERITY_POTION",
     "name": "Dexterity Potion",
-    "description": "Gain 2 Dexterity.",
+    "description": "Gain {DexterityPower} Dexterity.",
     "rarity": "Common",
     "color": "shared",
     "target": "AnyPlayer"
@@ -114,7 +122,7 @@
   {
     "id": "DISTILLED_CHAOS",
     "name": "Distilled Chaos",
-    "description": "Play the top 3 cards of your Draw Pile.",
+    "description": "Play the top {Repeat} cards of your Draw Pile.",
     "rarity": "Rare",
     "color": "shared",
     "target": "Self"
@@ -138,7 +146,7 @@
   {
     "id": "ENERGY_POTION",
     "name": "Energy Potion",
-    "description": "Gain 2 Energy.",
+    "description": "Gain {Energy:energyIcons()}.",
     "rarity": "Common",
     "color": "shared",
     "target": "AnyPlayer"
@@ -162,7 +170,7 @@
   {
     "id": "EXPLOSIVE_AMPOULE",
     "name": "Explosive Ampoule",
-    "description": "Deal 10 damage to ALL enemies.",
+    "description": "Deal {Damage} damage to ALL enemies.",
     "rarity": "Common",
     "color": "shared",
     "target": "AllEnemies"
@@ -178,7 +186,7 @@
   {
     "id": "FIRE_POTION",
     "name": "Fire Potion",
-    "description": "Deal 20 damage.",
+    "description": "Deal {Damage} damage.",
     "rarity": "Common",
     "color": "shared",
     "target": "AnyEnemy"
@@ -186,7 +194,7 @@
   {
     "id": "FLEX_POTION",
     "name": "Flex Potion",
-    "description": "Gain 5 Strength. At the end of your turn, lose 5 Strength.",
+    "description": "Gain {StrengthPower} Strength. At the end of your turn, lose {StrengthPower} Strength.",
     "rarity": "Common",
     "color": "shared",
     "target": "AnyPlayer"
@@ -194,7 +202,7 @@
   {
     "id": "FOCUS_POTION",
     "name": "Focus Potion",
-    "description": "Gain 2 Focus.",
+    "description": "Gain {FocusPower} Focus.",
     "rarity": "Common",
     "color": "shared",
     "target": "Self"
@@ -210,7 +218,7 @@
   {
     "id": "FOUL_POTION",
     "name": "Foul Potion",
-    "description": "Deal 12 damage to EVERYONE.\nCan be thrown at the Merchant for 100 Gold instead.",
+    "description": "Deal {Damage} damage to EVERYONE.\nCan be thrown at the Merchant for {Gold} Gold instead.",
     "rarity": "Event",
     "color": "event",
     "target": "TargetedNoCreature"
@@ -218,7 +226,7 @@
   {
     "id": "FRUIT_JUICE",
     "name": "Fruit Juice",
-    "description": "Gain 5 Max HP.",
+    "description": "Gain {MaxHp} Max HP.",
     "rarity": "Rare",
     "color": "shared",
     "target": "AnyPlayer"
@@ -226,7 +234,7 @@
   {
     "id": "FYSH_OIL",
     "name": "Fysh Oil",
-    "description": "Gain 1 Strength and 1 Dexterity.",
+    "description": "Gain {StrengthPower} Strength and {DexterityPower} Dexterity.",
     "rarity": "Uncommon",
     "color": "shared",
     "target": "AnyPlayer"
@@ -258,7 +266,7 @@
   {
     "id": "GLOWWATER_POTION",
     "name": "Glowwater Potion",
-    "description": "Exhaust your Hand. Draw 10 cards.",
+    "description": "Exhaust your Hand. Draw {Cards} cards.",
     "rarity": "Event",
     "color": "event",
     "target": "Self"
@@ -266,7 +274,7 @@
   {
     "id": "HEART_OF_IRON",
     "name": "Heart of Iron",
-    "description": "Gain 7 Plating.",
+    "description": "Gain {PlatingPower} Plating.",
     "rarity": "Uncommon",
     "color": "shared",
     "target": "AnyPlayer"
@@ -274,7 +282,7 @@
   {
     "id": "KINGS_COURAGE",
     "name": "King's Courage",
-    "description": "Forge 15.",
+    "description": "Forge {Forge}.",
     "rarity": "Uncommon",
     "color": "shared",
     "target": "AnyPlayer"
@@ -282,7 +290,7 @@
   {
     "id": "LIQUID_BRONZE",
     "name": "Liquid Bronze",
-    "description": "Gain 3 Thorns.",
+    "description": "Gain {ThornsPower} Thorns.",
     "rarity": "Uncommon",
     "color": "shared",
     "target": "AnyPlayer"
@@ -290,7 +298,7 @@
   {
     "id": "LIQUID_MEMORIES",
     "name": "Liquid Memories",
-    "description": "Put a card from your Discard Pile into your Hand. It costs 0 Energy this turn.",
+    "description": "Put a card from your Discard Pile into your Hand. It costs 0 {energyPrefix:energyIcons(1)} this turn.",
     "rarity": "Rare",
     "color": "shared",
     "target": "Self"
@@ -298,7 +306,7 @@
   {
     "id": "LUCKY_TONIC",
     "name": "Lucky Tonic",
-    "description": "Gain 1 Buffer.",
+    "description": "Gain {BufferPower} Buffer.",
     "rarity": "Rare",
     "color": "shared",
     "target": "AnyPlayer"
@@ -306,7 +314,7 @@
   {
     "id": "MAZALETHS_GIFT",
     "name": "Mazaleth's Gift",
-    "description": "Gain 1 Ritual.",
+    "description": "Gain {RitualPower} Ritual.",
     "rarity": "Rare",
     "color": "shared",
     "target": "AnyPlayer"
@@ -322,7 +330,7 @@
   {
     "id": "POISON_POTION",
     "name": "Poison Potion",
-    "description": "Apply 6 Poison.",
+    "description": "Apply {PoisonPower} Poison.",
     "rarity": "Common",
     "color": "shared",
     "target": "AnyEnemy"
@@ -330,7 +338,7 @@
   {
     "id": "POT_OF_GHOULS",
     "name": "Pot of Ghouls",
-    "description": "Add 2 Souls into your Hand.",
+    "description": "Add {Cards} {Cards:plural:Soul|Souls} into your Hand.",
     "rarity": "Rare",
     "color": "shared",
     "target": "Self"
@@ -338,7 +346,7 @@
   {
     "id": "POTION_OF_BINDING",
     "name": "Potion of Binding",
-    "description": "Apply 1 Weak and 1 Vulnerable to ALL enemies.",
+    "description": "Apply {WeakPower:diff()} Weak and {VulnerablePower:diff()} Vulnerable to ALL enemies.",
     "rarity": "Uncommon",
     "color": "shared",
     "target": "AllEnemies"
@@ -346,7 +354,7 @@
   {
     "id": "POTION_OF_CAPACITY",
     "name": "Potion of Capacity",
-    "description": "Gain 2 Orb Slots.",
+    "description": "Gain {Repeat} Orb {Repeat:plural:Slot|Slots}.",
     "rarity": "Uncommon",
     "color": "shared",
     "target": "Self"
@@ -354,7 +362,7 @@
   {
     "id": "POTION_OF_DOOM",
     "name": "Potion of Doom",
-    "description": "Apply 33 Doom.",
+    "description": "Apply {DoomPower} Doom.",
     "rarity": "Common",
     "color": "shared",
     "target": "AnyEnemy"
@@ -362,7 +370,7 @@
   {
     "id": "POTION_SHAPED_ROCK",
     "name": "Potion-Shaped Rock",
-    "description": "Deal 15 damage.",
+    "description": "Deal {Damage} damage.",
     "rarity": "Token",
     "color": "token",
     "target": "AnyEnemy"
@@ -370,7 +378,7 @@
   {
     "id": "POWDERED_DEMISE",
     "name": "Powdered Demise",
-    "description": "Enemy loses 9 HP at the end of each of its turns.",
+    "description": "Enemy loses {Demise} HP at the end of each of its turns.",
     "rarity": "Uncommon",
     "color": "shared",
     "target": "AnyEnemy"
@@ -386,7 +394,7 @@
   {
     "id": "RADIANT_TINCTURE",
     "name": "Radiant Tincture",
-    "description": "Gain 1 Energy. Gain an additional Energy at the start of your next 3 turns.",
+    "description": "Gain {Energy:energyIcons()}. Gain an additional {energyPrefix:energyIcons(1)} at the start of your next {RadiancePower} {RadiancePower:plural:turn|turns}.",
     "rarity": "Uncommon",
     "color": "shared",
     "target": "AnyPlayer"
@@ -394,7 +402,7 @@
   {
     "id": "REGEN_POTION",
     "name": "Regen Potion",
-    "description": "Gain 5 Regen.",
+    "description": "Gain {RegenPower} Regen.",
     "rarity": "Uncommon",
     "color": "shared",
     "target": "AnyPlayer"
@@ -402,7 +410,7 @@
   {
     "id": "SHACKLING_POTION",
     "name": "Shackling Potion",
-    "description": "ALL enemies lose 7 Strength this turn.",
+    "description": "ALL enemies lose {StrengthPower} Strength this turn.",
     "rarity": "Rare",
     "color": "shared",
     "target": "AllEnemies"
@@ -410,7 +418,7 @@
   {
     "id": "SHIP_IN_A_BOTTLE",
     "name": "Ship in a Bottle",
-    "description": "Gain 10 Block. Next turn, gain 10 Block.",
+    "description": "Gain {Block:diff()} Block. Next turn, gain {Block:diff()} Block.",
     "rarity": "Rare",
     "color": "shared",
     "target": "AnyPlayer"
@@ -426,7 +434,7 @@
   {
     "id": "SNECKO_OIL",
     "name": "Snecko Oil",
-    "description": "Draw 7 cards. Randomize the cost of cards in your Hand this turn.",
+    "description": "Draw {Cards} cards. Randomize the cost of cards in your Hand this turn.",
     "rarity": "Rare",
     "color": "shared",
     "target": "AnyPlayer"
@@ -442,7 +450,7 @@
   {
     "id": "SPEED_POTION",
     "name": "Speed Potion",
-    "description": "Gain 5 Dexterity. At the end of your turn, lose 5 Dexterity.",
+    "description": "Gain {DexterityPower} Dexterity. At the end of your turn, lose {DexterityPower} Dexterity.",
     "rarity": "Common",
     "color": "shared",
     "target": "AnyPlayer"
@@ -450,7 +458,7 @@
   {
     "id": "STABLE_SERUM",
     "name": "Stable Serum",
-    "description": "Retain your Hand for 2 turns.",
+    "description": "Retain your Hand for {Repeat} {Repeat:plural:turn|turns}.",
     "rarity": "Uncommon",
     "color": "shared",
     "target": "AnyPlayer"
@@ -458,7 +466,7 @@
   {
     "id": "STAR_POTION",
     "name": "Star Potion",
-    "description": "Gain 3 Stars.",
+    "description": "Gain {Stars:starIcons()}.",
     "rarity": "Common",
     "color": "shared",
     "target": "Self"
@@ -466,7 +474,7 @@
   {
     "id": "STRENGTH_POTION",
     "name": "Strength Potion",
-    "description": "Gain 2 Strength.",
+    "description": "Gain {StrengthPower} Strength.",
     "rarity": "Common",
     "color": "shared",
     "target": "AnyPlayer"
@@ -474,7 +482,7 @@
   {
     "id": "SWIFT_POTION",
     "name": "Swift Potion",
-    "description": "Draw 3 cards.",
+    "description": "Draw {Cards} {Cards:plural:card|cards}.",
     "rarity": "Common",
     "color": "shared",
     "target": "AnyPlayer"
@@ -490,7 +498,7 @@
   {
     "id": "VULNERABLE_POTION",
     "name": "Vulnerable Potion",
-    "description": "Apply 3 Vulnerable.",
+    "description": "Apply {VulnerablePower} Vulnerable.",
     "rarity": "Common",
     "color": "shared",
     "target": "AnyEnemy"
@@ -498,7 +506,7 @@
   {
     "id": "WEAK_POTION",
     "name": "Weak Potion",
-    "description": "Apply 3 Weak.",
+    "description": "Apply {WeakPower} Weak.",
     "rarity": "Common",
     "color": "shared",
     "target": "AnyEnemy"

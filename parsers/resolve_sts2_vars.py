@@ -9,8 +9,10 @@ import re
 import sys
 from pathlib import Path
 
-CARDS_JSON = Path(__file__).parent.parent / "data/sts2/cards.json"
-CS_DIR = Path("/Users/kuro/code/sts2-research/decompiled/MegaCrit.Sts2.Core.Models.Cards")
+from config import DECOMPILED_DIR, OUTPUT_DIR
+
+CARDS_JSON = OUTPUT_DIR / "cards.json"
+CS_DIR = DECOMPILED_DIR / "MegaCrit.Sts2.Core.Models.Cards"
 
 
 def card_id_to_filename(card_id: str) -> str:

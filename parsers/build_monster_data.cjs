@@ -2,12 +2,13 @@
 
 const fs = require('fs');
 const path = require('path');
+const { PROJECT_ROOT, PCK_DIR, DECOMPILED_DIR, OUTPUT_DIR } = require('./config.cjs');
 
-const CS_BASE = '/Users/kuro/code/sts2-research/decompiled';
+const CS_BASE = DECOMPILED_DIR;
 const MONSTERS_DIR = path.join(CS_BASE, 'MegaCrit.Sts2.Core.Models.Monsters');
-const OUTPUT_FILE = path.join(__dirname, '../data/sts2/monsters.json');
-const POWERS_FILE = path.join(__dirname, '../data/sts2/powers.json');
-const ENG_MONSTERS_LOC = '/tmp/sts2-pck/localization/eng/monsters.json';
+const OUTPUT_FILE = path.join(OUTPUT_DIR, 'monsters.json');
+const POWERS_FILE = path.join(OUTPUT_DIR, 'powers.json');
+const ENG_MONSTERS_LOC = path.join(PCK_DIR, 'localization', 'eng', 'monsters.json');
 
 // Build English localization name lookup: { MONSTER_ID: { MOVE_LOC_KEY: "Display Name" } }
 const engMoveLoc = {};

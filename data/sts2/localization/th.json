@@ -1,35 +1,35 @@
 {
   "cards": {
     "ABRASIVE": {
-      "description": "ได้รับ 1 ความชำนาญ\nได้รับ 4 หนาม",
+      "description": "ได้รับ {DexterityPower:diff()} ความชำนาญ\nได้รับ {ThornsPower:diff()} หนาม",
       "name": "เสียดสี"
     },
     "ACCELERANT": {
-      "description": "พิษทำงานเพิ่มอีก 1 ครั้ง",
+      "description": "พิษทำงานเพิ่มอีก {Accelerant:diff()} {Accelerant:plural:ครั้ง|ครั้ง}",
       "name": "สารเร่งปฏิกิริยา"
     },
     "ACCURACY": {
-      "description": "มีดสั้นสร้างความเสียหายเพิ่มขึ้น 4",
+      "description": "มีดสั้นสร้างความเสียหายเพิ่มขึ้น {AccuracyPower:diff()}",
       "name": "ความแม่นยำ"
     },
     "ACROBATICS": {
-      "description": "จั่ว 3 การ์ด\nทิ้ง 1 การ์ด",
+      "description": "จั่ว {Cards:diff()} การ์ด\nทิ้ง 1 การ์ด",
       "name": "การแสดงผาดโผน"
     },
     "ADAPTIVE_STRIKE": {
-      "description": "สร้างความเสียหาย 18\nทำสำเนาของการ์ดนี้แบบ 0[E] เพิ่มในกองทิ้ง",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nทำสำเนาของการ์ดนี้แบบ 0{energyPrefix:energyIcons(1)} เพิ่มในกองทิ้ง",
       "name": "จู่โจมประยุกต์"
     },
     "ADRENALINE": {
-      "description": "ได้รับ [E]\nจั่ว 2 การ์ด",
+      "description": "ได้รับ {Energy:energyIcons()}\nจั่ว 2 การ์ด",
       "name": "อะดรีนาลีน"
     },
     "AFTERIMAGE": {
-      "description": "ทุกครั้งที่เล่นการ์ด ได้รับ 1 บล็อก",
+      "description": "ทุกครั้งที่เล่นการ์ด ได้รับ {AfterimagePower:diff()} บล็อก",
       "name": "ภาพติดตาชั่วขณะ"
     },
     "AFTERLIFE": {
-      "description": "อัญเชิญ 6",
+      "description": "อัญเชิญ {Summon:diff()}",
       "name": "ชีวิตหลังความตาย"
     },
     "AGGRESSION": {
@@ -41,15 +41,15 @@
       "name": "ปรุงยา"
     },
     "ALIGNMENT": {
-      "description": "ได้รับ [E]",
+      "description": "ได้รับ {Energy:energyIcons()}",
       "name": "จัดเรียงตำแหน่ง"
     },
     "ALL_FOR_ONE": {
-      "description": "สร้างความเสียหาย 10\nนำการ์ด 0[E] ทั้งหมดจากกองทิ้งขึ้นมือ",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nนำการ์ด 0{energyPrefix:energyIcons(1)} ทั้งหมดจากกองทิ้งขึ้นมือ",
       "name": "รวมเป็นหนึ่ง"
     },
     "ANGER": {
-      "description": "สร้างความเสียหาย 6\nเพิ่มสำเนาของการ์ดนี้ 1 ใบใส่กองทิ้ง",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nเพิ่มสำเนาของการ์ดนี้ 1 ใบใส่กองทิ้ง",
       "name": "ความโกรธ"
     },
     "ANOINTED": {
@@ -57,7 +57,7 @@
       "name": "พิธีเจิม"
     },
     "ANTICIPATE": {
-      "description": "ได้รับ 3 ความชำนาญในเทิร์นนี้",
+      "description": "ได้รับ {DexterityPower:diff()} ความชำนาญในเทิร์นนี้",
       "name": "ประมาณการณ์"
     },
     "APOTHEOSIS": {
@@ -65,58 +65,58 @@
       "name": "สภาวะเทียมเทพ"
     },
     "APPARITION": {
-      "description": "ได้รับ 1 ไร้ตัวตน",
+      "description": "ได้รับ {IntangiblePower:diff()} ไร้ตัวตน",
       "name": "กายวิญญาณ"
     },
     "ARMAMENTS": {
-      "description": "ได้รับ 5 บล็อก\nพัฒนา 1 การ์ดในมือ",
+      "description": "ได้รับ {Block:diff()} บล็อก\nพัฒนา {IfUpgraded:show:การ์ดทั้งหมด|1 การ์ด}ในมือ",
       "name": "ยุทโธปกรณ์"
     },
     "ARSENAL": {
-      "description": "ทุกครั้งที่เล่นการ์ดไร้สี ได้รับ 1 ความแข็งแรง",
+      "description": "ทุกครั้งที่เล่นการ์ดไร้สี ได้รับ {ArsenalPower:diff()} ความแข็งแรง",
       "name": "คลังสรรพาวุธ"
     },
     "ASCENDERS_BANE": {
       "name": "คำสาปผู้บรรลุ"
     },
     "ASHEN_STRIKE": {
-      "description": "สร้างความเสียหาย 6\nสร้างความเสียหายเพิ่ม 3 ต่อการ์ดในกองสลาย",
+      "description": "สร้างความเสียหาย {CalculatedDamage:diff()}\nสร้างความเสียหายเพิ่ม {ExtraDamage:diff()} ต่อการ์ดในกองสลาย",
       "name": "จู่โจมเถ้าถ่าน"
     },
     "ASSASSINATE": {
-      "description": "สร้างความเสียหาย 10\nสร้าง 1 จุดอ่อน",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nสร้าง {VulnerablePower:diff()} จุดอ่อน",
       "name": "ลอบสังหาร"
     },
     "ASTRAL_PULSE": {
-      "description": "สร้างความเสียหาย 14 ใส่ศัตรูทั้งหมด",
+      "description": "สร้างความเสียหาย {Damage:diff()} ใส่ศัตรูทั้งหมด",
       "name": "คลื่นดวงดาว"
     },
     "AUTOMATION": {
-      "description": "การจั่วการ์ดทุก 10 ใบ ได้รับ [E]",
+      "description": "การจั่วการ์ดทุก 10 ใบ ได้รับ {Energy:energyIcons()}",
       "name": "กลไกอัตโนมัติ"
     },
     "BACKFLIP": {
-      "description": "ได้รับ 5 บล็อก\nจั่ว 2 การ์ด",
+      "description": "ได้รับ {Block:diff()} บล็อก\nจั่ว 2 การ์ด",
       "name": "ตีลังกากลับหลัง"
     },
     "BACKSTAB": {
-      "description": "สร้างความเสียหาย 11",
+      "description": "สร้างความเสียหาย {Damage:diff()}",
       "name": "ลอบแทงหลัง"
     },
     "BAD_LUCK": {
-      "description": "ตอนจบเทิร์น ถ้าการ์ดนี้อยู่ในมือ เสีย 13 HP",
+      "description": "ตอนจบเทิร์น ถ้าการ์ดนี้อยู่ในมือ เสีย {HpLoss:diff()} HP",
       "name": "โชคร้าย"
     },
     "BALL_LIGHTNING": {
-      "description": "สร้างความเสียหาย 7\nปลุกเสก 1 สายฟ้า",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nปลุกเสก 1 สายฟ้า",
       "name": "บอลสายฟ้า"
     },
     "BANSHEES_CRY": {
-      "description": "สร้างความเสียหาย 33 ใส่ศัตรูทั้งหมด\nค่าร่ายลดลง [E] ต่อการ์ดกึ่งสลายที่เล่นไปในการต่อสู้นี้",
+      "description": "สร้างความเสียหาย {Damage:diff()} ใส่ศัตรูทั้งหมด\nค่าร่ายลดลง {Energy:energyIcons()} ต่อการ์ดกึ่งสลายที่เล่นไปในการต่อสู้นี้",
       "name": "เสียงร้องของแบนชี"
     },
     "BARRAGE": {
-      "description": "สร้างความเสียหาย 5 ต่อลูกแก้วที่ถูกปลุกเสก \n(จำนวน 0 ครั้ง)",
+      "description": "สร้างความเสียหาย {Damage:diff()} ต่อลูกแก้วที่ถูกปลุกเสก {InCombat:\n(จำนวน {CalculatedHits:diff()} {CalculatedHits:plural:ครั้ง|ครั้ง})|}",
       "name": "ระดมยิง"
     },
     "BARRICADE": {
@@ -124,11 +124,11 @@
       "name": "ตรึงกำลัง"
     },
     "BASH": {
-      "description": "สร้างความเสียหาย 8\nสร้าง 2 จุดอ่อน",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nสร้าง {VulnerablePower:diff()} จุดอ่อน",
       "name": "ทุบตี"
     },
     "BATTLE_TRANCE": {
-      "description": "จั่ว 3 การ์ด\nในเทิร์นนี้ คุณจะจั่วการ์ดไม่ได้อีก",
+      "description": "จั่ว {Cards:diff()} การ์ด\nในเทิร์นนี้ คุณจะจั่วการ์ดไม่ได้อีก",
       "name": "หลงใหลการศึก"
     },
     "BEACON_OF_HOPE": {
@@ -136,337 +136,336 @@
       "name": "ดวงประทีปแห่งความหวัง"
     },
     "BEAM_CELL": {
-      "description": "สร้างความเสียหาย 3\nสร้าง 1 จุดอ่อน",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nสร้าง {VulnerablePower:diff()} จุดอ่อน",
       "name": "ลำแสงเปิดแผล"
     },
     "BEAT_DOWN": {
-      "description": "เล่นการ์ดโจมตี 3 ใบแบบสุ่มจากกองทิ้ง",
+      "description": "เล่นการ์ดโจมตี {Cards:diff()} ใบแบบสุ่มจากกองทิ้ง",
       "name": "รุมกระทืบ"
     },
     "BEAT_INTO_SHAPE": {
-      "description": "สร้างความเสียหาย 5\nหลอมสร้าง 5\nหลอมสร้างอีก 5 ต่อการโจมตีศัตรูในเทิร์นนี้ (ครั้งเว้นครั้ง)",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nหลอมสร้าง {CalculatedForge:diff()}\nหลอมสร้างอีก {CalculationExtra:diff()} ต่อการโจมตีศัตรูในเทิร์นนี้ (ครั้งเว้นครั้ง)",
       "name": "ตีขึ้นรูป"
     },
     "BECKON": {
-      "description": "ตอนจบเทิร์น ถ้าการ์ดนี้อยู่ในมือ เสีย 6 HP",
+      "description": "ตอนจบเทิร์น ถ้าการ์ดนี้อยู่ในมือ เสีย {HpLoss} HP",
       "name": "เรียกหา"
     },
     "BEGONE": {
-      "description": "สร้างความเสียหาย 4\nเลือก 1 การ์ดในมือเพื่อแปรสภาพเป็น อุกกาบาตลูกน้อง",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nเลือก 1 การ์ดในมือเพื่อแปรสภาพเป็น {IfUpgraded:show:อุกกาบาตลูกน้อง+|อุกกาบาตลูกน้อง}",
       "name": "หายไปซะ!"
     },
     "BELIEVE_IN_YOU": {
-      "description": "ผู้เล่นคนอื่น 1 คนได้รับ [E]",
+      "description": "ผู้เล่นคนอื่น 1 คนได้รับ {Energy:energyIcons()}",
       "name": "เชื่อในตัวคุณ"
     },
     "BIASED_COGNITION": {
-      "description": "ได้รับ 4 โฟกัส\nตอนเริ่มต้นเทิร์น เสีย 1 โฟกัส",
+      "description": "ได้รับ {FocusPower:diff()} โฟกัส\nตอนเริ่มต้นเทิร์น เสีย {BiasedCognitionPower:diff()} โฟกัส",
       "name": "อคติทางการรู้คิด"
     },
     "BIG_BANG": {
-      "description": "จั่ว 1 การ์ด\nได้รับ [E]\nได้รับ 1 Stars\nหลอมสร้าง 5",
+      "description": "จั่ว {Cards:diff()} {Cards:plural:การ์ด|การ์ด}\nได้รับ {Energy:energyIcons()}\nได้รับ {Stars:starIcons()}\nหลอมสร้าง {Forge:diff()}",
       "name": "บิ๊กแบง"
     },
     "BLACK_HOLE": {
-      "description": "ทุกครั้งที่คุณจ่ายหรือได้รับ ⭐ สร้างความเสียหาย 3 ใส่ศัตรูทั้งหมด",
+      "description": "ทุกครั้งที่คุณจ่ายหรือได้รับ {singleStarIcon} สร้างความเสียหาย {BlackHolePower:diff()} ใส่ศัตรูทั้งหมด",
       "name": "หลุมดำ"
     },
     "BLADE_DANCE": {
-      "description": "เพิ่ม 3 มีดสั้นใส่มือ",
+      "description": "เพิ่ม {Cards:diff()} {Cards:plural:มีดสั้น|มีดสั้น}ใส่มือ",
       "name": "ระบำมีด"
     },
     "BLADE_OF_INK": {
-      "description": "ทุกครั้งที่คุณเล่นการ์ดโจมตีในเทิร์นนี้ ได้รับ 2 ความแข็งแรงในเทิร์นนี้",
+      "description": "ทุกครั้งที่คุณเล่นการ์ดโจมตีในเทิร์นนี้ ได้รับ {StrengthPower:diff()} ความแข็งแรงในเทิร์นนี้",
       "name": "มีดหมึก"
     },
     "BLIGHT_STRIKE": {
-      "description": "สร้างความเสียหาย 8\nสร้างอายุขัยตามจำนวนความเสียหายที่ทำได้",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nสร้างอายุขัยตามจำนวนความเสียหายที่ทำได้",
       "name": "จู่โจมเหี่ยวเฉา"
     },
     "BLOODLETTING": {
-      "description": "เสีย 3 HP\nได้รับ [E]",
+      "description": "เสีย {HpLoss:diff()} HP\nได้รับ {Energy:energyIcons()}",
       "name": "กรีดเลือด"
     },
     "BLOOD_WALL": {
-      "description": "เสีย 2 HP\nได้รับ 16 บล็อก",
+      "description": "เสีย {HpLoss:diff()} HP\nได้รับ {Block:diff()} บล็อก",
       "name": "กำแพงโลหิต"
     },
     "BLUDGEON": {
-      "description": "สร้างความเสียหาย 32",
+      "description": "สร้างความเสียหาย {Damage:diff()}",
       "name": "กระบองยักษ์"
     },
     "BLUR": {
-      "description": "ได้รับ 5 บล็อก\nสามารถสะสมบล็อกไปยังเทิร์นต่อไปได้",
+      "description": "ได้รับ {Block:diff()} บล็อก\nสามารถสะสมบล็อกไปยังเทิร์นต่อไปได้",
       "name": "ภาพมัว"
     },
     "BODYGUARD": {
-      "description": "อัญเชิญ 5",
+      "description": "อัญเชิญ {Summon:diff()}",
       "name": "องค์รักษ์"
     },
     "BODY_SLAM": {
-      "description": "สร้างความเสียหายตามบล็อกที่คุณมี\n(สร้างความเสียหาย 0)",
+      "description": "สร้างความเสียหายตามบล็อกที่คุณมี{InCombat:\n(สร้างความเสียหาย {CalculatedDamage:diff()})|}",
       "name": "พุ่งเข้าชน"
     },
     "BOLAS": {
-      "description": "สร้างความเสียหาย 3\nตอนเริ่มต้นเทิร์น นำการ์ดนี้กลับขึ้นมือ",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nตอนเริ่มต้นเทิร์น นำการ์ดนี้กลับขึ้นมือ",
       "name": "โบลา"
     },
     "BOMBARDMENT": {
-      "description": "สร้างความเสียหาย 18\nตอนเริ่มต้นเทิร์น เล่นจากกองสลาย",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nตอนเริ่มต้นเทิร์น เล่นจากกองสลาย",
       "name": "ระเบิดทำลายล้าง"
     },
     "BONE_SHARDS": {
-      "description": "ถ้าOstyมีชีวิตอยู่ เขาจะสร้างความเสียหาย 9 ใส่ศัตรูทั้งหมด และคุณได้รับ 9 บล็อก\nจากนั้นOstyจะตาย",
+      "description": "ถ้าOstyมีชีวิตอยู่ เขาจะสร้างความเสียหาย {OstyDamage:diff()} ใส่ศัตรูทั้งหมด และคุณได้รับ {Block:diff()} บล็อก\nจากนั้นOstyจะตาย",
       "name": "เศษกระดูก"
     },
     "BOOST_AWAY": {
-      "description": "ได้รับ 6 บล็อก\nเพิ่มความมึนงง 1 ใบเข้ากองทิ้ง",
+      "description": "ได้รับ {Block:diff()} บล็อก\nเพิ่มความมึนงง 1 ใบเข้ากองทิ้ง",
       "name": "พุ่งหนี"
     },
     "BOOT_SEQUENCE": {
-      "description": "ได้รับ 10 บล็อก",
+      "description": "ได้รับ {Block:diff()} บล็อก",
       "name": "ลำดับเดินเครื่อง"
     },
     "BORROWED_TIME": {
-      "description": "สร้าง 3 อายุขัยใส่ตัวคุณ\nได้รับ [E]",
+      "description": "สร้าง {DoomPower:diff()} อายุขัยใส่ตัวคุณ\nได้รับ {Energy:energyIcons()}",
       "name": "กู้ยืมเวลา"
     },
     "BOUNCING_FLASK": {
-      "description": "สร้าง 3 พิษ ใส่ศัตรู 1 ตัวแบบสุ่ม จำนวน 3 ครั้ง",
+      "description": "สร้าง {PoisonPower:diff()} พิษ ใส่ศัตรู 1 ตัวแบบสุ่ม จำนวน {Repeat:diff()} ครั้ง",
       "name": "กระติกเด้งดึ๋ง"
     },
     "BRAND": {
-      "description": "เสีย 1 HP\nสลายการ์ด 1 ใบ\nได้รับ 1 ความแข็งแรง"
+      "description": "เสีย {HpLoss:diff()} HP\nสลายการ์ด 1 ใบ\nได้รับ {StrengthPower:diff()} ความแข็งแรง"
     },
     "BREAK": {
-      "description": "สร้างความเสียหาย 20\nสร้าง 5 จุดอ่อน"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nสร้าง {VulnerablePower:diff()} จุดอ่อน"
     },
     "BREAKTHROUGH": {
-      "description": "เสีย 1 HP\nสร้างความเสียหาย 9 ใส่ศัตรูทั้งหมด",
+      "description": "เสีย {HpLoss:diff()} HP\nสร้างความเสียหาย {Damage:diff()} ใส่ศัตรูทั้งหมด",
       "name": "ฝ่าวงล้อม"
     },
     "BRIGHTEST_FLAME": {
-      "description": "ได้รับ [E]\nจั่วการ์ด 2 ใบ\nเสีย 1 HP สูงสุด",
+      "description": "ได้รับ {Energy:energyIcons()}\nจั่วการ์ด {Cards:diff()} ใบ\nเสีย {MaxHp:diff()} HP สูงสุด",
       "name": "เพลิงที่โชติช่วงที่สุด"
     },
     "BUBBLE_BUBBLE": {
-      "description": "ถ้าศัตรูมีพิษ สร้าง 9 พิษ",
+      "description": "ถ้าศัตรูมีพิษ สร้าง {PoisonPower:diff()} พิษ",
       "name": "บุ๋งบุ๋ง"
     },
     "BUFFER": {
-      "description": "ป้องกันการเสีย HP ของคุณในอีก 1 ครั้ง",
+      "description": "ป้องกันการเสีย HP ของคุณในอีก {BufferPower:diff()} ครั้ง",
       "name": "ม่านกันชน"
     },
     "BULK_UP": {
-      "description": "เสียช่องเก็บลูกแก้ว 1 ช่อง\nได้รับ 2 ความแข็งแรง\nได้รับ 2 ความชำนาญ"
+      "description": "เสียช่องเก็บลูกแก้ว {OrbSlots:diff()} ช่อง\nได้รับ {StrengthPower:diff()} ความแข็งแรง\nได้รับ {DexterityPower:diff()} ความชำนาญ"
     },
     "BULLET_TIME": {
       "description": "ในเทิร์นนี้คุณจะจั่วการ์ดไม่ได้อีก การ์ดในมือทั้งหมดเล่นฟรีจนจบเทิร์น",
       "name": "วินาทีหลบกระสุน"
     },
     "BULLY": {
-      "description": "สร้างความเสียหาย 4\nสร้างความเสียหายเพิ่ม 2 ตามจำนวนจุดอ่อนบนตัวศัตรู"
+      "description": "สร้างความเสียหาย {CalculatedDamage:diff()}\nสร้างความเสียหายเพิ่ม {ExtraDamage:diff()} ตามจำนวนจุดอ่อนบนตัวศัตรู"
     },
     "BULWARK": {
-      "description": "ได้รับ 13 บล็อก\nหลอมสร้าง 10"
+      "description": "ได้รับ {Block:diff()} บล็อก\nหลอมสร้าง {Forge:diff()}"
     },
     "BUNDLE_OF_JOY": {
-      "description": "เพิ่มการ์ดไม่มีสี 3 ใบแบบสุ่มใส่มือ"
+      "description": "เพิ่มการ์ดไม่มีสี {Cards:diff()} ใบแบบสุ่มใส่มือ"
     },
     "BURN": {
-      "description": "ตอนจบเทิร์น ถ้าการ์ดนี้อยู่ในมือ ได้รับความเสียหาย 2",
+      "description": "ตอนจบเทิร์น ถ้าการ์ดนี้อยู่ในมือ ได้รับความเสียหาย {Damage:diff()}",
       "name": "เผาไหม้"
     },
     "BURNING_PACT": {
-      "description": "สลายการ์ด 1 ใบ\nจั่วการ์ด 2 ใบ",
+      "description": "สลายการ์ด 1 ใบ\nจั่วการ์ด {Cards:diff()} ใบ",
       "name": "สัญญาเพลิง"
     },
     "BURST": {
-      "name": "ระเบิดพลัง",
-      "description": "ในเทิร์นนี้ การ์ดทักษะใบถัดไปจะถูกเล่นซ้ำอีกครั้ง"
+      "name": "ระเบิดพลัง"
     },
     "BURY": {
-      "description": "สร้างความเสียหาย 52"
+      "description": "สร้างความเสียหาย {Damage:diff()}"
     },
     "BYRDONIS_EGG": {
       "description": "สามารถนำไปฟักได้ที่จุดพัก"
     },
     "BYRD_SWOOP": {
-      "description": "สร้างความเสียหาย 14"
+      "description": "สร้างความเสียหาย {Damage:diff()}"
     },
     "CALAMITY": {
       "description": "ทุกครั้งที่คุณเล่นการ์ดโจมตี เพิ่มการ์ดโจมตี 1 ใบแบบสุ่มใส่มือ"
     },
     "CALCIFY": {
-      "description": "การโจมตีของOstyสร้างความเสียหายเพิ่ม 4"
+      "description": "การโจมตีของOstyสร้างความเสียหายเพิ่ม {CalcifyPower:diff()}"
     },
     "CALCULATED_GAMBLE": {
       "description": "ทิ้งการ์ดทั้งมือ\nแล้วจั่วการ์ดตามจำนวนนั้น",
       "name": "เดิมพันตามสูตร"
     },
     "CALL_OF_THE_VOID": {
-      "description": "ตอนเริ่มต้นเทิร์น เพิ่มการ์ด 1 ใบแบบสุ่มใส่มือ และมันมีกึ่งสลาย"
+      "description": "ตอนเริ่มต้นเทิร์น เพิ่มการ์ด {Cards:diff()} ใบแบบสุ่มใส่มือ และมันมีกึ่งสลาย"
     },
     "CALTROPS": {
-      "description": "ทุกครั้งที่คุณถูกโจมตี สร้างความเสียหาย 3 กลับไป",
+      "description": "ทุกครั้งที่คุณถูกโจมตี สร้างความเสียหาย {ThornsPower:diff()} กลับไป",
       "name": "ขวากหนาม"
     },
     "CAPACITOR": {
-      "description": "ได้รับช่องเก็บลูกแก้ว 2 ช่อง",
+      "description": "ได้รับช่องเก็บลูกแก้ว {Repeat:diff()} ช่อง",
       "name": "ตัวเก็บประจุ"
     },
     "CAPTURE_SPIRIT": {
-      "description": "ศัตรูเสีย 3 HP\nเพิ่มวิญญาณ 3 ใบเข้ากองจั่ว"
+      "description": "ศัตรูเสีย {Damage:diff()} HP\nเพิ่มวิญญาณ {Cards:diff()} ใบเข้ากองจั่ว"
     },
     "CASCADE": {
-      "description": "เล่นการ์ดใบบนสุด X ใบของกองจั่ว"
+      "description": "เล่นการ์ดใบบนสุด X{IfUpgraded:show:+1} ใบของกองจั่ว"
     },
     "CATASTROPHE": {
-      "description": "เล่นการ์ด 2 ใบแบบสุ่มจากกองจั่ว"
+      "description": "เล่นการ์ด {Cards:diff()} ใบแบบสุ่มจากกองจั่ว"
     },
     "CELESTIAL_MIGHT": {
-      "description": "สร้างความเสียหาย 6 จำนวน 3 ครั้ง"
+      "description": "สร้างความเสียหาย {Damage:diff()} จำนวน {Repeat:diff()} ครั้ง"
     },
     "CHAOS": {
-      "description": "ปลุกเสกลูกแก้ว 1 ลูกแบบสุ่ม",
+      "description": "ปลุกเสกลูกแก้ว {Repeat:diff()} ลูกแบบสุ่ม",
       "name": "ความวุ่นวาย"
     },
     "CHARGE": {
-      "description": "เลือกการ์ด 2 ใบในกองจั่วเพื่อแปรสภาพเป็น",
+      "description": "เลือกการ์ด {Cards:diff()} ใบในกองจั่วเพื่อแปรสภาพเป็น{Cards:plural:{IfUpgraded:show:ลูกน้องจู่โจม+|ลูกน้องจู่โจม}|{IfUpgraded:show:ลูกน้องจู่โจม+|ลูกน้องจู่โจม}}",
       "name": "ลุย!!"
     },
     "CHARGE_BATTERY": {
-      "description": "ได้รับ 7 บล็อก\nและเทิร์นถัดไป ได้รับ [E]",
+      "description": "ได้รับ {Block:diff()} บล็อก\nและเทิร์นถัดไป ได้รับ {Energy:energyIcons()}",
       "name": "สะสมพลังงาน"
     },
     "CHILD_OF_THE_STARS": {
-      "description": "ทุกครั้งที่คุณจ่าย ⭐ ได้รับ 2 บล็อกตามจำนวน ⭐ ที่จ่ายไป"
+      "description": "ทุกครั้งที่คุณจ่าย {singleStarIcon} ได้รับ {BlockForStars:diff()} บล็อกตามจำนวน {singleStarIcon} ที่จ่ายไป"
     },
     "CHILL": {
       "description": "ปลุกเสก 1 น้ำแข็ง ตามจำนวนศัตรู",
       "name": "เยือกแข็ง"
     },
     "CHRYSALIS": {
-      "description": "สับการ์ดทักษะ {Cards:diff()} ใบแบบสุ่มเข้ากองจั่ว มันมีค่าร่าย 0 [E] ในการต่อสู้นี้",
+      "description": "สับการ์ดทักษะ {Cards:diff()} ใบแบบสุ่มเข้ากองจั่ว มันมีค่าร่าย 0 {energyPrefix:energyIcons(1)} ในการต่อสู้นี้",
       "name": "ดักแด้"
     },
     "CINDER": {
-      "description": "สร้างความเสียหาย 17\nสลายการ์ดใบบนสุดของกองจั่ว"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nสลายการ์ดใบบนสุดของกองจั่ว"
     },
     "CLASH": {
-      "description": "จะใช้ได้ก็ต่อเมื่อทั้งมือเป็นการ์ดโจมตี\nสร้างความเสียหาย 14",
+      "description": "จะใช้ได้ก็ต่อเมื่อทั้งมือเป็นการ์ดโจมตี\nสร้างความเสียหาย {Damage:diff()}",
       "name": "ประดาบ"
     },
     "CLAW": {
-      "description": "สร้างความเสียหาย 3\nเพิ่มพลังโจมตีให้การ์ดข่วนทั้งหมด 2 ในการต่อสู้นี้",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nเพิ่มพลังโจมตีให้การ์ดข่วนทั้งหมด {Increase:diff()} ในการต่อสู้นี้",
       "name": "ข่วน"
     },
     "CLEANSE": {
-      "description": "อัญเชิญ 3\nสลายการ์ด 1 ใบในกองจั่ว",
+      "description": "อัญเชิญ {Summon:diff()}\nสลายการ์ด 1 ใบในกองจั่ว",
       "name": "ชำระล้าง"
     },
     "CLOAK_AND_DAGGER": {
-      "description": "ได้รับ 6 บล็อก\nเพิ่มมีดสั้น 1 ใบใส่มือ",
+      "description": "ได้รับ {Block:diff()} บล็อก\nเพิ่มมีดสั้น {Cards:diff()} ใบใส่มือ",
       "name": "ผ้าคลุมซ่อนมีด"
     },
     "CLOAK_OF_STARS": {
-      "description": "ได้รับ 7 บล็อก"
+      "description": "ได้รับ {Block:diff()} บล็อก"
     },
     "CLUMSY": {
       "name": "ความซุ่มซ่าม"
     },
     "COLD_SNAP": {
-      "description": "สร้างความเสียหาย 6\nปลุกเสก 1 น้ำแข็ง",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nปลุกเสก 1 น้ำแข็ง",
       "name": "ความเย็นเข้าแทรก"
     },
     "COLLISION_COURSE": {
-      "description": "สร้างความเสียหาย 9\nเพิ่มDebris 1 ใบใส่มือ"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nเพิ่มDebris 1 ใบใส่มือ"
     },
     "COLOSSUS": {
-      "description": "ได้รับ 5 บล็อก\nในเทิร์นนี้ คุณจะได้รับความเสียหายน้อยลง 50% จากศัตรูที่มีจุดอ่อน"
+      "description": "ได้รับ {Block:diff()} บล็อก\nในเทิร์นนี้ คุณจะได้รับความเสียหายน้อยลง 50% จากศัตรูที่มีจุดอ่อน"
     },
     "COMET": {
-      "description": "สร้างความเสียหาย 33\nสร้าง 3 ความอ่อนแอ\nสร้าง 3 จุดอ่อน"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nสร้าง {WeakPower:diff()} ความอ่อนแอ\nสร้าง {VulnerablePower:diff()} จุดอ่อน"
     },
     "COMPACT": {
-      "description": "ได้รับ 6 บล็อก\nแปรสภาพการ์ดสถานะทั้งหมดในมือเป็นเชื้อเพลิง"
+      "description": "ได้รับ {Block:diff()} บล็อก\nแปรสภาพการ์ดสถานะทั้งหมดในมือเป็น{IfUpgraded:show:เชื้อเพลิง+|เชื้อเพลิง}"
     },
     "COMPILE_DRIVER": {
-      "description": "สร้างความเสียหาย 7\nจั่วการ์ด 1 ใบตามจำนวนลูกแก้วที่ไม่ซ้ำธาตุ\n(จั่วการ์ด 0 ใบ)",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nจั่วการ์ด 1 ใบตามจำนวนลูกแก้วที่ไม่ซ้ำธาตุ{InCombat:\n(จั่วการ์ด {CalculatedCards:diff()} ใบ)|}",
       "name": "ประมวลพลัง"
     },
     "CONFLAGRATION": {
-      "description": "สร้างความเสียหาย 8 ใส่ศัตรูทั้งหมด\nสร้างความเสียหายเพิ่ม 2 ตามจำนวนการ์ดโจมตีใบอื่นที่คุณเล่นในเทิร์นนี้"
+      "description": "สร้างความเสียหาย {CalculatedDamage:diff()} ใส่ศัตรูทั้งหมด\nสร้างความเสียหายเพิ่ม {ExtraDamage:diff()} ตามจำนวนการ์ดโจมตีใบอื่นที่คุณเล่นในเทิร์นนี้"
     },
     "CONQUEROR": {
-      "description": "หลอมสร้าง 3\nและในเทิร์นนี้ พระแสงอาญาสิทธิ์สร้างความเสียหายใส่ศัตรูเป็น 2 เท่า"
+      "description": "หลอมสร้าง {Forge:diff()}\nและในเทิร์นนี้ พระแสงอาญาสิทธิ์สร้างความเสียหายใส่ศัตรูเป็น 2 เท่า"
     },
     "CONSUMING_SHADOW": {
-      "description": "ปลุกเสก 2 ความมืด\nตอนจบเทิร์น ปล่อยพลังลูกแก้วลูกซ้ายสุด"
+      "description": "ปลุกเสก {Repeat:diff()} ความมืด\nตอนจบเทิร์น ปล่อยพลังลูกแก้วลูกซ้ายสุด"
     },
     "CONVERGENCE": {
-      "description": "คงสภาพทั้งมือในเทิร์นนี้\nเทิร์นถัดไป\nได้รับ [E] และ 1 Stars"
+      "description": "คงสภาพทั้งมือในเทิร์นนี้\nเทิร์นถัดไป\nได้รับ {Energy:energyIcons()} และ {Stars:starIcons()}"
     },
     "COOLANT": {
-      "description": "ตอนเริ่มต้นเทิร์น ได้รับ 2 บล็อกตามจำนวนลูกแก้วไม่ซ้ำธาตุที่คุณมี"
+      "description": "ตอนเริ่มต้นเทิร์น ได้รับ {CoolantPower:diff()} บล็อกตามจำนวนลูกแก้วไม่ซ้ำธาตุที่คุณมี"
     },
     "COOLHEADED": {
-      "description": "ปลุกเสก 1 น้ำแข็ง\nจั่วการ์ด 1 ใบ",
+      "description": "ปลุกเสก 1 น้ำแข็ง\nจั่วการ์ด {Cards:diff()} ใบ",
       "name": "ใจเย็น"
     },
     "COORDINATE": {
-      "description": "ผู้เล่นคนอื่น 1 คนได้รับ 5 ความแข็งแรงในเทิร์นนี้"
+      "description": "ผู้เล่นคนอื่น 1 คนได้รับ {StrengthPower:diff()} ความแข็งแรงในเทิร์นนี้"
     },
     "CORROSIVE_WAVE": {
-      "description": "ทุกครั้งที่คุณจั่วการ์ดในเทิร์นนี้ สร้าง 3 พิษใส่ศัตรูทั้งหมด"
+      "description": "ทุกครั้งที่คุณจั่วการ์ดในเทิร์นนี้ สร้าง {CorrosiveWave:diff()} พิษใส่ศัตรูทั้งหมด"
     },
     "CORRUPTION": {
-      "description": "การ์ดทักษะทั้งหมดมีค่าร่าย 0 [E]\nทุกครั้งที่เล่นการ์ดทักษะ สลายมัน",
+      "description": "การ์ดทักษะทั้งหมดมีค่าร่าย 0 {energyPrefix:energyIcons(1)}\nทุกครั้งที่เล่นการ์ดทักษะ สลายมัน",
       "name": "เปื้อนมลทิน"
     },
     "COSMIC_INDIFFERENCE": {
-      "description": "ได้รับ 6 บล็อก\nนำการ์ด 1 ใบจากกองทิ้งไปวางไว้บนสุดของกองจั่ว"
+      "description": "ได้รับ {Block:diff()} บล็อก\nนำการ์ด 1 ใบจากกองทิ้งไปวางไว้บนสุดของกองจั่ว"
     },
     "COUNTDOWN": {
-      "description": "ตอนเริ่มต้นเทิร์น สร้าง 6 อายุขัยใส่ศัตรู 1 ตัวแบบสุ่ม",
+      "description": "ตอนเริ่มต้นเทิร์น สร้าง {CountdownPower:diff()} อายุขัยใส่ศัตรู 1 ตัวแบบสุ่ม",
       "name": "นับถอยหลัง"
     },
     "CRASH_LANDING": {
-      "description": "สร้างความเสียหาย 21 ใส่ศัตรูทั้งหมด\nเติมทั้งมือด้วยDebris"
+      "description": "สร้างความเสียหาย {Damage:diff()} ใส่ศัตรูทั้งหมด\nเติมทั้งมือด้วยDebris"
     },
     "CREATIVE_AI": {
       "description": "ตอนเริ่มต้นเทิร์น เพิ่มการ์ดพลัง 1 ใบแบบสุ่มใส่มือ",
       "name": "ปัญญาประดิษฐ์สร้างสรรค์"
     },
     "CRESCENT_SPEAR": {
-      "description": "สร้างความเสียหาย 6\nสร้างความเสียหายเพิ่ม 2 ตามจำนวนการ์ดทั้งหมดของคุณที่มีค่าร่าย ⭐"
+      "description": "สร้างความเสียหาย {CalculatedDamage:diff()}\nสร้างความเสียหายเพิ่ม {ExtraDamage:diff()} ตามจำนวนการ์ดทั้งหมดของคุณที่มีค่าร่าย {singleStarIcon}"
     },
     "CRIMSON_MANTLE": {
-      "description": "ตอนเริ่มต้นเทิร์น เสีย 1 HP และได้รับ 8 บล็อก"
+      "description": "ตอนเริ่มต้นเทิร์น เสีย 1 HP และได้รับ {CrimsonMantlePower:diff()} บล็อก"
     },
     "CRUELTY": {
-      "description": "ศัตรูที่มีจุดอ่อนได้รับความเสียหายเพิ่ม 25%"
+      "description": "ศัตรูที่มีจุดอ่อนได้รับความเสียหายเพิ่ม {CrueltyPower:diff()}%"
     },
     "CRUSH_UNDER": {
-      "description": "สร้างความเสียหาย 7 ใส่ศัตรูทั้งหมด ศัตรูทั้งหมดเสีย 1 ความแข็งแรงในเทิร์นนี้"
+      "description": "สร้างความเสียหาย {Damage:diff()} ใส่ศัตรูทั้งหมด ศัตรูทั้งหมดเสีย {StrengthLoss:diff()} ความแข็งแรงในเทิร์นนี้"
     },
     "CURSE_OF_THE_BELL": {
       "name": "คำสาปจากกระดิ่ง"
     },
     "DAGGER_SPRAY": {
-      "description": "สร้างความเสียหาย 4 ใส่ศัตรูทั้งหมด จำนวน 2 ครั้ง",
+      "description": "สร้างความเสียหาย {Damage:diff()} ใส่ศัตรูทั้งหมด จำนวน 2 ครั้ง",
       "name": "ฝนมีดบิน"
     },
     "DAGGER_THROW": {
-      "description": "สร้างความเสียหาย 9\nจั่วการ์ด 1 ใบ\nทิ้งการ์ด 1 ใบ",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nจั่วการ์ด 1 ใบ\nทิ้งการ์ด 1 ใบ",
       "name": "ขว้างมีด"
     },
     "DANSE_MACABRE": {
-      "description": "ทุกครั้งที่คุณเล่นการ์ดค่าร่าย [E] ขึ้นไป ได้รับ 3 บล็อก",
+      "description": "ทุกครั้งที่คุณเล่นการ์ดค่าร่าย {Energy:energyIcons()} ขึ้นไป ได้รับ {DanseMacabrePower:diff()} บล็อก",
       "name": "ระบำมรณะ"
     },
     "DARKNESS": {
-      "description": "ปลุกเสก 1 ความมืด\nผลต่อเนื่องของลูกแก้วความมืดทั้งหมดทำงาน",
+      "description": "ปลุกเสก 1 ความมืด\nผลต่อเนื่องของลูกแก้วความมืดทั้งหมดทำงาน{IfUpgraded:show: 2 ครั้ง|}",
       "name": "ความมืดมิด"
     },
     "DARK_EMBRACE": {
@@ -474,92 +473,92 @@
       "name": "ความมืดโอบกอด"
     },
     "DARK_SHACKLES": {
-      "description": "ศัตรูเสีย 9 ความแข็งแรงในเทิร์นนี้",
+      "description": "ศัตรูเสีย {StrengthLoss:diff()} ความแข็งแรงในเทิร์นนี้",
       "name": "พันธนาการทมิฬ"
     },
     "DASH": {
-      "description": "ได้รับ 10 บล็อก\nสร้างความเสียหาย 10",
+      "description": "ได้รับ {Block:diff()} บล็อก\nสร้างความเสียหาย {Damage:diff()}",
       "name": "พุ่งเข้าใส่"
     },
     "DAZED": {
       "name": "ความมึนงง"
     },
     "DEADLY_POISON": {
-      "description": "สร้าง 5 พิษ",
+      "description": "สร้าง {PoisonPower:diff()} พิษ",
       "name": "พิษร้ายแรง"
     },
     "DEATHBRINGER": {
-      "description": "สร้าง 21 อายุขัยและ 1 ความอ่อนแอใส่ศัตรูทั้งหมด"
+      "description": "สร้าง {DoomPower:diff()} อายุขัยและ {WeakPower:diff()} ความอ่อนแอใส่ศัตรูทั้งหมด"
     },
     "DEATHS_DOOR": {
-      "description": "ได้รับ 6 บล็อก\nถ้าคุณเคยสร้างอายุขัยในเทิร์นนี้ ได้รับบล็อกเพิ่ม 2 ครั้ง",
+      "description": "ได้รับ {Block:diff()} บล็อก\nถ้าคุณเคยสร้างอายุขัยในเทิร์นนี้ ได้รับบล็อกเพิ่ม {Repeat:diff()} ครั้ง",
       "name": "ประตูมรณะ"
     },
     "DEATH_MARCH": {
-      "description": "สร้างความเสียหาย 8\nสร้างความเสียหายเพิ่ม 3 ตามจำนวนการ์ดที่คุณจั่วในเทิร์นนี้"
+      "description": "สร้างความเสียหาย {CalculatedDamage:diff()}\nสร้างความเสียหายเพิ่ม {ExtraDamage:diff()} ตามจำนวนการ์ดที่คุณจั่วในเทิร์นนี้"
     },
     "DEBILITATE": {
-      "description": "สร้างความเสียหาย 7\nจุดอ่อนและความอ่อนแอมีผลกับศัตรูเป็น 2 เท่า เป็นเวลา 3 เทิร์น"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nจุดอ่อนและความอ่อนแอมีผลกับศัตรูเป็น 2 เท่า เป็นเวลา {DebilitatePower:diff()} เทิร์น"
     },
     "DEBRIS": {
       "name": "เศษซาก"
     },
     "DEBT": {
-      "description": "ตอนจบเทิร์น ถ้าการ์ดนี้อยู่ในมือ เสีย 10 ทอง",
+      "description": "ตอนจบเทิร์น ถ้าการ์ดนี้อยู่ในมือ เสีย {Gold:diff()} ทอง",
       "name": "หนี้สิน"
     },
     "DECAY": {
-      "description": "ตอนจบเทิร์น ถ้าการ์ดนี้อยู่ในมือ ได้รับความเสียหาย 2",
+      "description": "ตอนจบเทิร์น ถ้าการ์ดนี้อยู่ในมือ ได้รับความเสียหาย {Damage:diff()}",
       "name": "ความเสื่อมสลาย"
     },
     "DECISIONS_DECISIONS": {
-      "description": "จั่วการ์ด 3 ใบ\nเลือกการ์ดทักษะ 1 ใบในมือแล้วเล่น 3 ครั้ง",
+      "description": "จั่วการ์ด {Cards:diff()} ใบ\nเลือกการ์ดทักษะ 1 ใบในมือแล้วเล่น {Repeat:diff()} ครั้ง",
       "name": "คิดแล้วคิดอีก"
     },
     "DEFEND_DEFECT": {
-      "description": "ได้รับ 5 บล็อก",
+      "description": "ได้รับ {Block:diff()} บล็อก",
       "name": "ป้องกัน"
     },
     "DEFEND_IRONCLAD": {
-      "description": "ได้รับ 5 บล็อก",
+      "description": "ได้รับ {Block:diff()} บล็อก",
       "name": "ป้องกัน"
     },
     "DEFEND_NECROBINDER": {
-      "description": "ได้รับ 5 บล็อก",
+      "description": "ได้รับ {Block:diff()} บล็อก",
       "name": "ป้องกัน"
     },
     "DEFEND_REGENT": {
-      "description": "ได้รับ 5 บล็อก",
+      "description": "ได้รับ {Block:diff()} บล็อก",
       "name": "ป้องกัน"
     },
     "DEFEND_SILENT": {
-      "description": "ได้รับ 5 บล็อก",
+      "description": "ได้รับ {Block:diff()} บล็อก",
       "name": "ป้องกัน"
     },
     "DEFILE": {
-      "description": "สร้างความเสียหาย 13"
+      "description": "สร้างความเสียหาย {Damage:diff()}"
     },
     "DEFLECT": {
-      "description": "ได้รับ 4 บล็อก",
+      "description": "ได้รับ {Block:diff()} บล็อก",
       "name": "ปัดป้อง"
     },
     "DEFRAGMENT": {
-      "description": "ได้รับ 1 โฟกัส",
+      "description": "ได้รับ {FocusPower:diff()} โฟกัส",
       "name": "จัดเรียงข้อมูล"
     },
     "DEFY": {
-      "description": "ได้รับ 6 บล็อก\nสร้าง 1 ความอ่อนแอ",
+      "description": "ได้รับ {Block:diff()} บล็อก\nสร้าง {WeakPower:diff()} ความอ่อนแอ",
       "name": "ขัดขืน"
     },
     "DELAY": {
-      "description": "ได้รับ 11 บล็อก\nและเทิร์นถัดไป\nได้รับ [E]",
+      "description": "ได้รับ {Block:diff()} บล็อก\nและเทิร์นถัดไป\nได้รับ {Energy:energyIcons()}",
       "name": "หน่วงเวลา"
     },
     "DEMESNE": {
-      "description": "ตอนเริ่มต้นเทิร์น ได้รับ [E] และจั่วการ์ดเพิ่ม 1 ใบ"
+      "description": "ตอนเริ่มต้นเทิร์น ได้รับ {Energy:energyIcons()} และจั่วการ์ดเพิ่ม {Cards:diff()} ใบ"
     },
     "DEMON_FORM": {
-      "description": "ตอนเริ่มต้นเทิร์น ได้รับ 2 ความแข็งแรง",
+      "description": "ตอนเริ่มต้นเทิร์น ได้รับ {StrengthPower:diff()} ความแข็งแรง",
       "name": "ร่างปีศาจ"
     },
     "DEPRECATED_CARD": {
@@ -570,56 +569,56 @@
       "description": "ทุก 1 อายุขัยที่คุณสร้าง ได้รับ 1 บล็อก"
     },
     "DEVASTATE": {
-      "description": "สร้างความเสียหาย 30"
+      "description": "สร้างความเสียหาย {Damage:diff()}"
     },
     "DEVOUR_LIFE": {
-      "description": "ทุกครั้งที่คุณเล่นวิญญาณ อัญเชิญ 1",
+      "description": "ทุกครั้งที่คุณเล่นวิญญาณ อัญเชิญ {DevourLifePower:diff()}",
       "name": "กลืนกินชีวิต"
     },
     "DIRGE": {
-      "description": "อัญเชิญ 3 จำนวน X ครั้ง\nเพิ่มวิญญาณ X  ใบเข้ากองจั่ว"
+      "description": "อัญเชิญ {Summon:diff()} จำนวน X ครั้ง\nเพิ่ม{IfUpgraded:show:วิญญาณ+|วิญญาณ} X  ใบเข้ากองจั่ว"
     },
     "DISCOVERY": {
-      "description": "เลือกการ์ด 1 จาก 3 ใบที่ถูกสุ่มมาเพื่อเพิ่มใส่มือ มันมีค่าร่าย 0 [E] ในเทิร์นนี้",
+      "description": "เลือกการ์ด 1 จาก 3 ใบที่ถูกสุ่มมาเพื่อเพิ่มใส่มือ มันมีค่าร่าย 0 {energyPrefix:energyIcons(1)} ในเทิร์นนี้",
       "name": "การค้นพบ"
     },
     "DISINTEGRATION": {
-      "description": "ตอนจบเทิร์น ได้รับความเสียหาย 6"
+      "description": "ตอนจบเทิร์น ได้รับความเสียหาย {DisintegrationPower:diff()}"
     },
     "DISMANTLE": {
-      "description": "สร้างความเสียหาย 8\nถ้าศัตรูมีจุดอ่อน โจมตี 2 ครั้ง"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nถ้าศัตรูมีจุดอ่อน โจมตี 2 ครั้ง"
     },
     "DISTRACTION": {
       "description": "เพิ่มการ์ดทักษะ 1 ใบแบบสุ่มใส่มือ มันเล่นฟรีในเทิร์นนี้",
       "name": "เบนความสนใจ"
     },
     "DODGE_AND_ROLL": {
-      "description": "ได้รับ 4 บล็อก\nเทิร์นถัดไปได้รับ 4 บล็อก",
+      "description": "ได้รับ {Block:diff()} บล็อก\nเทิร์นถัดไปได้รับ {Block:diff()} บล็อก",
       "name": "กลิ้งหลบ"
     },
     "DOMINATE": {
-      "description": "ได้รับ 1 ความแข็งแรงตามจำนวนจุดอ่อนบนตัวศัตรู"
+      "description": "ได้รับ {StrengthPerVulnerable:diff()} ความแข็งแรงตามจำนวนจุดอ่อนบนตัวศัตรู"
     },
     "DOUBLE_ENERGY": {
       "description": "พลังงานเพิ่มเป็น 2 เท่า",
       "name": "พลังงานสองเท่า"
     },
     "DOUBT": {
-      "description": "ตอนจบเทิร์น ถ้าการ์ดนี้อยู่ใบมือ ได้รับ 1 ความอ่อนแอ",
+      "description": "ตอนจบเทิร์น ถ้าการ์ดนี้อยู่ใบมือ ได้รับ {WeakPower:diff()} ความอ่อนแอ",
       "name": "ความเคลือบแคลง"
     },
     "DRAIN_POWER": {
-      "description": "สร้างความเสียหาย 10\nพัฒนาการ์ด 2 ใบแบบสุ่มในกองทิ้ง"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nพัฒนาการ์ด {Cards:diff()} ใบแบบสุ่มในกองทิ้ง"
     },
     "DRAMATIC_ENTRANCE": {
-      "description": "สร้างความเสียหาย 11 ใส่ศัตรูทั้งหมด",
+      "description": "สร้างความเสียหาย {Damage:diff()} ใส่ศัตรูทั้งหมด",
       "name": "เปิดตัวอลังการ"
     },
     "DREDGE": {
-      "description": "นำการ์ด 3 card ใบจากกองทิ้งขึ้นมือ"
+      "description": "นำการ์ด {Cards:diff()} {Cards:plural:card|cards} ใบจากกองทิ้งขึ้นมือ"
     },
     "DRUM_OF_BATTLE": {
-      "description": "จั่วการ์ด 2 ใบ\nตอนเริ่มต้นเทิร์น สลายการ์ดใบบนสุดของกองจั่ว",
+      "description": "จั่วการ์ด {Cards:diff()} ใบ\nตอนเริ่มต้นเทิร์น สลายการ์ดใบบนสุดของกองจั่ว",
       "name": "ลั่นกลองรบ"
     },
     "DUALCAST": {
@@ -627,14 +626,14 @@
       "name": "ร่ายซ้ำ"
     },
     "DUAL_WIELD": {
-      "description": "เลือกการ์ดโจมตีหรือการ์ดพลัง เพิ่มสำเนาการ์ดนั้น 1 ใบใส่มือ",
+      "description": "เลือกการ์ดโจมตีหรือการ์ดพลัง เพิ่มสำเนาการ์ดนั้น {IfUpgraded:show:{Cards} ใบ|1 ใบ}ใส่มือ",
       "name": "จับดาบสองมือ"
     },
     "DYING_STAR": {
-      "description": "สร้างความเสียหาย 9 ใส่ศัตรูทั้งหมด ศัตรูทั้งหมดเสีย 9 ความแข็งแรงในเทิร์นนี้"
+      "description": "สร้างความเสียหาย {Damage:diff()} ใส่ศัตรูทั้งหมด ศัตรูทั้งหมดเสีย {StrengthLoss:diff()} ความแข็งแรงในเทิร์นนี้"
     },
     "ECHOING_SLASH": {
-      "description": "สร้างความเสียหาย 10 ใส่ศัตรูทั้งหมด\nทำงานซ้ำตามจำนวนศัตรูที่ฆ่าได้",
+      "description": "สร้างความเสียหาย {Damage:diff()} ใส่ศัตรูทั้งหมด\nทำงานซ้ำตามจำนวนศัตรูที่ฆ่าได้",
       "name": "เฉือนสะท้อน"
     },
     "ECHO_FORM": {
@@ -645,16 +644,16 @@
       "description": "สลายทั้งมือ\nถ้ามีการ์ดสลายด้วยวิธีนี้ 9 ใบ ได้รับ 1 ไร้ตัวตน"
     },
     "END_OF_DAYS": {
-      "description": "สร้าง 29 อายุขัยใส่ศัตรูทั้งหมด\nฆ่าศัตรูทั้งหมดที่เหลือ HP ไม่เกินอายุขัย"
+      "description": "สร้าง {DoomPower:diff()} อายุขัยใส่ศัตรูทั้งหมด\nฆ่าศัตรูทั้งหมดที่เหลือ HP ไม่เกินอายุขัย"
     },
     "ENERGY_SURGE": {
-      "description": "ผู้เล่นทั้งหมดได้รับ [E]"
+      "description": "ผู้เล่นทั้งหมดได้รับ {Energy:energyIcons()}"
     },
     "ENFEEBLING_TOUCH": {
-      "description": "ศัตรูเสีย 8 ความแข็งแรงในเทิร์นนี้"
+      "description": "ศัตรูเสีย {StrengthLoss:diff()} ความแข็งแรงในเทิร์นนี้"
     },
     "ENLIGHTENMENT": {
-      "description": "ลดค่าร่ายการ์ดในมือทั้งหมดเหลือ 1 ในเทิร์นนี้",
+      "description": "ลดค่าร่ายการ์ดในมือทั้งหมดเหลือ 1 ใน{IfUpgraded:show:การต่อสู้|เทิร์น}นี้",
       "name": "รู้แจ้งเห็นจริง"
     },
     "ENTHRALLED": {
@@ -665,162 +664,162 @@
       "name": "ขุดสนามเพลาะ"
     },
     "ENTROPY": {
-      "description": "ตอนเริ่มต้นเทิร์น แปรสภาพการ์ด 1 ใบในมือ"
+      "description": "ตอนเริ่มต้นเทิร์น แปรสภาพการ์ด {Cards:diff()} ใบในมือ"
     },
     "ENVENOM": {
-      "description": "ทุกครั้งที่โจมตีแบบไม่ถูกบล็อกได้ สร้าง 1 พิษ",
+      "description": "ทุกครั้งที่โจมตีแบบไม่ถูกบล็อกได้ สร้าง {EnvenomPower:diff()} พิษ",
       "name": "อาบยาพิษ"
     },
     "EQUILIBRIUM": {
-      "description": "ได้รับ 13 Block\nคงสภาพทั้งมือในเทิร์นนี้",
+      "description": "ได้รับ {Block:diff()} Block\nคงสภาพทั้งมือในเทิร์นนี้",
       "name": "ดุลยภาพ"
     },
     "ERADICATE": {
-      "description": "สร้างความเสียหาย 11 จำนวน X ครั้ง"
+      "description": "สร้างความเสียหาย {Damage:diff()} จำนวน X ครั้ง"
     },
     "ESCAPE_PLAN": {
-      "description": "จั่วการ์ด 1 ใบ\nถ้าจั่วได้การ์ดทักษะ ได้รับ 3 บล็อก",
+      "description": "จั่วการ์ด 1 ใบ\nถ้าจั่วได้การ์ดทักษะ ได้รับ {Block:diff()} บล็อก",
       "name": "ทางหนีทีไล่"
     },
     "ETERNAL_ARMOR": {
-      "description": "ได้รับ 7 Plating"
+      "description": "ได้รับ {PlatingPower:diff()} Plating"
     },
     "EVIL_EYE": {
-      "description": "ได้รับ 8 บล็อก\nได้รับเพิ่ม 8 บล็อกถ้าคุณสลายการ์ดไปในเทิร์นนี้"
+      "description": "ได้รับ {Block:diff()} บล็อก\nได้รับเพิ่ม {Block:diff()} บล็อกถ้าคุณสลายการ์ดไปในเทิร์นนี้"
     },
     "EXPECT_A_FIGHT": {
-      "description": "ได้รับ [E] ตามจำนวนการ์ดโจมตีในมือ\n(ได้รับ [E])"
+      "description": "ได้รับ {energyPrefix:energyIcons(1)} ตามจำนวนการ์ดโจมตีในมือ{InCombat:\n(ได้รับ {CalculatedEnergy:energyIcons()})|}"
     },
     "EXPERTISE": {
-      "description": "จั่วการ์ดจนมี 6 ใบในมือ",
+      "description": "จั่วการ์ดจนมี {Cards:diff()} ใบในมือ",
       "name": "ความช่ำชอง"
     },
     "EXPOSE": {
-      "description": "กำจัดอาคมและบล็อกทั้งหมดจากศัตรู\nสร้าง 2 จุดอ่อน"
+      "description": "กำจัดอาคมและบล็อกทั้งหมดจากศัตรู\nสร้าง {Power:diff()} จุดอ่อน"
     },
     "EXTERMINATE": {
-      "description": "สร้างความเสียหาย 3 จำนวน 4 ครั้งใส่ศัตรูทั้งหมด"
+      "description": "สร้างความเสียหาย {Damage:diff()} จำนวน {Repeat:diff()} ครั้งใส่ศัตรูทั้งหมด"
     },
     "FALLING_STAR": {
-      "description": "สร้างความเสียหาย 7\nสร้าง 1 ความอ่อนแอ\nสร้าง 1 จุดอ่อน"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nสร้าง {WeakPower:diff()} ความอ่อนแอ\nสร้าง {VulnerablePower:diff()} จุดอ่อน"
     },
     "FAN_OF_KNIVES": {
-      "description": "ต่อไปนี้มีดสั้นจะโจมตีศัตรูทั้งหมด\nเพิ่มมีดสั้น 4 ใบใส่มือ",
+      "description": "ต่อไปนี้มีดสั้นจะโจมตีศัตรูทั้งหมด\nเพิ่มมีดสั้น {Shivs:diff()} ใบใส่มือ",
       "name": "พัดมีดบิน"
     },
     "FASTEN": {
-      "description": "ได้รับเพิ่ม 5 บล็อกจากการ์ดป้องกัน",
+      "description": "ได้รับเพิ่ม {ExtraBlock:diff()} บล็อกจากการ์ดป้องกัน",
       "name": "รัดให้แน่น"
     },
     "FEAR": {
-      "description": "สร้างความเสียหาย 7\nสร้าง 1 จุดอ่อน",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nสร้าง {VulnerablePower:diff()} จุดอ่อน",
       "name": "ความกลัว"
     },
     "FEED": {
-      "description": "สร้างความเสียหาย 10\nถ้าสังหาร เพิ่ม 3 HP สูงสุด",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nถ้าสังหาร เพิ่ม {MaxHp:diff()} HP สูงสุด",
       "name": "กัดกิน"
     },
     "FEEDING_FRENZY": {
-      "description": "ได้รับ 5 ความแข็งแรงในเทิร์นนี้"
+      "description": "ได้รับ {StrengthPower:diff()} ความแข็งแรงในเทิร์นนี้"
     },
     "FEEL_NO_PAIN": {
-      "description": "ทุกครั้งที่การ์ดสลาย ได้รับ 3 บล็อก",
+      "description": "ทุกครั้งที่การ์ดสลาย ได้รับ {Power:diff()} บล็อก",
       "name": "สภาพไร้เจ็บปวด"
     },
     "FERAL": {
-      "description": "ครั้งแรกที่คุณเล่นการ์ดโจมตีค่าร่าย\n0[E] ในแต่ละเทิร์น\nนำมันกลับขึ้นมือ"
+      "description": "{FeralPower:plural:ครั้งแรก|{FeralPower:diff()} ครั้งแรก}ที่คุณเล่นการ์ดโจมตีค่าร่าย\n0{energyPrefix:energyIcons(1)} ในแต่ละเทิร์น\nนำมันกลับขึ้นมือ"
     },
     "FETCH": {
-      "description": "Ostyสร้างความเสียหาย 3\nถ้านี่คือครั้งแรกที่เล่นการ์ดนี้ในเทิร์นนี้ จั่วการ์ด 1 ใบ"
+      "description": "Ostyสร้างความเสียหาย {OstyDamage:diff()}\nถ้านี่คือครั้งแรกที่เล่นการ์ดนี้ในเทิร์นนี้ จั่วการ์ด {Cards:diff()} ใบ"
     },
     "FIEND_FIRE": {
-      "description": "สลายทั้งมือ\nสร้างความเสียหาย 7 ตามจำนวนการ์ดที่สลาย",
+      "description": "สลายทั้งมือ\nสร้างความเสียหาย {Damage:diff()} ตามจำนวนการ์ดที่สลาย",
       "name": "เพลิงมาร"
     },
     "FIGHT_ME": {
-      "description": "สร้างความเสียหาย 5 จำนวน 2 ครั้ง\nได้รับ 2 ความแข็งแรง\nศัตรูได้รับ 1 ความแข็งแรง",
+      "description": "สร้างความเสียหาย {Damage:diff()} จำนวน 2 ครั้ง\nได้รับ {StrengthPower:diff()} ความแข็งแรง\nศัตรูได้รับ {EnemyStrength:diff()} ความแข็งแรง",
       "name": "มาสู้กัน!"
     },
     "FIGHT_THROUGH": {
-      "description": "ได้รับ 13 บล็อก\nเพิ่มWounds 2 ใบเข้ากองทิ้ง"
+      "description": "ได้รับ {Block:diff()} บล็อก\nเพิ่มWounds 2 ใบเข้ากองทิ้ง"
     },
     "FINESSE": {
-      "description": "ได้รับ 4 บล็อก\nจั่ว 1 การ์ด",
+      "description": "ได้รับ {Block:diff()} บล็อก\nจั่ว 1 การ์ด",
       "name": "ลูกเล่น"
     },
     "FINISHER": {
-      "description": "สร้างความเสียหาย 6 ตามจำนวนการ์ดโจมตีที่เล่นในเทิร์นนี้\n(โจมตี 0 ครั้ง)",
+      "description": "สร้างความเสียหาย {Damage:diff()} ตามจำนวนการ์ดโจมตีที่เล่นในเทิร์นนี้{InCombat:\n(โจมตี {CalculatedHits:diff()} ครั้ง)|}",
       "name": "โจมตีปิดฉาก"
     },
     "FISTICUFFS": {
-      "description": "สร้างความเสียหาย 7\nได้รับบล็อกตามความเสียหายที่ไม่ถูกบล็อกที่ทำได้"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nได้รับบล็อกตามความเสียหายที่ไม่ถูกบล็อกที่ทำได้"
     },
     "FLAK_CANNON": {
-      "description": "สลายการ์ดสถานะทั้งหมดของคุณ\nสร้างความเสียหาย 8 ใส่ศัตรู 1 ตัวแบบสุ่ม ตามจำนวนการ์ดที่ถูกสลาย\n(โจมตี 0 ครั้ง)"
+      "description": "สลายการ์ดสถานะทั้งหมดของคุณ\nสร้างความเสียหาย {Damage:diff()} ใส่ศัตรู 1 ตัวแบบสุ่ม ตามจำนวนการ์ดที่ถูกสลาย{InCombat:\n(โจมตี {CalculatedHits:diff()} ครั้ง)|}"
     },
     "FLAME_BARRIER": {
-      "description": "ได้รับ 12 บล็อก\nทุกครั้งที่คุณถูกโจมตีในเทิร์นนี้ สร้างความเสียหายกลับไป 4",
+      "description": "ได้รับ {Block:diff()} บล็อก\nทุกครั้งที่คุณถูกโจมตีในเทิร์นนี้ สร้างความเสียหายกลับไป {DamageBack:diff()}",
       "name": "กำแพงอัคคี"
     },
     "FLAME_IN_THE_DARK": {
-      "description": "ได้รับ [E]\nจั่วการ์ด {Cards:diff()} ใบ"
+      "description": "ได้รับ {Energy:energyIcons()}\nจั่วการ์ด {Cards:diff()} ใบ"
     },
     "FLANKING": {
       "description": "ศัตรูได้รับความเสียหายเป็น 2 เท่าจากผู้เล่นคนอื่นๆ ในเทิร์นนี้",
       "name": "โจมตีจากด้านข้าง"
     },
     "FLASH_OF_STEEL": {
-      "description": "สร้างความเสียหาย 5\nจั่วการ์ด 1 ใบ",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nจั่วการ์ด 1 ใบ",
       "name": "คมเหล็กพริบตา"
     },
     "FLATTEN": {
-      "description": "Ostyสร้างความเสียหาย 12\nการ์ดนี้ค่าร่ายเป็น 0 [E] ถ้าOstyเคยโจมตีในเทิร์นนี้"
+      "description": "Ostyสร้างความเสียหาย {OstyDamage:diff()}\nการ์ดนี้ค่าร่ายเป็น 0 {energyPrefix:energyIcons(1)} ถ้าOstyเคยโจมตีในเทิร์นนี้"
     },
     "FLECHETTES": {
-      "description": "สร้างความเสียหาย 5 ตามจำนวนการ์ดทักษะในมือ\n(โจมตี 0 ครั้ง)",
+      "description": "สร้างความเสียหาย {Damage:diff()} ตามจำนวนการ์ดทักษะในมือ{InCombat:\n(โจมตี {CalculatedHits:diff()} ครั้ง)|}",
       "name": "ลูกดอกสงคราม"
     },
     "FLICK_FLACK": {
-      "description": "สร้างความเสียหาย 7 ใส่ศัตรูทั้งหมด"
+      "description": "สร้างความเสียหาย {Damage:diff()} ใส่ศัตรูทั้งหมด"
     },
     "FOCUSED_STRIKE": {
-      "description": "สร้างความเสียหาย 9\nได้รับ 1 โฟกัสในเทิร์นนี้",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nได้รับ {FocusPower:diff()} โฟกัสในเทิร์นนี้",
       "name": "จู่โจมโฟกัส"
     },
     "FOLLOW_THROUGH": {
-      "description": "สร้างความเสียหาย 6 ใส่ศัตรูทั้งหมด\nถ้าการ์ดใบล่าสุดที่คุณเล่นในเทิร์นนี้เป็นการ์ดทักษะ สร้าง 1 ความอ่อนแอ ใส่ศัตรูทั้งหมด",
+      "description": "สร้างความเสียหาย {Damage:diff()} ใส่ศัตรูทั้งหมด\nถ้าการ์ดใบล่าสุดที่คุณเล่นในเทิร์นนี้เป็นการ์ดทักษะ สร้าง {WeakPower:diff()} ความอ่อนแอ ใส่ศัตรูทั้งหมด",
       "name": "กระบวนท่าส่งต่อ"
     },
     "FOOTWORK": {
-      "description": "ได้รับ 2 ความชำนาญ",
+      "description": "ได้รับ {DexterityPower:diff()} ความชำนาญ",
       "name": "จังหวะก้าวเท้า"
     },
     "FORBIDDEN_GRIMOIRE": {
       "description": "ตอนจบการต่อสู้ คุณสามารถกำจัดการ์ด 1 ใบจากกองการ์ดได้"
     },
     "FOREGONE_CONCLUSION": {
-      "description": "เทิร์นถัดไป นำการ์ด 2 ใบจากกองจั่วขึ้นมือ"
+      "description": "เทิร์นถัดไป นำการ์ด {Cards:diff()} ใบจากกองจั่วขึ้นมือ"
     },
     "FORGOTTEN_RITUAL": {
-      "description": "ถ้าคุณเคยสลายการ์ดในเทิร์นนี้ ได้รับ [E]"
+      "description": "ถ้าคุณเคยสลายการ์ดในเทิร์นนี้ ได้รับ {Energy:energyIcons()}"
     },
     "FRANTIC_ESCAPE": {
       "description": "ออกไปไกลขึ้น\nเพิ่ม Sandpit 1\nเพิ่มค่าร่ายการ์ดนี้ 1"
     },
     "FRIENDSHIP": {
-      "description": "เสีย 2 ความแข็งแรง\nได้รับ [E] ตอนเริ่มต้นเทิร์น",
+      "description": "เสีย {StrengthPower:inverseDiff()} ความแข็งแรง\nได้รับ {Energy:energyIcons()} ตอนเริ่มต้นเทิร์น",
       "name": "มิตรภาพ"
     },
     "FTL": {
-      "description": "สร้างความเสียหาย 5\nถ้าคุณใช้การ์ดไม่เกิน 3 ใบในเทิร์นนี้ จั่ว 1 การ์ด",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nถ้าคุณใช้การ์ดไม่เกิน {PlayMax:diff()} ใบในเทิร์นนี้ จั่ว 1 การ์ด",
       "name": "เร็วเหนือแสง"
     },
     "FUEL": {
-      "description": "ได้รับ [E]\nจั่วการ์ด 1 ใบ",
+      "description": "ได้รับ {Energy:energyIcons()}\nจั่วการ์ด {Cards:diff()} ใบ",
       "name": "เชื้อเพลิง"
     },
     "FURNACE": {
-      "description": "ตอนเริ่มต้นเทิร์น หลอมสร้าง 4",
+      "description": "ตอนเริ่มต้นเทิร์น หลอมสร้าง {Forge:diff()}",
       "name": "เตาเผา"
     },
     "FUSION": {
@@ -828,129 +827,129 @@
       "name": "รวมปรมาณู"
     },
     "GAMMA_BLAST": {
-      "description": "สร้างความเสียหาย 13\nสร้าง 2 ความอ่อนแอ\nสร้าง 2 จุดอ่อน"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nสร้าง {WeakPower:diff()} ความอ่อนแอ\nสร้าง {VulnerablePower:diff()} จุดอ่อน"
     },
     "GANG_UP": {
-      "description": "สร้างความเสียหาย 5\nสร้างความเสียหายเพิ่ม 5 ตามจำนวนครั้งที่พันธมิตรเคยโจมตีศัตรูในเทิร์นนี้"
+      "description": "สร้างความเสียหาย {CalculatedDamage:diff()}\nสร้างความเสียหายเพิ่ม {ExtraDamage:diff()} ตามจำนวนครั้งที่พันธมิตรเคยโจมตีศัตรูในเทิร์นนี้"
     },
     "GATHER_LIGHT": {
-      "description": "ได้รับ 7 บล็อก\nได้รับ 1 Stars"
+      "description": "ได้รับ {Block:diff()} บล็อก\nได้รับ {Stars:starIcons()}"
     },
     "GENESIS": {
-      "description": "ตอนเริ่มต้นเทิร์น ได้รับ 2 Stars"
+      "description": "ตอนเริ่มต้นเทิร์น ได้รับ {StarsPerTurn:starIcons()}"
     },
     "GENETIC_ALGORITHM": {
-      "description": "ได้รับ 1 บล็อก\nบล็อกของการ์ดนี้เพิ่มขึ้น 3 แบบถาวร",
+      "description": "ได้รับ {Block:diff()} บล็อก\nบล็อกของการ์ดนี้เพิ่มขึ้น {Increase:diff()} แบบถาวร",
       "name": "อัลกอริทึมพันธุกรรม"
     },
     "GHOST_EATER": {
-      "description": "นำอายุขัยออกทั้งหมด\nได้รับ [E] ต่อทุก 6 อายุขัยที่ถูกนำออก"
+      "description": "นำอายุขัยออกทั้งหมด\nได้รับ {Energy:energyIcons()} ต่อทุก 6 อายุขัยที่ถูกนำออก"
     },
     "GIANT_ROCK": {
-      "description": "สร้างความเสียหาย 16"
+      "description": "สร้างความเสียหาย {Damage:diff()}"
     },
     "GLACIER": {
-      "description": "ได้รับ 6 บล็อก\nปลุกเสก 2 น้ำแข็ง",
+      "description": "ได้รับ {Block:diff()} บล็อก\nปลุกเสก 2 น้ำแข็ง",
       "name": "ธารน้ำแข็ง"
     },
     "GLASSWORK": {
-      "description": "ได้รับ 5 บล็อก\nปลุกเสก 1 แก้ว",
+      "description": "ได้รับ {Block:diff()} บล็อก\nปลุกเสก 1 แก้ว",
       "name": "งานแก้ว"
     },
     "GLIMMER": {
-      "description": "จั่วการ์ด 3 ใบ\nนำการ์ด 1 ใบจากมือไปวางไว้บนสุดของกองจั่ว"
+      "description": "จั่วการ์ด {Cards:diff()} ใบ\nนำการ์ด {PutBack:diff()} ใบจากมือไปวางไว้บนสุดของกองจั่ว"
     },
     "GLIMPSE_BEYOND": {
-      "description": "ผู้เล่นทั้งหมดเพิ่มวิญญาณ 3 ใบเข้ากองจั่ว"
+      "description": "ผู้เล่นทั้งหมดเพิ่มวิญญาณ {Cards:diff()} ใบเข้ากองจั่ว"
     },
     "GLITTERSTREAM": {
-      "description": "ได้รับ 11 บล็อก\nเทิร์นถัดไป ได้รับ 4 บล็อก"
+      "description": "ได้รับ {Block:diff()} บล็อก\nเทิร์นถัดไป ได้รับ {BlockNextTurn:diff()} บล็อก"
     },
     "GLOW": {
-      "description": "ได้รับ 1 Stars\nจั่วการ์ด 2 ใบ"
+      "description": "ได้รับ {Stars:starIcons()}\nจั่วการ์ด {Cards:diff()} ใบ"
     },
     "GOLD_AXE": {
-      "description": "สร้างความเสียหายตามจำนวนการ์ดที่เคยเล่นในการต่อสู้นี้\n(สร้างความเสียหาย 0)"
+      "description": "สร้างความเสียหายตามจำนวนการ์ดที่เคยเล่นในการต่อสู้นี้{InCombat:\n(สร้างความเสียหาย {CalculatedDamage:diff()})|}"
     },
     "GOOD_INSTINCTS": {
       "description": "ได้รับ {Block:diff()} บล็อก",
       "name": "สัญชาตญาณดี"
     },
     "GO_FOR_THE_EYES": {
-      "description": "สร้างความเสียหาย 3\nถ้าศัตรูตั้งใจจะโจมตี สร้าง 1 ความอ่อนแอ",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nถ้าศัตรูตั้งใจจะโจมตี สร้าง {WeakPower:diff()} ความอ่อนแอ",
       "name": "พุ่งใส่ตา"
     },
     "GRAND_FINALE": {
-      "description": "จะเล่นได้ก็ต่อเมื่อไม่มีการ์ดในกองจั่ว สร้างความเสียหาย 50 ใส่ศัตรูทั้งหมด",
+      "description": "จะเล่นได้ก็ต่อเมื่อไม่มีการ์ดในกองจั่ว สร้างความเสียหาย {Damage:diff()} ใส่ศัตรูทั้งหมด",
       "name": "อวสานอลังการ"
     },
     "GRAPPLE": {
-      "description": "สร้างความเสียหาย 7\nและทุกครั้งที่คุณได้รับบล็อกในเทิร์นนี้ สร้างความเสียหาย 5 ใส่ศัตรูตัวนั้น"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nและทุกครั้งที่คุณได้รับบล็อกในเทิร์นนี้ สร้างความเสียหาย {GrapplePower:diff()} ใส่ศัตรูตัวนั้น"
     },
     "GRAVEBLAST": {
-      "description": "สร้างความเสียหาย 4\nนำการ์ด 1 ใบจากกองทิ้งขึ้นมือ"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nนำการ์ด 1 ใบจากกองทิ้งขึ้นมือ"
     },
     "GRAVE_WARDEN": {
-      "description": "ได้รับ 8 บล็อก\nเพิ่มวิญญาณ 1 ใบเข้ากองจั่ว"
+      "description": "ได้รับ {Block:diff()} บล็อก\nเพิ่ม{IfUpgraded:show:วิญญาณ+|วิญญาณ} 1 ใบเข้ากองจั่ว"
     },
     "GREED": {
       "name": "ความโลภ"
     },
     "GUARDS": {
-      "description": "แปรสภาพการ์ดกี่ใบก็ได้ในมือให้เป็นลูกน้องสละชีพ"
+      "description": "แปรสภาพการ์ดกี่ใบก็ได้ในมือให้เป็น{IfUpgraded:show:ลูกน้องสละชีพ+|ลูกน้องสละชีพ}"
     },
     "GUIDING_STAR": {
-      "description": "สร้างความเสียหาย 12\nเทิร์นถัดไป จั่วการ์ด 2 ใบ"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nเทิร์นถัดไป จั่วการ์ด {Cards:diff()} ใบ"
     },
     "GUILTY": {
-      "description": "ถูกกำจัดออกจากกองการ์ดหลังผ่านไป 5 การต่อสู้"
+      "description": "ถูกกำจัดออกจากกองการ์ดหลังผ่านไป {Combats:diff()} การต่อสู้"
     },
     "GUNK_UP": {
-      "description": "สร้างความเสียหาย 4 จำนวน 3 ครั้ง\nเพิ่มSlimed 1 ใบเข้ากองทิ้ง"
+      "description": "สร้างความเสียหาย {Damage:diff()} จำนวน {Repeat:diff()} ครั้ง\nเพิ่มSlimed 1 ใบเข้ากองทิ้ง"
     },
     "HAILSTORM": {
-      "description": "ตอนจบเทิร์น ถ้าคุณมีน้ำแข็ง สร้างความเสียหาย 6 ใส่ศัตรูทั้งหมด"
+      "description": "ตอนจบเทิร์น ถ้าคุณมีน้ำแข็ง สร้างความเสียหาย {HailstormPower:diff()} ใส่ศัตรูทั้งหมด"
     },
     "HAMMER_TIME": {
       "description": "ทุกครั้งที่คุณหลอมสร้าง พันธมิตรทั้งหมดจะหลอมสร้างเช่นกัน"
     },
     "HAND_OF_GREED": {
-      "description": "สร้างความเสียหาย 20\nถ้าสังหาร ได้รับ 20 ทอง",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nถ้าสังหาร ได้รับ {Gold:diff()} ทอง",
       "name": "มือแห่งความโลภ"
     },
     "HAND_TRICK": {
-      "description": "ได้รับ 7 บล็อก\nเพิ่มเล่ห์เหลี่ยมให้การ์ดทักษะ 1 ใบในมือในเทิร์นนี้"
+      "description": "ได้รับ {Block:diff()} บล็อก\nเพิ่มเล่ห์เหลี่ยมให้การ์ดทักษะ 1 ใบในมือในเทิร์นนี้"
     },
     "HANG": {
-      "description": "สร้างความเสียหาย 10\nการ์ดแขวนคอทั้งหมดสร้างความเสียหายใส่ศัตรูตัวนี้เป็น 2 เท่า",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nการ์ดแขวนคอทั้งหมดสร้างความเสียหายใส่ศัตรูตัวนี้เป็น 2 เท่า",
       "name": "แขวนคอ"
     },
     "HAUNT": {
-      "description": "ทุกครั้งที่คุณเล่นวิญญาณ ศัตรู 1 ตัวแบบสุ่มเสีย 6 HP"
+      "description": "ทุกครั้งที่คุณเล่นวิญญาณ ศัตรู 1 ตัวแบบสุ่มเสีย {HpLoss:diff()} HP"
     },
     "HAVOC": {
       "description": "เล่นการ์ดใบบนสุดของกองจั่วแล้วสลายมัน",
       "name": "นำพาหายนะ"
     },
     "HAZE": {
-      "description": "สร้าง 4 พิษใส่ศัตรูทั้งหมด",
+      "description": "สร้าง {PoisonPower:diff()} พิษใส่ศัตรูทั้งหมด",
       "name": "หมอกพิษ"
     },
     "HEADBUTT": {
-      "description": "สร้างความเสียหาย 9\nนำการ์ด 1 ใบจากกองทิ้งไปวางไว้บนสุดของกองจั่ว",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nนำการ์ด 1 ใบจากกองทิ้งไปวางไว้บนสุดของกองจั่ว",
       "name": "โขกหัว"
     },
     "HEAVENLY_DRILL": {
-      "description": "สร้างความเสียหาย 8 จำนวน X ครั้ง\nถ้า X มีค่า 4 ขึ้นไป จะเกิดผล 2 เท่า"
+      "description": "สร้างความเสียหาย {Damage:diff()} จำนวน X ครั้ง\nถ้า X มีค่า {Energy:diff()} ขึ้นไป จะเกิดผล 2 เท่า"
     },
     "HEGEMONY": {
-      "description": "สร้างความเสียหาย 15\nเทิร์นถัดไป ได้รับ [E]"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nเทิร์นถัดไป ได้รับ {Energy:energyIcons()}"
     },
     "HEIRLOOM_HAMMER": {
-      "description": "สร้างความเสียหาย 17\nเลือกการ์ดไม่มีสี 1 ใบในมือ เพิ่มสำเนาของการ์ดนั้น 1 ใบใส่มือ"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nเลือกการ์ดไม่มีสี 1 ใบในมือ เพิ่มสำเนาของการ์ดนั้น 1 ใบใส่มือ"
     },
     "HELIX_DRILL": {
-      "description": "สร้างความเสียหาย 3 ตามจำนวน [E] ที่เคยจ่ายในเทิร์นนี้\n(โจมตี 0 ครั้ง)"
+      "description": "สร้างความเสียหาย {Damage:diff()} ตามจำนวน {energyPrefix:energyIcons(1)} ที่เคยจ่ายในเทิร์นนี้{InCombat:\n(โจมตี {CalculatedHits:diff()} ครั้ง)|}"
     },
     "HELLO_WORLD": {
       "description": "ตอนเริ่มต้นเทิร์น เพิ่มการ์ดธรรมดา 1 ใบแบบสุ่มใส่มือ",
@@ -961,43 +960,43 @@
       "name": "ปลุกนรก"
     },
     "HEMOKINESIS": {
-      "description": "เสีย 2 HP\nสร้างความเสียหาย 14",
+      "description": "เสีย {HpLoss:diff()} HP\nสร้างความเสียหาย {Damage:diff()}",
       "name": "คาถาโลหิต"
     },
     "HIDDEN_CACHE": {
-      "description": "ได้รับ 1 Stars\nเทิร์นถัดไป ได้รับ 3 Stars"
+      "description": "ได้รับ {Stars:starIcons()}\nเทิร์นถัดไป ได้รับ {StarNextTurnPower:starIcons()}"
     },
     "HIDDEN_DAGGERS": {
-      "description": "ทิ้งการ์ด 2 ใบ\nเพิ่มมีดสั้น 2 ใบใส่มือ"
+      "description": "ทิ้งการ์ด {Cards:diff()} ใบ\nเพิ่ม{IfUpgraded:show:มีดสั้น+|มีดสั้น} {Shivs:diff()} ใบใส่มือ"
     },
     "HIDDEN_GEM": {
-      "description": "การ์ดในกองจั่ว 1 ใบแบบสุ่มได้รับ เล่นซ้ำ 2"
+      "description": "การ์ดในกองจั่ว 1 ใบแบบสุ่มได้รับ เล่นซ้ำ {Replay:diff()}"
     },
     "HIGH_FIVE": {
-      "description": "Ostyสร้างความเสียหาย 11\nและสร้าง 2 จุดอ่อน\nใส่ศัตรูทั้งหมด"
+      "description": "Ostyสร้างความเสียหาย {OstyDamage:diff()}\nและสร้าง {VulnerablePower:diff()} จุดอ่อน\nใส่ศัตรูทั้งหมด"
     },
     "HOLOGRAM": {
-      "description": "ได้รับ 3 บล็อก\nนำการ์ด 1 ใบจากกองทิ้งขึ้นมือ",
+      "description": "ได้รับ {Block:diff()} บล็อก\nนำการ์ด 1 ใบจากกองทิ้งขึ้นมือ",
       "name": "ภาพจำลอง"
     },
     "HOTFIX": {
-      "description": "ได้รับ 2 โฟกัสในเทิร์นนี้",
+      "description": "ได้รับ {FocusPower:diff()} โฟกัสในเทิร์นนี้",
       "name": "แก้ไขเร่งด่วน"
     },
     "HOWL_FROM_BEYOND": {
-      "description": "สร้างความเสียหาย 16 ใส่ศัตรูทั้งหมด\nตอนเริ่มต้นเทิร์น เล่นจากกองทิ้ง",
+      "description": "สร้างความเสียหาย {Damage:diff()} ใส่ศัตรูทั้งหมด\nตอนเริ่มต้นเทิร์น เล่นจากกองทิ้ง",
       "name": "เสียงหอนจากเบื้องบน"
     },
     "HUDDLE_UP": {
-      "description": "พันธมิตรทั้งหมดจั่วการ์ด 2 ใบ",
+      "description": "พันธมิตรทั้งหมดจั่วการ์ด {Cards:diff()} ใบ",
       "name": "จับกลุ่ม"
     },
     "HYPERBEAM": {
-      "description": "สร้างความเสียหาย 26 ใส่ศัตรูทั้งหมด\nเสีย 3 โฟกัส",
+      "description": "สร้างความเสียหาย {Damage:diff()} ใส่ศัตรูทั้งหมด\nเสีย {FocusPower:diff()} โฟกัส",
       "name": "ลำแสงพิฆาต"
     },
     "ICE_LANCE": {
-      "description": "สร้างความเสียหาย 19\nปลุกเสก 3 น้ำแข็ง",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nปลุกเสก {Repeat:diff()} น้ำแข็ง",
       "name": "หอกน้ำแข็ง"
     },
     "IGNITION": {
@@ -1012,15 +1011,15 @@
       "description": "สร้างความเสียหาย {Damage:diff()}\nสร้าง {PoisonPower:diff()} พิษ"
     },
     "IMPATIENCE": {
-      "description": "ถ้าไม่มีการ์ดโจมตีในมือ จั่วการ์ด 2 ใบ",
+      "description": "ถ้าไม่มีการ์ดโจมตีในมือ จั่วการ์ด {Cards:diff()} ใบ",
       "name": "ความใจร้อน"
     },
     "IMPERVIOUS": {
-      "description": "ได้รับ 30 บล็อก",
+      "description": "ได้รับ {Block:diff()} บล็อก",
       "name": "ฟันแทงไม่เข้า"
     },
     "INFECTION": {
-      "description": "ตอนจบเทิร์น ถ้าการ์ดนี้อยู่ในมือ ได้รับความเสียหาย 3",
+      "description": "ตอนจบเทิร์น ถ้าการ์ดนี้อยู่ในมือ ได้รับความเสียหาย {Damage:diff()}",
       "name": "ติดเชื้อ"
     },
     "INFERNAL_BLADE": {
@@ -1028,7 +1027,7 @@
       "name": "นรกศาสตรา"
     },
     "INFERNO": {
-      "description": "ตอนเริ่มต้นเทิร์น เสีย 1 HP\nทุกครั้งที่คุณเสีย HP ในเทิร์นของคุณ สร้างความเสียหาย 6 ใส่ศัตรูทั้งหมด",
+      "description": "ตอนเริ่มต้นเทิร์น เสีย 1 HP\nทุกครั้งที่คุณเสีย HP ในเทิร์นของคุณ สร้างความเสียหาย {InfernoPower:diff()} ใส่ศัตรูทั้งหมด",
       "name": "เพลิงโลกันตร์"
     },
     "INFINITE_BLADES": {
@@ -1036,117 +1035,117 @@
       "name": "คมมีดไร้ขอบเขต"
     },
     "INFLAME": {
-      "description": "ได้รับ 2 ความแข็งแรง",
+      "description": "ได้รับ {StrengthPower:diff()} ความแข็งแรง",
       "name": "จุดไฟ"
     },
     "INJURY": {
       "name": "ความเสียหาย"
     },
     "INTERCEPT": {
-      "description": "ได้รับ 9 บล็อก\nดึงการโจมตีทั้งหมดในเทิร์นนี้ที่เล็งผู้เล่นอื่นมาที่คุณแทน",
+      "description": "ได้รับ {Block:diff()} บล็อก\nดึงการโจมตีทั้งหมดในเทิร์นนี้ที่เล็งผู้เล่นอื่นมาที่คุณแทน",
       "name": "สกัดกั้น"
     },
     "INVOKE": {
-      "description": "เทิร์นถัดไป อัญเชิญ 2 และได้รับ [E]"
+      "description": "เทิร์นถัดไป อัญเชิญ {Summon:diff()} และได้รับ {Energy:energyIcons()}"
     },
     "IRON_WAVE": {
-      "description": "ได้รับ 5 บล็อก\nสร้างความเสียหาย 5",
+      "description": "ได้รับ {Block:diff()} บล็อก\nสร้างความเสียหาย {Damage:diff()}",
       "name": "คลื่นคมดาบ"
     },
     "ITERATION": {
-      "description": "ครั้งแรกที่คุณเล่นการ์ดสถานะในแต่ละเทิร์น จั่วการ์ด 2 ใบ"
+      "description": "ครั้งแรกที่คุณเล่นการ์ดสถานะในแต่ละเทิร์น จั่วการ์ด {IterationPower:diff()} ใบ"
     },
     "I_AM_INVINCIBLE": {
-      "description": "ได้รับ 9 บล็อก\nตอนจบเทิร์น ถ้าการ์ดนี้อยู่ใบบนสุดของกองจั่ว จะเล่นมัน"
+      "description": "ได้รับ {Block:diff()} บล็อก\nตอนจบเทิร์น ถ้าการ์ดนี้อยู่ใบบนสุดของกองจั่ว จะเล่นมัน"
     },
     "JACKPOT": {
       "name": "แจ็กพอต"
     },
     "JACK_OF_ALL_TRADES": {
-      "description": "เพิ่มการ์ดไม่มีสี 1 ใบแบบสุ่มใส่มือ",
+      "description": "เพิ่มการ์ดไม่มีสี {Cards:diff()} ใบแบบสุ่มใส่มือ",
       "name": "รู้อย่างเป็ด"
     },
     "JUGGERNAUT": {
-      "description": "ทุกครั้งที่ได้รับบล็อก สร้างความเสียหาย 5 ใส่ศัตรู 1 ตัวแบบสุ่ม",
+      "description": "ทุกครั้งที่ได้รับบล็อก สร้างความเสียหาย {JuggernautPower:diff()} ใส่ศัตรู 1 ตัวแบบสุ่ม",
       "name": "กำลังภายใน"
     },
     "JUGGLING": {
       "description": "เพิ่มสำเนา 1 ใบของการ์ดโจมตีใบที่ 3 ที่คุณเล่นในแต่ละเทิร์นใส่มือ"
     },
     "KINGLY_KICK": {
-      "description": "สร้างความเสียหาย 24\nทุกครั้งที่คุณจั่วได้การ์ดนี้ ลดค่าร่ายการ์ดนี้ลง 1"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nทุกครั้งที่คุณจั่วได้การ์ดนี้ ลดค่าร่ายการ์ดนี้ลง 1"
     },
     "KINGLY_PUNCH": {
-      "description": "สร้างความเสียหาย 8\nทุกครั้งที่คุณจั่วได้การ์ดนี้ เพิ่มความเสียหายของมัน 3 จนจบการต่อสู้"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nทุกครั้งที่คุณจั่วได้การ์ดนี้ เพิ่มความเสียหายของมัน {Increase:diff()} จนจบการต่อสู้"
     },
     "KNOCKDOWN": {
-      "description": "สร้างความเสียหาย 10\nในเทิร์นนี้ ศัตรูจะได้รับความเสียหายจากผู้เล่นคนอื่นเป็น 2 เท่า"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nในเทิร์นนี้ ศัตรูจะได้รับความเสียหายจากผู้เล่นคนอื่นเป็น {IfUpgraded:show:3|2} เท่า"
     },
     "KNOCKOUT_BLOW": {
-      "description": "สร้างความเสียหาย 30\nถ้าฆ่าศัตรูได้ ได้รับ 5 Stars"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nถ้าฆ่าศัตรูได้ ได้รับ {Stars:starIcons()}"
     },
     "KNOW_THY_PLACE": {
-      "description": "สร้าง 1 ความอ่อนแอ\nสร้าง 1 จุดอ่อน"
+      "description": "สร้าง {WeakPower:diff()} ความอ่อนแอ\nสร้าง {VulnerablePower:diff()} จุดอ่อน"
     },
     "LANTERN_KEY": {
       "description": "ปลดล็อกเหตุการณ์พิเศษในองก์ถัดไป"
     },
     "LARGESSE": {
-      "description": "ผู้เล่นคนอื่น 1 คนเพิ่มการ์ดไร้สี 1 ใบแบบสุ่มใส่มือ"
+      "description": "ผู้เล่นคนอื่น 1 คนเพิ่มการ์ดไร้สี{IfUpgraded:show: แบบพัฒนาแล้ว} 1 ใบแบบสุ่มใส่มือ"
     },
     "LEADING_STRIKE": {
-      "description": "สร้างความเสียหาย 7\nเพิ่มมีดสั้น 1 ใบใส่มือ"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nเพิ่มมีดสั้น {Shivs:diff()} ใบใส่มือ"
     },
     "LEAP": {
-      "description": "ได้รับ 9 บล็อก",
+      "description": "ได้รับ {Block:diff()} บล็อก",
       "name": "กระโจนหลบ"
     },
     "LEGION_OF_BONE": {
-      "description": "ผู้เล่นทั้งหมดอัญเชิญ 6"
+      "description": "ผู้เล่นทั้งหมดอัญเชิญ {Summon:diff()}"
     },
     "LEG_SWEEP": {
-      "description": "สร้าง 2 ความอ่อนแอ\nได้รับ 11 บล็อก",
+      "description": "สร้าง {WeakPower:diff()} ความอ่อนแอ\nได้รับ {Block:diff()} บล็อก",
       "name": "กวาดขา"
     },
     "LETHALITY": {
-      "description": "การโจมตีแรกในแต่ละเทิร์น สร้างความเสียหายเพิ่ม 50%"
+      "description": "การโจมตีแรกในแต่ละเทิร์น สร้างความเสียหายเพิ่ม {LethalityPower:diff()}%"
     },
     "LIFT": {
-      "description": "ให้ 11 บล็อกแก่ผู้เล่นคนอื่น 1 คน"
+      "description": "ให้ {Block:diff()} บล็อกแก่ผู้เล่นคนอื่น 1 คน"
     },
     "LIGHTNING_ROD": {
-      "description": "ได้รับ 4 บล็อก\nตอนเริ่มต้นเทิร์นในอีก 1 เทิร์น ปลุกเสก 1 สายฟ้า",
+      "description": "ได้รับ {Block:diff()} บล็อก\nตอนเริ่มต้นเทิร์นในอีก {LightningRodPower:plural:1 เทิร์น|{:diff()} เทิร์น} ปลุกเสก 1 สายฟ้า",
       "name": "สายล่อฟ้า"
     },
     "LOOP": {
-      "description": "ตอนเริ่มต้นเทิร์น ผลต่อเนื่องของลูกแก้วลูกขวาสุดจะทำงาน",
+      "description": "ตอนเริ่มต้นเทิร์น ผลต่อเนื่องของลูกแก้วลูกขวาสุดจะทำงาน{IfUpgraded:show: อีก 2 ครั้ง}",
       "name": "คำสั่งวนซ้ำ"
     },
     "LUMINESCE": {
-      "description": "ได้รับ [E]"
+      "description": "ได้รับ {Energy:energyIcons()}"
     },
     "LUNAR_BLAST": {
-      "description": "สร้างความเสียหาย 4 ตามจำนวนการ์ดทักษะที่เคยเล่นในเทิร์นนี้\n(โจมตี 0 ครั้ง)"
+      "description": "สร้างความเสียหาย {Damage:diff()} ตามจำนวนการ์ดทักษะที่เคยเล่นในเทิร์นนี้{InCombat:\n(โจมตี {CalculatedHits:diff()} ครั้ง)|}"
     },
     "MACHINE_LEARNING": {
-      "description": "ตอนเริ่มต้นเทิร์น จั่วการ์ดเพิ่ม 1 ใบ",
+      "description": "ตอนเริ่มต้นเทิร์น จั่วการ์ดเพิ่ม {Cards:diff()} ใบ",
       "name": "แมชชีนเลิร์นนิ่ง"
     },
     "MAKE_IT_SO": {
-      "description": "สร้างความเสียหาย 6\nการ์ดทักษะทุก 3 ใบที่คุณเล่นในเทิร์นเดียวกัน นำการ์ดนี้ขึ้นมือ"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nการ์ดทักษะทุก {Cards:diff()} ใบที่คุณเล่นในเทิร์นเดียวกัน นำการ์ดนี้ขึ้นมือ"
     },
     "MALAISE": {
-      "description": "ศัตรูเสีย X ความแข็งแรง สร้าง X ความอ่อนแอ",
+      "description": "ศัตรูเสีย X{IfUpgraded:show:+1} ความแข็งแรง สร้าง X{IfUpgraded:show:+1} ความอ่อนแอ",
       "name": "สาปส่งโรคภัย"
     },
     "MANGLE": {
-      "description": "สร้างความเสียหาย 15\nศัตรูเสีย 10 ความแข็งแรงในเทิร์นนี้"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nศัตรูเสีย {StrengthLoss:diff()} ความแข็งแรงในเทิร์นนี้"
     },
     "MANIFEST_AUTHORITY": {
-      "description": "ได้รับ 7 บล็อก\nเพิ่มการ์ดไร้สี 1 ใบแบบสุ่มใส่มือ"
+      "description": "ได้รับ {Block:diff()} บล็อก\nเพิ่มการ์ดไร้สี{IfUpgraded:show: แบบพัฒนาแล้ว} 1 ใบแบบสุ่มใส่มือ"
     },
     "MASTER_OF_STRATEGY": {
-      "description": "จั่วการ์ด 3 ใบ",
+      "description": "จั่วการ์ด {Cards:diff()} ใบ",
       "name": "จอมกลยุทธ์"
     },
     "MASTER_PLANNER": {
@@ -1154,25 +1153,25 @@
       "name": "จอมวางแผน"
     },
     "MAUL": {
-      "description": "สร้างความเสียหาน 5 จำนวน 2 ครั้ง\nการ์ด Maul ทั้งหมดสร้างความเสียหายเพิ่ม 1 ในการต่อสู้นี้"
+      "description": "สร้างความเสียหาน {Damage:diff()} จำนวน 2 ครั้ง\nการ์ด Maul ทั้งหมดสร้างความเสียหายเพิ่ม {Increase:diff()} ในการต่อสู้นี้"
     },
     "MAYHEM": {
       "description": "ตอนเริ่มต้นเทิร์น เล่นการ์ดใบบนสุดของกองจั่ว",
       "name": "ความโกลาหล"
     },
     "MEMENTO_MORI": {
-      "description": "สร้างความเสียหาย 8\nสร้างความเสียหายเพิ่ม 4 ตามจำนวนการ์ดที่เคยถูกทิ้งในเทิร์นนี้"
+      "description": "สร้างความเสียหาย {CalculatedDamage:diff()}\nสร้างความเสียหายเพิ่ม {ExtraDamage:diff()} ตามจำนวนการ์ดที่เคยถูกทิ้งในเทิร์นนี้"
     },
     "METAMORPHOSIS": {
-      "description": "เพิ่มการ์ดโจมตี 3 ใบแบบสุ่มเข้ากองจั่ว มันเล่นฟรีในการตอนสู้นี้",
+      "description": "เพิ่มการ์ดโจมตี {Cards:diff()} ใบแบบสุ่มเข้ากองจั่ว มันเล่นฟรีในการตอนสู้นี้",
       "name": "แปรร่างเปลี่ยนรูป"
     },
     "METEOR_SHOWER": {
-      "description": "สร้างความเสียหาย 14 ใส่ศัตรูทั้งหมด\nสร้าง 2 ความอ่อนแอและจุดอ่อนใส่ศัตรูทั้งหมด",
+      "description": "สร้างความเสียหาย {Damage:diff()} ใส่ศัตรูทั้งหมด\nสร้าง {WeakPower:diff()} ความอ่อนแอและจุดอ่อนใส่ศัตรูทั้งหมด",
       "name": "ฝนดาวตก"
     },
     "METEOR_STRIKE": {
-      "description": "สร้างความเสียหาย 24\nปลุกเสก 3 พลาสมา",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nปลุกเสก 3 พลาสมา",
       "name": "อุกกาบาตจู่โจม"
     },
     "MIMIC": {
@@ -1180,262 +1179,262 @@
       "name": "เลียนแบบ"
     },
     "MIND_BLAST": {
-      "description": "สร้างความเสียหายตามจำนวนการ์ดในกองจั่ว\n(สร้างความเสียหาย 0)",
+      "description": "สร้างความเสียหายตามจำนวนการ์ดในกองจั่ว{InCombat:\n(สร้างความเสียหาย {CalculatedDamage:diff()})|}",
       "name": "จิตสังหาร"
     },
     "MIND_ROT": {
-      "description": "จั่วการ์ดน้อยลง 1 ใบในแต่ละเทิร์น"
+      "description": "จั่วการ์ดน้อยลง {MindRotPower:diff()} ใบในแต่ละเทิร์น"
     },
     "MINION_DIVE_BOMB": {
-      "description": "สร้างความเสียหาย 13",
+      "description": "สร้างความเสียหาย {Damage:diff()}",
       "name": "อุกกาบาตลูกน้อง"
     },
     "MINION_SACRIFICE": {
-      "description": "ได้รับ 9 บล็อก",
+      "description": "ได้รับ {Block:diff()} บล็อก",
       "name": "ลูกน้องสละชีพ"
     },
     "MINION_STRIKE": {
-      "description": "สร้างความเสียหาย 7\nจั่วการ์ด 1 ใบ",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nจั่วการ์ด {Cards:diff()} ใบ",
       "name": "ลูกน้องจู่โจม"
     },
     "MIRAGE": {
-      "description": "ได้รับบล็อกตามจำนวนพิษบนตัวศัตรูทั้งหมด\n(ได้รับ 0 บล็อก)",
+      "description": "ได้รับบล็อกตามจำนวนพิษบนตัวศัตรูทั้งหมด{InCombat:\n(ได้รับ {CalculatedBlock:diff()} บล็อก)|}",
       "name": "ภาพลวงตา"
     },
     "MISERY": {
-      "description": "สร้างความเสียหาย 7\nสร้างผลผิดปกติใส่ศัตรูตัวอื่นทั้งหมด ตามผลผิดปกติทั้งหมดบนศัตรูตัวนี้"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nสร้างผลผิดปกติใส่ศัตรูตัวอื่นทั้งหมด ตามผลผิดปกติทั้งหมดบนศัตรูตัวนี้"
     },
     "MODDED": {
-      "description": "ได้รับช่องเก็บลูกแก้ว 1 ช่อง\nจั่วการ์ด 1 ใบ เพิ่มค่าร่ายของการ์ดนี้ 1"
+      "description": "ได้รับช่องเก็บลูกแก้ว {Repeat:diff()} ช่อง\nจั่วการ์ด {Cards:diff()} ใบ เพิ่มค่าร่ายของการ์ดนี้ 1"
     },
     "MOLTEN_FIST": {
-      "description": "สร้างความเสียหาย 10\nเพิ่มจุดอ่อนบนตัวศัตรูเป็น 2 เท่า"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nเพิ่มจุดอ่อนบนตัวศัตรูเป็น 2 เท่า"
     },
     "MOMENTUM_STRIKE": {
       "name": "จู่โจมด้วยแรงเหวี่ยง"
     },
     "MONARCHS_GAZE": {
-      "description": "ทุกครั้งที่คุณโจมตีศัตรู มันจะเสีย 1 ความแข็งแรงในเทิร์นนี้"
+      "description": "ทุกครั้งที่คุณโจมตีศัตรู มันจะเสีย {StrengthLoss:diff()} ความแข็งแรงในเทิร์นนี้"
     },
     "MONOLOGUE": {
-      "description": "ทุกครั้งที่คุณเล่นการ์ดในเทิร์นนี้ ได้รับ 1 ความแข็งแรงในเทิร์นนี้"
+      "description": "ทุกครั้งที่คุณเล่นการ์ดในเทิร์นนี้ ได้รับ {Power:diff()} ความแข็งแรงในเทิร์นนี้"
     },
     "MULTI_CAST": {
-      "description": "ปล่อยพลังลูกแก้วลูกขวาสุด X ครั้ง",
+      "description": "ปล่อยพลังลูกแก้วลูกขวาสุด {IfUpgraded:show:X+1|X} ครั้ง",
       "name": "ร่ายทวี"
     },
     "MURDER": {
-      "description": "สร้างความเสียหาย 1\nสร้างความเสียหายเพิ่ม 1 ตามจำนวนการ์ดที่ถูกจั่วในการต่อสู้นี้"
+      "description": "สร้างความเสียหาย {CalculatedDamage:diff()}\nสร้างความเสียหายเพิ่ม {ExtraDamage:diff()} ตามจำนวนการ์ดที่ถูกจั่วในการต่อสู้นี้"
     },
     "NECRO_MASTERY": {
-      "description": "อัญเชิญ 5\nทุกครั้งที่Ostyเสีย HP\nศัตรูทั้งหมดเสีย HP ตามจำนวนนั้นด้วย"
+      "description": "อัญเชิญ {Summon:diff()}\nทุกครั้งที่Ostyเสีย HP\nศัตรูทั้งหมดเสีย HP ตามจำนวนนั้นด้วย"
     },
     "NEGATIVE_PULSE": {
-      "description": "ได้รับ 5 บล็อก\nสร้าง 7 อายุขัยใส่ศัตรูทั้งหมด"
+      "description": "ได้รับ {Block:diff()} บล็อก\nสร้าง {DoomPower:diff()} อายุขัยใส่ศัตรูทั้งหมด"
     },
     "NEOWS_FURY": {
-      "description": "สร้างความเสียหาย 10\nนำการ์ด 1 ใบแบบสุ่มจากกองทิ้งขึ้นมือ"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nนำการ์ด {Cards:plural:1|{:diff()}} ใบแบบสุ่มจากกองทิ้งขึ้นมือ"
     },
     "NEUROSURGE": {
-      "description": "ได้รับ [E]\nจั่วการ์ด 2 ใบ\nตอนเริ่มต้นเทิร์น สร้าง 3 อายุขัยใส่ตัวคุณ"
+      "description": "ได้รับ {Energy:energyIcons()}\nจั่วการ์ด {Cards:diff()} ใบ\nตอนเริ่มต้นเทิร์น สร้าง {NeurosurgePower:diff()} อายุขัยใส่ตัวคุณ"
     },
     "NEUTRALIZE": {
-      "description": "สร้างความเสียหาย 3\nสร้าง 1 ความอ่อนแอ",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nสร้าง {WeakPower:diff()} ความอ่อนแอ",
       "name": "ทำให้เป็นกลาง"
     },
     "NEUTRON_AEGIS": {
-      "description": "ได้รับ 8 Plating"
+      "description": "ได้รับ {PlatingPower:diff()} Plating"
     },
     "NIGHTMARE": {
       "description": "เลือกการ์ด 1 ใบ\nเทิร์นถัดไป เพิ่มสำเนา 3 ใบของการ์ดนั้นใส่มือ",
       "name": "ฝันร้าย"
     },
     "NORMALITY": {
-      "description": "คุณไม่สามารถเล่นการ์ดเกิน 3 ใบได้ในเทิร์นนี้\n(เหลือ  ใบ)",
+      "description": "คุณไม่สามารถเล่นการ์ดเกิน 3 ใบได้ในเทิร์นนี้{InCombat:\n(เหลือ {CalculatedCards:plural:{} ใบ|{} ใบ})|}",
       "name": "จำกัดฐานะ"
     },
     "NOSTALGIA": {
       "description": "การ์ดโจมตีหรือทักษะใบแรกที่คุณเล่นในแต่ละเทิร์นจะถูกนำไปวางใบบนสุดของกองจั่ว"
     },
     "NOXIOUS_FUMES": {
-      "description": "ตอนเริ่มต้นเทิร์น สร้าง 2 พิษใส่ศัตรูทั้งหมด",
+      "description": "ตอนเริ่มต้นเทิร์น สร้าง {PoisonPerTurn:diff()} พิษใส่ศัตรูทั้งหมด",
       "name": "รมควันพิษ"
     },
     "NO_ESCAPE": {
-      "description": "สร้าง 10 อายุขัย บวกอีก 5 อายุขัยต่อทุก 10 อายุขัยบนตัวศัตรู\n(สร้าง 10 อายุขัย)"
+      "description": "สร้าง {CalculationBase:diff()} อายุขัย บวกอีก {CalculationExtra:diff()} อายุขัยต่อทุก {DoomThreshold:diff()} อายุขัยบนตัวศัตรู{IsTargeting:\n(สร้าง {CalculatedDoom:diff()} อายุขัย)|}"
     },
     "NULL": {
-      "description": "สร้างความเสียหาย 10\nสร้าง 2 ความอ่อนแอ\nปลุกเสก 1 ความมืด"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nสร้าง {WeakPower:diff()} ความอ่อนแอ\nปลุกเสก 1 ความมืด"
     },
     "OBLIVION": {
-      "description": "ทุกครั้งที่คุณเล่นการ์ดในเทิร์นนี้ สร้าง 3 อายุขัยใส่ศัตรู"
+      "description": "ทุกครั้งที่คุณเล่นการ์ดในเทิร์นนี้ สร้าง {DoomPower:diff()} อายุขัยใส่ศัตรู"
     },
     "OFFERING": {
-      "description": "เสีย 6 HP\nได้รับ [E]\nจั่วการ์ด 3 ใบ",
+      "description": "เสีย {HpLoss:diff()} HP\nได้รับ {Energy:energyIcons()}\nจั่วการ์ด {Cards:diff()} ใบ",
       "name": "เซ่นสังเวย"
     },
     "OFF_BY_ONE": {
-      "description": "ถ้าคุณจบเทิร์นโดยเหลือการ์ด 1 ใบในมือเป๊ะๆ ได้รับเพิ่ม [E] ตอนเริ่มต้นเทิร์นถัดไป"
+      "description": "ถ้าคุณจบเทิร์นโดยเหลือการ์ด 1 ใบในมือเป๊ะๆ ได้รับเพิ่ม {Energy:energyIcons()} ตอนเริ่มต้นเทิร์นถัดไป"
     },
     "OMNISLICE": {
-      "description": "สร้างความเสียหาย 8\nศัตรูตัวอื่นทั้งหมดได้รับความเสียหายตามความเสียหายที่ทำได้"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nศัตรูตัวอื่นทั้งหมดได้รับความเสียหายตามความเสียหายที่ทำได้"
     },
     "ONE_TWO_PUNCH": {
-      "description": "ในเทิร์นนี้ การ์ดโจมตีอีก 1 ใบจะถูกเล่นอีกครั้ง"
+      "description": "ในเทิร์นนี้ การ์ดโจมตีอีก {Attacks:cond:>1?{Attacks:diff()}|1} ใบจะถูกเล่นอีกครั้ง"
     },
     "ORBIT": {
-      "description": "ทุกการจ่าย [4 Energy]\nจะได้รับ [E]"
+      "description": "ทุกการจ่าย {energyPrefix:energyIcons(4)}\nจะได้รับ {Energy:energyIcons()}"
     },
     "OUTBREAK": {
-      "description": "ทุกครั้งที่คุณสร้างพิษ สร้างความเสียหาย 11 ใส่ศัตรูทั้งหมด"
+      "description": "ทุก{Repeat:plural:ครั้ง| {Repeat:diff()} ครั้ง}ที่คุณสร้างพิษ สร้างความเสียหาย {OutbreakPower:diff()} ใส่ศัตรูทั้งหมด"
     },
     "OUTMANEUVER": {
-      "description": "เทิร์นถัดไป ได้รับ [E]",
+      "description": "เทิร์นถัดไป ได้รับ {Energy:energyIcons()}",
       "name": "ใช้เล่ห์ใช้กล"
     },
     "OVERCLOCK": {
-      "description": "จั่วการ์ด 2 ใบ\nเพิ่มเผาไหม้ 1 ใบเข้ากองทิ้ง",
+      "description": "จั่วการ์ด {Cards:diff()} ใบ\nเพิ่มเผาไหม้ 1 ใบเข้ากองทิ้ง",
       "name": "โอเวอร์คล็อก"
     },
     "PACTS_END": {
-      "description": "จะเล่นได้ก็ต่อเมื่อคุณมีการ์ด 3 ใบขึ้นไปในกองทิ้ง\nสร้างความเสียหาย 17 ใส่ศัตรูทั้งหมด"
+      "description": "จะเล่นได้ก็ต่อเมื่อคุณมีการ์ด {Cards:diff()} ใบขึ้นไปในกองทิ้ง\nสร้างความเสียหาย {Damage:diff()} ใส่ศัตรูทั้งหมด"
     },
     "PAELS_STRIKE": {
-      "description": "สร้างความเสียหายตามจำนวนการ์ดในกองการ์ด\n(สร้างความเสียหาย {Damage:diff()})"
+      "description": "สร้างความเสียหายตามจำนวนการ์ดในกองการ์ด{InCombat:\n(สร้างความเสียหาย {Damage:diff()})|}"
     },
     "PAGESTORM": {
-      "description": "ทุกครั้งที่คุณจั่วการ์ดกึ่งสลาย จั่วการ์ด 1 ใบ"
+      "description": "ทุกครั้งที่คุณจั่วการ์ดกึ่งสลาย จั่วการ์ด {Cards:diff()} ใบ"
     },
     "PALE_BLUE_DOT": {
-      "description": "ถ้าคุณเล่นการ์ด 5 ใบขึ้นไปในเทิร์นเดียว ตอนเริ่มเทิร์นถัดไป จั่วการ์ด 1 ใบ"
+      "description": "ถ้าคุณเล่นการ์ด {CardPlay} ใบขึ้นไปในเทิร์นเดียว ตอนเริ่มเทิร์นถัดไป จั่วการ์ด {Cards:diff()} ใบ"
     },
     "PANACHE": {
-      "description": "ทุกครั้งที่คุณเล่นการ์ด 5 ใบในเทิร์นเดียว สร้างความเสียหาย 10 ใส่ศัตรูทั้งหมด",
+      "description": "ทุกครั้งที่คุณเล่นการ์ด 5 ใบในเทิร์นเดียว สร้างความเสียหาย {PanacheDamage:diff()} ใส่ศัตรูทั้งหมด",
       "name": "วางท่าอย่างเท่"
     },
     "PANIC_BUTTON": {
-      "description": "ได้รับ 30 บล็อก\nคุณไม่สามารถได้รับบล็อกจากการ์ดเป็นเวลา2 เทิร์น",
+      "description": "ได้รับ {Block:diff()} บล็อก\nคุณไม่สามารถได้รับบล็อกจากการ์ดเป็นเวลา{Turns:diff()} เทิร์น",
       "name": "ปุ่มฉุกเฉิน"
     },
     "PARRY": {
-      "description": "ทุกครั้งที่คุณเล่นSovereign Blade ได้รับ 6 บล็อก"
+      "description": "ทุกครั้งที่คุณเล่นSovereign Blade ได้รับ {ParryPower:diff()} บล็อก"
     },
     "PARSE": {
-      "description": "จั่วการ์ด 3 ใบ"
+      "description": "จั่วการ์ด {Cards:diff()} ใบ"
     },
     "PARTICLE_WALL": {
-      "description": "ได้รับ 9 บล็อก\nนำการ์ดนี้กลับขึ้นมือ"
+      "description": "ได้รับ {Block:diff()} บล็อก\nนำการ์ดนี้กลับขึ้นมือ"
     },
     "PATTER": {
-      "description": "ได้รับ 8 บล็อก\nได้รับ 2 ความกำยำ"
+      "description": "ได้รับ {Block:diff()} บล็อก\nได้รับ {VigorPower:diff()} ความกำยำ"
     },
     "PECK": {
-      "description": "สร้างความเสียหาย 2 จำนวน 3 ครั้ง"
+      "description": "สร้างความเสียหาย {Damage:diff()} จำนวน {Repeat:diff()} ครั้ง"
     },
     "PERFECTED_STRIKE": {
-      "description": "สร้างความเสียหาย 6\nสร้างความเสียหายเพิ่ม 2 ตามจำนวนการ์ดที่มีคำว่า “จู่โจม”",
+      "description": "สร้างความเสียหาย {CalculatedDamage:diff()}\nสร้างความเสียหายเพิ่ม {ExtraDamage:diff()} ตามจำนวนการ์ดที่มีคำว่า “จู่โจม”",
       "name": "จู่โจมสมบูรณ์แบบ"
     },
     "PHANTOM_BLADES": {
-      "description": "มีดสั้นได้รับคงสภาพ\nมีดสั้นใบแรกที่คุณเล่นในแต่ละเทิร์นสร้างความเสียหายเพิ่ม 9"
+      "description": "มีดสั้นได้รับคงสภาพ\nมีดสั้นใบแรกที่คุณเล่นในแต่ละเทิร์นสร้างความเสียหายเพิ่ม {PhantomBladesPower:diff()}"
     },
     "PHOTON_CUT": {
-      "description": "สร้างความเสียหาย 10\nจั่วการ์ด 1 ใบ\nนำการ์ด 1 ใบจากมือไปวางไว้บนสุดของกองจั่ว"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nจั่วการ์ด {Cards:diff()} ใบ\nนำการ์ด 1 ใบจากมือไปวางไว้บนสุดของกองจั่ว"
     },
     "PIERCING_WAIL": {
-      "description": "ศัตรูทั้งหมดเสีย 6 ความแข็งแรงในเทิร์นนี้",
+      "description": "ศัตรูทั้งหมดเสีย {StrengthLoss:diff()} ความแข็งแรงในเทิร์นนี้",
       "name": "คำครวญกรีดโสต"
     },
     "PILLAGE": {
-      "description": "สร้างความเสียหาย 6\nจั่วการ์ดจนกว่าจะจั่วได้การ์ดที่ไม่ใช่การ์ดโจมตี"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nจั่วการ์ดจนกว่าจะจั่วได้การ์ดที่ไม่ใช่การ์ดโจมตี"
     },
     "PILLAR_OF_CREATION": {
-      "description": "ทุกครั้งที่คุณสร้างการ์ด ได้รับ 3 บล็อก"
+      "description": "ทุกครั้งที่คุณสร้างการ์ด ได้รับ {Block:diff()} บล็อก"
     },
     "PINPOINT": {
-      "description": "สร้างความเสียหาย 17\nค่าร่ายลดลง 1 [E] ตามจำนวนการ์ดทักษะที่เคยเล่นในเทิร์นนี้"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nค่าร่ายลดลง 1 {energyPrefix:energyIcons(1)} ตามจำนวนการ์ดทักษะที่เคยเล่นในเทิร์นนี้"
     },
     "PITY": {
-      "description": "ศัตรู 1 ตัวฟื้นฟู HP จนเต็ม\nได้รับ ⭐ ต่อทุก {Hp:inverseDiff()} HP ที่ฟื้นฟู"
+      "description": "ศัตรู 1 ตัวฟื้นฟู HP จนเต็ม\nได้รับ {singleStarIcon} ต่อทุก {Hp:inverseDiff()} HP ที่ฟื้นฟู"
     },
     "POISONED_STAB": {
-      "description": "สร้างความเสียหาย 6\nสร้าง 3 พิษ",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nสร้าง {PoisonPower:diff()} พิษ",
       "name": "มีดอาบยาพิษ"
     },
     "POKE": {
-      "description": "Ostyสร้างความเสียหาย 6"
+      "description": "Ostyสร้างความเสียหาย {OstyDamage:diff()}"
     },
     "POMMEL_STRIKE": {
-      "description": "สร้างความเสียหาย 9\nจั่วการ์ด 1 ใบ",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nจั่วการ์ด {Cards:diff()} ใบ",
       "name": "จู่โจมกระแทกด้าม"
     },
     "POUNCE": {
-      "description": "สร้างความเสียหาย 12\nการ์ดทักษะใบต่อไปค่าร่ายเหลือ 0 [E]"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nการ์ดทักษะใบต่อไปค่าร่ายเหลือ 0 {energyPrefix:energyIcons(1)}"
     },
     "PRECISE_CUT": {
-      "description": "สร้างความเสียหาย 13\nสร้างความเสียหายน้อยลง 2 ตามจำนวนการ์ดอื่นในมือ"
+      "description": "สร้างความเสียหาย {CalculatedDamage:diff()}\nสร้างความเสียหายน้อยลง {ExtraDamage:inverseDiff()} ตามจำนวนการ์ดอื่นในมือ"
     },
     "PREDATOR": {
-      "description": "สร้างความเสียหาย 15\nเทิร์นถัดไป จั่วการ์ด 2 ใบ",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nเทิร์นถัดไป จั่วการ์ด 2 ใบ",
       "name": "ออกล่าเหยื่อ"
     },
     "PREPARED": {
-      "description": "จั่วการ์ด 1 ใบ\nทิ้งการ์ด 1 ใบ",
+      "description": "จั่วการ์ด {Cards:diff()} ใบ\nทิ้งการ์ด {Cards:diff()} ใบ",
       "name": "เตรียมตัวอย่างดี"
     },
     "PREP_TIME": {
-      "description": "ตอนเริ่มต้นเทิร์น ได้รับ 4 ความกำยำ"
+      "description": "ตอนเริ่มต้นเทิร์น ได้รับ {PrepTimePower:diff()} ความกำยำ"
     },
     "PRIMAL_FORCE": {
-      "description": "แปรสภาพการ์ดโจมตีทั้งหมดในมือให้เป็นศิลายักษ์"
+      "description": "แปรสภาพการ์ดโจมตีทั้งหมดในมือให้เป็น{IfUpgraded:show:หินยักษ์+|ศิลายักษ์}"
     },
     "PRODUCTION": {
-      "description": "ได้รับ [E]"
+      "description": "ได้รับ {Energy:energyIcons()}"
     },
     "PROLONG": {
       "description": "เทิร์นถัดไป ได้รับบล็อกตามจำนวนบล็อกที่มีในปัจจุบัน"
     },
     "PROPHESIZE": {
-      "description": "จั่วการ์ด 6 ใบ"
+      "description": "จั่วการ์ด {Cards:diff()} ใบ"
     },
     "PROTECTOR": {
-      "description": "Ostyสร้างความเสียหาย 10\nสร้างความเสียหายเพิ่มตาม HP สูงสุด ของOsty"
+      "description": "Ostyสร้างความเสียหาย {CalculatedDamage:diff()}\nสร้างความเสียหายเพิ่มตาม HP สูงสุด ของOsty"
     },
     "PROWESS": {
-      "description": "ได้รับ 1 ความแข็งแรง\nได้รับ 1 ความชำนาญ"
+      "description": "ได้รับ {StrengthPower:diff()} ความแข็งแรง\nได้รับ {DexterityPower:diff()} ความชำนาญ"
     },
     "PULL_AGGRO": {
-      "description": "อัญเชิญ 4\nได้รับ 7 บล็อก"
+      "description": "อัญเชิญ {Summon:diff()}\nได้รับ {Block:diff()} บล็อก"
     },
     "PULL_FROM_BELOW": {
-      "description": "สร้างความเสียหาย 5 ตามจำนวนการ์ดกึ่งสลายที่เล่นในการต่อสู้นี้\n(โจมตี 0 ครั้ง)"
+      "description": "สร้างความเสียหาย {Damage:diff()} ตามจำนวนการ์ดกึ่งสลายที่เล่นในการต่อสู้นี้{InCombat:\n(โจมตี {CalculatedHits:diff()} ครั้ง)|}"
     },
     "PURITY": {
-      "description": "สลายการ์ดได้สูงสุด 3 ใบในมือ",
+      "description": "สลายการ์ดได้สูงสุด {Cards:diff()} ใบในมือ",
       "name": "ความบริสุทธิ์"
     },
     "PUTREFY": {
-      "description": "สร้าง 2 ความอ่อนแอ\nสร้าง 2 จุดอ่อน"
+      "description": "สร้าง {Power:diff()} ความอ่อนแอ\nสร้าง {Power:diff()} จุดอ่อน"
     },
     "PYRE": {
-      "description": "ตอนเริ่มต้นเทิร์น ได้รับ [E]"
+      "description": "ตอนเริ่มต้นเทิร์น ได้รับ {Energy:energyIcons()}"
     },
     "QUADCAST": {
-      "description": "ปล่อยพลังลูกแก้วลูกขวาสุด 4 ครั้ง",
+      "description": "ปล่อยพลังลูกแก้วลูกขวาสุด {Repeat:diff()} ครั้ง",
       "name": "ร่ายซ้ำร่ายซ้อน"
     },
     "QUASAR": {
-      "description": "เลือกการ์ดไร้สี 1 จากที่สุ่มมา 3 ใบเพื่อเพิ่มใส่มือ"
+      "description": "เลือกการ์ดไร้สี{IfUpgraded:show:แบบพัฒนาแล้ว|} 1 จากที่สุ่มมา 3 ใบเพื่อเพิ่มใส่มือ"
     },
     "QUICK_SLASH": {
       "description": "สร้างความเสียหาย {Damage:diff()}\nจั่วการ์ด 1 ใบ",
       "name": "เฉือนอย่างรวดเร็ว"
     },
     "RADIATE": {
-      "description": "สร้างความเสียหาย 3 ใส่ศัตรูทั้งหมด ตามจำนวน 1 Stars ที่ได้รับในเทิร์นนี้\n(โจมตี 0 ครั้ง)"
+      "description": "สร้างความเสียหาย {Damage:diff()} ใส่ศัตรูทั้งหมด ตามจำนวน {Stars:starIcons()} ที่ได้รับในเทิร์นนี้{InCombat:\n(โจมตี {CalculatedHits:diff()} ครั้ง)|}"
     },
     "RAGE": {
-      "description": "ทุกครั้งที่คุณเล่นการ์ดโจมตีในเทิร์นนี้ ได้รับ 3 บล็อก",
+      "description": "ทุกครั้งที่คุณเล่นการ์ดโจมตีในเทิร์นนี้ ได้รับ {Power:diff()} บล็อก",
       "name": "บันดาลโทสะ"
     },
     "RAINBOW": {
@@ -1443,89 +1442,89 @@
       "name": "สายรุ้ง"
     },
     "RALLY": {
-      "description": "ผู้เล่นทั้งหมดได้รับ 12 บล็อก"
+      "description": "ผู้เล่นทั้งหมดได้รับ {Block:diff()} บล็อก"
     },
     "RAMPAGE": {
-      "description": "สร้างความเสียหาย 9\nเพิ่มพลังให้การ์ดนี้อีก 5 ในการต่อสู้นี้",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nเพิ่มพลังให้การ์ดนี้อีก {Increase:diff()} ในการต่อสู้นี้",
       "name": "ศาสตราอาละวาด"
     },
     "RATTLE": {
-      "description": "Ostyสร้างความเสียหาย 7\nโจมตีเพิ่มอีกครั้งต่อทุก 2 ครั้งที่เขาโจมตีในเทิร์นนี้\n(โจมตี 0 ครั้ง)"
+      "description": "Ostyสร้างความเสียหาย {OstyDamage:diff()}\nโจมตีเพิ่มอีกครั้งต่อทุก 2 ครั้งที่เขาโจมตีในเทิร์นนี้{InCombat:\n(โจมตี {CalculatedHits:diff()} ครั้ง)|}"
     },
     "REANIMATE": {
-      "description": "อัญเชิญ 20"
+      "description": "อัญเชิญ {Summon:diff()}"
     },
     "REAP": {
-      "description": "สร้างความเสียหาย 27"
+      "description": "สร้างความเสียหาย {Damage:diff()}"
     },
     "REAPER_FORM": {
       "description": "ทุกครั้งที่การ์ดโจมตีสร้างความเสียหาย สร้างอายุขัยตามจำนวนนั้นด้วย"
     },
     "REAVE": {
-      "description": "สร้างความเสียหาย 9\nเพิ่มวิญญาณ 1 ใบเข้ากองจั่ว"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nเพิ่ม{IfUpgraded:show:วิญญาณ+|วิญญาณ} 1 ใบเข้ากองจั่ว"
     },
     "REBOOT": {
-      "description": "สับการ์ดทั้งหมดของคุณเข้ากองจั่ว\nจั่วการ์ด 4 ใบ",
+      "description": "สับการ์ดทั้งหมดของคุณเข้ากองจั่ว\nจั่วการ์ด {Cards:diff()} ใบ",
       "name": "เปิดเครื่องใหม่"
     },
     "REBOUND": {
-      "description": "สร้างความเสียหาย 9\nนำการ์ดที่คุณเล่นใบต่อไปกลับไปวางไว้บนสุดของกองจั่ว",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nนำการ์ดที่คุณเล่นใบต่อไปกลับไปวางไว้บนสุดของกองจั่ว",
       "name": "ดีดกลับ"
     },
     "REFINE_BLADE": {
-      "description": "หลอมสร้าง 6\nเทิร์นถูกไป ได้รับ [E]"
+      "description": "หลอมสร้าง {Forge:diff()}\nเทิร์นถูกไป ได้รับ {Energy:energyIcons()}"
     },
     "REFLECT": {
-      "description": "ได้รับ 17 บล็อก\nสะท้อนความเสียหายจากการโจมตีที่บล็อกได้กลับไปหาผู้โจมตีในเทิร์นนี้"
+      "description": "ได้รับ {Block:diff()} บล็อก\nสะท้อนความเสียหายจากการโจมตีที่บล็อกได้กลับไปหาผู้โจมตีในเทิร์นนี้"
     },
     "REFLEX": {
-      "description": "จั่วการ์ด 2 ใบ",
+      "description": "จั่วการ์ด {Cards:diff()} ใบ",
       "name": "สัญชาตญาณตอบโต้"
     },
     "REFRACT": {
-      "description": "สร้างความเสียหาย 9 จำนวน 2 ครั้ง\nปลุกเสก 2 แก้ว"
+      "description": "สร้างความเสียหาย {Damage:diff()} จำนวน 2 ครั้ง\nปลุกเสก {Repeat:diff()} แก้ว"
     },
     "REGRET": {
       "description": "ตอนจบเทิร์น ถ้าการ์ดนี้อยู่ในมือ เสีย 1 HP ตามจำนวนการ์ดในมือ",
       "name": "เสียใจภายหลัง"
     },
     "RELAX": {
-      "description": "ได้รับ 15 บล็อก\nเทิร์นถัดไป จั่วการ์ด 2 ใบและได้รับ [E]"
+      "description": "ได้รับ {Block:diff()} บล็อก\nเทิร์นถัดไป จั่วการ์ด {Cards:diff()} ใบและได้รับ {Energy:energyIcons()}"
     },
     "REND": {
-      "description": "สร้างความเสียหาย 15\nสร้างความเสียหายเพิ่ม 5 ตามจำนวนผลผิดปกติที่ไม่ซ้ำกันบนตัวศัตรูตัวนั้น"
+      "description": "สร้างความเสียหาย {CalculatedDamage:diff()}\nสร้างความเสียหายเพิ่ม {ExtraDamage:diff()} ตามจำนวนผลผิดปกติที่ไม่ซ้ำกันบนตัวศัตรูตัวนั้น"
     },
     "RESERVES": {
-      "description": "ถ้าคุณมี [E] ไม่พอใช้ร่ายการ์ด จะใช้ 2⭐ แลก [E] แทน"
+      "description": "ถ้าคุณมี {energyPrefix:energyIcons(1)} ไม่พอใช้ร่ายการ์ด จะใช้ 2{singleStarIcon} แลก {energyPrefix:energyIcons(1)} แทน"
     },
     "RESONANCE": {
-      "description": "ได้รับ 1 ความแข็งแรง ศัตรูทั้งหมดเสีย 1 ความแข็งแรง"
+      "description": "ได้รับ {StrengthPower:diff()} ความแข็งแรง ศัตรูทั้งหมดเสีย 1 ความแข็งแรง"
     },
     "RESTLESSNESS": {
-      "description": "ถ้ามือว่าง จั่วการ์ด 2 ใบและได้รับ [E]"
+      "description": "ถ้ามือว่าง จั่วการ์ด {Cards:diff()} ใบและได้รับ {Energy:energyIcons()}"
     },
     "RICOCHET": {
-      "description": "สร้างความเสียหาย 3 ใส่ศัตรู 1 ตัวแบบสุ่ม จำนวน 4 ครั้ง"
+      "description": "สร้างความเสียหาย {Damage:diff()} ใส่ศัตรู 1 ตัวแบบสุ่ม จำนวน {Repeat:diff()} ครั้ง"
     },
     "RIGHT_HAND_HAND": {
-      "description": "Ostyสร้างความเสียหาย 4\nทุกครั้งที่คุณเล่นการ์ดค่าร่าย [E] ขึ้นไป นำการ์ดนี้จากกองทิ้งกลับขึ้นมือ",
+      "description": "Ostyสร้างความเสียหาย {OstyDamage:diff()}\nทุกครั้งที่คุณเล่นการ์ดค่าร่าย {Energy:energyIcons()} ขึ้นไป นำการ์ดนี้จากกองทิ้งกลับขึ้นมือ",
       "name": "มือมือขวา"
     },
     "RIP_AND_TEAR": {
-      "description": "สร้างความเสียหาย 7 ใส่ศัตรู 1 ตัวแบบสุ่ม จำนวน 2 ครั้ง",
+      "description": "สร้างความเสียหาย {Damage:diff()} ใส่ศัตรู 1 ตัวแบบสุ่ม จำนวน 2 ครั้ง",
       "name": "ฉีกเป็นชิ้นๆ"
     },
     "ROLLING_BOULDER": {
-      "description": "ตอนต้นเทิร์น สร้างความเสียหาย 5 ใส่ศัตรูทั้งหมด และเพิ่มความเสียหายนี้อีก 5"
+      "description": "ตอนต้นเทิร์น สร้างความเสียหาย {RollingBoulderPower:diff()} ใส่ศัตรูทั้งหมด และเพิ่มความเสียหายนี้อีก {IncrementAmount:diff()}"
     },
     "ROYALTIES": {
-      "description": "ตอนจบการต่อสู้ ได้รับ 30 ทอง"
+      "description": "ตอนจบการต่อสู้ ได้รับ {Gold:diff()} ทอง"
     },
     "ROYAL_GAMBLE": {
-      "description": "ได้รับ 9 ⭐"
+      "description": "ได้รับ {Stars:diff()} {singleStarIcon}"
     },
     "RUPTURE": {
-      "description": "ทุกครั้งที่คุณเสีย HP ในเทิร์นของคุณ ได้รับ 1 ความแข็งแรง",
+      "description": "ทุกครั้งที่คุณเสีย HP ในเทิร์นของคุณ ได้รับ {StrengthPower:diff()} ความแข็งแรง",
       "name": "กายาแตกร้าว"
     },
     "SACRIFICE": {
@@ -1533,16 +1532,16 @@
       "name": "สละชีพ"
     },
     "SALVO": {
-      "description": "สร้างความเสียหาย 12\nคงสภาพทั้งมือในเทิร์นนี้"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nคงสภาพทั้งมือในเทิร์นนี้"
     },
     "SCAVENGE": {
-      "description": "สลายการ์ด 1 ใบ\nเทิร์นถัดไป ได้รับ [E]"
+      "description": "สลายการ์ด 1 ใบ\nเทิร์นถัดไป ได้รับ {Energy:energyIcons()}"
     },
     "SCOURGE": {
-      "description": "สร้าง 13 อายุขัย\nจั่วการ์ด 1 ใบ"
+      "description": "สร้าง {DoomPower:diff()} อายุขัย\nจั่วการ์ด {Cards:diff()} ใบ"
     },
     "SCRAPE": {
-      "description": "สร้างความเสียหาย 7\nจั่วการ์ด 4 ใบ\nทิ้งการ์ดทั้งหมดที่ไม่ใช่ค่าร่าย 0 [E] ที่จั่วมาด้วยวิธีนี้",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nจั่วการ์ด {Cards:diff()} ใบ\nทิ้งการ์ดทั้งหมดที่ไม่ใช่ค่าร่าย 0 {energyPrefix:energyIcons(1)} ที่จั่วมาด้วยวิธีนี้",
       "name": "กรีดและสืบค้น"
     },
     "SCRAWL": {
@@ -1550,13 +1549,13 @@
       "name": "เร่งจารึก"
     },
     "SCULPTING_STRIKE": {
-      "description": "สร้างความเสียหาย 8\nเพิ่มกึ่งสลายให้การ์ด 1 ใบในมือ"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nเพิ่มกึ่งสลายให้การ์ด 1 ใบในมือ"
     },
     "SEANCE": {
-      "description": "แปรสภาพการ์ด 1 ใบในกองจั่วให้เป็นวิญญาณ"
+      "description": "แปรสภาพการ์ด 1 ใบในกองจั่วให้เป็น{IfUpgraded:show:วิญญาณ+|วิญญาณ}"
     },
     "SECOND_WIND": {
-      "description": "สลายการ์ดที่ไม่ใช่การ์ดโจมตีทั้งหมดในมือ ได้รับ 5 บล็อกตามจำนวนการ์ดที่สลาย",
+      "description": "สลายการ์ดที่ไม่ใช่การ์ดโจมตีทั้งหมดในมือ ได้รับ {Block:diff()} บล็อกตามจำนวนการ์ดที่สลาย",
       "name": "ฮึดสู้อีกครั้ง"
     },
     "SECRET_TECHNIQUE": {
@@ -1568,89 +1567,89 @@
       "name": "อาวุธลับ"
     },
     "SEEKER_STRIKE": {
-      "description": "สร้างความเสียหาย 6\nเลือกการ์ด 1 จาก 3 ใบในกองจั่วเพื่อนำขึ้นมือ"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nเลือกการ์ด 1 จาก {Cards:diff()} ใบในกองจั่วเพื่อนำขึ้นมือ"
     },
     "SEEKING_EDGE": {
-      "description": "หลอมสร้าง 7\nต่อไปนี้Sovereign Bladeจะสร้างความเสียหายใส่ศัตรูทั้งหมด"
+      "description": "หลอมสร้าง {Forge:diff()}\nต่อไปนี้Sovereign Bladeจะสร้างความเสียหายใส่ศัตรูทั้งหมด"
     },
     "SENTRY_MODE": {
-      "description": "ตอนเริ่มต้นเทิร์น เพิ่มSweeping Gaze 1 ใบใส่มือ"
+      "description": "ตอนเริ่มต้นเทิร์น เพิ่มSweeping Gaze {SentryModePower:diff()} ใบใส่มือ"
     },
     "SERPENT_FORM": {
-      "description": "ทุกครั้งที่คุณเล่นการ์ด สร้างความเสียหาย 4 ใส่ศัตรู 1 ตัวแบบสุ่ม",
+      "description": "ทุกครั้งที่คุณเล่นการ์ด สร้างความเสียหาย {SerpentFormPower:diff()} ใส่ศัตรู 1 ตัวแบบสุ่ม",
       "name": "ร่างอสรพิษ"
     },
     "SETUP_STRIKE": {
-      "description": "สร้างความเสียหาย 7\nได้รับ 2 ความแข็งแรงในเทิร์นนี้"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nได้รับ {StrengthPower:diff()} ความแข็งแรงในเทิร์นนี้"
     },
     "SEVEN_STARS": {
-      "description": "สร้างความเสียหาย 7 ใส่ศัตรูทั้งหมด จำนวน  ครั้ง"
+      "description": "สร้างความเสียหาย {Damage:diff()} ใส่ศัตรูทั้งหมด จำนวน {Repeat:plural:{} ครั้ง|{} ครั้ง}"
     },
     "SEVERANCE": {
-      "description": "สร้างความเสียหาย 13\nเพิ่มวิญญาณเข้ากองการ์ด, มือ, และกองทิ้ง อย่างละ 1 ใบ"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nเพิ่มวิญญาณเข้ากองการ์ด, มือ, และกองทิ้ง อย่างละ 1 ใบ"
     },
     "SHADOWMELD": {
       "description": "ในเทิร์นนี้ ได้รับบล็อก 2 เท่า"
     },
     "SHADOW_SHIELD": {
-      "description": "ได้รับ 11 บล็อก\nปลุกเสก 1 ความมืด"
+      "description": "ได้รับ {Block:diff()} บล็อก\nปลุกเสก 1 ความมืด"
     },
     "SHADOW_STEP": {
       "description": "ทิ้งการ์ดทั้งมือ\nเทิร์นถัดไป การ์ดโจมตีทั้งหมดสร้างความเสียหาย 2 เท่า"
     },
     "SHAME": {
-      "description": "ตอนจบเทิร์น ถ้าการ์ดนี้อยู่ในมือ ได้รับ 1 ความบอบบาง",
+      "description": "ตอนจบเทิร์น ถ้าการ์ดนี้อยู่ในมือ ได้รับ {Frail:diff()} ความบอบบาง",
       "name": "ความละอาย"
     },
     "SHARED_FATE": {
-      "description": "เสีย 2 ความแข็งแรง\nศัตรูเสีย 2 ความแข็งแรง"
+      "description": "เสีย {PlayerStrengthLoss:diff()} ความแข็งแรง\nศัตรูเสีย {EnemyStrengthLoss:diff()} ความแข็งแรง"
     },
     "SHARP_EDGE": {
       "description": "ทุกครั้งที่คุณสร้างมีดสั้น พัฒนามัน"
     },
     "SHATTER": {
-      "description": "สร้างความเสียหาย 11 ใส่ศัตรูทั้งหมด\nปล่อยพลังลูกแก้วทั้งหมดของคุณ"
+      "description": "สร้างความเสียหาย {Damage:diff()} ใส่ศัตรูทั้งหมด\nปล่อยพลังลูกแก้วทั้งหมดของคุณ"
     },
     "SHINING_STRIKE": {
-      "description": "สร้างความเสียหาย 8\nได้รับ 2 Stars\nนำการ์ดนี้ไปไว้บนสุดของกองจั่ว"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nได้รับ {Stars:starIcons()}\nนำการ์ดนี้ไปไว้บนสุดของกองจั่ว"
     },
     "SHINY_STRIKE": {
-      "description": "สร้างความเสียหาย {Damage:diff()}\nลดค่าร่ายการ์ดไร้สี {Cards:diff()} ใบในมือลง [E] ในเทิร์นนี้"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nลดค่าร่ายการ์ดไร้สี {Cards:diff()} ใบในมือลง {energyPrefix:energyIcons(1)} ในเทิร์นนี้"
     },
     "SHIV": {
-      "description": "สร้างความเสียหาย 4",
+      "description": "สร้างความเสียหาย {Damage:diff()}{FanOfKnivesAmount:cond:>0? ใส่ศัตรูทั้งหมด|}",
       "name": "มีดสั้น"
     },
     "SHOCKWAVE": {
-      "description": "สร้าง 3 ความอ่อนแอและจุดอ่อนใส่ศัตรูทั้งหมด",
+      "description": "สร้าง {Power:diff()} ความอ่อนแอและจุดอ่อนใส่ศัตรูทั้งหมด",
       "name": "คลื่นกระแทก"
     },
     "SHROUD": {
-      "description": "ทุกครั้งที่คุณสร้างอายุขัย ได้รับ 2 บล็อก"
+      "description": "ทุกครั้งที่คุณสร้างอายุขัย ได้รับ {Block:diff()} บล็อก"
     },
     "SHRUG_IT_OFF": {
-      "description": "ได้รับ 8 บล็อก\nจั่วการ์ด 1 ใบ",
+      "description": "ได้รับ {Block:diff()} บล็อก\nจั่วการ์ด {Cards:diff()} ใบ",
       "name": "แล้วไงใครแคร์"
     },
     "SIC_EM": {
-      "description": "Ostyสร้างความเสียหาย 5\nทุกครั้งที่Ostyโจมตีศัตรูตัวนี้ในเทิร์นนี้ อัญเชิญ 2"
+      "description": "Ostyสร้างความเสียหาย {OstyDamage:diff()}\nทุกครั้งที่Ostyโจมตีศัตรูตัวนี้ในเทิร์นนี้ อัญเชิญ {SicEmPower:diff()}"
     },
     "SIGNAL_BOOST": {
       "description": "การ์ดพลังใบถัดไปที่คุณเล่นจะถูกเล่นอีกครั้ง"
     },
     "SKEWER": {
-      "description": "สร้างความเสียหาย 7 จำนวน X ครั้ง",
+      "description": "สร้างความเสียหาย {Damage:diff()} จำนวน X ครั้ง",
       "name": "ระดมแทง"
     },
     "SKIM": {
-      "description": "จั่วการ์ด 3 ใบ",
+      "description": "จั่วการ์ด {Cards:diff()} ใบ",
       "name": "อ่านค่าอย่างเร็ว"
     },
     "SLEIGHT_OF_FLESH": {
-      "description": "ทุกครั้งที่คุณสร้างผลผิดปกติใส่ศัตรู มันจะได้รับความเสียหาย 9"
+      "description": "ทุกครั้งที่คุณสร้างผลผิดปกติใส่ศัตรู มันจะได้รับความเสียหาย {SleightOfFleshPower:diff()}"
     },
     "SLICE": {
-      "description": "สร้างความเสียหาย 6",
+      "description": "สร้างความเสียหาย {Damage:diff()}",
       "name": "หั่น"
     },
     "SLIMED": {
@@ -1658,85 +1657,85 @@
       "name": "เมือกสไลม์"
     },
     "SLOTH": {
-      "description": "เล่นการ์ดได้ไม่เกิน 3 ใบต่อเทิร์น",
+      "description": "เล่นการ์ดได้ไม่เกิน {SlothPower:diff()} ใบต่อเทิร์น",
       "name": "ความเกียจคร้าน"
     },
     "SMOKESTACK": {
-      "description": "ทุกครั้งที่คุณสร้างการ์ดสถานะ สร้างความเสียหาย 5 ใส่ศัตรูทั้งหมด"
+      "description": "ทุกครั้งที่คุณสร้างการ์ดสถานะ สร้างความเสียหาย {SmokestackPower:diff()} ใส่ศัตรูทั้งหมด"
     },
     "SNAKEBITE": {
-      "description": "สร้าง 7 พิษ"
+      "description": "สร้าง {PoisonPower:diff()} พิษ"
     },
     "SNAP": {
-      "description": "Ostyสร้างความเสียหาย 7\nเพิ่มคงสภาพให้การ์ด 1 ใบในมือ"
+      "description": "Ostyสร้างความเสียหาย {OstyDamage:diff()}\nเพิ่มคงสภาพให้การ์ด 1 ใบในมือ"
     },
     "SNEAKY": {
-      "description": "ทุกครั้งที่พันธมิตรโจมตีศัตรู ได้รับ 1 บล็อก"
+      "description": "ทุกครั้งที่พันธมิตรโจมตีศัตรู ได้รับ {SneakyPower:diff()} บล็อก"
     },
     "SOLAR_STRIKE": {
-      "description": "สร้างความเสียหาย 8\nได้รับ 1 Stars"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nได้รับ {Stars:starIcons()}"
     },
     "SOUL": {
-      "description": "จั่วการ์ด 2 ใบ",
+      "description": "จั่วการ์ด {Cards:diff()} ใบ",
       "name": "วิญญาณ"
     },
     "SOUL_STORM": {
-      "description": "สร้างความเสียหาย 9\nสร้างความเสียหายเพิ่ม 2 ตามจำนวนวิญญาณในกองสลาย",
+      "description": "สร้างความเสียหาย {CalculatedDamage:diff()}\nสร้างความเสียหายเพิ่ม {ExtraDamage:diff()} ตามจำนวนวิญญาณในกองสลาย",
       "name": "พายุวิญญาณ"
     },
     "SOVEREIGN_BLADE": {
-      "description": "สร้างความเสียหาย 10 ",
+      "description": "สร้างความเสียหาย {Damage:diff()} {SeekingEdgeAmount:cond:>0? ใส่ศัตรูทั้งหมด|}{Repeat:plural:| จำนวน {} ครั้ง}",
       "name": "พระแสงอาญาสิทธิ์"
     },
     "SOW": {
-      "description": "สร้างความเสียหาย 8 ใส่ศัตรูทั้งหมด"
+      "description": "สร้างความเสียหาย {Damage:diff()} ใส่ศัตรูทั้งหมด"
     },
     "SPECTRUM_SHIFT": {
-      "description": "ตอนเริ่มต้นเทิร์น เพิ่มการ์ดไร้สี 1 ใบแบบสุ่มใส่มือ"
+      "description": "ตอนเริ่มต้นเทิร์น เพิ่มการ์ดไร้สี {Cards:diff()} ใบแบบสุ่มใส่มือ"
     },
     "SPEEDSTER": {
-      "description": "ทุกครั้งที่คุณจั่วการ์ดในเทิร์นของคุณ สร้างความเสียหาย 2 ใส่ศัตรูทั้งหมด",
+      "description": "ทุกครั้งที่คุณจั่วการ์ดในเทิร์นของคุณ สร้างความเสียหาย {SpeedsterPower:diff()} ใส่ศัตรูทั้งหมด",
       "name": "ผู้ใช้ความเร็ว"
     },
     "SPIKED": {
       "description": "ตอนจบเทิร์น ได้รับความเสียหาย {Damage:diff()}"
     },
     "SPINNER": {
-      "description": "ตอนเริ่มต้นเทิร์น ปลุกเสก 1 แก้ว"
+      "description": "{IfUpgraded:show:ปลุกเสก 1 แก้ว\n|}ตอนเริ่มต้นเทิร์น ปลุกเสก 1 แก้ว"
     },
     "SPIRIT_OF_ASH": {
-      "description": "ทุกครั้งที่คุณเล่นการ์ดกึ่งสลาย ได้รับ 4 บล็อก"
+      "description": "ทุกครั้งที่คุณเล่นการ์ดกึ่งสลาย ได้รับ {BlockOnExhaust:diff()} บล็อก"
     },
     "SPITE": {
-      "description": "สร้างความเสียหาย 6\nถ้าคุณเคยเสีย HP ในเทิร์นนี้ จั่วการ์ด 1 ใบ"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nถ้าคุณเคยเสีย HP ในเทิร์นนี้ จั่วการ์ด {Cards:diff()} ใบ"
     },
     "SPLASH": {
-      "description": "เลือกการ์ดโจมตี 1 จาก 3 ใบแบบสุ่มจากตัวละครอื่นเพื่อเพิ่มใส่มือ มันเล่นฟรีในเทิร์นนี้"
+      "description": "เลือกการ์ดโจมตี{IfUpgraded:show: แบบพัฒนาแล้ว} 1 จาก 3 ใบแบบสุ่มจากตัวละครอื่นเพื่อเพิ่มใส่มือ มันเล่นฟรีในเทิร์นนี้"
     },
     "SPOILS_MAP": {
-      "description": "ระบุตำแหน่งสถานที่ที่ได้ทองเพิ่ม 600 ในองก์ถัดไป"
+      "description": "ระบุตำแหน่งสถานที่ที่ได้ทองเพิ่ม {Gold:diff()} ในองก์ถัดไป"
     },
     "SPOILS_OF_BATTLE": {
-      "description": "หลอมสร้าง 10"
+      "description": "หลอมสร้าง {Forge:diff()}"
     },
     "SPUR": {
-      "description": "อัญเชิญ 3\nOstyฟื้นฟู 5 HP"
+      "description": "อัญเชิญ {Summon:diff()}\nOstyฟื้นฟู {Heal:diff()} HP"
     },
     "SQUASH": {
-      "description": "สร้างความเสียหาย 10\nสร้าง 2 จุดอ่อน"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nสร้าง {VulnerablePower:diff()} จุดอ่อน"
     },
     "SQUEEZE": {
-      "description": "Ostyสร้างความเสียหาย 25\nสร้างความเสียหายเพิ่ม 5 ตามจำนวนการโจมตีครั้งอื่นของOsty"
+      "description": "Ostyสร้างความเสียหาย {CalculatedDamage:diff()}\nสร้างความเสียหายเพิ่ม {ExtraDamage:diff()} ตามจำนวนการโจมตีครั้งอื่นของOsty"
     },
     "STACK": {
-      "description": "ได้รับบล็อกตามจำนวนการ์ดในกองทิ้ง\n(ได้รับ 0 บล็อก)",
+      "description": "ได้รับบล็อกตามจำนวนการ์ดในกองทิ้ง{IfUpgraded:show: +{CalculationBase}|}{InCombat:\n(ได้รับ {CalculatedBlock:diff()} บล็อก)|}",
       "name": "ทับซ้อน"
     },
     "STAMPEDE": {
-      "description": "ตอนจบเทิร์น การ์ดโจมตี 1 ใบแบบสุ่มในมือจะถูกเล่นใส่ศัตรูแบบสุ่ม"
+      "description": "ตอนจบเทิร์น การ์ดโจมตี {Power:diff()} ใบแบบสุ่มในมือจะถูกเล่นใส่ศัตรูแบบสุ่ม"
     },
     "STARDUST": {
-      "description": "สร้างความเสียหาย 5 ใส่ศัตรู 1 ตัวแบบสุ่ม จำนวน X ครั้ง"
+      "description": "สร้างความเสียหาย {Damage:diff()} ใส่ศัตรู 1 ตัวแบบสุ่ม จำนวน X ครั้ง"
     },
     "STAR_BLAST": {
       "description": "ได้รับ {Block:diff()} บล็อก\nสร้างความเสียหาย {Damage:diff()}"
@@ -1748,175 +1747,175 @@
       "description": "สลายการ์ดทั้งมือ\nจั่วการ์ดตามจำนวนการ์ดที่ถูกสลาย"
     },
     "STOMP": {
-      "description": "สร้างความเสียหาย 12 ใส่ศัตรูทั้งหมด\nค่าร่ายลดลง 1 [E] ตามจำนวนการ์ดโจมตีที่เล่นในเทิร์นนี้"
+      "description": "สร้างความเสียหาย {Damage:diff()} ใส่ศัตรูทั้งหมด\nค่าร่ายลดลง 1 {energyPrefix:energyIcons(1)} ตามจำนวนการ์ดโจมตีที่เล่นในเทิร์นนี้"
     },
     "STONE_ARMOR": {
-      "description": "ได้รับ 4 Plating"
+      "description": "ได้รับ {PlatingPower:diff()} Plating"
     },
     "STORM": {
-      "description": "ทุกครั้งที่คุณเล่นการ์ดพลัง ปลุกเสก 1 สายฟ้า",
+      "description": "ทุกครั้งที่คุณเล่นการ์ดพลัง ปลุกเสก {StormPower:diff()} สายฟ้า",
       "name": "มรสุม"
     },
     "STORM_OF_STEEL": {
-      "description": "ทิ้งการ์ดทั้งมือ\nเพิ่มมีดสั้น 1 ใบใส่มือตามจำนวนการ์ดที่ถูกทิ้ง",
+      "description": "ทิ้งการ์ดทั้งมือ\nเพิ่ม{IfUpgraded:show:มีดสั้น+|มีดสั้น} 1 ใบใส่มือตามจำนวนการ์ดที่ถูกทิ้ง",
       "name": "พายุมีด"
     },
     "STRANGLE": {
-      "description": "สร้างความเสียหาย 8\nทุกครั้งที่คุณเล่นการ์ดในเทิร์นนี้ ศัตรูเสีย 2 HP"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nทุกครั้งที่คุณเล่นการ์ดในเทิร์นนี้ ศัตรูเสีย {StranglePower:diff()} HP"
     },
     "STRATAGEM": {
       "description": "ทุกครั้งที่คุณสับกองจั่ว เลือกการ์ด 1 ใบเพื่อนำขึ้นมือ"
     },
     "STRIKE_DEFECT": {
-      "description": "สร้างความเสียหาย 6",
+      "description": "สร้างความเสียหาย {Damage:diff()}",
       "name": "จู่โจม"
     },
     "STRIKE_IRONCLAD": {
-      "description": "สร้างความเสียหาย 6",
+      "description": "สร้างความเสียหาย {Damage:diff()}",
       "name": "จู่โจม"
     },
     "STRIKE_NECROBINDER": {
-      "description": "สร้างความเสียหาย 6",
+      "description": "สร้างความเสียหาย {Damage:diff()}",
       "name": "จู่โจม"
     },
     "STRIKE_REGENT": {
-      "description": "สร้างความเสียหาย 6",
+      "description": "สร้างความเสียหาย {Damage:diff()}",
       "name": "จู่โจม"
     },
     "STRIKE_SILENT": {
-      "description": "สร้างความเสียหาย 6",
+      "description": "สร้างความเสียหาย {Damage:diff()}",
       "name": "จู่โจม"
     },
     "SUBROUTINE": {
-      "description": "ทุกครั้งที่คุณเล่นการ์ดพลัง ได้รับ [E]"
+      "description": "ทุกครั้งที่คุณเล่นการ์ดพลัง ได้รับ {energyPrefix:energyIcons(1)}"
     },
     "SUCKER_PUNCH": {
-      "description": "สร้างความเสียหาย 8\nสร้าง 1 ความอ่อนแอ",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nสร้าง {WeakPower:diff()} ความอ่อนแอ",
       "name": "หมัดทีเผลอ"
     },
     "SUMMON_FORTH": {
-      "description": "หลอมสร้าง 8\nนำSovereign Bladeจากที่ไหนก็ได้ขึ้นมือ"
+      "description": "หลอมสร้าง {Forge:diff()}\nนำSovereign Bladeจากที่ไหนก็ได้ขึ้นมือ"
     },
     "SUNDER": {
-      "description": "สร้างความเสียหาย 24\nถ้าฆ่าศัตรูได้ ได้รับ [E]",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nถ้าฆ่าศัตรูได้ ได้รับ {Energy:energyIcons()}",
       "name": "มหาวิปโยค"
     },
     "SUPERCRITICAL": {
-      "description": "ได้รับ [E]"
+      "description": "ได้รับ {Energy:energyIcons()}"
     },
     "SUPERMASSIVE": {
-      "description": "สร้างความเสียหาย 5\nสร้างความเสียหายเพิ่ม 3 ตามจำนวนการ์ดที่คุณสร้างในการต่อสู้นี้"
+      "description": "สร้างความเสียหาย {CalculatedDamage:diff()}\nสร้างความเสียหายเพิ่ม {ExtraDamage:diff()} ตามจำนวนการ์ดที่คุณสร้างในการต่อสู้นี้"
     },
     "SUPPRESS": {
-      "description": "สร้างความเสียหาย 11\nสร้าง 3 ความอ่อนแอ"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nสร้าง {WeakPower:diff()} ความอ่อนแอ"
     },
     "SURVIVOR": {
-      "description": "ได้รับ 8 บล็อก\nทิ้งการ์ด 1 ใบ",
+      "description": "ได้รับ {Block:diff()} บล็อก\nทิ้งการ์ด 1 ใบ",
       "name": "ผู้รอดชีวิตฮึดสู้"
     },
     "SWEEPING_BEAM": {
-      "description": "สร้างความเสียหาย 6 ใส่ศัตรูทั้งหมด\nจั่วการ์ด 1 ใบ",
+      "description": "สร้างความเสียหาย {Damage:diff()} ใส่ศัตรูทั้งหมด\nจั่วการ์ด {Cards:diff()} ใบ",
       "name": "กวาดลำแสง"
     },
     "SWEEPING_GAZE": {
-      "description": "Ostyสร้างความเสียหาย 10 ใส่ศัตรู 1 ตัวแบบสุ่ม"
+      "description": "Ostyสร้างความเสียหาย {OstyDamage:diff()} ใส่ศัตรู 1 ตัวแบบสุ่ม"
     },
     "SWIFT_STRIKE": {
       "description": "สร้างความเสียหาย {Damage:diff()}",
       "name": "จู่โจมฉับพลัน"
     },
     "SWORD_BOOMERANG": {
-      "description": "สร้างความเสียหาย 3 ใส่ศัตรู 1 ตัวแบบสุ่ม จำนวน 3 ครั้ง",
+      "description": "สร้างความเสียหาย {Damage:diff()} ใส่ศัตรู 1 ตัวแบบสุ่ม จำนวน {Repeat:diff()} ครั้ง",
       "name": "ดาบบูมเมอแรง"
     },
     "SWORD_SAGE": {
       "description": "ค่าร่ายของSovereign Blade เพิ่มขึ้น 1 ต่อไปนี้Sovereign Bladeโจมตีเพิ่มอีกครั้ง"
     },
     "SYNCHRONIZE": {
-      "description": "ได้รับ 2 โฟกัสในเทิร์นนี้ตามจำนวนลูกแก้วไม่ซ้ำธาตุที่คุณมี\n(ได้รับ 0 โฟกัส)"
+      "description": "ได้รับ {CalculationExtra:diff()} โฟกัสในเทิร์นนี้ตามจำนวนลูกแก้วไม่ซ้ำธาตุที่คุณมี{InCombat:\n(ได้รับ {CalculatedFocus:diff()} โฟกัส)|}"
     },
     "SYNTHESIS": {
-      "description": "สร้างความเสียหาย 12\nการ์ดพลังใบถัดไปมีค่าร่าย 0 [E]"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nการ์ดพลังใบถัดไปมีค่าร่าย 0 {energyPrefix:energyIcons(1)}"
     },
     "TACTICIAN": {
-      "description": "ได้รับ [E]",
+      "description": "ได้รับ {Energy:energyIcons()}",
       "name": "อุบายแยบยล"
     },
     "TAG_TEAM": {
-      "description": "สร้างความเสียหาย 11\nการ์ดโจมตีใบถัดไปของพันธมิตร 1 คนที่เล่นใส่ศัตรูตัวนี้จะถูกเล่นซ้ำอีกครั้ง"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nการ์ดโจมตีใบถัดไปของพันธมิตร 1 คนที่เล่นใส่ศัตรูตัวนี้จะถูกเล่นซ้ำอีกครั้ง"
     },
     "TANK": {
       "description": "ได้รับความเสียหายจากศัตรู 2 เท่า\nพันธมิตรทั้งหมดได้รับความเสียหายจากศัตรูครึ่งเดียว"
     },
     "TAUNT": {
-      "description": "ได้รับ 7 บล็อก\nสร้าง 1 จุดอ่อน"
+      "description": "ได้รับ {Block:diff()} บล็อก\nสร้าง {VulnerablePower:diff()} จุดอ่อน"
     },
     "TEAR_ASUNDER": {
-      "description": "สร้างความเสียหาย 5\nโจมตีเพิ่มอีกตามจำนวนครั้งที่คุณเสีย HP ในการต่อสู้นี้\n(โจมตี 0 ครั้ง)"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nโจมตีเพิ่มอีกตามจำนวนครั้งที่คุณเสีย HP ในการต่อสู้นี้{InCombat:\n(โจมตี {CalculatedHits:diff()} {CalculatedHits:plural:ครั้ง|ครั้ง})|}"
     },
     "TEMPEST": {
-      "description": "ปลุกเสก X สายฟ้า",
+      "description": "ปลุกเสก {IfUpgraded:show:X+1|X} สายฟ้า",
       "name": "อสนีบาต"
     },
     "TERRAFORMING": {
-      "description": "ได้รับ 6 ความกำยำ"
+      "description": "ได้รับ {VigorPower:diff()} ความกำยำ"
     },
     "TESLA_COIL": {
-      "description": "สร้างความเสียหาย 3\nผลของสายฟ้าทั้งผลทำงานใส่ศัตรูตัวนี้"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nผลของสายฟ้าทั้งผลทำงานใส่ศัตรูตัวนี้"
     },
     "TEZCATARAS_MIGHT": {
       "description": "ได้รับ {StrengthPower:diff()} ความแข็งแรง\nตอนจบเทิร์น เสีย {StrengthLoss:diff()} ความแข็งแรง"
     },
     "THE_BOMB": {
-      "description": "เมื่อผ่านไป 3 เทิร์น สร้างความเสียหาย 40 ใส่ศัตรูทั้งหมด",
+      "description": "เมื่อผ่านไป {Turns:diff()} เทิร์น สร้างความเสียหาย {BombDamage:diff()} ใส่ศัตรูทั้งหมด",
       "name": "ระเบิด"
     },
     "THE_GAMBIT": {
-      "description": "ได้รับ 50 บล็อก\nถ้าคุณได้รับความเสียหายที่บล็อกไม่ได้ในการต่อสู้นี้ จะตายทันที",
+      "description": "ได้รับ {Block:diff()} บล็อก\nถ้าคุณได้รับความเสียหายที่บล็อกไม่ได้ในการต่อสู้นี้ จะตายทันที",
       "name": "ผู้เดิมพันชะตา"
     },
     "THE_HUNT": {
-      "description": "สร้างความเสียหาย 10\nถ้าสังหาร ได้รับรางวัลการ์ดเพิ่ม 1 รางวัล"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nถ้าสังหาร ได้รับรางวัลการ์ดเพิ่ม 1 รางวัล"
     },
     "THE_SCYTHE": {
-      "description": "สร้างความเสียหาย 13\nเพิ่มความเสียหายให้การ์ดนี้ 3 แบบถาวร"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nเพิ่มความเสียหายให้การ์ดนี้ {Increase:diff()} แบบถาวร"
     },
     "THE_SEALED_THRONE": {
-      "description": "ทุกครั้งที่คุณเล่นการ์ด ได้รับ ⭐"
+      "description": "ทุกครั้งที่คุณเล่นการ์ด ได้รับ {singleStarIcon}"
     },
     "THE_SMITH": {
-      "description": "หลอมสร้าง 30"
+      "description": "หลอมสร้าง {Forge:diff()}"
     },
     "THINKING_AHEAD": {
-      "description": "จั่วการ์ด 2 ใบ\nนำการ์ด 1 ใบจากมือไปวางไว้บนสุดของกองจั่ว",
+      "description": "จั่วการ์ด {Cards:diff()} ใบ\nนำการ์ด 1 ใบจากมือไปวางไว้บนสุดของกองจั่ว",
       "name": "คิดล่วงหน้า"
     },
     "THRASH": {
-      "description": "สร้างความเสียหาย 4 จำนวน 2 ครั้ง\nสลายการ์ดโจมตี 1 ใบแบบสุ่มในมือและนำความเสียหายของมันมาเพิ่มให้การ์ดนี้แทน"
+      "description": "สร้างความเสียหาย {Damage:diff()} จำนวน 2 ครั้ง\nสลายการ์ดโจมตี 1 ใบแบบสุ่มในมือและนำความเสียหายของมันมาเพิ่มให้การ์ดนี้แทน"
     },
     "THRUMMING_HATCHET": {
-      "description": "สร้างความเสียหาย 11\nตอนเริ่มต้นเทิร์น นำการ์ดนี้กลับขึ้นมือ"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nตอนเริ่มต้นเทิร์น นำการ์ดนี้กลับขึ้นมือ"
     },
     "THUNDER": {
-      "description": "ทุกครั้งที่คุณปล่อยพลังสายฟ้า สร้างความเสียหาย 6 ใส่ศัตรูแต่ละตัวที่ถูกสายฟ้าโจมตี",
+      "description": "ทุกครั้งที่คุณปล่อยพลังสายฟ้า สร้างความเสียหาย {ThunderPower:diff()} ใส่ศัตรูแต่ละตัวที่ถูกสายฟ้าโจมตี",
       "name": "ฟ้าคะนอง"
     },
     "THUNDERCLAP": {
-      "description": "สร้างความเสียหาย 4 และสร้าง 1 จุดอ่อนใส่ศัตรูทั้งหมด",
+      "description": "สร้างความเสียหาย {Damage:diff()} และสร้าง {VulnerablePower:diff()} จุดอ่อนใส่ศัตรูทั้งหมด",
       "name": "ฟ้าผ่า"
     },
     "TIMES_UP": {
-      "description": "สร้างความเสียหายตามอายุขัยบนตัวศัตรู\n(สร้างความเสียหาย 0)"
+      "description": "สร้างความเสียหายตามอายุขัยบนตัวศัตรู{IsTargeting:\n(สร้างความเสียหาย {CalculatedDamage:diff()})|}"
     },
     "TOOLS_OF_THE_TRADE": {
       "description": "ตอนเริ่มต้นเทิร์น จั่วการ์ด 1 ใบและทิ้งการ์ด 1 ใบ",
       "name": "สรรพอุปกรณ์"
     },
     "TORIC_TOUGHNESS": {
-      "description": "ได้รับ 5 บล็อก\nได้รับ 5 บล็อกตอนเริ่มต้นเทิร์น เป็นเวลา 2 เทิร์น"
+      "description": "ได้รับ {Block:diff()} บล็อก\nได้รับ {Block:diff()} บล็อกตอนเริ่มต้นเทิร์น เป็นเวลา {Turns:diff()} {Turns:plural:เทิร์น|เทิร์น}"
     },
     "TOXIC": {
-      "description": "ตอนจบเทิร์น ถ้าการ์ดนี้อยู่ในมือ ได้รับความเสียหาย 5"
+      "description": "ตอนจบเทิร์น ถ้าการ์ดนี้อยู่ในมือ ได้รับความเสียหาย {Damage:diff()}"
     },
     "TRACKING": {
       "description": "ศัตรูที่มีความอ่อนแอได้รับความเสียหายจากการ์ดโจมตี 2 เท่า"
@@ -1925,104 +1924,104 @@
       "description": "สร้างความเสียหาย {Damage:diff()}\nถ้าสังหาร Cocoon ได้รับค่าประสบการณ์ 1"
     },
     "TRANSFIGURE": {
-      "description": "เพิ่มเล่นซ้ำให้ 1 การ์ดในมือ\nแต่ค่าร่ายเพิ่มขึ้น [E]"
+      "description": "เพิ่มเล่นซ้ำให้ 1 การ์ดในมือ\nแต่ค่าร่ายเพิ่มขึ้น {Energy:energyIcons()}"
     },
     "TRASH_TO_TREASURE": {
       "description": "ทุกครั้งที่คุณสร้างการ์ดสถานะ ปลุกเสกลูกแก้ว 1 ลูกแบบสุ่ม"
     },
     "TREMBLE": {
-      "description": "สร้าง 2 จุดอ่อน"
+      "description": "สร้าง {VulnerablePower:diff()} จุดอ่อน"
     },
     "TRUE_GRIT": {
-      "description": "ได้รับ 7 บล็อก\nสลายการ์ด 1 ใบแบบสุ่ม",
+      "description": "ได้รับ {Block:diff()} บล็อก\nสลายการ์ด 1 ใบ{IfUpgraded:show:|แบบสุ่ม}",
       "name": "ใจสู้ที่แท้จริง"
     },
     "TURBO": {
-      "description": "ได้รับ [E]\nเพิ่มความว่างเปล่า 1 ใบเข้ากองทิ้ง",
+      "description": "ได้รับ {Energy:energyIcons()}\nเพิ่มความว่างเปล่า 1 ใบเข้ากองทิ้ง",
       "name": "เทอร์โบ"
     },
     "TWIN_STRIKE": {
-      "description": "สร้างความเสียหาย 5 จำนวน 2 ครั้ง",
+      "description": "สร้างความเสียหาย {Damage:diff()} จำนวน 2 ครั้ง",
       "name": "จู่โจมคู่"
     },
     "TYRANNY": {
       "description": "ตอนเริ่มต้นเทิร์น จั่วการ์ด 1 ใบและสลายการ์ด 1 ใบในมือ"
     },
     "ULTIMATE_DEFEND": {
-      "description": "ได้รับ 11 บล็อก"
+      "description": "ได้รับ {Block:diff()} บล็อก"
     },
     "ULTIMATE_STRIKE": {
-      "description": "สร้างความเสียหาย 14"
+      "description": "สร้างความเสียหาย {Damage:diff()}"
     },
     "UNDEATH": {
-      "description": "ได้รับ 7 บล็อก\nเพิ่มสำเนา 1 ใบของการ์ดนี้เข้ากองทิ้ง"
+      "description": "ได้รับ {Block:diff()} บล็อก\nเพิ่มสำเนา 1 ใบของการ์ดนี้เข้ากองทิ้ง"
     },
     "UNLEASH": {
-      "description": "Ostyสร้างความเสียหาย 6\nสร้างความเสียหายเพิ่มตามจำนวน HP ปัจจุบันของOsty"
+      "description": "Ostyสร้างความเสียหาย {CalculatedDamage:diff()}\nสร้างความเสียหายเพิ่มตามจำนวน HP ปัจจุบันของOsty"
     },
     "UNMOVABLE": {
       "description": "ครั้งแรกที่คุณได้รับบล็อกจากการ์ดในแต่ละเทิร์น จะได้รับเป็น 2 เท่า"
     },
     "UNRELENTING": {
-      "description": "สร้างความเสียหาย 12\nการ์ดโจมตีใบถัดไปมีค่าร่าย 0 [E]"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nการ์ดโจมตีใบถัดไปมีค่าร่าย 0 {energyPrefix:energyIcons(1)}"
     },
     "UNTOUCHABLE": {
-      "description": "ได้รับ 9 บล็อก"
+      "description": "ได้รับ {Block:diff()} บล็อก"
     },
     "UPPERCUT": {
-      "description": "สร้างความเสียหาย 13\nสร้าง 1 ความอ่อนแอ\nสร้าง 1 จุดอ่อน",
+      "description": "สร้างความเสียหาย {Damage:diff()}\nสร้าง {Power:diff()} ความอ่อนแอ\nสร้าง {Power:diff()} จุดอ่อน",
       "name": "หมัดสอยดาว"
     },
     "UPROAR": {
-      "description": "สร้างความเสียหาย 5 จำนวน 2 ครั้ง\nเล่นการ์ดโจมตี 1 ใบแบบสุ่มจากกองจั่ว"
+      "description": "สร้างความเสียหาย {Damage:diff()} จำนวน 2 ครั้ง\nเล่นการ์ดโจมตี 1 ใบแบบสุ่มจากกองจั่ว"
     },
     "UP_MY_SLEEVE": {
-      "description": "เพิ่มมีดสั้น 3 ใบใส่มือ\nลดค่าร่ายของการ์ดนี้ลง 1"
+      "description": "เพิ่มมีดสั้น {Cards:diff()} ใบใส่มือ\nลดค่าร่ายของการ์ดนี้ลง 1"
     },
     "VEILPIERCER": {
-      "description": "สร้างความเสียหาย 10\nการ์ดกึ่งสลายใบถัดไปมีค่าร่าย 0 [E]"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nการ์ดกึ่งสลายใบถัดไปมีค่าร่าย 0 {energyPrefix:energyIcons(1)}"
     },
     "VENERATE": {
-      "description": "ได้รับ 2 Stars"
+      "description": "ได้รับ {Stars:starIcons()}"
     },
     "VETERAN": {
       "description": "ได้รับ {Block:diff()} บล็อก\nได้รับ {StrengthPower:diff()} ความแข็งแรง"
     },
     "VICIOUS": {
-      "description": "ทุกครั้งที่คุณสร้างจุดอ่อน จั่วการ์ด 1 ใบ"
+      "description": "ทุกครั้งที่คุณสร้างจุดอ่อน จั่วการ์ด {Cards:diff()} ใบ"
     },
     "VISIONS_OF_GRANDEUR": {
-      "description": "ถ้าคุณมี {StarThreshold:diff()}⭐ จั่วการ์ด {Cards:diff()} ใบ"
+      "description": "ถ้าคุณมี {StarThreshold:diff()}{singleStarIcon} จั่วการ์ด {Cards:diff()} ใบ"
     },
     "VOID": {
-      "description": "ทุกครั้งที่จั่วได้การ์ดนี้ เสีย [E]",
+      "description": "ทุกครั้งที่จั่วได้การ์ดนี้ เสีย {Energy:energyIcons()}",
       "name": "ความว่างเปล่า"
     },
     "VOID_FORM": {
-      "description": "จบเทิร์น\nการ์ดใบแรกที่คุณเล่นในแต่ละเทิร์นจะเล่นฟรี"
+      "description": "จบเทิร์น\nการ์ด{VoidFormPower:plural:ใบแรก|{VoidFormPower: diff()} ใบแรก}ที่คุณเล่นในแต่ละเทิร์นจะเล่นฟรี"
     },
     "VOLLEY": {
-      "description": "สร้างความเสียหาย 10 ใส่ศัตรู 1 ตัวแบบสุ่ม จำนวน X ครั้ง"
+      "description": "สร้างความเสียหาย {Damage:diff()} ใส่ศัตรู 1 ตัวแบบสุ่ม จำนวน X ครั้ง"
     },
     "VOLTAIC": {
-      "description": "ปลุกเสกสายฟ้าตามจำนวนสายฟ้าที่เคยถูกปลุกเสกในการต่อสู้นี้\n(ปลุกเสก 0 สายฟ้า)"
+      "description": "ปลุกเสกสายฟ้าตามจำนวนสายฟ้าที่เคยถูกปลุกเสกในการต่อสู้นี้{InCombat:\n(ปลุกเสก {CalculatedChannels:diff()} สายฟ้า)|}"
     },
     "WARP_SPACE": {
       "description": "เพิ่มการ์ด {Cards:diff()} ใบแบบสุ่มเข้ากองจั่ว\nลดค่าร่ายของมันลง 1 จนกว่าจะถูกเล่น"
     },
     "WASTE_AWAY": {
-      "description": "ได้รับน้อยลง 1 [E] ต่อเทิร์น"
+      "description": "ได้รับน้อยลง {WasteAwayPower:diff()} {energyPrefix:energyIcons(1)} ต่อเทิร์น"
     },
     "WELL_LAID_PLANS": {
-      "description": "ตอนจบเทิร์น คงสภาพการ์ดได้สูงสุด 1 ใบ",
+      "description": "ตอนจบเทิร์น คงสภาพการ์ดได้สูงสุด {RetainAmount:diff()} ใบ",
       "name": "แผนการอย่างดี"
     },
     "WHIRLWIND": {
-      "description": "สร้างความเสียหาย 5 ใส่ศัตรูทั้งหมด จำนวน X ครั้ง",
+      "description": "สร้างความเสียหาย {Damage:diff()} ใส่ศัตรูทั้งหมด จำนวน X ครั้ง",
       "name": "พายุลมกรด"
     },
     "WHISTLE": {
-      "description": "สร้างความเสียหาย 33\nสตันศัตรูตัวนั้น"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nสตันศัตรูตัวนั้น"
     },
     "WHITE_NOISE": {
       "description": "เพิ่มการ์ดพลัง 1 ใบแบบสุ่มใส่มือ มันเล่นฟรีในเทิร์นนี้",
@@ -2033,20 +2032,20 @@
       "name": "อธิษฐาน"
     },
     "WISP": {
-      "description": "ได้รับ [E]"
+      "description": "ได้รับ {Energy:energyIcons()}"
     },
     "WOUND": {
       "name": "บาดแผล"
     },
     "WRAITH_FORM": {
-      "description": "ได้รับ 2 ไร้ตัวตน\nตอนเริ่มต้นเทิร์น เสีย 1 ความชำนาญ",
+      "description": "ได้รับ {IntangiblePower:diff()} ไร้ตัวตน\nตอนเริ่มต้นเทิร์น เสีย {WraithFormPower:diff()} ความชำนาญ",
       "name": "ร่างมายา"
     },
     "WRITHE": {
       "name": "อาการชัก"
     },
     "WROUGHT_IN_WAR": {
-      "description": "สร้างความเสียหาย 7\nหลอมสร้าง 5"
+      "description": "สร้างความเสียหาย {Damage:diff()}\nหลอมสร้าง {Forge:diff()}"
     },
     "ZAP": {
       "description": "ปลุกเสก 1 สายฟ้า",
@@ -2055,19 +2054,19 @@
   },
   "relics": {
     "AKABEKO": {
-      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ ได้รับ 8 ความกำยำ",
+      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ ได้รับ {VigorPower} ความกำยำ",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "ALCHEMICAL_COFFER": {
-      "description": "ตอนได้รับมา จะเพิ่มช่องเก็บขวดยา 4 ช่องพร้อมขวดยาแบบสุ่ม",
+      "description": "ตอนได้รับมา จะเพิ่มช่องเก็บขวดยา {PotionSlots} ช่องพร้อมขวดยาแบบสุ่ม",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "AMETHYST_AUBERGINE": {
-      "description": "ศัตรูดรอปทองมากขึ้น 10",
+      "description": "ศัตรูดรอปทองมากขึ้น {Gold}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "ANCHOR": {
-      "description": "เริ่มต้นแต่ละการต่อสู้ด้วย 10 บล็อก",
+      "description": "เริ่มต้นแต่ละการต่อสู้ด้วย {Block} บล็อก",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "ARCANE_SCROLL": {
@@ -2075,24 +2074,24 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "ARCHAIC_TOOTH": {
-      "description": "เมื่อรับมา แปรสภาพการ์ดเริ่มต้นเวอร์ชันเทพโบราณ 1 ใบ",
+      "description": "เมื่อรับมา แปรสภาพ{StarterCard.StringValue:cond:{StarterCard}ให้เป็น{AncientCard}|การ์ดเริ่มต้นเวอร์ชันเทพโบราณ 1 ใบ}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "ART_OF_WAR": {
-      "description": "ถ้าคุณไม่ได้เล่นการ์ดโจมตีในเทิร์นของคุณ จะได้รับ [E] เพิ่มในเทิร์นถัดไป",
+      "description": "ถ้าคุณไม่ได้เล่นการ์ดโจมตีในเทิร์นของคุณ จะได้รับ {Energy:energyIcons()} เพิ่มในเทิร์นถัดไป",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต...",
       "name": "ตำราพิชัยสงคราม"
     },
     "ASTROLABE": {
-      "description": "เมื่อรับมา แปรสภาพ 3 การ์ด จากนั้นพัฒนาพวกมัน",
+      "description": "เมื่อรับมา แปรสภาพ {Cards} การ์ด จากนั้นพัฒนาพวกมัน",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "BAG_OF_MARBLES": {
-      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ สร้าง 1 จุดอ่อนใส่ศัตรูทั้งหมด",
+      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ สร้าง {VulnerablePower} จุดอ่อนใส่ศัตรูทั้งหมด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "BAG_OF_PREPARATION": {
-      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ จั่วเพิ่มอีก 2 การ์ด",
+      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ จั่วเพิ่มอีก {Cards} การ์ด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "BEATING_REMNANT": {
@@ -2100,7 +2099,7 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "BEAUTIFUL_BRACELET": {
-      "description": "เมื่อรับมา เลือก 3 การ์ดในกองการ์ด จากนั้นร่ายมนต์ [purple]Swift[/purple] 3 ให้พวกมัน",
+      "description": "เมื่อรับมา เลือก {Cards} การ์ดในกองการ์ด จากนั้นร่ายมนต์ [purple]Swift[/purple] 3 ให้พวกมัน",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "BELLOWS": {
@@ -2108,19 +2107,19 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "BELT_BUCKLE": {
-      "description": "ช่วงที่ไม่มีขวดยา คุณจะได้รับเพิ่ม 2 ความชำนาญ",
+      "description": "ช่วงที่ไม่มีขวดยา คุณจะได้รับเพิ่ม {DexterityPower} ความชำนาญ",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "BIG_HAT": {
-      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ เพิ่มการ์ดกึ่งสลาย 2 ใบแบบสุ่มใส่มือ",
+      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ เพิ่มการ์ดกึ่งสลาย {Cards} ใบแบบสุ่มใส่มือ",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "BIG_MUSHROOM": {
-      "description": "เมื่อรับมา เพิ่ม 20 HP สูงสุด แต่ตอนเริ่มต้นแต่ละการต่อสู้ จั่วการ์ดน้อยลง 2 ใบ",
+      "description": "เมื่อรับมา เพิ่ม {MaxHp} HP สูงสุด แต่ตอนเริ่มต้นแต่ละการต่อสู้ จั่วการ์ดน้อยลง {Cards} ใบ",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "BIIIG_HUG": {
-      "description": "เมื่อรับมา กำจัด 4 การ์ดจากกองการ์ด ทุกครั้งที่กองจั่วถูกสับ จะเพิ่ม Soot 1 ใบเข้ากองจั่ว",
+      "description": "เมื่อรับมา กำจัด {Cards} การ์ดจากกองการ์ด ทุกครั้งที่กองจั่วถูกสับ จะเพิ่ม Soot 1 ใบเข้ากองจั่ว",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "BING_BONG": {
@@ -2128,7 +2127,7 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "BLACK_BLOOD": {
-      "description": "ตอนจบการต่อสู้ ฟื้นฟู 12 HP",
+      "description": "ตอนจบการต่อสู้ ฟื้นฟู {Heal} HP",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "BLACK_STAR": {
@@ -2136,15 +2135,15 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "BLESSED_ANTLER": {
-      "description": "ได้รับ [E] ตอนเริ่มต้นแต่ละเทิร์น แต่ตอนเริ่มต้นแต่ละการต่อสู้ สับความมึนงง 3 ใบเข้ากองจั่ว",
+      "description": "ได้รับ {Energy:energyIcons()} ตอนเริ่มต้นแต่ละเทิร์น แต่ตอนเริ่มต้นแต่ละการต่อสู้ สับความมึนงง {Cards} ใบเข้ากองจั่ว",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "BLOOD_SOAKED_ROSE": {
-      "description": "เมื่อรับมา เพิ่มEnthralled 1 ใบเข้ากองการ์ด ได้รับ [E] ตอนเริ่มต้นแต่ละเทิร์น",
+      "description": "เมื่อรับมา เพิ่มEnthralled 1 ใบเข้ากองการ์ด ได้รับ {Energy:energyIcons()} ตอนเริ่มต้นแต่ละเทิร์น",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "BLOOD_VIAL": {
-      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ ฟื้นฟู 2 HP",
+      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ ฟื้นฟู {Heal} HP",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "BONE_FLUTE": {
@@ -2160,25 +2159,25 @@
       "name": "ที่คั่นหนังสือ"
     },
     "BOOK_OF_FIVE_RINGS": {
-      "description": "การ์ดทุก 5 ใบที่คุณเพิ่มเข้ากองการ์ด ฟื้นฟู 15 HP",
+      "description": "การ์ดทุก {Cards} ใบที่คุณเพิ่มเข้ากองการ์ด ฟื้นฟู {Heal} HP",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "BOOK_REPAIR_KNIFE": {
-      "description": "ทุกครั้งที่ศัตรูที่ไม่ใช่ลูกน้องตายเพราะอายุขัย ฟื้นฟู 3 HP",
+      "description": "ทุกครั้งที่ศัตรูที่ไม่ใช่ลูกน้องตายเพราะอายุขัย ฟื้นฟู {Heal} HP",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "BOOMING_CONCH": {
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "BOUND_PHYLACTERY": {
-      "description": "ตอนเริ่มต้นเทิร์น อัญเชิญ 1",
+      "description": "ตอนเริ่มต้นเทิร์น อัญเชิญ {Summon}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "BOWLER_HAT": {
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "BREAD": {
-      "description": "ตอนเริ่มต้นเทิร์นแรก เสีย [E] แต่ตอนเริ่มต้นเทิร์นอื่นๆ ได้รับ [E]",
+      "description": "ตอนเริ่มต้นเทิร์นแรก เสีย {LoseEnergy:energyIcons()} แต่ตอนเริ่มต้นเทิร์นอื่นๆ ได้รับ {GainEnergy:energyIcons()}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต...",
       "name": "ขนมปัง"
     },
@@ -2187,15 +2186,15 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "BRIMSTONE": {
-      "description": "ตอนเริ่มต้นเทิร์น ได้รับ 2 ความแข็งแรง และศัตรูทั้งหมดได้รับ 1 ความแข็งแรง",
+      "description": "ตอนเริ่มต้นเทิร์น ได้รับ {SelfStrength} ความแข็งแรง และศัตรูทั้งหมดได้รับ {EnemyStrength} ความแข็งแรง",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "BRONZE_SCALES": {
-      "description": "เริ่มต้นแต่ละการต่อสู้ด้วย 3 หนาม",
+      "description": "เริ่มต้นแต่ละการต่อสู้ด้วย {ThornsPower} หนาม",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "BURNING_BLOOD": {
-      "description": "ตอนจบการต่อสู้ ฟื้นฟู 6 HP",
+      "description": "ตอนจบการต่อสู้ ฟื้นฟู {Heal} HP",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "BURNING_STICKS": {
@@ -2207,43 +2206,43 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "CALLING_BELL": {
-      "description": "เมื่อรับมา ได้รับคำสาปที่เป็นเอกลักษณ์และ 3 เครื่องราง",
+      "description": "เมื่อรับมา ได้รับคำสาปที่เป็นเอกลักษณ์และ {Relics} เครื่องราง",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "CANDELABRA": {
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "CAPTAINS_WHEEL": {
-      "description": "ตอนริ่มต้นเทิร์นที่ 3 ได้รับ 18 บล็อก",
+      "description": "ตอนริ่มต้นเทิร์นที่ 3 ได้รับ {Block} บล็อก",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "CAULDRON": {
-      "description": "เมื่อรับมา ปรุง 5 ขวดยาแบบสุ่ม",
+      "description": "เมื่อรับมา ปรุง {Potions} ขวดยาแบบสุ่ม",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต...",
       "name": "หม้อปรุงยา"
     },
     "CENTENNIAL_PUZZLE": {
-      "description": "เมื่อคุณเสีย HP เป็นครั้งแรกในแต่ละการต่อสู้ จั่ว 3 การ์ด",
+      "description": "เมื่อคุณเสีย HP เป็นครั้งแรกในแต่ละการต่อสู้ จั่ว {Cards} การ์ด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "CHANDELIER": {
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "CHARONS_ASHES": {
-      "description": "ทุกครั้งที่สลายการ์ด สร้างความเสียหาย 3 ใส่ศัตรูทั้งหมด",
+      "description": "ทุกครั้งที่สลายการ์ด สร้างความเสียหาย {Damage} ใส่ศัตรูทั้งหมด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "CHEMICAL_X": {
-      "description": "ผลของการ์ดค่าร่าย X ทั้งหมดจะเพิ่มขึ้นอีก 2",
+      "description": "ผลของการ์ดค่าร่าย X ทั้งหมดจะเพิ่มขึ้นอีก {Increase}",
       "flavor": "คำเตือน: อย่าผสมกับน้ำตาล, เครื่องเทศ, และสารพัดของกุ๊กกิ๊ก",
       "name": "สารเคมีเอ็กซ์"
     },
     "CHOICES_PARADOX": {
-      "description": "ตอนเริ่มต้นการต่อสู้ เลือกการ์ด 1 จาก 5 ใบที่ถูกสุ่มมาเพื่อเพิ่มใส่มือ และเพิ่มคงสภาพให้มันด้วย",
+      "description": "ตอนเริ่มต้นการต่อสู้ เลือกการ์ด 1 จาก {Cards} ใบที่ถูกสุ่มมาเพื่อเพิ่มใส่มือ และเพิ่มคงสภาพให้มันด้วย",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "CHOSEN_CHEESE": {
-      "description": "ตอนจบการต่อสู้ ได้รับ 1 HP สูงสุด",
+      "description": "ตอนจบการต่อสู้ ได้รับ {MaxHp} HP สูงสุด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต...",
       "name": "ชีสที่ถูกเลือก"
     },
@@ -2252,15 +2251,15 @@
       "name": "รัดเกล้า"
     },
     "CLAWS": {
-      "description": "เมื่อรับมา แปรสภาพการ์ดได้สูงสุด 6 ใบให้เป็นMaul",
+      "description": "เมื่อรับมา แปรสภาพการ์ดได้สูงสุด {Cards} ใบให้เป็นMaul",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "CLOAK_CLASP": {
-      "description": "ตอนจบเทิร์น ได้รับ 1 บล็อกตามจำนวนการ์ดในมือ",
+      "description": "ตอนจบเทิร์น ได้รับ {Block} บล็อกตามจำนวนการ์ดในมือ",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "CRACKED_CORE": {
-      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ ปลุกเสก 1 สายฟ้า",
+      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ ปลุกเสก {Lightning} สายฟ้า",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "CROSSBOW": {
@@ -2272,20 +2271,20 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "CURSED_PEARL": {
-      "description": "เมื่อรับมา ได้รับGreed ได้รับ 333 ทอง",
+      "description": "เมื่อรับมา ได้รับGreed ได้รับ {Gold} ทอง",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "DARKSTONE_PERIAPT": {
-      "description": "ทุกครั้งที่ได้รับคำสาป เพิ่ม 6 HP สูงสุด",
+      "description": "ทุกครั้งที่ได้รับคำสาป เพิ่ม {MaxHp} HP สูงสุด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "DATA_DISK": {
-      "description": "เริ่มต้นแต่ละการต่อสู้ด้วย 1 โฟกัส",
+      "description": "เริ่มต้นแต่ละการต่อสู้ด้วย {FocusPower} โฟกัส",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต...",
       "name": "ดิสก์ข้อมูล"
     },
     "DAUGHTER_OF_THE_WIND": {
-      "description": "ทุกครั้งที่คุณเล่นการ์ดโจมตี ได้รับ 1 บล็อก",
+      "description": "ทุกครั้งที่คุณเล่นการ์ดโจมตี ได้รับ {Block} บล็อก",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "DELICATE_FROND": {
@@ -2301,7 +2300,7 @@
       "name": "เครื่องรางที่ถูกนำออกจากเกม"
     },
     "DIAMOND_DIADEM": {
-      "description": "ในเทิร์นที่คุณเล่นการ์ดไม่เกิน 2 ใบ คุณจะได้รับความเสียหายจากศัตรูทั้งหมดน้อยลงครึ่งหนึ่ง",
+      "description": "ในเทิร์นที่คุณเล่นการ์ดไม่เกิน {CardThreshold} ใบ คุณจะได้รับความเสียหายจากศัตรูทั้งหมดน้อยลงครึ่งหนึ่ง",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "DINGY_RUG": {
@@ -2312,7 +2311,7 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "DIVINE_RIGHT": {
-      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ ได้รับ 3 Stars",
+      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ ได้รับ {Stars:starIcons()}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "DOLLYS_MIRROR": {
@@ -2320,7 +2319,7 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "DRAGON_FRUIT": {
-      "description": "ทุกครั้งที่ได้รับทอง เพิ่ม 1 HP สูงสุด",
+      "description": "ทุกครั้งที่ได้รับทอง เพิ่ม {MaxHp} HP สูงสุด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต...",
       "name": "แก้วมังกร"
     },
@@ -2334,12 +2333,12 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "DUSTY_TOME": {
-      "description": "เมื่อรับมา ได้รับการ์ดเทพโบราณ",
+      "description": "เมื่อรับมา ได้รับ{AncientCard.StringValue:cond:{}|การ์ดเทพโบราณ}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต...",
       "name": "ตำราฝุ่นเขรอะ"
     },
     "ECTOPLASM": {
-      "description": "คุณจะไม่ได้รับทองอีกต่อไป ได้รับ [E] ตอนเริ่มต้นแต่ละเทิร์น",
+      "description": "คุณจะไม่ได้รับทองอีกต่อไป ได้รับ {Energy:energyIcons()} ตอนเริ่มต้นแต่ละเทิร์น",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "ELECTRIC_SHRYMP": {
@@ -2347,7 +2346,7 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "EMBER_TEA": {
-      "description": "ตอนเริ่มต้นอีก 1 การต่อสู้ ได้รับ 2 ความแข็งแรง",
+      "description": "ตอนเริ่มต้นอีก {Combats:plural:1|{}} การต่อสู้ ได้รับ {StrengthPower} ความแข็งแรง",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "EMOTION_CHIP": {
@@ -2356,7 +2355,7 @@
       "name": "ชิปอารมณ์ความรู้สึก"
     },
     "EMPTY_CAGE": {
-      "description": "เมื่อรับมา กำจัดการ์ด 2 ใบจากกองการ์ด",
+      "description": "เมื่อรับมา กำจัดการ์ด {Cards} ใบจากกองการ์ด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "ENDLESS_APPETITE": {
@@ -2364,27 +2363,27 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "ETERNAL_FEATHER": {
-      "description": "ทุกครั้งที่เข้าจุดพัก ฟื้นฟู 3 HP ต่อทุก 1 การ์ดในกองการ์ด",
+      "description": "ทุกครั้งที่เข้าจุดพัก ฟื้นฟู {Heal} HP ต่อทุก {Cards:plural:1 การ์ด|{} การ์ด}ในกองการ์ด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "FAKE_ANCHOR": {
-      "description": "เริ่มต้นแต่ละการต่อสู้ด้วย 4 บล็อก",
+      "description": "เริ่มต้นแต่ละการต่อสู้ด้วย {Block} บล็อก",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "FAKE_BLOOD_VIAL": {
-      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ ฟื้นฟู 1 HP",
+      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ ฟื้นฟู {Heal} HP",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "FAKE_HAPPY_FLOWER": {
-      "description": "ทุกๆ 5 เทิร์น ได้รับ [E]",
+      "description": "ทุกๆ {Turns} เทิร์น ได้รับ {Energy:energyIcons()}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "FAKE_LEES_WAFFLE": {
-      "description": "เมื่อรับมา ฟื้นฟู 10% ของ HP",
+      "description": "เมื่อรับมา ฟื้นฟู {Heal}% ของ HP",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "FAKE_MANGO": {
-      "description": "เมื่อรับมา เพิ่ม 3 HP สูงสุด",
+      "description": "เมื่อรับมา เพิ่ม {MaxHp} HP สูงสุด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต...",
       "name": "มะม่วง???"
     },
@@ -2392,7 +2391,7 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "FAKE_ORICHALCUM": {
-      "description": "ถ้าจบเทิร์นโดยไม่มีบล็อก ได้รับ 3 บล็อก",
+      "description": "ถ้าจบเทิร์นโดยไม่มีบล็อก ได้รับ {Block} บล็อก",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "FAKE_SNECKO_EYE": {
@@ -2400,30 +2399,30 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "FAKE_STRIKE_DUMMY": {
-      "description": "การ์ดที่มีคำว่า “จู่โจม” สร้างความเสียหายเพิ่มขึ้น 1",
+      "description": "การ์ดที่มีคำว่า “จู่โจม” สร้างความเสียหายเพิ่มขึ้น {ExtraDamage}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "FAKE_VENERABLE_TEA_SET": {
-      "description": "ทุกครั้งที่เข้าจุดพัก จะเริ่มต้นการต่อสู้ถัดไปโดยเพิ่มอีก [E]",
+      "description": "ทุกครั้งที่เข้าจุดพัก จะเริ่มต้นการต่อสู้ถัดไปโดยเพิ่มอีก {Energy:energyIcons()}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "FENCING_MANUAL": {
-      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ หลอมสร้าง 10",
+      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ หลอมสร้าง {Forge}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "FESTIVE_POPPER": {
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "FORGOTTEN_SOUL": {
-      "description": "ทุกครั้งที่คุณสลายการ์ด สร้างความเสียหาย 1 ใส่ศัตรู 1 ตัวแบบสุ่ม",
+      "description": "ทุกครั้งที่คุณสลายการ์ด สร้างความเสียหาย {Damage} ใส่ศัตรู 1 ตัวแบบสุ่ม",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "FRAGRANT_MUSHROOM": {
-      "description": "เมื่อรับมา เสีย 15 HP และพัฒนาการ์ด 3 ใบแบบสุ่ม",
+      "description": "เมื่อรับมา เสีย {HpLoss} HP และพัฒนาการ์ด {Cards} ใบแบบสุ่ม",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "FRESNEL_LENS": {
-      "description": "ทุกครั้งที่เพิ่มการ์ดที่ได้รับบล็อกเข้ากองการ์ด จะร่ายมนตร์มันด้วย[purple]Nimble[/purple] 2",
+      "description": "ทุกครั้งที่เพิ่มการ์ดที่ได้รับบล็อกเข้ากองการ์ด จะร่ายมนตร์มันด้วย[purple]Nimble[/purple] {NimbleAmount}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "FROZEN_EGG": {
@@ -2432,11 +2431,11 @@
       "name": "ไข่แช่แข็ง"
     },
     "FUNERARY_MASK": {
-      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ เพิ่มวิญญาณ 3 ใบเข้ากองจั่ว",
+      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ เพิ่มวิญญาณ {Cards} ใบเข้ากองจั่ว",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "FUR_COAT": {
-      "description": "เมื่อรับมา ทำเครื่องหมาย 7 การต่อสู้แบบสุ่ม ศัตรูในห้องเหล่านั้นมี 1 HP",
+      "description": "เมื่อรับมา ทำเครื่องหมาย {Combats} การต่อสู้แบบสุ่ม ศัตรูในห้องเหล่านั้นมี 1 HP",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "GALACTIC_DUST": {
@@ -2447,7 +2446,7 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "GAME_PIECE": {
-      "description": "ทุกครั้งที่เล่นการ์ดพลัง จั่วการ์ด 1 ใบ",
+      "description": "ทุกครั้งที่เล่นการ์ดพลัง จั่วการ์ด {Cards} ใบ",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "GHOST_SEED": {
@@ -2468,12 +2467,12 @@
       "name": "กากเพชร"
     },
     "GLOWING_ORB": {
-      "description": "เริ่มต้นการต่อสู้กับลูกพี่โดยมีเพิ่มอีก [E]",
+      "description": "เริ่มต้นการต่อสู้กับลูกพี่โดยมีเพิ่มอีก {Energy:energyIcons()}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต...",
       "name": "ลูกแก้วเรืองแสง"
     },
     "GNARLED_HAMMER": {
-      "description": "เมื่อรับมา ร่ายมนตร์การ์ดโจมตีได้สูงสุด 3 ใบด้วย [purple]Sharp[/purple] 3",
+      "description": "เมื่อรับมา ร่ายมนตร์การ์ดโจมตีได้สูงสุด {Cards} ใบด้วย [purple]Sharp[/purple] {SharpAmount:diff()}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "GOLDEN_COMPASS": {
@@ -2482,7 +2481,7 @@
       "name": "เข็มทิศทองคำ"
     },
     "GOLDEN_PEARL": {
-      "description": "เมื่อรับมา ได้รับ 150 ทอง",
+      "description": "เมื่อรับมา ได้รับ {Gold} ทอง",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต...",
       "name": "ไข่มุกทองคำ"
     },
@@ -2491,23 +2490,23 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "GORGET": {
-      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ ได้รับ 4 Plating",
+      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ ได้รับ {PlatingPower} Plating",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "GREMLIN_HORN": {
-      "description": "ทุกครั้งที่ศัตรูตาย ได้รับ [E] และจั่วการ์ด 1 ใบ",
+      "description": "ทุกครั้งที่ศัตรูตาย ได้รับ {Energy:energyIcons()} และจั่วการ์ด {Cards} ใบ",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "HAND_DRILL": {
-      "description": "ทุกครั้งที่ทำลายบล็อกของศัตรูได้ สร้าง 2 จุดอ่อน",
+      "description": "ทุกครั้งที่ทำลายบล็อกของศัตรูได้ สร้าง {VulnerablePower} จุดอ่อน",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "HAPPY_FLOWER": {
-      "description": "ทุกๆ 3 เทิร์น ได้รับ [E]",
+      "description": "ทุกๆ {Turns} เทิร์น ได้รับ {Energy:energyIcons()}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "HELICAL_DART": {
-      "description": "ทุกครั้งที่เล่นมีดสั้น ได้รับ 1 ความชำนาญในเทิร์นนี้",
+      "description": "ทุกครั้งที่เล่นมีดสั้น ได้รับ {DexterityPower} ความชำนาญในเทิร์นนี้",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "HISTORY_COURSE": {
@@ -2515,7 +2514,7 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "HORN_CLEAT": {
-      "description": "ตอนเริ่มต้นเทิร์นที่ 2 ได้รับ 14 บล็อก",
+      "description": "ตอนเริ่มต้นเทิร์นที่ 2 ได้รับ {Block} บล็อก",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "ICE_CREAM": {
@@ -2524,7 +2523,7 @@
       "name": "ไอศกรีม"
     },
     "INFUSED_CORE": {
-      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ ปลุกเสก 3 สายฟ้า",
+      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ ปลุกเสก {Lightning} สายฟ้า",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "INK_BOTTLE": {
@@ -2532,11 +2531,11 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "INTIMIDATING_HELMET": {
-      "description": "ทุกครั้งที่เล่นการ์ดค่าร่าย [E] ขึ้นไป ได้รับ 4 บล็อก",
+      "description": "ทุกครั้งที่เล่นการ์ดค่าร่าย {Energy:energyIcons()} ขึ้นไป ได้รับ {Block} บล็อก",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "IRON_CLUB": {
-      "description": "การ์ดทุก 4 ใบที่คุณเล่น จั่วการ์ด 1 ใบ",
+      "description": "การ์ดทุก {Cards} ใบที่คุณเล่น จั่วการ์ด 1 ใบ",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "IVORY_TILE": {
@@ -2547,7 +2546,7 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "JOSS_PAPER": {
-      "description": "ทุก 5 ครั้งที่คุณสลายการ์ด จั่วการ์ด 1 ใบ",
+      "description": "ทุก {ExhaustAmount} ครั้งที่คุณสลายการ์ด จั่วการ์ด {Cards} ใบ",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "JUZU_BRACELET": {
@@ -2555,23 +2554,23 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "KIFUDA": {
-      "description": "เมื่อรับมา ร่ายมนตร์การ์ดได้สูงสุด 3 ใบด้วย [purple]Adroit[/purple]",
+      "description": "เมื่อรับมา ร่ายมนตร์การ์ดได้สูงสุด {Cards} ใบด้วย [purple]Adroit[/purple]",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "KUNAI": {
-      "description": "ทุกครั้งที่คุณเล่นการ์ดโจมตี 3 ใบในเทิร์นเดียว ได้รับ 1 ความชำนาญ",
+      "description": "ทุกครั้งที่คุณเล่นการ์ดโจมตี {Cards} ใบในเทิร์นเดียว ได้รับ {DexterityPower} ความชำนาญ",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "KUSARIGAMA": {
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "LANTERN": {
-      "description": "เริ่มต้นแต่ละการต่อสู้โดยมีเพิ่มอีก [E]",
+      "description": "เริ่มต้นแต่ละการต่อสู้โดยมีเพิ่มอีก {Energy:energyIcons()}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต...",
       "name": "ตะเกียง"
     },
     "LARGE_CAPSULE": {
-      "description": "เมื่อรับมา ได้รับเครื่องราง 2 ชิ้นแบบสุ่ม เพิ่มจู่โจมและป้องกันเข้ากองการ์ด",
+      "description": "เมื่อรับมา ได้รับเครื่องราง {Relics} ชิ้นแบบสุ่ม เพิ่มจู่โจมและป้องกันเข้ากองการ์ด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "LASTING_CANDY": {
@@ -2591,42 +2590,42 @@
       "name": "ตะกั่วทับกระดาษ"
     },
     "LEAFY_POULTICE": {
-      "description": "เมื่อรับมา แปรสภาพจู่โจม 1 ใบ และป้องกัน 1 ใบ และเสีย 10 HP สูงสุด",
+      "description": "เมื่อรับมา แปรสภาพจู่โจม 1 ใบ และป้องกัน 1 ใบ และเสีย {MaxHp} HP สูงสุด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "LEES_WAFFLE": {
-      "description": "เมื่อรับมา เพิ่ม 7 Max HP สูงสุดและฟื้นฟู HP จนเต็ม",
+      "description": "เมื่อรับมา เพิ่ม {MaxHp} Max HP สูงสุดและฟื้นฟู HP จนเต็ม",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "LETTER_OPENER": {
-      "description": "ทุกครั้งที่คุณเล่นการ์ดทักษะ 3 ใบในเทิร์นเดียว สร้างความเสียหาย 5 ใส่ศัตรูทั้งหมด",
+      "description": "ทุกครั้งที่คุณเล่นการ์ดทักษะ {Cards} ใบในเทิร์นเดียว สร้างความเสียหาย {Damage} ใส่ศัตรูทั้งหมด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "LIZARD_TAIL": {
-      "description": "เมื่อคุณจะตาย ฟื้นฟู 50% ของ HP สูงสุดแทน (ใช้ได้ครั้งเดียว)",
+      "description": "เมื่อคุณจะตาย ฟื้นฟู {Heal}% ของ HP สูงสุดแทน (ใช้ได้ครั้งเดียว)",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "LOOMING_FRUIT": {
-      "description": "เมื่อรับมา เพิ่ม 31 HP สูงสุด",
+      "description": "เมื่อรับมา เพิ่ม {MaxHp} HP สูงสุด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "LOST_COFFER": {
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "LOST_WISP": {
-      "description": "ทุกครั้งที่คุณเล่นการ์ดพลัง สร้างความเสียหาย 8 ใส่ศัตรูทั้งหมด",
+      "description": "ทุกครั้งที่คุณเล่นการ์ดพลัง สร้างความเสียหาย {Damage} ใส่ศัตรูทั้งหมด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "LUCKY_FYSH": {
-      "description": "ทุกครั้งที่คุณเพิ่มการ์ดเข้ากองการ์ด ได้รับ 15 ทอง",
+      "description": "ทุกครั้งที่คุณเพิ่มการ์ดเข้ากองการ์ด ได้รับ {Gold} ทอง",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "LUNAR_PASTRY": {
-      "description": "ตอนจบเทิร์น ได้รับ 1 Stars",
+      "description": "ตอนจบเทิร์น ได้รับ {Stars:starIcons()}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "MANGO": {
-      "description": "เมื่อรับมา เพิ่ม 14 HP สูงสุด",
+      "description": "เมื่อรับมา เพิ่ม {MaxHp} HP สูงสุด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต...",
       "name": "มะม่วง"
     },
@@ -2635,11 +2634,11 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "MAW_BANK": {
-      "description": "ทุกครั้งที่เปลี่ยนชั้น ได้รับ 12 ทอง แต่จะพังทันทีที่คุณนำทองไปใช้จ่ายที่ร้านค้า",
+      "description": "ทุกครั้งที่เปลี่ยนชั้น ได้รับ {Gold} ทอง แต่จะพังทันทีที่คุณนำทองไปใช้จ่ายที่ร้านค้า",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "MEAL_TICKET": {
-      "description": "ทุกครั้งที่คุณเข้าห้องร้านค้า ฟื้นฟู 15 HP",
+      "description": "ทุกครั้งที่คุณเข้าห้องร้านค้า ฟื้นฟู {Heal} HP",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "MEAT_CLEAVER": {
@@ -2647,7 +2646,7 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "MEAT_ON_THE_BONE": {
-      "description": "ตอนจบการต่อสู้ ถ้า HP ของคุณเหลือไม่เกิน 50% ฟื้นฟู 12 HP",
+      "description": "ตอนจบการต่อสู้ ถ้า HP ของคุณเหลือไม่เกิน {HpThreshold}% ฟื้นฟู {Heal} HP",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "MEDICAL_KIT": {
@@ -2655,20 +2654,20 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "MEMBERSHIP_CARD": {
-      "description": "ลดราคาสินค้าทั้งหมด 50%!",
+      "description": "ลดราคาสินค้าทั้งหมด {Discount}%!",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต...",
       "name": "บัตรสมาชิก"
     },
     "MERCURY_HOURGLASS": {
-      "description": "ตอนเริ่มต้นเทิร์น สร้างความเสียหาย 3 ใส่ศัตรูทั้งหมด",
+      "description": "ตอนเริ่มต้นเทิร์น สร้างความเสียหาย {Damage} ใส่ศัตรูทั้งหมด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "METRONOME": {
-      "description": "ครั้งแรกที่คุณปลุกเสกลูกแก้ว 7 ลูกในแต่ละการต่อสู้ สร้างความเสียหาย 30 ใส่ศัตรูทั้งหมด",
+      "description": "ครั้งแรกที่คุณปลุกเสกลูกแก้ว {OrbCount} ลูกในแต่ละการต่อสู้ สร้างความเสียหาย {Damage} ใส่ศัตรูทั้งหมด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "MINIATURE_CANNON": {
-      "description": "การ์ดโจมตีที่พัฒนาแล้วสร้างความเสียหายเพิ่มขึ้น 3",
+      "description": "การ์ดโจมตีที่พัฒนาแล้วสร้างความเสียหายเพิ่มขึ้น {ExtraDamage}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "MINIATURE_TENT": {
@@ -2676,7 +2675,7 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "MINI_REGENT": {
-      "description": "ครั้งแรกที่คุณจ่าย ⭐ ในแต่ละเทิร์น ได้รับ 1 ความแข็งแรง",
+      "description": "ครั้งแรกที่คุณจ่าย {singleStarIcon} ในแต่ละเทิร์น ได้รับ {StrengthPower} ความแข็งแรง",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "MOLTEN_EGG": {
@@ -2702,7 +2701,7 @@
       "name": "รังไหมลึกลับ"
     },
     "MYSTIC_LIGHTER": {
-      "description": "การ์ดโจมตีที่ถูกร่ายมนตร์สร้างความเสียหายเพิ่มขึ้น 9",
+      "description": "การ์ดโจมตีที่ถูกร่ายมนตร์สร้างความเสียหายเพิ่มขึ้น {Damage}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "NEOWS_TORMENT": {
@@ -2710,48 +2709,48 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "NEW_LEAF": {
-      "description": "เมื่อรับมา แปรสภาพการ์ด 1 ใบ",
+      "description": "เมื่อรับมา แปรสภาพการ์ด {Cards} ใบ",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "NINJA_SCROLL": {
-      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ เพิ่มมีดสั้น 3 ใบใส่มือ",
+      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ เพิ่มมีดสั้น {Shivs} ใบใส่มือ",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต...",
       "name": "คัมภีร์นินจา"
     },
     "NUNCHAKU": {
-      "description": "ทุกครั้งที่คุณเล่นการ์ดโจมตี 10 ใบ ได้รับ [E]",
+      "description": "ทุกครั้งที่คุณเล่นการ์ดโจมตี {Cards} ใบ ได้รับ {Energy:energyIcons()}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "NUTRITIOUS_OYSTER": {
-      "description": "เมื่อรับมา เพิ่ม 11 HP สูงสุด",
+      "description": "เมื่อรับมา เพิ่ม {MaxHp} HP สูงสุด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "NUTRITIOUS_SOUP": {
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "ODDLY_SMOOTH_STONE": {
-      "description": "เริ่มต้นแต่ละการต่อสู้ด้วย 1 ความชำนาญ",
+      "description": "เริ่มต้นแต่ละการต่อสู้ด้วย {DexterityPower} ความชำนาญ",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "OLD_COIN": {
-      "description": "เมื่อรับมา ได้รับ 300 ทอง",
+      "description": "เมื่อรับมา ได้รับ {Gold} ทอง",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต...",
       "name": "เหรียญเก่า"
     },
     "ORANGE_DOUGH": {
-      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ เพิ่มการ์ดไร้สี 2 ใบแบบสุ่มใส่มือ",
+      "description": "ตอนเริ่มต้นแต่ละการต่อสู้ เพิ่มการ์ดไร้สี {Cards} ใบแบบสุ่มใส่มือ",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "ORICHALCUM": {
-      "description": "ถ้าจบเทิร์นโดยไม่มีบล็อก ได้รับ 6 บล็อก",
+      "description": "ถ้าจบเทิร์นโดยไม่มีบล็อก ได้รับ {Block} บล็อก",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "ORNAMENTAL_FAN": {
-      "description": "ทุกครั้งที่คุณเล่นการ์ดโจมตี 3 ใบในเทิร์นเดียว ได้รับ 4 บล็อก",
+      "description": "ทุกครั้งที่คุณเล่นการ์ดโจมตี {Cards} ใบในเทิร์นเดียว ได้รับ {Block} บล็อก",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "ORRERY": {
-      "description": "เมื่อรับมา ได้รับรางวัลการ์ด 5 ใบ",
+      "description": "เมื่อรับมา ได้รับรางวัลการ์ด {Cards} ใบ",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "PAELS_BLOOD": {
@@ -2766,7 +2765,7 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "PAELS_FLESH": {
-      "description": "ได้รับเพิ่มอีก [E] ตอนเริ่มต้นเทิร์นที่ 3 และทุกเทิร์นหลังจากนั้น",
+      "description": "ได้รับเพิ่มอีก {Energy:energyIcons()} ตอนเริ่มต้นเทิร์นที่ 3 และทุกเทิร์นหลังจากนั้น",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "PAELS_GROWTH": {
@@ -2778,19 +2777,19 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "PAELS_LEGION": {
-      "description": "ได้รับบล็อกจากการ์ดเป็น 2 เท่า จากนั้นหลับเป็นเวลา 2 เทิร์น",
+      "description": "ได้รับบล็อกจากการ์ดเป็น 2 เท่า จากนั้นหลับเป็นเวลา {Turns} เทิร์น",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "PAELS_TEARS": {
-      "description": "ถ้าคุณจบเทิร์นโดยเหลือ [E] จะได้รับเพิ่มอีก [E] ในเทิร์นถัดไป",
+      "description": "ถ้าคุณจบเทิร์นโดยเหลือ {energyPrefix:energyIcons(1)} จะได้รับเพิ่มอีก {Energy:energyIcons()} ในเทิร์นถัดไป",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "PAELS_TOOTH": {
-      "description": "เมื่อรับมา กำจัดการ์ด 5 ใบจากกองการ์ด หลังจบแต่ละการต่อสู้ พัฒนาการ์ด 1 ใบแบบสุ่มจากกองที่แยกไว้ แล้วได้รับคืน ",
+      "description": "เมื่อรับมา กำจัดการ์ด {Cards} ใบจากกองการ์ด หลังจบแต่ละการต่อสู้ พัฒนาการ์ด 1 ใบแบบสุ่มจากกองที่แยกไว้ แล้วได้รับคืน {CardTitles.StringValue:cond:\n\nการ์ดที่แยกไว้:\n{}|}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "PAELS_WING": {
-      "description": "คุณสามารถถวายรางวัลการ์ดให้ Pael ได้ ได้รับเครื่องราง 1 ชิ้นต่อการ์ดทุก 1 ใบที่ถวาย",
+      "description": "คุณสามารถถวายรางวัลการ์ดให้ Pael ได้ ได้รับเครื่องราง 1 ชิ้นต่อการ์ดทุก {Sacrifices:plural:1 ใบ|{} ใบ}ที่ถวาย",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "PANDORAS_BOX": {
@@ -2799,7 +2798,7 @@
       "name": "กล่องแพนโดรา"
     },
     "PANTOGRAPH": {
-      "description": "ตอนเริ่มต้นของแต่ละการต่อสู้กับบอส ฟื้นฟู 25 HP",
+      "description": "ตอนเริ่มต้นของแต่ละการต่อสู้กับบอส ฟื้นฟู {Heal} HP",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "PAPER_KRANE": {
@@ -2811,11 +2810,11 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "PARRYING_SHIELD": {
-      "description": "ถ้าคุณจบเทิร์นโดยมีอย่างน้อย 10 บล็อก สร้างความเสียหาย 6 ใส่ศัตรู 1 ตัวแบบสุ่ม",
+      "description": "ถ้าคุณจบเทิร์นโดยมีอย่างน้อย {Block} บล็อก สร้างความเสียหาย {Damage} ใส่ศัตรู 1 ตัวแบบสุ่ม",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "PEAR": {
-      "description": "เมื่อรับมา เพิ่ม 10 HP สูงสุด",
+      "description": "เมื่อรับมา เพิ่ม {MaxHp} HP สูงสุด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "PENDULUM": {
@@ -2827,14 +2826,14 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "PERMAFROST": {
-      "description": "ครั้งแรกที่คุณเล่นการ์ดพลังเป็นครั้งแรกในแต่ละการต่อสู้ ได้รับ 6 บล็อก",
+      "description": "ครั้งแรกที่คุณเล่นการ์ดพลังเป็นครั้งแรกในแต่ละการต่อสู้ ได้รับ {Block} บล็อก",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "PETRIFIED_TOAD": {
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "PHILOSOPHERS_STONE": {
-      "description": "ตอนเริ่มต้นเทิร์น ได้รับ [E] ศัตรูทั้งหมดเริ่มการต่อสู้ด้วย 1 ความแข็งแรง",
+      "description": "ตอนเริ่มต้นเทิร์น ได้รับ {Energy:energyIcons()} ศัตรูทั้งหมดเริ่มการต่อสู้ด้วย {StrengthPower} ความแข็งแรง",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต...",
       "name": "ศิลานักปราชญ์"
     },
@@ -2843,22 +2842,22 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "PLANISPHERE": {
-      "description": "ทุกครั้งที่คุณเข้าห้อง ? ฟื้นฟู 4 HP",
+      "description": "ทุกครั้งที่คุณเข้าห้อง ? ฟื้นฟู {Heal} HP",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "POCKETWATCH": {
-      "description": "ทุกครั้งที่คุณเล่นการ์ดไม่เกิน 3 ใบในเทิร์น จั่วการ์ดเพิ่ม 3 ใบตอนเริ่มต้นเทิร์นถัดไป",
+      "description": "ทุกครั้งที่คุณเล่นการ์ดไม่เกิน {CardThreshold} ใบในเทิร์น จั่วการ์ดเพิ่ม {Cards} ใบตอนเริ่มต้นเทิร์นถัดไป",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "POLLINOUS_CORE": {
-      "description": "ทุก 4 เทิร์น จั่วการ์ดเพิ่ม 2 ใบ",
+      "description": "ทุก {Turns} เทิร์น จั่วการ์ดเพิ่ม {Cards} ใบ",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "POMANDER": {
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "POTION_BELT": {
-      "description": "เมื่อรับมา ได้รับช่องเก็บขวดยา 2 ช่อง",
+      "description": "เมื่อรับมา ได้รับช่องเก็บขวดยา {PotionSlots} ช่อง",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "POWER_CELL": {
@@ -2869,32 +2868,32 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "PRECARIOUS_SHEARS": {
-      "description": "เมื่อรับมา กำจัดการ์ด 2 ใบจากกองการ์ดและได้รับความเสียหาย 13",
+      "description": "เมื่อรับมา กำจัดการ์ด {Cards} ใบจากกองการ์ดและได้รับความเสียหาย {Damage}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "PRECISE_SCISSORS": {
-      "description": "เมื่อรับมา กำจัดการ์ด 1 ใบจากกองการ์ด",
+      "description": "เมื่อรับมา กำจัดการ์ด {Cards} ใบจากกองการ์ด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "PRISMATIC_GEM": {
-      "description": "ตอนเริ่มต้นเทิร์น ได้รับ [E] ต่อไปนี้รางวัลการ์ดจะมีสีอื่นด้วย",
+      "description": "ตอนเริ่มต้นเทิร์น ได้รับ {Energy:energyIcons()} ต่อไปนี้รางวัลการ์ดจะมีสีอื่นด้วย",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "PUMPKIN_CANDLE": {
-      "description": "ตอนเริ่มต้นเทิร์น ได้รับ [E] เทียนจะดับตอนเริ่มต้นองก์ 3",
+      "description": "ตอนเริ่มต้นเทิร์น ได้รับ {Energy:energyIcons()} เทียนจะดับตอนเริ่มต้นองก์ 3",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต...",
       "name": "เทียนไขฟักทอง"
     },
     "PUNCH_DAGGER": {
-      "description": "เมื่อรับมา ร่ายมนตร์การ์ดโจมตี 1 ใบด้วย[purple]Momentum[/purple] 5",
+      "description": "เมื่อรับมา ร่ายมนตร์การ์ดโจมตี 1 ใบด้วย[purple]Momentum[/purple] {Momentum}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "RADIANT_PEARL": {
-      "description": "ตอนเริ่มต้นการต่อสู้ เพิ่มLuminesce 1 ใบใส่มือ",
+      "description": "ตอนเริ่มต้นการต่อสู้ เพิ่มLuminesce {Cards} ใบใส่มือ",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "RAINBOW_RING": {
-      "description": "ทุกครั้งที่คุณเล่นการ์ดโจมตี, ทักษะ, และพลังในเทิร์นเดียว ได้รับ 1 ความแข็งแรงและ 1 ความชำนาญ",
+      "description": "ทุกครั้งที่คุณเล่นการ์ดโจมตี, ทักษะ, และพลังในเทิร์นเดียว ได้รับ {StrengthPower} ความแข็งแรงและ {DexterityPower} ความชำนาญ",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "RAZOR_TOOTH": {
@@ -2902,27 +2901,27 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "RED_MASK": {
-      "description": "ตอนเริ่มต้นการต่อสู้ สร้าง 1 ความอ่อนแอใส่ศัตรูทั้งหมด",
+      "description": "ตอนเริ่มต้นการต่อสู้ สร้าง {WeakPower} ความอ่อนแอใส่ศัตรูทั้งหมด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "RED_SKULL": {
-      "description": "ขณะที่คุณเหลือ HP ไม่เกิน 50% คุณจะมี 3 ความแข็งแรง",
+      "description": "ขณะที่คุณเหลือ HP ไม่เกิน {HpThreshold}% คุณจะมี {StrengthPower} ความแข็งแรง",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "RED_VINE_TEA": {
-      "description": "ตอนเริ่มต้นการต่อสู้ในอีก 1 ครั้ง จั่วการ์ดเพิ่ม {Cards} ใบ",
+      "description": "ตอนเริ่มต้นการต่อสู้ในอีก {Combats:plural:1 ครั้ง|{} ครั้ง} จั่วการ์ดเพิ่ม {Cards} ใบ",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "REGALITE": {
-      "description": "ทุกครั้งที่คุณสร้างการ์ดไร้สี ได้รับ 2 บล็อก",
+      "description": "ทุกครั้งที่คุณสร้างการ์ดไร้สี ได้รับ {Block} บล็อก",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "REGAL_PILLOW": {
-      "description": "ทุกครั้งที่คุณพักผ่อน ฟื้นฟูเพิ่ม 15 HP",
+      "description": "ทุกครั้งที่คุณพักผ่อน ฟื้นฟูเพิ่ม {Heal} HP",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "REPTILE_TRINKET": {
-      "description": "ทุกครั้งที่คุณใช้ขวดยา ได้รับ 3 ความแข็งแรงในเทิร์นนี้",
+      "description": "ทุกครั้งที่คุณใช้ขวดยา ได้รับ {StrengthPower} ความแข็งแรงในเทิร์นนี้",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "RINGING_TRIANGLE": {
@@ -2930,19 +2929,19 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "RING_OF_THE_DRAKE": {
-      "description": "ตอนเริ่มต้นของ 1 เทิร์นแรก จั่วการ์ดเพิ่ม 2 ใบ",
+      "description": "ตอนเริ่มต้นของ {Turns:plural:1|{}} เทิร์นแรก จั่วการ์ดเพิ่ม {Cards} ใบ",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "RING_OF_THE_SNAKE": {
-      "description": "ตอนเริ่มต้นการต่อสู้ จั่วการ์ดเพิ่ม 2 ใบ",
+      "description": "ตอนเริ่มต้นการต่อสู้ จั่วการ์ดเพิ่ม {Cards} ใบ",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "RIPPLE_BASIN": {
-      "description": "ถ้าคุณไม่ได้เล่นการ์ดโจมตีเลยในเทิร์น ได้รับ 4 บล็อก",
+      "description": "ถ้าคุณไม่ได้เล่นการ์ดโจมตีเลยในเทิร์น ได้รับ {Block} บล็อก",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "ROYAL_POISON": {
-      "description": "ตอนเริ่มต้นการต่อสู้ เสีย 4 HP",
+      "description": "ตอนเริ่มต้นการต่อสู้ เสีย {Damage} HP",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "ROYAL_STAMP": {
@@ -2953,7 +2952,7 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "RUNIC_CAPACITOR": {
-      "description": "เริ่มการต่อสู้ด้วยช่องเก็บลูกแก้วเพิ่มขึ้น 3 ช่อง",
+      "description": "เริ่มการต่อสู้ด้วยช่องเก็บลูกแก้วเพิ่มขึ้น {Repeat} ช่อง",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "RUNIC_PYRAMID": {
@@ -2961,7 +2960,7 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "SAI": {
-      "description": "ตอนเริ่มต้นเทิร์น ได้รับ 7 บล็อก",
+      "description": "ตอนเริ่มต้นเทิร์น ได้รับ {Block} บล็อก",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "SAND_CASTLE": {
@@ -2969,7 +2968,7 @@
       "name": "ปราสาททราย"
     },
     "SCREAMING_FLAGON": {
-      "description": "ถ้าคุณจบเทิร์นโดยไม่เหลือการ์ดในมือ สร้างความเสียหาย 20 ใส่ศัตรูทั้งหมด",
+      "description": "ถ้าคุณจบเทิร์นโดยไม่เหลือการ์ดในมือ สร้างความเสียหาย {Damage} ใส่ศัตรูทั้งหมด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "SCROLL_BOXES": {
@@ -2977,15 +2976,15 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "SEAL_OF_GOLD": {
-      "description": "ตอนเริ่มต้นเทิร์น จ่าย 5 ทองเพื่อได้รับ[E]",
+      "description": "ตอนเริ่มต้นเทิร์น จ่าย {Gold} ทองเพื่อได้รับ{Energy:energyIcons()}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "SEA_GLASS": {
-      "description": "ดูการ์ด 15 ใบจากตัวละครอื่น เลือกการ์ดกี่ใบก็ได้เพื่อเพิ่มเข้ากองการ์ด",
+      "description": "ดูการ์ด {Cards} ใบจาก{Character.StringValue:cond:{}|ตัวละครอื่น} เลือกการ์ดกี่ใบก็ได้เพื่อเพิ่มเข้ากองการ์ด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "SELF_FORMING_CLAY": {
-      "description": "ทุกครั้งที่คุณเสีย HP ในการต่อสู้ ได้รับ 3 บล็อกในเทิร์นถัดไป",
+      "description": "ทุกครั้งที่คุณเสีย HP ในการต่อสู้ ได้รับ {BlockNextTurn} บล็อกในเทิร์นถัดไป",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "SHOVEL": {
@@ -2994,18 +2993,18 @@
       "name": "พลั่ว"
     },
     "SHURIKEN": {
-      "description": "ทุกครั้งที่คุณเล่นการ์ดโจมตี 3 ใบในเทิร์นเดียว ได้รับ 1 ความแข็งแรง",
+      "description": "ทุกครั้งที่คุณเล่นการ์ดโจมตี {Cards} ใบในเทิร์นเดียว ได้รับ {StrengthPower} ความแข็งแรง",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "SIGNET_RING": {
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "SILVER_CRUCIBLE": {
-      "description": "รางวัลการ์ด 3 รางวัลแรกที่คุณเปิดจะพัฒนาแล้ว แต่กล่องสมบัติแรกที่คุณเปิดจะว่างเปล่า",
+      "description": "รางวัลการ์ด {Cards} รางวัลแรกที่คุณเปิดจะพัฒนาแล้ว แต่กล่องสมบัติแรกที่คุณเปิดจะว่างเปล่า",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "SLING_OF_COURAGE": {
-      "description": "เริ่มการต่อสู้กับลูกพี่ด้วย 2 ความแข็งแรง",
+      "description": "เริ่มการต่อสู้กับลูกพี่ด้วย {StrengthPower} ความแข็งแรง",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "SMALL_CAPSULE": {
@@ -3013,80 +3012,80 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "SNECKO_EYE": {
-      "description": "ตอนเริ่มต้นเทิร์น จั่วการ์ดเพิ่ม 2 ใบ แต่เริ่มการต่อสู้ด้วยสับสน",
+      "description": "ตอนเริ่มต้นเทิร์น จั่วการ์ดเพิ่ม {Cards} ใบ แต่เริ่มการต่อสู้ด้วยสับสน",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "SNECKO_SKULL": {
-      "description": "ทุกครั้งที่คุณสร้างพิษ สร้างเพิ่ม 1 พิษ",
+      "description": "ทุกครั้งที่คุณสร้างพิษ สร้างเพิ่ม {PoisonPower} พิษ",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "SOZU": {
-      "description": "ตอนเริ่มต้นเทิร์น ได้รับ [E] แต่นับจากนี้จะไม่ได้รับขวดยาอีก",
+      "description": "ตอนเริ่มต้นเทิร์น ได้รับ {Energy:energyIcons()} แต่นับจากนี้จะไม่ได้รับขวดยาอีก",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "SPARKLING_ROUGE": {
-      "description": "ตอนเริ่มต้นเทิร์นที่ 3 ได้รับ 1 ความแข็งแรงและ 1 ความชำนาญ",
+      "description": "ตอนเริ่มต้นเทิร์นที่ 3 ได้รับ {StrengthPower} ความแข็งแรงและ {DexterityPower} ความชำนาญ",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "SPIKED_GAUNTLETS": {
-      "description": "ตอนเริ่มต้นเทิร์น ได้รับ [E] แต่การ์ดพลังมีค่าร่ายมากขึ้น 1 [E]",
+      "description": "ตอนเริ่มต้นเทิร์น ได้รับ {Energy:energyIcons()} แต่การ์ดพลังมีค่าร่ายมากขึ้น 1 {energyPrefix:energyIcons(1)}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "STONE_CALENDAR": {
-      "description": "ตอนจบเทิร์นที่ 7 สร้างความเสียหาย 52 ใส่ศัตรูทั้งหมด",
+      "description": "ตอนจบเทิร์นที่ {DamageTurn} สร้างความเสียหาย {Damage} ใส่ศัตรูทั้งหมด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "STONE_CRACKER": {
-      "description": "ตอนเริ่มต้นการต่อสู้กับบอส พัฒนาการ์ด 3 ใบแบบสุ่มในกองจั่วจนจบการต่อสู้",
+      "description": "ตอนเริ่มต้นการต่อสู้กับบอส พัฒนาการ์ด {Cards} ใบแบบสุ่มในกองจั่วจนจบการต่อสู้",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "STONE_HUMIDIFIER": {
-      "description": "ทุกครั้งที่คุณพักผ่อนที่จุดพัก เพิ่ม 5 HP สูงสุด",
+      "description": "ทุกครั้งที่คุณพักผ่อนที่จุดพัก เพิ่ม {MaxHp} HP สูงสุด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "STORYBOOK": {
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "STRAWBERRY": {
-      "description": "เมื่อรับมา เพิ่ม 7 HP สูงสุด",
+      "description": "เมื่อรับมา เพิ่ม {MaxHp} HP สูงสุด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "STRIKE_DUMMY": {
-      "description": "การ์ดที่มีคำว่า “จู่โจม” สร้างความเสียหายเพิ่มขึ้น 3",
+      "description": "การ์ดที่มีคำว่า “จู่โจม” สร้างความเสียหายเพิ่มขึ้น {ExtraDamage}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "STURDY_CLAMP": {
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "SWORD_OF_JADE": {
-      "description": "เริ่มการต่อสู้ด้วย 3 ความแข็งแรง",
+      "description": "เริ่มการต่อสู้ด้วย {StrengthPower} ความแข็งแรง",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "SWORD_OF_STONE": {
-      "description": "แปรสภาพเป็นเครื่องรางทรงพลังหลังจากกำจัดลูกพี่ 5 ตัว",
+      "description": "แปรสภาพเป็นเครื่องรางทรงพลังหลังจากกำจัดลูกพี่ {Elites} ตัว",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "SYMBIOTIC_VIRUS": {
-      "description": "ตอนเริ่มการต่อสู้ ปลุกเสก 1 ความมืด",
+      "description": "ตอนเริ่มการต่อสู้ ปลุกเสก {Dark} ความมืด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "TANXS_WHISTLE": {
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "TEA_OF_DISCOURTESY": {
-      "description": "ตอนเริ่มต้นการต่อสู้ถัดไป สับความมึนงง 2 ใบเข้ากองจั่ว",
+      "description": "ตอนเริ่มต้นการต่อสู้ถัดไป สับความมึนงง {DazedCount} ใบเข้ากองจั่ว",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "THE_ABACUS": {
-      "description": "ทุกครั้งที่คุณสับกองจั่ว ได้รับ 6 บล็อก",
+      "description": "ทุกครั้งที่คุณสับกองจั่ว ได้รับ {Block} บล็อก",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "THE_BOOT": {
-      "description": "ทุกครั้งที่คุณสร้างความเสียหายแบบไม่ถูกบล็อก ถ้าความเสียหายจากการโจมตีไม่เกิน 4 ให้เปลี่ยนเป็น 5 แทน",
+      "description": "ทุกครั้งที่คุณสร้างความเสียหายแบบไม่ถูกบล็อก ถ้าความเสียหายจากการโจมตีไม่เกิน {DamageThreshold} ให้เปลี่ยนเป็น {DamageMinimum} แทน",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "THE_COURIER": {
-      "description": "พ่อค้าเติมสต๊อกการ์ด, เครื่องราง, และขวดยาในร้านค้าเสมอ และราคาลดลง 20%",
+      "description": "พ่อค้าเติมสต๊อกการ์ด, เครื่องราง, และขวดยาในร้านค้าเสมอ และราคาลดลง {Discount}%",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "THROWING_AXE": {
@@ -3094,7 +3093,7 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "TINGSHA": {
-      "description": "ทุกครั้งที่คุณทิ้งการ์ดในเทิร์นของคุณ สร้างความเสียหาย 3 ใส่ศัตรู 1 ตัวแบบสุ่ม ตามจำนวนการ์ดที่ถูกทิ้ง",
+      "description": "ทุกครั้งที่คุณทิ้งการ์ดในเทิร์นของคุณ สร้างความเสียหาย {Damage} ใส่ศัตรู 1 ตัวแบบสุ่ม ตามจำนวนการ์ดที่ถูกทิ้ง",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "TINY_MAILBOX": {
@@ -3102,20 +3101,20 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "TOASTY_MITTENS": {
-      "description": "ตอนเริ่มต้นเทิร์น สลายการ์ดใบบนสุดของกองจั่วและได้รับ 1 ความแข็งแรง",
+      "description": "ตอนเริ่มต้นเทิร์น สลายการ์ดใบบนสุดของกองจั่วและได้รับ {StrengthPower} ความแข็งแรง",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "TOOLBOX": {
-      "description": "ตอนเริ่มต้นการต่อสู้ เลือกการ์ดไร้สี 1 จาก 3 ใบที่ถูกสุ่มมา เพิ่มการ์ดที่เลือกใส่มือ",
+      "description": "ตอนเริ่มต้นการต่อสู้ เลือกการ์ดไร้สี 1 จาก {Cards} ใบที่ถูกสุ่มมา เพิ่มการ์ดที่เลือกใส่มือ",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต...",
       "name": "กล่องเครื่องมือ"
     },
     "TOUCH_OF_OROBAS": {
-      "description": "เมื่อรับมา แทนที่เครื่องรางแบบเริ่มต้น ด้วยแบบเทพโบราณ",
+      "description": "เมื่อรับมา แทนที่{StarterRelic.StringValue:cond:{StarterRelic}ด้วย{UpgradedRelic}|เครื่องรางแบบเริ่มต้น ด้วยแบบเทพโบราณ}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "TOUGH_BANDAGES": {
-      "description": "ทุกครั้งที่คุณทิ้งการ์ดในเทิร์นของคุณ ได้รับ 3 บล็อก",
+      "description": "ทุกครั้งที่คุณทิ้งการ์ดในเทิร์นของคุณ ได้รับ {Block} บล็อก",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "TOXIC_EGG": {
@@ -3127,18 +3126,18 @@
       "name": "กล่องของเล่น"
     },
     "TRI_BOOMERANG": {
-      "description": "เลือกการ์ดโจมตี 3 ใบในกองการ์ด ร่ายมนตร์ด้วย[purple]Instinct[/purple]",
+      "description": "เลือกการ์ดโจมตี {Cards} ใบในกองการ์ด ร่ายมนตร์ด้วย[purple]Instinct[/purple]",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "TUNGSTEN_ROD": {
-      "description": "ทุกครั้งที่คุณจะเสีย HP คุณจะเสียน้อยลง 1",
+      "description": "ทุกครั้งที่คุณจะเสีย HP คุณจะเสียน้อยลง {HpLossReduction}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "TUNING_FORK": {
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "TWISTED_FUNNEL": {
-      "description": "ตอนเริ่มต้นการต่อสู้ สร้าง 4 พิษ ใส่ศัตรูทั้งหมด",
+      "description": "ตอนเริ่มต้นการต่อสู้ สร้าง {PoisonPower} พิษ ใส่ศัตรูทั้งหมด",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "UNCEASING_TOP": {
@@ -3153,7 +3152,7 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "VAJRA": {
-      "description": "เริ่มการต่อสู้ด้วย 1 ความแข็งแรง",
+      "description": "เริ่มการต่อสู้ด้วย {StrengthPower} ความแข็งแรง",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต...",
       "name": "วัชระ"
     },
@@ -3162,20 +3161,20 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "VELVET_CHOKER": {
-      "description": "ตอนเริ่มต้นเทิร์น ได้รับ [E] แต่คุณเล่นการ์ดได้ไม่เกิน 6 ใบต่อเทิร์น",
+      "description": "ตอนเริ่มต้นเทิร์น ได้รับ {Energy:energyIcons()} แต่คุณเล่นการ์ดได้ไม่เกิน {Cards} ใบต่อเทิร์น",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "VENERABLE_TEA_SET": {
-      "description": "ทุกครั้งที่เข้าจุดพัก จะเริ่มต้นการต่อสู้ถัดไปโดยเพิ่มอีก [E]",
+      "description": "ทุกครั้งที่เข้าจุดพัก จะเริ่มต้นการต่อสู้ถัดไปโดยเพิ่มอีก {Energy:energyIcons()}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "VERY_HOT_COCOA": {
-      "description": "เริ่มต้นการต่อสู้โดยมีเพิ่มอีก [E]",
+      "description": "เริ่มต้นการต่อสู้โดยมีเพิ่มอีก {Energy:energyIcons()}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต...",
       "name": "โกโก้ร้อนมาก"
     },
     "VEXING_PUZZLEBOX": {
-      "description": "ตอนเริ่มต้นการต่อสู้ เพิ่มการ์ด 1 ใบแบบสุ่มใส่มือ มันมีค่าร่าย 0[E]",
+      "description": "ตอนเริ่มต้นการต่อสู้ เพิ่มการ์ด 1 ใบแบบสุ่มใส่มือ มันมีค่าร่าย 0{energyPrefix:energyIcons(1)}",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "VINE_BRACELET": {
@@ -3187,15 +3186,15 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "WAR_HAMMER": {
-      "description": "ทุกครั้งที่คุณสังหารลูกพี่ พัฒนาการ์ด 4 ใบแบบสุ่ม",
+      "description": "ทุกครั้งที่คุณสังหารลูกพี่ พัฒนาการ์ด {Cards} ใบแบบสุ่ม",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "WAR_PAINT": {
-      "description": "เมื่อรับมา พัฒนาการ์ดทักษะ 2 ใบแบบสุ่ม",
+      "description": "เมื่อรับมา พัฒนาการ์ดทักษะ {Cards} ใบแบบสุ่ม",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "WHETSTONE": {
-      "description": "เมื่อรับมา พัฒนาการ์ดโจมตี 2 ใบแบบสุ่ม",
+      "description": "เมื่อรับมา พัฒนาการ์ดโจมตี {Cards} ใบแบบสุ่ม",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "WHISPERING_EARRING": {
@@ -3213,7 +3212,7 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "WONGOS_MYSTERY_TICKET": {
-      "description": "ได้รับเครื่องราง 3 ชิ้นแบบสุ่ม หลังจาก 5 การต่อสู้",
+      "description": "ได้รับเครื่องราง {Repeat} ชิ้นแบบสุ่ม หลังจาก {RemainingCombats} การต่อสู้",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "WONGO_CUSTOMER_APPRECIATION_BADGE": {
@@ -3221,7 +3220,7 @@
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต..."
     },
     "YUMMY_COOKIE": {
-      "description": "เมื่อรับมา พัฒนาการ์ด 4 ใบ",
+      "description": "เมื่อรับมา พัฒนาการ์ด {Cards} ใบ",
       "flavor": "รายละเอียดของเครื่องรางนี้จะถูกเปิดเผยในอนาคต...",
       "name": "คุกกี้แสนอร่อย"
     }
@@ -4401,29 +4400,29 @@
       "name": "น้ำยาโจมตี"
     },
     "BEETLE_JUICE": {
-      "description": "การโจมตีของศัตรูสร้างความเสียหายน้อยลง 30% ในเทิร์นถัดไป"
+      "description": "การโจมตีของศัตรูสร้างความเสียหายน้อยลง {DamageDecrease}% {Repeat:plural:ในเทิร์นถัดไป|เป็นเวลา {} เทิร์น}"
     },
     "BLESSING_OF_THE_FORGE": {
       "description": "พัฒนาการ์ดทั้งหมดในมือจนจบการต่อสู้",
       "name": "พรแห่งเตาหลอม"
     },
     "BLOCK_POTION": {
-      "description": "ได้รับ 12 บล็อก",
+      "description": "ได้รับ {Block} บล็อก",
       "name": "น้ำยาบล็อก"
     },
     "BLOOD_POTION": {
-      "description": "ฟื้นฟู 20% ของ HP สูงสุด",
+      "description": "ฟื้นฟู {HealPercent}% ของ HP สูงสุด",
       "name": "น้ำยาโลหิต"
     },
     "BONE_BREW": {
-      "description": "อัญเชิญ 15"
+      "description": "อัญเชิญ {Summon}"
     },
     "BOTTLED_POTENTIAL": {
-      "description": "สับการ์ดทั้งหมดเข้ากองจั่ว แล้วจั่ว 5 การ์ด",
+      "description": "สับการ์ดทั้งหมดเข้ากองจั่ว แล้วจั่ว {Cards} {Cards:plural:การ์ด|การ์ด}",
       "name": "ศักยภาพบรรจุขวด"
     },
     "CLARITY": {
-      "description": "จั่วการ์ด 1 ใบ และตอนเริ่มต้นเทิร์นถัดไป จั่วการ์ดเพิ่ม 1 ใบ เป็นเวลา 1 เทิร์น",
+      "description": "จั่วการ์ด {Cards} ใบ และตอนเริ่มต้นเทิร์นถัดไป จั่วการ์ดเพิ่ม 1 ใบ เป็นเวลา {ClarityPower:plural:1 เทิร์น|{} เทิร์น}",
       "name": "สารสกัดกระจ่างแจ้งแจ่มชัด"
     },
     "COLORLESS_POTION": {
@@ -4431,15 +4430,15 @@
       "name": "น้ำยาไร้สี"
     },
     "COSMIC_CONCOCTION": {
-      "description": "เพิ่มการ์ดพัฒนาแล้ว 3 ใบใส่มือ",
+      "description": "เพิ่มการ์ดพัฒนาแล้ว {Cards} ใบใส่มือ",
       "name": "รวมมิตรจักรวาล"
     },
     "CUNNING_POTION": {
-      "description": "เพิ่มมีดสั้นพัฒนาแล้ว 3 ใบใส่มือ",
+      "description": "เพิ่มมีดสั้นพัฒนาแล้ว {Cards} ใบใส่มือ",
       "name": "น้ำยาร้อยเล่ห์"
     },
     "CURE_ALL": {
-      "description": "ได้รับ [E] จั่ว 2 การ์ด",
+      "description": "ได้รับ {Energy:energyIcons()} จั่ว {Cards} การ์ด",
       "name": "น้ำยารักษาทุกอย่าง"
     },
     "DEPRECATED_POTION": {
@@ -4447,11 +4446,11 @@
       "name": "น้ำยาที่ถูกนำออกจากเกม"
     },
     "DEXTERITY_POTION": {
-      "description": "ได้รับ 2 ความชำนาญ",
+      "description": "ได้รับ {DexterityPower} ความชำนาญ",
       "name": "น้ำยาความชำนาญ"
     },
     "DISTILLED_CHAOS": {
-      "description": "เล่นการ์ดใบบนสุดของกองจั่ว จำนวน 3 ใบ",
+      "description": "เล่นการ์ดใบบนสุดของกองจั่ว จำนวน {Repeat} ใบ",
       "name": "โกลาหลกลั่น"
     },
     "DROPLET_OF_PRECOGNITION": {
@@ -4463,7 +4462,7 @@
       "name": "น้ำยาคัดลอก"
     },
     "ENERGY_POTION": {
-      "description": "ได้รับ [E]",
+      "description": "ได้รับ {Energy:energyIcons()}",
       "name": "น้ำยาพลังงาน"
     },
     "ENTROPIC_BREW": {
@@ -4475,7 +4474,7 @@
       "name": "แก่นของความมืด"
     },
     "EXPLOSIVE_AMPOULE": {
-      "description": "สร้างความเสียหาย 10 ใส่ศัตรูทั้งหมด",
+      "description": "สร้างความเสียหาย {Damage} ใส่ศัตรูทั้งหมด",
       "name": "หลอดแก้วอัดระเบิด"
     },
     "FAIRY_IN_A_BOTTLE": {
@@ -4483,15 +4482,15 @@
       "name": "ภูติบรรจุขวด"
     },
     "FIRE_POTION": {
-      "description": "สร้างความเสียหาย 20",
+      "description": "สร้างความเสียหาย {Damage}",
       "name": "น้ำยาไฟ"
     },
     "FLEX_POTION": {
-      "description": "ได้รับ 5 ความแข็งแรง ตอนจบเทิร์นเสีย 5 ความแข็งแรง",
+      "description": "ได้รับ {StrengthPower} ความแข็งแรง ตอนจบเทิร์นเสีย {StrengthPower} ความแข็งแรง",
       "name": "น้ำยาเบ่งกล้าม"
     },
     "FOCUS_POTION": {
-      "description": "ได้รับ 2 โฟกัส",
+      "description": "ได้รับ {FocusPower} โฟกัส",
       "name": "น้ำยาโฟกัส"
     },
     "FORTIFIER": {
@@ -4499,14 +4498,14 @@
       "name": "น้ำยาเสริมกำลัง"
     },
     "FOUL_POTION": {
-      "description": "สร้างความเสียหาย 12 ใส่ทุกสิ่ง\nสามารถขว้างใส่พ่อค้าเพื่อ 100 ทองแทนได้"
+      "description": "สร้างความเสียหาย {Damage} ใส่ทุกสิ่ง\nสามารถขว้างใส่พ่อค้าเพื่อ {Gold} ทองแทนได้"
     },
     "FRUIT_JUICE": {
-      "description": "ได้รับ 5 HP สูงสุด",
+      "description": "ได้รับ {MaxHp} HP สูงสุด",
       "name": "น้ำผลไม้"
     },
     "FYSH_OIL": {
-      "description": "ได้รับ 1 ความแข็งแรง และ 1 ความชำนาญ"
+      "description": "ได้รับ {StrengthPower} ความแข็งแรง และ {DexterityPower} ความชำนาญ"
     },
     "GAMBLERS_BREW": {
       "description": "ทิ้งการ์ดกี่ใบก็ได้ แล้วจั่วการ์ดตามจำนวนนั้น",
@@ -4521,59 +4520,59 @@
       "name": "น้ำยาร่างยักษ์"
     },
     "GLOWWATER_POTION": {
-      "description": "สลายทั้งมือ จั่ว 10 การ์ด",
+      "description": "สลายทั้งมือ จั่ว {Cards} การ์ด",
       "name": "น้ำยาเรืองแสง"
     },
     "HEART_OF_IRON": {
       "name": "หัวใจดุจเหล็ก"
     },
     "KINGS_COURAGE": {
-      "description": "หลอมสร้าง 15"
+      "description": "หลอมสร้าง {Forge}"
     },
     "LIQUID_BRONZE": {
-      "description": "ได้รับ 3 หนาม",
+      "description": "ได้รับ {ThornsPower} หนาม",
       "name": "สัมฤทธิ์เหลว"
     },
     "LIQUID_MEMORIES": {
-      "description": "นำการ์ด 1 ใบจากกองทิ้งขึ้นมือ มันมีค่าร่าย 0 [E] ในเทิร์นนี้",
+      "description": "นำการ์ด 1 ใบจากกองทิ้งขึ้นมือ มันมีค่าร่าย 0 {energyPrefix:energyIcons(1)} ในเทิร์นนี้",
       "name": "ความทรงจำเหลว"
     },
     "LUCKY_TONIC": {
-      "description": "ได้รับ 1 ม่านกันชน",
+      "description": "ได้รับ {BufferPower} ม่านกันชน",
       "name": "ยาบำรุงโชคดี"
     },
     "MAZALETHS_GIFT": {
-      "description": "ได้รับ 1 พิธีกรรม"
+      "description": "ได้รับ {RitualPower} พิธีกรรม"
     },
     "OROBIC_ACID": {
       "description": "เพิ่มการ์ดโจมตี, ทักษะ, และพลังอย่างละ 1 ใบแบบสุ่มใส่มือ การ์ดเหล่านั้นเล่นได้ฟรีในเทิร์นนี้"
     },
     "POISON_POTION": {
-      "description": "สร้าง 6 พิษ",
+      "description": "สร้าง {PoisonPower} พิษ",
       "name": "น้ำยาพิษ"
     },
     "POTION_OF_BINDING": {
-      "description": "สร้าง 1 ความอ่อนแอ และ 1 จุดอ่อน ใส่ศัตรูทั้งหมด",
+      "description": "สร้าง {WeakPower:diff()} ความอ่อนแอ และ {VulnerablePower:diff()} จุดอ่อน ใส่ศัตรูทั้งหมด",
       "name": "น้ำยาผูกมัด"
     },
     "POTION_OF_CAPACITY": {
-      "description": "ได้รับช่องเก็บลูกแก้ว 2 ช่อง",
+      "description": "ได้รับช่องเก็บลูกแก้ว {Repeat} ช่อง",
       "name": "น้ำยาความจุ"
     },
     "POTION_OF_DOOM": {
-      "description": "สร้าง 33 อายุขัย",
+      "description": "สร้าง {DoomPower} อายุขัย",
       "name": "น้ำยาอายุขัย"
     },
     "POTION_SHAPED_ROCK": {
-      "description": "สร้างความเสียหาย 15",
+      "description": "สร้างความเสียหาย {Damage}",
       "name": "หินทรงขวดยา"
     },
     "POT_OF_GHOULS": {
-      "description": "เพิ่มSoul 2 ใบใส่มือ",
+      "description": "เพิ่มSoul {Cards} ใบใส่มือ",
       "name": "ไหผีปอบ"
     },
     "POWDERED_DEMISE": {
-      "description": "ศัตรูเสีย 9 HP ตอนจบเทิร์นของมัน",
+      "description": "ศัตรูเสีย {Demise} HP ตอนจบเทิร์นของมัน",
       "name": "ผงมรณะ"
     },
     "POWER_POTION": {
@@ -4581,18 +4580,18 @@
       "name": "น้ำยาพลัง"
     },
     "RADIANT_TINCTURE": {
-      "description": "ได้รับ [E] และได้รับเพิ่มอีก [E] ตอนเริ่มต้นเทิร์น เป็นเวลา 3 เทิร์น"
+      "description": "ได้รับ {Energy:energyIcons()} และได้รับเพิ่มอีก {energyPrefix:energyIcons(1)} ตอนเริ่มต้นเทิร์น เป็นเวลา {RadiancePower} เทิร์น"
     },
     "REGEN_POTION": {
-      "description": "ได้รับ 5 การฟื้นพลัง",
+      "description": "ได้รับ {RegenPower} การฟื้นพลัง",
       "name": "น้ำยาฟื้นพลัง"
     },
     "SHACKLING_POTION": {
-      "description": "ศัตรูทั้งหมดเสีย 7 ความแข็งแรงในเทิร์นนี้",
+      "description": "ศัตรูทั้งหมดเสีย {StrengthPower} ความแข็งแรงในเทิร์นนี้",
       "name": "น้ำยาพันธนาการ"
     },
     "SHIP_IN_A_BOTTLE": {
-      "description": "ได้รับ 10 บล็อก และเทิร์นถัดไปได้รับ 10 บล็อก",
+      "description": "ได้รับ {Block:diff()} บล็อก และเทิร์นถัดไปได้รับ {Block:diff()} บล็อก",
       "name": "เรือในขวด"
     },
     "SKILL_POTION": {
@@ -4600,7 +4599,7 @@
       "name": "น้ำยาทักษะ"
     },
     "SNECKO_OIL": {
-      "description": "จั่ว 7 การ์ด สุ่มค่าร่ายของการ์ดในมือทั้งหมดในเทิร์นนี้",
+      "description": "จั่ว {Cards} การ์ด สุ่มค่าร่ายของการ์ดในมือทั้งหมดในเทิร์นนี้",
       "name": "น้ำมันงุกแก"
     },
     "SOLDIERS_STEW": {
@@ -4608,22 +4607,22 @@
       "name": "สตูว์ของทหาร"
     },
     "SPEED_POTION": {
-      "description": "ได้รับ 5 ความชำนาญ ตอนจบเทิร์นเสีย 5 ความชำนาญ",
+      "description": "ได้รับ {DexterityPower} ความชำนาญ ตอนจบเทิร์นเสีย {DexterityPower} ความชำนาญ",
       "name": "น้ำยาความเร็ว"
     },
     "STABLE_SERUM": {
-      "description": "คงสภาพทั้งมือเป็นเวลา 2 เทิร์น"
+      "description": "คงสภาพทั้งมือเป็นเวลา {Repeat} เทิร์น"
     },
     "STAR_POTION": {
-      "description": "ได้รับ 3 Stars",
+      "description": "ได้รับ {Stars:starIcons()}",
       "name": "น้ำยาดาว"
     },
     "STRENGTH_POTION": {
-      "description": "ได้รับ 2 ความแข็งแรง",
+      "description": "ได้รับ {StrengthPower} ความแข็งแรง",
       "name": "น้ำยาความแข็งแรง"
     },
     "SWIFT_POTION": {
-      "description": "จั่ว 3 การ์ด",
+      "description": "จั่ว {Cards} การ์ด",
       "name": "น้ำยาฉับพลัน"
     },
     "TOUCH_OF_INSANITY": {
@@ -4631,11 +4630,11 @@
       "name": "สัมผัสแห่งวิกลจริต"
     },
     "VULNERABLE_POTION": {
-      "description": "สร้าง 3 จุดอ่อน",
+      "description": "สร้าง {VulnerablePower} จุดอ่อน",
       "name": "น้ำยาจุดอ่อน"
     },
     "WEAK_POTION": {
-      "description": "สร้าง 3 ความอ่อนแอ",
+      "description": "สร้าง {WeakPower} ความอ่อนแอ",
       "name": "น้ำยาความอ่อนแอ"
     }
   },
@@ -4668,7 +4667,7 @@
         },
         {
           "name": "แบ่งปันความรู้",
-          "description": "เลือกการ์ด 1 จาก 5 ใบที่ถูกสุ่มมาเพื่อเพิ่มเข้ากองการ์ด"
+          "description": "เลือกการ์ด {CardChoiceCount} จาก {FromCardChoiceCount} ใบที่ถูกสุ่มมาเพื่อเพิ่มเข้ากองการ์ด"
         }
       ]
     },
@@ -4692,22 +4691,22 @@
       "choices": [
         {
           "name": "ฟ้า",
-          "description": "ได้รับการ์ดนักเวทแปรพักตร์ 3 ใบ"
+          "description": "ได้รับการ์ดนักเวทแปรพักตร์ {Cards} ใบ"
         },
         {
           "name": "เท่าเทียมกัน"
         },
         {
           "name": "แดง",
-          "description": "ได้รับการ์ดนักรบเกราะเหล็ก 3 ใบ"
+          "description": "ได้รับการ์ดนักรบเกราะเหล็ก {Cards} ใบ"
         },
         {
           "name": "ชมพู",
-          "description": "ได้รับการ์ดของNecrobinder 3 ใบ"
+          "description": "ได้รับการ์ดของNecrobinder {Cards} ใบ"
         },
         {
           "name": "ส้ม",
-          "description": "ได้รับการ์ดของRegent 3 ใบ"
+          "description": "ได้รับการ์ดของRegent {Cards} ใบ"
         }
       ]
     },
@@ -4727,10 +4726,10 @@
       "name": "ผจญภัยเขาวงกตดงดิบ",
       "choices": [
         {
-          "description": "ได้รับ 50 ทอง"
+          "description": "ได้รับ {JoinForcesGold} ทอง"
         },
         {
-          "description": "ได้รับ 150 ทอง เสีย {SoloHp} HP"
+          "description": "ได้รับ {SoloGold} ทอง เสีย {SoloHp} HP"
         }
       ]
     },
@@ -4762,7 +4761,7 @@
         },
         {
           "name": "อ่านทั้งเล่ม",
-          "description": "เลือกการ์ดพลัง 1 ใบเพื่อร่ายมนตร์ด้วย{Enchantment3} 2"
+          "description": "เลือกการ์ดพลัง 1 ใบเพื่อร่ายมนตร์ด้วย{Enchantment3} {Enchantment3Amount}"
         },
         {
           "name": "ล็อก",
@@ -4770,7 +4769,7 @@
         },
         {
           "name": "สุ่มอ่าน 1 ย่อหน้า",
-          "description": "เลือกการ์ดทักษะ 1 ใบเพื่อร่ายมนตร์ด้วย{Enchantment2} 2"
+          "description": "เลือกการ์ดทักษะ 1 ใบเพื่อร่ายมนตร์ด้วย{Enchantment2} {Enchantment2Amount}"
         }
       ]
     },
@@ -4796,7 +4795,7 @@
         },
         {
           "name": "อันนี้",
-          "description": "เสีย 6 HP ได้รับ 0 ทอง"
+          "description": "เสีย {HpLoss} HP ได้รับ {Gold} ทอง"
         }
       ]
     },
@@ -4815,7 +4814,7 @@
       "choices": [
         {
           "name": "กินไข่",
-          "description": "ได้รับ 7 HP สูงสุด"
+          "description": "ได้รับ {MaxHp} HP สูงสุด"
         },
         {
           "name": "เก็บไข่",
@@ -4825,40 +4824,25 @@
     },
     "COLOSSAL_FLOWER": {
       "description": "มีดอกไม้มหึมาเติบโตอยู่บนกองภูเขากระดูก\n\nในขณะที่กลีบดอกเปลี่ยนสีได้กำลังขยับเป็นช่วงๆ คุณก็สัมผัสได้ว่ามีกองเกสรทรงพลังอยู่ใจกลาง แต่กลีบดอกที่ขยับขึ้นลงอยู่นั้นแหลมคมมากและคาดเดาไม่ได้\n\nคุณสามารถเก็บน้ำหวานทองคำได้ แต่รางวัล ณ ใจกลางก็เย้ายวนใจเหลือเกิน...",
-      "pages": [
+      "choices": [
         {
-          "description": "มีดอกไม้มหึมาเติบโตอยู่บนกองภูเขากระดูก\n\nในขณะที่กลีบดอกเปลี่ยนสีได้กำลังขยับเป็นช่วงๆ คุณก็สัมผัสได้ว่ามีกองเกสรทรงพลังอยู่ใจกลาง แต่กลีบดอกที่ขยับขึ้นลงอยู่นั้นแหลมคมมากและคาดเดาไม่ได้\n\nคุณสามารถเก็บน้ำหวานทองคำได้ แต่รางวัล ณ ใจกลางก็เย้ายวนใจเหลือเกิน...",
-          "choices": [
-            {
-              "name": "สกัดน้ำหวาน",
-              "description": "ได้รับ {Prize1} ทอง"
-            },
-            {
-              "name": "ลึกเข้าไปอีก",
-              "description": "เข้าไปลึกขึ้นอีก เสีย 5 HP"
-            }
-          ]
+          "name": "สกัดน้ำหวาน",
+          "description": "ได้รับ {Prize1} ทอง"
         },
         {
-          "choices": [
-            {
-              "name": "สกัดน้ำหวาน",
-              "description": "ได้รับ {Prize3} ทอง"
-            },
-            {}
-          ]
-        },
-        {}
+          "name": "ลึกเข้าไปอีก",
+          "description": "เข้าไปลึกขึ้นอีก เสีย 5 HP"
+        }
       ]
     },
     "DENSE_VEGETATION": {
       "choices": [
         {
           "name": "พักผ่อน",
-          "description": "ฟื้นฟู 0 HP และต่อสู้ศัตรูกลุ่มหนึ่ง"
+          "description": "ฟื้นฟู {Heal} HP และต่อสู้ศัตรูกลุ่มหนึ่ง"
         },
         {
-          "description": "กำจัดการ์ด 1 ใบจากกองการ์ด เสีย 11 HP"
+          "description": "กำจัดการ์ด 1 ใบจากกองการ์ด เสีย {HpLoss} HP"
         }
       ]
     },
@@ -4875,11 +4859,11 @@
     "LUMINOUS_CHOIR": {
       "choices": [
         {
-          "description": "จ่าย 149 ทอง ได้รับเครื่องราง 1 ชิ้นแบบสุ่ม"
+          "description": "จ่าย {Gold} ทอง ได้รับเครื่องราง 1 ชิ้นแบบสุ่ม"
         },
         {
           "name": "ล็อก",
-          "description": "ต้องการ 149 ทอง"
+          "description": "ต้องการ {Gold} ทอง"
         }
       ]
     },
@@ -4910,7 +4894,7 @@
       "choices": [
         {
           "name": "ดื่มแล้วยก",
-          "description": "เสีย {DrinkRandomPotion} ได้รับ 10 HP สูงสุด"
+          "description": "เสีย {DrinkRandomPotion} ได้รับ {DrinkMaxHpGain} HP สูงสุด"
         },
         {
           "name": "ล็อก",
@@ -4922,11 +4906,11 @@
       "choices": [
         {
           "name": "กล่องสมบัติใบแรก",
-          "description": "ได้รับ 60 ทอง"
+          "description": "ได้รับ {SmallChestGold} ทอง"
         },
         {
           "name": "กล่องสมบัติใบที่ 2",
-          "description": "ได้รับ 333 ทอง ได้รับGreed"
+          "description": "ได้รับ {LargeChestGold} ทอง ได้รับGreed"
         }
       ]
     },
@@ -4938,7 +4922,7 @@
         },
         {
           "name": "คืนกุญแจ",
-          "description": "ได้รับ 100 ทอง"
+          "description": "ได้รับ {Gold} ทอง"
         }
       ]
     },
@@ -4946,7 +4930,7 @@
       "choices": [
         {
           "name": "ค่อยๆ หาทางออก",
-          "description": "เสีย 8 HP จัดหาขวดยา 1 ขวดแบบสุ่ม"
+          "description": "เสีย {Damage} HP จัดหาขวดยา 1 ขวดแบบสุ่ม"
         },
         {}
       ]
@@ -4963,7 +4947,7 @@
     "UNREST_SITE": {
       "choices": [
         {
-          "description": "เสีย 8 HP สูงสุด ได้รับเครื่องรางแบบสุ่ม"
+          "description": "เสีย {MaxHpLoss} HP สูงสุด ได้รับเครื่องรางแบบสุ่ม"
         },
         {
           "name": "ก็จะพักผ่อนอยู่ดี",
@@ -4980,92 +4964,6 @@
         {
           "name": "ปลดล็อกกล่องสมบัติ",
           "description": "เสียLantern Key จัดหาขวดยา 2 ขวดแบบสุ่ม ได้รับเครื่องราง 2 ชิ้นแบบสุ่ม"
-        }
-      ]
-    },
-    "NEOW": {
-      "name": "Neow",
-      "description": "นีโอ มารดาแห่งการฟื้นคืนชีพ รออยู่ที่จุดเริ่มต้นของแต่ละรอบ เธอมอบพร 3 ประการ — 2 พรดี และ 1 พรสาป ตัวเลือกจะสุ่มจากกลุ่มด้านล่าง",
-      "choices": [
-        {
-          "name": "Arcane Scroll",
-          "description": "เมื่อรับมา จะได้รับการ์ดหายาก 1 ใบแบบสุ่มเข้ากองการ์ด"
-        },
-        {
-          "name": "Booming Conch",
-          "description": "At the start of Elite combats, draw 2 additional 2."
-        },
-        {
-          "name": "Pomander",
-          "description": "Upon pickup, Upgrade a card."
-        },
-        {
-          "name": "ไข่มุกทองคำ",
-          "description": "เมื่อรับมา ได้รับ 150 ทอง"
-        },
-        {
-          "name": "ตะกั่วทับกระดาษ",
-          "description": "เมื่อรับมา เลือกการ์ดไร้สี 1 จาก 2 ใบเพื่อเพิ่มเข้ากองการ์ด"
-        },
-        {
-          "name": "New Leaf",
-          "description": "เมื่อรับมา แปรสภาพการ์ด 1 ใบ"
-        },
-        {
-          "name": "Neow's Torment",
-          "description": "เมื่อรับมา เพิ่มNeow's Fury 1 ใบเข้ากองการ์ด"
-        },
-        {
-          "name": "Precise Scissors",
-          "description": "เมื่อรับมา กำจัดการ์ด 1 ใบจากกองการ์ด"
-        },
-        {
-          "name": "Lost Coffer",
-          "description": "Upon pickup, gain 1 card reward and procure 1 random potion."
-        },
-        {
-          "name": "Nutritious Oyster",
-          "description": "เมื่อรับมา เพิ่ม 11 HP สูงสุด"
-        },
-        {
-          "name": "Stone Humidifier",
-          "description": "ทุกครั้งที่คุณพักผ่อนที่จุดพัก เพิ่ม 5 HP สูงสุด"
-        },
-        {
-          "name": "หินลาวา",
-          "description": "The Act 1 Boss drops 2 Relics."
-        },
-        {
-          "name": "Small Capsule",
-          "description": "เมื่อรับมา ได้รับเครื่องราง 1 ชิ้นแบบสุ่ม"
-        },
-        {
-          "name": "Massive Scroll",
-          "description": "เมื่อรับมา เลือกการ์ดไร้สีแบบหลายคน 1 จาก 3 ใบเพื่อเพิ่มเข้ากองการ์ด"
-        },
-        {
-          "name": "Cursed Pearl",
-          "description": "เมื่อรับมา ได้รับGreed ได้รับ 333 ทอง"
-        },
-        {
-          "name": "Large Capsule",
-          "description": "เมื่อรับมา ได้รับเครื่องราง 2 ชิ้นแบบสุ่ม เพิ่มจู่โจมและป้องกันเข้ากองการ์ด"
-        },
-        {
-          "name": "Leafy Poultice",
-          "description": "เมื่อรับมา แปรสภาพจู่โจม 1 ใบ และป้องกัน 1 ใบ และเสีย 10 HP สูงสุด"
-        },
-        {
-          "name": "Precarious Shears",
-          "description": "เมื่อรับมา กำจัดการ์ด 2 ใบจากกองการ์ดและได้รับความเสียหาย 13"
-        },
-        {
-          "name": "Scroll Boxes",
-          "description": "เมื่อรับมา เสียทองทั้งหมด แล้วเลือกซองการ์ด 1 จาก 2 ซองเพื่อเพิ่มเข้ากองการ์ด"
-        },
-        {
-          "name": "Silver Crucible",
-          "description": "รางวัลการ์ด 3 รางวัลแรกที่คุณเปิดจะพัฒนาแล้ว แต่กล่องสมบัติแรกที่คุณเปิดจะว่างเปล่า"
         }
       ]
     },
@@ -5126,7 +5024,7 @@
   },
   "enchantments": {
     "ADROIT": {
-      "description": "ได้รับ X บล็อก",
+      "description": "ได้รับ {Block:diff()} บล็อก",
       "name": "มนตร์คล่องแคล่ว"
     },
     "CLONE": {
@@ -5165,11 +5063,11 @@
       "name": "Mock Free Enchantment"
     },
     "MOMENTUM": {
-      "description": "เมื่อเล่น เพิ่มพลังโจมตีให้การ์ดนี้ X ในการต่อสู้นี้",
+      "description": "เมื่อเล่น เพิ่มพลังโจมตีให้การ์ดนี้ {Amount} ในการต่อสู้นี้",
       "name": "มนตร์แรงเหวี่ยง"
     },
     "NIMBLE": {
-      "description": "เพิ่มบล็อกที่ได้รับจากการ์ดนี้ X",
+      "description": "เพิ่มบล็อกที่ได้รับจากการ์ดนี้ {Amount}",
       "name": "มนตร์ปราดเปรียว"
     },
     "PERFECT_FIT": {
@@ -5181,7 +5079,7 @@
       "name": "มนตร์พระราชทาน"
     },
     "SHARP": {
-      "description": "เพิ่มความเสียหายของการ์ดนี้ X",
+      "description": "เพิ่มความเสียหายของการ์ดนี้ {Amount}",
       "name": "มนตร์แหลมคม"
     },
     "SLITHER": {
@@ -5197,7 +5095,7 @@
       "name": "มนตร์พลังวิญญาณ"
     },
     "SOWN": {
-      "description": "ครั้งแรกที่คุณเล่นการ์ดนี้ในแต่ละการต่อสู้ ได้รับX",
+      "description": "ครั้งแรกที่คุณเล่นการ์ดนี้ในแต่ละการต่อสู้ ได้รับ{Amount:energyIcons()}",
       "name": "มนตร์หว่านเมล็ด"
     },
     "SPIRAL": {
@@ -5209,7 +5107,7 @@
       "name": "มนตร์มั่นคง"
     },
     "SWIFT": {
-      "description": "ครั้งแรกที่คุณเล่นการ์ดนี้ จั่ว X X",
+      "description": "ครั้งแรกที่คุณเล่นการ์ดนี้ จั่ว {Amount} {Amount:plural:การ์ด|การ์ด}",
       "name": "มนตร์ฉับพลัน"
     },
     "TEZCATARAS_EMBER": {
@@ -5217,7 +5115,7 @@
       "name": "เพลิงของเทซคาทารา"
     },
     "VIGOROUS": {
-      "description": "ครั้งแรกที่เล่นการ์ดนี้ สร้างความเสียหายเพิ่ม X",
+      "description": "ครั้งแรกที่เล่นการ์ดนี้ สร้างความเสียหายเพิ่ม {Amount}",
       "name": "มนตร์ชีวิตชีวา"
     }
   },

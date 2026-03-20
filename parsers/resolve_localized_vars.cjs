@@ -7,14 +7,15 @@
 
 const fs = require('fs');
 const path = require('path');
+const { PROJECT_ROOT, PCK_DIR, DECOMPILED_DIR, OUTPUT_DIR } = require('./config.cjs');
 
 const CS_DIRS = {
-  cards: '/Users/kuro/code/sts2-research/decompiled/MegaCrit.Sts2.Core.Models.Cards',
-  relics: '/Users/kuro/code/sts2-research/decompiled/MegaCrit.Sts2.Core.Models.Relics',
-  potions: '/Users/kuro/code/sts2-research/decompiled/MegaCrit.Sts2.Core.Models.Potions',
-  events: '/Users/kuro/code/sts2-research/decompiled/MegaCrit.Sts2.Core.Models.Events',
+  cards: path.join(DECOMPILED_DIR, 'MegaCrit.Sts2.Core.Models.Cards'),
+  relics: path.join(DECOMPILED_DIR, 'MegaCrit.Sts2.Core.Models.Relics'),
+  potions: path.join(DECOMPILED_DIR, 'MegaCrit.Sts2.Core.Models.Potions'),
+  events: path.join(DECOMPILED_DIR, 'MegaCrit.Sts2.Core.Models.Events'),
 };
-const LOCALE_DIR = path.join(__dirname, '../data/sts2/localization');
+const LOCALE_DIR = path.join(OUTPUT_DIR, 'localization');
 
 function idToFilename(id) {
   return id.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join('') + '.cs';
@@ -244,7 +245,7 @@ function resolveTokens(desc, vars) {
       const val = tag in vars ? parseInt(vars[tag]) : NaN;
       const idx = content.indexOf('|');
       if (idx !== -1) {
-        chosen = (!isNaN(val) && val === 1) ? content.slice(0, idx) : content.slice(idx + 1);
+        const chosen = (!isNaN(val) && val === 1) ? content.slice(0, idx) : content.slice(idx + 1);
         result.push(resolveTokens(chosen, vars));
       } else {
         result.push(resolveTokens(content, vars));

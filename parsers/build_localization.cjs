@@ -11,6 +11,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { PROJECT_ROOT, PCK_DIR, DECOMPILED_DIR, OUTPUT_DIR } = require('./config.cjs');
 
 // 13 shared languages (mapped to ISO 639-1 for URLs and our internal code)
 const LANG_MAP = {
@@ -29,9 +30,9 @@ const LANG_MAP = {
   zhs: 'zh',
 };
 
-const STS2_LOC_DIR = '/tmp/sts2-pck/localization';
+const STS2_LOC_DIR = path.join(PCK_DIR, 'localization');
 const STS1_LOC_DIR = '/tmp/sts1-loc/localization';
-const OUTPUT_DIR = path.join(__dirname, '..', 'data');
+const LOCALIZATION_OUTPUT_DIR = path.join(PROJECT_ROOT, 'data');
 
 // ---- STS2 ----
 
@@ -220,7 +221,7 @@ function main() {
     const sts2Dir = path.join(STS2_LOC_DIR, gameLang);
     if (fs.existsSync(sts2Dir)) {
       const data = buildSts2Lang(gameLang);
-      const outDir = path.join(OUTPUT_DIR, 'sts2', 'localization');
+      const outDir = path.join(LOCALIZATION_OUTPUT_DIR, 'sts2', 'localization');
       fs.mkdirSync(outDir, { recursive: true });
       fs.writeFileSync(path.join(outDir, `${isoLang}.json`), JSON.stringify(data, null, 2));
       const counts = Object.entries(data).map(([k, v]) => `${k}:${Object.keys(v).length}`).join(', ');
@@ -234,7 +235,7 @@ function main() {
     const sts1Dir = path.join(STS1_LOC_DIR, gameLang);
     if (fs.existsSync(sts1Dir)) {
       const data = buildSts1Lang(gameLang);
-      const outDir = path.join(OUTPUT_DIR, 'sts1', 'localization');
+      const outDir = path.join(LOCALIZATION_OUTPUT_DIR, 'sts1', 'localization');
       fs.mkdirSync(outDir, { recursive: true });
       fs.writeFileSync(path.join(outDir, `${isoLang}.json`), JSON.stringify(data, null, 2));
       const counts = Object.entries(data).map(([k, v]) => `${k}:${Object.keys(v).length}`).join(', ');

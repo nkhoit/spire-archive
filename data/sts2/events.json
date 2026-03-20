@@ -23,25 +23,11 @@
     "choices": [
       {
         "name": "Combine Defends",
-        "description": "Remove 2 Defends. Add Ultimate Defend to your Deck.",
-        "references": [
-          {
-            "type": "card",
-            "id": "ULTIMATE_DEFEND",
-            "name": "Ultimate Defend"
-          }
-        ]
+        "description": "Remove 2 Defends. Add {Card2} to your Deck."
       },
       {
         "name": "Combine Strikes",
-        "description": "Remove 2 Strikes. Add Ultimate Strike to your Deck.",
-        "references": [
-          {
-            "type": "card",
-            "id": "ULTIMATE_STRIKE",
-            "name": "Ultimate Strike"
-          }
-        ]
+        "description": "Remove 2 Strikes. Add {Card1} to your Deck."
       }
     ]
   },
@@ -69,15 +55,15 @@
     "choices": [
       {
         "name": "Setting 1",
-        "description": "Fight a 75 HP dummy. Procure 1 random Potion."
+        "description": "Fight a {Setting1Hp} HP dummy. Procure 1 random Potion."
       },
       {
         "name": "Setting 2",
-        "description": "Fight a 100 HP dummy. Upgrade 2 random cards."
+        "description": "Fight a {Setting2Hp} HP dummy. Upgrade 2 random cards."
       },
       {
         "name": "Setting 3",
-        "description": "Fight a 150 HP dummy. Obtain a random Relic."
+        "description": "Fight a {Setting3Hp} HP dummy. Obtain a random Relic."
       }
     ]
   },
@@ -89,11 +75,11 @@
     "choices": [
       {
         "name": "Rip the Leech Off",
-        "description": "Lose 5 HP. Gain a Colorless card reward."
+        "description": "Lose {RipHpLoss} HP. Gain a Colorless card reward."
       },
       {
         "name": "Share Knowledge",
-        "description": "Choose 1 of 5 random cards to add to your Deck."
+        "description": "Choose {CardChoiceCount} of {FromCardChoiceCount} random cards to add to your Deck."
       }
     ]
   },
@@ -105,25 +91,11 @@
     "choices": [
       {
         "name": "Learn Extermination Technique",
-        "description": "Add Exterminate to your Deck.",
-        "references": [
-          {
-            "type": "card",
-            "id": "EXTERMINATE",
-            "name": "Exterminate"
-          }
-        ]
+        "description": "Add {Card1} to your Deck."
       },
       {
         "name": "Learn Squash Technique",
-        "description": "Add Squash to your Deck.",
-        "references": [
-          {
-            "type": "card",
-            "id": "SQUASH",
-            "name": "Squash"
-          }
-        ]
+        "description": "Add {Card2} to your Deck."
       }
     ]
   },
@@ -139,14 +111,7 @@
       },
       {
         "name": "Take the Egg",
-        "description": "Add Byrdonis Egg to your Deck.",
-        "references": [
-          {
-            "type": "card",
-            "id": "BYRDONIS_EGG",
-            "name": "Byrdonis Egg"
-          }
-        ]
+        "description": "Add {Card} to your Deck."
       }
     ]
   },
@@ -154,11 +119,11 @@
     "id": "COLORFUL_PHILOSOPHERS",
     "name": "Colorful Philosophers",
     "act": "unknown",
-    "description": "Before you is a rather epic sight.\nYou see 3 different colored statues towering over a dais, having a heated debate over the philosophical implications of color.\n\nAs you listen in, you get a sense that the most important question at hand is which color truly is THE BEST.\n\nYou chime in with your thoughts.\n\n(You are offered 3 of the 5 colors, excluding your own class.)",
+    "description": "Before you is a rather epic sight.\nYou see 3 different colored statues towering over a dais, having a heated debate over the philosophical implications of color.\n\nAs you listen in, you get a sense that the most important question at hand is which color truly is THE BEST.\n\nYou chime in with your thoughts.",
     "choices": [
       {
         "name": "Blue",
-        "description": "Offered 3 Defect card rewards (Common, Uncommon, Rare). 3 choices each.",
+        "description": "Obtain {Cards} Defect {Cards:plural:card|cards}.",
         "references": [
           {
             "type": "character",
@@ -169,7 +134,7 @@
       },
       {
         "name": "Red",
-        "description": "Offered 3 Ironclad card rewards (Common, Uncommon, Rare). 3 choices each.",
+        "description": "Obtain {Cards} Ironclad {Cards:plural:card|cards}.",
         "references": [
           {
             "type": "character",
@@ -180,7 +145,7 @@
       },
       {
         "name": "Pink",
-        "description": "Offered 3 Necrobinder card rewards (Common, Uncommon, Rare). 3 choices each.",
+        "description": "Obtain {Cards} Necrobinder {Cards:plural:card|cards}.",
         "references": [
           {
             "type": "character",
@@ -191,7 +156,7 @@
       },
       {
         "name": "Orange",
-        "description": "Offered 3 Regent card rewards (Common, Uncommon, Rare). 3 choices each.",
+        "description": "Obtain {Cards} Regent {Cards:plural:card|cards}.",
         "references": [
           {
             "type": "character",
@@ -202,7 +167,7 @@
       },
       {
         "name": "Green",
-        "description": "Offered 3 Silent card rewards (Common, Uncommon, Rare). 3 choices each.",
+        "description": "Obtain {Cards} Silent {Cards:plural:card|cards}.",
         "references": [
           {
             "type": "character",
@@ -217,56 +182,17 @@
     "id": "COLOSSAL_FLOWER",
     "name": "Colossal Flower",
     "act": "unknown",
-    "description": "There is a colossal flower growing atop a mountain of bones.\n\nAs its color-shifting petals pulsate, you sense there is a Powerful Cluster of Pollen in the center but the undulating petals are razor sharp and unpredictable.\n\nYou could grab some of the golden nectar, but reaching the prize in the center is so tempting...",
-    "pages": [
+    "description": "There is a colossal flower growing atop a mountain of bones.\n\nAs its color-shifting petals[/rainbow] pulsate, you sense there is a Powerful Cluster of Pollen in the center but the undulating petals are razor sharp and unpredictable.\n\nYou could grab some of the golden nectar, but reaching the prize in the center is so tempting...",
+    "choices": [
       {
-        "label": "Initial",
-        "choices": [
-          {
-            "name": "Extract Nectar",
-            "description": "Gain 35 Gold."
-          },
-          {
-            "name": "Reach Deeper",
-            "description": "Take 5 damage. Go deeper."
-          }
-        ]
+        "name": "Extract Nectar",
+        "description": "Gain {Prize1} Gold."
       },
       {
-        "label": "Deeper",
-        "choices": [
-          {
-            "name": "Extract Nectar",
-            "description": "Gain 75 Gold."
-          },
-          {
-            "name": "Reach Deeper",
-            "description": "Take 6 damage. Go even deeper."
-          }
-        ]
-      },
-      {
-        "label": "Deepest",
-        "choices": [
-          {
-            "name": "Extract Instead",
-            "description": "Gain 135 Gold."
-          },
-          {
-            "name": "Obtain Pollinous Core",
-            "description": "Take 7 damage. Obtain the Pollinous Core relic.",
-            "references": [
-              {
-                "type": "relic",
-                "id": "POLLINOUS_CORE",
-                "name": "Pollinous Core"
-              }
-            ]
-          }
-        ]
+        "name": "Reach Deeper",
+        "description": "Enter deeper. Lose 5 HP."
       }
-    ],
-    "choices": []
+    ]
   },
   {
     "id": "CRYSTAL_SPHERE",
@@ -276,14 +202,7 @@
     "choices": [
       {
         "name": "Payment Plan",
-        "description": "Gain a Debt. Divine 6 times.",
-        "references": [
-          {
-            "type": "card",
-            "id": "DEBT",
-            "name": "Debt"
-          }
-        ]
+        "description": "Gain a {CurseTitle}. Divine 6 times."
       },
       {
         "name": "Uncover Future",
@@ -297,6 +216,41 @@
     "act": "unknown",
     "description": "Darv, the Hoarder, digs through a heap of powerful relics and presents a rotating stash. You are shown Dusty Tome plus three random relics drawn from the main pool and act-specific sets, with some options only appearing when their conditions are met.",
     "choices": [],
+    "type": "ancient",
+    "relic_pools": [
+      {
+        "name": "Main Pool",
+        "relics": [
+          "ASTROLABE",
+          "BLACK_STAR",
+          "CALLING_BELL",
+          "EMPTY_CAGE",
+          "PANDORAS_BOX",
+          "RUNIC_PYRAMID",
+          "SNECKO_EYE"
+        ]
+      },
+      {
+        "name": "Act 1 Set",
+        "relics": [
+          "ECTOPLASM",
+          "SOZU"
+        ]
+      },
+      {
+        "name": "Act 2 Set",
+        "relics": [
+          "PHILOSOPHERS_STONE",
+          "VELVET_CHOKER"
+        ]
+      },
+      {
+        "name": "Always Offered",
+        "relics": [
+          "DUSTY_TOME"
+        ]
+      }
+    ],
     "references": [
       {
         "type": "relic",
@@ -358,41 +312,6 @@
         "id": "VELVET_CHOKER",
         "name": "Velvet Choker"
       }
-    ],
-    "type": "ancient",
-    "relic_pools": [
-      {
-        "name": "Main Pool",
-        "relics": [
-          "ASTROLABE",
-          "BLACK_STAR",
-          "CALLING_BELL",
-          "EMPTY_CAGE",
-          "PANDORAS_BOX",
-          "RUNIC_PYRAMID",
-          "SNECKO_EYE"
-        ]
-      },
-      {
-        "name": "Act 1 Set",
-        "relics": [
-          "ECTOPLASM",
-          "SOZU"
-        ]
-      },
-      {
-        "name": "Act 2 Set",
-        "relics": [
-          "PHILOSOPHERS_STONE",
-          "VELVET_CHOKER"
-        ]
-      },
-      {
-        "name": "Always Offered",
-        "relics": [
-          "DUSTY_TOME"
-        ]
-      }
     ]
   },
   {
@@ -419,7 +338,7 @@
     "choices": [
       {
         "name": "Examine Each and Make the Best Choice",
-        "description": "Lose 15 HP. Choose 1 of 3 Doll Relics."
+        "description": "Lose {ExamineHpLoss} HP. Choose 1 of 3 Doll Relics."
       },
       {
         "name": "Pick at Random",
@@ -427,24 +346,7 @@
       },
       {
         "name": "Take Some Time",
-        "description": "Lose 5 HP. Choose 1 of 2 Doll Relics."
-      }
-    ],
-    "references": [
-      {
-        "type": "relic",
-        "id": "DAUGHTER_OF_THE_WIND",
-        "name": "Daughter Of The Wind"
-      },
-      {
-        "type": "relic",
-        "id": "MR_STRUGGLES",
-        "name": "Mr Struggles"
-      },
-      {
-        "type": "relic",
-        "id": "BING_BONG",
-        "name": "Bing Bong"
+        "description": "Lose {TakeTimeHpLoss} HP. Choose 1 of 2 Doll Relics."
       }
     ]
   },
@@ -460,7 +362,7 @@
       },
       {
         "name": "Light Door",
-        "description": "Upgrade 2 random cards."
+        "description": "Upgrade {Cards} random cards."
       }
     ]
   },
@@ -472,25 +374,11 @@
     "choices": [
       {
         "name": "Bottle",
-        "description": "Procure Glowwater Potion.",
-        "references": [
-          {
-            "type": "potion",
-            "id": "GLOWWATER_POTION",
-            "name": "Glowwater Potion"
-          }
-        ]
+        "description": "Procure {Potion}."
       },
       {
         "name": "Climb",
-        "description": "Obtain Fresnel Lens. Lose 13 Max HP.",
-        "references": [
-          {
-            "type": "relic",
-            "id": "FRESNEL_LENS",
-            "name": "Fresnel Lens"
-          }
-        ]
+        "description": "Obtain {Relic}. Lose 13 Max HP."
       }
     ]
   },
@@ -504,13 +392,6 @@
         "name": "Observe the Chef",
         "description": "Upgrade a random card in your Deck."
       }
-    ],
-    "references": [
-      {
-        "type": "card",
-        "id": "FEEDING_FRENZY",
-        "name": "Feeding Frenzy"
-      }
     ]
   },
   {
@@ -518,59 +399,7 @@
     "name": "The Merchant???",
     "act": "unknown",
     "description": "Placeholder",
-    "choices": [],
-    "references": [
-      {
-        "type": "relic",
-        "id": "FAKE_ANCHOR",
-        "name": "Fake Anchor"
-      },
-      {
-        "type": "relic",
-        "id": "FAKE_BLOOD_VIAL",
-        "name": "Fake Blood Vial"
-      },
-      {
-        "type": "relic",
-        "id": "FAKE_HAPPY_FLOWER",
-        "name": "Fake Happy Flower"
-      },
-      {
-        "type": "relic",
-        "id": "FAKE_LEES_WAFFLE",
-        "name": "Fake Lees Waffle"
-      },
-      {
-        "type": "relic",
-        "id": "FAKE_MANGO",
-        "name": "Fake Mango"
-      },
-      {
-        "type": "relic",
-        "id": "FAKE_ORICHALCUM",
-        "name": "Fake Orichalcum"
-      },
-      {
-        "type": "relic",
-        "id": "FAKE_SNECKO_EYE",
-        "name": "Fake Snecko Eye"
-      },
-      {
-        "type": "relic",
-        "id": "FAKE_STRIKE_DUMMY",
-        "name": "Fake Strike Dummy"
-      },
-      {
-        "type": "relic",
-        "id": "FAKE_VENERABLE_TEA_SET",
-        "name": "Fake Venerable Tea Set"
-      },
-      {
-        "type": "relic",
-        "id": "FAKE_MERCHANTS_RUG",
-        "name": "Fake Merchants Rug"
-      }
-    ]
+    "choices": []
   },
   {
     "id": "FIELD_OF_MAN_SIZED_HOLES",
@@ -580,18 +409,11 @@
     "choices": [
       {
         "name": "Enter Your Hole",
-        "description": "Enchant a card with Perfect Fit."
+        "description": "Enchant a card with {Enchantment}."
       },
       {
         "name": "Resist",
-        "description": "Remove 2 cards from your Deck. Add Normality to your Deck.",
-        "references": [
-          {
-            "type": "card",
-            "id": "NORMALITY",
-            "name": "Normality"
-          }
-        ]
+        "description": "Remove {Cards} cards from your Deck. Add {ResistCurse} to your Deck."
       }
     ]
   },
@@ -602,26 +424,12 @@
     "description": "There is a single grave with a roiling blue flame...\n\nA prideful warrior died in battle but its soul is restless. It wants to keep fighting, you feel it begging to journey with you.\n\nBut perhaps it's better for it to face the truth?",
     "choices": [
       {
-        "name": "Accept the Forgotten Soul",
-        "description": "Obtain Forgotten Soul.",
-        "references": [
-          {
-            "type": "relic",
-            "id": "FORGOTTEN_SOUL",
-            "name": "Forgotten Soul"
-          }
-        ]
+        "name": "Accept the {Relic}",
+        "description": "Obtain {Relic}."
       },
       {
         "name": "Confront with Truth",
-        "description": "Add Decay to your Deck. Enchant a card that Exhausts with Souls Power.",
-        "references": [
-          {
-            "type": "card",
-            "id": "DECAY",
-            "name": "Decay"
-          }
-        ],
+        "description": "Add {Curse} to your Deck. Enchant a card that Exhausts with {Enchantment}.",
         "locked": "You have no cards with Exhaust that can be Enchanted."
       }
     ]
@@ -670,7 +478,7 @@
       },
       {
         "name": "Solo Quest",
-        "description": "Gain 150 Gold. Lose 18 HP."
+        "description": "Gain 150 Gold. Lose {SoloHp} HP."
       }
     ]
   },
@@ -682,19 +490,12 @@
     "choices": [
       {
         "name": "Capture the Wisp",
-        "description": "Add Decay to your Deck. Obtain the Lost Wisp.",
-        "references": [
-          {
-            "type": "card",
-            "id": "DECAY",
-            "name": "Decay"
-          }
-        ],
+        "description": "Add {Curse} to your Deck. Obtain the {Relic}.",
         "locked": "Your Max HP is too low."
       },
       {
         "name": "Search the Nearby Area",
-        "description": "Gain a random amount (45-75) Gold."
+        "description": "Gain {Gold} Gold."
       }
     ]
   },
@@ -706,19 +507,12 @@
     "choices": [
       {
         "name": "Offer Tribute",
-        "description": "Pay 149 Gold. Obtain a random Relic.",
-        "locked": "Requires 149 Gold."
+        "description": "Pay {Gold} Gold. Obtain a random Relic.",
+        "locked": "Requires {Gold} Gold."
       },
       {
         "name": "Reach into the Flesh",
-        "description": "Remove 2 cards from your Deck. Add Spore Mind to your Deck.",
-        "references": [
-          {
-            "type": "card",
-            "id": "SPORE_MIND",
-            "name": "Spore Mind"
-          }
-        ]
+        "description": "Remove 2 cards from your Deck. Add Spore Mind to your Deck."
       }
     ]
   },
@@ -730,7 +524,7 @@
     "choices": [
       {
         "name": "Group",
-        "description": "Lose 100 Gold. Transform 2 cards."
+        "description": "Lose {Gold} Gold. Transform 2 cards."
       },
       {
         "name": "Loner",
@@ -742,129 +536,8 @@
     "id": "NEOW",
     "name": "Neow",
     "act": "unknown",
-    "description": "Neow, the Mother of Resurrection, awaits at the start of each run. She offers three blessings — two positive and one cursed. The options are drawn randomly from the pools below.",
-    "choices": [
-      {
-        "name": "Arcane Scroll",
-        "description": "Upon pickup, obtain a random Rare Card to add to your Deck.",
-        "relic_id": "ARCANE_SCROLL",
-        "pool": "positive"
-      },
-      {
-        "name": "Booming Conch",
-        "description": "At the start of Elite combats, draw 2 additional 2.",
-        "relic_id": "BOOMING_CONCH",
-        "pool": "positive"
-      },
-      {
-        "name": "Pomander",
-        "description": "Upon pickup, Upgrade a card.",
-        "relic_id": "POMANDER",
-        "pool": "positive"
-      },
-      {
-        "name": "Golden Pearl",
-        "description": "Upon pickup, gain 150 Gold.",
-        "relic_id": "GOLDEN_PEARL",
-        "pool": "positive"
-      },
-      {
-        "name": "Lead Paperweight",
-        "description": "Upon pickup, choose 1 of 2 Colorless cards to add to your Deck.",
-        "relic_id": "LEAD_PAPERWEIGHT",
-        "pool": "positive"
-      },
-      {
-        "name": "New Leaf",
-        "description": "Upon pickup, Transform 1 card.",
-        "relic_id": "NEW_LEAF",
-        "pool": "positive"
-      },
-      {
-        "name": "Neow's Torment",
-        "description": "Upon pickup, add 1 Neow's Fury to your Deck.",
-        "relic_id": "NEOWS_TORMENT",
-        "pool": "positive"
-      },
-      {
-        "name": "Precise Scissors",
-        "description": "Upon pickup, remove 1 card from your Deck.",
-        "relic_id": "PRECISE_SCISSORS",
-        "pool": "positive"
-      },
-      {
-        "name": "Lost Coffer",
-        "description": "Upon pickup, gain 1 card reward and procure 1 random potion.",
-        "relic_id": "LOST_COFFER",
-        "pool": "positive"
-      },
-      {
-        "name": "Nutritious Oyster",
-        "description": "Upon pickup, raise your Max HP by 11.",
-        "relic_id": "NUTRITIOUS_OYSTER",
-        "pool": "positive"
-      },
-      {
-        "name": "Stone Humidifier",
-        "description": "Whenever you Rest at a Rest Site, raise your Max HP by 5.",
-        "relic_id": "STONE_HUMIDIFIER",
-        "pool": "positive"
-      },
-      {
-        "name": "Lava Rock",
-        "description": "The Act 1 Boss drops 2 Relics.",
-        "relic_id": "LAVA_ROCK",
-        "pool": "positive"
-      },
-      {
-        "name": "Small Capsule",
-        "description": "Upon pickup, obtain a random Relic.",
-        "relic_id": "SMALL_CAPSULE",
-        "pool": "positive"
-      },
-      {
-        "name": "Massive Scroll",
-        "description": "Upon pickup, choose 1 of 3 Multiplayer Colorless Cards to add to your Deck.",
-        "relic_id": "MASSIVE_SCROLL",
-        "pool": "positive"
-      },
-      {
-        "name": "Cursed Pearl",
-        "description": "Upon pickup, receive Greed. Gain 333 Gold.",
-        "relic_id": "CURSED_PEARL",
-        "pool": "cursed"
-      },
-      {
-        "name": "Large Capsule",
-        "description": "Upon pickup, obtain 2 random 2. Add an additional Strike and Defend to your Deck.",
-        "relic_id": "LARGE_CAPSULE",
-        "pool": "cursed"
-      },
-      {
-        "name": "Leafy Poultice",
-        "description": "Upon pickup, Transform 1 of your Strikes and 1 of your Defends and lose 10 Max HP.",
-        "relic_id": "LEAFY_POULTICE",
-        "pool": "cursed"
-      },
-      {
-        "name": "Precarious Shears",
-        "description": "Upon pickup, remove 2 cards from your Deck and take 13 damage.",
-        "relic_id": "PRECARIOUS_SHEARS",
-        "pool": "cursed"
-      },
-      {
-        "name": "Scroll Boxes",
-        "description": "Upon pickup, lose all Gold and choose 1 of 2 packs of cards to add to your Deck.",
-        "relic_id": "SCROLL_BOXES",
-        "pool": "cursed"
-      },
-      {
-        "name": "Silver Crucible",
-        "description": "The first 3 card rewards you see are Upgraded. The first Treasure Chest you open is empty.",
-        "relic_id": "SILVER_CRUCIBLE",
-        "pool": "cursed"
-      }
-    ],
+    "description": null,
+    "choices": [],
     "type": "ancient"
   },
   {
@@ -898,23 +571,6 @@
     "act": "unknown",
     "description": "Orobas, the Living Rainbow, spreads a spectrum of relics across three distinct pools. Each encounter offers one relic from each pool, with Prismatic Gem joining the selection for characters who can channel Orbs.",
     "choices": [],
-    "references": [
-      {
-        "type": "relic",
-        "id": "SEA_GLASS",
-        "name": "Sea Glass"
-      },
-      {
-        "type": "relic",
-        "id": "TOUCH_OF_OROBAS",
-        "name": "Touch Of Orobas"
-      },
-      {
-        "type": "relic",
-        "id": "ARCHAIC_TOOTH",
-        "name": "Archaic Tooth"
-      }
-    ],
     "type": "ancient",
     "relic_pools": [
       {
@@ -941,6 +597,23 @@
           "ARCHAIC_TOOTH",
           "PRISMATIC_GEM"
         ]
+      }
+    ],
+    "references": [
+      {
+        "type": "relic",
+        "id": "SEA_GLASS",
+        "name": "Sea Glass"
+      },
+      {
+        "type": "relic",
+        "id": "TOUCH_OF_OROBAS",
+        "name": "Touch Of Orobas"
+      },
+      {
+        "type": "relic",
+        "id": "ARCHAIC_TOOTH",
+        "name": "Archaic Tooth"
       }
     ]
   },
@@ -987,14 +660,7 @@
     "choices": [
       {
         "name": "Grab Potions",
-        "description": "Procure 3 Foul Potions.",
-        "references": [
-          {
-            "type": "potion",
-            "id": "FOUL_POTION",
-            "name": "Foul Potion"
-          }
-        ]
+        "description": "Procure 3 Foul {FoulPotions:plural:Potion|Potions}."
       },
       {
         "name": "Ransack",
@@ -1014,14 +680,7 @@
       },
       {
         "name": "Nab",
-        "description": "Add Injury to your Deck. Obtain a random Relic.",
-        "references": [
-          {
-            "type": "card",
-            "id": "INJURY",
-            "name": "Injury"
-          }
-        ]
+        "description": "Add Injury to your Deck. Obtain a random Relic."
       }
     ]
   },
@@ -1032,16 +691,16 @@
     "description": "You are approached by the oldest person you have ever seen.\n“We meet once more... it's me, Ranwid!”\n\nYou do not know this man.",
     "choices": [
       {
-        "name": "Give 100 Gold",
+        "name": "Give {Gold} Gold",
         "description": "Obtain a random Relic."
       },
       {
-        "name": "Give a Potion from your inventory",
+        "name": "Give {Potion}",
         "description": "Obtain a random Relic.",
         "locked": "You don't have any Potions that can be given."
       },
       {
-        "name": "Give a Relic you own",
+        "name": "Give {Relic}",
         "description": "Obtain 2 random Relics.",
         "locked": "You don't have any Relics that can be given."
       }
@@ -1055,14 +714,7 @@
     "choices": [
       {
         "name": "Shatter",
-        "description": "Duplicate your Deck. Receive Bad Luck.",
-        "references": [
-          {
-            "type": "card",
-            "id": "BAD_LUCK",
-            "name": "Bad Luck"
-          }
-        ]
+        "description": "Duplicate your Deck. Receive Bad Luck."
       },
       {
         "name": "Touch a Mirror",
@@ -1078,15 +730,15 @@
     "choices": [
       {
         "name": "Take the Bottom One",
-        "description": "Trade a relic you own for a random relic."
+        "description": "Trade {BottomRelicOwned} for {BottomRelicNew}."
       },
       {
         "name": "Take the Middle One",
-        "description": "Trade a relic you own for a random relic."
+        "description": "Trade {MiddleRelicOwned} for {MiddleRelicNew}."
       },
       {
         "name": "Take the Top One",
-        "description": "Trade a relic you own for a random relic."
+        "description": "Trade {TopRelicOwned} for {TopRelicNew}."
       }
     ]
   },
@@ -1114,18 +766,11 @@
     "choices": [
       {
         "name": "Enjoy Your Tea",
-        "description": "Obtain Royal Poison. Heal to full HP.",
-        "references": [
-          {
-            "type": "relic",
-            "id": "ROYAL_POISON",
-            "name": "Royal Poison"
-          }
-        ]
+        "description": "Obtain {Relic}. Heal to full HP."
       },
       {
         "name": "Pick a Fight",
-        "description": "Lose 11 HP. Obtain a random Relic."
+        "description": "Lose {Damage} HP. Obtain a random Relic."
       }
     ]
   },
@@ -1141,7 +786,7 @@
       },
       {
         "name": "Plant and Nourish",
-        "description": "Enchant a card with Sown."
+        "description": "Enchant a card with {Enchantment}."
       }
     ]
   },
@@ -1152,23 +797,23 @@
     "description": "On the floor lies a tome,\n“Top 3 Ways to Conquer the Spire”\n\nThe book is encrusted with blood so you find this manuscript highly suspicious.\n\nWill you read it?",
     "choices": [
       {
+        "name": "Move On",
+        "description": "You don't have any cards that can be Enchanted."
+      },
+      {
         "name": "Read the Entire Book",
-        "description": "Choose a Power to Enchant with Swift 2.",
+        "description": "Choose a Power to Enchant with {Enchantment3} {Enchantment3Amount}.",
         "locked": "You don't have any Powers that can be Enchanted."
       },
       {
         "name": "Read a Random Passage",
-        "description": "Choose a Skill to Enchant with Nimble 2.",
+        "description": "Choose a Skill to Enchant with {Enchantment2} {Enchantment2Amount}.",
         "locked": "You don't have any Skills that can be Enchanted."
       },
       {
         "name": "Read the Back",
-        "description": "Choose an Attack to Enchant with Sharp 2.",
+        "description": "Choose an Attack to Enchant with {Enchantment1} {Enchantment1Amount}.",
         "locked": "You don't have any Attacks that can be Enchanted."
-      },
-      {
-        "name": "Move On",
-        "description": "Leave the book."
       }
     ]
   },
@@ -1180,11 +825,11 @@
     "choices": [
       {
         "name": "Hold On",
-        "description": "Lose depends on current floor HP. The card in the above option is randomized."
+        "description": "Lose {HpLoss} HP. The card in the above option is randomized."
       },
       {
         "name": "Overcome",
-        "description": "a random card from your deck is removed from your Deck."
+        "description": "{RandomCard} is removed from your Deck."
       }
     ]
   },
@@ -1216,18 +861,11 @@
     "choices": [
       {
         "name": "Let It In",
-        "description": "Heal 25 HP. Add Metamorphosis to your Deck.",
-        "references": [
-          {
-            "type": "card",
-            "id": "METAMORPHOSIS",
-            "name": "Metamorphosis"
-          }
-        ]
+        "description": "Heal {LetItInHealAmount} HP. Add Metamorphosis to your Deck."
       },
       {
         "name": "Rejection",
-        "description": "Lose 9 HP. Remove a card from your Deck."
+        "description": "Lose {RejectionHpLoss} HP. Remove a card from your Deck."
       }
     ]
   },
@@ -1239,7 +877,7 @@
     "choices": [
       {
         "name": "Drink and Lift",
-        "description": "Lose a random potion. Gain 10 Max HP.",
+        "description": "Lose {DrinkRandomPotion}. Gain 10 Max HP.",
         "locked": "Requires a Potion."
       },
       {
@@ -1257,18 +895,11 @@
     "choices": [
       {
         "name": "Dive into the Water",
-        "description": "Gain 101-121 (111±10) Gold. Lose 7 HP."
+        "description": "Gain {Gold} Gold. Lose {HpLoss} HP."
       },
       {
         "name": "Grab the Sword",
-        "description": "Obtain the Sword of Stone.",
-        "references": [
-          {
-            "type": "relic",
-            "id": "SWORD_OF_STONE",
-            "name": "Sword Of Stone"
-          }
-        ]
+        "description": "Obtain the {Relic}."
       }
     ]
   },
@@ -1284,14 +915,7 @@
       },
       {
         "name": "Second Chest",
-        "description": "Gain 333 Gold. Receive Greed.",
-        "references": [
-          {
-            "type": "card",
-            "id": "GREED",
-            "name": "Greed"
-          }
-        ]
+        "description": "Gain 333 Gold. Receive Greed."
       }
     ]
   },
@@ -1303,7 +927,7 @@
     "choices": [
       {
         "name": "Approach",
-        "description": "Enchant an Attack with Corrupted.",
+        "description": "Enchant an Attack with {Enchantment}.",
         "locked": "None of your Attacks can be Enchanted."
       },
       {
@@ -1361,38 +985,17 @@
     "choices": [
       {
         "name": "Bone Tea",
-        "description": "Pay 50 Gold. Obtain Bone Tea.",
-        "locked": "Requires 50 Gold.",
-        "references": [
-          {
-            "type": "relic",
-            "id": "BONE_TEA",
-            "name": "Bone Tea"
-          }
-        ]
+        "description": "Pay 50 Gold. {BoneTeaDescription}",
+        "locked": "Requires 50 Gold."
       },
       {
         "name": "Ember Tea",
-        "description": "Pay 150 Gold. Obtain Ember Tea.",
-        "locked": "Requires 150 Gold.",
-        "references": [
-          {
-            "type": "relic",
-            "id": "EMBER_TEA",
-            "name": "Ember Tea"
-          }
-        ]
+        "description": "Pay 150 Gold. {EmberTeaDescription}",
+        "locked": "Requires 150 Gold."
       },
       {
         "name": "Tea of Discourtesy",
-        "description": "Obtain Tea of Discourtesy. The Tea Master becomes hostile!",
-        "references": [
-          {
-            "type": "relic",
-            "id": "TEA_OF_DISCOURTESY",
-            "name": "Tea Of Discourtesy"
-          }
-        ]
+        "description": "{TeaOfDiscourtesyDescription}"
       }
     ]
   },
@@ -1446,8 +1049,8 @@
     "description": "You feel a faint rumbling as you round the corner to discover a gigantic spinning apparatus!\nIt has several slots which appear to convert liquids into a highly compressed digestible tablet.\n\nThe idea of turning these health tonics into a tiny morsel is uncomfortable but perhaps it's good to try new things?",
     "choices": [
       {
-        "name": "Insert Potion rarity (Common/Uncommon/Rare) Potion",
-        "description": "Lose a Potion from your inventory. Obtain an Upgraded Potion rarity (Common/Uncommon/Rare) a random card type (Attack/Skill/Power)."
+        "name": "Insert {Rarity} Potion",
+        "description": "Lose {Potion}. Obtain an Upgraded {Rarity} {Type}."
       }
     ]
   },
@@ -1463,14 +1066,7 @@
       },
       {
         "name": "Return the Key",
-        "description": "Gain 100 Gold."
-      }
-    ],
-    "references": [
-      {
-        "type": "card",
-        "id": "LANTERN_KEY",
-        "name": "Lantern Key"
+        "description": "Gain {Gold} Gold."
       }
     ]
   },
@@ -1482,14 +1078,7 @@
     "choices": [
       {
         "name": "Nab the Map",
-        "description": "Receive the Spoils Map.",
-        "references": [
-          {
-            "type": "card",
-            "id": "SPOILS_MAP",
-            "name": "Spoils Map"
-          }
-        ]
+        "description": "Receive the Spoils Map."
       },
       {
         "name": "Slowly Find an Exit",
@@ -1505,18 +1094,11 @@
     "choices": [
       {
         "name": "That",
-        "description": "Add Clumsy to your Deck. Obtain a random Relic.",
-        "references": [
-          {
-            "type": "card",
-            "id": "CLUMSY",
-            "name": "Clumsy"
-          }
-        ]
+        "description": "Add {Curse} to your Deck. Obtain a random Relic."
       },
       {
         "name": "This",
-        "description": "Lose 6 HP. Gain 41-68 (random) Gold."
+        "description": "Lose {HpLoss} HP. Gain {Gold} Gold."
       }
     ]
   },
@@ -1529,13 +1111,6 @@
       {
         "name": "Accept",
         "description": "Create a custom card to add to your Deck."
-      }
-    ],
-    "references": [
-      {
-        "type": "card",
-        "id": "MAD_SCIENCE",
-        "name": "Mad Science"
       }
     ]
   },
@@ -1551,84 +1126,7 @@
       },
       {
         "name": "Grab Random Junk",
-        "description": "Gain 100 Gold. Obtain a random forgotten card from the past."
-      }
-    ],
-    "references": [
-      {
-        "type": "card",
-        "id": "CALTROPS",
-        "name": "Caltrops"
-      },
-      {
-        "type": "card",
-        "id": "CLASH",
-        "name": "Clash"
-      },
-      {
-        "type": "card",
-        "id": "DISTRACTION",
-        "name": "Distraction"
-      },
-      {
-        "type": "card",
-        "id": "DUAL_WIELD",
-        "name": "Dual Wield"
-      },
-      {
-        "type": "card",
-        "id": "ENTRENCH",
-        "name": "Entrench"
-      },
-      {
-        "type": "card",
-        "id": "HELLO_WORLD",
-        "name": "Hello World"
-      },
-      {
-        "type": "card",
-        "id": "OUTMANEUVER",
-        "name": "Outmaneuver"
-      },
-      {
-        "type": "card",
-        "id": "REBOUND",
-        "name": "Rebound"
-      },
-      {
-        "type": "card",
-        "id": "RIP_AND_TEAR",
-        "name": "Rip And Tear"
-      },
-      {
-        "type": "card",
-        "id": "STACK",
-        "name": "Stack"
-      },
-      {
-        "type": "relic",
-        "id": "DARKSTONE_PERIAPT",
-        "name": "Darkstone Periapt"
-      },
-      {
-        "type": "relic",
-        "id": "DREAM_CATCHER",
-        "name": "Dream Catcher"
-      },
-      {
-        "type": "relic",
-        "id": "HAND_DRILL",
-        "name": "Hand Drill"
-      },
-      {
-        "type": "relic",
-        "id": "MAW_BANK",
-        "name": "Maw Bank"
-      },
-      {
-        "type": "relic",
-        "id": "THE_BOOT",
-        "name": "The Boot"
+        "description": "Gain {Gold} Gold. Obtain a random forgotten card from the past."
       }
     ]
   },
@@ -1636,7 +1134,7 @@
     "id": "TRIAL",
     "name": "The Trial",
     "act": "unknown",
-    "description": "You join a line of people entering a massive building.\n\nAs you pass under a golden archway, horns blare, confetti explodes, and streamers glide down from the ceiling!\n\n“Entrant dynamically set during event, you are the DECIDER for today's Trial.”",
+    "description": "You join a line of people entering a massive building.\n\nAs you pass under a golden archway, horns blare, confetti explodes, and streamers glide down from the ceiling!\n\n“Entrant {EntrantNumber}, you are the DECIDER for today's Trial.”",
     "choices": [
       {
         "name": "Accept",
@@ -1645,23 +1143,6 @@
       {
         "name": "Reject",
         "description": "You are not allowed to Reject."
-      }
-    ],
-    "references": [
-      {
-        "type": "card",
-        "id": "REGRET",
-        "name": "Regret"
-      },
-      {
-        "type": "card",
-        "id": "SHAME",
-        "name": "Shame"
-      },
-      {
-        "type": "card",
-        "id": "DOUBT",
-        "name": "Doubt"
       }
     ]
   },
@@ -1677,14 +1158,7 @@
       },
       {
         "name": "Rest Anyways",
-        "description": "Heal to full HP. Receive Poor Sleep.",
-        "references": [
-          {
-            "type": "card",
-            "id": "POOR_SLEEP",
-            "name": "Poor Sleep"
-          }
-        ]
+        "description": "Heal to full HP. Receive Poor Sleep."
       }
     ]
   },
@@ -1731,30 +1205,11 @@
     "choices": [
       {
         "name": "Unlock the Cage",
-        "description": "Lose Lantern Key. Obtain History Course.",
-        "references": [
-          {
-            "type": "card",
-            "id": "LANTERN_KEY",
-            "name": "Lantern Key"
-          },
-          {
-            "type": "relic",
-            "id": "HISTORY_COURSE",
-            "name": "History Course"
-          }
-        ]
+        "description": "Lose Lantern Key. Obtain History Course."
       },
       {
         "name": "Unlock the Chest",
-        "description": "Lose Lantern Key. Procure 2 random Potions. Obtain 2 random Relics.",
-        "references": [
-          {
-            "type": "card",
-            "id": "LANTERN_KEY",
-            "name": "Lantern Key"
-          }
-        ]
+        "description": "Lose Lantern Key. Procure 2 random Potions. Obtain 2 random Relics."
       }
     ]
   },
@@ -1770,13 +1225,13 @@
       },
       {
         "name": "Prickly Sponge",
-        "description": "Pay 155 Gold. Enchant 2 cards with Steady.",
-        "locked": "Requires 155 Gold."
+        "description": "Pay {PricklySpongeGold} Gold. Enchant {Cards} {Cards:plural:card|cards} with Steady.",
+        "locked": "Requires {PricklySpongeGold} Gold."
       },
       {
         "name": "Tentacle Quill",
-        "description": "Pay 65 Gold. Enchant a card with Steady.",
-        "locked": "Requires 65 Gold."
+        "description": "Pay {Gold} Gold. Enchant a card with Steady.",
+        "locked": "Requires {Gold} Gold."
       }
     ]
   },
@@ -1788,13 +1243,13 @@
     "choices": [
       {
         "name": "Wongo's Bargain Bin",
-        "description": "Pay 100 Gold. Obtain 1 random Common Relic.",
-        "locked": "Requires 100 Gold."
+        "description": "Pay {BargainBinCost} Gold. Obtain 1 random Common Relic.",
+        "locked": "Requires {BargainBinCost} Gold."
       },
       {
         "name": "Wongo's Featured Item",
-        "description": "Pay 200 Gold. Obtain a featured rare relic.",
-        "locked": "Requires 200 Gold."
+        "description": "Pay {FeaturedItemCost} Gold. Obtain {RandomRelic}.",
+        "locked": "Requires {FeaturedItemCost} Gold."
       },
       {
         "name": "Leave",
@@ -1802,8 +1257,8 @@
       },
       {
         "name": "Wongo's Mystery Box",
-        "description": "Pay 300 Gold. Obtain 3 random Relics after 5 combats.",
-        "locked": "Requires 300 Gold."
+        "description": "Pay {MysteryBoxCost} Gold. Obtain {MysteryBoxRelicCount} random Relics after {MysteryBoxCombatCount} combats.",
+        "locked": "Requires {MysteryBoxCost} Gold."
       }
     ]
   },
@@ -1815,14 +1270,7 @@
     "choices": [
       {
         "name": "Bathe",
-        "description": "Remove 1 card from your Deck. Add 1 Guilty to your Deck.",
-        "references": [
-          {
-            "type": "card",
-            "id": "GUILTY",
-            "name": "Guilty"
-          }
-        ]
+        "description": "Remove 1 card from your Deck. Add 1 Guilty to your Deck."
       },
       {
         "name": "Bottle",
@@ -1838,7 +1286,7 @@
     "choices": [
       {
         "name": "Exchange Gold",
-        "description": "Lose 50 Gold. Procure 2 random Potions."
+        "description": "Lose {Gold} Gold. Procure 2 random Potions."
       },
       {
         "name": "Hug the Tree",
@@ -1854,30 +1302,16 @@
     "choices": [
       {
         "name": "Bird",
-        "description": "Choose 1 starter card to Transform into Peck.",
-        "references": [
-          {
-            "type": "card",
-            "id": "PECK",
-            "name": "Peck"
-          }
-        ]
+        "description": "Choose 1 starter card to Transform into {BirdCard}."
       },
       {
         "name": "Snake",
-        "description": "Enchant 1 card with Slither.",
+        "description": "Enchant 1 card with {SnakeEnchantment}.",
         "locked": "None of your cards can be Enchanted with Slither."
       },
       {
         "name": "Torus",
-        "description": "Choose 1 starter card to Transform into Toric Toughness.",
-        "references": [
-          {
-            "type": "card",
-            "id": "TORIC_TOUGHNESS",
-            "name": "Toric Toughness"
-          }
-        ]
+        "description": "Choose 1 starter card to Transform into {ToricCard}."
       }
     ]
   },
@@ -1893,14 +1327,7 @@
       },
       {
         "name": "Breathing Techniques",
-        "description": "Pay 50 Gold. Add 2 Enlightenment to your Deck.",
-        "references": [
-          {
-            "type": "card",
-            "id": "ENLIGHTENMENT",
-            "name": "Enlightenment"
-          }
-        ]
+        "description": "Pay 50 Gold. Add 2 Enlightenment to your Deck."
       },
       {
         "name": "Emotional Awareness",
