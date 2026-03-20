@@ -21,11 +21,16 @@ function hpAsc(v: any): number | null {
   if (v == null || typeof v !== 'object') return null;
   return v.ascension !== v.normal ? v.ascension : null;
 }
+function hpAscLevel(v: any): number | null {
+  if (v == null || typeof v !== 'object') return null;
+  return v.ascLevel ?? null;
+}
 
 const minHp = hpVal(monster.min_hp);
 const maxHp = hpVal(monster.max_hp);
 const minHpAsc = hpAsc(monster.min_hp);
 const maxHpAsc = hpAsc(monster.max_hp);
+const hpAscLvl = hpAscLevel(monster.min_hp);
 const hasRealHp = minHp != null && minHp !== 9999;
 const hpText = hasRealHp
   ? minHp === maxHp ? `${minHp} HP` : `${minHp}–${maxHp} HP`
@@ -100,7 +105,7 @@ const sequence = buildSequence(movePattern, startMove);
   <div class="mt-2 flex flex-wrap items-center gap-2">
     <Badge label={monster.type} tone={typeTones[monster.type] ?? ''} locale={locale} />
     {hpText && <Badge label={hpText} locale={locale} />}
-    {hpAscText && <span class="text-xs text-amber-400/80" title="Ascension HP">Asc: {hpAscText}</span>}
+    {hpAscText && <span class="text-xs text-amber-400/80">Asc {hpAscLvl}+: {hpAscText}</span>}
   </div>
 
   {(monster.powers ?? []).length > 0 && (
@@ -145,6 +150,7 @@ const sequence = buildSequence(movePattern, startMove);
           const dmg = intent.damage;
           const hits = intent.hits;
           const ascDmg = intent.ascension_damage;
+          const ascDmgLvl = intent.ascension_level;
           const isStart = mv.id === startMove;
           const additionalIntents = mv.additional_intents ?? [];
           
@@ -168,8 +174,8 @@ const sequence = buildSequence(movePattern, startMove);
                     ⚔ {hits && hits > 1 ? `${dmg} × ${hits}` : dmg} {t('damage', locale)}
                   </span>
                   {ascDmg != null && ascDmg !== dmg && (
-                    <span class="ml-2 text-xs text-amber-400/80" title="Ascension damage">
-                      Asc: {hits && hits > 1 ? `${ascDmg} × ${hits}` : ascDmg}
+                    <span class="ml-2 text-xs text-amber-400/80">
+                      Asc {ascDmgLvl}+: {hits && hits > 1 ? `${ascDmg} × ${hits}` : ascDmg}
                     </span>
                   )}
                 </div>

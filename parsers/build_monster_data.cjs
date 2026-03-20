@@ -45,14 +45,19 @@ function parseIntent(intentStr) {
 }
 
 // Extract all property definitions that use GetValueIfAscension
-// Returns map: varName -> { normal: N, ascension: M }
+// Returns map: varName -> { normal: N, ascension: M, ascLevel: L }
 function extractAscensionValues(code) {
+  const ASCENSION_LEVELS = {
+    'None': 0, 'SwarmingElites': 1, 'WearyTraveler': 2, 'Poverty': 3,
+    'TightBelt': 4, 'AscendersBane': 5, 'Gloom': 6, 'Scarcity': 7,
+    'ToughEnemies': 8, 'DeadlyEnemies': 9, 'DoubleBoss': 10
+  };
   const values = {};
   // Match property like: private int FooDamage => AscensionHelper.GetValueIfAscension(AscensionLevel.X, ascVal, normalVal);
-  const propRe = /(?:private|public|protected)\s+\w+\s+(\w+)\s*=>\s*AscensionHelper\.GetValueIfAscension\([^,]+,\s*(\d+)\s*,\s*(\d+)\)/g;
+  const propRe = /(?:private|public|protected)\s+\w+\s+(\w+)\s*=>\s*AscensionHelper\.GetValueIfAscension\(AscensionLevel\.(\w+)\s*,\s*(\d+)\s*,\s*(\d+)\)/g;
   let m;
   while ((m = propRe.exec(code)) !== null) {
-    values[m[1]] = { ascension: parseInt(m[2]), normal: parseInt(m[3]) };
+    values[m[1]] = { ascension: parseInt(m[3]), normal: parseInt(m[4]), ascLevel: ASCENSION_LEVELS[m[2]] ?? null, ascLevelName: m[2] };
   }
   return values;
 }
@@ -61,17 +66,23 @@ function extractAscensionValues(code) {
 function extractHp(code, ascValues) {
   const result = {};
 
-  const minMatch = code.match(/override\s+int\s+MinInitialHp\s*=>\s*AscensionHelper\.GetValueIfAscension\([^,]+,\s*(\d+)\s*,\s*(\d+)\)/);
+  const ASCENSION_LEVELS = {
+    'None': 0, 'SwarmingElites': 1, 'WearyTraveler': 2, 'Poverty': 3,
+    'TightBelt': 4, 'AscendersBane': 5, 'Gloom': 6, 'Scarcity': 7,
+    'ToughEnemies': 8, 'DeadlyEnemies': 9, 'DoubleBoss': 10
+  };
+
+  const minMatch = code.match(/override\s+int\s+MinInitialHp\s*=>\s*AscensionHelper\.GetValueIfAscension\(AscensionLevel\.(\w+)\s*,\s*(\d+)\s*,\s*(\d+)\)/);
   if (minMatch) {
-    result.min_hp = { ascension: parseInt(minMatch[1]), normal: parseInt(minMatch[2]) };
+    result.min_hp = { ascension: parseInt(minMatch[2]), normal: parseInt(minMatch[3]), ascLevel: ASCENSION_LEVELS[minMatch[1]] ?? null };
   } else {
     const minSimple = code.match(/override\s+int\s+MinInitialHp\s*=>\s*(\d+)/);
     if (minSimple) result.min_hp = parseInt(minSimple[1]);
   }
 
-  const maxMatch = code.match(/override\s+int\s+MaxInitialHp\s*=>\s*AscensionHelper\.GetValueIfAscension\([^,]+,\s*(\d+)\s*,\s*(\d+)\)/);
+  const maxMatch = code.match(/override\s+int\s+MaxInitialHp\s*=>\s*AscensionHelper\.GetValueIfAscension\(AscensionLevel\.(\w+)\s*,\s*(\d+)\s*,\s*(\d+)\)/);
   if (maxMatch) {
-    result.max_hp = { ascension: parseInt(maxMatch[1]), normal: parseInt(maxMatch[2]) };
+    result.max_hp = { ascension: parseInt(maxMatch[2]), normal: parseInt(maxMatch[3]), ascLevel: ASCENSION_LEVELS[maxMatch[1]] ?? null };
   } else {
     const maxSimple = code.match(/override\s+int\s+MaxInitialHp\s*=>\s*(\d+)/);
     if (maxSimple) result.max_hp = parseInt(maxSimple[1]);
@@ -267,7 +278,10 @@ function parseFile(filePath, ascValuesGlobal) {
       if (dmgVal) {
         if (typeof dmgVal === 'object' && dmgVal.normal !== undefined) {
           intentOutput.damage = dmgVal.normal;
-          if (dmgVal.ascension !== undefined) intentOutput.ascension_damage = dmgVal.ascension;
+          if (dmgVal.ascension !== undefined) {
+            intentOutput.ascension_damage = dmgVal.ascension;
+            if (dmgVal.ascLevel != null) intentOutput.ascension_level = dmgVal.ascLevel;
+          }
         } else {
           intentOutput.damage = dmgVal;
         }
