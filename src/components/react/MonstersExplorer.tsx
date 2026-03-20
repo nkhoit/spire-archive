@@ -12,6 +12,7 @@ type Monster = {
   max_hp: number | { ascension: number; normal: number } | null;
   moves: { name: string; damage?: number | null; hits?: number | null }[];
   move_pattern?: { name?: string; id?: string; type?: string }[];
+  move_titles?: string[];
   powers: string[];
 };
 
@@ -118,11 +119,14 @@ export default function MonstersExplorer(props: { game?: string; acts: string[];
                     ))}
                     {hpText && <span className="text-xs text-slate-400">{hpText}</span>}
                   </div>
-                  {(m.move_pattern ?? m.moves).length > 0 && (
-                    <div className="mt-1 text-xs text-slate-400">
-                      {(m.move_pattern ?? m.moves).filter((mv: any) => mv.name && mv.type !== 'random').map((mv: any) => mv.name).join(' · ')}
-                    </div>
-                  )}
+                  {(() => {
+                    const titles = m.move_titles ?? (m.move_pattern ?? m.moves).filter((mv: any) => mv.name && mv.type !== 'random').map((mv: any) => mv.name);
+                    return titles.length > 0 && (
+                      <div className="mt-1 text-xs text-slate-400">
+                        {titles.join(' · ')}
+                      </div>
+                    );
+                  })()}
                 </div>
               </a>
             </li>

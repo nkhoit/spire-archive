@@ -106,6 +106,7 @@ export interface Monster {
   move_pattern?: any[];
   start_move?: string;
   acts?: string[];
+  move_titles?: string[];
   image_url?: string | null;
 }
 
@@ -285,6 +286,19 @@ export async function getData(game: 'sts1' | 'sts2' = 'sts1', locale: Locale = '
   let base = cache.get(baseKey);
   if (!base) {
     base = await loadBaseData(game);
+    // Apply English monster move_titles from localization
+    const enLocPath = path.join(rootDir(), 'data', game, 'localization', 'en.json');
+    if (existsSync(enLocPath)) {
+      const enLoc = JSON.parse(await fs.readFile(enLocPath, 'utf-8'));
+      if (enLoc.monsters) {
+        const monsters = base.monsters.map(m => {
+          const l = enLoc.monsters[m.id];
+          if (!l?.move_titles) return m;
+          return { ...m, move_titles: l.move_titles };
+        });
+        base = { ...base, monsters, monsterById: toMap(monsters) };
+      }
+    }
     cache.set(baseKey, base);
   }
 
@@ -377,7 +391,7 @@ interface LocData {
   events?: Record<string, { name?: string; [key: string]: any }>;
   keywords?: Record<string, { name?: string; names?: string[]; description?: string }>;
   enchantments?: Record<string, { name?: string; description?: string }>;
-  monsters?: Record<string, { name?: string; moves?: Record<string, string> }>;
+  monsters?: Record<string, { name?: string; moves?: Record<string, string>; move_names?: Record<string, string>; move_titles?: string[] }>;
 }
 
 async function applyLocalization(game: string, locale: Locale, base: Dataset): Promise<Dataset> {
@@ -462,23 +476,26 @@ async function applyLocalization(game: string, locale: Locale, base: Dataset): P
   const monsters = base.monsters.map(m => {
     const l = loc.monsters?.[m.id];
     if (!l) return m;
-    const moves = l.moves ? m.moves.map((mv: MonsterMove) => {
-      // Move IDs in data use _MOVE suffix, localization keys may or may not
+    const nameMap = l.move_names ?? {};
+    const localizeMoveByKey = (mv: any) => {
+      // Try move_names (English display name → localized name)
+      if (mv.name && nameMap[mv.name]) return { ...mv, name: nameMap[mv.name] };
+      // Try localization key match (strip _MOVE suffix from ID)
       const moveKey = mv.id?.replace(/_MOVE$/, '') ?? '';
-      const locName = l.moves![mv.id ?? ''] ?? l.moves![moveKey] ?? null;
+      const locName = l.moves?.[mv.id ?? ''] ?? l.moves?.[moveKey] ?? null;
       return locName ? { ...mv, name: locName } : mv;
-    }) : m.moves;
+    };
+    const moves = m.moves.map((mv: MonsterMove) => localizeMoveByKey(mv));
     const movePattern = (m as any).move_pattern ? (m as any).move_pattern.map((mp: any) => {
       if (mp.type === 'random') return mp;
-      const moveKey = mp.id?.replace(/_MOVE$/, '') ?? '';
-      const locName = l.moves?.[mp.id ?? ''] ?? l.moves?.[moveKey] ?? null;
-      return locName ? { ...mp, name: locName } : mp;
+      return localizeMoveByKey(mp);
     }) : (m as any).move_pattern;
     return {
       ...m,
       ...(l.name && { name: l.name }),
       moves,
       ...(movePattern && { move_pattern: movePattern }),
+      ...(l.move_titles && { move_titles: l.move_titles }),
     };
   });
 

@@ -7,6 +7,20 @@ const CS_BASE = '/Users/kuro/code/sts2-research/decompiled';
 const MONSTERS_DIR = path.join(CS_BASE, 'MegaCrit.Sts2.Core.Models.Monsters');
 const OUTPUT_FILE = path.join(__dirname, '../data/sts2/monsters.json');
 const POWERS_FILE = path.join(__dirname, '../data/sts2/powers.json');
+const ENG_MONSTERS_LOC = '/tmp/sts2-pck/localization/eng/monsters.json';
+
+// Build English localization name lookup: { MONSTER_ID: { MOVE_LOC_KEY: "Display Name" } }
+const engMoveLoc = {};
+try {
+  const engRaw = JSON.parse(fs.readFileSync(ENG_MONSTERS_LOC, 'utf8'));
+  for (const [key, value] of Object.entries(engRaw)) {
+    const m = key.match(/^([A-Z0-9_]+)\.moves\.([A-Z0-9_]+)\.title$/);
+    if (m) {
+      if (!engMoveLoc[m[1]]) engMoveLoc[m[1]] = {};
+      engMoveLoc[m[1]][m[2]] = value;
+    }
+  }
+} catch (e) { /* optional */ }
 
 // Build power class name → display name map from powers.json
 const powerClassToName = new Map();
@@ -446,8 +460,18 @@ function parseFile(filePath, ascValuesGlobal) {
     }
 
     // Ascension damage at top level of move entry (for backward compat)
+    // Resolve move name: prefer English localization, fall back to ID-derived name
+    const moveLocKey = move.id.replace(/_MOVE$/, '');
+    const idDerived = move.id.replace(/_MOVE$/, '').replace(/_/g, ' ').split(' ').map(w => w.charAt(0) + w.slice(1).toLowerCase()).join(' ');
+    // Try direct key match, then check if ID-derived name matches any English loc value
+    let engName = engMoveLoc[monsterId]?.[moveLocKey] ?? engMoveLoc[monsterId]?.[move.id] ?? null;
+    if (!engName && engMoveLoc[monsterId]) {
+      // Check if any localized value matches the ID-derived name
+      const vals = Object.values(engMoveLoc[monsterId]);
+      if (vals.includes(idDerived)) engName = idDerived;
+    }
     const moveEntry = {
-      name: move.id.replace(/_MOVE$/, '').replace(/_/g, ' ').split(' ').map(w => w.charAt(0) + w.slice(1).toLowerCase()).join(' '),
+      name: engName || idDerived,
       id: move.id,
       intent: intentOutput,
     };

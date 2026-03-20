@@ -11,6 +11,7 @@ const RAW_DIR = '/tmp/sts2-pck/localization';
 const OUT_DIR = path.join(__dirname, '..', 'data', 'sts2', 'localization');
 
 const LANG_MAP = {
+  eng: 'en',
   deu: 'de',
   fra: 'fr',
   ita: 'it',
@@ -25,6 +26,19 @@ const LANG_MAP = {
   kor: 'ko',
   zhs: 'zh',
 };
+
+// Also read English as a bridge for name matching
+const engPath = path.join(RAW_DIR, 'eng', 'monsters.json');
+const engRaw = JSON.parse(fs.readFileSync(engPath, 'utf-8'));
+const engMoves = {}; // monsterId -> { locKey -> englishTitle }
+for (const [key, value] of Object.entries(engRaw)) {
+  const moveParts = key.match(/^([A-Z0-9_]+)\.moves\.([A-Z0-9_]+)\.title$/);
+  if (moveParts) {
+    const [, monsterId, moveId] = moveParts;
+    if (!engMoves[monsterId]) engMoves[monsterId] = {};
+    engMoves[monsterId][moveId] = value;
+  }
+}
 
 for (const [gameCode, iso] of Object.entries(LANG_MAP)) {
   const rawPath = path.join(RAW_DIR, gameCode, 'monsters.json');
@@ -54,6 +68,23 @@ for (const [gameCode, iso] of Object.entries(LANG_MAP)) {
       monsters[monsterId].moves[moveId] = value;
       continue;
     }
+  }
+
+  // Build English name → localized name map for each monster
+  for (const [monsterId, mData] of Object.entries(monsters)) {
+    if (!mData.moves || !engMoves[monsterId]) continue;
+    const nameMap = {};
+    for (const [locKey, locTitle] of Object.entries(mData.moves)) {
+      const engTitle = engMoves[monsterId]?.[locKey];
+      if (engTitle && engTitle !== locTitle) {
+        nameMap[engTitle] = locTitle;
+      }
+    }
+    if (Object.keys(nameMap).length > 0) {
+      mData.move_names = nameMap; // English display name → localized display name
+    }
+    // Also store flat list of all localized move titles for list preview
+    mData.move_titles = Object.values(mData.moves);
   }
 
   // Merge into existing localization file
