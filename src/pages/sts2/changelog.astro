@@ -1,0 +1,46 @@
+---
+import Layout from '../../components/Layout.astro';
+import patchNotes from '../../../data/sts2/patch_notes.json';
+
+function formatContent(md: string): string {
+  // Convert markdown-ish content to HTML
+  return md
+    .split('\n')
+    .map(line => {
+      // Bold markers
+      line = line.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+      // Italic
+      line = line.replace(/(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)/g, '<em>$1</em>');
+      // Strikethrough
+      line = line.replace(/~~(.+?)~~/g, '<s>$1</s>');
+
+      if (line.trim() === '') return '';
+      if (line.startsWith('  - ')) return `<li class="ml-4">${line.slice(4)}</li>`;
+      if (line.startsWith('    - ')) return `<li class="ml-8">${line.slice(6)}</li>`;
+      if (line.startsWith('- ')) return `<li>${line.slice(2)}</li>`;
+      return `<p>${line}</p>`;
+    })
+    .join('\n');
+}
+---
+
+<Layout title="Changelog - Slay the Spire 2" description="Complete patch notes history for Slay the Spire 2" game="sts2">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold mb-2">Patch Notes</h1>
+    <p class="text-slate-400 mb-8">{patchNotes.length} updates from the development of Slay the Spire 2</p>
+
+    <div class="space-y-4">
+      {patchNotes.map((patch: any, i: number) => (
+        <details class="group bg-slate-800/50 rounded-lg border border-slate-700/50" open={i === 0}>
+          <summary class="flex items-center gap-3 px-5 py-4 cursor-pointer hover:bg-slate-700/30 rounded-lg transition-colors select-none">
+            <span class="text-slate-500 text-xs group-open:rotate-90 transition-transform">▶</span>
+            <span class="font-semibold">{new Date(patch.date + 'T12:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          </summary>
+          <div class="px-5 pb-5 text-sm text-slate-300 [&>p]:mb-2 [&>li]:list-disc [&>li]:ml-5 [&>li.ml-4]:ml-9 [&>li.ml-8]:ml-14 [&_strong]:text-amber-300 [&_strong]:font-semibold">
+            <Fragment set:html={formatContent(patch.content)} />
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</Layout>
