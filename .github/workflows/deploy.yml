@@ -14,6 +14,7 @@ env:
 
 jobs:
   build:
+    if: github.repository == 'nkhoit/spire-archive'
     runs-on: ubuntu-latest
     outputs:
       acr_name: ${{ steps.infra.outputs.acr_name }}
