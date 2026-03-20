@@ -57,8 +57,9 @@ test.describe('API — Search endpoints', () => {
       const res = await request.get(`/api/${game}/search?q=strike`);
       expect(res.status()).toBe(200);
       const json = await res.json();
-      expect(Array.isArray(json)).toBe(true);
-      expect(json.length).toBeGreaterThan(0);
+      const items = json.items ?? json;
+      expect(Array.isArray(items)).toBe(true);
+      expect(items.length).toBeGreaterThan(0);
     });
   }
 });
@@ -83,8 +84,8 @@ test.describe('API — Locale support', () => {
 test.describe('API — Detail endpoints', () => {
   // Test a known ID for each entity type
   const DETAIL_IDS: Record<string, Record<string, string>> = {
-    sts1: { cards: 'Strike_R', relics: 'BurningBlood', potions: 'FirePotion', events: 'BigFish', monsters: 'Cultist' },
-    sts2: { cards: 'BASH', relics: 'AKABEKO', potions: 'FIRE_POTION', events: 'ABYSSAL_BATHS', monsters: 'CULTIST', enchantments: 'ANCIENT' },
+    sts1: { cards: 'STRIKE_R', relics: 'AKABEKO', potions: 'AMBROSIA', events: 'BIG_FISH', monsters: 'ACIDSLIME_L' },
+    sts2: { cards: 'BASH', relics: 'AKABEKO', potions: 'FIRE_POTION', events: 'ABYSSAL_BATHS', monsters: 'ARCHITECT', enchantments: 'ADROIT' },
   };
 
   for (const game of GAMES) {
@@ -102,7 +103,7 @@ test.describe('API — Detail endpoints', () => {
 
   // Test detail endpoints with locale
   for (const game of GAMES) {
-    const cardId = game === 'sts1' ? 'Strike_R' : 'BASH';
+    const cardId = game === 'sts1' ? 'STRIKE_R' : 'BASH';
     for (const locale of LOCALES) {
       test(`${game}/cards/${cardId}?lang=${locale} returns localized data`, async ({ request }) => {
         const res = await request.get(`/api/${game}/cards/${cardId}?lang=${locale}`);
@@ -122,10 +123,11 @@ test.describe('API — Pagination', () => {
       const res2 = await request.get(`/api/${game}/cards?offset=5&limit=5`);
       const json2 = await res2.json();
 
-      expect(json1.data.length).toBe(5);
-      expect(json2.data.length).toBe(5);
-      // Ensure different pages return different cards
-      expect(json1.data[0].id).not.toBe(json2.data[0].id);
+      const items1 = json1.items ?? json1.data;
+      const items2 = json2.items ?? json2.data;
+      expect(items1.length).toBe(5);
+      expect(items2.length).toBe(5);
+      expect(items1[0].id).not.toBe(items2[0].id);
     });
   }
 });
