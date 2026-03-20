@@ -319,7 +319,7 @@ const langs = fs.readdirSync(LOCALE_DIR).filter(f => f.endsWith('.json')).map(f 
 console.log(`Processing ${langs.length} languages: ${langs.join(', ')}`);
 
 const results = {};
-const CATEGORIES = ['cards', 'relics', 'potions', 'events', 'enchantments'];
+const CATEGORIES = ['cards', 'relics', 'potions', 'events', 'enchantments', 'powers'];
 
 // Build entity name maps for resolving StringVar references per locale
 function buildEntityNameMap(localeData) {

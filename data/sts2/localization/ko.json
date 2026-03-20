@@ -363,10 +363,6 @@
       "description": "적 하나당 냉기를 1번 영창합니다.",
       "name": "오한"
     },
-    "CHRYSALIS": {
-      "description": "뽑을 카드 더미에 무작위 스킬 카드를 {Cards:diff()}장 섞어 넣습니다. 이번 전투 동안 그 카드들의 비용이 0 [E]이 됩니다.",
-      "name": "번데기"
-    },
     "CINDER": {
       "description": "피해를 17 줍니다.\n뽑을 카드 더미 맨 위의 카드를 소멸시킵니다.",
       "name": "잿불"
@@ -607,14 +603,6 @@
       "description": "내 턴 시작 시, 힘을 2 얻습니다.",
       "name": "악마의 형상"
     },
-    "DEPRECATED_CARD": {
-      "description": "이 카드는 게임에서 삭제되었습니다.",
-      "name": "구식 카드"
-    },
-    "DESPAIR": {
-      "description": "부여하는 종말 1마다, 방어도를 1 얻습니다.",
-      "name": "절망"
-    },
     "DEVASTATE": {
       "description": "피해를 30 줍니다.",
       "name": "초토화"
@@ -835,10 +823,6 @@
       "description": "방어도를 12 얻습니다.\n이번 턴에 공격을 받을 때마다, 공격한 적에게 피해를 4 줍니다.",
       "name": "화염 장벽"
     },
-    "FLAME_IN_THE_DARK": {
-      "description": "[E]를 얻습니다.\n카드를 {Cards:diff()}장 뽑습니다.",
-      "name": "어둠 속의 불꽃"
-    },
     "FLANKING": {
       "description": "이번 턴에 대상 적이 다른 플레이어에게 받는 피해량이 2배가 됩니다.",
       "name": "측면 공격"
@@ -930,10 +914,6 @@
       "description": "방어도를 1 얻습니다.\n이 카드로 얻는 방어도가 영구적으로 3 증가합니다.",
       "name": "유전 알고리즘"
     },
-    "GHOST_EATER": {
-      "description": "모든 종말을 제거합니다.\n제거한 종말 6마다 [E]를 얻습니다.",
-      "name": "유령 포식자"
-    },
     "GIANT_ROCK": {
       "description": "피해를 16 줍니다.",
       "name": "거대한 바위"
@@ -965,10 +945,6 @@
     "GOLD_AXE": {
       "description": "이번 전투 동안 사용한 카드의 수와 동일한 만큼의 피해를 줍니다.\n(피해를 0 줍니다)",
       "name": "황금 도끼"
-    },
-    "GOOD_INSTINCTS": {
-      "description": "방어도를 {Block:diff()} 얻습니다.",
-      "name": "좋은 직감"
     },
     "GO_FOR_THE_EYES": {
       "description": "피해를 3 줍니다.\n적이 공격할 의도가 있다면 약화를 1 부여합니다.",
@@ -1116,14 +1092,6 @@
     "IGNITION": {
       "description": "다른 플레이어가 플라즈마를 영창합니다.",
       "name": "점화"
-    },
-    "IMMORTALITY": {
-      "description": "체력을 {HpLoss:diff()} 잃습니다.\n불가침을 {IntangiblePower:diff()} 얻습니다.",
-      "name": "불멸"
-    },
-    "IMPALE": {
-      "description": "피해를 {Damage:diff()} 줍니다.\n중독을 {PoisonPower:diff()} 부여합니다.",
-      "name": "꿰뚫기"
     },
     "IMPATIENCE": {
       "description": "손에 공격 카드가 없다면, 카드를 2장 뽑습니다.",
@@ -1356,24 +1324,6 @@
       "description": "피해를 7 줍니다.\n대상 적에게 부여된 모든 해로운 효과를 다른 모든 적에게 부여합니다.",
       "name": "비참함"
     },
-    "MOCK_ATTACK_CARD": {
-      "name": "가짜 공격 카드"
-    },
-    "MOCK_CURSE_CARD": {
-      "name": "가짜 저주 카드"
-    },
-    "MOCK_POWER_CARD": {
-      "name": "가짜 파워 카드"
-    },
-    "MOCK_QUEST_CARD": {
-      "name": "가짜 퀘스트 카드"
-    },
-    "MOCK_SKILL_CARD": {
-      "name": "가짜 스킬 카드"
-    },
-    "MOCK_STATUS_CARD": {
-      "name": "가짜 상태이상 카드"
-    },
     "MODDED": {
       "description": "구체 슬롯을 1개 얻습니다.\n카드를 1장 뽑습니다. 이 카드의 비용이 1 증가합니다.",
       "name": "모드 적용"
@@ -1458,10 +1408,6 @@
       "description": "체력을 6 잃습니다.\n[E]를 얻습니다.\n카드를 3장 뽑습니다.",
       "name": "제물"
     },
-    "OFF_BY_ONE": {
-      "description": "내 턴 종료 시 손에 있는 카드가 정확히 1장이라면, 다음 턴 시작 시 추가로 [E]를 얻습니다.",
-      "name": "오프 바이 원"
-    },
     "OMNISLICE": {
       "description": "피해를 8 줍니다.\n가한 피해량만큼 다른 모든 적에게 피해를 줍니다.",
       "name": "만물 절단"
@@ -1489,10 +1435,6 @@
     "PACTS_END": {
       "description": "소멸된 카드 더미에 카드가 3장 이상 있을 때만 사용할 수 있습니다.\n모든 적에게 피해를 17 줍니다.",
       "name": "조약의 끝"
-    },
-    "PAELS_STRIKE": {
-      "description": "덱에 있는 카드의 수만큼 피해를 줍니다.\n(피해를 {Damage:diff()} 줍니다)",
-      "name": "파엘의 타격"
     },
     "PAGESTORM": {
       "description": "휘발성 카드를 뽑을 때마다, 카드를 1장 뽑습니다.",
@@ -1557,10 +1499,6 @@
     "PINPOINT": {
       "description": "피해를 17 줍니다.\n이번 턴에 스킬 카드를 사용할 때마다 비용이 1 [E] 감소합니다.",
       "name": "정밀 사격"
-    },
-    "PITY": {
-      "description": "적을 완전히 회복시킵니다.\n회복한 체력 {Hp:inverseDiff()}당 ⭐을 얻습니다.",
-      "name": "연민"
     },
     "POISONED_STAB": {
       "description": "피해를 6 줍니다.\n중독을 3 부여합니다.",
@@ -1649,10 +1587,6 @@
       "description": "무작위 무색 카드 3장 중 1장을 선택해 손으로 가져옵니다.",
       "name": "준항성"
     },
-    "QUICK_SLASH": {
-      "description": "피해를 {Damage:diff()} 줍니다.\n카드를 1장 뽑습니다.",
-      "name": "전광석화"
-    },
     "RADIATE": {
       "description": "이번 턴에 얻은 1 Stars의 수만큼 모든 적에게 피해를 3 줍니다.\n(0번 적중합니다)",
       "name": "방출"
@@ -1728,10 +1662,6 @@
     "REND": {
       "description": "피해를 15 줍니다.\n적이 보유한 해로운 효과의 종류 하나당 피해량이 5 증가합니다.",
       "name": "쥐어뜯기"
-    },
-    "RESERVES": {
-      "description": "카드 사용을 위한 [E]가 부족한 경우, [E]마다 2⭐이 대신 사용됩니다.",
-      "name": "비축물"
     },
     "RESONANCE": {
       "description": "힘을 1 얻습니다. 모든 적이 힘을 1 잃습니다.",
@@ -1865,10 +1795,6 @@
       "description": "힘을 2 잃습니다.\n적이 힘을 2 잃습니다.",
       "name": "운명 공유"
     },
-    "SHARP_EDGE": {
-      "description": "단도를 생성할 때마다, 그 단도를 강화합니다.",
-      "name": "예리한 날"
-    },
     "SHATTER": {
       "description": "모든 적에게 피해를 11 줍니다.\n모든 구체를 발현합니다.",
       "name": "산산조각"
@@ -1876,10 +1802,6 @@
     "SHINING_STRIKE": {
       "description": "피해를 8 줍니다.\n2 Stars을 얻습니다.\n뽑을 카드 더미 맨 위에 이 카드를 놓습니다.",
       "name": "빛나는 타격"
-    },
-    "SHINY_STRIKE": {
-      "description": "피해를 {Damage:diff()} 줍니다.\n이번 턴 동안 손에 있는 무색 카드 {Cards:diff()}장의 비용이 [E] 감소합니다.",
-      "name": "밝은 타격"
     },
     "SHIV": {
       "description": "피해를 4 줍니다.",
@@ -1976,10 +1898,6 @@
       "description": "내 턴 동안 카드를 뽑을 때마다, 모든 적에게 피해를 2 줍니다.",
       "name": "스피드스터"
     },
-    "SPIKED": {
-      "description": "내 턴 종료 시, 피해를 {Damage:diff()} 받습니다.",
-      "name": "가시 박힘"
-    },
     "SPINNER": {
       "description": "내 턴 시작 시, 유리를 1번 영창합니다.",
       "name": "스피너"
@@ -2030,14 +1948,6 @@
     "STARDUST": {
       "description": "무작위 적에게 피해를 5만큼 X번 줍니다.",
       "name": "우주 먼지"
-    },
-    "STAR_BLAST": {
-      "description": "방어도를 {Block:diff()} 얻습니다.\n피해를 {Damage:diff()} 줍니다.",
-      "name": "별의 세례"
-    },
-    "STAR_SHIELD": {
-      "description": "방어도를 {Block:diff()} 얻습니다.\n카드를 {Cards:diff()}장 뽑습니다.",
-      "name": "별 방패"
     },
     "STOKE": {
       "description": "손에 있는 모든 카드를 소멸시킵니다.\n소멸시킨 카드의 수만큼 카드를 뽑습니다",
@@ -2127,10 +2037,6 @@
       "description": "골골이가 무작위 적에게 피해를 10 줍니다.",
       "name": "훑어보기"
     },
-    "SWIFT_STRIKE": {
-      "description": "피해를 {Damage:diff()} 줍니다.",
-      "name": "재빠른 타격"
-    },
     "SWORD_BOOMERANG": {
       "description": "무작위 적에게 피해를 3만큼 3번 줍니다.",
       "name": "부메랑 칼날"
@@ -2178,10 +2084,6 @@
     "TESLA_COIL": {
       "description": "피해를 3 줍니다.\n대상 적을 상대로 모든 전기를 발동시킵니다.",
       "name": "테슬라 코일"
-    },
-    "TEZCATARAS_MIGHT": {
-      "description": "힘을 {StrengthPower:diff()} 얻습니다.\n내 턴 종료 시, 힘을 {StrengthLoss:diff()} 잃습니다.",
-      "name": "테즈카타라의 권능"
     },
     "THE_BOMB": {
       "description": "3턴 후 턴 종료 시, 모든 적에게 피해를 40 줍니다.",
@@ -2246,10 +2148,6 @@
     "TRACKING": {
       "description": "약화 상태의 적이 공격 카드로 받는 피해가 2배가 됩니다.",
       "name": "추적"
-    },
-    "TRAINING_STRIKE": {
-      "description": "피해를 {Damage:diff()} 줍니다.\n치명타라면, 고치가 경험치를 1 얻습니다.",
-      "name": "훈련 타격"
     },
     "TRANSFIGURE": {
       "description": "손에 있는 카드 1장에 재사용을 1 추가합니다.\n그 카드의 비용이 [E] 증가합니다.",
@@ -2327,17 +2225,9 @@
       "description": "2 Stars을 얻습니다.",
       "name": "추앙"
     },
-    "VETERAN": {
-      "description": "방어도를 {Block:diff()} 얻습니다.\n힘을 {StrengthPower:diff()} 얻습니다.",
-      "name": "베테랑"
-    },
     "VICIOUS": {
       "description": "취약을 부여할 때마다, 카드를 1장 뽑습니다.",
       "name": "포악함"
-    },
-    "VISIONS_OF_GRANDEUR": {
-      "description": "⭐을 {StarThreshold:diff()} 보유하고 있다면, 카드를 {Cards:diff()}장 뽑습니다.",
-      "name": "원대한 비전"
     },
     "VOID": {
       "description": "이 카드를 뽑을 때마다, [E]를 잃습니다.",
@@ -2354,10 +2244,6 @@
     "VOLTAIC": {
       "description": "이번 전투 동안 영창한 전기의 수만큼 전기를 영창합니다.\n(전기를 0번 영창합니다)",
       "name": "동전기"
-    },
-    "WARP_SPACE": {
-      "description": "뽑을 카드 더미에 무작위 카드를 {Cards:diff()}장 추가합니다.\n사용 전까지 그 카드들의 비용이 1 감소합니다.",
-      "name": "공간 왜곡"
     },
     "WASTE_AWAY": {
       "description": "매 턴마다 얻는 [E]가 1 감소합니다.",
@@ -2672,11 +2558,6 @@
       "flavor": "이 유물에 관한 자세한 내용은 추후 공개될 예정입니다...",
       "name": "크로스보우"
     },
-    "CURSED_KETTLE": {
-      "description": "엘리트를 처치할 때마다, 이번 막의 다른 엘리트가 전투 시작 시 힘을 {StrengthPower} 얻습니다.",
-      "flavor": "이 유물에 관한 자세한 내용은 추후 공개될 예정입니다...",
-      "name": "저주받은 주전자"
-    },
     "CURSED_PEARL": {
       "description": "획득 시, 탐욕을 받습니다. 골드를 333 획득합니다.",
       "flavor": "이 유물에 관한 자세한 내용은 추후 공개될 예정입니다...",
@@ -2706,11 +2587,6 @@
       "description": "내 턴 동안 처음으로 체력을 잃을 시, 동일한 양의 체력을 회복합니다.",
       "flavor": "이 유물에 관한 자세한 내용은 추후 공개될 예정입니다...",
       "name": "악마의 혓바닥"
-    },
-    "DEPRECATED_RELIC": {
-      "description": "이 유물은 더 이상 게임에 등장하지 않습니다. 그저 유산으로서 이곳에 남아있을 뿐입니다.",
-      "flavor": "이 유물에 관한 자세한 내용은 추후 공개될 예정입니다...",
-      "name": "구식 유물"
     },
     "DIAMOND_DIADEM": {
       "description": "내 턴 동안 카드를 2장 이하로 사용했다면, 적으로부터 받는 피해량이 절반이 됩니다.",
@@ -2786,11 +2662,6 @@
       "description": "획득 시, 덱에서 카드를 2장 제거합니다.",
       "flavor": "이 유물에 관한 자세한 내용은 추후 공개될 예정입니다...",
       "name": "빈 새장"
-    },
-    "ENDLESS_APPETITE": {
-      "description": "카드를 소멸시킬 때마다, 힘을 {StrengthPower} 얻습니다.",
-      "flavor": "이 유물에 관한 자세한 내용은 추후 공개될 예정입니다...",
-      "name": "끝없는 식욕"
     },
     "ETERNAL_FEATHER": {
       "description": "휴식 장소에 진입 시, 덱에 있는 카드 {}장마다 체력을 3 회복합니다.",
@@ -2927,11 +2798,6 @@
       "flavor": "이 유물에 관한 자세한 내용은 추후 공개될 예정입니다...",
       "name": "반짝이"
     },
-    "GLOWING_ORB": {
-      "description": "매 엘리트 전투 시작 시, 추가로 [E]를 얻습니다.",
-      "flavor": "이 유물에 관한 자세한 내용은 추후 공개될 예정입니다...",
-      "name": "발광하는 구체"
-    },
     "GNARLED_HAMMER": {
       "description": "획득 시, 최대 3장의 공격 카드에 [purple]예리[/purple]를 3 인챈트합니다.",
       "flavor": "이 유물에 관한 자세한 내용은 추후 공개될 예정입니다...",
@@ -2996,11 +2862,6 @@
       "description": "매 전투 시작 시, 전기를 3번 영창합니다.",
       "flavor": "이 유물에 관한 자세한 내용은 추후 공개될 예정입니다...",
       "name": "주입된 핵"
-    },
-    "INK_BOTTLE": {
-      "description": "카드를 {CardThreshold}장 사용할 때마다, 카드를 {Cards}장 뽑습니다.",
-      "flavor": "이 유물에 관한 자세한 내용은 추후 공개될 예정입니다...",
-      "name": "잉크병"
     },
     "INTIMIDATING_HELMET": {
       "description": "비용이 [E] 이상인 카드를 사용할 때마다, 방어도를 4 얻습니다.",
@@ -3162,11 +3023,6 @@
       "flavor": "이 유물에 관한 자세한 내용은 추후 공개될 예정입니다...",
       "name": "고깃덩어리"
     },
-    "MEDICAL_KIT": {
-      "description": "상태이상 카드를 사용할 수 있게 됩니다. 상태이상 카드는 사용 시 소멸합니다.",
-      "flavor": "이 유물에 관한 자세한 내용은 추후 공개될 예정입니다...",
-      "name": "구급 상자"
-    },
     "MEMBERSHIP_CARD": {
       "description": "모든 상품이 50% 할인됩니다!",
       "flavor": "이 유물에 관한 자세한 내용은 추후 공개될 예정입니다...",
@@ -3216,11 +3072,6 @@
       "description": "매 턴마다 처음으로 사용하는 공격 카드의 휘발성 복사본을 생성합니다.",
       "flavor": "이 유물에 관한 자세한 내용은 추후 공개될 예정입니다...",
       "name": "오르골"
-    },
-    "MYSTERIOUS_COCOON": {
-      "description": "경험치를 {Experience} 얻은 후, 훈련 타격을 꿰뚫기로 변화시킵니다.",
-      "flavor": "이 유물에 관한 자세한 내용은 추후 공개될 예정입니다...",
-      "name": "수수께끼의 고치"
     },
     "MYSTIC_LIGHTER": {
       "description": "인챈트된 공격 카드의 피해량이 9 증가합니다.",
@@ -3486,11 +3337,6 @@
       "description": "체력이 50% 이하인 동안, 추가 힘을 3 지닙니다.",
       "flavor": "이 유물에 관한 자세한 내용은 추후 공개될 예정입니다...",
       "name": "붉은 해골"
-    },
-    "RED_VINE_TEA": {
-      "description": "다음 {}번의 전투 시작 시, 카드를 추가로 {Cards}장 뽑습니다.",
-      "flavor": "이 유물에 관한 자세한 내용은 추후 공개될 예정입니다...",
-      "name": "붉은 덩굴 차"
     },
     "REGALITE": {
       "description": "무색 카드를 생성할 때마다, 방어도를 2 얻습니다.",
@@ -3832,11 +3678,6 @@
       "flavor": "이 유물에 관한 자세한 내용은 추후 공개될 예정입니다...",
       "name": "짜증나는 퍼즐상자"
     },
-    "VINE_BRACELET": {
-      "description": "획득 시, 최대 체력이 {MaxHp} 증가합니다.",
-      "flavor": "이 유물에 관한 자세한 내용은 추후 공개될 예정입니다...",
-      "name": "덩굴 팔찌"
-    },
     "VITRUVIAN_MINION": {
       "description": "이름에 “하수인”이 포함된 카드의 피해량과 얻는 방어도가 2배로 증가합니다.",
       "flavor": "이 유물에 관한 자세한 내용은 추후 공개될 예정입니다...",
@@ -3909,11 +3750,6 @@
       "smartDescription": "{OwnerName}(은)는 처치될 시 더 강력한 모습으로 부활합니다.",
       "name": "적응력"
     },
-    "ADAPTATION_POWER": {
-      "description": "방어도를 얻을 때마다, 이번 턴 동안 민첩을 3 얻습니다.",
-      "smartDescription": "방어도를 얻을 때마다, 이번 턴 동안 민첩을 {Amount} 얻습니다.",
-      "name": "적응"
-    },
     "AFTERIMAGE_POWER": {
       "description": "카드를 사용할 때마다, 방어도를 1 얻습니다.",
       "smartDescription": "카드를 사용할 때마다, 방어도를 {Amount} 얻습니다.",
@@ -3944,11 +3780,6 @@
       "smartDescription": "카드를 {BaseCards}장 뽑을 때마다, {Amount:energyIcons()}를 얻습니다.",
       "name": "자동화"
     },
-    "A_THOUSAND_CUTS_POWER": {
-      "description": "카드를 사용할 때마다, 모든 적에게 피해를 1 줍니다.",
-      "smartDescription": "카드를 사용할 때마다, 모든 적에게 피해를 {Amount} 줍니다.",
-      "name": "능지처참"
-    },
     "BACK_ATTACK_LEFT_POWER": {
       "description": "당신의 뒤쪽에서 공격 시 가하는 피해량이 50% 증가합니다.",
       "name": "후방 공격"
@@ -3978,7 +3809,7 @@
       "name": "인지 편향"
     },
     "BLACK_HOLE_POWER": {
-      "description": "{singleStarIcon}을 소모하거나 얻을 때마다, 모든 적에게 피해를 3 줍니다.",
+      "description": "⭐을 소모하거나 얻을 때마다, 모든 적에게 피해를 3 줍니다.",
       "smartDescription": "{singleStarIcon}을 소모하거나 얻을 때마다, 모든 적에게 피해를 {Amount} 줍니다.",
       "name": "블랙홀"
     },
@@ -4033,7 +3864,7 @@
       "name": "속박의 사슬"
     },
     "CHILD_OF_THE_STARS_POWER": {
-      "description": "소모한 {singleStarIcon}당 방어도를 1 얻습니다.",
+      "description": "소모한 ⭐당 방어도를 1 얻습니다.",
       "smartDescription": "소모한 {singleStarIcon}당 방어도를 {Amount} 얻습니다.",
       "name": "별의 아이"
     },
@@ -4066,11 +3897,6 @@
       "description": "내 턴 종료 시, 가장 왼쪽의 구체를 발현합니다.",
       "smartDescription": "내 턴 종료 시, 가장 왼쪽의 구체를{Amount:choose(1):| {}번} 발현합니다.",
       "name": "그림자 소모"
-    },
-    "CONTRACTILITY_POWER": {
-      "description": "다음 턴에, 방어도를 0 얻습니다.",
-      "smartDescription": "다음 턴에, 방어도를 {Amount} 얻습니다.",
-      "name": "신축성"
     },
     "COOLANT_POWER": {
       "description": "내 턴 시작 시, 영창된 구체의 종류 하나당 방어도를 3 얻습니다.",
@@ -4117,7 +3943,7 @@
       "name": "악랄함"
     },
     "CURIOUS_POWER": {
-      "description": "파워 카드의 비용이 1 {energyPrefix:energyIcons(1)} 감소합니다.",
+      "description": "파워 카드의 비용이 1 [E] 감소합니다.",
       "smartDescription": "파워 카드의 비용이 {Amount} {energyPrefix:energyIcons(1)} 감소합니다.",
       "name": "호기심"
     },
@@ -4145,16 +3971,6 @@
       "smartDescription": "{Amount:choose(1):이번 턴에|다음 {}턴 동안} 취약과 약화의 효과가 2배가 됩니다.",
       "name": "쇠락"
     },
-    "DECREE_OF_ENTROPY_POWER": {
-      "description": "내 턴 시작 시, 무작위 강화된 카드를 1장 손으로 가져옵니다.",
-      "smartDescription": "내 턴 시작 시, 무작위 강화된 카드를 {Amount}장 손으로 가져옵니다.",
-      "name": "예측 불허 판결"
-    },
-    "DECREE_OF_UNMAKING_POWER": {
-      "description": "적에게 피해를 줄 때마다, 대상 적에게 무작위 해로운 효과를 부여합니다.",
-      "smartDescription": "적에게 피해를 줄 때마다, 대상 적에게 무작위 해로운 효과를 {Amount} 부여합니다.",
-      "name": "원상 복구 판결"
-    },
     "DEMESNE_POWER": {
       "description": "내 턴 시작 시, 에너지를 1 얻고 카드를 추가로 1장 뽑습니다.",
       "smartDescription": "내 턴 시작 시, {Amount:energyIcons()}를 얻고 카드를 추가로 {Amount}장 뽑습니다.",
@@ -4170,20 +3986,10 @@
       "smartDescription": "내 턴 시작 시, 힘을 {Amount} 얻습니다.",
       "name": "악마의 형상"
     },
-    "DESPAIR_POWER": {
-      "description": "부여하는 종말 1마다, 방어도를 1 얻습니다.",
-      "smartDescription": "부여하는 종말 1마다, 방어도를 {Amount} 얻습니다.",
-      "name": "절망"
-    },
     "DEVOUR_LIFE_POWER": {
       "description": "영혼을 사용할 때마다, 소환 1.",
       "smartDescription": "영혼을 사용할 때마다, 소환 {Amount}.",
       "name": "생명 삼키기"
-    },
-    "DEXTERITY_DOWN_POWER": {
-      "description": "이번 턴 종료 시, 민첩을 잃습니다.",
-      "smartDescription": "이번 턴 종료 시, 민첩을 {Amount} 잃습니다.",
-      "name": "민첩 감소"
     },
     "DEXTERITY_POWER": {
       "description": "민첩은 카드를 통해 얻는 방어도를 증가시킵니다.",
@@ -4224,7 +4030,7 @@
       "name": "다음 턴 카드 뽑기"
     },
     "DRUM_OF_BATTLE_POWER": {
-      "description": "내 턴 시작 시, 뽑을 카드 더미 맨 위의 {Amount:choose(1):카드를|카드를 {}장} 소멸시킵니다.",
+      "description": "내 턴 시작 시, 뽑을 카드 더미 맨 위의 카드를 {}장 소멸시킵니다.",
       "smartDescription": "내 턴 시작 시, 뽑을 카드 더미 맨 위의 {Amount:choose(1):카드를|카드를 {}장} 소멸시킵니다.",
       "name": "전투의 북소리"
     },
@@ -4278,7 +4084,7 @@
       "name": "무감각"
     },
     "FERAL_POWER": {
-      "description": "매 턴마다 처음으로 비용이 0{energyPrefix:energyIcons(1)}인 공격 카드를 사용 시, 그 카드를 손으로 다시 가져옵니다.",
+      "description": "매 턴마다 처음으로 비용이 0[E]인 공격 카드를 사용 시, 그 카드를 손으로 다시 가져옵니다.",
       "smartDescription": "매 턴마다 처음으로 비용이 0{energyPrefix:energyIcons(1)}인 공격 카드를{Amount:choose(1):| {}장} 사용 시, 그 카드를 손으로 다시 가져옵니다.",
       "name": "야성"
     },
@@ -4296,11 +4102,6 @@
       "description": "공격 카드를 통해 받는 피해량이 50% 감소합니다.",
       "smartDescription": "공격 카드를 통해 받는 피해량이 {DamageDecrease}% 감소합니다. 공격 피해를 {Amount}번 받을 시 기절 상태가 됩니다",
       "name": "날갯짓"
-    },
-    "FOCUS_DOWN": {
-      "description": "이번 턴 종료 시, 밀집을 1 잃습니다.",
-      "smartDescription": "이번 턴 종료 시, 밀집을 {Amount} 잃습니다.",
-      "name": "밀집 감소"
     },
     "FOCUS_POWER": {
       "description": "구체들의 효율이 증가합니다.",
@@ -4323,17 +4124,17 @@
       "name": "손상"
     },
     "FREE_ATTACK_POWER": {
-      "description": "다음에 사용하는 공격 카드의 비용이 0 {energyPrefix:energyIcons(1)}이 됩니다.",
+      "description": "다음에 사용하는 공격 카드의 비용이 0 [E]이 됩니다.",
       "smartDescription": "다음에 사용하는 {Amount:choose(1):공격 카드|공격 카드 {}장}의 비용이 0 {energyPrefix:energyIcons(1)}이 됩니다.",
       "name": "무료 공격"
     },
     "FREE_POWER_POWER": {
-      "description": "다음에 사용하는 파워 카드의 비용이 0 {energyPrefix:energyIcons(1)}이 됩니다.",
+      "description": "다음에 사용하는 파워 카드의 비용이 0 [E]이 됩니다.",
       "smartDescription": "다음에 사용하는 {Amount:choose(1):파워 카드|파워 카드 {}장}의 비용이 0 {energyPrefix:energyIcons(1)}이 됩니다.",
       "name": "무료 파워"
     },
     "FREE_SKILL_POWER": {
-      "description": "다음에 사용하는 스킬 카드의 비용이 0 {energyPrefix:energyIcons(1)}이 됩니다.",
+      "description": "다음에 사용하는 스킬 카드의 비용이 0 [E]이 됩니다.",
       "smartDescription": "다음에 사용하는 {Amount:choose(1):스킬 카드|스킬 카드 {}장}의 비용이 0 {energyPrefix:energyIcons(1)}이 됩니다.",
       "name": "무료 스킬"
     },
@@ -4353,7 +4154,7 @@
       "name": "전류"
     },
     "GENESIS_POWER": {
-      "description": "내 턴 시작 시, {singleStarIcon}을 얻습니다.",
+      "description": "내 턴 시작 시, ⭐을 얻습니다.",
       "smartDescription": "내 턴 시작 시, {Amount:starIcons()}을 얻습니다.",
       "name": "창세"
     },
@@ -4361,14 +4162,6 @@
       "description": "다음에 사용하는 공격 카드의 피해량이 3배가 됩니다.",
       "smartDescription": "다음에 사용하는 {Amount:choose(1):공격 카드|공격 카드 {}장}의 피해량이 3배가 됩니다.",
       "name": "거대화"
-    },
-    "GOLDEN_PEARL": {
-      "smartDescription": "처음으로 상인을 방문 시, 모든 상품의 가격이 75% 할인됩니다."
-    },
-    "GRABBED": {
-      "description": "이 생물을 처치 시, 빼앗긴 카드가 손으로 돌아옵니다.",
-      "smartDescription": "{OwnerName}을 처치 시, 빼앗긴 카드가 손으로 돌아옵니다.",
-      "name": "붙잡힘"
     },
     "GRAPPLE_POWER": {
       "description": "이번 턴에 방어도를 얻을 때마다, 대상 적에게 피해를 5 줍니다.",
@@ -4419,11 +4212,6 @@
       "description": "영혼을 사용할 때마다, 무작위 적이 체력을 3 잃습니다.",
       "smartDescription": "영혼을 사용할 때마다, 무작위 적이 체력을 {Amount} 잃습니다.",
       "name": "출몰"
-    },
-    "HEATSINKS_POWER": {
-      "description": "파워 카드를 사용할 때마다, 카드를 1장 뽑습니다.",
-      "smartDescription": "파워 카드를 사용할 때마다, 카드를 {Amount}장 뽑습니다.",
-      "name": "방열판"
     },
     "HEIST_POWER": {
       "description": "사망 시, 빼앗은 모든 골드를 반환합니다.",
@@ -4478,11 +4266,6 @@
       "description": "내 턴 시작 시, 단도를 1장 손으로 가져옵니다.",
       "smartDescription": "내 턴 시작 시, {Amount:choose(1):단도를 1장|단도를 {}장} 손으로 가져옵니다.",
       "name": "무한의 검날"
-    },
-    "INKED": {
-      "description": "이 생물이 공격으로 받는 피해가 2 증가합니다.",
-      "smartDescription": "이 생물이 공격으로 받는 피해가 {Amount} 증가합니다.",
-      "name": "잉크투성이"
     },
     "INTANGIBLE_POWER": {
       "description": "이번 턴 동안 받는 모든 피해와 체력 손실이 1로 감소합니다.",
@@ -4553,11 +4336,6 @@
       "smartDescription": "내 턴 시작 시, 뽑을 카드 더미{Amount:choose(1): 맨 위의 카드를| 맨 위에서부터 {}장의 카드를} 사용합니다.",
       "name": "대혼란"
     },
-    "MELANCHOLY_POWER": {
-      "description": "종말이 부여될 때마다, 추가로 2 부여합니다.",
-      "smartDescription": "종말이 부여될 때마다, 추가로 {Amount} 부여합니다.",
-      "name": "비애"
-    },
     "MIND_ROT_POWER": {
       "description": "매 턴마다 카드를 1장 적게 뽑습니다.",
       "smartDescription": "매 턴마다 카드를 {Amount}장 적게 뽑습니다.",
@@ -4567,33 +4345,6 @@
       "description": "하수인들은 우두머리가 죽을 시 전투를 포기합니다.",
       "smartDescription": "하수인들은 우두머리가 죽을 시 전투를 포기합니다.",
       "name": "하수인"
-    },
-    "MOCK_CLONE_CARDS_ON_PLAY_POWER": {
-      "name": "가짜 사용 시 카드 복제"
-    },
-    "MOCK_FREE_CARDS_POWER": {
-      "name": "가짜 무료 카드"
-    },
-    "MOCK_GAIN_BLOCK_ON_ATTACK_POWER": {
-      "name": "가짜 공격 시 방어도 획득"
-    },
-    "MOCK_INVINCIBLE_ON_DEATH_POWER": {
-      "name": "가짜 죽음에 면역"
-    },
-    "MOCK_MODIFY_ENERGY_COST_POWER": {
-      "name": "가짜 에너지 비용 조정"
-    },
-    "MOCK_MODIFY_STAR_COST_POWER": {
-      "name": "가짜 별 비용 조정"
-    },
-    "MOCK_PREVENT_DEATH_POWER": {
-      "name": "가짜 죽음 방지"
-    },
-    "MOCK_REVIVE_POWER": {
-      "name": "가짜 부활"
-    },
-    "MOCK_TEMPORARY_STRENGTH_LOSS": {
-      "name": "가짜 일시적인 힘 손실"
     },
     "MONARCHS_GAZE_POWER": {
       "description": "적을 공격할 때마다, 대상 적이 이번 턴 동안 힘을 1 잃습니다.",
@@ -4645,11 +4396,6 @@
       "smartDescription": "이번 턴에 더 이상 카드를 뽑을 수 없습니다.",
       "name": "뽑기 불가"
     },
-    "NO_ESCAPE_POWER": {
-      "description": "3턴 종료 시, 종말을 50 얻습니다.",
-      "smartDescription": "{Amount:choose(1):이번 턴|{}턴 후 턴} 종료 시, 종말을 {DoomPower} 얻습니다.",
-      "name": "도망칠 수 없다"
-    },
     "OBLIVION_POWER": {
       "description": "카드를 사용할 때마다, 이 적이 종말을 1 얻습니다.",
       "smartDescription": "카드를 사용할 때마다, 이 적이 종말을 {Amount} 얻습니다.",
@@ -4664,10 +4410,6 @@
       "description": "에너지를 4 소모할 때마다, 에너지를 얻습니다.",
       "smartDescription": "{Energy:energyIcons()}를 소모할 때마다, {Amount:energyIcons()}를 얻습니다.",
       "name": "궤도"
-    },
-    "ORB_GENERATOR": {
-      "description": "이 적은 구체의 힘을 활용할 수 있습니다. 구체는 내 턴 종료 시 발동되며 이로운 효과와 해로운 효과의 영향을 받지 않습니다.",
-      "name": "구체 생성기"
     },
     "OUTBREAK_POWER": {
       "description": "중독을 10번 부여할 때마다, 모든 적에게 피해를 줍니다.",
@@ -4774,11 +4516,6 @@
       "smartDescription": "적이 사망 시, 시체 민달팽이가 그 적을 즉시 먹어치우며 기절 상태가 되고, 힘을 {Amount} 얻습니다.",
       "name": "굶주림"
     },
-    "READ_THE_BONES_POWER": {
-      "description": "소환할 때마다, 카드를 1장 뽑습니다.",
-      "smartDescription": "소환할 때마다, 카드를 {Amount}장 뽑습니다.",
-      "name": "뼈 읽기"
-    },
     "REAPER_FORM_POWER": {
       "description": "공격 카드로 피해를 줄 때마다, 그와 동일한 만큼의 종말을 부여합니다.",
       "smartDescription": "공격 카드로 피해를 줄 때마다, {Amount:choose(1):피해량과 동일한|피해량의 {}배} 만큼의 종말을 부여합니다.",
@@ -4794,11 +4531,6 @@
       "smartDescription": "이번 턴에 다음으로 사용하는 {Amount:choose(1):카드를|카드 {}장을} 뽑을 카드 더미 맨 위에 놓습니다.",
       "name": "되돌리기"
     },
-    "REFLECTIVE_FORTRESS_POWER": {
-      "description": "공격을 완전히 방어 할 때마다, 방어한 피해량을 공격자에게 반사합니다.",
-      "smartDescription": "공격을 완전히 방어 할 때마다, 방어한 {Amount:choose(1):피해량을|피해량을 {}배로} 공격자에게 반사합니다.",
-      "name": "반사하는 요새"
-    },
     "REFLECT_POWER": {
       "description": "막은 공격 피해가 공격한 적에게 반사됩니다.",
       "smartDescription": "다음 {Amount}턴 동안 막은 피해가 공격한 적에게 반사됩니다.",
@@ -4808,21 +4540,6 @@
       "description": "재생은 내 턴 종료 시 체력을 회복시킵니다. 매 턴마다 재생이 1 감소합니다.",
       "smartDescription": "내 턴 종료 시, 체력을 {Amount} 회복하고, 재생이 1 감소합니다.",
       "name": "재생"
-    },
-    "RESERVES_POWER": {
-      "description": "카드 사용을 위한 에너지가 부족한 경우, 에너지마다 2{singleStarIcon}이 대신 사용됩니다.",
-      "smartDescription": "카드 사용을 위한 {energyPrefix:energyIcons(1)}가 부족한 경우, {energyPrefix:energyIcons(1)}마다 2{singleStarIcon}이 대신 사용됩니다.",
-      "name": "비축물"
-    },
-    "RESTORE_DEXTERITY": {
-      "description": "대상의 턴 종료 시, 민첩을 9 얻습니다.",
-      "smartDescription": "대상의 종료 시, 민첩을 {Amount} 얻습니다.",
-      "name": "민첩 회복"
-    },
-    "RESTORE_FOCUS": {
-      "description": "대상의 턴 종료 시, 밀집을 9 얻습니다.",
-      "smartDescription": "대상의 턴 종료 시, 밀집을 {Amount} 얻습니다.",
-      "name": "밀집 회복"
     },
     "RETAIN_HAND_POWER": {
       "description": "다음 2턴 동안, 손에 있는 카드들을 보존합니다.",
@@ -4888,11 +4605,6 @@
       "description": "다음 턴에, 공격 카드의 피해량이 2배가 됩니다.",
       "smartDescription": "{Amount:choose(1):다음 턴에|다음 턴부터 {}턴 동안}, 공격 카드의 피해량이 2배가 됩니다.",
       "name": "그림자 걸음"
-    },
-    "SHARP_EDGE_POWER": {
-      "description": "단도를 생성할 때마다, 그 단도를 강화합니다.",
-      "smartDescription": "단도를 생성할 때마다, 그 단도를 강화합니다.",
-      "name": "예리한 날"
     },
     "SHRIEK_POWER": {
       "description": "이 생물의 체력이 처음으로 50% 이하로 떨어질 시, 대상이 기절 상태가 됩니다.",
@@ -4969,16 +4681,6 @@
       "smartDescription": "착지 전까지 공격으로 받는 피해량이 {DamageDecrease}% 감소합니다.",
       "name": "날아오르기"
     },
-    "SOUL_WITHER": {
-      "description": "영혼 결합체가 막히지 않은 공격 피해를 9번 준 후, 당신에게 피해를 999 줍니다.",
-      "smartDescription": "영혼 결합체가 막히지 않은 공격 피해를 {Amount}번 준 후, 당신에게 피해를 {Damage} 줍니다.",
-      "name": "영혼 쇠락"
-    },
-    "SOW_POWER": {
-      "description": "이번 턴에 손에 있는 무작위 카드를 1장 보존합니다.",
-      "smartDescription": "이번 턴에 손에 있는 무작위 카드를 {Amount}장 보존합니다.",
-      "name": "씨뿌리기"
-    },
     "SPECTRUM_SHIFT_POWER": {
       "description": "내 턴 시작 시, 무작위 무색 카드를 1장 손으로 가져옵니다.",
       "smartDescription": "내 턴 시작 시, 무작위 무색 카드를 {Amount}장 손으로 가져옵니다.",
@@ -5005,7 +4707,7 @@
       "name": "쇄도"
     },
     "STAR_NEXT_TURN_POWER": {
-      "description": "다음 턴에 {singleStarIcon}을 1 얻습니다.",
+      "description": "다음 턴에 ⭐을 1 얻습니다.",
       "smartDescription": "다음 턴에 {singleStarIcon}을 {Amount} 얻습니다.",
       "name": "다음 턴 별"
     },
@@ -5039,7 +4741,7 @@
       "name": "힘"
     },
     "SUBROUTINE_POWER": {
-      "description": "파워 카드를 사용할 때마다, {energyPrefix:energyIcons(1)}를 1 얻습니다.",
+      "description": "파워 카드를 사용할 때마다, [E]를 1 얻습니다.",
       "smartDescription": "파워 카드를 사용할 때마다, {Amount:energyIcons()}를 {Amount} 얻습니다.",
       "name": "서브루틴"
     },
@@ -5072,7 +4774,7 @@
       "name": "검성"
     },
     "TAG_TEAM_POWER": {
-      "description": "다른 플레이어가 다음에 대상 적에게 사용하는 공격이 {Amount:choose(1):1번 추가로 사용됩니다.|{}번 추가로 사용됩니다}.",
+      "description": "다른 플레이어가 다음에 대상 적에게 사용하는 공격이 {}번 추가로 사용됩니다.",
       "smartDescription": "다른 플레이어가 다음에 대상 적에게 사용하는 공격 카드가 1번 추가로 사용됩니다.",
       "name": "태그 팀"
     },
@@ -5086,30 +4788,13 @@
       "smartDescription": "적에게 받는 피해가 2배가 됩니다. 아군이 적에게 받는 피해가 절반이 됩니다.",
       "name": "탱커"
     },
-    "TAUNT_POWER": {
-      "description": "적이 당신을 공격 시, 공격한 적에게 취약을 1 부여합니다.",
-      "smartDescription": "적이 당신을 공격 시, 공격한 적에게 취약을 {Amount} 부여합니다.",
-      "name": "도발"
-    },
-    "TEMPORARY_DEXTERITY_DOWN": {
-      "description": "이번 턴이 끝나기 전까지 민첩을 잃습니다.",
-      "smartDescription": "이번 턴이 끝나기 전까지 민첩을 {Amount} 잃습니다."
-    },
     "TEMPORARY_DEXTERITY_POWER": {
       "description": "이번 턴이 끝나기 전까지 민첩을 얻습니다.",
       "smartDescription": "이번 턴이 끝나기 전까지 민첩을 {Amount} 얻습니다."
     },
-    "TEMPORARY_FOCUS_DOWN": {
-      "description": "이번 턴이 끝나기 전까지 밀집을 잃습니다.",
-      "smartDescription": "이번 턴이 끝나기 전까지 밀집을 {Amount} 잃습니다."
-    },
     "TEMPORARY_FOCUS_POWER": {
       "description": "이번 턴이 끝나기 전까지 밀집을 얻습니다.",
       "smartDescription": "이번 턴이 끝나기 전까지 밀집을 {Amount} 얻습니다."
-    },
-    "TEMPORARY_STRENGTH_DOWN": {
-      "description": "이번 턴이 끝나기 전까지 힘을 잃습니다.",
-      "smartDescription": "이번 턴이 끝나기 전까지 힘을 {Amount} 잃습니다."
     },
     "TEMPORARY_STRENGTH_POWER": {
       "description": "이번 턴이 끝나기 전까지 힘을 얻습니다.",
@@ -5124,11 +4809,6 @@
       "description": "대상의 턴 종료 시, 힘을 1 얻습니다.",
       "smartDescription": "대상의 턴 종료 시, 힘을 {Amount} 얻습니다.",
       "name": "영역 동물"
-    },
-    "TEZCATARAS_BLIGHT": {
-      "description": "이번 턴 종료 시, 힘을 1 잃습니다.",
-      "smartDescription": "이번 턴 종료 시, 힘을 {Amount} 잃습니다.",
-      "name": "테즈카타라의 역병"
     },
     "THE_BOMB_POWER": {
       "description": "3턴 후 턴 종료 시, 모든 적에게 피해를 40 줍니다.",
@@ -5146,7 +4826,7 @@
       "name": "사냥"
     },
     "THE_SEALED_THRONE_POWER": {
-      "description": "카드를 사용할 때마다, {singleStarIcon}을 얻습니다.",
+      "description": "카드를 사용할 때마다, ⭐을 얻습니다.",
       "smartDescription": "카드를 사용할 때마다, {Amount:starIcons()}을 얻습니다.",
       "name": "봉인된 왕좌"
     },
@@ -5175,11 +4855,6 @@
       "smartDescription": "다음 {Amount}턴 동안, 턴 시작 시 방어도를 {Block:diff()} 얻습니다.",
       "name": "고리형 강인함"
     },
-    "TORN": {
-      "description": "매 턴마다 카드를 1장 덜 뽑습니다.",
-      "smartDescription": "매 턴마다 카드를 {Amount}장 덜 뽑습니다.",
-      "name": "찢겨나감"
-    },
     "TRACKING_POWER": {
       "description": "약화 상태의 적이 공격 카드로 받는 피해가 2배가 됩니다..",
       "smartDescription": "약화 상태의 적이 공격 카드로 받는 피해가 {Amount}배가 됩니다.",
@@ -5200,16 +4875,6 @@
       "smartDescription": "매 턴마다 {Amount:choose(1):처음으로|{}번,} 카드를 통해 얻는 방어도가 2배가 됩니다.",
       "name": "요지부동"
     },
-    "UNSTABLE": {
-      "description": "공격 카드를 사용할 때마다, 대상 적이 체력을 5 잃습니다.",
-      "smartDescription": "공격 카드를 사용할 때마다, {OnPlayer:|대상 적이 }체력을 {Amount} 잃습니다.",
-      "name": "불안정"
-    },
-    "UNSTEADY": {
-      "description": "철퇴 기사의 체력이 50% 이하로 떨어질 시, 기절 상태가 됩니다.",
-      "smartDescription": "철퇴 기사의 체력이 {HealthLimit}% 이하로 떨어질 시, 대상이 기절 상태가 됩니다.",
-      "name": "휘청거림"
-    },
     "VEILPIERCER_POWER": {
       "description": "다음에 사용하는 휘발성 카드의 비용이 0이 됩니다.",
       "smartDescription": "다음에 사용하는 휘발성 카드 {Amount}장의 비용이 0이 됩니다.",
@@ -5224,10 +4889,6 @@
       "description": "다음 공격의 피해량이 증가합니다.",
       "smartDescription": "{OnPlayer:|{OwnerName}의 }다음 공격의 피해량이 {Amount} 증가합니다.",
       "name": "활력"
-    },
-    "VISUAL_ONLY": {
-      "description": "비주얼 온리",
-      "name": "비주얼 온리"
     },
     "VITAL_SPARK_POWER": {
       "description": "이 적이 매 턴마다 처음으로 공격 피해를 받을 시, 공격자가 에너지를 1 얻습니다.",
@@ -5258,11 +4919,6 @@
       "description": "내 턴 종료 시, 카드를 최대 1장까지 보존합니다.",
       "smartDescription": "내 턴 종료 시, 카드를 최대 {Amount}장까지 보존합니다.",
       "name": "괜찮은 전략"
-    },
-    "WINGED_JUMP_POWER": {
-      "description": "내 턴 시작 시, 모든 적에게 취약을 1 부여합니다.",
-      "smartDescription": "내 턴 시작 시, 모든 적에게 취약을 {Amount} 부여합니다.",
-      "name": "비행 점프"
     },
     "WRAITH_FORM_POWER": {
       "description": "내 턴 시작 시, 민첩을 1 잃습니다.",
@@ -5322,10 +4978,6 @@
     "CURE_ALL": {
       "description": "[E]를 얻습니다. 카드를 2장 뽑습니다.",
       "name": "묘약"
-    },
-    "DEPRECATED_POTION": {
-      "description": "이 포션은 게임에서 삭제되었습니다.",
-      "name": "구식 포션"
     },
     "DEXTERITY_POTION": {
       "description": "민첩을 2 얻습니다.",
@@ -6649,9 +6301,6 @@
     "INSTINCT": {
       "description": "이 카드의 비용이 1 감소합니다.",
       "name": "본능"
-    },
-    "MOCK_FREE_ENCHANTMENT": {
-      "name": "가짜 무료 인챈트"
     },
     "MOMENTUM": {
       "description": "이 카드를 사용할 시 이번 전투 동안 이 카드의 피해량이 {Amount} 증가합니다.",
