@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Pager, useApiList } from './SimpleExplorer';
+import { Pager, useApiList, useUrlOffset } from './SimpleExplorer';
 import { t } from '../../lib/ui-strings';
 
 type Potion = {
@@ -23,8 +23,8 @@ export default function PotionsExplorer(props: { game?: string; rarities: string
   const locale = props.locale ?? 'en';
   const [q, setQ] = useState('');
   const [rarity, setRarity] = useState('');
-  const [offset, setOffset] = useState(0);
   const limit = 50;
+  const [offset, setOffset] = useUrlOffset(limit);
 
   const { data, loading, error } = useApiList<Potion>(`/api/${game}/potions`, {
     q: q || null,

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { t } from '../../lib/ui-strings';
 
 type ApiResp<T> = { total: number; offset: number; limit: number; items: T[] };
@@ -48,6 +48,37 @@ export function useApiList<T>(
   }, [key]);
 
   return { data, loading, error };
+}
+
+export function useUrlOffset(limit: number): [number, (n: number) => void] {
+  const [offset, setOffsetRaw] = useState(() => {
+    if (typeof window === 'undefined') return 0;
+    const p = new URLSearchParams(window.location.search).get('page');
+    const page = p ? parseInt(p, 10) : 1;
+    return (Math.max(1, page) - 1) * limit;
+  });
+
+  const setOffset = useCallback((n: number) => {
+    setOffsetRaw(n);
+    const page = Math.floor(n / limit) + 1;
+    const url = new URL(window.location.href);
+    if (page <= 1) url.searchParams.delete('page');
+    else url.searchParams.set('page', String(page));
+    window.history.pushState({ page }, '', url.toString());
+  }, [limit]);
+
+  // Handle browser back/forward
+  useEffect(() => {
+    const onPop = () => {
+      const p = new URLSearchParams(window.location.search).get('page');
+      const page = p ? parseInt(p, 10) : 1;
+      setOffsetRaw((Math.max(1, page) - 1) * limit);
+    };
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, [limit]);
+
+  return [offset, setOffset];
 }
 
 export function Pager(props: {

@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import CssCardRenderer from './CssCardRenderer';
 import { t } from '../../lib/ui-strings';
+import { useUrlOffset } from './SimpleExplorer';
 
 type Card = {
   id: string;
@@ -132,8 +133,8 @@ export default function CardsExplorer(props: {
   const [type, setType] = useState('');
   const [rarity, setRarity] = useState('');
   const [cost, setCost] = useState<string>('');
-  const [offset, setOffset] = useState(0);
-  const [limit] = useState(100);
+  const limit = 100;
+  const [offset, setOffset] = useUrlOffset(limit);
   const [upgraded, setUpgraded] = useState(false);
 
   const [data, setData] = useState<ApiResp<Card> | null>(props.initial ?? null);

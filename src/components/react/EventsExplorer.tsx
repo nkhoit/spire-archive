@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Pager, useApiList } from './SimpleExplorer';
+import { Pager, useApiList, useUrlOffset } from './SimpleExplorer';
 import { t } from '../../lib/ui-strings';
 
 type EventChoice = {
@@ -21,8 +21,8 @@ export default function EventsExplorer(props: { game?: string; initial?: ApiResp
   const game = props.game ?? 'sts1';
   const locale = props.locale ?? 'en';
   const [q, setQ] = useState('');
-  const [offset, setOffset] = useState(0);
   const limit = 50;
+  const [offset, setOffset] = useUrlOffset(limit);
 
   const { data, loading, error } = useApiList<Event>(`/api/${game}/events`, {
     q: q || null,

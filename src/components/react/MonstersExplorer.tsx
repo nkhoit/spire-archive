@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Pager, useApiList } from './SimpleExplorer';
+import { Pager, useApiList, useUrlOffset } from './SimpleExplorer';
 import { t } from '../../lib/ui-strings';
 
 type Monster = {
@@ -29,8 +29,8 @@ export default function MonstersExplorer(props: { game?: string; acts: string[];
   const [q, setQ] = useState('');
   const [type, setType] = useState('');
   const [act, setAct] = useState('');
-  const [offset, setOffset] = useState(0);
   const limit = 50;
+  const [offset, setOffset] = useUrlOffset(limit);
 
   const { data, loading, error } = useApiList<Monster>(`/api/${game}/monsters`, {
     q: q || null,

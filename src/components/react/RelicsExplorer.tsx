@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Pager, useApiList } from './SimpleExplorer';
+import { Pager, useApiList, useUrlOffset } from './SimpleExplorer';
 import { t } from '../../lib/ui-strings';
 
 type Relic = {
@@ -19,8 +19,8 @@ export default function RelicsExplorer(props: { game?: string; tiers: string[]; 
   const [q, setQ] = useState('');
   const [tier, setTier] = useState('');
   const [color, setColor] = useState('');
-  const [offset, setOffset] = useState(0);
   const limit = 50;
+  const [offset, setOffset] = useUrlOffset(limit);
 
   const { data, loading, error } = useApiList<Relic>(`/api/${game}/relics`, {
     q: q || null,

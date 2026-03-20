@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Pager, useApiList } from './SimpleExplorer';
+import { Pager, useApiList, useUrlOffset } from './SimpleExplorer';
 import { t } from '../../lib/ui-strings';
 
 type Enchantment = {
@@ -14,8 +14,8 @@ export default function EnchantmentsExplorer(props: { game?: string; rarities: s
   const locale = props.locale ?? 'en';
   const [q, setQ] = useState('');
   const [rarity, setRarity] = useState('');
-  const [offset, setOffset] = useState(0);
   const limit = 200;
+  const [offset, setOffset] = useUrlOffset(limit);
 
   const { data, loading, error } = useApiList<Enchantment>(`/api/${game}/enchantments`, {
     q: q || null,
