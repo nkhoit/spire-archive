@@ -183,6 +183,31 @@ const sequence = buildSequence(movePattern, startMove);
               {mv.loops && (
                 <div class="mt-1 text-xs text-slate-500">↻ {t('Repeats', locale)}</div>
               )}
+              {(mv.effects ?? []).length > 0 && (
+                <div class="mt-1.5 flex flex-wrap gap-1.5">
+                  {(mv.effects ?? []).map((eff: any) => {
+                    if (eff.type === 'power') {
+                      const amt = typeof eff.amount === 'object' ? eff.amount.normal : eff.amount;
+                      const ascAmt = typeof eff.amount === 'object' ? eff.amount.ascension : null;
+                      const ascLvl = typeof eff.amount === 'object' ? eff.amount.ascLevel : null;
+                      return (
+                        <span class={`text-xs px-2 py-0.5 rounded ${eff.target === 'player' ? 'bg-red-500/15 text-red-300' : 'bg-purple-500/15 text-purple-300'}`}>
+                          {eff.target === 'player' ? '→ ' : ''}{eff.power}{amt != null ? ` ${amt}` : ''}
+                          {ascAmt != null && ascAmt !== amt && <span class="text-amber-400/80"> (Asc {ascLvl}+: {ascAmt})</span>}
+                        </span>
+                      );
+                    }
+                    if (eff.type === 'block') {
+                      const amt = typeof eff.amount === 'object' ? eff.amount.normal : eff.amount;
+                      return <span class="text-xs px-2 py-0.5 rounded bg-blue-500/15 text-blue-300">Block {amt ?? '?'}</span>;
+                    }
+                    if (eff.type === 'add_card') {
+                      return <span class="text-xs px-2 py-0.5 rounded bg-slate-500/15 text-slate-300">+ {eff.card}</span>;
+                    }
+                    return null;
+                  })}
+                </div>
+              )}
             </div>
           );
         })}

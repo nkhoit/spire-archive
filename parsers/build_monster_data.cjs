@@ -123,30 +123,32 @@ function parseMoveStates(block) {
   for (const line of lines) {
     // Match: [MoveState] varName = new MoveState("ID", method, intents...)
     // Must NOT match property assignments like moveState.FollowUpState = new MoveState(...)
-    const m = line.match(/(?:^|\s)(?:MoveState\s+)?(\w+)\s*=\s*(?:\(MoveState\))?new\s+MoveState\s*\(\s*"([^"]+)"\s*,\s*\w+\s*,(.+)/);
+    const m = line.match(/(?:^|\s)(?:MoveState\s+)?(\w+)\s*=\s*(?:\(MoveState\))?new\s+MoveState\s*\(\s*"([^"]+)"\s*,\s*(\w+)\s*,(.+)/);
     if (m && !line.includes('.FollowUpState')) {
       const varName = m[1];
       const moveId = m[2];
+      const methodName = m[3];
       // Skip if this is a FollowUpState inline assignment duplicate
       // (handled by the second pattern below)
       if (seenMoveIds.has(moveId)) continue;
       seenMoveIds.add(moveId);
 
-      const intentsPart = m[3].trim();
+      const intentsPart = m[4].trim();
       const intents = parseIntentList(intentsPart);
-      moves[varName] = { id: moveId, intents, varName };
+      moves[varName] = { id: moveId, intents, varName, methodName };
     }
     // Also handle inline assignment in FollowUpState chains like:
     // MoveState moveState2 = (MoveState)(moveState.FollowUpState = new MoveState(...))
-    const m2 = line.match(/MoveState\s+(\w+)\s*=\s*\(MoveState\)\s*\(\s*\w+\.FollowUpState\s*=\s*new\s+MoveState\s*\(\s*"([^"]+)"\s*,\s*\w+\s*,(.+)/);
+    const m2 = line.match(/MoveState\s+(\w+)\s*=\s*\(MoveState\)\s*\(\s*\w+\.FollowUpState\s*=\s*new\s+MoveState\s*\(\s*"([^"]+)"\s*,\s*(\w+)\s*,(.+)/);
     if (m2) {
       const varName = m2[1];
       const moveId = m2[2];
+      const methodName = m2[3];
       if (seenMoveIds.has(moveId)) continue;
       seenMoveIds.add(moveId);
-      const intentsPart = m2[3].trim();
+      const intentsPart = m2[4].trim();
       const intents = parseIntentList(intentsPart);
-      moves[varName] = { id: moveId, intents, varName };
+      moves[varName] = { id: moveId, intents, varName, methodName };
     }
   }
   return moves;
@@ -236,6 +238,95 @@ function resolveDamage(ref, ascValues) {
   return undefined;
 }
 
+// Extract effects from move method bodies (PowerCmd.Apply, CreatureCmd.Block, etc.)
+function extractMoveEffects(code, ascValues) {
+  const effects = {}; // moveMethodName -> [{ type, power?, amount?, target? }]
+  
+  // Find all async Task methods that look like move methods
+  const methodRe = /private\s+async\s+Task\s+(\w+Move)\s*\([^)]*\)\s*\{/g;
+  let m;
+  while ((m = methodRe.exec(code)) !== null) {
+    const methodName = m[1];
+    const startIdx = m.index + m[0].length;
+    // Find method body (count braces)
+    let depth = 1;
+    let endIdx = startIdx;
+    for (let i = startIdx; i < code.length && depth > 0; i++) {
+      if (code[i] === '{') depth++;
+      if (code[i] === '}') depth--;
+      endIdx = i;
+    }
+    const body = code.substring(startIdx, endIdx);
+    const moveEffects = [];
+
+    // PowerCmd.Apply<PowerType>(target, amount, ...)
+    const powerRe = /PowerCmd\.Apply<(\w+)>\s*\(([^,]+),\s*([^,]+)/g;
+    let pm;
+    while ((pm = powerRe.exec(body)) !== null) {
+      const powerName = pm[1].replace(/Power$/, '');
+      const targetRaw = pm[2].trim();
+      const amountRaw = pm[3].trim();
+      
+      const target = targetRaw.includes('base.Creature') ? 'self' : 'player';
+      
+      // Resolve amount
+      let amount = null;
+      const numMatch = amountRaw.match(/^(\d+)m?$/);
+      if (numMatch) {
+        amount = parseInt(numMatch[1]);
+      } else {
+        // It's a property reference — check ascValues
+        const propName = amountRaw.replace(/^this\./, '');
+        if (ascValues[propName]) {
+          const av = ascValues[propName];
+          amount = { normal: av.normal, ascension: av.ascension };
+          if (av.ascLevel != null) amount.ascLevel = av.ascLevel;
+        } else {
+          // Try to find simple property
+          const simplePropRe = new RegExp('(?:private|public|protected)\\s+\\w+\\s+' + propName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\s*=>\\s*(\\d+)');
+          const sp = code.match(simplePropRe);
+          if (sp) amount = parseInt(sp[1]);
+        }
+      }
+      
+      moveEffects.push({ type: 'power', power: powerName, amount, target });
+    }
+
+    // CreatureCmd.Block(creature, amount)
+    const blockRe = /CreatureCmd\.Block\s*\([^,]+,\s*([^,)]+)/g;
+    while ((pm = blockRe.exec(body)) !== null) {
+      const amountRaw = pm[1].trim();
+      let amount = null;
+      const numMatch = amountRaw.match(/^(\d+)m?$/);
+      if (numMatch) amount = parseInt(numMatch[1]);
+      else {
+        const propName = amountRaw.replace(/^this\./, '');
+        if (ascValues[propName]) {
+          const av = ascValues[propName];
+          amount = { normal: av.normal, ascension: av.ascension };
+          if (av.ascLevel != null) amount.ascLevel = av.ascLevel;
+        } else {
+          const simplePropRe = new RegExp('(?:private|public|protected)\\s+\\w+\\s+' + propName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\s*=>\\s*(\\d+)');
+          const sp = code.match(simplePropRe);
+          if (sp) amount = parseInt(sp[1]);
+        }
+      }
+      moveEffects.push({ type: 'block', amount });
+    }
+
+    // CardCmd.AddToHand / AddToDiscard / Shuffle into deck
+    const cardRe = /(?:CardCmd|CardHelper)\.\w*(?:Add|Shuffle|Create)\w*<(\w+)>/g;
+    while ((pm = cardRe.exec(body)) !== null) {
+      moveEffects.push({ type: 'add_card', card: pm[1] });
+    }
+
+    if (moveEffects.length > 0) {
+      effects[methodName] = moveEffects;
+    }
+  }
+  return effects;
+}
+
 // Main parse function for a single CS file
 function parseFile(filePath, ascValuesGlobal) {
   const code = fs.readFileSync(filePath, 'utf8');
@@ -259,6 +350,7 @@ function parseFile(filePath, ascValuesGlobal) {
   const moves = parseMoveStates(smBlock);
   const randomStates = parseRandomBranches(smBlock, moves);
   parseFollowUps(smBlock, moves);
+  const moveEffects = extractMoveEffects(code, ascValues);
 
   const startVar = findStartMove(smBlock);
 
@@ -310,6 +402,11 @@ function parseFile(filePath, ascValuesGlobal) {
         delete out._hitsRef;
         return out;
       });
+    }
+
+    // Effects from move method body
+    if (move.methodName && moveEffects[move.methodName]) {
+      moveEntry.effects = moveEffects[move.methodName];
     }
 
     // FollowUp

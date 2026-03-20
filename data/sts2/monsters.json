@@ -160,6 +160,14 @@
             "type": "buff"
           }
         ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 1,
+            "target": "self"
+          }
+        ],
         "followUp": "RAND_MOVE",
         "followUpType": "random"
       },
@@ -182,6 +190,14 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 4,
+            "target": "self"
+          }
+        ],
         "followUp": "RAND_MOVE",
         "followUpType": "random"
       },
@@ -197,6 +213,20 @@
         "additional_intents": [
           {
             "type": "debuff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Weak",
+            "amount": 1,
+            "target": "player"
+          },
+          {
+            "type": "power",
+            "power": "Frail",
+            "amount": 1,
+            "target": "player"
           }
         ],
         "followUp": "RAND_MOVE",
@@ -358,6 +388,18 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": {
+              "normal": 15,
+              "ascension": 16,
+              "ascLevel": 9
+            },
+            "target": "self"
+          }
+        ],
         "followUp": "THRASH2_MOVE"
       },
       {
@@ -453,6 +495,14 @@
         "intent": {
           "type": "debuff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Weak",
+            "amount": 1,
+            "target": "player"
+          }
+        ],
         "followUp": "TRASH_MOVE"
       }
     ],
@@ -499,6 +549,14 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 3,
+            "target": "self"
+          }
+        ],
         "followUp": "BEAT_MOVE"
       }
     ],
@@ -539,6 +597,14 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 10,
+            "target": "self"
+          }
+        ],
         "followUp": "SLASHES_MOVE"
       },
       {
@@ -655,6 +721,14 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Ritual",
+            "amount": 2,
+            "target": "self"
+          }
+        ],
         "followUp": "DARK_STRIKE_MOVE"
       },
       {
@@ -707,6 +781,18 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Plow",
+            "amount": {
+              "normal": 150,
+              "ascension": 160,
+              "ascLevel": 9
+            },
+            "target": "self"
+          }
+        ],
         "followUp": "PLOW_MOVE"
       },
       {
@@ -721,6 +807,14 @@
         "additional_intents": [
           {
             "type": "buff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 2,
+            "target": "self"
           }
         ],
         "followUp": "PLOW_MOVE",
@@ -740,6 +834,14 @@
         "intent": {
           "type": "debuff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Ringing",
+            "amount": 1,
+            "target": "player"
+          }
+        ],
         "followUp": "STOMP_MOVE"
       },
       {
@@ -765,6 +867,18 @@
         "additional_intents": [
           {
             "type": "buff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": {
+              "normal": 3,
+              "ascension": 4,
+              "ascLevel": 9
+            },
+            "target": "self"
           }
         ],
         "followUp": "BEAST_CRY_MOVE"
@@ -872,6 +986,14 @@
         "intent": {
           "type": "debuff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Frail",
+            "amount": 2,
+            "target": "player"
+          }
+        ],
         "followUp": "WHIP_SLAP_MOVE"
       }
     ]
@@ -1001,6 +1123,20 @@
             "type": "debuff"
           }
         ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Weak",
+            "amount": 2,
+            "target": "player"
+          },
+          {
+            "type": "power",
+            "power": "Frail",
+            "amount": 2,
+            "target": "player"
+          }
+        ],
         "followUp": "ADAPT_MOVE"
       },
       {
@@ -1009,6 +1145,14 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 2,
+            "target": "self"
+          }
+        ],
         "followUp": "GUARDED_STRIKE_MOVE"
       },
       {
@@ -1068,6 +1212,14 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 2,
+            "target": "self"
+          }
+        ],
         "followUp": "REPEATER_MOVE"
       },
       {
@@ -1084,6 +1236,14 @@
             "type": "buff"
           }
         ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 2,
+            "target": "self"
+          }
+        ],
         "followUp": "REPEATER_MOVE_2"
       },
       {
@@ -1098,6 +1258,14 @@
         "additional_intents": [
           {
             "type": "buff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 2,
+            "target": "self"
           }
         ],
         "followUp": "EXPEL_BLAST"
@@ -1155,6 +1323,18 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Ritual",
+            "amount": {
+              "normal": 5,
+              "ascension": 6,
+              "ascLevel": 9
+            },
+            "target": "self"
+          }
+        ],
         "followUp": "DARK_STRIKE_MOVE"
       },
       {
@@ -1216,6 +1396,14 @@
             "type": "buff"
           }
         ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 2,
+            "target": "self"
+          }
+        ],
         "followUp": "WRITHE_MOVE"
       },
       {
@@ -1230,6 +1418,14 @@
         "additional_intents": [
           {
             "type": "debuff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Weak",
+            "amount": 1,
+            "target": "player"
           }
         ],
         "followUp": "BULK_MOVE"
@@ -1285,6 +1481,14 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Ritual",
+            "amount": null,
+            "target": "self"
+          }
+        ],
         "followUp": "SAVAGE_MOVE"
       },
       {
@@ -1358,6 +1562,18 @@
         "additional_intents": [
           {
             "type": "buff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": {
+              "normal": 3,
+              "ascension": 4,
+              "ascLevel": 9
+            },
+            "target": "self"
           }
         ]
       },
@@ -1439,6 +1655,14 @@
             "type": "escape"
           }
         ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 5,
+            "target": "self"
+          }
+        ],
         "followUp": "GET_BACK_IN_MOVE",
         "loops": true
       }
@@ -1483,6 +1707,26 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "PersonalHive",
+            "amount": 1,
+            "target": "self"
+          },
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 1,
+            "target": "self"
+          },
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 2,
+            "target": "self"
+          }
+        ],
         "followUp": "BEES_MOVE"
       },
       {
@@ -1570,6 +1814,14 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 2,
+            "target": "self"
+          }
+        ],
         "followUp": "RAND",
         "followUpType": "random"
       },
@@ -1752,6 +2004,14 @@
             "type": "debuff"
           }
         ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Frail",
+            "amount": 1,
+            "target": "player"
+          }
+        ],
         "followUp": "RAND_ATTACK_MOVE",
         "followUpType": "random"
       },
@@ -1761,6 +2021,14 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 2,
+            "target": "self"
+          }
+        ],
         "followUp": "RAND_MOVE",
         "followUpType": "random"
       },
@@ -1849,7 +2117,15 @@
         "id": "WAR_CHANT",
         "intent": {
           "type": "buff"
-        }
+        },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 3,
+            "target": "self"
+          }
+        ]
       },
       {
         "name": "Flail",
@@ -1905,6 +2181,14 @@
         "intent": {
           "type": "debuff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Vulnerable",
+            "amount": 2,
+            "target": "player"
+          }
+        ],
         "followUp": "RAND",
         "followUpType": "random"
       },
@@ -1920,6 +2204,14 @@
         "additional_intents": [
           {
             "type": "debuff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Frail",
+            "amount": 2,
+            "target": "player"
           }
         ],
         "followUp": "RAND",
@@ -2010,6 +2302,14 @@
             "type": "buff"
           }
         ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 1,
+            "target": "self"
+          }
+        ],
         "followUp": "BRANCH",
         "followUpType": "random"
       },
@@ -2025,6 +2325,14 @@
         "additional_intents": [
           {
             "type": "buff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 1,
+            "target": "self"
           }
         ],
         "followUp": "HEADBUTT_MOVE"
@@ -2102,6 +2410,14 @@
           {
             "type": "debuff"
           }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Frail",
+            "amount": 1,
+            "target": "player"
+          }
         ]
       },
       {
@@ -2166,7 +2482,15 @@
         "id": "FOR_THE_QUEEN",
         "intent": {
           "type": "buff"
-        }
+        },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 5,
+            "target": "self"
+          }
+        ]
       },
       {
         "name": "Strike Down Evil",
@@ -2191,6 +2515,14 @@
         "additional_intents": [
           {
             "type": "debuff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Frail",
+            "amount": 2,
+            "target": "player"
           }
         ],
         "followUp": "STRIKE_DOWN_EVIL"
@@ -2376,6 +2708,14 @@
             "type": "buff"
           }
         ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 2,
+            "target": "self"
+          }
+        ],
         "followUp": "SHOCKING_SLAP"
       }
     ],
@@ -2433,6 +2773,14 @@
             "type": "debuff"
           }
         ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Weak",
+            "amount": 2,
+            "target": "player"
+          }
+        ],
         "followUp": "HEHE_MOVE"
       },
       {
@@ -2447,6 +2795,14 @@
         "additional_intents": [
           {
             "type": "buff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 2,
+            "target": "self"
           }
         ],
         "followUp": "GIMME_MOVE"
@@ -2558,7 +2914,27 @@
         "id": "HAUNT_MOVE",
         "intent": {
           "type": "debuff"
-        }
+        },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Weak",
+            "amount": 2,
+            "target": "player"
+          },
+          {
+            "type": "power",
+            "power": "Frail",
+            "amount": 2,
+            "target": "player"
+          },
+          {
+            "type": "power",
+            "power": "Vulnerable",
+            "amount": 2,
+            "target": "player"
+          }
+        ]
       }
     ],
     "start_move": "RAMMING_SPEED_MOVE"
@@ -2597,7 +2973,15 @@
         "id": "TENDERIZING_GOOP_MOVE",
         "intent": {
           "type": "debuff"
-        }
+        },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Tender",
+            "amount": 1,
+            "target": "player"
+          }
+        ]
       },
       {
         "name": "Bite",
@@ -2707,6 +3091,18 @@
         "additional_intents": [
           {
             "type": "defend"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": {
+              "normal": 4,
+              "ascension": 5,
+              "ascLevel": 9
+            },
+            "target": "self"
           }
         ],
         "followUp": "JAB_MOVE"
@@ -2851,6 +3247,18 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": {
+              "normal": 2,
+              "ascension": 3,
+              "ascLevel": 9
+            },
+            "target": "self"
+          }
+        ],
         "followUp": "QUICK_SLASH_MOVE"
       }
     ]
@@ -2903,6 +3311,14 @@
             "type": "debuff"
           }
         ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Frail",
+            "amount": 1,
+            "target": "player"
+          }
+        ],
         "followUp": "ORB_OF_WEAKNESS_MOVE"
       },
       {
@@ -2917,6 +3333,14 @@
         "additional_intents": [
           {
             "type": "debuff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Weak",
+            "amount": 1,
+            "target": "player"
           }
         ],
         "followUp": "BEAM_MOVE"
@@ -2939,6 +3363,18 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": {
+              "normal": 2,
+              "ascension": 3,
+              "ascLevel": 9
+            },
+            "target": "self"
+          }
+        ],
         "followUp": "ORB_OF_FRAILTY_MOVE"
       }
     ],
@@ -3024,6 +3460,18 @@
           },
           {
             "type": "buff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": {
+              "normal": 2,
+              "ascension": 3,
+              "ascLevel": 9
+            },
+            "target": "self"
           }
         ]
       }
@@ -3122,6 +3570,26 @@
         "additional_intents": [
           {
             "type": "buff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": null,
+            "target": "player"
+          },
+          {
+            "type": "power",
+            "power": "Dexterity",
+            "amount": null,
+            "target": "player"
+          },
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 2,
+            "target": "self"
           }
         ],
         "followUp": "SLASH_MOVE"
@@ -3261,6 +3729,14 @@
             "type": "debuff"
           }
         ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Smoggy",
+            "amount": 1,
+            "target": "player"
+          }
+        ],
         "followUp": "BLOAT_MOVE"
       },
       {
@@ -3346,6 +3822,14 @@
             "type": "buff"
           }
         ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 3,
+            "target": "self"
+          }
+        ],
         "followUp": "SMASH_MOVE",
         "loops": true
       }
@@ -3384,6 +3868,14 @@
             "type": "debuff"
           }
         ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Frail",
+            "amount": 2,
+            "target": "player"
+          }
+        ],
         "followUp": "CURL_AND_GROW_MOVE"
       },
       {
@@ -3406,6 +3898,14 @@
         "additional_intents": [
           {
             "type": "buff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 5,
+            "target": "self"
           }
         ],
         "followUp": "POUNCE_MOVE"
@@ -3543,7 +4043,15 @@
         "id": "ROAR_MOVE",
         "intent": {
           "type": "debuff"
-        }
+        },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Vulnerable",
+            "amount": 3,
+            "target": "player"
+          }
+        ]
       },
       {
         "name": "Claw",
@@ -3616,6 +4124,14 @@
         "additional_intents": [
           {
             "type": "buff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 5,
+            "target": "self"
           }
         ],
         "followUp": "HEAVY_CLEAVE_MOVE"
@@ -3723,6 +4239,18 @@
             "type": "buff"
           }
         ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": {
+              "normal": 2,
+              "ascension": 3,
+              "ascLevel": 9
+            },
+            "target": "self"
+          }
+        ],
         "followUp": "TOXIC_MOVE"
       }
     ]
@@ -3789,6 +4317,14 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 2,
+            "target": "self"
+          }
+        ],
         "followUp": "BUTT_MOVE"
       }
     ]
@@ -3890,6 +4426,14 @@
         "intent": {
           "type": "summon"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Minion",
+            "amount": null,
+            "target": "player"
+          }
+        ],
         "followUp": "SMASH_MOVE"
       },
       {
@@ -3916,6 +4460,14 @@
           {
             "type": "debuff"
           }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Vulnerable",
+            "amount": 2,
+            "target": "player"
+          }
         ]
       },
       {
@@ -3924,6 +4476,18 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": {
+              "normal": 3,
+              "ascension": 4,
+              "ascLevel": 9
+            },
+            "target": "self"
+          }
+        ],
         "followUp": "SMASH_MOVE"
       }
     ],
@@ -3992,6 +4556,14 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Soar",
+            "amount": 1,
+            "target": "self"
+          }
+        ],
         "followUp": "VERDICT"
       },
       {
@@ -4006,6 +4578,14 @@
         "additional_intents": [
           {
             "type": "debuff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Vulnerable",
+            "amount": 4,
+            "target": "player"
           }
         ],
         "followUp": "MAGISTRATE_SCRUTINY"
@@ -4128,6 +4708,18 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": {
+              "normal": 2,
+              "ascension": 3,
+              "ascLevel": 9
+            },
+            "target": "self"
+          }
+        ],
         "followUp": "BITE_MOVE"
       }
     ]
@@ -4256,6 +4848,14 @@
             "type": "debuff"
           }
         ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Weak",
+            "amount": 1,
+            "target": "player"
+          }
+        ],
         "followUp": "READY_MOVE"
       }
     ]
@@ -4295,6 +4895,14 @@
         "intent": {
           "type": "debuff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "ChainsOfBinding",
+            "amount": 3,
+            "target": "player"
+          }
+        ],
         "followUp": "YOUR_MINE_MOVE"
       },
       {
@@ -4302,7 +4910,27 @@
         "id": "YOUR_MINE_MOVE",
         "intent": {
           "type": "debuff"
-        }
+        },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Frail",
+            "amount": 99,
+            "target": "player"
+          },
+          {
+            "type": "power",
+            "power": "Weak",
+            "amount": 99,
+            "target": "player"
+          },
+          {
+            "type": "power",
+            "power": "Vulnerable",
+            "amount": 99,
+            "target": "player"
+          }
+        ]
       },
       {
         "name": "Burn Bright For Me",
@@ -4313,6 +4941,14 @@
         "additional_intents": [
           {
             "type": "defend"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": null,
+            "target": "player"
           }
         ]
       },
@@ -4345,6 +4981,14 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 2,
+            "target": "self"
+          }
+        ],
         "followUp": "OFF_WITH_YOUR_HEAD_MOVE"
       }
     ],
@@ -4417,6 +5061,14 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 2,
+            "target": "self"
+          }
+        ],
         "followUp": "LASER_MOVE"
       },
       {
@@ -4503,6 +5155,14 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 2,
+            "target": "self"
+          }
+        ],
         "followUp": "CHEW"
       },
       {
@@ -4576,6 +5236,18 @@
             "type": "defend"
           }
         ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": {
+              "normal": 1,
+              "ascension": 2,
+              "ascLevel": 9
+            },
+            "target": "self"
+          }
+        ],
         "followUp": "SEA_KICK_MOVE"
       }
     ],
@@ -4611,6 +5283,14 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 4,
+            "target": "self"
+          }
+        ],
         "followUp": "JET_MOVE"
       },
       {
@@ -4662,6 +5342,14 @@
         "intent": {
           "type": "debuff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Shrink",
+            "amount": null,
+            "target": "player"
+          }
+        ],
         "followUp": "CHOMP_MOVE"
       },
       {
@@ -4766,6 +5454,14 @@
             "type": "buff"
           }
         ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 3,
+            "target": "self"
+          }
+        ],
         "followUp": "SUPER_CRAB_MOVE"
       },
       {
@@ -4857,6 +5553,20 @@
             "type": "buff"
           }
         ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Weak",
+            "amount": 3,
+            "target": "player"
+          },
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 3,
+            "target": "self"
+          }
+        ],
         "followUp": "SMOTHER_MOVE"
       },
       {
@@ -4919,7 +5629,15 @@
         "id": "CONSTRICT",
         "intent": {
           "type": "debuff"
-        }
+        },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Constrict",
+            "amount": 3,
+            "target": "player"
+          }
+        ]
       },
       {
         "name": "Twack",
@@ -4998,6 +5716,14 @@
           {
             "type": "debuff"
           }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Weak",
+            "amount": 1,
+            "target": "player"
+          }
         ]
       },
       {
@@ -5022,6 +5748,14 @@
         "additional_intents": [
           {
             "type": "buff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 3,
+            "target": "self"
           }
         ]
       }
@@ -5068,6 +5802,14 @@
         "additional_intents": [
           {
             "type": "buff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 2,
+            "target": "self"
           }
         ],
         "followUp": "ROLL_OUT_MOVE",
@@ -5236,6 +5978,14 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Intangible",
+            "amount": 2,
+            "target": "self"
+          }
+        ],
         "followUp": "SCREAM_MOVE"
       },
       {
@@ -5250,6 +6000,14 @@
         "additional_intents": [
           {
             "type": "debuff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Vulnerable",
+            "amount": 3,
+            "target": "player"
           }
         ],
         "followUp": "BECKON_MOVE"
@@ -5325,6 +6083,20 @@
           {
             "type": "debuff"
           }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Vulnerable",
+            "amount": 2,
+            "target": "player"
+          },
+          {
+            "type": "power",
+            "power": "Weak",
+            "amount": 2,
+            "target": "player"
+          }
         ]
       }
     ],
@@ -5365,6 +6137,14 @@
         "intent": {
           "type": "debuff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Hex",
+            "amount": 2,
+            "target": "player"
+          }
+        ],
         "followUp": "SOUL_SLASH"
       },
       {
@@ -5439,6 +6219,14 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Thorns",
+            "amount": 5,
+            "target": "self"
+          }
+        ],
         "followUp": "SPIKE_EXPLOSION_MOVE"
       },
       {
@@ -5450,6 +6238,14 @@
           "ascension_damage": 25,
           "ascension_level": 9
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Thorns",
+            "amount": null,
+            "target": "self"
+          }
+        ],
         "followUp": "TONGUE_LASH_MOVE"
       },
       {
@@ -5502,6 +6298,14 @@
         "additional_intents": [
           {
             "type": "debuff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Frail",
+            "amount": 1,
+            "target": "player"
           }
         ],
         "followUp": "STAB_MOVE",
@@ -5586,6 +6390,14 @@
             "type": "buff"
           }
         ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Vigor",
+            "amount": 7,
+            "target": "self"
+          }
+        ],
         "followUp": "CRASH_MOVE"
       },
       {
@@ -5602,6 +6414,14 @@
         "intent": {
           "type": "debuff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Vulnerable",
+            "amount": 99,
+            "target": "player"
+          }
+        ],
         "followUp": "CRASH_MOVE"
       }
     ],
@@ -5661,6 +6481,20 @@
           {
             "type": "buff"
           }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "PainfulStabs",
+            "amount": 1,
+            "target": "self"
+          },
+          {
+            "type": "power",
+            "power": "Nemesis",
+            "amount": 1,
+            "target": "self"
+          }
         ]
       },
       {
@@ -5686,6 +6520,14 @@
         "additional_intents": [
           {
             "type": "debuff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Vulnerable",
+            "amount": 1,
+            "target": "player"
           }
         ],
         "followUp": "BITE_MOVE"
@@ -5741,6 +6583,18 @@
         "additional_intents": [
           {
             "type": "buff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": {
+              "normal": 2,
+              "ascension": 3,
+              "ascLevel": 9
+            },
+            "target": "self"
           }
         ],
         "followUp": "PHASE3_LACERATE_MOVE"
@@ -5802,6 +6656,14 @@
         "additional_intents": [
           {
             "type": "buff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 2,
+            "target": "self"
           }
         ],
         "followUp": "SMASH_MOVE"
@@ -5873,6 +6735,14 @@
             "type": "buff"
           }
         ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 4,
+            "target": "self"
+          }
+        ],
         "followUp": "CRASH_MOVE"
       }
     ],
@@ -5942,6 +6812,14 @@
             "type": "buff"
           }
         ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 3,
+            "target": "self"
+          }
+        ],
         "followUp": "BASH_MOVE"
       }
     ],
@@ -5986,6 +6864,20 @@
           },
           {
             "type": "buff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Dexterity",
+            "amount": null,
+            "target": "player"
+          },
+          {
+            "type": "power",
+            "power": "Dexterity",
+            "amount": 2,
+            "target": "self"
           }
         ],
         "followUp": "DREAD"
@@ -6087,6 +6979,18 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": {
+              "normal": 2,
+              "ascension": 3,
+              "ascLevel": 9
+            },
+            "target": "self"
+          }
+        ],
         "followUp": "THRASH_MOVE_2"
       }
     ],
@@ -6128,6 +7032,20 @@
         "additional_intents": [
           {
             "type": "buff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": null,
+            "target": "player"
+          },
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 2,
+            "target": "self"
           }
         ],
         "followUp": "EYE_LASERS"
@@ -6198,7 +7116,15 @@
         "id": "SAIL_MOVE",
         "intent": {
           "type": "buff"
-        }
+        },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 3,
+            "target": "self"
+          }
+        ]
       },
       {
         "name": "Hardening Strike",
@@ -6294,6 +7220,14 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Flutter",
+            "amount": 5,
+            "target": "self"
+          }
+        ],
         "followUp": "HAT_TRICK_MOVE"
       },
       {
@@ -6346,6 +7280,14 @@
           "ascension_damage": 4,
           "ascension_level": 9
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Thorns",
+            "amount": null,
+            "target": "self"
+          }
+        ],
         "followUp": "WHIRL_MOVE"
       },
       {
@@ -6365,6 +7307,14 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Thorns",
+            "amount": 2,
+            "target": "self"
+          }
+        ],
         "followUp": "SPIKE_SPIT_MOVE"
       }
     ]
@@ -6534,6 +7484,14 @@
         "intent": {
           "type": "debuff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Frail",
+            "amount": 2,
+            "target": "player"
+          }
+        ],
         "followUp": "HOUNDS_MOVE"
       },
       {
@@ -6596,6 +7554,14 @@
         "additional_intents": [
           {
             "type": "defend"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Burrowed",
+            "amount": 1,
+            "target": "self"
           }
         ],
         "followUp": "BELOW_MOVE_1"
@@ -6677,6 +7643,14 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 1,
+            "target": "self"
+          }
+        ],
         "followUp": "UNLOAD_MOVE_1"
       }
     ],
@@ -6819,7 +7793,15 @@
         "id": "SCREECH_MOVE",
         "intent": {
           "type": "debuff"
-        }
+        },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Frail",
+            "amount": 1,
+            "target": "player"
+          }
+        ]
       },
       {
         "name": "Call For Backup",
@@ -6907,6 +7889,14 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 2,
+            "target": "self"
+          }
+        ],
         "followUp": "INK_BLOT_MOVE"
       }
     ],
@@ -6958,6 +7948,14 @@
         "additional_intents": [
           {
             "type": "debuff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Tangled",
+            "amount": 1,
+            "target": "player"
           }
         ],
         "followUp": "CHOMP_MOVE"
@@ -7028,6 +8026,18 @@
         "intent": {
           "type": "buff"
         },
+        "effects": [
+          {
+            "type": "power",
+            "power": "SteamEruption",
+            "amount": {
+              "normal": 15,
+              "ascension": 20,
+              "ascLevel": 9
+            },
+            "target": "self"
+          }
+        ],
         "followUp": "STOMP_MOVE"
       },
       {
@@ -7047,6 +8057,20 @@
             "type": "buff"
           }
         ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Weak",
+            "amount": 1,
+            "target": "player"
+          },
+          {
+            "type": "power",
+            "power": "SteamEruption",
+            "amount": 3,
+            "target": "self"
+          }
+        ],
         "followUp": "RAM_MOVE"
       },
       {
@@ -7063,6 +8087,14 @@
             "type": "buff"
           }
         ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "SteamEruption",
+            "amount": 3,
+            "target": "self"
+          }
+        ],
         "followUp": "SIPHON_MOVE"
       },
       {
@@ -7076,6 +8108,14 @@
             "type": "buff"
           }
         ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "SteamEruption",
+            "amount": 3,
+            "target": "self"
+          }
+        ],
         "followUp": "PRESSURE_GUN_MOVE"
       },
       {
@@ -7087,6 +8127,14 @@
         "additional_intents": [
           {
             "type": "buff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "SteamEruption",
+            "amount": 3,
+            "target": "self"
           }
         ],
         "followUp": "PRESSURE_UP_MOVE"
@@ -7103,6 +8151,14 @@
         "additional_intents": [
           {
             "type": "buff"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "SteamEruption",
+            "amount": 3,
+            "target": "self"
           }
         ],
         "followUp": "STOMP_MOVE"
@@ -7171,6 +8227,14 @@
         "additional_intents": [
           {
             "type": "status"
+          }
+        ],
+        "effects": [
+          {
+            "type": "power",
+            "power": "Strength",
+            "amount": 2,
+            "target": "self"
           }
         ],
         "followUp": "NASTY_BITE_MOVE"
