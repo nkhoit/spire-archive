@@ -50,6 +50,8 @@ function extractVarsFromCs(csContent) {
     return v;
   }
 
+  // DamageVar("Name", Xm)
+  for (const [, name, v] of blockContent.matchAll(/new DamageVar\("(\w+)",\s*(\d+(?:\.\d+)?)m/g)) setDefault(name, fmtVal(v));
   // DamageVar(Xm)
   for (const [, v] of blockContent.matchAll(/new DamageVar\((\d+(?:\.\d+)?)m/g)) setDefault('Damage', fmtVal(v));
   // BlockVar(Xm)
@@ -58,11 +60,15 @@ function extractVarsFromCs(csContent) {
   for (const [, name, v] of blockContent.matchAll(/new BlockVar\("(\w+)",\s*(\d+(?:\.\d+)?)m/g)) setDefault(name, fmtVal(v));
   // ExtraDamageVar
   for (const [, v] of blockContent.matchAll(/new ExtraDamageVar\((\d+(?:\.\d+)?)m/g)) setDefault('ExtraDamage', fmtVal(v));
-  // HpLossVar
+  // HpLossVar("Name", Xm)
+  for (const [, name, v] of blockContent.matchAll(/new HpLossVar\("(\w+)",\s*(\d+(?:\.\d+)?)m/g)) setDefault(name, fmtVal(v));
+  // HpLossVar(Xm)
   for (const [, v] of blockContent.matchAll(/new HpLossVar\((\d+(?:\.\d+)?)m/g)) setDefault('HpLoss', fmtVal(v));
   // ForgeVar
   for (const [, v] of blockContent.matchAll(/new ForgeVar\((\d+(?:\.\d+)?)\b/g)) setDefault('Forge', fmtVal(v));
-  // GoldVar
+  // GoldVar("Name", Xm)
+  for (const [, name, v] of blockContent.matchAll(/new GoldVar\("(\w+)",\s*(\d+(?:\.\d+)?)m?[,)]/g)) setDefault(name, fmtVal(v));
+  // GoldVar(Xm)
   for (const [, v] of blockContent.matchAll(/new GoldVar\((\d+(?:\.\d+)?)m?[,)]/g)) setDefault('Gold', fmtVal(v));
   // TurnsVar
   for (const [, v] of blockContent.matchAll(/new TurnsVar\((\d+(?:\.\d+)?)m/g)) setDefault('Turns', fmtVal(v));
@@ -88,11 +94,15 @@ function extractVarsFromCs(csContent) {
   for (const [, v] of blockContent.matchAll(/new SummonVar\((\d+(?:\.\d+)?)m?\b/g)) setDefault('Summon', fmtVal(v));
   // OstyDamageVar
   for (const [, v] of blockContent.matchAll(/new OstyDamageVar\((\d+(?:\.\d+)?)m/g)) setDefault('OstyDamage', fmtVal(v));
-  // MaxHpVar
+  // MaxHpVar("Name", Xm)
+  for (const [, name, v] of blockContent.matchAll(/new MaxHpVar\("(\w+)",\s*(\d+(?:\.\d+)?)m/g)) setDefault(name, fmtVal(v));
+  // MaxHpVar(Xm)
   for (const [, v] of blockContent.matchAll(/new MaxHpVar\((\d+(?:\.\d+)?)m/g)) setDefault('MaxHp', fmtVal(v));
   // OrbSlotsVar
   for (const [, v] of blockContent.matchAll(/new OrbSlotsVar\((\d+(?:\.\d+)?)m/g)) setDefault('OrbSlots', fmtVal(v));
-  // HealVar
+  // HealVar("Name", Xm)
+  for (const [, name, v] of blockContent.matchAll(/new HealVar\("(\w+)",\s*(\d+(?:\.\d+)?)m/g)) setDefault(name, fmtVal(v));
+  // HealVar(Xm)
   for (const [, v] of blockContent.matchAll(/new HealVar\((\d+(?:\.\d+)?)m/g)) setDefault('Heal', fmtVal(v));
   // RepeatVar
   for (const [, v] of blockContent.matchAll(/new RepeatVar\((\d+(?:\.\d+)?)\b/g)) setDefault('Repeat', fmtVal(v));
@@ -373,7 +383,21 @@ for (const lang of langs) {
 
       if (category === 'events') {
         resolveField(itemData, 'description');
-        for (const choice of itemData.choices || []) resolveField(choice, 'description');
+        // For Neow choices, each choice has a relic_id — resolve using that relic's vars
+        const isNeow = itemId === 'NEOW';
+        for (const choice of itemData.choices || []) {
+          if (isNeow && choice.relic_id) {
+            const relicVars = getVarsForId(choice.relic_id, 'relics');
+            const resolvedRelicVars = resolveEntityRefs(relicVars, entityNameMap);
+            if (choice.description && choice.description.includes('{')) {
+              touched = true;
+              choice.description = resolveTokens(choice.description, resolvedRelicVars);
+              if (choice.description.includes('{')) collectTemplates(choice.description);
+            }
+          } else {
+            resolveField(choice, 'description');
+          }
+        }
         for (const page of itemData.pages || []) {
           resolveField(page, 'description');
           for (const choice of page.choices || []) resolveField(choice, 'description');

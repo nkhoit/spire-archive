@@ -5595,7 +5595,7 @@
       "choices": [
         {
           "name": "Rimuovi la sanguisuga",
-          "description": "Perdi {RipHpLoss} PV. Ottieni una carta ricompensa incolore."
+          "description": "Perdi 5 PV. Ottieni una carta ricompensa incolore."
         },
         {
           "name": "Condividi la tua conoscenza",
@@ -5753,7 +5753,7 @@
       "choices": [
         {
           "name": "Esamina ogni bambola e fai la scelta migliore",
-          "description": "Perdi {ExamineHpLoss} PV. Scegli 1 tra 3 Reliquie Bambolesche."
+          "description": "Perdi 15 PV. Scegli 1 tra 3 Reliquie Bambolesche."
         },
         {
           "name": "Scegli in modo casuale",
@@ -5761,7 +5761,7 @@
         },
         {
           "name": "Prenditi del tempo prima di decidere",
-          "description": "Perdi {TakeTimeHpLoss} PV. Scegli 1 tra 2 Reliquie Bambolesche."
+          "description": "Perdi 5 PV. Scegli 1 tra 2 Reliquie Bambolesche."
         }
       ]
     },
@@ -5874,7 +5874,7 @@
         },
         {
           "name": "Non collaborare",
-          "description": "Ottieni 150 unità d'oro. Perdi {SoloHp} PV."
+          "description": "Ottieni 150 unità d'oro. Perdi 18 PV."
         }
       ]
     },
@@ -6106,11 +6106,11 @@
       "choices": [
         {
           "name": "Non opporre resistenza",
-          "description": "Recuperi {LetItInHealAmount} PV. Aggiungi la carta Metamorfosi al tuo mazzo."
+          "description": "Recuperi 25 PV. Aggiungi la carta Metamorfosi al tuo mazzo."
         },
         {
           "name": "Rifiuta",
-          "description": "Perdi {RejectionHpLoss} PV. Rimuovi una carta dal tuo mazzo."
+          "description": "Perdi 9 PV. Rimuovi una carta dal tuo mazzo."
         }
       ]
     },
@@ -6185,7 +6185,7 @@
         },
         {
           "name": "Conchiglia Rimbombante",
-          "description": "All'inizio dei combattimenti contro nemici Élite, peschi {Cards} carta extra,",
+          "description": "All'inizio dei combattimenti contro nemici Élite, peschi 2 carta extra,",
           "relic_id": "BOOMING_CONCH",
           "pool": "positive"
         },
@@ -6197,7 +6197,7 @@
         },
         {
           "name": "Perla d'Oro",
-          "description": "Dopo aver ottenuto questa reliquia ottieni {Gold} unità d'oro.",
+          "description": "Dopo aver ottenuto questa reliquia ottieni 150 unità d'oro.",
           "relic_id": "GOLDEN_PEARL",
           "pool": "positive"
         },
@@ -6209,7 +6209,7 @@
         },
         {
           "name": "Foglia Nuova",
-          "description": "Dopo aver ottenuto questa reliquia, trasformi {Cards} carta.",
+          "description": "Dopo aver ottenuto questa reliquia, trasformi 1 carta.",
           "relic_id": "NEW_LEAF",
           "pool": "positive"
         },
@@ -6221,7 +6221,7 @@
         },
         {
           "name": "Forbici Precise",
-          "description": "Dopo aver ottenuto questa reliquia, rimuovi {Cards} carta dal tuo mazzo.",
+          "description": "Dopo aver ottenuto questa reliquia, rimuovi 1 carta dal tuo mazzo.",
           "relic_id": "PRECISE_SCISSORS",
           "pool": "positive"
         },
@@ -6233,37 +6233,37 @@
         },
         {
           "name": "Perla Maledetta",
-          "description": "Dopo aver ottenuto questa reliquia, ricevi la carta Avidità. Ottieni {Gold} unità d'oro.",
+          "description": "Dopo aver ottenuto questa reliquia, ricevi la carta Avidità. Ottieni 333 unità d'oro.",
           "relic_id": "CURSED_PEARL",
           "pool": "cursed"
         },
         {
           "name": "Capsula Grande",
-          "description": "Dopo aver ottenuto questa reliquia, ricevi {Relics} reliquia casuale. Aggiungi una carta Colpo e una carta Difendi al tuo mazzo.",
+          "description": "Dopo aver ottenuto questa reliquia, ricevi 2 reliquia casuale. Aggiungi una carta Colpo e una carta Difendi al tuo mazzo.",
           "relic_id": "LARGE_CAPSULE",
           "pool": "cursed"
         },
         {
           "name": "Impacco di Foglie",
-          "description": "Dopo aver ottenuto questa reliquia trasformi 1 delle tue carte Colpo e 1 delle tue carte Difendi e i tuoi PV massimi si riducono di {MaxHp}.",
+          "description": "Dopo aver ottenuto questa reliquia trasformi 1 delle tue carte Colpo e 1 delle tue carte Difendi e i tuoi PV massimi si riducono di 10.",
           "relic_id": "LEAFY_POULTICE",
           "pool": "cursed"
         },
         {
           "name": "Forbici Precarie",
-          "description": "Dopo aver ottenuto questa reliquia, rimuovi {Cards} carta dal tuo mazzo e subisci {Damage} di danno.",
+          "description": "Dopo aver ottenuto questa reliquia, rimuovi 2 carta dal tuo mazzo e subisci 13 di danno.",
           "relic_id": "PRECARIOUS_SHEARS",
           "pool": "cursed"
         },
         {
           "name": "Ostrica Nutriente",
-          "description": "Dopo aver ottenuto questa reliquia, aumenti i tuoi PV massimi di {MaxHp}.",
+          "description": "Dopo aver ottenuto questa reliquia, aumenti i tuoi PV massimi di 11.",
           "relic_id": "NUTRITIOUS_OYSTER",
           "pool": "positive"
         },
         {
           "name": "Umidificatore in Pietra",
-          "description": "Ogni volta che riposi presso un luogo di riposo, aumenti i tuoi PV massimi di {MaxHp}.",
+          "description": "Ogni volta che riposi presso un luogo di riposo, aumenti i tuoi PV massimi di 5.",
           "relic_id": "STONE_HUMIDIFIER",
           "pool": "positive"
         },
@@ -6275,7 +6275,7 @@
         },
         {
           "name": "Roccia Vulcanica",
-          "description": "Il boss dell'Atto 1 fa ottenere {Relics} reliquie.",
+          "description": "Il boss dell'Atto 1 fa ottenere 2 reliquie.",
           "relic_id": "LAVA_ROCK",
           "pool": "positive"
         },
@@ -6287,7 +6287,7 @@
         },
         {
           "name": "Crogiolo d'Argento",
-          "description": "Le prime {Cards} carte ricompensa che vedi sono potenziate. La prima cassa del tesoro che apri è vuota.",
+          "description": "Le prime 3 carte ricompensa che vedi sono potenziate. La prima cassa del tesoro che apri è vuota.",
           "relic_id": "SILVER_CRUCIBLE",
           "pool": "cursed"
         },

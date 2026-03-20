@@ -5595,7 +5595,7 @@
       "choices": [
         {
           "name": "Den Egel abreißen",
-          "description": "Verliere {RipHpLoss} TP. Erhalte eine farblose Kartenbelohnung."
+          "description": "Verliere 5 TP. Erhalte eine farblose Kartenbelohnung."
         },
         {
           "name": "Wissen teilen",
@@ -5753,7 +5753,7 @@
       "choices": [
         {
           "name": "Jede untersuchen und die beste Wahl treffen",
-          "description": "Verliere {ExamineHpLoss} TP. Wähle 1 von 3 Puppen-Relikten."
+          "description": "Verliere 15 TP. Wähle 1 von 3 Puppen-Relikten."
         },
         {
           "name": "Irgendeine nehmen",
@@ -5761,7 +5761,7 @@
         },
         {
           "name": "Etwas Zeit lassen",
-          "description": "Verliere {TakeTimeHpLoss} TP. Wähle 1 von 2 Puppen-Relikten."
+          "description": "Verliere 5 TP. Wähle 1 von 2 Puppen-Relikten."
         }
       ]
     },
@@ -5874,7 +5874,7 @@
         },
         {
           "name": "Solo-Quest",
-          "description": "Erhalte 150 Gold. Verliere {SoloHp} TP."
+          "description": "Erhalte 150 Gold. Verliere 18 TP."
         }
       ]
     },
@@ -6106,11 +6106,11 @@
       "choices": [
         {
           "name": "Ihn hereinlassen",
-          "description": "Heile {LetItInHealAmount} TP. Erhalte Metamorphose in dein Deck."
+          "description": "Heile 25 TP. Erhalte Metamorphose in dein Deck."
         },
         {
           "name": "Ablehnung",
-          "description": "Verliere {RejectionHpLoss} TP. Entferne eine Karte aus deinem Deck."
+          "description": "Verliere 9 TP. Entferne eine Karte aus deinem Deck."
         }
       ]
     },
@@ -6330,11 +6330,11 @@
         },
         {
           "name": "Dorniger Schwamm",
-          "description": "Zahle {PricklySpongeGold} Gold. Verzaubere 2 Karte mit Beständig."
+          "description": "Zahle 155 Gold. Verzaubere 2 Karte mit Beständig."
         },
         {
           "name": "Gesperrt",
-          "description": "Benötigt {PricklySpongeGold} Gold."
+          "description": "Benötigt 155 Gold."
         }
       ]
     },
@@ -6440,7 +6440,7 @@
         },
         {
           "name": "Brausende Muschel",
-          "description": "Ziehe zu Beginn von Elite-Kämpfen {Cards} Karte mehr.",
+          "description": "Ziehe zu Beginn von Elite-Kämpfen 2 Karte mehr.",
           "relic_id": "BOOMING_CONCH",
           "pool": "positive"
         },
@@ -6452,7 +6452,7 @@
         },
         {
           "name": "Goldene Perle",
-          "description": "Erhalte beim Aufheben {Gold} Gold.",
+          "description": "Erhalte beim Aufheben 150 Gold.",
           "relic_id": "GOLDEN_PEARL",
           "pool": "positive"
         },
@@ -6464,7 +6464,7 @@
         },
         {
           "name": "Neues Blatt",
-          "description": "Transformiere beim Aufheben {Cards} Karte.",
+          "description": "Transformiere beim Aufheben 1 Karte.",
           "relic_id": "NEW_LEAF",
           "pool": "positive"
         },
@@ -6476,7 +6476,7 @@
         },
         {
           "name": "Präzise Schere",
-          "description": "Entferne beim Aufheben {Cards} Karte aus deinem Deck.",
+          "description": "Entferne beim Aufheben 1 Karte aus deinem Deck.",
           "relic_id": "PRECISE_SCISSORS",
           "pool": "positive"
         },
@@ -6488,37 +6488,37 @@
         },
         {
           "name": "Verfluchte Perle",
-          "description": "Erhalte beim Aufheben Gier. Erhalte {Gold} Gold.",
+          "description": "Erhalte beim Aufheben Gier. Erhalte 333 Gold.",
           "relic_id": "CURSED_PEARL",
           "pool": "cursed"
         },
         {
           "name": "Große Kapsel",
-          "description": "Erhalte beim Aufheben {Relics} zufälliges Relikt. Erhalte einen zusätzlichen Schlag und Verteidigen in dein Deck.",
+          "description": "Erhalte beim Aufheben 2 zufälliges Relikt. Erhalte einen zusätzlichen Schlag und Verteidigen in dein Deck.",
           "relic_id": "LARGE_CAPSULE",
           "pool": "cursed"
         },
         {
           "name": "Blätterwickel",
-          "description": "Transformiere beim Aufheben 1 deiner Schläge und 1 deiner Verteidigen und verliere {MaxHp} max. TP.",
+          "description": "Transformiere beim Aufheben 1 deiner Schläge und 1 deiner Verteidigen und verliere 10 max. TP.",
           "relic_id": "LEAFY_POULTICE",
           "pool": "cursed"
         },
         {
           "name": "Heikle Schere",
-          "description": "Entferne beim Aufheben {Cards} Karte aus deinem Deck und nimm {Damage} Schaden.",
+          "description": "Entferne beim Aufheben 2 Karte aus deinem Deck und nimm 13 Schaden.",
           "relic_id": "PRECARIOUS_SHEARS",
           "pool": "cursed"
         },
         {
           "name": "Nahrhafte Auster",
-          "description": "Erhöhe beim Aufheben deine max. TP um {MaxHp}.",
+          "description": "Erhöhe beim Aufheben deine max. TP um 11.",
           "relic_id": "NUTRITIOUS_OYSTER",
           "pool": "positive"
         },
         {
           "name": "Steinerner Luftbefeuchter",
-          "description": "Immer wenn du dich an einem Lagerfeuer ausruhst, erhöhe deine max. TP um {MaxHp}.",
+          "description": "Immer wenn du dich an einem Lagerfeuer ausruhst, erhöhe deine max. TP um 5.",
           "relic_id": "STONE_HUMIDIFIER",
           "pool": "positive"
         },
@@ -6530,7 +6530,7 @@
         },
         {
           "name": "Lavastein",
-          "description": "Der Akt-1-Boss hinterlässt {Relics} Relikte.",
+          "description": "Der Akt-1-Boss hinterlässt 2 Relikte.",
           "relic_id": "LAVA_ROCK",
           "pool": "positive"
         },
@@ -6542,7 +6542,7 @@
         },
         {
           "name": "Silbertiegel",
-          "description": "Die ersten {Cards} Kartenbelohnungen, die du siehst, sind verbessert. Die erste Schatztruhe, die du öffnest, ist leer.",
+          "description": "Die ersten 3 Kartenbelohnungen, die du siehst, sind verbessert. Die erste Schatztruhe, die du öffnest, ist leer.",
           "relic_id": "SILVER_CRUCIBLE",
           "pool": "cursed"
         },

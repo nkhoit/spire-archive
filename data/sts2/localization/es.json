@@ -5595,7 +5595,7 @@
       "choices": [
         {
           "name": "Arrancar la sanguijuela",
-          "description": "Pierdes {RipHpLoss} PV. Obtienes una recompensa de carta incolora."
+          "description": "Pierdes 5 PV. Obtienes una recompensa de carta incolora."
         },
         {
           "name": "Compartir conocimiento",
@@ -5753,7 +5753,7 @@
       "choices": [
         {
           "name": "Examinar cada una y toma la mejor decisión",
-          "description": "Pierdes {ExamineHpLoss} PV. Eliges 1 de 3 reliquias de muñeca."
+          "description": "Pierdes 15 PV. Eliges 1 de 3 reliquias de muñeca."
         },
         {
           "name": "Elegir al azar",
@@ -5761,7 +5761,7 @@
         },
         {
           "name": "Tomarse un tiempo antes de decidir",
-          "description": "Pierdes {TakeTimeHpLoss} PV. Eliges 1 de 2 reliquias de muñeca."
+          "description": "Pierdes 5 PV. Eliges 1 de 2 reliquias de muñeca."
         }
       ]
     },
@@ -5874,7 +5874,7 @@
         },
         {
           "name": "Ir por tu cuenta",
-          "description": "Obtienes 150 de oro. Pierdes {SoloHp} PV."
+          "description": "Obtienes 150 de oro. Pierdes 18 PV."
         }
       ]
     },
@@ -6106,11 +6106,11 @@
       "choices": [
         {
           "name": "Permitir la fusión",
-          "description": "Recuperas {LetItInHealAmount} PV. Agregas Metamorfosis al mazo."
+          "description": "Recuperas 25 PV. Agregas Metamorfosis al mazo."
         },
         {
           "name": "Rechazarlo",
-          "description": "Pierdes {RejectionHpLoss} PV. Quitas una carta del mazo."
+          "description": "Pierdes 9 PV. Quitas una carta del mazo."
         }
       ]
     },
@@ -6330,11 +6330,11 @@
         },
         {
           "name": "Esponja espinosa",
-          "description": "Pagas {PricklySpongeGold} de oro. Encantas 2 carta con Firmeza."
+          "description": "Pagas 155 de oro. Encantas 2 carta con Firmeza."
         },
         {
           "name": "Sin desbloquear",
-          "description": "Necesitas {PricklySpongeGold} de oro."
+          "description": "Necesitas 155 de oro."
         }
       ]
     },
@@ -6440,7 +6440,7 @@
         },
         {
           "name": "Concha explosiva",
-          "description": "Al comienzo de los combates contra Élites, roba {Cards} carta adicional.",
+          "description": "Al comienzo de los combates contra Élites, roba 2 carta adicional.",
           "relic_id": "BOOMING_CONCH",
           "pool": "positive"
         },
@@ -6452,7 +6452,7 @@
         },
         {
           "name": "Perla dorada",
-          "description": "Al recoger esta reliquia, gana {Gold} de Oro.",
+          "description": "Al recoger esta reliquia, gana 150 de Oro.",
           "relic_id": "GOLDEN_PEARL",
           "pool": "positive"
         },
@@ -6464,7 +6464,7 @@
         },
         {
           "name": "Hoja nueva",
-          "description": "Al recoger esta reliquia, Transforma {Cards} carta.",
+          "description": "Al recoger esta reliquia, Transforma 1 carta.",
           "relic_id": "NEW_LEAF",
           "pool": "positive"
         },
@@ -6476,7 +6476,7 @@
         },
         {
           "name": "Tijeras precisas",
-          "description": "Al recoger esta reliquia, elimina {Cards} carta de tu Mazo.",
+          "description": "Al recoger esta reliquia, elimina 1 carta de tu Mazo.",
           "relic_id": "PRECISE_SCISSORS",
           "pool": "positive"
         },
@@ -6488,37 +6488,37 @@
         },
         {
           "name": "Perla maldita",
-          "description": "Al recoger esta reliquia, obtén Codicia. Gana {Gold} de Oro.",
+          "description": "Al recoger esta reliquia, obtén Codicia. Gana 333 de Oro.",
           "relic_id": "CURSED_PEARL",
           "pool": "cursed"
         },
         {
           "name": "Cápsula grande",
-          "description": "Al recoger esta reliquia, obtén {Relics} Reliquia aleatoria. Añade un Golpe y un Defender adicionales a tu Mazo.",
+          "description": "Al recoger esta reliquia, obtén 2 Reliquia aleatoria. Añade un Golpe y un Defender adicionales a tu Mazo.",
           "relic_id": "LARGE_CAPSULE",
           "pool": "cursed"
         },
         {
           "name": "Cataplasma",
-          "description": "Al recoger esta reliquia, Transforma 1 Golpe y 1 Defender y pierde {MaxHp} PV máx.",
+          "description": "Al recoger esta reliquia, Transforma 1 Golpe y 1 Defender y pierde 10 PV máx.",
           "relic_id": "LEAFY_POULTICE",
           "pool": "cursed"
         },
         {
           "name": "Tijeras peligrosas",
-          "description": "Al recoger esta reliquia, elimina {Cards} carta de tu Mazo y recibe {Damage} de daño.",
+          "description": "Al recoger esta reliquia, elimina 2 carta de tu Mazo y recibe 13 de daño.",
           "relic_id": "PRECARIOUS_SHEARS",
           "pool": "cursed"
         },
         {
           "name": "Ostra nutritiva",
-          "description": "Al recoger esta reliquia, aumenta tus PV máx. en {MaxHp}.",
+          "description": "Al recoger esta reliquia, aumenta tus PV máx. en 11.",
           "relic_id": "NUTRITIOUS_OYSTER",
           "pool": "positive"
         },
         {
           "name": "Humidificador de piedra",
-          "description": "Cuando Descanses en un Lugar de descanso, aumenta tus PV máx. en {MaxHp}.",
+          "description": "Cuando Descanses en un Lugar de descanso, aumenta tus PV máx. en 5.",
           "relic_id": "STONE_HUMIDIFIER",
           "pool": "positive"
         },
@@ -6530,7 +6530,7 @@
         },
         {
           "name": "Roca volcánica",
-          "description": "El Jefe del Acto 1 suelta {Relics} Reliquias.",
+          "description": "El Jefe del Acto 1 suelta 2 Reliquias.",
           "relic_id": "LAVA_ROCK",
           "pool": "positive"
         },
@@ -6542,7 +6542,7 @@
         },
         {
           "name": "Crisol de plata",
-          "description": "Las siguientes {Cards} recompensas de cartas que veas estarán Mejoradas. El primer cofre del tesoro que abras estará vacío.",
+          "description": "Las siguientes 3 recompensas de cartas que veas estarán Mejoradas. El primer cofre del tesoro que abras estará vacío.",
           "relic_id": "SILVER_CRUCIBLE",
           "pool": "cursed"
         },

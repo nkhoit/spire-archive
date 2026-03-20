@@ -5595,7 +5595,7 @@
       "choices": [
         {
           "name": "把它扯下来",
-          "description": "失去{RipHpLoss}点生命值。获得一组无色卡牌奖励。"
+          "description": "失去5点生命值。获得一组无色卡牌奖励。"
         },
         {
           "name": "分享知识",
@@ -5753,7 +5753,7 @@
       "choices": [
         {
           "name": "仔细检查然后挑选最好的那个",
-          "description": "失去{ExamineHpLoss}点生命。从3尊玩偶遗物中选择1尊带走。"
+          "description": "失去15点生命。从3尊玩偶遗物中选择1尊带走。"
         },
         {
           "name": "随机拿走一尊",
@@ -5761,7 +5761,7 @@
         },
         {
           "name": "花点时间慢慢来",
-          "description": "失去{TakeTimeHpLoss}点生命。从2尊玩偶遗物中选择1尊带走。"
+          "description": "失去5点生命。从2尊玩偶遗物中选择1尊带走。"
         }
       ]
     },
@@ -5874,7 +5874,7 @@
         },
         {
           "name": "独自挑战",
-          "description": "获得150金币。失去{SoloHp}点生命。"
+          "description": "获得150金币。失去18点生命。"
         }
       ]
     },
@@ -6106,11 +6106,11 @@
       "choices": [
         {
           "name": "接纳",
-          "description": "回复{LetItInHealAmount}点生命。将一张羽化添加到你的牌组。"
+          "description": "回复25点生命。将一张羽化添加到你的牌组。"
         },
         {
           "name": "拒绝",
-          "description": "失去{RejectionHpLoss}点生命。从你的牌组中移除一张牌。"
+          "description": "失去9点生命。从你的牌组中移除一张牌。"
         }
       ]
     },
@@ -6330,11 +6330,11 @@
         },
         {
           "name": "扎手海绵",
-          "description": "支付{PricklySpongeGold}金币。给2张牌附魔：稳定。"
+          "description": "支付155金币。给2张牌附魔：稳定。"
         },
         {
           "name": "锁定",
-          "description": "需要{PricklySpongeGold}金币。"
+          "description": "需要155金币。"
         }
       ]
     },
@@ -6440,7 +6440,7 @@
         },
         {
           "name": "轰鸣海螺",
-          "description": "在精英战的战斗开始时，额外抽{Cards}张牌。",
+          "description": "在精英战的战斗开始时，额外抽2张牌。",
           "relic_id": "BOOMING_CONCH",
           "pool": "positive"
         },
@@ -6452,7 +6452,7 @@
         },
         {
           "name": "金色珍珠",
-          "description": "拾起时，获得{Gold}金币。",
+          "description": "拾起时，获得150金币。",
           "relic_id": "GOLDEN_PEARL",
           "pool": "positive"
         },
@@ -6464,7 +6464,7 @@
         },
         {
           "name": "新叶",
-          "description": "拾起时，变化{Cards}张牌。",
+          "description": "拾起时，变化1张牌。",
           "relic_id": "NEW_LEAF",
           "pool": "positive"
         },
@@ -6476,7 +6476,7 @@
         },
         {
           "name": "精准剪刀",
-          "description": "拾起时，从你的牌组中移除{Cards}张牌。",
+          "description": "拾起时，从你的牌组中移除1张牌。",
           "relic_id": "PRECISE_SCISSORS",
           "pool": "positive"
         },
@@ -6488,37 +6488,37 @@
         },
         {
           "name": "诅咒珍珠",
-          "description": "拾起时，获得一张贪婪，获得{Gold}金币。",
+          "description": "拾起时，获得一张贪婪，获得333金币。",
           "relic_id": "CURSED_PEARL",
           "pool": "cursed"
         },
         {
           "name": "巨大扭蛋",
-          "description": "拾起时，获得{Relics}件随机遗物。额外将一对打击和防御，加入你的牌组。",
+          "description": "拾起时，获得2件随机遗物。额外将一对打击和防御，加入你的牌组。",
           "relic_id": "LARGE_CAPSULE",
           "pool": "cursed"
         },
         {
           "name": "树叶药膏",
-          "description": "拾起时，变化你的1张打击和1张防御，然后失去{MaxHp}点最大生命。",
+          "description": "拾起时，变化你的1张打击和1张防御，然后失去10点最大生命。",
           "relic_id": "LEAFY_POULTICE",
           "pool": "cursed"
         },
         {
           "name": "松动羊毛剪",
-          "description": "拾起时，从你的牌组中移除{Cards}张牌，并受到{Damage}点伤害。",
+          "description": "拾起时，从你的牌组中移除2张牌，并受到13点伤害。",
           "relic_id": "PRECARIOUS_SHEARS",
           "pool": "cursed"
         },
         {
           "name": "营养牡蛎",
-          "description": "拾起时，将你的最大生命值提升{MaxHp}。",
+          "description": "拾起时，将你的最大生命值提升11。",
           "relic_id": "NUTRITIOUS_OYSTER",
           "pool": "positive"
         },
         {
           "name": "石炉加湿器",
-          "description": "每当你在休息处休息时，将你的最大生命值提升{MaxHp}点。",
+          "description": "每当你在休息处休息时，将你的最大生命值提升5点。",
           "relic_id": "STONE_HUMIDIFIER",
           "pool": "positive"
         },
@@ -6530,7 +6530,7 @@
         },
         {
           "name": "熔岩石",
-          "description": "第一阶段的Boss敌人额外掉落{Relics}件遗物。",
+          "description": "第一阶段的Boss敌人额外掉落2件遗物。",
           "relic_id": "LAVA_ROCK",
           "pool": "positive"
         },
@@ -6542,7 +6542,7 @@
         },
         {
           "name": "白银熔炉",
-          "description": "你遇到的前{Cards}组卡牌奖励将是被升级过的。你打开的第一个宝箱将是空的",
+          "description": "你遇到的前3组卡牌奖励将是被升级过的。你打开的第一个宝箱将是空的",
           "relic_id": "SILVER_CRUCIBLE",
           "pool": "cursed"
         },

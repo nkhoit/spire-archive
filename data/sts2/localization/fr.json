@@ -5595,7 +5595,7 @@
       "choices": [
         {
           "name": "Arracher la sangsue",
-          "description": "Perdez {RipHpLoss} PV. Recevez une récompense de carte Incolore."
+          "description": "Perdez 5 PV. Recevez une récompense de carte Incolore."
         },
         {
           "name": "Partager la connaissance",
@@ -5753,7 +5753,7 @@
       "choices": [
         {
           "name": "Les examiner toutes pour faire le meilleur choix",
-          "description": "Perdez {ExamineHpLoss} PV. Choisissez 1 Relique poupée parmi 3."
+          "description": "Perdez 15 PV. Choisissez 1 Relique poupée parmi 3."
         },
         {
           "name": "Choisir au hasard",
@@ -5761,7 +5761,7 @@
         },
         {
           "name": "Prendre votre temps",
-          "description": "Perdez {TakeTimeHpLoss} PV. Choisissez 1 Relique poupée parmi 2."
+          "description": "Perdez 5 PV. Choisissez 1 Relique poupée parmi 2."
         }
       ]
     },
@@ -5874,7 +5874,7 @@
         },
         {
           "name": "Quête solo",
-          "description": "Recevez 150 Pièces d’or. Perdez {SoloHp} PV."
+          "description": "Recevez 150 Pièces d’or. Perdez 18 PV."
         }
       ]
     },
@@ -6106,11 +6106,11 @@
       "choices": [
         {
           "name": "Accepter",
-          "description": "Récupérez {LetItInHealAmount} PV. Ajoutez Métamorphose à votre Deck."
+          "description": "Récupérez 25 PV. Ajoutez Métamorphose à votre Deck."
         },
         {
           "name": "Rejeter",
-          "description": "Perdez {RejectionHpLoss} PV. Retirez une carte de votre Deck."
+          "description": "Perdez 9 PV. Retirez une carte de votre Deck."
         }
       ]
     },
@@ -6330,11 +6330,11 @@
         },
         {
           "name": "Éponge rêche",
-          "description": "Payez {PricklySpongeGold} Pièces d’or. Envoûtez 2 carte avec Stabilité."
+          "description": "Payez 155 Pièces d’or. Envoûtez 2 carte avec Stabilité."
         },
         {
           "name": "Verrouillé",
-          "description": "Coûte {PricklySpongeGold} Pièces d’or."
+          "description": "Coûte 155 Pièces d’or."
         }
       ]
     },
@@ -6440,7 +6440,7 @@
         },
         {
           "name": "Conque retentissante",
-          "description": "Au début des combats d'Élite, piochez {Cards} carte supplémentaire.",
+          "description": "Au début des combats d'Élite, piochez 2 carte supplémentaire.",
           "relic_id": "BOOMING_CONCH",
           "pool": "positive"
         },
@@ -6452,7 +6452,7 @@
         },
         {
           "name": "Perle dorée",
-          "description": "Lorsque vous obtenez cette relique, gagnez {Gold} Pièces d'or.",
+          "description": "Lorsque vous obtenez cette relique, gagnez 150 Pièces d'or.",
           "relic_id": "GOLDEN_PEARL",
           "pool": "positive"
         },
@@ -6464,7 +6464,7 @@
         },
         {
           "name": "Nouvelle page",
-          "description": "Lorsque vous obtenez cette relique, Transformez {Cards} carte.",
+          "description": "Lorsque vous obtenez cette relique, Transformez 1 carte.",
           "relic_id": "NEW_LEAF",
           "pool": "positive"
         },
@@ -6476,7 +6476,7 @@
         },
         {
           "name": "Ciseaux précis",
-          "description": "Lorsque vous obtenez cette relique, retirez {Cards} carte de votre Deck.",
+          "description": "Lorsque vous obtenez cette relique, retirez 1 carte de votre Deck.",
           "relic_id": "PRECISE_SCISSORS",
           "pool": "positive"
         },
@@ -6488,37 +6488,37 @@
         },
         {
           "name": "Perle maudite",
-          "description": "Lorsque vous obtenez cette relique, recevez Cupidité. Obtenez {Gold} Pièces d'or.",
+          "description": "Lorsque vous obtenez cette relique, recevez Cupidité. Obtenez 333 Pièces d'or.",
           "relic_id": "CURSED_PEARL",
           "pool": "cursed"
         },
         {
           "name": "Grande capsule",
-          "description": "Lorsque vous obtenez cette relique, obtenez {Relics} Relique aléatoire. Ajoutez une Frappe et une Défense à votre Deck.",
+          "description": "Lorsque vous obtenez cette relique, obtenez 2 Relique aléatoire. Ajoutez une Frappe et une Défense à votre Deck.",
           "relic_id": "LARGE_CAPSULE",
           "pool": "cursed"
         },
         {
           "name": "Cataplasme",
-          "description": "Lorsque vous obtenez cette relique, Transformez 1 Frappe et 1 Défense et perdez {MaxHp} PV Max.",
+          "description": "Lorsque vous obtenez cette relique, Transformez 1 Frappe et 1 Défense et perdez 10 PV Max.",
           "relic_id": "LEAFY_POULTICE",
           "pool": "cursed"
         },
         {
           "name": "Forces précaires",
-          "description": "Lorsque vous obtenez cette relique, retirez {Cards} carte de votre Deck et subissez {Damage} dégâts.",
+          "description": "Lorsque vous obtenez cette relique, retirez 2 carte de votre Deck et subissez 13 dégâts.",
           "relic_id": "PRECARIOUS_SHEARS",
           "pool": "cursed"
         },
         {
           "name": "Huître nourrissante",
-          "description": "Lorsque vous obtenez cette relique, augmentez vos PV Max de {MaxHp}.",
+          "description": "Lorsque vous obtenez cette relique, augmentez vos PV Max de 11.",
           "relic_id": "NUTRITIOUS_OYSTER",
           "pool": "positive"
         },
         {
           "name": "Humidificateur en pierre",
-          "description": "Lorsque vous vous Reposez à un Site de repos, augmentez vos PV Max de {MaxHp}.",
+          "description": "Lorsque vous vous Reposez à un Site de repos, augmentez vos PV Max de 5.",
           "relic_id": "STONE_HUMIDIFIER",
           "pool": "positive"
         },
@@ -6530,7 +6530,7 @@
         },
         {
           "name": "Pierre volcanique",
-          "description": "Le Boss de l'Acte 1 octroie {Relics} Reliques lorsqu'il est vaincu.",
+          "description": "Le Boss de l'Acte 1 octroie 2 Reliques lorsqu'il est vaincu.",
           "relic_id": "LAVA_ROCK",
           "pool": "positive"
         },
@@ -6542,7 +6542,7 @@
         },
         {
           "name": "Creuset en argent",
-          "description": "Vos {Cards} premières récompenses de carte sont Améliorées. Le premier Coffre trésor que vous ouvrez est vide.",
+          "description": "Vos 3 premières récompenses de carte sont Améliorées. Le premier Coffre trésor que vous ouvrez est vide.",
           "relic_id": "SILVER_CRUCIBLE",
           "pool": "cursed"
         },

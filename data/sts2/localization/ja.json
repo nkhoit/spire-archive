@@ -5595,7 +5595,7 @@
       "choices": [
         {
           "name": "ヒルを引き剥がす",
-          "description": "HPを{RipHpLoss}失う。 無色カード報酬を1枚受け取る。"
+          "description": "HPを5失う。 無色カード報酬を1枚受け取る。"
         },
         {
           "name": "知識を共有する",
@@ -5753,7 +5753,7 @@
       "choices": [
         {
           "name": "念入りに調べ、最良のものを選ぶ",
-          "description": "HPを{ExamineHpLoss}失う。 3つの人形レリックから1つを選ぶ。"
+          "description": "HPを15失う。 3つの人形レリックから1つを選ぶ。"
         },
         {
           "name": "ランダムに選ぶ",
@@ -5761,7 +5761,7 @@
         },
         {
           "name": "少しだけ時間をかける",
-          "description": "HPを{TakeTimeHpLoss}失う。 2つの人形レリックから1つを選ぶ。"
+          "description": "HPを5失う。 2つの人形レリックから1つを選ぶ。"
         }
       ]
     },
@@ -5874,7 +5874,7 @@
         },
         {
           "name": "ソロプレイを貫く",
-          "description": "150ゴールドを獲得。 HPを{SoloHp}失う。"
+          "description": "150ゴールドを獲得。 HPを18失う。"
         }
       ]
     },
@@ -6106,11 +6106,11 @@
       "choices": [
         {
           "name": "受け入れる",
-          "description": "HPを{LetItInHealAmount}回復する。 メタモルフォーシスをデッキに追加。"
+          "description": "HPを25回復する。 メタモルフォーシスをデッキに追加。"
         },
         {
           "name": "拒絶する",
-          "description": "HPを{RejectionHpLoss}失う。 デッキからカードを1枚削除する。"
+          "description": "HPを9失う。 デッキからカードを1枚削除する。"
         }
       ]
     },
@@ -6330,11 +6330,11 @@
         },
         {
           "name": "チクチクするスポンジ",
-          "description": "{PricklySpongeGold}ゴールドを支払う。 カード2枚に安定性をエンチャントする。"
+          "description": "155ゴールドを支払う。 カード2枚に安定性をエンチャントする。"
         },
         {
           "name": "ロック中",
-          "description": "{PricklySpongeGold}ゴールドが必要。"
+          "description": "155ゴールドが必要。"
         }
       ]
     },
@@ -6440,7 +6440,7 @@
         },
         {
           "name": "轟音のほら貝",
-          "description": "エリートとの戦闘開始時、追加でカードを{Cards}枚引く。",
+          "description": "エリートとの戦闘開始時、追加でカードを2枚引く。",
           "relic_id": "BOOMING_CONCH",
           "pool": "positive"
         },
@@ -6452,7 +6452,7 @@
         },
         {
           "name": "黄金の真珠",
-          "description": "取得時、{Gold}ゴールドを獲得する。",
+          "description": "取得時、150ゴールドを獲得する。",
           "relic_id": "GOLDEN_PEARL",
           "pool": "positive"
         },
@@ -6464,7 +6464,7 @@
         },
         {
           "name": "若葉",
-          "description": "取得時、カードを{Cards}枚変化させる。",
+          "description": "取得時、カードを1枚変化させる。",
           "relic_id": "NEW_LEAF",
           "pool": "positive"
         },
@@ -6476,7 +6476,7 @@
         },
         {
           "name": "精密なハサミ",
-          "description": "取得時、デッキからカードを{Cards}枚削除する。",
+          "description": "取得時、デッキからカードを1枚削除する。",
           "relic_id": "PRECISE_SCISSORS",
           "pool": "positive"
         },
@@ -6488,37 +6488,37 @@
         },
         {
           "name": "呪いの真珠",
-          "description": "取得時、強欲を受け取る。{Gold}ゴールドを獲得する。",
+          "description": "取得時、強欲を受け取る。333ゴールドを獲得する。",
           "relic_id": "CURSED_PEARL",
           "pool": "cursed"
         },
         {
           "name": "大きなカプセル",
-          "description": "取得時、ランダムなレリックを{Relics}個入手する。さらに、ストライク1枚と防御1枚をデッキに加える。",
+          "description": "取得時、ランダムなレリックを2個入手する。さらに、ストライク1枚と防御1枚をデッキに加える。",
           "relic_id": "LARGE_CAPSULE",
           "pool": "cursed"
         },
         {
           "name": "薬草の湿布",
-          "description": "取得時、ストライク1枚と防御1枚を変化させ、最大HPを{MaxHp}失う",
+          "description": "取得時、ストライク1枚と防御1枚を変化させ、最大HPを10失う",
           "relic_id": "LEAFY_POULTICE",
           "pool": "cursed"
         },
         {
           "name": "危険な大鋏",
-          "description": "取得時、デッキからカードを{Cards}枚削除する。{Damage}ダメージを受ける。",
+          "description": "取得時、デッキからカードを2枚削除する。13ダメージを受ける。",
           "relic_id": "PRECARIOUS_SHEARS",
           "pool": "cursed"
         },
         {
           "name": "栄養満点のカキ",
-          "description": "取得時、最大HPが{MaxHp}増加する。",
+          "description": "取得時、最大HPが11増加する。",
           "relic_id": "NUTRITIOUS_OYSTER",
           "pool": "positive"
         },
         {
           "name": "石の加湿器",
-          "description": "休憩所で休憩するたび、最大HPが{MaxHp}増加する。",
+          "description": "休憩所で休憩するたび、最大HPが5増加する。",
           "relic_id": "STONE_HUMIDIFIER",
           "pool": "positive"
         },
@@ -6530,7 +6530,7 @@
         },
         {
           "name": "溶岩石",
-          "description": "第1層のボスがレリックを{Relics}個ドロップする。",
+          "description": "第1層のボスがレリックを2個ドロップする。",
           "relic_id": "LAVA_ROCK",
           "pool": "positive"
         },
@@ -6542,7 +6542,7 @@
         },
         {
           "name": "銀のるつぼ",
-          "description": "最初の{Cards}回分のカード報酬は、アップグレードされた状態になる。最初に開ける宝箱はからっぽになる。",
+          "description": "最初の3回分のカード報酬は、アップグレードされた状態になる。最初に開ける宝箱はからっぽになる。",
           "relic_id": "SILVER_CRUCIBLE",
           "pool": "cursed"
         },

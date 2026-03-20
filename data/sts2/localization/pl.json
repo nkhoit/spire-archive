@@ -5317,7 +5317,7 @@
       "choices": [
         {
           "name": "Oderwij pijawkę",
-          "description": "Utrać {RipHpLoss} PŻ. Wybierz bezbarwną kartę z łupów."
+          "description": "Utrać 5 PŻ. Wybierz bezbarwną kartę z łupów."
         },
         {
           "name": "Chcę wiedzę",
@@ -5470,7 +5470,7 @@
       "choices": [
         {
           "name": "Przyjrzyj się każdej i wybierz najlepszą",
-          "description": "Utrać {ExamineHpLoss} PŻ. Wybierz 1 z 3 Lalkowych Artefaktów."
+          "description": "Utrać 15 PŻ. Wybierz 1 z 3 Lalkowych Artefaktów."
         },
         {
           "name": "Wybierz losowo",
@@ -5478,7 +5478,7 @@
         },
         {
           "name": "Zastanów się na spokojnie",
-          "description": "Utrać {TakeTimeHpLoss} PŻ. Wybierz 1 z 2 Lalkowych Artefaktów."
+          "description": "Utrać 5 PŻ. Wybierz 1 z 2 Lalkowych Artefaktów."
         }
       ]
     },
@@ -5590,7 +5590,7 @@
         },
         {
           "name": "Samotna misja",
-          "description": "Zyskaj 150 szt. Złota. Utrać {SoloHp} PŻ."
+          "description": "Zyskaj 150 szt. Złota. Utrać 18 PŻ."
         }
       ]
     },
@@ -5821,11 +5821,11 @@
       "choices": [
         {
           "name": "Wpuść",
-          "description": "Przywróć {LetItInHealAmount} PŻ. Dodaj Metamorfozę do talii."
+          "description": "Przywróć 25 PŻ. Dodaj Metamorfozę do talii."
         },
         {
           "name": "Odrzuć",
-          "description": "Utrać {RejectionHpLoss} PŻ. Usuń kartę z talii."
+          "description": "Utrać 9 PŻ. Usuń kartę z talii."
         }
       ]
     },
@@ -6048,7 +6048,7 @@
         },
         {
           "name": "Zablokowane",
-          "description": "Wymaga {PricklySpongeGold} szt. Złota."
+          "description": "Wymaga 155 szt. Złota."
         }
       ]
     },
@@ -6136,7 +6136,7 @@
         },
         {
           "name": "Szumiąca muszla",
-          "description": "At the start of Elite combats, draw {Cards} additional card.",
+          "description": "At the start of Elite combats, draw 2 additional card.",
           "relic_id": "BOOMING_CONCH",
           "pool": "positive"
         },
@@ -6148,7 +6148,7 @@
         },
         {
           "name": "Złota perła",
-          "description": "Przy podniesieniu zyskaj {Gold} szt. Złota.",
+          "description": "Przy podniesieniu zyskaj 150 szt. Złota.",
           "relic_id": "GOLDEN_PEARL",
           "pool": "positive"
         },
@@ -6160,7 +6160,7 @@
         },
         {
           "name": "Liść zmiany",
-          "description": "Upon pickup, Transform {Cards} card.",
+          "description": "Upon pickup, Transform 1 card.",
           "relic_id": "NEW_LEAF",
           "pool": "positive"
         },
@@ -6172,7 +6172,7 @@
         },
         {
           "name": "Precyzyjne nożyczki",
-          "description": "Upon pickup, remove {Cards} card from your Deck.",
+          "description": "Upon pickup, remove 1 card from your Deck.",
           "relic_id": "PRECISE_SCISSORS",
           "pool": "positive"
         },
@@ -6184,37 +6184,37 @@
         },
         {
           "name": "Przeklęta perła",
-          "description": "Przy podniesieniu otrzymaj Chciwość. Zyskaj {Gold} szt. Złota.",
+          "description": "Przy podniesieniu otrzymaj Chciwość. Zyskaj 333 szt. Złota.",
           "relic_id": "CURSED_PEARL",
           "pool": "cursed"
         },
         {
           "name": "Wielka kapsuła",
-          "description": "Upon pickup, obtain {Relics} random Relic. Add an additional Strike and Defend to your Deck.",
+          "description": "Upon pickup, obtain 2 random Relic. Add an additional Strike and Defend to your Deck.",
           "relic_id": "LARGE_CAPSULE",
           "pool": "cursed"
         },
         {
           "name": "Okład z liści",
-          "description": "Przy podniesieniu Zmień 1 Uderzenie i 1 Obronę. Utrać {MaxHp} maks. PŻ.",
+          "description": "Przy podniesieniu Zmień 1 Uderzenie i 1 Obronę. Utrać 10 maks. PŻ.",
           "relic_id": "LEAFY_POULTICE",
           "pool": "cursed"
         },
         {
           "name": "Niebezpieczne nożyce",
-          "description": "Upon pickup, remove {Cards} card from your Deck and take {Damage} damage.",
+          "description": "Upon pickup, remove 2 card from your Deck and take 13 damage.",
           "relic_id": "PRECARIOUS_SHEARS",
           "pool": "cursed"
         },
         {
           "name": "Odżywcza ostryga",
-          "description": "Przy podniesieniu zwiększ maks. liczbę PŻ o {MaxHp}.",
+          "description": "Przy podniesieniu zwiększ maks. liczbę PŻ o 11.",
           "relic_id": "NUTRITIOUS_OYSTER",
           "pool": "positive"
         },
         {
           "name": "Kamienny nawilżacz",
-          "description": "Kiedykolwiek Odpoczywasz w Obozowisku, zwiększ maks. liczbę PŻ o {MaxHp}.",
+          "description": "Kiedykolwiek Odpoczywasz w Obozowisku, zwiększ maks. liczbę PŻ o 5.",
           "relic_id": "STONE_HUMIDIFIER",
           "pool": "positive"
         },
@@ -6226,7 +6226,7 @@
         },
         {
           "name": "Kamień wulkaniczny",
-          "description": "Boss w Akcie 1. upuszcza {Relics} Artefakty.",
+          "description": "Boss w Akcie 1. upuszcza 2 Artefakty.",
           "relic_id": "LAVA_ROCK",
           "pool": "positive"
         },
@@ -6238,7 +6238,7 @@
         },
         {
           "name": "Srebrny tygiel",
-          "description": "Pierwsze {Cards} odnalezione łupy zawierają Ulepszone karty. Pierwszy odnaleziony Skarb jest pusty.",
+          "description": "Pierwsze 3 odnalezione łupy zawierają Ulepszone karty. Pierwszy odnaleziony Skarb jest pusty.",
           "relic_id": "SILVER_CRUCIBLE",
           "pool": "cursed"
         },

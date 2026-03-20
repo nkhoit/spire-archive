@@ -4663,7 +4663,7 @@
       "choices": [
         {
           "name": "ดึงปลิงออก",
-          "description": "เสีย {RipHpLoss} HP ได้รับรางวัลการ์ดไร้สี 1 ใบ"
+          "description": "เสีย 5 HP ได้รับรางวัลการ์ดไร้สี 1 ใบ"
         },
         {
           "name": "แบ่งปันความรู้",
@@ -4733,7 +4733,7 @@
           "description": "ได้รับ 50 ทอง"
         },
         {
-          "description": "ได้รับ 150 ทอง เสีย {SoloHp} HP"
+          "description": "ได้รับ 150 ทอง เสีย 18 HP"
         }
       ]
     },
@@ -4911,11 +4911,11 @@
       "choices": [
         {
           "name": "ให้มันเข้ามา",
-          "description": "ฟื้นฟู {LetItInHealAmount} HP เพิ่มMetamorphosisเข้ากองการ์ด"
+          "description": "ฟื้นฟู 25 HP เพิ่มMetamorphosisเข้ากองการ์ด"
         },
         {
           "name": "ปฏิเสธ",
-          "description": "เสีย {RejectionHpLoss} HP กำจัดการ์ด 1 ใบจากกองการ์ด"
+          "description": "เสีย 9 HP กำจัดการ์ด 1 ใบจากกองการ์ด"
         }
       ]
     },
@@ -5008,7 +5008,7 @@
         },
         {
           "name": "Booming Conch",
-          "description": "At the start of Elite combats, draw {Cards} additional card.",
+          "description": "At the start of Elite combats, draw 2 additional card.",
           "relic_id": "BOOMING_CONCH",
           "pool": "positive"
         },
@@ -5020,7 +5020,7 @@
         },
         {
           "name": "ไข่มุกทองคำ",
-          "description": "เมื่อรับมา ได้รับ {Gold} ทอง",
+          "description": "เมื่อรับมา ได้รับ 150 ทอง",
           "relic_id": "GOLDEN_PEARL",
           "pool": "positive"
         },
@@ -5032,7 +5032,7 @@
         },
         {
           "name": "New Leaf",
-          "description": "เมื่อรับมา แปรสภาพการ์ด {Cards} ใบ",
+          "description": "เมื่อรับมา แปรสภาพการ์ด 1 ใบ",
           "relic_id": "NEW_LEAF",
           "pool": "positive"
         },
@@ -5044,7 +5044,7 @@
         },
         {
           "name": "Precise Scissors",
-          "description": "เมื่อรับมา กำจัดการ์ด {Cards} ใบจากกองการ์ด",
+          "description": "เมื่อรับมา กำจัดการ์ด 1 ใบจากกองการ์ด",
           "relic_id": "PRECISE_SCISSORS",
           "pool": "positive"
         },
@@ -5056,37 +5056,37 @@
         },
         {
           "name": "Cursed Pearl",
-          "description": "เมื่อรับมา ได้รับGreed ได้รับ {Gold} ทอง",
+          "description": "เมื่อรับมา ได้รับGreed ได้รับ 333 ทอง",
           "relic_id": "CURSED_PEARL",
           "pool": "cursed"
         },
         {
           "name": "Large Capsule",
-          "description": "เมื่อรับมา ได้รับเครื่องราง {Relics} ชิ้นแบบสุ่ม เพิ่มจู่โจมและป้องกันเข้ากองการ์ด",
+          "description": "เมื่อรับมา ได้รับเครื่องราง 2 ชิ้นแบบสุ่ม เพิ่มจู่โจมและป้องกันเข้ากองการ์ด",
           "relic_id": "LARGE_CAPSULE",
           "pool": "cursed"
         },
         {
           "name": "Leafy Poultice",
-          "description": "เมื่อรับมา แปรสภาพจู่โจม 1 ใบ และป้องกัน 1 ใบ และเสีย {MaxHp} HP สูงสุด",
+          "description": "เมื่อรับมา แปรสภาพจู่โจม 1 ใบ และป้องกัน 1 ใบ และเสีย 10 HP สูงสุด",
           "relic_id": "LEAFY_POULTICE",
           "pool": "cursed"
         },
         {
           "name": "Precarious Shears",
-          "description": "เมื่อรับมา กำจัดการ์ด {Cards} ใบจากกองการ์ดและได้รับความเสียหาย {Damage}",
+          "description": "เมื่อรับมา กำจัดการ์ด 2 ใบจากกองการ์ดและได้รับความเสียหาย 13",
           "relic_id": "PRECARIOUS_SHEARS",
           "pool": "cursed"
         },
         {
           "name": "Nutritious Oyster",
-          "description": "เมื่อรับมา เพิ่ม {MaxHp} HP สูงสุด",
+          "description": "เมื่อรับมา เพิ่ม 11 HP สูงสุด",
           "relic_id": "NUTRITIOUS_OYSTER",
           "pool": "positive"
         },
         {
           "name": "Stone Humidifier",
-          "description": "ทุกครั้งที่คุณพักผ่อนที่จุดพัก เพิ่ม {MaxHp} HP สูงสุด",
+          "description": "ทุกครั้งที่คุณพักผ่อนที่จุดพัก เพิ่ม 5 HP สูงสุด",
           "relic_id": "STONE_HUMIDIFIER",
           "pool": "positive"
         },
@@ -5098,7 +5098,7 @@
         },
         {
           "name": "หินลาวา",
-          "description": "The Act 1 Boss drops {Relics} Relics.",
+          "description": "The Act 1 Boss drops 2 Relics.",
           "relic_id": "LAVA_ROCK",
           "pool": "positive"
         },
@@ -5110,7 +5110,7 @@
         },
         {
           "name": "Silver Crucible",
-          "description": "รางวัลการ์ด {Cards} รางวัลแรกที่คุณเปิดจะพัฒนาแล้ว แต่กล่องสมบัติแรกที่คุณเปิดจะว่างเปล่า",
+          "description": "รางวัลการ์ด 3 รางวัลแรกที่คุณเปิดจะพัฒนาแล้ว แต่กล่องสมบัติแรกที่คุณเปิดจะว่างเปล่า",
           "relic_id": "SILVER_CRUCIBLE",
           "pool": "cursed"
         },

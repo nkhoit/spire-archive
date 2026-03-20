@@ -5595,7 +5595,7 @@
       "choices": [
         {
           "name": "거머리를 떼어낸다",
-          "description": "체력을 {RipHpLoss} 잃습니다. 무색 카드 보상을 1번 얻습니다."
+          "description": "체력을 5 잃습니다. 무색 카드 보상을 1번 얻습니다."
         },
         {
           "name": "지식을 공유한다",
@@ -5753,7 +5753,7 @@
       "choices": [
         {
           "name": "깊게 고민한 뒤 최고의 선택을 한다",
-          "description": "체력을 {ExamineHpLoss} 잃습니다. 인형 유물 3개 중 1개를 선택합니다."
+          "description": "체력을 15 잃습니다. 인형 유물 3개 중 1개를 선택합니다."
         },
         {
           "name": "아무거나 고른다",
@@ -5761,7 +5761,7 @@
         },
         {
           "name": "잠시 고민한다",
-          "description": "체력을 {TakeTimeHpLoss} 잃습니다. 인형 유물 2개 중 1개를 선택합니다."
+          "description": "체력을 5 잃습니다. 인형 유물 2개 중 1개를 선택합니다."
         }
       ]
     },
@@ -5874,7 +5874,7 @@
         },
         {
           "name": "홀로 탐색한다",
-          "description": "골드를 150 얻습니다. 체력을 {SoloHp} 잃습니다."
+          "description": "골드를 150 얻습니다. 체력을 18 잃습니다."
         }
       ]
     },
@@ -6106,11 +6106,11 @@
       "choices": [
         {
           "name": "받아들인다",
-          "description": "체력을 {LetItInHealAmount} 회복합니다. 덱에 탈바꿈을 추가합니다."
+          "description": "체력을 25 회복합니다. 덱에 탈바꿈을 추가합니다."
         },
         {
           "name": "거부한다",
-          "description": "체력을 {RejectionHpLoss} 잃습니다. 덱에서 카드를 1장 제거합니다."
+          "description": "체력을 9 잃습니다. 덱에서 카드를 1장 제거합니다."
         }
       ]
     },
@@ -6330,11 +6330,11 @@
         },
         {
           "name": "꺼끌꺼끌한 스펀지",
-          "description": "골드를 {PricklySpongeGold} 지불합니다. 카드 2장에 안정을 인챈트합니다."
+          "description": "골드를 155 지불합니다. 카드 2장에 안정을 인챈트합니다."
         },
         {
           "name": "잠김",
-          "description": "골드가 {PricklySpongeGold} 필요합니다."
+          "description": "골드가 155 필요합니다."
         }
       ]
     },
@@ -6440,7 +6440,7 @@
         },
         {
           "name": "콰광 소라",
-          "description": "엘리트 전투 시작 시, 카드를 추가로 {Cards}장 뽑습니다.",
+          "description": "엘리트 전투 시작 시, 카드를 추가로 2장 뽑습니다.",
           "relic_id": "BOOMING_CONCH",
           "pool": "positive"
         },
@@ -6452,7 +6452,7 @@
         },
         {
           "name": "황금 진주",
-          "description": "획득 시, 골드를 {Gold} 얻습니다.",
+          "description": "획득 시, 골드를 150 얻습니다.",
           "relic_id": "GOLDEN_PEARL",
           "pool": "positive"
         },
@@ -6464,7 +6464,7 @@
         },
         {
           "name": "새로운 잎",
-          "description": "획득 시, 카드를 {Cards}장 변화시킵니다.",
+          "description": "획득 시, 카드를 1장 변화시킵니다.",
           "relic_id": "NEW_LEAF",
           "pool": "positive"
         },
@@ -6476,7 +6476,7 @@
         },
         {
           "name": "정밀한 가위",
-          "description": "획득 시, 덱에서 카드를 {Cards}장 제거합니다.",
+          "description": "획득 시, 덱에서 카드를 1장 제거합니다.",
           "relic_id": "PRECISE_SCISSORS",
           "pool": "positive"
         },
@@ -6488,37 +6488,37 @@
         },
         {
           "name": "저주받은 진주",
-          "description": "획득 시, 탐욕을 받습니다. 골드를 {Gold} 획득합니다.",
+          "description": "획득 시, 탐욕을 받습니다. 골드를 333 획득합니다.",
           "relic_id": "CURSED_PEARL",
           "pool": "cursed"
         },
         {
           "name": "대형 캡슐",
-          "description": "획득 시, 무작위 유물을 {Relics}개 얻습니다. 덱에 타격과 수비를 1장씩 추가합니다.",
+          "description": "획득 시, 무작위 유물을 2개 얻습니다. 덱에 타격과 수비를 1장씩 추가합니다.",
           "relic_id": "LARGE_CAPSULE",
           "pool": "cursed"
         },
         {
           "name": "나뭇잎 습포",
-          "description": "획득 시, 타격 1장과 수비 1장을 변화시킵니다. 최대 체력을 {MaxHp} 잃습니다.",
+          "description": "획득 시, 타격 1장과 수비 1장을 변화시킵니다. 최대 체력을 10 잃습니다.",
           "relic_id": "LEAFY_POULTICE",
           "pool": "cursed"
         },
         {
           "name": "불안정한 가위",
-          "description": "획득 시, 덱에서 카드를 {Cards}장 제거하고 피해를 {Damage} 받습니다.",
+          "description": "획득 시, 덱에서 카드를 2장 제거하고 피해를 13 받습니다.",
           "relic_id": "PRECARIOUS_SHEARS",
           "pool": "cursed"
         },
         {
           "name": "영양만점 굴",
-          "description": "획득 시, 최대 체력이 {MaxHp} 증가합니다.",
+          "description": "획득 시, 최대 체력이 11 증가합니다.",
           "relic_id": "NUTRITIOUS_OYSTER",
           "pool": "positive"
         },
         {
           "name": "석재 가습기",
-          "description": "휴식 장소에서 휴식을 취할 때마다, 최대 체력이 {MaxHp} 증가합니다.",
+          "description": "휴식 장소에서 휴식을 취할 때마다, 최대 체력이 5 증가합니다.",
           "relic_id": "STONE_HUMIDIFIER",
           "pool": "positive"
         },
@@ -6530,7 +6530,7 @@
         },
         {
           "name": "화산암",
-          "description": "1막의 보스가 보상으로 유물을 {Relics}개 제공합니다.",
+          "description": "1막의 보스가 보상으로 유물을 2개 제공합니다.",
           "relic_id": "LAVA_ROCK",
           "pool": "positive"
         },
@@ -6542,7 +6542,7 @@
         },
         {
           "name": "은 도가니",
-          "description": "처음 {Cards}번의 카드 보상이 강화된 상태로 등장합니다. 처음으로 여는 보물 상자가 비어 있습니다.",
+          "description": "처음 3번의 카드 보상이 강화된 상태로 등장합니다. 처음으로 여는 보물 상자가 비어 있습니다.",
           "relic_id": "SILVER_CRUCIBLE",
           "pool": "cursed"
         },
