@@ -75,8 +75,38 @@ jobs:
             -g "${APP_NAME}-rg" \
             --image "${{ needs.build.outputs.acr_login }}/$APP_NAME:${{ needs.build.outputs.tag }}"
 
+  smoke-test-staging:
+    needs: staging
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+
+      - name: Run smoke tests against staging
+        run: npx playwright test
+        env:
+          BASE_URL: https://test.spire-archive.com
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-staging
+          path: playwright-report/
+          retention-days: 7
+
   production:
-    needs: [build, staging]
+    needs: [build, smoke-test-staging]
     runs-on: ubuntu-latest
     environment: production
     steps:
@@ -91,3 +121,33 @@ jobs:
             -n "$APP_NAME" \
             -g "${APP_NAME}-rg" \
             --image "${{ needs.build.outputs.acr_login }}/$APP_NAME:${{ needs.build.outputs.tag }}"
+
+  smoke-test-prod:
+    needs: production
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+
+      - name: Run smoke tests against production
+        run: npx playwright test
+        env:
+          BASE_URL: https://spire-archive.com
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-prod
+          path: playwright-report/
+          retention-days: 7
