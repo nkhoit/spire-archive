@@ -3,476 +3,1650 @@
     "id": "ABYSSAL_BATHS",
     "name": "Abyssal Baths",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "You discover a secluded chamber.\n\nSteam rises from bubbling pools of hot liquid that shifts colors with hypnotic rhythm. Barnacled growths hang from the ceiling, dripping viscous fluid that hisses and writhes when it touches the surface. The air feels heavy, laden with salt and something unmistakably organic.\n\nAs you approach the edge of the largest pool, the liquid ripples. The waters bubble more intensely as if anticipating your entry.",
+    "choices": [
+      {
+        "name": "Abstain",
+        "description": "Heal 10 HP."
+      },
+      {
+        "name": "Immerse",
+        "description": "Gain 2 Max HP. Take 3 damage."
+      }
+    ]
   },
   {
     "id": "AMALGAMATOR",
     "name": "Amalgamator",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "CLANG! CLANG!!!\n\nYou hear the echoes of metal upon metal on the otherside of a wall...\n\nAs you press your head against the wall to listen in—the wall opens up, revealing a hulking six-armed figure toiling away.\nIts “face” is a swirling vortex of glowing sigils that shift about.\n\n“One with an Ascending Spirit has found my workshop? Let's get COMBINING!”",
+    "choices": [
+      {
+        "name": "Combine Defends",
+        "description": "Remove 2 Defends. Add {Card2} to your Deck.",
+        "references": [
+          {
+            "type": "card",
+            "id": "ULTIMATE_DEFEND",
+            "name": "Ultimate Defend"
+          }
+        ]
+      },
+      {
+        "name": "Combine Strikes",
+        "description": "Remove 2 Strikes. Add {Card1} to your Deck.",
+        "references": [
+          {
+            "type": "card",
+            "id": "ULTIMATE_STRIKE",
+            "name": "Ultimate Strike"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "AROMA_OF_CHAOS",
     "name": "Aroma of Chaos",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "Upon trudging through a thick underbrush and making it into a clearing, you're hit with an unplaceable nostalgia.\n\nA mix of floral scents, putrid decay, and something else entirely. The scent grows stronger with each step, and you feel as though the world around you is warping and twisting.\n\nOvercome with a sense of shifting chaos[/rainbow], you begin to lose your sense of self.",
+    "choices": [
+      {
+        "name": "Let Go",
+        "description": "Transform a card in your Deck."
+      },
+      {
+        "name": "Maintain Control",
+        "description": "Upgrade a card in your Deck."
+      }
+    ]
   },
   {
     "id": "BATTLEWORN_DUMMY",
     "name": "Battleworn Dummy",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "As you approach, it begins to rumble and fizzle and lights up brilliantly!\n\n“BZZZT! TIME TO TRAIN!!! YOU HAVE 3 TURNS TO DEFEAT ME!\nCHOOSE A SETTING OR FACE LETHAL HUMILIATION.\nHere are the options:”\n\nAfter the terrifying message, the dummy carefully reads out detailed instructions.\n\nWhat do you choose?",
+    "choices": [
+      {
+        "name": "Setting 1",
+        "description": "Fight a {Setting1Hp} HP dummy. Procure 1 random Potion."
+      },
+      {
+        "name": "Setting 2",
+        "description": "Fight a {Setting2Hp} HP dummy. Upgrade 2 random cards."
+      },
+      {
+        "name": "Setting 3",
+        "description": "Fight a {Setting3Hp} HP dummy. Obtain a random Relic."
+      }
+    ]
   },
   {
     "id": "BRAIN_LEECH",
     "name": "Brain Leech",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "*thunk*\n\nA sharp pain is felt atop your head and a thought stabs into your mind.\n\n“SHARE KNOWLEDGE???”\n\nYou are unsure how to proceed...",
+    "choices": [
+      {
+        "name": "Rip the Leech Off",
+        "description": "Lose {RipHpLoss} HP. Gain a Colorless card reward."
+      },
+      {
+        "name": "Share Knowledge",
+        "description": "Choose {CardChoiceCount} of {FromCardChoiceCount} random cards to add to your Deck."
+      }
+    ]
   },
   {
     "id": "BUGSLAYER",
     "name": "Bugslayer",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "As you're fending off a swarm of aggressive insects you suddenly notice a Mighty Rugged Warrior-Man fighting beside you this whole time!\n\nThe insects, sensing defeat, scatter. You turn to your fellow fighter.\n“Would you like any tips on exterminating these pests?”\n\nHow polite. You nod and accept his offer.",
+    "choices": [
+      {
+        "name": "Learn Extermination Technique",
+        "description": "Add {Card1} to your Deck.",
+        "references": [
+          {
+            "type": "card",
+            "id": "EXTERMINATE",
+            "name": "Exterminate"
+          }
+        ]
+      },
+      {
+        "name": "Learn Squash Technique",
+        "description": "Add {Card2} to your Deck.",
+        "references": [
+          {
+            "type": "card",
+            "id": "SQUASH",
+            "name": "Squash"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "BYRDONIS_NEST",
     "name": "Byrdonis Nest",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "You spot an enormous Shambling Beast chase off an injured Green Byrd.\n\nIn the alcove the byrd fled from, a single unguarded egg lies abandoned.\n\nYour stomach gurgles...",
+    "choices": [
+      {
+        "name": "Eat the Egg",
+        "description": "Gain 7 Max HP."
+      },
+      {
+        "name": "Take the Egg",
+        "description": "Add {Card} to your Deck.",
+        "references": [
+          {
+            "type": "card",
+            "id": "BYRDONIS_EGG",
+            "name": "Byrdonis Egg"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "COLORFUL_PHILOSOPHERS",
     "name": "Colorful Philosophers",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "Before you is a rather epic sight.\nYou see 3 different colored statues towering over a dais, having a heated debate over the philosophical implications of color.\n\nAs you listen in, you get a sense that the most important question at hand is which color truly is THE BEST.\n\nYou chime in with your thoughts.",
+    "choices": [
+      {
+        "name": "Blue",
+        "description": "Obtain {Cards} Defect {Cards:plural:card|cards}.",
+        "references": [
+          {
+            "type": "character",
+            "id": "DEFECT",
+            "name": "Defect"
+          }
+        ]
+      },
+      {
+        "name": "Red",
+        "description": "Obtain {Cards} Ironclad {Cards:plural:card|cards}.",
+        "references": [
+          {
+            "type": "character",
+            "id": "IRONCLAD",
+            "name": "Ironclad"
+          }
+        ]
+      },
+      {
+        "name": "Pink",
+        "description": "Obtain {Cards} Necrobinder {Cards:plural:card|cards}.",
+        "references": [
+          {
+            "type": "character",
+            "id": "NECROBINDER",
+            "name": "Necrobinder"
+          }
+        ]
+      },
+      {
+        "name": "Orange",
+        "description": "Obtain {Cards} Regent {Cards:plural:card|cards}.",
+        "references": [
+          {
+            "type": "character",
+            "id": "REGENT",
+            "name": "Regent"
+          }
+        ]
+      },
+      {
+        "name": "Green",
+        "description": "Obtain {Cards} Silent {Cards:plural:card|cards}.",
+        "references": [
+          {
+            "type": "character",
+            "id": "SILENT",
+            "name": "Silent"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "COLOSSAL_FLOWER",
     "name": "Colossal Flower",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "There is a colossal flower growing atop a mountain of bones.\n\nAs its color-shifting petals[/rainbow] pulsate, you sense there is a Powerful Cluster of Pollen in the center but the undulating petals are razor sharp and unpredictable.\n\nYou could grab some of the golden nectar, but reaching the prize in the center is so tempting...",
+    "choices": [
+      {
+        "name": "Extract Nectar",
+        "description": "Gain {Prize1} Gold."
+      },
+      {
+        "name": "Reach Deeper",
+        "description": "Enter deeper. Lose 5 HP."
+      }
+    ]
   },
   {
     "id": "CRYSTAL_SPHERE",
     "name": "Crystal Sphere",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "“I predicted you'd enter...!”\n\nA raspy voice calls out as you enter a mystic hut.\n\n“Your destiny has brought you here. We must uncover your future and fortunes so you can SAVE US ALL!!”\n“Okay, here are the options for the Crystal Sphere reading. Be sure to sign this waiver as well,” she says while bringing out pen and parchment.",
+    "choices": [
+      {
+        "name": "Payment Plan",
+        "description": "Gain a {CurseTitle}. Divine 6 times.",
+        "references": [
+          {
+            "type": "card",
+            "id": "DEBT",
+            "name": "Debt"
+          }
+        ]
+      },
+      {
+        "name": "Uncover Future",
+        "description": "Pay 50 Gold. Divine 3 times."
+      }
+    ]
   },
   {
     "id": "DARV",
     "name": "Darv",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "Darv, the Hoarder, digs through a heap of powerful relics and presents a rotating stash. You are shown Dusty Tome plus three random relics drawn from the main pool and act-specific sets, with some options only appearing when their conditions are met.",
+    "choices": [],
+    "type": "ancient",
+    "relic_pools": [
+      {
+        "name": "Main Pool",
+        "relics": [
+          "ASTROLABE",
+          "BLACK_STAR",
+          "CALLING_BELL",
+          "EMPTY_CAGE",
+          "PANDORAS_BOX",
+          "RUNIC_PYRAMID",
+          "SNECKO_EYE"
+        ]
+      },
+      {
+        "name": "Act 1 Set",
+        "relics": [
+          "ECTOPLASM",
+          "SOZU"
+        ]
+      },
+      {
+        "name": "Act 2 Set",
+        "relics": [
+          "PHILOSOPHERS_STONE",
+          "VELVET_CHOKER"
+        ]
+      },
+      {
+        "name": "Always Offered",
+        "relics": [
+          "DUSTY_TOME"
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "relic",
+        "id": "DUSTY_TOME",
+        "name": "Dusty Tome"
+      },
+      {
+        "type": "relic",
+        "id": "ASTROLABE",
+        "name": "Astrolabe"
+      },
+      {
+        "type": "relic",
+        "id": "BLACK_STAR",
+        "name": "Black Star"
+      },
+      {
+        "type": "relic",
+        "id": "CALLING_BELL",
+        "name": "Calling Bell"
+      },
+      {
+        "type": "relic",
+        "id": "EMPTY_CAGE",
+        "name": "Empty Cage"
+      },
+      {
+        "type": "relic",
+        "id": "PANDORAS_BOX",
+        "name": "Pandoras Box"
+      },
+      {
+        "type": "relic",
+        "id": "RUNIC_PYRAMID",
+        "name": "Runic Pyramid"
+      },
+      {
+        "type": "relic",
+        "id": "SNECKO_EYE",
+        "name": "Snecko Eye"
+      },
+      {
+        "type": "relic",
+        "id": "ECTOPLASM",
+        "name": "Ectoplasm"
+      },
+      {
+        "type": "relic",
+        "id": "SOZU",
+        "name": "Sozu"
+      },
+      {
+        "type": "relic",
+        "id": "PHILOSOPHERS_STONE",
+        "name": "Philosophers Stone"
+      },
+      {
+        "type": "relic",
+        "id": "VELVET_CHOKER",
+        "name": "Velvet Choker"
+      }
+    ]
   },
   {
     "id": "DENSE_VEGETATION",
     "name": "Dense Vegetation",
     "act": "unknown",
-    "description": null,
-    "choices": []
-  },
-  {
-    "id": "DEPRECATED_ANCIENT_EVENT",
-    "name": "Deprecated Ancient Event",
-    "act": "unknown",
-    "description": null,
-    "choices": []
-  },
-  {
-    "id": "DEPRECATED_EVENT",
-    "name": "Deprecated Event",
-    "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "Having taken the wrong path for a good while, you find yourself in a thick jungle of ferns, shrubs, and vines. Especially vines. Exhaustion sets in, and a dark thought comes to mind:\n\n“You are lost, unprepared, and the inevitability of death is approaching.”\n\nWhat do you do?",
+    "choices": [
+      {
+        "name": "Rest",
+        "description": "Heal like resting at a Rest Site. Fight some enemies."
+      },
+      {
+        "name": "Trudge On",
+        "description": "Remove a card from your Deck. Lose 11 HP."
+      }
+    ]
   },
   {
     "id": "DOLL_ROOM",
     "name": "Doll Room",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "You enter a hidden room...\n\nIt's packed with an array of dolls. Each are unique, their expressions ranging from joy to sorrow, their attire spanning centuries and realms beyond your own.\n\nA chorus of whispers grows louder and louder until the dolls are shouting over each other and calling for you...\n\nYou must choose one and leave immediately.",
+    "choices": [
+      {
+        "name": "Examine Each and Make the Best Choice",
+        "description": "Lose {ExamineHpLoss} HP. Choose 1 of 3 Doll Relics."
+      },
+      {
+        "name": "Pick at Random",
+        "description": "Obtain a random Doll Relic."
+      },
+      {
+        "name": "Take Some Time",
+        "description": "Lose {TakeTimeHpLoss} HP. Choose 1 of 2 Doll Relics."
+      }
+    ]
   },
   {
     "id": "DOORS_OF_LIGHT_AND_DARK",
     "name": "Doors of Light and Dark",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "A doorway existed where none existed moments before...\n\nYou enter to find two shimmering doorways and a well-dressed doorman.\n“Finally, a visitor! Please please! Choose a door, any door!”\n\nAre we still in the Spire? How is this place so clean?",
+    "choices": [
+      {
+        "name": "Dark Door",
+        "description": "Remove 1 card from your Deck."
+      },
+      {
+        "name": "Light Door",
+        "description": "Upgrade {Cards} random cards."
+      }
+    ]
   },
   {
     "id": "DROWNING_BEACON",
     "name": "Drowning Beacon",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "Crossing a dreamscape of rocks and still waters, you emerge to face a sinking lighthouse emitting anti-light.\n\nYou can bottle up the eerily-glowing water that has pooled here or climb up the dilapidated structure to retrieve the lens.",
+    "choices": [
+      {
+        "name": "Bottle",
+        "description": "Procure {Potion}.",
+        "references": [
+          {
+            "type": "potion",
+            "id": "GLOWWATER_POTION",
+            "name": "Glowwater Potion"
+          }
+        ]
+      },
+      {
+        "name": "Climb",
+        "description": "Obtain {Relic}. Lose 13 Max HP.",
+        "references": [
+          {
+            "type": "relic",
+            "id": "FRESNEL_LENS",
+            "name": "Fresnel Lens"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "ENDLESS_CONVEYOR",
     "name": "Endless Conveyor",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "You lumber into a shack with a bright but crooked sign that reads:\n“ENDLESS FEAST - PAY WHAT YOU HUNGER!”\n\nInside, a willowy multi-armed chef is deftly preparing bites of food and placing them onto a winding chitinous belt.\n\nOne of the chef's arms point to a sign:\n35 Gold each",
+    "choices": [
+      {
+        "name": "Observe the Chef",
+        "description": "Upgrade a random card in your Deck."
+      }
+    ]
   },
   {
     "id": "FAKE_MERCHANT",
     "name": "The Merchant???",
     "act": "unknown",
-    "description": null,
+    "description": "Placeholder",
     "choices": []
   },
   {
     "id": "FIELD_OF_MAN_SIZED_HOLES",
     "name": "Field of Man-Sized Holes",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "The sudden sight of a massive field, gouged with large outlines of bodies, stops you in your tracks.\n\nOne of these outlines matches your own.\n\nIt's perfect...",
+    "choices": [
+      {
+        "name": "Enter Your Hole",
+        "description": "Enchant a card with {Enchantment}.",
+        "references": [
+          {
+            "type": "card",
+            "id": "PERFECT_FIT",
+            "name": "Perfect Fit"
+          }
+        ]
+      },
+      {
+        "name": "Resist",
+        "description": "Remove {Cards} cards from your Deck. Add {ResistCurse} to your Deck.",
+        "references": [
+          {
+            "type": "card",
+            "id": "NORMALITY",
+            "name": "Normality"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "GRAVE_OF_THE_FORGOTTEN",
     "name": "Grave of the Forgotten",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "There is a single grave with a roiling blue flame...\n\nA prideful warrior died in battle but its soul is restless. It wants to keep fighting, you feel it begging to journey with you.\n\nBut perhaps it's better for it to face the truth?",
+    "choices": [
+      {
+        "name": "Accept the {Relic}",
+        "description": "Obtain {Relic}.",
+        "references": [
+          {
+            "type": "relic",
+            "id": "FORGOTTEN_SOUL",
+            "name": "Forgotten Soul"
+          }
+        ]
+      },
+      {
+        "name": "Confront with Truth",
+        "description": "Add {Curse} to your Deck. Enchant a card that Exhausts with {Enchantment}.",
+        "references": [
+          {
+            "type": "card",
+            "id": "SOULS_POWER",
+            "name": "Souls Power"
+          }
+        ],
+        "locked": "You have no cards with Exhaust that can be Enchanted."
+      }
+    ]
   },
   {
     "id": "HUNGRY_FOR_MUSHROOMS",
     "name": "Hungry for Mushrooms",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "How long has it been since you ate?\n...wait, what's that fantastic smell?\n\nFollowing the scent, you reach a cozy campground with all manner of tasty mushrooms being cooked! You don't consider the safety of eating these mushrooms because you are so hungry.\n(So hungry that you don't notice the dead adventurer)",
+    "choices": [
+      {
+        "name": "Big Mushroom",
+        "description": ""
+      },
+      {
+        "name": "Fragrant Mushroom",
+        "description": ""
+      }
+    ]
   },
   {
     "id": "INFESTED_AUTOMATON",
     "name": "Infested Automaton",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "There's a chamber filled with dead robots.\n\nA lone automaton still has a faintly glowing core but it's engulfed by a grotesque, organic growth and doesn't respond.",
+    "choices": [
+      {
+        "name": "Study",
+        "description": "Obtain a random Power."
+      },
+      {
+        "name": "Touch the Core",
+        "description": "Obtain a random 0 cost card."
+      }
+    ]
   },
   {
     "id": "JUNGLE_MAZE_ADVENTURE",
     "name": "Jungle Maze Adventure",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "In a clearing, you run into a Ragtag Group of Adventurers looking down and gesturing at a gigantic maze.\n\nThey offer to join forces with you in an Epic Quest to loot the riches of this maze. As an experienced adventurer yourself, it's clear this maze is filled with deadly traps and guardians.\n\nIt would be easier if you work together, but then you would have to split the loot.",
+    "choices": [
+      {
+        "name": "Join Forces",
+        "description": "Gain 50 Gold."
+      },
+      {
+        "name": "Solo Quest",
+        "description": "Gain 150 Gold. Lose {SoloHp} HP."
+      }
+    ]
   },
   {
     "id": "LOST_WISP",
     "name": "The Lost Wisp",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "In the distance is an odd sight. Mounds and mounds of deceased insects, surrounding what looks to be a small glowing mote.\nIt seems to be an effective attractant for all manner of bugs but you see it lash out some flames!\n\nYou move closer to investigate.",
+    "choices": [
+      {
+        "name": "Capture the Wisp",
+        "description": "Add {Curse} to your Deck. Obtain the {Relic}.",
+        "references": [
+          {
+            "type": "card",
+            "id": "DECAY",
+            "name": "Decay"
+          }
+        ],
+        "locked": "Your Max HP is too low."
+      },
+      {
+        "name": "Search the Nearby Area",
+        "description": "Gain {Gold} Gold."
+      }
+    ]
   },
   {
     "id": "LUMINOUS_CHOIR",
     "name": "Luminous Choir",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "You stumble upon a clearing bathed in an unnatural blue glow. Towering mushrooms pulse with bioluminescence, their caps swollen and glistening. As you approach, the fungi begin to emit haunting, melodic tones that reverberate throughout your chest.\n\nYou notice something gleaming, embedded within the largest mushroom's flesh, pulsing in rhythm with the fungal song.",
+    "choices": [
+      {
+        "name": "Offer Tribute",
+        "description": "Pay {Gold} Gold. Obtain a random Relic.",
+        "locked": "Requires {Gold} Gold."
+      },
+      {
+        "name": "Reach into the Flesh",
+        "description": "Remove 2 cards from your Deck. Add Spore Mind to your Deck.",
+        "references": [
+          {
+            "type": "card",
+            "id": "SPORE_MIND",
+            "name": "Spore Mind"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "MORPHIC_GROVE",
     "name": "Morphic Grove",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "You enter a grove of crystalline trees, and they begin to quiver excitedly!\nA chorus of hellos and welcomes bombard you as a group of Morphics burst forth from trees.\n\nOne of the Morphics is fidgeting in the corner, clearly not as sociable as the others.\n\nApproach the group or the loner?",
+    "choices": [
+      {
+        "name": "Group",
+        "description": "Lose {Gold} Gold. Transform 2 cards."
+      },
+      {
+        "name": "Loner",
+        "description": "Gain 5 Max HP."
+      }
+    ]
   },
   {
     "id": "NEOW",
     "name": "Neow",
     "act": "unknown",
     "description": null,
-    "choices": []
+    "choices": [],
+    "type": "ancient"
   },
   {
     "id": "NONUPEIPE",
     "name": "Nonupeipe",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "Nonupeipe, Serendipity Incarnate, surrounds you with a glittering collection of lucky treasures. Each visit offers three random relics from the main pool, with Beautiful Bracelet appearing only when its special condition is met.",
+    "choices": [],
+    "type": "ancient",
+    "relic_pools": [
+      {
+        "name": "Main Pool",
+        "relics": [
+          "BLESSED_ANTLER",
+          "BRILLIANT_SCARF",
+          "DELICATE_FROND",
+          "DIAMOND_DIADEM",
+          "FUR_COAT",
+          "GLITTER",
+          "JEWELRY_BOX",
+          "LOOMING_FRUIT",
+          "SIGNET_RING",
+          "BEAUTIFUL_BRACELET"
+        ]
+      }
+    ]
   },
   {
     "id": "OROBAS",
     "name": "Orobas",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "Orobas, the Living Rainbow, spreads a spectrum of relics across three distinct pools. Each encounter offers one relic from each pool, with Prismatic Gem joining the selection for characters who can channel Orbs.",
+    "choices": [],
+    "type": "ancient",
+    "relic_pools": [
+      {
+        "name": "Pool 1",
+        "relics": [
+          "ELECTRIC_SHRYMP",
+          "GLASS_EYE",
+          "SAND_CASTLE"
+        ]
+      },
+      {
+        "name": "Pool 2",
+        "relics": [
+          "ALCHEMICAL_COFFER",
+          "DRIFTWOOD",
+          "RADIANT_PEARL"
+        ]
+      },
+      {
+        "name": "Pool 3",
+        "relics": [
+          "SEA_GLASS",
+          "TOUCH_OF_OROBAS",
+          "ARCHAIC_TOOTH",
+          "PRISMATIC_GEM"
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "relic",
+        "id": "SEA_GLASS",
+        "name": "Sea Glass"
+      },
+      {
+        "type": "relic",
+        "id": "TOUCH_OF_OROBAS",
+        "name": "Touch Of Orobas"
+      },
+      {
+        "type": "relic",
+        "id": "ARCHAIC_TOOTH",
+        "name": "Archaic Tooth"
+      }
+    ]
   },
   {
     "id": "PAEL",
     "name": "Pael",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "Pael, the Melting Dragon, offers three relic choices drawn from twisting pools of flesh, wing, and eye. Each visit presents one relic from Pool 1, one from Pool 2, and one from Pool 3, with extra options appearing when your deck or companions meet Pael's peculiar conditions.",
+    "choices": [],
+    "type": "ancient",
+    "relic_pools": [
+      {
+        "name": "Pool 1",
+        "relics": [
+          "PAELS_FLESH",
+          "PAELS_HORN",
+          "PAELS_TEARS"
+        ]
+      },
+      {
+        "name": "Pool 2",
+        "relics": [
+          "PAELS_WING",
+          "PAELS_GROWTH",
+          "PAELS_CLAW",
+          "PAELS_TOOTH"
+        ]
+      },
+      {
+        "name": "Pool 3",
+        "relics": [
+          "PAELS_EYE",
+          "PAELS_BLOOD",
+          "PAELS_LEGION"
+        ]
+      }
+    ]
   },
   {
     "id": "POTION_COURIER",
     "name": "Potion Courier",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "There is a sour smell in the air and shortly after, you find a Potion Courier collapsed on the ground.\nUnmoving. Lifeless. Dead!?\nWhile their belongings have been ransacked, there is a batch of Foul Smelling Potions with a note: \"Recipient: Merchant\".",
+    "choices": [
+      {
+        "name": "Grab Potions",
+        "description": "Procure 3 Foul {FoulPotions:plural:Potion|Potions}.",
+        "references": [
+          {
+            "type": "potion",
+            "id": "FOUL_POTION",
+            "name": "Foul Potion"
+          }
+        ]
+      },
+      {
+        "name": "Ransack",
+        "description": "Procure 1 random Uncommon Potion."
+      }
+    ]
   },
   {
     "id": "PUNCH_OFF",
     "name": "Punch Off",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "Two Punch Constructs are duking it out and you see some treasure in between them...\n\nShould you try to nab it?",
+    "choices": [
+      {
+        "name": "I Can Take Them",
+        "description": "Fight them for Greater Rewards."
+      },
+      {
+        "name": "Nab",
+        "description": "Add Injury to your Deck. Obtain a random Relic.",
+        "references": [
+          {
+            "type": "card",
+            "id": "INJURY",
+            "name": "Injury"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "RANWID_THE_ELDER",
     "name": "Ranwid the Elder",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "You are approached by the oldest person you have ever seen.\n“We meet once more... it's me, Ranwid!”\n\nYou do not know this man.",
+    "choices": [
+      {
+        "name": "Give {Gold} Gold",
+        "description": "Obtain a random Relic."
+      },
+      {
+        "name": "Give {Potion}",
+        "description": "Obtain a random Relic.",
+        "locked": "You don't have any Potions that can be given."
+      },
+      {
+        "name": "Give {Relic}",
+        "description": "Obtain 2 random Relics.",
+        "locked": "You don't have any Relics that can be given."
+      }
+    ]
   },
   {
     "id": "REFLECTIONS",
     "name": "Reflections snoitcelfeR",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "What is this? Something feels wrong here...\n...ereh gnorw sleef gnihtemoS ?siht si tahW",
+    "choices": [
+      {
+        "name": "Shatter",
+        "description": "Duplicate your Deck. Receive Bad Luck.",
+        "references": [
+          {
+            "type": "card",
+            "id": "BAD_LUCK",
+            "name": "Bad Luck"
+          }
+        ]
+      },
+      {
+        "name": "Touch a Mirror",
+        "description": "Downgrade 2 random cards. Upgrade 4 random cards."
+      }
+    ]
   },
   {
     "id": "RELIC_TRADER",
     "name": "Relic Trader",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "You turn a corner and suddenly, a shadowy figure is just standing there. He pivots to face you.\n\n“Welcome! What're ya trading?”\nThe figure inquires as he flares open his cloak to reveal a slew of suspicious wares.",
+    "choices": [
+      {
+        "name": "Take the Bottom One",
+        "description": "Trade {BottomRelicOwned} for {BottomRelicNew}."
+      },
+      {
+        "name": "Take the Middle One",
+        "description": "Trade {MiddleRelicOwned} for {MiddleRelicNew}."
+      },
+      {
+        "name": "Take the Top One",
+        "description": "Trade {TopRelicOwned} for {TopRelicNew}."
+      }
+    ]
   },
   {
     "id": "ROOM_FULL_OF_CHEESE",
     "name": "Room Full of Cheese",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "This room is full of cheese!!!\n\nYou look around to see if there are any traps and above you is... more cheese. The candles in this room appear to be made of cheese. The furniture is also cheese.\nSuddenly, the door behind you slams shut.\n\nIt is made of cheese.",
+    "choices": [
+      {
+        "name": "Gorge",
+        "description": "Choose 2 of 8 random Common cards to add to your Deck."
+      },
+      {
+        "name": "Search",
+        "description": "Lose 14 HP. Obtain the Chosen Cheese.",
+        "references": [
+          {
+            "type": "relic",
+            "id": "CHOSEN_CHEESE",
+            "name": "The Chosen Cheese"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "ROUND_TEA_PARTY",
     "name": "The Round Tea Party",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "You find an invitation for a “Sir Galalot” to a tea party and decide to show up in his stead.\n\nUpon entering an unassuming rotunda, you find yourself in the midst of commanders, generals, warlords, and mercenaries having... tea?\nThe gigantic knight donning a golden crown speaks.\n\n“Thou art late for Tea?!”",
+    "choices": [
+      {
+        "name": "Enjoy Your Tea",
+        "description": "Obtain {Relic}. Heal to full HP.",
+        "references": [
+          {
+            "type": "relic",
+            "id": "ROYAL_POISON",
+            "name": "Royal Poison"
+          }
+        ]
+      },
+      {
+        "name": "Pick a Fight",
+        "description": "Lose {Damage} HP. Obtain a random Relic."
+      }
+    ]
   },
   {
     "id": "SAPPHIRE_SEED",
     "name": "Sapphire Seed",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "You narrowly avoid stepping on a bright, sharp... seed? Its unmistakable color gives away that it's a Sapphire Seed! Weren't these incredible seeds supposed to be extinct!?\n\nLegends say that consuming one can greatly amplify your endurance, but what if you plant and nourish it instead?",
+    "choices": [
+      {
+        "name": "Consume",
+        "description": "Heal 9 HP. Upgrade a card in your Deck."
+      },
+      {
+        "name": "Plant and Nourish",
+        "description": "Enchant a card with {Enchantment}.",
+        "references": [
+          {
+            "type": "card",
+            "id": "SOWN",
+            "name": "Sown"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "SELF_HELP_BOOK",
     "name": "Self-Help Book",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "On the floor lies a tome,\n“Top 3 Ways to Conquer the Spire”\n\nThe book is encrusted with blood so you find this manuscript highly suspicious.\n\nWill you read it?",
+    "choices": [
+      {
+        "name": "Move On",
+        "description": "You don't have any cards that can be Enchanted."
+      },
+      {
+        "name": "Read the Entire Book",
+        "description": "Choose a Power to Enchant with {Enchantment3} {Enchantment3Amount}.",
+        "references": [
+          {
+            "type": "card",
+            "id": "SWIFT",
+            "name": "Swift"
+          }
+        ],
+        "locked": "You don't have any Powers that can be Enchanted."
+      },
+      {
+        "name": "Read a Random Passage",
+        "description": "Choose a Skill to Enchant with {Enchantment2} {Enchantment2Amount}.",
+        "references": [
+          {
+            "type": "card",
+            "id": "NIMBLE",
+            "name": "Nimble"
+          }
+        ],
+        "locked": "You don't have any Skills that can be Enchanted."
+      },
+      {
+        "name": "Read the Back",
+        "description": "Choose an Attack to Enchant with {Enchantment1} {Enchantment1Amount}.",
+        "references": [
+          {
+            "type": "card",
+            "id": "SHARP",
+            "name": "Sharp"
+          }
+        ],
+        "locked": "You don't have any Attacks that can be Enchanted."
+      }
+    ]
   },
   {
     "id": "SLIPPERY_BRIDGE",
     "name": "Slippery Bridge",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "While crossing a rickety wooden bridge, there is a sudden torrent of rain. Massive gusts of wind buffet you, threatening to end your journey.",
+    "choices": [
+      {
+        "name": "Hold On",
+        "description": "Lose {HpLoss} HP. The card in the above option is randomized."
+      },
+      {
+        "name": "Overcome",
+        "description": "{RandomCard} is removed from your Deck."
+      }
+    ]
   },
   {
     "id": "SPIRALING_WHIRLPOOL",
     "name": "Spiraling Whirlpool",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "You happen upon a Massive Spiraling Whirlpool. The water swirls with beautiful precision and its surrounding walls are adorned with spiral patterns.\n\nAround and around... around...\n....and around.... what a sight......\n\nWhat do you do?",
+    "choices": [
+      {
+        "name": "Drink",
+        "description": "Heal 0 HP."
+      },
+      {
+        "name": "Observe",
+        "description": "Enchant a Strike or Defend with Spiral.",
+        "references": [
+          {
+            "type": "card",
+            "id": "SPIRAL",
+            "name": "Spiral"
+          }
+        ]
+      },
+      {
+        "name": "Reach In",
+        "description": "Obtain a random Relic. Add Writhe to your Deck."
+      }
+    ]
   },
   {
     "id": "SPIRIT_GRAFTER",
     "name": "Spirit Grafter",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "Above, a cocoon is shaking and wriggling, about to burst forth!\n\n...it stops wriggling. The cocoon ignites! What is going on?\nIn a flash of light and flame, a Spirit Grafter rushes into you, threatening to merge with your being to become complete.",
+    "choices": [
+      {
+        "name": "Let It In",
+        "description": "Heal {LetItInHealAmount} HP. Add Metamorphosis to your Deck.",
+        "references": [
+          {
+            "type": "card",
+            "id": "METAMORPHOSIS",
+            "name": "Metamorphosis"
+          }
+        ]
+      },
+      {
+        "name": "Rejection",
+        "description": "Lose {RejectionHpLoss} HP. Remove a card from your Deck."
+      }
+    ]
   },
   {
     "id": "STONE_OF_ALL_TIME",
     "name": "Stone of All Time",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "A massive boulder sits in the middle of an abandoned courtyard.\n\nA plaque reads:\nStone of All Time.\n\nIts presence, shape, and adornments indicate that this courtyard was built around this Stone and that it has never moved from this spot.",
+    "choices": [
+      {
+        "name": "Drink and Lift",
+        "description": "Lose {DrinkRandomPotion}. Gain 10 Max HP.",
+        "locked": "Requires a Potion."
+      },
+      {
+        "name": "Push",
+        "description": "Lose 6 HP. Enchant an Attack with Vigorous 8.",
+        "references": [
+          {
+            "type": "card",
+            "id": "VIGOROUS",
+            "name": "Vigorous"
+          }
+        ],
+        "locked": "Requires an Attack."
+      }
+    ]
   },
   {
     "id": "SUNKEN_STATUE",
     "name": "The Sunken Statue",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "You spot an aged statue half submerged in a pond; its hands gently rest atop a stone sword.\n\nSomething is also glittering at the bottom of the pond.\nVotive offerings perhaps?\n\nYou could really use some money...",
+    "choices": [
+      {
+        "name": "Dive into the Water",
+        "description": "Gain {Gold} Gold. Lose {HpLoss} HP."
+      },
+      {
+        "name": "Grab the Sword",
+        "description": "Obtain the {Relic}.",
+        "references": [
+          {
+            "type": "relic",
+            "id": "SWORD_OF_STONE",
+            "name": "Sword of Stone"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "SUNKEN_TREASURY",
     "name": "Sunken Treasury",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "A path leads you into a partially submerged vault.\nThere are 2 chests but only 1 brittle key.\n\nThe First Chest: Shaking it, you get jingly-jangly noises. Bit of gold.\nThe Second Chest: Enormous, ornate, and clearly cursed. Lots of gold!",
+    "choices": [
+      {
+        "name": "First Chest",
+        "description": "Gain 60 Gold."
+      },
+      {
+        "name": "Second Chest",
+        "description": "Gain 333 Gold. Receive Greed.",
+        "references": [
+          {
+            "type": "card",
+            "id": "GREED",
+            "name": "Greed"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "SYMBIOTE",
     "name": "Symbiote",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "Along your travels, you stumble upon a dark, amorphous polyp. You can sense that it is very old, and very evil.\n\nApproach...",
+    "choices": [
+      {
+        "name": "Approach",
+        "description": "Enchant an Attack with {Enchantment}.",
+        "references": [
+          {
+            "type": "card",
+            "id": "CORRUPTED",
+            "name": "Corrupted"
+          }
+        ],
+        "locked": "None of your Attacks can be Enchanted."
+      },
+      {
+        "name": "Kill with Fire",
+        "description": "Choose a card to Transform."
+      }
+    ]
   },
   {
     "id": "TABLET_OF_TRUTH",
     "name": "Tablet of Truth",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "You defeat a pair of Guardian Kin and make your way into a protected vault.\n\nInside is a tablet with familiar inscriptions. Your intuition tells you that this language can be deciphered rather easily... However, once you begin deciphering you'll be locked in.\n\nThe tablet gives off a soothing energy and you can smash it to receive its healing energies instead.",
+    "choices": [
+      {
+        "name": "Decipher",
+        "description": "Lose 3 Max HP. Upgrade a random card."
+      },
+      {
+        "name": "Smash",
+        "description": "Heal 20 HP."
+      }
+    ]
   },
   {
     "id": "TANX",
     "name": "Tanx",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "Tanx, the Khimera King, arms you from a brutal cache of weapons. Each meeting offers three random relics from Tanx's arsenal, with Tri-Boomerang added when you already carry enough weapons to impress the king.",
+    "choices": [],
+    "type": "ancient",
+    "relic_pools": [
+      {
+        "name": "Base Pool",
+        "relics": [
+          "CLAWS",
+          "CROSSBOW",
+          "IRON_CLUB",
+          "MEAT_CLEAVER",
+          "SAI",
+          "SPIKED_GAUNTLETS",
+          "TANXS_WHISTLE",
+          "THROWING_AXE",
+          "WAR_HAMMER",
+          "TRI_BOOMERANG"
+        ]
+      }
+    ]
   },
   {
     "id": "TEA_MASTER",
     "name": "Tea Master",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "You stumble into a dimly lit shack and find yourself immersed in a very peaceful space containing an obsessive variety of tea.\n\nThe man inside gestures to a selection of teas, each neatly labeled with a premium price.",
+    "choices": [
+      {
+        "name": "Bone Tea",
+        "description": "Pay 50 Gold. {BoneTeaDescription}",
+        "references": [
+          {
+            "type": "relic",
+            "id": "BONE_TEA",
+            "name": "Bone Tea"
+          }
+        ],
+        "locked": "Requires 50 Gold."
+      },
+      {
+        "name": "Ember Tea",
+        "description": "Pay 150 Gold. {EmberTeaDescription}",
+        "references": [
+          {
+            "type": "relic",
+            "id": "EMBER_TEA",
+            "name": "Ember Tea"
+          }
+        ],
+        "locked": "Requires 150 Gold."
+      },
+      {
+        "name": "Tea of Discourtesy",
+        "description": "{TeaOfDiscourtesyDescription}",
+        "references": [
+          {
+            "type": "relic",
+            "id": "TEA_OF_DISCOURTESY",
+            "name": "Tea of Discourtesy"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "TEZCATARA",
     "name": "Tezcatara",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "Tezcatara, It Which Feeds the Fire, sets out gifts in three carefully prepared pools. Each encounter offers one relic from each pool, ranging from comforting treats to strange keepsakes and treasured curios.",
+    "choices": [],
+    "type": "ancient",
+    "relic_pools": [
+      {
+        "name": "Pool 1",
+        "relics": [
+          "NUTRITIOUS_SOUP",
+          "VERY_HOT_COCOA",
+          "YUMMY_COOKIE"
+        ]
+      },
+      {
+        "name": "Pool 2",
+        "relics": [
+          "BIIIG_HUG",
+          "STORYBOOK",
+          "SEAL_OF_GOLD",
+          "TOASTY_MITTENS"
+        ]
+      },
+      {
+        "name": "Pool 3",
+        "relics": [
+          "GOLDEN_COMPASS",
+          "PUMPKIN_CANDLE",
+          "TOY_BOX"
+        ]
+      }
+    ]
   },
   {
     "id": "THE_ARCHITECT",
     "name": "The Architect",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "The Architect awaits at the end of each successful run. The encounter plays out as a dialogue with character-specific lines, culminating in a final confrontation.",
+    "choices": [],
+    "type": "ancient"
   },
   {
     "id": "THE_FUTURE_OF_POTIONS",
     "name": "The Future of Potions?",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "You feel a faint rumbling as you round the corner to discover a gigantic spinning apparatus!\nIt has several slots which appear to convert liquids into a highly compressed digestible tablet.\n\nThe idea of turning these health tonics into a tiny morsel is uncomfortable but perhaps it's good to try new things?",
+    "choices": [
+      {
+        "name": "Insert {Rarity} Potion",
+        "description": "Lose {Potion}. Obtain an Upgraded {Rarity} {Type}."
+      }
+    ]
   },
   {
     "id": "THE_LANTERN_KEY",
     "name": "The Lantern Key",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "You come upon a faintly glowing key and go to pick it up.\n\n“Been looking all over for that key! Now if you don't mind...”\n\n This person looks like bad news but maybe it's not good to be judgy.",
+    "choices": [
+      {
+        "name": "Keep the Key",
+        "description": "Fight to obtain the Key."
+      },
+      {
+        "name": "Return the Key",
+        "description": "Gain {Gold} Gold."
+      }
+    ]
   },
   {
     "id": "THE_LEGENDS_WERE_TRUE",
     "name": "The Legends Were True",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "Entering into a pitch dark chamber, a sudden light pierces the darkness from above, just as the door slams behind you.\n\nIlluminated before you appears to be a podium with a map on it. You feel compelled to take it.\n\nSuspicious.",
+    "choices": [
+      {
+        "name": "Nab the Map",
+        "description": "Receive the Spoils Map.",
+        "references": [
+          {
+            "type": "card",
+            "id": "SPOILS_MAP",
+            "name": "Spoils Map"
+          }
+        ]
+      },
+      {
+        "name": "Slowly Find an Exit",
+        "description": "Lose 8 HP. Procure 1 random Potion."
+      }
+    ]
   },
   {
     "id": "THIS_OR_THAT",
     "name": "This or That?",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "Arms suddenly jut out from a nearby hole, clutching a suspicious bag of riches and a clearly cursed relic.\n\n“This... or That?”\na scratched-up voice whispers from below.",
+    "choices": [
+      {
+        "name": "That",
+        "description": "Add {Curse} to your Deck. Obtain a random Relic.",
+        "references": [
+          {
+            "type": "card",
+            "id": "CLUMSY",
+            "name": "Clumsy"
+          }
+        ]
+      },
+      {
+        "name": "This",
+        "description": "Lose {HpLoss} HP. Gain {Gold} Gold."
+      }
+    ]
   },
   {
     "id": "TINKER_TIME",
     "name": "Tinker Time",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "Navigating through an endless sea of corpses, you find a mad scientist scavenging for various scraps.\n\n“Yes. Hi, hello! You look like a capable fighter... I need a tester for my next atrocity device! How about it?”",
+    "choices": [
+      {
+        "name": "Accept",
+        "description": "Create a custom card to add to your Deck."
+      }
+    ]
   },
   {
     "id": "TRASH_HEAP",
     "name": "Trash Heap",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "You discover a towering pile of scrapped weapons, discarded trinkets, and other oddities. The massive pile shifts and rumbles, as if growing from within...\n\nIf you scavenge from the surface, you may find some decent things. But if you really get in there, you may find some exotic treasures.",
+    "choices": [
+      {
+        "name": "Dive In",
+        "description": "Lose 8 HP. Obtain a random forgotten Relic from the past."
+      },
+      {
+        "name": "Grab Random Junk",
+        "description": "Gain {Gold} Gold. Obtain a random forgotten card from the past."
+      }
+    ]
   },
   {
     "id": "TRIAL",
     "name": "The Trial",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "You join a line of people entering a massive building.\n\nAs you pass under a golden archway, horns blare, confetti explodes, and streamers glide down from the ceiling!\n\n“Entrant {EntrantNumber}, you are the DECIDER for today's Trial.”",
+    "choices": [
+      {
+        "name": "Accept",
+        "description": "Serve as today's Decider."
+      },
+      {
+        "name": "Reject",
+        "description": "You are not allowed to Reject."
+      }
+    ]
   },
   {
     "id": "UNREST_SITE",
     "name": "Unrest Site",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "You find a secluded Rest Site and start a fire to get some rest.\nOr so you thought.\n\nOnce the fire is started, it begins to swell, reaching not upwards but sideways towards a grove of oil-seeping trees.\n\nShould you try resting anyways?",
+    "choices": [
+      {
+        "name": "Kill the Trees",
+        "description": "Lose 8 Max HP. Obtain a random Relic."
+      },
+      {
+        "name": "Rest Anyways",
+        "description": "Heal to full HP. Receive Poor Sleep.",
+        "references": [
+          {
+            "type": "card",
+            "id": "POOR_SLEEP",
+            "name": "Poor Sleep"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "VAKUU",
     "name": "Vakuu",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "Vakuu, the First Demon, tempts you with relics sorted into three ominous pools. Each encounter offers one relic from each pool, mixing bloody bargains, preserved trophies, and elegant demonic finery.",
+    "choices": [],
+    "type": "ancient",
+    "relic_pools": [
+      {
+        "name": "Pool 1",
+        "relics": [
+          "BLOOD_SOAKED_ROSE",
+          "WHISPERING_EARRING",
+          "FIDDLE"
+        ]
+      },
+      {
+        "name": "Pool 2",
+        "relics": [
+          "PRESERVED_FOG",
+          "SERE_TALON",
+          "DISTINGUISHED_CAPE"
+        ]
+      },
+      {
+        "name": "Pool 3",
+        "relics": [
+          "CHOICES_PARADOX",
+          "MUSIC_BOX",
+          "LORDS_PARASOL",
+          "JEWELED_MASK"
+        ]
+      }
+    ]
   },
   {
     "id": "WAR_HISTORIAN_REPY",
     "name": "War Historian, Repy",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "An academic is trapped in a hanging cage next to a treasure chest.\n\nThe academic is muttering about “One-Time-Use Keys” while furiously writing something.\n\nLooks like you can unlock the cage or the chest.",
+    "choices": [
+      {
+        "name": "Unlock the Cage",
+        "description": "Lose Lantern Key. Obtain History Course.",
+        "references": [
+          {
+            "type": "relic",
+            "id": "HISTORY_COURSE",
+            "name": "History Course"
+          },
+          {
+            "type": "card",
+            "id": "LANTERN_KEY",
+            "name": "Lantern Key"
+          }
+        ]
+      },
+      {
+        "name": "Unlock the Chest",
+        "description": "Lose Lantern Key. Procure 2 random Potions. Obtain 2 random Relics.",
+        "references": [
+          {
+            "type": "card",
+            "id": "LANTERN_KEY",
+            "name": "Lantern Key"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "WATERLOGGED_SCRIPTORIUM",
     "name": "Waterlogged Scriptorium",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "Navigating the murky passages, you stumble upon a withered figure working a small shop. The multitude of shelves are stuffed full of damp scrolls and parchment.\n\nNoticing a patron has entered, the scribe-shopkeeper snaps to attention and gestures at some implements arranged on a desk.",
+    "choices": [
+      {
+        "name": "Bloody Ink",
+        "description": "Gain 6 Max HP."
+      },
+      {
+        "name": "Prickly Sponge",
+        "description": "Pay {PricklySpongeGold} Gold. Enchant {Cards} {Cards:plural:card|cards} with Steady.",
+        "references": [
+          {
+            "type": "card",
+            "id": "STEADY",
+            "name": "Steady"
+          }
+        ],
+        "locked": "Requires {PricklySpongeGold} Gold."
+      },
+      {
+        "name": "Tentacle Quill",
+        "description": "Pay {Gold} Gold. Enchant a card with Steady.",
+        "references": [
+          {
+            "type": "card",
+            "id": "STEADY",
+            "name": "Steady"
+          }
+        ],
+        "locked": "Requires {Gold} Gold."
+      }
+    ]
   },
   {
     "id": "WELCOME_TO_WONGOS",
     "name": "Welcome to Wongo's",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "“Welcome to Wongo's. We have what you want at Wongtastic prices.” says the least enthusiastic clerk you have ever met.\n\n“Peruse our wares and enjoy your time at Wongo's,” they continue, without even looking up.",
+    "choices": [
+      {
+        "name": "Wongo's Bargain Bin",
+        "description": "Pay {BargainBinCost} Gold. Obtain 1 random Common Relic.",
+        "locked": "Requires {BargainBinCost} Gold."
+      },
+      {
+        "name": "Wongo's Featured Item",
+        "description": "Pay {FeaturedItemCost} Gold. Obtain {RandomRelic}.",
+        "locked": "Requires {FeaturedItemCost} Gold."
+      },
+      {
+        "name": "Leave",
+        "description": "Downgrade a random card."
+      },
+      {
+        "name": "Wongo's Mystery Box",
+        "description": "Pay {MysteryBoxCost} Gold. Obtain {MysteryBoxRelicCount} random Relics after {MysteryBoxCombatCount} combats.",
+        "locked": "Requires {MysteryBoxCost} Gold."
+      }
+    ]
   },
   {
     "id": "WELLSPRING",
     "name": "Wellspring",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "You trace a low rumble to its source and find yourself captivated by a tranquil wellspring. The water is an emerald green with clusters of glowing motes.\n\nIt looks inviting. What can possibly go wrong?",
+    "choices": [
+      {
+        "name": "Bathe",
+        "description": "Remove 1 card from your Deck. Add 1 Guilty to your Deck.",
+        "references": [
+          {
+            "type": "card",
+            "id": "GUILTY",
+            "name": "Guilty"
+          }
+        ]
+      },
+      {
+        "name": "Bottle",
+        "description": "Procure 1 random Potion."
+      }
+    ]
   },
   {
     "id": "WHISPERING_HOLLOW",
     "name": "Whispering Hollow",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "Making your way through a hollow of dead trees you happen upon a single bone-white tree. Clay baubles hang off its branches, which curve inward like protective ribs.\n\nSuch a creepy tree. It whispers.\n\n...make exchange.....",
+    "choices": [
+      {
+        "name": "Exchange Gold",
+        "description": "Lose {Gold} Gold. Procure 2 random Potions."
+      },
+      {
+        "name": "Hug the Tree",
+        "description": "Lose 9 HP. Choose a card to Transform."
+      }
+    ]
   },
   {
     "id": "WOOD_CARVINGS",
     "name": "Wood Carvings",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "You open a dusty box to find a set of 3 elaborate wood carvings:\n\nA bird, snake, and... a torus?\n\nA nearby pedestal has indentations which match the bottom of the carvings. Which carving will you place on the pedestal?",
+    "choices": [
+      {
+        "name": "Bird",
+        "description": "Choose 1 starter card to Transform into {BirdCard}.",
+        "references": [
+          {
+            "type": "card",
+            "id": "PECK",
+            "name": "Peck"
+          }
+        ]
+      },
+      {
+        "name": "Snake",
+        "description": "Enchant 1 card with {SnakeEnchantment}.",
+        "references": [
+          {
+            "type": "card",
+            "id": "SLITHER",
+            "name": "Slither"
+          }
+        ],
+        "locked": "None of your cards can be Enchanted with Slither."
+      },
+      {
+        "name": "Torus",
+        "description": "Choose 1 starter card to Transform into {ToricCard}.",
+        "references": [
+          {
+            "type": "card",
+            "id": "TORIC_TOUGHNESS",
+            "name": "Toric Toughness"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "ZEN_WEAVER",
     "name": "Zen Weaver",
     "act": "unknown",
-    "description": null,
-    "choices": []
+    "description": "You walk through a spider web and PANIC!\nBut then, a wave of calm washes over you...\n\n“Calm down. I need you to quit fussing up my web.”\n\nHow did you calm down so quickly?\nAn itsy bitsy spider abseils down to meet you. It seems willing to impart some techniques for gold.",
+    "choices": [
+      {
+        "name": "Arachnid Acupuncture",
+        "description": "Pay 250 Gold. Remove 2 cards from your Deck."
+      },
+      {
+        "name": "Breathing Techniques",
+        "description": "Pay 50 Gold. Add 2 Enlightenment to your Deck.",
+        "references": [
+          {
+            "type": "card",
+            "id": "ENLIGHTENMENT",
+            "name": "Enlightenment"
+          }
+        ]
+      },
+      {
+        "name": "Emotional Awareness",
+        "description": "Pay 125 Gold. Remove 1 card from your Deck.",
+        "locked": "Not enough Gold."
+      }
+    ]
   }
 ]

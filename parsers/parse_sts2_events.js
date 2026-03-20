@@ -183,6 +183,101 @@ function eventNameToCsFileName(eventName) {
     .join('');
 }
 
+function classToId(name) {
+  return name
+    .replace(/([a-z])([A-Z])/g, '$1_$2')
+    .replace(/([A-Z]+)([A-Z][a-z])/g, '$1_$2')
+    .toUpperCase();
+}
+
+/**
+ * Extract card/relic/enchantment/potion references from event C# files.
+ * Returns a map: eventId → { optionRefs: { optionKey → references[] }, eventRefs: references[] }
+ */
+function extractReferences(csDir, cardsData, relicsData, potionsData) {
+  const cardNames = new Map(); // ID → name
+  const relicNames = new Map();
+  const potionNames = new Map();
+  for (const c of cardsData) cardNames.set(c.id, c.name);
+  for (const r of relicsData) relicNames.set(r.id, r.name);
+  for (const p of potionsData) potionNames.set(p.id, p.name);
+
+  function makeRef(className) {
+    const refId = classToId(className);
+    if (cardNames.has(refId)) return { type: 'card', id: refId, name: cardNames.get(refId) };
+    if (relicNames.has(refId)) return { type: 'relic', id: refId, name: relicNames.get(refId) };
+    if (potionNames.has(refId)) return { type: 'potion', id: refId, name: potionNames.get(refId) };
+    return { type: 'card', id: refId, name: className.replace(/([a-z])([A-Z])/g, '$1 $2') };
+  }
+
+  const refMap = {};
+  let files;
+  try {
+    files = fs.readdirSync(csDir).filter(f => f.endsWith('.cs'));
+  } catch { return refMap; }
+
+  for (const file of files) {
+    const content = fs.readFileSync(path.join(csDir, file), 'utf-8');
+    const eventClassName = file.replace('.cs', '');
+    const eventId = classToId(eventClassName);
+
+    const optionRefs = {}; // optionKey → references[]
+    const eventRefs = []; // event-level references
+
+    // Strategy 1: Inline EventOption with HoverTipFactory
+    const inlinePattern = /new\s+EventOption\([^,]+,\s*\w+,\s*(?:InitialOptionKey\("([^"]+)"\)|"[^"]*\.options\.([^"]+)")[^)]*HoverTipFactory\.(?:FromCardWithCardHoverTips|FromCard|FromRelic|FromRelicExcludingItself|FromEnchantment|FromPotion|FromPower)\s*(?:<(\w+)>(?:\(\))?|\(ModelDb\.(?:Card|Relic|Potion|Enchantment)<(\w+)>\(\)\))/g;
+    let m;
+    while ((m = inlinePattern.exec(content)) !== null) {
+      const optKey = m[1] || m[2];
+      const className = m[3] || m[4];
+      if (!className) continue;
+      const ref = makeRef(className);
+      if (optKey) {
+        if (!optionRefs[optKey]) optionRefs[optKey] = [];
+        optionRefs[optKey].push(ref);
+      }
+    }
+
+    // Strategy 2: List-based pattern — HoverTipFactory calls before array[N] = new EventOption
+    // Parse the entire method to associate refs with options
+    const generateMatch = content.match(/GenerateInitialOptions\(\)\s*\{([\s\S]*?)\n\t\}/);
+    if (generateMatch) {
+      const body = generateMatch[1];
+      const lines = body.split('\n');
+
+      let pendingRefs = [];
+      for (const line of lines) {
+        // Collect HoverTipFactory refs
+        const hoverMatches = [...line.matchAll(/HoverTipFactory\.(?:FromCardWithCardHoverTips|FromCard|FromRelic|FromRelicExcludingItself|FromEnchantment|FromPotion|FromPower)\s*(?:<(\w+)>(?:\(\))?|\(ModelDb\.(?:Card|Relic|Potion|Enchantment)<(\w+)>\(\)\))/g)];
+        for (const hm of hoverMatches) {
+          const cn = hm[1] || hm[2];
+          if (cn) pendingRefs.push(makeRef(cn));
+        }
+
+        // Check for EventOption assignment that consumes pending refs
+        const optAssign = line.match(/new\s+EventOption\([^,]+,\s*\w+,\s*(?:InitialOptionKey\("([^"]+)"\)|"[^"]*\.options\.([^"]+)")/);
+        if (optAssign && pendingRefs.length > 0) {
+          const optKey = optAssign[1] || optAssign[2];
+          if (optKey) {
+            if (!optionRefs[optKey]) optionRefs[optKey] = [];
+            // Merge, avoiding duplicates
+            for (const r of pendingRefs) {
+              if (!optionRefs[optKey].some(er => er.id === r.id)) optionRefs[optKey].push(r);
+            }
+          }
+          pendingRefs = [];
+        }
+      }
+    }
+
+    if (Object.keys(optionRefs).length > 0 || eventRefs.length > 0) {
+      refMap[eventId] = { optionRefs, eventRefs };
+    }
+  }
+
+  return refMap;
+}
+
 function dedupeReferences(refs = []) {
   const seen = new Set();
   return refs.filter(ref => {
@@ -269,6 +364,13 @@ async function parseEvents() {
 
   const canonicalVars = parseCanonicalVars(csDir);
 
+  // Load cards + relics for reference resolution
+  let cardsData = [], relicsData = [], potionsData = [];
+  try { cardsData = JSON.parse(fs.readFileSync(path.join(OUTPUT_DIR, 'cards.json'), 'utf-8')); } catch {}
+  try { relicsData = JSON.parse(fs.readFileSync(path.join(OUTPUT_DIR, 'relics.json'), 'utf-8')); } catch {}
+  try { potionsData = JSON.parse(fs.readFileSync(path.join(OUTPUT_DIR, 'potions.json'), 'utf-8')); } catch {}
+  const refMap = extractReferences(csDir, cardsData, relicsData, potionsData);
+
   let enrichedCount = 0;
   let updatedCount = 0;
 
@@ -306,10 +408,16 @@ async function parseEvents() {
       if (title) {
         let cleanDesc = description ? stripBBCode(description) : '';
         cleanDesc = substituteVars(cleanDesc, vars);
-        choices.push({
+        const choice = {
           name: stripBBCode(title),
           description: cleanDesc,
-        });
+        };
+        // Attach references from C# HoverTipFactory
+        const eventRefs = refMap[event.id];
+        if (eventRefs?.optionRefs?.[optionName]) {
+          choice.references = dedupeReferences(eventRefs.optionRefs[optionName]);
+        }
+        choices.push(choice);
       }
     }
 
