@@ -97,12 +97,14 @@ export interface Monster {
   name: string;
   type: string;
   act: string;
-  min_hp: number | null;
-  max_hp: number | null;
+  min_hp: number | { ascension: number; normal: number } | null;
+  max_hp: number | { ascension: number; normal: number } | null;
   min_hp_ascension?: number | null;
   max_hp_ascension?: number | null;
   moves: MonsterMove[];
   powers?: string[];
+  move_pattern?: any[];
+  start_move?: string;
   image_url?: string | null;
 }
 

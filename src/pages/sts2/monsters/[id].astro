@@ -12,9 +12,26 @@ const monster = data.monsterById.get(String(id));
 if (!monster) return new Response('Not found', { status: 404 });
 
 const title = `${monster.name} — Monster — Spire Archive — STS2`;
-const hasRealHp = monster.min_hp && monster.min_hp !== 9999;
+
+function hpVal(v: any): number | null {
+  if (v == null) return null;
+  return typeof v === 'object' ? v.normal : v;
+}
+function hpAsc(v: any): number | null {
+  if (v == null || typeof v !== 'object') return null;
+  return v.ascension !== v.normal ? v.ascension : null;
+}
+
+const minHp = hpVal(monster.min_hp);
+const maxHp = hpVal(monster.max_hp);
+const minHpAsc = hpAsc(monster.min_hp);
+const maxHpAsc = hpAsc(monster.max_hp);
+const hasRealHp = minHp != null && minHp !== 9999;
 const hpText = hasRealHp
-  ? monster.min_hp === monster.max_hp ? `${monster.min_hp} HP` : `${monster.min_hp}–${monster.max_hp} HP`
+  ? minHp === maxHp ? `${minHp} HP` : `${minHp}–${maxHp} HP`
+  : null;
+const hpAscText = hasRealHp && minHpAsc != null
+  ? minHpAsc === maxHpAsc ? `${minHpAsc} HP` : `${minHpAsc}–${maxHpAsc} HP`
   : null;
 
 const typeTones: Record<string, string> = {
@@ -23,13 +40,67 @@ const typeTones: Record<string, string> = {
   Normal: '',
   Weak: '',
 };
+
+const intentIcons: Record<string, string> = {
+  attack: '⚔️',
+  multi_attack: '⚔️',
+  buff: '🛡️',
+  debuff: '💀',
+  defend: '🛡️',
+  stun: '💫',
+  sleep: '💤',
+  escape: '🏃',
+  deathblow: '☠️',
+  hidden: '❓',
+  status: '⚡',
+  heal: '💚',
+};
+
+const intentLabels: Record<string, string> = {
+  attack: 'Attack',
+  multi_attack: 'Multi Attack',
+  buff: 'Buff',
+  debuff: 'Debuff',
+  defend: 'Defend',
+  stun: 'Stun',
+  sleep: 'Sleep',
+  escape: 'Escape',
+  deathblow: 'Deathblow',
+  hidden: 'Unknown',
+  status: 'Status',
+  heal: 'Heal',
+};
+
+const movePattern = monster.move_pattern ?? [];
+const startMove = monster.start_move;
+
+// Build the sequence description
+function buildSequence(pattern: any[], start: string | null): string[] {
+  if (!pattern.length || !start) return [];
+  const byId = new Map(pattern.map((m: any) => [m.id, m]));
+  const seq: string[] = [];
+  const visited = new Set<string>();
+  let current = start;
+  while (current && !visited.has(current)) {
+    visited.add(current);
+    const move = byId.get(current);
+    if (!move) break;
+    seq.push(move.id);
+    if (move.loops) break;
+    current = move.followUp;
+  }
+  return seq;
+}
+
+const sequence = buildSequence(movePattern, startMove);
 ---
 <Layout game="sts2" title={title} description={`${monster.type} · ${hpText ?? 'HP unknown'}`}>
   <a href={langPrefix + '/sts2/monsters'} class="text-xs text-sky-400 hover:underline">← {t('Monsters', locale)}</a>
   <h1 class="mt-2 text-2xl font-semibold">{monster.name}</h1>
-  <div class="mt-2 flex flex-wrap gap-2">
+  <div class="mt-2 flex flex-wrap items-center gap-2">
     <Badge label={monster.type} tone={typeTones[monster.type] ?? ''} locale={locale} />
     {hpText && <Badge label={hpText} locale={locale} />}
+    {hpAscText && <span class="text-xs text-amber-400/80" title="Ascension HP">A: {hpAscText}</span>}
   </div>
 
   {(monster.powers ?? []).length > 0 && (
@@ -43,9 +114,79 @@ const typeTones: Record<string, string> = {
     </section>
   )}
 
-  <section class="mt-6">
-    <h2 class="text-sm font-semibold text-slate-200">{t('Moves', locale)}</h2>
-    {monster.moves?.length ? (
+  {movePattern.length > 0 && (
+    <section class="mt-6">
+      <h2 class="text-sm font-semibold text-slate-200">{t('Move Pattern', locale)}</h2>
+      
+      {sequence.length > 0 && (
+        <div class="mt-3 flex flex-wrap items-center gap-1 text-xs text-slate-300">
+          {sequence.map((moveId: string, i: number) => {
+            const move = movePattern.find((m: any) => m.id === moveId);
+            if (!move) return null;
+            const isLast = i === sequence.length - 1;
+            return (
+              <>
+                <span class={`px-2 py-1 rounded ${startMove === moveId ? 'bg-amber-500/20 text-amber-200 border border-amber-500/30' : 'bg-white/10'}`}>
+                  {intentIcons[move.intent?.type] ?? ''} {move.name}
+                </span>
+                {!isLast && <span class="text-slate-500">→</span>}
+                {isLast && move.loops && <span class="text-slate-500">↻</span>}
+              </>
+            );
+          })}
+        </div>
+      )}
+
+      <div class="mt-4 space-y-2">
+        {movePattern.map((mv: any) => {
+          const intent = mv.intent ?? {};
+          const icon = intentIcons[intent.type] ?? '';
+          const label = intentLabels[intent.type] ?? intent.type ?? 'Unknown';
+          const dmg = intent.damage;
+          const hits = intent.hits;
+          const ascDmg = intent.ascension_damage;
+          const isStart = mv.id === startMove;
+          const additionalIntents = mv.additional_intents ?? [];
+          
+          return (
+            <div class={`rounded-md border p-3 ${isStart ? 'border-amber-500/30 bg-amber-500/5' : 'border-white/10 bg-white/5'}`}>
+              <div class="flex items-baseline justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-sm font-semibold">{mv.name}</span>
+                  {isStart && <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 uppercase tracking-wider">Start</span>}
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-xs text-slate-400">{icon} {label}</span>
+                  {additionalIntents.map((ai: any) => (
+                    <span class="text-xs text-slate-500">+ {intentIcons[ai.type] ?? ''} {intentLabels[ai.type] ?? ai.type}</span>
+                  ))}
+                </div>
+              </div>
+              {dmg != null && (
+                <div class="mt-1 text-sm">
+                  <span class="text-red-300">
+                    ⚔ {hits && hits > 1 ? `${dmg} × ${hits}` : dmg} {t('damage', locale)}
+                  </span>
+                  {ascDmg != null && ascDmg !== dmg && (
+                    <span class="ml-2 text-xs text-amber-400/80" title="Ascension damage">
+                      A: {hits && hits > 1 ? `${ascDmg} × ${hits}` : ascDmg}
+                    </span>
+                  )}
+                </div>
+              )}
+              {mv.loops && (
+                <div class="mt-1 text-xs text-slate-500">↻ {t('Repeats', locale)}</div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  )}
+
+  {(!movePattern.length && monster.moves?.length > 0) && (
+    <section class="mt-6">
+      <h2 class="text-sm font-semibold text-slate-200">{t('Moves', locale)}</h2>
       <div class="mt-3 space-y-2">
         {monster.moves.map((mv: any) => {
           const dmgText = mv.damage != null
@@ -53,24 +194,12 @@ const typeTones: Record<string, string> = {
             : null;
           return (
             <div class="rounded-md border border-white/10 bg-white/5 p-3">
-              <div class="flex items-baseline justify-between gap-3">
-                <span class="text-sm font-semibold">{mv.name || mv.id || 'Unknown'}</span>
-                {mv.intent && <span class="text-xs text-slate-400 capitalize">{mv.intent}</span>}
-              </div>
-              {dmgText && (
-                <div class="mt-1 text-sm text-red-300">
-                  ⚔ {dmgText} damage
-                </div>
-              )}
-              {mv.description && (
-                <p class="mt-1 text-xs text-slate-300">{mv.description}</p>
-              )}
+              <span class="text-sm font-semibold">{mv.name || mv.id || 'Unknown'}</span>
+              {dmgText && <span class="ml-2 text-sm text-red-300">⚔ {dmgText} {t('damage', locale)}</span>}
             </div>
           );
         })}
       </div>
-    ) : (
-      <p class="mt-2 text-sm text-slate-400">No move data available.</p>
-    )}
-  </section>
+    </section>
+  )}
 </Layout>

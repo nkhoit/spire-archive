@@ -63,6 +63,9 @@ const strings: Record<string, Partial<Record<Locale, string>>> = {
   'HP': { ja: 'HP', ko: 'HP', zh: 'HP', de: 'HP', fr: 'PV', es: 'PV', pt: 'PV', it: 'PV', pl: 'HP', ru: 'HP', tr: 'HP', th: 'HP' },
   'Energy': { ja: 'エナジー', ko: '에너지', zh: '能量', de: 'Energie', fr: 'Énergie', es: 'Energía', pt: 'Energia', it: 'Energia', pl: 'Energia', ru: 'Энергия', tr: 'Enerji', th: 'พลังงาน' },
   'Moves': { ja: '行動', ko: '행동', zh: '招式', de: 'Züge', fr: 'Actions', es: 'Movimientos', pt: 'Movimentos', it: 'Mosse', pl: 'Ruchy', ru: 'Действия', tr: 'Hareketler', th: 'การเคลื่อนไหว' },
+  'Move Pattern': { ja: '行動パターン', ko: '행동 패턴', zh: '行动模式', de: 'Zugmuster', fr: 'Schéma d\'actions', es: 'Patrón de movimiento', pt: 'Padrão de movimento', it: 'Schema di mosse', pl: 'Wzorzec ruchów', ru: 'Паттерн действий', tr: 'Hareket Düzeni', th: 'รูปแบบการเคลื่อนไหว' },
+  'Repeats': { ja: '繰り返し', ko: '반복', zh: '重复', de: 'Wiederholt', fr: 'Répète', es: 'Repite', pt: 'Repete', it: 'Ripete', pl: 'Powtarza', ru: 'Повторяется', tr: 'Tekrarlar', th: 'ทำซ้ำ' },
+  'damage': { ja: 'ダメージ', ko: '피해', zh: '伤害', de: 'Schaden', fr: 'dégâts', es: 'daño', pt: 'dano', it: 'danno', pl: 'obrażeń', ru: 'урона', tr: 'hasar', th: 'ความเสียหาย' },
   'Encounter Type': { ja: '遭遇タイプ', ko: '조우 유형', zh: '遭遇类型', de: 'Begegnungstyp', fr: "Type de rencontre", es: 'Tipo de encuentro', pt: 'Tipo de encontro', it: 'Tipo di incontro', pl: 'Typ spotkania', ru: 'Тип встречи', tr: 'Karşılaşma Türü', th: 'ประเภทการเผชิญหน้า' },
 
   // Encounter types
