@@ -348,12 +348,27 @@ def parse_characters():
         if m:
             energy = int(m.group(1))
         
+        # Starting deck
+        starting_deck = []
+        deck_match = re.search(r'StartingDeck\s*=>[^{]*\{([^}]+)\}', text, re.DOTALL)
+        if deck_match:
+            for card_ref in re.findall(r'ModelDb\.Card<(\w+)>\(\)', deck_match.group(1)):
+                starting_deck.append(class_to_id(card_ref))
+        
+        # Starting relic(s)
+        starting_relic = None
+        relic_match = re.search(r'StartingRelics\s*=>.*?ModelDb\.Relic<(\w+)>', text)
+        if relic_match:
+            starting_relic = class_to_id(relic_match.group(1))
+        
         chars.append({
             "id": class_to_id(name),
             "name": humanize(name),
             "hp": hp,
             "starting_gold": gold,
             "energy_per_turn": energy,
+            "starting_deck": starting_deck or None,
+            "starting_relic": starting_relic,
             "description": None,
         })
     return chars
