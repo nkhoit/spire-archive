@@ -84,17 +84,17 @@ const getRelicImgSrc = (r: any) => {
 
 {charCards.length > 0 && (
   <section class="mt-6">
-    <h2 class="text-lg font-semibold">Cards ({charCards.length})</h2>
+    <h2 class="text-lg font-semibold">{t('Cards', locale)} ({charCards.length})</h2>
     <div class="mt-3 grid grid-cols-1 gap-4 md:grid-cols-3">
       {Array.from(cardsByType.entries()).sort().map(([type, cards]) => (
         <div class="rounded-lg border border-white/[0.06] bg-white/[0.03] p-4">
-          <h3 class="text-sm font-semibold capitalize">{type}s ({cards.length})</h3>
+          <h3 class="text-sm font-semibold capitalize">{t(type.charAt(0).toUpperCase() + type.slice(1) + 's', locale)} ({cards.length})</h3>
           <ul class="mt-2 space-y-1">
             {cards.sort((a: any, b: any) => a.name.localeCompare(b.name)).map((c: any) => (
               <li class="flex items-center gap-2">
                 <img src={`/images/${cardImageDir}/${c.id.toLowerCase()}.png`} alt="" class="w-6 h-5 object-cover rounded-sm shrink-0" />
                 <a href={`${langPrefix}/${game}/cards/${c.id}`} class="text-sm text-sky-300 hover:text-sky-200 hover:underline">{c.name}</a>
-                <span class="text-xs text-slate-400"> · {c.rarity} · {c.cost ?? 'X'}</span>
+                <span class="text-xs text-slate-400"> · {t(c.rarity, locale)} · {c.cost ?? 'X'}</span>
               </li>
             ))}
           </ul>

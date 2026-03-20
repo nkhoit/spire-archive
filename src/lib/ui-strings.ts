@@ -31,8 +31,11 @@ const strings: Record<string, Partial<Record<Locale, string>>> = {
 
   // Card types
   'Attack': { ja: 'アタック', ko: '공격', zh: '攻击', de: 'Angriff', fr: 'Attaque', es: 'Ataque', pt: 'Ataque', it: 'Attacco', pl: 'Atak', ru: 'Атака', tr: 'Saldırı', th: 'โจมตี' },
+  'Attacks': { ja: 'アタック', ko: '공격', zh: '攻击', de: 'Angriffe', fr: 'Attaques', es: 'Ataques', pt: 'Ataques', it: 'Attacchi', pl: 'Ataki', ru: 'Атаки', tr: 'Saldırılar', th: 'โจมตี' },
   'Skill': { ja: 'スキル', ko: '스킬', zh: '技能', de: 'Fertigkeit', fr: 'Compétence', es: 'Habilidad', pt: 'Habilidade', it: 'Abilità', pl: 'Umiejętność', ru: 'Навык', tr: 'Beceri', th: 'ทักษะ' },
+  'Skills': { ja: 'スキル', ko: '스킬', zh: '技能', de: 'Fertigkeiten', fr: 'Compétences', es: 'Habilidades', pt: 'Habilidades', it: 'Abilità', pl: 'Umiejętności', ru: 'Навыки', tr: 'Beceriler', th: 'ทักษะ' },
   'Power': { ja: 'パワー', ko: '파워', zh: '能力', de: 'Kraft', fr: 'Pouvoir', es: 'Poder', pt: 'Poder', it: 'Potere', pl: 'Moc', ru: 'Сила', tr: 'Güç', th: 'พลัง' },
+  'Powers': { ja: 'パワー', ko: '파워', zh: '能力', de: 'Kräfte', fr: 'Pouvoirs', es: 'Poderes', pt: 'Poderes', it: 'Poteri', pl: 'Moce', ru: 'Силы', tr: 'Güçler', th: 'พลัง' },
   'Curse': { ja: '呪い', ko: '저주', zh: '诅咒', de: 'Fluch', fr: 'Malédiction', es: 'Maldición', pt: 'Maldição', it: 'Maledizione', pl: 'Klątwa', ru: 'Проклятие', tr: 'Lanet', th: 'คำสาป' },
   'Status': { ja: 'ステータス', ko: '상태', zh: '状态', de: 'Status', fr: 'Statut', es: 'Estado', pt: 'Estado', it: 'Stato', pl: 'Status', ru: 'Статус', tr: 'Durum', th: 'สถานะ' },
   'Quest': { ja: 'クエスト', ko: '퀘스트', zh: '任务', de: 'Quest', fr: 'Quête', es: 'Misión', pt: 'Missão', it: 'Missione', pl: 'Misja', ru: 'Задание', tr: 'Görev', th: 'เควส' },
