@@ -68,7 +68,7 @@ export default function MonstersExplorer(props: { game?: string; acts: string[];
           <option value="">{t('All Types', locale)}</option>
           {props.types.map((tp) => (
             <option key={tp} value={tp}>
-              {tp}
+              {t(tp, locale)}
             </option>
           ))}
         </select>
@@ -83,7 +83,7 @@ export default function MonstersExplorer(props: { game?: string; acts: string[];
           <option value="">{t('All Acts', locale)}</option>
           {props.acts.map((a) => (
             <option key={a} value={a}>
-              {a}
+              {t(a, locale)}
             </option>
           ))}
         </select>
@@ -111,9 +111,9 @@ export default function MonstersExplorer(props: { game?: string; acts: string[];
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-2">
                     <span className="text-sm font-semibold">{m.name}</span>
-                    <span className={`text-xs font-medium ${typeColor}`}>{m.type}</span>
+                    <span className={`text-xs font-medium ${typeColor}`}>{t(m.type, locale)}</span>
                     {(m.acts ?? []).map(a => (
-                      <span key={a} className="text-xs px-1.5 py-0.5 rounded-full bg-sky-500/15 text-sky-300 ring-1 ring-sky-500/30">{a}</span>
+                      <span key={a} className="text-xs px-1.5 py-0.5 rounded-full bg-sky-500/15 text-sky-300 ring-1 ring-sky-500/30">{t(a, locale)}</span>
                     ))}
                     {hpText && <span className="text-xs text-slate-400">{hpText}</span>}
                   </div>
