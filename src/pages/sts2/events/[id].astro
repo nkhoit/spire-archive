@@ -64,7 +64,7 @@ function getPoolLabel(name: string, locale: string) {
     />
     <div class="absolute inset-0 bg-gradient-to-b from-[#0a0d13]/30 via-[#0a0d13]/60 to-[#0a0d13]"></div>
     <div class="absolute bottom-0 left-0 right-0 px-6 pb-5" style="z-index: 1;">
-      <a href={langPrefix + '/sts2/events'} class="text-xs text-sky-400/70 hover:text-sky-300 hover:underline transition-colors">← Events</a>
+      <a href={langPrefix + '/sts2/events'} class="text-xs text-sky-400/70 hover:text-sky-300 hover:underline transition-colors">← {t('Events', locale)}</a>
       <h1 class="mt-1 text-2xl font-bold" style="font-family: 'KreonGame', 'Kreon', serif;">{event.name}</h1>
       {isAncient && (
         <div class="mt-2 flex flex-wrap gap-2">
