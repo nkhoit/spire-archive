@@ -121,6 +121,19 @@ const COLORFUL_CHARACTER_LINKS = {
 function parseCanonicalVars(csDir) {
   const varMap = {};
 
+  // Load entity data for StringVar name resolution
+  let cardNames = {}, relicNames = {}, enchantmentNames = {}, potionNames = {};
+  try {
+    for (const c of JSON.parse(fs.readFileSync(path.join(OUTPUT_DIR, 'cards.json'), 'utf-8')))
+      cardNames[c.id] = c.name;
+    for (const r of JSON.parse(fs.readFileSync(path.join(OUTPUT_DIR, 'relics.json'), 'utf-8')))
+      relicNames[r.id] = r.name;
+    for (const e of JSON.parse(fs.readFileSync(path.join(OUTPUT_DIR, 'enchantments.json'), 'utf-8')))
+      enchantmentNames[e.id] = e.name;
+    for (const p of JSON.parse(fs.readFileSync(path.join(OUTPUT_DIR, 'potions.json'), 'utf-8')))
+      potionNames[p.id] = p.name;
+  } catch {}
+
   try {
     const files = fs.readdirSync(csDir).filter(f => f.endsWith('.cs'));
 
@@ -128,11 +141,16 @@ function parseCanonicalVars(csDir) {
       const content = fs.readFileSync(path.join(csDir, file), 'utf-8');
       const eventNameMatch = file.replace('.cs', '');
       const vars = {};
-      const typedVarPattern = /new\s+(\w+Var)\(([0-9.]+)m[,)]/g;
+
+      // Numeric vars — multiple patterns
       let match;
 
+      // Pattern 1: new TypeVar(numberM) or new TypeVar(number) — unnamed, type implies name
+      const typedVarPattern = /new\s+(\w+Var)\(([0-9.]+)m?[,)]/g;
       while ((match = typedVarPattern.exec(content)) !== null) {
         const varType = match[1];
+        // Skip if it looks like named var (handled below)
+        if (/^(DynamicVar|IntVar|DecimalVar|StringVar)$/.test(varType)) continue;
         const value = parseFloat(match[2]);
         let varName;
         if (varType === 'MaxHpVar') varName = 'MaxHp';
@@ -145,13 +163,48 @@ function parseCanonicalVars(csDir) {
         vars[varName] = value;
       }
 
-      const dynamicVarPattern = /new\s+DynamicVar\("([^"]+)",\s*([0-9.]+)/g;
-      while ((match = dynamicVarPattern.exec(content)) !== null) {
+      // Pattern 2: new TypeVar("name", numberM, ...) — named typed vars
+      const namedTypedVarPattern = /new\s+(?:DamageVar|HealVar|HpLossVar|GoldVar|BlockVar|IntVar|CardsVar|MaxHpVar|StrengthVar|DecimalVar|RepeatVar|SummonVar|StarsVar|EnergyVar|DynamicVar)\("(\w+)",\s*([0-9.]+)m?/g;
+      while ((match = namedTypedVarPattern.exec(content)) !== null) {
         vars[match[1]] = parseFloat(match[2]);
+      }
+
+      // Pattern 3: new DynamicVar("name", number) — without m suffix
+      const dynamicVarPattern = /new\s+DynamicVar\("([^"]+)",\s*([0-9.]+)\b/g;
+      while ((match = dynamicVarPattern.exec(content)) !== null) {
+        if (!vars[match[1]]) vars[match[1]] = parseFloat(match[2]);
+      }
+
+      // Pattern 4: new PowerVar<TypeName>(value)
+      const powerVarPattern = /new\s+PowerVar<(\w+)>\(([0-9.]+)m?\)/g;
+      while ((match = powerVarPattern.exec(content)) !== null) {
+        vars[match[1]] = parseFloat(match[2]);
+      }
+
+      // StringVars with static entity references
+      const stringVarPattern = /new\s+StringVar\("(\w+)",\s*ModelDb\.(?:Card|Relic|Enchantment|Potion)<(\w+)>\(\)\.(?:Title|DynamicDescription)/g;
+      while ((match = stringVarPattern.exec(content)) !== null) {
+        const varName = match[1];
+        const className = match[2];
+        const entityId = classToId(className);
+        const name = cardNames[entityId] || relicNames[entityId] || enchantmentNames[entityId] || potionNames[entityId];
+        if (name) vars[varName] = name;
+      }
+
+      // StringVars with ModelDb.Enchantment<X>().Title.GetFormattedText()
+      const stringVarFmtPattern = /new\s+StringVar\("(\w+)",\s*ModelDb\.(?:Card|Relic|Enchantment|Potion)<(\w+)>\(\)\.Title\.GetFormattedText\(\)/g;
+      while ((match = stringVarFmtPattern.exec(content)) !== null) {
+        const varName = match[1];
+        const className = match[2];
+        const entityId = classToId(className);
+        const name = cardNames[entityId] || relicNames[entityId] || enchantmentNames[entityId] || potionNames[entityId];
+        if (name) vars[varName] = name;
       }
 
       if (Object.keys(vars).length > 0) {
         varMap[eventNameMatch] = vars;
+        // Also index by event ID (SCREAMING_SNAKE) for reliable lookup
+        varMap[classToId(eventNameMatch)] = vars;
       }
     }
   } catch (err) {
@@ -447,7 +500,7 @@ async function parseEvents() {
     const initialDescKey = `${event.id}.pages.INITIAL.description`;
     const initialDesc = localization[initialDescKey];
 
-    if (!initialDesc && !canonicalVars[event.name]) {
+    if (!initialDesc && !canonicalVars[event.id] && !canonicalVars[event.name]) {
       continue;
     }
 
@@ -468,7 +521,7 @@ async function parseEvents() {
     }
 
     const csFileName = eventNameToCsFileName(event.name);
-    const vars = canonicalVars[csFileName] || {};
+    const vars = canonicalVars[event.id] || canonicalVars[csFileName] || {};
 
     for (const optionName of Array.from(optionNames).sort()) {
       const title = localization[`${event.id}.pages.INITIAL.options.${optionName}.title`];

@@ -23,7 +23,7 @@
     "choices": [
       {
         "name": "Combine Defends",
-        "description": "Remove 2 Defends. Add {Card2} to your Deck.",
+        "description": "Remove 2 Defends. Add Ultimate Defend to your Deck.",
         "references": [
           {
             "type": "card",
@@ -34,7 +34,7 @@
       },
       {
         "name": "Combine Strikes",
-        "description": "Remove 2 Strikes. Add {Card1} to your Deck.",
+        "description": "Remove 2 Strikes. Add Ultimate Strike to your Deck.",
         "references": [
           {
             "type": "card",
@@ -89,11 +89,11 @@
     "choices": [
       {
         "name": "Rip the Leech Off",
-        "description": "Lose {RipHpLoss} HP. Gain a Colorless card reward."
+        "description": "Lose 5 HP. Gain a Colorless card reward."
       },
       {
         "name": "Share Knowledge",
-        "description": "Choose {CardChoiceCount} of {FromCardChoiceCount} random cards to add to your Deck."
+        "description": "Choose 1 of 5 random cards to add to your Deck."
       }
     ]
   },
@@ -105,7 +105,7 @@
     "choices": [
       {
         "name": "Learn Extermination Technique",
-        "description": "Add {Card1} to your Deck.",
+        "description": "Add Exterminate to your Deck.",
         "references": [
           {
             "type": "card",
@@ -116,7 +116,7 @@
       },
       {
         "name": "Learn Squash Technique",
-        "description": "Add {Card2} to your Deck.",
+        "description": "Add Squash to your Deck.",
         "references": [
           {
             "type": "card",
@@ -139,7 +139,7 @@
       },
       {
         "name": "Take the Egg",
-        "description": "Add {Card} to your Deck.",
+        "description": "Add Byrdonis Egg to your Deck.",
         "references": [
           {
             "type": "card",
@@ -158,7 +158,7 @@
     "choices": [
       {
         "name": "Blue",
-        "description": "Obtain {Cards} Defect {Cards:plural:card|cards}.",
+        "description": "Obtain 3 Defect {Cards:plural:card|cards}.",
         "references": [
           {
             "type": "character",
@@ -169,7 +169,7 @@
       },
       {
         "name": "Red",
-        "description": "Obtain {Cards} Ironclad {Cards:plural:card|cards}.",
+        "description": "Obtain 3 Ironclad {Cards:plural:card|cards}.",
         "references": [
           {
             "type": "character",
@@ -180,7 +180,7 @@
       },
       {
         "name": "Pink",
-        "description": "Obtain {Cards} Necrobinder {Cards:plural:card|cards}.",
+        "description": "Obtain 3 Necrobinder {Cards:plural:card|cards}.",
         "references": [
           {
             "type": "character",
@@ -191,7 +191,7 @@
       },
       {
         "name": "Orange",
-        "description": "Obtain {Cards} Regent {Cards:plural:card|cards}.",
+        "description": "Obtain 3 Regent {Cards:plural:card|cards}.",
         "references": [
           {
             "type": "character",
@@ -202,7 +202,7 @@
       },
       {
         "name": "Green",
-        "description": "Obtain {Cards} Silent {Cards:plural:card|cards}.",
+        "description": "Obtain 3 Silent {Cards:plural:card|cards}.",
         "references": [
           {
             "type": "character",
@@ -285,7 +285,7 @@
     "choices": [
       {
         "name": "Payment Plan",
-        "description": "Gain a {CurseTitle}. Divine 6 times.",
+        "description": "Gain a Debt. Divine 6 times.",
         "references": [
           {
             "type": "card",
@@ -428,7 +428,7 @@
     "choices": [
       {
         "name": "Examine Each and Make the Best Choice",
-        "description": "Lose {ExamineHpLoss} HP. Choose 1 of 3 Doll Relics."
+        "description": "Lose 15 HP. Choose 1 of 3 Doll Relics."
       },
       {
         "name": "Pick at Random",
@@ -436,7 +436,7 @@
       },
       {
         "name": "Take Some Time",
-        "description": "Lose {TakeTimeHpLoss} HP. Choose 1 of 2 Doll Relics."
+        "description": "Lose 5 HP. Choose 1 of 2 Doll Relics."
       }
     ],
     "references": [
@@ -469,7 +469,7 @@
       },
       {
         "name": "Light Door",
-        "description": "Upgrade {Cards} random cards."
+        "description": "Upgrade 2 random cards."
       }
     ]
   },
@@ -481,7 +481,7 @@
     "choices": [
       {
         "name": "Bottle",
-        "description": "Procure {Potion}.",
+        "description": "Procure Glowwater Potion.",
         "references": [
           {
             "type": "potion",
@@ -492,7 +492,7 @@
       },
       {
         "name": "Climb",
-        "description": "Obtain {Relic}. Lose 13 Max HP.",
+        "description": "Obtain Fresnel Lens. Lose 13 Max HP.",
         "references": [
           {
             "type": "relic",
@@ -589,7 +589,7 @@
     "choices": [
       {
         "name": "Enter Your Hole",
-        "description": "Enchant a card with {Enchantment}.",
+        "description": "Enchant a card with Perfect Fit.",
         "references": [
           {
             "type": "card",
@@ -600,7 +600,7 @@
       },
       {
         "name": "Resist",
-        "description": "Remove {Cards} cards from your Deck. Add {ResistCurse} to your Deck.",
+        "description": "Remove 2 cards from your Deck. Add Normality to your Deck.",
         "references": [
           {
             "type": "card",
@@ -619,7 +619,7 @@
     "choices": [
       {
         "name": "Accept the {Relic}",
-        "description": "Obtain {Relic}.",
+        "description": "Obtain Forgotten Soul.",
         "references": [
           {
             "type": "relic",
@@ -630,7 +630,7 @@
       },
       {
         "name": "Confront with Truth",
-        "description": "Add {Curse} to your Deck. Enchant a card that Exhausts with {Enchantment}.",
+        "description": "Add Decay to your Deck. Enchant a card that Exhausts with Soul's Power.",
         "references": [
           {
             "type": "card",
@@ -686,7 +686,7 @@
       },
       {
         "name": "Solo Quest",
-        "description": "Gain 150 Gold. Lose {SoloHp} HP."
+        "description": "Gain 150 Gold. Lose 18 HP."
       }
     ]
   },
@@ -698,7 +698,7 @@
     "choices": [
       {
         "name": "Capture the Wisp",
-        "description": "Add {Curse} to your Deck. Obtain the {Relic}.",
+        "description": "Add Decay to your Deck. Obtain the {Relic}.",
         "references": [
           {
             "type": "card",
@@ -710,7 +710,7 @@
       },
       {
         "name": "Search the Nearby Area",
-        "description": "Gain {Gold} Gold."
+        "description": "Gain 60 Gold."
       }
     ]
   },
@@ -722,8 +722,8 @@
     "choices": [
       {
         "name": "Offer Tribute",
-        "description": "Pay {Gold} Gold. Obtain a random Relic.",
-        "locked": "Requires {Gold} Gold."
+        "description": "Pay 149 Gold. Obtain a random Relic.",
+        "locked": "Requires 149 Gold."
       },
       {
         "name": "Reach into the Flesh",
@@ -746,7 +746,7 @@
     "choices": [
       {
         "name": "Group",
-        "description": "Lose {Gold} Gold. Transform 2 cards."
+        "description": "Lose 100 Gold. Transform 2 cards."
       },
       {
         "name": "Loner",
@@ -1016,7 +1016,7 @@
     "choices": [
       {
         "name": "Enjoy Your Tea",
-        "description": "Obtain {Relic}. Heal to full HP.",
+        "description": "Obtain Royal Poison. Heal to full HP.",
         "references": [
           {
             "type": "relic",
@@ -1027,7 +1027,7 @@
       },
       {
         "name": "Pick a Fight",
-        "description": "Lose {Damage} HP. Obtain a random Relic."
+        "description": "Lose 11 HP. Obtain a random Relic."
       }
     ]
   },
@@ -1043,7 +1043,7 @@
       },
       {
         "name": "Plant and Nourish",
-        "description": "Enchant a card with {Enchantment}.",
+        "description": "Enchant a card with Sown.",
         "references": [
           {
             "type": "card",
@@ -1066,7 +1066,7 @@
       },
       {
         "name": "Read the Entire Book",
-        "description": "Choose a Power to Enchant with {Enchantment3} {Enchantment3Amount}.",
+        "description": "Choose a Power to Enchant with Swift 2.",
         "references": [
           {
             "type": "card",
@@ -1078,7 +1078,7 @@
       },
       {
         "name": "Read a Random Passage",
-        "description": "Choose a Skill to Enchant with {Enchantment2} {Enchantment2Amount}.",
+        "description": "Choose a Skill to Enchant with Nimble 2.",
         "references": [
           {
             "type": "card",
@@ -1090,7 +1090,7 @@
       },
       {
         "name": "Read the Back",
-        "description": "Choose an Attack to Enchant with {Enchantment1} {Enchantment1Amount}.",
+        "description": "Choose an Attack to Enchant with Sharp 2.",
         "references": [
           {
             "type": "card",
@@ -1153,7 +1153,7 @@
     "choices": [
       {
         "name": "Let It In",
-        "description": "Heal {LetItInHealAmount} HP. Add Metamorphosis to your Deck.",
+        "description": "Heal 25 HP. Add Metamorphosis to your Deck.",
         "references": [
           {
             "type": "card",
@@ -1164,7 +1164,7 @@
       },
       {
         "name": "Rejection",
-        "description": "Lose {RejectionHpLoss} HP. Remove a card from your Deck."
+        "description": "Lose 9 HP. Remove a card from your Deck."
       }
     ]
   },
@@ -1201,11 +1201,11 @@
     "choices": [
       {
         "name": "Dive into the Water",
-        "description": "Gain {Gold} Gold. Lose {HpLoss} HP."
+        "description": "Gain 111 Gold. Lose 7 HP."
       },
       {
         "name": "Grab the Sword",
-        "description": "Obtain the {Relic}.",
+        "description": "Obtain the Sword of Stone.",
         "references": [
           {
             "type": "relic",
@@ -1247,7 +1247,7 @@
     "choices": [
       {
         "name": "Approach",
-        "description": "Enchant an Attack with {Enchantment}.",
+        "description": "Enchant an Attack with Corrupted.",
         "references": [
           {
             "type": "card",
@@ -1312,7 +1312,7 @@
     "choices": [
       {
         "name": "Bone Tea",
-        "description": "Pay 50 Gold. {BoneTeaDescription}",
+        "description": "Pay 50 Gold. Bone Tea",
         "references": [
           {
             "type": "relic",
@@ -1324,7 +1324,7 @@
       },
       {
         "name": "Ember Tea",
-        "description": "Pay 150 Gold. {EmberTeaDescription}",
+        "description": "Pay 150 Gold. Ember Tea",
         "references": [
           {
             "type": "relic",
@@ -1336,7 +1336,7 @@
       },
       {
         "name": "Tea of Discourtesy",
-        "description": "{TeaOfDiscourtesyDescription}",
+        "description": "Tea of Discourtesy",
         "references": [
           {
             "type": "relic",
@@ -1414,7 +1414,7 @@
       },
       {
         "name": "Return the Key",
-        "description": "Gain {Gold} Gold."
+        "description": "Gain 100 Gold."
       }
     ],
     "references": [
@@ -1456,7 +1456,7 @@
     "choices": [
       {
         "name": "That",
-        "description": "Add {Curse} to your Deck. Obtain a random Relic.",
+        "description": "Add Clumsy to your Deck. Obtain a random Relic.",
         "references": [
           {
             "type": "card",
@@ -1467,7 +1467,7 @@
       },
       {
         "name": "This",
-        "description": "Lose {HpLoss} HP. Gain {Gold} Gold."
+        "description": "Lose 6 HP. Gain 0 Gold."
       }
     ]
   },
@@ -1502,7 +1502,7 @@
       },
       {
         "name": "Grab Random Junk",
-        "description": "Gain {Gold} Gold. Obtain a random forgotten card from the past."
+        "description": "Gain 100 Gold. Obtain a random forgotten card from the past."
       }
     ],
     "references": [
@@ -1721,7 +1721,7 @@
       },
       {
         "name": "Prickly Sponge",
-        "description": "Pay {PricklySpongeGold} Gold. Enchant {Cards} {Cards:plural:card|cards} with Steady.",
+        "description": "Pay 155 Gold. Enchant 2 {Cards:plural:card|cards} with Steady.",
         "references": [
           {
             "type": "card",
@@ -1729,11 +1729,11 @@
             "name": "Steady"
           }
         ],
-        "locked": "Requires {PricklySpongeGold} Gold."
+        "locked": "Requires 155 Gold."
       },
       {
         "name": "Tentacle Quill",
-        "description": "Pay {Gold} Gold. Enchant a card with Steady.",
+        "description": "Pay 65 Gold. Enchant a card with Steady.",
         "references": [
           {
             "type": "card",
@@ -1741,7 +1741,7 @@
             "name": "Steady"
           }
         ],
-        "locked": "Requires {Gold} Gold."
+        "locked": "Requires 65 Gold."
       }
     ]
   },
@@ -1753,13 +1753,13 @@
     "choices": [
       {
         "name": "Wongo's Bargain Bin",
-        "description": "Pay {BargainBinCost} Gold. Obtain 1 random Common Relic.",
-        "locked": "Requires {BargainBinCost} Gold."
+        "description": "Pay 100 Gold. Obtain 1 random Common Relic.",
+        "locked": "Requires 100 Gold."
       },
       {
         "name": "Wongo's Featured Item",
-        "description": "Pay {FeaturedItemCost} Gold. Obtain {RandomRelic}.",
-        "locked": "Requires {FeaturedItemCost} Gold."
+        "description": "Pay 200 Gold. Obtain {RandomRelic}.",
+        "locked": "Requires 200 Gold."
       },
       {
         "name": "Leave",
@@ -1767,8 +1767,8 @@
       },
       {
         "name": "Wongo's Mystery Box",
-        "description": "Pay {MysteryBoxCost} Gold. Obtain {MysteryBoxRelicCount} random Relics after {MysteryBoxCombatCount} combats.",
-        "locked": "Requires {MysteryBoxCost} Gold."
+        "description": "Pay 300 Gold. Obtain 3 random Relics after 5 combats.",
+        "locked": "Requires 300 Gold."
       }
     ]
   },
@@ -1803,7 +1803,7 @@
     "choices": [
       {
         "name": "Exchange Gold",
-        "description": "Lose {Gold} Gold. Procure 2 random Potions."
+        "description": "Lose 50 Gold. Procure 2 random Potions."
       },
       {
         "name": "Hug the Tree",
@@ -1819,7 +1819,7 @@
     "choices": [
       {
         "name": "Bird",
-        "description": "Choose 1 starter card to Transform into {BirdCard}.",
+        "description": "Choose 1 starter card to Transform into Peck.",
         "references": [
           {
             "type": "card",
@@ -1830,7 +1830,7 @@
       },
       {
         "name": "Snake",
-        "description": "Enchant 1 card with {SnakeEnchantment}.",
+        "description": "Enchant 1 card with Slither.",
         "references": [
           {
             "type": "card",
@@ -1842,7 +1842,7 @@
       },
       {
         "name": "Torus",
-        "description": "Choose 1 starter card to Transform into {ToricCard}.",
+        "description": "Choose 1 starter card to Transform into Toric Toughness.",
         "references": [
           {
             "type": "card",
