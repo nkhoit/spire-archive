@@ -36,6 +36,51 @@ def clean_desc(text: str, vars: dict = None) -> str:
     text = re.sub(r'\[/?[a-z]+\]', '', text)
     return text.strip()
 
+# Map from game template var names to our var keys
+# Template uses {VarName:diff()} — VarName corresponds to DynamicVars.VarName
+GAME_VAR_TO_KEY = {
+    'Damage': 'damage', 'ExtraDamage': 'extra_damage', 'OstyDamage': 'osty_damage',
+    'CalculatedDamage': 'calculated_damage', 'Block': 'block', 'CalculatedBlock': 'calculated_block',
+    'Heal': 'heal', 'MagicNumber': 'magic_number', 'Cards': 'cards', 'Energy': 'energy',
+    'HpLoss': 'hp_loss', 'Repeat': 'repeat', 'Summon': 'summon', 'Forge': 'forge',
+    'Stars': 'stars_var', 'Gold': 'gold', 'MaxHp': 'max_hp',
+    'CalculationBase': 'calculation_base', 'CalculationExtra': 'calculation_extra',
+    'Calculated': 'calculated',
+}
+
+def build_description_template(raw_loc: str | None, vars_data: dict) -> str | None:
+    """Build a description template with {var_key} placeholders from raw localization text."""
+    if not raw_loc:
+        return None
+    # Strip BBCode
+    text = re.sub(r'\[/?[a-z]+\]', '', raw_loc).strip()
+    if '{' not in text:
+        return None  # No vars to template
+
+    def replace_var(m):
+        var_name = m.group(1)
+        # Check direct mapping
+        key = GAME_VAR_TO_KEY.get(var_name)
+        if key and key in vars_data:
+            return f'{{{key}}}'
+        # Check PowerVar pattern: StrengthPower → power_strength
+        if var_name.endswith('Power') and len(var_name) > 5:
+            power_key = f"power_{camel_to_snake(var_name[:-5])}"
+            if power_key in vars_data:
+                return f'{{{power_key}}}'
+        # Try camel_to_snake directly
+        snake_key = camel_to_snake(var_name)
+        if snake_key in vars_data:
+            return f'{{{snake_key}}}'
+        # Not resolvable — leave the number (will be resolved later)
+        return m.group(0)
+
+    text = re.sub(r'\{(\w+)(?::[^}]*)?\}', replace_var, text)
+    # If no {var_key} placeholders remain, no point storing template
+    if not re.search(r'\{[a-z_]+\}', text):
+        return None
+    return text
+
 def get_loc_name(loc: dict, entity_id: str) -> str | None:
     return loc.get(f"{entity_id}.title")
 
@@ -204,6 +249,11 @@ def parse_cards():
             "description": get_loc_desc(loc, card_id, vars_data),
             "image_url": f"/images/sts2/cards/{card_id.lower()}.png",
         }
+        # Add description template for precise upgrade rendering
+        raw_loc = loc.get(f"{card_id}.description")
+        desc_tmpl = build_description_template(raw_loc, vars_data)
+        if desc_tmpl:
+            card["description_template"] = desc_tmpl
         if star_match:
             card["star_cost"] = int(star_match.group(1))
         cards.append(card)

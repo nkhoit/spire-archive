@@ -237,20 +237,60 @@ function Sts2Renderer({ card, upgraded, size, locale = 'en' }: { card: any; upgr
       description = upg.description;
     } else {
       const vars = { ...(card.vars ?? {}) };
-      const replacements: [number, number][] = [];
-      for (const [uk, delta] of Object.entries(upg)) {
-        if (['add_keywords', 'remove_keywords', 'energy', 'stars', 'description'].includes(uk)) continue;
-        const vk = uk in vars ? uk : `power_${uk}` in vars ? `power_${uk}` : null;
-        if (vk) {
-          const oldVal = Math.floor(vars[vk] as number);
-          const newVal = oldVal + (delta as number);
-          replacements.push([oldVal, newVal]);
+      const template = (card as any).description_template as string | undefined;
+
+      if (template) {
+        // Use template for precise var replacement
+        description = template;
+        for (const [uk, delta] of Object.entries(upg)) {
+          if (['add_keywords', 'remove_keywords', 'energy', 'stars', 'description'].includes(uk)) continue;
+          const vk = uk in vars ? uk : `power_${uk}` in vars ? `power_${uk}` : null;
+          if (vk) {
+            const oldVal = Math.floor(vars[vk] as number);
+            const newVal = oldVal + (delta as number);
+            // Replace {var_key} placeholder with new value
+            description = description.replace(`{${vk}}`, String(newVal));
+            upgradedNumbers.add(String(newVal));
+          }
         }
-      }
-      replacements.sort((a, b) => b[0] - a[0]);
-      for (const [oldVal, newVal] of replacements) {
-        description = description.replace(new RegExp(`(?<!\\d)${oldVal}(?!\\d)`), String(newVal));
-        upgradedNumbers.add(String(newVal));
+        // Replace remaining {var_key} placeholders with base values
+        description = description.replace(/\{([a-z_]+)\}/g, (_, key) => {
+          return key in vars ? String(Math.floor(vars[key] as number)) : _;
+        });
+      } else {
+        // Fallback: positional replacement for cards without template
+        const numberPositions: { pos: number; len: number; val: number }[] = [];
+        for (const m of description.matchAll(/(?<!\d)\d+(?!\d)/g)) {
+          numberPositions.push({ pos: m.index!, len: m[0].length, val: parseInt(m[0]) });
+        }
+        const varOrder = Object.keys(vars);
+        const usedPositions = new Set<number>();
+        const varToPosition: Record<string, number> = {};
+        for (const vk of varOrder) {
+          const val = Math.floor(vars[vk] as number);
+          for (const np of numberPositions) {
+            if (np.val === val && !usedPositions.has(np.pos)) {
+              varToPosition[vk] = np.pos;
+              usedPositions.add(np.pos);
+              break;
+            }
+          }
+        }
+        const positionReplacements: { pos: number; len: number; newVal: string }[] = [];
+        for (const [uk, delta] of Object.entries(upg)) {
+          if (['add_keywords', 'remove_keywords', 'energy', 'stars', 'description'].includes(uk)) continue;
+          const vk = uk in vars ? uk : `power_${uk}` in vars ? `power_${uk}` : null;
+          if (vk && vk in varToPosition) {
+            const oldVal = Math.floor(vars[vk] as number);
+            const newVal = oldVal + (delta as number);
+            positionReplacements.push({ pos: varToPosition[vk], len: String(oldVal).length, newVal: String(newVal) });
+            upgradedNumbers.add(String(newVal));
+          }
+        }
+        positionReplacements.sort((a, b) => b.pos - a.pos);
+        for (const r of positionReplacements) {
+          description = description.slice(0, r.pos) + r.newVal + description.slice(r.pos + r.len);
+        }
       }
       if (upg.energy) {
         const added = '[E]'.repeat(upg.energy as number);
