@@ -255,18 +255,16 @@ function Sts2Renderer({ card, upgraded, size, locale = 'en' }: { card: any; upgr
       if (template) {
         // Use template for precise var replacement
         description = template;
+        const UPG_MARK = '\x01';
+        const UPG_END = '\x02';
         for (const [uk, delta] of Object.entries(upg)) {
           if (['add_keywords', 'remove_keywords', 'description'].includes(uk)) continue;
           const vk = uk in vars ? uk : `power_${uk}` in vars ? `power_${uk}` : null;
           if (vk) {
             const oldVal = Math.floor(vars[vk] as number);
             const newVal = oldVal + (delta as number);
-            // Replace {var_key} placeholder with new value
-            const before = description;
-            description = description.replace(`{${vk}}`, String(newVal));
-            if (description !== before) {
-              upgradedNumbers.add(String(newVal));
-            }
+            // Replace {var_key} placeholder with marked upgraded value
+            description = description.replace(`{${vk}}`, `${UPG_MARK}${newVal}${UPG_END}`);
           }
         }
         // Resolve {VarName:energyIcons()} → [E] repeated
@@ -287,15 +285,13 @@ function Sts2Renderer({ card, upgraded, size, locale = 'en' }: { card: any; upgr
         description = description.replace(/\{singleStarIcon\}/g, '[S]');
         // Resolve {VarName:diff()} → upgraded value (lookup var, apply delta)
         description = description.replace(/\{(\w+):diff\(\)\}/g, (full, varName) => {
-          // Map game var name to our key
           const snakeKey = varName.replace(/([A-Z])/g, '_$1').toLowerCase().replace(/^_/, '');
           const vk = snakeKey in vars ? snakeKey : `power_${snakeKey}` in vars ? `power_${snakeKey}` : null;
           if (vk) {
             const base = Math.floor(vars[vk] as number);
             const delta = (upg[vk] as number) ?? (upg[snakeKey] as number) ?? 0;
             const val = base + delta;
-            if (delta !== 0) upgradedNumbers.add(String(val));
-            return String(val);
+            return delta !== 0 ? `${UPG_MARK}${val}${UPG_END}` : String(val);
           }
           return full;
         });
@@ -354,12 +350,15 @@ function Sts2Renderer({ card, upgraded, size, locale = 'en' }: { card: any; upgr
   const highlightPattern = new RegExp(`\\b(${STS2_HIGHLIGHT_TERMS.join('|')})\\b`, 'g');
 
   let descProcessed = description
+    .replace(/\x01(\d+)\x02/g, '<span class="cr-green">$1</span>')
     .replace(/\[E\]/g, `<img src="${inlineEnergy}" class="cr-icon" alt="Energy" />`)
     .replace(/\[S\]/g, `<img src="${inlineStar}" class="cr-icon" alt="Star" />`)
     .replace(highlightPattern, '<span class="cr-keyword">$1</span>')
     .replace(/\n/g, '<br>');
 
-  if (upgraded && upgradedNumbers.size > 0) {
+  // Template path uses marker-based highlighting; skip regex highlighting if markers were used
+  const usedMarkers = descProcessed.includes('cr-green');
+  if (upgraded && upgradedNumbers.size > 0 && !usedMarkers) {
     for (const num of upgradedNumbers) {
       descProcessed = descProcessed.replace(
         new RegExp(`(?<!\\d)${num}(?!\\d)`, 'g'),
