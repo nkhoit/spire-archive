@@ -248,11 +248,9 @@ def resolve_tokens(desc: str, vars_map: dict[str, str]) -> str:
             i = end
             continue
 
-        # {InCombat:...|} → include inner (strip trailing |)
+        # {InCombat:...|} → strip (runtime-only display, meaningless on static archive)
         if tag == "InCombat":
-            if rest.endswith("|"):
-                rest = rest[:-1]
-            result.append(resolve_tokens(rest, vars_map))
+            # Use the empty branch (after |) — these show runtime-calculated values
             i = end
             continue
 
