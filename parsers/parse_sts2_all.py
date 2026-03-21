@@ -8,6 +8,11 @@ from pathlib import Path
 
 from config import DECOMPILED_DIR, OUTPUT_DIR
 
+def camel_to_snake(name: str) -> str:
+    """Convert CamelCase to snake_case: ExtraDamage -> extra_damage."""
+    s = re.sub(r'([A-Z])', r'_\1', name).lower().lstrip('_')
+    return s
+
 DECOMPILED = DECOMPILED_DIR
 OUTPUT = OUTPUT_DIR
 LOC_DIR = Path(__file__).parent.parent / "data/sts2-localization/eng"
@@ -90,16 +95,21 @@ def parse_dynamic_vars(text: str) -> dict:
         for m in re.finditer(pattern, text):
             result[key] = int(m.group(1))
     for m in re.finditer(r'new PowerVar<(\w+)>\((\d+)m', text):
-        result[f"power_{m.group(1).replace('Power','').lower()}"] = int(m.group(2))
+        result[f"power_{camel_to_snake(m.group(1).replace('Power',''))}"] = int(m.group(2))
     # Named CardsVar("Name", X) — e.g., CardsVar("Shivs", 4)
     for m in re.finditer(r'new CardsVar\("(\w+)",\s*(\d+)', text):
-        result[m.group(1).lower()] = int(m.group(2))
+        result[camel_to_snake(m.group(1))] = int(m.group(2))
     # Named IntVar("Name", Xm) — e.g., IntVar("Increase", 3m)
     for m in re.finditer(r'new IntVar\("(\w+)",\s*(\d+)', text):
-        result[m.group(1).lower()] = int(m.group(2))
+        result[camel_to_snake(m.group(1))] = int(m.group(2))
     # Generic DynamicVar("Name", Xm)
     for m in re.finditer(r'new DynamicVar\("(\w+)",\s*(\d+)', text):
-        key = m.group(1).lower()
+        key = camel_to_snake(m.group(1))
+        if key not in result:
+            result[key] = int(m.group(2))
+    # Named typed vars: e.g., new BlockVar("BlockNextTurn", 4m), new DamageVar("BombDamage", 10m)
+    for m in re.finditer(r'new \w+Var\("(\w+)",\s*(\d+)', text):
+        key = camel_to_snake(m.group(1))
         if key not in result:
             result[key] = int(m.group(2))
     return result
@@ -149,16 +159,17 @@ def parse_cards():
         upgrade = {}
         # Simple pattern: VarName.UpgradeValueBy(Xm)
         for um in re.finditer(r'(\w+)\.UpgradeValueBy\((\-?\d+)m\)', text):
-            upgrade[um.group(1).lower()] = int(um.group(2))
+            upgrade[camel_to_snake(um.group(1))] = int(um.group(2))
         # DynamicVars["VarName"].UpgradeValueBy(Xm) pattern
         for um in re.finditer(r'DynamicVars\["(\w+)"\]\.UpgradeValueBy\((\-?\d+)m\)', text):
             var_name = um.group(1)
             # Normalize: strip "Power" suffix to match CardDetail.astro convention
             # e.g., ThornsPower → thorns, AccuracyPower → accuracy
-            if var_name.endswith('Power'):
-                key = var_name[:-5].lower()
+            # But don't strip if the name IS just "Power"
+            if var_name.endswith('Power') and len(var_name) > 5:
+                key = camel_to_snake(var_name[:-5])
             else:
-                key = var_name.lower()
+                key = camel_to_snake(var_name)
             upgrade[key] = int(um.group(2))
         for um in re.finditer(r'UpgradeBaseCost\((\d+)\)', text):
             upgrade["cost"] = int(um.group(1))
