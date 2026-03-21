@@ -5616,11 +5616,11 @@
       "choices": [
         {
           "name": "Kaçın",
-          "description": "10 CP iyileş."
+          "description": "{Heal} CP iyileş."
         },
         {
           "name": "Gir",
-          "description": "2 Maksimum CP elde et. 3 hasar al."
+          "description": "{MaxHp} Maksimum CP elde et. {Damage} hasar al."
         }
       ]
     },
@@ -5630,11 +5630,11 @@
       "choices": [
         {
           "name": "Savunmaları Birleştir",
-          "description": "2 Savunma kartını kaldır. Deste'ne Nihai Savunma ekle."
+          "description": "2 Savunma kartını kaldır. Deste'ne {Card2} ekle."
         },
         {
           "name": "Saldırıları Birleştir",
-          "description": "2 Saldırı kartını kaldır. Deste'ne Nihai Saldırı ekle."
+          "description": "2 Saldırı kartını kaldır. Deste'ne {Card1} ekle."
         }
       ]
     },
@@ -5658,15 +5658,15 @@
       "choices": [
         {
           "name": "1. Ayar",
-          "description": "{Setting1Hp} CP olan bir mankenle savaş. Rastgele 1 İksir elde et."
+          "description": "75 CP olan bir mankenle savaş. Rastgele 1 İksir elde et."
         },
         {
           "name": "2. Ayar",
-          "description": "{Setting2Hp} CP olan bir mankenle savaş. Rastgele 2 kartı Geliştir."
+          "description": "150 CP olan bir mankenle savaş. Rastgele 2 kartı Geliştir."
         },
         {
           "name": "3. Ayar",
-          "description": "{Setting3Hp} CP olan bir mankenle savaş. Rastgele bir Kalıntı elde et."
+          "description": "300 CP olan bir mankenle savaş. Rastgele bir Kalıntı elde et."
         }
       ]
     },
@@ -5676,11 +5676,11 @@
       "choices": [
         {
           "name": "Sülüğü Kafandan Sök",
-          "description": "5 CP kaybet. Renksiz bir kart elde et."
+          "description": "{RipHpLoss} CP kaybet. Renksiz bir kart elde et."
         },
         {
           "name": "Bilgiyi Paylaş",
-          "description": "Deste'ne eklemek için 5 rastgele karttan 1 tanesini seç."
+          "description": "Deste'ne eklemek için {FromCardChoiceCount} rastgele karttan {CardChoiceCount} tanesini seç."
         }
       ]
     },
@@ -5690,11 +5690,11 @@
       "choices": [
         {
           "name": "Yok Etme Tekniğini Öğren",
-          "description": "Deste'ne İmha Et kartını ekle."
+          "description": "Deste'ne {Card1} kartını ekle."
         },
         {
           "name": "Ezme Tekniğini Öğren",
-          "description": "Deste'ne Çiğne Geç kartını ekle."
+          "description": "Deste'ne {Card2} kartını ekle."
         }
       ]
     },
@@ -5704,11 +5704,11 @@
       "choices": [
         {
           "name": "Yumurtayı Ye",
-          "description": "7 Maksimum CP elde et."
+          "description": "{MaxHp} Maksimum CP elde et."
         },
         {
           "name": "Yumurtayı Al",
-          "description": "Deste'ne Guşdeniz Yumurtası kartını ekle."
+          "description": "Deste'ne {Card} kartını ekle."
         }
       ]
     },
@@ -5718,7 +5718,7 @@
       "choices": [
         {
           "name": "Mavi",
-          "description": "3 Arıza kartı elde et."
+          "description": "{Cards} Arıza {Cards:plural:kartı|kartı} elde et."
         },
         {
           "name": "Eşitlik",
@@ -5726,19 +5726,19 @@
         },
         {
           "name": "Kırmızı",
-          "description": "3 Demirkaplı kartı elde et."
+          "description": "{Cards} Demirkaplı {Cards:plural:kartı|kartı} elde et."
         },
         {
           "name": "Pembe",
-          "description": "3 Ölübağlayan kartı elde et."
+          "description": "{Cards} Ölübağlayan {Cards:plural:kartı|kartı} elde et."
         },
         {
           "name": "Turuncu",
-          "description": "3 Naip kartı elde et."
+          "description": "{Cards} Naip {Cards:plural:kartı|kartı} elde et."
         },
         {
           "name": "Yeşil",
-          "description": "3 Sessiz kartı elde et."
+          "description": "{Cards} Sessiz {Cards:plural:kartı|kartı} elde et."
         }
       ]
     },
@@ -5803,11 +5803,11 @@
       "choices": [
         {
           "name": "Ödeme Planı",
-          "description": "Borç elde et. 6 kez Kehanetini Ortaya Çıkar."
+          "description": "{CurseTitle} elde et. {PaymentPlanCount} kez Kehanetini Ortaya Çıkar."
         },
         {
           "name": "Geleceğini Ortaya Çıkar",
-          "description": "50 Altın öde. 3 kez Kehanetini Ortaya Çıkar."
+          "description": "{UncoverFutureCost} Altın öde. {UncoverFutureProphesizeCount} kez Kehanetini Ortaya Çıkar."
         }
       ]
     },
@@ -5817,11 +5817,11 @@
       "choices": [
         {
           "name": "Dinlen",
-          "description": "0 CP iyileş. Bazı düşmanlarla savaş."
+          "description": "{Heal} CP iyileş. Bazı düşmanlarla savaş."
         },
         {
           "name": "Güçlükle Yürümeye Devam Et",
-          "description": "Deste'nden bir kartı kaldır. 11 CP kaybet."
+          "description": "Deste'nden bir kartı kaldır. {HpLoss} CP kaybet."
         }
       ]
     },
@@ -5834,7 +5834,7 @@
       "choices": [
         {
           "name": "Her Birini İncele ve En İyi Kararı Ver",
-          "description": "15 CP kaybet. 3 Bebek Kalıntısı'ndan 1 tanesini seç."
+          "description": "{ExamineHpLoss} CP kaybet. 3 Bebek Kalıntısı'ndan 1 tanesini seç."
         },
         {
           "name": "Rastgele Birini Seç",
@@ -5842,7 +5842,7 @@
         },
         {
           "name": "Biraz Zaman Ayır",
-          "description": "5 CP kaybet. 2 Bebek Kalıntısı'ndan 1 tanesini seç."
+          "description": "{TakeTimeHpLoss} CP kaybet. 2 Bebek Kalıntısı'ndan 1 tanesini seç."
         }
       ]
     },
@@ -5856,7 +5856,7 @@
         },
         {
           "name": "Aydınlık Kapı",
-          "description": "Rastgele 2 kartını Geliştir."
+          "description": "Rastgele {Cards} kartını Geliştir."
         }
       ]
     },
@@ -5866,11 +5866,11 @@
       "choices": [
         {
           "name": "Şişele",
-          "description": "Işıldayan Su İksiri elde et."
+          "description": "{Potion} elde et."
         },
         {
           "name": "Tırman",
-          "description": "Fresnel Mercek elde et. 13 Maksimum CP kaybet."
+          "description": "{Relic} elde et. {HpLoss} Maksimum CP kaybet."
         }
       ]
     },
@@ -5897,11 +5897,11 @@
       "choices": [
         {
           "name": "Deliğine Gir",
-          "description": "Bir kartı Cuk Oturdu ile Büyüle."
+          "description": "Bir kartı {Enchantment} ile Büyüle."
         },
         {
           "name": "Diren",
-          "description": "Deste'nden 2 kart kaldır. Deste'ne Sıradanlık ekle."
+          "description": "Deste'nden {Cards} kart kaldır. Deste'ne {ResistCurse} ekle."
         }
       ]
     },
@@ -5911,11 +5911,11 @@
       "choices": [
         {
           "name": "{Relic}'u Kabul Et",
-          "description": "Unutulmuş Ruh elde et."
+          "description": "{Relic} elde et."
         },
         {
           "name": "Gerçekle Yüzleştir",
-          "description": "Deste'ne Çürüme ekle. Tüketilen bir kartı Ruh'un Gücü ile Büyüle."
+          "description": "Deste'ne {Curse} ekle. Tüketilen bir kartı {Enchantment} ile Büyüle."
         }
       ]
     },
@@ -5951,11 +5951,11 @@
       "choices": [
         {
           "name": "Güçlerinizi Birleştirin",
-          "description": "50 Altın elde et."
+          "description": "{JoinForcesGold} Altın elde et."
         },
         {
           "name": "Tek Kişilik Görev",
-          "description": "150 Altın elde et. 18 CP kaybet."
+          "description": "{SoloGold} Altın elde et. {SoloHp} CP kaybet."
         }
       ]
     },
@@ -5965,7 +5965,7 @@
       "choices": [
         {
           "name": "Kıvılcımı Yakala",
-          "description": "Deste'ne Çürüme kartını ekle. {Relic} kalıntısını elde et."
+          "description": "Deste'ne {Curse} kartını ekle. {Relic} kalıntısını elde et."
         },
         {
           "name": "Kilitli",
@@ -5979,11 +5979,11 @@
       "choices": [
         {
           "name": "Adak Sun",
-          "description": "149 Altın öde. Rastgele bir Kalıntı elde et."
+          "description": "{Gold} Altın öde. Rastgele bir Kalıntı elde et."
         },
         {
           "name": "Kilitli",
-          "description": "149 Altın gerektirir."
+          "description": "{Gold} Altın gerektirir."
         }
       ]
     },
@@ -5996,11 +5996,11 @@
       "choices": [
         {
           "name": "Grup",
-          "description": "100 Altın kaybet. 2 kartını Dönüştür."
+          "description": "{Gold} Altın kaybet. 2 kartını Dönüştür."
         },
         {
           "name": "Yalnız",
-          "description": "5 maksimum CP elde et."
+          "description": "{MaxHp} maksimum CP elde et."
         }
       ]
     },
@@ -6010,7 +6010,7 @@
       "choices": [
         {
           "name": "İksirleri Al",
-          "description": "3 adet İğrenç İksir elde et."
+          "description": "{FoulPotions} adet İğrenç {FoulPotions:plural:İksir|İksir} elde et."
         },
         {
           "name": "Yağmala",
@@ -6095,7 +6095,7 @@
         },
         {
           "name": "Ara",
-          "description": "14 CP kaybet. Seçilmiş Peynir'i elde et."
+          "description": "{Damage} CP kaybet. Seçilmiş Peynir'i elde et."
         }
       ]
     },
@@ -6105,11 +6105,11 @@
       "choices": [
         {
           "name": "Çayının Tadını Çıkar",
-          "description": "Kraliyet Zehri elde et. Tüm CP'ni iyileştir."
+          "description": "{Relic} elde et. Tüm CP'ni iyileştir."
         },
         {
           "name": "Kavga Çıkar",
-          "description": "11 CP kaybet. Rastgele bir Kalıntı elde et."
+          "description": "{Damage} CP kaybet. Rastgele bir Kalıntı elde et."
         }
       ]
     },
@@ -6119,11 +6119,11 @@
       "choices": [
         {
           "name": "Tüket",
-          "description": "9 CP iyileştir. Deste'ndeki bir kartı Geliştir."
+          "description": "{Heal} CP iyileştir. Deste'ndeki bir kartı Geliştir."
         },
         {
           "name": "Ek ve Besle",
-          "description": "Bir kartı Yatırım ile Büyüle."
+          "description": "Bir kartı {Enchantment} ile Büyüle."
         }
       ]
     },
@@ -6137,7 +6137,7 @@
         },
         {
           "name": "Tüm Kitabı Oku",
-          "description": "2 Hızlı ile Büyülemek için bir Güç kartı seç."
+          "description": "{Enchantment3Amount} {Enchantment3} ile Büyülemek için bir Güç kartı seç."
         },
         {
           "name": "Kilitli",
@@ -6145,7 +6145,7 @@
         },
         {
           "name": "Rastgele Bir Bölüm Oku",
-          "description": "2 Atik ile Büyülemek için bir Beceri kartı seç."
+          "description": "{Enchantment2Amount} {Enchantment2} ile Büyülemek için bir Beceri kartı seç."
         }
       ]
     },
@@ -6169,7 +6169,7 @@
       "choices": [
         {
           "name": "İç",
-          "description": "0 CP iyileştir."
+          "description": "{Heal} CP iyileştir."
         },
         {
           "name": "Gözlemle",
@@ -6187,11 +6187,11 @@
       "choices": [
         {
           "name": "İçine Al",
-          "description": "25 CP iyileştir. Deste'ne bir Başkalaşım ekle."
+          "description": "{LetItInHealAmount} CP iyileştir. Deste'ne bir Başkalaşım ekle."
         },
         {
           "name": "Reddet",
-          "description": "9 CP kaybet. Deste'nden bir kartı kaldır."
+          "description": "{RejectionHpLoss} CP kaybet. Deste'nden bir kartı kaldır."
         }
       ]
     },
@@ -6201,7 +6201,7 @@
       "choices": [
         {
           "name": "İksir İç ve Kaldır",
-          "description": "İksiri kaybet: {DrinkRandomPotion}. 10 Maksimum CP elde et."
+          "description": "İksiri kaybet: {DrinkRandomPotion}. {DrinkMaxHpGain} Maksimum CP elde et."
         },
         {
           "name": "Kilitli",
@@ -6215,11 +6215,11 @@
       "choices": [
         {
           "name": "Suya Dal",
-          "description": "111 Altın elde et. 7 CP kaybet."
+          "description": "{Gold} Altın elde et. {HpLoss} CP kaybet."
         },
         {
           "name": "Kılıcı Al",
-          "description": "Kalıntıyı elde et: Taş Kılıç"
+          "description": "Kalıntıyı elde et: {Relic}"
         }
       ]
     },
@@ -6229,11 +6229,11 @@
       "choices": [
         {
           "name": "Birinci Sandık",
-          "description": "60 Altın elde et."
+          "description": "{SmallChestGold} Altın elde et."
         },
         {
           "name": "İkinci Sandık",
-          "description": "333 Altın ve Açgözlülük elde et."
+          "description": "{LargeChestGold} Altın ve Açgözlülük elde et."
         }
       ]
     },
@@ -6243,7 +6243,7 @@
       "choices": [
         {
           "name": "Yaklaş",
-          "description": "Bir Saldırı kartını Yozlaşmış ile Büyüle."
+          "description": "Bir Saldırı kartını {Enchantment} ile Büyüle."
         },
         {
           "name": "Kilitli",
@@ -6257,11 +6257,11 @@
       "choices": [
         {
           "name": "Çözümle",
-          "description": "3 Maksimum CP kaybet. Rastgele bir kart Geliştir."
+          "description": "{DecipherMaxHpLoss} Maksimum CP kaybet. Rastgele bir kart Geliştir."
         },
         {
           "name": "Ezip Parçala",
-          "description": "20 CP iyileştir."
+          "description": "{SmashHPGain} CP iyileştir."
         }
       ]
     },
@@ -6271,15 +6271,15 @@
       "choices": [
         {
           "name": "Kemik Çayı",
-          "description": "50 Altın öde. {BoneTeaDescription}"
+          "description": "{BoneTeaCost} Altın öde. {BoneTeaDescription}"
         },
         {
           "name": "Kilitli",
-          "description": "50 Altın gerektiriyor."
+          "description": "{BoneTeaCost} Altın gerektiriyor."
         },
         {
           "name": "Köz Çayı",
-          "description": "150 Altın öde. {EmberTeaDescription}"
+          "description": "{EmberTeaCost} Altın öde. {EmberTeaDescription}"
         }
       ]
     },
@@ -6303,7 +6303,7 @@
         },
         {
           "name": "Anahtarı Geri Ver",
-          "description": "100 Altın elde et."
+          "description": "{Gold} Altın elde et."
         }
       ]
     },
@@ -6317,7 +6317,7 @@
         },
         {
           "name": "Yavaşça Bir Çıkış Yolu Bul",
-          "description": "8 CP kaybet. Rastgele 1 İksir elde et."
+          "description": "{Damage} CP kaybet. Rastgele 1 İksir elde et."
         }
       ]
     },
@@ -6327,21 +6327,75 @@
       "choices": [
         {
           "name": "Şu",
-          "description": "Deste'ne bir Sakar ekle. Rastgele bir Kalıntı elde et."
+          "description": "Deste'ne bir {Curse} ekle. Rastgele bir Kalıntı elde et."
         },
         {
           "name": "Bu",
-          "description": "6 CP kaybet. 0 Altın elde et."
+          "description": "{HpLoss} CP kaybet. {Gold} Altın elde et."
         }
       ]
     },
     "TINKER_TIME": {
       "name": "Kurcalama Vakti",
-      "description": "Sonsuz bir ceset denizinin içinde yolunu bulmaya çalışırken, çeşitli hurdalar toplayan çılgın bir bilim insanına rastlarsın.\n\n“Evet. Şey... merhaba! Güçlü bir savaşçıya benziyorsun... Bir sonraki vahşet aygıtım için bir deneğe ihtiyacım var! Ne dersin?”",
-      "choices": [
+      "description": "“Sana herkesi öldürmende yardım edecek nasıl bir araç istersin?”",
+      "pages": [
         {
-          "name": "Kabul Et",
-          "description": "Deste'ne eklemek için özel yapım bir kart ekle."
+          "description": "“Sana herkesi öldürmende yardım edecek nasıl bir araç istersin?”",
+          "choices": [
+            {
+              "name": "Silah",
+              "description": "Bir Saldırı oluştur."
+            },
+            {
+              "name": "Alet",
+              "description": "Bir Güç oluştur."
+            },
+            {
+              "name": "Koruyucu",
+              "description": "Bir Beceri oluştur."
+            }
+          ]
+        },
+        {
+          "description": "“Mükemmel bir seçim! Peki bu şey NE YAPMALI?”\nBilim insanı, keyifle ellerini ovuşturur.",
+          "choices": [
+            {
+              "name": "Kaos",
+              "description": "El'ine rastgele bir kart ekle. Bu tur maliyeti 0 {energyPrefix:energyIcons(1)} olur."
+            },
+            {
+              "name": "Boğucu",
+              "description": "Bu tur her kart oynadığında düşman {ChokingDamage} CP kaybeder."
+            },
+            {
+              "name": "Meraklı",
+              "description": "Güç kartlarının maliyeti {CuriousReduction} {energyPrefix:energyIcons(1)} azalır."
+            },
+            {
+              "name": "Enerji Yüklü",
+              "description": "{EnergizedEnergy:energyIcons()} elde et."
+            },
+            {
+              "name": "Uzmanlık",
+              "description": "{ExpertiseStrength} Kuvvet elde et. {ExpertiseDexterity} Çeviklik elde et."
+            },
+            {
+              "name": "Geliştirme",
+              "description": "Savaşın sonunda rastgele bir kartı Geliştir."
+            },
+            {
+              "name": "Zayıflatma",
+              "description": "{SappingWeak} Zayıf uygula. {SappingVulnerable} Savunmasız uygula."
+            },
+            {
+              "name": "Şiddet",
+              "description": "Fazladan 2 kez vurur."
+            },
+            {
+              "name": "Bilgelik",
+              "description": "{WisdomCards} kart çek."
+            }
+          ]
         }
       ]
     },
@@ -6351,11 +6405,11 @@
       "choices": [
         {
           "name": "İçine Dal",
-          "description": "8 CP kaybet. Geçmişten kalma, unutulmuş rastgele bir Kalıntı elde et."
+          "description": "{HpLoss} CP kaybet. Geçmişten kalma, unutulmuş rastgele bir Kalıntı elde et."
         },
         {
           "name": "Rastgele Hurda Kap",
-          "description": "100 Altın elde et. Geçmişten kalma, unutulmuş rastgele bir Kart elde et."
+          "description": "{Gold} Altın elde et. Geçmişten kalma, unutulmuş rastgele bir Kart elde et."
         }
       ]
     },
@@ -6379,7 +6433,7 @@
       "choices": [
         {
           "name": "Ağaçları Öldür",
-          "description": "8 Maksimum CP kaybet. Rastgele bir Kalıntı elde et."
+          "description": "{MaxHpLoss} Maksimum CP kaybet. Rastgele bir Kalıntı elde et."
         },
         {
           "name": "Yine de Dinlen",
@@ -6411,11 +6465,11 @@
         },
         {
           "name": "Dikenli Sünger",
-          "description": "155 Altın öde. 2 kartı Sabit ile Büyüle."
+          "description": "{PricklySpongeGold} Altın öde. {Cards} {Cards:plural:kartı|kartı} Sabit ile Büyüle."
         },
         {
           "name": "Kilitli",
-          "description": "155 Altın gerektirir."
+          "description": "{PricklySpongeGold} Altın gerektirir."
         }
       ]
     },
@@ -6425,19 +6479,19 @@
       "choices": [
         {
           "name": "Wongo'nun Ucuzluk Sepeti",
-          "description": "100 Altın öde. Rastgele 1 Yaygın Kalıntı elde et."
+          "description": "{BargainBinCost} Altın öde. Rastgele 1 Yaygın Kalıntı elde et."
         },
         {
           "name": "Kilitli",
-          "description": "100 Altın gerektirir."
+          "description": "{BargainBinCost} Altın gerektirir."
         },
         {
           "name": "Wongo'nun Öne Çıkan Ürünü",
-          "description": "200 Altın öde. Kalıntı'yı elde et: {RandomRelic}"
+          "description": "{FeaturedItemCost} Altın öde. Kalıntı'yı elde et: {RandomRelic}"
         },
         {
           "name": "Kilitli",
-          "description": "200 Altın gerekir."
+          "description": "{FeaturedItemCost} Altın gerekir."
         }
       ]
     },
@@ -6447,7 +6501,7 @@
       "choices": [
         {
           "name": "Yıkan",
-          "description": "Deste'nden 1 kart kaldır. Deste'ne 1 Suçlu ekle."
+          "description": "Deste'nden 1 kart kaldır. Deste'ne {BatheCurses} Suçlu ekle."
         },
         {
           "name": "Şişele",
@@ -6461,11 +6515,11 @@
       "choices": [
         {
           "name": "Altın Takası Yap",
-          "description": "50 Altın kaybet. Rastgele 2 İksir elde et."
+          "description": "{Gold} Altın kaybet. Rastgele 2 İksir elde et."
         },
         {
           "name": "Ağaca Sarıl",
-          "description": "9 CP kaybet. Dönüştürmek için bir kart seç."
+          "description": "{HpLoss} CP kaybet. Dönüştürmek için bir kart seç."
         }
       ]
     },
@@ -6475,11 +6529,11 @@
       "choices": [
         {
           "name": "Kuş",
-          "description": "Gagala kartına Dönüştürmek için başlangıç kartlarından 1 tanesini seç."
+          "description": "{BirdCard} kartına Dönüştürmek için başlangıç kartlarından 1 tanesini seç."
         },
         {
           "name": "Yılan",
-          "description": "1 kartı Sürüngen ile Büyüle."
+          "description": "1 kartı {SnakeEnchantment} ile Büyüle."
         },
         {
           "name": "Kilitli",
@@ -6493,15 +6547,15 @@
       "choices": [
         {
           "name": "Örümcek Akupunkturu",
-          "description": "250 Altın öde. Deste'nden 2 kart çıkar."
+          "description": "{ArachnidAcupunctureCost} Altın öde. Deste'nden 2 kart çıkar."
         },
         {
           "name": "Nefes Alma Teknikleri",
-          "description": "50 Altın öde. Deste'ne 2 Aydınlanma ekle."
+          "description": "{BreathingTechniquesCost} Altın öde. Deste'ne 2 Aydınlanma ekle."
         },
         {
           "name": "Duygusal Farkındalık",
-          "description": "125 Altın öde. Deste'nden 1 kart çıkar."
+          "description": "{EmotionalAwarenessCost} Altın öde. Deste'nden 1 kart çıkar."
         }
       ]
     },

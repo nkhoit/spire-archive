@@ -5611,11 +5611,11 @@
       "choices": [
         {
           "name": "자제한다",
-          "description": "체력을 10 회복합니다."
+          "description": "체력을 {Heal} 회복합니다."
         },
         {
           "name": "몸을 담근다",
-          "description": "최대 체력을 2 얻습니다. 피해를 3 받습니다."
+          "description": "최대 체력을 {MaxHp} 얻습니다. 피해를 {Damage} 받습니다."
         }
       ]
     },
@@ -5625,11 +5625,11 @@
       "choices": [
         {
           "name": "수비를 합친다",
-          "description": "수비를 2장 제거합니다. 궁극의 수비를 덱에 추가합니다."
+          "description": "수비를 2장 제거합니다. {Card2}를 덱에 추가합니다."
         },
         {
           "name": "타격을 합친다",
-          "description": "타격을 2장 제거합니다. 궁극의 타격을 덱에 추가합니다."
+          "description": "타격을 2장 제거합니다. {Card1}을 덱에 추가합니다."
         }
       ]
     },
@@ -5653,15 +5653,15 @@
       "choices": [
         {
           "name": "1로 설정",
-          "description": "체력이 {Setting1Hp}인 훈련 인형과 싸웁니다. 무작위 포션을 1개 생성합니다."
+          "description": "체력이 75인 훈련 인형과 싸웁니다. 무작위 포션을 1개 생성합니다."
         },
         {
           "name": "2로 설정",
-          "description": "체력이 {Setting2Hp}인 훈련 인형과 싸웁니다. 무작위 카드를 2장 강화합니다."
+          "description": "체력이 150인 훈련 인형과 싸웁니다. 무작위 카드를 2장 강화합니다."
         },
         {
           "name": "3으로 설정",
-          "description": "체력이 {Setting3Hp}인 훈련 인형과 싸웁니다. 무작위 유물을 1개 얻습니다."
+          "description": "체력이 300인 훈련 인형과 싸웁니다. 무작위 유물을 1개 얻습니다."
         }
       ]
     },
@@ -5671,11 +5671,11 @@
       "choices": [
         {
           "name": "거머리를 떼어낸다",
-          "description": "체력을 5 잃습니다. 무색 카드 보상을 1번 얻습니다."
+          "description": "체력을 {RipHpLoss} 잃습니다. 무색 카드 보상을 1번 얻습니다."
         },
         {
           "name": "지식을 공유한다",
-          "description": "무작위 카드 5장 중 1장을 선택해 덱에 추가합니다."
+          "description": "무작위 카드 {FromCardChoiceCount}장 중 {CardChoiceCount}장을 선택해 덱에 추가합니다."
         }
       ]
     },
@@ -5685,11 +5685,11 @@
       "choices": [
         {
           "name": "박멸 기술 배우기",
-          "description": "덱에 박멸을 추가합니다."
+          "description": "덱에 {Card1}을 추가합니다."
         },
         {
           "name": "짓누르기 기술 배우기",
-          "description": "덱에 짓누르기를 추가합니다."
+          "description": "덱에 {Card2}를 추가합니다."
         }
       ]
     },
@@ -5699,11 +5699,11 @@
       "choices": [
         {
           "name": "알을 먹는다",
-          "description": "최대 체력을 7 얻습니다."
+          "description": "최대 체력을 {MaxHp} 얻습니다."
         },
         {
           "name": "알을 가져간다",
-          "description": "덱에 섀도니스 알을 추가합니다."
+          "description": "덱에 {Card}을 추가합니다."
         }
       ]
     },
@@ -5713,7 +5713,7 @@
       "choices": [
         {
           "name": "파란색",
-          "description": "디펙트 카드를 3장 얻습니다."
+          "description": "디펙트 카드를 {Cards}장 얻습니다."
         },
         {
           "name": "평등",
@@ -5721,19 +5721,19 @@
         },
         {
           "name": "빨간색",
-          "description": "아이언클래드 카드를 3장 얻습니다."
+          "description": "아이언클래드 카드를 {Cards}장 얻습니다."
         },
         {
           "name": "분홍색",
-          "description": "네크로바인더 카드를 3장 얻습니다."
+          "description": "네크로바인더 카드를 {Cards}장 얻습니다."
         },
         {
           "name": "주황색",
-          "description": "리젠트 카드를 3장 얻습니다."
+          "description": "리젠트 카드를 {Cards}장 얻습니다."
         },
         {
           "name": "초록색",
-          "description": "사일런트 카드를 3장 얻습니다."
+          "description": "사일런트 카드를 {Cards}장 얻습니다."
         }
       ]
     },
@@ -5798,11 +5798,11 @@
       "choices": [
         {
           "name": "분할 납부",
-          "description": "빚을 얻습니다. 6번 점을 칩니다."
+          "description": "{CurseTitle}을 얻습니다. {PaymentPlanCount}번 점을 칩니다."
         },
         {
           "name": "미래를 알아본다",
-          "description": "골드를 50 지불합니다. 3번 점을 칩니다."
+          "description": "골드를 {UncoverFutureCost} 지불합니다. {UncoverFutureProphesizeCount}번 점을 칩니다."
         }
       ]
     },
@@ -5812,11 +5812,11 @@
       "choices": [
         {
           "name": "휴식한다",
-          "description": "체력을 0 회복합니다. 적들과 싸웁니다."
+          "description": "체력을 {Heal} 회복합니다. 적들과 싸웁니다."
         },
         {
           "name": "묵묵히 나아간다",
-          "description": "덱에서 카드를 1장 제거합니다. 체력을 11 잃습니다."
+          "description": "덱에서 카드를 1장 제거합니다. 체력을 {HpLoss} 잃습니다."
         }
       ]
     },
@@ -5829,7 +5829,7 @@
       "choices": [
         {
           "name": "깊게 고민한 뒤 최고의 선택을 한다",
-          "description": "체력을 15 잃습니다. 인형 유물 3개 중 1개를 선택합니다."
+          "description": "체력을 {ExamineHpLoss} 잃습니다. 인형 유물 3개 중 1개를 선택합니다."
         },
         {
           "name": "아무거나 고른다",
@@ -5837,7 +5837,7 @@
         },
         {
           "name": "잠시 고민한다",
-          "description": "체력을 5 잃습니다. 인형 유물 2개 중 1개를 선택합니다."
+          "description": "체력을 {TakeTimeHpLoss} 잃습니다. 인형 유물 2개 중 1개를 선택합니다."
         }
       ]
     },
@@ -5851,7 +5851,7 @@
         },
         {
           "name": "빛의 문",
-          "description": "무작위 카드를 2장 강화합니다."
+          "description": "무작위 카드를 {Cards}장 강화합니다."
         }
       ]
     },
@@ -5861,11 +5861,11 @@
       "choices": [
         {
           "name": "병에 담는다",
-          "description": "발광수 포션을 생성합니다."
+          "description": "{Potion}을 생성합니다."
         },
         {
           "name": "올라간다",
-          "description": "프레넬 렌즈를 획득합니다. 최대 체력을 13 잃습니다."
+          "description": "{Relic}를 획득합니다. 최대 체력을 {HpLoss} 잃습니다."
         }
       ]
     },
@@ -5892,11 +5892,11 @@
       "choices": [
         {
           "name": "내 구멍에 들어간다",
-          "description": "카드 1장에 안성맞춤을 인챈트합니다."
+          "description": "카드 1장에 {Enchantment}을 인챈트합니다."
         },
         {
           "name": "저항한다",
-          "description": "덱에서 카드를 2장 제거합니다. 덱에 규칙 준수를 추가합니다."
+          "description": "덱에서 카드를 {Cards}장 제거합니다. 덱에 {ResistCurse}를 추가합니다."
         }
       ]
     },
@@ -5906,11 +5906,11 @@
       "choices": [
         {
           "name": "{Relic}을 받아들인다",
-          "description": "잊힌 영혼을 얻습니다."
+          "description": "{Relic}을 얻습니다."
         },
         {
           "name": "사실을 알린다",
-          "description": "덱에 부패를 추가합니다. 소멸 카드에 영혼의 힘을 인챈트합니다."
+          "description": "덱에 {Curse}를 추가합니다. 소멸 카드에 {Enchantment}을 인챈트합니다."
         }
       ]
     },
@@ -5946,11 +5946,11 @@
       "choices": [
         {
           "name": "협력한다",
-          "description": "골드를 50 얻습니다."
+          "description": "골드를 {JoinForcesGold} 얻습니다."
         },
         {
           "name": "홀로 탐색한다",
-          "description": "골드를 150 얻습니다. 체력을 18 잃습니다."
+          "description": "골드를 {SoloGold} 얻습니다. 체력을 {SoloHp} 잃습니다."
         }
       ]
     },
@@ -5960,7 +5960,7 @@
       "choices": [
         {
           "name": "위습을 붙잡는다",
-          "description": "덱에 부패를 추가합니다. {Relic}을 얻습니다."
+          "description": "덱에 {Curse}를 추가합니다. {Relic}을 얻습니다."
         },
         {
           "name": "잠김",
@@ -5974,11 +5974,11 @@
       "choices": [
         {
           "name": "공물을 바친다",
-          "description": "골드를 149 지불합니다. 무작위 유물을 1개 얻습니다."
+          "description": "골드를 {Gold} 지불합니다. 무작위 유물을 1개 얻습니다."
         },
         {
           "name": "잠김",
-          "description": "골드가 149 필요합니다."
+          "description": "골드가 {Gold} 필요합니다."
         }
       ]
     },
@@ -5991,11 +5991,11 @@
       "choices": [
         {
           "name": "무리",
-          "description": "골드를 100 잃습니다. 카드를 2장 변화시킵니다."
+          "description": "골드를 {Gold} 잃습니다. 카드를 2장 변화시킵니다."
         },
         {
           "name": "외톨이",
-          "description": "최대 체력을 5 얻습니다."
+          "description": "최대 체력을 {MaxHp} 얻습니다."
         }
       ]
     },
@@ -6005,7 +6005,7 @@
       "choices": [
         {
           "name": "포션을 집는다",
-          "description": "역겨운 포션을 3개 생성합니다."
+          "description": "역겨운 포션을 {FoulPotions}개 생성합니다."
         },
         {
           "name": "뒤져본다",
@@ -6090,7 +6090,7 @@
         },
         {
           "name": "탐색한다",
-          "description": "체력을 14 잃습니다. 엄선된 치즈를 얻습니다."
+          "description": "체력을 {Damage} 잃습니다. 엄선된 치즈를 얻습니다."
         }
       ]
     },
@@ -6100,11 +6100,11 @@
       "choices": [
         {
           "name": "차를 즐긴다",
-          "description": "왕실의 독을 얻습니다. 체력을 모두 회복합니다."
+          "description": "{Relic}을 얻습니다. 체력을 모두 회복합니다."
         },
         {
           "name": "싸움을 건다",
-          "description": "체력을 11 잃습니다. 무작위 유물을 1개 얻습니다."
+          "description": "체력을 {Damage} 잃습니다. 무작위 유물을 1개 얻습니다."
         }
       ]
     },
@@ -6114,11 +6114,11 @@
       "choices": [
         {
           "name": "먹는다",
-          "description": "체력을 9 회복합니다. 덱에 있는 카드를 1장 강화합니다."
+          "description": "체력을 {Heal} 회복합니다. 덱에 있는 카드를 1장 강화합니다."
         },
         {
           "name": "심고 영양을 공급한다",
-          "description": "카드 1장에 발아를 인챈트합니다."
+          "description": "카드 1장에 {Enchantment}를 인챈트합니다."
         }
       ]
     },
@@ -6132,7 +6132,7 @@
         },
         {
           "name": "책을 모두 읽는다",
-          "description": "파워 카드를 1장 선택해 신속을 2 인챈트합니다."
+          "description": "파워 카드를 1장 선택해 {Enchantment3}을 {Enchantment3Amount} 인챈트합니다."
         },
         {
           "name": "잠김",
@@ -6140,7 +6140,7 @@
         },
         {
           "name": "무작위 문단을 읽는다",
-          "description": "스킬 카드를 1장 선택해 기민함을 2 인챈트합니다."
+          "description": "스킬 카드를 1장 선택해 {Enchantment2}을 {Enchantment2Amount} 인챈트합니다."
         }
       ]
     },
@@ -6164,7 +6164,7 @@
       "choices": [
         {
           "name": "마신다",
-          "description": "체력을 0 회복합니다."
+          "description": "체력을 {Heal} 회복합니다."
         },
         {
           "name": "관찰한다",
@@ -6182,11 +6182,11 @@
       "choices": [
         {
           "name": "받아들인다",
-          "description": "체력을 25 회복합니다. 덱에 탈바꿈을 추가합니다."
+          "description": "체력을 {LetItInHealAmount} 회복합니다. 덱에 탈바꿈을 추가합니다."
         },
         {
           "name": "거부한다",
-          "description": "체력을 9 잃습니다. 덱에서 카드를 1장 제거합니다."
+          "description": "체력을 {RejectionHpLoss} 잃습니다. 덱에서 카드를 1장 제거합니다."
         }
       ]
     },
@@ -6196,7 +6196,7 @@
       "choices": [
         {
           "name": "목을 축이고 들어올린다",
-          "description": "{DrinkRandomPotion}을(를) 잃습니다. 최대 체력을 10 얻습니다."
+          "description": "{DrinkRandomPotion}을(를) 잃습니다. 최대 체력을 {DrinkMaxHpGain} 얻습니다."
         },
         {
           "name": "잠김",
@@ -6210,11 +6210,11 @@
       "choices": [
         {
           "name": "물로 뛰어든다",
-          "description": "골드를 111 얻습니다. 체력을 7 잃습니다."
+          "description": "골드를 {Gold} 얻습니다. 체력을 {HpLoss} 잃습니다."
         },
         {
           "name": "검을 집는다",
-          "description": "돌 검을 얻습니다."
+          "description": "{Relic}을 얻습니다."
         }
       ]
     },
@@ -6224,11 +6224,11 @@
       "choices": [
         {
           "name": "첫 번째 상자",
-          "description": "골드를 60 얻습니다."
+          "description": "골드를 {SmallChestGold} 얻습니다."
         },
         {
           "name": "두 번째 상자",
-          "description": "골드를 333 얻습니다. 탐욕을 얻습니다."
+          "description": "골드를 {LargeChestGold} 얻습니다. 탐욕을 얻습니다."
         }
       ]
     },
@@ -6238,7 +6238,7 @@
       "choices": [
         {
           "name": "다가간다",
-          "description": "공격 카드 1장에 오염을 인챈트합니다."
+          "description": "공격 카드 1장에 {Enchantment}을 인챈트합니다."
         },
         {
           "name": "잠김",
@@ -6252,11 +6252,11 @@
       "choices": [
         {
           "name": "해독한다",
-          "description": "최대 체력을 3 잃습니다. 무작위 카드를 1장 강화합니다."
+          "description": "최대 체력을 {DecipherMaxHpLoss} 잃습니다. 무작위 카드를 1장 강화합니다."
         },
         {
           "name": "부순다",
-          "description": "체력을 20 회복합니다."
+          "description": "체력을 {SmashHPGain} 회복합니다."
         }
       ]
     },
@@ -6266,15 +6266,15 @@
       "choices": [
         {
           "name": "뼈다귀 차",
-          "description": "골드를 50 지불합니다. {BoneTeaDescription}"
+          "description": "골드를 {BoneTeaCost} 지불합니다. {BoneTeaDescription}"
         },
         {
           "name": "잠김",
-          "description": "골드가 50 필요합니다."
+          "description": "골드가 {BoneTeaCost} 필요합니다."
         },
         {
           "name": "잉걸불 차",
-          "description": "골드를 150 지불합니다. {EmberTeaDescription}"
+          "description": "골드를 {EmberTeaCost} 지불합니다. {EmberTeaDescription}"
         }
       ]
     },
@@ -6298,7 +6298,7 @@
         },
         {
           "name": "열쇠를 돌려준다",
-          "description": "골드를 100 얻습니다."
+          "description": "골드를 {Gold} 얻습니다."
         }
       ]
     },
@@ -6312,7 +6312,7 @@
         },
         {
           "name": "천천히 출구를 찾는다",
-          "description": "체력을 8 잃습니다. 무작위 포션을 1개 생성합니다."
+          "description": "체력을 {Damage} 잃습니다. 무작위 포션을 1개 생성합니다."
         }
       ]
     },
@@ -6322,21 +6322,75 @@
       "choices": [
         {
           "name": "저거",
-          "description": "서투름을 덱에 추가합니다. 무작위 유물을 1개 얻습니다."
+          "description": "{Curse}을 덱에 추가합니다. 무작위 유물을 1개 얻습니다."
         },
         {
           "name": "이거",
-          "description": "체력을 6 잃습니다. 골드를 0 얻습니다."
+          "description": "체력을 {HpLoss} 잃습니다. 골드를 {Gold} 얻습니다."
         }
       ]
     },
     "TINKER_TIME": {
       "name": "땜질 시간",
-      "description": "당신은 끝도 없이 넘쳐나는 시체들을 헤쳐나가던 도중, 각양각색의 잔해를 뒤적거리고 있는 괴짜 과학자를 발견했습니다.\n\n“어. 네, 안녕하세요! 꽤 실력이 있는 전사이신 것 같네요... 제 다음 포악 장치의 테스터가 필요했거든요! 한 번 어때요?”",
-      "choices": [
+      "description": "“어떤 도구가 전부 죽여버리는 데에 도움이 될까요?”",
+      "pages": [
         {
-          "name": "수락한다",
-          "description": "커스텀 카드를 1장 생성해 덱에 추가합니다."
+          "description": "“어떤 도구가 전부 죽여버리는 데에 도움이 될까요?”",
+          "choices": [
+            {
+              "name": "무기",
+              "description": "공격 카드를 만듭니다."
+            },
+            {
+              "name": "도구",
+              "description": "파워 카드를 만듭니다."
+            },
+            {
+              "name": "보호대",
+              "description": "스킬 카드를 만듭니다."
+            }
+          ]
+        },
+        {
+          "description": "“훌륭한 선택이군요! 그럼 이걸로 뭘 해야 할까요?”\n과학자는 기쁨에 찬 표정으로 두 손을 비벼댑니다.",
+          "choices": [
+            {
+              "name": "혼돈",
+              "description": "무작위 카드를 1장 손으로 가져옵니다. 이번 턴 동안 그 카드의 비용이 0 {energyPrefix:energyIcons(1)}이 됩니다."
+            },
+            {
+              "name": "질식",
+              "description": "이번 턴에 카드를 사용할 때마다, 대상 적이 체력을 {ChokingDamage} 잃습니다."
+            },
+            {
+              "name": "호기심",
+              "description": "파워 카드의 비용이 {CuriousReduction} {energyPrefix:energyIcons(1)} 감소합니다."
+            },
+            {
+              "name": "충전",
+              "description": "{EnergizedEnergy:energyIcons()}를 얻습니다."
+            },
+            {
+              "name": "전문성",
+              "description": "힘을 {ExpertiseStrength} 얻습니다. 민첩을 {ExpertiseDexterity} 얻습니다."
+            },
+            {
+              "name": "개선",
+              "description": "매 전투 종료 시, 무작위 카드를 1장 강화합니다."
+            },
+            {
+              "name": "탈력",
+              "description": "약화를 {SappingWeak} 부여합니다. 취약을 {SappingVulnerable} 부여합니다."
+            },
+            {
+              "name": "폭력",
+              "description": "추가로 2번 적중합니다."
+            },
+            {
+              "name": "지혜",
+              "description": "카드를 {WisdomCards}장 뽑습니다."
+            }
+          ]
         }
       ]
     },
@@ -6346,11 +6400,11 @@
       "choices": [
         {
           "name": "뛰어든다",
-          "description": "체력을 8 잃습니다. 과거의 무작위 잊힌 유물을 1개 얻습니다."
+          "description": "체력을 {HpLoss} 잃습니다. 과거의 무작위 잊힌 유물을 1개 얻습니다."
         },
         {
           "name": "아무 고물이나 잡는다",
-          "description": "골드를 100 얻습니다. 과거의 무작위 잊힌 카드를 1장 얻습니다."
+          "description": "골드를 {Gold} 얻습니다. 과거의 무작위 잊힌 카드를 1장 얻습니다."
         }
       ]
     },
@@ -6374,7 +6428,7 @@
       "choices": [
         {
           "name": "나무들을 베어낸다",
-          "description": "최대 체력을 8 잃습니다. 무작위 유물을 1개 얻습니다."
+          "description": "최대 체력을 {MaxHpLoss} 잃습니다. 무작위 유물을 1개 얻습니다."
         },
         {
           "name": "그래도 휴식한다",
@@ -6406,11 +6460,11 @@
         },
         {
           "name": "꺼끌꺼끌한 스펀지",
-          "description": "골드를 155 지불합니다. 카드 2장에 안정을 인챈트합니다."
+          "description": "골드를 {PricklySpongeGold} 지불합니다. 카드 {Cards}장에 안정을 인챈트합니다."
         },
         {
           "name": "잠김",
-          "description": "골드가 155 필요합니다."
+          "description": "골드가 {PricklySpongeGold} 필요합니다."
         }
       ]
     },
@@ -6420,19 +6474,19 @@
       "choices": [
         {
           "name": "웡고스 할인 코너",
-          "description": "골드를 100 지불합니다. 무작위 일반 유물을 1개 얻습니다."
+          "description": "골드를 {BargainBinCost} 지불합니다. 무작위 일반 유물을 1개 얻습니다."
         },
         {
           "name": "잠김",
-          "description": "골드가 100 필요합니다."
+          "description": "골드가 {BargainBinCost} 필요합니다."
         },
         {
           "name": "웡고스 추천 상품",
-          "description": "골드를 200 지불합니다. {RandomRelic}을(를) 얻습니다."
+          "description": "골드를 {FeaturedItemCost} 지불합니다. {RandomRelic}을(를) 얻습니다."
         },
         {
           "name": "잠김",
-          "description": "골드가 200 필요합니다."
+          "description": "골드가 {FeaturedItemCost} 필요합니다."
         }
       ]
     },
@@ -6442,7 +6496,7 @@
       "choices": [
         {
           "name": "몸을 담근다",
-          "description": "덱에서 카드를 1장 제거합니다. 덱에 죄책감을 1장 추가합니다."
+          "description": "덱에서 카드를 1장 제거합니다. 덱에 죄책감을 {BatheCurses}장 추가합니다."
         },
         {
           "name": "병에 담는다",
@@ -6456,11 +6510,11 @@
       "choices": [
         {
           "name": "골드를 거래한다",
-          "description": "골드를 50 잃습니다. 무작위 포션을 2개 생성합니다."
+          "description": "골드를 {Gold} 잃습니다. 무작위 포션을 2개 생성합니다."
         },
         {
           "name": "나무를 끌어안는다",
-          "description": "체력을 9 잃습니다. 변화시킬 카드를 1장 선택합니다."
+          "description": "체력을 {HpLoss} 잃습니다. 변화시킬 카드를 1장 선택합니다."
         }
       ]
     },
@@ -6470,11 +6524,11 @@
       "choices": [
         {
           "name": "새",
-          "description": "시작 카드를 1장 선택해 쪼기로 변화시킵니다."
+          "description": "시작 카드를 1장 선택해 {BirdCard}로 변화시킵니다."
         },
         {
           "name": "뱀",
-          "description": "카드 1장에 스르륵을 인챈트합니다."
+          "description": "카드 1장에 {SnakeEnchantment}을 인챈트합니다."
         },
         {
           "name": "잠김",
@@ -6488,15 +6542,15 @@
       "choices": [
         {
           "name": "거미류 침술",
-          "description": "골드를 250 지불합니다. 덱에서 카드를 2장 제거합니다."
+          "description": "골드를 {ArachnidAcupunctureCost} 지불합니다. 덱에서 카드를 2장 제거합니다."
         },
         {
           "name": "호흡법",
-          "description": "골드를 50 지불합니다. 덱에 계몽을 2장 추가합니다."
+          "description": "골드를 {BreathingTechniquesCost} 지불합니다. 덱에 계몽을 2장 추가합니다."
         },
         {
           "name": "감정의 인식",
-          "description": "골드를 125 지불합니다. 덱에서 카드를 1장 제거합니다."
+          "description": "골드를 {EmotionalAwarenessCost} 지불합니다. 덱에서 카드를 1장 제거합니다."
         }
       ]
     },

@@ -5617,11 +5617,11 @@
       "choices": [
         {
           "name": "Verzichten",
-          "description": "Heile 10 TP."
+          "description": "Heile {Heal} TP."
         },
         {
           "name": "Eintauchen",
-          "description": "Erhalte 2 max. TP. Nimm 3 Schaden."
+          "description": "Erhalte {MaxHp} max. TP. Nimm {Damage} Schaden."
         }
       ]
     },
@@ -5631,11 +5631,11 @@
       "choices": [
         {
           "name": "Verteidigen kombinieren",
-          "description": "Entferne 2 Verteidigen. Erhalte Ultimatives Verteidigen in dein Deck."
+          "description": "Entferne 2 Verteidigen. Erhalte {Card2} in dein Deck."
         },
         {
           "name": "Schläge kombinieren",
-          "description": "Entferne 2 Schläge. Erhalte Ultimativer Schlag in dein Deck."
+          "description": "Entferne 2 Schläge. Erhalte {Card1} in dein Deck."
         }
       ]
     },
@@ -5659,15 +5659,15 @@
       "choices": [
         {
           "name": "Einstellung 1",
-          "description": "Bekämpfe einen {Setting1Hp}-TP-Dummy. Beschaffe 1 zufälligen Trank."
+          "description": "Bekämpfe einen 75-TP-Dummy. Beschaffe 1 zufälligen Trank."
         },
         {
           "name": "Einstellung 2",
-          "description": "Bekämpfe einen {Setting2Hp}-TP-Dummy. Verbessere 2 zufällige Karten."
+          "description": "Bekämpfe einen 150-TP-Dummy. Verbessere 2 zufällige Karten."
         },
         {
           "name": "Einstellung 3",
-          "description": "Bekämpfe einen {Setting3Hp}-TP-Dummy. Erhalte ein zufälliges Relikt."
+          "description": "Bekämpfe einen 300-TP-Dummy. Erhalte ein zufälliges Relikt."
         }
       ]
     },
@@ -5677,11 +5677,11 @@
       "choices": [
         {
           "name": "Den Egel abreißen",
-          "description": "Verliere 5 TP. Erhalte eine farblose Kartenbelohnung."
+          "description": "Verliere {RipHpLoss} TP. Erhalte eine farblose Kartenbelohnung."
         },
         {
           "name": "Wissen teilen",
-          "description": "Erhalte 1 von 5 zufälligen Karten in dein Deck."
+          "description": "Erhalte {CardChoiceCount} von {FromCardChoiceCount} zufälligen Karten in dein Deck."
         }
       ]
     },
@@ -5691,11 +5691,11 @@
       "choices": [
         {
           "name": "Ausrottungstechnik lernen",
-          "description": "Erhalte Ausrotten in dein Deck."
+          "description": "Erhalte {Card1} in dein Deck."
         },
         {
           "name": "Quetschtechnik lernen",
-          "description": "Erhalte Zerdrücken in dein Deck."
+          "description": "Erhalte {Card2} in dein Deck."
         }
       ]
     },
@@ -5705,11 +5705,11 @@
       "choices": [
         {
           "name": "Das Ei essen",
-          "description": "Erhalte 7 max TP."
+          "description": "Erhalte {MaxHp} max TP."
         },
         {
           "name": "Das Ei nehmen",
-          "description": "Erhalte Foglonis-Ei in dein Deck."
+          "description": "Erhalte {Card} in dein Deck."
         }
       ]
     },
@@ -5719,7 +5719,7 @@
       "choices": [
         {
           "name": "Blau",
-          "description": "Erhalte 3 Defekte-Karte."
+          "description": "Erhalte {Cards} Defekte-{Cards:plural:Karte|Karten}."
         },
         {
           "name": "Ebenbürtigkeit",
@@ -5727,19 +5727,19 @@
         },
         {
           "name": "Rot",
-          "description": "Erhalte 3 Eisernen-Karte."
+          "description": "Erhalte {Cards} Eisernen-{Cards:plural:Karte|Karten}."
         },
         {
           "name": "Rosa",
-          "description": "Erhalte 3 Totenbinderin-Karte."
+          "description": "Erhalte {Cards} Totenbinderin-{Cards:plural:Karte|Karten}."
         },
         {
           "name": "Orange",
-          "description": "Erhalte 3 Regenten-Karte."
+          "description": "Erhalte {Cards} Regenten-{Cards:plural:Karte|Karten}."
         },
         {
           "name": "Grün",
-          "description": "Erhalte 3 Stille-Karte."
+          "description": "Erhalte {Cards} Stille-{Cards:plural:Karte|Karten}."
         }
       ]
     },
@@ -5804,11 +5804,11 @@
       "choices": [
         {
           "name": "Zahlungsplan",
-          "description": "Erhalte Schulden. Weissage 6 Mal."
+          "description": "Erhalte {CurseTitle}. Weissage {PaymentPlanCount} Mal."
         },
         {
           "name": "Zukunft enthüllen",
-          "description": "Zahle 50 Gold. Weissage 3 Mal."
+          "description": "Zahle {UncoverFutureCost} Gold. Weissage {UncoverFutureProphesizeCount} Mal."
         }
       ]
     },
@@ -5818,11 +5818,11 @@
       "choices": [
         {
           "name": "Ausruhen",
-          "description": "Heile 0 TP. Bekämpfe einige Gegner."
+          "description": "Heile {Heal} TP. Bekämpfe einige Gegner."
         },
         {
           "name": "Dich weiterschleppen",
-          "description": "Entferne eine Karte aus deinem Deck. Verliere 11 TP."
+          "description": "Entferne eine Karte aus deinem Deck. Verliere {HpLoss} TP."
         }
       ]
     },
@@ -5835,7 +5835,7 @@
       "choices": [
         {
           "name": "Jede untersuchen und die beste Wahl treffen",
-          "description": "Verliere 15 TP. Wähle 1 von 3 Puppen-Relikten."
+          "description": "Verliere {ExamineHpLoss} TP. Wähle 1 von 3 Puppen-Relikten."
         },
         {
           "name": "Irgendeine nehmen",
@@ -5843,7 +5843,7 @@
         },
         {
           "name": "Etwas Zeit lassen",
-          "description": "Verliere 5 TP. Wähle 1 von 2 Puppen-Relikten."
+          "description": "Verliere {TakeTimeHpLoss} TP. Wähle 1 von 2 Puppen-Relikten."
         }
       ]
     },
@@ -5857,7 +5857,7 @@
         },
         {
           "name": "Helle Tür",
-          "description": "Verbessere 2 zufällige Karten."
+          "description": "Verbessere {Cards} zufällige Karten."
         }
       ]
     },
@@ -5867,11 +5867,11 @@
       "choices": [
         {
           "name": "Abfüllen",
-          "description": "Beschaffe Glühwasser-Trank."
+          "description": "Beschaffe {Potion}."
         },
         {
           "name": "Erklimmen",
-          "description": "Erhalte Fresnel-Linse. Verliere 13 max. TP."
+          "description": "Erhalte {Relic}. Verliere {HpLoss} max. TP."
         }
       ]
     },
@@ -5898,11 +5898,11 @@
       "choices": [
         {
           "name": "Dein Loch betreten",
-          "description": "Verzaubere eine Karte mit Passt perfekt."
+          "description": "Verzaubere eine Karte mit {Enchantment}."
         },
         {
           "name": "Widerstehen",
-          "description": "Entferne 2 Karten aus deinem Deck. Erhalte Normalität in dein Deck."
+          "description": "Entferne {Cards} Karten aus deinem Deck. Erhalte {ResistCurse} in dein Deck."
         }
       ]
     },
@@ -5912,11 +5912,11 @@
       "choices": [
         {
           "name": "Die {Relic} annehmen",
-          "description": "Erhalte Vergessene Seele."
+          "description": "Erhalte {Relic}."
         },
         {
           "name": "Mit der Wahrheit konfrontieren",
-          "description": "Erhalte Verfall in dein Deck. Verzaubere eine Karte, die Erschöpft, mit Seelenkraft."
+          "description": "Erhalte {Curse} in dein Deck. Verzaubere eine Karte, die Erschöpft, mit {Enchantment}."
         }
       ]
     },
@@ -5952,11 +5952,11 @@
       "choices": [
         {
           "name": "Zusammenschließen",
-          "description": "Erhalte 50 Gold."
+          "description": "Erhalte {JoinForcesGold} Gold."
         },
         {
           "name": "Solo-Quest",
-          "description": "Erhalte 150 Gold. Verliere 18 TP."
+          "description": "Erhalte {SoloGold} Gold. Verliere {SoloHp} TP."
         }
       ]
     },
@@ -5966,7 +5966,7 @@
       "choices": [
         {
           "name": "Das Irrlicht fangen",
-          "description": "Erhalte Verfall in dein Deck. Erhalte {Relic}."
+          "description": "Erhalte {Curse} in dein Deck. Erhalte {Relic}."
         },
         {
           "name": "Gesperrt",
@@ -5980,11 +5980,11 @@
       "choices": [
         {
           "name": "Tribut darbieten",
-          "description": "Zahle 149 Gold. Erhalte ein zufälliges Relikt."
+          "description": "Zahle {Gold} Gold. Erhalte ein zufälliges Relikt."
         },
         {
           "name": "Gesperrt",
-          "description": "Benötigt 149 Gold."
+          "description": "Benötigt {Gold} Gold."
         }
       ]
     },
@@ -5997,11 +5997,11 @@
       "choices": [
         {
           "name": "Gruppe",
-          "description": "Verliere 100 Gold. Transformiere 2 Karten."
+          "description": "Verliere {Gold} Gold. Transformiere 2 Karten."
         },
         {
           "name": "Einzelgänger",
-          "description": "Erhalte 5 max. TP."
+          "description": "Erhalte {MaxHp} max. TP."
         }
       ]
     },
@@ -6011,7 +6011,7 @@
       "choices": [
         {
           "name": "Tränke mitnehmen",
-          "description": "Beschaffe 3 Fauligen Trank."
+          "description": "Beschaffe {FoulPotions} {FoulPotions:plural:Fauligen Trank|Faulige Tränke}."
         },
         {
           "name": "Wühlen",
@@ -6096,7 +6096,7 @@
         },
         {
           "name": "Suchen",
-          "description": "Verliere 14 TP. Erhalte den Erlesenen Käse."
+          "description": "Verliere {Damage} TP. Erhalte den Erlesenen Käse."
         }
       ]
     },
@@ -6106,11 +6106,11 @@
       "choices": [
         {
           "name": "Deinen Tee genießen",
-          "description": "Erhalte Königliches Gift. Heile auf volle TP."
+          "description": "Erhalte {Relic}. Heile auf volle TP."
         },
         {
           "name": "Schlägerei anzetteln",
-          "description": "Verliere 11 TP. Erhalte ein zufälliges Relikt."
+          "description": "Verliere {Damage} TP. Erhalte ein zufälliges Relikt."
         }
       ]
     },
@@ -6120,11 +6120,11 @@
       "choices": [
         {
           "name": "Verzehren",
-          "description": "Heile 9 TP. Verbessere eine Karte aus deinem Deck."
+          "description": "Heile {Heal} TP. Verbessere eine Karte aus deinem Deck."
         },
         {
           "name": "Einpflanzen und pflegen",
-          "description": "Verzaubere eine Karte mit Eingesät."
+          "description": "Verzaubere eine Karte mit {Enchantment}."
         }
       ]
     },
@@ -6138,7 +6138,7 @@
         },
         {
           "name": "Das ganze Buch lesen",
-          "description": "Wähle eine Macht, die du mit Flott 2 verzauberst."
+          "description": "Wähle eine Macht, die du mit {Enchantment3} {Enchantment3Amount} verzauberst."
         },
         {
           "name": "Gesperrt",
@@ -6146,7 +6146,7 @@
         },
         {
           "name": "Irgendeinen Abschnitt lesen",
-          "description": "Wähle eine Fertigkeit, die du mit Geschickt 2 verzauberst."
+          "description": "Wähle eine Fertigkeit, die du mit {Enchantment2} {Enchantment2Amount} verzauberst."
         }
       ]
     },
@@ -6170,7 +6170,7 @@
       "choices": [
         {
           "name": "Trinken",
-          "description": "Heile 0 TP."
+          "description": "Heile {Heal} TP."
         },
         {
           "name": "Betrachten",
@@ -6188,11 +6188,11 @@
       "choices": [
         {
           "name": "Ihn hereinlassen",
-          "description": "Heile 25 TP. Erhalte Metamorphose in dein Deck."
+          "description": "Heile {LetItInHealAmount} TP. Erhalte Metamorphose in dein Deck."
         },
         {
           "name": "Ablehnung",
-          "description": "Verliere 9 TP. Entferne eine Karte aus deinem Deck."
+          "description": "Verliere {RejectionHpLoss} TP. Entferne eine Karte aus deinem Deck."
         }
       ]
     },
@@ -6202,7 +6202,7 @@
       "choices": [
         {
           "name": "Trinken und Anheben",
-          "description": "Verliere {DrinkRandomPotion}. Erhalte 10 max. TP."
+          "description": "Verliere {DrinkRandomPotion}. Erhalte {DrinkMaxHpGain} max. TP."
         },
         {
           "name": "Gesperrt",
@@ -6216,11 +6216,11 @@
       "choices": [
         {
           "name": "Ins Wasser tauchen",
-          "description": "Erhalte 111 Gold. Verliere 7 TP."
+          "description": "Erhalte {Gold} Gold. Verliere {HpLoss} TP."
         },
         {
           "name": "Das Schwert mitnehmen",
-          "description": "Erhalte das Schwert aus Stein."
+          "description": "Erhalte das {Relic}."
         }
       ]
     },
@@ -6230,11 +6230,11 @@
       "choices": [
         {
           "name": "Erste Truhe",
-          "description": "Erhalte 60 Gold."
+          "description": "Erhalte {SmallChestGold} Gold."
         },
         {
           "name": "Zweite Truhe",
-          "description": "Erhalte 333 Gold. Erhalte Gier."
+          "description": "Erhalte {LargeChestGold} Gold. Erhalte Gier."
         }
       ]
     },
@@ -6244,7 +6244,7 @@
       "choices": [
         {
           "name": "Näherkommen",
-          "description": "Verzaubere einen Angriff mit Korrumpiert."
+          "description": "Verzaubere einen Angriff mit {Enchantment}."
         },
         {
           "name": "Gesperrt",
@@ -6258,11 +6258,11 @@
       "choices": [
         {
           "name": "Entziffern",
-          "description": "Verliere 3 max. TP. Verbessere eine zufällige Karte."
+          "description": "Verliere {DecipherMaxHpLoss} max. TP. Verbessere eine zufällige Karte."
         },
         {
           "name": "Zertrümmern",
-          "description": "Heile 20 TP."
+          "description": "Heile {SmashHPGain} TP."
         }
       ]
     },
@@ -6272,15 +6272,15 @@
       "choices": [
         {
           "name": "Knochentee",
-          "description": "Zahle 50 Gold. {BoneTeaDescription}"
+          "description": "Zahle {BoneTeaCost} Gold. {BoneTeaDescription}"
         },
         {
           "name": "Gesperrt",
-          "description": "Benötigt 50 Gold."
+          "description": "Benötigt {BoneTeaCost} Gold."
         },
         {
           "name": "Glut-Tee",
-          "description": "Zahle 150 Gold. {EmberTeaDescription}"
+          "description": "Zahle {EmberTeaCost} Gold. {EmberTeaDescription}"
         }
       ]
     },
@@ -6304,7 +6304,7 @@
         },
         {
           "name": "Den Schlüssel zurückgeben",
-          "description": "Erhalte 100 Gold."
+          "description": "Erhalte {Gold} Gold."
         }
       ]
     },
@@ -6318,7 +6318,7 @@
         },
         {
           "name": "Langsam einen Ausgang finden",
-          "description": "Verliere 8 TP. Beschaffe 1 zufälligen Trank."
+          "description": "Verliere {Damage} TP. Beschaffe 1 zufälligen Trank."
         }
       ]
     },
@@ -6328,21 +6328,75 @@
       "choices": [
         {
           "name": "Das",
-          "description": "Erhalte Ungeschickt in dein Deck. Erhalte ein zufälliges Relikt."
+          "description": "Erhalte {Curse} in dein Deck. Erhalte ein zufälliges Relikt."
         },
         {
           "name": "Dies",
-          "description": "Verliere 6 TP. Erhalte 0 Gold."
+          "description": "Verliere {HpLoss} TP. Erhalte {Gold} Gold."
         }
       ]
     },
     "TINKER_TIME": {
       "name": "Bastelstunde",
-      "description": "Als du ein endloses Meer von Leichen durchquerst, findest du eine verrückte Forscherin, die nach diversem verwertbarem Schrott sucht.\n\n“Ja. Hey, hallo! Du siehst aus wie {characterGender:choose(feminine):eine gute Kämpferin|ein guter Kämpfer}... Ich brauche eine Testperson für mein nächstes Gräuelgerät! Wie wär's?”",
-      "choices": [
+      "description": "“Welche Art Werkzeug wird dir helfen, alle zu töten?”",
+      "pages": [
         {
-          "name": "Akzeptieren",
-          "description": "Erzeuge eine eigene Karte, die du deinem Deck hinzufügst."
+          "description": "“Welche Art Werkzeug wird dir helfen, alle zu töten?”",
+          "choices": [
+            {
+              "name": "Waffe",
+              "description": "Erstelle einen Angriff."
+            },
+            {
+              "name": "Hilfsmittel",
+              "description": "Erstelle eine Macht."
+            },
+            {
+              "name": "Schutz",
+              "description": "Erstelle eine Fertigkeit."
+            }
+          ]
+        },
+        {
+          "description": "“Großartige Wahl! Was soll sie jetzt TUN?”\nDie Forscherin reibt sich vor Freude die Hände.",
+          "choices": [
+            {
+              "name": "Chaos",
+              "description": "Erhalte eine zufällige Karte auf deine Hand. Sie kostet in diesem Zug 0 {energyPrefix:energyIcons(1)}."
+            },
+            {
+              "name": "Würgend",
+              "description": "Immer wenn du in diesem Zug eine Karte spielst, verliert der Gegner {ChokingDamage} TP."
+            },
+            {
+              "name": "Neugierig",
+              "description": "Mächte kosten {CuriousReduction} {energyPrefix:energyIcons(1)} weniger."
+            },
+            {
+              "name": "Energetisch",
+              "description": "Erhalte {EnergizedEnergy:energyIcons()}."
+            },
+            {
+              "name": "Expertise",
+              "description": "Erhalte {ExpertiseStrength} Stärke. Erhalte {ExpertiseDexterity} Geschicklichkeit."
+            },
+            {
+              "name": "Steigerung",
+              "description": "Verbessere am Ende des Kampfes eine zufällige Karte."
+            },
+            {
+              "name": "Schwächend",
+              "description": "Wende {SappingWeak} Schwach an. Wende {SappingVulnerable} Verwundbar an."
+            },
+            {
+              "name": "Gewalt",
+              "description": "Trifft 2 weitere Male."
+            },
+            {
+              "name": "Weisheit",
+              "description": "Ziehe {WisdomCards} Karten."
+            }
+          ]
         }
       ]
     },
@@ -6352,11 +6406,11 @@
       "choices": [
         {
           "name": "Hineinspringen",
-          "description": "Verliere 8 TP. Erhalte ein zufälliges vergessenes Relikt aus der Vergangenheit."
+          "description": "Verliere {HpLoss} TP. Erhalte ein zufälliges vergessenes Relikt aus der Vergangenheit."
         },
         {
           "name": "Irgendwelchen Müll mitnehmen",
-          "description": "Erhalte 100 Gold. Erhalte eine zufällige vergessene Karte von früher."
+          "description": "Erhalte {Gold} Gold. Erhalte eine zufällige vergessene Karte von früher."
         }
       ]
     },
@@ -6380,7 +6434,7 @@
       "choices": [
         {
           "name": "Die Bäume fällen",
-          "description": "Verliere 8 max. TP. Erhalte ein zufälliges Relikt."
+          "description": "Verliere {MaxHpLoss} max. TP. Erhalte ein zufälliges Relikt."
         },
         {
           "name": "Trotzdem ausruhen",
@@ -6412,11 +6466,11 @@
         },
         {
           "name": "Dorniger Schwamm",
-          "description": "Zahle 155 Gold. Verzaubere 2 Karte mit Beständig."
+          "description": "Zahle {PricklySpongeGold} Gold. Verzaubere {Cards} {Cards:plural:Karte|Karten} mit Beständig."
         },
         {
           "name": "Gesperrt",
-          "description": "Benötigt 155 Gold."
+          "description": "Benötigt {PricklySpongeGold} Gold."
         }
       ]
     },
@@ -6426,19 +6480,19 @@
       "choices": [
         {
           "name": "Wongos Schnäppchenkorb",
-          "description": "Zahle 100 Gold. Erhalte 1 zufälliges Gewöhnliches Relikt."
+          "description": "Zahle {BargainBinCost} Gold. Erhalte 1 zufälliges Gewöhnliches Relikt."
         },
         {
           "name": "Gesperrt",
-          "description": "Benötigt 100 Gold."
+          "description": "Benötigt {BargainBinCost} Gold."
         },
         {
           "name": "Wongos Spezialartikel",
-          "description": "Zahle 200 Gold. Erhalte {RandomRelic}."
+          "description": "Zahle {FeaturedItemCost} Gold. Erhalte {RandomRelic}."
         },
         {
           "name": "Gesperrt",
-          "description": "Benötigt 200 Gold."
+          "description": "Benötigt {FeaturedItemCost} Gold."
         }
       ]
     },
@@ -6448,7 +6502,7 @@
       "choices": [
         {
           "name": "Baden",
-          "description": "Entferne 1 Karte aus deinem Deck. Erhalte 1 Schuldgefühl in dein Deck."
+          "description": "Entferne 1 Karte aus deinem Deck. Erhalte {BatheCurses} Schuldgefühl in dein Deck."
         },
         {
           "name": "Abfüllen",
@@ -6462,11 +6516,11 @@
       "choices": [
         {
           "name": "Gold wegtauschen",
-          "description": "Verliere 50 Gold. Beschaffe 2 zufällige Tränke."
+          "description": "Verliere {Gold} Gold. Beschaffe 2 zufällige Tränke."
         },
         {
           "name": "Den Baum umarmen",
-          "description": "Verliere 9 TP. Wähle eine Karte, die du Transformierst."
+          "description": "Verliere {HpLoss} TP. Wähle eine Karte, die du Transformierst."
         }
       ]
     },
@@ -6476,11 +6530,11 @@
       "choices": [
         {
           "name": "Vogel",
-          "description": "Wähle 1 Startkarte, die du zu Picken Transformierst."
+          "description": "Wähle 1 Startkarte, die du zu {BirdCard} Transformierst."
         },
         {
           "name": "Schlange",
-          "description": "Verzaubere 1 Karte mit Schlängeln."
+          "description": "Verzaubere 1 Karte mit {SnakeEnchantment}."
         },
         {
           "name": "Gesperrt",
@@ -6494,15 +6548,15 @@
       "choices": [
         {
           "name": "Arachnide Akupunktur",
-          "description": "Zahle 250 Gold. Entferne 2 Karten aus deinem Deck."
+          "description": "Zahle {ArachnidAcupunctureCost} Gold. Entferne 2 Karten aus deinem Deck."
         },
         {
           "name": "Atemtechniken",
-          "description": "Zahle 50 Gold. Erhalte 2 Erleuchtung in dein Deck."
+          "description": "Zahle {BreathingTechniquesCost} Gold. Erhalte 2 Erleuchtung in dein Deck."
         },
         {
           "name": "Emotionales Bewusstsein",
-          "description": "Zahle 125 Gold. Entferne 1 Karte aus deinem Deck."
+          "description": "Zahle {EmotionalAwarenessCost} Gold. Entferne 1 Karte aus deinem Deck."
         }
       ]
     },

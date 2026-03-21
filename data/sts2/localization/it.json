@@ -5618,11 +5618,11 @@
       "choices": [
         {
           "name": "Non immergerti",
-          "description": "Recuperi 10 PV."
+          "description": "Recuperi {Heal} PV."
         },
         {
           "name": "Immergiti",
-          "description": "Ottieni i seguenti PV massimi: 2. Subisci 3 di danno."
+          "description": "Ottieni i seguenti PV massimi: {MaxHp}. Subisci {Damage} di danno."
         }
       ]
     },
@@ -5632,11 +5632,11 @@
       "choices": [
         {
           "name": "Combina le carte Difendi",
-          "description": "Rimuovi 2 carte Difendi. Aggiungi Difesa Strenua al tuo mazzo."
+          "description": "Rimuovi 2 carte Difendi. Aggiungi {Card2} al tuo mazzo."
         },
         {
           "name": "Combina le carte Colpo",
-          "description": "Rimuovi 2 carte Colpo. Aggiungi Colpo Definitivo al tuo mazzo."
+          "description": "Rimuovi 2 carte Colpo. Aggiungi {Card1} al tuo mazzo."
         }
       ]
     },
@@ -5660,15 +5660,15 @@
       "choices": [
         {
           "name": "Opzione 1",
-          "description": "Affronti un manichino da {Setting1Hp} PV. Ricevi 1 pozione casuale."
+          "description": "Affronti un manichino da 75 PV. Ricevi 1 pozione casuale."
         },
         {
           "name": "Opzione 2",
-          "description": "Affronti un manichino da {Setting2Hp} PV. Potenzi 2 carte casuali."
+          "description": "Affronti un manichino da 150 PV. Potenzi 2 carte casuali."
         },
         {
           "name": "Opzione 3",
-          "description": "Affronti un manichino da {Setting3Hp} PV. Ottieni una reliquia casuale."
+          "description": "Affronti un manichino da 300 PV. Ottieni una reliquia casuale."
         }
       ]
     },
@@ -5678,11 +5678,11 @@
       "choices": [
         {
           "name": "Rimuovi la sanguisuga",
-          "description": "Perdi 5 PV. Ottieni una carta ricompensa incolore."
+          "description": "Perdi {RipHpLoss} PV. Ottieni una carta ricompensa incolore."
         },
         {
           "name": "Condividi la tua conoscenza",
-          "description": "Scegli 1 tra 5 carte casuali da aggiungere al tuo mazzo."
+          "description": "Scegli {CardChoiceCount} tra {FromCardChoiceCount} carte casuali da aggiungere al tuo mazzo."
         }
       ]
     },
@@ -5692,11 +5692,11 @@
       "choices": [
         {
           "name": "Impara la tecnica Sterminio",
-          "description": "Aggiungi Disinfestazione al tuo mazzo."
+          "description": "Aggiungi {Card1} al tuo mazzo."
         },
         {
           "name": "Impara la tecnica Schiacciaparassita",
-          "description": "Aggiungi Pestata al tuo mazzo."
+          "description": "Aggiungi {Card2} al tuo mazzo."
         }
       ]
     },
@@ -5706,11 +5706,11 @@
       "choices": [
         {
           "name": "Mangia l'uovo",
-          "description": "Ottieni i seguenti PV massimi: 7."
+          "description": "Ottieni i seguenti PV massimi: {MaxHp}."
         },
         {
           "name": "Prendi l'uovo",
-          "description": "Aggiungi Uovo di Gryfone al tuo mazzo."
+          "description": "Aggiungi {Card} al tuo mazzo."
         }
       ]
     },
@@ -5720,7 +5720,7 @@
       "choices": [
         {
           "name": "Blu",
-          "description": "Ottieni 3 carta di Defect."
+          "description": "Ottieni {Cards} {Cards:plural:carta|carte} di Defect."
         },
         {
           "name": "Non esiste colore migliore",
@@ -5728,19 +5728,19 @@
         },
         {
           "name": "Rosso",
-          "description": "Ottieni 3 carta di Ironclad."
+          "description": "Ottieni {Cards} {Cards:plural:carta|carte} di Ironclad."
         },
         {
           "name": "Rosa",
-          "description": "Ottieni 3 carta di Necrobinder."
+          "description": "Ottieni {Cards} {Cards:plural:carta|carte} di Necrobinder."
         },
         {
           "name": "Arancione",
-          "description": "Ottieni 3 carta di Regent."
+          "description": "Ottieni {Cards} {Cards:plural:carta|carte} di Regent."
         },
         {
           "name": "Verde",
-          "description": "Ottieni 3 carta di Silent."
+          "description": "Ottieni {Cards} {Cards:plural:carta|carte} di Silent."
         }
       ]
     },
@@ -5805,11 +5805,11 @@
       "choices": [
         {
           "name": "Chiedi piano di pagamento",
-          "description": "Ottieni Debito. Puoi effettuare 6 divinazioni."
+          "description": "Ottieni {CurseTitle}. Puoi effettuare {PaymentPlanCount} divinazioni."
         },
         {
           "name": "Rivela il futuro",
-          "description": "Paghi 50 unità d'oro. Puoi effettuare 3 divinazioni."
+          "description": "Paghi {UncoverFutureCost} unità d'oro. Puoi effettuare {UncoverFutureProphesizeCount} divinazioni."
         }
       ]
     },
@@ -5819,11 +5819,11 @@
       "choices": [
         {
           "name": "Riposa",
-          "description": "Recuperi 0 PV. Affronti dei nemici."
+          "description": "Recuperi {Heal} PV. Affronti dei nemici."
         },
         {
           "name": "Avanza a fatica",
-          "description": "Rimuovi una carta dal tuo mazzo. Perdi 11 PV."
+          "description": "Rimuovi una carta dal tuo mazzo. Perdi {HpLoss} PV."
         }
       ]
     },
@@ -5836,7 +5836,7 @@
       "choices": [
         {
           "name": "Esamina ogni bambola e fai la scelta migliore",
-          "description": "Perdi 15 PV. Scegli 1 tra 3 Reliquie Bambolesche."
+          "description": "Perdi {ExamineHpLoss} PV. Scegli 1 tra 3 Reliquie Bambolesche."
         },
         {
           "name": "Scegli in modo casuale",
@@ -5844,7 +5844,7 @@
         },
         {
           "name": "Prenditi del tempo prima di decidere",
-          "description": "Perdi 5 PV. Scegli 1 tra 2 Reliquie Bambolesche."
+          "description": "Perdi {TakeTimeHpLoss} PV. Scegli 1 tra 2 Reliquie Bambolesche."
         }
       ]
     },
@@ -5858,7 +5858,7 @@
         },
         {
           "name": "Porta della luce",
-          "description": "Potenzi 2 carte casuali."
+          "description": "Potenzi {Cards} carte casuali."
         }
       ]
     },
@@ -5868,11 +5868,11 @@
       "choices": [
         {
           "name": "Imbottiglia",
-          "description": "Ricevi Pozione Luminacqua."
+          "description": "Ricevi {Potion}."
         },
         {
           "name": "Sali",
-          "description": "Ottieni Lenti di Fresnel. Perdi i seguenti PV massimi: 13."
+          "description": "Ottieni {Relic}. Perdi i seguenti PV massimi: {HpLoss}."
         }
       ]
     },
@@ -5899,11 +5899,11 @@
       "choices": [
         {
           "name": "Entra nel tuo buco",
-          "description": "Incanti una carta con Incastro Perfetto."
+          "description": "Incanti una carta con {Enchantment}."
         },
         {
           "name": "Resisti",
-          "description": "Rimuovi 2 carte dal tuo Deck. Aggiungi Normalità al tuo mazzo."
+          "description": "Rimuovi {Cards} carte dal tuo Deck. Aggiungi {ResistCurse} al tuo mazzo."
         }
       ]
     },
@@ -5913,11 +5913,11 @@
       "choices": [
         {
           "name": "Accetta {Relic}",
-          "description": "Ottieni Anima Dimenticata."
+          "description": "Ottieni {Relic}."
         },
         {
           "name": "Mostri la realtà dei fatti",
-          "description": "Aggiungi Decomposizione al mazzo. Usi Potere dell'Anima per incantare una carta con Esaurimento."
+          "description": "Aggiungi {Curse} al mazzo. Usi {Enchantment} per incantare una carta con Esaurimento."
         }
       ]
     },
@@ -5953,11 +5953,11 @@
       "choices": [
         {
           "name": "Collabora",
-          "description": "Ottieni 50 unità d'oro."
+          "description": "Ottieni {JoinForcesGold} unità d'oro."
         },
         {
           "name": "Non collaborare",
-          "description": "Ottieni 150 unità d'oro. Perdi 18 PV."
+          "description": "Ottieni {SoloGold} unità d'oro. Perdi {SoloHp} PV."
         }
       ]
     },
@@ -5967,7 +5967,7 @@
       "choices": [
         {
           "name": "Cattura il fuoco fatuo",
-          "description": "Aggiungi Decomposizione al tuo mazzo. Ottieni {Relic}."
+          "description": "Aggiungi {Curse} al tuo mazzo. Ottieni {Relic}."
         },
         {
           "name": "Bloccato",
@@ -5981,11 +5981,11 @@
       "choices": [
         {
           "name": "Offri un tributo",
-          "description": "Paga 149 unità d'oro. Ottieni una reliquia casuale."
+          "description": "Paga {Gold} unità d'oro. Ottieni una reliquia casuale."
         },
         {
           "name": "Bloccato",
-          "description": "Richiede 149 unità d'oro."
+          "description": "Richiede {Gold} unità d'oro."
         }
       ]
     },
@@ -5998,11 +5998,11 @@
       "choices": [
         {
           "name": "Avvicinati al gruppo",
-          "description": "Perdi 100 unità d'oro. Trasformi 2 carte."
+          "description": "Perdi {Gold} unità d'oro. Trasformi 2 carte."
         },
         {
           "name": "Avvicinati al morfico solitario",
-          "description": "Ottieni i seguenti PV massimi: 5."
+          "description": "Ottieni i seguenti PV massimi: {MaxHp}."
         }
       ]
     },
@@ -6012,7 +6012,7 @@
       "choices": [
         {
           "name": "Prendi pozioni",
-          "description": "Ricevi 3 Pozione Nefasta."
+          "description": "Ricevi {FoulPotions} {FoulPotions:plural:Pozione Nefasta|Pozioni Nefaste}."
         },
         {
           "name": "Rovista",
@@ -6097,7 +6097,7 @@
         },
         {
           "name": "Cerca",
-          "description": "Perdi 14 PV. Ottieni Il Formaggio Prescelto."
+          "description": "Perdi {Damage} PV. Ottieni Il Formaggio Prescelto."
         }
       ]
     },
@@ -6107,11 +6107,11 @@
       "choices": [
         {
           "name": "Bevi il tè",
-          "description": "Ottieni Veleno Regale. Recuperi tutti i tuoi PV."
+          "description": "Ottieni {Relic}. Recuperi tutti i tuoi PV."
         },
         {
           "name": "Litiga",
-          "description": "Perdi 11 PV. Ottieni una reliquia casuale."
+          "description": "Perdi {Damage} PV. Ottieni una reliquia casuale."
         }
       ]
     },
@@ -6121,11 +6121,11 @@
       "choices": [
         {
           "name": "Ingerisci il seme",
-          "description": "Recuperi 9 PV. Potenzi una carta nel tuo mazzo."
+          "description": "Recuperi {Heal} PV. Potenzi una carta nel tuo mazzo."
         },
         {
           "name": "Pianta e coltiva il seme",
-          "description": "Incanti una carta con Semina."
+          "description": "Incanti una carta con {Enchantment}."
         }
       ]
     },
@@ -6139,7 +6139,7 @@
         },
         {
           "name": "Leggi tutto il libro",
-          "description": "Scegli un carta Potere da incantare con 2 di Rapidità."
+          "description": "Scegli un carta Potere da incantare con {Enchantment3Amount} di {Enchantment3}."
         },
         {
           "name": "Bloccato",
@@ -6147,7 +6147,7 @@
         },
         {
           "name": "Leggi una pagina casuale",
-          "description": "Scegli una carta Abilità da incantare con 2 di Scioltezza."
+          "description": "Scegli una carta Abilità da incantare con {Enchantment2Amount} di {Enchantment2}."
         }
       ]
     },
@@ -6171,7 +6171,7 @@
       "choices": [
         {
           "name": "Bevi",
-          "description": "Recuperi 0 PV."
+          "description": "Recuperi {Heal} PV."
         },
         {
           "name": "Osserva",
@@ -6189,11 +6189,11 @@
       "choices": [
         {
           "name": "Non opporre resistenza",
-          "description": "Recuperi 25 PV. Aggiungi la carta Metamorfosi al tuo mazzo."
+          "description": "Recuperi {LetItInHealAmount} PV. Aggiungi la carta Metamorfosi al tuo mazzo."
         },
         {
           "name": "Rifiuta",
-          "description": "Perdi 9 PV. Rimuovi una carta dal tuo mazzo."
+          "description": "Perdi {RejectionHpLoss} PV. Rimuovi una carta dal tuo mazzo."
         }
       ]
     },
@@ -6203,7 +6203,7 @@
       "choices": [
         {
           "name": "Bevi e solleva",
-          "description": "Perdi {DrinkRandomPotion}. Ottieni i seguenti PV massimi: 10."
+          "description": "Perdi {DrinkRandomPotion}. Ottieni i seguenti PV massimi: {DrinkMaxHpGain}."
         },
         {
           "name": "Bloccato",
@@ -6217,11 +6217,11 @@
       "choices": [
         {
           "name": "Immergiti in acqua",
-          "description": "Ottieni 111 unità d'oro. Perdi 7 PV."
+          "description": "Ottieni {Gold} unità d'oro. Perdi {HpLoss} PV."
         },
         {
           "name": "Prendi la spada",
-          "description": "Ottieni la seguente reliquia: Spada di Pietra."
+          "description": "Ottieni la seguente reliquia: {Relic}."
         }
       ]
     },
@@ -6231,11 +6231,11 @@
       "choices": [
         {
           "name": "Primo forziere",
-          "description": "Ottieni 60 unità d'oro."
+          "description": "Ottieni {SmallChestGold} unità d'oro."
         },
         {
           "name": "Secondo forziere",
-          "description": "Ottieni 333 unità d'oro. Ricevi la carta Avidità."
+          "description": "Ottieni {LargeChestGold} unità d'oro. Ricevi la carta Avidità."
         }
       ]
     },
@@ -6244,7 +6244,7 @@
       "choices": [
         {
           "name": "Avvicinati",
-          "description": "Incanti una carta Attacco con Corruzione."
+          "description": "Incanti una carta Attacco con {Enchantment}."
         },
         {
           "name": "Bloccato",

@@ -5618,11 +5618,11 @@
       "choices": [
         {
           "name": "Abster-se",
-          "description": "Cure 10 PV."
+          "description": "Cure {Heal} PV."
         },
         {
           "name": "Submergir",
-          "description": "Receba 2 PV Máximos. Sofra 3 de dano."
+          "description": "Receba {MaxHp} PV Máximos. Sofra {Damage} de dano."
         }
       ]
     },
@@ -5632,11 +5632,11 @@
       "choices": [
         {
           "name": "Combinar Defesas",
-          "description": "Remova 2 Defesas. Adicione Defesa Suprema ao seu Baralho."
+          "description": "Remova 2 Defesas. Adicione {Card2} ao seu Baralho."
         },
         {
           "name": "Combinar Golpes",
-          "description": "Remova 2 Golpes. Adicione Golpe Supremo ao seu Baralho."
+          "description": "Remova 2 Golpes. Adicione {Card1} ao seu Baralho."
         }
       ]
     },
@@ -5660,15 +5660,15 @@
       "choices": [
         {
           "name": "Nível 1",
-          "description": "Lute contra um manequim com {Setting1Hp} PV. Receba 1 Poção aleatória."
+          "description": "Lute contra um manequim com 75 PV. Receba 1 Poção aleatória."
         },
         {
           "name": "Nível 2",
-          "description": "Lute contra um manequim com {Setting2Hp} PV. Aprimore 2 cartas aleatórias."
+          "description": "Lute contra um manequim com 150 PV. Aprimore 2 cartas aleatórias."
         },
         {
           "name": "Nível 3",
-          "description": "Lute contra um manequim com {Setting3Hp} PV. Receba uma Relíquia aleatória."
+          "description": "Lute contra um manequim com 300 PV. Receba uma Relíquia aleatória."
         }
       ]
     },
@@ -5678,11 +5678,11 @@
       "choices": [
         {
           "name": "Arrancar o Parasita",
-          "description": "Perca 5 PV. Receba uma recompensa de cartas Incolores."
+          "description": "Perca {RipHpLoss} PV. Receba uma recompensa de cartas Incolores."
         },
         {
           "name": "Compartilhar Conhecimento",
-          "description": "Escolha 1 entre 5 cartas aleatória para adicionar ao seu Baralho."
+          "description": "Escolha {CardChoiceCount} entre {FromCardChoiceCount} cartas aleatória para adicionar ao seu Baralho."
         }
       ]
     },
@@ -5692,11 +5692,11 @@
       "choices": [
         {
           "name": "Aprender Método da Exterminação",
-          "description": "Adicione Exterminar ao seu Baralho."
+          "description": "Adicione {Card1} ao seu Baralho."
         },
         {
           "name": "Aprender Método do Achatamento",
-          "description": "Adicione Achatar ao seu Baralho."
+          "description": "Adicione {Card2} ao seu Baralho."
         }
       ]
     },
@@ -5706,11 +5706,11 @@
       "choices": [
         {
           "name": "Comer o Ovo",
-          "description": "Receba 7 PV Máximos."
+          "description": "Receba {MaxHp} PV Máximos."
         },
         {
           "name": "Coletar o Ovo",
-          "description": "Adicione Ovo de Avestriz Alfa ao seu Baralho."
+          "description": "Adicione {Card} ao seu Baralho."
         }
       ]
     },
@@ -5720,7 +5720,7 @@
       "choices": [
         {
           "name": "Azul",
-          "description": "Receba 3 carta do Defeituoso."
+          "description": "Receba {Cards} {Cards:plural:carta|cartas} do Defeituoso."
         },
         {
           "name": "Igualdade",
@@ -5728,19 +5728,19 @@
         },
         {
           "name": "Vermelho",
-          "description": "Receba 3 carta do Rígido."
+          "description": "Receba {Cards} {Cards:plural:carta|cartas} do Rígido."
         },
         {
           "name": "Rosa",
-          "description": "Receba 3 carta da Necroartífice."
+          "description": "Receba {Cards} {Cards:plural:carta|cartas} da Necroartífice."
         },
         {
           "name": "Laranja",
-          "description": "Receba 3 carta do Regente."
+          "description": "Receba {Cards} {Cards:plural:carta|cartas} do Regente."
         },
         {
           "name": "Verde",
-          "description": "Receba 3 carta da Sorrateira."
+          "description": "Receba {Cards} {Cards:plural:carta|cartas} da Sorrateira."
         }
       ]
     },
@@ -5805,11 +5805,11 @@
       "choices": [
         {
           "name": "Plano de Crediário",
-          "description": "Receba uma Dívida. Adivinhe 6 vezes."
+          "description": "Receba uma {CurseTitle}. Adivinhe {PaymentPlanCount} vezes."
         },
         {
           "name": "Desvendar Futuro",
-          "description": "Pague 50 de Ouro. Adivinhe 3 vezes."
+          "description": "Pague {UncoverFutureCost} de Ouro. Adivinhe {UncoverFutureProphesizeCount} vezes."
         }
       ]
     },
@@ -5819,11 +5819,11 @@
       "choices": [
         {
           "name": "Descansar",
-          "description": "Cure 0 PV. Lute contra alguns inimigos."
+          "description": "Cure {Heal} PV. Lute contra alguns inimigos."
         },
         {
           "name": "Prosseguir",
-          "description": "Remova uma carta do seu Baralho. Perca 11 PV."
+          "description": "Remova uma carta do seu Baralho. Perca {HpLoss} PV."
         }
       ]
     },
@@ -5836,7 +5836,7 @@
       "choices": [
         {
           "name": "Examinar Cada Um e Fazer a Melhor Escolha",
-          "description": "Perca 15 PV. Escolha 1 entre 3 Relíquias de Brinquedo."
+          "description": "Perca {ExamineHpLoss} PV. Escolha 1 entre 3 Relíquias de Brinquedo."
         },
         {
           "name": "Escolher Aleatoriamente",
@@ -5844,7 +5844,7 @@
         },
         {
           "name": "Decidir Rapidamente",
-          "description": "Perca 5 PV. Escolha 1 entre 2 Relíquias de Brinquedo."
+          "description": "Perca {TakeTimeHpLoss} PV. Escolha 1 entre 2 Relíquias de Brinquedo."
         }
       ]
     },
@@ -5858,7 +5858,7 @@
         },
         {
           "name": "Porta Luminosa",
-          "description": "Aprimore 2 cartas aleatórias."
+          "description": "Aprimore {Cards} cartas aleatórias."
         }
       ]
     },
@@ -5868,11 +5868,11 @@
       "choices": [
         {
           "name": "Engarrafar",
-          "description": "Receba Poção de Luminágua."
+          "description": "Receba {Potion}."
         },
         {
           "name": "Escalar",
-          "description": "Receba Lentes de Fresnel. Perca 13 PV Máximos."
+          "description": "Receba {Relic}. Perca {HpLoss} PV Máximos."
         }
       ]
     },
@@ -5899,11 +5899,11 @@
       "choices": [
         {
           "name": "Entrar No Seu Buraco",
-          "description": "Encante uma carta com Encaixe Perfeito."
+          "description": "Encante uma carta com {Enchantment}."
         },
         {
           "name": "Resistir",
-          "description": "Remova 2 cartas do seu Baralho. Adicione Neutralização ao seu Baralho."
+          "description": "Remova {Cards} cartas do seu Baralho. Adicione {ResistCurse} ao seu Baralho."
         }
       ]
     },
@@ -5913,11 +5913,11 @@
       "choices": [
         {
           "name": "Aceitar a {Relic}",
-          "description": "Receba Alma Esquecida."
+          "description": "Receba {Relic}."
         },
         {
           "name": "Confrontar com a Verdade",
-          "description": "Adicione Deterioração ao seu Baralho. Encante uma carta que contenha Exaurir com Poder Espiritual."
+          "description": "Adicione {Curse} ao seu Baralho. Encante uma carta que contenha Exaurir com {Enchantment}."
         }
       ]
     },
@@ -5953,11 +5953,11 @@
       "choices": [
         {
           "name": "Unir Forças",
-          "description": "Receba 50 de Ouro."
+          "description": "Receba {JoinForcesGold} de Ouro."
         },
         {
           "name": "Recusar Oferta",
-          "description": "Receba 150 de Ouro. Perca 18 PV."
+          "description": "Receba {SoloGold} de Ouro. Perca {SoloHp} PV."
         }
       ]
     },
@@ -5967,7 +5967,7 @@
       "choices": [
         {
           "name": "Capturar o Fogo-fátuo",
-          "description": "Adicione Deterioração ao seu Baralho. Receba {Relic}."
+          "description": "Adicione {Curse} ao seu Baralho. Receba {Relic}."
         },
         {
           "name": "Bloqueado",
@@ -5981,11 +5981,11 @@
       "choices": [
         {
           "name": "Oferecer Tributo",
-          "description": "Pague 149 de Ouro. Receba uma Relíquia aleatória."
+          "description": "Pague {Gold} de Ouro. Receba uma Relíquia aleatória."
         },
         {
           "name": "Bloqueado",
-          "description": "Requer 149 de Ouro."
+          "description": "Requer {Gold} de Ouro."
         }
       ]
     },
@@ -5998,11 +5998,11 @@
       "choices": [
         {
           "name": "Grupo",
-          "description": "Perca 100 de Ouro. Transforme 2 cartas."
+          "description": "Perca {Gold} de Ouro. Transforme 2 cartas."
         },
         {
           "name": "Solitário",
-          "description": "Receba 5 PV Máximos."
+          "description": "Receba {MaxHp} PV Máximos."
         }
       ]
     },
@@ -6012,7 +6012,7 @@
       "choices": [
         {
           "name": "Recolher Poções",
-          "description": "Receba 3 Poção Nefasta."
+          "description": "Receba {FoulPotions} {FoulPotions:plural:Poção Nefasta|Poções Nefastas}."
         },
         {
           "name": "Vasculhar",
@@ -6097,7 +6097,7 @@
         },
         {
           "name": "Vasculhar",
-          "description": "Perca 14 PV. Receba O Queijo Escolhido."
+          "description": "Perca {Damage} PV. Receba O Queijo Escolhido."
         }
       ]
     },
@@ -6107,11 +6107,11 @@
       "choices": [
         {
           "name": "Aceitar o Chá",
-          "description": "Receba Veneno Real. Cure todos os seus PV."
+          "description": "Receba {Relic}. Cure todos os seus PV."
         },
         {
           "name": "Comprar uma Briga",
-          "description": "Perca 11 PV. Receba uma Relíquia aleatória."
+          "description": "Perca {Damage} PV. Receba uma Relíquia aleatória."
         }
       ]
     },
@@ -6121,11 +6121,11 @@
       "choices": [
         {
           "name": "Consumir",
-          "description": "Cure 9 PV. Aprimore uma carta no seu Baralho."
+          "description": "Cure {Heal} PV. Aprimore uma carta no seu Baralho."
         },
         {
           "name": "Plantar e Cuidar",
-          "description": "Encante uma carta com Semeada."
+          "description": "Encante uma carta com {Enchantment}."
         }
       ]
     },
@@ -6139,7 +6139,7 @@
         },
         {
           "name": "Ler o Livro Inteiro",
-          "description": "Escolha um Poder para Encantar com Célere 2."
+          "description": "Escolha um Poder para Encantar com {Enchantment3} {Enchantment3Amount}."
         },
         {
           "name": "Bloqueado",
@@ -6147,7 +6147,7 @@
         },
         {
           "name": "Ler um Parágrafo Aleatório",
-          "description": "Escolha uma Técnica para Encantar com Ágil 2."
+          "description": "Escolha uma Técnica para Encantar com {Enchantment2} {Enchantment2Amount}."
         }
       ]
     },
@@ -6171,7 +6171,7 @@
       "choices": [
         {
           "name": "Beber",
-          "description": "Cure 0 PV."
+          "description": "Cure {Heal} PV."
         },
         {
           "name": "Observar",
@@ -6189,11 +6189,11 @@
       "choices": [
         {
           "name": "Não Resistir",
-          "description": "Cure 25 PV. Adicione Metamorfose ao seu Baralho."
+          "description": "Cure {LetItInHealAmount} PV. Adicione Metamorfose ao seu Baralho."
         },
         {
           "name": "Rejeitar",
-          "description": "Perca 9 PV. Remova uma carta do seu Baralho."
+          "description": "Perca {RejectionHpLoss} PV. Remova uma carta do seu Baralho."
         }
       ]
     },
@@ -6203,7 +6203,7 @@
       "choices": [
         {
           "name": "Beber algo e Erguer",
-          "description": "Perca {DrinkRandomPotion}. Receba 10 PV Máximos."
+          "description": "Perca {DrinkRandomPotion}. Receba {DrinkMaxHpGain} PV Máximos."
         },
         {
           "name": "Bloqueado",
@@ -6217,11 +6217,11 @@
       "choices": [
         {
           "name": "Mergulhar na Lagoa",
-          "description": "Receba 111 de Ouro. Perca 7 PV."
+          "description": "Receba {Gold} de Ouro. Perca {HpLoss} PV."
         },
         {
           "name": "Pegar a Espada",
-          "description": "Receba Espada de Pedra."
+          "description": "Receba {Relic}."
         }
       ]
     },
@@ -6231,11 +6231,11 @@
       "choices": [
         {
           "name": "Primeiro Baú",
-          "description": "Receba 60 de Ouro."
+          "description": "Receba {SmallChestGold} de Ouro."
         },
         {
           "name": "Segundo Baú",
-          "description": "Receba 333 de Ouro. Receba Ganância."
+          "description": "Receba {LargeChestGold} de Ouro. Receba Ganância."
         }
       ]
     },
@@ -6245,7 +6245,7 @@
       "choices": [
         {
           "name": "Aproximar",
-          "description": "Encante um Ataque com Corrompida."
+          "description": "Encante um Ataque com {Enchantment}."
         },
         {
           "name": "Bloqueado",
@@ -6259,11 +6259,11 @@
       "choices": [
         {
           "name": "Decifrar",
-          "description": "Perca 3 PV Máximos. Aprimore uma carta aleatória."
+          "description": "Perca {DecipherMaxHpLoss} PV Máximos. Aprimore uma carta aleatória."
         },
         {
           "name": "Quebrar",
-          "description": "Cure 20 PV."
+          "description": "Cure {SmashHPGain} PV."
         }
       ]
     },
@@ -6273,15 +6273,15 @@
       "choices": [
         {
           "name": "Chá de Ossos",
-          "description": "Pague 50 de Ouro. {BoneTeaDescription}"
+          "description": "Pague {BoneTeaCost} de Ouro. {BoneTeaDescription}"
         },
         {
           "name": "Bloqueado",
-          "description": "Requer 50 de Ouro."
+          "description": "Requer {BoneTeaCost} de Ouro."
         },
         {
           "name": "Chá Ígneo",
-          "description": "Pague 150 de Ouro. {EmberTeaDescription}"
+          "description": "Pague {EmberTeaCost} de Ouro. {EmberTeaDescription}"
         }
       ]
     },
@@ -6305,7 +6305,7 @@
         },
         {
           "name": "Devolver a Chave",
-          "description": "Receba 100 de Ouro."
+          "description": "Receba {Gold} de Ouro."
         }
       ]
     },
@@ -6319,7 +6319,7 @@
         },
         {
           "name": "Buscar a Saída",
-          "description": "Perca 8 PV. Receba 1 Poção aleatória."
+          "description": "Perca {Damage} PV. Receba 1 Poção aleatória."
         }
       ]
     },
@@ -6329,21 +6329,75 @@
       "choices": [
         {
           "name": "Aquilo",
-          "description": "Adicione Desajeitado ao seu Baralho. Receba uma Relíquia aleatória."
+          "description": "Adicione {Curse} ao seu Baralho. Receba uma Relíquia aleatória."
         },
         {
           "name": "Isto",
-          "description": "Perca 6 PV. Receba 0 de Ouro."
+          "description": "Perca {HpLoss} PV. Receba {Gold} de Ouro."
         }
       ]
     },
     "TINKER_TIME": {
       "name": "Hora de Inventar",
-      "description": "Atravessando um infinito mar de cadáveres, você encontra um cientista louco vasculhando os corpos.\n\n“Ah. Oi, olá! Você parece ser alguém hábil em combate... preciso de uma cobaia para o meu dispositivo de atrocidades! O que acha?”",
-      "choices": [
+      "description": "“Que tipo de ferramenta lhe seria útil para extermínios em massa?”",
+      "pages": [
         {
-          "name": "Aceitar",
-          "description": "Crie uma carta personalizada e a adicione ao seu Baralho."
+          "description": "“Que tipo de ferramenta lhe seria útil para extermínios em massa?”",
+          "choices": [
+            {
+              "name": "Arma",
+              "description": "Construir um Ataque."
+            },
+            {
+              "name": "Aparato",
+              "description": "Construir um Poder."
+            },
+            {
+              "name": "Protetor",
+              "description": "Construir uma Técnica."
+            }
+          ]
+        },
+        {
+          "description": "“Excelente escolha! Agora, o que isto deve FAZER?”\nO cientista esfrega suas mãos com entusiasmo.",
+          "choices": [
+            {
+              "name": "Caos",
+              "description": "Adicione uma carta aleatória na sua Mão. Ela custa 0 {energyPrefix:energyIcons(1)} neste turno."
+            },
+            {
+              "name": "Asfixia",
+              "description": "Sempre que você jogar uma carta neste turno, o inimigo perde {ChokingDamage} PV."
+            },
+            {
+              "name": "Curiosidade",
+              "description": "Poderes custam {CuriousReduction} {energyPrefix:energyIcons(1)} a menos."
+            },
+            {
+              "name": "Estimular",
+              "description": "Receba {EnergizedEnergy:energyIcons()}."
+            },
+            {
+              "name": "Perícia",
+              "description": "Receba {ExpertiseStrength} de Força. Receba {ExpertiseDexterity} de Destreza."
+            },
+            {
+              "name": "Otimização",
+              "description": "No final do combate, Aprimore uma carta aleatória."
+            },
+            {
+              "name": "Desgaste",
+              "description": "Aplique {SappingWeak} de Fraqueza. Aplique {SappingVulnerable} de Vulnerável."
+            },
+            {
+              "name": "Violência",
+              "description": "Golpeia 2 vezes adicionais."
+            },
+            {
+              "name": "Sabedoria",
+              "description": "Compre {WisdomCards} cartas."
+            }
+          ]
         }
       ]
     },
@@ -6353,11 +6407,11 @@
       "choices": [
         {
           "name": "Mergulhar",
-          "description": "Perca 8 PV. Receba uma antiga e esquecida Relíquia aleatória."
+          "description": "Perca {HpLoss} PV. Receba uma antiga e esquecida Relíquia aleatória."
         },
         {
           "name": "Vasculhar a Superfície",
-          "description": "Receba 100 de Ouro. Receba uma antiga e esquecida carta aleatória."
+          "description": "Receba {Gold} de Ouro. Receba uma antiga e esquecida carta aleatória."
         }
       ]
     },
@@ -6381,7 +6435,7 @@
       "choices": [
         {
           "name": "Cortar as Árvores",
-          "description": "Perca 8 PV Máximos. Receba uma Relíquia aleatória."
+          "description": "Perca {MaxHpLoss} PV Máximos. Receba uma Relíquia aleatória."
         },
         {
           "name": "Descansar",
@@ -6413,11 +6467,11 @@
         },
         {
           "name": "Esponja Espinhosa",
-          "description": "Pague 155 de Ouro. Encante 2 carta com Prontidão."
+          "description": "Pague {PricklySpongeGold} de Ouro. Encante {Cards} {Cards:plural:carta|cartas} com Prontidão."
         },
         {
           "name": "Bloqueado",
-          "description": "Requer 155 de Ouro."
+          "description": "Requer {PricklySpongeGold} de Ouro."
         }
       ]
     },
@@ -6427,19 +6481,19 @@
       "choices": [
         {
           "name": "Oferta do Wongo's",
-          "description": "Pague 100 de Ouro. Receba 1 Relíquia Comum."
+          "description": "Pague {BargainBinCost} de Ouro. Receba 1 Relíquia Comum."
         },
         {
           "name": "Bloqueado",
-          "description": "Requer 100 de Ouro."
+          "description": "Requer {BargainBinCost} de Ouro."
         },
         {
           "name": "Destaque do Wongo's",
-          "description": "Pague 200 de Ouro. Receba {RandomRelic}."
+          "description": "Pague {FeaturedItemCost} de Ouro. Receba {RandomRelic}."
         },
         {
           "name": "Bloqueado",
-          "description": "Requer 200 de Ouro."
+          "description": "Requer {FeaturedItemCost} de Ouro."
         }
       ]
     },
@@ -6449,7 +6503,7 @@
       "choices": [
         {
           "name": "Banhar-se",
-          "description": "Remova 1 carta do seu Baralho. Adicione 1 Culpa ao seu Baralho."
+          "description": "Remova 1 carta do seu Baralho. Adicione {BatheCurses} Culpa ao seu Baralho."
         },
         {
           "name": "Engarrafar",
@@ -6463,11 +6517,11 @@
       "choices": [
         {
           "name": "Trocar Ouro",
-          "description": "Perca 50 de Ouro. Receba 2 Poções aleatórias."
+          "description": "Perca {Gold} de Ouro. Receba 2 Poções aleatórias."
         },
         {
           "name": "Abraçar a Árvore",
-          "description": "Perca 9 PV. Escolha uma carta para Transforma-la."
+          "description": "Perca {HpLoss} PV. Escolha uma carta para Transforma-la."
         }
       ]
     },
@@ -6477,11 +6531,11 @@
       "choices": [
         {
           "name": "Pássaro",
-          "description": "Escolha 1 carta inicial para Transforma-la em Bicada."
+          "description": "Escolha 1 carta inicial para Transforma-la em {BirdCard}."
         },
         {
           "name": "Serpente",
-          "description": "Encante 1 carta com Rastejante."
+          "description": "Encante 1 carta com {SnakeEnchantment}."
         },
         {
           "name": "Bloqueado",
@@ -6495,15 +6549,15 @@
       "choices": [
         {
           "name": "Acupuntura Aracnídea",
-          "description": "Pagar 250 de Ouro. Remova 2 cartas do seu Baralho."
+          "description": "Pagar {ArachnidAcupunctureCost} de Ouro. Remova 2 cartas do seu Baralho."
         },
         {
           "name": "Técnicas de Respiração",
-          "description": "Pague 50 de Ouro. Adicione 2 Iluminação ao seu Baralho."
+          "description": "Pague {BreathingTechniquesCost} de Ouro. Adicione 2 Iluminação ao seu Baralho."
         },
         {
           "name": "Consciência Emocional",
-          "description": "Pague 125 de Ouro. Remova 1 carta do seu Baralho."
+          "description": "Pague {EmotionalAwarenessCost} de Ouro. Remova 1 carta do seu Baralho."
         }
       ]
     },

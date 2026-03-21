@@ -543,6 +543,36 @@ function applyManualFixes(events, relicsData = []) {
       event.references = dedupeReferences([...(event.references || []), ...MANUAL_EVENT_REFS[event.id]]);
     }
 
+    // Resolve static event DynamicVars (values from C# source)
+    const STATIC_EVENT_VARS = {
+      '{Setting1Hp}': '75',   // BattleFriendV1.MinInitialHp
+      '{Setting2Hp}': '150',  // BattleFriendV2.MinInitialHp
+      '{Setting3Hp}': '300',  // BattleFriendV3.MinInitialHp
+    };
+    const resolveStaticVars = (text) => {
+      if (!text) return text;
+      for (const [key, val] of Object.entries(STATIC_EVENT_VARS)) {
+        text = text.replaceAll(key, val);
+      }
+      return text;
+    };
+    if (event.description) event.description = resolveStaticVars(event.description);
+    if (event.choices) {
+      for (const c of event.choices) {
+        if (c.description) c.description = resolveStaticVars(c.description);
+      }
+    }
+    if (event.pages) {
+      for (const p of event.pages) {
+        if (p.description) p.description = resolveStaticVars(p.description);
+        if (p.choices) {
+          for (const c of p.choices) {
+            if (c.description) c.description = resolveStaticVars(c.description);
+          }
+        }
+      }
+    }
+
     // TINKER_TIME: multi-step card builder event
     if (event.id === 'TINKER_TIME') {
       event.choices = [];

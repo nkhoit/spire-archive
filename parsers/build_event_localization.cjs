@@ -286,6 +286,18 @@ function main() {
       }
     }
 
+    // Resolve static event DynamicVars
+    const STATIC_VARS = { '{Setting1Hp}': '75', '{Setting2Hp}': '150', '{Setting3Hp}': '300' };
+    const resolveVars = (t) => { if (!t) return t; for (const [k, v] of Object.entries(STATIC_VARS)) t = t.replaceAll(k, v); return t; };
+    for (const ev of Object.values(nextEvents)) {
+      if (ev.description) ev.description = resolveVars(ev.description);
+      if (ev.choices) for (const c of ev.choices) { if (c.description) c.description = resolveVars(c.description); }
+      if (ev.pages) for (const p of ev.pages) {
+        if (p.description) p.description = resolveVars(p.description);
+        if (p.choices) for (const c of p.choices) { if (c.description) c.description = resolveVars(c.description); }
+      }
+    }
+
     existing.events = nextEvents;
     fs.writeFileSync(outPath, JSON.stringify(existing, null, 2) + '\n', 'utf8');
     console.log(`Updated ${iso}.json from ${gameLang}`);

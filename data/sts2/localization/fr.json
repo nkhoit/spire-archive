@@ -5618,11 +5618,11 @@
       "choices": [
         {
           "name": "S'abstenir",
-          "description": "Récupérez 10 PV."
+          "description": "Récupérez {Heal} PV."
         },
         {
           "name": "S'immerger",
-          "description": "Gagnez 2 PV Max. Subissez 3 dégâts."
+          "description": "Gagnez {MaxHp} PV Max. Subissez {Damage} dégâts."
         }
       ]
     },
@@ -5632,11 +5632,11 @@
       "choices": [
         {
           "name": "Alliage de Défenses",
-          "description": "Retirez 2 Défenses. Ajoutez Défense ultime à votre Deck."
+          "description": "Retirez 2 Défenses. Ajoutez {Card2} à votre Deck."
         },
         {
           "name": "Alliage de Frappes",
-          "description": "Retirez 2 Frappes. Ajoutez Frappe ultime à votre Deck."
+          "description": "Retirez 2 Frappes. Ajoutez {Card1} à votre Deck."
         }
       ]
     },
@@ -5660,15 +5660,15 @@
       "choices": [
         {
           "name": "Niveau 1",
-          "description": "Affrontez un mannequin avec {Setting1Hp} PV. Récupérez 1 Potion aléatoire."
+          "description": "Affrontez un mannequin avec 75 PV. Récupérez 1 Potion aléatoire."
         },
         {
           "name": "Niveau 2",
-          "description": "Affrontez un mannequin d'entraînement avec {Setting2Hp} PV. Améliorez 2 cartes au hasard."
+          "description": "Affrontez un mannequin d'entraînement avec 150 PV. Améliorez 2 cartes au hasard."
         },
         {
           "name": "Niveau 3",
-          "description": "Affrontez un mannequin avec {Setting3Hp} PV. Obtenez une Relique aléatoire."
+          "description": "Affrontez un mannequin avec 300 PV. Obtenez une Relique aléatoire."
         }
       ]
     },
@@ -5678,11 +5678,11 @@
       "choices": [
         {
           "name": "Arracher la sangsue",
-          "description": "Perdez 5 PV. Recevez une récompense de carte Incolore."
+          "description": "Perdez {RipHpLoss} PV. Recevez une récompense de carte Incolore."
         },
         {
           "name": "Partager la connaissance",
-          "description": "Choisissez 1 parmi 5 cartes aléatoires à ajouter à votre Deck."
+          "description": "Choisissez {CardChoiceCount} parmi {FromCardChoiceCount} cartes aléatoires à ajouter à votre Deck."
         }
       ]
     },
@@ -5692,11 +5692,11 @@
       "choices": [
         {
           "name": "Apprendre la Technique d’Extermination",
-          "description": "Ajoutez Extermination à votre Deck."
+          "description": "Ajoutez {Card1} à votre Deck."
         },
         {
           "name": "Apprendre la Technique d’Aplatissement",
-          "description": "Ajoutez Aplatissement à votre Deck."
+          "description": "Ajoutez {Card2} à votre Deck."
         }
       ]
     },
@@ -5706,11 +5706,11 @@
       "choices": [
         {
           "name": "Manger l’œuf",
-          "description": "Gagnez 7 PV Max."
+          "description": "Gagnez {MaxHp} PV Max."
         },
         {
           "name": "Récupérer l’œuf",
-          "description": "Ajoutez Œuf d'oizodon à votre Deck."
+          "description": "Ajoutez {Card} à votre Deck."
         }
       ]
     },
@@ -5720,7 +5720,7 @@
       "choices": [
         {
           "name": "Bleu",
-          "description": "Obtenez 3 carte du Défectueux."
+          "description": "Obtenez {Cards} {Cards:plural:carte|cartes} du Défectueux."
         },
         {
           "name": "Égalité",
@@ -5728,19 +5728,19 @@
         },
         {
           "name": "Rouge",
-          "description": "Obtenez 3 carte du Soldat de Fer."
+          "description": "Obtenez {Cards} {Cards:plural:carte|cartes} du Soldat de Fer."
         },
         {
           "name": "Rose",
-          "description": "Obtenez 3 carte de la Tisse-Mort."
+          "description": "Obtenez {Cards} {Cards:plural:carte|cartes} de la Tisse-Mort."
         },
         {
           "name": "Orange",
-          "description": "Obtenez 3 carte du Régent."
+          "description": "Obtenez {Cards} {Cards:plural:carte|cartes} du Régent."
         },
         {
           "name": "Vert",
-          "description": "Obtenez 3 carte de la Silencieuse."
+          "description": "Obtenez {Cards} {Cards:plural:carte|cartes} de la Silencieuse."
         }
       ]
     },
@@ -5805,11 +5805,11 @@
       "choices": [
         {
           "name": "Formule de paiement",
-          "description": "Obtenez Dette. Effectuez 6 révélations."
+          "description": "Obtenez {CurseTitle}. Effectuez {PaymentPlanCount} révélations."
         },
         {
           "name": "Dévoiler l’avenir",
-          "description": "Payez 50 Pièces d’or. Effectuez 3 révélations."
+          "description": "Payez {UncoverFutureCost} Pièces d’or. Effectuez {UncoverFutureProphesizeCount} révélations."
         }
       ]
     },
@@ -5819,11 +5819,11 @@
       "choices": [
         {
           "name": "Repos",
-          "description": "Récupérez 0 PV. Affrontez des ennemis."
+          "description": "Récupérez {Heal} PV. Affrontez des ennemis."
         },
         {
           "name": "Avancer malgré tout",
-          "description": "Retirez une carte de votre Deck. Perdez 11 PV."
+          "description": "Retirez une carte de votre Deck. Perdez {HpLoss} PV."
         }
       ]
     },
@@ -5836,7 +5836,7 @@
       "choices": [
         {
           "name": "Les examiner toutes pour faire le meilleur choix",
-          "description": "Perdez 15 PV. Choisissez 1 Relique poupée parmi 3."
+          "description": "Perdez {ExamineHpLoss} PV. Choisissez 1 Relique poupée parmi 3."
         },
         {
           "name": "Choisir au hasard",
@@ -5844,7 +5844,7 @@
         },
         {
           "name": "Prendre votre temps",
-          "description": "Perdez 5 PV. Choisissez 1 Relique poupée parmi 2."
+          "description": "Perdez {TakeTimeHpLoss} PV. Choisissez 1 Relique poupée parmi 2."
         }
       ]
     },
@@ -5858,7 +5858,7 @@
         },
         {
           "name": "Porte de la lumière",
-          "description": "Améliorez 2 cartes aléatoires dans votre Deck."
+          "description": "Améliorez {Cards} cartes aléatoires dans votre Deck."
         }
       ]
     },
@@ -5868,11 +5868,11 @@
       "choices": [
         {
           "name": "Mettre en bouteille",
-          "description": "Récupérez Potion luminescente."
+          "description": "Récupérez {Potion}."
         },
         {
           "name": "Gravir le phare",
-          "description": "Obtenez Lentille de Fresnel. Perdez 13 PV Max."
+          "description": "Obtenez {Relic}. Perdez {HpLoss} PV Max."
         }
       ]
     },
@@ -5899,11 +5899,11 @@
       "choices": [
         {
           "name": "Entrer dans votre trou",
-          "description": "Envoûtez une carte avec Sur-mesure."
+          "description": "Envoûtez une carte avec {Enchantment}."
         },
         {
           "name": "Résister",
-          "description": "Retirez 2 cartes de votre Deck. Ajoutez Normalité à votre Deck."
+          "description": "Retirez {Cards} cartes de votre Deck. Ajoutez {ResistCurse} à votre Deck."
         }
       ]
     },
@@ -5913,11 +5913,11 @@
       "choices": [
         {
           "name": "Accueillir l’{Relic}",
-          "description": "Obtenez Âme oubliée."
+          "description": "Obtenez {Relic}."
         },
         {
           "name": "Confronter à la réalité",
-          "description": "Ajoutez Déclin à votre Deck. Envoûtez une carte qui s’Épuise avec Puissance animique."
+          "description": "Ajoutez {Curse} à votre Deck. Envoûtez une carte qui s’Épuise avec {Enchantment}."
         }
       ]
     },
@@ -5953,11 +5953,11 @@
       "choices": [
         {
           "name": "Unir vos forces",
-          "description": "Recevez 50 Pièces d’or."
+          "description": "Recevez {JoinForcesGold} Pièces d’or."
         },
         {
           "name": "Quête solo",
-          "description": "Recevez 150 Pièces d’or. Perdez 18 PV."
+          "description": "Recevez {SoloGold} Pièces d’or. Perdez {SoloHp} PV."
         }
       ]
     },
@@ -5967,7 +5967,7 @@
       "choices": [
         {
           "name": "Capturer le feu follet",
-          "description": "Ajoutez Déclin à votre Deck. Obtenez le {Relic}."
+          "description": "Ajoutez {Curse} à votre Deck. Obtenez le {Relic}."
         },
         {
           "name": "Verrouillé",
@@ -5981,11 +5981,11 @@
       "choices": [
         {
           "name": "Offrir un tribut",
-          "description": "Payez 149 Pièces d’or. Obtenez une Relique aléatoire."
+          "description": "Payez {Gold} Pièces d’or. Obtenez une Relique aléatoire."
         },
         {
           "name": "Verrouillé",
-          "description": "Nécessite 149 Pièces d’or."
+          "description": "Nécessite {Gold} Pièces d’or."
         }
       ]
     },
@@ -5998,11 +5998,11 @@
       "choices": [
         {
           "name": "Groupe",
-          "description": "Perdez 100 Pièces d’or. Transformez 2 cartes."
+          "description": "Perdez {Gold} Pièces d’or. Transformez 2 cartes."
         },
         {
           "name": "Individu",
-          "description": "Gagnez 5 PV Max."
+          "description": "Gagnez {MaxHp} PV Max."
         }
       ]
     },
@@ -6012,7 +6012,7 @@
       "choices": [
         {
           "name": "Prendre les potions",
-          "description": "Obtenez 3 Potion infecte."
+          "description": "Obtenez {FoulPotions} {FoulPotions:plural:Potion infecte|Potions infectes}."
         },
         {
           "name": "Fouiller",
@@ -6097,7 +6097,7 @@
         },
         {
           "name": "Fouiller",
-          "description": "Perdez 14 PV. Obtenez le Fromage élu."
+          "description": "Perdez {Damage} PV. Obtenez le Fromage élu."
         }
       ]
     },
@@ -6107,11 +6107,11 @@
       "choices": [
         {
           "name": "Déguster votre thé",
-          "description": "Obtenez Poison royal. Récupérez tous vos PV."
+          "description": "Obtenez {Relic}. Récupérez tous vos PV."
         },
         {
           "name": "Chercher la bagarre",
-          "description": "Perdez 11 PV. Obtenez une Relique aléatoire."
+          "description": "Perdez {Damage} PV. Obtenez une Relique aléatoire."
         }
       ]
     },
@@ -6121,11 +6121,11 @@
       "choices": [
         {
           "name": "Consommer",
-          "description": "Récupérez 9 PV. Améliorez une carte de votre Deck."
+          "description": "Récupérez {Heal} PV. Améliorez une carte de votre Deck."
         },
         {
           "name": "Planter et nourrir",
-          "description": "Envoûtez une carte avec Semence."
+          "description": "Envoûtez une carte avec {Enchantment}."
         }
       ]
     },
@@ -6139,7 +6139,7 @@
         },
         {
           "name": "Lire en entier",
-          "description": "Choisissez un Pouvoir à Envoûter avec Rapide 2."
+          "description": "Choisissez un Pouvoir à Envoûter avec {Enchantment3} {Enchantment3Amount}."
         },
         {
           "name": "Verrouillé",
@@ -6147,7 +6147,7 @@
         },
         {
           "name": "Lire un passage au hasard",
-          "description": "Choisissez une Compétence à Envoûter avec Agilité 2."
+          "description": "Choisissez une Compétence à Envoûter avec {Enchantment2} {Enchantment2Amount}."
         }
       ]
     },
@@ -6171,7 +6171,7 @@
       "choices": [
         {
           "name": "Boire l’eau",
-          "description": "Récupérez 0 PV."
+          "description": "Récupérez {Heal} PV."
         },
         {
           "name": "Observer",
@@ -6189,11 +6189,11 @@
       "choices": [
         {
           "name": "Accepter",
-          "description": "Récupérez 25 PV. Ajoutez Métamorphose à votre Deck."
+          "description": "Récupérez {LetItInHealAmount} PV. Ajoutez Métamorphose à votre Deck."
         },
         {
           "name": "Rejeter",
-          "description": "Perdez 9 PV. Retirez une carte de votre Deck."
+          "description": "Perdez {RejectionHpLoss} PV. Retirez une carte de votre Deck."
         }
       ]
     },
@@ -6203,7 +6203,7 @@
       "choices": [
         {
           "name": "Boire et soulever",
-          "description": "Perdez {DrinkRandomPotion}. Gagnez 10 PV Max."
+          "description": "Perdez {DrinkRandomPotion}. Gagnez {DrinkMaxHpGain} PV Max."
         },
         {
           "name": "Verrouillé",
@@ -6217,11 +6217,11 @@
       "choices": [
         {
           "name": "Plonger dans l’eau",
-          "description": "Obtenez 111 Pièces d’or. Perdez 7 PV."
+          "description": "Obtenez {Gold} Pièces d’or. Perdez {HpLoss} PV."
         },
         {
           "name": "Prendre l’épée",
-          "description": "Obtenir l’Épée de pierre."
+          "description": "Obtenir l’{Relic}."
         }
       ]
     },
@@ -6231,11 +6231,11 @@
       "choices": [
         {
           "name": "Premier coffre",
-          "description": "Récupérez 60 Pièces d’or."
+          "description": "Récupérez {SmallChestGold} Pièces d’or."
         },
         {
           "name": "Deuxième coffre",
-          "description": "Récupérez 333 Pièces d’or. Recevez Cupidité."
+          "description": "Récupérez {LargeChestGold} Pièces d’or. Recevez Cupidité."
         }
       ]
     },
@@ -6245,7 +6245,7 @@
       "choices": [
         {
           "name": "S’approcher",
-          "description": "Envoûtez une Attaque avec Corruption."
+          "description": "Envoûtez une Attaque avec {Enchantment}."
         },
         {
           "name": "Verrouillé",
@@ -6259,11 +6259,11 @@
       "choices": [
         {
           "name": "Déchiffrer",
-          "description": "Perdez 3 PV Max. Améliorez une carte aléatoire de votre Deck."
+          "description": "Perdez {DecipherMaxHpLoss} PV Max. Améliorez une carte aléatoire de votre Deck."
         },
         {
           "name": "Détruire",
-          "description": "Récupérez 20 PV."
+          "description": "Récupérez {SmashHPGain} PV."
         }
       ]
     },
@@ -6273,15 +6273,15 @@
       "choices": [
         {
           "name": "Thé d’os",
-          "description": "Payez 50 Pièces d’or. {BoneTeaDescription}"
+          "description": "Payez {BoneTeaCost} Pièces d’or. {BoneTeaDescription}"
         },
         {
           "name": "Verrouillé",
-          "description": "Nécessite 50 Pièces d’or."
+          "description": "Nécessite {BoneTeaCost} Pièces d’or."
         },
         {
           "name": "Thé de braises",
-          "description": "Payez 150 Pièces d’or. {EmberTeaDescription}"
+          "description": "Payez {EmberTeaCost} Pièces d’or. {EmberTeaDescription}"
         }
       ]
     },
@@ -6305,7 +6305,7 @@
         },
         {
           "name": "Rendre la Clé",
-          "description": "Obtenez 100 Pièces d’or."
+          "description": "Obtenez {Gold} Pièces d’or."
         }
       ]
     },
@@ -6319,7 +6319,7 @@
         },
         {
           "name": "Chercher la sortie",
-          "description": "Perdez 8 PV. Obtenez 1 Potion aléatoire."
+          "description": "Perdez {Damage} PV. Obtenez 1 Potion aléatoire."
         }
       ]
     },
@@ -6329,21 +6329,75 @@
       "choices": [
         {
           "name": "Cela",
-          "description": "Ajoutez Maladresse à votre Deck. Obtenez une Relique aléatoire."
+          "description": "Ajoutez {Curse} à votre Deck. Obtenez une Relique aléatoire."
         },
         {
           "name": "Ceci",
-          "description": "Perdez 6 PV. Recevez 0 Pièces d’or."
+          "description": "Perdez {HpLoss} PV. Recevez {Gold} Pièces d’or."
         }
       ]
     },
     "TINKER_TIME": {
       "name": "Bricolage",
-      "description": "Après avoir traversé un véritable océan de cadavres, vous tombez sur une ingénieure aux airs de savante folle en train de farfouiller à la recherche de quelque chose d’utile.\n\n« Oui. Salut, bonjour ! Tu as l’air d’être un guerrier compétent... J’ai besoin de quelqu’un pour tester mon prochain atrociteur ! Ça t’intéresse ? »",
-      "choices": [
+      "description": "« Quel type d’outil te servira le mieux pour tuer tout le monde ? »",
+      "pages": [
         {
-          "name": "Accepter",
-          "description": "Créez une carte personnalisée à ajouter à votre Deck."
+          "description": "« Quel type d’outil te servira le mieux pour tuer tout le monde ? »",
+          "choices": [
+            {
+              "name": "Arme",
+              "description": "Fabriquez une Attaque."
+            },
+            {
+              "name": "Gadget",
+              "description": "Fabriquez un Pouvoir."
+            },
+            {
+              "name": "Protection",
+              "description": "Fabriquez une Compétence."
+            }
+          ]
+        },
+        {
+          "description": "« Un excellent choix ! Maintenant, que veux-tu qu’il FASSE exactement ? »\nL’ingénieure se frotte les mains de jubilation.",
+          "choices": [
+            {
+              "name": "Chaos",
+              "description": "Ajoutez une carte aléatoire à votre Main. Elle coûte 0 {energyPrefix:energyIcons(1)} pendant ce tour."
+            },
+            {
+              "name": "Étranglement",
+              "description": "Lorsque vous jouez une carte pendant ce tour, l’ennemi perd {ChokingDamage} PV."
+            },
+            {
+              "name": "Curiosité",
+              "description": "Les Pouvoirs coûtent {CuriousReduction} {energyPrefix:energyIcons(1)} de moins."
+            },
+            {
+              "name": "Stimulation",
+              "description": "Gagnez {EnergizedEnergy:energyIcons()}."
+            },
+            {
+              "name": "Expertise",
+              "description": "Gagnez {ExpertiseStrength} Force. Gagnez {ExpertiseDexterity} Dextérité."
+            },
+            {
+              "name": "Progrès",
+              "description": "À la fin du combat, Upgrade une carte aléatoire de votre Deck."
+            },
+            {
+              "name": "Abattement",
+              "description": "Appliquez {SappingWeak} Faible. Appliquez {SappingVulnerable} Vulnérable."
+            },
+            {
+              "name": "Violence",
+              "description": "Inflige ses dégâts 2 fois de plus."
+            },
+            {
+              "name": "Sagesse",
+              "description": "Piochez {WisdomCards} cartes."
+            }
+          ]
         }
       ]
     },
@@ -6353,11 +6407,11 @@
       "choices": [
         {
           "name": "Fouiller au fond",
-          "description": "Perdez 8 PV. Obtenez une Relique du passé aléatoire."
+          "description": "Perdez {HpLoss} PV. Obtenez une Relique du passé aléatoire."
         },
         {
           "name": "Ramasser de la camelote",
-          "description": "Récupérez 100 Pièces d’or. Obtenez une carte aléatoire du passé ."
+          "description": "Récupérez {Gold} Pièces d’or. Obtenez une carte aléatoire du passé ."
         }
       ]
     },
@@ -6381,7 +6435,7 @@
       "choices": [
         {
           "name": "Abattre les arbres",
-          "description": "Perdez 8 PV Max. Obtenez une Relique aléatoire."
+          "description": "Perdez {MaxHpLoss} PV Max. Obtenez une Relique aléatoire."
         },
         {
           "name": "Se reposer",
@@ -6413,11 +6467,11 @@
         },
         {
           "name": "Éponge rêche",
-          "description": "Payez 155 Pièces d’or. Envoûtez 2 carte avec Stabilité."
+          "description": "Payez {PricklySpongeGold} Pièces d’or. Envoûtez {Cards} {Cards:plural:carte|cartes} avec Stabilité."
         },
         {
           "name": "Verrouillé",
-          "description": "Coûte 155 Pièces d’or."
+          "description": "Coûte {PricklySpongeGold} Pièces d’or."
         }
       ]
     },
@@ -6427,19 +6481,19 @@
       "choices": [
         {
           "name": "Panier de bonnes affaires Wongo’s",
-          "description": "Payez 100 Pièces d’or. Obtenez 1 Relique Commune aléatoire."
+          "description": "Payez {BargainBinCost} Pièces d’or. Obtenez 1 Relique Commune aléatoire."
         },
         {
           "name": "Verrouillé",
-          "description": "Nécessite 100 Pièces d’or."
+          "description": "Nécessite {BargainBinCost} Pièces d’or."
         },
         {
           "name": "Article Wongo’s du moment",
-          "description": "Payez 200 Pièces d’or. Obtenez {RandomRelic}."
+          "description": "Payez {FeaturedItemCost} Pièces d’or. Obtenez {RandomRelic}."
         },
         {
           "name": "Verrouillé",
-          "description": "Nécessite 200 Pièces d’or."
+          "description": "Nécessite {FeaturedItemCost} Pièces d’or."
         }
       ]
     },
@@ -6449,7 +6503,7 @@
       "choices": [
         {
           "name": "Se baigner",
-          "description": "Retirez 1 carte de votre Deck. Ajoutez 1 Coupable à votre Deck."
+          "description": "Retirez 1 carte de votre Deck. Ajoutez {BatheCurses} Coupable à votre Deck."
         },
         {
           "name": "Embouteiller",
@@ -6463,11 +6517,11 @@
       "choices": [
         {
           "name": "Échanger des pièces d’or",
-          "description": "Perdez 50 Pièces d’or. Obtenez 2 Potions aléatoires."
+          "description": "Perdez {Gold} Pièces d’or. Obtenez 2 Potions aléatoires."
         },
         {
           "name": "Serrer dans vos bras",
-          "description": "Perdez 9 PV. Choisissez une carte à Transformer."
+          "description": "Perdez {HpLoss} PV. Choisissez une carte à Transformer."
         }
       ]
     },
@@ -6477,11 +6531,11 @@
       "choices": [
         {
           "name": "Oiseau",
-          "description": "Choisissez 1 carte de départ à Transformer en Picpic."
+          "description": "Choisissez 1 carte de départ à Transformer en {BirdCard}."
         },
         {
           "name": "Serpent",
-          "description": "Envoûtez 1 carte avec Serpentin."
+          "description": "Envoûtez 1 carte avec {SnakeEnchantment}."
         },
         {
           "name": "Verrouillé",
@@ -6495,15 +6549,15 @@
       "choices": [
         {
           "name": "Acupuncture arachnoïde",
-          "description": "Payez 250 Pièces d’or. Retirez 2 cartes de votre Deck."
+          "description": "Payez {ArachnidAcupunctureCost} Pièces d’or. Retirez 2 cartes de votre Deck."
         },
         {
           "name": "Techniques de respiration",
-          "description": "Payez 50 Pièces d’or. Ajoutez 2 Éveil dans votre Deck."
+          "description": "Payez {BreathingTechniquesCost} Pièces d’or. Ajoutez 2 Éveil dans votre Deck."
         },
         {
           "name": "Conscience émotionnelle",
-          "description": "Payez 125 Pièces d’or. Retirez 1 carte de votre Deck."
+          "description": "Payez {EmotionalAwarenessCost} Pièces d’or. Retirez 1 carte de votre Deck."
         }
       ]
     },

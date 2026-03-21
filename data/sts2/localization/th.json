@@ -4818,15 +4818,15 @@
       "choices": [
         {
           "name": "การตั้งค่า 1",
-          "description": "ต่อสู้กับหุ่นฝึกซ้อม {Setting1Hp} HP จัดหาขวดยา 1 ขวดแบบสุ่ม"
+          "description": "ต่อสู้กับหุ่นฝึกซ้อม 75 HP จัดหาขวดยา 1 ขวดแบบสุ่ม"
         },
         {
           "name": "การตั้งค่า 2",
-          "description": "ต่อสู้กับหุ่นฝึกซ้อม {Setting2Hp} HP พัฒนาการ์ด 2 ใบแบบสุ่ม"
+          "description": "ต่อสู้กับหุ่นฝึกซ้อม 150 HP พัฒนาการ์ด 2 ใบแบบสุ่ม"
         },
         {
           "name": "การตั้งค่า 3",
-          "description": "ต่อสู้กับหุ่นฝึกซ้อม {Setting3Hp} HP ได้รับเครื่องราง 1 ชิ้นแบบสุ่ม"
+          "description": "ต่อสู้กับหุ่นฝึกซ้อม 300 HP ได้รับเครื่องราง 1 ชิ้นแบบสุ่ม"
         }
       ]
     },
@@ -4836,11 +4836,11 @@
       "choices": [
         {
           "name": "ดึงปลิงออก",
-          "description": "เสีย 5 HP ได้รับรางวัลการ์ดไร้สี 1 ใบ"
+          "description": "เสีย {RipHpLoss} HP ได้รับรางวัลการ์ดไร้สี 1 ใบ"
         },
         {
           "name": "แบ่งปันความรู้",
-          "description": "เลือกการ์ด 1 จาก 5 ใบที่ถูกสุ่มมาเพื่อเพิ่มเข้ากองการ์ด"
+          "description": "เลือกการ์ด {CardChoiceCount} จาก {FromCardChoiceCount} ใบที่ถูกสุ่มมาเพื่อเพิ่มเข้ากองการ์ด"
         }
       ]
     },
@@ -4864,26 +4864,26 @@
       "choices": [
         {
           "name": "ฟ้า",
-          "description": "ได้รับการ์ดนักเวทแปรพักตร์ 3 ใบ"
+          "description": "ได้รับการ์ดนักเวทแปรพักตร์ {Cards} ใบ"
         },
         {
           "name": "เท่าเทียมกัน"
         },
         {
           "name": "แดง",
-          "description": "ได้รับการ์ดนักรบเกราะเหล็ก 3 ใบ"
+          "description": "ได้รับการ์ดนักรบเกราะเหล็ก {Cards} ใบ"
         },
         {
           "name": "ชมพู",
-          "description": "ได้รับการ์ดของNecrobinder 3 ใบ"
+          "description": "ได้รับการ์ดของNecrobinder {Cards} ใบ"
         },
         {
           "name": "ส้ม",
-          "description": "ได้รับการ์ดของRegent 3 ใบ"
+          "description": "ได้รับการ์ดของRegent {Cards} ใบ"
         },
         {
           "name": "เขียว",
-          "description": "ได้รับการ์ดนักฆ่าแห่งความเงียบ 3 ใบ"
+          "description": "ได้รับการ์ดนักฆ่าแห่งความเงียบ {Cards} ใบ"
         }
       ]
     },
@@ -4903,10 +4903,10 @@
       "name": "ผจญภัยเขาวงกตดงดิบ",
       "choices": [
         {
-          "description": "ได้รับ 50 ทอง"
+          "description": "ได้รับ {JoinForcesGold} ทอง"
         },
         {
-          "description": "ได้รับ 150 ทอง เสีย 18 HP"
+          "description": "ได้รับ {SoloGold} ทอง เสีย {SoloHp} HP"
         }
       ]
     },
@@ -4938,7 +4938,7 @@
         },
         {
           "name": "อ่านทั้งเล่ม",
-          "description": "เลือกการ์ดพลัง 1 ใบเพื่อร่ายมนตร์ด้วยมนตร์ฉับพลัน 2"
+          "description": "เลือกการ์ดพลัง 1 ใบเพื่อร่ายมนตร์ด้วย{Enchantment3} {Enchantment3Amount}"
         },
         {
           "name": "ล็อก",
@@ -4946,7 +4946,7 @@
         },
         {
           "name": "สุ่มอ่าน 1 ย่อหน้า",
-          "description": "เลือกการ์ดทักษะ 1 ใบเพื่อร่ายมนตร์ด้วยมนตร์ปราดเปรียว 2"
+          "description": "เลือกการ์ดทักษะ 1 ใบเพื่อร่ายมนตร์ด้วย{Enchantment2} {Enchantment2Amount}"
         }
       ]
     },
@@ -4968,11 +4968,11 @@
       "choices": [
         {
           "name": "อันนั้น",
-          "description": "เพิ่มความซุ่มซ่ามเข้ากองการ์ด ได้รับเครื่องราง 1 ชิ้นแบบสุ่ม"
+          "description": "เพิ่ม{Curse}เข้ากองการ์ด ได้รับเครื่องราง 1 ชิ้นแบบสุ่ม"
         },
         {
           "name": "อันนี้",
-          "description": "เสีย 6 HP ได้รับ 0 ทอง"
+          "description": "เสีย {HpLoss} HP ได้รับ {Gold} ทอง"
         }
       ]
     },
@@ -4991,7 +4991,7 @@
       "choices": [
         {
           "name": "กินไข่",
-          "description": "ได้รับ 7 HP สูงสุด"
+          "description": "ได้รับ {MaxHp} HP สูงสุด"
         },
         {
           "name": "เก็บไข่",
@@ -5041,10 +5041,10 @@
       "choices": [
         {
           "name": "พักผ่อน",
-          "description": "ฟื้นฟู 0 HP และต่อสู้ศัตรูกลุ่มหนึ่ง"
+          "description": "ฟื้นฟู {Heal} HP และต่อสู้ศัตรูกลุ่มหนึ่ง"
         },
         {
-          "description": "กำจัดการ์ด 1 ใบจากกองการ์ด เสีย 11 HP"
+          "description": "กำจัดการ์ด 1 ใบจากกองการ์ด เสีย {HpLoss} HP"
         }
       ]
     },
@@ -5061,11 +5061,11 @@
     "LUMINOUS_CHOIR": {
       "choices": [
         {
-          "description": "จ่าย 149 ทอง ได้รับเครื่องราง 1 ชิ้นแบบสุ่ม"
+          "description": "จ่าย {Gold} ทอง ได้รับเครื่องราง 1 ชิ้นแบบสุ่ม"
         },
         {
           "name": "ล็อก",
-          "description": "ต้องการ 149 ทอง"
+          "description": "ต้องการ {Gold} ทอง"
         }
       ]
     },
@@ -5084,11 +5084,11 @@
       "choices": [
         {
           "name": "ให้มันเข้ามา",
-          "description": "ฟื้นฟู 25 HP เพิ่มMetamorphosisเข้ากองการ์ด"
+          "description": "ฟื้นฟู {LetItInHealAmount} HP เพิ่มMetamorphosisเข้ากองการ์ด"
         },
         {
           "name": "ปฏิเสธ",
-          "description": "เสีย 9 HP กำจัดการ์ด 1 ใบจากกองการ์ด"
+          "description": "เสีย {RejectionHpLoss} HP กำจัดการ์ด 1 ใบจากกองการ์ด"
         }
       ]
     },
@@ -5096,7 +5096,7 @@
       "choices": [
         {
           "name": "ดื่มแล้วยก",
-          "description": "เสีย {DrinkRandomPotion} ได้รับ 10 HP สูงสุด"
+          "description": "เสีย {DrinkRandomPotion} ได้รับ {DrinkMaxHpGain} HP สูงสุด"
         },
         {
           "name": "ล็อก",
@@ -5108,11 +5108,11 @@
       "choices": [
         {
           "name": "กล่องสมบัติใบแรก",
-          "description": "ได้รับ 60 ทอง"
+          "description": "ได้รับ {SmallChestGold} ทอง"
         },
         {
           "name": "กล่องสมบัติใบที่ 2",
-          "description": "ได้รับ 333 ทอง ได้รับGreed"
+          "description": "ได้รับ {LargeChestGold} ทอง ได้รับGreed"
         }
       ]
     },
@@ -5124,7 +5124,7 @@
         },
         {
           "name": "คืนกุญแจ",
-          "description": "ได้รับ 100 ทอง"
+          "description": "ได้รับ {Gold} ทอง"
         }
       ]
     },
@@ -5132,7 +5132,7 @@
       "choices": [
         {
           "name": "ค่อยๆ หาทางออก",
-          "description": "เสีย 8 HP จัดหาขวดยา 1 ขวดแบบสุ่ม"
+          "description": "เสีย {Damage} HP จัดหาขวดยา 1 ขวดแบบสุ่ม"
         },
         {}
       ]
@@ -5149,7 +5149,7 @@
     "UNREST_SITE": {
       "choices": [
         {
-          "description": "เสีย 8 HP สูงสุด ได้รับเครื่องรางแบบสุ่ม"
+          "description": "เสีย {MaxHpLoss} HP สูงสุด ได้รับเครื่องรางแบบสุ่ม"
         },
         {
           "name": "ก็จะพักผ่อนอยู่ดี",
@@ -5181,7 +5181,7 @@
         },
         {
           "name": "Booming Conch",
-          "description": "At the start of Elite combats, draw 2 additional card.",
+          "description": "At the start of Elite combats, draw 2 additional cards.",
           "relic_id": "BOOMING_CONCH",
           "pool": "positive"
         },
@@ -5318,6 +5318,59 @@
     },
     "THE_ARCHITECT": {
       "description": "The Architect รออยู่ในตอนจบของทุกการวิ่งที่ประสบความสำเร็จ การเผชิญหน้าครั้งนี้ดำเนินไปในรูปแบบบทสนทนาที่มีบรรทัดเฉพาะของแต่ละตัวละคร ก่อนจะจบลงด้วยการปะทะครั้งสุดท้าย"
+    },
+    "TINKER_TIME": {
+      "pages": [
+        {
+          "choices": [
+            {
+              "name": "อาวุธ",
+              "description": "ทำการ์ดโจมตีที่มีความสามารถพิเศษ สร้างความเสียหาย {Damage}"
+            },
+            {
+              "name": "อุปกรณ์",
+              "description": "สร้างการ์ดพลังที่มีความสามารถพิเศษ"
+            },
+            {
+              "name": "เครื่องป้องกัน",
+              "description": "สร้างการ์ดทักษะที่มีความสามารถพิเศษ ได้รับ {Block} บล็อก"
+            }
+          ]
+        },
+        {
+          "choices": [
+            {
+              "description": "เพิ่มการ์ด 1 ใบแบบสุ่มใส่มือ มันมีค่าร่าย 0 {energyPrefix:energyIcons(1)} ในเทิร์นนี้"
+            },
+            {
+              "description": "ทุกครั้งที่คุณเล่นการ์ดในเทิร์นนี้ ศัตรูเสีย {ChokingDamage} HP"
+            },
+            {
+              "description": "การ์ดพลังมีค่าร่ายลดลง {CuriousReduction} {energyPrefix:energyIcons(1)}"
+            },
+            {
+              "description": "ได้รับ {EnergizedEnergy:energyIcons()}"
+            },
+            {
+              "name": "ความช่ำชอง",
+              "description": "ได้รับ {ExpertiseStrength} ความแข็งแรง ได้รับ {ExpertiseDexterity} ความชำนาญ"
+            },
+            {
+              "name": "การปรับปรุง",
+              "description": "ตอนจบการต่อสู้ พัฒนาการ์ด 1 ใบแบบสุ่ม"
+            },
+            {
+              "description": "สร้าง {SappingWeak} ความอ่อนแอ สร้าง {SappingVulnerable} จุดอ่อน"
+            },
+            {
+              "description": "โจมตีเพิ่ม 2 ครั้ง"
+            },
+            {
+              "description": "จั่วการ์ด {WisdomCards} ใบ"
+            }
+          ]
+        }
+      ]
     }
   },
   "keywords": {

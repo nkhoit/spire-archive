@@ -5612,11 +5612,11 @@
       "choices": [
         {
           "name": "遠慮する",
-          "description": "HPを10回復する。"
+          "description": "HPを{Heal}回復する。"
         },
         {
           "name": "入浴する",
-          "description": "最大HPが2増加する。 3ダメージを受ける。"
+          "description": "最大HPが{MaxHp}増加する。 {Damage}ダメージを受ける。"
         }
       ]
     },
@@ -5626,11 +5626,11 @@
       "choices": [
         {
           "name": "防御を融合",
-          "description": "防御を2枚削除。 デッキに究極の防御を追加。"
+          "description": "防御を2枚削除。 デッキに{Card2}を追加。"
         },
         {
           "name": "ストライクを融合",
-          "description": "ストライクを2枚削除。 デッキに究極のストライクを追加。"
+          "description": "ストライクを2枚削除。 デッキに{Card1}を追加。"
         }
       ]
     },
@@ -5654,15 +5654,15 @@
       "choices": [
         {
           "name": "レベル1",
-          "description": "HP{Setting1Hp}の訓練人形と戦闘。 ランダムなポーションを1個獲得。"
+          "description": "HP75の訓練人形と戦闘。 ランダムなポーションを1個獲得。"
         },
         {
           "name": "レベル2",
-          "description": "HP{Setting2Hp}の訓練人形と戦闘。 ランダムなカードを2枚アップグレード。"
+          "description": "HP150の訓練人形と戦闘。 ランダムなカードを2枚アップグレード。"
         },
         {
           "name": "レベル3",
-          "description": "HP{Setting3Hp}の訓練人形と戦闘。 ランダムなレリックを1個獲得。"
+          "description": "HP300の訓練人形と戦闘。 ランダムなレリックを1個獲得。"
         }
       ]
     },
@@ -5672,11 +5672,11 @@
       "choices": [
         {
           "name": "ヒルを引き剥がす",
-          "description": "HPを5失う。 無色カード報酬を1枚受け取る。"
+          "description": "HPを{RipHpLoss}失う。 無色カード報酬を1枚受け取る。"
         },
         {
           "name": "知識を共有する",
-          "description": "ランダムなカード5枚から1枚を選び、デッキに追加。"
+          "description": "ランダムなカード{FromCardChoiceCount}枚から{CardChoiceCount}枚を選び、デッキに追加。"
         }
       ]
     },
@@ -5686,11 +5686,11 @@
       "choices": [
         {
           "name": "「駆除」の極意を学ぶ",
-          "description": "駆除をデッキに追加。"
+          "description": "{Card1}をデッキに追加。"
         },
         {
           "name": "「圧殺」の極意を学ぶ",
-          "description": "踏み潰しをデッキに追加。"
+          "description": "{Card2}をデッキに追加。"
         }
       ]
     },
@@ -5700,11 +5700,11 @@
       "choices": [
         {
           "name": "卵を食べる",
-          "description": "最大HPが7増加。"
+          "description": "最大HPが{MaxHp}増加。"
         },
         {
           "name": "卵を持っていく",
-          "description": "ビャードニスの卵をデッキに追加。"
+          "description": "{Card}をデッキに追加。"
         }
       ]
     },
@@ -5714,7 +5714,7 @@
       "choices": [
         {
           "name": "青",
-          "description": "ディフェクトのカードを3枚獲得する。"
+          "description": "ディフェクトのカードを{Cards}枚獲得する。"
         },
         {
           "name": "どれも同じ",
@@ -5722,19 +5722,19 @@
         },
         {
           "name": "赤",
-          "description": "アイアンクラッドのカードを3枚獲得する。"
+          "description": "アイアンクラッドのカードを{Cards}枚獲得する。"
         },
         {
           "name": "ピンク",
-          "description": "ネクロバインダーのカードを3枚獲得する。"
+          "description": "ネクロバインダーのカードを{Cards}枚獲得する。"
         },
         {
           "name": "オレンジ",
-          "description": "リージェントのカードを3枚獲得する。"
+          "description": "リージェントのカードを{Cards}枚獲得する。"
         },
         {
           "name": "緑",
-          "description": "サイレントのカードを3枚獲得する。"
+          "description": "サイレントのカードを{Cards}枚獲得する。"
         }
       ]
     },
@@ -5799,11 +5799,11 @@
       "choices": [
         {
           "name": "後払いプラン",
-          "description": "負債を1枚獲得。 6回占う。"
+          "description": "{CurseTitle}を1枚獲得。 {PaymentPlanCount}回占う。"
         },
         {
           "name": "未来を明らかにする",
-          "description": "50ゴールドを支払う。 3回占う。"
+          "description": "{UncoverFutureCost}ゴールドを支払う。 {UncoverFutureProphesizeCount}回占う。"
         }
       ]
     },
@@ -5813,11 +5813,11 @@
       "choices": [
         {
           "name": "休憩する",
-          "description": "HPを0回復する。 敵と戦う。"
+          "description": "HPを{Heal}回復する。 敵と戦う。"
         },
         {
           "name": "意地でも進む",
-          "description": "デッキからカードを1枚削除する。 HPを11失う。"
+          "description": "デッキからカードを1枚削除する。 HPを{HpLoss}失う。"
         }
       ]
     },
@@ -5830,7 +5830,7 @@
       "choices": [
         {
           "name": "念入りに調べ、最良のものを選ぶ",
-          "description": "HPを15失う。 3つの人形レリックから1つを選ぶ。"
+          "description": "HPを{ExamineHpLoss}失う。 3つの人形レリックから1つを選ぶ。"
         },
         {
           "name": "ランダムに選ぶ",
@@ -5838,7 +5838,7 @@
         },
         {
           "name": "少しだけ時間をかける",
-          "description": "HPを5失う。 2つの人形レリックから1つを選ぶ。"
+          "description": "HPを{TakeTimeHpLoss}失う。 2つの人形レリックから1つを選ぶ。"
         }
       ]
     },
@@ -5852,7 +5852,7 @@
         },
         {
           "name": "光の扉",
-          "description": "ランダムなカードを2枚アップグレード。"
+          "description": "ランダムなカードを{Cards}枚アップグレード。"
         }
       ]
     },
@@ -5862,11 +5862,11 @@
       "choices": [
         {
           "name": "水を汲む",
-          "description": "燐光のポーションを獲得。"
+          "description": "{Potion}を獲得。"
         },
         {
           "name": "よじ登る",
-          "description": "フレネルレンズを獲得。 最大HPを13失う。"
+          "description": "{Relic}を獲得。 最大HPを{HpLoss}失う。"
         }
       ]
     },
@@ -5893,11 +5893,11 @@
       "choices": [
         {
           "name": "“自分の”穴に入る",
-          "description": "カード1枚に、完璧な適合をエンチャントする。"
+          "description": "カード1枚に、{Enchantment}をエンチャントする。"
         },
         {
           "name": "やめておく",
-          "description": "デッキからカードを2枚削除。 凡庸をデッキに追加。"
+          "description": "デッキからカードを{Cards}枚削除。 {ResistCurse}をデッキに追加。"
         }
       ]
     },
@@ -5907,11 +5907,11 @@
       "choices": [
         {
           "name": "{Relic}を受け入れる",
-          "description": "忘れ去られし魂を獲得。"
+          "description": "{Relic}を獲得。"
         },
         {
           "name": "真実を突き付ける",
-          "description": "腐敗をデッキに追加。 廃棄を持つカード1枚に魂力をエンチャントする。"
+          "description": "{Curse}をデッキに追加。 廃棄を持つカード1枚に{Enchantment}をエンチャントする。"
         }
       ]
     },
@@ -5947,11 +5947,11 @@
       "choices": [
         {
           "name": "パーティーを組む",
-          "description": "50ゴールドを獲得。"
+          "description": "{JoinForcesGold}ゴールドを獲得。"
         },
         {
           "name": "ソロプレイを貫く",
-          "description": "150ゴールドを獲得。 HPを18失う。"
+          "description": "{SoloGold}ゴールドを獲得。 HPを{SoloHp}失う。"
         }
       ]
     },
@@ -5961,7 +5961,7 @@
       "choices": [
         {
           "name": "ウィスプを捕まえる",
-          "description": "腐敗をデッキに追加。 {Relic}を獲得する。"
+          "description": "{Curse}をデッキに追加。 {Relic}を獲得する。"
         },
         {
           "name": "ロック中",
@@ -5975,11 +5975,11 @@
       "choices": [
         {
           "name": "貢物を捧げる",
-          "description": "149ゴールドを支払う。 ランダムなレリックを1個獲得する。"
+          "description": "{Gold}ゴールドを支払う。 ランダムなレリックを1個獲得する。"
         },
         {
           "name": "ロック中",
-          "description": "149ゴールドが必要。"
+          "description": "{Gold}ゴールドが必要。"
         }
       ]
     },
@@ -5992,11 +5992,11 @@
       "choices": [
         {
           "name": "群れ",
-          "description": "ゴールドを100失う。 カードを2枚変化させる。"
+          "description": "ゴールドを{Gold}失う。 カードを2枚変化させる。"
         },
         {
           "name": "独りぼっち",
-          "description": "最大HPが5増加。"
+          "description": "最大HPが{MaxHp}増加。"
         }
       ]
     },
@@ -6006,7 +6006,7 @@
       "choices": [
         {
           "name": "ポーションを拾う",
-          "description": "悪臭ポーションを3個獲得する。"
+          "description": "悪臭ポーションを{FoulPotions}個獲得する。"
         },
         {
           "name": "物色する",
@@ -6091,7 +6091,7 @@
         },
         {
           "name": "物色する",
-          "description": "HPを14失う。 選ばれしチーズを獲得する。"
+          "description": "HPを{Damage}失う。 選ばれしチーズを獲得する。"
         }
       ]
     },
@@ -6101,11 +6101,11 @@
       "choices": [
         {
           "name": "紅茶を楽しむ",
-          "description": "ロイヤルな毒を1個獲得する。 HPを全回復する。"
+          "description": "{Relic}を1個獲得する。 HPを全回復する。"
         },
         {
           "name": "喧嘩を売る",
-          "description": "HPを11失う。 ランダムなレリックを1個獲得する。"
+          "description": "HPを{Damage}失う。 ランダムなレリックを1個獲得する。"
         }
       ]
     },
@@ -6115,11 +6115,11 @@
       "choices": [
         {
           "name": "食べる",
-          "description": "HPを9回復する。 デッキのカードを1枚アップグレードする。"
+          "description": "HPを{Heal}回復する。 デッキのカードを1枚アップグレードする。"
         },
         {
           "name": "植えて育てる",
-          "description": "カード1枚に、芽吹きをエンチャントする。"
+          "description": "カード1枚に、{Enchantment}をエンチャントする。"
         }
       ]
     },
@@ -6133,7 +6133,7 @@
         },
         {
           "name": "読破する",
-          "description": "パワーを1枚選び、迅速2をエンチャントする。"
+          "description": "パワーを1枚選び、{Enchantment3}{Enchantment3Amount}をエンチャントする。"
         },
         {
           "name": "ロック中",
@@ -6141,7 +6141,7 @@
         },
         {
           "name": "適当なページを読む",
-          "description": "スキルを1枚選び、身軽2をエンチャントする。"
+          "description": "スキルを1枚選び、{Enchantment2}{Enchantment2Amount}をエンチャントする。"
         }
       ]
     },
@@ -6165,7 +6165,7 @@
       "choices": [
         {
           "name": "飲む",
-          "description": "HPを0回復する。"
+          "description": "HPを{Heal}回復する。"
         },
         {
           "name": "観察する",
@@ -6183,11 +6183,11 @@
       "choices": [
         {
           "name": "受け入れる",
-          "description": "HPを25回復する。 メタモルフォーシスをデッキに追加。"
+          "description": "HPを{LetItInHealAmount}回復する。 メタモルフォーシスをデッキに追加。"
         },
         {
           "name": "拒絶する",
-          "description": "HPを9失う。 デッキからカードを1枚削除する。"
+          "description": "HPを{RejectionHpLoss}失う。 デッキからカードを1枚削除する。"
         }
       ]
     },
@@ -6197,7 +6197,7 @@
       "choices": [
         {
           "name": "ポーションを飲んで持ち上げる",
-          "description": "{DrinkRandomPotion}を失う。 最大HPが10増加。"
+          "description": "{DrinkRandomPotion}を失う。 最大HPが{DrinkMaxHpGain}増加。"
         },
         {
           "name": "ロック中",
@@ -6211,11 +6211,11 @@
       "choices": [
         {
           "name": "池に飛び込む",
-          "description": "111ゴールドを獲得。 HPを7失う。"
+          "description": "{Gold}ゴールドを獲得。 HPを{HpLoss}失う。"
         },
         {
           "name": "剣を掴む",
-          "description": "石の剣を獲得する。"
+          "description": "{Relic}を獲得する。"
         }
       ]
     },
@@ -6225,11 +6225,11 @@
       "choices": [
         {
           "name": "1つ目の宝箱",
-          "description": "60ゴールドを獲得。"
+          "description": "{SmallChestGold}ゴールドを獲得。"
         },
         {
           "name": "2つ目の宝箱",
-          "description": "333ゴールドを獲得。 強欲を受け取る。"
+          "description": "{LargeChestGold}ゴールドを獲得。 強欲を受け取る。"
         }
       ]
     },
@@ -6239,7 +6239,7 @@
       "choices": [
         {
           "name": "近づく",
-          "description": "アタック1枚に、蝕みをエンチャントする。"
+          "description": "アタック1枚に、{Enchantment}をエンチャントする。"
         },
         {
           "name": "ロック中",
@@ -6253,11 +6253,11 @@
       "choices": [
         {
           "name": "解読する",
-          "description": "最大HPを3失う。 ランダムなカードを1枚アップグレードする。"
+          "description": "最大HPを{DecipherMaxHpLoss}失う。 ランダムなカードを1枚アップグレードする。"
         },
         {
           "name": "叩き割る",
-          "description": "HPを20回復する。"
+          "description": "HPを{SmashHPGain}回復する。"
         }
       ]
     },
@@ -6267,15 +6267,15 @@
       "choices": [
         {
           "name": "骨茶",
-          "description": "50ゴールドを支払う。 {BoneTeaDescription}"
+          "description": "{BoneTeaCost}ゴールドを支払う。 {BoneTeaDescription}"
         },
         {
           "name": "ロック中",
-          "description": "50ゴールドが必要。"
+          "description": "{BoneTeaCost}ゴールドが必要。"
         },
         {
           "name": "燃え殻茶",
-          "description": "150ゴールドを支払う。 {EmberTeaDescription}"
+          "description": "{EmberTeaCost}ゴールドを支払う。 {EmberTeaDescription}"
         }
       ]
     },
@@ -6299,7 +6299,7 @@
         },
         {
           "name": "鍵を返す",
-          "description": "100ゴールドを獲得。"
+          "description": "{Gold}ゴールドを獲得。"
         }
       ]
     },
@@ -6313,7 +6313,7 @@
         },
         {
           "name": "ゆっくりと出口を探す",
-          "description": "HPを8失う。 ランダムなポーションを1個獲得。"
+          "description": "HPを{Damage}失う。 ランダムなポーションを1個獲得。"
         }
       ]
     },
@@ -6323,21 +6323,75 @@
       "choices": [
         {
           "name": "そっち",
-          "description": "不器用をデッキに追加。 ランダムなレリックを1個獲得する。"
+          "description": "{Curse}をデッキに追加。 ランダムなレリックを1個獲得する。"
         },
         {
           "name": "こっち",
-          "description": "HPを6失う。 0ゴールドを獲得。"
+          "description": "HPを{HpLoss}失う。 {Gold}ゴールドを獲得。"
         }
       ]
     },
     "TINKER_TIME": {
       "name": "発明の時間だ",
-      "description": "見渡す限りの死体の海をかき分けて進むと、ガラクタを漁っているマッドサイエンティストに出くわした。\n\n「よし。 やあ、ごきげんよう！ キミ、なかなか腕の立つ戦士のようだね…… ちょうど、次に作る凶悪兵器のテスト役を探していたんだ！ どうだ、やってみないか？」",
-      "choices": [
+      "description": "「皆殺しにするなら、どんな道具がいいかな？」",
+      "pages": [
         {
-          "name": "引き受ける",
-          "description": "カスタムしたカードを作成し、デッキに加える。"
+          "description": "「皆殺しにするなら、どんな道具がいいかな？」",
+          "choices": [
+            {
+              "name": "武器",
+              "description": "アタックを作成する。"
+            },
+            {
+              "name": "ガジェット",
+              "description": "パワーを作成する。"
+            },
+            {
+              "name": "防具",
+              "description": "スキルを作成する。"
+            }
+          ]
+        },
+        {
+          "description": "「素晴らしい選択だ！ じゃあ、そいつにどんな機能を付けようか？」\n科学者は嬉しそうにもみ手をしている。",
+          "choices": [
+            {
+              "name": "混沌",
+              "description": "ランダムなカードを1枚手札に加える。 このターン、そのコストは0{energyPrefix:energyIcons(1)}。"
+            },
+            {
+              "name": "窒息",
+              "description": "このターン、カードをプレイするたび、敵はHPを{ChokingDamage}失う。"
+            },
+            {
+              "name": "好奇心",
+              "description": "パワーのコストが{CuriousReduction}{energyPrefix:energyIcons(1)}減少する。"
+            },
+            {
+              "name": "活性化",
+              "description": "{EnergizedEnergy:energyIcons()}を得る。"
+            },
+            {
+              "name": "専門家",
+              "description": "筋力{ExpertiseStrength}を得る。 敏捷{ExpertiseDexterity}を得る。"
+            },
+            {
+              "name": "改良",
+              "description": "戦闘終了時、ランダムなカードを1枚アップグレードする。"
+            },
+            {
+              "name": "虚弱",
+              "description": "脱力{SappingWeak}を付与する。 弱体{SappingVulnerable}を付与する。"
+            },
+            {
+              "name": "暴力",
+              "description": "追加で2回ダメージを与える。"
+            },
+            {
+              "name": "知恵",
+              "description": "カードを{WisdomCards}枚引く。"
+            }
+          ]
         }
       ]
     },
@@ -6347,11 +6401,11 @@
       "choices": [
         {
           "name": "潜り込む",
-          "description": "HPを8失う。 忘れ去られた過去のレリックを1個入手する。"
+          "description": "HPを{HpLoss}失う。 忘れ去られた過去のレリックを1個入手する。"
         },
         {
           "name": "適当にガラクタを拾う",
-          "description": "100ゴールドを獲得。 忘れ去られた過去のカードを1枚入手する。"
+          "description": "{Gold}ゴールドを獲得。 忘れ去られた過去のカードを1枚入手する。"
         }
       ]
     },
@@ -6375,7 +6429,7 @@
       "choices": [
         {
           "name": "木々を伐採する",
-          "description": "最大HPを8失う。 ランダムなレリックを1個獲得する。"
+          "description": "最大HPを{MaxHpLoss}失う。 ランダムなレリックを1個獲得する。"
         },
         {
           "name": "構わず休む",
@@ -6407,11 +6461,11 @@
         },
         {
           "name": "チクチクするスポンジ",
-          "description": "155ゴールドを支払う。 カード2枚に安定性をエンチャントする。"
+          "description": "{PricklySpongeGold}ゴールドを支払う。 カード{Cards}枚に安定性をエンチャントする。"
         },
         {
           "name": "ロック中",
-          "description": "155ゴールドが必要。"
+          "description": "{PricklySpongeGold}ゴールドが必要。"
         }
       ]
     },
@@ -6421,19 +6475,19 @@
       "choices": [
         {
           "name": "ウォンゴの特売ワゴン",
-          "description": "100ゴールドを支払う。 ランダムなレリック（コモン）を1個獲得する。"
+          "description": "{BargainBinCost}ゴールドを支払う。 ランダムなレリック（コモン）を1個獲得する。"
         },
         {
           "name": "ロック中",
-          "description": "100ゴールドが必要。"
+          "description": "{BargainBinCost}ゴールドが必要。"
         },
         {
           "name": "ウォンゴのおすすめ商品",
-          "description": "200ゴールドを支払う。 {RandomRelic}を獲得する。"
+          "description": "{FeaturedItemCost}ゴールドを支払う。 {RandomRelic}を獲得する。"
         },
         {
           "name": "ロック中",
-          "description": "200ゴールドが必要。"
+          "description": "{FeaturedItemCost}ゴールドが必要。"
         }
       ]
     },
@@ -6443,7 +6497,7 @@
       "choices": [
         {
           "name": "泉につかる",
-          "description": "デッキからカードを1枚削除。 罪悪感を1枚デッキに追加。"
+          "description": "デッキからカードを1枚削除。 罪悪感を{BatheCurses}枚デッキに追加。"
         },
         {
           "name": "瓶に汲む",
@@ -6457,11 +6511,11 @@
       "choices": [
         {
           "name": "ゴールドを渡す",
-          "description": "ゴールドを50失う。 ランダムなポーションを2個獲得する。"
+          "description": "ゴールドを{Gold}失う。 ランダムなポーションを2個獲得する。"
         },
         {
           "name": "木を抱きしめる",
-          "description": "HPを9失う。 カードを1枚選び、変化させる。"
+          "description": "HPを{HpLoss}失う。 カードを1枚選び、変化させる。"
         }
       ]
     },
@@ -6471,11 +6525,11 @@
       "choices": [
         {
           "name": "鳥",
-          "description": "スターターカードを1枚選び、ついばみに変化させる。"
+          "description": "スターターカードを1枚選び、{BirdCard}に変化させる。"
         },
         {
           "name": "蛇",
-          "description": "カードを1枚選び、スリザーをエンチャントする。"
+          "description": "カードを1枚選び、{SnakeEnchantment}をエンチャントする。"
         },
         {
           "name": "ロック中",
@@ -6489,15 +6543,15 @@
       "choices": [
         {
           "name": "蜘蛛式・鍼治療",
-          "description": "250ゴールドを支払う。 デッキからカードを2枚削除。"
+          "description": "{ArachnidAcupunctureCost}ゴールドを支払う。 デッキからカードを2枚削除。"
         },
         {
           "name": "呼吸法",
-          "description": "50ゴールドを支払う。 悟りを2枚デッキに追加する。"
+          "description": "{BreathingTechniquesCost}ゴールドを支払う。 悟りを2枚デッキに追加する。"
         },
         {
           "name": "感情のコントロール",
-          "description": "125ゴールドを支払う。 デッキからカードを1枚削除。"
+          "description": "{EmotionalAwarenessCost}ゴールドを支払う。 デッキからカードを1枚削除。"
         }
       ]
     },
