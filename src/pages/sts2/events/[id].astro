@@ -189,7 +189,7 @@ function getPoolLabel(name: string, locale: string) {
     </section>
   )}
 
-  {showStandardChoices && ungrouped.length > 0 && (
+  {showStandardChoices && ungrouped.length > 0 && pages.length === 0 && (
     <section class="mt-4">
       <h2 class="text-sm font-semibold text-slate-200">{t('Choices', locale)}</h2>
       <div class="mt-3 space-y-2">
