@@ -348,6 +348,16 @@ function resolveEntityRefs(vars, nameMap) {
   return resolved;
 }
 
+// Load English base data IDs to filter orphaned localization entries
+const BASE_IDS = {};
+for (const cat of CATEGORIES) {
+  const basePath = path.join(OUTPUT_DIR, cat + '.json');
+  if (fs.existsSync(basePath)) {
+    const items = JSON.parse(fs.readFileSync(basePath, 'utf8'));
+    BASE_IDS[cat] = new Set(items.map(i => i.id));
+  }
+}
+
 for (const lang of langs) {
   const filePath = path.join(LOCALE_DIR, lang + '.json');
   const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
@@ -356,6 +366,12 @@ for (const lang of langs) {
 
   for (const category of CATEGORIES) {
     const items = data[category] || {};
+    // Remove orphaned entries that don't exist in English base data
+    if (BASE_IDS[category]) {
+      for (const id of Object.keys(items)) {
+        if (!BASE_IDS[category].has(id)) delete items[id];
+      }
+    }
     let totalItems = 0;
     let fullyResolved = 0;
     let unresolvedItems = 0;
