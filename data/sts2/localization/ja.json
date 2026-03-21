@@ -70,7 +70,8 @@
     },
     "ARMAMENTS": {
       "description": "5ブロックを得る。\n手札のカードを1枚アップグレードする。",
-      "name": "武装"
+      "name": "武装",
+      "upgrade_description": "5ブロックを得る。\n手札のカードをすべてアップグレードする。"
     },
     "ARSENAL": {
       "description": "無色カードをプレイするたび、筋力1を得る。",
@@ -153,7 +154,8 @@
     },
     "BEGONE": {
       "description": "4ダメージを与える。\n手札のカードを1枚選び、ミニオンの特攻に変化させる。",
-      "name": "失せよ！"
+      "name": "失せよ！",
+      "upgrade_description": "5ダメージを与える。\n手札のカードを1枚選び、ミニオンの特攻+に変化させる。"
     },
     "BELIEVE_IN_YOU": {
       "description": "他のプレイヤーは[E]を得る。",
@@ -333,7 +335,8 @@
     },
     "CASCADE": {
       "description": "山札の上からX枚のカードをプレイする。",
-      "name": "カスケード"
+      "name": "カスケード",
+      "upgrade_description": "山札の上からX+1枚のカードをプレイする。"
     },
     "CATASTROPHE": {
       "description": "山札にあるカードをランダムに2枚プレイする。",
@@ -349,7 +352,8 @@
     },
     "CHARGE": {
       "description": "山札のランダムなカード2枚から1枚選び、\nミニオンストライクに変化させる。",
-      "name": "突撃せよ！"
+      "name": "突撃せよ！",
+      "upgrade_description": "山札のランダムなカード2枚から1枚選び、\nミニオンストライク+に変化させる。"
     },
     "CHARGE_BATTERY": {
       "description": "7ブロックを得る。\n次のターン、[E]を得る。",
@@ -408,7 +412,8 @@
     },
     "COMPACT": {
       "description": "6ブロックを得る。\n手札にあるすべての状態異常を燃料に変化させる。",
-      "name": "圧縮"
+      "name": "圧縮",
+      "upgrade_description": "7ブロックを得る。\n手札にあるすべての状態異常を燃料+に変化させる。"
     },
     "COMPILE_DRIVER": {
       "description": "7ダメージを与える。\n生成中のオーブ1種類につきカードを1枚引く。\n(カードを0枚引く)",
@@ -499,7 +504,8 @@
     },
     "DARKNESS": {
       "description": "ダーク1を生成する。\nすべてのダークオーブの自動効果を発動する。",
-      "name": "暗黒"
+      "name": "暗黒",
+      "upgrade_description": "ダーク1を生成する。\nすべてのダークオーブの自動効果を2回発動する。"
     },
     "DARK_EMBRACE": {
       "description": "カードが廃棄されるたび、\nカードを1枚引く。",
@@ -613,7 +619,8 @@
     },
     "DIRGE": {
       "description": "召喚3をX回行う。\nソウルをX枚山札に加える。",
-      "name": "葬送歌"
+      "name": "葬送歌",
+      "upgrade_description": "召喚4をX回行う。\nソウル+をX枚山札に加える。"
     },
     "DISCOVERY": {
       "description": "3枚のランダムなカードから1枚を選び、手札に加える。このターン、そのコストは0 [E]。",
@@ -669,7 +676,8 @@
     },
     "DUAL_WIELD": {
       "description": "アタックかパワーを1枚選ぶ。そのコピーを1枚手札に加える。",
-      "name": "二刀流"
+      "name": "二刀流",
+      "upgrade_description": "アタックかパワーを1枚選ぶ。そのコピーを2枚手札に加える。"
     },
     "DYING_STAR": {
       "description": "すべての敵に9ダメージを与える。ターン終了時まですべての敵は筋力9を失う。",
@@ -701,7 +709,8 @@
     },
     "ENLIGHTENMENT": {
       "description": "このターン、手札のすべてのカードのコストを1にする。",
-      "name": "啓発"
+      "name": "啓発",
+      "upgrade_description": "この戦闘中、手札のすべてのカードのコストを1にする。"
     },
     "ENTHRALLED": {
       "description": "これが手札にある場合、他のカードより先にプレイしなければならない。",
@@ -964,14 +973,16 @@
     },
     "GRAVE_WARDEN": {
       "description": "8ブロックを得る。\nソウルを1枚山札に加える。",
-      "name": "墓守"
+      "name": "墓守",
+      "upgrade_description": "10ブロックを得る。\nソウル+を1枚山札に加える。"
     },
     "GREED": {
       "name": "強欲"
     },
     "GUARDS": {
       "description": "手札からカードを任意の枚数選び、ミニオンの盾に変化させる。",
-      "name": "盾となれ！！"
+      "name": "盾となれ！！",
+      "upgrade_description": "手札からカードを任意の枚数選び、ミニオンの盾+に変化させる。"
     },
     "GUIDING_STAR": {
       "description": "12ダメージを与える。\n次のターン、カードを2枚引く。",
@@ -1055,7 +1066,8 @@
     },
     "HIDDEN_DAGGERS": {
       "description": "カードを2枚捨てる。\nナイフを2枚手札に加える。",
-      "name": "暗器"
+      "name": "暗器",
+      "upgrade_description": "カードを2枚捨てる。\nナイフ+を2枚手札に加える。"
     },
     "HIDDEN_GEM": {
       "description": "山札にあるランダムなカード1枚がリプレイ2を得る。",
@@ -1146,7 +1158,8 @@
     },
     "JACKPOT": {
       "description": "25ダメージを与える。\nランダムなコスト0[E]のカードを3枚手札に加える。",
-      "name": "ジャックポット"
+      "name": "ジャックポット",
+      "upgrade_description": "30ダメージを与える。\nランダムなアップグレード済みのコスト0[E]のカードを3枚手札に加える。"
     },
     "JACK_OF_ALL_TRADES": {
       "description": "ランダムな無色カードを1枚手札に加える。",
@@ -1170,11 +1183,13 @@
     },
     "KNIFE_TRAP": {
       "description": "廃棄札にあるすべてのナイフをプレイする。\n(ナイフを0枚プレイする。)",
-      "name": "ナイフの罠"
+      "name": "ナイフの罠",
+      "upgrade_description": "廃棄札にあるすべてのナイフをアップグレードしてプレイする。"
     },
     "KNOCKDOWN": {
       "description": "10ダメージを与える。\nこのターン、敵は他のプレイヤーから2倍のダメージを受ける。",
-      "name": "ノックダウン"
+      "name": "ノックダウン",
+      "upgrade_description": "14ダメージを与える。\nこのターン、敵は他のプレイヤーから3倍のダメージを受ける。"
     },
     "KNOCKOUT_BLOW": {
       "description": "30ダメージを与える。\nこのカードでとどめを刺した時、5 Starsを得る。",
@@ -1190,7 +1205,8 @@
     },
     "LARGESSE": {
       "description": "他のプレイヤー1人は、ランダムな無色カードを1枚手札に加える。",
-      "name": "寛大なる施し"
+      "name": "寛大なる施し",
+      "upgrade_description": "他のプレイヤー1人は、ランダムなアップグレード済みの無色カードを1枚手札に加える。"
     },
     "LEADING_STRIKE": {
       "description": "7ダメージを与える。\nナイフを1枚手札に加える。",
@@ -1222,7 +1238,8 @@
     },
     "LOOP": {
       "description": "ターン開始時、右端にあるオーブの自動効果を発動する。",
-      "name": "ループ"
+      "name": "ループ",
+      "upgrade_description": "ターン開始時、右端にあるオーブの自動効果を2回発動する。"
     },
     "LUMINESCE": {
       "description": "[E]を得る。",
@@ -1246,7 +1263,8 @@
     },
     "MALAISE": {
       "description": "敵は筋力Xを失う。脱力Xを付与する。",
-      "name": "不快感"
+      "name": "不快感",
+      "upgrade_description": "敵は筋力X+1を失う。脱力X+1を付与する。"
     },
     "MANGLE": {
       "description": "15ダメージを与える。\nターン終了時まで敵は筋力10を失う。",
@@ -1254,7 +1272,8 @@
     },
     "MANIFEST_AUTHORITY": {
       "description": "7ブロックを得る。\nランダムな無色カードを1枚手札に加える。",
-      "name": "権威の体現"
+      "name": "権威の体現",
+      "upgrade_description": "8ブロックを得る。\nランダムなアップグレード済みの無色カードを1枚手札に加える。"
     },
     "MASTER_OF_STRATEGY": {
       "description": "カードを3枚引く。",
@@ -1346,7 +1365,8 @@
     },
     "MULTI_CAST": {
       "description": "右端のオーブをX回解放する。",
-      "name": "マルチキャスト"
+      "name": "マルチキャスト",
+      "upgrade_description": "右端のオーブをX+1回解放する。"
     },
     "MURDER": {
       "description": "1ダメージを与える。\nこの戦闘中に引いたカード1枚につき、追加で1ダメージを与える。",
@@ -1414,7 +1434,8 @@
     },
     "ONE_TWO_PUNCH": {
       "description": "このターン、次にプレイするアタックをもう1回プレイする。",
-      "name": "ワン・ツーパンチ"
+      "name": "ワン・ツーパンチ",
+      "upgrade_description": "このターン、次にプレイする2枚のアタックをもう1回プレイする。"
     },
     "ORBIT": {
       "description": "4[E]を消費するたび、\n[E]を得る。",
@@ -1537,7 +1558,8 @@
     },
     "PRIMAL_FORCE": {
       "description": "手札にあるすべてのアタックを巨大な岩に変化させる。",
-      "name": "原始の力"
+      "name": "原始の力",
+      "upgrade_description": "手札にあるすべてのアタックを巨大な岩+に変化させる。"
     },
     "PRODUCTION": {
       "description": "[E]を得る。",
@@ -1585,7 +1607,8 @@
     },
     "QUASAR": {
       "description": "ランダムな無色カード3枚の中から1枚選び、手札に加える。",
-      "name": "クエーサー"
+      "name": "クエーサー",
+      "upgrade_description": "ランダムなアップグレード済みの無色カード3枚の中から1枚選び、手札に加える。"
     },
     "RADIATE": {
       "description": "このターンに得た1 Stars一つにつき、すべての敵に3ダメージを与える。\n(攻撃回数は0回)",
@@ -1625,7 +1648,8 @@
     },
     "REAVE": {
       "description": "9ダメージを与える。\nソウルを1枚山札に加える。",
-      "name": "魂剥ぎ"
+      "name": "魂剥ぎ",
+      "upgrade_description": "11ダメージを与える。\nソウル+を1枚山札に加える。"
     },
     "REBOOT": {
       "description": "すべてのカードを山札に混ぜてシャッフルする。\nカードを4枚引く。",
@@ -1733,7 +1757,8 @@
     },
     "SEANCE": {
       "description": "山札のカード1枚をソウルに変化させる。",
-      "name": "降霊術"
+      "name": "降霊術",
+      "upgrade_description": "山札のカード1枚をソウル+に変化させる。"
     },
     "SECOND_WIND": {
       "description": "手札にあるアタック以外のカードをすべて廃棄する。廃棄したカード1枚につき、ブロック5を得る。",
@@ -1805,7 +1830,8 @@
     },
     "SHIV": {
       "description": "4ダメージを与える。",
-      "name": "ナイフ"
+      "name": "ナイフ",
+      "upgrade_description": "6ダメージを与える。"
     },
     "SHOCKWAVE": {
       "description": "すべての敵に脱力3と弱体3を付与する。",
@@ -1900,7 +1926,8 @@
     },
     "SPINNER": {
       "description": "ターン開始時、グラス1を生成する。",
-      "name": "スピナー"
+      "name": "スピナー",
+      "upgrade_description": "グラス1を生成する。\nターン開始時、グラス1を生成する。"
     },
     "SPIRIT_OF_ASH": {
       "description": "エセリアルをプレイするたび、4ブロックを得る。",
@@ -1912,7 +1939,8 @@
     },
     "SPLASH": {
       "description": "他のキャラクターのランダムなアタックを3枚見て1枚を選び、手札に加える。このターン、それはコストを支払わずにプレイできる。",
-      "name": "スプラッシュ"
+      "name": "スプラッシュ",
+      "upgrade_description": "他のキャラクターのランダムなアップグレード済みのアタックを3枚見て1枚を選び、手札に加える。このターン、それはコストを支払わずにプレイできる。"
     },
     "SPOILS_MAP": {
       "description": "次の層で、600ゴールドが追加で手に入る場所をマップに記す。",
@@ -1939,7 +1967,8 @@
     },
     "STACK": {
       "description": "捨て札の枚数に等しいブロックを得る。\n(ブロック0を得る。)",
-      "name": "スタック"
+      "name": "スタック",
+      "upgrade_description": "捨て札の枚数 +3に等しいブロックを得る。"
     },
     "STAMPEDE": {
       "description": "ターン終了時、手札にあるランダムなアタック1枚を、ランダムな敵にプレイする。",
@@ -1967,7 +1996,8 @@
     },
     "STORM_OF_STEEL": {
       "description": "手札をすべて捨てる。\n捨てたカード1枚につき、ナイフを1枚手札に加える。",
-      "name": "鋼の嵐"
+      "name": "鋼の嵐",
+      "upgrade_description": "手札をすべて捨てる。\n捨てたカード1枚につき、ナイフ+を1枚手札に加える。"
     },
     "STRANGLE": {
       "description": "8ダメージを与える。\nこのターン、カードをプレイするたび、敵はHPを2失う。",
@@ -2075,7 +2105,8 @@
     },
     "TEMPEST": {
       "description": "ライトニングXを生成する。",
-      "name": "テンペスト"
+      "name": "テンペスト",
+      "upgrade_description": "ライトニングX+1を生成する。"
     },
     "TERRAFORMING": {
       "description": "活力6を得る。",
@@ -2163,7 +2194,8 @@
     },
     "TRUE_GRIT": {
       "description": "7ブロックを得る。\nランダムなカードを1枚廃棄する。",
-      "name": "不屈の闘志"
+      "name": "不屈の闘志",
+      "upgrade_description": "9ブロックを得る。\nカードを1枚廃棄する。"
     },
     "TURBO": {
       "description": "[E]を得る。\n虚無を1枚捨て札に加える。",

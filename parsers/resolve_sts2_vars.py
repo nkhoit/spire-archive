@@ -657,6 +657,140 @@ def _generate_upgrade_descriptions():
     print(f"  Generated {count} upgrade descriptions for plural cards")
 
 
+def _generate_localized_upgrade_descriptions():
+    """Generate upgrade_description for each locale's cards in localization JSON files."""
+    import os
+    pck_dir = os.environ.get("STS2_PCK_DIR", "/tmp/sts2-pck")
+
+    # Map our locale codes to game's folder names
+    LOCALE_MAP = {
+        "ja": "jpn", "ko": "kor", "zh": "zhs", "de": "deu", "fr": "fra",
+        "es": "spa", "pt": "ptb", "it": "ita", "pl": "pol", "ru": "rus",
+        "tr": "tur", "th": "tha",
+    }
+
+    cards_path = OUTPUT_DIR / "cards.json"
+    with open(cards_path) as f:
+        cards = json.load(f)
+
+    cs_dir = DECOMPILED_DIR / "MegaCrit.Sts2.Core.Models.Cards"
+    entity_names = _build_entity_name_map()
+
+    for locale, game_folder in LOCALE_MAP.items():
+        raw_loc_path = Path(pck_dir) / "localization" / game_folder / "cards.json"
+        loc_output_path = OUTPUT_DIR / "localization" / f"{locale}.json"
+        if not raw_loc_path.exists() or not loc_output_path.exists():
+            continue
+
+        with open(raw_loc_path) as f:
+            raw_loc = json.load(f)
+        with open(loc_output_path) as f:
+            loc_data = json.load(f)
+
+        count = 0
+        for card in cards:
+            cid = card["id"]
+            upgrade = card.get("upgrade", {})
+            raw_desc = raw_loc.get(f"{cid}.description", "")
+            has_plural = "plural" in raw_desc
+            has_if_upgraded = "IfUpgraded" in raw_desc
+            has_cond = ":cond:" in raw_desc
+            if not has_plural and not has_if_upgraded and not has_cond:
+                continue
+            if not has_if_upgraded and not upgrade:
+                continue
+            vars_data = card.get("vars", {})
+            if not vars_data and not upgrade and not has_if_upgraded:
+                continue
+
+            # Build upgraded vars_map from C# source
+            cs_filename = card_id_to_filename(cid)
+            cs_path = cs_dir / cs_filename
+            vars_map: dict[str, str] = {}
+            if cs_path.exists():
+                with open(cs_path) as f:
+                    cs_content = f.read()
+                vars_map = extract_vars_from_cs(cs_content)
+                vars_map = _resolve_entity_refs(vars_map, entity_names)
+
+            for uk, delta in upgrade.items():
+                if uk in ('add_keywords', 'remove_keywords', 'description'):
+                    continue
+                vk = uk if uk in vars_data else f"power_{uk}" if f"power_{uk}" in vars_data else None
+                if vk and vk in vars_data:
+                    new_val = int(vars_data[vk]) + int(delta)
+                    game_name = KEY_TO_GAME_VAR.get(vk)
+                    if not game_name:
+                        if vk.startswith("power_"):
+                            parts = vk[6:].split("_")
+                            game_name = "".join(p.capitalize() for p in parts) + "Power"
+                        else:
+                            game_name = "".join(p.capitalize() for p in vk.split("_"))
+                    if game_name:
+                        vars_map[game_name] = str(new_val)
+                    if vk.startswith("power_"):
+                        parts = vk[6:].split("_")
+                        vars_map["".join(p.capitalize() for p in parts)] = str(new_val)
+
+            for vk, val in vars_data.items():
+                game_name = KEY_TO_GAME_VAR.get(vk)
+                if not game_name:
+                    if vk.startswith("power_"):
+                        parts = vk[6:].split("_")
+                        game_name = "".join(p.capitalize() for p in parts) + "Power"
+                    else:
+                        game_name = "".join(p.capitalize() for p in vk.split("_"))
+                if game_name and game_name not in vars_map:
+                    vars_map[game_name] = str(int(val))
+                if vk.startswith("power_"):
+                    parts = vk[6:].split("_")
+                    no_power = "".join(p.capitalize() for p in parts)
+                    if no_power not in vars_map:
+                        vars_map[no_power] = str(int(val))
+
+            clean_raw = re.sub(r'\[/?[a-z]+\]', '', raw_desc).strip()
+            while '{InCombat:' in clean_raw:
+                start = clean_raw.index('{InCombat:')
+                depth = 0
+                end = start
+                for i in range(start, len(clean_raw)):
+                    if clean_raw[i] == '{': depth += 1
+                    elif clean_raw[i] == '}': depth -= 1
+                    if depth == 0:
+                        end = i + 1
+                        break
+                clean_raw = clean_raw[:start] + clean_raw[end:]
+            clean_raw = clean_raw.strip()
+            clean_raw = re.sub(r'\{IfUpgraded:show:([^|]*)\|([^}]*)\}', r'\1', clean_raw)
+            clean_raw = re.sub(r'\{IfUpgraded:show:([^}]*)\}', r'\1', clean_raw)
+
+            upgraded_desc = resolve_tokens(clean_raw, vars_map)
+            upgraded_desc = re.sub(r"\d+ \w+\|\{\} \w+\}", lambda m: m.group(0).split("|")[0] + "s", upgraded_desc)
+            upgraded_desc = re.sub(r"\s*\|+\?+$", "", upgraded_desc.rstrip())
+            upgraded_desc = re.sub(r"\n\([^)]*\bcard\b[^)]*\)", "", upgraded_desc)
+            upgraded_desc = re.sub(r"\{Amount(?::[^}]*)?\}", "X", upgraded_desc)
+            upgraded_desc = re.sub(r"\{singleStarIcon\}", "[S]", upgraded_desc)
+            upgraded_desc = re.sub(r"\{energyPrefix:energyIcons\(1\)\}", "[E]", upgraded_desc)
+
+            if "{" not in upgraded_desc:
+                # Get base localized description for comparison
+                base_loc_desc = loc_data.get("cards", {}).get(cid, {}).get("description", "")
+                if upgraded_desc != base_loc_desc:
+                    if "cards" not in loc_data:
+                        loc_data["cards"] = {}
+                    if cid not in loc_data["cards"]:
+                        loc_data["cards"][cid] = {}
+                    loc_data["cards"][cid]["upgrade_description"] = upgraded_desc
+                    count += 1
+
+        with open(loc_output_path, "w") as f:
+            json.dump(loc_data, f, indent=2, ensure_ascii=False)
+            f.write("\n")
+
+        if count:
+            print(f"  {locale}: generated {count} upgrade descriptions")
+
+
 def _fix_mad_science():
     """Fix MAD_SCIENCE card: customizable card built via Tinker Time event."""
     cards_path = OUTPUT_DIR / "cards.json"
@@ -721,6 +855,9 @@ def main():
 
     # Generate upgrade.description for cards with plural templates
     _generate_upgrade_descriptions()
+
+    # Generate localized upgrade descriptions
+    _generate_localized_upgrade_descriptions()
 
     # Fix MAD_SCIENCE: customizable card built during Tinker Time event
     _fix_mad_science()
