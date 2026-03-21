@@ -5618,11 +5618,11 @@
       "choices": [
         {
           "name": "Abstenerse",
-          "description": "Recuperas {Heal} PV."
+          "description": "Recuperas 10 PV."
         },
         {
           "name": "Sumergirse",
-          "description": "Obtienes {MaxHp} PV máx. Recibes {Damage} de daño."
+          "description": "Obtienes 2 PV máx. Recibes 3 de daño."
         }
       ]
     },
@@ -5632,11 +5632,11 @@
       "choices": [
         {
           "name": "Combinar cartas Defensa",
-          "description": "Eliminas 2 cartas Defensa. Agregas {Card2} al mazo."
+          "description": "Eliminas 2 cartas Defensa. Agregas Defender definitivo al mazo."
         },
         {
           "name": "Combinar cartas Golpe",
-          "description": "Eliminas 2 cartas Golpe. Agregas {Card1} al mazo."
+          "description": "Eliminas 2 cartas Golpe. Agregas Golpe definitivo al mazo."
         }
       ]
     },
@@ -5678,11 +5678,11 @@
       "choices": [
         {
           "name": "Arrancar la sanguijuela",
-          "description": "Pierdes {RipHpLoss} PV. Obtienes una recompensa de carta incolora."
+          "description": "Pierdes 5 PV. Obtienes una recompensa de carta incolora."
         },
         {
           "name": "Compartir conocimiento",
-          "description": "Eliges {CardChoiceCount} de {FromCardChoiceCount} cartas al azar para agregar al mazo."
+          "description": "Eliges 1 de 5 cartas al azar para agregar al mazo."
         }
       ]
     },
@@ -5692,11 +5692,11 @@
       "choices": [
         {
           "name": "Aprender la técnica Exterminio",
-          "description": "Agregas {Card1} al mazo."
+          "description": "Agregas Exterminar al mazo."
         },
         {
           "name": "Aprender la técnica Aplastabichos",
-          "description": "Agregas {Card2} al mazo."
+          "description": "Agregas Espachurrar al mazo."
         }
       ]
     },
@@ -5706,11 +5706,11 @@
       "choices": [
         {
           "name": "Comerse el huevo",
-          "description": "Obtienes {MaxHp} PV máx."
+          "description": "Obtienes 7 PV máx."
         },
         {
           "name": "Robarse el huevo",
-          "description": "Agregas {Card} al mazo."
+          "description": "Agregas Huevo de Japarónix al mazo."
         }
       ]
     },
@@ -5720,7 +5720,7 @@
       "choices": [
         {
           "name": "El mejor color es el azul",
-          "description": "Obtienes {Cards} {Cards:plural:carta|cartas} de El Defectuoso."
+          "description": "Obtienes 3 carta de El Defectuoso."
         },
         {
           "name": "Igualdad",
@@ -5728,19 +5728,19 @@
         },
         {
           "name": "El mejor color es el rojo",
-          "description": "Obtienes {Cards} {Cards:plural:carta|cartas} de El Blindado."
+          "description": "Obtienes 3 carta de El Blindado."
         },
         {
           "name": "El mejor color es el rosa",
-          "description": "Obtienes {Cards} {Cards:plural:carta|cartas} de La Necrodescarte."
+          "description": "Obtienes 3 carta de La Necrodescarte."
         },
         {
           "name": "El mejor color es el naranja",
-          "description": "Obtienes {Cards} {Cards:plural:carta|cartas} de El Monarca."
+          "description": "Obtienes 3 carta de El Monarca."
         },
         {
           "name": "El mejor color es el verde",
-          "description": "Obtienes {Cards} {Cards:plural:carta|cartas} de La Silenciosa."
+          "description": "Obtienes 3 carta de La Silenciosa."
         }
       ]
     },
@@ -5805,11 +5805,11 @@
       "choices": [
         {
           "name": "Pedir plan de pago",
-          "description": "Obtienes una carta {CurseTitle}. Puedes adivinar {PaymentPlanCount} veces."
+          "description": "Obtienes una carta Deuda. Puedes adivinar 6 veces."
         },
         {
           "name": "Revelar el futuro",
-          "description": "Pagas {UncoverFutureCost} de oro. Puedes adivinar {UncoverFutureProphesizeCount} veces."
+          "description": "Pagas 50 de oro. Puedes adivinar 3 veces."
         }
       ]
     },
@@ -5819,11 +5819,11 @@
       "choices": [
         {
           "name": "Descansar",
-          "description": "Recuperas {Heal} PV. Luchas contra algunos enemigos."
+          "description": "Recuperas 0 PV. Luchas contra algunos enemigos."
         },
         {
           "name": "Avanzar a duras penas",
-          "description": "Quitas una carta del mazo. Pierdes {HpLoss} PV."
+          "description": "Quitas una carta del mazo. Pierdes 11 PV."
         }
       ]
     },
@@ -5836,7 +5836,7 @@
       "choices": [
         {
           "name": "Examinar cada una y toma la mejor decisión",
-          "description": "Pierdes {ExamineHpLoss} PV. Eliges 1 de 3 reliquias de muñeca."
+          "description": "Pierdes 15 PV. Eliges 1 de 3 reliquias de muñeca."
         },
         {
           "name": "Elegir al azar",
@@ -5844,7 +5844,7 @@
         },
         {
           "name": "Tomarse un tiempo antes de decidir",
-          "description": "Pierdes {TakeTimeHpLoss} PV. Eliges 1 de 2 reliquias de muñeca."
+          "description": "Pierdes 5 PV. Eliges 1 de 2 reliquias de muñeca."
         }
       ]
     },
@@ -5858,7 +5858,7 @@
         },
         {
           "name": "Puerta luminosa",
-          "description": "Mejoras {Cards} cartas al azar."
+          "description": "Mejoras 2 cartas al azar."
         }
       ]
     },
@@ -5868,11 +5868,11 @@
       "choices": [
         {
           "name": "Embotellar",
-          "description": "Obtienes {Potion}."
+          "description": "Obtienes Poción de fulgor."
         },
         {
           "name": "Trepar",
-          "description": "Obtienes {Relic}. Pierdes {HpLoss} PV máx."
+          "description": "Obtienes Lente de Fresnel. Pierdes 13 PV máx."
         }
       ]
     },
@@ -5899,11 +5899,11 @@
       "choices": [
         {
           "name": "Entrar en tu silueta",
-          "description": "Encantas una carta con {Enchantment}."
+          "description": "Encantas una carta con A medida."
         },
         {
           "name": "Resistir",
-          "description": "Quitas {Cards} cartas del mazo. Agregas {ResistCurse} al mazo."
+          "description": "Quitas 2 cartas del mazo. Agregas Normalidad al mazo."
         }
       ]
     },
@@ -5912,12 +5912,12 @@
       "description": "Hay una tumba solitaria con una intensa llama azul.\n\nUn guerrero orgulloso murió en batalla, pero su alma yace inquieta. Quiere seguir luchando; sientes cómo te suplica acompañarte en el viaje.\n\nPero... Quizás sea mejor que se enfrente a la verdad.",
       "choices": [
         {
-          "name": "Aceptar {Relic}",
-          "description": "Obtienes {Relic}."
+          "name": "Aceptar Alma olvidada",
+          "description": "Obtienes Alma olvidada."
         },
         {
           "name": "Enfrentar la verdad",
-          "description": "Agregas {Curse} al mazo. Usas {Enchantment} para encantar una carta con Agotamiento."
+          "description": "Agregas Descomposición al mazo. Usas Poder del alma para encantar una carta con Agotamiento."
         }
       ]
     },
@@ -5953,11 +5953,11 @@
       "choices": [
         {
           "name": "Unir fuerzas",
-          "description": "Obtienes {JoinForcesGold} de oro."
+          "description": "Obtienes 50 de oro."
         },
         {
           "name": "Ir por tu cuenta",
-          "description": "Obtienes {SoloGold} de oro. Pierdes {SoloHp} PV."
+          "description": "Obtienes 150 de oro. Pierdes 18 PV."
         }
       ]
     },
@@ -5967,7 +5967,7 @@
       "choices": [
         {
           "name": "Capturar al fuego fatuo",
-          "description": "Agregas {Curse} al mazo. Obtienes {Relic}."
+          "description": "Agregas Descomposición al mazo. Obtienes Fuego fatuo perdido."
         },
         {
           "name": "Sin desbloquear",
@@ -5981,11 +5981,11 @@
       "choices": [
         {
           "name": "Ofrecer tributo",
-          "description": "Pagas {Gold} de oro. Obtienes una reliquia al azar."
+          "description": "Pagas 149 de oro. Obtienes una reliquia al azar."
         },
         {
           "name": "Sin desbloquear",
-          "description": "Necesitas {Gold} de oro."
+          "description": "Necesitas 149 de oro."
         }
       ]
     },
@@ -5998,11 +5998,11 @@
       "choices": [
         {
           "name": "Acercarse al grupo",
-          "description": "Pierdes {Gold} de oro. Transformas 2 cartas."
+          "description": "Pierdes 100 de oro. Transformas 2 cartas."
         },
         {
           "name": "Acercarse al mórfico solitario",
-          "description": "Obtienes {MaxHp} PV máx."
+          "description": "Obtienes 5 PV máx."
         }
       ]
     },
@@ -6012,7 +6012,7 @@
       "choices": [
         {
           "name": "Tomar pociones",
-          "description": "Obtienes {FoulPotions} {FoulPotions:plural:poción fétida|pociones fétidas}."
+          "description": "Obtienes 3 poción fétida."
         },
         {
           "name": "Rebuscar",
@@ -6042,7 +6042,7 @@
       "description": "Se te acerca la persona más anciana que has visto en tu vida.\n—Nos volvemos a ver... ¡Soy yo, Ranwid!\n\nNo conoces a este hombre.",
       "choices": [
         {
-          "name": "Darle {Gold} de oro",
+          "name": "Darle 100 de oro",
           "description": "Obtienes una reliquia al azar."
         },
         {
@@ -6097,7 +6097,7 @@
         },
         {
           "name": "Buscar",
-          "description": "Pierdes {Damage} PV. Obtienes el Queso elegido."
+          "description": "Pierdes 14 PV. Obtienes el Queso elegido."
         }
       ]
     },
@@ -6107,11 +6107,11 @@
       "choices": [
         {
           "name": "Disfrutar el té",
-          "description": "Obtienes {Relic}. Recuperas todos tus PV."
+          "description": "Obtienes Veneno real. Recuperas todos tus PV."
         },
         {
           "name": "Buscar pelea",
-          "description": "Pierdes {Damage} PV. Obtienes una reliquia al azar."
+          "description": "Pierdes 11 PV. Obtienes una reliquia al azar."
         }
       ]
     },
@@ -6121,11 +6121,11 @@
       "choices": [
         {
           "name": "Consumir",
-          "description": "Recuperas {Heal} PV. Mejoras una carta en el mazo."
+          "description": "Recuperas 9 PV. Mejoras una carta en el mazo."
         },
         {
           "name": "Plantarla y nutrirla",
-          "description": "Encantas una carta con {Enchantment}."
+          "description": "Encantas una carta con Siembra."
         }
       ]
     },
@@ -6139,7 +6139,7 @@
         },
         {
           "name": "Leer el tomo entero",
-          "description": "Eliges un poder para encantarlo con {Enchantment3} {Enchantment3Amount}."
+          "description": "Eliges un poder para encantarlo con Rapidez 2."
         },
         {
           "name": "Sin desbloquear",
@@ -6147,7 +6147,7 @@
         },
         {
           "name": "Leer un fragmento al azar",
-          "description": "Eliges una habilidad para encantarla con {Enchantment2} {Enchantment2Amount}."
+          "description": "Eliges una habilidad para encantarla con Agilidad 2."
         }
       ]
     },
@@ -6171,7 +6171,7 @@
       "choices": [
         {
           "name": "Beber",
-          "description": "Recuperas {Heal} PV."
+          "description": "Recuperas 0 PV."
         },
         {
           "name": "Observar",
@@ -6189,11 +6189,11 @@
       "choices": [
         {
           "name": "Permitir la fusión",
-          "description": "Recuperas {LetItInHealAmount} PV. Agregas Metamorfosis al mazo."
+          "description": "Recuperas 25 PV. Agregas Metamorfosis al mazo."
         },
         {
           "name": "Rechazarlo",
-          "description": "Pierdes {RejectionHpLoss} PV. Quitas una carta del mazo."
+          "description": "Pierdes 9 PV. Quitas una carta del mazo."
         }
       ]
     },
@@ -6203,7 +6203,7 @@
       "choices": [
         {
           "name": "Beber y levantarla",
-          "description": "Pierdes {DrinkRandomPotion}. Obtienes {DrinkMaxHpGain} PV máx."
+          "description": "Pierdes {DrinkRandomPotion}. Obtienes 10 PV máx."
         },
         {
           "name": "Sin desbloquear",
@@ -6217,11 +6217,11 @@
       "choices": [
         {
           "name": "Sumergirse en el agua",
-          "description": "Obtienes {Gold} de oro. Pierdes {HpLoss} PV."
+          "description": "Obtienes 111 de oro. Pierdes 7 PV."
         },
         {
           "name": "Tomar la espada",
-          "description": "Obtienes la {Relic}."
+          "description": "Obtienes la Espada de piedra."
         }
       ]
     },
@@ -6231,11 +6231,11 @@
       "choices": [
         {
           "name": "Primer cofre",
-          "description": "Obtienes {SmallChestGold} de oro."
+          "description": "Obtienes 60 de oro."
         },
         {
           "name": "Segundo cofre",
-          "description": "Obtienes {LargeChestGold} de oro. Recibes avaricia."
+          "description": "Obtienes 333 de oro. Recibes avaricia."
         }
       ]
     },
@@ -6245,7 +6245,7 @@
       "choices": [
         {
           "name": "Acercarse",
-          "description": "Encantas un ataque con {Enchantment}."
+          "description": "Encantas un ataque con Corrupción."
         },
         {
           "name": "Sin desbloquear",
@@ -6259,11 +6259,11 @@
       "choices": [
         {
           "name": "Descifrar",
-          "description": "Pierdes {DecipherMaxHpLoss} PV máx. Mejoras una carta al azar."
+          "description": "Pierdes 3 PV máx. Mejoras una carta al azar."
         },
         {
           "name": "Romperla",
-          "description": "Recuperas {SmashHPGain} PV."
+          "description": "Recuperas 20 PV."
         }
       ]
     },
@@ -6273,15 +6273,15 @@
       "choices": [
         {
           "name": "Té de huesos",
-          "description": "Pagas {BoneTeaCost} de oro. {BoneTeaDescription}"
+          "description": "Pagas 50 de oro. Té de huesos"
         },
         {
           "name": "Sin desbloquear",
-          "description": "Necestias {BoneTeaCost} de oro."
+          "description": "Necestias 50 de oro."
         },
         {
           "name": "Té de brasas",
-          "description": "Pagas {EmberTeaCost} de oro. {EmberTeaDescription}"
+          "description": "Pagas 150 de oro. Té de ascuas"
         }
       ]
     },
@@ -6305,7 +6305,7 @@
         },
         {
           "name": "Devolver la llave",
-          "description": "Obtienes {Gold} de oro."
+          "description": "Obtienes 100 de oro."
         }
       ]
     },
@@ -6319,7 +6319,7 @@
         },
         {
           "name": "Encontrar una salida",
-          "description": "Pierdes {Damage} PV. Obtienes 1 poción al azar."
+          "description": "Pierdes 8 PV. Obtienes 1 poción al azar."
         }
       ]
     },
@@ -6329,11 +6329,11 @@
       "choices": [
         {
           "name": "Derecha",
-          "description": "Agregas {Curse} al mazo. Obtienes una reliquia al azar."
+          "description": "Agregas Torpeza al mazo. Obtienes una reliquia al azar."
         },
         {
           "name": "Izquierda",
-          "description": "Pierdes {HpLoss} PV. Obtienes {Gold} de oro."
+          "description": "Pierdes 6 PV. Obtienes 0 de oro."
         }
       ]
     },
@@ -6363,23 +6363,23 @@
           "choices": [
             {
               "name": "Caos",
-              "description": "Agregas una carta al azar a tu mano. Cuesta 0 {energyPrefix:energyIcons(1)} este turno."
+              "description": "Agregas una carta al azar a tu mano. Cuesta 0 [E] este turno."
             },
             {
               "name": "Asfixia",
-              "description": "Siempre que juegues una carta este turno, el enemigo perderá {ChokingDamage} PV."
+              "description": "Siempre que juegues una carta este turno, el enemigo perderá 6 PV."
             },
             {
               "name": "Curiosidad",
-              "description": "Los poderes cuestan {CuriousReduction} de {energyPrefix:energyIcons(1)} menos."
+              "description": "Los poderes cuestan 1 de [E] menos."
             },
             {
               "name": "Revitalización",
-              "description": "Obtienes {EnergizedEnergy:energyIcons()}."
+              "description": "Obtienes [E]."
             },
             {
               "name": "Pericia",
-              "description": "Obtienes {ExpertiseStrength} de fuerza. Obtienes {ExpertiseDexterity} de destreza."
+              "description": "Obtienes 2 de fuerza. Obtienes 2 de destreza."
             },
             {
               "name": "Optimización",
@@ -6387,7 +6387,7 @@
             },
             {
               "name": "Chupavidas",
-              "description": "Aplicas {SappingWeak} de debilitamiento. Aplicas {SappingVulnerable} de vulnerabilidad."
+              "description": "Aplicas 2 de debilitamiento. Aplicas 2 de vulnerabilidad."
             },
             {
               "name": "Violencia",
@@ -6395,7 +6395,7 @@
             },
             {
               "name": "Sabiduría",
-              "description": "Robas {WisdomCards} cartas."
+              "description": "Robas 3 cartas."
             }
           ]
         }
@@ -6407,11 +6407,11 @@
       "choices": [
         {
           "name": "Sumergirse",
-          "description": "Pierdes {HpLoss} PV. Obtienes una reliquia olvidada del pasado al azar."
+          "description": "Pierdes 8 PV. Obtienes una reliquia olvidada del pasado al azar."
         },
         {
           "name": "Tomar cachivaches al azar",
-          "description": "Obtienes {Gold} de oro. Obtienes una carta olvidada del pasado al azar."
+          "description": "Obtienes 100 de oro. Obtienes una carta olvidada del pasado al azar."
         }
       ]
     },
@@ -6435,7 +6435,7 @@
       "choices": [
         {
           "name": "Talar los árboles",
-          "description": "Pierdes {MaxHpLoss} PV máx. Obtienes una reliquia al azar."
+          "description": "Pierdes 8 PV máx. Obtienes una reliquia al azar."
         },
         {
           "name": "Descansar de todos modos",
@@ -6467,11 +6467,11 @@
         },
         {
           "name": "Esponja espinosa",
-          "description": "Pagas {PricklySpongeGold} de oro. Encantas {Cards} {Cards:plural:carta|cartas} con Firmeza."
+          "description": "Pagas 155 de oro. Encantas 2 carta con Firmeza."
         },
         {
           "name": "Sin desbloquear",
-          "description": "Necesitas {PricklySpongeGold} de oro."
+          "description": "Necesitas 155 de oro."
         }
       ]
     },
@@ -6481,19 +6481,19 @@
       "choices": [
         {
           "name": "Rebajas de Wongo",
-          "description": "Pagas {BargainBinCost} de oro. Obtienes 1 reliquia común al azar."
+          "description": "Pagas 100 de oro. Obtienes 1 reliquia común al azar."
         },
         {
           "name": "Sin desbloquear",
-          "description": "Necesitas {BargainBinCost} de oro."
+          "description": "Necesitas 100 de oro."
         },
         {
           "name": "Especial de Wongo",
-          "description": "Pagas {FeaturedItemCost} de oro. Obtienes {RandomRelic}."
+          "description": "Pagas 200 de oro. Obtienes {RandomRelic}."
         },
         {
           "name": "Sin desbloquear",
-          "description": "Necesitas {FeaturedItemCost} de oro."
+          "description": "Necesitas 200 de oro."
         }
       ]
     },
@@ -6503,7 +6503,7 @@
       "choices": [
         {
           "name": "Bañarse",
-          "description": "Quitas 1 carta del mazo. Agregas {BatheCurses} Culpa al mazo."
+          "description": "Quitas 1 carta del mazo. Agregas 1 Culpa al mazo."
         },
         {
           "name": "Embotellar",
@@ -6517,11 +6517,11 @@
       "choices": [
         {
           "name": "Intercambiar oro",
-          "description": "Pierdes {Gold} de oro. Obtienes 2 pociones al azar."
+          "description": "Pierdes 50 de oro. Obtienes 2 pociones al azar."
         },
         {
           "name": "Abrazar al árbol",
-          "description": "Pierdes {HpLoss} PV. Eliges una carta para transformarla."
+          "description": "Pierdes 9 PV. Eliges una carta para transformarla."
         }
       ]
     },
@@ -6531,11 +6531,11 @@
       "choices": [
         {
           "name": "Colocar el pájaro",
-          "description": "Eliges 1 carta básica para transformarla en {BirdCard}."
+          "description": "Eliges 1 carta básica para transformarla en Picotazo."
         },
         {
           "name": "Colocar la serpiente",
-          "description": "Encantas 1 carta con {SnakeEnchantment}."
+          "description": "Encantas 1 carta con Serpenteo."
         },
         {
           "name": "Sin desbloquear",
@@ -6549,15 +6549,15 @@
       "choices": [
         {
           "name": "Acupuntura arácnida",
-          "description": "Pagas {ArachnidAcupunctureCost} de oro. Quitas 2 cartas del mazo."
+          "description": "Pagas 250 de oro. Quitas 2 cartas del mazo."
         },
         {
           "name": "Técnicas de respiración",
-          "description": "Pagas {BreathingTechniquesCost} de oro. Agregas 2 Iluminación al mazo."
+          "description": "Pagas 50 de oro. Agregas 2 Iluminación al mazo."
         },
         {
           "name": "Conciencia emocional",
-          "description": "Pagas {EmotionalAwarenessCost} de oro. Quitas 1 carta del mazo."
+          "description": "Pagas 125 de oro. Quitas 1 carta del mazo."
         }
       ]
     },

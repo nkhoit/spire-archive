@@ -24,6 +24,119 @@ const LANG_MAP = {
   zhs: 'zh',
 };
 
+const CS_EVENTS_DIR = path.join(DECOMPILED_DIR, 'MegaCrit.Sts2.Core.Models.Events');
+
+function classNameToId(cls) {
+  return cls.replace(/([a-z0-9])([A-Z])/g, '$1_$2').replace(/([A-Z])([A-Z][a-z])/g, '$1_$2').toUpperCase();
+}
+
+/** Extract all static DynamicVars/StringVars from event C# files */
+function extractEventVarsFromCs() {
+  const TYPED_VAR_KEYS = {
+    GoldVar: 'Gold', DamageVar: 'Damage', HealVar: 'Heal',
+    HpLossVar: 'HpLoss', CardsVar: 'Cards', MaxHpVar: 'MaxHp',
+    BlockVar: 'Block', EnergyVar: 'Energy',
+  };
+  const result = {};
+  if (!fs.existsSync(CS_EVENTS_DIR)) return result;
+  for (const f of fs.readdirSync(CS_EVENTS_DIR).filter(f => f.endsWith('.cs'))) {
+    const src = fs.readFileSync(path.join(CS_EVENTS_DIR, f), 'utf8');
+    const eventClass = f.replace('.cs', '');
+    const eventId = classNameToId(eventClass);
+    const vars = {};
+    // DynamicVar/IntVar with numeric
+    for (const m of src.matchAll(/new (?:DynamicVar|IntVar)\("(\w+)",\s*([\d.]+)/g)) {
+      const val = parseFloat(m[2]);
+      if (val !== 0) vars[m[1]] = val; // skip 0 (runtime-modified base values)
+    }
+    // Typed vars with default key (GoldVar(100) → Gold=100)
+    for (const m of src.matchAll(/new (\w+Var)\(([\d.]+)/g)) {
+      const key = TYPED_VAR_KEYS[m[1]];
+      if (key) {
+        const val = parseFloat(m[2]);
+        if (val !== 0) vars[key] = val;
+      }
+    }
+    // Typed vars with named key (DamageVar("RipHpLoss", 5m, ...) → RipHpLoss=5)
+    for (const m of src.matchAll(/new (\w+Var)\("(\w+)",\s*([\d.]+)/g)) {
+      if (TYPED_VAR_KEYS[m[1]]) {
+        const val = parseFloat(m[3]);
+        if (val !== 0) vars[m[2]] = val;
+      }
+    }
+    // Named EnergyVar/CardsVar with numeric: e.g. CardsVar("WisdomCards", 3)
+    for (const m of src.matchAll(/new (?:EnergyVar|CardsVar|IntVar)\("(\w+)",\s*([\d.]+)/g)) {
+      const val = parseFloat(m[2]);
+      if (val !== 0) vars[m[1]] = val;
+    }
+    // PowerVar<T>("name", value) and other generic named vars
+    for (const m of src.matchAll(/new \w+Var(?:<[^>]+>)?\("(\w+)",\s*([\d.]+)/g)) {
+      if (!vars[m[1]]) { // don't override already captured
+        const val = parseFloat(m[2]);
+        if (val !== 0) vars[m[1]] = val;
+      }
+    }
+    // StringVar with ModelDb reference (resolve to entity name at runtime)
+    for (const m of src.matchAll(/new StringVar\("(\w+)",\s*ModelDb\.(\w+)<([^>]+)>/g)) {
+      vars[m[1]] = { type: m[2].toLowerCase(), entityId: classNameToId(m[3].replace(/.*\./, '')) };
+    }
+    if (Object.keys(vars).length) result[eventId] = vars;
+  }
+
+  // Manual overrides for vars derived from non-literal expressions (e.g., ModelDb.Monster<X>().MinInitialHp)
+  result['BATTLEWORN_DUMMY'] = {
+    ...(result['BATTLEWORN_DUMMY'] || {}),
+    Setting1Hp: 75,  // BattleFriendV1.MinInitialHp
+    Setting2Hp: 150, // BattleFriendV2.MinInitialHp
+    Setting3Hp: 300, // BattleFriendV3.MinInitialHp
+  };
+
+  return result;
+}
+
+/** Resolve event vars in localized event data */
+function resolveEventVars(events, eventVarMap, localeData, lang) {
+  let count = 0;
+  for (const [eventId, ev] of Object.entries(events)) {
+    const vars = eventVarMap[eventId];
+    if (!vars) continue;
+
+    // Build substitution map: {VarName} → resolved value
+    const subs = {};
+    for (const [varName, val] of Object.entries(vars)) {
+      if (typeof val === 'number') {
+        subs[`{${varName}}`] = String(val);
+      } else if (val && typeof val === 'object' && val.entityId) {
+        // Look up localized entity name
+        const category = val.type + 's'; // card→cards, relic→relics, etc.
+        const entityData = localeData[category]?.[val.entityId];
+        if (entityData?.name) {
+          subs[`{${varName}}`] = entityData.name;
+        }
+      }
+    }
+    if (!Object.keys(subs).length) continue;
+
+    const resolve = (t) => {
+      if (!t) return t;
+      let changed = false;
+      for (const [k, v] of Object.entries(subs)) {
+        if (t.includes(k)) { t = t.replaceAll(k, v); changed = true; }
+      }
+      if (changed) count++;
+      return t;
+    };
+
+    if (ev.description) ev.description = resolve(ev.description);
+    if (ev.choices) for (const c of ev.choices) { if (c.name) c.name = resolve(c.name); if (c.description) c.description = resolve(c.description); }
+    if (ev.pages) for (const p of ev.pages) {
+      if (p.description) p.description = resolve(p.description);
+      if (p.choices) for (const c of p.choices) { if (c.name) c.name = resolve(c.name); if (c.description) c.description = resolve(c.description); }
+    }
+  }
+  return count;
+}
+
 function stripBbcode(text) {
   if (typeof text !== 'string') return text;
   return text
@@ -286,17 +399,10 @@ function main() {
       }
     }
 
-    // Resolve static event DynamicVars
-    const STATIC_VARS = { '{Setting1Hp}': '75', '{Setting2Hp}': '150', '{Setting3Hp}': '300' };
-    const resolveVars = (t) => { if (!t) return t; for (const [k, v] of Object.entries(STATIC_VARS)) t = t.replaceAll(k, v); return t; };
-    for (const ev of Object.values(nextEvents)) {
-      if (ev.description) ev.description = resolveVars(ev.description);
-      if (ev.choices) for (const c of ev.choices) { if (c.description) c.description = resolveVars(c.description); }
-      if (ev.pages) for (const p of ev.pages) {
-        if (p.description) p.description = resolveVars(p.description);
-        if (p.choices) for (const c of p.choices) { if (c.description) c.description = resolveVars(c.description); }
-      }
-    }
+    // Resolve static event DynamicVars extracted from C# source
+    const eventVarMap = extractEventVarsFromCs();
+    const resolvedCount = resolveEventVars(nextEvents, eventVarMap, existing, iso);
+    if (resolvedCount > 0) console.log(`  [${iso}] Resolved ${resolvedCount} event var substitutions`);
 
     existing.events = nextEvents;
     fs.writeFileSync(outPath, JSON.stringify(existing, null, 2) + '\n', 'utf8');
