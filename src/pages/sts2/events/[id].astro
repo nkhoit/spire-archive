@@ -23,6 +23,18 @@ const ancientRelicPools = event.relic_pools ?? [];
 const hasAncientRelicPools = isAncient && ancientRelicPools.length > 0;
 const showStandardChoices = !hasAncientRelicPools;
 
+function getRefPreviewData(ref: any) {
+  const imgBase = ref.type === 'card' ? '/images/sts2/cards/' :
+                  ref.type === 'relic' ? '/images/sts2/relics/' :
+                  ref.type === 'potion' ? '/images/sts2/potions/' : null;
+  const img = imgBase ? `${imgBase}${ref.id.toLowerCase()}.png` : null;
+  let desc = '';
+  if (ref.type === 'card') desc = data.cardById.get(ref.id)?.description ?? '';
+  else if (ref.type === 'relic') desc = data.relicById.get(ref.id)?.description ?? '';
+  else if (ref.type === 'potion') desc = data.potionById.get(ref.id)?.description ?? '';
+  return { img, desc };
+}
+
 function linkifyRefs(text: string, refs?: any[], langPrefix?: string): string {
   const prefix = langPrefix ?? '';
   if (!refs?.length || !text) return replaceGameTokens(text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'));
@@ -35,9 +47,15 @@ function linkifyRefs(text: string, refs?: any[], langPrefix?: string): string {
                  ref.type === 'effect' ? `${prefix}/sts2/effects/${ref.id}` :
                  ref.type === 'character' ? `${prefix}/sts2/characters/${ref.id}` : null;
     if (!href) continue;
+    const { img, desc } = getRefPreviewData(ref);
     const escaped = ref.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const re = new RegExp(`(?<!<[^>]*)\\b(${escaped})\\b`, 'gi');
-    html = html.replace(re, `<a href="${href}" class="text-amber-200 underline decoration-amber-500/40 hover:decoration-amber-400 transition-colors">$1</a>`);
+    const dataAttrs = [
+      `data-preview-type="${ref.type}"`,
+      img ? `data-preview-img="${img}"` : '',
+      desc ? `data-preview-desc="${replaceGameTokens(desc).replace(/"/g, '&quot;')}"` : '',
+    ].filter(Boolean).join(' ');
+    html = html.replace(re, `<a href="${href}" ${dataAttrs} class="ref-link text-amber-200 underline decoration-amber-500/40 hover:decoration-amber-400 transition-colors">$1</a>`);
   }
   return replaceGameTokens(html);
 }
@@ -215,3 +233,114 @@ function getPoolLabel(name: string, locale: string) {
     );
   })}
 </Layout>
+
+<style is:global>
+  .ref-preview {
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+    max-width: 280px;
+    background: linear-gradient(135deg, #1a1f2e 0%, #111827 100%);
+    border: 1px solid rgba(251, 191, 36, 0.25);
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,.6), 0 0 0 1px rgba(0,0,0,.3);
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    font-family: 'KreonGame', 'Kreon', serif;
+  }
+  .ref-preview.visible { opacity: 1; }
+  .ref-preview img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+  .ref-preview.card-preview img {
+    width: 64px;
+    height: 64px;
+  }
+  .ref-preview-text {
+    min-width: 0;
+  }
+  .ref-preview-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fbbf24;
+    line-height: 1.2;
+  }
+  .ref-preview-desc {
+    font-size: 12px;
+    color: #cbd5e1;
+    line-height: 1.4;
+    margin-top: 4px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
+
+<script>
+  const preview = document.createElement('div');
+  preview.className = 'ref-preview';
+  document.body.appendChild(preview);
+
+  let activeLink: HTMLElement | null = null;
+
+  function show(link: HTMLElement, e: MouseEvent) {
+    const type = link.dataset.previewType;
+    const img = link.dataset.previewImg;
+    const desc = link.dataset.previewDesc;
+    const name = link.textContent ?? '';
+    if (!type) return;
+
+    preview.className = `ref-preview ${type}-preview`;
+    preview.innerHTML = `
+      ${img ? `<img src="${img}" alt="" />` : ''}
+      <div class="ref-preview-text">
+        <div class="ref-preview-name">${name}</div>
+        ${desc ? `<div class="ref-preview-desc">${desc}</div>` : ''}
+      </div>
+    `;
+    position(e);
+    requestAnimationFrame(() => preview.classList.add('visible'));
+    activeLink = link;
+  }
+
+  function position(e: MouseEvent) {
+    const pad = 12;
+    let x = e.clientX + pad;
+    let y = e.clientY + pad;
+    // Prevent going off-screen right
+    if (x + 290 > window.innerWidth) x = e.clientX - 290 - pad;
+    // Prevent going off-screen bottom
+    if (y + 120 > window.innerHeight) y = e.clientY - 120;
+    preview.style.left = `${x}px`;
+    preview.style.top = `${y}px`;
+  }
+
+  function hide() {
+    preview.classList.remove('visible');
+    activeLink = null;
+  }
+
+  document.addEventListener('mouseover', (e) => {
+    const link = (e.target as HTMLElement).closest?.('.ref-link') as HTMLElement;
+    if (link && link !== activeLink && link.dataset.previewType) {
+      show(link, e);
+    }
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (activeLink) position(e);
+  });
+
+  document.addEventListener('mouseout', (e) => {
+    const link = (e.target as HTMLElement).closest?.('.ref-link');
+    if (link && link === activeLink) hide();
+  });
+</script>
