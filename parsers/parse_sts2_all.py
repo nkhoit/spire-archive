@@ -211,6 +211,7 @@ def parse_cards():
             keywords = []
         tags = list(set(t for t in re.findall(r'CardTag\.(\w+)', text) if t != "None"))
         
+        raw_cost = int(m.group(1))
         upgrade = {}
         # Simple pattern: VarName.UpgradeValueBy(Xm)
         for um in re.finditer(r'(\w+)\.UpgradeValueBy\((\-?\d+)m\)', text):
@@ -237,7 +238,6 @@ def parse_cards():
         for um in re.finditer(r'RemoveKeyword\(CardKeyword\.(\w+)\)', text):
             upgrade.setdefault("remove_keywords", []).append(um.group(1))
         
-        raw_cost = int(m.group(1))
         card_id = class_to_id(name)
         vars_data = parse_dynamic_vars(text)
         
