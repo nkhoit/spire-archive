@@ -133,7 +133,17 @@ def parse_cards():
         # X-cost detection
         is_x_cost = 'HasEnergyCostX => true' in text
         
-        keywords = list(set(k for k in re.findall(r'CardKeyword\.(\w+)', text) if k != "None"))
+        # Extract keywords only from CanonicalKeywords property (not OnUpgrade)
+        canon_kw_match = re.search(r'CanonicalKeywords\s*=>\s*(.*?)(?:;\s*$|\n\s*\n)', text, re.MULTILINE | re.DOTALL)
+        if canon_kw_match:
+            canon_block = canon_kw_match.group(1)
+            # Grab up to the closing semicolon of the property
+            semi_pos = text.find(';', canon_kw_match.start())
+            if semi_pos != -1:
+                canon_block = text[canon_kw_match.start():semi_pos+1]
+            keywords = list(set(k for k in re.findall(r'CardKeyword\.(\w+)', canon_block) if k != "None"))
+        else:
+            keywords = []
         tags = list(set(t for t in re.findall(r'CardTag\.(\w+)', text) if t != "None"))
         
         upgrade = {}
