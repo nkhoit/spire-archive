@@ -5289,7 +5289,7 @@
       "choices": [
         {
           "name": "Blau",
-          "description": "Erhalte 3 Defekte-Karte."
+          "description": "Erhalte 3 Defekte-{Cards:plural:Karte|Karten}."
         },
         {
           "name": "Ebenbürtigkeit",
@@ -5297,19 +5297,19 @@
         },
         {
           "name": "Rot",
-          "description": "Erhalte 3 Eisernen-Karte."
+          "description": "Erhalte 3 Eisernen-{Cards:plural:Karte|Karten}."
         },
         {
           "name": "Rosa",
-          "description": "Erhalte 3 Totenbinderin-Karte."
+          "description": "Erhalte 3 Totenbinderin-{Cards:plural:Karte|Karten}."
         },
         {
           "name": "Orange",
-          "description": "Erhalte 3 Regenten-Karte."
+          "description": "Erhalte 3 Regenten-{Cards:plural:Karte|Karten}."
         },
         {
           "name": "Grün",
-          "description": "Erhalte 3 Stille-Karte."
+          "description": "Erhalte 3 Stille-{Cards:plural:Karte|Karten}."
         }
       ]
     },
@@ -5571,7 +5571,7 @@
       "choices": [
         {
           "name": "Tränke mitnehmen",
-          "description": "Beschaffe 3 Fauligen Trank."
+          "description": "Beschaffe 3 {FoulPotions:plural:Fauligen Trank|Faulige Tränke}."
         },
         {
           "name": "Wühlen",
@@ -5919,7 +5919,7 @@
           "choices": [
             {
               "name": "Chaos",
-              "description": "Erhalte eine zufällige Karte auf deine Hand. Sie kostet in diesem Zug 0 [E]."
+              "description": "Erhalte eine zufällige Karte auf deine Hand. Sie kostet in diesem Zug 0 {energyPrefix:energyIcons(1)}."
             },
             {
               "name": "Würgend",
@@ -5927,11 +5927,11 @@
             },
             {
               "name": "Neugierig",
-              "description": "Mächte kosten 1 [E] weniger."
+              "description": "Mächte kosten 1 {energyPrefix:energyIcons(1)} weniger."
             },
             {
               "name": "Energetisch",
-              "description": "Erhalte [E]."
+              "description": "Erhalte {EnergizedEnergy:energyIcons()}."
             },
             {
               "name": "Expertise",
@@ -6023,7 +6023,7 @@
         },
         {
           "name": "Dorniger Schwamm",
-          "description": "Zahle 155 Gold. Verzaubere 2 Karte mit Beständig."
+          "description": "Zahle 155 Gold. Verzaubere 2 {Cards:plural:Karte|Karten} mit Beständig."
         },
         {
           "name": "Gesperrt",
@@ -6145,7 +6145,7 @@
         },
         {
           "name": "Goldene Perle",
-          "description": "Erhalte beim Aufheben X Gold.",
+          "description": "Erhalte beim Aufheben 150 Gold.",
           "relic_id": "GOLDEN_PEARL",
           "pool": "positive"
         },
@@ -6181,7 +6181,7 @@
         },
         {
           "name": "Verfluchte Perle",
-          "description": "Erhalte beim Aufheben Gier. Erhalte X Gold.",
+          "description": "Erhalte beim Aufheben Gier. Erhalte 333 Gold.",
           "relic_id": "CURSED_PEARL",
           "pool": "cursed"
         },

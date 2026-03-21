@@ -5289,7 +5289,7 @@
       "choices": [
         {
           "name": "Azul",
-          "description": "Receba 3 carta do Defeituoso."
+          "description": "Receba 3 {Cards:plural:carta|cartas} do Defeituoso."
         },
         {
           "name": "Igualdade",
@@ -5297,19 +5297,19 @@
         },
         {
           "name": "Vermelho",
-          "description": "Receba 3 carta do Rígido."
+          "description": "Receba 3 {Cards:plural:carta|cartas} do Rígido."
         },
         {
           "name": "Rosa",
-          "description": "Receba 3 carta da Necroartífice."
+          "description": "Receba 3 {Cards:plural:carta|cartas} da Necroartífice."
         },
         {
           "name": "Laranja",
-          "description": "Receba 3 carta do Regente."
+          "description": "Receba 3 {Cards:plural:carta|cartas} do Regente."
         },
         {
           "name": "Verde",
-          "description": "Receba 3 carta da Sorrateira."
+          "description": "Receba 3 {Cards:plural:carta|cartas} da Sorrateira."
         }
       ]
     },
@@ -5571,7 +5571,7 @@
       "choices": [
         {
           "name": "Recolher Poções",
-          "description": "Receba 3 Poção Nefasta."
+          "description": "Receba 3 {FoulPotions:plural:Poção Nefasta|Poções Nefastas}."
         },
         {
           "name": "Vasculhar",
@@ -5919,7 +5919,7 @@
           "choices": [
             {
               "name": "Caos",
-              "description": "Adicione uma carta aleatória na sua Mão. Ela custa 0 [E] neste turno."
+              "description": "Adicione uma carta aleatória na sua Mão. Ela custa 0 {energyPrefix:energyIcons(1)} neste turno."
             },
             {
               "name": "Asfixia",
@@ -5927,11 +5927,11 @@
             },
             {
               "name": "Curiosidade",
-              "description": "Poderes custam 1 [E] a menos."
+              "description": "Poderes custam 1 {energyPrefix:energyIcons(1)} a menos."
             },
             {
               "name": "Estimular",
-              "description": "Receba [E]."
+              "description": "Receba {EnergizedEnergy:energyIcons()}."
             },
             {
               "name": "Perícia",
@@ -6023,7 +6023,7 @@
         },
         {
           "name": "Esponja Espinhosa",
-          "description": "Pague 155 de Ouro. Encante 2 carta com Prontidão."
+          "description": "Pague 155 de Ouro. Encante 2 {Cards:plural:carta|cartas} com Prontidão."
         },
         {
           "name": "Bloqueado",
@@ -6145,7 +6145,7 @@
         },
         {
           "name": "Pérola Dourada",
-          "description": "Ao coletar esta relíquia, receba X de Ouro.",
+          "description": "Ao coletar esta relíquia, receba 150 de Ouro.",
           "relic_id": "GOLDEN_PEARL",
           "pool": "positive"
         },
@@ -6181,7 +6181,7 @@
         },
         {
           "name": "Pérola Amaldiçoada",
-          "description": "Ao coletar esta relíquia, receba Ganância. Receba X de Ouro.",
+          "description": "Ao coletar esta relíquia, receba Ganância. Receba 333 de Ouro.",
           "relic_id": "CURSED_PEARL",
           "pool": "cursed"
         },

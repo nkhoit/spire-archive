@@ -5919,7 +5919,7 @@
           "choices": [
             {
               "name": "혼돈",
-              "description": "무작위 카드를 1장 손으로 가져옵니다. 이번 턴 동안 그 카드의 비용이 0 [E]이 됩니다."
+              "description": "무작위 카드를 1장 손으로 가져옵니다. 이번 턴 동안 그 카드의 비용이 0 {energyPrefix:energyIcons(1)}이 됩니다."
             },
             {
               "name": "질식",
@@ -5927,11 +5927,11 @@
             },
             {
               "name": "호기심",
-              "description": "파워 카드의 비용이 1 [E] 감소합니다."
+              "description": "파워 카드의 비용이 1 {energyPrefix:energyIcons(1)} 감소합니다."
             },
             {
               "name": "충전",
-              "description": "[E]를 얻습니다."
+              "description": "{EnergizedEnergy:energyIcons()}를 얻습니다."
             },
             {
               "name": "전문성",
@@ -6145,7 +6145,7 @@
         },
         {
           "name": "황금 진주",
-          "description": "획득 시, 골드를 X 얻습니다.",
+          "description": "획득 시, 골드를 150 얻습니다.",
           "relic_id": "GOLDEN_PEARL",
           "pool": "positive"
         },
@@ -6181,7 +6181,7 @@
         },
         {
           "name": "저주받은 진주",
-          "description": "획득 시, 탐욕을 받습니다. 골드를 X 획득합니다.",
+          "description": "획득 시, 탐욕을 받습니다. 골드를 333 획득합니다.",
           "relic_id": "CURSED_PEARL",
           "pool": "cursed"
         },

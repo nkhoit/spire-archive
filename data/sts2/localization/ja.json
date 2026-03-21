@@ -5919,7 +5919,7 @@
           "choices": [
             {
               "name": "混沌",
-              "description": "ランダムなカードを1枚手札に加える。 このターン、そのコストは0[E]。"
+              "description": "ランダムなカードを1枚手札に加える。 このターン、そのコストは0{energyPrefix:energyIcons(1)}。"
             },
             {
               "name": "窒息",
@@ -5927,11 +5927,11 @@
             },
             {
               "name": "好奇心",
-              "description": "パワーのコストが1[E]減少する。"
+              "description": "パワーのコストが1{energyPrefix:energyIcons(1)}減少する。"
             },
             {
               "name": "活性化",
-              "description": "[E]を得る。"
+              "description": "{EnergizedEnergy:energyIcons()}を得る。"
             },
             {
               "name": "専門家",
@@ -6145,7 +6145,7 @@
         },
         {
           "name": "黄金の真珠",
-          "description": "取得時、Xゴールドを獲得する。",
+          "description": "取得時、150ゴールドを獲得する。",
           "relic_id": "GOLDEN_PEARL",
           "pool": "positive"
         },
@@ -6181,7 +6181,7 @@
         },
         {
           "name": "呪いの真珠",
-          "description": "取得時、強欲を受け取る。Xゴールドを獲得する。",
+          "description": "取得時、強欲を受け取る。333ゴールドを獲得する。",
           "relic_id": "CURSED_PEARL",
           "pool": "cursed"
         },

@@ -5289,7 +5289,7 @@
       "choices": [
         {
           "name": "Mavi",
-          "description": "3 Arıza kartı elde et."
+          "description": "3 Arıza {Cards:plural:kartı|kartı} elde et."
         },
         {
           "name": "Eşitlik",
@@ -5297,19 +5297,19 @@
         },
         {
           "name": "Kırmızı",
-          "description": "3 Demirkaplı kartı elde et."
+          "description": "3 Demirkaplı {Cards:plural:kartı|kartı} elde et."
         },
         {
           "name": "Pembe",
-          "description": "3 Ölübağlayan kartı elde et."
+          "description": "3 Ölübağlayan {Cards:plural:kartı|kartı} elde et."
         },
         {
           "name": "Turuncu",
-          "description": "3 Naip kartı elde et."
+          "description": "3 Naip {Cards:plural:kartı|kartı} elde et."
         },
         {
           "name": "Yeşil",
-          "description": "3 Sessiz kartı elde et."
+          "description": "3 Sessiz {Cards:plural:kartı|kartı} elde et."
         }
       ]
     },
@@ -5571,7 +5571,7 @@
       "choices": [
         {
           "name": "İksirleri Al",
-          "description": "3 adet İğrenç İksir elde et."
+          "description": "3 adet İğrenç {FoulPotions:plural:İksir|İksir} elde et."
         },
         {
           "name": "Yağmala",
@@ -5919,7 +5919,7 @@
           "choices": [
             {
               "name": "Kaos",
-              "description": "El'ine rastgele bir kart ekle. Bu tur maliyeti 0 [E] olur."
+              "description": "El'ine rastgele bir kart ekle. Bu tur maliyeti 0 {energyPrefix:energyIcons(1)} olur."
             },
             {
               "name": "Boğucu",
@@ -5927,11 +5927,11 @@
             },
             {
               "name": "Meraklı",
-              "description": "Güç kartlarının maliyeti 1 [E] azalır."
+              "description": "Güç kartlarının maliyeti 1 {energyPrefix:energyIcons(1)} azalır."
             },
             {
               "name": "Enerji Yüklü",
-              "description": "[E] elde et."
+              "description": "{EnergizedEnergy:energyIcons()} elde et."
             },
             {
               "name": "Uzmanlık",
@@ -6023,7 +6023,7 @@
         },
         {
           "name": "Dikenli Sünger",
-          "description": "155 Altın öde. 2 kartı Sabit ile Büyüle."
+          "description": "155 Altın öde. 2 {Cards:plural:kartı|kartı} Sabit ile Büyüle."
         },
         {
           "name": "Kilitli",
@@ -6145,7 +6145,7 @@
         },
         {
           "name": "Altın İnci",
-          "description": "Bu kalıntıyı aldığında X Altın elde et.",
+          "description": "Bu kalıntıyı aldığında 150 Altın elde et.",
           "relic_id": "GOLDEN_PEARL",
           "pool": "positive"
         },
@@ -6181,7 +6181,7 @@
         },
         {
           "name": "Lanetli İnci",
-          "description": "Bu kalıntıyı aldığında Açgözlülük elde et. X Altın elde et.",
+          "description": "Bu kalıntıyı aldığında Açgözlülük elde et. 333 Altın elde et.",
           "relic_id": "CURSED_PEARL",
           "pool": "cursed"
         },

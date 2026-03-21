@@ -5919,7 +5919,7 @@
           "choices": [
             {
               "name": "混沌",
-              "description": "将一张随机牌放入你的手牌。这张牌在本回合这张牌在本回合耗能变为0[E]。"
+              "description": "将一张随机牌放入你的手牌。这张牌在本回合这张牌在本回合耗能变为0{energyPrefix:energyIcons(1)}。"
             },
             {
               "name": "扼杀",
@@ -5927,11 +5927,11 @@
             },
             {
               "name": "好奇",
-              "description": "能力牌的耗能减少1[E]。"
+              "description": "能力牌的耗能减少1{energyPrefix:energyIcons(1)}。"
             },
             {
               "name": "充能",
-              "description": "获得[E]。"
+              "description": "获得{EnergizedEnergy:energyIcons()}。"
             },
             {
               "name": "专长",
@@ -6145,7 +6145,7 @@
         },
         {
           "name": "金色珍珠",
-          "description": "拾起时，获得X金币。",
+          "description": "拾起时，获得150金币。",
           "relic_id": "GOLDEN_PEARL",
           "pool": "positive"
         },
@@ -6181,7 +6181,7 @@
         },
         {
           "name": "诅咒珍珠",
-          "description": "拾起时，获得一张贪婪，获得X金币。",
+          "description": "拾起时，获得一张贪婪，获得333金币。",
           "relic_id": "CURSED_PEARL",
           "pool": "cursed"
         },

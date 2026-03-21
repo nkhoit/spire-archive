@@ -661,11 +661,23 @@
     "choices": [
       {
         "name": "Big Mushroom",
-        "description": ""
+        "description": "Obtain Big Mushroom."
       },
       {
         "name": "Fragrant Mushroom",
-        "description": ""
+        "description": "Obtain Fragrant Mushroom. Lose 15 HP."
+      }
+    ],
+    "references": [
+      {
+        "type": "relic",
+        "id": "BIG_MUSHROOM",
+        "name": "Big Mushroom"
+      },
+      {
+        "type": "relic",
+        "id": "FRAGRANT_MUSHROOM",
+        "name": "Fragrant Mushroom"
       }
     ]
   },
@@ -779,7 +791,7 @@
       },
       {
         "name": "Booming Conch",
-        "description": "At the start of Elite combats, draw {Cards} additional {Cards:plural:card|cards}.",
+        "description": "At the start of Elite combats, draw 2 additional cards.",
         "relic_id": "BOOMING_CONCH",
         "pool": "positive"
       },
@@ -791,7 +803,7 @@
       },
       {
         "name": "Golden Pearl",
-        "description": "Upon pickup, gain {Gold} Gold.",
+        "description": "Upon pickup, gain 150 Gold.",
         "relic_id": "GOLDEN_PEARL",
         "pool": "positive"
       },
@@ -803,7 +815,7 @@
       },
       {
         "name": "New Leaf",
-        "description": "Upon pickup, Transform {Cards} {Cards:plural:card|cards}.",
+        "description": "Upon pickup, Transform 1 card.",
         "relic_id": "NEW_LEAF",
         "pool": "positive"
       },
@@ -815,7 +827,7 @@
       },
       {
         "name": "Precise Scissors",
-        "description": "Upon pickup, remove {Cards} {Cards:plural:card|cards} from your Deck.",
+        "description": "Upon pickup, remove 1 card from your Deck.",
         "relic_id": "PRECISE_SCISSORS",
         "pool": "positive"
       },
@@ -827,37 +839,37 @@
       },
       {
         "name": "Cursed Pearl",
-        "description": "Upon pickup, receive Greed. Gain {Gold} Gold.",
+        "description": "Upon pickup, receive Greed. Gain 333 Gold.",
         "relic_id": "CURSED_PEARL",
         "pool": "cursed"
       },
       {
         "name": "Large Capsule",
-        "description": "Upon pickup, obtain {Relics} random {Relics:plural:Relic|Relics}. Add an additional Strike and Defend to your Deck.",
+        "description": "Upon pickup, obtain 2 random Relics. Add an additional Strike and Defend to your Deck.",
         "relic_id": "LARGE_CAPSULE",
         "pool": "cursed"
       },
       {
         "name": "Leafy Poultice",
-        "description": "Upon pickup, Transform 1 of your Strikes and 1 of your Defends and lose {MaxHp} Max HP.",
+        "description": "Upon pickup, Transform 1 of your Strikes and 1 of your Defends and lose 10 Max HP.",
         "relic_id": "LEAFY_POULTICE",
         "pool": "cursed"
       },
       {
         "name": "Precarious Shears",
-        "description": "Upon pickup, remove {Cards} {Cards:plural:card|cards} from your Deck and take {Damage} damage.",
+        "description": "Upon pickup, remove 2 cards from your Deck and take 13 damage.",
         "relic_id": "PRECARIOUS_SHEARS",
         "pool": "cursed"
       },
       {
         "name": "Nutritious Oyster",
-        "description": "Upon pickup, raise your Max HP by {MaxHp}.",
+        "description": "Upon pickup, raise your Max HP by 11.",
         "relic_id": "NUTRITIOUS_OYSTER",
         "pool": "positive"
       },
       {
         "name": "Stone Humidifier",
-        "description": "Whenever you Rest at a Rest Site, raise your Max HP by {MaxHp}.",
+        "description": "Whenever you Rest at a Rest Site, raise your Max HP by 5.",
         "relic_id": "STONE_HUMIDIFIER",
         "pool": "positive"
       },
@@ -869,7 +881,7 @@
       },
       {
         "name": "Lava Rock",
-        "description": "The Act 1 Boss drops {Relics} Relics.",
+        "description": "The Act 1 Boss drops 2 Relics.",
         "relic_id": "LAVA_ROCK",
         "pool": "positive"
       },
@@ -881,7 +893,7 @@
       },
       {
         "name": "Silver Crucible",
-        "description": "The first {Cards} card rewards you see are Upgraded. The first Treasure Chest you open is empty.",
+        "description": "The first 3 card rewards you see are Upgraded. The first Treasure Chest you open is empty.",
         "relic_id": "SILVER_CRUCIBLE",
         "pool": "cursed"
       },

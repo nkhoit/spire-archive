@@ -4732,16 +4732,16 @@
         {
           "choices": [
             {
-              "description": "เพิ่มการ์ด 1 ใบแบบสุ่มใส่มือ มันมีค่าร่าย 0 [E] ในเทิร์นนี้"
+              "description": "เพิ่มการ์ด 1 ใบแบบสุ่มใส่มือ มันมีค่าร่าย 0 {energyPrefix:energyIcons(1)} ในเทิร์นนี้"
             },
             {
               "description": "ทุกครั้งที่คุณเล่นการ์ดในเทิร์นนี้ ศัตรูเสีย 6 HP"
             },
             {
-              "description": "การ์ดพลังมีค่าร่ายลดลง 1 [E]"
+              "description": "การ์ดพลังมีค่าร่ายลดลง 1 {energyPrefix:energyIcons(1)}"
             },
             {
-              "description": "ได้รับ [E]"
+              "description": "ได้รับ {EnergizedEnergy:energyIcons()}"
             },
             {
               "name": "ความช่ำชอง",
@@ -4808,7 +4808,7 @@
         },
         {
           "name": "Booming Conch",
-          "description": "At the start of Elite combats, draw 2 additional card.",
+          "description": "At the start of Elite combats, draw 2 additional cards.",
           "relic_id": "BOOMING_CONCH",
           "pool": "positive"
         },
@@ -4820,7 +4820,7 @@
         },
         {
           "name": "ไข่มุกทองคำ",
-          "description": "เมื่อรับมา ได้รับ X ทอง",
+          "description": "เมื่อรับมา ได้รับ 150 ทอง",
           "relic_id": "GOLDEN_PEARL",
           "pool": "positive"
         },
@@ -4856,7 +4856,7 @@
         },
         {
           "name": "Cursed Pearl",
-          "description": "เมื่อรับมา ได้รับGreed ได้รับ X ทอง",
+          "description": "เมื่อรับมา ได้รับGreed ได้รับ 333 ทอง",
           "relic_id": "CURSED_PEARL",
           "pool": "cursed"
         },

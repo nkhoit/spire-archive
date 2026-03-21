@@ -535,6 +535,10 @@ function applyManualFixes(events, relicsData = []) {
         { type: 'relic', id: 'MAW_BANK', name: 'Maw Bank' },
         { type: 'relic', id: 'THE_BOOT', name: 'The Boot' },
       ],
+      HUNGRY_FOR_MUSHROOMS: [
+        { type: 'relic', id: 'BIG_MUSHROOM', name: 'Big Mushroom' },
+        { type: 'relic', id: 'FRAGRANT_MUSHROOM', name: 'Fragrant Mushroom' },
+      ],
       TRIAL: [
         { type: 'card', id: 'REGRET', name: 'Regret' },
         { type: 'card', id: 'SHAME', name: 'Shame' },
@@ -544,6 +548,21 @@ function applyManualFixes(events, relicsData = []) {
 
     if (MANUAL_EVENT_REFS[event.id]) {
       event.references = dedupeReferences([...(event.references || []), ...MANUAL_EVENT_REFS[event.id]]);
+    }
+
+    // Manual choice description overrides (from C# RelicOption/CardOption patterns)
+    const CHOICE_DESC_OVERRIDES = {
+      HUNGRY_FOR_MUSHROOMS: {
+        'Big Mushroom': 'Obtain Big Mushroom.',
+        'Fragrant Mushroom': 'Obtain Fragrant Mushroom. Lose 15 HP.',
+      },
+    };
+    if (CHOICE_DESC_OVERRIDES[event.id]) {
+      for (const c of (event.choices || [])) {
+        if (CHOICE_DESC_OVERRIDES[event.id][c.name] && !c.description) {
+          c.description = CHOICE_DESC_OVERRIDES[event.id][c.name];
+        }
+      }
     }
 
     // Resolve static event DynamicVars (values from C# source)

@@ -5649,7 +5649,7 @@
           "choices": [
             {
               "name": "Chaos",
-              "description": "Add a random card into your Hand. W tej turze kosztuje 0 [E]."
+              "description": "Add a random card into your Hand. W tej turze kosztuje 0 {energyPrefix:energyIcons(1)}."
             },
             {
               "name": "Duszenie",
@@ -5657,11 +5657,11 @@
             },
             {
               "name": "Ciekawość",
-              "description": "Moce kosztują 1 [E] mniej."
+              "description": "Moce kosztują 1 {energyPrefix:energyIcons(1)} mniej."
             },
             {
               "name": "Zasilanie",
-              "description": "Zyskaj [E]."
+              "description": "Zyskaj {EnergizedEnergy:energyIcons()}."
             },
             {
               "name": "Ekspertyza",
@@ -5844,7 +5844,7 @@
         },
         {
           "name": "Szumiąca muszla",
-          "description": "At the start of Elite combats, draw 2 additional card.",
+          "description": "At the start of Elite combats, draw 2 additional cards.",
           "relic_id": "BOOMING_CONCH",
           "pool": "positive"
         },
@@ -5856,7 +5856,7 @@
         },
         {
           "name": "Złota perła",
-          "description": "Przy podniesieniu zyskaj X szt. Złota.",
+          "description": "Przy podniesieniu zyskaj 150 szt. Złota.",
           "relic_id": "GOLDEN_PEARL",
           "pool": "positive"
         },
@@ -5892,13 +5892,13 @@
         },
         {
           "name": "Przeklęta perła",
-          "description": "Przy podniesieniu otrzymaj Chciwość. Zyskaj X szt. Złota.",
+          "description": "Przy podniesieniu otrzymaj Chciwość. Zyskaj 333 szt. Złota.",
           "relic_id": "CURSED_PEARL",
           "pool": "cursed"
         },
         {
           "name": "Wielka kapsuła",
-          "description": "Upon pickup, obtain 2 random Relic. Add an additional Strike and Defend to your Deck.",
+          "description": "Upon pickup, obtain 2 random Relics. Add an additional Strike and Defend to your Deck.",
           "relic_id": "LARGE_CAPSULE",
           "pool": "cursed"
         },
@@ -5910,7 +5910,7 @@
         },
         {
           "name": "Niebezpieczne nożyce",
-          "description": "Upon pickup, remove 2 card from your Deck and take 13 damage.",
+          "description": "Upon pickup, remove 2 cards from your Deck and take 13 damage.",
           "relic_id": "PRECARIOUS_SHEARS",
           "pool": "cursed"
         },

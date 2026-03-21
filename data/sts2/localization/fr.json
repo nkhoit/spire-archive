@@ -5289,7 +5289,7 @@
       "choices": [
         {
           "name": "Bleu",
-          "description": "Obtenez 3 carte du Défectueux."
+          "description": "Obtenez 3 {Cards:plural:carte|cartes} du Défectueux."
         },
         {
           "name": "Égalité",
@@ -5297,19 +5297,19 @@
         },
         {
           "name": "Rouge",
-          "description": "Obtenez 3 carte du Soldat de Fer."
+          "description": "Obtenez 3 {Cards:plural:carte|cartes} du Soldat de Fer."
         },
         {
           "name": "Rose",
-          "description": "Obtenez 3 carte de la Tisse-Mort."
+          "description": "Obtenez 3 {Cards:plural:carte|cartes} de la Tisse-Mort."
         },
         {
           "name": "Orange",
-          "description": "Obtenez 3 carte du Régent."
+          "description": "Obtenez 3 {Cards:plural:carte|cartes} du Régent."
         },
         {
           "name": "Vert",
-          "description": "Obtenez 3 carte de la Silencieuse."
+          "description": "Obtenez 3 {Cards:plural:carte|cartes} de la Silencieuse."
         }
       ]
     },
@@ -5571,7 +5571,7 @@
       "choices": [
         {
           "name": "Prendre les potions",
-          "description": "Obtenez 3 Potion infecte."
+          "description": "Obtenez 3 {FoulPotions:plural:Potion infecte|Potions infectes}."
         },
         {
           "name": "Fouiller",
@@ -5919,7 +5919,7 @@
           "choices": [
             {
               "name": "Chaos",
-              "description": "Ajoutez une carte aléatoire à votre Main. Elle coûte 0 [E] pendant ce tour."
+              "description": "Ajoutez une carte aléatoire à votre Main. Elle coûte 0 {energyPrefix:energyIcons(1)} pendant ce tour."
             },
             {
               "name": "Étranglement",
@@ -5927,11 +5927,11 @@
             },
             {
               "name": "Curiosité",
-              "description": "Les Pouvoirs coûtent 1 [E] de moins."
+              "description": "Les Pouvoirs coûtent 1 {energyPrefix:energyIcons(1)} de moins."
             },
             {
               "name": "Stimulation",
-              "description": "Gagnez [E]."
+              "description": "Gagnez {EnergizedEnergy:energyIcons()}."
             },
             {
               "name": "Expertise",
@@ -6023,7 +6023,7 @@
         },
         {
           "name": "Éponge rêche",
-          "description": "Payez 155 Pièces d’or. Envoûtez 2 carte avec Stabilité."
+          "description": "Payez 155 Pièces d’or. Envoûtez 2 {Cards:plural:carte|cartes} avec Stabilité."
         },
         {
           "name": "Verrouillé",
@@ -6145,7 +6145,7 @@
         },
         {
           "name": "Perle dorée",
-          "description": "Lorsque vous obtenez cette relique, gagnez X Pièces d'or.",
+          "description": "Lorsque vous obtenez cette relique, gagnez 150 Pièces d'or.",
           "relic_id": "GOLDEN_PEARL",
           "pool": "positive"
         },
@@ -6181,7 +6181,7 @@
         },
         {
           "name": "Perle maudite",
-          "description": "Lorsque vous obtenez cette relique, recevez Cupidité. Obtenez X Pièces d'or.",
+          "description": "Lorsque vous obtenez cette relique, recevez Cupidité. Obtenez 333 Pièces d'or.",
           "relic_id": "CURSED_PEARL",
           "pool": "cursed"
         },
