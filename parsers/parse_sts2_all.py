@@ -86,6 +86,9 @@ def build_description_template(raw_loc: str | None, vars_data: dict) -> str | No
     # If no {var_key} placeholders remain, no point storing template
     if not re.search(r'\{[a-z_]+\}', text):
         return None
+    # If unresolved {GameVarName:...} tokens remain, skip template (let fallback handle it)
+    if re.search(r'\{[A-Z]\w*:[^}]+\}', text):
+        return None
     return text
 
 def get_loc_name(loc: dict, entity_id: str) -> str | None:

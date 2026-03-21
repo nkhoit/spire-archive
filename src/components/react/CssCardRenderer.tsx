@@ -283,6 +283,22 @@ function Sts2Renderer({ card, upgraded, size, locale = 'en' }: { card: any; upgr
           const num = parseInt(n);
           return num === 1 ? '[E]' : `[${num} Energy]`;
         });
+        // Resolve {singleStarIcon} → [S]
+        description = description.replace(/\{singleStarIcon\}/g, '[S]');
+        // Resolve {VarName:diff()} → upgraded value (lookup var, apply delta)
+        description = description.replace(/\{(\w+):diff\(\)\}/g, (full, varName) => {
+          // Map game var name to our key
+          const snakeKey = varName.replace(/([A-Z])/g, '_$1').toLowerCase().replace(/^_/, '');
+          const vk = snakeKey in vars ? snakeKey : `power_${snakeKey}` in vars ? `power_${snakeKey}` : null;
+          if (vk) {
+            const base = Math.floor(vars[vk] as number);
+            const delta = (upg[vk] as number) ?? (upg[snakeKey] as number) ?? 0;
+            const val = base + delta;
+            if (delta !== 0) upgradedNumbers.add(String(val));
+            return String(val);
+          }
+          return full;
+        });
         // Replace remaining {var_key} placeholders with base values
         description = description.replace(/\{([a-z_]+)\}/g, (_, key) => {
           return key in vars ? String(Math.floor(vars[key] as number)) : _;
