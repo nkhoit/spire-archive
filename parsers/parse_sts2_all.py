@@ -421,6 +421,9 @@ def parse_monsters():
 def parse_characters():
     chars_dir = DECOMPILED / "MegaCrit.Sts2.Core.Models.Characters"
     
+    # Game order (character select screen)
+    CHARACTER_ORDER = ["Ironclad", "Silent", "Defect", "Necrobinder", "Regent"]
+    
     chars = []
     for f in sorted(chars_dir.glob("*.cs")):
         text = f.read_text()
@@ -468,6 +471,8 @@ def parse_characters():
             "starting_relic": starting_relic,
             "description": None,
         })
+    order_map = {name: i for i, name in enumerate(CHARACTER_ORDER)}
+    chars.sort(key=lambda c: order_map.get(c["name"], 999))
     return chars
 
 # ============ KEYWORDS ============

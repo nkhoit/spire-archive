@@ -1,26 +1,5 @@
 [
   {
-    "id": "DEFECT",
-    "name": "Defect",
-    "hp": 75,
-    "starting_gold": 99,
-    "energy_per_turn": 3,
-    "starting_deck": [
-      "STRIKE_DEFECT",
-      "STRIKE_DEFECT",
-      "STRIKE_DEFECT",
-      "STRIKE_DEFECT",
-      "DEFEND_DEFECT",
-      "DEFEND_DEFECT",
-      "DEFEND_DEFECT",
-      "DEFEND_DEFECT",
-      "ZAP",
-      "DUALCAST"
-    ],
-    "starting_relic": "CRACKED_CORE",
-    "description": null
-  },
-  {
     "id": "IRONCLAD",
     "name": "Ironclad",
     "hp": 80,
@@ -39,6 +18,50 @@
       "BASH"
     ],
     "starting_relic": "BURNING_BLOOD",
+    "description": null
+  },
+  {
+    "id": "SILENT",
+    "name": "Silent",
+    "hp": 70,
+    "starting_gold": 99,
+    "energy_per_turn": 3,
+    "starting_deck": [
+      "STRIKE_SILENT",
+      "STRIKE_SILENT",
+      "STRIKE_SILENT",
+      "STRIKE_SILENT",
+      "STRIKE_SILENT",
+      "DEFEND_SILENT",
+      "DEFEND_SILENT",
+      "DEFEND_SILENT",
+      "DEFEND_SILENT",
+      "DEFEND_SILENT",
+      "NEUTRALIZE",
+      "SURVIVOR"
+    ],
+    "starting_relic": "RING_OF_THE_SNAKE",
+    "description": null
+  },
+  {
+    "id": "DEFECT",
+    "name": "Defect",
+    "hp": 75,
+    "starting_gold": 99,
+    "energy_per_turn": 3,
+    "starting_deck": [
+      "STRIKE_DEFECT",
+      "STRIKE_DEFECT",
+      "STRIKE_DEFECT",
+      "STRIKE_DEFECT",
+      "DEFEND_DEFECT",
+      "DEFEND_DEFECT",
+      "DEFEND_DEFECT",
+      "DEFEND_DEFECT",
+      "ZAP",
+      "DUALCAST"
+    ],
+    "starting_relic": "CRACKED_CORE",
     "description": null
   },
   {
@@ -81,29 +104,6 @@
       "VENERATE"
     ],
     "starting_relic": "DIVINE_RIGHT",
-    "description": null
-  },
-  {
-    "id": "SILENT",
-    "name": "Silent",
-    "hp": 70,
-    "starting_gold": 99,
-    "energy_per_turn": 3,
-    "starting_deck": [
-      "STRIKE_SILENT",
-      "STRIKE_SILENT",
-      "STRIKE_SILENT",
-      "STRIKE_SILENT",
-      "STRIKE_SILENT",
-      "DEFEND_SILENT",
-      "DEFEND_SILENT",
-      "DEFEND_SILENT",
-      "DEFEND_SILENT",
-      "DEFEND_SILENT",
-      "NEUTRALIZE",
-      "SURVIVOR"
-    ],
-    "starting_relic": "RING_OF_THE_SNAKE",
     "description": null
   }
 ]
