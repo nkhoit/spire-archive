@@ -61,7 +61,11 @@ def build_description_template(raw_loc: str | None, vars_data: dict) -> str | No
         return None  # No vars to template
 
     def replace_var(m):
+        full = m.group(0)
         var_name = m.group(1)
+        # Don't template energy icon patterns — they resolve to [E] symbols, not numbers
+        if 'energyIcons' in full or 'energyPrefix' in full:
+            return full
         # Check direct mapping
         key = GAME_VAR_TO_KEY.get(var_name)
         if key and key in vars_data:

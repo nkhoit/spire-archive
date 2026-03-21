@@ -124,8 +124,7 @@
       "energy": 1
     },
     "description": "Gain [E].\nDraw 2 cards.",
-    "image_url": "/images/sts2/cards/adrenaline.png",
-    "description_template": "Gain {energy}.\nDraw 2 cards."
+    "image_url": "/images/sts2/cards/adrenaline.png"
   },
   {
     "id": "AFTERIMAGE",
@@ -227,7 +226,6 @@
     },
     "description": "Gain [E][E].",
     "image_url": "/images/sts2/cards/alignment.png",
-    "description_template": "Gain {energy}.",
     "star_cost": 2
   },
   {
@@ -403,9 +401,9 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Ethereal",
       "Unplayable",
-      "Eternal"
+      "Eternal",
+      "Ethereal"
     ],
     "tags": [],
     "vars": {},
@@ -499,8 +497,7 @@
       "cost": 0
     },
     "description": "Every 10 cards you draw, gain [E].",
-    "image_url": "/images/sts2/cards/automation.png",
-    "description_template": "Every 10 cards you draw, gain {energy}."
+    "image_url": "/images/sts2/cards/automation.png"
   },
   {
     "id": "BACKFLIP",
@@ -606,7 +603,7 @@
     },
     "description": "Deal 33 damage to ALL enemies.\nCosts [E][E] less for each Ethereal card played this combat.",
     "image_url": "/images/sts2/cards/banshees_cry.png",
-    "description_template": "Deal {damage} damage to ALL enemies.\nCosts {energy} less for each Ethereal card played this combat."
+    "description_template": "Deal {damage} damage to ALL enemies.\nCosts {Energy:energyIcons()} less for each Ethereal card played this combat."
   },
   {
     "id": "BARRAGE",
@@ -829,8 +826,7 @@
       "energy": 1
     },
     "description": "Another player gains [E][E][E].",
-    "image_url": "/images/sts2/cards/believe_in_you.png",
-    "description_template": "Another player gains {energy}."
+    "image_url": "/images/sts2/cards/believe_in_you.png"
   },
   {
     "id": "BIASED_COGNITION",
@@ -1003,7 +999,7 @@
     },
     "description": "Lose 3 HP.\nGain [E][E].",
     "image_url": "/images/sts2/cards/bloodletting.png",
-    "description_template": "Lose {hp_loss} HP.\nGain {energy}."
+    "description_template": "Lose {hp_loss} HP.\nGain {Energy:energyIcons()}."
   },
   {
     "id": "BLUDGEON",
@@ -1214,7 +1210,7 @@
     },
     "description": "Apply 3 Doom to yourself.\nGain [E].",
     "image_url": "/images/sts2/cards/borrowed_time.png",
-    "description_template": "Apply {power_doom} Doom to yourself.\nGain {energy}."
+    "description_template": "Apply {power_doom} Doom to yourself.\nGain {Energy:energyIcons()}."
   },
   {
     "id": "BOUNCING_FLASK",
@@ -1839,7 +1835,7 @@
     },
     "description": "Gain 7 Block.\nNext turn, gain [E].",
     "image_url": "/images/sts2/cards/charge_battery.png",
-    "description_template": "Gain {block} Block.\nNext turn, gain {energy}."
+    "description_template": "Gain {block} Block.\nNext turn, gain {Energy:energyIcons()}."
   },
   {
     "id": "CHILD_OF_THE_STARS",
@@ -2233,7 +2229,7 @@
     },
     "description": "Next turn,\ngain [E] and [S].\nRetain your Hand this turn.",
     "image_url": "/images/sts2/cards/convergence.png",
-    "description_template": "Next turn,\ngain {energy} and {stars_var}.\nRetain your Hand this turn."
+    "description_template": "Next turn,\ngain {Energy:energyIcons()} and {stars_var}.\nRetain your Hand this turn."
   },
   {
     "id": "COOLANT",
@@ -2574,7 +2570,7 @@
     },
     "description": "Whenever you play a card that costs [E][E] or more, gain 3 Block.",
     "image_url": "/images/sts2/cards/danse_macabre.png",
-    "description_template": "Whenever you play a card that costs {energy} or more, gain {power_danse_macabre} Block."
+    "description_template": "Whenever you play a card that costs {Energy:energyIcons()} or more, gain {power_danse_macabre} Block."
   },
   {
     "id": "DARK_EMBRACE",
@@ -3073,7 +3069,7 @@
     },
     "description": "Gain 11 Block.\nNext turn,\ngain [E].",
     "image_url": "/images/sts2/cards/delay.png",
-    "description_template": "Gain {block} Block.\nNext turn,\ngain {energy}."
+    "description_template": "Gain {block} Block.\nNext turn,\ngain {Energy:energyIcons()}."
   },
   {
     "id": "DEMESNE",
@@ -3614,8 +3610,7 @@
       "energy": 1
     },
     "description": "ALL players gain [E][E].",
-    "image_url": "/images/sts2/cards/energy_surge.png",
-    "description_template": "ALL players gain {energy}."
+    "image_url": "/images/sts2/cards/energy_surge.png"
   },
   {
     "id": "ENFEEBLING_TOUCH",
@@ -4445,8 +4440,8 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Unplayable",
       "Innate",
+      "Unplayable",
       "Eternal"
     ],
     "tags": [],
@@ -4531,8 +4526,7 @@
       "energy": 1
     },
     "description": "If you Exhausted a card this turn, gain [E][E][E].",
-    "image_url": "/images/sts2/cards/forgotten_ritual.png",
-    "description_template": "If you Exhausted a card this turn, gain {energy}."
+    "image_url": "/images/sts2/cards/forgotten_ritual.png"
   },
   {
     "id": "FRANTIC_ESCAPE",
@@ -4568,7 +4562,7 @@
     },
     "description": "Lose 2 Strength.\nGain [E] at the start of each turn.",
     "image_url": "/images/sts2/cards/friendship.png",
-    "description_template": "Lose {power_strength} Strength.\nGain {energy} at the start of each turn."
+    "description_template": "Lose {power_strength} Strength.\nGain {Energy:energyIcons()} at the start of each turn."
   },
   {
     "id": "FTL",
@@ -5354,7 +5348,7 @@
     },
     "description": "Deal 15 damage.\nNext turn, gain [E][E].",
     "image_url": "/images/sts2/cards/hegemony.png",
-    "description_template": "Deal {damage} damage.\nNext turn, gain {energy}."
+    "description_template": "Deal {damage} damage.\nNext turn, gain {Energy:energyIcons()}."
   },
   {
     "id": "HEIRLOOM_HAMMER",
@@ -5904,7 +5898,7 @@
     },
     "description": "Next turn, Summon 2 and gain [E][E].",
     "image_url": "/images/sts2/cards/invoke.png",
-    "description_template": "Next turn, Summon {summon} and gain {energy}."
+    "description_template": "Next turn, Summon {summon} and gain {Energy:energyIcons()}."
   },
   {
     "id": "IRON_WAVE",
@@ -6380,8 +6374,7 @@
       "energy": 1
     },
     "description": "Gain [E][E].",
-    "image_url": "/images/sts2/cards/luminesce.png",
-    "description_template": "Gain {energy}."
+    "image_url": "/images/sts2/cards/luminesce.png"
   },
   {
     "id": "LUNAR_BLAST",
@@ -6630,7 +6623,7 @@
     },
     "description": "Gain 13 Block.\nReduce this card's cost by [E] whenever ANYONE dies.",
     "image_url": "/images/sts2/cards/melancholy.png",
-    "description_template": "Gain {block} Block.\nReduce this card's cost by {energy} whenever ANYONE dies."
+    "description_template": "Gain {block} Block.\nReduce this card's cost by {Energy:energyIcons()} whenever ANYONE dies."
   },
   {
     "id": "MEMENTO_MORI",
@@ -6844,8 +6837,8 @@
       "Exhaust"
     ],
     "tags": [
-      "Minion",
-      "Strike"
+      "Strike",
+      "Minion"
     ],
     "vars": {
       "damage": 7,
@@ -7337,7 +7330,7 @@
     },
     "description": "Lose 6 HP.\nGain [E][E].\nDraw 3 cards.",
     "image_url": "/images/sts2/cards/offering.png",
-    "description_template": "Lose {hp_loss} HP.\nGain {energy}.\nDraw {cards} cards."
+    "description_template": "Lose {hp_loss} HP.\nGain {Energy:energyIcons()}.\nDraw {cards} cards."
   },
   {
     "id": "OMNISLICE",
@@ -7396,8 +7389,7 @@
       "cost": 0
     },
     "description": "Every [E][E][E][E] you spend,\ngain [E].",
-    "image_url": "/images/sts2/cards/orbit.png",
-    "description_template": "Every {energyPrefix:energyIcons(4)} you spend,\ngain {energy}."
+    "image_url": "/images/sts2/cards/orbit.png"
   },
   {
     "id": "OUTBREAK",
@@ -7437,8 +7429,7 @@
       "energy": 1
     },
     "description": "Next turn, gain [E][E].",
-    "image_url": "/images/sts2/cards/outmaneuver.png",
-    "description_template": "Next turn, gain {energy}."
+    "image_url": "/images/sts2/cards/outmaneuver.png"
   },
   {
     "id": "OVERCLOCK",
@@ -8041,8 +8032,7 @@
       ]
     },
     "description": "Gain [E][E].",
-    "image_url": "/images/sts2/cards/production.png",
-    "description_template": "Gain {energy}."
+    "image_url": "/images/sts2/cards/production.png"
   },
   {
     "id": "PROLONG",
@@ -8236,8 +8226,7 @@
       "energy": 1
     },
     "description": "Gain [E] at the start of each turn.",
-    "image_url": "/images/sts2/cards/pyre.png",
-    "description_template": "Gain {energy} at the start of each turn."
+    "image_url": "/images/sts2/cards/pyre.png"
   },
   {
     "id": "QUADCAST",
@@ -8548,7 +8537,7 @@
     },
     "description": "Forge 6.\nNext turn, gain [E].",
     "image_url": "/images/sts2/cards/refine_blade.png",
-    "description_template": "Forge {forge}.\nNext turn, gain {energy}."
+    "description_template": "Forge {forge}.\nNext turn, gain {Energy:energyIcons()}."
   },
   {
     "id": "REFLECT",
@@ -8722,7 +8711,7 @@
     },
     "description": "If your Hand is empty, draw 2 cards and gain [E][E].",
     "image_url": "/images/sts2/cards/restlessness.png",
-    "description_template": "If your Hand is empty, draw {cards} cards and gain {energy}."
+    "description_template": "If your Hand is empty, draw {cards} cards and gain {Energy:energyIcons()}."
   },
   {
     "id": "RICOCHET",
@@ -8768,7 +8757,7 @@
     },
     "description": "Osty deals 4 damage.\nWhenever you play a card that costs [E][E] or more, return this to your Hand from the Discard Pile.",
     "image_url": "/images/sts2/cards/right_hand_hand.png",
-    "description_template": "Osty deals {osty_damage} damage.\nWhenever you play a card that costs {energy} or more, return this to your Hand from the Discard Pile."
+    "description_template": "Osty deals {osty_damage} damage.\nWhenever you play a card that costs {Energy:energyIcons()} or more, return this to your Hand from the Discard Pile."
   },
   {
     "id": "RIP_AND_TEAR",
@@ -8954,8 +8943,7 @@
       "energy": 1
     },
     "description": "Exhaust a card.\nNext turn, gain [E][E].",
-    "image_url": "/images/sts2/cards/scavenge.png",
-    "description_template": "Exhaust a card.\nNext turn, gain {energy}."
+    "image_url": "/images/sts2/cards/scavenge.png"
   },
   {
     "id": "SCOURGE",
@@ -10502,7 +10490,7 @@
     },
     "description": "Deal 24 damage.\nIf this kills an enemy, gain [E][E][E].",
     "image_url": "/images/sts2/cards/sunder.png",
-    "description_template": "Deal {damage} damage.\nIf this kills an enemy, gain {energy}."
+    "description_template": "Deal {damage} damage.\nIf this kills an enemy, gain {Energy:energyIcons()}."
   },
   {
     "id": "SUPERCRITICAL",
@@ -10523,8 +10511,7 @@
       "energy": 2
     },
     "description": "Gain [E][E][E][E].",
-    "image_url": "/images/sts2/cards/supercritical.png",
-    "description_template": "Gain {energy}."
+    "image_url": "/images/sts2/cards/supercritical.png"
   },
   {
     "id": "SUPERMASSIVE",
@@ -10741,8 +10728,7 @@
       "energy": 1
     },
     "description": "Gain [E].",
-    "image_url": "/images/sts2/cards/tactician.png",
-    "description_template": "Gain {energy}."
+    "image_url": "/images/sts2/cards/tactician.png"
   },
   {
     "id": "TAG_TEAM",
@@ -11231,8 +11217,7 @@
       ]
     },
     "description": "Add Replay to a card in your Hand.\nIt costs an extra [E].",
-    "image_url": "/images/sts2/cards/transfigure.png",
-    "description_template": "Add Replay to a card in your Hand.\nIt costs an extra {energy}."
+    "image_url": "/images/sts2/cards/transfigure.png"
   },
   {
     "id": "TRASH_TO_TREASURE",
@@ -11310,8 +11295,7 @@
       "energy": 1
     },
     "description": "Gain [E][E].\nAdd a Void into your Discard Pile.",
-    "image_url": "/images/sts2/cards/turbo.png",
-    "description_template": "Gain {energy}.\nAdd a Void into your Discard Pile."
+    "image_url": "/images/sts2/cards/turbo.png"
   },
   {
     "id": "TWIN_STRIKE",
@@ -11638,8 +11622,7 @@
     },
     "upgrade": {},
     "description": "Whenever you draw this card, lose [E].",
-    "image_url": "/images/sts2/cards/void.png",
-    "description_template": "Whenever you draw this card, lose {energy}."
+    "image_url": "/images/sts2/cards/void.png"
   },
   {
     "id": "VOID_FORM",
@@ -11846,8 +11829,7 @@
       ]
     },
     "description": "Gain [E].",
-    "image_url": "/images/sts2/cards/wisp.png",
-    "description_template": "Gain {energy}."
+    "image_url": "/images/sts2/cards/wisp.png"
   },
   {
     "id": "WOUND",
@@ -11896,8 +11878,8 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Unplayable",
-      "Innate"
+      "Innate",
+      "Unplayable"
     ],
     "tags": [],
     "vars": {},

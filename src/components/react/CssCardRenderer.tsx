@@ -256,16 +256,33 @@ function Sts2Renderer({ card, upgraded, size, locale = 'en' }: { card: any; upgr
         // Use template for precise var replacement
         description = template;
         for (const [uk, delta] of Object.entries(upg)) {
-          if (['add_keywords', 'remove_keywords', 'energy', 'stars', 'description'].includes(uk)) continue;
+          if (['add_keywords', 'remove_keywords', 'description'].includes(uk)) continue;
           const vk = uk in vars ? uk : `power_${uk}` in vars ? `power_${uk}` : null;
           if (vk) {
             const oldVal = Math.floor(vars[vk] as number);
             const newVal = oldVal + (delta as number);
             // Replace {var_key} placeholder with new value
+            const before = description;
             description = description.replace(`{${vk}}`, String(newVal));
-            upgradedNumbers.add(String(newVal));
+            if (description !== before) {
+              upgradedNumbers.add(String(newVal));
+            }
           }
         }
+        // Resolve {VarName:energyIcons()} → [E] repeated
+        description = description.replace(/\{(\w+):energyIcons\(\)\}/g, (_, varName) => {
+          // Look up upgraded value: check if energy var was upgraded
+          const key = varName.toLowerCase();
+          const base = vars[key] as number ?? 1;
+          const delta = (upg[key] as number) ?? 0;
+          const n = Math.floor(base + delta);
+          return '[E]'.repeat(Math.max(1, n));
+        });
+        // Resolve {energyPrefix:energyIcons(N)} → [E] or [N Energy]
+        description = description.replace(/\{energyPrefix:energyIcons\((\d+)\)\}/g, (_, n) => {
+          const num = parseInt(n);
+          return num === 1 ? '[E]' : `[${num} Energy]`;
+        });
         // Replace remaining {var_key} placeholders with base values
         description = description.replace(/\{([a-z_]+)\}/g, (_, key) => {
           return key in vars ? String(Math.floor(vars[key] as number)) : _;
@@ -305,12 +322,12 @@ function Sts2Renderer({ card, upgraded, size, locale = 'en' }: { card: any; upgr
           description = description.slice(0, r.pos) + r.newVal + description.slice(r.pos + r.len);
         }
       }
-      if (upg.energy) {
+      if (upg.energy && !template) {
         const added = '[E]'.repeat(upg.energy as number);
         const lastE = description.lastIndexOf('[E]');
         if (lastE >= 0) description = description.slice(0, lastE + 3) + added + description.slice(lastE + 3);
       }
-      if (upg.stars) {
+      if (upg.stars && !template) {
         const added = '[S]'.repeat(upg.stars as number);
         const lastS = description.lastIndexOf('[S]');
         if (lastS >= 0) description = description.slice(0, lastS + 3) + added + description.slice(lastS + 3);
