@@ -289,6 +289,10 @@ function getPoolLabel(name: string, locale: string) {
   preview.className = 'ref-preview';
   document.body.appendChild(preview);
 
+  // Disable hover previews on touch devices — tap navigates directly
+  let isTouchDevice = false;
+  document.addEventListener('touchstart', () => { isTouchDevice = true; }, { once: true });
+
   let activeLink: HTMLElement | null = null;
 
   function show(link: HTMLElement, e: MouseEvent) {
@@ -329,6 +333,7 @@ function getPoolLabel(name: string, locale: string) {
   }
 
   document.addEventListener('mouseover', (e) => {
+    if (isTouchDevice) return;
     const link = (e.target as HTMLElement).closest?.('.ref-link') as HTMLElement;
     if (link && link !== activeLink && link.dataset.previewType) {
       show(link, e);
@@ -336,6 +341,7 @@ function getPoolLabel(name: string, locale: string) {
   });
 
   document.addEventListener('mousemove', (e) => {
+    if (isTouchDevice) return;
     if (activeLink) position(e);
   });
 
