@@ -37,6 +37,8 @@ Key files:
 
 ## Step 2: Extract PCK (GDRE Tools)
 
+The PCK file has an encrypted directory listing (flag `0x0002`). GDRE Tools handles this automatically — no manual key needed.
+
 ```bash
 # CLI (headless):
 gdre_tools --headless \
@@ -45,6 +47,8 @@ gdre_tools --headless \
 
 # Or use the GUI: File → Open PCK → select the .pck → Extract
 ```
+
+> **Note**: If a future update adds full file encryption (flag `0x0003`), GDRE may need the encryption key. The key is typically embedded in the game executable — GDRE can often extract it automatically, or you may need to pass `--key=<hex>`. Check the GDRE docs.
 
 This produces `/tmp/sts2-pck/` with:
 - `localization/` — JSON files per language (eng, jpn, kor, zhs, deu, fra, spa, ptb, ita, pol, rus, tur, tha)
