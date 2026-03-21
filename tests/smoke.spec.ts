@@ -36,6 +36,38 @@ test.describe('Basic rendering', () => {
     const potionLinks = page.locator('a[href*="/potions/"]');
     await expect(potionLinks.first()).toBeVisible();
   });
+
+  test('/sts2/monsters renders monster list', async ({ page }) => {
+    await page.goto('/sts2/monsters');
+    const monsterLinks = page.locator('a[href*="/monsters/"]');
+    await expect(monsterLinks.first()).toBeVisible();
+  });
+
+  test('/sts2/enchantments renders enchantment list', async ({ page }) => {
+    await page.goto('/sts2/enchantments');
+    const links = page.locator('a[href*="/enchantments/"]');
+    await expect(links.first()).toBeVisible();
+  });
+});
+
+test.describe('Detail pages return 200', () => {
+  const detailPages = [
+    ['/sts2/cards/BASH', 'Bash'],
+    ['/sts2/relics/AKABEKO', 'Akabeko'],
+    ['/sts2/potions/BEETLE_JUICE', 'Beetle Juice'],
+    ['/sts2/events/SELF_HELP_BOOK', 'Self-Help Book'],
+    ['/sts2/monsters/CULTIST', 'Cultist'],
+    ['/sts2/characters/IRONCLAD', 'Ironclad'],
+    ['/sts2/enchantments/SWIFT', 'Swift'],
+  ];
+  for (const [path, name] of detailPages) {
+    test(`${path} renders ${name}`, async ({ page }) => {
+      const response = await page.goto(path);
+      expect(response?.status()).toBe(200);
+      const body = await page.textContent('body');
+      expect(body).toContain(name);
+    });
+  }
 });
 
 test.describe('Localization (Japanese)', () => {
@@ -125,21 +157,24 @@ test.describe('Link integrity', () => {
 });
 
 test.describe('API endpoints', () => {
-  test('/api/sts2/cards returns valid JSON with data', async ({ request }) => {
-    const response = await request.get('/api/sts2/cards');
-    expect(response.status()).toBe(200);
-    const body = await response.json();
-    // API returns { items: [...], total, offset, limit }
-    expect(body.items ?? body.data).toBeTruthy();
-    const items = body.items ?? body.data;
-    expect(Array.isArray(items)).toBe(true);
-    expect(items.length).toBeGreaterThan(0);
-  });
+  const apiChecks = [
+    ['/api/sts2/cards', 500],
+    ['/api/sts2/relics', 80],
+    ['/api/sts2/potions', 30],
+    ['/api/sts2/monsters', 100],
+    ['/api/sts2/events', 50],
+    ['/api/sts2/enchantments', 15],
+    ['/api/sts2/powers', 100],
+  ] as const;
 
-  test('/api/sts2/events returns valid JSON', async ({ request }) => {
-    const response = await request.get('/api/sts2/events');
-    expect(response.status()).toBe(200);
-    const body = await response.json();
-    expect(body).toBeTruthy();
-  });
+  for (const [endpoint, minCount] of apiChecks) {
+    test(`${endpoint} returns ≥${minCount} items`, async ({ request }) => {
+      const response = await request.get(endpoint);
+      expect(response.status()).toBe(200);
+      const body = await response.json();
+      const items = body.items ?? body.data ?? body;
+      expect(Array.isArray(items)).toBe(true);
+      expect(items.length).toBeGreaterThanOrEqual(minCount);
+    });
+  }
 });
