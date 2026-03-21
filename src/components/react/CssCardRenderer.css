@@ -209,7 +209,9 @@
   color: #fff;
   font-weight: 700;
   font-size: calc(52px * var(--s));
-  text-shadow: 0 1px 3px rgba(0,0,0,.9);
+  -webkit-text-stroke: calc(10px * var(--s)) rgba(77, 74, 67, 0.86);
+  paint-order: stroke fill;
+  text-shadow: calc(2px * var(--s)) calc(2px * var(--s)) calc(12px * var(--s)) rgba(0,0,0,.19);
 }
 
 .cr-title {

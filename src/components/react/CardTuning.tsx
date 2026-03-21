@@ -30,6 +30,8 @@ interface TuningOverrides {
   starWidth: number;
   starHeight: number;
   starFontSize: number;
+  starStrokeWidth: number;
+  starStrokeColor: string;
 }
 
 const DEFAULTS: TuningOverrides = {
@@ -51,6 +53,8 @@ const DEFAULTS: TuningOverrides = {
   starWidth: 21,
   starHeight: 17,
   starFontSize: 52,
+  starStrokeWidth: 10,
+  starStrokeColor: 'rgba(77, 74, 67, 0.86)',
 };
 
 const FONT_OPTIONS = [
@@ -147,6 +151,7 @@ export default function CardTuning() {
       }
       .tune-preview .cr-star-num {
         font-size: calc(${o.starFontSize}px * var(--s)) !important;
+        -webkit-text-stroke: calc(${o.starStrokeWidth}px * var(--s)) ${o.starStrokeColor} !important;
       }
     `;
     return () => {
@@ -301,6 +306,7 @@ export default function CardTuning() {
           <Slider label="Width %" value={overrides.starWidth} onChange={v => updateOverride('starWidth', v)} min={10} max={35} step={0.1} unit="%" />
           <Slider label="Height %" value={overrides.starHeight} onChange={v => updateOverride('starHeight', v)} min={5} max={30} step={0.1} unit="%" />
           <Slider label="Font Size" value={overrides.starFontSize} onChange={v => updateOverride('starFontSize', v)} min={20} max={80} unit="px" />
+          <Slider label="Stroke Width" value={overrides.starStrokeWidth} onChange={v => updateOverride('starStrokeWidth', v)} min={0} max={20} step={0.5} unit="px" />
         </fieldset>
 
         {/* Actions */}
@@ -327,7 +333,7 @@ export default function CardTuning() {
 .cr-type { font-size: calc(${overrides.typeFontSize}px * var(--s)); top: ${overrides.typeTop}%; }
 .cr-energy-num { font-size: calc(${overrides.energyFontSize}px * var(--s)); }
 .cr-star { top: ${overrides.starTop}%; left: ${overrides.starLeft}%; width: ${overrides.starWidth}%; height: ${overrides.starHeight}%; }
-.cr-star-num { font-size: calc(${overrides.starFontSize}px * var(--s)); }`}</pre>
+.cr-star-num { font-size: calc(${overrides.starFontSize}px * var(--s)); -webkit-text-stroke: calc(${overrides.starStrokeWidth}px * var(--s)) ${overrides.starStrokeColor}; }`}</pre>
         </fieldset>
       </div>
 
