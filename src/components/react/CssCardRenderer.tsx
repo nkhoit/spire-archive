@@ -1,3 +1,4 @@
+import { useRef, useLayoutEffect, useCallback } from 'react';
 import './CssCardRenderer.css';
 import { t } from '../../lib/ui-strings';
 
@@ -175,6 +176,81 @@ function Sts1Renderer({ card, upgraded, size }: { card: any; upgraded: boolean; 
 }
 
 // ─── STS2 Renderer ───────────────────────────────────────────────────────────
+
+// ─── Locale font config (matches game's font + scale transforms) ─────────────
+
+interface LocaleFontConfig {
+  family: string;
+  scale: number;         // from game's variation_transform
+  baselineOffset?: number;
+}
+
+const LOCALE_FONTS: Record<string, LocaleFontConfig> = {
+  en: { family: "'KreonGame', 'Kreon', serif", scale: 1.0 },
+  de: { family: "'KreonGame', 'Kreon', serif", scale: 1.0 },
+  fr: { family: "'KreonGame', 'Kreon', serif", scale: 1.0 },
+  es: { family: "'KreonGame', 'Kreon', serif", scale: 1.0 },
+  pt: { family: "'KreonGame', 'Kreon', serif", scale: 1.0 },
+  it: { family: "'KreonGame', 'Kreon', serif", scale: 1.0 },
+  pl: { family: "'KreonGame', 'Kreon', serif", scale: 1.0 },
+  tr: { family: "'KreonGame', 'Kreon', serif", scale: 1.0 },
+  ja: { family: "'Noto Sans JP', 'KreonGame', serif", scale: 0.95 },
+  zh: { family: "'Noto Serif SC', 'KreonGame', serif", scale: 0.95 },
+  ko: { family: "'KreonGame', 'Kreon', serif", scale: 0.90 },
+  ru: { family: "'Fira Sans Extra Condensed', 'KreonGame', serif", scale: 0.95 },
+  th: { family: "'KreonGame', 'Kreon', serif", scale: 0.95 },
+};
+
+// Base font sizes (px at scale=1, matches game's MaxFontSize)
+const BASE_TITLE_SIZE = 60;  // visual size in our 680×884 canvas
+const BASE_DESC_SIZE = 43;
+const MIN_DESC_SIZE = 24;    // proportional to game's 12/21 ratio ≈ 0.57
+
+/**
+ * Auto-fit hook: shrinks font until text fits container (like game's MegaLabel).
+ * Binary searches between minSize and maxSize.
+ */
+function useAutoFit(
+  maxSize: number,
+  minSize: number,
+  deps: any[],
+) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const innerRef = useRef<HTMLDivElement>(null);
+
+  const fit = useCallback(() => {
+    const container = containerRef.current;
+    const inner = innerRef.current;
+    if (!container || !inner) return;
+
+    const containerH = container.clientHeight;
+    const containerW = container.clientWidth;
+    if (containerH === 0 || containerW === 0) return;
+
+    // Binary search for largest fitting size
+    let lo = minSize;
+    let hi = maxSize;
+    let best = minSize;
+
+    while (lo <= hi) {
+      const mid = Math.floor((lo + hi) / 2);
+      inner.style.fontSize = `${mid}px`;
+      if (inner.scrollHeight <= containerH + 1 && inner.scrollWidth <= containerW + 1) {
+        best = mid;
+        lo = mid + 1;
+      } else {
+        hi = mid - 1;
+      }
+    }
+    inner.style.fontSize = `${best}px`;
+  }, [maxSize, minSize]);
+
+  useLayoutEffect(() => {
+    fit();
+  }, [...deps, fit]);
+
+  return { containerRef, innerRef };
+}
 
 function Sts2Renderer({ card, upgraded, size, locale = 'en' }: { card: any; upgraded: boolean; size: string; locale?: string }) {
   const cardType = (card.type ?? 'Skill').toLowerCase();
@@ -374,8 +450,27 @@ function Sts2Renderer({ card, upgraded, size, locale = 'en' }: { card: any; upgr
   const scales: Record<string, number> = { xs: 0.25, sm: 0.4, md: 0.6, lg: 0.8 };
   const scale = scales[size] ?? 0.6;
 
+  // Locale-aware font config
+  const fontConfig = LOCALE_FONTS[locale] ?? LOCALE_FONTS['en'];
+  const descMaxPx = Math.round(BASE_DESC_SIZE * fontConfig.scale * scale);
+  const descMinPx = Math.round(MIN_DESC_SIZE * fontConfig.scale * scale);
+  const titleMaxPx = Math.round(BASE_TITLE_SIZE * fontConfig.scale * scale);
+  const titleMinPx = Math.round(BASE_TITLE_SIZE * 0.55 * fontConfig.scale * scale);
+
+  // Auto-fit description and title
+  const descHtml = (keywords.length > 0
+    ? keywords.map((kw: string) => {
+        const localizedKw = t(kw, locale);
+        const isNew = upgraded && (card.upgrade?.add_keywords ?? []).includes(kw);
+        return isNew ? `<span class="cr-green">${localizedKw}.</span>` : `<span class="cr-keyword">${localizedKw}.</span>`;
+      }).join('<br/>') + '<br/>'
+    : '') + descProcessed;
+
+  const descFit = useAutoFit(descMaxPx, descMinPx, [descHtml, scale, locale]);
+  const titleFit = useAutoFit(titleMaxPx, titleMinPx, [cardName, scale, locale]);
+
   return (
-    <div className="cr" style={{ '--s': scale } as React.CSSProperties}>
+    <div className="cr" style={{ '--s': scale, '--locale-font': fontConfig.family } as React.CSSProperties}>
       <div className="cr-portrait-area">
         <img src={portrait} className="cr-portrait" alt="" loading="lazy" />
       </div>
@@ -396,22 +491,15 @@ function Sts2Renderer({ card, upgraded, size, locale = 'en' }: { card: any; upgr
         </div>
       )}
       <div
+        ref={titleFit.containerRef}
         className={`cr-title${upgraded ? ' cr-green' : ''}`}
         style={{ WebkitTextStroke: `calc(7px * var(--s)) ${titleOutlineColor}` } as React.CSSProperties}
       >
-        {cardName}
+        <span ref={titleFit.innerRef}>{cardName}</span>
       </div>
       <div className="cr-type">{typeLabel}</div>
-      <div className="cr-desc">
-        <div className="cr-desc-inner" dangerouslySetInnerHTML={{ __html:
-          (keywords.length > 0
-            ? keywords.map((kw: string) => {
-                const localizedKw = t(kw, locale);
-                const isNew = upgraded && (card.upgrade?.add_keywords ?? []).includes(kw);
-                return isNew ? `<span class="cr-green">${localizedKw}.</span>` : `<span class="cr-keyword">${localizedKw}.</span>`;
-              }).join('<br/>') + '<br/>'
-            : '') + descProcessed
-        }} />
+      <div className="cr-desc" ref={descFit.containerRef}>
+        <div ref={descFit.innerRef} className="cr-desc-inner" dangerouslySetInnerHTML={{ __html: descHtml }} />
       </div>
     </div>
   );

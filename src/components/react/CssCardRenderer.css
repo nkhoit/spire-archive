@@ -14,7 +14,7 @@
   position: relative;
   width: calc(680px * var(--s));
   height: calc(884px * var(--s));
-  font-family: 'KreonGame', 'Kreon', serif;
+  font-family: var(--locale-font, 'KreonGame', 'Kreon', serif);
   flex-shrink: 0;
 }
 
@@ -149,7 +149,6 @@
   justify-content: center;
   color: #fff6e2;
   font-weight: 400;
-  font-size: calc(60px * var(--s));
   paint-order: stroke fill;
   text-shadow: calc(2px * var(--s)) calc(2px * var(--s)) calc(12px * var(--s)) rgba(0,0,0,.19);
   white-space: nowrap;
@@ -182,7 +181,6 @@
   width: 71.5%;
   height: 30.8%;
   color: #fff6e2;
-  font-size: calc(43px * var(--s));
   font-weight: 400;
   line-height: 1;
   text-align: center;
