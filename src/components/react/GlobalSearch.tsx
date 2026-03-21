@@ -155,10 +155,11 @@ export default function GlobalSearch({ game, locale = 'en', langPrefix = '' }: {
 
   return (
     <>
-      <div className="fixed inset-0 z-40" onClick={() => setOpen(false)} />
-      <div className="fixed inset-0 z-50 flex items-start justify-center pt-[15vh] pointer-events-none">
+      <div className="fixed inset-0 z-40 bg-black/50" onClick={() => setOpen(false)} />
+      <div className="fixed inset-0 z-50 flex items-start justify-center pt-[15vh]" onClick={() => setOpen(false)}>
         <div
-          className="pointer-events-auto w-full max-w-lg mx-4 rounded-xl border border-white/[0.1] bg-[#0d1117] shadow-2xl shadow-black/80 overflow-hidden"
+          className="w-full max-w-lg mx-4 rounded-xl border border-white/[0.1] bg-[#0d1117] shadow-2xl shadow-black/80 overflow-hidden"
+          onClick={(e) => e.stopPropagation()}
           >
         <div className="flex items-center gap-3 border-b border-white/[0.06] px-4 py-3">
           <svg className="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
