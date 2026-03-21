@@ -360,9 +360,10 @@ function Sts2Renderer({ card, upgraded, size, locale = 'en' }: { card: any; upgr
   const usedMarkers = descProcessed.includes('cr-green');
   if (upgraded && upgradedNumbers.size > 0 && !usedMarkers) {
     for (const num of upgradedNumbers) {
+      // Only highlight numbers in text content, not inside HTML tags
       descProcessed = descProcessed.replace(
-        new RegExp(`(?<!\\d)${num}(?!\\d)`, 'g'),
-        `<span class="cr-green">${num}</span>`
+        new RegExp(`(^|>)([^<]*?)(?<!\\d)(${num})(?!\\d)`, 'g'),
+        (_, prefix, before, n) => `${prefix}${before}<span class="cr-green">${n}</span>`
       );
     }
   }
