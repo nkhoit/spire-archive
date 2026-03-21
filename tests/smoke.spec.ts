@@ -56,7 +56,7 @@ test.describe('Detail pages return 200', () => {
     ['/sts2/relics/AKABEKO', 'Akabeko'],
     ['/sts2/potions/BEETLE_JUICE', 'Beetle Juice'],
     ['/sts2/events/SELF_HELP_BOOK', 'Self-Help Book'],
-    ['/sts2/monsters/CULTIST', 'Cultist'],
+    ['/sts2/monsters/CALCIFIED_CULTIST', 'Calcified Cultist'],
     ['/sts2/characters/IRONCLAD', 'Ironclad'],
     ['/sts2/enchantments/SWIFT', 'Swift'],
   ];
@@ -169,12 +169,13 @@ test.describe('API endpoints', () => {
 
   for (const [endpoint, minCount] of apiChecks) {
     test(`${endpoint} returns ≥${minCount} items`, async ({ request }) => {
-      const response = await request.get(endpoint);
+      const response = await request.get(`${endpoint}?limit=1000`);
       expect(response.status()).toBe(200);
       const body = await response.json();
       const items = body.items ?? body.data ?? body;
       expect(Array.isArray(items)).toBe(true);
-      expect(items.length).toBeGreaterThanOrEqual(minCount);
+      const total = body.total ?? items.length;
+      expect(total).toBeGreaterThanOrEqual(minCount);
     });
   }
 });
