@@ -3,7 +3,7 @@ import CssCardRenderer from './CssCardRenderer';
 import './CardTuning.css';
 
 const LOCALES = ['en', 'ja', 'ko', 'zh', 'de', 'fr', 'es', 'pt', 'it', 'pl', 'ru', 'tr', 'th'];
-const CARD_TYPES = ['All', 'Attack', 'Skill', 'Power'];
+const CARD_TYPES = ['All', 'Attack', 'Skill', 'Power', 'Regent (★)'] as const;
 const SIZES = ['xs', 'sm', 'md', 'lg'] as const;
 
 interface TuningOverrides {
@@ -24,6 +24,12 @@ interface TuningOverrides {
   typeTop: number;
   // Energy
   energyFontSize: number;
+  // Star
+  starTop: number;
+  starLeft: number;
+  starWidth: number;
+  starHeight: number;
+  starFontSize: number;
 }
 
 const DEFAULTS: TuningOverrides = {
@@ -40,6 +46,11 @@ const DEFAULTS: TuningOverrides = {
   typeFontSize: 30,
   typeTop: 52.5,
   energyFontSize: 78,
+  starTop: 11,
+  starLeft: -1,
+  starWidth: 21,
+  starHeight: 17,
+  starFontSize: 52,
 };
 
 const FONT_OPTIONS = [
@@ -128,6 +139,15 @@ export default function CardTuning() {
       .tune-preview .cr-energy-num {
         font-size: calc(${o.energyFontSize}px * var(--s)) !important;
       }
+      .tune-preview .cr-star {
+        top: ${o.starTop}% !important;
+        left: ${o.starLeft}% !important;
+        width: ${o.starWidth}% !important;
+        height: ${o.starHeight}% !important;
+      }
+      .tune-preview .cr-star-num {
+        font-size: calc(${o.starFontSize}px * var(--s)) !important;
+      }
     `;
     return () => {
       if (styleRef.current) {
@@ -137,7 +157,9 @@ export default function CardTuning() {
   }, [overrides]);
 
   const filtered = cards.filter(c => {
-    if (typeFilter !== 'All' && c.type !== typeFilter) return false;
+    if (typeFilter === 'Regent (★)') {
+      if (!c.star_cost) return false;
+    } else if (typeFilter !== 'All' && c.type !== typeFilter) return false;
     if (search && !c.name.toLowerCase().includes(search.toLowerCase()) && !c.id.toLowerCase().includes(search.toLowerCase())) return false;
     return true;
   });
@@ -271,6 +293,16 @@ export default function CardTuning() {
           <Slider label="Font Size" value={overrides.energyFontSize} onChange={v => updateOverride('energyFontSize', v)} min={40} max={120} unit="px" />
         </fieldset>
 
+        {/* Star */}
+        <fieldset>
+          <legend>Star Icon</legend>
+          <Slider label="Top %" value={overrides.starTop} onChange={v => updateOverride('starTop', v)} min={-5} max={25} step={0.1} unit="%" />
+          <Slider label="Left %" value={overrides.starLeft} onChange={v => updateOverride('starLeft', v)} min={-10} max={20} step={0.1} unit="%" />
+          <Slider label="Width %" value={overrides.starWidth} onChange={v => updateOverride('starWidth', v)} min={10} max={35} step={0.1} unit="%" />
+          <Slider label="Height %" value={overrides.starHeight} onChange={v => updateOverride('starHeight', v)} min={5} max={30} step={0.1} unit="%" />
+          <Slider label="Font Size" value={overrides.starFontSize} onChange={v => updateOverride('starFontSize', v)} min={20} max={80} unit="px" />
+        </fieldset>
+
         {/* Actions */}
         <fieldset>
           <legend>Actions</legend>
@@ -293,7 +325,9 @@ export default function CardTuning() {
           <pre className="tune-css">{`.cr-title { font-size: calc(${overrides.titleFontSize}px * var(--s)); top: ${overrides.titleTop}%; font-family: ${overrides.titleFontFamily}; }
 .cr-desc { font-size: calc(${overrides.descFontSize}px * var(--s)); line-height: ${overrides.descLineHeight}; top: ${overrides.descTop}%; height: ${overrides.descHeight}%; left: ${overrides.descLeft}%; width: ${overrides.descWidth}%; font-family: ${overrides.descFontFamily}; }
 .cr-type { font-size: calc(${overrides.typeFontSize}px * var(--s)); top: ${overrides.typeTop}%; }
-.cr-energy-num { font-size: calc(${overrides.energyFontSize}px * var(--s)); }`}</pre>
+.cr-energy-num { font-size: calc(${overrides.energyFontSize}px * var(--s)); }
+.cr-star { top: ${overrides.starTop}%; left: ${overrides.starLeft}%; width: ${overrides.starWidth}%; height: ${overrides.starHeight}%; }
+.cr-star-num { font-size: calc(${overrides.starFontSize}px * var(--s)); }`}</pre>
         </fieldset>
       </div>
 
