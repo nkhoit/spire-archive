@@ -4955,11 +4955,11 @@
       "choices": [
         {
           "name": "จับไว้",
-          "description": "เสีย {HpLoss} HP สุ่มการ์ดในตัวเลือกด้านบน"
+          "description": "เสีย X HP สุ่มการ์ดในตัวเลือกด้านบน"
         },
         {
           "name": "พิชิต",
-          "description": "{RandomCard}ถูกกำจัดออกจากกองการ์ด"
+          "description": "การ์ดสุ่มถูกกำจัดออกจากกองการ์ด"
         }
       ]
     },
@@ -4972,7 +4972,7 @@
         },
         {
           "name": "อันนี้",
-          "description": "เสีย 6 HP ได้รับ {Gold} ทอง"
+          "description": "เสีย 6 HP ได้รับ X ทอง"
         }
       ]
     },
@@ -5004,7 +5004,7 @@
       "choices": [
         {
           "name": "สกัดน้ำหวาน",
-          "description": "ได้รับ {Prize1} ทอง"
+          "description": "ได้รับ X ทอง"
         },
         {
           "name": "ลึกเข้าไปอีก",
@@ -5017,7 +5017,7 @@
           "choices": [
             {
               "name": "สกัดน้ำหวาน",
-              "description": "ได้รับ {Prize1} ทอง"
+              "description": "ได้รับ X ทอง"
             },
             {
               "name": "ลึกเข้าไปอีก",
@@ -5029,7 +5029,7 @@
           "choices": [
             {
               "name": "สกัดน้ำหวาน",
-              "description": "ได้รับ {Prize3} ทอง"
+              "description": "ได้รับ X ทอง"
             },
             {}
           ]
@@ -5041,7 +5041,7 @@
       "choices": [
         {
           "name": "พักผ่อน",
-          "description": "ฟื้นฟู {Heal} HP และต่อสู้ศัตรูกลุ่มหนึ่ง"
+          "description": "ฟื้นฟู X HP และต่อสู้ศัตรูกลุ่มหนึ่ง"
         },
         {
           "description": "กำจัดการ์ด 1 ใบจากกองการ์ด เสีย 11 HP"
@@ -5096,7 +5096,7 @@
       "choices": [
         {
           "name": "ดื่มแล้วยก",
-          "description": "เสีย {DrinkRandomPotion} ได้รับ 10 HP สูงสุด"
+          "description": "เสีย ยาสุ่ม ได้รับ 10 HP สูงสุด"
         },
         {
           "name": "ล็อก",

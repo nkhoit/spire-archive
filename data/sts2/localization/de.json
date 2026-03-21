@@ -5749,7 +5749,7 @@
       "choices": [
         {
           "name": "Nektar gewinnen",
-          "description": "Erhalte {Prize1} Gold."
+          "description": "Erhalte X Gold."
         },
         {
           "name": "Tiefer greifen",
@@ -5762,7 +5762,7 @@
           "choices": [
             {
               "name": "Nektar gewinnen",
-              "description": "Erhalte {Prize1} Gold."
+              "description": "Erhalte X Gold."
             },
             {
               "name": "Tiefer greifen",
@@ -5775,7 +5775,7 @@
           "choices": [
             {
               "name": "Nektar gewinnen",
-              "description": "Erhalte {Prize2} Gold."
+              "description": "Erhalte X Gold."
             },
             {
               "name": "Tiefer greifen",
@@ -5788,7 +5788,7 @@
           "choices": [
             {
               "name": "Nektar gewinnen",
-              "description": "Erhalte {Prize3} Gold."
+              "description": "Erhalte X Gold."
             },
             {
               "name": "Zur Mitte gelangen",
@@ -5818,7 +5818,7 @@
       "choices": [
         {
           "name": "Ausruhen",
-          "description": "Heile {Heal} TP. Bekämpfe einige Gegner."
+          "description": "Heile X TP. Bekämpfe einige Gegner."
         },
         {
           "name": "Dich weiterschleppen",
@@ -6045,7 +6045,7 @@
           "description": "Erhalte ein zufälliges Relikt."
         },
         {
-          "name": "{Potion} geben",
+          "name": "Trank geben",
           "description": "Erhalte ein zufälliges Relikt."
         },
         {
@@ -6074,15 +6074,15 @@
       "choices": [
         {
           "name": "Das untere nehmen",
-          "description": "Tausche {BottomRelicOwned} gegen {BottomRelicNew}."
+          "description": "Tausche dein Relikt gegen ein neues Relikt."
         },
         {
           "name": "Das mittlere nehmen",
-          "description": "Tausche {MiddleRelicOwned} gegen {MiddleRelicNew}."
+          "description": "Tausche dein Relikt gegen ein neues Relikt."
         },
         {
           "name": "Das obere nehmen",
-          "description": "Tausche {TopRelicOwned} gegen {TopRelicNew}."
+          "description": "Tausche dein Relikt gegen ein neues Relikt."
         }
       ]
     },
@@ -6156,11 +6156,11 @@
       "choices": [
         {
           "name": "Festhalten",
-          "description": "Verliere {HpLoss} TP. Die Karte in der oberen Option wird geändert."
+          "description": "Verliere X TP. Die Karte in der oberen Option wird geändert."
         },
         {
           "name": "Überwinden",
-          "description": "{RandomCard} wird aus deinem Deck entfernt."
+          "description": "zufällige Karte wird aus deinem Deck entfernt."
         }
       ]
     },
@@ -6170,7 +6170,7 @@
       "choices": [
         {
           "name": "Trinken",
-          "description": "Heile {Heal} TP."
+          "description": "Heile X TP."
         },
         {
           "name": "Betrachten",
@@ -6202,7 +6202,7 @@
       "choices": [
         {
           "name": "Trinken und Anheben",
-          "description": "Verliere {DrinkRandomPotion}. Erhalte 10 max. TP."
+          "description": "Verliere zufälliger Trank. Erhalte 10 max. TP."
         },
         {
           "name": "Gesperrt",
@@ -6290,7 +6290,7 @@
       "choices": [
         {
           "name": "{Rarity:choose(Ereignis|Token):Ereignis-Trank|Token-Trank|{}en Trank} einfüllen",
-          "description": "Verliere {Potion}. Erhalte {Type:choose(Angriff):einen verbesserten|eine verbesserte} {Rarity}e{Type:choose(Angriff):n {}| {}}."
+          "description": "Verliere Trank. Erhalte {Type:choose(Angriff):einen verbesserten|eine verbesserte} ?e{Type:choose(Angriff):n {}| {}}."
         }
       ]
     },
@@ -6332,7 +6332,7 @@
         },
         {
           "name": "Dies",
-          "description": "Verliere 6 TP. Erhalte {Gold} Gold."
+          "description": "Verliere 6 TP. Erhalte X Gold."
         }
       ]
     },
@@ -6416,7 +6416,7 @@
     },
     "TRIAL": {
       "name": "Der Prozess",
-      "description": "Du stellst dich hinter einigen Leuten an, die ein riesiges Gebäude betreten.\n\nAls du unter einem goldenen Torbogen durchgehst, schmettert eine Fanfare, Konfetti explodiert und Luftschlangen gleiten von der Decke herab!\n\n“Teilnehmer{characterGender:choose(feminine):in|} {EntrantNumber}, du bist ENTSCHEIDER{characterGender:choose(feminine):IN|} für den heutigen Prozess.”",
+      "description": "Du stellst dich hinter einigen Leuten an, die ein riesiges Gebäude betreten.\n\nAls du unter einem goldenen Torbogen durchgehst, schmettert eine Fanfare, Konfetti explodiert und Luftschlangen gleiten von der Decke herab!\n\n“Teilnehmer{characterGender:choose(feminine):in|} ?, du bist ENTSCHEIDER{characterGender:choose(feminine):IN|} für den heutigen Prozess.”",
       "choices": [
         {
           "name": "Akzeptieren",
@@ -6488,7 +6488,7 @@
         },
         {
           "name": "Wongos Spezialartikel",
-          "description": "Zahle 200 Gold. Erhalte {RandomRelic}."
+          "description": "Zahle 200 Gold. Erhalte zufälliges Relikt."
         },
         {
           "name": "Gesperrt",

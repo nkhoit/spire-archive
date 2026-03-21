@@ -406,6 +406,55 @@ function main() {
 
     existing.events = nextEvents;
 
+    // Replace runtime-only event vars with descriptive text
+    const L = {
+      ja: { potion: 'ポーション', relic: 'レリック', randomRelic: 'ランダムなレリック', randomCard: 'ランダムなカード', randomPotion: 'ランダムなポーション', yourRelic: 'あなたのレリック', newRelic: '新しいレリック' },
+      ko: { potion: '물약', relic: '유물', randomRelic: '무작위 유물', randomCard: '무작위 카드', randomPotion: '무작위 물약', yourRelic: '보유 유물', newRelic: '새 유물' },
+      zh: { potion: '药水', relic: '遗物', randomRelic: '随机遗物', randomCard: '随机卡牌', randomPotion: '随机药水', yourRelic: '你的遗物', newRelic: '新遗物' },
+      de: { potion: 'Trank', relic: 'Relikt', randomRelic: 'zufälliges Relikt', randomCard: 'zufällige Karte', randomPotion: 'zufälliger Trank', yourRelic: 'dein Relikt', newRelic: 'ein neues Relikt' },
+      fr: { potion: 'Potion', relic: 'Relique', randomRelic: 'Relique aléatoire', randomCard: 'Carte aléatoire', randomPotion: 'Potion aléatoire', yourRelic: 'votre Relique', newRelic: 'une nouvelle Relique' },
+      es: { potion: 'Poción', relic: 'Reliquia', randomRelic: 'Reliquia aleatoria', randomCard: 'Carta aleatoria', randomPotion: 'Poción aleatoria', yourRelic: 'tu Reliquia', newRelic: 'una nueva Reliquia' },
+      pt: { potion: 'Poção', relic: 'Relíquia', randomRelic: 'Relíquia aleatória', randomCard: 'Carta aleatória', randomPotion: 'Poção aleatória', yourRelic: 'sua Relíquia', newRelic: 'uma nova Relíquia' },
+      it: { potion: 'Pozione', relic: 'Reliquia', randomRelic: 'Reliquia casuale', randomCard: 'Carta casuale', randomPotion: 'Pozione casuale', yourRelic: 'la tua Reliquia', newRelic: 'una nuova Reliquia' },
+      pl: { potion: 'Mikstura', relic: 'Relikt', randomRelic: 'losowy Relikt', randomCard: 'losowa Karta', randomPotion: 'losowa Mikstura', yourRelic: 'twój Relikt', newRelic: 'nowy Relikt' },
+      ru: { potion: 'Зелье', relic: 'Реликвия', randomRelic: 'случайная Реликвия', randomCard: 'случайная Карта', randomPotion: 'случайное Зелье', yourRelic: 'ваша Реликвия', newRelic: 'новая Реликвия' },
+      tr: { potion: 'İksir', relic: 'Kalıntı', randomRelic: 'rastgele Kalıntı', randomCard: 'rastgele Kart', randomPotion: 'rastgele İksir', yourRelic: 'Kalıntın', newRelic: 'yeni bir Kalıntı' },
+      th: { potion: 'ยา', relic: 'เรลิก', randomRelic: 'เรลิกสุ่ม', randomCard: 'การ์ดสุ่ม', randomPotion: 'ยาสุ่ม', yourRelic: 'เรลิกของคุณ', newRelic: 'เรลิกใหม่' },
+    };
+    const l = L[iso] || L.ja;
+    const RUNTIME_REPLACEMENTS = {
+      '{Prize1}': 'X', '{Prize2}': 'X', '{Prize3}': 'X',
+      '{Heal}': 'X', '{Gold}': 'X', '{HpLoss}': 'X',
+      '{Potion}': l.potion, '{Relic}': l.relic,
+      '{RandomRelic}': l.randomRelic, '{RandomCard}': l.randomCard,
+      '{DrinkRandomPotion}': l.randomPotion,
+      '{Rarity}': '?', '{Type}': '?', '{EntrantNumber}': '?',
+      '{BottomRelicOwned}': l.yourRelic, '{BottomRelicNew}': l.newRelic,
+      '{MiddleRelicOwned}': l.yourRelic, '{MiddleRelicNew}': l.newRelic,
+      '{TopRelicOwned}': l.yourRelic, '{TopRelicNew}': l.newRelic,
+    };
+    const resolveRuntime = (t) => {
+      if (!t) return t;
+      for (const [k, v] of Object.entries(RUNTIME_REPLACEMENTS)) {
+        if (t.includes(k)) t = t.replaceAll(k, v);
+      }
+      return t;
+    };
+    for (const ev of Object.values(existing.events)) {
+      if (ev.description) ev.description = resolveRuntime(ev.description);
+      if (ev.choices) for (const c of ev.choices) {
+        if (c.name) c.name = resolveRuntime(c.name);
+        if (c.description) c.description = resolveRuntime(c.description);
+      }
+      if (ev.pages) for (const p of ev.pages) {
+        if (p.description) p.description = resolveRuntime(p.description);
+        if (p.choices) for (const c of p.choices) {
+          if (c.name) c.name = resolveRuntime(c.name);
+          if (c.description) c.description = resolveRuntime(c.description);
+        }
+      }
+    }
+
     // Replace runtime-only {Amount} in enchantments with "X" (matches English convention)
     if (existing.enchantments) {
       for (const ench of Object.values(existing.enchantments)) {

@@ -232,7 +232,7 @@
     "choices": [
       {
         "name": "Extract Nectar",
-        "description": "Gain {Prize1} Gold."
+        "description": "Gain X Gold."
       },
       {
         "name": "Reach Deeper",
@@ -629,7 +629,7 @@
     "description": "There is a single grave with a roiling blue flame...\n\nA prideful warrior died in battle but its soul is restless. It wants to keep fighting, you feel it begging to journey with you.\n\nBut perhaps it's better for it to face the truth?",
     "choices": [
       {
-        "name": "Accept the {Relic}",
+        "name": "Accept the Relic",
         "description": "Obtain Forgotten Soul.",
         "references": [
           {
@@ -709,7 +709,7 @@
     "choices": [
       {
         "name": "Capture the Wisp",
-        "description": "Add Decay to your Deck. Obtain the {Relic}.",
+        "description": "Add Decay to your Deck. Obtain the Relic.",
         "references": [
           {
             "type": "card",
@@ -1059,16 +1059,16 @@
     "description": "You are approached by the oldest person you have ever seen.\n“We meet once more... it's me, Ranwid!”\n\nYou do not know this man.",
     "choices": [
       {
-        "name": "Give {Gold} Gold",
+        "name": "Give X Gold",
         "description": "Obtain a random Relic."
       },
       {
-        "name": "Give {Potion}",
+        "name": "Give Potion",
         "description": "Obtain a random Relic.",
         "locked": "You don't have any Potions that can be given."
       },
       {
-        "name": "Give {Relic}",
+        "name": "Give Relic",
         "description": "Obtain 2 random Relics.",
         "locked": "You don't have any Relics that can be given."
       }
@@ -1105,15 +1105,15 @@
     "choices": [
       {
         "name": "Take the Bottom One",
-        "description": "Trade {BottomRelicOwned} for {BottomRelicNew}."
+        "description": "Trade your Relic for a new Relic."
       },
       {
         "name": "Take the Middle One",
-        "description": "Trade {MiddleRelicOwned} for {MiddleRelicNew}."
+        "description": "Trade your Relic for a new Relic."
       },
       {
         "name": "Take the Top One",
-        "description": "Trade {TopRelicOwned} for {TopRelicNew}."
+        "description": "Trade your Relic for a new Relic."
       }
     ]
   },
@@ -1242,11 +1242,11 @@
     "choices": [
       {
         "name": "Hold On",
-        "description": "Lose {HpLoss} HP. The card in the above option is randomized."
+        "description": "Lose X HP. The card in the above option is randomized."
       },
       {
         "name": "Overcome",
-        "description": "{RandomCard} is removed from your Deck."
+        "description": "A random card is removed from your Deck."
       }
     ]
   },
@@ -1308,7 +1308,7 @@
     "choices": [
       {
         "name": "Drink and Lift",
-        "description": "Lose {DrinkRandomPotion}. Gain 10 Max HP.",
+        "description": "Lose a random Potion. Gain 10 Max HP.",
         "locked": "Requires a Potion."
       },
       {
@@ -1529,8 +1529,8 @@
     "description": "You feel a faint rumbling as you round the corner to discover a gigantic spinning apparatus!\nIt has several slots which appear to convert liquids into a highly compressed digestible tablet.\n\nThe idea of turning these health tonics into a tiny morsel is uncomfortable but perhaps it's good to try new things?",
     "choices": [
       {
-        "name": "Insert {Rarity} Potion",
-        "description": "Lose {Potion}. Obtain an Upgraded {Rarity} {Type}."
+        "name": "Insert ? Potion",
+        "description": "Lose Potion. Obtain an Upgraded ? ?."
       }
     ]
   },
@@ -1785,7 +1785,7 @@
     "id": "TRIAL",
     "name": "The Trial",
     "act": "unknown",
-    "description": "You join a line of people entering a massive building.\n\nAs you pass under a golden archway, horns blare, confetti explodes, and streamers glide down from the ceiling!\n\n“Entrant {EntrantNumber}, you are the DECIDER for today's Trial.”",
+    "description": "You join a line of people entering a massive building.\n\nAs you pass under a golden archway, horns blare, confetti explodes, and streamers glide down from the ceiling!\n\n“Entrant ?, you are the DECIDER for today's Trial.”",
     "choices": [
       {
         "name": "Accept",
@@ -1956,7 +1956,7 @@
       },
       {
         "name": "Wongo's Featured Item",
-        "description": "Pay 200 Gold. Obtain {RandomRelic}.",
+        "description": "Pay 200 Gold. Obtain a random Relic.",
         "locked": "Requires 200 Gold."
       },
       {

@@ -5750,7 +5750,7 @@
       "choices": [
         {
           "name": "Extraire du nectar",
-          "description": "Obtenez {Prize1} Pièces d’or."
+          "description": "Obtenez X Pièces d’or."
         },
         {
           "name": "Pénétrer plus loin",
@@ -5763,7 +5763,7 @@
           "choices": [
             {
               "name": "Extraire du nectar",
-              "description": "Obtenez {Prize1} Pièces d’or."
+              "description": "Obtenez X Pièces d’or."
             },
             {
               "name": "Pénétrer plus loin",
@@ -5776,7 +5776,7 @@
           "choices": [
             {
               "name": "Extraire du nectar",
-              "description": "Obtenez {Prize2} Pièces d’or."
+              "description": "Obtenez X Pièces d’or."
             },
             {
               "name": "Pénétrer plus loin",
@@ -5789,7 +5789,7 @@
           "choices": [
             {
               "name": "Extraire du nectar",
-              "description": "Obtenez {Prize3} Pièces d’or."
+              "description": "Obtenez X Pièces d’or."
             },
             {
               "name": "Atteindre le centre",
@@ -5819,7 +5819,7 @@
       "choices": [
         {
           "name": "Repos",
-          "description": "Récupérez {Heal} PV. Affrontez des ennemis."
+          "description": "Récupérez X PV. Affrontez des ennemis."
         },
         {
           "name": "Avancer malgré tout",
@@ -6046,7 +6046,7 @@
           "description": "Obtenez une Relique aléatoire."
         },
         {
-          "name": "Offrir {Potion}",
+          "name": "Offrir Potion",
           "description": "Obtenez une Relique aléatoire."
         },
         {
@@ -6075,15 +6075,15 @@
       "choices": [
         {
           "name": "Prendre celle du bas",
-          "description": "Troquer {BottomRelicOwned} contre {BottomRelicNew}."
+          "description": "Troquer votre Relique contre une nouvelle Relique."
         },
         {
           "name": "Prendre celle du milieu",
-          "description": "Troquer {MiddleRelicOwned} contre {MiddleRelicNew}."
+          "description": "Troquer votre Relique contre une nouvelle Relique."
         },
         {
           "name": "Prendre celle du haut",
-          "description": "Troquer {TopRelicOwned} contre {TopRelicNew}."
+          "description": "Troquer votre Relique contre une nouvelle Relique."
         }
       ]
     },
@@ -6157,11 +6157,11 @@
       "choices": [
         {
           "name": "Tenir bon",
-          "description": "Perdez {HpLoss} PV. La carte ci-dessus est resélectionnée aléatoirement."
+          "description": "Perdez X PV. La carte ci-dessus est resélectionnée aléatoirement."
         },
         {
           "name": "Surmonter",
-          "description": "{RandomCard} est retiré de votre Deck."
+          "description": "Carte aléatoire est retiré de votre Deck."
         }
       ]
     },
@@ -6171,7 +6171,7 @@
       "choices": [
         {
           "name": "Boire l’eau",
-          "description": "Récupérez {Heal} PV."
+          "description": "Récupérez X PV."
         },
         {
           "name": "Observer",
@@ -6203,7 +6203,7 @@
       "choices": [
         {
           "name": "Boire et soulever",
-          "description": "Perdez {DrinkRandomPotion}. Gagnez 10 PV Max."
+          "description": "Perdez Potion aléatoire. Gagnez 10 PV Max."
         },
         {
           "name": "Verrouillé",
@@ -6290,8 +6290,8 @@
       "description": "Vous vous apprêtez à tourner au coin lorsque vous ressentez un léger bourdonnement, et découvrez un énorme appareil qui pivote sur son axe !\nVous remarquez qu’il dispose d’emplacements où des liquides semblent pouvoir être transformés en petits comprimés faciles à digérer.\n\nL’idée de convertir vos potions tonifiantes en toutes petites bouchées vous gêne un peu, mais c’est peut-être l’occasion d’essayer de nouvelles choses ?",
       "choices": [
         {
-          "name": "Insérer une potion {Rarity}",
-          "description": "Perdez {Potion}. Obtenez une {Type} {Rarity} Améliorée."
+          "name": "Insérer une potion ?",
+          "description": "Perdez Potion. Obtenez une ? ? Améliorée."
         }
       ]
     },
@@ -6333,7 +6333,7 @@
         },
         {
           "name": "Ceci",
-          "description": "Perdez 6 PV. Recevez {Gold} Pièces d’or."
+          "description": "Perdez 6 PV. Recevez X Pièces d’or."
         }
       ]
     },
@@ -6417,7 +6417,7 @@
     },
     "TRIAL": {
       "name": "Le procès",
-      "description": "Vous vous joignez à une file de personnes en train d’entrer dans un énorme bâtiment.\n\nTandis que vous passez sous une arche dorée, un beuglement de cors se fait entendre, des confettis jaillissent, et des banderoles se déploient du plafond !\n\n« Citoyen{characterGender:choose(feminine):ne|} {EntrantNumber}, vous êtes {characterGender:choose(feminine):LA DÉCIDEUSE|LE DÉCIDEUR} pour le Procès d’aujourd’hui. »",
+      "description": "Vous vous joignez à une file de personnes en train d’entrer dans un énorme bâtiment.\n\nTandis que vous passez sous une arche dorée, un beuglement de cors se fait entendre, des confettis jaillissent, et des banderoles se déploient du plafond !\n\n« Citoyen{characterGender:choose(feminine):ne|} ?, vous êtes {characterGender:choose(feminine):LA DÉCIDEUSE|LE DÉCIDEUR} pour le Procès d’aujourd’hui. »",
       "choices": [
         {
           "name": "Accepter",
@@ -6489,7 +6489,7 @@
         },
         {
           "name": "Article Wongo’s du moment",
-          "description": "Payez 200 Pièces d’or. Obtenez {RandomRelic}."
+          "description": "Payez 200 Pièces d’or. Obtenez Relique aléatoire."
         },
         {
           "name": "Verrouillé",

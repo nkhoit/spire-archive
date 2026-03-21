@@ -5743,7 +5743,7 @@
       "choices": [
         {
           "name": "采集花蜜",
-          "description": "获得{Prize1}金币。"
+          "description": "获得X金币。"
         },
         {
           "name": "深入探索",
@@ -5756,7 +5756,7 @@
           "choices": [
             {
               "name": "采集花蜜",
-              "description": "获得{Prize1}金币。"
+              "description": "获得X金币。"
             },
             {
               "name": "深入探索",
@@ -5769,7 +5769,7 @@
           "choices": [
             {
               "name": "采集花蜜",
-              "description": "获得{Prize2}金币。"
+              "description": "获得X金币。"
             },
             {
               "name": "深入探索",
@@ -5782,7 +5782,7 @@
           "choices": [
             {
               "name": "采集花蜜",
-              "description": "获得{Prize3}金币。"
+              "description": "获得X金币。"
             },
             {
               "name": "抵达核心",
@@ -5812,7 +5812,7 @@
       "choices": [
         {
           "name": "休息",
-          "description": "回复{Heal}点生命。进入战斗。"
+          "description": "回复X点生命。进入战斗。"
         },
         {
           "name": "坚持跋涉",
@@ -6039,7 +6039,7 @@
           "description": "获得一件随机遗物。"
         },
         {
-          "name": "给他{Potion}",
+          "name": "给他药水",
           "description": "获得一件随机遗物。"
         },
         {
@@ -6068,15 +6068,15 @@
       "choices": [
         {
           "name": "拿下面那件",
-          "description": "用{BottomRelicOwned}换{BottomRelicNew}。"
+          "description": "用你的遗物换新遗物。"
         },
         {
           "name": "拿中间这件",
-          "description": "用{MiddleRelicOwned}换{MiddleRelicNew}。"
+          "description": "用你的遗物换新遗物。"
         },
         {
           "name": "拿上面那件",
-          "description": "用{TopRelicOwned}换{TopRelicNew}。"
+          "description": "用你的遗物换新遗物。"
         }
       ]
     },
@@ -6150,11 +6150,11 @@
       "choices": [
         {
           "name": "再撑一会",
-          "description": "失去{HpLoss}点生命。重新随机上方选项中的卡牌。"
+          "description": "失去X点生命。重新随机上方选项中的卡牌。"
         },
         {
           "name": "跨越",
-          "description": "{RandomCard}将从你的牌组中被移除。"
+          "description": "随机卡牌将从你的牌组中被移除。"
         }
       ]
     },
@@ -6164,7 +6164,7 @@
       "choices": [
         {
           "name": "饮用",
-          "description": "回复{Heal}点生命。"
+          "description": "回复X点生命。"
         },
         {
           "name": "观察",
@@ -6196,7 +6196,7 @@
       "choices": [
         {
           "name": "喝药抬起",
-          "description": "失去{DrinkRandomPotion}。获得10最大生命。"
+          "description": "失去随机药水。获得10最大生命。"
         },
         {
           "name": "锁定",
@@ -6283,8 +6283,8 @@
       "description": "转过拐角，你感受到一阵轻微的轰鸣，随后发现了一台巨大的旋转装置！\n它带有几个槽位，似乎能将液体转化为高度压缩的易消化药片。\n\n将这些药水炼成一小片的想法令人有些不适，但或许尝试新事物也不错？",
       "choices": [
         {
-          "name": "放入{Rarity}药水",
-          "description": "失去{Potion}。获得一张升级过的{Rarity}{Type}牌。"
+          "name": "放入?药水",
+          "description": "失去药水。获得一张升级过的??牌。"
         }
       ]
     },
@@ -6326,7 +6326,7 @@
         },
         {
           "name": "这个",
-          "description": "失去6点生命。获得{Gold}金币。"
+          "description": "失去6点生命。获得X金币。"
         }
       ]
     },
@@ -6410,7 +6410,7 @@
     },
     "TRIAL": {
       "name": "审判",
-      "description": "你排起队，和众人一起进入一栋巨大的建筑物。\n\n当你通过一道金色的拱门时，突然号角响起、彩纸爆裂飞散、天花板上还飞出了众多彩条！\n\n“{EntrantNumber}号进入者，你将成为今天审判的判决者。”",
+      "description": "你排起队，和众人一起进入一栋巨大的建筑物。\n\n当你通过一道金色的拱门时，突然号角响起、彩纸爆裂飞散、天花板上还飞出了众多彩条！\n\n“?号进入者，你将成为今天审判的判决者。”",
       "choices": [
         {
           "name": "接受",
@@ -6482,7 +6482,7 @@
         },
         {
           "name": "旺购的特选商品",
-          "description": "支付200金币。获得{RandomRelic}。"
+          "description": "支付200金币。获得随机遗物。"
         },
         {
           "name": "锁定",

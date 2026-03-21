@@ -5403,7 +5403,7 @@
       "choices": [
         {
           "name": "Zbierz nektar",
-          "description": "Zyskaj {Prize1} szt. Złota."
+          "description": "Zyskaj X szt. Złota."
         },
         {
           "name": "Sięgnij głębiej",
@@ -5416,7 +5416,7 @@
           "choices": [
             {
               "name": "Zbierz nektar",
-              "description": "Zyskaj {Prize1} szt. Złota."
+              "description": "Zyskaj X szt. Złota."
             },
             {
               "name": "Sięgnij głębiej",
@@ -5429,7 +5429,7 @@
           "choices": [
             {
               "name": "Zbierz nektar",
-              "description": "Zyskaj {Prize2} szt. Złota."
+              "description": "Zyskaj X szt. Złota."
             },
             {
               "name": "Sięgnij głębiej",
@@ -5442,7 +5442,7 @@
           "choices": [
             {
               "name": "Zbierz nektar",
-              "description": "Zyskaj {Prize3} szt. Złota."
+              "description": "Zyskaj X szt. Złota."
             },
             {
               "name": "Wejdź do środka",
@@ -5472,7 +5472,7 @@
       "choices": [
         {
           "name": "Odpocznij",
-          "description": "Przywróć {Heal} PŻ. Walcz z paroma przeciwnikami."
+          "description": "Przywróć X PŻ. Walcz z paroma przeciwnikami."
         },
         {
           "name": "Brnij dalej",
@@ -5697,7 +5697,7 @@
           "description": "Otrzymaj losowy Artefakt."
         },
         {
-          "name": "Podaruj {Potion}",
+          "name": "Podaruj Mikstura",
           "description": "Otrzymaj losowy Artefakt."
         },
         {
@@ -5726,15 +5726,15 @@
       "choices": [
         {
           "name": "Weź ten na dole",
-          "description": "Zamień Artefakt: {BottomRelicOwned} na {BottomRelicNew}."
+          "description": "Zamień Artefakt: twój Relikt na nowy Relikt."
         },
         {
           "name": "Weź ten na środku",
-          "description": "Zamień Artefakt: {MiddleRelicOwned} na {MiddleRelicNew}."
+          "description": "Zamień Artefakt: twój Relikt na nowy Relikt."
         },
         {
           "name": "Weź ten na górze",
-          "description": "Zamień Artefakt: {TopRelicOwned} na {TopRelicNew}."
+          "description": "Zamień Artefakt: twój Relikt na nowy Relikt."
         }
       ]
     },
@@ -5808,11 +5808,11 @@
       "choices": [
         {
           "name": "Trzymaj się",
-          "description": "Utrać {HpLoss} PŻ. Karta w opcji powyżej zostanie ponownie wylosowana."
+          "description": "Utrać X PŻ. Karta w opcji powyżej zostanie ponownie wylosowana."
         },
         {
           "name": "Overcome",
-          "description": "Usuń {RandomCard} z talii."
+          "description": "Usuń losowa Karta z talii."
         }
       ]
     },
@@ -5822,7 +5822,7 @@
       "choices": [
         {
           "name": "Wypij",
-          "description": "Przywróć {Heal} PŻ."
+          "description": "Przywróć X PŻ."
         },
         {
           "name": "Obserwuj",
@@ -5854,7 +5854,7 @@
       "choices": [
         {
           "name": "Wypij i podnieś",
-          "description": "Utrać Miksturę: {DrinkRandomPotion}. Zyskaj 10 maks. PŻ."
+          "description": "Utrać Miksturę: losowa Mikstura. Zyskaj 10 maks. PŻ."
         },
         {
           "name": "Zablokowane",
@@ -5942,7 +5942,7 @@
       "choices": [
         {
           "name": "Umieść {Rarity:choose(Pospolita|Niepospolita|Rzadka|Specjalna):pospolitą|niepospolitą|rzadką|specjalną} Miksturę",
-          "description": "Utrać Miksturę: {Potion}. Otrzymaj Ulepszoną {Rarity:choose(Pospolita|Niepospolita|Rzadka|Specjalna):pospolitą|niepospolitą|rzadką|specjalną} kartę {Type:choose(Atak|Umiej.|Moc):Ataku|Umiejętności|Mocy}."
+          "description": "Utrać Miksturę: Mikstura. Otrzymaj Ulepszoną {Rarity:choose(Pospolita|Niepospolita|Rzadka|Specjalna):pospolitą|niepospolitą|rzadką|specjalną} kartę {Type:choose(Atak|Umiej.|Moc):Ataku|Umiejętności|Mocy}."
         }
       ]
     },
@@ -5984,7 +5984,7 @@
         },
         {
           "name": "Tamto",
-          "description": "Utrać 6 PŻ. Zyskaj {Gold} szt. Złota."
+          "description": "Utrać 6 PŻ. Zyskaj X szt. Złota."
         }
       ]
     },
@@ -6068,7 +6068,7 @@
     },
     "TRIAL": {
       "name": "Proces",
-      "description": "You join a line of people entering a massive building.\n\nAs you pass under a golden archway, horns blare, confetti explodes, and streamers glide down from the ceiling!\n\n“Entrant {EntrantNumber}, you are the DECIDER for today's Trial.”",
+      "description": "You join a line of people entering a massive building.\n\nAs you pass under a golden archway, horns blare, confetti explodes, and streamers glide down from the ceiling!\n\n“Entrant ?, you are the DECIDER for today's Trial.”",
       "choices": [
         {
           "name": "Zgódź się",

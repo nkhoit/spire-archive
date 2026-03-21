@@ -5743,7 +5743,7 @@
       "choices": [
         {
           "name": "꿀을 추출한다",
-          "description": "골드를 {Prize1} 얻습니다."
+          "description": "골드를 X 얻습니다."
         },
         {
           "name": "더 깊게 다가간다",
@@ -5756,7 +5756,7 @@
           "choices": [
             {
               "name": "꿀을 추출한다",
-              "description": "골드를 {Prize1} 얻습니다."
+              "description": "골드를 X 얻습니다."
             },
             {
               "name": "더 깊게 다가간다",
@@ -5769,7 +5769,7 @@
           "choices": [
             {
               "name": "꿀을 추출한다",
-              "description": "골드를 {Prize2} 얻습니다."
+              "description": "골드를 X 얻습니다."
             },
             {
               "name": "더 깊게 다가간다",
@@ -5782,7 +5782,7 @@
           "choices": [
             {
               "name": "꿀을 추출한다",
-              "description": "골드를 {Prize3} 얻습니다."
+              "description": "골드를 X 얻습니다."
             },
             {
               "name": "중심부로 들어간다",
@@ -5812,7 +5812,7 @@
       "choices": [
         {
           "name": "휴식한다",
-          "description": "체력을 {Heal} 회복합니다. 적들과 싸웁니다."
+          "description": "체력을 X 회복합니다. 적들과 싸웁니다."
         },
         {
           "name": "묵묵히 나아간다",
@@ -6039,7 +6039,7 @@
           "description": "무작위 유물을 1개 얻습니다."
         },
         {
-          "name": "{Potion}을(를) 준다",
+          "name": "물약을(를) 준다",
           "description": "무작위 유물을 1개 얻습니다."
         },
         {
@@ -6068,15 +6068,15 @@
       "choices": [
         {
           "name": "아래의 것을 가져간다",
-          "description": "{BottomRelicOwned}을(를) {BottomRelicNew}(와)과 거래합니다."
+          "description": "보유 유물을(를) 새 유물(와)과 거래합니다."
         },
         {
           "name": "중간 것을 가져간다",
-          "description": "{MiddleRelicOwned}을(를) {MiddleRelicNew}(와)과 거래합니다."
+          "description": "보유 유물을(를) 새 유물(와)과 거래합니다."
         },
         {
           "name": "위의 것을 가져간다",
-          "description": "{TopRelicOwned}을(를) {TopRelicNew}(와)과 거래합니다."
+          "description": "보유 유물을(를) 새 유물(와)과 거래합니다."
         }
       ]
     },
@@ -6150,11 +6150,11 @@
       "choices": [
         {
           "name": "버틴다",
-          "description": "체력을 {HpLoss} 잃습니다. 상단 선택지의 카드가 무작위로 변경됩니다."
+          "description": "체력을 X 잃습니다. 상단 선택지의 카드가 무작위로 변경됩니다."
         },
         {
           "name": "헤쳐 나간다",
-          "description": "{RandomCard}(이)가 덱에서 제거됩니다."
+          "description": "무작위 카드(이)가 덱에서 제거됩니다."
         }
       ]
     },
@@ -6164,7 +6164,7 @@
       "choices": [
         {
           "name": "마신다",
-          "description": "체력을 {Heal} 회복합니다."
+          "description": "체력을 X 회복합니다."
         },
         {
           "name": "관찰한다",
@@ -6196,7 +6196,7 @@
       "choices": [
         {
           "name": "목을 축이고 들어올린다",
-          "description": "{DrinkRandomPotion}을(를) 잃습니다. 최대 체력을 10 얻습니다."
+          "description": "무작위 물약을(를) 잃습니다. 최대 체력을 10 얻습니다."
         },
         {
           "name": "잠김",
@@ -6283,8 +6283,8 @@
       "description": "모퉁이를 도는 순간 희미한 진동이 느껴지고, 거대한 회전 장치가 당신의 눈앞에 모습을 드러냅니다!\n여러 개의 투입구가 있어, 액체를 고도로 압축해 섭취할 수 있는 알약으로 바꾸는 구조의 장치인 것으로 보입니다.\n\n이 건강 음료들을 작은 알약 한 알로 바꾼다는 발상은 영 꺼림칙하지만, 가끔은 새로운 시도를 해보는 것도 나쁘지 않을지도 모릅니다.",
       "choices": [
         {
-          "name": "{Rarity} 포션을 삽입한다",
-          "description": "{Potion}을(를) 잃습니다. 강화된 {Rarity} {Type} 카드를 얻습니다."
+          "name": "? 포션을 삽입한다",
+          "description": "물약을(를) 잃습니다. 강화된 ? ? 카드를 얻습니다."
         }
       ]
     },
@@ -6326,7 +6326,7 @@
         },
         {
           "name": "이거",
-          "description": "체력을 6 잃습니다. 골드를 {Gold} 얻습니다."
+          "description": "체력을 6 잃습니다. 골드를 X 얻습니다."
         }
       ]
     },
@@ -6410,7 +6410,7 @@
     },
     "TRIAL": {
       "name": "재판",
-      "description": "당신은 거대한 건물로 들어가는 사람들의 줄에 합류합니다.\n\n황금빛 아치를 지나자 나팔 소리가 요란하게 울려 퍼지고 색종이가 터져 나오며, 천장에서는 장식용 리본이 흩날립니다!\n\n“참가 번호 {EntrantNumber}번, 오늘 재판의 결정자는 당신입니다.”",
+      "description": "당신은 거대한 건물로 들어가는 사람들의 줄에 합류합니다.\n\n황금빛 아치를 지나자 나팔 소리가 요란하게 울려 퍼지고 색종이가 터져 나오며, 천장에서는 장식용 리본이 흩날립니다!\n\n“참가 번호 ?번, 오늘 재판의 결정자는 당신입니다.”",
       "choices": [
         {
           "name": "수락한다",
@@ -6482,7 +6482,7 @@
         },
         {
           "name": "웡고스 추천 상품",
-          "description": "골드를 200 지불합니다. {RandomRelic}을(를) 얻습니다."
+          "description": "골드를 200 지불합니다. 무작위 유물을(를) 얻습니다."
         },
         {
           "name": "잠김",

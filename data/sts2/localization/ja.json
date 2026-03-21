@@ -5744,7 +5744,7 @@
       "choices": [
         {
           "name": "蜜を採取",
-          "description": "{Prize1}ゴールドを獲得。"
+          "description": "Xゴールドを獲得。"
         },
         {
           "name": "奥へ入る",
@@ -5757,7 +5757,7 @@
           "choices": [
             {
               "name": "蜜を採取",
-              "description": "{Prize1}ゴールドを獲得。"
+              "description": "Xゴールドを獲得。"
             },
             {
               "name": "奥へ入る",
@@ -5770,7 +5770,7 @@
           "choices": [
             {
               "name": "蜜を採取",
-              "description": "{Prize2}ゴールドを獲得。"
+              "description": "Xゴールドを獲得。"
             },
             {
               "name": "さらに奥へ",
@@ -5783,7 +5783,7 @@
           "choices": [
             {
               "name": "蜜を採取",
-              "description": "{Prize3}ゴールドを獲得。"
+              "description": "Xゴールドを獲得。"
             },
             {
               "name": "中心へ",
@@ -5813,7 +5813,7 @@
       "choices": [
         {
           "name": "休憩する",
-          "description": "HPを{Heal}回復する。 敵と戦う。"
+          "description": "HPをX回復する。 敵と戦う。"
         },
         {
           "name": "意地でも進む",
@@ -6040,7 +6040,7 @@
           "description": "ランダムなレリックを1個獲得する。"
         },
         {
-          "name": "{Potion}を渡す",
+          "name": "ポーションを渡す",
           "description": "ランダムなレリックを1個獲得する。"
         },
         {
@@ -6069,15 +6069,15 @@
       "choices": [
         {
           "name": "一番下の品を選ぶ",
-          "description": "{BottomRelicOwned}を{BottomRelicNew}と交換する。"
+          "description": "あなたのレリックを新しいレリックと交換する。"
         },
         {
           "name": "真ん中の品を選ぶ",
-          "description": "{MiddleRelicOwned}を{MiddleRelicNew}と交換する。"
+          "description": "あなたのレリックを新しいレリックと交換する。"
         },
         {
           "name": "一番上の品を選ぶ",
-          "description": "{TopRelicOwned}を{TopRelicNew}と交換する。"
+          "description": "あなたのレリックを新しいレリックと交換する。"
         }
       ]
     },
@@ -6151,11 +6151,11 @@
       "choices": [
         {
           "name": "しがみつく",
-          "description": "HPを{HpLoss}失う。 上の選択肢のカードがランダムに変わる。"
+          "description": "HPをX失う。 上の選択肢のカードがランダムに変わる。"
         },
         {
           "name": "乗り越える",
-          "description": "デッキから{RandomCard}が失われる。"
+          "description": "デッキからランダムなカードが失われる。"
         }
       ]
     },
@@ -6165,7 +6165,7 @@
       "choices": [
         {
           "name": "飲む",
-          "description": "HPを{Heal}回復する。"
+          "description": "HPをX回復する。"
         },
         {
           "name": "観察する",
@@ -6197,7 +6197,7 @@
       "choices": [
         {
           "name": "ポーションを飲んで持ち上げる",
-          "description": "{DrinkRandomPotion}を失う。 最大HPが10増加。"
+          "description": "ランダムなポーションを失う。 最大HPが10増加。"
         },
         {
           "name": "ロック中",
@@ -6284,8 +6284,8 @@
       "description": "角を曲がると、かすかな地響きを感じる。 そこには、巨大な回転する装置があった！\nいくつかの投入口を備えており、液体を高度に圧縮し、服用可能な錠剤に変換するようだ。\n\nポーションを、ほんの小さな一口サイズに変えてしまうというアイデアには不安を覚える。 だが、何事もまずは試してみるべきか？",
       "choices": [
         {
-          "name": "ポーション（{Rarity}）を投入",
-          "description": "{Potion}を失う。 アップグレードした{Rarity}の{Type}を1つ入手する。"
+          "name": "ポーション（?）を投入",
+          "description": "ポーションを失う。 アップグレードした?の?を1つ入手する。"
         }
       ]
     },
@@ -6327,7 +6327,7 @@
         },
         {
           "name": "こっち",
-          "description": "HPを6失う。 {Gold}ゴールドを獲得。"
+          "description": "HPを6失う。 Xゴールドを獲得。"
         }
       ]
     },
@@ -6411,7 +6411,7 @@
     },
     "TRIAL": {
       "name": "裁判",
-      "description": "巨大な建造物へと続く人だかりの列に、あなたは紛れ込んだ。\n\n黄金のアーチをくぐり抜けた途端、角笛が鳴り響き、紙吹雪が舞い散り、天井からテープが降り注いできた！\n\n「入場番号{EntrantNumber}番！ あなたが本日の裁判における裁判官です！」",
+      "description": "巨大な建造物へと続く人だかりの列に、あなたは紛れ込んだ。\n\n黄金のアーチをくぐり抜けた途端、角笛が鳴り響き、紙吹雪が舞い散り、天井からテープが降り注いできた！\n\n「入場番号?番！ あなたが本日の裁判における裁判官です！」",
       "choices": [
         {
           "name": "受諾する",
@@ -6483,7 +6483,7 @@
         },
         {
           "name": "ウォンゴのおすすめ商品",
-          "description": "200ゴールドを支払う。 {RandomRelic}を獲得する。"
+          "description": "200ゴールドを支払う。 ランダムなレリックを獲得する。"
         },
         {
           "name": "ロック中",

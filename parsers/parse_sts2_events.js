@@ -573,6 +573,44 @@ function applyManualFixes(events, relicsData = []) {
       }
     }
 
+    // Replace runtime-only vars with descriptive text
+    const RUNTIME_REPLACEMENTS = {
+      '{Prize1}': 'X', '{Prize2}': 'X', '{Prize3}': 'X',
+      '{Heal}': 'X', '{Gold}': 'X', '{HpLoss}': 'X',
+      '{Potion}': 'Potion', '{Relic}': 'Relic',
+      '{RandomRelic}': 'a random Relic', '{RandomCard}': 'A random card',
+      '{DrinkRandomPotion}': 'a random Potion',
+      '{Rarity}': '?', '{Type}': '?', '{EntrantNumber}': '?',
+      '{BottomRelicOwned}': 'your Relic', '{BottomRelicNew}': 'a new Relic',
+      '{MiddleRelicOwned}': 'your Relic', '{MiddleRelicNew}': 'a new Relic',
+      '{TopRelicOwned}': 'your Relic', '{TopRelicNew}': 'a new Relic',
+    };
+    const resolveRuntime = (text) => {
+      if (!text) return text;
+      for (const [k, v] of Object.entries(RUNTIME_REPLACEMENTS)) {
+        if (text.includes(k)) text = text.replaceAll(k, v);
+      }
+      return text;
+    };
+    if (event.description) event.description = resolveRuntime(event.description);
+    if (event.choices) {
+      for (const c of event.choices) {
+        if (c.name) c.name = resolveRuntime(c.name);
+        if (c.description) c.description = resolveRuntime(c.description);
+      }
+    }
+    if (event.pages) {
+      for (const p of event.pages) {
+        if (p.description) p.description = resolveRuntime(p.description);
+        if (p.choices) {
+          for (const c of p.choices) {
+            if (c.name) c.name = resolveRuntime(c.name);
+            if (c.description) c.description = resolveRuntime(c.description);
+          }
+        }
+      }
+    }
+
     // TINKER_TIME: multi-step card builder event
     if (event.id === 'TINKER_TIME') {
       event.choices = [];
