@@ -659,6 +659,53 @@ def _generate_upgrade_descriptions():
     print(f"  Generated {count} upgrade descriptions for plural cards")
 
 
+def _fix_mad_science():
+    """Fix MAD_SCIENCE card: customizable card built via Tinker Time event."""
+    cards_path = OUTPUT_DIR / "cards.json"
+    with open(cards_path) as f:
+        cards = json.load(f)
+
+    for card in cards:
+        if card["id"] == "MAD_SCIENCE":
+            card["description"] = (
+                "A custom card created during the Tinker Time event. "
+                "You choose a card type (Attack, Skill, or Power) and a rider effect."
+            )
+            card["customizable"] = True
+            card["variants"] = {
+                "Attack": {
+                    "description": "Deal 12 damage.",
+                    "riders": [
+                        {"name": "Sapping", "description": "Apply 2 Weak. Apply 2 Vulnerable."},
+                        {"name": "Violence", "description": "Hits 2 additional times."},
+                        {"name": "Choking", "description": "Whenever you play a card this turn, the enemy loses 6 HP."},
+                    ],
+                },
+                "Skill": {
+                    "description": "Gain 8 Block.",
+                    "riders": [
+                        {"name": "Energized", "description": "Gain [E][E]."},
+                        {"name": "Wisdom", "description": "Draw 3 cards."},
+                        {"name": "Chaos", "description": "Add a random card into your Hand. It costs 0 [E] this turn."},
+                    ],
+                },
+                "Power": {
+                    "description": "No base effect.",
+                    "riders": [
+                        {"name": "Expertise", "description": "Gain 2 Strength. Gain 2 Dexterity."},
+                        {"name": "Curious", "description": "Powers cost 1 [E] less."},
+                        {"name": "Improvement", "description": "At the end of combat, Upgrade a random card."},
+                    ],
+                },
+            }
+            print("  Fixed MAD_SCIENCE: customizable card with variants")
+            break
+
+    with open(cards_path, "w") as f:
+        json.dump(cards, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+
+
 def main():
     # Build entity name lookup for StringVar resolution
     entity_names = _build_entity_name_map()
@@ -673,6 +720,9 @@ def main():
 
     # Generate upgrade.description for cards with plural templates
     _generate_upgrade_descriptions()
+
+    # Fix MAD_SCIENCE: customizable card built during Tinker Time event
+    _fix_mad_science()
 
     # Relics
     resolve_entity_file(

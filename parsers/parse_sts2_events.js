@@ -543,6 +543,38 @@ function applyManualFixes(events, relicsData = []) {
       event.references = dedupeReferences([...(event.references || []), ...MANUAL_EVENT_REFS[event.id]]);
     }
 
+    // TINKER_TIME: multi-step card builder event
+    if (event.id === 'TINKER_TIME') {
+      event.choices = [];
+      event.pages = [
+        {
+          label: 'Choose Card Type',
+          description: '2 of 3 types are offered randomly.',
+          choices: [
+            { name: 'Weapon', description: 'Create an Attack. (Deal 12 damage.)' },
+            { name: 'Protector', description: 'Create a Skill. (Gain 8 Block.)' },
+            { name: 'Gadget', description: 'Create a Power.' },
+          ],
+        },
+        {
+          label: 'Choose Rider Effect',
+          description: '2 of 3 effects are offered randomly, based on the card type chosen.',
+          choices: [
+            { name: 'Sapping', description: 'Apply 2 Weak. Apply 2 Vulnerable.', pool: 'Attack' },
+            { name: 'Violence', description: 'Hits 2 additional times.', pool: 'Attack' },
+            { name: 'Choking', description: 'Whenever you play a card this turn, the enemy loses 6 HP.', pool: 'Attack' },
+            { name: 'Energized', description: 'Gain [E][E].', pool: 'Skill' },
+            { name: 'Wisdom', description: 'Draw 3 cards.', pool: 'Skill' },
+            { name: 'Chaos', description: 'Add a random card into your Hand. It costs 0 [E] this turn.', pool: 'Skill' },
+            { name: 'Expertise', description: 'Gain 2 Strength. Gain 2 Dexterity.', pool: 'Power' },
+            { name: 'Curious', description: 'Powers cost 1 [E] less.', pool: 'Power' },
+            { name: 'Improvement', description: 'At the end of combat, Upgrade a random card.', pool: 'Power' },
+          ],
+        },
+      ];
+      event.references = [{ type: 'card', id: 'MAD_SCIENCE', name: 'Mad Science' }];
+    }
+
     const ancient = ANCIENT_EVENT_DATA[event.id];
     if (ancient) {
       event.type = ancient.type;

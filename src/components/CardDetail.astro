@@ -389,6 +389,32 @@ if (game === 'sts2' && upg) {
         </div>
       </section>
     )}
+
+    {(card as any).variants && (
+      <section class="mt-6">
+        <h2 class="text-sm font-semibold text-slate-400 mb-3">Card Variants</h2>
+        <p class="text-xs text-slate-400 mb-3 italic">
+          Created during the <a href={`${langPrefix}/sts2/events/TINKER_TIME`} class="text-amber-200 underline decoration-amber-500/40 hover:decoration-amber-400">Tinker Time</a> event. You choose a type and a rider effect (2 of 3 offered randomly for each).
+        </p>
+        <div class="grid gap-3 sm:grid-cols-3">
+          {Object.entries((card as any).variants).map(([typeName, variant]: [string, any]) => (
+            <div class="rounded-lg border border-white/10 bg-white/5 p-3">
+              <h3 class="text-sm font-semibold text-amber-300">{typeName}</h3>
+              <p class="text-xs text-slate-400 mt-0.5" set:html={replaceGameTokens(variant.description)} />
+              <div class="mt-2 space-y-1.5">
+                {variant.riders.map((rider: any) => (
+                  <div class="rounded border border-white/5 bg-white/[0.03] p-2">
+                    <div class="text-xs font-semibold text-sky-300">{rider.name}</div>
+                    <p class="text-xs text-slate-300 mt-0.5" set:html={replaceGameTokens(rider.description)} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+        <p class="text-xs text-slate-500 mt-2">Upgrade adds Innate.</p>
+      </section>
+    )}
   </div>
 </div>
 

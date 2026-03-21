@@ -403,8 +403,8 @@
     "color": "curse",
     "keywords": [
       "Ethereal",
-      "Eternal",
-      "Unplayable"
+      "Unplayable",
+      "Eternal"
     ],
     "tags": [],
     "vars": {},
@@ -552,8 +552,8 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Eternal",
-      "Unplayable"
+      "Unplayable",
+      "Eternal"
     ],
     "tags": [],
     "vars": {
@@ -2497,8 +2497,8 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Eternal",
-      "Unplayable"
+      "Unplayable",
+      "Eternal"
     ],
     "tags": [],
     "vars": {},
@@ -4436,9 +4436,9 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Eternal",
+      "Unplayable",
       "Innate",
-      "Unplayable"
+      "Eternal"
     ],
     "tags": [],
     "vars": {},
@@ -5033,8 +5033,8 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Eternal",
-      "Unplayable"
+      "Unplayable",
+      "Eternal"
     ],
     "tags": [],
     "vars": {},
@@ -6442,8 +6442,62 @@
         "Innate"
       ]
     },
-    "description": "Deal 12 damage 3 times\nApply 2 Weak.\nApply 2 Vulnerable.\nWhenever you play a card this turn, the enemy loses 6 HP.\nGain [E][E].\nDraw 3 cards.\nAdd a random card into your Hand. It costs 0 [E] this turn.Gain 2 Strength.\nGain 2 Dexterity.Powers cost 1 [E] less.At the end of combat, Upgrade a random card.",
-    "image_url": "/images/sts2/cards/mad_science.png"
+    "description": "A custom card created during the Tinker Time event. You choose a card type (Attack, Skill, or Power) and a rider effect.",
+    "image_url": "/images/sts2/cards/mad_science.png",
+    "customizable": true,
+    "variants": {
+      "Attack": {
+        "description": "Deal 12 damage.",
+        "riders": [
+          {
+            "name": "Sapping",
+            "description": "Apply 2 Weak. Apply 2 Vulnerable."
+          },
+          {
+            "name": "Violence",
+            "description": "Hits 2 additional times."
+          },
+          {
+            "name": "Choking",
+            "description": "Whenever you play a card this turn, the enemy loses 6 HP."
+          }
+        ]
+      },
+      "Skill": {
+        "description": "Gain 8 Block.",
+        "riders": [
+          {
+            "name": "Energized",
+            "description": "Gain [E][E]."
+          },
+          {
+            "name": "Wisdom",
+            "description": "Draw 3 cards."
+          },
+          {
+            "name": "Chaos",
+            "description": "Add a random card into your Hand. It costs 0 [E] this turn."
+          }
+        ]
+      },
+      "Power": {
+        "description": "No base effect.",
+        "riders": [
+          {
+            "name": "Expertise",
+            "description": "Gain 2 Strength. Gain 2 Dexterity."
+          },
+          {
+            "name": "Curious",
+            "description": "Powers cost 1 [E] less."
+          },
+          {
+            "name": "Improvement",
+            "description": "At the end of combat, Upgrade a random card."
+          }
+        ]
+      }
+    }
   },
   {
     "id": "MAKE_IT_SO",
@@ -6836,8 +6890,8 @@
       "Exhaust"
     ],
     "tags": [
-      "Strike",
-      "Minion"
+      "Minion",
+      "Strike"
     ],
     "vars": {
       "damage": 7,
@@ -8172,8 +8226,8 @@
     "target": "Self",
     "color": "colorless",
     "keywords": [
-      "Retain",
-      "Exhaust"
+      "Exhaust",
+      "Retain"
     ],
     "tags": [],
     "vars": {
@@ -11880,8 +11934,8 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Innate",
-      "Unplayable"
+      "Unplayable",
+      "Innate"
     ],
     "tags": [],
     "vars": {},
