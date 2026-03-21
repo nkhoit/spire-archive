@@ -12,7 +12,7 @@ if (!card) {
   return new Response('Not found', { status: 404 });
 }
 const title = `${card.name} — Card — Spire Archive — STS2`;
-const desc = `${card.type} · ${card.rarity} · cost ${card.cost ?? '—'}`;
+const desc = `${card.type} · ${card.rarity} · cost ${card.cost === -1 ? 'X' : card.cost ?? '—'}`;
 ---
 <Layout game="sts2" title={title} description={card.description} ogTitle={card.name} ogDescription={desc}>
   <CardDetail game="sts2" card={card} data={data} />

@@ -240,7 +240,7 @@ def parse_cards():
         card = {
             "id": card_id,
             "name": get_loc_name(loc, card_id) or humanize(name),
-            "cost": None if raw_cost < 0 or is_x_cost else raw_cost,
+            "cost": -1 if is_x_cost else (None if raw_cost < 0 else raw_cost),
             "type": m.group(2),
             "rarity": m.group(3),
             "target": m.group(4),

@@ -212,7 +212,9 @@ function Sts2Renderer({ card, upgraded, size, locale = 'en' }: { card: any; upgr
 
   const cardName = upgraded ? card.name + '+' : card.name;
 
-  let displayCost: number | null = card.cost ?? null;
+  let displayCost: number | string | null = card.cost ?? null;
+  const isXCost = card.cost === -1;
+  if (isXCost) displayCost = 'X';
   if (upgraded && card.upgrade?.cost != null) {
     displayCost = card.upgrade.cost;
   }
