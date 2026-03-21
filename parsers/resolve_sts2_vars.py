@@ -609,8 +609,19 @@ def _generate_upgrade_descriptions():
 
         # Clean BBCode from raw template
         clean_raw = re.sub(r'\[/?[a-z]+\]', '', raw_desc).strip()
-        # Remove {InCombat:...} blocks
-        clean_raw = re.sub(r'\{InCombat:[^}]*\}', '', clean_raw).strip()
+        # Remove {InCombat:...} blocks (may contain nested {})
+        while '{InCombat:' in clean_raw:
+            start = clean_raw.index('{InCombat:')
+            depth = 0
+            end = start
+            for i in range(start, len(clean_raw)):
+                if clean_raw[i] == '{': depth += 1
+                elif clean_raw[i] == '}': depth -= 1
+                if depth == 0:
+                    end = i + 1
+                    break
+            clean_raw = clean_raw[:start] + clean_raw[end:]
+        clean_raw = clean_raw.strip()
         # Remove {IfUpgraded:show:...|...} — use upgraded form
         clean_raw = re.sub(r'\{IfUpgraded:show:([^|]*)\|([^}]*)\}', r'\1', clean_raw)
         clean_raw = re.sub(r'\{IfUpgraded:show:([^}]*)\}', r'\1', clean_raw)
