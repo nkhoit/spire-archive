@@ -107,7 +107,7 @@
   {
     "id": "BLACK_HOLE_POWER",
     "name": "Black Hole",
-    "description": "Whenever you spend or gain {singleStarIcon}, deal 3 damage to ALL enemies.",
+    "description": "Whenever you spend or gain [S], deal 3 damage to ALL enemies.",
     "type": "Buff",
     "stackable": true
   },
@@ -184,7 +184,7 @@
   {
     "id": "CHILD_OF_THE_STARS_POWER",
     "name": "Child of the Stars",
-    "description": "Gain 1 Block for each {singleStarIcon} spent.",
+    "description": "Gain 1 Block for each [S] spent.",
     "type": "Buff",
     "stackable": true
   },
@@ -296,7 +296,7 @@
   {
     "id": "CURIOUS_POWER",
     "name": "Curious",
-    "description": "Powers cost 1 {energyPrefix:energyIcons(1)} less.",
+    "description": "Powers cost 1 [E] less.",
     "type": "Buff",
     "stackable": true
   },
@@ -422,7 +422,7 @@
   {
     "id": "DRUM_OF_BATTLE_POWER",
     "name": "Drum of Battle",
-    "description": "At the start of your turn, Exhaust the top {Amount:plural:card|{} cards} of your Draw Pile.",
+    "description": "At the start of your turn, Exhaust the top card of your Draw Pile.",
     "type": "Buff",
     "stackable": true
   },
@@ -499,7 +499,7 @@
   {
     "id": "FERAL_POWER",
     "name": "Feral",
-    "description": "The first time you play a 0{energyPrefix:energyIcons(1)} Attack each turn, return it to your Hand.",
+    "description": "The first time you play a 0[E] Attack each turn, return it to your Hand.",
     "type": "Buff",
     "stackable": true
   },
@@ -555,21 +555,21 @@
   {
     "id": "FREE_ATTACK_POWER",
     "name": "Free Attack",
-    "description": "Your next Attack costs 0 {energyPrefix:energyIcons(1)}.",
+    "description": "Your next Attack costs 0 [E].",
     "type": "Buff",
     "stackable": true
   },
   {
     "id": "FREE_POWER_POWER",
     "name": "Free Power",
-    "description": "The next Power you play costs 0 {energyPrefix:energyIcons(1)}.",
+    "description": "The next Power you play costs 0 [E].",
     "type": "Buff",
     "stackable": true
   },
   {
     "id": "FREE_SKILL_POWER",
     "name": "Free Skill",
-    "description": "The next Skill you play costs 0 {energyPrefix:energyIcons(1)}.",
+    "description": "The next Skill you play costs 0 [E].",
     "type": "Buff",
     "stackable": true
   },
@@ -597,7 +597,7 @@
   {
     "id": "GENESIS_POWER",
     "name": "Genesis",
-    "description": "At the start of your turn, gain {singleStarIcon}.",
+    "description": "At the start of your turn, gain [S].",
     "type": "Buff",
     "stackable": true
   },
@@ -793,7 +793,7 @@
   {
     "id": "KNOCKDOWN_POWER",
     "name": "Knockdown",
-    "description": "This creature takes {Amount} times the damage from other players this turn.",
+    "description": "This creature takes X times the damage from other players this turn.",
     "type": "Debuff",
     "stackable": true
   },
@@ -1374,7 +1374,7 @@
   {
     "id": "STAR_NEXT_TURN_POWER",
     "name": "Star Next Turn",
-    "description": "Gain 1 {singleStarIcon} next turn.",
+    "description": "Gain 1 [S] next turn.",
     "type": "Buff",
     "stackable": true
   },
@@ -1423,7 +1423,7 @@
   {
     "id": "SUBROUTINE_POWER",
     "name": "Subroutine",
-    "description": "Whenever you play a Power, gain 1 {energyPrefix:energyIcons(1)}.",
+    "description": "Whenever you play a Power, gain 1 [E].",
     "type": "Buff",
     "stackable": true
   },
@@ -1472,7 +1472,7 @@
   {
     "id": "TAG_TEAM_POWER",
     "name": "Tag Team",
-    "description": "The next Attack another player plays on the enemy is played {Amount:plural:an extra time|{} extra times}.",
+    "description": "The next Attack another player plays on the enemy is played an extra time.",
     "type": "Debuff",
     "stackable": true
   },
@@ -1549,7 +1549,7 @@
   {
     "id": "THE_SEALED_THRONE_POWER",
     "name": "The Sealed Throne",
-    "description": "Whenever you play a card, gain {singleStarIcon}.",
+    "description": "Whenever you play a card, gain [S].",
     "type": "Buff",
     "stackable": true
   },
