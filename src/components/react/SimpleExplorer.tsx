@@ -51,12 +51,15 @@ export function useApiList<T>(
 }
 
 export function useUrlOffset(limit: number): [number, (n: number) => void] {
-  const [offset, setOffsetRaw] = useState(() => {
-    if (typeof window === 'undefined') return 0;
+  const [offset, setOffsetRaw] = useState(0);
+
+  // Sync from URL on client mount (SSR always starts at 0)
+  useEffect(() => {
     const p = new URLSearchParams(window.location.search).get('page');
     const page = p ? parseInt(p, 10) : 1;
-    return (Math.max(1, page) - 1) * limit;
-  });
+    const urlOffset = (Math.max(1, page) - 1) * limit;
+    if (urlOffset !== 0) setOffsetRaw(urlOffset);
+  }, [limit]);
 
   const setOffset = useCallback((n: number) => {
     setOffsetRaw(n);
