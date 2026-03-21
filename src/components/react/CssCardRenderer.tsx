@@ -186,19 +186,19 @@ interface LocaleFontConfig {
 }
 
 const LOCALE_FONTS: Record<string, LocaleFontConfig> = {
-  en: { family: "'KreonGame', 'Kreon', serif", scale: 1.0 },
-  de: { family: "'KreonGame', 'Kreon', serif", scale: 1.0 },
-  fr: { family: "'KreonGame', 'Kreon', serif", scale: 1.0 },
-  es: { family: "'KreonGame', 'Kreon', serif", scale: 1.0 },
-  pt: { family: "'KreonGame', 'Kreon', serif", scale: 1.0 },
-  it: { family: "'KreonGame', 'Kreon', serif", scale: 1.0 },
-  pl: { family: "'KreonGame', 'Kreon', serif", scale: 1.0 },
-  tr: { family: "'KreonGame', 'Kreon', serif", scale: 1.0 },
-  ja: { family: "'Noto Sans JP', 'KreonGame', serif", scale: 0.95 },
-  zh: { family: "'Noto Serif SC', 'KreonGame', serif", scale: 0.95 },
-  ko: { family: "'KreonGame', 'Kreon', serif", scale: 0.90 },
-  ru: { family: "'Fira Sans Extra Condensed', 'KreonGame', serif", scale: 0.95 },
-  th: { family: "'KreonGame', 'Kreon', serif", scale: 0.95 },
+  en: { family: "'KreonGame', serif", scale: 1.0 },
+  de: { family: "'KreonGame', serif", scale: 1.0 },
+  fr: { family: "'KreonGame', serif", scale: 1.0 },
+  es: { family: "'KreonGame', serif", scale: 1.0 },
+  pt: { family: "'KreonGame', serif", scale: 1.0 },
+  it: { family: "'KreonGame', serif", scale: 1.0 },
+  pl: { family: "'KreonGame', serif", scale: 1.0 },
+  tr: { family: "'KreonGame', serif", scale: 1.0 },
+  ja: { family: "'NotoSansCJKjp', 'KreonGame', serif", scale: 0.95 },
+  zh: { family: "'SourceHanSerifSC', 'KreonGame', serif", scale: 0.95 },
+  ko: { family: "'GyeonggiCheonnyeon', 'KreonGame', serif", scale: 0.90 },
+  ru: { family: "'FiraSansCondensed', 'KreonGame', serif", scale: 0.95 },
+  th: { family: "'CSChatThai', 'KreonGame', serif", scale: 0.95 },
 };
 
 // Base font sizes (px at scale=1, matches game's MaxFontSize)

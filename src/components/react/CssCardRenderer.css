@@ -1,3 +1,77 @@
+/* ─── Game font @font-face declarations ──────────────────────────────────── */
+
+/* Kreon (default / Latin) */
+@font-face {
+  font-family: 'KreonGame';
+  src: url('/fonts/kreon-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'KreonGame';
+  src: url('/fonts/kreon-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* Japanese — Noto Sans CJK JP */
+@font-face {
+  font-family: 'NotoSansCJKjp';
+  src: url('/fonts/NotoSansCJKjp-Medium.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'NotoSansCJKjp';
+  src: url('/fonts/NotoSansCJKjp-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* Chinese Simplified — Source Han Serif SC */
+@font-face {
+  font-family: 'SourceHanSerifSC';
+  src: url('/fonts/SourceHanSerifSC-Medium.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SourceHanSerifSC';
+  src: url('/fonts/SourceHanSerifSC-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* Korean — Gyeonggi Cheonnyeon Batang */
+@font-face {
+  font-family: 'GyeonggiCheonnyeon';
+  src: url('/fonts/GyeonggiCheonnyeonBatangBold.woff2') format('woff2');
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+/* Russian — Fira Sans Extra Condensed */
+@font-face {
+  font-family: 'FiraSansCondensed';
+  src: url('/fonts/FiraSansExtraCondensed-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FiraSansCondensed';
+  src: url('/fonts/FiraSansExtraCondensed-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* Thai — CSChat Thai UI */
+@font-face {
+  font-family: 'CSChatThai';
+  src: url('/fonts/CSChatThaiUI.woff2') format('woff2');
+  font-weight: 400 700;
+  font-display: swap;
+}
+
 /* Canvas: 680×884 scaled by --s
  * All % values are relative to this canvas.
  * Frame rect: top=4.5% left=5.9% w=88.2% h=95.5%
