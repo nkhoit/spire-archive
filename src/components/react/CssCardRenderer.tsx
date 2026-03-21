@@ -1,4 +1,4 @@
-import { useRef, useLayoutEffect, useCallback } from 'react';
+import { useRef, useLayoutEffect, useCallback, useState } from 'react';
 import './CssCardRenderer.css';
 import { t } from '../../lib/ui-strings';
 
@@ -466,8 +466,22 @@ function Sts2Renderer({ card, upgraded, size, locale = 'en' }: { card: any; upgr
       }).join('<br/>') + '<br/>'
     : '') + descProcessed;
 
+// Game type plaque constants (from NCard.cs, scaled to our 680px canvas = 2x game's 340px)
+const TYPE_PLAQUE_MARGIN = 34;  // 17 * 2
+const TYPE_PLAQUE_MIN_WIDTH = 122; // 61 * 2
+
   const descFit = useAutoFit(descMaxPx, descMinPx, [descHtml, scale, locale]);
   const titleFit = useAutoFit(titleMaxPx, titleMinPx, [cardName, scale, locale]);
+
+  // Dynamic type plaque sizing (matches game's UpdateTypePlaqueSizeAndPosition)
+  const typeLabelRef = useRef<HTMLSpanElement>(null);
+  const [plaqueWidth, setPlaqueWidth] = useState(TYPE_PLAQUE_MIN_WIDTH);
+  useLayoutEffect(() => {
+    const el = typeLabelRef.current;
+    if (!el) return;
+    const w = Math.max(el.scrollWidth / scale + TYPE_PLAQUE_MARGIN, TYPE_PLAQUE_MIN_WIDTH);
+    setPlaqueWidth(w);
+  }, [typeLabel, scale, locale]);
 
   return (
     <div className="cr" style={{ '--s': scale, '--locale-font': fontConfig.family } as React.CSSProperties}>
@@ -476,7 +490,7 @@ function Sts2Renderer({ card, upgraded, size, locale = 'en' }: { card: any; upgr
       </div>
       <img src={frameAsset} className="cr-frame" alt="" />
       <img src={borderAsset} className="cr-border" alt="" />
-      <img src={plaqueAsset} className="cr-plaque" alt="" />
+      <img src={plaqueAsset} className="cr-plaque" alt="" style={{ width: `calc(${plaqueWidth}px * var(--s))` }} />
       <img src={bannerAsset} className="cr-banner" alt="" />
       {displayCost !== null && (
         <div className="cr-energy">
@@ -497,7 +511,7 @@ function Sts2Renderer({ card, upgraded, size, locale = 'en' }: { card: any; upgr
       >
         <span ref={titleFit.innerRef}>{cardName}</span>
       </div>
-      <div className="cr-type">{typeLabel}</div>
+      <div className="cr-type"><span ref={typeLabelRef}>{typeLabel}</span></div>
       <div className="cr-desc" ref={descFit.containerRef}>
         <div ref={descFit.innerRef} className="cr-desc-inner" dangerouslySetInnerHTML={{ __html: descHtml }} />
       </div>

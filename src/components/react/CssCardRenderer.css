@@ -151,9 +151,9 @@
   top: 52.5%;
   left: 50%;
   transform: translateX(-50%);
-  width: calc(122px * var(--s));
+  /* width set dynamically via inline style */
   height: calc(74px * var(--s));
-  object-fit: contain;
+  object-fit: fill;
   pointer-events: none;
   z-index: 3;
 }
