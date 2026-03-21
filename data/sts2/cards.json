@@ -31,7 +31,9 @@
     "color": "silent",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "accelerant": 1
+    },
     "upgrade": {
       "accelerant": 1
     },
@@ -268,8 +270,8 @@
     "target": "Self",
     "color": "colorless",
     "keywords": [
-      "Retain",
-      "Exhaust"
+      "Exhaust",
+      "Retain"
     ],
     "tags": [],
     "vars": {},
@@ -309,8 +311,8 @@
     "target": "Self",
     "color": "event",
     "keywords": [
-      "Innate",
-      "Exhaust"
+      "Exhaust",
+      "Innate"
     ],
     "tags": [],
     "vars": {},
@@ -329,8 +331,8 @@
     "target": "Self",
     "color": "event",
     "keywords": [
-      "Ethereal",
-      "Exhaust"
+      "Exhaust",
+      "Ethereal"
     ],
     "tags": [],
     "vars": {
@@ -389,9 +391,9 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Ethereal",
+      "Eternal",
       "Unplayable",
-      "Eternal"
+      "Ethereal"
     ],
     "tags": [],
     "vars": {},
@@ -429,8 +431,8 @@
     "target": "AnyEnemy",
     "color": "silent",
     "keywords": [
-      "Innate",
-      "Exhaust"
+      "Exhaust",
+      "Innate"
     ],
     "tags": [],
     "vars": {
@@ -512,8 +514,8 @@
     "target": "AnyEnemy",
     "color": "silent",
     "keywords": [
-      "Innate",
-      "Exhaust"
+      "Exhaust",
+      "Innate"
     ],
     "tags": [],
     "vars": {
@@ -534,8 +536,8 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Unplayable",
-      "Eternal"
+      "Eternal",
+      "Unplayable"
     ],
     "tags": [],
     "vars": {
@@ -830,8 +832,8 @@
     "target": "Self",
     "color": "regent",
     "keywords": [
-      "Innate",
-      "Exhaust"
+      "Exhaust",
+      "Innate"
     ],
     "tags": [],
     "vars": {
@@ -996,7 +998,8 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "block": 5
+      "block": 5,
+      "blur": 1
     },
     "upgrade": {
       "block": 3
@@ -1128,8 +1131,8 @@
     "target": "Self",
     "color": "defect",
     "keywords": [
-      "Innate",
-      "Exhaust"
+      "Exhaust",
+      "Innate"
     ],
     "tags": [],
     "vars": {
@@ -1315,7 +1318,8 @@
     "tags": [],
     "vars": {
       "power_strength": 2,
-      "power_dexterity": 2
+      "power_dexterity": 2,
+      "orbslots": 1
     },
     "upgrade": {
       "strength": 1,
@@ -1449,7 +1453,9 @@
     "color": "silent",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "skills": 1
+    },
     "upgrade": {
       "skills": 1
     },
@@ -1556,8 +1562,8 @@
     "target": "Self",
     "color": "silent",
     "keywords": [
-      "Retain",
-      "Exhaust"
+      "Exhaust",
+      "Retain"
     ],
     "tags": [],
     "vars": {},
@@ -1774,7 +1780,9 @@
     "color": "regent",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "blockforstars": 2
+    },
     "upgrade": {
       "blockforstars": 1
     },
@@ -1815,7 +1823,8 @@
     ],
     "tags": [],
     "vars": {
-      "damage": 17
+      "damage": 17,
+      "cardstoexhaust": 1
     },
     "upgrade": {
       "damage": 5
@@ -1853,7 +1862,8 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "damage": 3
+      "damage": 3,
+      "increase": 2
     },
     "upgrade": {
       "damage": 1,
@@ -1930,8 +1940,8 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Ethereal",
-      "Unplayable"
+      "Unplayable",
+      "Ethereal"
     ],
     "tags": [],
     "vars": {},
@@ -1988,7 +1998,8 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "block": 5
+      "block": 5,
+      "colossus": 1
     },
     "upgrade": {
       "block": 3
@@ -2199,7 +2210,9 @@
     "color": "silent",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "corrosivewave": 3
+    },
     "upgrade": {
       "corrosivewave": 1
     },
@@ -2218,7 +2231,9 @@
       "Exhaust"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "power": 1
+    },
     "upgrade": {
       "cost": 0
     },
@@ -2292,7 +2307,9 @@
     "color": "defect",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "creativeai": 1
+    },
     "upgrade": {
       "cost": 0
     },
@@ -2366,7 +2383,8 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "damage": 7
+      "damage": 7,
+      "strengthloss": 1
     },
     "upgrade": {
       "damage": 1,
@@ -2384,8 +2402,8 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Unplayable",
-      "Eternal"
+      "Eternal",
+      "Unplayable"
     ],
     "tags": [],
     "vars": {},
@@ -2482,7 +2500,9 @@
       "Exhaust"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "strengthloss": 9
+    },
     "upgrade": {
       "strengthloss": 6
     },
@@ -2534,8 +2554,8 @@
     "target": "None",
     "color": "status",
     "keywords": [
-      "Ethereal",
-      "Unplayable"
+      "Unplayable",
+      "Ethereal"
     ],
     "tags": [],
     "vars": {},
@@ -2703,8 +2723,8 @@
     "target": "Self",
     "color": "regent",
     "keywords": [
-      "Unplayable",
-      "Exhaust"
+      "Exhaust",
+      "Unplayable"
     ],
     "tags": [],
     "vars": {
@@ -3153,7 +3173,9 @@
       "Exhaust"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "strengthpervulnerable": 1
+    },
     "upgrade": {
       "remove_keywords": [
         "Exhaust"
@@ -3230,8 +3252,8 @@
     "target": "AllEnemies",
     "color": "colorless",
     "keywords": [
-      "Innate",
-      "Exhaust"
+      "Exhaust",
+      "Innate"
     ],
     "tags": [],
     "vars": {
@@ -3252,8 +3274,8 @@
     "target": "Self",
     "color": "necrobinder",
     "keywords": [
-      "Retain",
-      "Exhaust"
+      "Exhaust",
+      "Retain"
     ],
     "tags": [],
     "vars": {
@@ -3338,7 +3360,8 @@
     ],
     "tags": [],
     "vars": {
-      "damage": 9
+      "damage": 9,
+      "strengthloss": 9
     },
     "upgrade": {
       "damage": 2,
@@ -3360,7 +3383,9 @@
       "Ethereal"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "echoform": 1
+    },
     "upgrade": {
       "remove_keywords": [
         "Ethereal"
@@ -3459,7 +3484,9 @@
       "Ethereal"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "strengthloss": 8
+    },
     "upgrade": {
       "strengthloss": 3
     },
@@ -3572,7 +3599,8 @@
     ],
     "tags": [],
     "vars": {
-      "block": 13
+      "block": 13,
+      "equilibrium": 1
     },
     "upgrade": {
       "block": 3
@@ -3710,7 +3738,9 @@
       "Exhaust"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "power": 2
+    },
     "upgrade": {
       "": 1
     },
@@ -3788,7 +3818,9 @@
     "tags": [
       "Defend"
     ],
-    "vars": {},
+    "vars": {
+      "extrablock": 5
+    },
     "upgrade": {
       "extrablock": 2
     },
@@ -3871,7 +3903,9 @@
       "Exhaust"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "power": 3
+    },
     "upgrade": {
       "": 1
     },
@@ -3952,7 +3986,8 @@
     "vars": {
       "damage": 5,
       "repeat": 2,
-      "power_strength": 2
+      "power_strength": 2,
+      "enemystrength": 1
     },
     "upgrade": {
       "damage": 1,
@@ -4070,7 +4105,8 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "block": 12
+      "block": 12,
+      "damageback": 4
     },
     "upgrade": {
       "block": 4,
@@ -4228,9 +4264,9 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Innate",
+      "Eternal",
       "Unplayable",
-      "Eternal"
+      "Innate"
     ],
     "tags": [],
     "vars": {},
@@ -4496,7 +4532,9 @@
     "color": "regent",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "starsperturn": 2
+    },
     "upgrade": {
       "starsperturn": 1
     },
@@ -4590,7 +4628,8 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "cards": 3
+      "cards": 3,
+      "putback": 1
     },
     "upgrade": {
       "cards": 1
@@ -4793,8 +4832,8 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Unplayable",
-      "Eternal"
+      "Eternal",
+      "Unplayable"
     ],
     "tags": [],
     "vars": {},
@@ -4853,7 +4892,9 @@
       "Unplayable"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "combats": 5
+    },
     "upgrade": {},
     "description": "Removed from your Deck after 5 combats.",
     "image_url": "/images/sts2/cards/guilty.png"
@@ -4925,7 +4966,8 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "damage": 20
+      "damage": 20,
+      "gold": 20
     },
     "upgrade": {
       "damage": 5,
@@ -5220,7 +5262,8 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "cards": 2
+      "cards": 2,
+      "shivs": 2
     },
     "upgrade": {},
     "description": "Discard 2 cards.\nAdd 2 Shiv} into your Hand.",
@@ -5774,7 +5817,8 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "damage": 8
+      "damage": 8,
+      "increase": 3
     },
     "upgrade": {
       "increase": 2
@@ -6045,7 +6089,9 @@
     "color": "defect",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "loop": 1
+    },
     "upgrade": {
       "loop": 1
     },
@@ -6061,8 +6107,8 @@
     "target": "Self",
     "color": "token",
     "keywords": [
-      "Retain",
-      "Exhaust"
+      "Exhaust",
+      "Retain"
     ],
     "tags": [],
     "vars": {
@@ -6130,7 +6176,9 @@
     "tags": [],
     "vars": {
       "damage": 12,
-      "block": 8
+      "block": 8,
+      "violencehits": 3,
+      "curiousreduction": 1
     },
     "upgrade": {
       "add_keywords": [
@@ -6188,7 +6236,8 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "damage": 15
+      "damage": 15,
+      "strengthloss": 10
     },
     "upgrade": {
       "damage": 5,
@@ -6267,7 +6316,8 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "damage": 5
+      "damage": 5,
+      "increase": 1
     },
     "upgrade": {
       "damage": 1,
@@ -6510,8 +6560,8 @@
       "Exhaust"
     ],
     "tags": [
-      "Minion",
-      "Strike"
+      "Strike",
+      "Minion"
     ],
     "vars": {
       "damage": 7,
@@ -6638,7 +6688,9 @@
     "color": "regent",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "strengthloss": 1
+    },
     "upgrade": {
       "cost": 0
     },
@@ -6657,7 +6709,9 @@
       "Retain"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "power": 1
+    },
     "upgrade": {
       "add_keywords": [
         "Retain"
@@ -6849,7 +6903,9 @@
     "color": "necrobinder",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "doomthreshold": 10
+    },
     "upgrade": {
       "calculationbase": 5
     },
@@ -6900,7 +6956,9 @@
     "color": "silent",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "poisonperturn": 2
+    },
     "upgrade": {
       "poisonperturn": 1
     },
@@ -6999,7 +7057,9 @@
     "color": "ironclad",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "attacks": 1
+    },
     "upgrade": {
       "attacks": 1
     },
@@ -7135,7 +7195,8 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "cards": 1
+      "cards": 1,
+      "cardplay": 5
     },
     "upgrade": {
       "cards": 1
@@ -7153,7 +7214,9 @@
     "color": "colorless",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "panachedamage": 10
+    },
     "upgrade": {
       "panachedamage": 4
     },
@@ -7173,7 +7236,8 @@
     ],
     "tags": [],
     "vars": {
-      "block": 30
+      "block": 30,
+      "turns": 2
     },
     "upgrade": {
       "block": 10
@@ -7334,7 +7398,8 @@
     "tags": [],
     "vars": {
       "damage": 10,
-      "cards": 1
+      "cards": 1,
+      "putback": 1
     },
     "upgrade": {
       "damage": 3,
@@ -7355,7 +7420,9 @@
       "Exhaust"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "strengthloss": 6
+    },
     "upgrade": {
       "strengthloss": 2
     },
@@ -7762,8 +7829,8 @@
     "target": "Self",
     "color": "colorless",
     "keywords": [
-      "Retain",
-      "Exhaust"
+      "Exhaust",
+      "Retain"
     ],
     "tags": [],
     "vars": {
@@ -7787,7 +7854,9 @@
       "Exhaust"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "power": 2
+    },
     "upgrade": {
       "": 1
     },
@@ -7877,7 +7946,9 @@
     "color": "ironclad",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "power": 3
+    },
     "upgrade": {
       "": 2
     },
@@ -7935,7 +8006,8 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "damage": 9
+      "damage": 9,
+      "increase": 5
     },
     "upgrade": {
       "increase": 4
@@ -8360,7 +8432,8 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "power_rollingboulder": 5
+      "power_rollingboulder": 5,
+      "incrementamount": 5
     },
     "upgrade": {
       "rollingboulder": 5
@@ -8377,8 +8450,8 @@
     "target": "Self",
     "color": "regent",
     "keywords": [
-      "Retain",
-      "Exhaust"
+      "Exhaust",
+      "Retain"
     ],
     "tags": [],
     "vars": {},
@@ -8539,8 +8612,8 @@
     "target": "Self",
     "color": "colorless",
     "keywords": [
-      "Retain",
-      "Exhaust"
+      "Exhaust",
+      "Retain"
     ],
     "tags": [],
     "vars": {},
@@ -8845,7 +8918,9 @@
     "color": "silent",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "power": 1
+    },
     "upgrade": {
       "cost": 0
     },
@@ -8864,7 +8939,9 @@
       "Unplayable"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "frail": 1
+    },
     "upgrade": {},
     "description": "At the end of your turn, if this is in your Hand, gain 1 Frail.",
     "image_url": "/images/sts2/cards/shame.png"
@@ -8881,7 +8958,10 @@
       "Exhaust"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "enemystrengthloss": 2,
+      "playerstrengthloss": 2
+    },
     "upgrade": {
       "enemystrengthloss": 1
     },
@@ -8965,7 +9045,9 @@
       "Exhaust"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "power": 3
+    },
     "upgrade": {
       "": 2
     },
@@ -9435,7 +9517,9 @@
       "Ethereal"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "blockonexhaust": 4
+    },
     "upgrade": {
       "blockonexhaust": 1
     },
@@ -9618,7 +9702,9 @@
     "color": "ironclad",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "power": 1
+    },
     "upgrade": {
       "cost": 0
     },
@@ -10064,8 +10150,8 @@
     "target": "RandomEnemy",
     "color": "token",
     "keywords": [
-      "Ethereal",
-      "Exhaust"
+      "Exhaust",
+      "Ethereal"
     ],
     "tags": [
       "OstyAttack"
@@ -10317,7 +10403,10 @@
     "color": "colorless",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "turns": 3,
+      "bombdamage": 40
+    },
     "upgrade": {
       "bombdamage": 10
     },
@@ -10534,8 +10623,8 @@
     "target": "AnyEnemy",
     "color": "necrobinder",
     "keywords": [
-      "Retain",
-      "Exhaust"
+      "Exhaust",
+      "Retain"
     ],
     "tags": [],
     "vars": {},
@@ -10575,7 +10664,8 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "block": 5
+      "block": 5,
+      "turns": 2
     },
     "upgrade": {
       "block": 2
@@ -10752,8 +10842,8 @@
     "target": "Self",
     "color": "regent",
     "keywords": [
-      "Innate",
-      "Exhaust"
+      "Exhaust",
+      "Innate"
     ],
     "tags": [],
     "vars": {},
@@ -10932,7 +11022,8 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "damage": 13
+      "damage": 13,
+      "power": 1
     },
     "upgrade": {
       "": 1
@@ -11027,8 +11118,8 @@
     "target": "None",
     "color": "status",
     "keywords": [
-      "Ethereal",
-      "Unplayable"
+      "Unplayable",
+      "Ethereal"
     ],
     "tags": [],
     "vars": {
@@ -11126,7 +11217,9 @@
       "Retain"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "retainamount": 1
+    },
     "upgrade": {
       "retainamount": 1
     },
@@ -11201,8 +11294,8 @@
     "target": "Self",
     "color": "event",
     "keywords": [
-      "Retain",
-      "Exhaust"
+      "Exhaust",
+      "Retain"
     ],
     "tags": [],
     "vars": {},
@@ -11223,8 +11316,8 @@
     "target": "Self",
     "color": "necrobinder",
     "keywords": [
-      "Retain",
-      "Exhaust"
+      "Exhaust",
+      "Retain"
     ],
     "tags": [],
     "vars": {

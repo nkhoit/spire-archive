@@ -79,6 +79,11 @@ def parse_dynamic_vars(text: str) -> dict:
             result[key] = int(m.group(1))
     for m in re.finditer(r'new PowerVar<(\w+)>\((\d+)m', text):
         result[f"power_{m.group(1).replace('Power','').lower()}"] = int(m.group(2))
+    # Generic DynamicVar("Name", Xm)
+    for m in re.finditer(r'new DynamicVar\("(\w+)",\s*(\d+)m', text):
+        key = m.group(1).lower()
+        if key not in result:
+            result[key] = int(m.group(2))
     return result
 
 # ============ CARDS ============
