@@ -942,6 +942,20 @@ def main():
         entity_names=entity_names,
     )
 
+    # Post-process enchantments: Adroit's Block is base.Amount (context-dependent)
+    ench_path = OUTPUT_DIR / "enchantments.json"
+    with open(ench_path) as f:
+        enchs = json.load(f)
+    ENCH_DESC_OVERRIDES = {
+        "ADROIT": "Gain X Block.",
+    }
+    for e in enchs:
+        if e["id"] in ENCH_DESC_OVERRIDES:
+            e["description"] = ENCH_DESC_OVERRIDES[e["id"]]
+    with open(ench_path, "w") as f:
+        json.dump(enchs, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+
 
 if __name__ == "__main__":
     main()
