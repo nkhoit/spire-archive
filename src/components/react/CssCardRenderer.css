@@ -18,6 +18,14 @@
   flex-shrink: 0;
 }
 
+/* Scale card down to fit container when it overflows */
+.card-render-wrap .cr {
+  flex-shrink: 1;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 680 / 884;
+}
+
 .cr-frame {
   position: absolute;
   top: 4.5%;
