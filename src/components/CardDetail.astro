@@ -399,6 +399,9 @@ if (game === 'sts2' && upg) {
         <div class="grid gap-3 sm:grid-cols-3">
           {Object.entries((card as any).variants).map(([typeName, variant]: [string, any]) => (
             <div class="rounded-lg border border-white/10 bg-white/5 p-3">
+              {variant.image && (
+                <img src={variant.image} alt={`${card.name} (${typeName})`} class="w-full rounded mb-2 object-contain" style="max-height: 140px;" loading="lazy" />
+              )}
               <h3 class="text-sm font-semibold text-amber-300">{typeName}</h3>
               <p class="text-xs text-slate-400 mt-0.5" set:html={replaceGameTokens(variant.description)} />
               <div class="mt-2 space-y-1.5">

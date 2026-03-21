@@ -675,6 +675,7 @@ def _fix_mad_science():
             card["variants"] = {
                 "Attack": {
                     "description": "Deal 12 damage.",
+                    "image": "/images/sts2/cards/mad_science_attack.png",
                     "riders": [
                         {"name": "Sapping", "description": "Apply 2 Weak. Apply 2 Vulnerable."},
                         {"name": "Violence", "description": "Hits 2 additional times."},
@@ -683,6 +684,7 @@ def _fix_mad_science():
                 },
                 "Skill": {
                     "description": "Gain 8 Block.",
+                    "image": "/images/sts2/cards/mad_science_skill.png",
                     "riders": [
                         {"name": "Energized", "description": "Gain [E][E]."},
                         {"name": "Wisdom", "description": "Draw 3 cards."},
@@ -691,6 +693,7 @@ def _fix_mad_science():
                 },
                 "Power": {
                     "description": "No base effect.",
+                    "image": "/images/sts2/cards/mad_science_power.png",
                     "riders": [
                         {"name": "Expertise", "description": "Gain 2 Strength. Gain 2 Dexterity."},
                         {"name": "Curious", "description": "Powers cost 1 [E] less."},
