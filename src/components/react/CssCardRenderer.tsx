@@ -249,8 +249,12 @@ function Sts2Renderer({ card, upgraded, size, locale = 'en' }: { card: any; upgr
     } else {
       const vars = { ...(card.vars ?? {}) };
       const template = (card as any).description_template as string | undefined;
+      // Check if upgrade has any numeric deltas (not just keyword changes)
+      const hasNumericUpgrade = Object.entries(upg).some(([k]) =>
+        !['add_keywords', 'remove_keywords', 'description'].includes(k)
+      );
 
-      if (template) {
+      if (template && hasNumericUpgrade) {
         // Use template for precise var replacement
         description = template;
         const UPG_MARK = '\x01';
