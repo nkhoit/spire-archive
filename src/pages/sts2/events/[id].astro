@@ -32,6 +32,7 @@ function getRefPreviewData(ref: any) {
   if (ref.type === 'card') desc = data.cardById.get(ref.id)?.description ?? '';
   else if (ref.type === 'relic') desc = data.relicById.get(ref.id)?.description ?? '';
   else if (ref.type === 'potion') desc = data.potionById.get(ref.id)?.description ?? '';
+  else if (ref.type === 'enchantment') desc = data.enchantmentById?.get(ref.id)?.description ?? '';
   return { img, desc };
 }
 
@@ -46,8 +47,8 @@ function linkifyRefs(text: string, refs?: any[], langPrefix?: string): string {
                  ref.type === 'potion' ? `${prefix}/sts2/potions/${ref.id}` :
                  ref.type === 'effect' ? `${prefix}/sts2/effects/${ref.id}` :
                  ref.type === 'character' ? `${prefix}/sts2/characters/${ref.id}` : null;
-    if (!href) continue;
     const { img, desc } = getRefPreviewData(ref);
+    if (!href && !desc) continue; // skip if no page and no preview data
     const escaped = ref.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const re = new RegExp(`(?<!<[^>]*)\\b(${escaped})\\b`, 'gi');
     const dataAttrs = [
@@ -55,7 +56,12 @@ function linkifyRefs(text: string, refs?: any[], langPrefix?: string): string {
       img ? `data-preview-img="${img}"` : '',
       desc ? `data-preview-desc="${replaceGameTokens(desc).replace(/"/g, '&quot;')}"` : '',
     ].filter(Boolean).join(' ');
-    html = html.replace(re, `<a href="${href}" ${dataAttrs} class="ref-link text-amber-200 underline decoration-amber-500/40 hover:decoration-amber-400 transition-colors">$1</a>`);
+    if (href) {
+      html = html.replace(re, `<a href="${href}" ${dataAttrs} class="ref-link text-amber-200 underline decoration-amber-500/40 hover:decoration-amber-400 transition-colors">$1</a>`);
+    } else {
+      // No detail page (e.g. enchantments) — hover-only, no link
+      html = html.replace(re, `<span ${dataAttrs} class="ref-link text-amber-200 underline decoration-dotted decoration-amber-500/40 cursor-help">$1</span>`);
+    }
   }
   return replaceGameTokens(html);
 }
@@ -289,6 +295,7 @@ function getPoolLabel(name: string, locale: string) {
   .ref-type-badge.relic { background: rgba(251, 191, 36, 0.2); color: #fcd34d; }
   .ref-type-badge.potion { background: rgba(52, 211, 153, 0.25); color: #6ee7b7; }
   .ref-type-badge.effect { background: rgba(167, 139, 250, 0.25); color: #c4b5fd; }
+  .ref-type-badge.enchantment { background: rgba(236, 72, 153, 0.25); color: #f9a8d4; }
   .ref-type-badge.character { background: rgba(251, 113, 133, 0.25); color: #fda4af; }
   .ref-preview-desc {
     font-size: 12px;

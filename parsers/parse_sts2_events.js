@@ -266,19 +266,22 @@ function classToId(name) {
  * Extract card/relic/enchantment/potion references from event C# files.
  * Returns a map: eventId → { optionRefs: { optionKey → references[] }, eventRefs: references[] }
  */
-function extractReferences(csDir, cardsData, relicsData, potionsData) {
+function extractReferences(csDir, cardsData, relicsData, potionsData, enchantmentsData) {
   const cardNames = new Map(); // ID → name
   const relicNames = new Map();
   const potionNames = new Map();
+  const enchantmentNames = new Map();
   for (const c of cardsData) cardNames.set(c.id, c.name);
   for (const r of relicsData) relicNames.set(r.id, r.name);
   for (const p of potionsData) potionNames.set(p.id, p.name);
+  if (enchantmentsData) for (const e of enchantmentsData) enchantmentNames.set(e.id, e.name);
 
   function makeRef(className) {
     const refId = classToId(className);
     if (cardNames.has(refId)) return { type: 'card', id: refId, name: cardNames.get(refId) };
     if (relicNames.has(refId)) return { type: 'relic', id: refId, name: relicNames.get(refId) };
     if (potionNames.has(refId)) return { type: 'potion', id: refId, name: potionNames.get(refId) };
+    if (enchantmentNames.has(refId)) return { type: 'enchantment', id: refId, name: enchantmentNames.get(refId) };
     return { type: 'card', id: refId, name: className.replace(/([a-z])([A-Z])/g, '$1 $2') };
   }
 
@@ -687,11 +690,12 @@ async function parseEvents() {
   const canonicalVars = parseCanonicalVars(csDir);
 
   // Load cards + relics for reference resolution
-  let cardsData = [], relicsData = [], potionsData = [];
+  let cardsData = [], relicsData = [], potionsData = [], enchantmentsData = [];
   try { cardsData = JSON.parse(fs.readFileSync(path.join(OUTPUT_DIR, 'cards.json'), 'utf-8')); } catch {}
   try { relicsData = JSON.parse(fs.readFileSync(path.join(OUTPUT_DIR, 'relics.json'), 'utf-8')); } catch {}
   try { potionsData = JSON.parse(fs.readFileSync(path.join(OUTPUT_DIR, 'potions.json'), 'utf-8')); } catch {}
-  const refMap = extractReferences(csDir, cardsData, relicsData, potionsData);
+  try { enchantmentsData = JSON.parse(fs.readFileSync(path.join(OUTPUT_DIR, 'enchantments.json'), 'utf-8')); } catch {}
+  const refMap = extractReferences(csDir, cardsData, relicsData, potionsData, enchantmentsData);
 
   let enrichedCount = 0;
   let updatedCount = 0;
