@@ -318,8 +318,8 @@
     "target": "Self",
     "color": "event",
     "keywords": [
-      "Innate",
-      "Exhaust"
+      "Exhaust",
+      "Innate"
     ],
     "tags": [],
     "vars": {},
@@ -338,8 +338,8 @@
     "target": "Self",
     "color": "event",
     "keywords": [
-      "Ethereal",
-      "Exhaust"
+      "Exhaust",
+      "Ethereal"
     ],
     "tags": [],
     "vars": {
@@ -367,7 +367,9 @@
     "vars": {
       "block": 5
     },
-    "upgrade": {},
+    "upgrade": {
+      "description": "Gain 5 Block.\nUpgrade ALL cards in your Hand."
+    },
     "description": "Gain 5 Block.\nUpgrade a card in your Hand.",
     "image_url": "/images/sts2/cards/armaments.png"
   },
@@ -400,9 +402,9 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Unplayable",
       "Eternal",
-      "Ethereal"
+      "Ethereal",
+      "Unplayable"
     ],
     "tags": [],
     "vars": {},
@@ -441,8 +443,8 @@
     "target": "AnyEnemy",
     "color": "silent",
     "keywords": [
-      "Innate",
-      "Exhaust"
+      "Exhaust",
+      "Innate"
     ],
     "tags": [],
     "vars": {
@@ -527,8 +529,8 @@
     "target": "AnyEnemy",
     "color": "silent",
     "keywords": [
-      "Innate",
-      "Exhaust"
+      "Exhaust",
+      "Innate"
     ],
     "tags": [],
     "vars": {
@@ -550,8 +552,8 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Unplayable",
-      "Eternal"
+      "Eternal",
+      "Unplayable"
     ],
     "tags": [],
     "vars": {
@@ -799,7 +801,8 @@
       "damage": 4
     },
     "upgrade": {
-      "damage": 1
+      "damage": 1,
+      "description": "Deal 5 damage.\nChoose a card in your Hand to Transform into Minion Dive Bomb+."
     },
     "description": "Deal 4 damage.\nChoose a card in your Hand to Transform into Minion Dive Bomb.",
     "image_url": "/images/sts2/cards/begone.png"
@@ -1171,8 +1174,8 @@
     "target": "Self",
     "color": "defect",
     "keywords": [
-      "Innate",
-      "Exhaust"
+      "Exhaust",
+      "Innate"
     ],
     "tags": [],
     "vars": {
@@ -1726,7 +1729,9 @@
     "keywords": [],
     "tags": [],
     "vars": {},
-    "upgrade": {},
+    "upgrade": {
+      "description": "Play the top X+1 cards of your Draw Pile."
+    },
     "description": "Play the top X cards of your Draw Pile.",
     "image_url": "/images/sts2/cards/cascade.png"
   },
@@ -1804,7 +1809,9 @@
     "vars": {
       "cards": 2
     },
-    "upgrade": {},
+    "upgrade": {
+      "description": "Choose 2 cards in your Draw Pile to Transform into\nMinion Strikes+."
+    },
     "description": "Choose 2 cards in your Draw Pile to Transform into\nMinion Strike}.",
     "image_url": "/images/sts2/cards/charge.png"
   },
@@ -2110,7 +2117,8 @@
       "block": 6
     },
     "upgrade": {
-      "block": 1
+      "block": 1,
+      "description": "Gain 7 Block.\nTransform all Status cards in your Hand into Fuel+."
     },
     "description": "Gain 6 Block.\nTransform all Status cards in your Hand into Fuel.",
     "image_url": "/images/sts2/cards/compact.png"
@@ -2489,8 +2497,8 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Unplayable",
-      "Eternal"
+      "Eternal",
+      "Unplayable"
     ],
     "tags": [],
     "vars": {},
@@ -2608,7 +2616,9 @@
     "keywords": [],
     "tags": [],
     "vars": {},
-    "upgrade": {},
+    "upgrade": {
+      "description": "Channel 1 Dark.\nTrigger the passive ability of all Dark Orbs twice."
+    },
     "description": "Channel 1 Dark.\nTrigger the passive ability of all Dark Orbs.",
     "image_url": "/images/sts2/cards/darkness.png"
   },
@@ -3177,7 +3187,8 @@
       "summon": 3
     },
     "upgrade": {
-      "summon": 1
+      "summon": 1,
+      "description": "Summon 4 X times.\nAdd X Souls+ into your Draw Pile."
     },
     "description": "Summon 3 X times.\nAdd X Souls into your Draw Pile.",
     "image_url": "/images/sts2/cards/dirge.png"
@@ -3374,8 +3385,8 @@
     "target": "AllEnemies",
     "color": "colorless",
     "keywords": [
-      "Innate",
-      "Exhaust"
+      "Exhaust",
+      "Innate"
     ],
     "tags": [],
     "vars": {
@@ -3446,7 +3457,8 @@
       "cards": 1
     },
     "upgrade": {
-      "cards": 1
+      "cards": 1,
+      "description": "Choose an Attack or Power card. Add 2 copies of that card into your Hand."
     },
     "description": "Choose an Attack or Power card. Add a copy of that card into your Hand.",
     "image_url": "/images/sts2/cards/dual_wield.png"
@@ -3629,7 +3641,9 @@
     ],
     "tags": [],
     "vars": {},
-    "upgrade": {},
+    "upgrade": {
+      "description": "Reduce the cost of ALL cards in your Hand to 1 this combat."
+    },
     "description": "Reduce the cost of ALL cards in your Hand to 1 this turn.",
     "image_url": "/images/sts2/cards/enlightenment.png"
   },
@@ -4422,9 +4436,9 @@
     "target": "None",
     "color": "curse",
     "keywords": [
+      "Innate",
       "Unplayable",
-      "Eternal",
-      "Innate"
+      "Eternal"
     ],
     "tags": [],
     "vars": {},
@@ -4979,7 +4993,8 @@
       "cards": 1
     },
     "upgrade": {
-      "block": 2
+      "block": 2,
+      "description": "Gain 10 Block.\nAdd a Soul+ into your Draw Pile."
     },
     "description": "Gain 8 Block.\nAdd a Soul into your Draw Pile.",
     "image_url": "/images/sts2/cards/grave_warden.png"
@@ -5018,8 +5033,8 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Unplayable",
-      "Eternal"
+      "Eternal",
+      "Unplayable"
     ],
     "tags": [],
     "vars": {},
@@ -5040,7 +5055,9 @@
     ],
     "tags": [],
     "vars": {},
-    "upgrade": {},
+    "upgrade": {
+      "description": "Transform any number of cards in your Hand into Minion Sacrifice+."
+    },
     "description": "Transform any number of cards in your Hand into Minion Sacrifice.",
     "image_url": "/images/sts2/cards/guards.png"
   },
@@ -5462,7 +5479,9 @@
       "cards": 2,
       "shivs": 2
     },
-    "upgrade": {},
+    "upgrade": {
+      "description": "Discard 2 cards.\nAdd 2 Shivs+ into your Hand."
+    },
     "description": "Discard 2 cards.\nAdd 2 Shiv} into your Hand.",
     "image_url": "/images/sts2/cards/hidden_daggers.png"
   },
@@ -6057,7 +6076,9 @@
       "calculation_base": 0,
       "calculation_extra": 1
     },
-    "upgrade": {},
+    "upgrade": {
+      "description": "Upgrade and play every Shiv in your Exhaust Pile on the enemy. Shivs)|}"
+    },
     "description": "Play every Shiv in your Exhaust Pile on the enemy.\n(Plays 0 Shivs)",
     "image_url": "/images/sts2/cards/knife_trap.png"
   },
@@ -6077,7 +6098,8 @@
     },
     "upgrade": {
       "damage": 4,
-      "knockdown": 1
+      "knockdown": 1,
+      "description": "Deal 14 damage.\nThe enemy takes triple damage from other players this turn."
     },
     "description": "Deal 10 damage.\nThe enemy takes double damage from other players this turn.",
     "image_url": "/images/sts2/cards/knockdown.png"
@@ -6156,7 +6178,9 @@
     "keywords": [],
     "tags": [],
     "vars": {},
-    "upgrade": {},
+    "upgrade": {
+      "description": "Another player adds 1 random Upgraded Colorless card to their Hand."
+    },
     "description": "Another player adds 1 random Colorless card to their Hand.",
     "image_url": "/images/sts2/cards/largesse.png"
   },
@@ -6324,7 +6348,8 @@
       "loop": 1
     },
     "upgrade": {
-      "loop": 1
+      "loop": 1,
+      "description": "At the start of your turn, trigger the passive ability of your rightmost Orb 2 times."
     },
     "description": "At the start of your turn, trigger the passive ability of your rightmost Orb.",
     "image_url": "/images/sts2/cards/loop.png"
@@ -6338,8 +6363,8 @@
     "target": "Self",
     "color": "token",
     "keywords": [
-      "Retain",
-      "Exhaust"
+      "Exhaust",
+      "Retain"
     ],
     "tags": [],
     "vars": {
@@ -6454,7 +6479,9 @@
     ],
     "tags": [],
     "vars": {},
-    "upgrade": {},
+    "upgrade": {
+      "description": "Enemy loses X+1 Strength. Apply X+1 Weak."
+    },
     "description": "Enemy loses X Strength. Apply X Weak.",
     "image_url": "/images/sts2/cards/malaise.png"
   },
@@ -6494,7 +6521,8 @@
       "block": 7
     },
     "upgrade": {
-      "block": 1
+      "block": 1,
+      "description": "Gain 8 Block.\nAdd 1 random Upgraded Colorless card into your Hand."
     },
     "description": "Gain 7 Block.\nAdd 1 random Colorless card into your Hand.",
     "image_url": "/images/sts2/cards/manifest_authority.png"
@@ -6808,8 +6836,8 @@
       "Exhaust"
     ],
     "tags": [
-      "Minion",
-      "Strike"
+      "Strike",
+      "Minion"
     ],
     "vars": {
       "damage": 7,
@@ -6985,7 +7013,9 @@
     "keywords": [],
     "tags": [],
     "vars": {},
-    "upgrade": {},
+    "upgrade": {
+      "description": "Evoke your rightmost Orb X+1 times."
+    },
     "description": "Evoke your rightmost Orb X times.",
     "image_url": "/images/sts2/cards/multi_cast.png"
   },
@@ -7853,8 +7883,8 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Unplayable",
-      "Retain"
+      "Retain",
+      "Unplayable"
     ],
     "tags": [],
     "vars": {},
@@ -7973,7 +8003,9 @@
     "keywords": [],
     "tags": [],
     "vars": {},
-    "upgrade": {},
+    "upgrade": {
+      "description": "Transform all Attacks in your Hand into Giant Rock+."
+    },
     "description": "Transform all Attacks in your Hand into Giant Rock.",
     "image_url": "/images/sts2/cards/primal_force.png"
   },
@@ -8139,8 +8171,8 @@
     "target": "Self",
     "color": "colorless",
     "keywords": [
-      "Retain",
-      "Exhaust"
+      "Exhaust",
+      "Retain"
     ],
     "tags": [],
     "vars": {
@@ -8224,7 +8256,9 @@
     "keywords": [],
     "tags": [],
     "vars": {},
-    "upgrade": {},
+    "upgrade": {
+      "description": "Choose 1 of 3 random Upgraded Colorless cards to add into your Hand."
+    },
     "description": "Choose 1 of 3 random Colorless cards to add into your Hand.",
     "image_url": "/images/sts2/cards/quasar.png",
     "star_cost": 2
@@ -8436,7 +8470,8 @@
       "cards": 1
     },
     "upgrade": {
-      "damage": 2
+      "damage": 2,
+      "description": "Deal 11 damage.\nAdd a Soul+ into your Draw Pile."
     },
     "description": "Deal 9 damage.\nAdd a Soul into your Draw Pile.",
     "image_url": "/images/sts2/cards/reave.png"
@@ -9008,7 +9043,9 @@
     "vars": {
       "cards": 1
     },
-    "upgrade": {},
+    "upgrade": {
+      "description": "Transform a card in your Draw Pile into Soul+."
+    },
     "description": "Transform a card in your Draw Pile into Soul.",
     "image_url": "/images/sts2/cards/seance.png"
   },
@@ -9882,7 +9919,9 @@
     "vars": {
       "power_spinner": 1
     },
-    "upgrade": {},
+    "upgrade": {
+      "description": "Channel 1 Glass.\nAt the start of your turn, Channel 1 Glass."
+    },
     "description": "At the start of your turn, Channel 1 Glass.",
     "image_url": "/images/sts2/cards/spinner.png"
   },
@@ -9938,7 +9977,9 @@
     "keywords": [],
     "tags": [],
     "vars": {},
-    "upgrade": {},
+    "upgrade": {
+      "description": "Choose 1 of 3 random Upgraded Attacks from another character to add into your Hand. It's free to play this turn."
+    },
     "description": "Choose 1 of 3 random Attacks from another character to add into your Hand. It's free to play this turn.",
     "image_url": "/images/sts2/cards/splash.png"
   },
@@ -10083,7 +10124,8 @@
       "calculation_extra": 1
     },
     "upgrade": {
-      "calculation_base": 3
+      "calculation_base": 3,
+      "description": "Gain Block equal to the number of cards in your Discard Pile +3. Block.)|}"
     },
     "description": "Gain Block equal to the number of cards in your Discard Pile.\n(Gain 0 Block.)",
     "image_url": "/images/sts2/cards/stack.png"
@@ -10217,7 +10259,9 @@
     "keywords": [],
     "tags": [],
     "vars": {},
-    "upgrade": {},
+    "upgrade": {
+      "description": "Discard your Hand.\nAdd 1 Shiv+ into your Hand for each card discarded."
+    },
     "description": "Discard your Hand.\nAdd 1 Shiv into your Hand for each card discarded.",
     "image_url": "/images/sts2/cards/storm_of_steel.png"
   },
@@ -10564,8 +10608,8 @@
     "target": "RandomEnemy",
     "color": "token",
     "keywords": [
-      "Ethereal",
-      "Exhaust"
+      "Exhaust",
+      "Ethereal"
     ],
     "tags": [
       "OstyAttack"
@@ -10778,7 +10822,9 @@
     "keywords": [],
     "tags": [],
     "vars": {},
-    "upgrade": {},
+    "upgrade": {
+      "description": "Channel X+1 Lightning."
+    },
     "description": "Channel X Lightning.",
     "image_url": "/images/sts2/cards/tempest.png"
   },
@@ -11226,7 +11272,8 @@
       "block": 7
     },
     "upgrade": {
-      "block": 2
+      "block": 2,
+      "description": "Gain 9 Block.\nExhaust 1 card."
     },
     "description": "Gain 7 Block.\nExhaust 1 card at random.",
     "image_url": "/images/sts2/cards/true_grit.png"
@@ -11831,8 +11878,8 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Unplayable",
-      "Innate"
+      "Innate",
+      "Unplayable"
     ],
     "tags": [],
     "vars": {},

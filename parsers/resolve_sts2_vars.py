@@ -537,16 +537,21 @@ def _generate_upgrade_descriptions():
     count = 0
 
     for card in cards:
-        upgrade = card.get("upgrade")
-        if not upgrade or isinstance(upgrade.get("description"), str):
-            continue  # Already has an upgrade description or no upgrade
+        upgrade = card.get("upgrade", {})
+        if isinstance(upgrade.get("description"), str):
+            continue  # Already has an upgrade description
 
         raw_desc = raw_loc.get(f"{card['id']}.description", "")
-        if "plural" not in raw_desc:
+        has_plural = "plural" in raw_desc
+        has_if_upgraded = "IfUpgraded" in raw_desc
+        if not has_plural and not has_if_upgraded:
+            continue
+        # For plural cards, need actual var upgrades
+        if has_plural and not has_if_upgraded and not upgrade:
             continue
 
         vars_data = card.get("vars", {})
-        if not vars_data and not upgrade:
+        if not vars_data and not upgrade and not has_if_upgraded:
             continue
 
         # Build upgraded vars_map (game var names → upgraded string values)
