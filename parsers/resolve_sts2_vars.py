@@ -783,12 +783,67 @@ def _generate_localized_upgrade_descriptions():
                     loc_data["cards"][cid]["upgrade_description"] = upgraded_desc
                     count += 1
 
+        # Second pass: simple numeric upgrades (no plural/cond/IfUpgraded)
+        # For cards where upgrade just changes numbers, do positional substitution
+        # in the localized base description
+        count2 = 0
+        for card in cards:
+            cid = card["id"]
+            upgrade = card.get("upgrade", {})
+            if not upgrade:
+                continue
+            # Skip if already handled above
+            if loc_data.get("cards", {}).get(cid, {}).get("upgrade_description"):
+                continue
+            # Skip if upgrade only has non-numeric keys
+            vars_data = card.get("vars", {})
+            if not vars_data:
+                continue
+            # Skip cards with upgrade.description (English override)
+            if isinstance(upgrade.get("description"), str):
+                continue
+
+            # Get localized base description
+            base_loc_desc = loc_data.get("cards", {}).get(cid, {}).get("description", "")
+            if not base_loc_desc:
+                continue
+
+            # Build old→new value pairs from upgrade deltas
+            replacements = []  # (old_val, new_val)
+            for uk, delta in upgrade.items():
+                if uk in ('add_keywords', 'remove_keywords', 'description', 'cost'):
+                    continue
+                vk = uk if uk in vars_data else f"power_{uk}" if f"power_{uk}" in vars_data else None
+                if vk and vk in vars_data:
+                    old_val = int(vars_data[vk])
+                    new_val = old_val + int(delta)
+                    if old_val != new_val:
+                        replacements.append((str(old_val), str(new_val)))
+
+            if not replacements:
+                continue
+
+            # Apply replacements: for each old→new, replace first occurrence
+            upgraded = base_loc_desc
+            for old_str, new_str in replacements:
+                # Use word-boundary-like replacement (match standalone numbers)
+                upgraded = re.sub(r'(?<!\d)' + re.escape(old_str) + r'(?!\d)', new_str, upgraded, count=1)
+
+            if upgraded != base_loc_desc:
+                if "cards" not in loc_data:
+                    loc_data["cards"] = {}
+                if cid not in loc_data["cards"]:
+                    loc_data["cards"][cid] = {}
+                loc_data["cards"][cid]["upgrade_description"] = upgraded
+                count2 += 1
+
         with open(loc_output_path, "w") as f:
             json.dump(loc_data, f, indent=2, ensure_ascii=False)
             f.write("\n")
 
-        if count:
-            print(f"  {locale}: generated {count} upgrade descriptions")
+        total = count + count2
+        if total:
+            print(f"  {locale}: generated {total} upgrade descriptions ({count} template, {count2} numeric)")
 
 
 def _fix_mad_science():
