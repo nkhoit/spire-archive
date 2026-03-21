@@ -422,7 +422,7 @@ def parse_characters():
     chars_dir = DECOMPILED / "MegaCrit.Sts2.Core.Models.Characters"
     
     # Game order (character select screen)
-    CHARACTER_ORDER = ["Ironclad", "Silent", "Defect", "Necrobinder", "Regent"]
+    CHARACTER_ORDER = ["Ironclad", "Silent", "Regent", "Necrobinder", "Defect"]
     
     chars = []
     for f in sorted(chars_dir.glob("*.cs")):
