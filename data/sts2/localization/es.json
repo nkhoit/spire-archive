@@ -5720,7 +5720,7 @@
       "choices": [
         {
           "name": "El mejor color es el azul",
-          "description": "Obtienes 3 carta de El Defectuoso."
+          "description": "Obtienes 3 {Cards:plural:carta|cartas} de El Defectuoso."
         },
         {
           "name": "Igualdad",
@@ -5728,19 +5728,19 @@
         },
         {
           "name": "El mejor color es el rojo",
-          "description": "Obtienes 3 carta de El Blindado."
+          "description": "Obtienes 3 {Cards:plural:carta|cartas} de El Blindado."
         },
         {
           "name": "El mejor color es el rosa",
-          "description": "Obtienes 3 carta de La Necrodescarte."
+          "description": "Obtienes 3 {Cards:plural:carta|cartas} de La Necrodescarte."
         },
         {
           "name": "El mejor color es el naranja",
-          "description": "Obtienes 3 carta de El Monarca."
+          "description": "Obtienes 3 {Cards:plural:carta|cartas} de El Monarca."
         },
         {
           "name": "El mejor color es el verde",
-          "description": "Obtienes 3 carta de La Silenciosa."
+          "description": "Obtienes 3 {Cards:plural:carta|cartas} de La Silenciosa."
         }
       ]
     },
@@ -5819,7 +5819,7 @@
       "choices": [
         {
           "name": "Descansar",
-          "description": "Recuperas 0 PV. Luchas contra algunos enemigos."
+          "description": "Recuperas {Heal} PV. Luchas contra algunos enemigos."
         },
         {
           "name": "Avanzar a duras penas",
@@ -6012,7 +6012,7 @@
       "choices": [
         {
           "name": "Tomar pociones",
-          "description": "Obtienes 3 poción fétida."
+          "description": "Obtienes 3 {FoulPotions:plural:poción fétida|pociones fétidas}."
         },
         {
           "name": "Rebuscar",
@@ -6171,7 +6171,7 @@
       "choices": [
         {
           "name": "Beber",
-          "description": "Recuperas 0 PV."
+          "description": "Recuperas {Heal} PV."
         },
         {
           "name": "Observar",
@@ -6333,7 +6333,7 @@
         },
         {
           "name": "Izquierda",
-          "description": "Pierdes 6 PV. Obtienes 0 de oro."
+          "description": "Pierdes 6 PV. Obtienes {Gold} de oro."
         }
       ]
     },
@@ -6363,7 +6363,7 @@
           "choices": [
             {
               "name": "Caos",
-              "description": "Agregas una carta al azar a tu mano. Cuesta 0 [E] este turno."
+              "description": "Agregas una carta al azar a tu mano. Cuesta 0 {energyPrefix:energyIcons(1)} este turno."
             },
             {
               "name": "Asfixia",
@@ -6371,11 +6371,11 @@
             },
             {
               "name": "Curiosidad",
-              "description": "Los poderes cuestan 1 de [E] menos."
+              "description": "Los poderes cuestan 1 de {energyPrefix:energyIcons(1)} menos."
             },
             {
               "name": "Revitalización",
-              "description": "Obtienes [E]."
+              "description": "Obtienes {EnergizedEnergy:energyIcons()}."
             },
             {
               "name": "Pericia",
@@ -6467,7 +6467,7 @@
         },
         {
           "name": "Esponja espinosa",
-          "description": "Pagas 155 de oro. Encantas 2 carta con Firmeza."
+          "description": "Pagas 155 de oro. Encantas 2 {Cards:plural:carta|cartas} con Firmeza."
         },
         {
           "name": "Sin desbloquear",
@@ -6788,11 +6788,11 @@
       "name": "Instinto"
     },
     "MOMENTUM": {
-      "description": "Al jugarla, aumenta el daño de ataque de esta carta en {Amount} durante este combate.",
+      "description": "Al jugarla, aumenta el daño de ataque de esta carta en X durante este combate.",
       "name": "Impulso"
     },
     "NIMBLE": {
-      "description": "Aumenta el Bloqueo obtenido por esta carta en {Amount}.",
+      "description": "Aumenta el Bloqueo obtenido por esta carta en X.",
       "name": "Agilidad"
     },
     "PERFECT_FIT": {
@@ -6804,7 +6804,7 @@
       "name": "Sigilo real"
     },
     "SHARP": {
-      "description": "Aumenta el daño de esta carta en {Amount}.",
+      "description": "Aumenta el daño de esta carta en X.",
       "name": "Filo"
     },
     "SLITHER": {
@@ -6832,7 +6832,7 @@
       "name": "Firmeza"
     },
     "SWIFT": {
-      "description": "La primera vez que juegues esta carta, roba {Amount} carta.",
+      "description": "La primera vez que juegues esta carta, roba X carta.",
       "name": "Rapidez"
     },
     "TEZCATARAS_EMBER": {
@@ -6840,7 +6840,7 @@
       "name": "Ascua de Tezcatara"
     },
     "VIGOROUS": {
-      "description": "La primera vez que juegues esta carta, inflige {Amount} de daño adicional.",
+      "description": "La primera vez que juegues esta carta, inflige X de daño adicional.",
       "name": "Robustez"
     }
   },

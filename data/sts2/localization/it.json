@@ -5720,7 +5720,7 @@
       "choices": [
         {
           "name": "Blu",
-          "description": "Ottieni 3 carta di Defect."
+          "description": "Ottieni 3 {Cards:plural:carta|carte} di Defect."
         },
         {
           "name": "Non esiste colore migliore",
@@ -5728,19 +5728,19 @@
         },
         {
           "name": "Rosso",
-          "description": "Ottieni 3 carta di Ironclad."
+          "description": "Ottieni 3 {Cards:plural:carta|carte} di Ironclad."
         },
         {
           "name": "Rosa",
-          "description": "Ottieni 3 carta di Necrobinder."
+          "description": "Ottieni 3 {Cards:plural:carta|carte} di Necrobinder."
         },
         {
           "name": "Arancione",
-          "description": "Ottieni 3 carta di Regent."
+          "description": "Ottieni 3 {Cards:plural:carta|carte} di Regent."
         },
         {
           "name": "Verde",
-          "description": "Ottieni 3 carta di Silent."
+          "description": "Ottieni 3 {Cards:plural:carta|carte} di Silent."
         }
       ]
     },
@@ -5819,7 +5819,7 @@
       "choices": [
         {
           "name": "Riposa",
-          "description": "Recuperi 0 PV. Affronti dei nemici."
+          "description": "Recuperi {Heal} PV. Affronti dei nemici."
         },
         {
           "name": "Avanza a fatica",
@@ -6012,7 +6012,7 @@
       "choices": [
         {
           "name": "Prendi pozioni",
-          "description": "Ricevi 3 Pozione Nefasta."
+          "description": "Ricevi 3 {FoulPotions:plural:Pozione Nefasta|Pozioni Nefaste}."
         },
         {
           "name": "Rovista",
@@ -6171,7 +6171,7 @@
       "choices": [
         {
           "name": "Bevi",
-          "description": "Recuperi 0 PV."
+          "description": "Recuperi {Heal} PV."
         },
         {
           "name": "Osserva",
@@ -6479,11 +6479,11 @@
       "name": "Istinto"
     },
     "MOMENTUM": {
-      "description": "Quando viene giocata, aumenti il danno dell'attacco di questa carta di {Amount} durante questo combattimento.",
+      "description": "Quando viene giocata, aumenti il danno dell'attacco di questa carta di X durante questo combattimento.",
       "name": "Inerzia"
     },
     "NIMBLE": {
-      "description": "Il Blocco ottenuto da questa carta aumenta di {Amount}.",
+      "description": "Il Blocco ottenuto da questa carta aumenta di X.",
       "name": "Scioltezza"
     },
     "PERFECT_FIT": {
@@ -6495,7 +6495,7 @@
       "name": "Approvazione Regale"
     },
     "SHARP": {
-      "description": "Aumenta il danno che infligge questa carta di {Amount}.",
+      "description": "Aumenta il danno che infligge questa carta di X.",
       "name": "Affilatura"
     },
     "SLITHER": {
@@ -6523,7 +6523,7 @@
       "name": "Stabilità"
     },
     "SWIFT": {
-      "description": "La prima volta che giochi questa carta, peschi {Amount} carta.",
+      "description": "La prima volta che giochi questa carta, peschi X carta.",
       "name": "Rapidità"
     },
     "TEZCATARAS_EMBER": {
@@ -6531,7 +6531,7 @@
       "name": "Brace di Tezcatara"
     },
     "VIGOROUS": {
-      "description": "La prima volta che questa carta viene giocata, infligge {Amount} di danno extra.",
+      "description": "La prima volta che questa carta viene giocata, infligge X di danno extra.",
       "name": "Vigorosità"
     }
   },

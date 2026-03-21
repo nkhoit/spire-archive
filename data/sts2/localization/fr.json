@@ -5720,7 +5720,7 @@
       "choices": [
         {
           "name": "Bleu",
-          "description": "Obtenez 3 carte du Défectueux."
+          "description": "Obtenez 3 {Cards:plural:carte|cartes} du Défectueux."
         },
         {
           "name": "Égalité",
@@ -5728,19 +5728,19 @@
         },
         {
           "name": "Rouge",
-          "description": "Obtenez 3 carte du Soldat de Fer."
+          "description": "Obtenez 3 {Cards:plural:carte|cartes} du Soldat de Fer."
         },
         {
           "name": "Rose",
-          "description": "Obtenez 3 carte de la Tisse-Mort."
+          "description": "Obtenez 3 {Cards:plural:carte|cartes} de la Tisse-Mort."
         },
         {
           "name": "Orange",
-          "description": "Obtenez 3 carte du Régent."
+          "description": "Obtenez 3 {Cards:plural:carte|cartes} du Régent."
         },
         {
           "name": "Vert",
-          "description": "Obtenez 3 carte de la Silencieuse."
+          "description": "Obtenez 3 {Cards:plural:carte|cartes} de la Silencieuse."
         }
       ]
     },
@@ -5819,7 +5819,7 @@
       "choices": [
         {
           "name": "Repos",
-          "description": "Récupérez 0 PV. Affrontez des ennemis."
+          "description": "Récupérez {Heal} PV. Affrontez des ennemis."
         },
         {
           "name": "Avancer malgré tout",
@@ -6012,7 +6012,7 @@
       "choices": [
         {
           "name": "Prendre les potions",
-          "description": "Obtenez 3 Potion infecte."
+          "description": "Obtenez 3 {FoulPotions:plural:Potion infecte|Potions infectes}."
         },
         {
           "name": "Fouiller",
@@ -6171,7 +6171,7 @@
       "choices": [
         {
           "name": "Boire l’eau",
-          "description": "Récupérez 0 PV."
+          "description": "Récupérez {Heal} PV."
         },
         {
           "name": "Observer",
@@ -6333,7 +6333,7 @@
         },
         {
           "name": "Ceci",
-          "description": "Perdez 6 PV. Recevez 0 Pièces d’or."
+          "description": "Perdez 6 PV. Recevez {Gold} Pièces d’or."
         }
       ]
     },
@@ -6363,7 +6363,7 @@
           "choices": [
             {
               "name": "Chaos",
-              "description": "Ajoutez une carte aléatoire à votre Main. Elle coûte 0 [E] pendant ce tour."
+              "description": "Ajoutez une carte aléatoire à votre Main. Elle coûte 0 {energyPrefix:energyIcons(1)} pendant ce tour."
             },
             {
               "name": "Étranglement",
@@ -6371,11 +6371,11 @@
             },
             {
               "name": "Curiosité",
-              "description": "Les Pouvoirs coûtent 1 [E] de moins."
+              "description": "Les Pouvoirs coûtent 1 {energyPrefix:energyIcons(1)} de moins."
             },
             {
               "name": "Stimulation",
-              "description": "Gagnez [E]."
+              "description": "Gagnez {EnergizedEnergy:energyIcons()}."
             },
             {
               "name": "Expertise",
@@ -6467,7 +6467,7 @@
         },
         {
           "name": "Éponge rêche",
-          "description": "Payez 155 Pièces d’or. Envoûtez 2 carte avec Stabilité."
+          "description": "Payez 155 Pièces d’or. Envoûtez 2 {Cards:plural:carte|cartes} avec Stabilité."
         },
         {
           "name": "Verrouillé",
@@ -6788,11 +6788,11 @@
       "name": "Instinct"
     },
     "MOMENTUM": {
-      "description": "Lorsque cette carte est jouée, augmentez ses dégâts d'attaque de {Amount} pour le restant du combat.",
+      "description": "Lorsque cette carte est jouée, augmentez ses dégâts d'attaque de X pour le restant du combat.",
       "name": "Élan"
     },
     "NIMBLE": {
-      "description": "Augmente l'Armure que confère cette carte de {Amount}.",
+      "description": "Augmente l'Armure que confère cette carte de X.",
       "name": "Agilité"
     },
     "PERFECT_FIT": {
@@ -6804,7 +6804,7 @@
       "name": "Sceau royal"
     },
     "SHARP": {
-      "description": "Augmente les dégâts de cette carte de {Amount}",
+      "description": "Augmente les dégâts de cette carte de X",
       "name": "Tranchant"
     },
     "SLITHER": {
@@ -6832,7 +6832,7 @@
       "name": "Stabilité"
     },
     "SWIFT": {
-      "description": "La première fois que vous jouez cette carte, piochez {Amount} carte.",
+      "description": "La première fois que vous jouez cette carte, piochez X carte.",
       "name": "Rapide"
     },
     "TEZCATARAS_EMBER": {
@@ -6840,7 +6840,7 @@
       "name": "Braise de Tezcatara"
     },
     "VIGOROUS": {
-      "description": "La première fois que cette carte est jouée, elle inflige {Amount} dégâts supplémentaires.",
+      "description": "La première fois que cette carte est jouée, elle inflige X dégâts supplémentaires.",
       "name": "Vigoureux"
     }
   },

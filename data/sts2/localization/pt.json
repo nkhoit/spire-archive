@@ -5720,7 +5720,7 @@
       "choices": [
         {
           "name": "Azul",
-          "description": "Receba 3 carta do Defeituoso."
+          "description": "Receba 3 {Cards:plural:carta|cartas} do Defeituoso."
         },
         {
           "name": "Igualdade",
@@ -5728,19 +5728,19 @@
         },
         {
           "name": "Vermelho",
-          "description": "Receba 3 carta do Rígido."
+          "description": "Receba 3 {Cards:plural:carta|cartas} do Rígido."
         },
         {
           "name": "Rosa",
-          "description": "Receba 3 carta da Necroartífice."
+          "description": "Receba 3 {Cards:plural:carta|cartas} da Necroartífice."
         },
         {
           "name": "Laranja",
-          "description": "Receba 3 carta do Regente."
+          "description": "Receba 3 {Cards:plural:carta|cartas} do Regente."
         },
         {
           "name": "Verde",
-          "description": "Receba 3 carta da Sorrateira."
+          "description": "Receba 3 {Cards:plural:carta|cartas} da Sorrateira."
         }
       ]
     },
@@ -5819,7 +5819,7 @@
       "choices": [
         {
           "name": "Descansar",
-          "description": "Cure 0 PV. Lute contra alguns inimigos."
+          "description": "Cure {Heal} PV. Lute contra alguns inimigos."
         },
         {
           "name": "Prosseguir",
@@ -6012,7 +6012,7 @@
       "choices": [
         {
           "name": "Recolher Poções",
-          "description": "Receba 3 Poção Nefasta."
+          "description": "Receba 3 {FoulPotions:plural:Poção Nefasta|Poções Nefastas}."
         },
         {
           "name": "Vasculhar",
@@ -6171,7 +6171,7 @@
       "choices": [
         {
           "name": "Beber",
-          "description": "Cure 0 PV."
+          "description": "Cure {Heal} PV."
         },
         {
           "name": "Observar",
@@ -6333,7 +6333,7 @@
         },
         {
           "name": "Isto",
-          "description": "Perca 6 PV. Receba 0 de Ouro."
+          "description": "Perca 6 PV. Receba {Gold} de Ouro."
         }
       ]
     },
@@ -6363,7 +6363,7 @@
           "choices": [
             {
               "name": "Caos",
-              "description": "Adicione uma carta aleatória na sua Mão. Ela custa 0 [E] neste turno."
+              "description": "Adicione uma carta aleatória na sua Mão. Ela custa 0 {energyPrefix:energyIcons(1)} neste turno."
             },
             {
               "name": "Asfixia",
@@ -6371,11 +6371,11 @@
             },
             {
               "name": "Curiosidade",
-              "description": "Poderes custam 1 [E] a menos."
+              "description": "Poderes custam 1 {energyPrefix:energyIcons(1)} a menos."
             },
             {
               "name": "Estimular",
-              "description": "Receba [E]."
+              "description": "Receba {EnergizedEnergy:energyIcons()}."
             },
             {
               "name": "Perícia",
@@ -6467,7 +6467,7 @@
         },
         {
           "name": "Esponja Espinhosa",
-          "description": "Pague 155 de Ouro. Encante 2 carta com Prontidão."
+          "description": "Pague 155 de Ouro. Encante 2 {Cards:plural:carta|cartas} com Prontidão."
         },
         {
           "name": "Bloqueado",
@@ -6788,11 +6788,11 @@
       "name": "Instinto"
     },
     "MOMENTUM": {
-      "description": "Aumenta o dano de ataque desta carta em {Amount} quando jogada neste combate.",
+      "description": "Aumenta o dano de ataque desta carta em X quando jogada neste combate.",
       "name": "Impulso"
     },
     "NIMBLE": {
-      "description": "Aumenta a Proteção recebida por esta carta em {Amount}.",
+      "description": "Aumenta a Proteção recebida por esta carta em X.",
       "name": "Ágil"
     },
     "PERFECT_FIT": {
@@ -6804,7 +6804,7 @@
       "name": "Aprovação Real"
     },
     "SHARP": {
-      "description": "Aumenta o dano desta carta em {Amount}.",
+      "description": "Aumenta o dano desta carta em X.",
       "name": "Afiada"
     },
     "SLITHER": {
@@ -6832,7 +6832,7 @@
       "name": "Prontidão"
     },
     "SWIFT": {
-      "description": "Na primeira vez que você jogar esta carta, compre {Amount} carta.",
+      "description": "Na primeira vez que você jogar esta carta, compre X carta.",
       "name": "Célere"
     },
     "TEZCATARAS_EMBER": {
@@ -6840,7 +6840,7 @@
       "name": "Centelha de Tezcatara"
     },
     "VIGOROUS": {
-      "description": "Na primeira vez que esta carta for jogada, ela causa {Amount} de dano adicional.",
+      "description": "Na primeira vez que esta carta for jogada, ela causa X de dano adicional.",
       "name": "Vigorosa"
     }
   },

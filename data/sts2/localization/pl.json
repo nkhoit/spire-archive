@@ -5472,7 +5472,7 @@
       "choices": [
         {
           "name": "Odpocznij",
-          "description": "Przywróć 0 PŻ. Walcz z paroma przeciwnikami."
+          "description": "Przywróć {Heal} PŻ. Walcz z paroma przeciwnikami."
         },
         {
           "name": "Brnij dalej",
@@ -5822,7 +5822,7 @@
       "choices": [
         {
           "name": "Wypij",
-          "description": "Przywróć 0 PŻ."
+          "description": "Przywróć {Heal} PŻ."
         },
         {
           "name": "Obserwuj",
@@ -5984,7 +5984,7 @@
         },
         {
           "name": "Tamto",
-          "description": "Utrać 6 PŻ. Zyskaj 0 szt. Złota."
+          "description": "Utrać 6 PŻ. Zyskaj {Gold} szt. Złota."
         }
       ]
     },
@@ -6014,7 +6014,7 @@
           "choices": [
             {
               "name": "Chaos",
-              "description": "Add a random card into your Hand. W tej turze kosztuje 0 [E]."
+              "description": "Add a random card into your Hand. W tej turze kosztuje 0 {energyPrefix:energyIcons(1)}."
             },
             {
               "name": "Duszenie",
@@ -6022,11 +6022,11 @@
             },
             {
               "name": "Ciekawość",
-              "description": "Moce kosztują 1 [E] mniej."
+              "description": "Moce kosztują 1 {energyPrefix:energyIcons(1)} mniej."
             },
             {
               "name": "Zasilanie",
-              "description": "Zyskaj [E]."
+              "description": "Zyskaj {EnergizedEnergy:energyIcons()}."
             },
             {
               "name": "Ekspertyza",
@@ -6420,11 +6420,11 @@
       "name": "Instynkt"
     },
     "MOMENTUM": {
-      "description": "Każde zagranie karty zwiększa jej obrażenia w walce o {Amount} pkt.",
+      "description": "Każde zagranie karty zwiększa jej obrażenia w walce o X pkt.",
       "name": "Impet"
     },
     "NIMBLE": {
-      "description": "Zwiększ Blok karty o {Amount} pkt.",
+      "description": "Zwiększ Blok karty o X pkt.",
       "name": "Zwinność"
     },
     "PERFECT_FIT": {
@@ -6436,7 +6436,7 @@
       "name": "Aprobata"
     },
     "SHARP": {
-      "description": "Zwiększ obrażenia karty o {Amount} pkt.",
+      "description": "Zwiększ obrażenia karty o X pkt.",
       "name": "Szlifierka"
     },
     "SLITHER": {
@@ -6471,7 +6471,7 @@
       "name": "Żar Tezcatary"
     },
     "VIGOROUS": {
-      "description": "Gdy zagrasz tę kartę po raz pierwszy w walce, zadaje dodatkowo {Amount} pkt. obrażeń.",
+      "description": "Gdy zagrasz tę kartę po raz pierwszy w walce, zadaje dodatkowo X pkt. obrażeń.",
       "name": "Werwa"
     }
   },

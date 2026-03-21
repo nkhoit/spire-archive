@@ -405,6 +405,14 @@ function main() {
     if (resolvedCount > 0) console.log(`  [${iso}] Resolved ${resolvedCount} event var substitutions`);
 
     existing.events = nextEvents;
+
+    // Replace runtime-only {Amount} in enchantments with "X" (matches English convention)
+    if (existing.enchantments) {
+      for (const ench of Object.values(existing.enchantments)) {
+        if (ench.description) ench.description = ench.description.replaceAll('{Amount}', 'X');
+      }
+    }
+
     fs.writeFileSync(outPath, JSON.stringify(existing, null, 2) + '\n', 'utf8');
     console.log(`Updated ${iso}.json from ${gameLang}`);
   }

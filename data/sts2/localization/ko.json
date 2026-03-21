@@ -5812,7 +5812,7 @@
       "choices": [
         {
           "name": "휴식한다",
-          "description": "체력을 0 회복합니다. 적들과 싸웁니다."
+          "description": "체력을 {Heal} 회복합니다. 적들과 싸웁니다."
         },
         {
           "name": "묵묵히 나아간다",
@@ -6164,7 +6164,7 @@
       "choices": [
         {
           "name": "마신다",
-          "description": "체력을 0 회복합니다."
+          "description": "체력을 {Heal} 회복합니다."
         },
         {
           "name": "관찰한다",
@@ -6326,7 +6326,7 @@
         },
         {
           "name": "이거",
-          "description": "체력을 6 잃습니다. 골드를 0 얻습니다."
+          "description": "체력을 6 잃습니다. 골드를 {Gold} 얻습니다."
         }
       ]
     },
@@ -6356,7 +6356,7 @@
           "choices": [
             {
               "name": "혼돈",
-              "description": "무작위 카드를 1장 손으로 가져옵니다. 이번 턴 동안 그 카드의 비용이 0 [E]이 됩니다."
+              "description": "무작위 카드를 1장 손으로 가져옵니다. 이번 턴 동안 그 카드의 비용이 0 {energyPrefix:energyIcons(1)}이 됩니다."
             },
             {
               "name": "질식",
@@ -6364,11 +6364,11 @@
             },
             {
               "name": "호기심",
-              "description": "파워 카드의 비용이 1 [E] 감소합니다."
+              "description": "파워 카드의 비용이 1 {energyPrefix:energyIcons(1)} 감소합니다."
             },
             {
               "name": "충전",
-              "description": "[E]를 얻습니다."
+              "description": "{EnergizedEnergy:energyIcons()}를 얻습니다."
             },
             {
               "name": "전문성",
@@ -6781,11 +6781,11 @@
       "name": "본능"
     },
     "MOMENTUM": {
-      "description": "이 카드를 사용할 시 이번 전투 동안 이 카드의 피해량이 {Amount} 증가합니다.",
+      "description": "이 카드를 사용할 시 이번 전투 동안 이 카드의 피해량이 X 증가합니다.",
       "name": "기세"
     },
     "NIMBLE": {
-      "description": "이 카드로 얻는 방어도가 {Amount} 증가합니다.",
+      "description": "이 카드로 얻는 방어도가 X 증가합니다.",
       "name": "기민함"
     },
     "PERFECT_FIT": {
@@ -6797,7 +6797,7 @@
       "name": "왕실 인증"
     },
     "SHARP": {
-      "description": "이 카드의 피해량이 {Amount} 증가합니다.",
+      "description": "이 카드의 피해량이 X 증가합니다.",
       "name": "예리"
     },
     "SLITHER": {
@@ -6825,7 +6825,7 @@
       "name": "안정"
     },
     "SWIFT": {
-      "description": "이 카드를 처음으로 사용할 때, 카드를 {Amount}장 뽑습니다.",
+      "description": "이 카드를 처음으로 사용할 때, 카드를 X장 뽑습니다.",
       "name": "신속"
     },
     "TEZCATARAS_EMBER": {
@@ -6833,7 +6833,7 @@
       "name": "테즈카타라의 잉걸불"
     },
     "VIGOROUS": {
-      "description": "이 카드를 처음으로 사용 시, 추가로 피해를 {Amount} 줍니다.",
+      "description": "이 카드를 처음으로 사용 시, 추가로 피해를 X 줍니다.",
       "name": "활기"
     }
   },

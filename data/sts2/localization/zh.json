@@ -5812,7 +5812,7 @@
       "choices": [
         {
           "name": "休息",
-          "description": "回复0点生命。进入战斗。"
+          "description": "回复{Heal}点生命。进入战斗。"
         },
         {
           "name": "坚持跋涉",
@@ -6164,7 +6164,7 @@
       "choices": [
         {
           "name": "饮用",
-          "description": "回复0点生命。"
+          "description": "回复{Heal}点生命。"
         },
         {
           "name": "观察",
@@ -6326,7 +6326,7 @@
         },
         {
           "name": "这个",
-          "description": "失去6点生命。获得0金币。"
+          "description": "失去6点生命。获得{Gold}金币。"
         }
       ]
     },
@@ -6356,7 +6356,7 @@
           "choices": [
             {
               "name": "混沌",
-              "description": "将一张随机牌放入你的手牌。这张牌在本回合这张牌在本回合耗能变为0[E]。"
+              "description": "将一张随机牌放入你的手牌。这张牌在本回合这张牌在本回合耗能变为0{energyPrefix:energyIcons(1)}。"
             },
             {
               "name": "扼杀",
@@ -6364,11 +6364,11 @@
             },
             {
               "name": "好奇",
-              "description": "能力牌的耗能减少1[E]。"
+              "description": "能力牌的耗能减少1{energyPrefix:energyIcons(1)}。"
             },
             {
               "name": "充能",
-              "description": "获得[E]。"
+              "description": "获得{EnergizedEnergy:energyIcons()}。"
             },
             {
               "name": "专长",
@@ -6781,11 +6781,11 @@
       "name": "本能"
     },
     "MOMENTUM": {
-      "description": "在本场战斗中，每次打出就增加这张牌的攻击伤害{Amount}点。",
+      "description": "在本场战斗中，每次打出就增加这张牌的攻击伤害X点。",
       "name": "动量"
     },
     "NIMBLE": {
-      "description": "这张牌获得的格挡值增加{Amount}点。",
+      "description": "这张牌获得的格挡值增加X点。",
       "name": "灵巧"
     },
     "PERFECT_FIT": {
@@ -6797,7 +6797,7 @@
       "name": "王室认证"
     },
     "SHARP": {
-      "description": "这张牌上的伤害值增加{Amount}点。",
+      "description": "这张牌上的伤害值增加X点。",
       "name": "锋利"
     },
     "SLITHER": {
@@ -6825,7 +6825,7 @@
       "name": "稳定"
     },
     "SWIFT": {
-      "description": "你第一次打出这张牌时，抽{Amount}张牌。",
+      "description": "你第一次打出这张牌时，抽X张牌。",
       "name": "迅速"
     },
     "TEZCATARAS_EMBER": {
@@ -6833,7 +6833,7 @@
       "name": "特兹卡塔拉的余烬"
     },
     "VIGOROUS": {
-      "description": "第一次打出这张牌时，造成{Amount}点额外伤害。",
+      "description": "第一次打出这张牌时，造成X点额外伤害。",
       "name": "活力"
     }
   },

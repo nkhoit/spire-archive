@@ -5813,7 +5813,7 @@
       "choices": [
         {
           "name": "休憩する",
-          "description": "HPを0回復する。 敵と戦う。"
+          "description": "HPを{Heal}回復する。 敵と戦う。"
         },
         {
           "name": "意地でも進む",
@@ -6165,7 +6165,7 @@
       "choices": [
         {
           "name": "飲む",
-          "description": "HPを0回復する。"
+          "description": "HPを{Heal}回復する。"
         },
         {
           "name": "観察する",
@@ -6327,7 +6327,7 @@
         },
         {
           "name": "こっち",
-          "description": "HPを6失う。 0ゴールドを獲得。"
+          "description": "HPを6失う。 {Gold}ゴールドを獲得。"
         }
       ]
     },
@@ -6357,7 +6357,7 @@
           "choices": [
             {
               "name": "混沌",
-              "description": "ランダムなカードを1枚手札に加える。 このターン、そのコストは0[E]。"
+              "description": "ランダムなカードを1枚手札に加える。 このターン、そのコストは0{energyPrefix:energyIcons(1)}。"
             },
             {
               "name": "窒息",
@@ -6365,11 +6365,11 @@
             },
             {
               "name": "好奇心",
-              "description": "パワーのコストが1[E]減少する。"
+              "description": "パワーのコストが1{energyPrefix:energyIcons(1)}減少する。"
             },
             {
               "name": "活性化",
-              "description": "[E]を得る。"
+              "description": "{EnergizedEnergy:energyIcons()}を得る。"
             },
             {
               "name": "専門家",
@@ -6782,11 +6782,11 @@
       "name": "本能"
     },
     "MOMENTUM": {
-      "description": "プレイ時、この戦闘中に限りこのカードのダメージが{Amount}増加する。",
+      "description": "プレイ時、この戦闘中に限りこのカードのダメージがX増加する。",
       "name": "モメンタム"
     },
     "NIMBLE": {
-      "description": "このカードから得るブロックが{Amount}増加する。",
+      "description": "このカードから得るブロックがX増加する。",
       "name": "身軽"
     },
     "PERFECT_FIT": {
@@ -6798,7 +6798,7 @@
       "name": "王室認可"
     },
     "SHARP": {
-      "description": "ダメージが{Amount}増加する。",
+      "description": "ダメージがX増加する。",
       "name": "鋭利"
     },
     "SLITHER": {
@@ -6826,7 +6826,7 @@
       "name": "安定性"
     },
     "SWIFT": {
-      "description": "各戦闘で初めてプレイした時、カードを{Amount}枚引く。",
+      "description": "各戦闘で初めてプレイした時、カードをX枚引く。",
       "name": "迅速"
     },
     "TEZCATARAS_EMBER": {
@@ -6834,7 +6834,7 @@
       "name": "テスカタラの残り火"
     },
     "VIGOROUS": {
-      "description": "各戦闘で初めてプレイした時、{Amount}の追加ダメージを与える。",
+      "description": "各戦闘で初めてプレイした時、Xの追加ダメージを与える。",
       "name": "活気"
     }
   },
