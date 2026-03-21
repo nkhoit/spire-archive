@@ -6209,7 +6209,7 @@
         },
         {
           "name": "Szumiąca muszla",
-          "description": "At the start of Elite combats, draw 2 additional cards.",
+          "description": "At the start of Elite combats, draw {Cards} additional {Cards:plural:card|cards}.",
           "relic_id": "BOOMING_CONCH",
           "pool": "positive"
         },
@@ -6233,7 +6233,7 @@
         },
         {
           "name": "Liść zmiany",
-          "description": "Upon pickup, Transform 1 card.",
+          "description": "Upon pickup, Transform {Cards} {Cards:plural:card|cards}.",
           "relic_id": "NEW_LEAF",
           "pool": "positive"
         },
@@ -6245,7 +6245,7 @@
         },
         {
           "name": "Precyzyjne nożyczki",
-          "description": "Upon pickup, remove 1 card from your Deck.",
+          "description": "Upon pickup, remove {Cards} {Cards:plural:card|cards} from your Deck.",
           "relic_id": "PRECISE_SCISSORS",
           "pool": "positive"
         },
@@ -6263,7 +6263,7 @@
         },
         {
           "name": "Wielka kapsuła",
-          "description": "Upon pickup, obtain 2 random Relics. Add an additional Strike and Defend to your Deck.",
+          "description": "Upon pickup, obtain {Relics} random {Relics:plural:Relic|Relics}. Add an additional Strike and Defend to your Deck.",
           "relic_id": "LARGE_CAPSULE",
           "pool": "cursed"
         },
@@ -6275,7 +6275,7 @@
         },
         {
           "name": "Niebezpieczne nożyce",
-          "description": "Upon pickup, remove 2 cards from your Deck and take 13 damage.",
+          "description": "Upon pickup, remove {Cards} {Cards:plural:card|cards} from your Deck and take {Damage} damage.",
           "relic_id": "PRECARIOUS_SHEARS",
           "pool": "cursed"
         },

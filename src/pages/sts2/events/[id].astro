@@ -26,13 +26,16 @@ const showStandardChoices = !hasAncientRelicPools;
 function getRefPreviewData(ref: any) {
   const imgBase = ref.type === 'card' ? '/images/sts2/cards/' :
                   ref.type === 'relic' ? '/images/sts2/relics/' :
-                  ref.type === 'potion' ? '/images/sts2/potions/' : null;
+                  ref.type === 'potion' ? '/images/sts2/potions/' :
+                  ref.type === 'enchantment' ? '/images/sts2/enchantments/' : null;
   const img = imgBase ? `${imgBase}${ref.id.toLowerCase()}.png` : null;
   let desc = '';
   if (ref.type === 'card') desc = data.cardById.get(ref.id)?.description ?? '';
   else if (ref.type === 'relic') desc = data.relicById.get(ref.id)?.description ?? '';
   else if (ref.type === 'potion') desc = data.potionById.get(ref.id)?.description ?? '';
   else if (ref.type === 'enchantment') desc = data.enchantmentById?.get(ref.id)?.description ?? '';
+  // Clean runtime template vars for display
+  desc = desc.replace(/\{[^}]*:diff\(\)\}\s*/g, 'X ').replace(/\{[^}]*:plural:([^|]+)\|[^}]+\}/g, '$1').replace(/\{[^}]*:energyIcons\(\)\}/g, '[E]').replace(/\{Amount\}/g, 'X');
   return { img, desc };
 }
 
