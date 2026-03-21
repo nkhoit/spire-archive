@@ -39,7 +39,7 @@ run_step() {
   echo
 }
 
-TOTAL=11
+TOTAL=12
 run_step 1 "$TOTAL" python3 "$PARSERS_DIR/parse_sts2_all.py"
 run_step 2 "$TOTAL" node "$PARSERS_DIR/parse_sts2_events.js"
 run_step 3 "$TOTAL" node "$PARSERS_DIR/parse_sts2_monsters.js"
@@ -51,6 +51,7 @@ run_step 8 "$TOTAL" node "$PARSERS_DIR/resolve_localized_vars.cjs"
 run_step 9 "$TOTAL" node "$PARSERS_DIR/build_monster_localization.cjs"
 run_step 10 "$TOTAL" node "$PARSERS_DIR/add_sts2_ancient_descriptions.cjs"
 run_step 11 "$TOTAL" node "$PARSERS_DIR/build_patch_notes.cjs"
+run_step 12 "$TOTAL" python3 "$PARSERS_DIR/subset_fonts.py"
 
 python3 - <<'PY'
 import json
