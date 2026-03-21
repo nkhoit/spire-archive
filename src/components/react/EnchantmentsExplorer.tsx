@@ -63,6 +63,7 @@ export default function EnchantmentsExplorer(props: { game?: string; rarities: s
         {resp.items.map((e) => (
           <li key={e.id} className="p-3">
             <a className="flex items-start gap-3 hover:bg-white/5 -m-3 p-3 rounded-lg" href={`${locale !== "en" ? "/" + locale : ""}/${game}/enchantments/${e.id}`}>
+              <img src={`/images/sts2/enchantments/${e.id.toLowerCase()}.png`} alt="" width={40} height={40} className="flex-shrink-0 rounded" loading="lazy" style={{ imageRendering: 'pixelated' }} />
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-2">
                   <span className="text-sm font-semibold">{e.name}</span>
