@@ -235,6 +235,17 @@ function Sts2Renderer({ card, upgraded, size, locale = 'en' }: { card: any; upgr
     const upg = card.upgrade ?? {};
     if (upg.description) {
       description = upg.description;
+      // Find numbers that differ between base and upgraded descriptions
+      const baseNums = (card.description ?? '').match(/\d+/g)?.map(Number) ?? [];
+      const upgNums = upg.description.match(/\d+/g)?.map(Number) ?? [];
+      // Numbers in upgraded that aren't in base (or appear more times)
+      const baseCounts = new Map<number, number>();
+      for (const n of baseNums) baseCounts.set(n, (baseCounts.get(n) ?? 0) + 1);
+      for (const n of upgNums) {
+        const bc = baseCounts.get(n) ?? 0;
+        if (bc > 0) { baseCounts.set(n, bc - 1); }
+        else { upgradedNumbers.add(String(n)); }
+      }
     } else {
       const vars = { ...(card.vars ?? {}) };
       const template = (card as any).description_template as string | undefined;

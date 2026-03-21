@@ -353,6 +353,11 @@ def resolve_tokens(desc: str, vars_map: dict[str, str]) -> str:
                 # Replace {} placeholders with the value
                 if val is not None:
                     chosen = chosen.replace("{}", fmt_value(val))
+                # Replace {:diff()} with the value (used in plural forms)
+                if val is not None:
+                    chosen = chosen.replace("{:diff()}", fmt_value(val))
+                    # Replace {VarName:diff()} with the value (same var referenced by name)
+                    chosen = chosen.replace("{" + tag + ":diff()}", fmt_value(val))
                 # Remove any remaining {} placeholders
                 chosen = re.sub(r"\{[^}]*\}", "", chosen)
                 result.append(chosen)
@@ -499,6 +504,132 @@ def _resolve_entity_refs(vars_map: dict[str, str], name_map: dict[str, str]) -> 
     return resolved
 
 
+# Map from our var keys back to game template var names
+KEY_TO_GAME_VAR = {
+    'damage': 'Damage', 'extra_damage': 'ExtraDamage', 'osty_damage': 'OstyDamage',
+    'calculated_damage': 'CalculatedDamage', 'block': 'Block', 'calculated_block': 'CalculatedBlock',
+    'heal': 'Heal', 'magic_number': 'MagicNumber', 'cards': 'Cards', 'energy': 'Energy',
+    'hp_loss': 'HpLoss', 'repeat': 'Repeat', 'summon': 'Summon', 'forge': 'Forge',
+    'stars_var': 'Stars', 'gold': 'Gold', 'max_hp': 'MaxHp',
+    'calculation_base': 'CalculationBase', 'calculation_extra': 'CalculationExtra',
+    'calculated': 'Calculated',
+}
+
+
+def _generate_upgrade_descriptions():
+    """For cards with plural patterns, generate upgrade.description by resolving raw template with upgraded values."""
+    import os
+    pck_dir = os.environ.get("STS2_PCK_DIR", "/tmp/sts2-pck")
+    raw_loc_path = Path(pck_dir) / "localization" / "eng" / "cards.json"
+    if not raw_loc_path.exists():
+        print(f"  Skipping upgrade description generation: {raw_loc_path} not found")
+        return
+
+    with open(raw_loc_path) as f:
+        raw_loc = json.load(f)
+
+    cards_path = OUTPUT_DIR / "cards.json"
+    with open(cards_path) as f:
+        cards = json.load(f)
+
+    cs_dir = DECOMPILED_DIR / "MegaCrit.Sts2.Core.Models.Cards"
+    entity_names = _build_entity_name_map()
+    count = 0
+
+    for card in cards:
+        upgrade = card.get("upgrade")
+        if not upgrade or isinstance(upgrade.get("description"), str):
+            continue  # Already has an upgrade description or no upgrade
+
+        raw_desc = raw_loc.get(f"{card['id']}.description", "")
+        if "plural" not in raw_desc:
+            continue
+
+        vars_data = card.get("vars", {})
+        if not vars_data and not upgrade:
+            continue
+
+        # Build upgraded vars_map (game var names → upgraded string values)
+        # First get C# vars for full resolution context
+        cs_filename = card_id_to_filename(card["id"])
+        cs_path = cs_dir / cs_filename
+        vars_map: dict[str, str] = {}
+        if cs_path.exists():
+            with open(cs_path) as f:
+                cs_content = f.read()
+            vars_map = extract_vars_from_cs(cs_content)
+            vars_map = _resolve_entity_refs(vars_map, entity_names)
+
+        # Apply upgrade deltas to get upgraded values
+        for uk, delta in upgrade.items():
+            if uk in ('add_keywords', 'remove_keywords', 'description'):
+                continue
+            # Map upgrade key to game var name
+            vk = uk if uk in vars_data else f"power_{uk}" if f"power_{uk}" in vars_data else None
+            if vk and vk in vars_data:
+                new_val = int(vars_data[vk]) + int(delta)
+                # Update vars_map with upgraded value using game var names
+                game_name = KEY_TO_GAME_VAR.get(vk)
+                if not game_name:
+                    if vk.startswith("power_"):
+                        parts = vk[6:].split("_")
+                        game_name = "".join(p.capitalize() for p in parts) + "Power"
+                    else:
+                        game_name = "".join(p.capitalize() for p in vk.split("_"))
+                if game_name:
+                    vars_map[game_name] = str(new_val)
+                # Also set without Power suffix
+                if vk.startswith("power_"):
+                    parts = vk[6:].split("_")
+                    vars_map["".join(p.capitalize() for p in parts)] = str(new_val)
+
+        # Also set base (non-upgraded) vars in vars_map
+        for vk, val in vars_data.items():
+            game_name = KEY_TO_GAME_VAR.get(vk)
+            if not game_name:
+                if vk.startswith("power_"):
+                    # power_strength → StrengthPower, power_void_form → VoidFormPower
+                    parts = vk[6:].split("_")
+                    game_name = "".join(p.capitalize() for p in parts) + "Power"
+                else:
+                    game_name = "".join(p.capitalize() for p in vk.split("_"))
+            if game_name and game_name not in vars_map:
+                vars_map[game_name] = str(int(val))
+            # Also add without Power suffix for templates that use either form
+            if vk.startswith("power_"):
+                parts = vk[6:].split("_")
+                no_power = "".join(p.capitalize() for p in parts)
+                if no_power not in vars_map:
+                    vars_map[no_power] = str(int(val))
+
+        # Clean BBCode from raw template
+        clean_raw = re.sub(r'\[/?[a-z]+\]', '', raw_desc).strip()
+        # Remove {InCombat:...} blocks
+        clean_raw = re.sub(r'\{InCombat:[^}]*\}', '', clean_raw).strip()
+        # Remove {IfUpgraded:show:...|...} — use upgraded form
+        clean_raw = re.sub(r'\{IfUpgraded:show:([^|]*)\|([^}]*)\}', r'\1', clean_raw)
+        clean_raw = re.sub(r'\{IfUpgraded:show:([^}]*)\}', r'\1', clean_raw)
+
+        upgraded_desc = resolve_tokens(clean_raw, vars_map)
+        # Post-process cleanup
+        upgraded_desc = re.sub(r"\d+ \w+\|\{\} \w+\}", lambda m: m.group(0).split("|")[0] + "s", upgraded_desc)
+        upgraded_desc = re.sub(r"\s*\|+\?+$", "", upgraded_desc.rstrip())
+        upgraded_desc = re.sub(r"\n\([^)]*\bcard\b[^)]*\)", "", upgraded_desc)
+        upgraded_desc = re.sub(r"\{Amount(?::[^}]*)?\}", "X", upgraded_desc)
+        # Normalize icon tokens
+        upgraded_desc = re.sub(r"\{singleStarIcon\}", "[S]", upgraded_desc)
+        upgraded_desc = re.sub(r"\{energyPrefix:energyIcons\(1\)\}", "[E]", upgraded_desc)
+
+        if "{" not in upgraded_desc and upgraded_desc != card.get("description"):
+            upgrade["description"] = upgraded_desc
+            count += 1
+
+    with open(cards_path, "w") as f:
+        json.dump(cards, f, indent=2, ensure_ascii=False)
+
+    print(f"  Generated {count} upgrade descriptions for plural cards")
+
+
 def main():
     # Build entity name lookup for StringVar resolution
     entity_names = _build_entity_name_map()
@@ -510,6 +641,10 @@ def main():
         "Cards",
         entity_names=entity_names,
     )
+
+    # Generate upgrade.description for cards with plural templates
+    _generate_upgrade_descriptions()
+
     # Relics
     resolve_entity_file(
         OUTPUT_DIR / "relics.json",

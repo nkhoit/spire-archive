@@ -52,6 +52,9 @@ def build_description_template(raw_loc: str | None, vars_data: dict) -> str | No
     """Build a description template with {var_key} placeholders from raw localization text."""
     if not raw_loc:
         return None
+    # Skip plural patterns — they change description structure on upgrade
+    if 'plural' in raw_loc:
+        return None
     # Strip BBCode
     text = re.sub(r'\[/?[a-z]+\]', '', raw_loc).strip()
     if '{' not in text:
