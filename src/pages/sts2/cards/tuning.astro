@@ -1,0 +1,20 @@
+---
+import Layout from '../../../components/Layout.astro';
+
+// Only allow in non-production (test.spire-archive.com / localhost)
+const host = Astro.request.headers.get('host') ?? '';
+const isProd = host === 'spire-archive.com' || host === 'www.spire-archive.com';
+if (isProd) {
+  return Astro.redirect('/sts2/cards');
+}
+---
+<Layout title="Card Tuning — Spire Archive" description="Internal card rendering tuning tool" game="sts2">
+  <div id="tuning-root"></div>
+  <script>
+    import { createRoot } from 'react-dom/client';
+    import { createElement } from 'react';
+    import CardTuning from '../../../components/react/CardTuning';
+    const el = document.getElementById('tuning-root');
+    if (el) createRoot(el).render(createElement(CardTuning));
+  </script>
+</Layout>
