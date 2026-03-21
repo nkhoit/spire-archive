@@ -156,7 +156,9 @@
       "Exhaust"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "summon": 6
+    },
     "upgrade": {
       "summon": 3
     },
@@ -270,8 +272,8 @@
     "target": "Self",
     "color": "colorless",
     "keywords": [
-      "Exhaust",
-      "Retain"
+      "Retain",
+      "Exhaust"
     ],
     "tags": [],
     "vars": {},
@@ -331,8 +333,8 @@
     "target": "Self",
     "color": "event",
     "keywords": [
-      "Exhaust",
-      "Ethereal"
+      "Ethereal",
+      "Exhaust"
     ],
     "tags": [],
     "vars": {
@@ -391,9 +393,9 @@
     "target": "None",
     "color": "curse",
     "keywords": [
+      "Ethereal",
       "Eternal",
-      "Unplayable",
-      "Ethereal"
+      "Unplayable"
     ],
     "tags": [],
     "vars": {},
@@ -415,7 +417,10 @@
     "tags": [
       "Strike"
     ],
-    "vars": {},
+    "vars": {
+      "extra_damage": 3,
+      "calculation_base": 6
+    },
     "upgrade": {
       "extradamage": 1
     },
@@ -599,7 +604,9 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "damage": 5
+      "damage": 5,
+      "calculation_base": 0,
+      "calculation_extra": 1
     },
     "upgrade": {
       "damage": 2
@@ -738,7 +745,9 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "damage": 5
+      "damage": 5,
+      "calculation_base": 5,
+      "calculation_extra": 5
     },
     "upgrade": {
       "damage": 2,
@@ -838,7 +847,9 @@
     "tags": [],
     "vars": {
       "cards": 1,
-      "energy": 1
+      "energy": 1,
+      "forge": 5,
+      "stars_var": 1
     },
     "upgrade": {
       "add_keywords": [
@@ -1017,7 +1028,10 @@
     "color": "ironclad",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "extra_damage": 1,
+      "calculation_base": 0
+    },
     "upgrade": {
       "cost": 0
     },
@@ -1034,7 +1048,9 @@
     "color": "necrobinder",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "summon": 5
+    },
     "upgrade": {
       "summon": 2
     },
@@ -1094,6 +1110,7 @@
       "OstyAttack"
     ],
     "vars": {
+      "osty_damage": 9,
       "block": 9
     },
     "upgrade": {
@@ -1259,7 +1276,8 @@
     "tags": [],
     "vars": {
       "cards": 2,
-      "energy": 2
+      "energy": 2,
+      "max_hp": 1
     },
     "upgrade": {
       "energy": 1,
@@ -1355,7 +1373,10 @@
     "color": "ironclad",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "extra_damage": 2,
+      "calculation_base": 4
+    },
     "upgrade": {
       "extradamage": 1
     },
@@ -1373,7 +1394,8 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "block": 13
+      "block": 13,
+      "forge": 10
     },
     "upgrade": {
       "block": 3,
@@ -1562,8 +1584,8 @@
     "target": "Self",
     "color": "silent",
     "keywords": [
-      "Exhaust",
-      "Retain"
+      "Retain",
+      "Exhaust"
     ],
     "tags": [],
     "vars": {},
@@ -1884,7 +1906,9 @@
       "Exhaust"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "summon": 3
+    },
     "upgrade": {
       "summon": 2
     },
@@ -1940,8 +1964,8 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Unplayable",
-      "Ethereal"
+      "Ethereal",
+      "Unplayable"
     ],
     "tags": [],
     "vars": {},
@@ -2059,7 +2083,9 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "damage": 7
+      "damage": 7,
+      "calculation_base": 0,
+      "calculation_extra": 1
     },
     "upgrade": {
       "damage": 3
@@ -2077,7 +2103,10 @@
     "color": "ironclad",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "extra_damage": 2,
+      "calculation_base": 8
+    },
     "upgrade": {
       "calculationbase": 1,
       "extradamage": 1
@@ -2095,7 +2124,9 @@
     "color": "regent",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "forge": 3
+    },
     "upgrade": {
       "forge": 2
     },
@@ -2135,7 +2166,8 @@
     ],
     "tags": [],
     "vars": {
-      "energy": 1
+      "energy": 1,
+      "stars_var": 1
     },
     "upgrade": {
       "stars": 1
@@ -2326,7 +2358,10 @@
     "color": "regent",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "extra_damage": 2,
+      "calculation_base": 6
+    },
     "upgrade": {
       "extradamage": 1
     },
@@ -2554,8 +2589,8 @@
     "target": "None",
     "color": "status",
     "keywords": [
-      "Unplayable",
-      "Ethereal"
+      "Ethereal",
+      "Unplayable"
     ],
     "tags": [],
     "vars": {},
@@ -2592,7 +2627,10 @@
     "color": "necrobinder",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "extra_damage": 3,
+      "calculation_base": 8
+    },
     "upgrade": {
       "calculationbase": 1,
       "extradamage": 1
@@ -2690,7 +2728,9 @@
       "Unplayable"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "gold": 10
+    },
     "upgrade": {},
     "description": "At the end of your turn, if this is in your Hand, lose 10 Gold.",
     "image_url": "/images/sts2/cards/debt.png"
@@ -3000,7 +3040,9 @@
     ],
     "tags": [],
     "vars": {
-      "hp_loss": 1
+      "hp_loss": 1,
+      "calculation_base": 0,
+      "calculation_extra": 1
     },
     "upgrade": {
       "remove_keywords": [
@@ -3059,7 +3101,9 @@
     "color": "necrobinder",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "summon": 3
+    },
     "upgrade": {
       "summon": 1
     },
@@ -3274,8 +3318,8 @@
     "target": "Self",
     "color": "necrobinder",
     "keywords": [
-      "Exhaust",
-      "Retain"
+      "Retain",
+      "Exhaust"
     ],
     "tags": [],
     "vars": {
@@ -3699,7 +3743,9 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "energy": 0
+      "energy": 0,
+      "calculation_base": 0,
+      "calculation_extra": 1
     },
     "upgrade": {
       "cost": 0
@@ -3799,7 +3845,9 @@
     "color": "silent",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "shivs": 4
+    },
     "upgrade": {
       "shivs": 1
     },
@@ -3863,7 +3911,8 @@
     ],
     "tags": [],
     "vars": {
-      "damage": 10
+      "damage": 10,
+      "max_hp": 3
     },
     "upgrade": {
       "damage": 2,
@@ -3944,6 +3993,7 @@
       "OstyAttack"
     ],
     "vars": {
+      "osty_damage": 3,
       "cards": 1
     },
     "upgrade": {
@@ -4046,7 +4096,9 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "damage": 6
+      "damage": 6,
+      "calculation_base": 0,
+      "calculation_extra": 1
     },
     "upgrade": {
       "damage": 2
@@ -4086,7 +4138,9 @@
     ],
     "tags": [],
     "vars": {
-      "damage": 8
+      "damage": 8,
+      "calculation_base": 0,
+      "calculation_extra": 1
     },
     "upgrade": {
       "damage": 3
@@ -4164,7 +4218,9 @@
     "tags": [
       "OstyAttack"
     ],
-    "vars": {},
+    "vars": {
+      "osty_damage": 12
+    },
     "upgrade": {
       "ostydamage": 4
     },
@@ -4182,7 +4238,9 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "damage": 5
+      "damage": 5,
+      "calculation_base": 0,
+      "calculation_extra": 1
     },
     "upgrade": {
       "damage": 2
@@ -4399,7 +4457,8 @@
     "tags": [],
     "vars": {
       "damage": 5,
-      "cards": 1
+      "cards": 1,
+      "playmax": 3
     },
     "upgrade": {
       "damage": 1,
@@ -4440,7 +4499,9 @@
     "color": "regent",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "forge": 4
+    },
     "upgrade": {
       "forge": 2
     },
@@ -4496,7 +4557,10 @@
     "color": "colorless",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "extra_damage": 5,
+      "calculation_base": 5
+    },
     "upgrade": {
       "extradamage": 2
     },
@@ -4514,7 +4578,8 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "block": 7
+      "block": 7,
+      "stars_var": 1
     },
     "upgrade": {
       "block": 3
@@ -4553,7 +4618,9 @@
       "Exhaust"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "increase": 3
+    },
     "upgrade": {
       "increase": 1
     },
@@ -4689,7 +4756,8 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "cards": 2
+      "cards": 2,
+      "stars_var": 1
     },
     "upgrade": {
       "stars": 1
@@ -4730,7 +4798,10 @@
       "Retain"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "extra_damage": 1,
+      "calculation_base": 0
+    },
     "upgrade": {
       "add_keywords": [
         "Retain"
@@ -5166,7 +5237,9 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "damage": 3
+      "damage": 3,
+      "calculation_base": 0,
+      "calculation_extra": 1
     },
     "upgrade": {
       "damage": 2
@@ -5243,6 +5316,7 @@
     "keywords": [],
     "tags": [],
     "vars": {
+      "stars_var": 1,
       "power_starnextturn": 3
     },
     "upgrade": {
@@ -5281,7 +5355,9 @@
       "Unplayable"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "replay": 2
+    },
     "upgrade": {
       "replay": 1
     },
@@ -5301,6 +5377,7 @@
       "OstyAttack"
     ],
     "vars": {
+      "osty_damage": 11,
       "power_vulnerable": 2
     },
     "upgrade": {
@@ -5657,7 +5734,8 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "energy": 2
+      "energy": 2,
+      "summon": 2
     },
     "upgrade": {
       "summon": 1,
@@ -5838,7 +5916,10 @@
     "tags": [
       "Shiv"
     ],
-    "vars": {},
+    "vars": {
+      "calculation_base": 0,
+      "calculation_extra": 1
+    },
     "upgrade": {},
     "description": "Play every Shiv in your Exhaust Pile on the enemy.\n(Plays 0 Shivs)",
     "image_url": "/images/sts2/cards/knife_trap.png"
@@ -5875,7 +5956,8 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "damage": 30
+      "damage": 30,
+      "stars_var": 5
     },
     "upgrade": {
       "damage": 8
@@ -5952,7 +6034,8 @@
       "Strike"
     ],
     "vars": {
-      "damage": 7
+      "damage": 7,
+      "shivs": 1
     },
     "upgrade": {
       "damage": 3
@@ -6012,7 +6095,9 @@
       "Exhaust"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "summon": 6
+    },
     "upgrade": {
       "summon": 2
     },
@@ -6107,8 +6192,8 @@
     "target": "Self",
     "color": "token",
     "keywords": [
-      "Exhaust",
-      "Retain"
+      "Retain",
+      "Exhaust"
     ],
     "tags": [],
     "vars": {
@@ -6131,7 +6216,9 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "damage": 4
+      "damage": 4,
+      "calculation_base": 0,
+      "calculation_extra": 1
     },
     "upgrade": {
       "damage": 1
@@ -6177,6 +6264,7 @@
     "vars": {
       "damage": 12,
       "block": 8,
+      "wisdomcards": 3,
       "violencehits": 3,
       "curiousreduction": 1
     },
@@ -6373,7 +6461,10 @@
     "color": "silent",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "extra_damage": 4,
+      "calculation_base": 8
+    },
     "upgrade": {
       "calculationbase": 2,
       "extradamage": 1
@@ -6457,7 +6548,10 @@
       "Exhaust"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "calculation_base": 0,
+      "calculation_extra": 1
+    },
     "upgrade": {
       "remove_keywords": [
         "Exhaust"
@@ -6478,7 +6572,10 @@
       "Innate"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "extra_damage": 1,
+      "calculation_base": 0
+    },
     "upgrade": {
       "cost": 0
     },
@@ -6585,7 +6682,10 @@
       "Exhaust"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "calculation_base": 0,
+      "calculation_extra": 1
+    },
     "upgrade": {
       "cost": 0
     },
@@ -6745,7 +6845,10 @@
     "color": "silent",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "extra_damage": 1,
+      "calculation_base": 1
+    },
     "upgrade": {
       "cost": 0
     },
@@ -6762,7 +6865,9 @@
     "color": "necrobinder",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "summon": 5
+    },
     "upgrade": {
       "summon": 3
     },
@@ -6904,6 +7009,8 @@
     "keywords": [],
     "tags": [],
     "vars": {
+      "calculation_base": 10,
+      "calculation_extra": 5,
       "doomthreshold": 10
     },
     "upgrade": {
@@ -6924,7 +7031,9 @@
       "Unplayable"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "calculation_base": 3
+    },
     "upgrade": {},
     "description": "You cannot play more than 3 cards this turn.\n(3 cards left)",
     "image_url": "/images/sts2/cards/normality.png"
@@ -7358,7 +7467,10 @@
     "tags": [
       "Strike"
     ],
-    "vars": {},
+    "vars": {
+      "extra_damage": 2,
+      "calculation_base": 6
+    },
     "upgrade": {
       "extradamage": 1
     },
@@ -7519,7 +7631,9 @@
     "tags": [
       "OstyAttack"
     ],
-    "vars": {},
+    "vars": {
+      "osty_damage": 6
+    },
     "upgrade": {
       "ostydamage": 3
     },
@@ -7558,8 +7672,8 @@
     "target": "None",
     "color": "curse",
     "keywords": [
-      "Unplayable",
-      "Retain"
+      "Retain",
+      "Unplayable"
     ],
     "tags": [],
     "vars": {},
@@ -7596,7 +7710,10 @@
     "color": "silent",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "extra_damage": 2,
+      "calculation_base": 13
+    },
     "upgrade": {
       "calculationbase": 3
     },
@@ -7750,7 +7867,10 @@
     "tags": [
       "OstyAttack"
     ],
-    "vars": {},
+    "vars": {
+      "extra_damage": 1,
+      "calculation_base": 10
+    },
     "upgrade": {
       "calculationbase": 5,
       "cost": 1
@@ -7790,7 +7910,8 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "block": 7
+      "block": 7,
+      "summon": 4
     },
     "upgrade": {
       "summon": 1,
@@ -7812,7 +7933,9 @@
     ],
     "tags": [],
     "vars": {
-      "damage": 5
+      "damage": 5,
+      "calculation_base": 0,
+      "calculation_extra": 1
     },
     "upgrade": {
       "damage": 2
@@ -7829,8 +7952,8 @@
     "target": "Self",
     "color": "colorless",
     "keywords": [
-      "Exhaust",
-      "Retain"
+      "Retain",
+      "Exhaust"
     ],
     "tags": [],
     "vars": {
@@ -7928,7 +8051,10 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "damage": 3
+      "damage": 3,
+      "stars_var": 1,
+      "calculation_base": 0,
+      "calculation_extra": 1
     },
     "upgrade": {
       "damage": 1
@@ -8027,7 +8153,11 @@
     "tags": [
       "OstyAttack"
     ],
-    "vars": {},
+    "vars": {
+      "osty_damage": 7,
+      "calculation_base": 0,
+      "calculation_extra": 1
+    },
     "upgrade": {
       "ostydamage": 2
     },
@@ -8046,7 +8176,9 @@
       "Exhaust"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "summon": 20
+    },
     "upgrade": {
       "summon": 5
     },
@@ -8166,7 +8298,8 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "energy": 1
+      "energy": 1,
+      "forge": 6
     },
     "upgrade": {
       "forge": 4
@@ -8287,7 +8420,10 @@
     "color": "colorless",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "extra_damage": 5,
+      "calculation_base": 15
+    },
     "upgrade": {
       "extradamage": 3,
       "calculationbase": 3
@@ -8373,6 +8509,7 @@
       "OstyAttack"
     ],
     "vars": {
+      "osty_damage": 4,
       "energy": 2
     },
     "upgrade": {
@@ -8450,11 +8587,13 @@
     "target": "Self",
     "color": "regent",
     "keywords": [
-      "Exhaust",
-      "Retain"
+      "Retain",
+      "Exhaust"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "stars_var": 9
+    },
     "upgrade": {
       "add_keywords": [
         "Retain"
@@ -8474,7 +8613,9 @@
     "color": "regent",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "gold": 30
+    },
     "upgrade": {
       "gold": 5
     },
@@ -8612,8 +8753,8 @@
     "target": "Self",
     "color": "colorless",
     "keywords": [
-      "Exhaust",
-      "Retain"
+      "Retain",
+      "Exhaust"
     ],
     "tags": [],
     "vars": {},
@@ -8762,7 +8903,9 @@
     "color": "regent",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "forge": 7
+    },
     "upgrade": {
       "forge": 4
     },
@@ -9002,7 +9145,8 @@
       "Strike"
     ],
     "vars": {
-      "damage": 8
+      "damage": 8,
+      "stars_var": 2
     },
     "upgrade": {
       "damage": 3
@@ -9025,7 +9169,9 @@
       "Shiv"
     ],
     "vars": {
-      "damage": 4
+      "damage": 4,
+      "calculation_base": 0,
+      "calculation_extra": 1
     },
     "upgrade": {
       "damage": 2
@@ -9106,6 +9252,7 @@
       "OstyAttack"
     ],
     "vars": {
+      "osty_damage": 5,
       "power_sicem": 2
     },
     "upgrade": {
@@ -9302,7 +9449,9 @@
     "tags": [
       "OstyAttack"
     ],
-    "vars": {},
+    "vars": {
+      "osty_damage": 7
+    },
     "upgrade": {
       "ostydamage": 3
     },
@@ -9343,7 +9492,8 @@
       "Strike"
     ],
     "vars": {
-      "damage": 8
+      "damage": 8,
+      "stars_var": 1
     },
     "upgrade": {
       "damage": 1,
@@ -9400,7 +9550,10 @@
     "color": "necrobinder",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "extra_damage": 2,
+      "calculation_base": 9
+    },
     "upgrade": {
       "extradamage": 1
     },
@@ -9421,7 +9574,9 @@
     "tags": [],
     "vars": {
       "damage": 10,
-      "repeat": 1
+      "repeat": 1,
+      "calculation_base": 0,
+      "calculation_extra": 1
     },
     "upgrade": {
       "cost": 0
@@ -9573,7 +9728,9 @@
       "Unplayable"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "gold": 600
+    },
     "upgrade": {},
     "description": "Marks a site of 600 extra Gold in the next Act.",
     "image_url": "/images/sts2/cards/spoils_map.png"
@@ -9588,7 +9745,9 @@
     "color": "regent",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "forge": 10
+    },
     "upgrade": {
       "forge": 5
     },
@@ -9625,7 +9784,8 @@
     ],
     "tags": [],
     "vars": {
-      "heal": 5
+      "heal": 5,
+      "summon": 3
     },
     "upgrade": {
       "summon": 2,
@@ -9667,7 +9827,10 @@
     "tags": [
       "OstyAttack"
     ],
-    "vars": {},
+    "vars": {
+      "extra_damage": 5,
+      "calculation_base": 25
+    },
     "upgrade": {
       "calculationbase": 5,
       "extradamage": 1
@@ -9685,7 +9848,10 @@
     "color": "event",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "calculation_base": 0,
+      "calculation_extra": 1
+    },
     "upgrade": {
       "calculationbase": 3
     },
@@ -10014,7 +10180,9 @@
       "Retain"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "forge": 8
+    },
     "upgrade": {
       "forge": 3
     },
@@ -10072,7 +10240,10 @@
     "color": "regent",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "extra_damage": 3,
+      "calculation_base": 5
+    },
     "upgrade": {
       "extradamage": 1
     },
@@ -10150,13 +10321,15 @@
     "target": "RandomEnemy",
     "color": "token",
     "keywords": [
-      "Exhaust",
-      "Ethereal"
+      "Ethereal",
+      "Exhaust"
     ],
     "tags": [
       "OstyAttack"
     ],
-    "vars": {},
+    "vars": {
+      "osty_damage": 10
+    },
     "upgrade": {
       "ostydamage": 5
     },
@@ -10214,7 +10387,10 @@
       "Exhaust"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "calculation_base": 0,
+      "calculation_extra": 2
+    },
     "upgrade": {
       "remove_keywords": [
         "Exhaust"
@@ -10332,7 +10508,9 @@
     "tags": [],
     "vars": {
       "damage": 5,
-      "repeat": 1
+      "repeat": 1,
+      "calculation_base": 0,
+      "calculation_extra": 1
     },
     "upgrade": {
       "damage": 2
@@ -10465,7 +10643,9 @@
       "Exhaust"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "increase": 3
+    },
     "upgrade": {
       "increase": 1
     },
@@ -10504,7 +10684,9 @@
     "color": "regent",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "forge": 30
+    },
     "upgrade": {
       "forge": 10
     },
@@ -10623,11 +10805,14 @@
     "target": "AnyEnemy",
     "color": "necrobinder",
     "keywords": [
-      "Exhaust",
-      "Retain"
+      "Retain",
+      "Exhaust"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "extra_damage": 1,
+      "calculation_base": 0
+    },
     "upgrade": {
       "add_keywords": [
         "Retain"
@@ -10928,7 +11113,10 @@
     "tags": [
       "OstyAttack"
     ],
-    "vars": {},
+    "vars": {
+      "extra_damage": 1,
+      "calculation_base": 6
+    },
     "upgrade": {
       "calculationbase": 3
     },
@@ -11083,7 +11271,9 @@
     "color": "regent",
     "keywords": [],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "stars_var": 2
+    },
     "upgrade": {
       "stars": 1
     },
@@ -11118,8 +11308,8 @@
     "target": "None",
     "color": "status",
     "keywords": [
-      "Unplayable",
-      "Ethereal"
+      "Ethereal",
+      "Unplayable"
     ],
     "tags": [],
     "vars": {
@@ -11179,7 +11369,10 @@
       "Exhaust"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "calculation_base": 0,
+      "calculation_extra": 1
+    },
     "upgrade": {
       "remove_keywords": [
         "Exhaust"
@@ -11294,8 +11487,8 @@
     "target": "Self",
     "color": "event",
     "keywords": [
-      "Exhaust",
-      "Retain"
+      "Retain",
+      "Exhaust"
     ],
     "tags": [],
     "vars": {},
@@ -11316,8 +11509,8 @@
     "target": "Self",
     "color": "necrobinder",
     "keywords": [
-      "Exhaust",
-      "Retain"
+      "Retain",
+      "Exhaust"
     ],
     "tags": [],
     "vars": {
@@ -11397,7 +11590,8 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "damage": 7
+      "damage": 7,
+      "forge": 5
     },
     "upgrade": {
       "damage": 2,

@@ -66,21 +66,39 @@ def parse_dynamic_vars(text: str) -> dict:
     result = {}
     patterns = [
         (r'new DamageVar\((\d+)m', 'damage'),
+        (r'new ExtraDamageVar\((\d+)m', 'extra_damage'),
+        (r'new OstyDamageVar\((\d+)m', 'osty_damage'),
+        (r'new CalculatedDamageVar\((\d+)m', 'calculated_damage'),
         (r'new BlockVar\((\d+)m', 'block'),
+        (r'new CalculatedBlockVar\((\d+)m', 'calculated_block'),
         (r'new HealVar\((\d+)m', 'heal'),
         (r'new MagicNumberVar\((\d+)m', 'magic_number'),
         (r'new CardsVar\((\d+)', 'cards'),
         (r'new EnergyVar\((\d+)', 'energy'),
         (r'new HpLossVar\((\d+)m', 'hp_loss'),
         (r'new RepeatVar\((\d+)', 'repeat'),
+        (r'new SummonVar\((\d+)', 'summon'),
+        (r'new ForgeVar\((\d+)', 'forge'),
+        (r'new StarsVar\((\d+)', 'stars_var'),
+        (r'new GoldVar\((\d+)', 'gold'),
+        (r'new MaxHpVar\((\d+)', 'max_hp'),
+        (r'new CalculationBaseVar\((\d+)', 'calculation_base'),
+        (r'new CalculationExtraVar\((\d+)', 'calculation_extra'),
+        (r'new CalculatedVar\((\d+)', 'calculated'),
     ]
     for pattern, key in patterns:
         for m in re.finditer(pattern, text):
             result[key] = int(m.group(1))
     for m in re.finditer(r'new PowerVar<(\w+)>\((\d+)m', text):
         result[f"power_{m.group(1).replace('Power','').lower()}"] = int(m.group(2))
+    # Named CardsVar("Name", X) — e.g., CardsVar("Shivs", 4)
+    for m in re.finditer(r'new CardsVar\("(\w+)",\s*(\d+)', text):
+        result[m.group(1).lower()] = int(m.group(2))
+    # Named IntVar("Name", Xm) — e.g., IntVar("Increase", 3m)
+    for m in re.finditer(r'new IntVar\("(\w+)",\s*(\d+)', text):
+        result[m.group(1).lower()] = int(m.group(2))
     # Generic DynamicVar("Name", Xm)
-    for m in re.finditer(r'new DynamicVar\("(\w+)",\s*(\d+)m', text):
+    for m in re.finditer(r'new DynamicVar\("(\w+)",\s*(\d+)', text):
         key = m.group(1).lower()
         if key not in result:
             result[key] = int(m.group(2))
