@@ -366,14 +366,26 @@ def resolve_tokens(desc: str, vars_map: dict[str, str]) -> str:
             i = end
             continue
 
-        # {VarName:cond:...?text|alttext} → alttext (base case)
+        # {VarName:cond:>N?text|alttext} → evaluate condition if var value known
         if rest.startswith("cond:"):
             cond_content = rest[5:]
             if "|" in cond_content:
                 idx = cond_content.rfind("|")
-                alttext = cond_content[idx+1:]
-                result.append(resolve_tokens(alttext, vars_map))
-            # else: remove
+                true_text = cond_content[:idx]
+                false_text = cond_content[idx+1:]
+                # Try to evaluate condition
+                cond_match = re.match(r'>(\d+)\?(.*)$', true_text, re.DOTALL)
+                var_val = vars_map.get(tag)
+                if cond_match and var_val is not None:
+                    threshold = int(cond_match.group(1))
+                    true_branch = cond_match.group(2)
+                    if int(var_val) > threshold:
+                        result.append(resolve_tokens(true_branch, vars_map))
+                    else:
+                        result.append(resolve_tokens(false_text, vars_map))
+                else:
+                    # Unknown var — use false branch (base case)
+                    result.append(resolve_tokens(false_text, vars_map))
             i = end
             continue
 
@@ -544,10 +556,11 @@ def _generate_upgrade_descriptions():
         raw_desc = raw_loc.get(f"{card['id']}.description", "")
         has_plural = "plural" in raw_desc
         has_if_upgraded = "IfUpgraded" in raw_desc
-        if not has_plural and not has_if_upgraded:
+        has_cond = ":cond:" in raw_desc
+        if not has_plural and not has_if_upgraded and not has_cond:
             continue
-        # For plural cards, need actual var upgrades
-        if has_plural and not has_if_upgraded and not upgrade:
+        # For plural/cond cards, need actual var upgrades
+        if not has_if_upgraded and not upgrade:
             continue
 
         vars_data = card.get("vars", {})
