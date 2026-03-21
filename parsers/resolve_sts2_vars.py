@@ -799,10 +799,6 @@ def _generate_localized_upgrade_descriptions():
             vars_data = card.get("vars", {})
             if not vars_data:
                 continue
-            # Skip cards with upgrade.description (English override)
-            if isinstance(upgrade.get("description"), str):
-                continue
-
             # Get localized base description
             base_loc_desc = loc_data.get("cards", {}).get(cid, {}).get("description", "")
             if not base_loc_desc:

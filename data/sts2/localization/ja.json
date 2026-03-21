@@ -7,7 +7,8 @@
     },
     "ACCELERANT": {
       "description": "毒が追加で1回発動する。",
-      "name": "促進剤"
+      "name": "促進剤",
+      "upgrade_description": "毒が追加で2回発動する。"
     },
     "ACCURACY": {
       "description": "ナイフが追加で4ダメージを与える。",
@@ -134,7 +135,8 @@
     },
     "BARRAGE": {
       "description": "生成されたオーブ1つにつき、5ダメージを与える。\n(攻撃回数は0回)",
-      "name": "集中砲火"
+      "name": "集中砲火",
+      "upgrade_description": "生成されたオーブ1つにつき、7ダメージを与える。\n(攻撃回数は0回)"
     },
     "BARRICADE": {
       "description": "ターン開始時にブロックを失わない。",
@@ -198,7 +200,8 @@
     },
     "BLADE_DANCE": {
       "description": "ナイフを3枚手札に加える。",
-      "name": "剣の舞"
+      "name": "剣の舞",
+      "upgrade_description": "ナイフを4枚手札に加える。"
     },
     "BLADE_OF_INK": {
       "description": "このターン、アタックをプレイするたび、ターン終了時まで筋力2を得る。",
@@ -289,7 +292,8 @@
     },
     "BRIGHTEST_FLAME": {
       "description": "[E]を得る。\nカードを2枚引く。\n最大HPを1失う。",
-      "name": "極光の炎"
+      "name": "極光の炎",
+      "upgrade_description": "[E]を得る。\nカードを3枚引く。\n最大HPを1失う。"
     },
     "BUBBLE_BUBBLE": {
       "description": "敵が毒に侵されている場合、毒9を付与する。",
@@ -298,11 +302,13 @@
     },
     "BUFFER": {
       "description": "次にHPを失う時、それを1回無効化する。",
-      "name": "バッファー"
+      "name": "バッファー",
+      "upgrade_description": "次にHPを失う時、それを2回無効化する。"
     },
     "BULK_UP": {
       "description": "オーブスロットを1個失う。\n筋力2を得る。\n敏捷2を得る。",
-      "name": "肉体改造"
+      "name": "肉体改造",
+      "upgrade_description": "オーブスロットを1個失う。\n筋力3を得る。\n敏捷3を得る。"
     },
     "BULLET_TIME": {
       "description": "このターン、追加でカードを引くことができない。手札にあるすべてのカードを、コストを支払わずプレイできる。",
@@ -320,7 +326,8 @@
     },
     "BUNDLE_OF_JOY": {
       "description": "ランダムな無色カードを3枚手札に加える。",
-      "name": "思いがけぬ贈り物"
+      "name": "思いがけぬ贈り物",
+      "upgrade_description": "ランダムな無色カードを4枚手札に加える。"
     },
     "BURN": {
       "description": "ターン終了時、これが手札にある場合、2ダメージを受ける。",
@@ -333,7 +340,8 @@
     },
     "BURST": {
       "description": "このターン、次にプレイするスキルをもう1回プレイする。",
-      "name": "バースト"
+      "name": "バースト",
+      "upgrade_description": "このターン、次にプレイするスキルをもう2回プレイする。"
     },
     "BURY": {
       "description": "52ダメージを与える。",
@@ -378,7 +386,8 @@
     },
     "CAPTURE_SPIRIT": {
       "description": "敵はHP3を失う。\nソウルを3枚山札に加える。",
-      "name": "霊魂抽出"
+      "name": "霊魂抽出",
+      "upgrade_description": "敵はHP4を失う。\nソウルを4枚山札に加える。"
     },
     "CASCADE": {
       "description": "山札の上からX枚のカードをプレイする。",
@@ -387,15 +396,18 @@
     },
     "CATASTROPHE": {
       "description": "山札にあるカードをランダムに2枚プレイする。",
-      "name": "天変地異"
+      "name": "天変地異",
+      "upgrade_description": "山札にあるカードをランダムに3枚プレイする。"
     },
     "CELESTIAL_MIGHT": {
       "description": "6ダメージを3回与える。",
-      "name": "天の力"
+      "name": "天の力",
+      "upgrade_description": "8ダメージを3回与える。"
     },
     "CHAOS": {
       "description": "ランダムなオーブを1個生成する。",
-      "name": "混沌"
+      "name": "混沌",
+      "upgrade_description": "ランダムなオーブを2個生成する。"
     },
     "CHARGE": {
       "description": "山札のランダムなカード2枚から1枚選び、\nミニオンストライクに変化させる。",
@@ -438,7 +450,8 @@
     },
     "CLOAK_AND_DAGGER": {
       "description": "6ブロックを得る。\nナイフを1枚手札に加える。",
-      "name": "外套と短剣"
+      "name": "外套と短剣",
+      "upgrade_description": "6ブロックを得る。\nナイフを2枚手札に加える。"
     },
     "CLOAK_OF_STARS": {
       "description": "7ブロックを得る。",
@@ -475,7 +488,8 @@
     },
     "COMPILE_DRIVER": {
       "description": "7ダメージを与える。\n生成中のオーブ1種類につきカードを1枚引く。\n(カードを0枚引く)",
-      "name": "コンパイル・ドライバ"
+      "name": "コンパイル・ドライバ",
+      "upgrade_description": "10ダメージを与える。\n生成中のオーブ1種類につきカードを1枚引く。\n(カードを0枚引く)"
     },
     "CONFLAGRATION": {
       "description": "すべての敵に8ダメージを与える。このターンにプレイしたアタック1枚につき、追加で2ダメージを与える。",
@@ -503,7 +517,8 @@
     },
     "COOLHEADED": {
       "description": "フロスト1を生成する。\nカードを1枚引く。",
-      "name": "冷静沈着"
+      "name": "冷静沈着",
+      "upgrade_description": "フロスト2を生成する。\nカードを1枚引く。"
     },
     "COORDINATE": {
       "description": "ターン終了時まで、他のプレイヤー1人に筋力5を付与する。",
@@ -610,7 +625,8 @@
     },
     "DEATHS_DOOR": {
       "description": "6ブロックを得る。\nこのターンに破滅を付与していた場合、追加で2回ブロックを得る。",
-      "name": "死への扉"
+      "name": "死への扉",
+      "upgrade_description": "7ブロックを得る。\nこのターンに破滅を付与していた場合、追加で2回ブロックを得る。"
     },
     "DEATH_MARCH": {
       "description": "8ダメージを与える。\n自分のターン中に引いたカード1枚につき、追加で3ダメージを与える。",
@@ -619,7 +635,8 @@
     },
     "DEBILITATE": {
       "description": "7ダメージを与える。\n次の3ターンの間、この敵に対する弱体と脱力の効果が2倍になる。",
-      "name": "衰弱"
+      "name": "衰弱",
+      "upgrade_description": "9ダメージを与える。\n次の4ターンの間、この敵に対する弱体と脱力の効果が2倍になる。"
     },
     "DEBRIS": {
       "name": "デブリ"
@@ -751,7 +768,8 @@
     },
     "DRAIN_POWER": {
       "description": "10ダメージを与える。\n捨て札にあるランダムなカードを2枚アップグレードする。",
-      "name": "力の吸収"
+      "name": "力の吸収",
+      "upgrade_description": "12ダメージを与える。\n捨て札にあるランダムなカードを3枚アップグレードする。"
     },
     "DRAMATIC_ENTRANCE": {
       "description": "すべての敵に11ダメージを与える。",
@@ -915,7 +933,8 @@
     },
     "FETCH": {
       "description": "オスティが3ダメージを与える。\nこのターンにこれをプレイしたのが初めての場合、カードを1枚引く。",
-      "name": "とってこい"
+      "name": "とってこい",
+      "upgrade_description": "オスティが6ダメージを与える。\nこのターンにこれをプレイしたのが初めての場合、カードを1枚引く。"
     },
     "FIEND_FIRE": {
       "description": "手札をすべて廃棄する。\n廃棄したカード1枚につき、7ダメージを与える。",
@@ -939,7 +958,8 @@
     },
     "FINISHER": {
       "description": "このターンにプレイしたアタック1枚につき、6ダメージを与える。\n(攻撃回数は0回)",
-      "name": "フィニッシャー"
+      "name": "フィニッシャー",
+      "upgrade_description": "このターンにプレイしたアタック1枚につき、8ダメージを与える。\n(攻撃回数は0回)"
     },
     "FISTICUFFS": {
       "description": "7ダメージを与える。\n与えたダメージに等しいブロックを得る。",
@@ -948,7 +968,8 @@
     },
     "FLAK_CANNON": {
       "description": "あなたの状態異常をすべて廃棄する。廃棄したカード1枚につき、ランダムな敵に8ダメージを与える。\n(攻撃回数は0回)",
-      "name": "対空砲"
+      "name": "対空砲",
+      "upgrade_description": "あなたの状態異常をすべて廃棄する。廃棄したカード1枚につき、ランダムな敵に11ダメージを与える。\n(攻撃回数は0回)"
     },
     "FLAME_BARRIER": {
       "description": "12ブロックを得る。\nこのターン、攻撃を受けるたび、攻撃した敵に4ダメージを与える。",
@@ -971,7 +992,8 @@
     },
     "FLECHETTES": {
       "description": "手札にあるスキル1枚につき、5ダメージを与える。\n(攻撃回数は0回)",
-      "name": "フレシェット"
+      "name": "フレシェット",
+      "upgrade_description": "手札にあるスキル1枚につき、7ダメージを与える。\n(攻撃回数は0回)"
     },
     "FLICK_FLACK": {
       "description": "すべての敵に7ダメージを与える。",
@@ -1025,7 +1047,8 @@
     },
     "FUEL": {
       "description": "[E]を得る。\nカードを1枚引く。",
-      "name": "燃料"
+      "name": "燃料",
+      "upgrade_description": "[E]を得る。\nカードを2枚引く。"
     },
     "FURNACE": {
       "description": "ターン開始時、鍛造4。",
@@ -1078,11 +1101,13 @@
     },
     "GLIMMER": {
       "description": "カードを3枚引く。\n手札からカードを1枚選び、山札の一番上に置く。",
-      "name": "微光"
+      "name": "微光",
+      "upgrade_description": "カードを4枚引く。\n手札からカードを1枚選び、山札の一番上に置く。"
     },
     "GLIMPSE_BEYOND": {
       "description": "すべてのプレイヤーはソウルを3枚山札に加える。",
-      "name": "彼方への一瞥"
+      "name": "彼方への一瞥",
+      "upgrade_description": "すべてのプレイヤーはソウルを4枚山札に加える。"
     },
     "GLITTERSTREAM": {
       "description": "11ブロックを得る。\n次のターン、4ブロックを得る。",
@@ -1132,7 +1157,8 @@
     },
     "GUIDING_STAR": {
       "description": "12ダメージを与える。\n次のターン、カードを2枚引く。",
-      "name": "導きの星"
+      "name": "導きの星",
+      "upgrade_description": "13ダメージを与える。\n次のターン、カードを3枚引く。"
     },
     "GUILTY": {
       "description": "5回の戦闘後、デッキから削除される。",
@@ -1140,7 +1166,8 @@
     },
     "GUNK_UP": {
       "description": "4ダメージを3回与える。\n粘液を1枚捨て札に加える。",
-      "name": "ヘドロ投げ"
+      "name": "ヘドロ投げ",
+      "upgrade_description": "5ダメージを3回与える。\n粘液を1枚捨て札に加える。"
     },
     "HAILSTORM": {
       "description": "ターン終了時、フロストを生成中の場合、すべての敵に6ダメージを与える。",
@@ -1202,7 +1229,8 @@
     },
     "HELIX_DRILL": {
       "description": "このターン中に支払った[E]1つにつき、3ダメージを与える。\n(攻撃回数は0回)",
-      "name": "螺旋ドリル"
+      "name": "螺旋ドリル",
+      "upgrade_description": "このターン中に支払った[E]1つにつき、5ダメージを与える。\n(攻撃回数は0回)"
     },
     "HELLO_WORLD": {
       "description": "ターン開始時、ランダムなコモンカードを1枚手札に加える。",
@@ -1323,7 +1351,8 @@
     },
     "ITERATION": {
       "description": "毎ターン、最初に状態異常を引いた時、カードを2枚引く。",
-      "name": "反復"
+      "name": "反復",
+      "upgrade_description": "毎ターン、最初に状態異常を引いた時、カードを3枚引く。"
     },
     "I_AM_INVINCIBLE": {
       "description": "9ブロックを得る。\nターン終了時、これが山札の一番上にある場合、自動的にプレイする。",
@@ -1337,7 +1366,8 @@
     },
     "JACK_OF_ALL_TRADES": {
       "description": "ランダムな無色カードを1枚手札に加える。",
-      "name": "何でも屋"
+      "name": "何でも屋",
+      "upgrade_description": "ランダムな無色カードを2枚手札に加える。"
     },
     "JUGGERNAUT": {
       "description": "ブロックを得るたび、ランダムな敵に5ダメージを与える。",
@@ -1418,7 +1448,8 @@
     },
     "LIGHTNING_ROD": {
       "description": "4ブロックを得る。\n次の2ターンの間、ターン開始時にライトニング1を生成する。",
-      "name": "避雷針"
+      "name": "避雷針",
+      "upgrade_description": "7ブロックを得る。\n次の2ターンの間、ターン開始時にライトニング1を生成する。"
     },
     "LOOP": {
       "description": "ターン開始時、右端にあるオーブの自動効果を発動する。",
@@ -1431,7 +1462,8 @@
     },
     "LUNAR_BLAST": {
       "description": "このターンにプレイしたスキル1枚につき、4ダメージを与える。\n(攻撃回数は0回)",
-      "name": "月光波"
+      "name": "月光波",
+      "upgrade_description": "このターンにプレイしたスキル1枚につき、5ダメージを与える。\n(攻撃回数は0回)"
     },
     "MACHINE_LEARNING": {
       "description": "ターン開始時、追加でカードを1枚引く。",
@@ -1443,7 +1475,8 @@
     },
     "MAKE_IT_SO": {
       "description": "6ダメージを与える。\n1ターンの間に、スキルを3枚プレイするたび、これを手札に戻す。",
-      "name": "実行せよ"
+      "name": "実行せよ",
+      "upgrade_description": "9ダメージを与える。\n1ターンの間に、スキルを3枚プレイするたび、これを手札に戻す。"
     },
     "MALAISE": {
       "description": "敵は筋力Xを失う。脱力Xを付与する。",
@@ -1527,7 +1560,8 @@
     },
     "MINION_STRIKE": {
       "description": "7ダメージを与える。\nカードを1枚引く。",
-      "name": "ミニオンストライク"
+      "name": "ミニオンストライク",
+      "upgrade_description": "10ダメージを与える。\nカードを1枚引く。"
     },
     "MIRAGE": {
       "description": "すべての敵に付与している毒の合計値に等しいブロックを得る。\n(0ブロックを得る。)",
@@ -1540,7 +1574,8 @@
     },
     "MODDED": {
       "description": "オーブスロットを1個得る。\nカードを1枚引く。このカードのコストが1増加する。",
-      "name": "改造"
+      "name": "改造",
+      "upgrade_description": "オーブスロットを2個得る。\nカードを1枚引く。このカードのコストが1増加する。"
     },
     "MOLTEN_FIST": {
       "description": "10ダメージを与える。\n敵の弱体を2倍にする。",
@@ -1581,11 +1616,13 @@
     },
     "NEOWS_FURY": {
       "description": "10ダメージを与える。\n捨て札からランダムなカードを2枚手札に加える。",
-      "name": "ネオーの怒り"
+      "name": "ネオーの怒り",
+      "upgrade_description": "14ダメージを与える。\n捨て札からランダムなカードを2枚手札に加える。"
     },
     "NEUROSURGE": {
       "description": "[E]を得る。\nカードを2枚引く。\nターン開始時、自身に破滅3を付与する。",
-      "name": "ニューロサージ"
+      "name": "ニューロサージ",
+      "upgrade_description": "[E]を得る。\nカードを2枚引く。\nターン開始時、自身に破滅4を付与する。"
     },
     "NEUTRALIZE": {
       "description": "3ダメージを与える。\n脱力1を付与する。",
@@ -1650,7 +1687,8 @@
     },
     "OUTBREAK": {
       "description": "毒を3回付与するたび、すべての敵に11ダメージを与える。",
-      "name": "感染爆発"
+      "name": "感染爆発",
+      "upgrade_description": "毒を3回付与するたび、すべての敵に15ダメージを与える。"
     },
     "OUTMANEUVER": {
       "description": "次のターン、[E]を得る。",
@@ -1663,7 +1701,8 @@
     },
     "PACTS_END": {
       "description": "廃棄札にカードが3枚以上ある場合のみプレイ可能\nすべての敵に17ダメージを与える。",
-      "name": "契約の終わり"
+      "name": "契約の終わり",
+      "upgrade_description": "廃棄札にカードが3枚以上ある場合のみプレイ可能\nすべての敵に23ダメージを与える。"
     },
     "PAGESTORM": {
       "description": "エセリアルを引くたび、カードを1枚引く。",
@@ -1671,7 +1710,8 @@
     },
     "PALE_BLUE_DOT": {
       "description": "1ターンの間にカードを5枚以上プレイした場合、次のターン開始時、カードを1枚引く。",
-      "name": "ペイル・ブルー・ドット"
+      "name": "ペイル・ブルー・ドット",
+      "upgrade_description": "2ターンの間にカードを5枚以上プレイした場合、次のターン開始時、カードを1枚引く。"
     },
     "PANACHE": {
       "description": "1ターンの間にカードを5枚プレイするたび、すべての敵に10ダメージを与える。",
@@ -1680,7 +1720,8 @@
     },
     "PANIC_BUTTON": {
       "description": "30ブロックを得る。\n2ターンの間、カードからブロックを得ることができない。",
-      "name": "非常ボタン"
+      "name": "非常ボタン",
+      "upgrade_description": "40ブロックを得る。\n2ターンの間、カードからブロックを得ることができない。"
     },
     "PARRY": {
       "description": "ソヴリン・ブレードをプレイするたび、6ブロックを得る。",
@@ -1719,7 +1760,8 @@
     },
     "PHOTON_CUT": {
       "description": "10ダメージを与える。\nカードを1枚引く。\n手札からカードを1枚選び、山札の一番上に置く。",
-      "name": "フォトンカット"
+      "name": "フォトンカット",
+      "upgrade_description": "13ダメージを与える。\nカードを2枚引く。\n手札からカードを1枚選び、山札の一番上に置く。"
     },
     "PIERCING_WAIL": {
       "description": "ターン終了時まですべての敵は筋力6を失う。",
@@ -1753,7 +1795,8 @@
     },
     "POMMEL_STRIKE": {
       "description": "9ダメージを与える。\nカードを1枚引く。",
-      "name": "ポンメルストライク"
+      "name": "ポンメルストライク",
+      "upgrade_description": "10ダメージを与える。\nカードを2枚引く。"
     },
     "POOR_SLEEP": {
       "name": "寝不足"
@@ -1775,7 +1818,8 @@
     },
     "PREPARED": {
       "description": "カードを1枚引く。\nカードを1枚捨てる。",
-      "name": "準備"
+      "name": "準備",
+      "upgrade_description": "カードを2枚引く。\nカードを1枚捨てる。"
     },
     "PREP_TIME": {
       "description": "ターン開始時、活力4を得る。",
@@ -1797,7 +1841,8 @@
     },
     "PROPHESIZE": {
       "description": "カードを6枚引く。",
-      "name": "予言"
+      "name": "予言",
+      "upgrade_description": "カードを9枚引く。"
     },
     "PROTECTOR": {
       "description": "オスティが10ダメージを与える。\n追加でオスティの最大HPに等しいダメージを与える。",
@@ -1816,7 +1861,8 @@
     },
     "PULL_FROM_BELOW": {
       "description": "この戦闘中にプレイしたエセリアル1枚につき、5ダメージを与える。\n(攻撃回数は0回)",
-      "name": "地底からの引き寄せ"
+      "name": "地底からの引き寄せ",
+      "upgrade_description": "この戦闘中にプレイしたエセリアル1枚につき、7ダメージを与える。\n(攻撃回数は0回)"
     },
     "PURITY": {
       "description": "手札のカードを3枚まで廃棄する。",
@@ -1843,7 +1889,8 @@
     },
     "RADIATE": {
       "description": "このターンに得た1 Stars一つにつき、すべての敵に3ダメージを与える。\n(攻撃回数は0回)",
-      "name": "輝きの奔流"
+      "name": "輝きの奔流",
+      "upgrade_description": "このターンに得た1 Stars一つにつき、すべての敵に4ダメージを与える。\n(攻撃回数は0回)"
     },
     "RAGE": {
       "description": "このターン、アタックをプレイするたび、3ブロックを得る。",
@@ -1866,7 +1913,8 @@
     },
     "RATTLE": {
       "description": "オスティが7ダメージを与える。\nこのターン中にオスティが攻撃した回数分、追加で繰り返す。\n(攻撃回数は0回)",
-      "name": "ガラガラ"
+      "name": "ガラガラ",
+      "upgrade_description": "オスティが9ダメージを与える。\nこのターン中にオスティが攻撃した回数分、追加で繰り返す。\n(攻撃回数は0回)"
     },
     "REANIMATE": {
       "description": "召喚20。",
@@ -1889,7 +1937,8 @@
     },
     "REBOOT": {
       "description": "すべてのカードを山札に混ぜてシャッフルする。\nカードを4枚引く。",
-      "name": "再起動"
+      "name": "再起動",
+      "upgrade_description": "すべてのカードを山札に混ぜてシャッフルする。\nカードを6枚引く。"
     },
     "REBOUND": {
       "description": "9ダメージを与える。\nこのターン、次にプレイするカードを山札の一番上に置く。",
@@ -1922,7 +1971,8 @@
     },
     "RELAX": {
       "description": "15ブロックを得る。\n次のターン、カードを2枚引き、[E]を得る。",
-      "name": "リラックス"
+      "name": "リラックス",
+      "upgrade_description": "17ブロックを得る。\n次のターン、カードを3枚引き、[E]を得る。"
     },
     "REND": {
       "description": "15ダメージを与える。\n対象の敵に付与しているデバフ1種類につき、追加で5ダメージを与える。",
@@ -1956,7 +2006,8 @@
     },
     "ROCKET_PUNCH": {
       "description": "13ダメージを与える。\nカードを1枚引く。\n状態異常を作成するたび、このターン、このカードのコストは0[E]。",
-      "name": "ロケットパンチ"
+      "name": "ロケットパンチ",
+      "upgrade_description": "14ダメージを与える。\nカードを2枚引く。\n状態異常を作成するたび、このターン、このカードのコストは0[E]。"
     },
     "ROLLING_BOULDER": {
       "description": "ターン開始時、すべての敵に5ダメージを与え、このダメージを5増加させる。",
@@ -1992,7 +2043,8 @@
     },
     "SCOURGE": {
       "description": "破滅13を付与する。\nカードを1枚引く。",
-      "name": "天罰"
+      "name": "天罰",
+      "upgrade_description": "破滅16を付与する。\nカードを2枚引く。"
     },
     "SCRAPE": {
       "description": "7ダメージを与える。\nカードを4枚引く。\nこの方法で引いたカードのうち、コストが0[E]でないものを捨てる。",
@@ -2178,7 +2230,8 @@
     },
     "SOUL": {
       "description": "カードを2枚引く。",
-      "name": "ソウル"
+      "name": "ソウル",
+      "upgrade_description": "カードを3枚引く。"
     },
     "SOUL_STORM": {
       "description": "9ダメージを与える。\n廃棄札にあるソウル1枚につき、追加で2ダメージを与える。",
@@ -2215,7 +2268,8 @@
     },
     "SPITE": {
       "description": "6ダメージを与える。\nこのターン、HPを失っていた場合、カードを1枚引く。",
-      "name": "悪意"
+      "name": "悪意",
+      "upgrade_description": "9ダメージを与える。\nこのターン、HPを失っていた場合、カードを1枚引く。"
     },
     "SPLASH": {
       "description": "他のキャラクターのランダムなアタックを3枚見て1枚を選び、手札に加える。このターン、それはコストを支払わずにプレイできる。",
@@ -2361,7 +2415,8 @@
     },
     "SWEEPING_BEAM": {
       "description": "すべての敵に6ダメージを与える。\nカードを1枚引く。",
-      "name": "ビーム一掃"
+      "name": "ビーム一掃",
+      "upgrade_description": "すべての敵に9ダメージを与える。\nカードを1枚引く。"
     },
     "SWEEPING_GAZE": {
       "description": "オスティが、ランダムな敵に10ダメージを与える。",
@@ -2406,7 +2461,8 @@
     },
     "TEAR_ASUNDER": {
       "description": "5ダメージを与える。\nこの戦闘でHPを失った回数分、追加で攻撃する。\n(攻撃回数は0回。)",
-      "name": "八つ裂き"
+      "name": "八つ裂き",
+      "upgrade_description": "7ダメージを与える。\nこの戦闘でHPを失った回数分、追加で攻撃する。\n(攻撃回数は0回。)"
     },
     "TEMPEST": {
       "description": "ライトニングXを生成する。",
@@ -2425,7 +2481,8 @@
     },
     "THE_BOMB": {
       "description": "カウントが0になると、すべての敵に40ダメージを与える。（爆発まであと3ターン）",
-      "name": "爆弾"
+      "name": "爆弾",
+      "upgrade_description": "カウントが0になると、すべての敵に50ダメージを与える。（爆発まであと3ターン）"
     },
     "THE_GAMBIT": {
       "description": "50ブロックを得る。\nこの戦闘中、ブロックできずに攻撃ダメージを受けた場合、即死する。",
@@ -2485,7 +2542,8 @@
     },
     "TORIC_TOUGHNESS": {
       "description": "5ブロックを得る。\n次の2ターンの間、ターン開始時、5ブロックを得る。",
-      "name": "円環の障壁"
+      "name": "円環の障壁",
+      "upgrade_description": "7ブロックを得る。\n次の2ターンの間、ターン開始時、5ブロックを得る。"
     },
     "TOXIC": {
       "description": "ターン終了時、これが手札にある場合、5ダメージを受ける。",
@@ -2572,7 +2630,8 @@
     },
     "UP_MY_SLEEVE": {
       "description": "ナイフを3枚手札に加える。\nこのカードのコストが1減少する。",
-      "name": "奥の手"
+      "name": "奥の手",
+      "upgrade_description": "ナイフを4枚手札に加える。\nこのカードのコストが1減少する。"
     },
     "VEILPIERCER": {
       "description": "10ダメージを与える。\n次にプレイするエセリアルのコストは0[E]。",
@@ -2585,7 +2644,8 @@
     },
     "VICIOUS": {
       "description": "弱体を付与するたび、カードを1枚引く。",
-      "name": "残忍"
+      "name": "残忍",
+      "upgrade_description": "弱体を付与するたび、カードを2枚引く。"
     },
     "VOID": {
       "description": "このカードを引くたび、[E]を失う。",
@@ -2593,7 +2653,8 @@
     },
     "VOID_FORM": {
       "description": "ターンを終了する。\n毎ターン、最初の2枚のカードを、コストを支払わずにプレイできる。",
-      "name": "虚無化"
+      "name": "虚無化",
+      "upgrade_description": "ターンを終了する。\n毎ターン、最初の3枚のカードを、コストを支払わずにプレイできる。"
     },
     "VOLLEY": {
       "description": "ランダムな敵に10ダメージをX回与える。",
@@ -2610,7 +2671,8 @@
     },
     "WELL_LAID_PLANS": {
       "description": "ターン終了時、カードを1枚まで保留する。",
-      "name": "用意周到"
+      "name": "用意周到",
+      "upgrade_description": "ターン終了時、カードを2枚まで保留する。"
     },
     "WHIRLWIND": {
       "description": "すべての敵に5ダメージをX回与える。",
