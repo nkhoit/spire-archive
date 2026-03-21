@@ -33,8 +33,8 @@ const typeIcons: Record<string, string> = {
   keyword: '📖',
 };
 
-function getHref(e: Entry): string {
-  const base = `/${e.game}`;
+function getHref(e: Entry, langPrefix = ''): string {
+  const base = `${langPrefix}/${e.game}`;
   switch (e.type) {
     case 'card': return `${base}/cards/${e.id}`;
     case 'relic': return `${base}/relics/${e.id}`;
@@ -69,7 +69,7 @@ function loadIndex(): Promise<void> {
   return loadingPromise;
 }
 
-export default function GlobalSearch({ game, locale = 'en' }: { game?: string; locale?: string }) {
+export default function GlobalSearch({ game, locale = 'en', langPrefix = '' }: { game?: string; locale?: string; langPrefix?: string }) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<Entry[]>([]);
@@ -120,7 +120,7 @@ export default function GlobalSearch({ game, locale = 'en' }: { game?: string; l
     else if (e.key === 'ArrowUp') { e.preventDefault(); setSelected(s => Math.max(s - 1, 0)); }
     else if (e.key === 'Enter' && results[selected]) {
       e.preventDefault();
-      window.location.href = getHref(results[selected]);
+      window.location.href = getHref(results[selected], langPrefix);
       setOpen(false);
     }
   }, [results, selected]);
@@ -171,6 +171,7 @@ export default function GlobalSearch({ game, locale = 'en' }: { game?: string; l
             onChange={e => setQuery(e.target.value)}
             onKeyDown={handleKeyDown}
           />
+          <button onClick={() => setOpen(false)} className="shrink-0 rounded px-1.5 py-0.5 text-[10px] text-slate-500 border border-white/[0.08] hover:text-slate-300 hover:border-white/[0.15] transition-colors">ESC</button>
         </div>
 
         {results.length > 0 && (
@@ -186,7 +187,7 @@ export default function GlobalSearch({ game, locale = 'en' }: { game?: string; l
                     <a
                       key={`${item.game}-${item.type}-${item.id}`}
                       data-idx={idx}
-                      href={getHref(item)}
+                      href={getHref(item, langPrefix)}
                       className={`flex items-center gap-3 px-4 py-2 text-sm transition-colors ${idx === selected ? 'bg-amber-500/10 text-white' : 'text-slate-300 hover:bg-white/[0.04]'}`}
                       onMouseEnter={() => setSelected(idx)}
                       onClick={() => setOpen(false)}

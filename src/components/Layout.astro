@@ -86,7 +86,7 @@ const navLinks = game ? [
           )}
         </div>
         <div class="flex items-center gap-3 shrink-0">
-          <GlobalSearch client:load game={game} locale={locale} />
+          <GlobalSearch client:load game={game} locale={locale} langPrefix={langPrefix} />
           {navLinks.length > 0 && (
           <>
             {/* Desktop nav */}
