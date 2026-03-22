@@ -28,13 +28,7 @@
   --accent-rgb: 217 171 69;
 }
 
-body[data-game='sts2'] {
-  --accent-200: #b9f3df;
-  --accent-300: #72dec0;
-  --accent-400: #2fb592;
-  --accent-500: #1d8e73;
-  --accent-rgb: 47 181 146;
-}
+/* STS2 uses the same warm palette as STS1 */
 
 html {
   background: var(--bg-base);
@@ -49,12 +43,7 @@ body {
     var(--bg-base);
 }
 
-body[data-game='sts2'] {
-  background:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgb(var(--accent-rgb) / 0.05), transparent),
-    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(22, 78, 99, 0.08), transparent),
-    var(--bg-base);
-}
+
 
 a {
   color: inherit;

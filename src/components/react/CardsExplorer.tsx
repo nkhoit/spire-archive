@@ -62,13 +62,7 @@ function CardTile({ c, game, isMobile, upgraded, locale }: { c: Card; game: stri
 
   return (
     <div className="card-tilt group flex flex-col items-center rounded-lg border border-white/[0.06] bg-white/[0.03] p-2 sm:p-3 hover:bg-white/[0.06] hover:border-white/[0.12] transition-all">
-      <a
-        href={(locale !== 'en' ? '/' + locale : '') + '/' + game + '/cards/' + c.id}
-        className={`font-game text-sm font-semibold group-hover:underline truncate text-center w-full ${showUpgraded ? 'text-emerald-400' : 'theme-link'}`}
-      >
-        {showUpgraded ? `${c.name}+` : c.name}
-      </a>
-      <a href={(locale !== 'en' ? '/' + locale : '') + '/' + game + '/cards/' + c.id} className="card-render-wrap w-full mt-2 flex justify-center overflow-visible">
+      <a href={(locale !== 'en' ? '/' + locale : '') + '/' + game + '/cards/' + c.id} className="card-render-wrap w-full flex justify-center overflow-visible">
         <CssCardRenderer card={c} upgraded={!!showUpgraded} size={isMobile ? 'xs' : 'sm'} game={game as 'sts1' | 'sts2'} locale={locale} />
       </a>
       <div className="mt-2 flex flex-wrap items-center justify-center gap-1">
