@@ -1,5 +1,70 @@
-import { useState, useRef, useCallback } from 'react';
+import { useCallback, useEffect, useRef, createContext, useContext, useState } from 'react';
+import { createPortal } from 'react-dom';
 import CssCardRenderer from './CssCardRenderer';
+
+interface HoverState {
+  card: any;
+  game: 'sts1' | 'sts2';
+  locale?: string;
+  x: number;
+  y: number;
+}
+
+const HoverCtx = createContext<{
+  show: (state: HoverState) => void;
+  hide: () => void;
+} | null>(null);
+
+function HoverPortal() {
+  const [state, setState] = useState<HoverState | null>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!ref.current) {
+      const el = document.createElement('div');
+      el.id = 'card-hover-portal';
+      document.body.appendChild(el);
+      ref.current = el;
+    }
+    return () => { ref.current?.remove(); };
+  }, []);
+
+  const ctx = useContext(HoverCtx);
+  // This component is rendered inside the provider, so we wire via ref
+  useEffect(() => {
+    (window as any).__cardHoverShow = setState;
+    (window as any).__cardHoverHide = () => setState(null);
+    return () => {
+      delete (window as any).__cardHoverShow;
+      delete (window as any).__cardHoverHide;
+    };
+  }, []);
+
+  if (!state || !ref.current) return null;
+  return createPortal(
+    <div
+      className="fixed z-50 pointer-events-none hidden md:block"
+      style={{ left: `${state.x}px`, top: `${state.y}px` }}
+    >
+      <CssCardRenderer card={state.card} game={state.game} size="sm" locale={state.locale} />
+    </div>,
+    ref.current,
+  );
+}
+
+// Singleton portal – mounts once
+let portalMounted = false;
+
+function ensurePortal() {
+  if (portalMounted || typeof document === 'undefined') return;
+  portalMounted = true;
+  const container = document.createElement('div');
+  document.body.appendChild(container);
+  // Lazy import to avoid SSR issues
+  import('react-dom/client').then(({ createRoot }) => {
+    createRoot(container).render(<HoverPortal />);
+  });
+}
 
 interface Props {
   href: string;
@@ -11,50 +76,29 @@ interface Props {
 }
 
 export default function CardHoverLink({ href, card, game, locale, children, className }: Props) {
-  const [show, setShow] = useState(false);
-  const [pos, setPos] = useState<{ x: number; y: number; flipLeft: boolean; flipUp: boolean }>({ x: 0, y: 0, flipLeft: false, flipUp: false });
-  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => { ensurePortal(); }, []);
 
   const handleEnter = useCallback((e: React.MouseEvent) => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
     const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
     const cardW = 200, cardH = 280;
     const flipLeft = rect.right + cardW + 16 > window.innerWidth;
-    const flipUp = rect.top + cardH > window.innerHeight;
-    setPos({
-      x: flipLeft ? rect.left - cardW - 8 : rect.right + 8,
-      y: flipUp ? Math.max(8, rect.bottom - cardH) : rect.top,
-      flipLeft,
-      flipUp,
-    });
-    setShow(true);
-  }, []);
+    const x = flipLeft ? rect.left - cardW - 8 : rect.right + 8;
+    const y = rect.top + cardH > window.innerHeight ? Math.max(8, rect.bottom - cardH) : rect.top;
+    (window as any).__cardHoverShow?.({ card, game, locale, x, y });
+  }, [card, game, locale]);
 
   const handleLeave = useCallback(() => {
-    timeoutRef.current = setTimeout(() => setShow(false), 100);
+    (window as any).__cardHoverHide?.();
   }, []);
 
   return (
-    <>
-      <a
-        href={href}
-        className={className}
-        onMouseEnter={handleEnter}
-        onMouseLeave={handleLeave}
-      >
-        {children}
-      </a>
-      {show && (
-        <div
-          className="fixed z-50 pointer-events-none hidden md:block"
-          style={{
-            left: `${pos.x}px`,
-            top: `${pos.y}px`,
-          }}
-        >
-          <CssCardRenderer card={card} game={game} size="sm" locale={locale} />
-        </div>
-      )}
-    </>
+    <a
+      href={href}
+      className={className}
+      onMouseEnter={handleEnter}
+      onMouseLeave={handleLeave}
+    >
+      {children}
+    </a>
   );
 }

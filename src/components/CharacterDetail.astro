@@ -62,9 +62,9 @@ const getRelicImgSrc = (r: any) => {
       {startingDeck.map(({ cardId, card, count }) => (
         <li class="text-sm flex items-center gap-2">
           <img src={`/images/${cardImageDir}/${cardId.toLowerCase()}.png`} alt="" class="w-6 h-5 object-cover rounded-sm shrink-0" />
-          <a href={`${langPrefix}/${game}/cards/${cardId}`} class="text-sky-300 hover:text-sky-200 hover:underline">
+          <CardHoverLink client:load href={`${langPrefix}/${game}/cards/${cardId}`} card={card} game={game} locale={locale} className="text-sky-300 hover:text-sky-200 hover:underline">
             {card.name}{count > 1 ? ` ×${count}` : ''}
-          </a>
+          </CardHoverLink>
         </li>
       ))}
     </ul>
