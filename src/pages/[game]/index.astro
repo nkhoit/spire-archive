@@ -1,0 +1,117 @@
+---
+import Layout from '../../components/Layout.astro';
+import { getData } from '../../lib/data';
+import { getLocale } from '../../lib/i18n';
+import { t } from '../../lib/ui-strings';
+import { getPageGame } from '../../lib/page-game';
+
+const game = getPageGame(Astro.params);
+if (!game) return new Response('Not found', { status: 404 });
+
+const { locale, langPrefix } = getLocale(Astro);
+const data = await getData(game, locale);
+const isSts2 = game === 'sts2';
+const counts = {
+  cards: data.cards.length,
+  relics: data.relics.length,
+  potions: data.potions.length,
+  monsters: data.monsters.length,
+  events: data.events.length,
+  powers: data.powers.length,
+  keywords: data.keywords.length,
+  enchantments: data.enchantments.length,
+};
+
+const taglineMap: Record<string, string> = {
+  IRONCLAD: t('Strength & self-healing', locale),
+  THE_SILENT: t('Poison & card draw', locale),
+  SILENT: t('Poison & card draw', locale),
+  DEFECT: t('Orbs & channeling', locale),
+  WATCHER: t('Stances & divine wrath', locale),
+  NECROBINDER: t('Summons & sacrifice', locale),
+  REGENT: t('Stars & burst turns', locale),
+};
+
+const portraitMap: Record<string, string> = {
+  IRONCLAD: isSts2 ? '/images/sts2/characters/ironclad.jpg' : '/images/sts1/characters/ironclad.jpg',
+  THE_SILENT: '/images/sts1/characters/silent.jpg',
+  SILENT: '/images/sts2/characters/silent.jpg',
+  DEFECT: isSts2 ? '/images/sts2/characters/defect.jpg' : '/images/sts1/characters/defect.jpg',
+  WATCHER: '/images/sts1/characters/watcher.jpg',
+  NECROBINDER: '/images/sts2/characters/necrobinder.jpg',
+  REGENT: '/images/sts2/characters/regent.jpg',
+};
+
+const positionMap: Record<string, string> = {
+  IRONCLAD: isSts2 ? 'right center' : 'center 35%',
+  THE_SILENT: 'center 40%',
+  SILENT: 'right center',
+  DEFECT: isSts2 ? 'right center' : 'center 25%',
+  WATCHER: 'center 30%',
+  NECROBINDER: 'right center',
+  REGENT: 'right center',
+};
+
+const charColors: Record<string, string> = {
+  IRONCLAD: 'border-red-500/20 hover:border-red-500/40',
+  THE_SILENT: 'border-green-500/20 hover:border-green-500/40',
+  SILENT: 'border-green-500/20 hover:border-green-500/40',
+  DEFECT: 'border-blue-500/20 hover:border-blue-500/40',
+  WATCHER: 'border-purple-500/20 hover:border-purple-500/40',
+  NECROBINDER: 'border-purple-500/20 hover:border-purple-500/40',
+  REGENT: 'border-amber-500/20 hover:border-amber-500/40',
+};
+
+const nameMap: Record<string, string> = {
+  THE_SILENT: 'Silent',
+  DEFECT: 'Defect',
+};
+
+const browseLinks = [
+  { href: `${langPrefix}/${game}/cards`, icon: 'cards', label: t('Cards', locale), desc: counts.cards + ' ' + t('cards across all characters', locale) },
+  { href: `${langPrefix}/${game}/relics`, icon: 'relics', label: t('Relics', locale), desc: counts.relics + ' ' + t('relics', locale) },
+  { href: `${langPrefix}/${game}/potions`, icon: 'potions', label: t('Potions', locale), desc: counts.potions + ' ' + t('potions', locale) },
+  { href: `${langPrefix}/${game}/monsters`, icon: 'monsters', label: t('Monsters', locale), desc: counts.monsters + ' ' + t('monsters', locale) },
+  { href: `${langPrefix}/${game}/events`, icon: 'events', label: t('Events', locale), desc: counts.events + ' ' + t('events', locale) },
+  { href: `${langPrefix}/${game}/effects`, icon: 'effects', label: t('Buffs & Debuffs', locale), desc: counts.powers + ' ' + t('buffs & debuffs', locale) },
+  ...(isSts2 ? [{ href: `${langPrefix}/${game}/enchantments`, icon: 'enchantments', label: t('Enchantments', locale), desc: counts.enchantments + ' ' + t('card enchantments', locale) }] : []),
+  { href: `${langPrefix}/${game}/keywords`, icon: 'keywords', label: t('Game Mechanics', locale), desc: counts.keywords + ' ' + t('game keywords and mechanics', locale) },
+  ...(isSts2 ? [{ href: `${langPrefix}/${game}/changelog`, icon: 'changelog', label: t('Patch Notes', locale), desc: '110 ' + t('weekly updates', locale) }] : []),
+];
+---
+<Layout game={game} title={isSts2 ? 'Slay the Spire 2 — Spire Archive' : 'Slay the Spire — Spire Archive'} description={isSts2 ? 'The complete database for Slay the Spire 2 — browse cards, relics, potions, characters, monsters, events, and more.' : 'The complete database for Slay the Spire — browse cards, relics, potions, characters, monsters, events, and more.'}>
+  <h1 class="text-2xl font-bold">{isSts2 ? 'Slay the Spire 2' : 'Slay the Spire'}</h1>
+  <p class="mt-2 max-w-2xl text-sm text-slate-400">
+    {isSts2 ? t('The complete database for Slay the Spire 2', locale) : 'The complete database for Slay the Spire'}
+  </p>
+
+  <section class="mt-6">
+    <h2 class="text-xs font-semibold text-amber-200/60 uppercase tracking-widest">{t('Characters', locale)}</h2>
+    <div class:list={['mt-3 grid', isSts2 ? 'grid-cols-5 gap-2 md:gap-3' : 'grid-cols-2 gap-3 md:grid-cols-4']}>
+      {data.characters.map((ch) => (
+        <a href={`${langPrefix}/${game}/characters/${ch.id}`} class={'group rounded-lg border bg-white/[0.03] overflow-hidden hover:bg-white/[0.06] text-center transition-all ' + (charColors[ch.id] ?? 'border-white/10')}>
+          <img src={portraitMap[ch.id] ?? `/images/${game}/characters/${ch.id.toLowerCase()}.jpg`} alt={ch.name} class:list={['w-full object-cover opacity-80 group-hover:opacity-100 transition-opacity', isSts2 ? 'h-16 md:h-24' : 'h-28']} style={`object-position: ${positionMap[ch.id] ?? 'center 30%'}`} />
+          <div class:list={isSts2 ? ['p-1.5 md:p-3'] : ['p-3']}>
+            <div class:list={['font-semibold', isSts2 ? 'text-[11px] md:text-sm truncate' : 'text-sm']}>{nameMap[ch.id] ?? ch.name}</div>
+            <div class:list={['mt-1 text-xs text-slate-500', isSts2 ? 'hidden md:block' : '']}>{taglineMap[ch.id] ?? ''}</div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="mt-8">
+    <h2 class="text-xs font-semibold text-amber-200/60 uppercase tracking-widest">{t('Browse', locale)}</h2>
+    <div class="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {browseLinks.map((item) => (
+        <a href={item.href} class="group flex items-center gap-3 rounded-lg border border-white/[0.06] bg-white/[0.03] p-4 hover:bg-white/[0.06] hover:border-white/[0.12] transition-all">
+          <img src={`/images/${game}/nav/${item.icon}.png`} alt="" class="w-8 h-8 object-contain opacity-60 group-hover:opacity-100 transition-opacity" />
+          <div>
+            <div class="text-sm font-medium">{item.label}</div>
+            <div class="mt-1 text-xs text-slate-500">{item.desc}</div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</Layout>

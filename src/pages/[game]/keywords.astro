@@ -1,0 +1,17 @@
+---
+import Layout from '../../components/Layout.astro';
+import MechanicsPage from '../../components/MechanicsPage.astro';
+import { getData } from '../../lib/data';
+import { getLocale } from '../../lib/i18n';
+import { t } from '../../lib/ui-strings';
+import { getPageGame } from '../../lib/page-game';
+
+const game = getPageGame(Astro.params);
+if (!game) return new Response('Not found', { status: 404 });
+
+const { locale, langPrefix } = getLocale(Astro);
+const data = await getData(game, locale);
+---
+<Layout game={game} title={`${t('Game Mechanics', locale)} — Spire Archive${game === 'sts2' ? ' — STS2' : ''}`} description={game === 'sts2' ? 'Game mechanics reference for Slay the Spire 2.' : 'Game mechanics reference for Slay the Spire.'}>
+  <MechanicsPage game={game} data={data} locale={locale} langPrefix={langPrefix} />
+</Layout>

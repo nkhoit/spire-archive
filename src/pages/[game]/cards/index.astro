@@ -1,0 +1,21 @@
+---
+import Layout from '../../../components/Layout.astro';
+import CardsExplorer from '../../../components/react/CardsExplorer';
+import { getData } from '../../../lib/data';
+import { getLocale } from '../../../lib/i18n';
+import { t } from '../../../lib/ui-strings';
+import { getPageGame } from '../../../lib/page-game';
+
+const game = getPageGame(Astro.params);
+if (!game) return new Response('Not found', { status: 404 });
+
+const { locale } = getLocale(Astro);
+const { cards } = await getData(game, locale);
+const colors = Array.from(new Set(cards.map((c) => String(c.color)))).sort();
+const types = Array.from(new Set(cards.map((c) => String(c.type)))).sort();
+const rarities = Array.from(new Set(cards.map((c) => String(c.rarity)))).sort();
+---
+<Layout game={game} title={game === 'sts2' ? 'Cards — Spire Archive — STS2' : 'Cards — Spire Archive'} description={game === 'sts2' ? 'Browse Slay the Spire 2 cards with filters for color, type, rarity, and cost.' : 'Browse Slay the Spire cards with filters for color, type, rarity, and cost.'}>
+  <h1 class="text-xl font-semibold">{t('Cards', locale)}</h1>
+  <CardsExplorer game={game} client:load colors={colors} types={types} rarities={rarities} locale={locale} />
+</Layout>

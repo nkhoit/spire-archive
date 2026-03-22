@@ -1,0 +1,21 @@
+---
+import Layout from '../../../components/Layout.astro';
+import CardDetail from '../../../components/CardDetail.astro';
+import { getData } from '../../../lib/data';
+import { getLocale } from '../../../lib/i18n';
+import { getPageGame } from '../../../lib/page-game';
+
+const game = getPageGame(Astro.params);
+if (!game) return new Response('Not found', { status: 404 });
+
+const { id } = Astro.params;
+const { locale } = getLocale(Astro);
+const data = await getData(game, locale);
+const card = data.cardById.get(String(id));
+if (!card) return new Response('Not found', { status: 404 });
+const title = `${card.name} — Card — Spire Archive${game === 'sts2' ? ' — STS2' : ''}`;
+const desc = `${card.type} · ${card.rarity} · cost ${game === 'sts2' ? (card.cost === -1 ? 'X' : card.cost ?? '—') : (card.cost ?? '—')}`;
+---
+<Layout game={game} title={title} description={card.description} ogTitle={card.name} ogDescription={desc}>
+  <CardDetail game={game} card={card} data={data} />
+</Layout>

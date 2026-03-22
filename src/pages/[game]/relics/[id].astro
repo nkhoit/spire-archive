@@ -1,0 +1,40 @@
+---
+import Layout from '../../../components/Layout.astro';
+import Badge from '../../../components/Badge.astro';
+import { getData } from '../../../lib/data';
+import { getLocale } from '../../../lib/i18n';
+import { t } from '../../../lib/ui-strings';
+import { replaceGameTokens } from '../../../lib/energy-icons';
+import { getPageGame } from '../../../lib/page-game';
+
+const game = getPageGame(Astro.params);
+if (!game) return new Response('Not found', { status: 404 });
+
+const { id } = Astro.params;
+const { locale } = getLocale(Astro);
+const data = await getData(game, locale);
+const relic = data.relicById.get(String(id));
+if (!relic) return new Response('Not found', { status: 404 });
+const imgSrc = game === 'sts2' ? `/images/sts2/relics/${relic.id.toLowerCase()}.png` : (relic.icon ? `/images/sts1/relics/${relic.icon}` : null);
+---
+<Layout game={game} title={`${relic.name} — Relic — Spire Archive${game === 'sts2' ? ' — STS2' : ''}`} description={relic.description} ogTitle={relic.name} ogDescription={relic.tier}>
+  <div class="flex items-start justify-between gap-4">
+    <div class="flex items-center gap-4">
+      {imgSrc && <img src={imgSrc} alt={relic.name} class="w-16 h-16 object-contain" loading="lazy" />}
+      <div>
+        <h1 class="text-2xl font-semibold">{relic.name}</h1>
+        <div class="mt-2 flex flex-wrap gap-2">
+          <Badge label={relic.tier} locale={game === 'sts2' ? locale : undefined} />
+          {relic.color ? <Badge label={String(relic.color)} tone={String(relic.color)} locale={game === 'sts2' ? locale : undefined} /> : null}
+        </div>
+      </div>
+    </div>
+    <div class="text-xs text-slate-400">ID: {relic.id}</div>
+  </div>
+
+  <section class="mt-6 rounded-lg border border-white/10 bg-white/5 p-4">
+    <h2 class="text-sm font-semibold">{t('Description', locale)}</h2>
+    {game === 'sts2' ? <p class="mt-2 whitespace-pre-line text-sm text-slate-200" set:html={replaceGameTokens(relic.description ?? '')} /> : <p class="mt-2 whitespace-pre-line text-sm text-slate-200">{relic.description}</p>}
+    {relic.flavor ? <p class="mt-3 text-sm italic text-slate-400">{relic.flavor}</p> : null}
+  </section>
+</Layout>

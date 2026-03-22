@@ -1,0 +1,45 @@
+---
+import Layout from '../../../components/Layout.astro';
+import CharacterDetail from '../../../components/CharacterDetail.astro';
+import { getData } from '../../../lib/data';
+import { getLocale } from '../../../lib/i18n';
+import { t } from '../../../lib/ui-strings';
+import { getPageGame } from '../../../lib/page-game';
+
+const game = getPageGame(Astro.params);
+if (!game) return new Response('Not found', { status: 404 });
+
+const { id } = Astro.params;
+const { locale } = getLocale(Astro);
+const data = await getData(game, locale);
+const ch = data.characterById.get(String(id));
+if (!ch) return new Response('Not found', { status: 404 });
+
+const colorMap: Record<string, string> = { IRONCLAD: 'ironclad', THE_SILENT: 'silent', SILENT: 'silent', DEFECT: 'defect', WATCHER: 'watcher', NECROBINDER: 'necrobinder', REGENT: 'regent' };
+const descMap: Record<string, string> = {
+  IRONCLAD: t('A hardened warrior who wields powerful attacks and self-healing. Starts with the most HP and excels at strength-based strategies.', locale),
+  THE_SILENT: t('A deadly huntress who relies on poisons, shivs, and card draw. Starts with the largest deck and a focus on discard synergies.', locale),
+  SILENT: t('A deadly huntress who relies on poisons, shivs, and card draw. Starts with the largest deck and a focus on discard synergies.', locale),
+  DEFECT: t('An ancient automaton that channels elemental Orbs for passive and active effects. Unique focus on Lightning, Frost, Dark, and Plasma orbs.', locale),
+  WATCHER: t('A blind ascetic who shifts between powerful Stances. Wrath doubles damage dealt and taken, while Calm grants energy on exit.', locale),
+  NECROBINDER: t('A dark summoner who commands Osty and raises undead minions. Manipulates souls and sacrifices allies for power.', locale),
+  REGENT: t('A celestial ruler who harnesses Stars for powerful abilities. Balances resource management with explosive turns.', locale),
+};
+const color = colorMap[ch.id] ?? '';
+const chAny = ch as any;
+const startingDeckIds: string[] = chAny.starting_deck ?? [];
+const deckMap = new Map<string, { cardId: string; card: any; count: number }>();
+for (const cardId of startingDeckIds) {
+  const existing = deckMap.get(cardId);
+  if (existing) existing.count++;
+  else deckMap.set(cardId, { cardId, card: data.cardById.get(cardId) ?? { id: cardId, name: cardId }, count: 1 });
+}
+const startRelic = game === 'sts1'
+  ? (chAny.starting_relic ? data.relics.find((r) => r.name === chAny.starting_relic || r.id === chAny.starting_relic) ?? null : null)
+  : (chAny.starting_relic ? data.relicById?.get(chAny.starting_relic) ?? data.relics.find((r) => r.id === chAny.starting_relic) ?? null : null);
+const charCards = game === 'sts1' ? data.cards.filter((c) => c.color === color) : data.cards.filter((c) => (c as any).color?.toLowerCase() === color);
+const charRelics = game === 'sts1' ? data.relics.filter((r) => (r as any).color === color) : data.relics.filter((r) => (r as any).color?.toLowerCase() === color);
+---
+<Layout game={game} title={`${ch.name} — Spire Archive${game === 'sts2' ? ' — STS2' : ''}`} description={descMap[ch.id] ?? ''}>
+  <CharacterDetail game={game} character={chAny} color={color} description={descMap[ch.id] ?? ''} startingDeck={Array.from(deckMap.values())} startingRelic={startRelic} charCards={charCards} charRelics={charRelics} />
+</Layout>

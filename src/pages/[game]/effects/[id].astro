@@ -1,0 +1,92 @@
+---
+import Layout from '../../../components/Layout.astro';
+import { getData } from '../../../lib/data';
+import { getLocale } from '../../../lib/i18n';
+import { t } from '../../../lib/ui-strings';
+import { replaceGameTokens } from '../../../lib/energy-icons';
+import CssCardRenderer from '../../../components/react/CssCardRenderer';
+import { getPageGame } from '../../../lib/page-game';
+
+const game = getPageGame(Astro.params);
+if (!game) return new Response('Not found', { status: 404 });
+
+const { id } = Astro.params;
+const { locale, langPrefix } = getLocale(Astro);
+const data = await getData(game, locale);
+const power = data.powers.find((p: any) => p.id === id);
+const baseData = game === 'sts2' ? await getData('sts2') : (locale === 'en' ? data : await getData('sts1'));
+const basePower = game === 'sts1' ? baseData.powers.find((p: any) => p.id === id) : null;
+if (!power || (game === 'sts1' && !basePower)) return new Response(null, { status: 404, statusText: 'Not Found' });
+
+const matchingKeyword = data.keywords.find((k: any) => k.names?.some((n: string) => n.toLowerCase() === power.name.toLowerCase()));
+const relatedCards: any[] = [];
+if (game === 'sts2') {
+  for (const [cardId, powers] of Object.entries(data.cardPowers)) {
+    if ((powers as any[]).some((p: any) => p.id === power.id)) {
+      const card = data.cardById.get(cardId);
+      if (card) relatedCards.push(card);
+    }
+  }
+} else {
+  for (const [cardId, powers] of Object.entries(baseData.cardPowers)) {
+    if ((powers as any[]).some((p: any) => p.name === basePower!.name)) {
+      const card = data.cardById.get(cardId);
+      if (card) relatedCards.push(card);
+    }
+  }
+}
+
+const powerNameLower = game === 'sts2'
+  ? ((await getData('sts2')).powers.find((p: any) => p.id === id)?.name ?? power.name).toLowerCase()
+  : power.name.toLowerCase();
+const genericNames = new Set(['draw', 'draw card', 'block', 'heal', 'damage', 'gold', 'energy']);
+const skipDescMatch = powerNameLower.length <= 5 || genericNames.has(powerNameLower);
+if (game === 'sts2') {
+  const englishData = await getData('sts2');
+  for (const baseCard of englishData.cards) {
+    if (relatedCards.some(rc => rc.id === baseCard.id)) continue;
+    if (baseCard.name?.toLowerCase() === powerNameLower) {
+      const card = data.cardById.get(baseCard.id);
+      if (card) relatedCards.push(card);
+    } else if (!skipDescMatch && baseCard.description?.toLowerCase().includes(powerNameLower)) {
+      const card = data.cardById.get(baseCard.id);
+      if (card) relatedCards.push(card);
+    }
+  }
+} else {
+  for (const card of data.cards) {
+    if (relatedCards.some(rc => rc.id === card.id)) continue;
+    if (card.name?.toLowerCase() === powerNameLower) relatedCards.push(card);
+    else if (!skipDescMatch && card.description?.toLowerCase().includes(powerNameLower)) relatedCards.push(card);
+  }
+}
+relatedCards.sort((a, b) => a.name.localeCompare(b.name));
+---
+<Layout game={game} title={`${power.name} — Spire Archive${game === 'sts2' ? ' — STS2' : ''}`} description={power.description}>
+  <a href={langPrefix + `/${game}/effects`} class="text-sm text-slate-400 hover:text-white">← {t('Buffs & Debuffs', locale)}</a>
+
+  <div class="mt-4 flex items-center gap-4">
+    {power.icon ? <img src={`/images/${game}/powers/${power.icon}`} alt="" class="w-16 h-16" /> : game === 'sts2' ? <img src={`/images/sts2/powers/${power.id.toLowerCase()}.png`} alt="" class="w-16 h-16" /> : <div class="w-16 h-16 rounded bg-white/10" />}
+    <div>
+      <h1 class="text-2xl font-bold">{power.name}</h1>
+      <span class={`text-sm px-2 py-0.5 rounded ${power.type === 'Buff' ? 'bg-emerald-900/50 text-emerald-300' : 'bg-red-900/50 text-red-300'}`}>{game === 'sts2' ? t(power.type, locale) : power.type}</span>
+    </div>
+  </div>
+
+  {game === 'sts2' ? <p class="mt-4 text-slate-200" set:html={replaceGameTokens(power.description ?? '')} /> : <p class="mt-4 text-slate-200">{power.description}</p>}
+
+  {matchingKeyword && <a href={langPrefix + `/${game}/keywords`} class="mt-2 inline-block text-sm text-sky-400 hover:text-sky-300">→ {game === 'sts2' ? t('See keyword definition', locale) : 'See keyword definition'}</a>}
+
+  {relatedCards.length > 0 && (
+    <section class="mt-8">
+      <h2 class="text-lg font-semibold mb-3">{t('Cards that apply', locale)} {power.name}</h2>
+      <div class:list={['grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4', game === 'sts2' ? 'gap-4' : 'gap-3']}>
+        {relatedCards.map((card) => (
+          <a href={langPrefix + `/${game}/cards/${card.id}`} class="group flex items-center justify-center rounded-lg border border-white/10 bg-white/5 p-2 hover:bg-white/10 transition">
+            <CssCardRenderer client:load card={card} game={game} size="xs" />
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+</Layout>

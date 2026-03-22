@@ -1,0 +1,16 @@
+---
+import Layout from '../../../components/Layout.astro';
+import PowersExplorer from '../../../components/react/PowersExplorer';
+import { getLocale } from '../../../lib/i18n';
+import { t } from '../../../lib/ui-strings';
+import { getPageGame } from '../../../lib/page-game';
+
+const game = getPageGame(Astro.params);
+if (!game) return new Response('Not found', { status: 404 });
+
+const { locale } = getLocale(Astro);
+---
+<Layout game={game} title={game === 'sts2' ? 'Buffs & Debuffs — Spire Archive — STS2' : 'Buffs & Debuffs — Spire Archive'} description="Browse all buffs, debuffs, and status effects in Slay the Spire.">
+  <h1 class="text-xl font-semibold">{t('Buffs & Debuffs', locale)}</h1>
+  <PowersExplorer game={game} client:load locale={locale} />
+</Layout>

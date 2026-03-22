@@ -1,0 +1,23 @@
+---
+import Layout from '../../../components/Layout.astro';
+import MonstersExplorer from '../../../components/react/MonstersExplorer';
+import { getData } from '../../../lib/data';
+import { getLocale } from '../../../lib/i18n';
+import { t } from '../../../lib/ui-strings';
+import { getPageGame } from '../../../lib/page-game';
+
+const game = getPageGame(Astro.params);
+if (!game) return new Response('Not found', { status: 404 });
+
+const { locale } = getLocale(Astro);
+const { monsters } = await getData(game, locale);
+const acts = game === 'sts2'
+  ? Array.from(new Set(monsters.flatMap((m) => (m as any).acts ?? []))).sort()
+  : ['exordium', 'city', 'beyond', 'ending'].filter((a) => monsters.some((m) => String((m as any).act) === a));
+const types = Array.from(new Set(monsters.map((m) => String(m.type)))).sort();
+---
+<Layout game={game} title={game === 'sts2' ? 'Monsters — Spire Archive — STS2' : 'Monsters — Spire Archive'} description={game === 'sts2' ? 'Browse Slay the Spire 2 monsters with filters for type.' : 'Browse Slay the Spire monsters with filters for act and type.'}>
+  <h1 class="text-xl font-semibold">{t('Monsters', locale)}</h1>
+  {game === 'sts2' && <p class="mt-1 text-sm text-slate-400">{monsters.length} {t('monsters from Slay the Spire 2', locale)}</p>}
+  <MonstersExplorer game={game} client:load acts={acts} types={types} locale={locale} />
+</Layout>
