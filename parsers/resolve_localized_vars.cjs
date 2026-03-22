@@ -168,7 +168,8 @@ function extractBalanced(s, start) {
 
 const KEYWORD_BLOCKS = new Set(['Chaos','Choking','Curious','Energized','Expertise','Violence','Wisdom','Improvement','Sapping']);
 
-function resolveTokens(desc, vars) {
+function resolveTokens(desc, vars, fullStr) {
+  if (fullStr === undefined) fullStr = desc;
   const result = [];
   let i = 0;
   while (i < desc.length) {
@@ -193,25 +194,43 @@ function resolveTokens(desc, vars) {
     if (tag === 'IfUpgraded' && rest.startsWith('show:')) {
       const content = rest.slice(5);
       const idx = content.lastIndexOf('|');
-      if (idx !== -1) result.push(resolveTokens(content.slice(idx + 1), vars));
+      if (idx !== -1) result.push(resolveTokens(content.slice(idx + 1), vars, fullStr));
       i = end; continue;
     }
     if (tag === 'InCombat' || tag === 'IsTargeting') {
-      result.push(resolveTokens(rest.endsWith('|') ? rest.slice(0,-1) : rest, vars));
+      result.push(resolveTokens(rest.endsWith('|') ? rest.slice(0,-1) : rest, vars, fullStr));
       i = end; continue;
     }
     if (tag === 'HasRider') {
       const idx = rest.lastIndexOf('|');
-      result.push(resolveTokens(idx !== -1 ? rest.slice(0, idx) : rest, vars));
+      result.push(resolveTokens(idx !== -1 ? rest.slice(0, idx) : rest, vars, fullStr));
       i = end; continue;
     }
     if (KEYWORD_BLOCKS.has(tag)) {
-      result.push(resolveTokens(rest.endsWith('|') ? rest.slice(0,-1) : rest, vars));
+      result.push(resolveTokens(rest.endsWith('|') ? rest.slice(0,-1) : rest, vars, fullStr));
       i = end; continue;
     }
     if (rest === 'diff()' || rest === 'inverseDiff()') {
-      if (tag in vars) result.push(vars[tag]);
-      else result.push('{' + inner + '}');
+      if (tag in vars) {
+        result.push(vars[tag]);
+      } else if (tag === '') {
+        // {:diff()} with no var name — infer from available vars
+        // Pick the first var whose value doesn't already appear literally in the full string
+        const unusedVar = Object.entries(vars).find(([k, v]) => {
+          // Skip vars whose value already appears as a standalone number in the string
+          // (meaning they were already substituted by an earlier {VarName} reference)
+          const numStr = String(v);
+          // Check if this value appears as {VarName} or {VarName:...} — if so it's "used"
+          const namedRef = new RegExp(`\\{${k}[:\\}]`);
+          if (namedRef.test(fullStr)) return false;
+          return true;
+        });
+        if (unusedVar) result.push(unusedVar[1]);
+        else if (Object.keys(vars).length === 1) result.push(Object.values(vars)[0]);
+        else result.push('{' + inner + '}');
+      } else {
+        result.push('{' + inner + '}');
+      }
       i = end; continue;
     }
     if (rest === 'starIcons()') {
@@ -255,7 +274,7 @@ function resolveTokens(desc, vars) {
         } else {
           chosen = options[0];
         }
-        result.push(resolveTokens(chosen, vars));
+        result.push(resolveTokens(chosen, vars, fullStr));
       } else {
         result.push('{' + inner + '}');
       }
@@ -268,16 +287,16 @@ function resolveTokens(desc, vars) {
       const idx = content.indexOf('|');
       if (idx !== -1) {
         const chosen = (!isNaN(val) && val === 1) ? content.slice(0, idx) : content.slice(idx + 1);
-        result.push(resolveTokens(chosen, vars));
+        result.push(resolveTokens(chosen, vars, fullStr));
       } else {
-        result.push(resolveTokens(content, vars));
+        result.push(resolveTokens(content, vars, fullStr));
       }
       i = end; continue;
     }
     if (rest.startsWith('cond:')) {
       const content = rest.slice(5);
       const idx = content.lastIndexOf('|');
-      if (idx !== -1) result.push(resolveTokens(content.slice(idx + 1), vars));
+      if (idx !== -1) result.push(resolveTokens(content.slice(idx + 1), vars, fullStr));
       i = end; continue;
     }
     if (tag === 'CardType' && rest.startsWith('choose(')) {
@@ -285,7 +304,7 @@ function resolveTokens(desc, vars) {
       if (parenEnd !== -1) {
         const afterParen = rest.slice(parenEnd + 2);
         const parts = afterParen.split('|');
-        result.push(resolveTokens(parts[0].trim(), vars));
+        result.push(resolveTokens(parts[0].trim(), vars, fullStr));
       }
       i = end; continue;
     }
@@ -393,6 +412,8 @@ for (const lang of langs) {
       function resolveField(obj, key) {
         if (!obj || typeof obj[key] !== 'string' || !obj[key].includes('{')) return;
         touched = true;
+        // Fix malformed game templates: {Var:diff)} → {Var:diff()}
+        obj[key] = obj[key].replace(/\{(\w+):diff\)}/g, '{$1:diff()}');
         obj[key] = resolveTokens(obj[key], vars);
         if (obj[key].includes('{')) collectTemplates(obj[key]);
       }
