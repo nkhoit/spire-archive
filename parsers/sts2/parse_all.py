@@ -207,7 +207,7 @@ def parse_cards():
             semi_pos = text.find(';', canon_kw_match.start())
             if semi_pos != -1:
                 canon_block = text[canon_kw_match.start():semi_pos+1]
-            keywords = list(set(k for k in re.findall(r'CardKeyword\.(\w+)', canon_block) if k != "None"))
+            keywords = sorted(set(k for k in re.findall(r'CardKeyword\.(\w+)', canon_block) if k != "None"))
         else:
             keywords = []
         tags = list(set(t for t in re.findall(r'CardTag\.(\w+)', text) if t != "None"))
