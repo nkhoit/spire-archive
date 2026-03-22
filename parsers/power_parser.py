@@ -112,6 +112,9 @@ def parse_powers(source_dir: str, localization_dir: str) -> list[dict]:
 
         # Use first description
         desc_text = clean_description(descriptions[0]) if descriptions else ""
+        desc_upper = desc_text.upper()
+        if "DEPRECATED" in desc_upper or "DEPERCATED" in desc_upper:
+            continue
 
         # Stackable
         stackable = bool(re.search(r"stackPower\s*\(|this\.stackable\s*=\s*true", source))
