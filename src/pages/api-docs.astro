@@ -1,0 +1,32 @@
+---
+// API documentation powered by Scalar
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>API Documentation — Spire Archive</title>
+    <meta name="description" content="Interactive API documentation for Spire Archive — browse cards, relics, potions, monsters, events, and more from Slay the Spire 1 & 2." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+      /* Override Scalar's default light theme to match our dark site */
+      body { margin: 0; background: #0a0d13; }
+    </style>
+  </head>
+  <body>
+    <script
+      id="api-reference"
+      data-url="/openapi.yaml"
+      data-configuration={JSON.stringify({
+        theme: 'kepler',
+        darkMode: true,
+        hideModels: false,
+        hideDownloadButton: false,
+        metaData: {
+          title: 'Spire Archive API',
+        },
+      })}
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script>
+  </body>
+</html>

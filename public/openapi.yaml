@@ -1,0 +1,693 @@
+openapi: 3.0.3
+info:
+  title: Spire Archive API
+  version: 1.0.0
+  description: |
+    Read-only API for **Slay the Spire 1 & 2** game data — cards, relics, potions, monsters, events, enchantments, effects, and more.
+
+    ## Base URL
+    `https://spire-archive.com`
+
+    ## Caching
+    All responses include `Cache-Control: public, max-age=3600` (1 hour). Data updates when game patches are parsed.
+
+    ## Pagination
+    List endpoints return `{ items, total, offset, limit }`. Default `limit=50`, max `400`.
+
+    ## Localization
+    Pass `lang` (cards) or `locale` to get localized names and descriptions. Supported: `en`, `ja`, `ko`, `zh`, `de`, `fr`, `es`, `pt`, `it`, `pl`, `ru`, `tr`, `th`.
+
+    ## Rate Limits
+    No hard rate limit, but please be respectful. Cache responses on your side.
+servers:
+  - url: https://spire-archive.com
+    description: Production
+  - url: https://test.spire-archive.com
+    description: Staging
+
+components:
+  parameters:
+    lang:
+      name: lang
+      in: query
+      description: Locale code for translations
+      schema:
+        type: string
+        default: en
+        enum: [en, ja, ko, zh, de, fr, es, pt, it, pl, ru, tr, th]
+    locale:
+      name: locale
+      in: query
+      description: Locale code for translations
+      schema:
+        type: string
+        default: en
+        enum: [en, ja, ko, zh, de, fr, es, pt, it, pl, ru, tr, th]
+    q:
+      name: q
+      in: query
+      description: Search query (filters by name, description, or ID)
+      schema:
+        type: string
+    offset:
+      name: offset
+      in: query
+      description: Pagination offset
+      schema:
+        type: integer
+        default: 0
+        minimum: 0
+    limit:
+      name: limit
+      in: query
+      description: "Items per page (max: 400)"
+      schema:
+        type: integer
+        default: 50
+        minimum: 1
+        maximum: 400
+  schemas:
+    PaginatedResponse:
+      type: object
+      properties:
+        total:
+          type: integer
+          description: Total matching items
+        offset:
+          type: integer
+        limit:
+          type: integer
+        items:
+          type: array
+          items: {}
+    Card:
+      type: object
+      properties:
+        id:
+          type: string
+          example: BASH
+        name:
+          type: string
+          example: Bash
+        cost:
+          type: integer
+          nullable: true
+          description: "Energy cost. -1 = X-cost, null = unplayable (curses/status)"
+          example: 2
+        type:
+          type: string
+          enum: [Attack, Skill, Power, Status, Curse]
+          example: Attack
+        rarity:
+          type: string
+          enum: [Basic, Common, Uncommon, Rare, Special]
+          example: Basic
+        target:
+          type: string
+          example: AnyEnemy
+        color:
+          type: string
+          description: Character color (ironclad, silent, regent, necrobinder, defect, neutral)
+          example: ironclad
+        keywords:
+          type: array
+          items:
+            type: string
+          example: []
+        tags:
+          type: array
+          items:
+            type: string
+        vars:
+          type: object
+          description: Resolved numeric variables from the card
+          example: { damage: 8, power_vulnerable: 2 }
+        upgrade:
+          type: object
+          description: Upgrade deltas (values to add to base vars)
+          example: { damage: 2, vulnerable: 1 }
+        description:
+          type: string
+          example: "Deal 8 damage.\nApply 2 Vulnerable."
+        image_url:
+          type: string
+          example: /images/sts2/cards/bash.png
+        description_template:
+          type: string
+          description: Description with variable placeholders
+          example: "Deal {damage} damage.\nApply {power_vulnerable} Vulnerable."
+    Relic:
+      type: object
+      properties:
+        id:
+          type: string
+          example: AKABEKO
+        name:
+          type: string
+          example: Akabeko
+        description:
+          type: string
+          example: "At the start of each combat, gain 8 Vigor."
+        tier:
+          type: string
+          enum: [Starter, Common, Uncommon, Rare, Boss, Event, Shop, Special]
+          example: Uncommon
+        color:
+          type: string
+          description: Character restriction or "shared"
+          example: shared
+    Potion:
+      type: object
+      properties:
+        id:
+          type: string
+          example: BEETLE_JUICE
+        name:
+          type: string
+          example: Beetle Juice
+        description:
+          type: string
+        rarity:
+          type: string
+          enum: [Common, Uncommon, Rare]
+    Monster:
+      type: object
+      properties:
+        id:
+          type: string
+          example: CALCIFIED_CULTIST
+        name:
+          type: string
+        min_hp:
+          type: integer
+        max_hp:
+          type: integer
+        type:
+          type: string
+          enum: [Normal, Elite, Boss]
+        act:
+          type: string
+        moves:
+          type: array
+          items:
+            type: object
+        move_titles:
+          type: array
+          items:
+            type: string
+    Event:
+      type: object
+      properties:
+        id:
+          type: string
+          example: COLOSSAL_FLOWER
+        name:
+          type: string
+          example: Colossal Flower
+        act:
+          type: string
+        description:
+          type: string
+        choices:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              description:
+                type: string
+        pages:
+          type: array
+          description: Multi-step events have pages with their own choices
+          items:
+            type: object
+            properties:
+              label:
+                type: string
+              choices:
+                type: array
+                items:
+                  type: object
+    Enchantment:
+      type: object
+      properties:
+        id:
+          type: string
+          example: SWIFT
+        name:
+          type: string
+          example: Swift
+        description:
+          type: string
+        rarity:
+          type: string
+    Power:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        type:
+          type: string
+          enum: [buff, debuff]
+
+paths:
+  /api/sts2/cards:
+    get:
+      summary: List cards
+      description: Browse and filter all Slay the Spire 2 cards with pagination.
+      tags: [STS2 — Cards]
+      parameters:
+        - $ref: '#/components/parameters/lang'
+        - $ref: '#/components/parameters/q'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/limit'
+        - name: color
+          in: query
+          description: Filter by character color
+          schema:
+            type: string
+            enum: [ironclad, silent, regent, necrobinder, defect, neutral]
+        - name: type
+          in: query
+          description: Filter by card type
+          schema:
+            type: string
+            enum: [Attack, Skill, Power, Status, Curse]
+        - name: rarity
+          in: query
+          description: Filter by rarity
+          schema:
+            type: string
+            enum: [Basic, Common, Uncommon, Rare, Special]
+        - name: cost
+          in: query
+          description: Filter by energy cost
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Paginated card list
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/PaginatedResponse'
+                  - type: object
+                    properties:
+                      items:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/Card'
+
+  /api/sts2/cards/{id}:
+    get:
+      summary: Get a card
+      tags: [STS2 — Cards]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Card ID (UPPER_SNAKE_CASE)
+          schema:
+            type: string
+          example: BASH
+        - $ref: '#/components/parameters/lang'
+      responses:
+        '200':
+          description: Card details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Card'
+        '404':
+          description: Card not found
+
+  /api/sts2/relics:
+    get:
+      summary: List relics
+      tags: [STS2 — Relics]
+      parameters:
+        - $ref: '#/components/parameters/locale'
+        - $ref: '#/components/parameters/q'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/limit'
+        - name: tier
+          in: query
+          schema:
+            type: string
+            enum: [Starter, Common, Uncommon, Rare, Boss, Event, Shop, Special]
+        - name: color
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Paginated relic list
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/PaginatedResponse'
+                  - type: object
+                    properties:
+                      items:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/Relic'
+
+  /api/sts2/relics/{id}:
+    get:
+      summary: Get a relic
+      tags: [STS2 — Relics]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          example: AKABEKO
+        - $ref: '#/components/parameters/locale'
+      responses:
+        '200':
+          description: Relic details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Relic'
+        '404':
+          description: Relic not found
+
+  /api/sts2/potions:
+    get:
+      summary: List potions
+      tags: [STS2 — Potions]
+      parameters:
+        - $ref: '#/components/parameters/locale'
+        - $ref: '#/components/parameters/q'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/limit'
+        - name: rarity
+          in: query
+          schema:
+            type: string
+            enum: [Common, Uncommon, Rare]
+      responses:
+        '200':
+          description: Paginated potion list
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/PaginatedResponse'
+                  - type: object
+                    properties:
+                      items:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/Potion'
+
+  /api/sts2/potions/{id}:
+    get:
+      summary: Get a potion
+      tags: [STS2 — Potions]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          example: BEETLE_JUICE
+        - $ref: '#/components/parameters/locale'
+      responses:
+        '200':
+          description: Potion details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Potion'
+        '404':
+          description: Potion not found
+
+  /api/sts2/monsters:
+    get:
+      summary: List monsters
+      tags: [STS2 — Monsters]
+      parameters:
+        - $ref: '#/components/parameters/locale'
+        - $ref: '#/components/parameters/q'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/limit'
+        - name: act
+          in: query
+          schema:
+            type: string
+        - name: type
+          in: query
+          schema:
+            type: string
+            enum: [Normal, Elite, Boss]
+      responses:
+        '200':
+          description: Paginated monster list
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/PaginatedResponse'
+                  - type: object
+                    properties:
+                      items:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/Monster'
+
+  /api/sts2/monsters/{id}:
+    get:
+      summary: Get a monster
+      tags: [STS2 — Monsters]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          example: CALCIFIED_CULTIST
+        - $ref: '#/components/parameters/locale'
+      responses:
+        '200':
+          description: Monster details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Monster'
+        '404':
+          description: Monster not found
+
+  /api/sts2/events:
+    get:
+      summary: List events
+      tags: [STS2 — Events]
+      parameters:
+        - $ref: '#/components/parameters/locale'
+        - $ref: '#/components/parameters/q'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/limit'
+        - name: act
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Paginated event list
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/PaginatedResponse'
+                  - type: object
+                    properties:
+                      items:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/Event'
+
+  /api/sts2/events/{id}:
+    get:
+      summary: Get an event
+      tags: [STS2 — Events]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          example: COLOSSAL_FLOWER
+        - $ref: '#/components/parameters/locale'
+      responses:
+        '200':
+          description: Event details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Event'
+        '404':
+          description: Event not found
+
+  /api/sts2/enchantments:
+    get:
+      summary: List enchantments
+      tags: [STS2 — Enchantments]
+      parameters:
+        - $ref: '#/components/parameters/locale'
+        - $ref: '#/components/parameters/q'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/limit'
+        - name: rarity
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Paginated enchantment list
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/PaginatedResponse'
+                  - type: object
+                    properties:
+                      items:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/Enchantment'
+
+  /api/sts2/enchantments/{id}:
+    get:
+      summary: Get an enchantment
+      tags: [STS2 — Enchantments]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          example: SWIFT
+        - $ref: '#/components/parameters/locale'
+      responses:
+        '200':
+          description: Enchantment details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Enchantment'
+        '404':
+          description: Enchantment not found
+
+  /api/sts2/effects:
+    get:
+      summary: List buffs & debuffs
+      tags: [STS2 — Effects]
+      parameters:
+        - $ref: '#/components/parameters/locale'
+        - $ref: '#/components/parameters/q'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/limit'
+        - name: type
+          in: query
+          description: Filter by buff or debuff
+          schema:
+            type: string
+            enum: [buff, debuff]
+      responses:
+        '200':
+          description: Paginated power/effect list
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/PaginatedResponse'
+                  - type: object
+                    properties:
+                      items:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/Power'
+
+  /api/sts2/powers:
+    get:
+      summary: List powers (alias for effects)
+      tags: [STS2 — Effects]
+      parameters:
+        - $ref: '#/components/parameters/locale'
+        - $ref: '#/components/parameters/q'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/limit'
+        - name: type
+          in: query
+          schema:
+            type: string
+            enum: [buff, debuff]
+      responses:
+        '200':
+          description: Paginated power list
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/PaginatedResponse'
+                  - type: object
+                    properties:
+                      items:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/Power'
+
+  /api/sts2/search:
+    get:
+      summary: Full-text search
+      description: Search across all entity types (cards, relics, potions, monsters, events)
+      tags: [STS2 — Search]
+      parameters:
+        - name: q
+          in: query
+          required: true
+          description: Search query
+          schema:
+            type: string
+        - $ref: '#/components/parameters/locale'
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 20
+            maximum: 200
+      responses:
+        '200':
+          description: Search results
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  query:
+                    type: string
+                  total:
+                    type: integer
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        name:
+                          type: string
+                        type:
+                          type: string
+                        game:
+                          type: string

@@ -135,8 +135,12 @@ const navLinks = game ? [
     </main>
 
     <footer class="border-t border-white/[0.06]">
-      <div class="mx-auto max-w-7xl px-4 py-6 text-xs text-slate-500">
-        <span class="font-['KreonGame','Kreon',serif] text-amber-200/40">Spire Archive</span> — {t('a Slay the Spire companion', locale)}
+      <div class="mx-auto max-w-7xl px-4 py-6 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500">
+        <span><span class="font-['KreonGame','Kreon',serif] text-amber-200/40">Spire Archive</span> — {t('a Slay the Spire companion', locale)}</span>
+        <div class="flex items-center gap-4">
+          <a href="/api-docs" class="hover:text-slate-300 transition-colors">API</a>
+          <a href="https://github.com/nkhoit/spire-archive" class="hover:text-slate-300 transition-colors">GitHub</a>
+        </div>
       </div>
     </footer>
   </body>
