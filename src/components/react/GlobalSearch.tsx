@@ -155,8 +155,7 @@ export default function GlobalSearch({ game, locale = 'en', langPrefix = '' }: {
 
   return (
     <>
-      <div className="fixed inset-0 z-40 bg-black/50" onClick={() => setOpen(false)} />
-      <div className="fixed inset-0 z-50 flex items-start justify-center pt-[15vh]" onClick={() => setOpen(false)}>
+      <div className="fixed inset-0 z-50 flex items-start justify-center pt-[15vh] bg-black/50" onClick={() => setOpen(false)}>
         <div
           className="w-full max-w-lg mx-4 rounded-xl border border-white/[0.1] bg-[#0d1117] shadow-2xl shadow-black/80 overflow-hidden"
           onClick={(e) => e.stopPropagation()}
