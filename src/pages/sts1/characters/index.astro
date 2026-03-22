@@ -73,9 +73,7 @@ function deckSummary(deck: string[]) {
               <Badge label={`${(ch as any).energy_per_turn} Energy`} />
             </div>
             <p class="mt-3 text-sm text-slate-300">{desc}</p>
-            {relic && (
-              <div class="mt-3 text-xs text-slate-400">{t('Starting Relic', locale)}: <span class="text-slate-200">{relic}</span></div>
-            )}
+
           </div>
         </a>
       );
