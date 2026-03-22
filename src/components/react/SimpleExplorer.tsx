@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { t } from '../../lib/ui-strings';
 
-type ApiResp<T> = { total: number; offset: number; limit: number; items: T[] };
+export type ApiResp<T> = { total: number; offset: number; limit: number; items: T[] };
 
 function buildUrl(base: string, params: Record<string, string | number | null>) {
   const u = new URL(base, window.location.origin);

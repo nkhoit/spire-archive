@@ -1,7 +1,6 @@
-import { useState } from 'react';
-import { Pager, useApiList, useUrlOffset } from './SimpleExplorer';
-import { t } from '../../lib/ui-strings';
 import DescriptionText from './DescriptionText';
+import ListExplorer, { Badge, cap, type FilterConfig } from './ListExplorer';
+import { t } from '../../lib/ui-strings';
 
 type Enchantment = {
   id: string;
@@ -10,71 +9,33 @@ type Enchantment = {
   rarity: string;
 };
 
-export default function EnchantmentsExplorer(props: { game?: string; rarities: string[]; locale?: string }) {
+export default function EnchantmentsExplorer(props: { game?: 'sts2'; rarities: string[]; locale?: string }) {
   const game = props.game ?? 'sts2';
   const locale = props.locale ?? 'en';
-  const [q, setQ] = useState('');
-  const [rarity, setRarity] = useState('');
-  const limit = 200;
-  const [offset, setOffset] = useUrlOffset(limit);
+  const filters: FilterConfig[] = [
+    { key: 'q', type: 'text' },
+    { key: 'rarity', type: 'select', allLabel: 'All Rarities', options: props.rarities.map((rarity) => ({ value: rarity, label: t(cap(rarity), locale) })) },
+  ];
 
-  const { data, loading, error } = useApiList<Enchantment>(`/api/${game}/enchantments`, {
-    q: q || null,
-    rarity: rarity || null,
-    lang: locale !== 'en' ? locale : null,
-    offset,
-    limit,
-  });
-
-  const resp = data ?? { total: 0, offset, limit, items: [] };
-
-  function cap(s: string) { return s.charAt(0).toUpperCase() + s.slice(1); }
-
-  return (
-    <div className="mt-4">
-      <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
-        <input
-          className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm"
-          placeholder={t('Search', locale) + ' ' + t('Enchantments', locale).toLowerCase() + '…'}
-          value={q}
-          onChange={(e) => { setOffset(0); setQ(e.target.value); }}
-        />
-        <select
-          className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm"
-          value={rarity}
-          onChange={(e) => { setOffset(0); setRarity(e.target.value); }}
-        >
-          <option value="">{t('All Rarities', locale)}</option>
-          {props.rarities.map((r) => (
-            <option key={r} value={r}>{t(cap(r), locale)}</option>
-          ))}
-        </select>
-      </div>
-
-      <div className="mt-3 flex items-center justify-between text-xs text-slate-300">
-        <div>
-          {loading ? t('Loading…', locale) : `${resp.total} ${t('results', locale)}`}
-          {error ? <span className="text-red-300"> ({error})</span> : null}
+  return <ListExplorer<Enchantment>
+    endpoint={`/api/${game}/enchantments`}
+    game={game}
+    locale={locale}
+    title="Enchantments"
+    filters={filters}
+    limit={200}
+    getItemKey={(enchantment) => enchantment.id}
+    renderItem={(enchantment) => (
+      <>
+        <img src={`/images/sts2/enchantments/${enchantment.id.toLowerCase()}.png`} alt="" width={40} height={40} className="flex-shrink-0 rounded" loading="lazy" style={{ imageRendering: 'pixelated' }} />
+        <div className="min-w-0 flex-1">
+          <div className="flex items-center gap-2">
+            <span className="text-sm font-semibold">{enchantment.name}</span>
+            {enchantment.rarity && enchantment.rarity !== 'Unknown' && <Badge label={enchantment.rarity} className="bg-white/10 text-slate-300 ring-white/10" />}
+          </div>
+          <div className="mt-0.5 line-clamp-2 text-sm text-slate-300"><DescriptionText text={enchantment.description} /></div>
         </div>
-        <Pager total={resp.total} offset={resp.offset} limit={resp.limit} onOffset={setOffset} locale={locale} />
-      </div>
-
-      <ul className="mt-3 divide-y divide-white/10 rounded-lg border border-white/10 bg-white/5">
-        {resp.items.map((e) => (
-          <li key={e.id} className="p-3">
-            <a className="flex items-start gap-3 hover:bg-white/5 -m-3 p-3 rounded-lg" href={`${locale !== "en" ? "/" + locale : ""}/${game}/enchantments/${e.id}`}>
-              <img src={`/images/sts2/enchantments/${e.id.toLowerCase()}.png`} alt="" width={40} height={40} className="flex-shrink-0 rounded" loading="lazy" style={{ imageRendering: 'pixelated' }} />
-              <div className="min-w-0 flex-1">
-                <div className="flex items-center gap-2">
-                  <span className="text-sm font-semibold">{e.name}</span>
-                  {e.rarity && e.rarity !== 'Unknown' && <span className="text-xs px-1.5 py-0.5 rounded bg-white/10 text-slate-300">{e.rarity}</span>}
-                </div>
-                <p className="mt-0.5 text-sm text-slate-300 line-clamp-2"><DescriptionText text={e.description} /></p>
-              </div>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+      </>
+    )}
+  />;
 }
