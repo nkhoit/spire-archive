@@ -77,7 +77,7 @@ function CardTile({ c, game, isMobile, upgraded, locale }: { c: Card; game: stri
         <BadgeSpan label={c.color} tone={c.color} locale={locale} />
         <BadgeSpan label={c.type} locale={locale} />
         <BadgeSpan label={c.rarity} locale={locale} />
-        <BadgeSpan label={`Cost ${c.cost ?? 'X'}`} />
+        <span className="inline-flex items-center rounded-full px-2 py-0.5 text-xs ring-1 bg-white/10 text-slate-200 ring-white/10">{t('Cost', locale)} {c.cost ?? 'X'}</span>
       </div>
     </div>
   );

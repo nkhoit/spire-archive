@@ -267,7 +267,7 @@ const relatedPowers = allRelatedPowers.filter((p: any) => !keywordNameSet.has(p.
 // Upgrade summary for STS2 (show what changed)
 const upgChanges: string[] = [];
 if (game === 'sts2' && upg) {
-  if (upg.cost != null && upg.cost !== card.cost) upgChanges.push(`Cost ${upg.cost}`);
+  if (upg.cost != null && upg.cost !== card.cost) upgChanges.push(`${t('Cost', locale)} ${upg.cost}`);
   for (const kw of (upg.add_keywords ?? [])) upgChanges.push(`+${kw}`);
   for (const kw of (upg.remove_keywords ?? [])) upgChanges.push(`-${kw}`);
   for (const [k, v] of Object.entries(upg)) {
