@@ -18,11 +18,6 @@ const upg = card.upgrade;
 // STS1 and STS2 upgrades both have absolute cost in upgrade.cost
 const hasUpgrade = upg && Object.keys(upg).length > 0;
 
-// Upgraded name and cost
-const upgName = hasUpgrade ? card.name + '+' : card.name;
-const upgCost = hasUpgrade && upg.cost != null ? upg.cost : card.cost;
-const costChanged = hasUpgrade && upgCost !== card.cost;
-
 // Build upgrade description for STS2
 function buildUpgradeDescription(card: any): { description: string; cost: number | null; keywords: string[] } | null {
   const upg = card.upgrade;

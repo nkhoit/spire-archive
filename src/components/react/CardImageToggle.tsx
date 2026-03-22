@@ -12,16 +12,12 @@ interface Props {
 export default function CardImageToggle({ card, hasUpgrade, game = 'sts2', locale = 'en' }: Props) {
   const [showUpgraded, setShowUpgraded] = useState(false);
 
-  // Sync upgrade toggle state with server-rendered description/name elements
+  // Sync upgrade toggle state with server-rendered name/cost elements
   useEffect(() => {
-    const descBase = document.getElementById('desc-base');
-    const descUpg = document.getElementById('desc-upgraded');
     const cardName = document.getElementById('card-name');
     const costBadge = document.getElementById('cost-badge');
 
     if (showUpgraded) {
-      descBase?.classList.add('hidden');
-      descUpg?.classList.remove('hidden');
       if (cardName) { cardName.textContent = card.name + '+'; cardName.classList.add('text-emerald-400'); }
       if (costBadge) {
         const span = costBadge.querySelector('span');
@@ -33,8 +29,6 @@ export default function CardImageToggle({ card, hasUpgrade, game = 'sts2', local
         }
       }
     } else {
-      descBase?.classList.remove('hidden');
-      descUpg?.classList.add('hidden');
       if (cardName) { cardName.textContent = card.name; cardName.classList.remove('text-emerald-400'); }
       if (costBadge) {
         const span = costBadge.querySelector('span');
