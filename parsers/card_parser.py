@@ -64,6 +64,8 @@ def parse_cards(source_dir: str, localization_dir: str) -> list[dict]:
             # Skip deprecated
             if "DEPRECATED" in source and re.search(r'public static final String ID\s*=\s*"DEPRECATED', source):
                 continue
+            if "DEPRECATED" in source and re.search(r'NAME\s*=\s*".*DEPRECATED', source):
+                continue
 
             card_id_raw = extract_static_id(source)
             if not card_id_raw:
