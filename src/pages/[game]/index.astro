@@ -87,13 +87,13 @@ const browseLinks = [
 
   <section class="mt-6">
     <h2 class="font-game text-xs font-semibold theme-kicker uppercase tracking-widest">{t('Characters', locale)}</h2>
-    <div class:list={['mt-3 grid', isSts2 ? 'grid-cols-5 gap-2 md:gap-3' : 'grid-cols-2 gap-3 md:grid-cols-4']}>
+    <div class:list={['mt-3 grid gap-2 md:gap-3', isSts2 ? 'grid-cols-5' : 'grid-cols-4']}>
       {data.characters.map((ch) => (
         <a href={`${langPrefix}/${game}/characters/${ch.id}`} class={'group rounded-lg border bg-white/[0.03] overflow-hidden hover:bg-white/[0.06] text-center transition-all ' + (charColors[ch.id] ?? 'border-white/10')}>
-          <img src={portraitMap[ch.id] ?? `/images/${game}/characters/${ch.id.toLowerCase()}.jpg`} alt={ch.name} class:list={['w-full object-cover opacity-80 group-hover:opacity-100 transition-opacity', isSts2 ? 'h-16 md:h-24' : 'h-28']} style={`object-position: ${positionMap[ch.id] ?? 'center 30%'}`} />
-          <div class:list={isSts2 ? ['p-1.5 md:p-3'] : ['p-3']}>
-            <div class:list={['font-game font-semibold', isSts2 ? 'text-[11px] md:text-sm truncate' : 'text-sm']}>{nameMap[ch.id] ?? ch.name}</div>
-            <div class:list={['mt-1 text-xs text-slate-500', isSts2 ? 'hidden md:block' : '']}>{taglineMap[ch.id] ?? ''}</div>
+          <img src={portraitMap[ch.id] ?? `/images/${game}/characters/${ch.id.toLowerCase()}.jpg`} alt={ch.name} class="w-full h-16 md:h-24 object-cover opacity-80 group-hover:opacity-100 transition-opacity" style={`object-position: ${positionMap[ch.id] ?? 'center 30%'}`} />
+          <div class="p-1.5 md:p-3">
+            <div class="font-game font-semibold text-[11px] md:text-sm truncate">{nameMap[ch.id] ?? ch.name}</div>
+            <div class="mt-1 text-xs text-slate-500 hidden md:block">{taglineMap[ch.id] ?? ''}</div>
           </div>
         </a>
       ))}
