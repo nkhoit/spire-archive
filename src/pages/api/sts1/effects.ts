@@ -3,8 +3,10 @@ import { getData, type Locale, SUPPORTED_LOCALES } from '../../../lib/data';
 import { getPaging, getString, jsonResponse } from '../_util';
 
 export const GET: APIRoute = async ({ url }) => {
-  const lang = (getString(url, 'lang') || 'en') as Locale;
-  const locale = SUPPORTED_LOCALES.includes(lang) ? lang : 'en' as Locale;
+  const localeParam = getString(url, 'locale') ?? getString(url, 'lang');
+  const locale: Locale = localeParam && SUPPORTED_LOCALES.includes(localeParam as Locale)
+    ? localeParam as Locale
+    : 'en';
   const { powers } = await getData('sts1', locale);
 
   const q = getString(url, 'q')?.toLowerCase() ?? null;

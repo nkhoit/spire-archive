@@ -419,7 +419,7 @@ async function applyLocalization(game: string, locale: Locale, base: Dataset): P
   });
 
   const powers = base.powers.map(p => {
-    const l = loc.powers?.[p.id];
+    const l = loc.powers?.[p.id] ?? (game === 'sts1' ? loc.powers?.[p.name] : undefined);
     if (!l) return p;
     return { ...p, ...(l.name && { name: l.name }), ...(l.description && { description: l.description }) };
   });
