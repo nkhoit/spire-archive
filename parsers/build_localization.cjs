@@ -136,6 +136,29 @@ function toUpperSnake(s) {
   return s.toUpperCase().replace(/[^A-Z0-9_]/g, '_').replace(/_+/g, '_').replace(/^_|_$/g, '');
 }
 
+// Load relic/potion interpolation values extracted from Java source
+const relicValuesPath = path.join(LOCALIZATION_OUTPUT_DIR, 'sts1', 'relic_values.json');
+const relicValuesData = fs.existsSync(relicValuesPath) ? JSON.parse(fs.readFileSync(relicValuesPath, 'utf8')) : { relics: {}, potions: {} };
+
+/**
+ * Interpolate STS1 DESCRIPTIONS array with values.
+ * Pattern: DESCRIPTIONS[0] + values[0] + DESCRIPTIONS[1] + values[1] + ...
+ * If no values, just join segments.
+ */
+function interpolateDescriptions(descriptions, values) {
+  if (!descriptions || descriptions.length === 0) return '';
+  if (!values || values.length === 0) return descriptions.join('');
+  let result = '';
+  for (let i = 0; i < descriptions.length; i++) {
+    result += descriptions[i];
+    if (i < values.length) {
+      const v = values[i];
+      result += v != null ? String(v) : '?';
+    }
+  }
+  return result;
+}
+
 // Load STS1 card data for resolving !D!/!B!/!M! tokens
 const sts1CardsPath = path.join(LOCALIZATION_OUTPUT_DIR, 'sts1', 'cards.json');
 const sts1CardData = fs.existsSync(sts1CardsPath) ? JSON.parse(fs.readFileSync(sts1CardsPath, 'utf8')) : [];
@@ -166,20 +189,34 @@ function buildSts1Lang(gameLang) {
   const relics = JSON.parse(fs.readFileSync(path.join(dir, 'relics.json'), 'utf8'));
   for (const [id, data] of Object.entries(relics)) {
     if (!data.NAME) continue;
-    result.relics[toUpperSnake(id)] = {
+    const relicId = toUpperSnake(id);
+    const values = relicValuesData.relics[relicId];
+    const descriptions = data.DESCRIPTIONS || [];
+    const desc = values && descriptions.length > 1
+      ? interpolateDescriptions(descriptions, values)
+      : descriptions.join('');
+    result.relics[relicId] = {
       name: data.NAME,
-      description: cleanSts1Description((data.DESCRIPTIONS || []).join('')),
+      description: cleanSts1Description(desc),
       ...(data.FLAVOR && { flavor: data.FLAVOR }),
     };
   }
 
-  // Powers
+  // Powers — values are runtime (stacking), use "X" as placeholder
   const powers = JSON.parse(fs.readFileSync(path.join(dir, 'powers.json'), 'utf8'));
   for (const [id, data] of Object.entries(powers)) {
     if (!data.NAME) continue;
+    const descriptions = data.DESCRIPTIONS || [];
+    // For multi-segment, insert "X" between segments (runtime values)
+    const xValues = descriptions.length > 1
+      ? Array(descriptions.length - 1).fill('X')
+      : null;
+    const desc = xValues
+      ? interpolateDescriptions(descriptions, xValues)
+      : descriptions.join('');
     result.powers[toUpperSnake(id)] = {
       name: data.NAME,
-      description: cleanSts1Description((data.DESCRIPTIONS || []).join('')),
+      description: cleanSts1Description(desc),
     };
   }
 
@@ -187,9 +224,15 @@ function buildSts1Lang(gameLang) {
   const potions = JSON.parse(fs.readFileSync(path.join(dir, 'potions.json'), 'utf8'));
   for (const [id, data] of Object.entries(potions)) {
     if (!data.NAME) continue;
-    result.potions[toUpperSnake(id)] = {
+    const potionId = toUpperSnake(id);
+    const values = relicValuesData.potions[potionId];
+    const descriptions = data.DESCRIPTIONS || [];
+    const desc = values && descriptions.length > 1
+      ? interpolateDescriptions(descriptions, values)
+      : descriptions.join('');
+    result.potions[potionId] = {
       name: data.NAME,
-      description: cleanSts1Description((data.DESCRIPTIONS || []).join('')),
+      description: cleanSts1Description(desc),
     };
   }
 
@@ -204,13 +247,14 @@ function buildSts1Lang(gameLang) {
     };
   }
 
-  // Keywords
-  const keywords = JSON.parse(fs.readFileSync(path.join(dir, 'keywords.json'), 'utf8'));
-  for (const [id, data] of Object.entries(keywords)) {
-    if (!data.NAMES) continue;
+  // Keywords — STS1 wraps all keywords under "Game Dictionary" key
+  const keywordsRaw = JSON.parse(fs.readFileSync(path.join(dir, 'keywords.json'), 'utf8'));
+  const keywordsDict = keywordsRaw['Game Dictionary'] || keywordsRaw;
+  for (const [id, data] of Object.entries(keywordsDict)) {
+    if (!data || typeof data !== 'object' || !data.NAMES) continue;
     result.keywords[id] = {
       names: data.NAMES,
-      description: data.DESCRIPTION || '',
+      description: cleanSts1Description(data.DESCRIPTION || ''),
     };
   }
 

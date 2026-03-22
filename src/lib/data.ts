@@ -414,7 +414,7 @@ async function applyLocalization(game: string, locale: Locale, base: Dataset): P
   const relics = base.relics.map(r => {
     const l = loc.relics?.[r.id];
     if (!l) return r;
-    return { ...r, ...(l.name && { name: l.name }), ...(l.description && { description: l.description }) };
+        return { ...r, ...(l.name && { name: l.name }), ...(l.description && { description: l.description }), ...(l.flavor && { flavor: l.flavor }) };
   });
 
   const powers = base.powers.map(p => {
@@ -476,7 +476,7 @@ async function applyLocalization(game: string, locale: Locale, base: Dataset): P
   const keywords = base.keywords.map(k => {
     const l = loc.keywords?.[k.id];
     if (!l) return k;
-    return { ...k, ...(l.name && { names: [l.name] }), ...(l.description && { description: l.description }) };
+    return { ...k, ...(l.names && { names: l.names }), ...(l.name && { names: [l.name] }), ...(l.description && { description: l.description }) };
   });
 
   const enchantments = base.enchantments.map(e => {

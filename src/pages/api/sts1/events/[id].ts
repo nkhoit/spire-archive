@@ -1,10 +1,12 @@
 import type { APIRoute } from 'astro';
-import { getData } from '../../../../lib/data';
-import { jsonResponse } from '../../_util';
+import { getData, type Locale, SUPPORTED_LOCALES } from '../../../../lib/data';
+import { getString, jsonResponse } from '../../_util';
 
-export const GET: APIRoute = async ({ params }) => {
+export const GET: APIRoute = async ({ params, url }) => {
   const id = String(params.id ?? '');
-  const { eventById } = await getData('sts1');
+  const lang = (url.searchParams.get('lang') || 'en') as Locale;
+  const locale = SUPPORTED_LOCALES.includes(lang) ? lang : 'en' as Locale;
+  const { eventById } = await getData('sts1', locale);
   const event = eventById.get(id);
   if (!event) return jsonResponse({ error: 'not found' }, { status: 404 });
   return jsonResponse(event);
