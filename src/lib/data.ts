@@ -384,7 +384,7 @@ async function loadBaseData(game: string): Promise<Dataset> {
 }
 
 interface LocData {
-  cards?: Record<string, { name?: string; description?: string; upgrade_description?: string }>;
+  cards?: Record<string, { name?: string; description?: string; upgrade_description?: string; upgradeDescription?: string }>;
   relics?: Record<string, { name?: string; description?: string; flavor?: string }>;
   powers?: Record<string, { name?: string; description?: string }>;
   potions?: Record<string, { name?: string; description?: string }>;
@@ -405,8 +405,9 @@ async function applyLocalization(game: string, locale: Locale, base: Dataset): P
     const l = loc.cards?.[c.id];
     if (!l) return c;
     const result = { ...c, ...(l.name && { name: l.name }), ...(l.description && { description: l.description }) };
-    if (l.upgrade_description && result.upgrade) {
-      result.upgrade = { ...result.upgrade, description: l.upgrade_description };
+    const upgDesc = l.upgrade_description ?? l.upgradeDescription;
+    if (upgDesc && result.upgrade) {
+      result.upgrade = { ...result.upgrade, description: upgDesc };
     }
     return result;
   });
