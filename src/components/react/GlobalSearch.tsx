@@ -146,11 +146,10 @@ export default function GlobalSearch({ game, locale = 'en', langPrefix = '' }: {
     return (
       <button
         onClick={() => setOpen(true)}
-        className="flex items-center gap-2 rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-1.5 text-xs text-slate-400 hover:text-slate-200 hover:border-white/[0.15] transition-colors whitespace-nowrap min-w-[140px] sm:min-w-[200px] md:min-w-[280px]"
+        className="p-1.5 rounded-md text-slate-300 hover:text-white hover:bg-white/10 transition-colors"
+        aria-label="Search"
       >
-        <svg className="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-        <span className="flex-1 text-left">{t('Search', locale)}</span>
-        <kbd className="hidden sm:inline text-[10px] text-slate-600 border border-white/[0.06] rounded px-1">⌘K</kbd>
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
       </button>
     );
   }
