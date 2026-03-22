@@ -11,31 +11,39 @@
     "moves": [
       {
         "id": "SLIME_TACKLE",
-        "name": "Slime Tackle",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK_DEBUFF"
+        "name": "Corrosive Spit",
+        "damage": 11,
+        "damage_ascension": 12,
+        "intent": "ATTACK_DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "NORMAL_TACKLE",
         "name": "Normal Tackle",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 16,
+        "damage_ascension": 18,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "SPLIT",
         "name": "Split",
         "damage": null,
         "damage_ascension": null,
-        "intent": "UNKNOWN"
+        "intent": "UNKNOWN",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "WEAK_LICK",
-        "name": "Weak Lick",
+        "name": "Lick",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEBUFF"
+        "intent": "DEBUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -52,24 +60,30 @@
     "moves": [
       {
         "id": "WOUND_TACKLE",
-        "name": "Wound Tackle",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK_DEBUFF"
+        "name": "Corrosive Spit",
+        "damage": 7,
+        "damage_ascension": 8,
+        "intent": "ATTACK_DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "NORMAL_TACKLE",
         "name": "Normal Tackle",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 10,
+        "damage_ascension": 12,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "WEAK_LICK",
-        "name": "Weak Lick",
+        "name": "Lick",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEBUFF"
+        "intent": "DEBUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -87,16 +101,20 @@
       {
         "id": "TACKLE",
         "name": "Tackle",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 3,
+        "damage_ascension": 4,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "DEBUFF",
         "name": "Debuff",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEBUFF"
+        "intent": "DEBUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -106,24 +124,28 @@
     "name": "Apology Slime",
     "type": "Normal",
     "act": "exordium",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 8,
+    "max_hp": 12,
     "min_hp_ascension": null,
     "max_hp_ascension": null,
     "moves": [
       {
         "id": "TACKLE",
         "name": "Tackle",
-        "damage": null,
+        "damage": 3,
         "damage_ascension": null,
-        "intent": "ATTACK"
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "DEBUFF",
         "name": "Debuff",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEBUFF"
+        "intent": "DEBUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -143,42 +165,54 @@
         "name": "Slash",
         "damage": 20,
         "damage_ascension": null,
-        "intent": "ATTACK"
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "SOUL_STRIKE",
         "name": "Soul Strike",
-        "damage": null,
+        "damage": 6,
         "damage_ascension": null,
-        "intent": "ATTACK"
+        "intent": "ATTACK",
+        "hits": 4,
+        "block": null
       },
       {
         "id": "REBIRTH",
         "name": "Rebirth",
         "damage": null,
         "damage_ascension": null,
-        "intent": "UNKNOWN"
+        "intent": "UNKNOWN",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "DARK_ECHO",
         "name": "Dark Echo",
-        "damage": null,
+        "damage": 40,
         "damage_ascension": null,
-        "intent": "ATTACK"
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "SLUDGE",
         "name": "Sludge",
         "damage": 18,
         "damage_ascension": null,
-        "intent": "ATTACK_DEBUFF"
+        "intent": "ATTACK_DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "TACKLE",
         "name": "Tackle",
         "damage": 10,
         "damage_ascension": null,
-        "intent": "ATTACK"
+        "intent": "ATTACK",
+        "hits": 3,
+        "block": null
       }
     ],
     "image_url": null
@@ -198,7 +232,9 @@
         "name": "Bear Hug",
         "damage": null,
         "damage_ascension": null,
-        "intent": "STRONG_DEBUFF"
+        "intent": "STRONG_DEBUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -218,7 +254,9 @@
         "name": "Pointy Special",
         "damage": null,
         "damage_ascension": null,
-        "intent": "ATTACK"
+        "intent": "ATTACK",
+        "hits": 2,
+        "block": null
       }
     ],
     "image_url": null
@@ -238,7 +276,9 @@
         "name": "Mock",
         "damage": null,
         "damage_ascension": null,
-        "intent": "UNKNOWN"
+        "intent": "UNKNOWN",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -256,16 +296,20 @@
       {
         "id": "STAB",
         "name": "Stab",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 6,
+        "damage_ascension": 7,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "BIG_STAB",
         "name": "Big Stab",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 21,
+        "damage_ascension": 24,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -284,36 +328,46 @@
         "id": "FLAIL",
         "name": "Flail",
         "damage": 7,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage_ascension": 8,
+        "intent": "ATTACK",
+        "hits": 2,
+        "block": null
       },
       {
         "id": "HYPER_BEAM",
-        "name": "Hyper Beam",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "name": "HYPER BEAM",
+        "damage": 45,
+        "damage_ascension": 50,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "STUNNED",
         "name": "Stunned",
         "damage": null,
         "damage_ascension": null,
-        "intent": "STUN"
+        "intent": "STUN",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "SPAWN_ORBS",
         "name": "Spawn Orbs",
         "damage": null,
         "damage_ascension": null,
-        "intent": "UNKNOWN"
+        "intent": "UNKNOWN",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "BOOST",
         "name": "Boost",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEFEND_BUFF"
+        "intent": "DEFEND_BUFF",
+        "hits": 1,
+        "block": 9
       }
     ],
     "image_url": null
@@ -333,21 +387,27 @@
         "name": "Beam",
         "damage": 8,
         "damage_ascension": null,
-        "intent": "ATTACK"
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "SUPPORT_BEAM",
         "name": "Support Beam",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEFEND"
+        "intent": "DEFEND",
+        "hits": 1,
+        "block": 12
       },
       {
         "id": "STASIS",
         "name": "Stasis",
         "damage": null,
         "damage_ascension": null,
-        "intent": "STRONG_DEBUFF"
+        "intent": "STRONG_DEBUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -367,42 +427,54 @@
         "name": "Peck",
         "damage": 1,
         "damage_ascension": null,
-        "intent": "ATTACK"
+        "intent": "ATTACK",
+        "hits": 5,
+        "block": null
       },
       {
         "id": "GO_AIRBORNE",
         "name": "Go Airborne",
         "damage": null,
         "damage_ascension": null,
-        "intent": "UNKNOWN"
+        "intent": "UNKNOWN",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "SWOOP",
         "name": "Swoop",
         "damage": 12,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage_ascension": 14,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "STUNNED",
         "name": "Stunned",
         "damage": null,
         "damage_ascension": null,
-        "intent": "STUN"
+        "intent": "STUN",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "HEADBUTT",
         "name": "Headbutt",
         "damage": 3,
         "damage_ascension": null,
-        "intent": "ATTACK"
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "CAW",
         "name": "Caw",
         "damage": null,
         "damage_ascension": null,
-        "intent": "BUFF"
+        "intent": "BUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -421,22 +493,28 @@
         "id": "SLASH",
         "name": "Slash",
         "damage": 12,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage_ascension": 14,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "PROTECT",
         "name": "Protect",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEFEND"
+        "intent": "DEFEND",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "FURY",
         "name": "Fury",
         "damage": 6,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage_ascension": 7,
+        "intent": "ATTACK",
+        "hits": 3,
+        "block": null
       }
     ],
     "image_url": null
@@ -454,51 +532,65 @@
       {
         "id": "HEAVY_SLASH",
         "name": "Heavy Slash",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 16,
+        "damage_ascension": 18,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "DEFENSIVE_STANCE",
         "name": "Defensive Stance",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEFEND_BUFF"
+        "intent": "DEFEND_BUFF",
+        "hits": 1,
+        "block": 15
       },
       {
         "id": "EXECUTE",
         "name": "Execute",
-        "damage": null,
+        "damage": 10,
         "damage_ascension": null,
-        "intent": "ATTACK"
+        "intent": "ATTACK",
+        "hits": 2,
+        "block": null
       },
       {
         "id": "FACE_SLAP",
         "name": "Face Slap",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK_DEBUFF"
+        "damage": 12,
+        "damage_ascension": 14,
+        "intent": "ATTACK_DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "GLOAT",
         "name": "Gloat",
         "damage": null,
         "damage_ascension": null,
-        "intent": "BUFF"
+        "intent": "BUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "TAUNT",
         "name": "Taunt",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEBUFF"
+        "intent": "DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "ANGER",
         "name": "Anger",
         "damage": null,
         "damage_ascension": null,
-        "intent": "BUFF"
+        "intent": "BUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -517,36 +609,46 @@
         "id": "ZAP",
         "name": "Zap",
         "damage": 18,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage_ascension": 21,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "DRAIN",
         "name": "Drain",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEBUFF"
+        "intent": "DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "DEBILITATE",
         "name": "Debilitate",
         "damage": 10,
-        "damage_ascension": null,
-        "intent": "ATTACK_DEBUFF"
+        "damage_ascension": 12,
+        "intent": "ATTACK_DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "HEX",
         "name": "Hex",
         "damage": null,
         "damage_ascension": null,
-        "intent": "STRONG_DEBUFF"
+        "intent": "STRONG_DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "POKE",
         "name": "Poke",
         "damage": 5,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage_ascension": 6,
+        "intent": "ATTACK",
+        "hits": 2,
+        "block": null
       }
     ],
     "image_url": null
@@ -564,30 +666,38 @@
       {
         "id": "BLOOD_SHOTS",
         "name": "Blood Shots",
-        "damage": null,
+        "damage": 2,
         "damage_ascension": null,
-        "intent": "ATTACK"
+        "intent": "ATTACK",
+        "hits": 12,
+        "block": null
       },
       {
         "id": "ECHO_ATTACK",
         "name": "Echo Attack",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 40,
+        "damage_ascension": 45,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "DEBILITATE",
         "name": "Debilitate",
         "damage": null,
         "damage_ascension": null,
-        "intent": "STRONG_DEBUFF"
+        "intent": "STRONG_DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "GAIN_ONE_STRENGTH",
         "name": "Gain One Strength",
         "damage": null,
         "damage_ascension": null,
-        "intent": "BUFF"
+        "intent": "BUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -605,16 +715,20 @@
       {
         "id": "DARK_STRIKE",
         "name": "Dark Strike",
-        "damage": null,
+        "damage": 6,
         "damage_ascension": null,
-        "intent": "ATTACK"
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "INCANTATION",
         "name": "Incantation",
         "damage": null,
         "damage_ascension": null,
-        "intent": "BUFF"
+        "intent": "BUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -624,24 +738,28 @@
     "name": "Dagger",
     "type": "Normal",
     "act": "beyond",
-    "min_hp": null,
-    "max_hp": null,
+    "min_hp": 20,
+    "max_hp": 25,
     "min_hp_ascension": null,
     "max_hp_ascension": null,
     "moves": [
       {
         "id": "WOUND",
         "name": "Wound",
-        "damage": null,
+        "damage": 9,
         "damage_ascension": null,
-        "intent": "ATTACK_DEBUFF"
+        "intent": "ATTACK_DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "EXPLODE",
         "name": "Explode",
-        "damage": null,
+        "damage": 25,
         "damage_ascension": null,
-        "intent": "ATTACK"
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -659,37 +777,47 @@
       {
         "id": "CHOMP",
         "name": "Chomp",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 8,
+        "damage_ascension": 9,
+        "intent": "ATTACK",
+        "hits": 2,
+        "block": null
       },
       {
         "id": "HARDEN",
         "name": "Harden",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEFEND"
+        "intent": "DEFEND",
+        "hits": 1,
+        "block": 12
       },
       {
         "id": "NIP",
         "name": "Nip",
         "damage": null,
         "damage_ascension": null,
-        "intent": "ATTACK"
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "COUNT",
         "name": "Count",
         "damage": null,
         "damage_ascension": null,
-        "intent": "UNKNOWN"
+        "intent": "UNKNOWN",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "REINCARNATE",
         "name": "Reincarnate",
         "damage": null,
         "damage_ascension": null,
-        "intent": "BUFF"
+        "intent": "BUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -697,7 +825,7 @@
   {
     "id": "DECA",
     "name": "Deca",
-    "type": "Normal",
+    "type": "Boss",
     "act": "beyond",
     "min_hp": 250,
     "max_hp": 250,
@@ -708,15 +836,19 @@
         "id": "BEAM",
         "name": "Beam",
         "damage": 10,
-        "damage_ascension": null,
-        "intent": "ATTACK_DEBUFF"
+        "damage_ascension": 12,
+        "intent": "ATTACK_DEBUFF",
+        "hits": 2,
+        "block": null
       },
       {
         "id": "SQUARE_OF_PROTECTION",
         "name": "Square Of Protection",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEFEND"
+        "intent": "DEFEND",
+        "hits": 1,
+        "block": 16
       }
     ],
     "image_url": null
@@ -724,7 +856,7 @@
   {
     "id": "DONU",
     "name": "Donu",
-    "type": "Normal",
+    "type": "Boss",
     "act": "beyond",
     "min_hp": 250,
     "max_hp": 250,
@@ -735,15 +867,19 @@
         "id": "BEAM",
         "name": "Beam",
         "damage": 10,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage_ascension": 12,
+        "intent": "ATTACK",
+        "hits": 2,
+        "block": null
       },
       {
         "id": "CIRCLE_OF_PROTECTION",
-        "name": "Circle Of Protection",
+        "name": "Circle of Power",
         "damage": null,
         "damage_ascension": null,
-        "intent": "BUFF"
+        "intent": "BUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -762,15 +898,19 @@
         "id": "ATTACK",
         "name": "Attack",
         "damage": 9,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage_ascension": 11,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "BLOCK",
         "name": "Block",
         "damage": null,
         "damage_ascension": null,
-        "intent": "UNKNOWN"
+        "intent": "UNKNOWN",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -790,14 +930,18 @@
         "name": "Bite",
         "damage": 6,
         "damage_ascension": null,
-        "intent": "ATTACK"
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "GROW",
         "name": "Grow",
         "damage": null,
         "damage_ascension": null,
-        "intent": "BUFF"
+        "intent": "BUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -817,14 +961,18 @@
         "name": "Bite",
         "damage": null,
         "damage_ascension": null,
-        "intent": "ATTACK"
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "WEAKEN",
         "name": "Spit Web",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEBUFF"
+        "intent": "DEBUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -844,14 +992,18 @@
         "name": "Bite",
         "damage": null,
         "damage_ascension": null,
-        "intent": "ATTACK"
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "STRENGTHEN",
         "name": "Grow",
         "damage": null,
         "damage_ascension": null,
-        "intent": "BUFF"
+        "intent": "BUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -859,7 +1011,7 @@
   {
     "id": "GIANTHEAD",
     "name": "Giant Head",
-    "type": "Boss",
+    "type": "Elite",
     "act": "beyond",
     "min_hp": 500,
     "max_hp": 500,
@@ -871,21 +1023,27 @@
         "name": "Glare",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEBUFF"
+        "intent": "DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "IT_IS_TIME",
         "name": "It Is Time",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 5,
+        "damage_ascension": 15,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "COUNT",
         "name": "Count",
         "damage": 13,
         "damage_ascension": null,
-        "intent": "ATTACK"
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -903,16 +1061,20 @@
       {
         "id": "BLUNT",
         "name": "Smash",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK_DEBUFF"
+        "damage": 4,
+        "damage_ascension": 5,
+        "intent": "ATTACK_DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "MOVE_99",
         "name": "Move 99",
         "damage": null,
         "damage_ascension": null,
-        "intent": "ESCAPE"
+        "intent": "ESCAPE",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -920,7 +1082,7 @@
   {
     "id": "GREMLINLEADER",
     "name": "Gremlin Leader",
-    "type": "Normal",
+    "type": "Elite",
     "act": "city",
     "min_hp": 140,
     "max_hp": 148,
@@ -929,24 +1091,30 @@
     "moves": [
       {
         "id": "RALLY",
-        "name": "Rally",
+        "name": "Rally!",
         "damage": null,
         "damage_ascension": null,
-        "intent": "UNKNOWN"
+        "intent": "UNKNOWN",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "ENCOURAGE",
         "name": "Encourage",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEFEND_BUFF"
+        "intent": "DEFEND_BUFF",
+        "hits": 1,
+        "block": 6
       },
       {
         "id": "STAB",
         "name": "Stab",
-        "damage": null,
+        "damage": 6,
         "damage_ascension": null,
-        "intent": "ATTACK"
+        "intent": "ATTACK",
+        "hits": 3,
+        "block": null
       }
     ],
     "image_url": null
@@ -964,23 +1132,29 @@
       {
         "id": "BULL_RUSH",
         "name": "Bull Rush",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 14,
+        "damage_ascension": 16,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "SKULL_BASH",
         "name": "Skull Bash",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 6,
+        "damage_ascension": 8,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "BELLOW",
         "name": "Bellow",
         "damage": null,
         "damage_ascension": null,
-        "intent": "BUFF"
+        "intent": "BUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -998,16 +1172,20 @@
       {
         "id": "PUNCTURE",
         "name": "Puncture",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 9,
+        "damage_ascension": 10,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "MOVE_99",
         "name": "Move 99",
         "damage": null,
         "damage_ascension": null,
-        "intent": "ESCAPE"
+        "intent": "ESCAPE",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -1027,21 +1205,27 @@
         "name": "Protect",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEFEND"
+        "intent": "DEFEND",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "BASH",
         "name": "Shield Bash",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 6,
+        "damage_ascension": 8,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "MOVE_99",
         "name": "Move 99",
         "damage": null,
         "damage_ascension": null,
-        "intent": "ESCAPE"
+        "intent": "ESCAPE",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -1059,16 +1243,20 @@
       {
         "id": "SCRATCH",
         "name": "Scratch",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 4,
+        "damage_ascension": 5,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "MOVE_99",
         "name": "Move 99",
         "damage": null,
         "damage_ascension": null,
-        "intent": "ESCAPE"
+        "intent": "ESCAPE",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -1086,23 +1274,29 @@
       {
         "id": "DOPE_MAGIC",
         "name": "Ultimate Blast",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 25,
+        "damage_ascension": 30,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "CHARGE",
         "name": "Charging",
         "damage": null,
         "damage_ascension": null,
-        "intent": "UNKNOWN"
+        "intent": "UNKNOWN",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "MOVE_99",
         "name": "Move 99",
         "damage": null,
         "damage_ascension": null,
-        "intent": "ESCAPE"
+        "intent": "ESCAPE",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -1120,23 +1314,29 @@
       {
         "id": "ATTACK",
         "name": "Attack",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK_DEBUFF"
+        "damage": 8,
+        "damage_ascension": 9,
+        "intent": "ATTACK_DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "HEAL",
         "name": "Heal",
         "damage": null,
         "damage_ascension": null,
-        "intent": "BUFF"
+        "intent": "BUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "BUFF",
         "name": "Buff",
         "damage": null,
         "damage_ascension": null,
-        "intent": "BUFF"
+        "intent": "BUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -1154,44 +1354,56 @@
       {
         "id": "DIVIDER",
         "name": "Divider",
-        "damage": null,
+        "damage": -1,
         "damage_ascension": null,
-        "intent": "ATTACK"
+        "intent": "ATTACK",
+        "hits": 6,
+        "block": null
       },
       {
         "id": "TACKLE",
         "name": "Tackle",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 5,
+        "damage_ascension": 6,
+        "intent": "ATTACK",
+        "hits": 2,
+        "block": null
       },
       {
         "id": "INFLAME",
         "name": "Inflame",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEFEND_BUFF"
+        "intent": "DEFEND_BUFF",
+        "hits": 1,
+        "block": 12
       },
       {
         "id": "SEAR",
         "name": "Sear",
         "damage": 6,
         "damage_ascension": null,
-        "intent": "ATTACK_DEBUFF"
+        "intent": "ATTACK_DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "ACTIVATE",
         "name": "Activate",
         "damage": null,
         "damage_ascension": null,
-        "intent": "UNKNOWN"
+        "intent": "UNKNOWN",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "INFERNO",
         "name": "Inferno",
         "damage": 2,
-        "damage_ascension": null,
-        "intent": "ATTACK_DEBUFF"
+        "damage_ascension": 3,
+        "intent": "ATTACK_DEBUFF",
+        "hits": 6,
+        "block": null
       }
     ],
     "image_url": null
@@ -1234,22 +1446,28 @@
         "id": "CHOMP",
         "name": "Chomp",
         "damage": 11,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage_ascension": 12,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "BELLOW",
         "name": "Bellow",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEFEND_BUFF"
+        "intent": "DEFEND_BUFF",
+        "hits": 1,
+        "block": 6
       },
       {
         "id": "THRASH",
         "name": "Thrash",
         "damage": 7,
         "damage_ascension": null,
-        "intent": "ATTACK_DEFEND"
+        "intent": "ATTACK_DEFEND",
+        "hits": 1,
+        "block": 5
       }
     ],
     "image_url": null
@@ -1266,31 +1484,39 @@
     "moves": [
       {
         "id": "DEBUFF",
-        "name": "Debuff",
+        "name": "Siphon Soul",
         "damage": null,
         "damage_ascension": null,
-        "intent": "STRONG_DEBUFF"
+        "intent": "STRONG_DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "STRONG_ATK",
         "name": "Strong Atk",
         "damage": 18,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage_ascension": 20,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "OPEN",
         "name": "Open",
         "damage": null,
         "damage_ascension": null,
-        "intent": "STUN"
+        "intent": "STUN",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "IDLE",
         "name": "Idle",
         "damage": null,
         "damage_ascension": null,
-        "intent": "SLEEP"
+        "intent": "SLEEP",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -1308,16 +1534,20 @@
       {
         "id": "MUG",
         "name": "Mug",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 10,
+        "damage_ascension": 11,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "SMOKE_BOMB",
         "name": "Smoke Bomb",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEFEND"
+        "intent": "DEFEND",
+        "hits": 1,
+        "block": 6
       }
     ],
     "image_url": null
@@ -1337,28 +1567,36 @@
         "name": "Roar",
         "damage": null,
         "damage_ascension": null,
-        "intent": "STRONG_DEBUFF"
+        "intent": "STRONG_DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "SLAM",
         "name": "Slam",
         "damage": 25,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage_ascension": 30,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "DROOL",
         "name": "Drool",
         "damage": null,
         "damage_ascension": null,
-        "intent": "BUFF"
+        "intent": "BUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "NOMNOMNOM",
         "name": "Nomnomnom",
-        "damage": null,
+        "damage": 5,
         "damage_ascension": null,
-        "intent": "ATTACK"
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -1376,16 +1614,20 @@
       {
         "id": "MUG",
         "name": "Mug",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 10,
+        "damage_ascension": 11,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "SMOKE_BOMB",
         "name": "Smoke Bomb",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEFEND"
+        "intent": "DEFEND",
+        "hits": 1,
+        "block": 28
       }
     ],
     "image_url": null
@@ -1393,7 +1635,7 @@
   {
     "id": "NEMESIS",
     "name": "Nemesis",
-    "type": "Boss",
+    "type": "Elite",
     "act": "beyond",
     "min_hp": 185,
     "max_hp": 185,
@@ -1403,23 +1645,29 @@
       {
         "id": "TRI_ATTACK",
         "name": "Tri Attack",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 6,
+        "damage_ascension": 7,
+        "intent": "ATTACK",
+        "hits": 3,
+        "block": null
       },
       {
         "id": "SCYTHE",
         "name": "Scythe",
         "damage": 45,
         "damage_ascension": null,
-        "intent": "ATTACK"
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "TRI_BURN",
         "name": "Tri Burn",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEBUFF"
+        "intent": "DEBUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -1437,16 +1685,20 @@
       {
         "id": "LASER",
         "name": "Laser",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK_DEBUFF"
+        "damage": 10,
+        "damage_ascension": 11,
+        "intent": "ATTACK_DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "CLAW",
         "name": "Claw",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 15,
+        "damage_ascension": 16,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -1465,22 +1717,28 @@
         "id": "SNAKE_STRIKE",
         "name": "Snake Strike",
         "damage": 13,
-        "damage_ascension": null,
-        "intent": "ATTACK_DEBUFF"
+        "damage_ascension": 16,
+        "intent": "ATTACK_DEBUFF",
+        "hits": 2,
+        "block": null
       },
       {
         "id": "SPAWN_DAGGER",
         "name": "Spawn Dagger",
         "damage": null,
         "damage_ascension": null,
-        "intent": "UNKNOWN"
+        "intent": "UNKNOWN",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "BIG_BITE",
         "name": "Big Bite",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 30,
+        "damage_ascension": 34,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -1500,14 +1758,18 @@
         "name": "Daze",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEBUFF"
+        "intent": "DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "ATTACK",
         "name": "Attack",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 11,
+        "damage_ascension": 13,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -1515,7 +1777,7 @@
   {
     "id": "SENTRY",
     "name": "Sentry",
-    "type": "Normal",
+    "type": "Elite",
     "act": "exordium",
     "min_hp": 38,
     "max_hp": 42,
@@ -1527,14 +1789,18 @@
         "name": "Bolt",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEBUFF"
+        "intent": "DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "BEAM",
         "name": "Beam",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 9,
+        "damage_ascension": 10,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -1552,23 +1818,29 @@
       {
         "id": "QUICK_TACKLE",
         "name": "Quick Tackle",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 16,
+        "damage_ascension": 18,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "CONSTRICT",
         "name": "Constrict",
         "damage": null,
         "damage_ascension": null,
-        "intent": "STRONG_DEBUFF"
+        "intent": "STRONG_DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "SMASH",
         "name": "Smash",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 22,
+        "damage_ascension": 25,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -1587,29 +1859,37 @@
         "id": "FELL",
         "name": "Fell",
         "damage": 18,
-        "damage_ascension": null,
-        "intent": "ATTACK_DEBUFF"
+        "damage_ascension": 21,
+        "intent": "ATTACK_DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "DOUBLE_STRIKE",
         "name": "Double Strike",
         "damage": 6,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage_ascension": 7,
+        "intent": "ATTACK",
+        "hits": 2,
+        "block": null
       },
       {
         "id": "LIFE_SUCK",
         "name": "Life Suck",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK_BUFF"
+        "damage": 10,
+        "damage_ascension": 12,
+        "intent": "ATTACK_BUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "STUNNED",
         "name": "Stunned",
         "damage": null,
         "damage_ascension": null,
-        "intent": "STUN"
+        "intent": "STUN",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -1628,15 +1908,19 @@
         "id": "STAB",
         "name": "Stab",
         "damage": 12,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage_ascension": 13,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "RAKE",
         "name": "Rake",
         "damage": 7,
-        "damage_ascension": null,
-        "intent": "ATTACK_DEBUFF"
+        "damage_ascension": 8,
+        "intent": "ATTACK_DEBUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -1656,7 +1940,9 @@
         "name": "Scouring Whip",
         "damage": 7,
         "damage_ascension": null,
-        "intent": "ATTACK_DEBUFF"
+        "intent": "ATTACK_DEBUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -1675,22 +1961,28 @@
         "id": "STAB",
         "name": "Stab",
         "damage": 13,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage_ascension": 14,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "ENTANGLE",
         "name": "Entangle",
         "damage": null,
         "damage_ascension": null,
-        "intent": "STRONG_DEBUFF"
+        "intent": "STRONG_DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "SCRAPE",
         "name": "Scrape",
         "damage": 8,
-        "damage_ascension": null,
-        "intent": "ATTACK_DEBUFF"
+        "damage_ascension": 9,
+        "intent": "ATTACK_DEBUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -1708,30 +2000,38 @@
       {
         "id": "SLAM",
         "name": "Slam",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 35,
+        "damage_ascension": 38,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "PREP_SLAM",
-        "name": "Prep Slam",
+        "name": "Preparing",
         "damage": null,
         "damage_ascension": null,
-        "intent": "UNKNOWN"
+        "intent": "UNKNOWN",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "SPLIT",
         "name": "Split",
         "damage": null,
         "damage_ascension": null,
-        "intent": "UNKNOWN"
+        "intent": "UNKNOWN",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "STICKY",
-        "name": "Sticky",
+        "name": "Goop Spray",
         "damage": null,
         "damage_ascension": null,
-        "intent": "STRONG_DEBUFF"
+        "intent": "STRONG_DEBUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -1749,16 +2049,20 @@
       {
         "id": "CHOMPY_CHOMPS",
         "name": "Chompy Chomps",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 7,
+        "damage_ascension": 8,
+        "intent": "ATTACK",
+        "hits": 3,
+        "block": null
       },
       {
         "id": "SPORES",
         "name": "Enfeebling Spores",
         "damage": null,
         "damage_ascension": null,
-        "intent": "STRONG_DEBUFF"
+        "intent": "STRONG_DEBUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -1778,21 +2082,27 @@
         "name": "Perplexing Glare",
         "damage": null,
         "damage_ascension": null,
-        "intent": "STRONG_DEBUFF"
+        "intent": "STRONG_DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "BITE",
         "name": "Bite",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 15,
+        "damage_ascension": 18,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "TAIL",
         "name": "Tail Whip",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK_DEBUFF"
+        "damage": 8,
+        "damage_ascension": 10,
+        "intent": "ATTACK_DEBUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -1810,30 +2120,38 @@
       {
         "id": "BIG_ATTACK",
         "name": "Big Attack",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 10,
+        "damage_ascension": 11,
+        "intent": "ATTACK",
+        "hits": 2,
+        "block": null
       },
       {
         "id": "INITIAL_BLOCK_GAIN",
         "name": "Initial Block Gain",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEFEND"
+        "intent": "DEFEND",
+        "hits": 1,
+        "block": 95
       },
       {
         "id": "BLOCK_ATTACK",
         "name": "Block Attack",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK_DEFEND"
+        "damage": 10,
+        "damage_ascension": 11,
+        "intent": "ATTACK_DEFEND",
+        "hits": 1,
+        "block": 15
       },
       {
         "id": "FRAIL_ATTACK",
         "name": "Frail Attack",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK_DEBUFF"
+        "damage": 10,
+        "damage_ascension": 11,
+        "intent": "ATTACK_DEBUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -1852,15 +2170,19 @@
         "id": "ATTACK",
         "name": "Attack",
         "damage": 7,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage_ascension": 9,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "BUFF_THORNS",
         "name": "Buff Thorns",
         "damage": null,
         "damage_ascension": null,
-        "intent": "BUFF"
+        "intent": "BUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -1878,23 +2200,29 @@
       {
         "id": "FLAME_TACKLE",
         "name": "Flame Tackle",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK_DEBUFF"
+        "damage": 16,
+        "damage_ascension": 18,
+        "intent": "ATTACK_DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "SPLIT",
         "name": "Split",
         "damage": null,
         "damage_ascension": null,
-        "intent": "UNKNOWN"
+        "intent": "UNKNOWN",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "FRAIL_LICK",
-        "name": "Frail Lick",
+        "name": "Lick",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEBUFF"
+        "intent": "DEBUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -1912,16 +2240,20 @@
       {
         "id": "FLAME_TACKLE",
         "name": "Flame Tackle",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK_DEBUFF"
+        "damage": 8,
+        "damage_ascension": 10,
+        "intent": "ATTACK_DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "FRAIL_LICK",
-        "name": "Frail Lick",
+        "name": "Lick",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEBUFF"
+        "intent": "DEBUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -1939,9 +2271,11 @@
       {
         "id": "TACKLE",
         "name": "Tackle",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 5,
+        "damage_ascension": 6,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -1949,7 +2283,7 @@
   {
     "id": "SPIRESHIELD",
     "name": "Spire Shield",
-    "type": "Normal",
+    "type": "Elite",
     "act": "ending",
     "min_hp": 110,
     "max_hp": 110,
@@ -1959,23 +2293,29 @@
       {
         "id": "BASH",
         "name": "Bash",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK_DEBUFF"
+        "damage": 12,
+        "damage_ascension": 14,
+        "intent": "ATTACK_DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "FORTIFY",
         "name": "Fortify",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEFEND"
+        "intent": "DEFEND",
+        "hits": 1,
+        "block": 30
       },
       {
         "id": "SMASH",
         "name": "Smash",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK_DEFEND"
+        "damage": 34,
+        "damage_ascension": 38,
+        "intent": "ATTACK_DEFEND",
+        "hits": 1,
+        "block": 99
       }
     ],
     "image_url": null
@@ -1983,7 +2323,7 @@
   {
     "id": "SPIRESPEAR",
     "name": "Spire Spear",
-    "type": "Normal",
+    "type": "Elite",
     "act": "ending",
     "min_hp": 160,
     "max_hp": 160,
@@ -1993,23 +2333,29 @@
       {
         "id": "BURN_STRIKE",
         "name": "Burn Strike",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK_DEBUFF"
+        "damage": 5,
+        "damage_ascension": 6,
+        "intent": "ATTACK_DEBUFF",
+        "hits": 2,
+        "block": null
       },
       {
         "id": "PIERCER",
         "name": "Piercer",
         "damage": null,
         "damage_ascension": null,
-        "intent": "BUFF"
+        "intent": "BUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "SKEWER",
         "name": "Skewer",
-        "damage": null,
+        "damage": 10,
         "damage_ascension": null,
-        "intent": "ATTACK"
+        "intent": "ATTACK",
+        "hits": 3,
+        "block": null
       }
     ],
     "image_url": null
@@ -2017,7 +2363,7 @@
   {
     "id": "THECOLLECTOR",
     "name": "The Collector",
-    "type": "Minion",
+    "type": "Boss",
     "act": "city",
     "min_hp": 282,
     "max_hp": 282,
@@ -2029,35 +2375,45 @@
         "name": "Spawn",
         "damage": null,
         "damage_ascension": null,
-        "intent": "UNKNOWN"
+        "intent": "UNKNOWN",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "FIREBALL",
         "name": "Fireball",
         "damage": 18,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage_ascension": 21,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "BUFF",
         "name": "Buff",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEFEND_BUFF"
+        "intent": "DEFEND_BUFF",
+        "hits": 1,
+        "block": 35
       },
       {
         "id": "MEGA_DEBUFF",
         "name": "Mega Debuff",
         "damage": null,
         "damage_ascension": null,
-        "intent": "STRONG_DEBUFF"
+        "intent": "STRONG_DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "REVIVE",
         "name": "Revive",
         "damage": null,
         "damage_ascension": null,
-        "intent": "UNKNOWN"
+        "intent": "UNKNOWN",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -2074,52 +2430,66 @@
     "moves": [
       {
         "id": "CLOSE_UP",
-        "name": "Close Up",
+        "name": "Defensive Mode",
         "damage": null,
         "damage_ascension": null,
-        "intent": "BUFF"
+        "intent": "BUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "FIERCE_BASH",
         "name": "Fierce Bash",
         "damage": 32,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage_ascension": 36,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "ROLL_ATTACK",
         "name": "Roll Attack",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 9,
+        "damage_ascension": 10,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "TWIN_SLAM",
         "name": "Twin Slam",
-        "damage": null,
+        "damage": 8,
         "damage_ascension": null,
-        "intent": "ATTACK_BUFF"
+        "intent": "ATTACK_BUFF",
+        "hits": 2,
+        "block": null
       },
       {
         "id": "WHIRLWIND",
         "name": "Whirlwind",
-        "damage": null,
+        "damage": 5,
         "damage_ascension": null,
-        "intent": "ATTACK"
+        "intent": "ATTACK",
+        "hits": 4,
+        "block": null
       },
       {
         "id": "CHARGE_UP",
-        "name": "Charge Up",
+        "name": "Charging Up",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEFEND"
+        "intent": "DEFEND",
+        "hits": 1,
+        "block": 9
       },
       {
         "id": "VENT_STEAM",
         "name": "Vent Steam",
         "damage": null,
         "damage_ascension": null,
-        "intent": "STRONG_DEBUFF"
+        "intent": "STRONG_DEBUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -2139,28 +2509,36 @@
         "name": "Reverberate",
         "damage": null,
         "damage_ascension": null,
-        "intent": "ATTACK"
+        "intent": "ATTACK",
+        "hits": 3,
+        "block": null
       },
       {
         "id": "RIPPLE",
         "name": "Ripple",
         "damage": null,
         "damage_ascension": null,
-        "intent": "DEFEND_DEBUFF"
+        "intent": "DEFEND_DEBUFF",
+        "hits": 1,
+        "block": 20
       },
       {
         "id": "HEAD_SLAM",
         "name": "Head Slam",
-        "damage": 26,
+        "damage": null,
         "damage_ascension": null,
-        "intent": "ATTACK_DEBUFF"
+        "intent": "ATTACK_DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "HASTE",
         "name": "Haste",
         "damage": null,
         "damage_ascension": null,
-        "intent": "BUFF"
+        "intent": "BUFF",
+        "hits": 1,
+        "block": 26
       }
     ],
     "image_url": null
@@ -2178,9 +2556,11 @@
       {
         "id": "TACKLE",
         "name": "Tackle",
-        "damage": null,
+        "damage": 7,
         "damage_ascension": null,
-        "intent": "ATTACK"
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -2198,9 +2578,11 @@
       {
         "id": "ATTACK",
         "name": "Attack",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 30,
+        "damage_ascension": 40,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
@@ -2218,37 +2600,47 @@
       {
         "id": "BIG_HIT",
         "name": "Big Hit",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 32,
+        "damage_ascension": 38,
+        "intent": "ATTACK",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "MULTI_HIT",
         "name": "Multi Hit",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK"
+        "damage": 7,
+        "damage_ascension": 9,
+        "intent": "ATTACK",
+        "hits": 3,
+        "block": null
       },
       {
         "id": "ATTACK_BLOCK",
         "name": "Attack Block",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK_DEFEND"
+        "damage": 15,
+        "damage_ascension": 16,
+        "intent": "ATTACK_DEFEND",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "ATTACK_DEBUFF",
         "name": "Attack Debuff",
-        "damage": null,
-        "damage_ascension": null,
-        "intent": "ATTACK_DEBUFF"
+        "damage": 10,
+        "damage_ascension": 12,
+        "intent": "ATTACK_DEBUFF",
+        "hits": 1,
+        "block": null
       },
       {
         "id": "MEGA_DEBUFF",
         "name": "Mega Debuff",
         "damage": null,
         "damage_ascension": null,
-        "intent": "STRONG_DEBUFF"
+        "intent": "STRONG_DEBUFF",
+        "hits": 1,
+        "block": null
       }
     ],
     "image_url": null
