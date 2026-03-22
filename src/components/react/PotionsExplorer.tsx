@@ -30,7 +30,7 @@ export default function PotionsExplorer(props: { game?: string; rarities: string
   const { data, loading, error } = useApiList<Potion>(`/api/${game}/potions`, {
     q: q || null,
     rarity: rarity || null,
-    locale: locale !== 'en' ? locale : null,
+    lang: locale !== 'en' ? locale : null,
     offset,
     limit,
   }, props.initial);

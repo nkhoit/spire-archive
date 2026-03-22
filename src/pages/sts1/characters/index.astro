@@ -29,7 +29,7 @@ const positionMap: Record<string, string> = {
   WATCHER: 'center 30%',
 };
 
-const descMap: Record<string, string> = {
+const descKeys: Record<string, string> = {
   IRONCLAD: 'A hardened warrior who wields powerful attacks and self-healing. Starts with the most HP and excels at strength-based strategies.',
   THE_SILENT: 'A deadly huntress who relies on poisons, shivs, and card draw. Starts with the largest deck and a focus on discard synergies.',
   DEFECT: 'An ancient automaton that channels elemental Orbs for passive and active effects. Unique focus on Lightning, Frost, Dark, and Plasma orbs.',
@@ -52,7 +52,7 @@ function deckSummary(deck: string[]) {
   <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
     {data.characters.map((ch) => {
       const color = colorMap[ch.id] ?? '';
-      const desc = descMap[ch.id] ?? '';
+      const desc = t(descKeys[ch.id] ?? '', locale);
       const deck = deckSummary((ch as any).starting_deck ?? []);
       const relic = (ch as any).starting_relic;
       return (
@@ -67,7 +67,7 @@ function deckSummary(deck: string[]) {
             </div>
             <p class="mt-3 text-sm text-slate-300">{desc}</p>
             {relic && (
-              <div class="mt-3 text-xs text-slate-400">Starting relic: <span class="text-slate-200">{relic}</span></div>
+              <div class="mt-3 text-xs text-slate-400">{t('Starting Relic', locale)}: <span class="text-slate-200">{relic}</span></div>
             )}
           </div>
         </a>

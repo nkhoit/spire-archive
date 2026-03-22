@@ -28,7 +28,7 @@ export default function EventsExplorer(props: { game?: string; initial?: ApiResp
     q: q || null,
     offset,
     limit,
-    locale: locale !== 'en' ? locale : null,
+    lang: locale !== 'en' ? locale : null,
   }, props.initial);
 
   const resp = data ?? { total: 0, offset, limit, items: [] };

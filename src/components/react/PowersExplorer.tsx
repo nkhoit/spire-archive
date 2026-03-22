@@ -25,7 +25,7 @@ export default function PowersExplorer(props: { game?: string; locale?: string }
   const { data, loading, error } = useApiList<Power>(`/api/${game}/effects`, {
     q: q || null,
     type: type || null,
-    locale: locale !== 'en' ? locale : null,
+    lang: locale !== 'en' ? locale : null,
     offset,
     limit,
   });
