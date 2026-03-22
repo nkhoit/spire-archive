@@ -74,14 +74,11 @@ const navLinks = game ? [
     <header class="sticky top-0 z-10 border-b border-white/[0.06] bg-[#0a0d13]/70 backdrop-blur-xl">
       <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3">
         <div class="flex items-center gap-2 min-w-0">
-          <a href={langPrefix + '/' + game} class="font-['KreonGame','Kreon',serif] text-base font-bold tracking-wide text-amber-200/90 hover:text-amber-100 transition-colors shrink-0">Spire Archive</a>
+          <a href="/" class="font-['KreonGame','Kreon',serif] text-base font-bold tracking-wide text-amber-200/90 hover:text-amber-100 transition-colors shrink-0">Spire Archive</a>
           {game && (
             <>
               <span class="text-white/15 hidden sm:inline">|</span>
               <a href={langPrefix + '/' + game} class="text-sm font-medium text-slate-300 hover:text-white transition-colors hidden sm:inline">{gameLabels[game]}</a>
-              <a href={langPrefix + (game === 'sts1' ? '/sts2' : '/sts1')} class="shrink-0 rounded-full bg-white/[0.06] border border-white/[0.08] px-2.5 py-0.5 text-xs font-medium text-slate-500 hover:text-slate-200 hover:bg-white/10 hover:border-white/15 transition-all">
-                {game === 'sts1' ? 'STS2' : 'STS1'} →
-              </a>
             </>
           )}
         </div>
@@ -97,6 +94,14 @@ const navLinks = game ? [
                 {navLinks.map((link) => (
                   <a class="block px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-white/[0.06] transition-colors" href={link.href}>{link.label}</a>
                 ))}
+                {game && (
+                  <>
+                    <div class="my-1.5 border-t border-white/[0.06]"></div>
+                    <a class="block px-4 py-2 text-sm text-slate-400 hover:text-white hover:bg-white/[0.06] transition-colors" href={langPrefix + (game === 'sts1' ? '/sts2' : '/sts1')}>
+                      Switch to {game === 'sts1' ? 'STS2' : 'STS1'}
+                    </a>
+                  </>
+                )}
               </nav>
             </div>
         )}
