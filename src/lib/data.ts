@@ -434,11 +434,19 @@ async function applyLocalization(game: string, locale: Locale, base: Dataset): P
     if (!l) return e;
 
     const choices = l.choices
-      ? e.choices.map((choice: EventChoice, index: number) => ({
-          ...choice,
-          ...(l.choices?.[index]?.name && { name: l.choices[index].name }),
-          ...(l.choices?.[index]?.description && { description: l.choices[index].description }),
-        }))
+      ? e.choices.map((choice: EventChoice, index: number) => {
+          const lc = l.choices?.[index];
+          if (!lc) return choice;
+          // STS1: choices are strings; STS2: choices are objects with name/description
+          if (typeof lc === 'string') {
+            return { ...choice, option: lc };
+          }
+          return {
+            ...choice,
+            ...(lc.name && { name: lc.name }),
+            ...(lc.description && { description: lc.description }),
+          };
+        })
       : e.choices;
 
     const pages = l.pages
