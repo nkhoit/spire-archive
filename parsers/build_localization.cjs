@@ -131,19 +131,34 @@ function cleanSts2Markup(text) {
 
 // ---- STS1 ----
 
+/** Convert e.g. "Body Slam" or "A Thousand Cuts" → "BODY_SLAM" / "A_THOUSAND_CUTS" */
+function toUpperSnake(s) {
+  return s.toUpperCase().replace(/[^A-Z0-9_]/g, '_').replace(/_+/g, '_').replace(/^_|_$/g, '');
+}
+
+// Load STS1 card data for resolving !D!/!B!/!M! tokens
+const sts1CardsPath = path.join(LOCALIZATION_OUTPUT_DIR, 'sts1', 'cards.json');
+const sts1CardData = fs.existsSync(sts1CardsPath) ? JSON.parse(fs.readFileSync(sts1CardsPath, 'utf8')) : [];
+const sts1CardMap = {};
+for (const c of sts1CardData) {
+  sts1CardMap[c.id] = c;
+}
+
 function buildSts1Lang(gameLang) {
   const dir = path.join(STS1_LOC_DIR, gameLang);
   const result = { cards: {}, relics: {}, powers: {}, potions: {}, events: {}, keywords: {} };
 
   // Cards: { "Bash": { "NAME": "...", "DESCRIPTION": "..." } }
-  // Need to map STS1 card IDs (PascalCase) to our IDs (UPPER_SNAKE)
+  // Map STS1 card IDs (PascalCase/spaces) to our IDs (UPPER_SNAKE)
   const cards = JSON.parse(fs.readFileSync(path.join(dir, 'cards.json'), 'utf8'));
   for (const [id, data] of Object.entries(cards)) {
     if (!data.NAME) continue;
-    result.cards[id] = {
+    const cardId = toUpperSnake(id);
+    const cardInfo = sts1CardMap[cardId];
+    result.cards[cardId] = {
       name: data.NAME,
-      description: cleanSts1Description(data.DESCRIPTION || ''),
-      ...(data.UPGRADE_DESCRIPTION && { upgradeDescription: cleanSts1Description(data.UPGRADE_DESCRIPTION) }),
+      description: cleanSts1Description(data.DESCRIPTION || '', cardInfo),
+      ...(data.UPGRADE_DESCRIPTION && { upgradeDescription: cleanSts1Description(data.UPGRADE_DESCRIPTION, cardInfo, true) }),
     };
   }
 
@@ -151,9 +166,9 @@ function buildSts1Lang(gameLang) {
   const relics = JSON.parse(fs.readFileSync(path.join(dir, 'relics.json'), 'utf8'));
   for (const [id, data] of Object.entries(relics)) {
     if (!data.NAME) continue;
-    result.relics[id] = {
+    result.relics[toUpperSnake(id)] = {
       name: data.NAME,
-      description: (data.DESCRIPTIONS || []).join(''),
+      description: cleanSts1Description((data.DESCRIPTIONS || []).join('')),
       ...(data.FLAVOR && { flavor: data.FLAVOR }),
     };
   }
@@ -162,9 +177,9 @@ function buildSts1Lang(gameLang) {
   const powers = JSON.parse(fs.readFileSync(path.join(dir, 'powers.json'), 'utf8'));
   for (const [id, data] of Object.entries(powers)) {
     if (!data.NAME) continue;
-    result.powers[id] = {
+    result.powers[toUpperSnake(id)] = {
       name: data.NAME,
-      description: (data.DESCRIPTIONS || []).join(''),
+      description: cleanSts1Description((data.DESCRIPTIONS || []).join('')),
     };
   }
 
@@ -172,9 +187,9 @@ function buildSts1Lang(gameLang) {
   const potions = JSON.parse(fs.readFileSync(path.join(dir, 'potions.json'), 'utf8'));
   for (const [id, data] of Object.entries(potions)) {
     if (!data.NAME) continue;
-    result.potions[id] = {
+    result.potions[toUpperSnake(id)] = {
       name: data.NAME,
-      description: (data.DESCRIPTIONS || []).join(''),
+      description: cleanSts1Description((data.DESCRIPTIONS || []).join('')),
     };
   }
 
@@ -182,7 +197,7 @@ function buildSts1Lang(gameLang) {
   const events = JSON.parse(fs.readFileSync(path.join(dir, 'events.json'), 'utf8'));
   for (const [id, data] of Object.entries(events)) {
     if (!data.NAME) continue;
-    result.events[id] = {
+    result.events[toUpperSnake(id)] = {
       name: data.NAME,
       description: (data.DESCRIPTIONS || []).join(''),
       ...(data.OPTIONS && { options: data.OPTIONS }),
@@ -202,9 +217,22 @@ function buildSts1Lang(gameLang) {
   return result;
 }
 
-function cleanSts1Description(text) {
+function cleanSts1Description(text, cardInfo, isUpgrade) {
   // NL = newline in STS1
-  return text.replace(/ NL /g, '\n').replace(/NL/g, '\n');
+  text = text.replace(/ NL /g, '\n').replace(/NL/g, '\n');
+  // Strip color codes: #b, #y, #r, #g, #p, ~, @, *
+  text = text.replace(/#[byrgp]/g, '').replace(/[~@*]/g, '');
+  // Resolve !D!, !B!, !M! with card data values
+  if (cardInfo) {
+    const upg = isUpgrade && cardInfo.upgrade;
+    const damage = upg?.damage ?? cardInfo.damage;
+    const block = upg?.block ?? cardInfo.block;
+    const magic = upg?.magic_number ?? cardInfo.magic_number;
+    if (damage != null) text = text.replace(/!D!/g, String(damage));
+    if (block != null) text = text.replace(/!B!/g, String(block));
+    if (magic != null) text = text.replace(/!M!/g, String(magic));
+  }
+  return text.trim();
 }
 
 // ---- Main ----
