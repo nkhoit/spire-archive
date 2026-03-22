@@ -333,6 +333,26 @@ function getVarsForId(id, category) {
   return vars;
 }
 
+// Runtime-only variable fallbacks: values that only exist at runtime in the game engine.
+// These are resolved to their canonical/default values for the static data browser.
+// Format: { 'category:ID': { 'VarName': 'value' } }
+const RUNTIME_VAR_FALLBACKS = {
+  // Enchantments: Amount varies by tier, English uses "X"
+  'enchantments:MOMENTUM': { Amount: 'X' },
+  'enchantments:NIMBLE': { Amount: 'X' },
+  'enchantments:SHARP': { Amount: 'X' },
+  'enchantments:SWIFT': { Amount: 'X' },
+  'enchantments:VIGOROUS': { Amount: 'X' },
+  // Powers: Amount is runtime-set
+  'powers:KNOCKDOWN_POWER': { Amount: 'X' },  // multiplier varies
+  'powers:DRUM_OF_BATTLE_POWER': { Amount: '1' },  // "the top card" in EN
+  'powers:TAG_TEAM_POWER': { Amount: '1' },  // DisplayAmount => 1 in CS
+  'powers:OUTBREAK_POWER': { OutbreakPower: '11' },  // PowerVar<OutbreakPower>(11m) in Outbreak.cs
+  // Relics: Combats is a runtime counter, default 1
+  'relics:BONE_TEA': { Combats: '1' },
+  'relics:EMBER_TEA': { Combats: '1' },
+};
+
 // Process all locale files
 const langs = fs.readdirSync(LOCALE_DIR).filter(f => f.endsWith('.json')).map(f => f.replace('.json',''));
 console.log(`Processing ${langs.length} languages: ${langs.join(', ')}`);
@@ -399,7 +419,8 @@ for (const lang of langs) {
     for (const [itemId, itemData] of Object.entries(items)) {
       totalItems++;
       const rawVars = getVarsForId(itemId, category);
-      const vars = resolveEntityRefs(rawVars, entityNameMap);
+      const fallbacks = RUNTIME_VAR_FALLBACKS[`${category}:${itemId}`] || {};
+      const vars = { ...fallbacks, ...resolveEntityRefs(rawVars, entityNameMap) };
       const unresolved = new Set();
       let touched = false;
 

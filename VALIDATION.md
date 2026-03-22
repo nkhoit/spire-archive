@@ -83,6 +83,9 @@ All warnings are either runtime-only variables or game-source typos. **Zero are 
 
 
 
+
+
+
 ## Validation Run Results
 
 sts1/cards/en: ✅ (360 items)
@@ -181,19 +184,14 @@ sts2/relics/de: ✅ (288 items)
 sts2/relics/es: ✅ (288 items)
 sts2/relics/fr: ✅ (288 items)
 sts2/relics/it: ✅ (288 items)
-sts2/relics/ja: ⚠️ (288 items)
-  WARN: relics BONE_TEA has unresolved vars in ja: ['{Combats}']
-  WARN: relics EMBER_TEA has unresolved vars in ja: ['{Combats}']
+sts2/relics/ja: ✅ (288 items)
 sts2/relics/ko: ✅ (288 items)
 sts2/relics/pl: ✅ (288 items)
 sts2/relics/pt: ✅ (288 items)
 sts2/relics/ru: ✅ (288 items)
-sts2/relics/th: ⚠️ (288 items)
-  WARN: relics BONE_TEA has unresolved vars in th: ['{Combats}']
+sts2/relics/th: ✅ (288 items)
 sts2/relics/tr: ✅ (288 items)
-sts2/relics/zh: ⚠️ (288 items)
-  WARN: relics BONE_TEA has unresolved vars in zh: ['{Combats}']
-  WARN: relics EMBER_TEA has unresolved vars in zh: ['{Combats}']
+sts2/relics/zh: ✅ (288 items)
 sts2/potions/en: ✅ (63 items)
 sts2/potions/de: ✅ (63 items)
 sts2/potions/es: ✅ (63 items)
@@ -234,105 +232,28 @@ sts2/events/th: ✅ (66 items)
 sts2/events/tr: ✅ (66 items)
 sts2/events/zh: ✅ (66 items)
 sts2/effects/en: ✅ (241 items)
-sts2/effects/de: ⚠️ (241 items)
-  WARN: effects KNOCKDOWN_POWER has unresolved vars in de: ['{Amount}']
-sts2/effects/es: ⚠️ (241 items)
-  WARN: effects KNOCKDOWN_POWER has unresolved vars in es: ['{Amount}']
-sts2/effects/fr: ⚠️ (241 items)
-  WARN: effects KNOCKDOWN_POWER has unresolved vars in fr: ['{Amount}']
-  WARN: effects TAG_TEAM_POWER has unresolved vars in fr: ['{Amount}']
-sts2/effects/it: ⚠️ (241 items)
-  WARN: effects KNOCKDOWN_POWER has unresolved vars in it: ['{Amount}']
-sts2/effects/ja: ⚠️ (241 items)
-  WARN: effects DRUM_OF_BATTLE_POWER has unresolved vars in ja: ['{Amount}']
-  WARN: effects KNOCKDOWN_POWER has unresolved vars in ja: ['{Amount}']
-  WARN: effects TAG_TEAM_POWER has unresolved vars in ja: ['{Amount}']
-sts2/effects/ko: ⚠️ (241 items)
-  WARN: effects KNOCKDOWN_POWER has unresolved vars in ko: ['{Amount}']
-sts2/effects/pl: ⚠️ (241 items)
-  WARN: effects KNOCKDOWN_POWER has unresolved vars in pl: ['{Amount}']
-  WARN: effects OUTBREAK_POWER has unresolved vars in pl: ['{OutbreakPower:diff()}']
-sts2/effects/pt: ⚠️ (241 items)
-  WARN: effects KNOCKDOWN_POWER has unresolved vars in pt: ['{Amount}']
-sts2/effects/ru: ⚠️ (241 items)
-  WARN: effects KNOCKDOWN_POWER has unresolved vars in ru: ['{Amount}']
-sts2/effects/th: ⚠️ (241 items)
-  WARN: effects KNOCKDOWN_POWER has unresolved vars in th: ['{Amount}']
-sts2/effects/tr: ⚠️ (241 items)
-  WARN: effects KNOCKDOWN_POWER has unresolved vars in tr: ['{Amount}']
-sts2/effects/zh: ⚠️ (241 items)
-  WARN: effects DRUM_OF_BATTLE_POWER has unresolved vars in zh: ['{Amount}']
-  WARN: effects KNOCKDOWN_POWER has unresolved vars in zh: ['{Amount}']
-  WARN: effects TAG_TEAM_POWER has unresolved vars in zh: ['{Amount}']
+sts2/effects/de: ✅ (241 items)
+sts2/effects/es: ✅ (241 items)
+sts2/effects/fr: ✅ (241 items)
+sts2/effects/it: ✅ (241 items)
+sts2/effects/ja: ✅ (241 items)
+sts2/effects/ko: ✅ (241 items)
+sts2/effects/pl: ✅ (241 items)
+sts2/effects/pt: ✅ (241 items)
+sts2/effects/ru: ✅ (241 items)
+sts2/effects/th: ✅ (241 items)
+sts2/effects/tr: ✅ (241 items)
+sts2/effects/zh: ✅ (241 items)
 sts2/enchantments/en: ✅ (22 items)
-sts2/enchantments/de: ⚠️ (22 items)
-  WARN: enchantments MOMENTUM has unresolved vars in de: ['{Amount}']
-  WARN: enchantments NIMBLE has unresolved vars in de: ['{Amount}']
-  WARN: enchantments SHARP has unresolved vars in de: ['{Amount}']
-  WARN: enchantments SWIFT has unresolved vars in de: ['{Amount}']
-  WARN: enchantments VIGOROUS has unresolved vars in de: ['{Amount}']
-sts2/enchantments/es: ⚠️ (22 items)
-  WARN: enchantments MOMENTUM has unresolved vars in es: ['{Amount}']
-  WARN: enchantments NIMBLE has unresolved vars in es: ['{Amount}']
-  WARN: enchantments SHARP has unresolved vars in es: ['{Amount}']
-  WARN: enchantments SWIFT has unresolved vars in es: ['{Amount}']
-  WARN: enchantments VIGOROUS has unresolved vars in es: ['{Amount}']
-sts2/enchantments/fr: ⚠️ (22 items)
-  WARN: enchantments MOMENTUM has unresolved vars in fr: ['{Amount}']
-  WARN: enchantments NIMBLE has unresolved vars in fr: ['{Amount}']
-  WARN: enchantments SHARP has unresolved vars in fr: ['{Amount}']
-  WARN: enchantments SWIFT has unresolved vars in fr: ['{Amount}']
-  WARN: enchantments VIGOROUS has unresolved vars in fr: ['{Amount}']
-sts2/enchantments/it: ⚠️ (22 items)
-  WARN: enchantments MOMENTUM has unresolved vars in it: ['{Amount}']
-  WARN: enchantments NIMBLE has unresolved vars in it: ['{Amount}']
-  WARN: enchantments SHARP has unresolved vars in it: ['{Amount}']
-  WARN: enchantments SWIFT has unresolved vars in it: ['{Amount}']
-  WARN: enchantments VIGOROUS has unresolved vars in it: ['{Amount}']
-sts2/enchantments/ja: ⚠️ (22 items)
-  WARN: enchantments MOMENTUM has unresolved vars in ja: ['{Amount}']
-  WARN: enchantments NIMBLE has unresolved vars in ja: ['{Amount}']
-  WARN: enchantments SHARP has unresolved vars in ja: ['{Amount}']
-  WARN: enchantments SWIFT has unresolved vars in ja: ['{Amount}']
-  WARN: enchantments VIGOROUS has unresolved vars in ja: ['{Amount}']
-sts2/enchantments/ko: ⚠️ (22 items)
-  WARN: enchantments MOMENTUM has unresolved vars in ko: ['{Amount}']
-  WARN: enchantments NIMBLE has unresolved vars in ko: ['{Amount}']
-  WARN: enchantments SHARP has unresolved vars in ko: ['{Amount}']
-  WARN: enchantments SWIFT has unresolved vars in ko: ['{Amount}']
-  WARN: enchantments VIGOROUS has unresolved vars in ko: ['{Amount}']
-sts2/enchantments/pl: ⚠️ (22 items)
-  WARN: enchantments MOMENTUM has unresolved vars in pl: ['{Amount}']
-  WARN: enchantments NIMBLE has unresolved vars in pl: ['{Amount}']
-  WARN: enchantments SHARP has unresolved vars in pl: ['{Amount}']
-  WARN: enchantments VIGOROUS has unresolved vars in pl: ['{Amount}']
-sts2/enchantments/pt: ⚠️ (22 items)
-  WARN: enchantments MOMENTUM has unresolved vars in pt: ['{Amount}']
-  WARN: enchantments NIMBLE has unresolved vars in pt: ['{Amount}']
-  WARN: enchantments SHARP has unresolved vars in pt: ['{Amount}']
-  WARN: enchantments SWIFT has unresolved vars in pt: ['{Amount}']
-  WARN: enchantments VIGOROUS has unresolved vars in pt: ['{Amount}']
-sts2/enchantments/ru: ⚠️ (22 items)
-  WARN: enchantments MOMENTUM has unresolved vars in ru: ['{Amount}']
-  WARN: enchantments NIMBLE has unresolved vars in ru: ['{Amount}']
-  WARN: enchantments SHARP has unresolved vars in ru: ['{Amount}']
-  WARN: enchantments SWIFT has unresolved vars in ru: ['{Amount}']
-  WARN: enchantments VIGOROUS has unresolved vars in ru: ['{Amount}']
-sts2/enchantments/th: ⚠️ (22 items)
-  WARN: enchantments MOMENTUM has unresolved vars in th: ['{Amount}']
-  WARN: enchantments NIMBLE has unresolved vars in th: ['{Amount}']
-  WARN: enchantments SHARP has unresolved vars in th: ['{Amount}']
-  WARN: enchantments SWIFT has unresolved vars in th: ['{Amount}']
-  WARN: enchantments VIGOROUS has unresolved vars in th: ['{Amount}']
-sts2/enchantments/tr: ⚠️ (22 items)
-  WARN: enchantments MOMENTUM has unresolved vars in tr: ['{Amount}']
-  WARN: enchantments NIMBLE has unresolved vars in tr: ['{Amount}']
-  WARN: enchantments SHARP has unresolved vars in tr: ['{Amount}']
-  WARN: enchantments SWIFT has unresolved vars in tr: ['{Amount}']
-  WARN: enchantments VIGOROUS has unresolved vars in tr: ['{Amount}']
-sts2/enchantments/zh: ⚠️ (22 items)
-  WARN: enchantments MOMENTUM has unresolved vars in zh: ['{Amount}']
-  WARN: enchantments NIMBLE has unresolved vars in zh: ['{Amount}']
-  WARN: enchantments SHARP has unresolved vars in zh: ['{Amount}']
-  WARN: enchantments SWIFT has unresolved vars in zh: ['{Amount}']
-  WARN: enchantments VIGOROUS has unresolved vars in zh: ['{Amount}']
+sts2/enchantments/de: ✅ (22 items)
+sts2/enchantments/es: ✅ (22 items)
+sts2/enchantments/fr: ✅ (22 items)
+sts2/enchantments/it: ✅ (22 items)
+sts2/enchantments/ja: ✅ (22 items)
+sts2/enchantments/ko: ✅ (22 items)
+sts2/enchantments/pl: ✅ (22 items)
+sts2/enchantments/pt: ✅ (22 items)
+sts2/enchantments/ru: ✅ (22 items)
+sts2/enchantments/th: ✅ (22 items)
+sts2/enchantments/tr: ✅ (22 items)
+sts2/enchantments/zh: ✅ (22 items)
