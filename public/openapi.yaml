@@ -254,6 +254,147 @@ components:
         type:
           type: string
           enum: [buff, debuff]
+    STS1Card:
+      type: object
+      properties:
+        id:
+          type: string
+          example: ACCURACY
+        name:
+          type: string
+          example: Accuracy
+        description:
+          type: string
+          example: "Shivs deal 4 additional damage."
+        cost:
+          type: integer
+          nullable: true
+        type:
+          type: string
+          enum: [Attack, Skill, Power, Status, Curse]
+        rarity:
+          type: string
+          enum: [Basic, Common, Uncommon, Rare, Special]
+        target:
+          type: string
+        color:
+          type: string
+          enum: [ironclad, silent, defect, watcher, neutral, colorless]
+        damage:
+          type: integer
+          nullable: true
+        block:
+          type: integer
+          nullable: true
+        magic_number:
+          type: integer
+          nullable: true
+        hit_count:
+          type: integer
+          nullable: true
+        exhaust:
+          type: boolean
+        ethereal:
+          type: boolean
+        image_url:
+          type: string
+          nullable: true
+    STS1Relic:
+      type: object
+      properties:
+        id:
+          type: string
+          example: AKABEKO
+        name:
+          type: string
+          example: Akabeko
+        description:
+          type: string
+        flavor:
+          type: string
+          nullable: true
+        tier:
+          type: string
+          enum: [Starter, Common, Uncommon, Rare, Boss, Event, Shop, Special]
+        color:
+          type: string
+          nullable: true
+        icon:
+          type: string
+          nullable: true
+    STS1Potion:
+      type: object
+      properties:
+        id:
+          type: string
+          example: AMBROSIA
+        name:
+          type: string
+        description:
+          type: string
+        rarity:
+          type: string
+          enum: [Common, Uncommon, Rare]
+        color:
+          type: string
+          nullable: true
+        is_thrown:
+          type: boolean
+        target:
+          type: string
+        icon:
+          type: string
+          nullable: true
+    STS1Monster:
+      type: object
+      properties:
+        id:
+          type: string
+          example: ACIDSLIME_L
+        name:
+          type: string
+        type:
+          type: string
+          enum: [Normal, Elite, Boss]
+        act:
+          type: string
+        min_hp:
+          type: integer
+        max_hp:
+          type: integer
+        min_hp_ascension:
+          type: integer
+          nullable: true
+        max_hp_ascension:
+          type: integer
+          nullable: true
+        moves:
+          type: array
+          items:
+            type: object
+    STS1Event:
+      type: object
+      properties:
+        id:
+          type: string
+          example: BIG_FISH
+        name:
+          type: string
+        act:
+          type: string
+        description:
+          type: string
+        choices:
+          type: array
+          items:
+            type: object
+            properties:
+              option:
+                type: string
+              description:
+                type: string
+              outcome:
+                type: string
 
 paths:
   /api/sts2/cards:
@@ -691,3 +832,489 @@ paths:
                           type: string
                         game:
                           type: string
+
+  # ── STS1 Endpoints ──
+
+  /api/sts1/cards:
+    get:
+      summary: List cards
+      tags: [STS1 — Cards]
+      parameters:
+        - $ref: '#/components/parameters/lang'
+        - $ref: '#/components/parameters/q'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/limit'
+        - name: color
+          in: query
+          schema:
+            type: string
+            enum: [ironclad, silent, defect, watcher, neutral, colorless]
+        - name: type
+          in: query
+          schema:
+            type: string
+            enum: [Attack, Skill, Power, Status, Curse]
+        - name: rarity
+          in: query
+          schema:
+            type: string
+            enum: [Basic, Common, Uncommon, Rare, Special]
+        - name: cost
+          in: query
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Paginated card list
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/PaginatedResponse'
+                  - type: object
+                    properties:
+                      items:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/STS1Card'
+
+  /api/sts1/cards/{id}:
+    get:
+      summary: Get a card
+      tags: [STS1 — Cards]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          example: ACCURACY
+        - $ref: '#/components/parameters/lang'
+      responses:
+        '200':
+          description: Card details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/STS1Card'
+        '404':
+          description: Card not found
+
+  /api/sts1/relics:
+    get:
+      summary: List relics
+      tags: [STS1 — Relics]
+      parameters:
+        - $ref: '#/components/parameters/q'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/limit'
+        - name: tier
+          in: query
+          schema:
+            type: string
+            enum: [Starter, Common, Uncommon, Rare, Boss, Event, Shop, Special]
+        - name: color
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Paginated relic list
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/PaginatedResponse'
+                  - type: object
+                    properties:
+                      items:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/STS1Relic'
+
+  /api/sts1/relics/{id}:
+    get:
+      summary: Get a relic
+      tags: [STS1 — Relics]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          example: AKABEKO
+      responses:
+        '200':
+          description: Relic details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/STS1Relic'
+        '404':
+          description: Relic not found
+
+  /api/sts1/potions:
+    get:
+      summary: List potions
+      tags: [STS1 — Potions]
+      parameters:
+        - $ref: '#/components/parameters/q'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/limit'
+        - name: rarity
+          in: query
+          schema:
+            type: string
+            enum: [Common, Uncommon, Rare]
+      responses:
+        '200':
+          description: Paginated potion list
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/PaginatedResponse'
+                  - type: object
+                    properties:
+                      items:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/STS1Potion'
+
+  /api/sts1/potions/{id}:
+    get:
+      summary: Get a potion
+      tags: [STS1 — Potions]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          example: AMBROSIA
+      responses:
+        '200':
+          description: Potion details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/STS1Potion'
+        '404':
+          description: Potion not found
+
+  /api/sts1/monsters:
+    get:
+      summary: List monsters
+      tags: [STS1 — Monsters]
+      parameters:
+        - $ref: '#/components/parameters/q'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/limit'
+        - name: act
+          in: query
+          schema:
+            type: string
+        - name: type
+          in: query
+          schema:
+            type: string
+            enum: [Normal, Elite, Boss]
+      responses:
+        '200':
+          description: Paginated monster list
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/PaginatedResponse'
+                  - type: object
+                    properties:
+                      items:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/STS1Monster'
+
+  /api/sts1/monsters/{id}:
+    get:
+      summary: Get a monster
+      tags: [STS1 — Monsters]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          example: ACIDSLIME_L
+      responses:
+        '200':
+          description: Monster details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/STS1Monster'
+        '404':
+          description: Monster not found
+
+  /api/sts1/events:
+    get:
+      summary: List events
+      tags: [STS1 — Events]
+      parameters:
+        - $ref: '#/components/parameters/q'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/limit'
+        - name: act
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Paginated event list
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/PaginatedResponse'
+                  - type: object
+                    properties:
+                      items:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/STS1Event'
+
+  /api/sts1/events/{id}:
+    get:
+      summary: Get an event
+      tags: [STS1 — Events]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          example: BIG_FISH
+      responses:
+        '200':
+          description: Event details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/STS1Event'
+        '404':
+          description: Event not found
+
+  /api/sts1/effects:
+    get:
+      summary: List buffs & debuffs
+      tags: [STS1 — Effects]
+      parameters:
+        - $ref: '#/components/parameters/q'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/limit'
+        - name: type
+          in: query
+          schema:
+            type: string
+            enum: [buff, debuff]
+      responses:
+        '200':
+          description: Paginated effect list
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/PaginatedResponse'
+                  - type: object
+                    properties:
+                      items:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/Power'
+
+  /api/sts1/powers:
+    get:
+      summary: List powers (alias for effects)
+      tags: [STS1 — Effects]
+      parameters:
+        - $ref: '#/components/parameters/q'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/limit'
+        - name: type
+          in: query
+          schema:
+            type: string
+            enum: [buff, debuff]
+      responses:
+        '200':
+          description: Paginated power list
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/PaginatedResponse'
+                  - type: object
+                    properties:
+                      items:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/Power'
+
+  /api/sts1/search:
+    get:
+      summary: Full-text search
+      description: Search across all STS1 entity types
+      tags: [STS1 — Search]
+      parameters:
+        - name: q
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 20
+            maximum: 200
+      responses:
+        '200':
+          description: Search results
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  query:
+                    type: string
+                  total:
+                    type: integer
+                  results:
+                    type: array
+                    items:
+                      type: object
+
+  /api/sts1/reference/characters:
+    get:
+      summary: List characters
+      tags: [STS1 — Reference]
+      responses:
+        '200':
+          description: All playable characters with starting decks and relics
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  total:
+                    type: integer
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        name:
+                          type: string
+                        hp:
+                          type: integer
+                        energy_per_turn:
+                          type: integer
+                        starting_deck:
+                          type: array
+                          items:
+                            type: string
+
+  /api/sts1/reference/keywords:
+    get:
+      summary: List keywords
+      tags: [STS1 — Reference]
+      responses:
+        '200':
+          description: All game keywords with descriptions
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  total:
+                    type: integer
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        names:
+                          type: array
+                          items:
+                            type: string
+                        description:
+                          type: string
+
+  /api/sts1/reference/orbs:
+    get:
+      summary: List orbs
+      tags: [STS1 — Reference]
+      responses:
+        '200':
+          description: Defect orb types
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  total:
+                    type: integer
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        name:
+                          type: string
+                        passive_amount:
+                          type: integer
+                          nullable: true
+                        evoke_amount:
+                          type: integer
+                          nullable: true
+
+  /api/sts1/reference/stances:
+    get:
+      summary: List stances
+      tags: [STS1 — Reference]
+      responses:
+        '200':
+          description: Watcher stances
+          content:
+            application/json:
+              schema:
+                type: object
+
+  /api/sts1/reference/blights:
+    get:
+      summary: List blights
+      tags: [STS1 — Reference]
+      responses:
+        '200':
+          description: Blights from daily/custom runs
+          content:
+            application/json:
+              schema:
+                type: object
+
+  /api/sts1/reference/achievements:
+    get:
+      summary: List achievements
+      tags: [STS1 — Reference]
+      responses:
+        '200':
+          description: All Steam achievements
+          content:
+            application/json:
+              schema:
+                type: object
