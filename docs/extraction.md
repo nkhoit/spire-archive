@@ -86,7 +86,7 @@ Decompiled source location: `~/code/sts2-research/decompiled/`
 ## Step 4: Run the Parser Pipeline
 
 ```bash
-cd ~/code/sts1-data
+cd ~/code/spire-archive
 bash parsers/update.sh
 ```
 
@@ -119,15 +119,33 @@ bash parsers/update.sh \
 | `STS2_PCK_DIR` | `/tmp/sts2-pck` | Extracted PCK directory |
 | `STS2_DECOMPILED_DIR` | `~/code/sts2-research/decompiled` | Decompiled C# source |
 
-## Step 5: Verify
+## Step 5: Validate
 
 ```bash
-# Run regression tests
-npx playwright test
+# Run the data validator across all entities and locales
+python3 parsers/validate.py --all
+```
 
-# Check dev server
-npx astro dev --port 4323
-# Browse: http://localhost:4323/sts2/cards
+This compares API output against parsed JSON source data for both games across all 13 locales. Expect all checks to pass (✅). If warnings appear:
+
+- **New `{Amount}` in enchantments/powers** — add to `RUNTIME_VAR_FALLBACKS` in `parsers/resolve_localized_vars.cjs`
+- **New `{:diff()}` patterns** — should auto-resolve (generic inference logic)
+- **New `{Var:diff)}` typos** — should auto-correct (generic regex pre-processing)
+- **New runtime-only vars** — trace the C# source to find the default value, add a fallback entry
+
+> **Note**: The dev server must be running for validation. Start it with `npx astro dev --port 4321` first.
+
+## Step 6: Build & Test
+
+```bash
+# Type check
+npx astro check
+
+# Full build
+npm run build
+
+# Playwright smoke tests
+npx playwright test
 ```
 
 ### What to Check After an Update
@@ -139,7 +157,7 @@ npx astro dev --port 4323
 - Monster pages if new monsters added
 - Patch notes page has the new entry
 
-## Step 6: Extract New Card Images (if needed)
+## Step 7: Extract New Card Images (if needed)
 
 Card portraits are in the PCK at `images/cards/`:
 ```bash
@@ -153,7 +171,9 @@ cp /tmp/sts2-pck/images/cards/*.png public/images/sts2/cards/
 ## Troubleshooting
 
 ### "unresolved template variable" warnings
-A few variables are runtime-only (e.g., `{CombatsLeft}`, `{RandomRelic}`). These can't be resolved statically — they stay as `{VarName}` in the output.
+Some variables are runtime-only (set when the game applies a power/enchantment, not in source). These are handled by `RUNTIME_VAR_FALLBACKS` in `parsers/resolve_localized_vars.cjs` — a lookup table mapping entity IDs to their default values derived from C# source.
+
+If a new patch adds entities with runtime vars, the validator will flag them. Trace the C# source to find the canonical default and add a new fallback entry.
 
 ### New DynamicVar types
 If `resolve_sts2_vars.py` logs unknown var types, add them to the `VAR_TYPES` dict. Check the C# source for the var class definition.
@@ -167,13 +187,15 @@ Check `themes/fonts/{locale}/` in the PCK for any new scale transforms, then upd
 ## File Locations Summary
 
 ```
-~/code/sts1-data/              # Project root
-├── parsers/                   # All extraction/transform scripts
-│   ├── update.sh              # Pipeline orchestrator
-│   ├── config.cjs             # Shared config (paths)
-│   ├── config.py              # Python config
-│   └── subset_fonts.py        # Font subsetting
-├── data/sts2/                 # Generated JSON data
+~/code/spire-archive/             # Project root
+├── parsers/                      # All extraction/transform scripts
+│   ├── update.sh                 # Pipeline orchestrator
+│   ├── validate.py               # Data validation (all entities × locales)
+│   ├── config.cjs                # Shared config (paths)
+│   ├── config.py                 # Python config
+│   ├── resolve_localized_vars.cjs # Template variable resolution (incl. RUNTIME_VAR_FALLBACKS)
+│   └── subset_fonts.py           # Font subsetting
+├── data/sts2/                    # Generated JSON data
 │   ├── cards.json
 │   ├── relics.json
 │   ├── potions.json
@@ -185,9 +207,9 @@ Check `themes/fonts/{locale}/` in the PCK for any new scale transforms, then upd
 │   ├── keywords.json
 │   ├── patch_notes.json
 │   └── localization/{lang}.json
-├── public/fonts/              # Subsetted game fonts
-├── public/images/sts2/        # Game images
-└── docs/                      # This documentation
-    ├── extraction.md          # ← you are here
+├── public/fonts/                 # Subsetted game fonts
+├── public/images/sts2/           # Game images
+└── docs/                         # This documentation
+    ├── extraction.md             # ← you are here
     └── font-system.md
 ```
