@@ -7,7 +7,7 @@ function haystack(...parts: Array<string | null | undefined>) {
 }
 
 export const GET: APIRoute = async ({ url }) => {
-  const localeParam = getString(url, 'locale');
+  const localeParam = getString(url, 'lang');
   const locale: Locale | undefined = localeParam && SUPPORTED_LOCALES.includes(localeParam as Locale) ? localeParam as Locale : undefined;
   const q = getString(url, 'q')?.toLowerCase() ?? '';
   const limit = Math.min(200, Math.max(1, getNumber(url, 'limit') ?? 20));

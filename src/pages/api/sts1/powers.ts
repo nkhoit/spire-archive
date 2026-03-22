@@ -3,7 +3,7 @@ import { getData, type Locale, SUPPORTED_LOCALES } from '../../../lib/data';
 import { getPaging, getString, jsonResponse } from '../_util';
 
 export const GET: APIRoute = async ({ url }) => {
-  const localeParam = getString(url, 'locale') ?? getString(url, 'lang');
+  const localeParam = getString(url, 'lang');
   const locale: Locale = localeParam && SUPPORTED_LOCALES.includes(localeParam as Locale)
     ? localeParam as Locale
     : 'en';

@@ -5,7 +5,7 @@ import { getPaging, getString, jsonResponse } from '../_util';
 const ACT_ORDER: Record<string, number> = { exordium: 1, city: 2, beyond: 3, shrines: 4 };
 
 export const GET: APIRoute = async ({ url }) => {
-  const lang = (getString(url, 'locale') || 'en') as Locale;
+  const lang = (getString(url, 'lang') || 'en') as Locale;
   const locale = SUPPORTED_LOCALES.includes(lang) ? lang : 'en' as Locale;
   const { events } = await getData('sts2', locale);
 
