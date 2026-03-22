@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 PARSERS_DIR="$ROOT_DIR/parsers"
 
 while [[ $# -gt 0 ]]; do
@@ -43,12 +43,12 @@ TOTAL=12
 run_step 1 "$TOTAL" python3 "$PARSERS_DIR/sts2/parse_all.py"
 run_step 2 "$TOTAL" node "$PARSERS_DIR/sts2/parse_events.js"
 run_step 3 "$TOTAL" node "$PARSERS_DIR/sts2/parse_monsters.js"
-run_step 4 "$TOTAL" node "$PARSERS_DIR/shared/build_monster_data.cjs"
+run_step 4 "$TOTAL" node "$PARSERS_DIR/sts2/build_monster_data.cjs"
 run_step 5 "$TOTAL" python3 "$PARSERS_DIR/sts2/resolve_vars.py"
-run_step 6 "$TOTAL" node "$PARSERS_DIR/shared/build_localization.cjs"
-run_step 7 "$TOTAL" node "$PARSERS_DIR/shared/build_event_localization.cjs"
+run_step 6 "$TOTAL" node "$PARSERS_DIR/sts2/build_localization.cjs"
+run_step 7 "$TOTAL" node "$PARSERS_DIR/sts2/build_event_localization.cjs"
 run_step 8 "$TOTAL" node "$PARSERS_DIR/sts2/resolve_localized_vars.cjs"
-run_step 9 "$TOTAL" node "$PARSERS_DIR/shared/build_monster_localization.cjs"
+run_step 9 "$TOTAL" node "$PARSERS_DIR/sts2/build_monster_localization.cjs"
 run_step 10 "$TOTAL" node "$PARSERS_DIR/sts2/add_ancient_descriptions.cjs"
 run_step 11 "$TOTAL" node "$PARSERS_DIR/sts2/build_patch_notes.cjs"
 run_step 12 "$TOTAL" python3 "$PARSERS_DIR/subset_fonts.py"

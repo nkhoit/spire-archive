@@ -348,7 +348,7 @@
       "name": "Caos"
     },
     "CHARGE": {
-      "description": "Elige 2 carta de tu Pila de robo y Transfórmalas en\n",
+      "description": "Elige 2 carta de tu Pila de robo y Transfórmalas en\n{IfUpgraded:show:Golpe de esbirro+.",
       "name": "¡A LA CARGA!"
     },
     "CHARGE_BATTERY": {
@@ -1054,7 +1054,7 @@
       "name": "Tesoro oculto"
     },
     "HIDDEN_DAGGERS": {
-      "description": "Descarta 2 carta.\nAñade 2 ",
+      "description": "Descarta 2 carta.\nAñade 2 {IfUpgraded:show:Navaja+ a tu Mano.",
       "name": "Dagas ocultas"
     },
     "HIDDEN_GEM": {
@@ -5182,175 +5182,1098 @@
   },
   "events": {
     "ABYSSAL_BATHS": {
-      "name": "Termas abisales"
+      "name": "Balneario abisal",
+      "description": "Descubres una cámara solitaria.\n\nEl vapor se eleva desde pozas burbujeantes de líquido caliente que cambia de color con un ritmo hipnótico. Del techo cuelgan formaciones con percebes que gotean un líquido viscoso que sisea y se retuerce al tocar la superficie. El aire se siente pesado, cargado de sal y algo inequívocamente orgánico.\n\nAl acercarte al borde de la poza más grande, el líquido ondula. Las aguas borbotean con mayor intensidad, como si anticiparan tu inmersión.",
+      "choices": [
+        {
+          "name": "Abstenerse",
+          "description": "Recuperas 10 PV."
+        },
+        {
+          "name": "Sumergirse",
+          "description": "Obtienes 2 PV máx. Recibes 3 de daño."
+        }
+      ]
     },
     "AMALGAMATOR": {
-      "name": "Amalgamador"
+      "name": "Amalgamador",
+      "description": "¡CLANG! ¡¡¡CLANG!!!\n\nOyes ecos de metal contra metal al otro lado de una pared.\n\nAl apoyar la cabeza contra la pared para escuchar, esta se abre y revela a una imponente figura de seis brazos, la cual trabaja sin descanso.\nSu «cara» es un vórtice giratorio de sigilos brillantes que se mueven.\n\n—¿Alguien con un espíritu ascendente encontró mi taller? ¡A COMBINAR!",
+      "choices": [
+        {
+          "name": "Combinar cartas Defensa",
+          "description": "Eliminas 2 cartas Defensa. Agregas Defender definitivo al mazo."
+        },
+        {
+          "name": "Combinar cartas Golpe",
+          "description": "Eliminas 2 cartas Golpe. Agregas Golpe definitivo al mazo."
+        }
+      ]
     },
     "AROMA_OF_CHAOS": {
-      "name": "El aroma del Caos"
+      "name": "Aroma del caos",
+      "description": "Tras avanzar con afán entre una maleza espesa y llegar a un claro, te invade una nostalgia indescriptible.\n\nHay una mezcla de aromas florales, descomposición pútrida y algo completamente diferente. El olor se intensifica con cada paso y sientes como si el mundo a tu alrededor se estuviera deformando y retorciendo.\n\nTe abruma una sensación de caos cambiante y empiezas a perder la noción de quién eres.",
+      "choices": [
+        {
+          "name": "Dejarse llevar",
+          "description": "Transformas una carta en el mazo."
+        },
+        {
+          "name": "Mantener el control",
+          "description": "Mejoras una carta en el mazo."
+        }
+      ]
     },
     "BATTLEWORN_DUMMY": {
-      "name": "Muñeco de entrenamiento maltrecho"
+      "name": "Muñeco de entrenamiento maltrecho",
+      "description": "¡A medida que te acercas, comienza a gruñir, crepitar e iluminarse con un gran destello!\n\n—¡BRRR! ¡¡¡HORA DE ENTRENAR!!! ¡TIENES 3 TURNOS PARA DERROTARME!\nELIGE UNA OPCIÓN O ENFRENTA UNA HUMILLACIÓN LETAL.\nPresta atención antes de decidir.\n\nTras el aterrador mensaje, el muñeco lee atentamente las instrucciones detalladas.\n\n¿Cuál eliges?",
+      "choices": [
+        {
+          "name": "Opción 1",
+          "description": "Luchas contra un muñeco con 75 PV. Obtienes 1 poción al azar."
+        },
+        {
+          "name": "Opción 2",
+          "description": "Luchas contra un muñeco con 150 PV. Mejoras 2 cartas al azar."
+        },
+        {
+          "name": "Opción 3",
+          "description": "Luchas contra un muñeco con 300 PV. Obtienes una reliquia al azar."
+        }
+      ]
     },
     "BRAIN_LEECH": {
-      "name": "Parásito cerebral"
+      "name": "Sanguijuela cerebral",
+      "description": "*paf*\n\nSientes un dolor punzante en la coronilla y un pensamiento inunda tu mente.\n\n—¿¿¿COMPARTIRÁS TU CONOCIMIENTO???\n\nNo sabes cómo proceder.",
+      "choices": [
+        {
+          "name": "Arrancar la sanguijuela",
+          "description": "Pierdes 5 PV. Obtienes una recompensa de carta incolora."
+        },
+        {
+          "name": "Compartir conocimiento",
+          "description": "Eliges 1 de 5 cartas al azar para agregar al mazo."
+        }
+      ]
     },
     "BUGSLAYER": {
-      "name": "Triturabichos"
+      "name": "Aniquilainsectos",
+      "description": "Te estás defendiendo de un enjambre de insectos agresivos y, de repente, notas que un poderoso y rudo guerrero estuvo luchando a tu lado todo este tiempo.\n\nAl presentir la derrota, los insectos se dispersan. Miras hacia tu compañero de lucha.\n—¿Te gustaría recibir consejos para exterminar estas plagas?\n\nQué educado. Asientes y aceptas su oferta.",
+      "choices": [
+        {
+          "name": "Aprender la técnica Exterminio",
+          "description": "Agregas Exterminar al mazo."
+        },
+        {
+          "name": "Aprender la técnica Aplastabichos",
+          "description": "Agregas Espachurrar al mazo."
+        }
+      ]
     },
     "BYRDONIS_NEST": {
-      "name": "Nido de Japarónix"
+      "name": "Nido de japaronis",
+      "description": "Ves cómo una enorme bestia tambaleante persigue a un jáparo verde herido.\n\nEn el nicho del que huyo el jáparo, yace un huevo desprotegido y abandonado.\n\nTe gruñe el estómago...",
+      "choices": [
+        {
+          "name": "Comerse el huevo",
+          "description": "Obtienes 7 PV máx."
+        },
+        {
+          "name": "Robarse el huevo",
+          "description": "Agregas Huevo de Japarónix al mazo."
+        }
+      ]
     },
     "COLORFUL_PHILOSOPHERS": {
-      "name": "Filósofos cromáticos"
+      "name": "Filósofos coloridos",
+      "description": "Ante ti yace un espectáculo bastante épico.\nTres estatuas de colores diferentes se alzan sobre un estrado y debaten acaloradamente las implicancias filosóficas del color.\n\nMientras escuchas, tienes la sensación de que la cuestión más importante recae sobre qué color es EL MEJOR.\n\nIntervienes con tus reflexiones.",
+      "choices": [
+        {
+          "name": "El mejor color es el azul",
+          "description": "Obtienes 3 carta de El Defectuoso."
+        },
+        {
+          "name": "Igualdad",
+          "description": "Obtienes Fragmento prismático."
+        },
+        {
+          "name": "El mejor color es el rojo",
+          "description": "Obtienes 3 carta de El Blindado."
+        },
+        {
+          "name": "El mejor color es el rosa",
+          "description": "Obtienes 3 carta de La Necrodescarte."
+        },
+        {
+          "name": "El mejor color es el naranja",
+          "description": "Obtienes 3 carta de El Monarca."
+        },
+        {
+          "name": "El mejor color es el verde",
+          "description": "Obtienes 3 carta de La Silenciosa."
+        }
+      ]
     },
     "COLOSSAL_FLOWER": {
-      "name": "Flor gigantesca"
+      "name": "Flor colosal",
+      "description": "Una flor colosal crece sobre una montaña de huesos.\n\nMientras sus pétalos de color cambiante palpitan, percibes que en el centro hay un núcleo de polen poderoso, pero los pétalos ondulantes son afilados e impredecibles.\n\nPodrías tomar un poco del néctar dorado que se escurre, pero alcanzar el premio en el centro es muy tentador.",
+      "choices": [
+        {
+          "name": "Extraer néctar",
+          "description": "Obtienes X de oro."
+        },
+        {
+          "name": "Adentrarse a las profundidades",
+          "description": "Te adentras en las profundidades. Pierdes 5 PV."
+        }
+      ],
+      "pages": [
+        {
+          "description": "Una flor colosal crece sobre una montaña de huesos.\n\nMientras sus pétalos de color cambiante palpitan, percibes que en el centro hay un núcleo de polen poderoso, pero los pétalos ondulantes son afilados e impredecibles.\n\nPodrías tomar un poco del néctar dorado que se escurre, pero alcanzar el premio en el centro es muy tentador.",
+          "choices": [
+            {
+              "name": "Extraer néctar",
+              "description": "Obtienes X de oro."
+            },
+            {
+              "name": "Adentrarse a las profundidades",
+              "description": "Te adentras en las profundidades. Pierdes 5 PV."
+            }
+          ]
+        },
+        {
+          "description": "Pasas por una capa de pétalos afilados y recubiertos de una sustancia que te provoca un hormigueo en la piel. ¿Acaso anestesia tu dolor?\n\nQuizás por eso hay un montón de huesos aquí...",
+          "choices": [
+            {
+              "name": "Extraer néctar",
+              "description": "Obtienes X de oro."
+            },
+            {
+              "name": "Adentrarse mucho más en las profundidades",
+              "description": "Te adentras en las profundidades. Pierdes 6 PV."
+            }
+          ]
+        },
+        {
+          "description": "El hormigueo se convierte en una debilidad palpitante a medida que sigues avanzando.\n\nEsta flor quiere comerme. ¿Por qué me metí en ella?",
+          "choices": [
+            {
+              "name": "Extraer néctar",
+              "description": "Obtienes X de oro."
+            },
+            {
+              "name": "Adentrarse en el núcleo",
+              "description": "Pierdes 7 PV. Obtienes Núcleo polinoso."
+            }
+          ]
+        }
+      ]
     },
     "CRYSTAL_SPHERE": {
-      "name": "Esfera de cristal"
+      "name": "Bola de cristal",
+      "description": "—¡Predije que vendrías!\n\nUna voz ronca vocifera cuando entras en la cabaña mística.\n\n—Tu destino te trajo aquí. ¡¡Debemos revelar tu futuro y fortuna para que puedas SALVARNOS A TODOS!!\n—Bien, estas son las opciones de lectura de bola de cristal. También firma esta exención de responsabilidad —dice mientras saca una pluma y un pergamino.",
+      "choices": [
+        {
+          "name": "Pedir plan de pago",
+          "description": "Obtienes una carta Deuda. Puedes adivinar 6 veces."
+        },
+        {
+          "name": "Revelar el futuro",
+          "description": "Pagas 50 de oro. Puedes adivinar 3 veces."
+        }
+      ]
     },
     "DENSE_VEGETATION": {
-      "name": "Vegetación densa"
+      "name": "Vegetación densa",
+      "description": "Tras haber tomado el camino equivocado durante un buen rato, te encuentras en una espesa jungla de helechos, arbustos y enredaderas (muchísimas enredaderas). Tu cuerpo sucumbe ante el agotamiento y un pensamiento oscuro cruza por tu mente:\n\n—Te perdiste, no te preparaste y la inevitabilidad de la muerte se acerca.\n\n¿Qué haces?",
+      "choices": [
+        {
+          "name": "Descansar",
+          "description": "Recuperas X PV. Luchas contra algunos enemigos."
+        },
+        {
+          "name": "Avanzar a duras penas",
+          "description": "Quitas una carta del mazo. Pierdes 11 PV."
+        }
+      ]
     },
     "DOLL_ROOM": {
-      "name": "Sala de los muñecos"
+      "name": "Habitación de muñecas",
+      "description": "Entras en una habitación oculta.\n\nEstá repleta de una gran variedad de muñecas. Cada una es única, con expresiones que van desde la alegría hasta la tristeza. Además, sus atuendos abarcan siglos y reinos que trascienden el tuyo.\n\nUn coro de susurros suena cada vez más y más fuerte, hasta que las muñecas se gritan unas a otras y te llaman.\n\nDebes elegir una y marcharte de inmediato.",
+      "choices": [
+        {
+          "name": "Examinar cada una y toma la mejor decisión",
+          "description": "Pierdes 15 PV. Eliges 1 de 3 reliquias de muñeca."
+        },
+        {
+          "name": "Elegir al azar",
+          "description": "Obtienes una reliquia de muñeca al azar."
+        },
+        {
+          "name": "Tomarse un tiempo antes de decidir",
+          "description": "Pierdes 5 PV. Eliges 1 de 2 reliquias de muñeca."
+        }
+      ]
     },
     "DOORS_OF_LIGHT_AND_DARK": {
-      "name": "Portales de Luz y Oscuridad"
+      "name": "Puertas de luz y oscuridad",
+      "description": "Ahora hay una puerta donde momentos antes no había ninguna.\n\nEntras y encuentras dos puertas relucientes y un portero bien vestido.\n—¡Por fin tenemos visitas! Por favor, adelante. Elige una puerta, cualquiera.\n\n¿Seguimos en la Torre? ¿Cómo es que este lugar está tan limpio?",
+      "choices": [
+        {
+          "name": "Puerta oscura",
+          "description": "Quitas 1 carta del mazo."
+        },
+        {
+          "name": "Puerta luminosa",
+          "description": "Mejoras 2 cartas al azar."
+        }
+      ]
     },
     "DROWNING_BEACON": {
-      "name": "Faro inestable"
+      "name": "Faro hundiéndose",
+      "description": "Mientras cruzas un paisaje onírico de rocas y aguas tranquilas, emerges y te encuentras con un faro que se hunde y emite antiluz.\n\nPuedes embotellar el agua de brillo inquietante que se acumuló o trepar por la estructura deteriorada para recuperar la lente.",
+      "choices": [
+        {
+          "name": "Embotellar",
+          "description": "Obtienes Poción de fulgor."
+        },
+        {
+          "name": "Trepar",
+          "description": "Obtienes Lente de Fresnel. Pierdes 13 PV máx."
+        }
+      ]
     },
     "ENDLESS_CONVEYOR": {
-      "name": "Cinta transportadora de la abundancia"
+      "name": "Cinta transportadora infinita",
+      "description": "Entras con torpeza en una choza con un letrero brillante y torcido que dice:\n«FESTÍN SIN FIN: ¡PAGA SEGÚN TU HAMBRE!»\n\nDentro, un chef grácil y con múltiples brazos prepara apetitosos manjares con destreza y los coloca sobre una sinuosa y quitinosa cinta transportadora.\n\nUno de los brazos del chef señala un cartel:\n35 de oro por cada alimento",
+      "choices": [
+        {
+          "name": "Observar al chef",
+          "description": "Mejoras una carta al azar en el mazo."
+        }
+      ]
     },
     "FAKE_MERCHANT": {
-      "name": "¿¿¿El Comerciante???"
+      "name": "¿¿El comerciante??"
     },
     "FIELD_OF_MAN_SIZED_HOLES": {
-      "name": "Campo repleto de agujeros"
+      "name": "Campo de agujeros antropomorfos",
+      "description": "Te detienes en seco ante el repentino panorama de un vasto campo repleto de grandes siluetas corpóreas.\n\nUna de ellas coincide con la tuya.\n\nEs perfecta...",
+      "choices": [
+        {
+          "name": "Entrar en tu silueta",
+          "description": "Encantas una carta con A medida."
+        },
+        {
+          "name": "Resistir",
+          "description": "Quitas 2 cartas del mazo. Agregas Normalidad al mazo."
+        }
+      ]
     },
     "GRAVE_OF_THE_FORGOTTEN": {
-      "name": "Tumba del Olvidado"
+      "name": "Tumba del olvidado",
+      "description": "Hay una tumba solitaria con una intensa llama azul.\n\nUn guerrero orgulloso murió en batalla, pero su alma yace inquieta. Quiere seguir luchando; sientes cómo te suplica acompañarte en el viaje.\n\nPero... Quizás sea mejor que se enfrente a la verdad.",
+      "choices": [
+        {
+          "name": "Aceptar Alma olvidada",
+          "description": "Obtienes Alma olvidada."
+        },
+        {
+          "name": "Enfrentar la verdad",
+          "description": "Agregas Descomposición al mazo. Usas Poder del alma para encantar una carta con Agotamiento."
+        }
+      ]
     },
     "HUNGRY_FOR_MUSHROOMS": {
-      "name": "Banquete de setas"
+      "name": "Antojo fúngico",
+      "description": "¿Cuándo fue la última vez que comiste?\nUn momento... ¿Qué es ese olor fantástico?\n\nTras seguir el aroma, llegas a un acogedor campamento en el que se cocinan todo tipo de hongos deliciosos. No consideras si es seguro comerlos porque tienes demasiada hambre.\n(Tienes tanta hambre que no notas el cadáver de trotamundos).",
+      "choices": [
+        {
+          "name": "Hongo grande"
+        },
+        {
+          "name": "Hongo aromático"
+        }
+      ]
     },
     "INFESTED_AUTOMATON": {
-      "name": "Autómata infestado"
+      "name": "Autómata infestado",
+      "description": "Hay una cámara repleta de robots muertos.\n\nUn autómata solitario aún tiene un núcleo con un tenue brillo. Sin embargo, lo envuelve un matorral orgánico y grotesco, por lo que no responde.",
+      "choices": [
+        {
+          "name": "Estudiar",
+          "description": "Obtienes un poder al azar."
+        },
+        {
+          "name": "Tocar el núcleo",
+          "description": "Obtienes una carta de costo 0 al azar."
+        }
+      ]
     },
     "JUNGLE_MAZE_ADVENTURE": {
-      "name": "Aventura laberíntica"
+      "name": "Aventura en el laberinto selvático",
+      "description": "En un claro, te cruzas con un grupo variado de trotamundos que miran hacia abajo y señalan un laberinto gigante.\n\nTe ofrecen unir fuerzas en una misión épica para saquear las riquezas de este laberinto. Debido a tu experiencia, tienes claro que este lugar está lleno de trampas mortales y guardianes.\n\nSería más fácil si cooperan, pero entonces tendrían que dividir el botín.",
+      "choices": [
+        {
+          "name": "Unir fuerzas",
+          "description": "Obtienes 50 de oro."
+        },
+        {
+          "name": "Ir por tu cuenta",
+          "description": "Obtienes 150 de oro. Pierdes 18 PV."
+        }
+      ]
     },
     "LOST_WISP": {
-      "name": "El fuego fatuo perdido"
+      "name": "El fuego fatuo perdido",
+      "description": "A la distancia se alza un panorama inquietante: montones de insectos muertos rodean lo que parece ser una pequeña mota resplandeciente.\nParece atraer a todo tipo de insectos con eficacia, pero ves que lanza llamaradas.\n\nTe acercas para investigar.",
+      "choices": [
+        {
+          "name": "Capturar al fuego fatuo",
+          "description": "Agregas Descomposición al mazo. Obtienes Fuego fatuo perdido."
+        },
+        {
+          "name": "Sin desbloquear",
+          "description": "Tus PV máx. son demasiado bajos."
+        }
+      ]
     },
     "LUMINOUS_CHOIR": {
-      "name": "Coro luminoso"
+      "name": "Coro luminoso",
+      "description": "Te topas con un claro sobre el cual resplandece una luz azul antinatural. Unos hongos gigantescos laten con bioluminiscencia, con sus píleos hinchados y brillantes. A medida que te acercas, los hongos comienzan a emitir tonos melódicos y evocadores que resuenan en todo tu pecho.\n\nNotas algo brillante incrustado en la pulpa del hongo más grande que palpita al ritmo de la canción fúngica.",
+      "choices": [
+        {
+          "name": "Ofrecer tributo",
+          "description": "Pagas 149 de oro. Obtienes una reliquia al azar."
+        },
+        {
+          "name": "Sin desbloquear",
+          "description": "Necesitas 149 de oro."
+        }
+      ]
     },
     "MORPHIC_GROVE": {
-      "name": "Bosque Mórfico"
+      "name": "Arboleda mórfica",
+      "description": "Entras a una arboleda de árboles cristalinos, ¡los cuales empiezan a temblar de emoción!\nUn coro de saludos y bienvenidas te bombardea mientras un grupo de mórficos emerge desde los árboles.\n\nUno de los mórficos se mueve con nerviosismo en un rincón; es obvio que es menos sociable que los demás.\n\n¿A quién te acercas, al grupo o al mórfico solitario?",
+      "choices": [
+        {
+          "name": "Acercarse al grupo",
+          "description": "Pierdes 100 de oro. Transformas 2 cartas."
+        },
+        {
+          "name": "Acercarse al mórfico solitario",
+          "description": "Obtienes 5 PV máx."
+        }
+      ]
     },
     "POTION_COURIER": {
-      "name": "Repartidor de pociones"
+      "name": "Repartidor de pociones",
+      "description": "Hay un olor agrio en el aire. Poco después, encuentras a un repartidor de pociones desplomado en el suelo.\nEstá inmóvil, sin vida... ¿¡Acaso está muerto!?\nAunque saquearon sus pertenencias, hay un lote de pociones malolientes con una nota: «Para: Comerciante».",
+      "choices": [
+        {
+          "name": "Tomar pociones",
+          "description": "Obtienes 3 poción fétida."
+        },
+        {
+          "name": "Rebuscar",
+          "description": "Obtienes 1 poción infrecuente al azar."
+        }
+      ]
     },
     "PUNCH_OFF": {
-      "name": "A puñetazo limpio"
+      "name": "Puñetazo",
+      "description": "Dos constructos pugilistas están en plena lucha; entre ellos, visualizas un tesoro.\n\n¿Debería intentar robarlo?",
+      "choices": [
+        {
+          "name": "Vencerlos con confianza",
+          "description": "Luchas contra ellos por mejores recompensas."
+        },
+        {
+          "name": "Robar",
+          "description": "Agregas Herida al mazo. Obtienes una reliquia al azar."
+        }
+      ]
     },
     "RANWID_THE_ELDER": {
-      "name": "Ranwid el Viejo"
+      "name": "Ranwid el Viejo",
+      "description": "Se te acerca la persona más anciana que has visto en tu vida.\n—Nos volvemos a ver... ¡Soy yo, Ranwid!\n\nNo conoces a este hombre.",
+      "choices": [
+        {
+          "name": "Darle 100 de oro",
+          "description": "Obtienes una reliquia al azar."
+        },
+        {
+          "name": "Darle Poción",
+          "description": "Obtienes una reliquia al azar."
+        },
+        {
+          "name": "Sin desbloquear",
+          "description": "No tienes ninguna poción que puedas entregar."
+        }
+      ]
     },
     "REFLECTIONS": {
-      "name": "Reflejos sojelfeR"
+      "name": "Reflejos | sojelfeR",
+      "description": "¿Qué está pasando? Algo no anda bien por aquí...\n...íuqa neib adna on oglA ?odnasap átse éuQ¿",
+      "choices": [
+        {
+          "name": "Destrozar",
+          "description": "Duplicas el mazo. Recibes Mala suerte."
+        },
+        {
+          "name": "Tocar el espejo",
+          "description": "Desmejora 2 cartas al azar. Mejora 4 cartas al azar."
+        }
+      ]
     },
     "RELIC_TRADER": {
-      "name": "Comerciante de reliquias"
+      "name": "Comerciante de reliquias",
+      "description": "Doblas en una esquina y, de repente, una figura sombría aparece allí de pie. Se gira para mirarte.\n\n—¡Te doy la bienvenida! ¿Quieres hacer negocios?\nLa figura pregunta y abre la capa para revelar un montón de mercancías sospechosas.",
+      "choices": [
+        {
+          "name": "Tomar la de abajo",
+          "description": "Intercambias tu Reliquia por una nueva Reliquia."
+        },
+        {
+          "name": "Tomar la del medio",
+          "description": "Intercambias tu Reliquia por una nueva Reliquia."
+        },
+        {
+          "name": "Tomar la de arriba",
+          "description": "Intercambias tu Reliquia por una nueva Reliquia."
+        }
+      ]
     },
     "ROOM_FULL_OF_CHEESE": {
-      "name": "Paraíso quesero"
+      "name": "Sala quesera",
+      "description": "Esta sala está llena de ¡¡¡queso!!!\n\nMiras a tu alrededor para ver si hay trampas. Encima de ti hay... más queso. Las velas parecen estar hechas de queso; los muebles también son de queso.\nDe repente, la puerta se cierra de golpe detrás de ti.\n\nSip, también está hecha de queso.",
+      "choices": [
+        {
+          "name": "Atiborrarse",
+          "description": "Eliges 2 de 8 cartas comunes al azar para agregarlas al mazo."
+        },
+        {
+          "name": "Buscar",
+          "description": "Pierdes 14 PV. Obtienes el Queso elegido."
+        }
+      ]
     },
     "ROUND_TEA_PARTY": {
-      "name": "El círculo del té"
+      "name": "La fiesta del té de la rotonda",
+      "description": "Encuentras una invitación para un tal «sir Galalot» a una fiesta de té y decides asistir en su lugar.\n\nAl entrar a través de una modesta rotonda, te encuentras entre comandantes, generales, líderes de guerra y mercenarios tomando... ¿té?\nEl gigantesco caballero con una corona dorada emite unas palabras.\n\n—¡¿Osáis llegar tarde al té?!",
+      "choices": [
+        {
+          "name": "Disfrutar el té",
+          "description": "Obtienes Veneno real. Recuperas todos tus PV."
+        },
+        {
+          "name": "Buscar pelea",
+          "description": "Pierdes 11 PV. Obtienes una reliquia al azar."
+        }
+      ]
     },
     "SAPPHIRE_SEED": {
-      "name": "Semilla zafírea"
+      "name": "Semilla de zafiro",
+      "description": "Por poco evitas pisar... ¿una semilla brillante y mordaz? ¡Su inconfundible color delata que es una semilla de zafiro! ¿No se suponía que estas semillas increíbles estaban extintas?\n\nLas leyendas dicen que consumir una puede aumentar enormemente tu resistencia, pero ¿y si la plantas y la nutres?",
+      "choices": [
+        {
+          "name": "Consumir",
+          "description": "Recuperas 9 PV. Mejoras una carta en el mazo."
+        },
+        {
+          "name": "Plantarla y nutrirla",
+          "description": "Encantas una carta con Siembra."
+        }
+      ]
     },
     "SELF_HELP_BOOK": {
-      "name": "Libro de autoayuda"
+      "name": "Libro de autoayuda",
+      "description": "En el suelo hay un tomo:\n«Las tres mejores maneras de conquistar la Torre».\n\nEl libro está cubierto en sangre, así que este manuscrito te resulta muy sospechoso.\n\n¿Lo leerás?",
+      "choices": [
+        {
+          "name": "Continuar",
+          "description": "No tienes ninguna carta que pueda encantarse."
+        },
+        {
+          "name": "Leer el tomo entero",
+          "description": "Eliges un poder para encantarlo con Rapidez 2."
+        },
+        {
+          "name": "Sin desbloquear",
+          "description": "No tienes ningún poder que pueda encantarse."
+        },
+        {
+          "name": "Leer un fragmento al azar",
+          "description": "Eliges una habilidad para encantarla con Agilidad 2."
+        }
+      ]
     },
     "SLIPPERY_BRIDGE": {
-      "name": "Puente resbaladizo"
+      "name": "Puente resbaladizo",
+      "description": "Mientras cruzas un puente de madera destartalado, de repente, cae una lluvia torrencial. Enormes ráfagas de viento te azotan y amenazan con terminar tu viaje.",
+      "choices": [
+        {
+          "name": "Aguantar",
+          "description": "Pierdes X PV. La carta en la opción anterior se establece al azar."
+        },
+        {
+          "name": "Sobreponerte",
+          "description": "Carta aleatoria se quita del mazo."
+        }
+      ]
     },
     "SPIRALING_WHIRLPOOL": {
-      "name": "Remolino turbulento"
+      "name": "Remolino voraginoso",
+      "description": "Te topas con un enorme remolino. El agua se arremolina con una precisión hermosa y las paredes circundantes están adornadas con patrones en espiral.\n\nDa vueltas y vueltas... y vueltas...\n... y vueltas... ¡Qué espectáculo!\n\n¿Qué haces?",
+      "choices": [
+        {
+          "name": "Beber",
+          "description": "Recuperas X PV."
+        },
+        {
+          "name": "Observar",
+          "description": "Encantas una carta Golpe o una carta Defensa con Espiral."
+        },
+        {
+          "name": "Tocar",
+          "description": "Obtienes una reliquia al azar. Agregas Retorcimiento al mazo."
+        }
+      ]
     },
     "SPIRIT_GRAFTER": {
-      "name": "Injertador espiritual"
+      "name": "Injertador espiritual",
+      "description": "Arriba, un capullo se agita y retuerce. ¡Está a punto de estallar!\n\nDeja de retorcerse... ¡El capullo comienza a brillar! ¿Qué está pasando?\nEn un destello de luz y llamas, un injertador espiritual se abalanza sobre ti y amenaza con fusionarse con tu ser para completarse.",
+      "choices": [
+        {
+          "name": "Permitir la fusión",
+          "description": "Recuperas 25 PV. Agregas Metamorfosis al mazo."
+        },
+        {
+          "name": "Rechazarlo",
+          "description": "Pierdes 9 PV. Quitas una carta del mazo."
+        }
+      ]
     },
     "STONE_OF_ALL_TIME": {
-      "name": "Piedra Atemporal"
+      "name": "Roca omnitemporal",
+      "description": "Una enorme roca yace en medio de una explanada abandonada.\n\nUna placa dice:\nRoca omnitemporal.\n\nSu presencia, forma y adornos indican que esta explanada se construyó alrededor de esta roca y que nunca se ha movido de este lugar.",
+      "choices": [
+        {
+          "name": "Beber y levantarla",
+          "description": "Pierdes Poción aleatoria. Obtienes 10 PV máx."
+        },
+        {
+          "name": "Sin desbloquear",
+          "description": "Necesitas una poción."
+        }
+      ]
     },
     "SUNKEN_STATUE": {
-      "name": "La estatua hundida"
+      "name": "La estatua sumergida",
+      "description": "Ves una estatua antigua medio sumergida en un estanque; sus manos descansan con cuidado sobre una espada pétrea.\n\nAlgo también resplandece en el fondo del estanque.\n¿Serán ofrendas votivas, quizás?\n\nTe vendría bien algo de dinero.",
+      "choices": [
+        {
+          "name": "Sumergirse en el agua",
+          "description": "Obtienes 111 de oro. Pierdes 7 PV."
+        },
+        {
+          "name": "Tomar la espada",
+          "description": "Obtienes la Espada de piedra."
+        }
+      ]
     },
     "SUNKEN_TREASURY": {
-      "name": "Tesoros sumergidos"
+      "name": "Tesoro sumergido",
+      "description": "Un camino te lleva a una bóveda parcialmente sumergida.\nHay dos cofres, pero solo una llave frágil.\n\nPrimer cofre: al agitarlo, se oyen ruidos tintineantes. Debe ser un poco de oro.\nSegundo cofre: es enorme, adornado y claramente maldito. ¡Debe tener un montón de oro!",
+      "choices": [
+        {
+          "name": "Primer cofre",
+          "description": "Obtienes 60 de oro."
+        },
+        {
+          "name": "Segundo cofre",
+          "description": "Obtienes 333 de oro. Recibes avaricia."
+        }
+      ]
     },
     "SYMBIOTE": {
-      "name": "Simbionte"
+      "name": "Simbionte",
+      "description": "Durante tus viajes, te topas con un pólipo oscuro y amorfo. Percibes que es muy antiguo y maligno.\n\n—Acércate...",
+      "choices": [
+        {
+          "name": "Acercarse",
+          "description": "Encantas un ataque con Corrupción."
+        },
+        {
+          "name": "Sin desbloquear",
+          "description": "No puedes encantar ninguno de tus ataques."
+        }
+      ]
     },
     "TABLET_OF_TRUTH": {
-      "name": "Tablilla de la Verdad"
+      "name": "Tablilla de la verdad",
+      "description": "Derrotas a un par de guardianes del Familiar y te abres paso a una bóveda protegida.\n\nDentro hay una tablilla con inscripciones conocidas. Tu intuición te dice que este idioma se puede descifrar con bastante facilidad... Sin embargo, una vez que empieces a descifrarlo, no podrás detenerte.\n\nLa tablilla emite una energía calmante y puedes romperla para recibir sus energías curativas.",
+      "choices": [
+        {
+          "name": "Descifrar",
+          "description": "Pierdes 3 PV máx. Mejoras una carta al azar."
+        },
+        {
+          "name": "Romperla",
+          "description": "Recuperas 20 PV."
+        }
+      ]
     },
     "TEA_MASTER": {
-      "name": "Maestro del té"
+      "name": "El maestro del té",
+      "description": "Entras en una choza apenas iluminada y te encuentras en un espacio muy tranquilo que alberga una variedad obsesiva de té.\n\nEl hombre dentro señala una selección de tés, cada uno etiquetado con cuidado con un precio prémium.",
+      "choices": [
+        {
+          "name": "Té de huesos",
+          "description": "Pagas 50 de oro. Té de huesos"
+        },
+        {
+          "name": "Sin desbloquear",
+          "description": "Necestias 50 de oro."
+        },
+        {
+          "name": "Té de brasas",
+          "description": "Pagas 150 de oro. Té de ascuas"
+        }
+      ]
     },
     "THE_FUTURE_OF_POTIONS": {
-      "name": "¿El futuro de las pociones?"
+      "name": "¿El futuro de las pociones?",
+      "description": "Sientes un leve ruido al doblar la esquina y descubres un gigantesco aparato giratorio.\nTiene varias ranuras que parecen convertir líquidos en una pastilla digerible muy comprimida.\n\nLa idea de convertir estos tónicos para la salud en un bocadito es incómoda, pero ¿quizás sea bueno probar cosas nuevas?",
+      "choices": [
+        {
+          "name": "Insertar poción ?",
+          "description": "Pierdes Poción. Obtienes una poción ? de ? mejorada."
+        }
+      ]
     },
     "THE_LANTERN_KEY": {
-      "name": "La llave ígnea"
+      "name": "La llave ígnea",
+      "description": "Encuentras y recoges una llave que posee un tenue brillo.\n\n—¡La estuve buscando por todas partes! Si no te importa...\n\nEsta persona parece maliciosa, pero quizá no sea bueno juzgar por las apariencias.",
+      "choices": [
+        {
+          "name": "Quedarse con la llave",
+          "description": "Luchas para obtener la llave."
+        },
+        {
+          "name": "Devolver la llave",
+          "description": "Obtienes 100 de oro."
+        }
+      ]
     },
     "THE_LEGENDS_WERE_TRUE": {
-      "name": "Las leyendas eran ciertas"
+      "name": "Las leyendas eran ciertas",
+      "description": "Al entrar en una cámara completamente oscura, una luz repentina penetra la oscuridad desde arriba, justo cuando la puerta se cierra de golpe detrás de ti.\n\nIluminado ante ti, parece haber un podio con un mapa. Sientes el impulso de tomarlo.\n\nQué sospechoso.",
+      "choices": [
+        {
+          "name": "Tomar el mapa",
+          "description": "Recibes la carta Mapa del tesoro."
+        },
+        {
+          "name": "Encontrar una salida",
+          "description": "Pierdes 8 PV. Obtienes 1 poción al azar."
+        }
+      ]
     },
     "THIS_OR_THAT": {
-      "name": "¿Izquierda o derecha?"
+      "name": "¿Izquierda o derecha?",
+      "description": "De repente, unos brazos sobresalen de un agujero cercano, los cuales sostienen una bolsa de riquezas sospechosa y una evidente reliquia maldita.\n\n—¿Izquierda o derecha?\nSusurra una voz ronca desde abajo.",
+      "choices": [
+        {
+          "name": "Derecha",
+          "description": "Agregas Torpeza al mazo. Obtienes una reliquia al azar."
+        },
+        {
+          "name": "Izquierda",
+          "description": "Pierdes 6 PV. Obtienes X de oro."
+        }
+      ]
     },
     "TINKER_TIME": {
-      "name": "Bricomanía"
+      "name": "Hora de inventar",
+      "description": "—¿Qué tipo de herramienta te ayudará a matar a todo el mundo?",
+      "pages": [
+        {
+          "description": "—¿Qué tipo de herramienta te ayudará a matar a todo el mundo?",
+          "choices": [
+            {
+              "name": "Arma",
+              "description": "Creas un Ataque."
+            },
+            {
+              "name": "Artefacto",
+              "description": "Creas un Poder."
+            },
+            {
+              "name": "Protección",
+              "description": "Creas una Habilidad."
+            }
+          ]
+        },
+        {
+          "description": "—¡Excelente elección! ¿Y ahora qué debería hacer?\nLa científica se frota las manos con alegría.",
+          "choices": [
+            {
+              "name": "Caos",
+              "description": "Agregas una carta al azar a tu mano. Cuesta 0 [E] este turno."
+            },
+            {
+              "name": "Asfixia",
+              "description": "Siempre que juegues una carta este turno, el enemigo perderá 6 PV."
+            },
+            {
+              "name": "Curiosidad",
+              "description": "Los poderes cuestan 1 de [E] menos."
+            },
+            {
+              "name": "Revitalización",
+              "description": "Obtienes [E]."
+            },
+            {
+              "name": "Pericia",
+              "description": "Obtienes 2 de fuerza. Obtienes 2 de destreza."
+            },
+            {
+              "name": "Optimización",
+              "description": "Al final del combate, mejoras una carta al azar."
+            },
+            {
+              "name": "Chupavidas",
+              "description": "Aplicas 2 de debilitamiento. Aplicas 2 de vulnerabilidad."
+            },
+            {
+              "name": "Violencia",
+              "description": "Golpeas 2 veces más."
+            },
+            {
+              "name": "Sabiduría",
+              "description": "Robas 3 cartas."
+            }
+          ]
+        }
+      ]
     },
     "TRASH_HEAP": {
-      "name": "Montón de basura"
+      "name": "Montaña de basura",
+      "description": "Descubres una enorme montaña de armas, baratijas y otras rarezas desechadas. La enorme pila se mueve y retumba, como si creciera desde dentro.\n\nSi rebuscas en la superficie, puede que encuentres cosas decentes. Si te metes ahí dentro de verdad, sin embargo, puede que encuentres tesoros exóticos.",
+      "choices": [
+        {
+          "name": "Sumergirse",
+          "description": "Pierdes 8 PV. Obtienes una reliquia olvidada del pasado al azar."
+        },
+        {
+          "name": "Tomar cachivaches al azar",
+          "description": "Obtienes 100 de oro. Obtienes una carta olvidada del pasado al azar."
+        }
+      ]
     },
     "TRIAL": {
-      "name": "El juicio"
+      "name": "El juicio",
+      "description": "Te unes a una fila de personas que entran a un edificio enorme.\n\nAl pasar bajo un arco dorado, suenan las bocinas, explota el confeti y serpentinas descienden del techo.\n\n—Participante ?, obtuviste el rol de DELIBERANTE del juicio de hoy.",
+      "choices": [
+        {
+          "name": "Aceptar",
+          "description": "Asumes el rol de deliberante para el juicio de hoy."
+        },
+        {
+          "name": "Rechazar",
+          "description": "No puedes rechazar la decisión."
+        }
+      ]
     },
     "UNREST_SITE": {
-      "name": "Lugar sin descanso"
+      "name": "Punto intranquilo",
+      "description": "Encuentras un punto de descanso inhóspito y enciendes una fogata para descansar.\nO eso creías.\n\nTras encender el fuego, empieza a crecer y a extenderse no hacia arriba, sino lateralmente hacia un bosque de árboles que rezuman aceite.\n\n¿Deberías intentar descansar de todas formas?",
+      "choices": [
+        {
+          "name": "Talar los árboles",
+          "description": "Pierdes 8 PV máx. Obtienes una reliquia al azar."
+        },
+        {
+          "name": "Descansar de todos modos",
+          "description": "Recuperas todos tus PV. Recibes Falta de sueño."
+        }
+      ]
     },
     "WAR_HISTORIAN_REPY": {
-      "name": "Repy, el historiador de guerra"
+      "name": "Repy, el historiador de guerra",
+      "description": "Un erudito está atrapado en una jaula colgante junto a un cofre del tesoro.\n\nEl académico murmura sobre «llaves de un solo uso» mientras escribe algo con fervor.\n\nParece que puedes abrir la jaula o el cofre.",
+      "choices": [
+        {
+          "name": "Abrir la jaula",
+          "description": "Pierdes Llave ígnea. Obtienes Clase de historia."
+        },
+        {
+          "name": "Abrir el cofre",
+          "description": "Pierdes Llave ígnea. Obtienes 2 pociones y 2 reliquias al azar."
+        }
+      ]
     },
     "WATERLOGGED_SCRIPTORIUM": {
-      "name": "Scriptorium anegado"
+      "name": "Escriba anegado",
+      "description": "Mientras caminas por los oscuros pasadizos, te topas con una figura marchita que trabaja en una pequeña tienda. Los numerosos estantes están repletos de pergaminos y rollos húmedos.\n\nAl notar que entró alguien, el escriba comerciante se pone firme y señala unos utensilios dispuestos sobre un escritorio.",
+      "choices": [
+        {
+          "name": "Tinta sangrienta",
+          "description": "Obtienes 6 PV máx."
+        },
+        {
+          "name": "Esponja espinosa",
+          "description": "Pagas 155 de oro. Encantas 2 carta con Firmeza."
+        },
+        {
+          "name": "Sin desbloquear",
+          "description": "Necesitas 155 de oro."
+        }
+      ]
     },
     "WELCOME_TO_WONGOS": {
-      "name": "Te damos la bienvenida a Wongo's"
+      "name": "¡Te damos la bienvenida a Wongo!",
+      "description": "—Te doy la bienvenida a Wongo. Tenemos lo que deseas a wontásticos precios. —dice el empleado menos entusiasta que hayas conocido.\n\n—Echa un vistazo a nuestros productos y disfruta de tu tiempo en Wongo. —continúa, sin siquiera levantar la vista.",
+      "choices": [
+        {
+          "name": "Rebajas de Wongo",
+          "description": "Pagas 100 de oro. Obtienes 1 reliquia común al azar."
+        },
+        {
+          "name": "Sin desbloquear",
+          "description": "Necesitas 100 de oro."
+        },
+        {
+          "name": "Especial de Wongo",
+          "description": "Pagas 200 de oro. Obtienes Reliquia aleatoria."
+        },
+        {
+          "name": "Sin desbloquear",
+          "description": "Necesitas 200 de oro."
+        }
+      ]
     },
     "WELLSPRING": {
-      "name": "Manantial brillante"
+      "name": "Manantial",
+      "description": "Rastreas un ruido sordo hasta su origen y te topas con un manantial tranquilo que te cautiva. El agua es de un verde esmeralda con cúmulos de motas brillantes.\n\nTe tienta sumergirte. ¿Qué podría salir mal?",
+      "choices": [
+        {
+          "name": "Bañarse",
+          "description": "Quitas 1 carta del mazo. Agregas 1 Culpa al mazo."
+        },
+        {
+          "name": "Embotellar",
+          "description": "Obtienes 1 poción al azar."
+        }
+      ]
     },
     "WHISPERING_HOLLOW": {
-      "name": "Hondonada susurrante"
+      "name": "Hondonada Susurrante",
+      "description": "Abriéndote paso por una hondonada de árboles muertos, te topas con un solo árbol blanco como el hueso. Adornos de arcilla cuelgan de sus ramas, las cuales se curvan hacia adentro como costillas protectoras.\n\nEs un árbol espeluznante. Además, te susurra.\n\n—... Intercambio ...",
+      "choices": [
+        {
+          "name": "Intercambiar oro",
+          "description": "Pierdes 50 de oro. Obtienes 2 pociones al azar."
+        },
+        {
+          "name": "Abrazar al árbol",
+          "description": "Pierdes 9 PV. Eliges una carta para transformarla."
+        }
+      ]
     },
     "WOOD_CARVINGS": {
-      "name": "Figuras de madera"
+      "name": "Esculturas de madera",
+      "description": "Abres una caja polvorienta y encuentras un conjunto de tres elaboradas esculturas de madera:\n\nUn pájaro, una serpiente y... ¿un toro?\n\nUn pedestal cercano tiene hendiduras que coinciden con la base de las esculturas. ¿Cuál colocarás en el pedestal?",
+      "choices": [
+        {
+          "name": "Colocar el pájaro",
+          "description": "Eliges 1 carta básica para transformarla en Picotazo."
+        },
+        {
+          "name": "Colocar la serpiente",
+          "description": "Encantas 1 carta con Serpenteo."
+        },
+        {
+          "name": "Sin desbloquear",
+          "description": "No puedes encantar ninguna de tus cartas con Serpenteo."
+        }
+      ]
     },
     "ZEN_WEAVER": {
-      "name": "Tejedora zen"
+      "name": "Tejedora zen",
+      "description": "Caminas a través de una telaraña y ¡ENTRAS EN PÁNICO!\nPero entonces, una ola de calma te invade...\n\n—Tranquilízate; deja de ensuciar mi telaraña.\n\n¿Cómo te calmaste tan rápido?\nUna araña pequeñita desciende colgada en una telaraña hasta ti. Está dispuesta a enseñarte algunas técnicas a cambio de oro.",
+      "choices": [
+        {
+          "name": "Acupuntura arácnida",
+          "description": "Pagas 250 de oro. Quitas 2 cartas del mazo."
+        },
+        {
+          "name": "Técnicas de respiración",
+          "description": "Pagas 50 de oro. Agregas 2 Iluminación al mazo."
+        },
+        {
+          "name": "Conciencia emocional",
+          "description": "Pagas 125 de oro. Quitas 1 carta del mazo."
+        }
+      ]
+    },
+    "DARV": {
+      "name": "Darv",
+      "description": "Darv, el Coleccionista, rebusca entre una pila de reliquias poderosas y te presenta un surtido cambiante. Ves Dusty Tome junto con tres reliquias aleatorias del grupo principal y de conjuntos específicos del acto, y algunas opciones solo aparecen si se cumplen ciertas condiciones."
+    },
+    "NEOW": {
+      "name": "Neow",
+      "description": "Neow, la Madre de la Resurrección, espera al inicio de cada partida. Ofrece tres bendiciones: dos positivas y una maldita. Las opciones se eligen al azar de los grupos a continuación.",
+      "choices": [
+        {
+          "name": "Pergamino arcano",
+          "description": "Al recoger esta reliquia, añade una Carta Rara aleatoria a tu Mazo.",
+          "relic_id": "ARCANE_SCROLL",
+          "pool": "positive"
+        },
+        {
+          "name": "Concha explosiva",
+          "description": "Al comienzo de los combates contra Élites, roba 2 carta adicional.",
+          "relic_id": "BOOMING_CONCH",
+          "pool": "positive"
+        },
+        {
+          "name": "Incensario",
+          "description": "Al recoger esta reliquia, Mejora una carta.",
+          "relic_id": "POMANDER",
+          "pool": "positive"
+        },
+        {
+          "name": "Perla dorada",
+          "description": "Al recoger esta reliquia, gana X de Oro.",
+          "relic_id": "GOLDEN_PEARL",
+          "pool": "positive"
+        },
+        {
+          "name": "Pisapapeles de plomo",
+          "description": "Al recoger esta reliquia, elige 1 de entre 2 cartas incoloras y añádela a tu Mazo.",
+          "relic_id": "LEAD_PAPERWEIGHT",
+          "pool": "positive"
+        },
+        {
+          "name": "Hoja nueva",
+          "description": "Al recoger esta reliquia, Transforma 1 carta.",
+          "relic_id": "NEW_LEAF",
+          "pool": "positive"
+        },
+        {
+          "name": "Tormento de Neow",
+          "description": "Al recoger esta reliquia, añade 1 Furia de Neow a tu Mazo.",
+          "relic_id": "NEOWS_TORMENT",
+          "pool": "positive"
+        },
+        {
+          "name": "Tijeras precisas",
+          "description": "Al recoger esta reliquia, elimina 1 carta de tu Mazo.",
+          "relic_id": "PRECISE_SCISSORS",
+          "pool": "positive"
+        },
+        {
+          "name": "Cofre perdido",
+          "description": "Al recoger esta reliquia, gana 1 recompensa de cartas y 1 Poción aleatoria.",
+          "relic_id": "LOST_COFFER",
+          "pool": "positive"
+        },
+        {
+          "name": "Perla maldita",
+          "description": "Al recoger esta reliquia, obtén Codicia. Gana X de Oro.",
+          "relic_id": "CURSED_PEARL",
+          "pool": "cursed"
+        },
+        {
+          "name": "Cápsula grande",
+          "description": "Al recoger esta reliquia, obtén 2 Reliquia aleatoria. Añade un Golpe y un Defender adicionales a tu Mazo.",
+          "relic_id": "LARGE_CAPSULE",
+          "pool": "cursed"
+        },
+        {
+          "name": "Cataplasma",
+          "description": "Al recoger esta reliquia, Transforma 1 Golpe y 1 Defender y pierde 10 PV máx.",
+          "relic_id": "LEAFY_POULTICE",
+          "pool": "cursed"
+        },
+        {
+          "name": "Tijeras peligrosas",
+          "description": "Al recoger esta reliquia, elimina 2 carta de tu Mazo y recibe 13 de daño.",
+          "relic_id": "PRECARIOUS_SHEARS",
+          "pool": "cursed"
+        },
+        {
+          "name": "Ostra nutritiva",
+          "description": "Al recoger esta reliquia, aumenta tus PV máx. en 11.",
+          "relic_id": "NUTRITIOUS_OYSTER",
+          "pool": "positive"
+        },
+        {
+          "name": "Humidificador de piedra",
+          "description": "Cuando Descanses en un Lugar de descanso, aumenta tus PV máx. en 5.",
+          "relic_id": "STONE_HUMIDIFIER",
+          "pool": "positive"
+        },
+        {
+          "name": "Pergamino enorme",
+          "description": "Al recoger esta reliquia, elige 1 de entre 3 cartas multijugador incoloras y añádela a tu Mazo.",
+          "relic_id": "MASSIVE_SCROLL",
+          "pool": "positive"
+        },
+        {
+          "name": "Roca volcánica",
+          "description": "El Jefe del Acto 1 suelta 2 Reliquias.",
+          "relic_id": "LAVA_ROCK",
+          "pool": "positive"
+        },
+        {
+          "name": "Cápsula pequeña",
+          "description": "Al recoger esta reliquia, obtén una Reliquia aleatoria.",
+          "relic_id": "SMALL_CAPSULE",
+          "pool": "positive"
+        },
+        {
+          "name": "Crisol de plata",
+          "description": "Las siguientes 3 recompensas de cartas que veas estarán Mejoradas. El primer cofre del tesoro que abras estará vacío.",
+          "relic_id": "SILVER_CRUCIBLE",
+          "pool": "cursed"
+        },
+        {
+          "name": "Caja de pergaminos",
+          "description": "Al recoger esta reliquia, pierde todo tu Oro, elige 1 de entre 2 paquetes de cartas y añádelo a tu Mazo.",
+          "relic_id": "SCROLL_BOXES",
+          "pool": "cursed"
+        }
+      ]
+    },
+    "NONUPEIPE": {
+      "name": "Nonupeipe",
+      "description": "Nonupeipe, la Serendipia personificada, te rodea con una brillante colección de tesoros afortunados. Cada visita ofrece tres reliquias aleatorias del grupo principal, y Beautiful Bracelet solo aparece si se cumple su condición especial."
+    },
+    "OROBAS": {
+      "name": "Orobas",
+      "description": "Orobas, el Arcoíris viviente, despliega un espectro de reliquias repartidas en tres grupos distintos. Cada encuentro ofrece una reliquia de cada grupo, y Prismatic Gem se suma para los personajes capaces de canalizar Orbes."
+    },
+    "PAEL": {
+      "name": "Pael",
+      "description": "Pael, el Dragón fundido, ofrece tres reliquias extraídas de retorcidos conjuntos de carne, alas y ojos. Cada encuentro muestra una reliquia de cada grupo, con opciones extra que pueden aparecer si tu mazo o tus compañeros cumplen las peculiares condiciones de Pael."
+    },
+    "TANX": {
+      "name": "Tanx",
+      "description": "Tanx, el Rey de las quimeras, te arma desde un brutal arsenal. Cada encuentro ofrece tres reliquias aleatorias del arsenal de Tanx, con Tri-Boomerang añadido si ya llevas suficientes armas como para impresionar al rey."
+    },
+    "TEZCATARA": {
+      "name": "Tezcatara",
+      "description": "Tezcatara, lo que alimenta el fuego, coloca sus dones en tres grupos cuidadosamente preparados. Cada encuentro ofrece una reliquia de cada grupo, desde dulces reconfortantes hasta extraños recuerdos y valiosas curiosidades."
+    },
+    "THE_ARCHITECT": {
+      "name": "El Artífice",
+      "description": "El Arquitecto te espera al final de cada carrera exitosa. El encuentro se desarrolla como un diálogo con líneas específicas de cada personaje y culmina en una confrontación final."
+    },
+    "VAKUU": {
+      "name": "Vakuu",
+      "description": "Vakuu, el primer demonio, te tienta con reliquias repartidas en tres grupos ominosos. Cada encuentro ofrece una reliquia de cada grupo, mezclando pactos sangrientos, trofeos preservados y elegantes galas demoníacas."
     }
   },
   "keywords": {
@@ -5473,258 +6396,2042 @@
       "name": "Robustez"
     }
   },
-  "mechanics": {
-    "ascension": [
-      {
-        "level": 0,
-        "title": "Sin Ascensión",
-        "description": "Juega sin modificadores de Ascensión."
+  "monsters": {
+    "ARCHITECT": {
+      "moves": {
+        "NOTHING": "Nada"
       },
-      {
-        "level": 1,
-        "title": "Élites a tutiplén",
-        "description": "Los Élites aparecen más a menudo."
+      "name": "El Arquitecto",
+      "move_names": {
+        "Nothing": "Nada"
       },
-      {
-        "level": 2,
-        "title": "Viaje agotador",
-        "description": "Los Antiguos solo curan un 80 % de los PV que has perdido."
+      "move_titles": [
+        "Nada"
+      ]
+    },
+    "ASSASSIN_RUBY_RAIDER": {
+      "moves": {
+        "KILLSHOT": "Ejecución"
       },
-      {
-        "level": 3,
-        "title": "Pobreza",
-        "description": "Los enemigos y cofres del tesoro sueltan un 25 % menos de Oro."
+      "name": "Asaltante asesino",
+      "move_names": {
+        "Killshot": "Ejecución"
       },
-      {
-        "level": 4,
-        "title": "Cinturón apretado",
-        "description": "Comienza la partida con 1 espacio para pociones menos."
+      "move_titles": [
+        "Ejecución"
+      ]
+    },
+    "ATTACK_MOVE_MONSTER": {
+      "moves": {
+        "POKE": "Punzada"
       },
-      {
-        "level": 5,
-        "title": "Ascensión accidentada",
-        "description": "Comienza la partida con una Maldición."
+      "name": "Monstruosidad",
+      "move_names": {
+        "Poke": "Punzada"
       },
-      {
-        "level": 6,
-        "title": "Pesadumbre",
-        "description": "Los lugares de descanso son menos comunes."
+      "move_titles": [
+        "Punzada"
+      ]
+    },
+    "AXEBOT": {
+      "moves": {
+        "BOOT_UP": "Arranque",
+        "HAMMER_UPPERCUT": "Martillazo",
+        "ONE_TWO": "Puñetazo doble",
+        "SHARPEN": "Afilar"
       },
-      {
-        "level": 7,
-        "title": "Escasez",
-        "description": "Las cartas raras y mejoradas aparecen con menos frecuencia."
+      "name": "Hachatrón",
+      "move_names": {
+        "Boot Up": "Arranque",
+        "Hammer Uppercut": "Martillazo",
+        "The One-Two": "Puñetazo doble",
+        "Sharpen": "Afilar"
       },
-      {
-        "level": 8,
-        "title": "Enemigos resistentes",
-        "description": "Todos los enemigos son más resistentes."
+      "move_titles": [
+        "Arranque",
+        "Martillazo",
+        "Puñetazo doble",
+        "Afilar"
+      ]
+    },
+    "AXE_RUBY_RAIDER": {
+      "moves": {
+        "BIG_SWING": "Gran tajo"
       },
-      {
-        "level": 9,
-        "title": "Enemigos letales",
-        "description": "Todos los enemigos tienen ataques más poderosos."
+      "name": "Asaltante con hacha",
+      "move_names": {
+        "Big Swing": "Gran tajo"
       },
-      {
-        "level": 10,
-        "title": "Jefe doble",
-        "description": "Combate contra dos jefes al final del Acto 3."
-      }
-    ],
-    "map_rooms": [
-      {
-        "id": "ROOM_ENEMY",
-        "title": "Enemigo",
-        "description": "En estas salas te esperan enemigos hostiles."
+      "move_titles": [
+        "Gran tajo"
+      ]
+    },
+    "BATTLE_FRIEND_V1": {
+      "moves": {
+        "NOTHING": "Nada"
       },
-      {
-        "id": "ROOM_ELITE",
-        "title": "Élite",
-        "description": "En esta sala te esperan enemigos muy poderosos.\n\nAl derrotarlos, conseguirás una Reliquia."
+      "name": "Amigo de batalla V1.0",
+      "move_names": {
+        "Nothing": "Nada"
       },
-      {
-        "id": "ROOM_BOSS",
-        "title": "Jefe",
-        "description": "El enemigo más poderoso de esta zona.\n\nDerrotarlo te permitirá continuar al siguiente Acto."
+      "move_titles": [
+        "Nada"
+      ]
+    },
+    "BATTLE_FRIEND_V2": {
+      "moves": {
+        "NOTHING": "Nada"
       },
-      {
-        "id": "ROOM_EVENT",
-        "title": "Evento",
-        "description": "En estas salas ocurren cosas inusuales..."
+      "name": "Amigo de batalla V2.0",
+      "move_names": {
+        "Nothing": "Nada"
       },
-      {
-        "id": "ROOM_MERCHANT",
-        "title": "Tienda",
-        "description": "En estas salas, el Comerciante vende sus mercancías.\n\n¡Gasta el Oro que has conseguido aquí!"
+      "move_titles": [
+        "Nada"
+      ]
+    },
+    "BATTLE_FRIEND_V3": {
+      "moves": {
+        "NOTHING": "Nada"
       },
-      {
-        "id": "ROOM_REST",
-        "title": "Lugar de descanso",
-        "description": "En estas salas puedes Recuperar PV o Mejorar una carta."
+      "name": "Amigo de batalla V3.0",
+      "move_names": {
+        "Nothing": "Nada"
       },
-      {
-        "id": "ROOM_TREASURE",
-        "title": "Sala del tesoro",
-        "description": "En estas codiciadas salas puedes encontrar Reliquias y Oro."
+      "move_titles": [
+        "Nada"
+      ]
+    },
+    "BIG_DUMMY": {
+      "moves": {
+        "NOTHING": "Nada"
       },
-      {
-        "id": "ROOM_ANCIENT",
-        "title": "Antiguo",
-        "description": "Los Antiguos residen en estas salas.\n\nConceden bonificaciones, tesoros y conocimiento increíbles."
-      }
-    ],
-    "core_concepts": [
-      {
-        "id": "ENERGY",
-        "title": "Energía",
-        "description": "La Energía se usa para jugar las cartas de tu Mano."
+      "name": "Muñeco grande",
+      "move_names": {
+        "Nothing": "Nada"
       },
-      {
-        "id": "BLOCK",
-        "title": "Bloqueo",
-        "description": "Previene el daño hasta el siguiente turno."
+      "move_titles": [
+        "Nada"
+      ]
+    },
+    "BOWLBUG_EGG": {
+      "moves": {
+        "BITE": "Mordisco",
+        "PROTECT": "Protección"
       },
-      {
-        "id": "HIT_POINTS",
-        "title": "Puntos de Vida (PV)",
-        "description": "Si te quedas sin PV, mueres."
+      "name": "Escaracuenco (Huevo)",
+      "move_names": {
+        "Bite": "Mordisco",
+        "Protect": "Protección"
       },
-      {
-        "id": "MONEY_POUCH",
-        "title": "Oro",
-        "description": "La cantidad de Oro que tienes. El Oro es la moneda que se usa en la Torre."
+      "move_titles": [
+        "Mordisco",
+        "Protección"
+      ]
+    },
+    "BOWLBUG_NECTAR": {
+      "moves": {
+        "BUFF": "Potenciación",
+        "THRASH": "Despedazar",
+        "THRASH2": "Despedazar"
       },
-      {
-        "id": "DRAW_PILE",
-        "title": "Pila de robo (A)",
-        "description": "Al comienzo de cada turno,\nrobas 5 cartas de esta pila.\n\nHaz clic para ver las cartas de tu Pila de robo (bajaradas)."
+      "name": "Escaracuenco (Néctar)",
+      "move_names": {
+        "Buff": "Potenciación",
+        "Thrash": "Despedazar"
       },
-      {
-        "id": "DISCARD_PILE",
-        "title": "Pila de descarte (S)",
-        "description": "Si tu Pila de robo está vacía, la Pila de descarte se baraja y se coloca en la Pila de robo.\n\nHaz clic para ver las cartas en tu Pila de descarte."
+      "move_titles": [
+        "Potenciación",
+        "Despedazar",
+        "Despedazar"
+      ]
+    },
+    "BOWLBUG_ROCK": {
+      "moves": {
+        "HEADBUTT": "Cabezazo"
       },
-      {
-        "id": "EXHAUST_PILE",
-        "title": "Cartas Agotadas (X)",
-        "description": "Haz clic para ver las cartas Agotadas durante este combate."
-      }
-    ],
-    "orbs": [
-      {
-        "id": "LIGHTNING",
-        "title": "Relámpago",
-        "description": "Pasiva: al final del turno, inflige {Passive} de daño a un enemigo aleatorio.\nDescarga: inflige {Evoke} de daño a un enemigo aleatorio.",
-        "passive": "",
-        "evoke": ""
+      "name": "Escaracuenco (Roca)",
+      "move_names": {
+        "Headbutt": "Cabezazo"
       },
-      {
-        "id": "FROST",
-        "title": "Escarcha",
-        "description": "Pasiva: al final del turno, gana {Passive} de Bloqueo.\nDescarga: gana {Evoke} de Bloqueo.",
-        "passive": "",
-        "evoke": ""
+      "move_titles": [
+        "Cabezazo"
+      ]
+    },
+    "BOWLBUG_SILK": {
+      "moves": {
+        "SPIN_WEB": "Telaraña giratoria",
+        "THRASH": "Despedazar"
       },
-      {
-        "id": "DARK",
-        "title": "Oscuridad",
-        "description": "Pasiva: al final del turno, aumenta el daño de este Orbe en {Passive}.\nDescarga: inflige {Evoke} de daño al enemigo con menos PV.",
-        "passive": "",
-        "evoke": ""
+      "name": "Escaracuenco (Seda)",
+      "move_names": {
+        "Spin Web": "Telaraña giratoria",
+        "Thrash": "Despedazar"
       },
-      {
-        "id": "PLASMA",
-        "title": "Plasma",
-        "description": "Pasiva: al comienzo del turno,\ngana 1 Energy.\nDescarga: gana 2 Energy.\nLa Concentración no afecta al Plasma.",
-        "passive": "",
-        "evoke": ""
+      "move_titles": [
+        "Telaraña giratoria",
+        "Despedazar"
+      ]
+    },
+    "BRUTE_RUBY_RAIDER": {
+      "moves": {
+        "BEAT": "Aporrear",
+        "CLAP": "Bofetón"
       },
-      {
-        "id": "GLASS",
-        "title": "Cristal",
-        "description": "Pasiva: al final del turno, inflige {Passive} de daño a TODOS los enemigos y reduce el valor de este orbe en 1.\nDescarga: inflige {Evoke} de daño a TODOS los enemigos.",
-        "passive": "",
-        "evoke": ""
-      }
-    ],
-    "stances": [],
-    "character_mechanics": [
-      {
-        "id": "STAR_COUNT",
-        "title": "Estrellas",
-        "description": "Tus Estrellas (★) actuales. Algunas cartas del Regente gastan ★ al jugarse."
+      "name": "Asaltante bruto",
+      "move_names": {
+        "Beat": "Aporrear",
+        "Clap": "Bofetón"
       },
-      {
-        "id": "SUMMON",
-        "title": "Vincular",
-        "description": "Invoca a Nudillos.\nSi ya está invocado, aumenta sus PV máx. durante este combate."
+      "move_titles": [
+        "Aporrear",
+        "Bofetón"
+      ]
+    },
+    "BYGONE_EFFIGY": {
+      "moves": {
+        "SLASHES": "Corte",
+        "SLEEP": "Dormir"
       },
-      {
-        "id": "FORGE",
-        "title": "Forjar",
-        "description": "La primera vez que Forjes cada combate, añade Espada del soberano a tu Mano. Forjar añade daño adicional a Espada del soberano."
+      "name": "Estatua vetusta",
+      "move_names": {
+        "Slashes": "Corte",
+        "Sleep": "Dormir"
       },
-      {
-        "id": "REPLAY",
-        "title": "Repetición",
-        "description": "Juega esta carta una vez más."
+      "move_titles": [
+        "Corte",
+        "Dormir"
+      ]
+    },
+    "BYRDONIS": {
+      "moves": {
+        "BITE": "Mordisco",
+        "PECK": "Picotazo",
+        "PROTECT": "Protección"
       },
-      {
-        "id": "FATAL",
-        "title": "Letal",
-        "description": "Se activa cuando esta carta mata a un enemigo que no sea un esbirro."
-      }
-    ],
-    "keywords": [
-      {
-        "id": "ETERNAL",
-        "names": [
-          "Eterna"
-        ],
-        "description": "No se puede transformar ni eliminar de tu Mazo."
+      "name": "Japarónix",
+      "move_names": {
+        "Bite": "Mordisco",
+        "Peck": "Picotazo",
+        "Protect": "Protección"
       },
-      {
-        "id": "ETHEREAL",
-        "names": [
-          "Etérea"
-        ],
-        "description": "Si esta carta está en tu Mano al final del turno, se Agota."
+      "move_titles": [
+        "Mordisco",
+        "Picotazo",
+        "Protección"
+      ]
+    },
+    "BYRDONIS_NEST": {
+      "moves": {
+        "NOTHING": "Nada"
       },
-      {
-        "id": "EXHAUST",
-        "names": [
-          "Agotamiento"
-        ],
-        "description": "Elimina esta carta hasta el final del combate."
+      "name": "Nido",
+      "move_names": {
+        "Nothing": "Nada"
       },
-      {
-        "id": "INNATE",
-        "names": [
-          "Innata"
-        ],
-        "description": "Comienza cada combate con esta carta en tu Mano."
+      "move_titles": [
+        "Nada"
+      ]
+    },
+    "BYRDPIP": {
+      "moves": {
+        "NOTHING": "Nada"
       },
-      {
-        "id": "RETAIN",
-        "names": [
-          "Retención"
-        ],
-        "description": "Las cartas retenidas no se descartan al final del turno."
+      "name": "Japarito",
+      "move_names": {
+        "Nothing": "Nada"
       },
-      {
-        "id": "SLY",
-        "names": [
-          "Astucia"
-        ],
-        "description": "Si esta carta es descartada de tu Mano antes de que acabe tu turno, juégala gratis."
+      "move_titles": [
+        "Nada"
+      ]
+    },
+    "CALCIFIED_CULTIST": {
+      "moves": {
+        "DARK_STRIKE": "Golpe oscuro",
+        "INCANTATION": "Encantamiento"
       },
-      {
-        "id": "UNPLAYABLE",
-        "names": [
-          "Injugable"
-        ],
-        "description": "Las cartas injugables no pueden jugarse."
-      }
-    ]
+      "name": "Sectario calcificado",
+      "move_names": {
+        "Dark Strike": "Golpe oscuro",
+        "Incantation": "Encantamiento"
+      },
+      "move_titles": [
+        "Golpe oscuro",
+        "Encantamiento"
+      ]
+    },
+    "CEREMONIAL_BEAST": {
+      "moves": {
+        "BEAST_CRY": "Aullido bestial",
+        "CRUSH": "Aplastar",
+        "PLOW": "Cornada",
+        "STAMP": "Pisotear",
+        "STOMP": "Pisotón"
+      },
+      "name": "Bestia ceremonial",
+      "move_names": {
+        "Beast Cry": "Aullido bestial",
+        "Crush": "Aplastar",
+        "Plow": "Cornada",
+        "Stamp": "Pisotear",
+        "Stomp": "Pisotón"
+      },
+      "move_titles": [
+        "Aullido bestial",
+        "Aplastar",
+        "Cornada",
+        "Pisotear",
+        "Pisotón"
+      ]
+    },
+    "CHOMPER": {
+      "moves": {
+        "CLAMP": "Pinzar",
+        "SCREECH": "*Chillido*",
+        "THRASH": "Despedazar"
+      },
+      "name": "Bocaditos",
+      "move_names": {
+        "Clamp": "Pinzar",
+        "Screech": "*Chillido*",
+        "Thrash": "Despedazar"
+      },
+      "move_titles": [
+        "Pinzar",
+        "*Chillido*",
+        "Despedazar"
+      ]
+    },
+    "COCOON": {
+      "moves": {
+        "NOTHING": "Nada"
+      },
+      "name": "Capullo",
+      "move_names": {
+        "Nothing": "Nada"
+      },
+      "move_titles": [
+        "Nada"
+      ]
+    },
+    "CORPSE_SLUG": {
+      "moves": {
+        "TACKLE": "Placaje",
+        "WHIP_SLAP": "Tortazo"
+      },
+      "name": "Babosa cadavérica",
+      "move_names": {
+        "Tackle": "Placaje",
+        "Whip Slap": "Tortazo"
+      },
+      "move_titles": [
+        "Placaje",
+        "Tortazo"
+      ]
+    },
+    "CROSSBOW_RUBY_RAIDER": {
+      "moves": {
+        "FIRE": "¡Fuego!",
+        "RELOAD": "Recarga"
+      },
+      "name": "Asaltante ballestero",
+      "move_names": {
+        "Fire!": "¡Fuego!",
+        "Reload": "Recarga"
+      },
+      "move_titles": [
+        "¡Fuego!",
+        "Recarga"
+      ]
+    },
+    "CRUSHER": {
+      "moves": {
+        "ADAPT": "Adaptación",
+        "BUG_STING": "Picadura",
+        "ENLARGING_STRIKE": "Golpe creciente",
+        "GUARDED_STRIKE": "Golpe defensivo",
+        "THRASH": "Despedazar"
+      },
+      "name": "Demoledora",
+      "move_names": {
+        "Adapt": "Adaptación",
+        "Bug Sting": "Picadura",
+        "Enlarging Strike": "Golpe creciente",
+        "Guarded Strike": "Golpe defensivo",
+        "Thrash": "Despedazar"
+      },
+      "move_titles": [
+        "Adaptación",
+        "Picadura",
+        "Golpe creciente",
+        "Golpe defensivo",
+        "Despedazar"
+      ]
+    },
+    "CUBEX_CONSTRUCT": {
+      "moves": {
+        "CHARGE_UP": "Cargar",
+        "REPEATER_BLAST": "Rayo repetidor",
+        "SUBMERGE": "Inmersión"
+      },
+      "name": "Constructo Cúbex",
+      "move_names": {
+        "Charge Up": "Cargar",
+        "Repeater Blast": "Rayo repetidor",
+        "Submerge": "Inmersión"
+      },
+      "move_titles": [
+        "Cargar",
+        "Rayo repetidor",
+        "Inmersión"
+      ]
+    },
+    "DAMP_CULTIST": {
+      "moves": {
+        "DARK_STRIKE": "Golpe oscuro",
+        "INCANTATION": "Encantamiento"
+      },
+      "name": "Sectario empapado",
+      "move_names": {
+        "Dark Strike": "Golpe oscuro",
+        "Incantation": "Encantamiento"
+      },
+      "move_titles": [
+        "Golpe oscuro",
+        "Encantamiento"
+      ]
+    },
+    "DECIMILLIPEDE_SEGMENT": {
+      "moves": {
+        "BULK": "Corpulencia",
+        "DEAD": "Muerte",
+        "OUTGAS": "Gas",
+        "REATTACH": "Reconexión",
+        "TACKLE": "Placaje",
+        "WRITHE": "Retorcimiento"
+      },
+      "name": "Diezmilpiés",
+      "move_names": {
+        "Bulk": "Corpulencia",
+        "Dead": "Muerte",
+        "Outgas": "Gas",
+        "Reattach": "Reconexión",
+        "Tackle": "Placaje",
+        "Writhe": "Retorcimiento"
+      },
+      "move_titles": [
+        "Corpulencia",
+        "Muerte",
+        "Gas",
+        "Reconexión",
+        "Placaje",
+        "Retorcimiento"
+      ]
+    },
+    "DEVOTED_SCULPTOR": {
+      "name": "Escultor devoto"
+    },
+    "DOOR": {
+      "name": "Portal"
+    },
+    "DOORMAKER": {
+      "name": "Titán interdimensional"
+    },
+    "ENTOMANCER": {
+      "moves": {
+        "AGITATE_SWARM": "Agitar la colmena",
+        "BEES": "¡Abeeeejas!",
+        "PHEROMONE_SPIT": "Escupitajo de feronomas",
+        "SPEAR": "¡Lanza!"
+      },
+      "name": "Entomomante",
+      "move_names": {
+        "Agitate Swarm": "Agitar la colmena",
+        "Beeeees!": "¡Abeeeejas!",
+        "Pheromone Spit": "Escupitajo de feronomas",
+        "Spear!": "¡Lanza!"
+      },
+      "move_titles": [
+        "Agitar la colmena",
+        "¡Abeeeejas!",
+        "Escupitajo de feronomas",
+        "¡Lanza!"
+      ]
+    },
+    "EXOSKELETON": {
+      "moves": {
+        "ENRAGE": "Ira",
+        "MANDIBLES": "Mandíbulas",
+        "SKITTER": "Escabullirse"
+      },
+      "name": "Placóptero",
+      "move_names": {
+        "Enrage": "Ira",
+        "Mandibles": "Mandíbulas",
+        "Skitter": "Escabullirse"
+      },
+      "move_titles": [
+        "Ira",
+        "Mandíbulas",
+        "Escabullirse"
+      ]
+    },
+    "EYE_WITH_TEETH": {
+      "moves": {
+        "DISTRACT": "Distraer",
+        "STARTLE": "Sorpresa"
+      },
+      "name": "Ojo dentado",
+      "move_names": {
+        "Distract": "Distraer",
+        "Startle": "Sorpresa"
+      },
+      "move_titles": [
+        "Distraer",
+        "Sorpresa"
+      ]
+    },
+    "FABRICATOR": {
+      "moves": {
+        "DISINTEGRATE": "Desintegrar",
+        "FABRICATE": "Construir"
+      },
+      "name": "Constructor",
+      "move_names": {
+        "Disintegrate": "Desintegrar",
+        "Fabricate": "Construir"
+      },
+      "move_titles": [
+        "Desintegrar",
+        "Construir"
+      ]
+    },
+    "FAKE_MERCHANT_MONSTER": {
+      "moves": {
+        "ENRAGE": "Ira",
+        "SPEW_COINS": "Lanzar monedas",
+        "SWIPE": "Mangar",
+        "THROW_RELIC": "Lanzar reliquia"
+      },
+      "name": "¿¿¿El Comerciante???",
+      "move_names": {
+        "Enrage": "Ira",
+        "Spew Coins": "Lanzar monedas",
+        "Swipe": "Mangar",
+        "Throw Relic": "Lanzar reliquia"
+      },
+      "move_titles": [
+        "Ira",
+        "Lanzar monedas",
+        "Mangar",
+        "Lanzar reliquia"
+      ]
+    },
+    "FAT_GREMLIN": {
+      "moves": {
+        "FLEE": "Huir"
+      },
+      "name": "Gremlin regordete",
+      "move_names": {
+        "Flee": "Huir"
+      },
+      "move_titles": [
+        "Huir"
+      ]
+    },
+    "FLAIL_KNIGHT": {
+      "moves": {
+        "BREAKER": "Destrucción",
+        "FLAIL": "Flagelo",
+        "RAM": "Embestida"
+      },
+      "name": "Caballero flagelador",
+      "move_names": {
+        "Breaker": "Destrucción",
+        "Flail": "Flagelo",
+        "Ram": "Embestida"
+      },
+      "move_titles": [
+        "Destrucción",
+        "Flagelo",
+        "Embestida"
+      ]
+    },
+    "FLYCONID": {
+      "moves": {
+        "FRAIL_SPORES": "Esporas de fragilidad",
+        "SMASH": "Placaje"
+      },
+      "name": "Micónido volador",
+      "move_names": {
+        "Frail Spores": "Esporas de fragilidad",
+        "Smash": "Placaje"
+      },
+      "move_titles": [
+        "Esporas de fragilidad",
+        "Placaje"
+      ]
+    },
+    "FOGMOG": {
+      "moves": {
+        "ILLUSORY_SPORES": "Esporas ilusorias",
+        "THWACK": "Porrazo"
+      },
+      "name": "Esporino",
+      "move_names": {
+        "Illusory Spores": "Esporas ilusorias",
+        "Thwack": "Porrazo"
+      },
+      "move_titles": [
+        "Esporas ilusorias",
+        "Porrazo"
+      ]
+    },
+    "FOSSIL_STALKER": {
+      "moves": {
+        "LASH": "Latigazo",
+        "LATCH": "Agarrarse",
+        "TACKLE": "Placaje"
+      },
+      "name": "Fósil acosador",
+      "move_names": {
+        "Lash": "Latigazo",
+        "Latch": "Agarrarse",
+        "Tackle": "Placaje"
+      },
+      "move_titles": [
+        "Latigazo",
+        "Agarrarse",
+        "Placaje"
+      ]
+    },
+    "FROG_KNIGHT": {
+      "moves": {
+        "BEETLE_CHARGE": "Escaracarga",
+        "FOR_THE_QUEEN": "Por la reina",
+        "STRIKE_DOWN_EVIL": "Acabar con el mal",
+        "TONGUE_LASH": "Látigo lengua"
+      },
+      "name": "Croaballero",
+      "move_names": {
+        "Beetle Charge": "Escaracarga",
+        "For the Queen": "Por la reina",
+        "Strike Down Evil": "Acabar con el mal",
+        "Tongue Lash": "Látigo lengua"
+      },
+      "move_titles": [
+        "Escaracarga",
+        "Por la reina",
+        "Acabar con el mal",
+        "Látigo lengua"
+      ]
+    },
+    "FUZZY_WURM_CRAWLER": {
+      "moves": {
+        "ACID_GOOP": "Baba ácida"
+      },
+      "name": "Reptador peludo",
+      "move_names": {
+        "Acid Goop": "Baba ácida"
+      },
+      "move_titles": [
+        "Baba ácida"
+      ]
+    },
+    "GAS_BOMB": {
+      "moves": {
+        "EXPLODE": "Explosión"
+      },
+      "name": "Bomba de gas",
+      "move_names": {
+        "Explode": "Explosión"
+      },
+      "move_titles": [
+        "Explosión"
+      ]
+    },
+    "GAZING_MOTH": {
+      "moves": {
+        "GLARE": "Mirada maliciosa",
+        "POWDER": "Polvo"
+      },
+      "name": "Polilla acechadora",
+      "move_names": {
+        "Glare": "Mirada maliciosa",
+        "Powder": "Polvo"
+      },
+      "move_titles": [
+        "Mirada maliciosa",
+        "Polvo"
+      ]
+    },
+    "GEM_EATER": {
+      "moves": {
+        "FOCUS_BEAM": "Rayo concentrado",
+        "GEM_LASER": "Geoláser"
+      },
+      "name": "Comegemas",
+      "move_names": {
+        "Focus Beam": "Rayo concentrado",
+        "Gem Laser": "Geoláser"
+      },
+      "move_titles": [
+        "Rayo concentrado",
+        "Geoláser"
+      ]
+    },
+    "GLOBE_HEAD": {
+      "moves": {
+        "CHANNEL_LIGHTNING": "Invocar Relámpago",
+        "DUAL_CAST": "Descarga doble",
+        "SHOCKING_SLAP": "Bofetón electrizante"
+      },
+      "name": "Plasmacéfalo",
+      "move_names": {
+        "Channel Lightning": "Invocar Relámpago",
+        "Dual Cast": "Descarga doble",
+        "Shocking Slap": "Bofetón electrizante"
+      },
+      "move_titles": [
+        "Invocar Relámpago",
+        "Descarga doble",
+        "Bofetón electrizante"
+      ]
+    },
+    "GREMLIN_MERC": {
+      "moves": {
+        "DOUBLE_SMASH": "Golpe doble",
+        "GIMME": "Dámelo",
+        "HEHE": "Je, je"
+      },
+      "name": "Gremlin mercenario",
+      "move_names": {
+        "Double Smash": "Golpe doble",
+        "Gimme": "Dámelo",
+        "Hehe": "Je, je"
+      },
+      "move_titles": [
+        "Golpe doble",
+        "Dámelo",
+        "Je, je"
+      ]
+    },
+    "GUARDBOT": {
+      "moves": {
+        "GUARD": "Bloquear"
+      },
+      "name": "Escudotrón",
+      "move_names": {
+        "Guard": "Bloquear"
+      },
+      "move_titles": [
+        "Bloquear"
+      ]
+    },
+    "HATCHLING": {
+      "name": "Cría"
+    },
+    "HAUNTED_SHIP": {
+      "moves": {
+        "HAUNT": "Embrujar",
+        "RAMMING_SPEED": "Velocidad vertiginosa",
+        "STOMP": "Derribo",
+        "SWIPE": "Golpetazo"
+      },
+      "name": "Barco embrujado",
+      "move_names": {
+        "Haunt": "Embrujar",
+        "Ramming Speed": "Velocidad vertiginosa",
+        "Stomp": "Derribo",
+        "Swipe": "Golpetazo"
+      },
+      "move_titles": [
+        "Embrujar",
+        "Velocidad vertiginosa",
+        "Derribo",
+        "Golpetazo"
+      ]
+    },
+    "HUNTER_KILLER": {
+      "moves": {
+        "BITE": "Mordisco",
+        "PUNCTURE": "Punzada",
+        "TENDERIZING_GOOP": "Baba descomponedora"
+      },
+      "name": "Cazador de cazadores",
+      "move_names": {
+        "Bite": "Mordisco",
+        "Puncture": "Punzada",
+        "Tenderizing Goop": "Baba descomponedora"
+      },
+      "move_titles": [
+        "Mordisco",
+        "Punzada",
+        "Baba descomponedora"
+      ]
+    },
+    "INFESTED_PRISM": {
+      "moves": {
+        "JAB": "Pinchazo",
+        "PULSATE": "Pulsación",
+        "RADIATE": "Radiación",
+        "WHIRLWIND": "Torbellino"
+      },
+      "name": "Prisma infestado",
+      "move_names": {
+        "Jab": "Pinchazo",
+        "Pulsate": "Pulsación",
+        "Radiate": "Radiación",
+        "Whirlwind": "Torbellino"
+      },
+      "move_titles": [
+        "Pinchazo",
+        "Pulsación",
+        "Radiación",
+        "Torbellino"
+      ]
+    },
+    "INKLET": {
+      "moves": {
+        "JAB": "Puñetazo",
+        "PIERCING_GAZE": "Mirada penetrante",
+        "WINDUP_PUNCH": "Puñetazo cargado"
+      },
+      "name": "Tintoide",
+      "move_names": {
+        "Jab": "Puñetazo",
+        "Piercing Gaze": "Mirada penetrante",
+        "Windup Punch": "Puñetazo cargado"
+      },
+      "move_titles": [
+        "Puñetazo",
+        "Mirada penetrante",
+        "Puñetazo cargado"
+      ]
+    },
+    "KIN_FOLLOWER": {
+      "moves": {
+        "BOOMERANG_MOVE": "Bumerán",
+        "POWER_DANCE_MOVE": "Danza del poder",
+        "QUICK_SLASH_MOVE": "Tajo rápido"
+      },
+      "name": "Acólito de la Estirpe",
+      "move_names": {
+        "Boomerang": "Bumerán",
+        "Power Dance": "Danza del poder",
+        "Quick Slash": "Tajo rápido"
+      },
+      "move_titles": [
+        "Bumerán",
+        "Danza del poder",
+        "Tajo rápido"
+      ]
+    },
+    "KIN_PRIEST": {
+      "moves": {
+        "BEAM_MOVE": "Rayo del alma",
+        "OR_OF_FRAILTY_MOVE": "Orbe de fragilidad",
+        "OR_OF_WEAKNESS_MOVE": "Orbe de debilidad",
+        "RITUAL_MOVE": "Ritual oscuro"
+      },
+      "name": "Sacerdote de la Estirpe",
+      "move_names": {
+        "Soul Beam": "Rayo del alma",
+        "Orb of Frailty": "Orbe de fragilidad",
+        "Orb of Weakness": "Orbe de debilidad",
+        "Dark Ritual": "Ritual oscuro"
+      },
+      "move_titles": [
+        "Rayo del alma",
+        "Orbe de fragilidad",
+        "Orbe de debilidad",
+        "Ritual oscuro"
+      ]
+    },
+    "KNOWLEDGE_DEMON": {
+      "moves": {
+        "BLUE_FLAME": "Llama azul",
+        "CURSE_OF_KNOWLEDGE": "Maldición del saber",
+        "HAVE_A_TASTE": "Prueba un poco",
+        "KNOWLEDGE_OVERWHELMING": "Conocimiento abrumador",
+        "PONDER": "Reflexionar"
+      },
+      "name": "Demonio del saber",
+      "move_names": {
+        "Blue Flame": "Llama azul",
+        "Curse of Knowledge": "Maldición del saber",
+        "Have a Taste": "Prueba un poco",
+        "Knowledge Overwhelming": "Conocimiento abrumador",
+        "Ponder": "Reflexionar"
+      },
+      "move_titles": [
+        "Llama azul",
+        "Maldición del saber",
+        "Prueba un poco",
+        "Conocimiento abrumador",
+        "Reflexionar"
+      ]
+    },
+    "LAGAVULIN_MATRIARCH": {
+      "moves": {
+        "DISEMBOWEL": "Destripar",
+        "SLASH": "Tajo",
+        "SLEEP": "Dormir",
+        "SOUL_SIPHON": "Succión de almas"
+      },
+      "name": "Matriarca lagavulin",
+      "move_names": {
+        "Disembowel": "Destripar",
+        "Slash": "Tajo",
+        "Sleep": "Dormir",
+        "Soul Siphon": "Succión de almas"
+      },
+      "move_titles": [
+        "Destripar",
+        "Tajo",
+        "Dormir",
+        "Succión de almas"
+      ]
+    },
+    "LEAF_SLIME_M": {
+      "moves": {
+        "CLUMP_SHOT": "Disparo de aglomeración",
+        "STICKY_SHOT": "Disparo pegajoso"
+      },
+      "name": "Herbolimo grande",
+      "move_names": {
+        "Clump Shot": "Disparo de aglomeración",
+        "Sticky Shot": "Disparo pegajoso"
+      },
+      "move_titles": [
+        "Disparo de aglomeración",
+        "Disparo pegajoso"
+      ]
+    },
+    "LEAF_SLIME_S": {
+      "moves": {
+        "GOOP": "Baba",
+        "TACKLE": "Placaje"
+      },
+      "name": "Herbolimo pequeño",
+      "move_names": {
+        "Goop": "Baba",
+        "Tackle": "Placaje"
+      },
+      "move_titles": [
+        "Baba",
+        "Placaje"
+      ]
+    },
+    "LIVING_FOG": {
+      "moves": {
+        "BLOAT": "Hincharse"
+      },
+      "name": "Nieblamprea",
+      "move_names": {
+        "Bloat": "Hincharse"
+      },
+      "move_titles": [
+        "Hincharse"
+      ]
+    },
+    "LIVING_SHIELD": {
+      "moves": {
+        "SHIELD_SLAM": "Golpe de escudo"
+      },
+      "name": "Escudero animado",
+      "move_names": {
+        "Shield Slam": "Golpe de escudo"
+      },
+      "move_titles": [
+        "Golpe de escudo"
+      ]
+    },
+    "LOUSE_PROGENITOR": {
+      "moves": {
+        "ACID_DUST": "Polvo ácido",
+        "CURL_AND_GROW": "Fortificación",
+        "WEB_CANNON": "Cañón de red"
+      },
+      "name": "Piojo progenitor",
+      "move_names": {
+        "Acid Dust": "Polvo ácido",
+        "Curl and Grow": "Fortificación",
+        "Web Cannon": "Cañón de red"
+      },
+      "move_titles": [
+        "Polvo ácido",
+        "Fortificación",
+        "Cañón de red"
+      ]
+    },
+    "MAGI_KNIGHT": {
+      "moves": {
+        "MAGIC_BOMB": "Bomba mágica",
+        "POWER_SHIELD": "Escudo de energía",
+        "RAM": "Embestida"
+      },
+      "name": "Caballero magi",
+      "move_names": {
+        "Magic Bomb": "Bomba mágica",
+        "Power Shield": "Escudo de energía",
+        "Ram": "Embestida"
+      },
+      "move_titles": [
+        "Bomba mágica",
+        "Escudo de energía",
+        "Embestida"
+      ]
+    },
+    "MAWLER": {
+      "moves": {
+        "CLAW": "Garra",
+        "RIP_AND_TEAR": "Rasgar y desgarrar",
+        "ROAR": "Rugido"
+      },
+      "name": "Devastadonte",
+      "move_names": {
+        "Claw": "Garra",
+        "Rip and Tear": "Rasgar y desgarrar",
+        "Roar": "Rugido"
+      },
+      "move_titles": [
+        "Garra",
+        "Rasgar y desgarrar",
+        "Rugido"
+      ]
+    },
+    "MECHA_KNIGHT": {
+      "moves": {
+        "CHARGE": "Carga",
+        "FLAMETHROWER": "Lanzallamas",
+        "HEAVY_CLEAVE": "Tajo pesado",
+        "WINDUP": "Carga"
+      },
+      "name": "Caballero mecanizado",
+      "move_names": {
+        "Charge": "Carga",
+        "Flamethrower": "Lanzallamas",
+        "Heavy Cleave": "Tajo pesado",
+        "Windup": "Carga"
+      },
+      "move_titles": [
+        "Carga",
+        "Lanzallamas",
+        "Tajo pesado",
+        "Carga"
+      ]
+    },
+    "MOCK_ATTACK_AND_SUMMON_MINION_MONSTER": {
+      "moves": {
+        "ATTACK_AND_SUMMON_MINION": "Ataque e invocación de esbirro"
+      },
+      "name": "Monstruo de ataque e invocación de esbirros",
+      "move_names": {
+        "Attack and Summon Minion": "Ataque e invocación de esbirro"
+      },
+      "move_titles": [
+        "Ataque e invocación de esbirro"
+      ]
+    },
+    "MOCK_ATTACK_MONSTER": {
+      "moves": {
+        "ATTACK": "Ataque"
+      },
+      "name": "Monstruo de ataque",
+      "move_names": {
+        "Attack": "Ataque"
+      },
+      "move_titles": [
+        "Ataque"
+      ]
+    },
+    "MYSTERIOUS_KNIGHT": {
+      "moves": {
+        "BREAKER": "Destrucción",
+        "FLAIL": "Flagelo",
+        "RAM": "Embestida"
+      },
+      "name": "Caballero misterioso",
+      "move_names": {
+        "Breaker": "Destrucción",
+        "Flail": "Flagelo",
+        "Ram": "Embestida"
+      },
+      "move_titles": [
+        "Destrucción",
+        "Flagelo",
+        "Embestida"
+      ]
+    },
+    "MYTE": {
+      "moves": {
+        "BIG_SUCK": "Succión potente",
+        "BITE": "Mordisco",
+        "SUCK": "Succión",
+        "TOXIC": "Cornada tóxica"
+      },
+      "name": "Asaltante acárido",
+      "move_names": {
+        "Big Suck": "Succión potente",
+        "Bite": "Mordisco",
+        "Suck": "Succión",
+        "Toxic Cornucopia": "Cornada tóxica"
+      },
+      "move_titles": [
+        "Succión potente",
+        "Mordisco",
+        "Succión",
+        "Cornada tóxica"
+      ]
+    },
+    "NIBBIT": {
+      "moves": {
+        "BUTT": "Golpetazo",
+        "HESITANT_SLICE": "Arañazo indeciso",
+        "HISS": "Vibrar"
+      },
+      "name": "Vibrosaurio",
+      "move_names": {
+        "Butt": "Golpetazo",
+        "Hesitant Slice": "Arañazo indeciso",
+        "Hiss": "Vibrar"
+      },
+      "move_titles": [
+        "Golpetazo",
+        "Arañazo indeciso",
+        "Vibrar"
+      ]
+    },
+    "NOISEBOT": {
+      "moves": {
+        "NOISE": "Ruido"
+      },
+      "name": "Ruidotrón",
+      "move_names": {
+        "Noise": "Ruido"
+      },
+      "move_titles": [
+        "Ruido"
+      ]
+    },
+    "OSTY": {
+      "name": "Nudillos"
+    },
+    "OVICOPTER": {
+      "moves": {
+        "LAY_EGGS": "Poner huevos",
+        "NUTRITIONAL_PASTE": "Pasta nutritiva",
+        "SMASH": "Aplastar",
+        "TENDERIZER": "Descomponer"
+      },
+      "name": "Ovocóptero",
+      "move_names": {
+        "Lay Eggs": "Poner huevos",
+        "Nutritional Paste": "Pasta nutritiva",
+        "Smash": "Aplastar",
+        "Tenderizer": "Descomponer"
+      },
+      "move_titles": [
+        "Poner huevos",
+        "Pasta nutritiva",
+        "Aplastar",
+        "Descomponer"
+      ]
+    },
+    "OWL_MAGISTRATE": {
+      "moves": {
+        "JUDICIAL_FLIGHT": "Vuelo judicial",
+        "MAGISTRATE_SCRUTINY": "Escrutinio del magistrado",
+        "PECK_ASSAULT": "Ráfaga de picotazos",
+        "VERDICT": "Veredicto"
+      },
+      "name": "Magistrado nocturno",
+      "move_names": {
+        "Judicial Flight": "Vuelo judicial",
+        "Magistrate Scrutiny": "Escrutinio del magistrado",
+        "Peck Assault": "Ráfaga de picotazos",
+        "Verdict": "Veredicto"
+      },
+      "move_titles": [
+        "Vuelo judicial",
+        "Escrutinio del magistrado",
+        "Ráfaga de picotazos",
+        "Veredicto"
+      ]
+    },
+    "PAELS_LEGION": {
+      "moves": {
+        "NOTHING": "Nada"
+      },
+      "name": "Legión de Pael",
+      "move_names": {
+        "Nothing": "Nada"
+      },
+      "move_titles": [
+        "Nada"
+      ]
+    },
+    "PARAFRIGHT": {
+      "moves": {
+        "SLAM": "Golpetazo"
+      },
+      "name": "Paraspectro",
+      "move_names": {
+        "Slam": "Golpetazo"
+      },
+      "move_titles": [
+        "Golpetazo"
+      ]
+    },
+    "PHANTASMAL_GARDENER": {
+      "moves": {
+        "BITE": "Mordisco",
+        "ENLARGE": "Crecimiento",
+        "FLAIL": "Flagelo",
+        "LASH": "Latigazo"
+      },
+      "name": "Acechamareas",
+      "move_names": {
+        "Bite": "Mordisco",
+        "Enlarge": "Crecimiento",
+        "Flail": "Flagelo",
+        "Lash": "Latigazo"
+      },
+      "move_titles": [
+        "Mordisco",
+        "Crecimiento",
+        "Flagelo",
+        "Latigazo"
+      ]
+    },
+    "PHROG_PARASITE": {
+      "moves": {
+        "INFECT": "Infección",
+        "LASH": "Latigazo",
+        "LEAP_SLAM": "Salto aplastador"
+      },
+      "name": "Sapo agusanado",
+      "move_names": {
+        "Infect": "Infección",
+        "Lash": "Latigazo",
+        "Leap Slam": "Salto aplastador"
+      },
+      "move_titles": [
+        "Infección",
+        "Latigazo",
+        "Salto aplastador"
+      ]
+    },
+    "PUNCH_CONSTRUCT": {
+      "moves": {
+        "FAST_PUNCH": "Puñetazo rápido",
+        "READY": "LISTO",
+        "STRONG_PUNCH": "Puñetazo fuerte"
+      },
+      "name": "Puñotrón",
+      "move_names": {
+        "Fast Punch": "Puñetazo rápido",
+        "READY": "LISTO",
+        "Strong Punch": "Puñetazo fuerte"
+      },
+      "move_titles": [
+        "Puñetazo rápido",
+        "LISTO",
+        "Puñetazo fuerte"
+      ]
+    },
+    "QUEEN": {
+      "moves": {
+        "BARRIER": "Barrera",
+        "BURN_BRIGHT_FOR_ME": "Arde para mí",
+        "EXECUTION": "Ejecución",
+        "IMPOSSIBLE": "Imposible",
+        "OFF_WITH_YOUR_HEAD": "Despídete de tu cabeza",
+        "SUMMON_1": "Invocar",
+        "SUMMON_2": "Invocar",
+        "YOURE_MINE": "Te tengo entre mis garras"
+      },
+      "name": "La Reina",
+      "move_names": {
+        "Barrier": "Barrera",
+        "Burn Bright for Me": "Arde para mí",
+        "Execution": "Ejecución",
+        "Impossible": "Imposible",
+        "Off with Your Head": "Despídete de tu cabeza",
+        "Summon": "Invocar",
+        "You're Mine": "Te tengo entre mis garras"
+      },
+      "move_titles": [
+        "Barrera",
+        "Arde para mí",
+        "Ejecución",
+        "Imposible",
+        "Despídete de tu cabeza",
+        "Invocar",
+        "Invocar",
+        "Te tengo entre mis garras"
+      ]
+    },
+    "ROCKET": {
+      "moves": {
+        "CHARGE_UP": "Cargar",
+        "LASER": "Láser",
+        "PRECISION_BEAM": "Rayo preciso",
+        "RECHARGE": "Recarga",
+        "TARGETING_RETICLE": "Mira"
+      },
+      "name": "Perforadora",
+      "move_names": {
+        "Charge Up": "Cargar",
+        "Laser": "Láser",
+        "Precision Beam": "Rayo preciso",
+        "Recharge": "Recarga",
+        "Targeting Reticle": "Mira"
+      },
+      "move_titles": [
+        "Cargar",
+        "Láser",
+        "Rayo preciso",
+        "Recarga",
+        "Mira"
+      ]
+    },
+    "SCROLL_OF_BITING": {
+      "moves": {
+        "CHEW": "Masticar",
+        "CHOMP": "Morder",
+        "MORE_TEETH": "Más dientes"
+      },
+      "name": "Pergamino mordedor",
+      "move_names": {
+        "Chew": "Masticar",
+        "Chomp": "Morder",
+        "More Teeth": "Más dientes"
+      },
+      "move_titles": [
+        "Masticar",
+        "Morder",
+        "Más dientes"
+      ]
+    },
+    "SEAPUNK": {
+      "moves": {
+        "BUBBLE_BURP": "Rayo burbuja",
+        "SEA_KICK": "Patada marina",
+        "SPINNING_KICK": "Patada giratoria"
+      },
+      "name": "Canalla marino",
+      "move_names": {
+        "Bubble Burp": "Rayo burbuja",
+        "Sea Kick": "Patada marina",
+        "Spinning Kick": "Patada giratoria"
+      },
+      "move_titles": [
+        "Rayo burbuja",
+        "Patada marina",
+        "Patada giratoria"
+      ]
+    },
+    "SEWER_CLAM": {
+      "moves": {
+        "JET": "Chorrazo",
+        "PRESSURIZE": "Presurizar"
+      },
+      "name": "Almejarilla",
+      "move_names": {
+        "Jet": "Chorrazo",
+        "Pressurize": "Presurizar"
+      },
+      "move_titles": [
+        "Chorrazo",
+        "Presurizar"
+      ]
+    },
+    "SHRINKER_BEETLE": {
+      "moves": {
+        "CHOMP": "Mordisco",
+        "SHRINKER": "Encoger",
+        "STOMP": "Pisotón"
+      },
+      "name": "Encogebajo",
+      "move_names": {
+        "Chomp": "Mordisco",
+        "Shrinker": "Encoger",
+        "Stomp": "Pisotón"
+      },
+      "move_titles": [
+        "Mordisco",
+        "Encoger",
+        "Pisotón"
+      ]
+    },
+    "SKULKING_COLONY": {
+      "moves": {
+        "INERTIA": "Inercia",
+        "SUPER_CRAB": "Supercangrejo",
+        "ZOOM": "Zumbido"
+      },
+      "name": "Colonia acechadora",
+      "move_names": {
+        "Inertia": "Inercia",
+        "Super Crab": "Supercangrejo",
+        "Zoom": "Zumbido"
+      },
+      "move_titles": [
+        "Inercia",
+        "Supercangrejo",
+        "Zumbido"
+      ]
+    },
+    "SLIMED_BERSERKER": {
+      "name": "Berserker viscoso"
+    },
+    "SLITHERING_STRANGLER": {
+      "moves": {
+        "CONSTRICT": "Atadura",
+        "LASH": "Latigazo",
+        "THWACK": "Porrazo"
+      },
+      "name": "Estrangulador reptante",
+      "move_names": {
+        "Constrict": "Atadura",
+        "Lash": "Latigazo",
+        "Thwack": "Porrazo"
+      },
+      "move_titles": [
+        "Atadura",
+        "Latigazo",
+        "Porrazo"
+      ]
+    },
+    "SLUDGE_SPINNER": {
+      "moves": {
+        "OIL_SPRAY": "Rociada aceitosa",
+        "RAGE": "Furia",
+        "SLAM": "Golpetazo"
+      },
+      "name": "Girador cenagoso",
+      "move_names": {
+        "Oil Spray": "Rociada aceitosa",
+        "Rage": "Furia",
+        "Slam": "Golpetazo"
+      },
+      "move_titles": [
+        "Rociada aceitosa",
+        "Furia",
+        "Golpetazo"
+      ]
+    },
+    "SLUMBERING_BEETLE": {
+      "moves": {
+        "CRASH": "Colisión",
+        "RESOLVE": "Resolver",
+        "ROLL_OUT": "Desenrollar",
+        "SNORE": "Ronquido"
+      },
+      "name": "Escarabajo durmiente",
+      "move_names": {
+        "Crash": "Colisión",
+        "Resolve": "Resolver",
+        "Roll Out": "Desenrollar",
+        "Snore": "Ronquido"
+      },
+      "move_titles": [
+        "Colisión",
+        "Resolver",
+        "Desenrollar",
+        "Ronquido"
+      ]
+    },
+    "SNAPPING_JAXFRUIT": {
+      "moves": {
+        "COLLECT_POWER": "Concentrar energía",
+        "ENERGY_ORB": "Orbe de energía"
+      },
+      "name": "Energicol mordedora",
+      "move_names": {
+        "Collect Power": "Concentrar energía",
+        "Energy Orb": "Orbe de energía"
+      },
+      "move_titles": [
+        "Concentrar energía",
+        "Orbe de energía"
+      ]
+    },
+    "SNEAKY_GREMLIN": {
+      "moves": {
+        "TACKLE": "Placaje"
+      },
+      "name": "Gremlin sigiloso",
+      "move_names": {
+        "Tackle": "Placaje"
+      },
+      "move_titles": [
+        "Placaje"
+      ]
+    },
+    "SOUL_FYSH": {
+      "moves": {
+        "BURP": "Eructo",
+        "DE_GAS": "Fuga de gas",
+        "SCREAM": "Alarido"
+      },
+      "name": "Peth alma",
+      "move_names": {
+        "Burp": "Eructo",
+        "De-Gas": "Fuga de gas",
+        "Scream": "Alarido"
+      },
+      "move_titles": [
+        "Eructo",
+        "Fuga de gas",
+        "Alarido"
+      ]
+    },
+    "SOUL_NEXUS": {
+      "moves": {
+        "DRAIN_LIFE": "Drenar vida",
+        "MAELSTROM": "Vorágine",
+        "SOUL_BURN": "Quemadura del alma"
+      },
+      "name": "Nexo de almas",
+      "move_names": {
+        "Drain Life": "Drenar vida",
+        "Maelstrom": "Vorágine",
+        "Soul Burn": "Quemadura del alma"
+      },
+      "move_titles": [
+        "Drenar vida",
+        "Vorágine",
+        "Quemadura del alma"
+      ]
+    },
+    "SPECTRAL_KNIGHT": {
+      "moves": {
+        "HEX": "Maleficio",
+        "SOUL_FLAME": "Llama del alma",
+        "SOUL_SLASH": "Corte espiritual"
+      },
+      "name": "Caballero espectral",
+      "move_names": {
+        "Hex": "Maleficio",
+        "Soul Flame": "Llama del alma",
+        "Soul Slash": "Corte espiritual"
+      },
+      "move_titles": [
+        "Maleficio",
+        "Llama del alma",
+        "Corte espiritual"
+      ]
+    },
+    "SPINY_TOAD": {
+      "moves": {
+        "PROTRUDING_SPIKES": "Pinchos prominentes",
+        "SPIKE_EXPLOSION": "Explosión de púas",
+        "TONGUE_LASH": "Lengüetazo"
+      },
+      "name": "Sapo espinoso",
+      "move_names": {
+        "Protruding Spikes": "Pinchos prominentes",
+        "Spike Explosion": "Explosión de púas",
+        "Tongue Lash": "Lengüetazo"
+      },
+      "move_titles": [
+        "Pinchos prominentes",
+        "Explosión de púas",
+        "Lengüetazo"
+      ]
+    },
+    "STABBOT": {
+      "moves": {
+        "STAB": "Puñalada"
+      },
+      "name": "Puñalatrón",
+      "move_names": {
+        "Stab": "Puñalada"
+      },
+      "move_titles": [
+        "Puñalada"
+      ]
+    },
+    "TERROR_EEL": {
+      "name": "Aberración abisal"
+    },
+    "TEST_SUBJECT": {
+      "moves": {
+        "BIG_POUNCE_MOVE": "Salto feroz",
+        "BITE_MOVE": "Mordisco",
+        "BURNING_GROWL_MOVE": "Rugido abrasador",
+        "MULTI_CLAW_MOVE": "Garra múltiple",
+        "PHASE3_LACERATE_MOVE": "Laceración",
+        "POUNCE_MOVE": "Abalanzarse",
+        "RESPAWN_MOVE": "Reaparición",
+        "SKULL_BASH_MOVE": "Cabezazo"
+      },
+      "name": "Sujeto de pruebas #C{Count}",
+      "move_names": {
+        "Big Pounce": "Salto feroz",
+        "Bite": "Mordisco",
+        "Burning Growl": "Rugido abrasador",
+        "Multi-Claw": "Garra múltiple",
+        "Lacerate": "Laceración",
+        "Pounce": "Abalanzarse",
+        "Respawn": "Reaparición",
+        "Skull Bash": "Cabezazo"
+      },
+      "move_titles": [
+        "Salto feroz",
+        "Mordisco",
+        "Rugido abrasador",
+        "Garra múltiple",
+        "Laceración",
+        "Abalanzarse",
+        "Reaparición",
+        "Cabezazo"
+      ]
+    },
+    "THE_ADVERSARY_MK_ONE": {
+      "moves": {
+        "BARRAGE": "Descarga",
+        "BEAM": "Rayo",
+        "SMASH": "Aplastar"
+      },
+      "name": "El Adversario Mk 1",
+      "move_names": {
+        "Barrage": "Descarga",
+        "Beam": "Rayo",
+        "Smash": "Aplastar"
+      },
+      "move_titles": [
+        "Descarga",
+        "Rayo",
+        "Aplastar"
+      ]
+    },
+    "THE_ADVERSARY_MK_THREE": {
+      "moves": {
+        "BARRAGE": "Descarga",
+        "CRASH": "Colisión",
+        "FLAME_BEAM": "Rayo flamígero"
+      },
+      "name": "El Adversario Mk 3",
+      "move_names": {
+        "Barrage": "Descarga",
+        "Crash": "Colisión",
+        "Flame Beam": "Rayo flamígero"
+      },
+      "move_titles": [
+        "Descarga",
+        "Colisión",
+        "Rayo flamígero"
+      ]
+    },
+    "THE_ADVERSARY_MK_TWO": {
+      "moves": {
+        "BARRAGE": "Descarga",
+        "BASH": "Golpetazo",
+        "FLAME_BEAM": "Rayo flamígero"
+      },
+      "name": "El Adversario Mk 2",
+      "move_names": {
+        "Barrage": "Descarga",
+        "Bash": "Golpetazo",
+        "Flame Beam": "Rayo flamígero"
+      },
+      "move_titles": [
+        "Descarga",
+        "Golpetazo",
+        "Rayo flamígero"
+      ]
+    },
+    "THE_ARM": {
+      "moves": {
+        "GRAB": "Agarrón",
+        "PUNCH": "Puñetazo",
+        "WRESTLE": "Pulso"
+      },
+      "name": "El Brazo",
+      "move_names": {
+        "Grab": "Agarrón",
+        "Punch": "Puñetazo",
+        "Wrestle": "Pulso"
+      },
+      "move_titles": [
+        "Agarrón",
+        "Puñetazo",
+        "Pulso"
+      ]
+    },
+    "THE_BELL": {
+      "moves": {
+        "CACOPHONY": "Cacofonía",
+        "CLANG": "Sonido metálico",
+        "RING": "Tañido"
+      },
+      "name": "La Campana",
+      "move_names": {
+        "Cacophony": "Cacofonía",
+        "Clang": "Sonido metálico",
+        "Ring": "Tañido"
+      },
+      "move_titles": [
+        "Cacofonía",
+        "Sonido metálico",
+        "Tañido"
+      ]
+    },
+    "THE_DREAMER": {
+      "moves": {
+        "DREAM": "Sueño",
+        "FEND_OFF": "Repeler",
+        "RUMINATE": "Cavilar",
+        "SNORE": "Roncar"
+      },
+      "name": "El Soñador",
+      "move_names": {
+        "Dream": "Sueño",
+        "Fend Off": "Repeler",
+        "Ruminate": "Cavilar",
+        "Snore": "Roncar"
+      },
+      "move_titles": [
+        "Sueño",
+        "Repeler",
+        "Cavilar",
+        "Roncar"
+      ]
+    },
+    "THE_FORGOTTEN": {
+      "moves": {
+        "DREAD": "Pavor",
+        "MIASMA": "Miasma"
+      },
+      "name": "El Olvidado",
+      "move_names": {
+        "Dread": "Pavor"
+      },
+      "move_titles": [
+        "Pavor",
+        "Miasma"
+      ]
+    },
+    "THE_INSATIABLE": {
+      "moves": {
+        "LIQUIFY_GROUND": "Licuar el suelo",
+        "LUNGING_BITE": "Mordisco brusco",
+        "SALIVATE": "Salivar",
+        "THRASH": "Despedazar"
+      },
+      "name": "El Insaciable",
+      "move_names": {
+        "Liquify Ground": "Licuar el suelo",
+        "Lunging Bite": "Mordisco brusco",
+        "Salivate": "Salivar",
+        "Thrash": "Despedazar"
+      },
+      "move_titles": [
+        "Licuar el suelo",
+        "Mordisco brusco",
+        "Salivar",
+        "Despedazar"
+      ]
+    },
+    "THE_LOST": {
+      "moves": {
+        "DEBILITATING_SMOG": "Polución debilitante",
+        "EYE_LASERS": "Láser ocular"
+      },
+      "name": "El Perdido",
+      "move_names": {
+        "Debilitating Smog": "Polución debilitante",
+        "Eye Lasers": "Láser ocular"
+      },
+      "move_titles": [
+        "Polución debilitante",
+        "Láser ocular"
+      ]
+    },
+    "THE_OBSCURA": {
+      "moves": {
+        "HARDENING_STRIKE": "Golpe endurecedor",
+        "ILLUSION": "Ilusión",
+        "PIERCING_GAZE": "Mirada penetrante",
+        "WAIL": "Lamento"
+      },
+      "name": "La Tenebrosa",
+      "move_names": {
+        "Hardening Strike": "Golpe endurecedor",
+        "Illusion": "Ilusión",
+        "Piercing Gaze": "Mirada penetrante",
+        "Wail": "Lamento"
+      },
+      "move_titles": [
+        "Golpe endurecedor",
+        "Ilusión",
+        "Mirada penetrante",
+        "Lamento"
+      ]
+    },
+    "THIEVING_HOPPER": {
+      "moves": {
+        "ESCAPE": "Escape",
+        "FLUTTER": "Aleteo",
+        "HAT_TRICK": "Triplete",
+        "NAB": "Robo",
+        "THIEVERY": "Hurto"
+      },
+      "name": "Asaltamontes",
+      "move_names": {
+        "Flutter": "Aleteo",
+        "Hat Trick": "Triplete",
+        "Nab": "Robo",
+        "Thievery": "Hurto"
+      },
+      "move_titles": [
+        "Escape",
+        "Aleteo",
+        "Triplete",
+        "Robo",
+        "Hurto"
+      ]
+    },
+    "TOADPOLE": {
+      "moves": {
+        "SPIKEN": "Espinas",
+        "SPIKE_SPIT": "Escupitajo espinoso",
+        "WHIRL": "Remolino"
+      },
+      "name": "Ranicuajo",
+      "move_names": {
+        "Spiken": "Espinas",
+        "Spike Spit": "Escupitajo espinoso",
+        "Whirl": "Remolino"
+      },
+      "move_titles": [
+        "Espinas",
+        "Escupitajo espinoso",
+        "Remolino"
+      ]
+    },
+    "TORCH_HEAD_AMALGAM": {
+      "moves": {
+        "TACKLE": "Placaje"
+      },
+      "name": "Amalgama de antorchas",
+      "move_names": {
+        "Tackle": "Placaje"
+      },
+      "move_titles": [
+        "Placaje"
+      ]
+    },
+    "TOUGH_EGG": {
+      "moves": {
+        "HATCH": "ECLOSIÓN"
+      },
+      "name": "Huevo endurecido",
+      "move_names": {
+        "HATCH": "ECLOSIÓN"
+      },
+      "move_titles": [
+        "ECLOSIÓN"
+      ]
+    },
+    "TRACKER_RUBY_RAIDER": {
+      "moves": {
+        "HOUNDS": "Soltar a los perros",
+        "TRACK": "Rastrear"
+      },
+      "name": "Asaltante rastreador",
+      "move_names": {
+        "Unleash the Hounds": "Soltar a los perros",
+        "Track": "Rastrear"
+      },
+      "move_titles": [
+        "Soltar a los perros",
+        "Rastrear"
+      ]
+    },
+    "TUNNELER": {
+      "moves": {
+        "BELOW": "Ataque subterráneo",
+        "BITE": "Mordisco",
+        "BURROW": "Excavar",
+        "STRIKE": "Golpe emergente"
+      },
+      "name": "Tunelador",
+      "move_names": {
+        "Attack from Below": "Ataque subterráneo",
+        "Bite": "Mordisco",
+        "Burrow": "Excavar",
+        "Emerging Strike": "Golpe emergente"
+      },
+      "move_titles": [
+        "Ataque subterráneo",
+        "Mordisco",
+        "Excavar",
+        "Golpe emergente"
+      ]
+    },
+    "TURRET_OPERATOR": {
+      "moves": {
+        "LOADING": "Cargando",
+        "UNLOAD": "¡Fuego!"
+      },
+      "name": "Ametrallador",
+      "move_names": {
+        "Loading": "Cargando",
+        "Unload!": "¡Fuego!"
+      },
+      "move_titles": [
+        "Cargando",
+        "¡Fuego!"
+      ]
+    },
+    "TWIG_SLIME_M": {
+      "moves": {
+        "CHOMP": "Morder",
+        "POKEY_POUNCE": "Pequeño salto",
+        "STICKY_SHOT": "Disparo pegajoso"
+      },
+      "name": "Ramalimo grande",
+      "move_names": {
+        "Chomp": "Morder",
+        "Pokey Pounce": "Pequeño salto",
+        "Sticky Shot": "Disparo pegajoso"
+      },
+      "move_titles": [
+        "Morder",
+        "Pequeño salto",
+        "Disparo pegajoso"
+      ]
+    },
+    "TWIG_SLIME_S": {
+      "moves": {
+        "GOOP": "Baba",
+        "TACKLE": "Placaje"
+      },
+      "name": "Ramalimo pequeño",
+      "move_names": {
+        "Goop": "Baba",
+        "Tackle": "Placaje"
+      },
+      "move_titles": [
+        "Baba",
+        "Placaje"
+      ]
+    },
+    "TWO_TAILED_RAT": {
+      "moves": {
+        "CALL_FOR_BACKUP": "Refuerzos",
+        "DISEASE_BITE": "Mordisco infeccioso",
+        "SCRATCH": "Arañazo",
+        "SCREECH": "Chillido"
+      },
+      "name": "Rata de cola bífida",
+      "move_names": {
+        "Call for Backup": "Refuerzos",
+        "Disease Bite": "Mordisco infeccioso",
+        "Scratch": "Arañazo",
+        "Screech": "Chillido"
+      },
+      "move_titles": [
+        "Refuerzos",
+        "Mordisco infeccioso",
+        "Arañazo",
+        "Chillido"
+      ]
+    },
+    "VANTOM": {
+      "moves": {
+        "DISMEMBER": "Desmembrar",
+        "INKY_LANCE": "Lanza de tinta",
+        "INK_BLOT": "Mancha de tinta",
+        "PREPARE": "Preparación"
+      },
+      "name": "Tintasma",
+      "move_names": {
+        "Dismember": "Desmembrar",
+        "Inky Lance": "Lanza de tinta",
+        "Ink Blot": "Mancha de tinta",
+        "Prepare": "Preparación"
+      },
+      "move_titles": [
+        "Desmembrar",
+        "Lanza de tinta",
+        "Mancha de tinta",
+        "Preparación"
+      ]
+    },
+    "VINE_SHAMBLER": {
+      "moves": {
+        "CHOMP": "Mordisco",
+        "GRASPING_VINES": "Enredaderas",
+        "SWIPE": "Barrido"
+      },
+      "name": "Engendro de lianas",
+      "move_names": {
+        "Chomp": "Mordisco",
+        "Grasping Vines": "Enredaderas",
+        "Swipe": "Barrido"
+      },
+      "move_titles": [
+        "Mordisco",
+        "Enredaderas",
+        "Barrido"
+      ]
+    },
+    "WATERFALL_GIANT": {
+      "moves": {
+        "PRESSURE_GUN": "Agua a presión",
+        "PRESSURIZE": "Presurizar",
+        "RAM": "Embestida",
+        "SIPHON": "Sifón",
+        "STOMP": "Pisotón"
+      },
+      "name": "Cataronte",
+      "move_names": {
+        "Pressure Gun": "Agua a presión",
+        "Pressurize": "Presurizar",
+        "Ram": "Embestida",
+        "Siphon": "Sifón",
+        "Stomp": "Pisotón"
+      },
+      "move_titles": [
+        "Agua a presión",
+        "Presurizar",
+        "Embestida",
+        "Sifón",
+        "Pisotón"
+      ]
+    },
+    "WRIGGLER": {
+      "moves": {
+        "PARASITIZE_PLAYER": "Parasitar",
+        "WRIGGLE_STRIKE": "Golpe retorcido"
+      },
+      "name": "Alimaña retorcida",
+      "move_names": {
+        "Parasitize Player": "Parasitar",
+        "Wriggle Strike": "Golpe retorcido"
+      },
+      "move_titles": [
+        "Parasitar",
+        "Golpe retorcido"
+      ]
+    },
+    "ZAPBOT": {
+      "moves": {
+        "ZAP": "Chispazo"
+      },
+      "name": "Chispatrón",
+      "move_names": {
+        "Zap": "Chispazo"
+      },
+      "move_titles": [
+        "Chispazo"
+      ]
+    }
   }
 }

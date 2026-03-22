@@ -348,7 +348,7 @@
       "name": "Kaos"
     },
     "CHARGE": {
-      "description": "Çekme Deste'nden 2 kart seç ve onları\n",
+      "description": "Çekme Deste'nden 2 kart seç ve onları\n{IfUpgraded:show:Uşak Saldırısı+ kartlarına Dönüştür.",
       "name": "İLERİ!!"
     },
     "CHARGE_BATTERY": {
@@ -1054,7 +1054,7 @@
       "name": "Gizli Sandık"
     },
     "HIDDEN_DAGGERS": {
-      "description": "Elinden 2 kartı çıkar.\nEl'ine 2 ",
+      "description": "Elinden 2 kartı çıkar.\nEl'ine 2 {IfUpgraded:show:Kama+ ekle.",
       "name": "Gizli Hançerler"
     },
     "HIDDEN_GEM": {
@@ -5182,175 +5182,1098 @@
   },
   "events": {
     "ABYSSAL_BATHS": {
-      "name": "Dipsiz Havuzlar"
+      "name": "Dipsiz Havuzlar",
+      "description": "Gözlerden uzak bir oda keşfedersin.\n\nBuhar, kaynar havuzlarda hipnotik bir ritimle renk değiştiren sıcak bir sıvının üzerinden yükselir. Tavandan sarkan midyemsi oluşumlar, yüzeye değdiğinde tıslayıp kıvranan, koyu, yapışkan bir sıvı damlatır. Hava ağırdır; tuz ve şüphesiz derecede organik bir kokuyla doludur.\n\nEn büyük havuzun kenarına yaklaştığında sıvı dalgalanır. Sular, sanki girişini bekliyormuşçasına daha şiddetli kabarmaya başlar.",
+      "choices": [
+        {
+          "name": "Kaçın",
+          "description": "10 CP iyileş."
+        },
+        {
+          "name": "Gir",
+          "description": "2 Maksimum CP elde et. 3 hasar al."
+        }
+      ]
     },
     "AMALGAMATOR": {
-      "name": "Kaynaştırıcı"
+      "name": "Kaynaştırıcı",
+      "description": "ÇIN! ÇIN!!!\n\nBir duvarın öte yanında, metalin metalle temasının yankılarını duyarsın...\n\nDinlemek için başını duvara yasladığında duvar açılır ve içeride, harıl harıl çalışan iri, altı kollu bir figür ortaya çıkar.\nParıldayan mühürlerden oluşan ve dönüp duran bir girdabı andıran \"yüzü,\" sürekli şekil değiştiriyordu.\n\n“Yükselen Ruh’a sahip biri atölyemi mi buldu? Hadi KAYNAŞTIRALIM!”",
+      "choices": [
+        {
+          "name": "Savunmaları Birleştir",
+          "description": "2 Savunma kartını kaldır. Deste'ne Nihai Savunma ekle."
+        },
+        {
+          "name": "Saldırıları Birleştir",
+          "description": "2 Saldırı kartını kaldır. Deste'ne Nihai Saldırı ekle."
+        }
+      ]
     },
     "AROMA_OF_CHAOS": {
-      "name": "Kaos'un Aroması"
+      "name": "Kaos'un Aroması",
+      "description": "Sık bir çalılığın arasından güçlükle ilerleyip bir açıklığa çıktığında adını koyamadığın bir nostalji duygusu seni sarar.\n\nÇiçeksi kokuların, iğrenç bir çürümenin ve tamamen farklı bir şeyin karışımı... Attığın her adımda koku daha da yoğunlaşır ve çevrendeki dünyanın eğilip büküldüğünü hissedersin.\n\nDeğişken bir kaos hissiyle kuşatıldığında benlik duygunu yavaş yavaş kaybetmeye başlarsın.",
+      "choices": [
+        {
+          "name": "Kendini Bırak",
+          "description": "Deste'ndeki bir kartı Dönüştür."
+        },
+        {
+          "name": "Kontrolü Elinde Tut",
+          "description": "Deste'ndeki bir kartı Geliştir."
+        }
+      ]
     },
     "BATTLEWORN_DUMMY": {
-      "name": "Savaşta Yıpranmış Manken"
+      "name": "Savaşta Yıpranmış Manken",
+      "description": "Yaklaştığında, titremeye ve cızırdamaya başlar; ardından göz kamaştırıcı bir şekilde ışıldar!\n\n“BZZZT! TALİM VAKTİ!!! BENİ YENMEK İÇİN 3 TURUN VAR!\nBİR AYAR SEÇ YA DA ÖLÜMCÜL AŞAĞILAMAYLA YÜZLEŞ.\nİşte seçenekler:”\n\nBu dehşet verici mesajın ardından, manken ayrıntılı talimatları büyük bir özenle okumaya başlar.\n\nNe seçeceksin?",
+      "choices": [
+        {
+          "name": "1. Ayar",
+          "description": "75 CP olan bir mankenle savaş. Rastgele 1 İksir elde et."
+        },
+        {
+          "name": "2. Ayar",
+          "description": "150 CP olan bir mankenle savaş. Rastgele 2 kartı Geliştir."
+        },
+        {
+          "name": "3. Ayar",
+          "description": "300 CP olan bir mankenle savaş. Rastgele bir Kalıntı elde et."
+        }
+      ]
     },
     "BRAIN_LEECH": {
-      "name": "Beyin Sülüğü"
+      "name": "Beyin Sülüğü",
+      "description": "*tak*\n\nBaşının tepesinde keskin bir acı hissedersin ve bir düşünce zihnine saplanır.\n\n“BİLGİYİ PAYLAŞ???”\n\nNasıl devam edeceğinden emin değilsin...",
+      "choices": [
+        {
+          "name": "Sülüğü Kafandan Sök",
+          "description": "5 CP kaybet. Renksiz bir kart elde et."
+        },
+        {
+          "name": "Bilgiyi Paylaş",
+          "description": "Deste'ne eklemek için 5 rastgele karttan 1 tanesini seç."
+        }
+      ]
     },
     "BUGSLAYER": {
-      "name": "Böcek Avcısı"
+      "name": "Böcek Avcısı",
+      "description": "Agresif böceklerden oluşan bir sürüyle boğuşurken, bir anda fark edersin ki tüm bu süre boyunca yanında Heybetli, Çetin bir Savaşçı da savaşıyordur!\n\nYenilgiyi sezen böcekler sağa sola dağılıp kaçar. Sen de silah arkadaşına dönersin.\n“Bu haşereleri yok etmeye dair birkaç ipucu ister misin?”\n\nNe kadar da kibar. Başını sallayıp teklifini kabul edersin.",
+      "choices": [
+        {
+          "name": "Yok Etme Tekniğini Öğren",
+          "description": "Deste'ne İmha Et kartını ekle."
+        },
+        {
+          "name": "Ezme Tekniğini Öğren",
+          "description": "Deste'ne Çiğne Geç kartını ekle."
+        }
+      ]
     },
     "BYRDONIS_NEST": {
-      "name": "Guşdeniz Yuvası"
+      "name": "Guşdeniz Yuvası",
+      "description": "Sendeleyen Devasa Bir Yaratığın, yaralı bir Yeşil Guş'u kovalayıp gittiğini görürsün.\n\nGuşun kaçıp gittiği oyukta, korunmasız tek bir yumurta, terk edilmiş hâlde durmaktadır.\n\nMiden guruldar...",
+      "choices": [
+        {
+          "name": "Yumurtayı Ye",
+          "description": "7 Maksimum CP elde et."
+        },
+        {
+          "name": "Yumurtayı Al",
+          "description": "Deste'ne Guşdeniz Yumurtası kartını ekle."
+        }
+      ]
     },
     "COLORFUL_PHILOSOPHERS": {
-      "name": "Renkli Filozoflar"
+      "name": "Renkli Filozoflar",
+      "description": "Karşında hayli epik bir manzara duruyor.\nBir platformun üzerinde yükselen üç farklı renkteki heykelin, rengin felsefi sonuçları üzerine hararetli bir tartışmaya girdiğini görüyorsun.\n\nKulak kabarttıkça, ortadaki en önemli sorunun aslında hangisinin gerçekten EN İYİ renk olduğu üzerine olduğunu anlıyorsun.\n\nSen de fikirlerinle lafa karışırsın.",
+      "choices": [
+        {
+          "name": "Mavi",
+          "description": "3 Arıza kartı elde et."
+        },
+        {
+          "name": "Eşitlik",
+          "description": "Prizmatik Cam Parçası'nı elde et."
+        },
+        {
+          "name": "Kırmızı",
+          "description": "3 Demirkaplı kartı elde et."
+        },
+        {
+          "name": "Pembe",
+          "description": "3 Ölübağlayan kartı elde et."
+        },
+        {
+          "name": "Turuncu",
+          "description": "3 Naip kartı elde et."
+        },
+        {
+          "name": "Yeşil",
+          "description": "3 Sessiz kartı elde et."
+        }
+      ]
     },
     "COLOSSAL_FLOWER": {
-      "name": "Devasa Çiçek"
+      "name": "Devasa Çiçek",
+      "description": "Kemiklerden oluşan bir dağın tepesinde devasa bir çiçek büyümektedir.\n\nRenk değiştiren taç yaprakları nabız gibi atarken, merkezinde Güçlü Bir Polen Kümesi olduğunu sezersin; ancak dalgalanan yapraklar ustura keskinliğindedir ve son derece öngörülemezdir.\n\nBiraz altın nektar alabilirsin... ama merkezdeki ödüle uzanmak da fazlasıyla cezbedicidir.",
+      "choices": [
+        {
+          "name": "Nektarı Topla",
+          "description": "X Altın elde et."
+        },
+        {
+          "name": "Daha Derine Ulaş",
+          "description": "Daha derine ilerle. 5 CP kaybet."
+        }
+      ],
+      "pages": [
+        {
+          "description": "Kemiklerden oluşan bir dağın tepesinde devasa bir çiçek büyümektedir.\n\nRenk değiştiren taç yaprakları nabız gibi atarken, merkezinde Güçlü Bir Polen Kümesi olduğunu sezersin; ancak dalgalanan yapraklar ustura keskinliğindedir ve son derece öngörülemezdir.\n\nBiraz altın nektar alabilirsin... ama merkezdeki ödüle uzanmak da fazlasıyla cezbedicidir.",
+          "choices": [
+            {
+              "name": "Nektarı Topla",
+              "description": "X Altın elde et."
+            },
+            {
+              "name": "Daha Derine Ulaş",
+              "description": "Daha derine ilerle. 5 CP kaybet."
+            }
+          ]
+        },
+        {
+          "description": "Ustura keskinliğindeki taç yapraklardan bir katmanı zorla aşarsın. Üzerleri, tenini karıncalandıran bir maddeyle kaplıdır. Bu his, sanki acıyı uyuşturuyor gibidir.\n\nBelki de burada bir kemik yığınının olmasının sebebi budur...",
+          "choices": [
+            {
+              "name": "Nektarı Topla",
+              "description": "X Altın elde et."
+            },
+            {
+              "name": "Derine İlerle",
+              "description": "Daha da derine ilerle. 6 CP kaybet."
+            }
+          ]
+        },
+        {
+          "description": "İçeri ilerledikçe karıncalanma, zonklayan bir güçsüzlüğe dönüşür...\n\nBu çiçek beni yemek istiyor. Neden içine girdim ki?",
+          "choices": [
+            {
+              "name": "Nektarı Topla",
+              "description": "X Altın elde et."
+            },
+            {
+              "name": "Merkezine Gir",
+              "description": "7 CP kaybet. Polenli Çekirdek'i elde et."
+            }
+          ]
+        }
+      ]
     },
     "CRYSTAL_SPHERE": {
-      "name": "Kristal Küre"
+      "name": "Kristal Küre",
+      "description": "“İçeri gireceğini öngörmüştüm!..”\n\nHırıltılı bir ses, mistik bir kulübeye adım attığında yankılanır.\n\n“Kaderin seni buraya getirdi. HEPİMİZİ KURTARABİLMEN için geleceğini ve talihini açığa çıkarmalıyız!!”\n“Pekâlâ, işte Kristal Küre okuması için seçenekler. Şunu da imzalamayı unutma,” derken kalemle parşömeni ortaya çıkarır.",
+      "choices": [
+        {
+          "name": "Ödeme Planı",
+          "description": "Borç elde et. 6 kez Kehanetini Ortaya Çıkar."
+        },
+        {
+          "name": "Geleceğini Ortaya Çıkar",
+          "description": "50 Altın öde. 3 kez Kehanetini Ortaya Çıkar."
+        }
+      ]
     },
     "DENSE_VEGETATION": {
-      "name": "Yoğun Bitki Örtüsü"
+      "name": "Yoğun Bitki Örtüsü",
+      "description": "Bir süredir yanlış yoldan ilerledikten sonra, kendini eğrelti otları, çalılıklar ve sarmaşıklarla dolu sık bir ormanda bulursun. Özellikle de sarmaşıklarla dolup taşmaktadır burası. Üstüne bir yorgunluk çöker ve aklına iç karartıcı bir fikir gelir:\n\n“Kayboldun, hazırlıksızsın ve ölümün kaçınılmazlığı yaklaşıyor.”\n\nNe yapacaksın?",
+      "choices": [
+        {
+          "name": "Dinlen",
+          "description": "X CP iyileş. Bazı düşmanlarla savaş."
+        },
+        {
+          "name": "Güçlükle Yürümeye Devam Et",
+          "description": "Deste'nden bir kartı kaldır. 11 CP kaybet."
+        }
+      ]
     },
     "DOLL_ROOM": {
-      "name": "Bebek Odası"
+      "name": "Bebek Odası",
+      "description": "Gizli bir odaya girersin...\n\nOda, sayısız bebekle tıka basa doludur. Her biri benzersizdir; yüz ifadeleri neşeden kedere değişir, kıyafetleri ise yüzyılları ve bildiğin diyarları aşar.\n\nFısıltılardan oluşan bir koronun sesi giderek yükselir; ta ki bebekler birbirlerinin üzerine bağırmaya ve seni çağırmaya başlayana dek...\n\nBirini seçmeli ve derhâl çıkmalısın.",
+      "choices": [
+        {
+          "name": "Her Birini İncele ve En İyi Kararı Ver",
+          "description": "15 CP kaybet. 3 Bebek Kalıntısı'ndan 1 tanesini seç."
+        },
+        {
+          "name": "Rastgele Birini Seç",
+          "description": "Rastgele bir Bebek Kalıntısı elde et."
+        },
+        {
+          "name": "Biraz Zaman Ayır",
+          "description": "5 CP kaybet. 2 Bebek Kalıntısı'ndan 1 tanesini seç."
+        }
+      ]
     },
     "DOORS_OF_LIGHT_AND_DARK": {
-      "name": "Karanlığın ve Aydınlığın Kapıları"
+      "name": "Karanlığın ve Aydınlığın Kapıları",
+      "description": "Az önce hiçbir şeyin olmadığı yerde bir kapı beliriverir...\n\nİçeri girdiğinde iki parıldayan kapı ve şık giyimli bir kapıcı ile karşılaşırsın.\n“Sonunda, bir ziyaretçi! Lütfen, lütfen! Bir kapı seçin. Herhangi bir kapı olabilir!”\n\nHâlâ Spire’da mıyız? Burası nasıl bu kadar temiz?",
+      "choices": [
+        {
+          "name": "Karanlık Kapı",
+          "description": "Deste'nden 1 kart kaldır."
+        },
+        {
+          "name": "Aydınlık Kapı",
+          "description": "Rastgele 2 kartını Geliştir."
+        }
+      ]
     },
     "DROWNING_BEACON": {
-      "name": "Batan Deniz Feneri"
+      "name": "Batan Deniz Feneri",
+      "description": "Kayalar ve durgun sulardan oluşan bir düş manzarasını aşarak ilerler, batmakta olan bir deniz feneriyle yüz yüze gelirsin. Fener, anti-ışık saçmaktadır.\n\nBurada birikmiş olan tekinsizce parlayan suyu şişeye doldurabilirsin ya da harap yapıya tırmanıp merceği ele geçirebilirsin.",
+      "choices": [
+        {
+          "name": "Şişele",
+          "description": "Işıldayan Su İksiri elde et."
+        },
+        {
+          "name": "Tırman",
+          "description": "Fresnel Mercek elde et. 13 Maksimum CP kaybet."
+        }
+      ]
     },
     "ENDLESS_CONVEYOR": {
-      "name": "Sonsuz Bant"
+      "name": "Sonsuz Bant",
+      "description": "Parlak ama eğri büğrü bir tabelası olan bir kulübeye ağır adımlarla girersin. Tabelada şunlar yazar:\n“SONSUZ ZİYAFET - NE KADAR AÇSAN O KADAR ÖDE!”\n\nİçeride, ince yapılı, çok kollu bir aşçı ustalıkla lokmalık yiyecekler hazırlar ve bunları kıvrıla kıvrıla uzanan kitinsi bir banda yerleştirir.\n\nAşçının kollarından biri bir tabelayı işaret eder:\nTanesi 35 Altın",
+      "choices": [
+        {
+          "name": "Şefi Gözlemle",
+          "description": "Deste'ndeki rastgele bir kartı Geliştir."
+        }
+      ]
     },
     "FAKE_MERCHANT": {
       "name": "Tüccar???"
     },
     "FIELD_OF_MAN_SIZED_HOLES": {
-      "name": "İnsan Boyutunda Delikler Arazisi"
+      "name": "İnsan Boyutunda Delikler Arazisi",
+      "description": "Bir anda karşına çıkan, devasa beden hatlarıyla oyulmuş uçsuz bucaksız bir alan, adımlarını olduğu yerde dondurur.\n\nBu siluetlerden biri seninkiyle birebir örtüşür.\n\nBu mükemmel...",
+      "choices": [
+        {
+          "name": "Deliğine Gir",
+          "description": "Bir kartı Cuk Oturdu ile Büyüle."
+        },
+        {
+          "name": "Diren",
+          "description": "Deste'nden 2 kart kaldır. Deste'ne Sıradanlık ekle."
+        }
+      ]
     },
     "GRAVE_OF_THE_FORGOTTEN": {
-      "name": "Unutulanın Mezarı"
+      "name": "Unutulanın Mezarı",
+      "description": "Kaynayıp duran mavi bir alevle işaretlenmiş tek bir mezar vardır...\n\nGururlu bir savaşçı savaşta ölmüştür; fakat ruhu huzursuzdur. Savaşmaya devam etmek ister. Seninle birlikte yolculuk etmeyi yalvarırcasına dilediğini hissedersin.\n\nBelki de onun için en iyisi gerçekle yüzleşmektir.",
+      "choices": [
+        {
+          "name": "Unutulmuş Ruh'u Kabul Et",
+          "description": "Unutulmuş Ruh elde et."
+        },
+        {
+          "name": "Gerçekle Yüzleştir",
+          "description": "Deste'ne Çürüme ekle. Tüketilen bir kartı Ruh'un Gücü ile Büyüle."
+        }
+      ]
     },
     "HUNGRY_FOR_MUSHROOMS": {
-      "name": "Mantar İştahı"
+      "name": "Mantar İştahı",
+      "description": "En son ne zaman bir şey yemiştin?\n...dur, bu muhteşem koku da ne?\n\nKokunun peşine düşersin ve her türden lezzetli mantarın pişirildiği, sıcak ve sevimli bir kamp alanına ulaşırsın! O kadar açsındır ki bu mantarları yemenin güvenli olup olmadığını hiç düşünmezsin.\n(Hatta o kadar açsındır ki ölü maceracıyı fark etmezsin bile.)",
+      "choices": [
+        {
+          "name": "Büyük Mantar"
+        },
+        {
+          "name": "Kokulu Mantar"
+        }
+      ]
     },
     "INFESTED_AUTOMATON": {
-      "name": "İstila Edilmiş Otomaton"
+      "name": "İstila Edilmiş Otomaton",
+      "description": "Ölü robotlarla dolu bir odadasındır.\n\nYalnız bir otomatonun hafifçe parıldayan bir çekirdeği hâlâ duruyor; ancak iğrenç, organik bir oluşum tarafından sarılmış ve hiçbir tepki vermiyor.",
+      "choices": [
+        {
+          "name": "İncele",
+          "description": "Rastgele bir Güç kartı elde et."
+        },
+        {
+          "name": "Çekirdeğe Dokun",
+          "description": "Maliyeti 0 olan rastgele bir kart elde et."
+        }
+      ]
     },
     "JUNGLE_MAZE_ADVENTURE": {
-      "name": "Vahşi Orman Labirentinde Macera"
+      "name": "Vahşi Orman Labirentinde Macera",
+      "description": "Bir açıklıkta, bakışlarını aşağıya dikmiş ve devasa bir labirenti işaret eden derme çatma bir maceracı grubuyla karşılaşırsın.\n\nLabirentin zenginliklerini yağmalamak için seni Destansı bir Göreve birlikte atılmaya davet ederler. Deneyimli bir maceracı olarak bu labirentin ölümcül tuzaklarla ve muhafızlarla dolu olduğu gerçeği, senin için apaçıktır.\n\nBirlikte çalışmak işleri kolaylaştırırdı... ama öyle yaparsan ganimeti paylaşmak zorunda kalırsın.",
+      "choices": [
+        {
+          "name": "Güçlerinizi Birleştirin",
+          "description": "50 Altın elde et."
+        },
+        {
+          "name": "Tek Kişilik Görev",
+          "description": "150 Altın elde et. 18 CP kaybet."
+        }
+      ]
     },
     "LOST_WISP": {
-      "name": "Kayıp Kıvılcım"
+      "name": "Kayıp Kıvılcım",
+      "description": "Uzakta tuhaf bir manzara göze çarpar. Ölü böceklerden oluşan yığınlar, ortasında küçük, parıldayan bir zerreyi andıran bir şeyin çevresini sarmıştır.\nHer türden böcek için son derece etkili bir çekici gibi görünür; ama alevler savurduğunu da fark edersin!\n\nİncelemek için daha da yaklaşırsın.",
+      "choices": [
+        {
+          "name": "Kıvılcımı Yakala",
+          "description": "Deste'ne Çürüme kartını ekle. Kayıp Kıvılcım kalıntısını elde et."
+        },
+        {
+          "name": "Kilitli",
+          "description": "Sahip olduğun maksimum CP çok düşük."
+        }
+      ]
     },
     "LUMINOUS_CHOIR": {
-      "name": "Işık Saçan Koro"
+      "name": "Işık Saçan Koro",
+      "description": "Doğal olmayan mavi bir parıltıya bulanmış bir açıklığa rastlarsın. Devasa mantarlar ışık üreterek nabız gibi atar; şapkaları şişkindir ve ıslaktır. Yaklaştıkça, mantarlar ürkütücü, melodik tonlar yaymaya başlar ve bu sesler göğsünün derinliklerinde yankılanır.\n\nEn büyük mantarın etli dokusunun içine gömülü, parıldayan bir şey fark edersin. Bu şey, mantarların şarkısıyla aynı ritimde atarak titreşmektedir.",
+      "choices": [
+        {
+          "name": "Adak Sun",
+          "description": "149 Altın öde. Rastgele bir Kalıntı elde et."
+        },
+        {
+          "name": "Kilitli",
+          "description": "149 Altın gerektirir."
+        }
+      ]
     },
     "MORPHIC_GROVE": {
-      "name": "Şekillenen Koruluğu"
+      "name": "Şekillenen Koruluğu",
+      "description": "Kristal ağaçlardan oluşan bir koruya girersin. Ağaçlar heyecanla titreşmeye başlar!\nSelamlar ve hoş geldinlerden oluşan bir koro seni adeta bombardımana tutarken bir grup Şekillenen, ağaçlardanfırlayarak ortaya çıkar.\n\nŞekillenenlerden biri köşede huzursuzca kıpırdanmaktadır. Diğerleri kadar sosyal olmadığı bellidir.\n\nGruba mı yaklaşacaksın, yoksa yalnız olana mı?",
+      "choices": [
+        {
+          "name": "Grup",
+          "description": "100 Altın kaybet. 2 kartını Dönüştür."
+        },
+        {
+          "name": "Yalnız",
+          "description": "5 maksimum CP elde et."
+        }
+      ]
     },
     "POTION_COURIER": {
-      "name": "İksir Kuryesi"
+      "name": "İksir Kuryesi",
+      "description": "Havada ekşi bir koku vardır ve kısa bir süre sonra yerde yığılmış bir İksir Kuryesi bulursun.\nKıpırdamaz. Cansızdır. Ölmüş mü!?\nEşyaları talan edilmiş olsa da üzerinde şu notun iliştirildiği bir paket İğrenç Kokulu İksir durmaktadır: “Alıcı: Tüccar”",
+      "choices": [
+        {
+          "name": "İksirleri Al",
+          "description": "3 adet İğrenç İksir elde et."
+        },
+        {
+          "name": "Yağmala",
+          "description": "Rastgele 1 Az Yaygın İksir elde et."
+        }
+      ]
     },
     "PUNCH_OFF": {
-      "name": "Yumruklaşma"
+      "name": "Yumruklaşma",
+      "description": "İki Yumruklayan Yapı birbirine girişmiş durumdadır ve aralarında biraz ganimet görürsün...\n\nOnu kapmaya çalışmalı mısın?",
+      "choices": [
+        {
+          "name": "Haklarından Gelebilirim",
+          "description": "Daha Görkemli Ödüller için onlarla savaş."
+        },
+        {
+          "name": "Çaktırmadan Aşır",
+          "description": "Deste'ne bir Yaralanma ekle. Rastgele bir Kalıntı elde et."
+        }
+      ]
     },
     "RANWID_THE_ELDER": {
-      "name": "İhtiyar Ranwid"
+      "name": "İhtiyar Ranwid",
+      "description": "Hayatında gördüğün en yaşlı kişi sana doğru yaklaşır.\n“Bir kez daha karşılaştık... Benim, Ranwid!”\n\nBu adamı tanımıyorsun.",
+      "choices": [
+        {
+          "name": "100 Altın ver.",
+          "description": "Rastgele bir Kalıntı elde et."
+        },
+        {
+          "name": "İksiri Ver: İksir",
+          "description": "Rastgele bir Kalıntı elde et."
+        },
+        {
+          "name": "Kilitli",
+          "description": "Verebileceğin hiçbir İksir yok."
+        }
+      ]
     },
     "REFLECTIONS": {
-      "name": "Yansımalar ralamısnaY"
+      "name": "Yansımalar ralamısnaY",
+      "description": "Bu da ne? Burada bir şey yanlış gibi...\n...ibig şılnay yeş rib adaruB ?en ad uB",
+      "choices": [
+        {
+          "name": "Parçala",
+          "description": "Deste'ni birebir kopyala. Kötü Şans elde et."
+        },
+        {
+          "name": "Bir Aynaya Dokun",
+          "description": "Rastgele 2 kartın geliştirmesini kaldır. Rastgele 4 kartı Geliştir."
+        }
+      ]
     },
     "RELIC_TRADER": {
-      "name": "Kalıntı Tüccarı"
+      "name": "Kalıntı Tüccarı",
+      "description": "Bir köşeyi dönersin ve bir anda, gölgeler içinden bir figür karşında öylece durmaktadır. Sana dönerek yüzünü sana çevirir:\n\n“Hoş geldin! Ne alıp satıyorsun?”\nFigür, soruyu sorarken pelerinini bir anda savurarak şüpheli mallardan oluşan bir koleksiyon sergiler.",
+      "choices": [
+        {
+          "name": "En Alttakini Al",
+          "description": "Kalıntın karşılığında yeni bir Kalıntı al."
+        },
+        {
+          "name": "Ortadakini Al",
+          "description": "Kalıntın karşılığında yeni bir Kalıntı al."
+        },
+        {
+          "name": "En Yukardakini Al",
+          "description": "Kalıntın karşılığında yeni bir Kalıntı al."
+        }
+      ]
     },
     "ROOM_FULL_OF_CHEESE": {
-      "name": "Peynir Dolu Oda"
+      "name": "Peynir Dolu Oda",
+      "description": "Bu oda peynirle dolu!!!\n\nEtrafta tuzak var mı diye bakınırsın. Başının üzerinde de... daha fazla peynir vardır. Bu odadaki mumlar peynirden yapılmış gibi görünmektedir. Mobilyalar da peynirdir.\nBir anda, arkandaki kapı gürültüyle kapanır.\n\nKapı da peynirdendir.",
+      "choices": [
+        {
+          "name": "Tıkın",
+          "description": "Deste'ne eklemek için rastgele 8 Sıradan karttan 2 tanesini seç."
+        },
+        {
+          "name": "Ara",
+          "description": "14 CP kaybet. Seçilmiş Peynir'i elde et."
+        }
+      ]
     },
     "ROUND_TEA_PARTY": {
-      "name": "Yuvarlak Masada Çay Partisi"
+      "name": "Yuvarlak Masada Çay Partisi",
+      "description": "\"Beyefendi Galalot\" adına gönderilmiş bir çay partisi davetiyesi bulur ve onun yerine gitmeye karar verirsin.\n\nMütevazı görünen bir rotundaya adım attığında kendini komutanlar, generaller, savaş beyleri ve paralı askerlerin arasında bulursun... Çay mı içiyorlar?\nBaşında altın bir taç taşıyan devasa şövalye konuşur:\n\n“Çay vaktine teşrifte geciktin mi!?”",
+      "choices": [
+        {
+          "name": "Çayının Tadını Çıkar",
+          "description": "Kraliyet Zehri elde et. Tüm CP'ni iyileştir."
+        },
+        {
+          "name": "Kavga Çıkar",
+          "description": "11 CP kaybet. Rastgele bir Kalıntı elde et."
+        }
+      ]
     },
     "SAPPHIRE_SEED": {
-      "name": "Safir Tohum"
+      "name": "Safir Tohum",
+      "description": "Parlak ve keskin bir şeye basmaktan son anda kaçınırsın. Bu bir tohum mu? Ayırt edici rengi, onun bir Safir Tohumu olduğunu ele verir! Bu inanılmaz tohumların nesli tükenmemiş miydi!?\n\nEfsaneler der ki bir tanesini tüketmek, dayanıklılığını büyük ölçüde artırır... ama ya onu ekip büyütmeyi seçersen?",
+      "choices": [
+        {
+          "name": "Tüket",
+          "description": "9 CP iyileştir. Deste'ndeki bir kartı Geliştir."
+        },
+        {
+          "name": "Ek ve Besle",
+          "description": "Bir kartı Yatırım ile Büyüle."
+        }
+      ]
     },
     "SELF_HELP_BOOK": {
-      "name": "Kişisel Gelişim Kitabı"
+      "name": "Kişisel Gelişim Kitabı",
+      "description": "Yerde büyük bir kitap durmaktadır:\n“Spire’ı Fethetmenin En İyi 3 Yolu”\n\nKitap kana bulanmıştır; bu yüzden bu el yazmasını son derece şüpheli bulursun.\n\nOkuyacak mısın?",
+      "choices": [
+        {
+          "name": "Yoluna Devam Et",
+          "description": "Büyüleyebileceğin hiçbir kartın yok."
+        },
+        {
+          "name": "Tüm Kitabı Oku",
+          "description": "2 Hızlı ile Büyülemek için bir Güç kartı seç."
+        },
+        {
+          "name": "Kilitli",
+          "description": "Büyüleyebileceğin hiçbir Güç kartın yok."
+        },
+        {
+          "name": "Rastgele Bir Bölüm Oku",
+          "description": "2 Atik ile Büyülemek için bir Beceri kartı seç."
+        }
+      ]
     },
     "SLIPPERY_BRIDGE": {
-      "name": "Kaygan Köprü"
+      "name": "Kaygan Köprü",
+      "description": "Derme çatma bir ahşap köprüden geçerken bir anda sağanak bir yağmur bastırır. Şiddetli rüzgârlar seni savurur; yolculuğunu sona erdirecek bir tehdit doğurur.",
+      "choices": [
+        {
+          "name": "Tutun",
+          "description": "X CP kaybet. Üstteki seçenekteki kart değişir."
+        },
+        {
+          "name": "Üstesinden Gel",
+          "description": "rastgele Kart Deste'nden kaldırılır."
+        }
+      ]
     },
     "SPIRALING_WHIRLPOOL": {
-      "name": "Sarmal Girdap"
+      "name": "Sarmal Girdap",
+      "description": "Devasa, Sarmal Bir Girdap ile karşılaşırsın. Sular kusursuz bir zarafetle döner; çevresindeki duvarlar sarmal desenlerle bezenmiştir.\n\nDöne döne... döne...\n...ve yine döne... ne manzara ama...\n\nNe yapacaksın?",
+      "choices": [
+        {
+          "name": "İç",
+          "description": "X CP iyileştir."
+        },
+        {
+          "name": "Gözlemle",
+          "description": "Bir Saldırı veya Savunma kartını Sarmal ile Büyüle."
+        },
+        {
+          "name": "Uzan",
+          "description": "Rastgele bir Kalıntı elde et. Deste'ne bir Kıvranma ekle."
+        }
+      ]
     },
     "SPIRIT_GRAFTER": {
-      "name": "Ruh Yamalayan"
+      "name": "Ruh Yamalayan",
+      "description": "Yukarıda bir koza sarsılıp kıvranır; açılmak üzeredir!\n\nKıpırdanma bir anda durur. Koza tutuşur! Neler oluyor?\nIşık ve alevden oluşan bir parıltı içinde, bir Ruh Yamalayan sana doğru atılır; bütünleşmek için varlığınla birleşmekle tehdit eder.",
+      "choices": [
+        {
+          "name": "İçine Al",
+          "description": "25 CP iyileştir. Deste'ne bir Başkalaşım ekle."
+        },
+        {
+          "name": "Reddet",
+          "description": "9 CP kaybet. Deste'nden bir kartı kaldır."
+        }
+      ]
     },
     "STONE_OF_ALL_TIME": {
-      "name": "Tüm Zamanların Taşı"
+      "name": "Tüm Zamanların Taşı",
+      "description": "Terk edilmiş bir avlunun tam ortasında devasa bir kaya durmaktadır.\n\nBir levhada şunlar yazar:\nTüm Zamanların Taşı.\n\nVarlığı, biçimi ve üzerindeki süslemeler bu avlunun Taş'ın etrafına inşa edildiğini ve onun bu noktadan hiç kıpırdamadığını gösterir.",
+      "choices": [
+        {
+          "name": "İksir İç ve Kaldır",
+          "description": "İksiri kaybet: rastgele İksir. 10 Maksimum CP elde et."
+        },
+        {
+          "name": "Kilitli",
+          "description": "Bir İksir gerektirir."
+        }
+      ]
     },
     "SUNKEN_STATUE": {
-      "name": "Batık Heykel"
+      "name": "Batık Heykel",
+      "description": "Bir göletin içinde yarı yarıya batmış eski bir heykel fark edersin. Elleri nazikçe taş bir kılıcın üzerinde durmaktadır.\n\nAyrıca göletin dibinde parıldayan bir şey de gözüne çarpar.\nBunlar para mı acaba?\n\nGerçekten de biraz paraya ihtiyacın vardı...",
+      "choices": [
+        {
+          "name": "Suya Dal",
+          "description": "111 Altın elde et. 7 CP kaybet."
+        },
+        {
+          "name": "Kılıcı Al",
+          "description": "Kalıntıyı elde et: Taş Kılıç"
+        }
+      ]
     },
     "SUNKEN_TREASURY": {
-      "name": "Batık Hazinelik"
+      "name": "Batık Hazinelik",
+      "description": "Bir yol seni kısmen suya gömülmüş bir mahzene götürür.\nİçeride 2 adet sandık bulunmaktadır fakat yalnızca 1 tane kırılgan anahtar bulursun.\n\nBirinci Sandık: Salladığında şıngır mıngır sesler gelir. Biraz altın var gibi.\nİkinci Sandık: Devasa, süslü ve apaçık lanetli. Bir sürü altını var!",
+      "choices": [
+        {
+          "name": "Birinci Sandık",
+          "description": "60 Altın elde et."
+        },
+        {
+          "name": "İkinci Sandık",
+          "description": "333 Altın ve Açgözlülük elde et."
+        }
+      ]
     },
     "SYMBIOTE": {
-      "name": "Simbiyot"
+      "name": "Simbiyot",
+      "description": "Yolculuğun sırasında karanlık, biçimsiz bir poliple karşılaşırsın. Onun çok yaşlı, ve son derece kötü olduğunu hissedebiliyorsundur.\n\nYaklaş...",
+      "choices": [
+        {
+          "name": "Yaklaş",
+          "description": "Bir Saldırı kartını Yozlaşmış ile Büyüle."
+        },
+        {
+          "name": "Kilitli",
+          "description": "Hiçbir Saldırı kartın Büyülenemiyor."
+        }
+      ]
     },
     "TABLET_OF_TRUTH": {
-      "name": "Doğruluğun Tableti"
+      "name": "Doğruluğun Tableti",
+      "description": "Bir çift Soydaş Muhafız'ı alt eder ve koruma altındaki bir mahzene ilerlersin.\n\nİçeride tanıdık yazıtlarla bezeli bir tablet durmaktadır. Sezgilerin, bu dilin oldukça kolay çözülebileceğini söyler... ancak çözmeye başladığında geri dönüş olmayacaktır.\n\nTablet yatıştırıcı bir enerji yayar; dilersen onu parçalayıp iyileştirici enerjilerini alabilirsin.",
+      "choices": [
+        {
+          "name": "Çözümle",
+          "description": "3 Maksimum CP kaybet. Rastgele bir kart Geliştir."
+        },
+        {
+          "name": "Ezip Parçala",
+          "description": "20 CP iyileştir."
+        }
+      ]
     },
     "TEA_MASTER": {
-      "name": "Çay Ustası"
+      "name": "Çay Ustası",
+      "description": "Loş ışıkla aydınlanan bir kulübeye rastlarsın ve kendini, takıntılı denecek kadar çeşitli çaylarla dolu son derece huzurlu bir ortamın içinde bulursun.\n\nİçerideki adam, her biri yüksek bir fiyat etiketiyle özenle etiketlenmiş çaylardan oluşan bir seçkiye işaret eder.",
+      "choices": [
+        {
+          "name": "Kemik Çayı",
+          "description": "50 Altın öde. Kemik Çayı"
+        },
+        {
+          "name": "Kilitli",
+          "description": "50 Altın gerektiriyor."
+        },
+        {
+          "name": "Köz Çayı",
+          "description": "150 Altın öde. Köz Çayı"
+        }
+      ]
     },
     "THE_FUTURE_OF_POTIONS": {
-      "name": "İksirlerin Geleceği?"
+      "name": "İksirlerin Geleceği?",
+      "description": "Köşeyi döndüğünde hafif bir sarsıntı hissedersin ve devasa, dönen bir aygıtla karşılaşırsın!\nÜzerindeki birkaç yuva vardır; bu yuvaların sıvıları son derece sıkıştırılmış ve yenilebilir tabletlere dönüştürdüğü anlaşılmaktadır.\n\nBu sağlık iksirlerini minicik bir lokmaya dönüştürme fikri rahatsız edici olabilir. Yine de yeni bir şeyler denemek iyi olabilir mi?",
+      "choices": [
+        {
+          "name": "? Bir İksir Yerleştir",
+          "description": "İksiri kaybet: İksir. Geliştirilmiş bir ? ? elde et."
+        }
+      ]
     },
     "THE_LANTERN_KEY": {
-      "name": "Fener Anahtar"
+      "name": "Fener Anahtar",
+      "description": "Hafifçe parıldayan bir anahtarla karşılaşırsın ve onu almak için eğilirsin.\n\n“Her yerde bu anahtarı arıyordum! Müsaade edersen alayım...”\n\nBu kişi pek hayra alamet gibi görünmüyor; ama belki de peşin hükümlü olmamak gerekir.",
+      "choices": [
+        {
+          "name": "Anahtarı Sakla",
+          "description": "Anahtar'ı elde etmek için savaş."
+        },
+        {
+          "name": "Anahtarı Geri Ver",
+          "description": "100 Altın elde et."
+        }
+      ]
     },
     "THE_LEGENDS_WERE_TRUE": {
-      "name": "Efsaneler Doğruymuş"
+      "name": "Efsaneler Doğruymuş",
+      "description": "Zifiri karanlık bir odaya adım attığın anda kapı arkandan sertçe kapanırken yukarıdan gelen ani bir ışık, karanlığı yarar.\n\nÜzerinde bir harita bulunan bir kürsü, önünde aydınlanır. Onu almak için güçlü bir dürtü hissedersin.\n\nŞüpheli duruyor.",
+      "choices": [
+        {
+          "name": "Haritayı Aşır",
+          "description": "Ganimet Haritası'nı elde et."
+        },
+        {
+          "name": "Yavaşça Bir Çıkış Yolu Bul",
+          "description": "8 CP kaybet. Rastgele 1 İksir elde et."
+        }
+      ]
     },
     "THIS_OR_THAT": {
-      "name": "Bu mu? Şu mu?"
+      "name": "Bu mu? Şu mu?",
+      "description": "Yakındaki bir delikten kollar aniden fırlar. Bir elinde bol zenginliklerle dolu, şüpheli bir torba, diğerinde ise apaçık lanetli bir kalıntı tutar.\n\nAşağıdan kısık bir ses fısıldar:\n“Bu mu? Şu mu?”",
+      "choices": [
+        {
+          "name": "Şu",
+          "description": "Deste'ne bir Sakar ekle. Rastgele bir Kalıntı elde et."
+        },
+        {
+          "name": "Bu",
+          "description": "6 CP kaybet. X Altın elde et."
+        }
+      ]
     },
     "TINKER_TIME": {
-      "name": "Kurcalama Vakti"
+      "name": "Kurcalama Vakti",
+      "description": "“Sana herkesi öldürmende yardım edecek nasıl bir araç istersin?”",
+      "pages": [
+        {
+          "description": "“Sana herkesi öldürmende yardım edecek nasıl bir araç istersin?”",
+          "choices": [
+            {
+              "name": "Silah",
+              "description": "Bir Saldırı oluştur."
+            },
+            {
+              "name": "Alet",
+              "description": "Bir Güç oluştur."
+            },
+            {
+              "name": "Koruyucu",
+              "description": "Bir Beceri oluştur."
+            }
+          ]
+        },
+        {
+          "description": "“Mükemmel bir seçim! Peki bu şey NE YAPMALI?”\nBilim insanı, keyifle ellerini ovuşturur.",
+          "choices": [
+            {
+              "name": "Kaos",
+              "description": "El'ine rastgele bir kart ekle. Bu tur maliyeti 0 [E] olur."
+            },
+            {
+              "name": "Boğucu",
+              "description": "Bu tur her kart oynadığında düşman 6 CP kaybeder."
+            },
+            {
+              "name": "Meraklı",
+              "description": "Güç kartlarının maliyeti 1 [E] azalır."
+            },
+            {
+              "name": "Enerji Yüklü",
+              "description": "[E] elde et."
+            },
+            {
+              "name": "Uzmanlık",
+              "description": "2 Kuvvet elde et. 2 Çeviklik elde et."
+            },
+            {
+              "name": "Geliştirme",
+              "description": "Savaşın sonunda rastgele bir kartı Geliştir."
+            },
+            {
+              "name": "Zayıflatma",
+              "description": "2 Zayıf uygula. 2 Savunmasız uygula."
+            },
+            {
+              "name": "Şiddet",
+              "description": "Fazladan 2 kez vurur."
+            },
+            {
+              "name": "Bilgelik",
+              "description": "3 kart çek."
+            }
+          ]
+        }
+      ]
     },
     "TRASH_HEAP": {
-      "name": "Çöp Yığını"
+      "name": "Çöp Yığını",
+      "description": "Hurdaya ayrılmış silahlardan, atılmış ıvır zıvırlardan ve diğer tuhaf şeylerden oluşan devasa bir yığın keşfedersin. Bu koca yığın, sanki içten içe büyüyormuş gibi hareket eder ve gürültü çıkarır.\n\nYığını yüzeyden karıştırırsan çok da fena olmayan birkaç şey bulabilirsin; fakat gerçekten içine dalarsan, egzotik hazinelere de rastlayabilirsin.",
+      "choices": [
+        {
+          "name": "İçine Dal",
+          "description": "8 CP kaybet. Geçmişten kalma, unutulmuş rastgele bir Kalıntı elde et."
+        },
+        {
+          "name": "Rastgele Hurda Kap",
+          "description": "100 Altın elde et. Geçmişten kalma, unutulmuş rastgele bir Kart elde et."
+        }
+      ]
     },
     "TRIAL": {
-      "name": "Dava"
+      "name": "Dava",
+      "description": "Devasa bir binaya giren insanların oluşturduğu sıraya katılırsın.\n\nAltın bir kemerin altından geçerken borazanlar çalar, konfetiler patlar ve tavandan şeritler süzülür!\n\n“? numaralı katılımcı, bugünkü Dava için KARAR VERİCİ sensin.”",
+      "choices": [
+        {
+          "name": "Kabul Et",
+          "description": "Bugünün Karar Verici'si olarak görev al."
+        },
+        {
+          "name": "Reddet",
+          "description": "Reddetme hakkın yok."
+        }
+      ]
     },
     "UNREST_SITE": {
-      "name": "Dinlenememe Yeri"
+      "name": "Dinlenememe Yeri",
+      "description": "Gözlerden uzak bir Dinlenme Alanı bulur ve biraz soluklanmak için bir ateş yakarsın...\nya da en azından öyle sanırsın.\n\nAteş yakıldıktan sonra kabarıp büyümeye başlar; yukarı doğru değil, yağ sızdıran ağaçlardan oluşan bir koruluğa uzanarak yanlara doğru hareket eder.\n\nYine de dinlenmeyi denemeli misin?",
+      "choices": [
+        {
+          "name": "Ağaçları Öldür",
+          "description": "8 Maksimum CP kaybet. Rastgele bir Kalıntı elde et."
+        },
+        {
+          "name": "Yine de Dinlen",
+          "description": "Tüm CP'ni iyileştir. Bir Uykusuzluk elde et."
+        }
+      ]
     },
     "WAR_HISTORIAN_REPY": {
-      "name": "Savaş Tarihçisi Repy"
+      "name": "Savaş Tarihçisi Repy",
+      "description": "Bir akademisyen, bir hazine sandığının yanında duran asılı bir kafeste mahsur kalmıştır.\n\nAkademisyen, bir yandan hararetle bir şeyler karalarken “Tek Kullanımlık Anahtarlar” hakkında söylenip durur.\n\nGörünüşe göre ya sadece kafesi ya da sadece sandığı açabilirsin.",
+      "choices": [
+        {
+          "name": "Kafesin Kilidini Aç",
+          "description": "Fener Anahtar'ı kaybet. Tarih Dersi'ni elde et."
+        },
+        {
+          "name": "Sandığın Kilidini Aç",
+          "description": "Fener Anahtar'ı kaybet. Rastgele 2 İksir elde et. Rastgele 2 Kalıntı elde et."
+        }
+      ]
     },
     "WATERLOGGED_SCRIPTORIUM": {
-      "name": "Suya Boğulmuş Kâtip Odası"
+      "name": "Suya Boğulmuş Kâtip Odası",
+      "description": "Bulanık geçitlerde yolunu bulmaya çalışırken, küçük bir dükkân işleten solmuş bir figüre rastlarsın. Sayısız raflar, nemli tomarlar ve parşömenlerle tıka basa doludur.\n\nBir müşterinin içeri girdiğini fark eden dükkan sahibi kâtip, bir anda toparlanır ve masanın üzerine dizilmiş edevatları işaret eder.",
+      "choices": [
+        {
+          "name": "Kanlı Mürekkep",
+          "description": "6 Maksimum CP elde et."
+        },
+        {
+          "name": "Dikenli Sünger",
+          "description": "155 Altın öde. 2 kartı Sabit ile Büyüle."
+        },
+        {
+          "name": "Kilitli",
+          "description": "155 Altın gerektirir."
+        }
+      ]
     },
     "WELCOME_TO_WONGOS": {
-      "name": "Wongo's'a Hoş Geldin"
+      "name": "Wongo's'a Hoş Geldin",
+      "description": "“Wongo’ya hoş geldiniz. İstediğiniz her şey Wongo-tastik fiyatlarla burada,” der hayatında gördüğün en hevessiz kasiyer.\n\n“Ürünlerimize göz atın ve Wongo’da zamanın tadını çıkarın,” diye başını bile kaldırmadan devam eder.",
+      "choices": [
+        {
+          "name": "Wongo'nun Ucuzluk Sepeti",
+          "description": "100 Altın öde. Rastgele 1 Yaygın Kalıntı elde et."
+        },
+        {
+          "name": "Kilitli",
+          "description": "100 Altın gerektirir."
+        },
+        {
+          "name": "Wongo'nun Öne Çıkan Ürünü",
+          "description": "200 Altın öde. Kalıntı'yı elde et: rastgele Kalıntı"
+        },
+        {
+          "name": "Kilitli",
+          "description": "200 Altın gerekir."
+        }
+      ]
     },
     "WELLSPRING": {
-      "name": "Pınar"
+      "name": "Pınar",
+      "description": "Alçak bir uğultunun kaynağını takip eder ve kendini sakin bir pınarın huzuruna kapılmış hâlde bulursun. Su, zümrüt yeşili bir tona sahiptir ve içinde ışıldayan zerrecik kümeleri dolaşmaktadır.\n\nİnsanı içine çağırıyor gibi. Ne ters gidebilir ki?",
+      "choices": [
+        {
+          "name": "Yıkan",
+          "description": "Deste'nden 1 kart kaldır. Deste'ne 1 Suçlu ekle."
+        },
+        {
+          "name": "Şişele",
+          "description": "Rastgele 1 İksir elde et."
+        }
+      ]
     },
     "WHISPERING_HOLLOW": {
-      "name": "Fısıldayan Ağaçlık"
+      "name": "Fısıldayan Ağaçlık",
+      "description": "Ölü bir ağaçlıktan geçerken kemik gibi bembeyaz bir ağaca rastlarsın. Dalları, kaburgalar gibi içe doğru kıvrılmıştır. Üzerlerinden kil süsler sarkar.\n\nNe ürkütücü bir ağaç. Fısıldıyor.\n\n...takas yap.....",
+      "choices": [
+        {
+          "name": "Altın Takası Yap",
+          "description": "50 Altın kaybet. Rastgele 2 İksir elde et."
+        },
+        {
+          "name": "Ağaca Sarıl",
+          "description": "9 CP kaybet. Dönüştürmek için bir kart seç."
+        }
+      ]
     },
     "WOOD_CARVINGS": {
-      "name": "Ağaç Oymalar"
+      "name": "Ağaç Oymalar",
+      "description": "Tozlu bir sandığı açtığında üç adet özenle oyulmuş ahşap figürle karşılaşırsın:\n\nBir kuş, bir yılan ve... galiba bir simit.\n\nYakındaki bir kaidede, oymaların tabanlarıyla birebir uyuşan girintiler vardır. Kaideye hangisini yerleştireceksin?",
+      "choices": [
+        {
+          "name": "Kuş",
+          "description": "Gagala kartına Dönüştürmek için başlangıç kartlarından 1 tanesini seç."
+        },
+        {
+          "name": "Yılan",
+          "description": "1 kartı Sürüngen ile Büyüle."
+        },
+        {
+          "name": "Kilitli",
+          "description": "Kartlarından hiçbiri Sürüngen ile Büyülenemiyor."
+        }
+      ]
     },
     "ZEN_WEAVER": {
-      "name": "Huzur Dokuyan"
+      "name": "Huzur Dokuyan",
+      "description": "Bir örümcek ağından geçerken PANİKLERSİN!\nSonrasında, bir sakinlik hissi üzerine yayılır...\n\n“Sakin ol. Ağımı böyle telaşla bozmayı bırakman lazım.”\n\nBu kadar çabuk nasıl sakinleştiğini merak edersin.\nUfacık tefecik bir örümcek ipini salarak yanına iner. Görünüşe göre altın karşılığında sana bazı teknikler öğretmeye niyetlidir.",
+      "choices": [
+        {
+          "name": "Örümcek Akupunkturu",
+          "description": "250 Altın öde. Deste'nden 2 kart çıkar."
+        },
+        {
+          "name": "Nefes Alma Teknikleri",
+          "description": "50 Altın öde. Deste'ne 2 Aydınlanma ekle."
+        },
+        {
+          "name": "Duygusal Farkındalık",
+          "description": "125 Altın öde. Deste'nden 1 kart çıkar."
+        }
+      ]
+    },
+    "DARV": {
+      "name": "Darv",
+      "description": "Darv, İstifçi, güçlü kalıntılarla dolu bir yığını karıştırır ve size sürekli değişen bir stok sunar. Dusty Tome ile birlikte ana havuzdan ve perdeye özel setlerden üç rastgele kalıntı gösterilir; bazı seçenekler yalnızca belirli koşullarda görünür."
+    },
+    "NEOW": {
+      "name": "Neow",
+      "description": "Diriliş Anası Neow, her koşunun başında bekler. Üç kutsama sunar — iki olumlu ve bir lanetli. Seçenekler aşağıdaki havuzlardan rastgele çekilir.",
+      "choices": [
+        {
+          "name": "Büyü Parşömeni",
+          "description": "Bu kalıntıyı aldığında rastgele bir Nadir Kartı Deste'ne ekle.",
+          "relic_id": "ARCANE_SCROLL",
+          "pool": "positive"
+        },
+        {
+          "name": "Yankılı Denizkabuğu",
+          "description": "Elit savaşların başında fazladan 2 kart çek.",
+          "relic_id": "BOOMING_CONCH",
+          "pool": "positive"
+        },
+        {
+          "name": "Parfüm Topu",
+          "description": "Bu kalıntıyı aldığında bir kartını Geliştir.",
+          "relic_id": "POMANDER",
+          "pool": "positive"
+        },
+        {
+          "name": "Altın İnci",
+          "description": "Bu kalıntıyı aldığında X Altın elde et.",
+          "relic_id": "GOLDEN_PEARL",
+          "pool": "positive"
+        },
+        {
+          "name": "Kurşun Ağırlık",
+          "description": "Bu kalıntıyı aldığında Deste'ne eklemek için 2 Renksiz karttan 1 tanesini seç.",
+          "relic_id": "LEAD_PAPERWEIGHT",
+          "pool": "positive"
+        },
+        {
+          "name": "Yeni Yaprak",
+          "description": "Bu kalıntıyı aldığında 1 kartı Dönüştür.",
+          "relic_id": "NEW_LEAF",
+          "pool": "positive"
+        },
+        {
+          "name": "Neow'un Azabı",
+          "description": "Bu kalıntıyı aldığında, Deste'ne 1 Neow'un Öfkesi ekle.",
+          "relic_id": "NEOWS_TORMENT",
+          "pool": "positive"
+        },
+        {
+          "name": "Keskin Makas",
+          "description": "Bu kalıntıyı aldığında Deste'nden 1 kartı çıkar.",
+          "relic_id": "PRECISE_SCISSORS",
+          "pool": "positive"
+        },
+        {
+          "name": "Kayıp Sandık",
+          "description": "Bu kalıntıyı aldığında 1 kart ödülü ve rastgele 1 iksir elde et.",
+          "relic_id": "LOST_COFFER",
+          "pool": "positive"
+        },
+        {
+          "name": "Lanetli İnci",
+          "description": "Bu kalıntıyı aldığında Açgözlülük elde et. X Altın elde et.",
+          "relic_id": "CURSED_PEARL",
+          "pool": "cursed"
+        },
+        {
+          "name": "İri Kapsül",
+          "description": "Bu kalıntıyı aldığında rastgele 2 Kalıntı elde et. Deste'ne fazladan bir Saldırı ve Savunma ekle.",
+          "relic_id": "LARGE_CAPSULE",
+          "pool": "cursed"
+        },
+        {
+          "name": "Yapraklı Merhem",
+          "description": "Bu kalıntıyı aldığında Saldırı kartlarından 1 tanesini ve Savunma kartlarından 1 tanesini Dönüştür. 10 Maksimum CP kaybet.",
+          "relic_id": "LEAFY_POULTICE",
+          "pool": "cursed"
+        },
+        {
+          "name": "Tehlikeli Makas",
+          "description": "Bu kalıntıyı aldığında Deste'nden 2 kartı çıkar ve 13 hasar al.",
+          "relic_id": "PRECARIOUS_SHEARS",
+          "pool": "cursed"
+        },
+        {
+          "name": "Besleyici İstiridye",
+          "description": "Bu kalıntıyı aldığında Maksimum CP'ni 11 artır.",
+          "relic_id": "NUTRITIOUS_OYSTER",
+          "pool": "positive"
+        },
+        {
+          "name": "Taş Nemlendirici",
+          "description": "Bir Dinlenme Yeri'nde Dinlendiğinde Maksimum CP'ni 5 artır.",
+          "relic_id": "STONE_HUMIDIFIER",
+          "pool": "positive"
+        },
+        {
+          "name": "Devasa Parşömen",
+          "description": "Bu kalıntıyı aldığında, Deste'ne eklemek için 3 Çok Oyunculu Kart'tan 1 tanesini seç.",
+          "relic_id": "MASSIVE_SCROLL",
+          "pool": "positive"
+        },
+        {
+          "name": "Lav Taşı",
+          "description": "1. Sahne'nin Boss'u 2 Kalıntı düşürür.",
+          "relic_id": "LAVA_ROCK",
+          "pool": "positive"
+        },
+        {
+          "name": "Küçük Kapsül",
+          "description": "Bu kalıntıyı aldığında rastgele bir Kalıntı elde et.",
+          "relic_id": "SMALL_CAPSULE",
+          "pool": "positive"
+        },
+        {
+          "name": "Gümüş Eritme Potası",
+          "description": "Alacağın ilk 3 kart ödülü Geliştirilir. Açtığın ilk Hazine Sandığı boş çıkar.",
+          "relic_id": "SILVER_CRUCIBLE",
+          "pool": "cursed"
+        },
+        {
+          "name": "Parşömen Kutuları",
+          "description": "Bu kalıntıyı aldığında tüm Altın'ını kaybet ve Deste'ne eklemek için 2 kart paketinden 1 tanesini seç.",
+          "relic_id": "SCROLL_BOXES",
+          "pool": "cursed"
+        }
+      ]
+    },
+    "NONUPEIPE": {
+      "name": "Nonupeipe",
+      "description": "Nonupeipe, Tesadüfün Vücut Bulmuş Hali, sizi şans getiren hazinelerden oluşan parıltılı bir koleksiyonla çevreler. Her ziyaret ana havuzdan üç rastgele kalıntı sunar; Beautiful Bracelet ise yalnızca özel koşulu sağlandığında görünür."
+    },
+    "OROBAS": {
+      "name": "Orobas",
+      "description": "Orobas, Canlı Gökkuşağı, kalıntılardan oluşan bir tayfı üç ayrı havuza yayar. Her karşılaşma her havuzdan bir kalıntı sunar; Prismatic Gem ise Küre kanalize edebilen karakterler için seçime eklenir."
+    },
+    "PAEL": {
+      "name": "Pael",
+      "description": "Pael, Eriyen Ejderha, et, kanat ve göz temalı tuhaf havuzlardan üç kalıntı seçeneği sunar. Her karşılaşmada her havuzdan bir kalıntı görünür; desteniz ya da yoldaşlarınız Pael'in garip koşullarını karşılıyorsa ek seçenekler de çıkabilir."
+    },
+    "TANX": {
+      "name": "Tanx",
+      "description": "Tanx, Kimera Kral, sizi acımasız bir cephanelikten donatır. Her karşılaşma Tanx'ın cephaneliğinden üç rastgele kalıntı sunar; kralı etkileyecek kadar çok silah taşıyorsanız Tri-Boomerang da eklenir."
+    },
+    "TEZCATARA": {
+      "name": "Tezcatara",
+      "description": "Tezcatara, Ateşi Besleyen Varlık, armağanlarını özenle hazırlanmış üç havuza dizer. Her karşılaşma her havuzdan bir kalıntı sunar; rahatlatıcı ikramlardan tuhaf hatıralara ve değerli acayipliklere kadar uzanır."
+    },
+    "THE_ARCHITECT": {
+      "name": "Mimar",
+      "description": "Mimar, her başarılı koşunun sonunda sizi bekler. Karşılaşma, karaktere özgü satırlarla ilerleyen bir diyalog olarak açılır ve nihai bir yüzleşmeyle son bulur."
+    },
+    "VAKUU": {
+      "name": "Vakuu",
+      "description": "Vakuu, İlk Şeytan, sizi üç uğursuz havuza ayrılmış kalıntılarla baştan çıkarır. Her karşılaşma her havuzdan bir kalıntı sunar; kanlı pazarlıklar, korunmuş ganimetler ve zarif şeytani süsler bir araya gelir."
     }
   },
   "keywords": {
@@ -5473,258 +6396,2044 @@
       "name": "Güçlü"
     }
   },
-  "mechanics": {
-    "ascension": [
-      {
-        "level": 0,
-        "title": "Yükseliş Kapalı",
-        "description": "Yükseliş kuralları olmadan oyna."
+  "monsters": {
+    "ARCHITECT": {
+      "moves": {
+        "NOTHING": "Hiçbir Şey"
       },
-      {
-        "level": 1,
-        "title": "Elit Yağmuru",
-        "description": "Elitler daha sık ortaya çıkar."
+      "name": "Mimar",
+      "move_names": {
+        "Nothing": "Hiçbir Şey"
       },
-      {
-        "level": 2,
-        "title": "Yorgun Yolcu",
-        "description": "Kadimler eksik canının sadece %80'ini iyileştirir."
+      "move_titles": [
+        "Hiçbir Şey"
+      ]
+    },
+    "ASSASSIN_RUBY_RAIDER": {
+      "moves": {
+        "KILLSHOT": "Öldürücü Vuruş"
       },
-      {
-        "level": 3,
-        "title": "Yoksulluk",
-        "description": "Düşmanlar ve Hazine Sandıkları %25 daha az Altın düşürür."
+      "name": "Suikastçı Yağmacı",
+      "move_names": {
+        "Killshot": "Öldürücü Vuruş"
       },
-      {
-        "level": 4,
-        "title": "Dar Kemer",
-        "description": "Her oyuna 1 eksik iksir yuvası ile başla."
+      "move_titles": [
+        "Öldürücü Vuruş"
+      ]
+    },
+    "ATTACK_MOVE_MONSTER": {
+      "moves": {
+        "POKE": "Dürt"
       },
-      {
-        "level": 5,
-        "title": "Yükselenin Belası",
-        "description": "Her oyuna Lanetli başla."
+      "name": "Canavar Saldırısı",
+      "move_names": {
+        "Poke": "Dürt"
       },
-      {
-        "level": 6,
-        "title": "Kasvet",
-        "description": "Daha az Dinlenme Yerleri."
+      "move_titles": [
+        "Dürt"
+      ]
+    },
+    "AXEBOT": {
+      "moves": {
+        "BOOT_UP": "Başlat",
+        "HAMMER_UPPERCUT": "Çekiç Aparkatı",
+        "ONE_TWO": "Sollu Sağlı",
+        "SHARPEN": "Keskinleştir"
       },
-      {
-        "level": 7,
-        "title": "Kıtlık",
-        "description": "Nadir ve Geliştirilmiş kartlar daha az sıklıkla belirir."
+      "name": "Baltabot",
+      "move_names": {
+        "Boot Up": "Başlat",
+        "Hammer Uppercut": "Çekiç Aparkatı",
+        "The One-Two": "Sollu Sağlı",
+        "Sharpen": "Keskinleştir"
       },
-      {
-        "level": 8,
-        "title": "Dayanıklı Düşmanlar",
-        "description": "Tüm düşmanları öldürmek daha zor hale gelir."
+      "move_titles": [
+        "Başlat",
+        "Çekiç Aparkatı",
+        "Sollu Sağlı",
+        "Keskinleştir"
+      ]
+    },
+    "AXE_RUBY_RAIDER": {
+      "moves": {
+        "BIG_SWING": "Büyük Savuruş"
       },
-      {
-        "level": 9,
-        "title": "Ölümcül Düşmanlar",
-        "description": "Tüm düşmanların saldırıları daha ölümcül olur."
+      "name": "Baltalı Yağmacı",
+      "move_names": {
+        "Big Swing": "Büyük Savuruş"
       },
-      {
-        "level": 10,
-        "title": "Çifte Boss",
-        "description": "3. Sahne'nin sonunda iki boss ile yüzleş."
-      }
-    ],
-    "map_rooms": [
-      {
-        "id": "ROOM_ENEMY",
-        "title": "Düşman",
-        "description": "Bu odalarda saldırgan düşmanlar bulunur."
+      "move_titles": [
+        "Büyük Savuruş"
+      ]
+    },
+    "BATTLE_FRIEND_V1": {
+      "moves": {
+        "NOTHING": "Hiçbir Şey"
       },
-      {
-        "id": "ROOM_ELITE",
-        "title": "Elit",
-        "description": "Bu odalarda güçlü düşmanlar bulunur.\n\nOnları alt etmek, sana bir Kalıntı kazandırır."
+      "name": "Savaş Dostu V1.0",
+      "move_names": {
+        "Nothing": "Hiçbir Şey"
       },
-      {
-        "id": "ROOM_BOSS",
-        "title": "Boss",
-        "description": "Bu bölgedeki en ölümcül düşman.\n\nOnları alt etmek, bir sonraki Sahne'ye geçmeni sağlayacak."
+      "move_titles": [
+        "Hiçbir Şey"
+      ]
+    },
+    "BATTLE_FRIEND_V2": {
+      "moves": {
+        "NOTHING": "Hiçbir Şey"
       },
-      {
-        "id": "ROOM_EVENT",
-        "title": "Etkinlik",
-        "description": "Bu odalarda sıra dışı şeyler yaşanır..."
+      "name": "Savaş Dostu V2.0",
+      "move_names": {
+        "Nothing": "Hiçbir Şey"
       },
-      {
-        "id": "ROOM_MERCHANT",
-        "title": "Dükkan",
-        "description": "Esrarengiz Tüccar, bu odalarda mallarını satar.\n\nKazandığın Altın’ı burada harca!"
+      "move_titles": [
+        "Hiçbir Şey"
+      ]
+    },
+    "BATTLE_FRIEND_V3": {
+      "moves": {
+        "NOTHING": "Hiçbir Şey"
       },
-      {
-        "id": "ROOM_REST",
-        "title": "Dinlenme Yeri",
-        "description": "Bu odalara uğrayarak bir miktar CP İyileştir veya bir kartı Geliştir."
+      "name": "Savaş Dostu V3.0",
+      "move_names": {
+        "Nothing": "Hiçbir Şey"
       },
-      {
-        "id": "ROOM_TREASURE",
-        "title": "Hazine Odası",
-        "description": "Bu gözde odalarda Kalıntılar ve Altın bulunabilir."
+      "move_titles": [
+        "Hiçbir Şey"
+      ]
+    },
+    "BIG_DUMMY": {
+      "moves": {
+        "NOTHING": "Hiçbir Şey"
       },
-      {
-        "id": "ROOM_ANCIENT",
-        "title": "Kadim",
-        "description": "Bu odalar Kadimlere ev sahipliği yapar.\n\nSana eşi benzeri görülmemiş nimetleri, hazineleri ve bilgeliklerini sunarlar."
-      }
-    ],
-    "core_concepts": [
-      {
-        "id": "ENERGY",
-        "title": "Enerji",
-        "description": "Enerji, El'indeki kartları oynamak için kullanılır."
+      "name": "Büyük Manken",
+      "move_names": {
+        "Nothing": "Hiçbir Şey"
       },
-      {
-        "id": "BLOCK",
-        "title": "Blok",
-        "description": "Bir sonraki tura kadar hasarı engeller."
+      "move_titles": [
+        "Hiçbir Şey"
+      ]
+    },
+    "BOWLBUG_EGG": {
+      "moves": {
+        "BITE": "Isır",
+        "PROTECT": "Koru"
       },
-      {
-        "id": "HIT_POINTS",
-        "title": "Can Puanı (CP)",
-        "description": "Sahip olduğun CP biterse ölürsün."
+      "name": "Çanakböceği (Yumurta)",
+      "move_names": {
+        "Bite": "Isır",
+        "Protect": "Koru"
       },
-      {
-        "id": "MONEY_POUCH",
-        "title": "Altın",
-        "description": "Sahip olduğun Altın miktarı. Altın, Spire içindeki para birimidir."
+      "move_titles": [
+        "Isır",
+        "Koru"
+      ]
+    },
+    "BOWLBUG_NECTAR": {
+      "moves": {
+        "BUFF": "Güçlendir",
+        "THRASH": "Saldır",
+        "THRASH2": "Saldır"
       },
-      {
-        "id": "DRAW_PILE",
-        "title": "Çekme Destesi (A)",
-        "description": "Her turun başında\nburadan 5 kart çekilir.\n\nKarışık sırayla dizilmiş çekme desteni göstermek için tıkla."
+      "name": "Çanakböceği (Nektar)",
+      "move_names": {
+        "Buff": "Güçlendir",
+        "Thrash": "Saldır"
       },
-      {
-        "id": "DISCARD_PILE",
-        "title": "Atık Destesi (S)",
-        "description": "Eğer çekme desten boşsa, atık desten çekme destene karıştırılır.\n\nAtık destendeki kartları göstermek için tıkla."
+      "move_titles": [
+        "Güçlendir",
+        "Saldır",
+        "Saldır"
+      ]
+    },
+    "BOWLBUG_ROCK": {
+      "moves": {
+        "HEADBUTT": "Kafa At"
       },
-      {
-        "id": "EXHAUST_PILE",
-        "title": "Tüketilen Kartlar (X)",
-        "description": "Bu savaşta Tüketilen kartları göstermek için tıkla."
-      }
-    ],
-    "orbs": [
-      {
-        "id": "LIGHTNING",
-        "title": "Yıldırım",
-        "description": "Pasif: Turunun sonunda rastgele bir düşmana {Passive} hasar ver.\nTetikle: Rastgele bir düşmana {Evoke} hasar ver.",
-        "passive": "",
-        "evoke": ""
+      "name": "Çanakböceği (Taş)",
+      "move_names": {
+        "Headbutt": "Kafa At"
       },
-      {
-        "id": "FROST",
-        "title": "Buz",
-        "description": "Pasif: Turunun sonunda {Passive} Blok elde et.\nTetikle: {Evoke} Blok elde et.",
-        "passive": "",
-        "evoke": ""
+      "move_titles": [
+        "Kafa At"
+      ]
+    },
+    "BOWLBUG_SILK": {
+      "moves": {
+        "SPIN_WEB": "Ağ Ör",
+        "THRASH": "Saldır"
       },
-      {
-        "id": "DARK",
-        "title": "Karanlık",
-        "description": "Pasif: Turunun sonunda bu Küre'nin hasarını {Passive} artır.\nTetikle: En düşük CP'ye sahip düşmana {Evoke} hasar ver.",
-        "passive": "",
-        "evoke": ""
+      "name": "Çanakböceği (İpek)",
+      "move_names": {
+        "Spin Web": "Ağ Ör",
+        "Thrash": "Saldır"
       },
-      {
-        "id": "PLASMA",
-        "title": "Plazma",
-        "description": "Pasif: Turunun başında\n1 Energy elde et.\nTetikle: 2 Energy elde et.\nPlazma, Odak'tan etkilenmez.",
-        "passive": "",
-        "evoke": ""
+      "move_titles": [
+        "Ağ Ör",
+        "Saldır"
+      ]
+    },
+    "BRUTE_RUBY_RAIDER": {
+      "moves": {
+        "BEAT": "Döv",
+        "CLAP": "Tokatla"
       },
-      {
-        "id": "GLASS",
-        "title": "Cam",
-        "description": "Pasif: Turunun sonunda TÜM düşmanlara {Passive} hasar ver ve bu kürenin değerini 1 azalt.\nTetikle: TÜM düşmanlara {Evoke} hasar ver.",
-        "passive": "",
-        "evoke": ""
-      }
-    ],
-    "stances": [],
-    "character_mechanics": [
-      {
-        "id": "STAR_COUNT",
-        "title": "Yıldızlar",
-        "description": "Mevcut Yıldız (★) adedin. Naip'in kartlarını oynamak ★ gerektirebilir."
+      "name": "Vahşi Yağmacı",
+      "move_names": {
+        "Beat": "Döv",
+        "Clap": "Tokatla"
       },
-      {
-        "id": "SUMMON",
-        "title": "Çağır",
-        "description": "Osti'yi çağır.\nEğer önceden çağrılmışsa, bu savaş için Maksimum CP'sini artır."
+      "move_titles": [
+        "Döv",
+        "Tokatla"
+      ]
+    },
+    "BYGONE_EFFIGY": {
+      "moves": {
+        "SLASHES": "Kesikler",
+        "SLEEP": "Uyku"
       },
-      {
-        "id": "FORGE",
-        "title": "Döv",
-        "description": "Her savaşta ilk kez Dövdüğünde El'ine Egemen Kılıcı'nı eklersin. Egemen Kılıcı'na fazladan hasar ekler."
+      "name": "Mazinin Heykeli",
+      "move_names": {
+        "Slashes": "Kesikler",
+        "Sleep": "Uyku"
       },
-      {
-        "id": "REPLAY",
-        "title": "Yeniden Oyna",
-        "description": "Bu kartı fazladan bir kez daha oynar."
+      "move_titles": [
+        "Kesikler",
+        "Uyku"
+      ]
+    },
+    "BYRDONIS": {
+      "moves": {
+        "BITE": "Isır",
+        "PECK": "Gagala",
+        "PROTECT": "Koru"
       },
-      {
-        "id": "FATAL",
-        "title": "Ölümcül",
-        "description": "Bu kart, yancı olmayan bir düşmanı öldürdüğünde tetiklenir."
-      }
-    ],
-    "keywords": [
-      {
-        "id": "ETERNAL",
-        "names": [
-          "Sonsuz"
-        ],
-        "description": "Dönüştürülemez veya Deste'nden çıkarılamaz."
+      "name": "Guşdeniz",
+      "move_names": {
+        "Bite": "Isır",
+        "Peck": "Gagala",
+        "Protect": "Koru"
       },
-      {
-        "id": "ETHEREAL",
-        "names": [
-          "Ruhani"
-        ],
-        "description": "Eğer bu kart turun sonunda El'inde kalırsa Tüketilir."
+      "move_titles": [
+        "Isır",
+        "Gagala",
+        "Koru"
+      ]
+    },
+    "BYRDONIS_NEST": {
+      "moves": {
+        "NOTHING": "Hiçbir Şey"
       },
-      {
-        "id": "EXHAUST",
-        "names": [
-          "Tüket"
-        ],
-        "description": "Savaşın sonuna kadar kaldırılır."
+      "name": "Yuva Yap",
+      "move_names": {
+        "Nothing": "Hiçbir Şey"
       },
-      {
-        "id": "INNATE",
-        "names": [
-          "Yerleşik"
-        ],
-        "description": "Her savaşa El'inde bu kartla başla."
+      "move_titles": [
+        "Hiçbir Şey"
+      ]
+    },
+    "BYRDPIP": {
+      "moves": {
+        "NOTHING": "Hiçbir Şey"
       },
-      {
-        "id": "RETAIN",
-        "names": [
-          "Sakla"
-        ],
-        "description": "Saklanan kartlar tur sonunda elden çıkarılmaz."
+      "name": "Guşçuk",
+      "move_names": {
+        "Nothing": "Hiçbir Şey"
       },
-      {
-        "id": "SLY",
-        "names": [
-          "Kurnaz"
-        ],
-        "description": "Bu kartı turun bitmeden El'inden çıkartırsan ücretsiz oynarsın."
+      "move_titles": [
+        "Hiçbir Şey"
+      ]
+    },
+    "CALCIFIED_CULTIST": {
+      "moves": {
+        "DARK_STRIKE": "Karanlık Saldırı",
+        "INCANTATION": "Sihirli Söz"
       },
-      {
-        "id": "UNPLAYABLE",
-        "names": [
-          "Oynanamaz"
-        ],
-        "description": "Bu kart Oynanamaz."
-      }
-    ]
+      "name": "Taşlaşmış Tarikatçı",
+      "move_names": {
+        "Dark Strike": "Karanlık Saldırı",
+        "Incantation": "Sihirli Söz"
+      },
+      "move_titles": [
+        "Karanlık Saldırı",
+        "Sihirli Söz"
+      ]
+    },
+    "CEREMONIAL_BEAST": {
+      "moves": {
+        "BEAST_CRY": "Yaratık Çığlığı",
+        "CRUSH": "Ez",
+        "PLOW": "Ezerek Geç",
+        "STAMP": "Tepin",
+        "STOMP": "Yere Vur"
+      },
+      "name": "Mukaddes Yaratık",
+      "move_names": {
+        "Beast Cry": "Yaratık Çığlığı",
+        "Crush": "Ez",
+        "Plow": "Ezerek Geç",
+        "Stamp": "Tepin",
+        "Stomp": "Yere Vur"
+      },
+      "move_titles": [
+        "Yaratık Çığlığı",
+        "Ez",
+        "Ezerek Geç",
+        "Tepin",
+        "Yere Vur"
+      ]
+    },
+    "CHOMPER": {
+      "moves": {
+        "CLAMP": "Kıstır",
+        "SCREECH": "Çığlık",
+        "THRASH": "Saldır"
+      },
+      "name": "Çiğneyici",
+      "move_names": {
+        "Clamp": "Kıstır",
+        "Screech": "Çığlık",
+        "Thrash": "Saldır"
+      },
+      "move_titles": [
+        "Kıstır",
+        "Çığlık",
+        "Saldır"
+      ]
+    },
+    "COCOON": {
+      "moves": {
+        "NOTHING": "Hiçbir Şey"
+      },
+      "name": "Koza",
+      "move_names": {
+        "Nothing": "Hiçbir Şey"
+      },
+      "move_titles": [
+        "Hiçbir Şey"
+      ]
+    },
+    "CORPSE_SLUG": {
+      "moves": {
+        "TACKLE": "Saldır",
+        "WHIP_SLAP": "Kamçı Vuruşu"
+      },
+      "name": "Ceset Yiyen Sümüklü Böcek",
+      "move_names": {
+        "Tackle": "Saldır",
+        "Whip Slap": "Kamçı Vuruşu"
+      },
+      "move_titles": [
+        "Saldır",
+        "Kamçı Vuruşu"
+      ]
+    },
+    "CROSSBOW_RUBY_RAIDER": {
+      "moves": {
+        "FIRE": "Ateş Et!",
+        "RELOAD": "Yeniden Doldur"
+      },
+      "name": "Arbaletli Yağmacı",
+      "move_names": {
+        "Fire!": "Ateş Et!",
+        "Reload": "Yeniden Doldur"
+      },
+      "move_titles": [
+        "Ateş Et!",
+        "Yeniden Doldur"
+      ]
+    },
+    "CRUSHER": {
+      "moves": {
+        "ADAPT": "Adapte Ol",
+        "BUG_STING": "Böcek Sokması",
+        "ENLARGING_STRIKE": "Büyüten Saldırı",
+        "GUARDED_STRIKE": "Korunmuş Saldırı",
+        "THRASH": "Saldır"
+      },
+      "name": "Ezici",
+      "move_names": {
+        "Adapt": "Adapte Ol",
+        "Bug Sting": "Böcek Sokması",
+        "Enlarging Strike": "Büyüten Saldırı",
+        "Guarded Strike": "Korunmuş Saldırı",
+        "Thrash": "Saldır"
+      },
+      "move_titles": [
+        "Adapte Ol",
+        "Böcek Sokması",
+        "Büyüten Saldırı",
+        "Korunmuş Saldırı",
+        "Saldır"
+      ]
+    },
+    "CUBEX_CONSTRUCT": {
+      "moves": {
+        "CHARGE_UP": "Enerji Topla",
+        "REPEATER_BLAST": "Yineleyen Patlama",
+        "SUBMERGE": "Yere Gömül"
+      },
+      "name": "Kübiks Yapı",
+      "move_names": {
+        "Charge Up": "Enerji Topla",
+        "Repeater Blast": "Yineleyen Patlama",
+        "Submerge": "Yere Gömül"
+      },
+      "move_titles": [
+        "Enerji Topla",
+        "Yineleyen Patlama",
+        "Yere Gömül"
+      ]
+    },
+    "DAMP_CULTIST": {
+      "moves": {
+        "DARK_STRIKE": "Karanlık Saldırı",
+        "INCANTATION": "Sihirli Sözler"
+      },
+      "name": "Islak Tarikatçi",
+      "move_names": {
+        "Dark Strike": "Karanlık Saldırı",
+        "Incantation": "Sihirli Sözler"
+      },
+      "move_titles": [
+        "Karanlık Saldırı",
+        "Sihirli Sözler"
+      ]
+    },
+    "DECIMILLIPEDE_SEGMENT": {
+      "moves": {
+        "BULK": "Büyüme",
+        "DEAD": "Ölü",
+        "OUTGAS": "Gaz Salımı",
+        "REATTACH": "Tekrar Bağlan",
+        "TACKLE": "Saldır",
+        "WRITHE": "Kuru"
+      },
+      "name": "Ondabirayak",
+      "move_names": {
+        "Bulk": "Büyüme",
+        "Dead": "Ölü",
+        "Outgas": "Gaz Salımı",
+        "Reattach": "Tekrar Bağlan",
+        "Tackle": "Saldır",
+        "Writhe": "Kuru"
+      },
+      "move_titles": [
+        "Büyüme",
+        "Ölü",
+        "Gaz Salımı",
+        "Tekrar Bağlan",
+        "Saldır",
+        "Kuru"
+      ]
+    },
+    "DEVOTED_SCULPTOR": {
+      "name": "Kendini Adamış Heykeltıraş"
+    },
+    "DOOR": {
+      "name": "Kapı"
+    },
+    "DOORMAKER": {
+      "name": "Kapı Ustası"
+    },
+    "ENTOMANCER": {
+      "moves": {
+        "AGITATE_SWARM": "Sürüyü Kışkırt",
+        "BEES": "Arılaaaar!",
+        "PHEROMONE_SPIT": "Feromon Tükürüğü",
+        "SPEAR": "Mızrak!"
+      },
+      "name": "Böcek Büyücüsü",
+      "move_names": {
+        "Agitate Swarm": "Sürüyü Kışkırt",
+        "Beeeees!": "Arılaaaar!",
+        "Pheromone Spit": "Feromon Tükürüğü",
+        "Spear!": "Mızrak!"
+      },
+      "move_titles": [
+        "Sürüyü Kışkırt",
+        "Arılaaaar!",
+        "Feromon Tükürüğü",
+        "Mızrak!"
+      ]
+    },
+    "EXOSKELETON": {
+      "moves": {
+        "ENRAGE": "Sinirlen",
+        "MANDIBLES": "Böcek Isırığı",
+        "SKITTER": "Sıçra"
+      },
+      "name": "Zırhkabuk",
+      "move_names": {
+        "Enrage": "Sinirlen",
+        "Mandibles": "Böcek Isırığı",
+        "Skitter": "Sıçra"
+      },
+      "move_titles": [
+        "Sinirlen",
+        "Böcek Isırığı",
+        "Sıçra"
+      ]
+    },
+    "EYE_WITH_TEETH": {
+      "moves": {
+        "DISTRACT": "Dikkatini Dağıt",
+        "STARTLE": "Ürküt"
+      },
+      "name": "Dişli Göz",
+      "move_names": {
+        "Distract": "Dikkatini Dağıt",
+        "Startle": "Ürküt"
+      },
+      "move_titles": [
+        "Dikkatini Dağıt",
+        "Ürküt"
+      ]
+    },
+    "FABRICATOR": {
+      "moves": {
+        "DISINTEGRATE": "Parçalarına Ayır",
+        "FABRICATE": "Üret"
+      },
+      "name": "İmalatçı",
+      "move_names": {
+        "Disintegrate": "Parçalarına Ayır",
+        "Fabricate": "Üret"
+      },
+      "move_titles": [
+        "Parçalarına Ayır",
+        "Üret"
+      ]
+    },
+    "FAKE_MERCHANT_MONSTER": {
+      "moves": {
+        "ENRAGE": "Sinirlen",
+        "SPEW_COINS": "Para Kus",
+        "SWIPE": "Çiz",
+        "THROW_RELIC": "Kalıntı Fırlat"
+      },
+      "name": "Tüccar???",
+      "move_names": {
+        "Enrage": "Sinirlen",
+        "Spew Coins": "Para Kus",
+        "Swipe": "Çiz",
+        "Throw Relic": "Kalıntı Fırlat"
+      },
+      "move_titles": [
+        "Sinirlen",
+        "Para Kus",
+        "Çiz",
+        "Kalıntı Fırlat"
+      ]
+    },
+    "FAT_GREMLIN": {
+      "moves": {
+        "FLEE": "Kaç"
+      },
+      "name": "Şişko Gremlin",
+      "move_names": {
+        "Flee": "Kaç"
+      },
+      "move_titles": [
+        "Kaç"
+      ]
+    },
+    "FLAIL_KNIGHT": {
+      "moves": {
+        "BREAKER": "Kafa Kıran",
+        "FLAIL": "Gürz",
+        "RAM": "Ez"
+      },
+      "name": "Gürzlü Şövalye",
+      "move_names": {
+        "Breaker": "Kafa Kıran",
+        "Flail": "Gürz",
+        "Ram": "Ez"
+      },
+      "move_titles": [
+        "Kafa Kıran",
+        "Gürz",
+        "Ez"
+      ]
+    },
+    "FLYCONID": {
+      "moves": {
+        "FRAIL_SPORES": "Hassas Sporlar",
+        "SMASH": "Ez"
+      },
+      "name": "Sinekonyum",
+      "move_names": {
+        "Frail Spores": "Hassas Sporlar",
+        "Smash": "Ez"
+      },
+      "move_titles": [
+        "Hassas Sporlar",
+        "Ez"
+      ]
+    },
+    "FOGMOG": {
+      "moves": {
+        "ILLUSORY_SPORES": "Yanıltıcı Sporlar",
+        "THWACK": "Küt!"
+      },
+      "name": "Gaztar",
+      "move_names": {
+        "Illusory Spores": "Yanıltıcı Sporlar",
+        "Thwack": "Küt!"
+      },
+      "move_titles": [
+        "Yanıltıcı Sporlar",
+        "Küt!"
+      ]
+    },
+    "FOSSIL_STALKER": {
+      "moves": {
+        "LASH": "Kırbaçla",
+        "LATCH": "Tutun",
+        "TACKLE": "Saldır"
+      },
+      "name": "Pusan Fosil",
+      "move_names": {
+        "Lash": "Kırbaçla",
+        "Latch": "Tutun",
+        "Tackle": "Saldır"
+      },
+      "move_titles": [
+        "Kırbaçla",
+        "Tutun",
+        "Saldır"
+      ]
+    },
+    "FROG_KNIGHT": {
+      "moves": {
+        "BEETLE_CHARGE": "Böcek Hücumu",
+        "FOR_THE_QUEEN": "Kraliçe İçin",
+        "STRIKE_DOWN_EVIL": "Kötülüğe Darbe",
+        "TONGUE_LASH": "Dil Kamçısı"
+      },
+      "name": "Kurbağa Şövalye",
+      "move_names": {
+        "Beetle Charge": "Böcek Hücumu",
+        "For the Queen": "Kraliçe İçin",
+        "Strike Down Evil": "Kötülüğe Darbe",
+        "Tongue Lash": "Dil Kamçısı"
+      },
+      "move_titles": [
+        "Böcek Hücumu",
+        "Kraliçe İçin",
+        "Kötülüğe Darbe",
+        "Dil Kamçısı"
+      ]
+    },
+    "FUZZY_WURM_CRAWLER": {
+      "moves": {
+        "ACID_GOOP": "Asidik Tükürük"
+      },
+      "name": "Tüylü Müylü Sürüngen",
+      "move_names": {
+        "Acid Goop": "Asidik Tükürük"
+      },
+      "move_titles": [
+        "Asidik Tükürük"
+      ]
+    },
+    "GAS_BOMB": {
+      "moves": {
+        "EXPLODE": "Patla"
+      },
+      "name": "Gaz Bombası",
+      "move_names": {
+        "Explode": "Patla"
+      },
+      "move_titles": [
+        "Patla"
+      ]
+    },
+    "GAZING_MOTH": {
+      "moves": {
+        "GLARE": "Bakış",
+        "POWDER": "Toz"
+      },
+      "name": "Gözleyen Güve",
+      "move_names": {
+        "Glare": "Bakış",
+        "Powder": "Toz"
+      },
+      "move_titles": [
+        "Bakış",
+        "Toz"
+      ]
+    },
+    "GEM_EATER": {
+      "moves": {
+        "FOCUS_BEAM": "Odak Işını",
+        "GEM_LASER": "Mücevher Işını"
+      },
+      "name": "Mücevher Yiyen",
+      "move_names": {
+        "Focus Beam": "Odak Işını",
+        "Gem Laser": "Mücevher Işını"
+      },
+      "move_titles": [
+        "Odak Işını",
+        "Mücevher Işını"
+      ]
+    },
+    "GLOBE_HEAD": {
+      "moves": {
+        "CHANNEL_LIGHTNING": "Yıldırım Oluştur",
+        "DUAL_CAST": "Çifte Tetikleme",
+        "SHOCKING_SLAP": "Şok Edici Tokat"
+      },
+      "name": "Küre Kafa",
+      "move_names": {
+        "Channel Lightning": "Yıldırım Oluştur",
+        "Dual Cast": "Çifte Tetikleme",
+        "Shocking Slap": "Şok Edici Tokat"
+      },
+      "move_titles": [
+        "Yıldırım Oluştur",
+        "Çifte Tetikleme",
+        "Şok Edici Tokat"
+      ]
+    },
+    "GREMLIN_MERC": {
+      "moves": {
+        "DOUBLE_SMASH": "Çifte Eziş",
+        "GIMME": "Ceple",
+        "HEHE": "Hihi"
+      },
+      "name": "Gremlin Paralı Asker",
+      "move_names": {
+        "Double Smash": "Çifte Eziş",
+        "Gimme": "Ceple",
+        "Hehe": "Hihi"
+      },
+      "move_titles": [
+        "Çifte Eziş",
+        "Ceple",
+        "Hihi"
+      ]
+    },
+    "GUARDBOT": {
+      "moves": {
+        "GUARD": "Koru"
+      },
+      "name": "Korubot",
+      "move_names": {
+        "Guard": "Koru"
+      },
+      "move_titles": [
+        "Koru"
+      ]
+    },
+    "HATCHLING": {
+      "name": "Yavru"
+    },
+    "HAUNTED_SHIP": {
+      "moves": {
+        "HAUNT": "Musallat Ol",
+        "RAMMING_SPEED": "Ezici Hız",
+        "STOMP": "Ez",
+        "SWIPE": "Çiz"
+      },
+      "name": "Lanetli Gemi",
+      "move_names": {
+        "Haunt": "Musallat Ol",
+        "Ramming Speed": "Ezici Hız",
+        "Stomp": "Ez",
+        "Swipe": "Çiz"
+      },
+      "move_titles": [
+        "Musallat Ol",
+        "Ezici Hız",
+        "Ez",
+        "Çiz"
+      ]
+    },
+    "HUNTER_KILLER": {
+      "moves": {
+        "BITE": "Isır",
+        "PUNCTURE": "Del",
+        "TENDERIZING_GOOP": "Aşındırıcı Kusmuk"
+      },
+      "name": "Avcı Katili",
+      "move_names": {
+        "Bite": "Isır",
+        "Puncture": "Del",
+        "Tenderizing Goop": "Aşındırıcı Kusmuk"
+      },
+      "move_titles": [
+        "Isır",
+        "Del",
+        "Aşındırıcı Kusmuk"
+      ]
+    },
+    "INFESTED_PRISM": {
+      "moves": {
+        "JAB": "Batır",
+        "PULSATE": "Titreş",
+        "RADIATE": "Işık Saç",
+        "WHIRLWIND": "Kasırga"
+      },
+      "name": "İstila Edilmiş Prizma",
+      "move_names": {
+        "Jab": "Batır",
+        "Pulsate": "Titreş",
+        "Radiate": "Işık Saç",
+        "Whirlwind": "Kasırga"
+      },
+      "move_titles": [
+        "Batır",
+        "Titreş",
+        "Işık Saç",
+        "Kasırga"
+      ]
+    },
+    "INKLET": {
+      "moves": {
+        "JAB": "Yumruk",
+        "PIERCING_GAZE": "Delici Bakış",
+        "WINDUP_PUNCH": "Güç Toplayan Yumruk"
+      },
+      "name": "Mürekkepçik",
+      "move_names": {
+        "Jab": "Yumruk",
+        "Piercing Gaze": "Delici Bakış",
+        "Windup Punch": "Güç Toplayan Yumruk"
+      },
+      "move_titles": [
+        "Yumruk",
+        "Delici Bakış",
+        "Güç Toplayan Yumruk"
+      ]
+    },
+    "KIN_FOLLOWER": {
+      "moves": {
+        "BOOMERANG_MOVE": "Bumerang",
+        "POWER_DANCE_MOVE": "Güç Dansı",
+        "QUICK_SLASH_MOVE": "Hızlı Kesiş"
+      },
+      "name": "Kabile Üyesi",
+      "move_names": {
+        "Boomerang": "Bumerang",
+        "Power Dance": "Güç Dansı",
+        "Quick Slash": "Hızlı Kesiş"
+      },
+      "move_titles": [
+        "Bumerang",
+        "Güç Dansı",
+        "Hızlı Kesiş"
+      ]
+    },
+    "KIN_PRIEST": {
+      "moves": {
+        "BEAM_MOVE": "Ruh Işını",
+        "OR_OF_FRAILTY_MOVE": "Kırılganlık Küresi",
+        "OR_OF_WEAKNESS_MOVE": "Zayıflık Küresi",
+        "RITUAL_MOVE": "Karanlık Ritüel"
+      },
+      "name": "Kabile Şamanı",
+      "move_names": {
+        "Soul Beam": "Ruh Işını",
+        "Orb of Frailty": "Kırılganlık Küresi",
+        "Orb of Weakness": "Zayıflık Küresi",
+        "Dark Ritual": "Karanlık Ritüel"
+      },
+      "move_titles": [
+        "Ruh Işını",
+        "Kırılganlık Küresi",
+        "Zayıflık Küresi",
+        "Karanlık Ritüel"
+      ]
+    },
+    "KNOWLEDGE_DEMON": {
+      "moves": {
+        "BLUE_FLAME": "Mavi Alev",
+        "CURSE_OF_KNOWLEDGE": "Bilginin Laneti",
+        "HAVE_A_TASTE": "Tadına Bak",
+        "KNOWLEDGE_OVERWHELMING": "Ezici Bilgi",
+        "PONDER": "Düşün"
+      },
+      "name": "Bilgi Şeytanı",
+      "move_names": {
+        "Blue Flame": "Mavi Alev",
+        "Curse of Knowledge": "Bilginin Laneti",
+        "Have a Taste": "Tadına Bak",
+        "Knowledge Overwhelming": "Ezici Bilgi",
+        "Ponder": "Düşün"
+      },
+      "move_titles": [
+        "Mavi Alev",
+        "Bilginin Laneti",
+        "Tadına Bak",
+        "Ezici Bilgi",
+        "Düşün"
+      ]
+    },
+    "LAGAVULIN_MATRIARCH": {
+      "moves": {
+        "DISEMBOWEL": "Deş",
+        "SLASH": "Kes",
+        "SLEEP": "Uyu",
+        "SOUL_SIPHON": "Ruh Emiş"
+      },
+      "name": "Anne Lagavulin",
+      "move_names": {
+        "Disembowel": "Deş",
+        "Slash": "Kes",
+        "Sleep": "Uyu",
+        "Soul Siphon": "Ruh Emiş"
+      },
+      "move_titles": [
+        "Deş",
+        "Kes",
+        "Uyu",
+        "Ruh Emiş"
+      ]
+    },
+    "LEAF_SLIME_M": {
+      "moves": {
+        "CLUMP_SHOT": "Balçık Atışı",
+        "STICKY_SHOT": "Yapışkan Atış"
+      },
+      "name": "Yaprak Balçık (O)",
+      "move_names": {
+        "Clump Shot": "Balçık Atışı",
+        "Sticky Shot": "Yapışkan Atış"
+      },
+      "move_titles": [
+        "Balçık Atışı",
+        "Yapışkan Atış"
+      ]
+    },
+    "LEAF_SLIME_S": {
+      "moves": {
+        "GOOP": "Balçık Atışı",
+        "TACKLE": "Saldır"
+      },
+      "name": "Yaprak Balçık (K)",
+      "move_names": {
+        "Goop": "Balçık Atışı",
+        "Tackle": "Saldır"
+      },
+      "move_titles": [
+        "Balçık Atışı",
+        "Saldır"
+      ]
+    },
+    "LIVING_FOG": {
+      "moves": {
+        "BLOAT": "Üfür"
+      },
+      "name": "Yaşayan Sis",
+      "move_names": {
+        "Bloat": "Üfür"
+      },
+      "move_titles": [
+        "Üfür"
+      ]
+    },
+    "LIVING_SHIELD": {
+      "moves": {
+        "SHIELD_SLAM": "Kalkan Vuruşu"
+      },
+      "name": "Yaşayan Kalkan",
+      "move_names": {
+        "Shield Slam": "Kalkan Vuruşu"
+      },
+      "move_titles": [
+        "Kalkan Vuruşu"
+      ]
+    },
+    "LOUSE_PROGENITOR": {
+      "moves": {
+        "ACID_DUST": "Asit Tozu",
+        "CURL_AND_GROW": "İçe Kapan ve Büyü",
+        "WEB_CANNON": "Ağ Topu"
+      },
+      "name": "Bitlerin Atası",
+      "move_names": {
+        "Acid Dust": "Asit Tozu",
+        "Curl and Grow": "İçe Kapan ve Büyü",
+        "Web Cannon": "Ağ Topu"
+      },
+      "move_titles": [
+        "Asit Tozu",
+        "İçe Kapan ve Büyü",
+        "Ağ Topu"
+      ]
+    },
+    "MAGI_KNIGHT": {
+      "moves": {
+        "MAGIC_BOMB": "Büyü Bombası",
+        "POWER_SHIELD": "Güç Kalkanı",
+        "RAM": "Deş"
+      },
+      "name": "Büyücü Şövalye",
+      "move_names": {
+        "Magic Bomb": "Büyü Bombası",
+        "Power Shield": "Güç Kalkanı",
+        "Ram": "Deş"
+      },
+      "move_titles": [
+        "Büyü Bombası",
+        "Güç Kalkanı",
+        "Deş"
+      ]
+    },
+    "MAWLER": {
+      "moves": {
+        "CLAW": "Pençe",
+        "RIP_AND_TEAR": "Parçalayıp Kopar",
+        "ROAR": "Kükre"
+      },
+      "name": "Yırtançene",
+      "move_names": {
+        "Claw": "Pençe",
+        "Rip and Tear": "Parçalayıp Kopar",
+        "Roar": "Kükre"
+      },
+      "move_titles": [
+        "Pençe",
+        "Parçalayıp Kopar",
+        "Kükre"
+      ]
+    },
+    "MECHA_KNIGHT": {
+      "moves": {
+        "CHARGE": "Atıl",
+        "FLAMETHROWER": "Alev Makinesi",
+        "HEAVY_CLEAVE": "Ağır Darbe",
+        "WINDUP": "Güç Topla"
+      },
+      "name": "Meka Şövalye",
+      "move_names": {
+        "Charge": "Atıl",
+        "Flamethrower": "Alev Makinesi",
+        "Heavy Cleave": "Ağır Darbe",
+        "Windup": "Güç Topla"
+      },
+      "move_titles": [
+        "Atıl",
+        "Alev Makinesi",
+        "Ağır Darbe",
+        "Güç Topla"
+      ]
+    },
+    "MOCK_ATTACK_AND_SUMMON_MINION_MONSTER": {
+      "moves": {
+        "ATTACK_AND_SUMMON_MINION": "Saldır ve Yancı Çağır"
+      },
+      "name": "Saldır ve Yancı Yaratık Çağır",
+      "move_names": {
+        "Attack and Summon Minion": "Saldır ve Yancı Çağır"
+      },
+      "move_titles": [
+        "Saldır ve Yancı Çağır"
+      ]
+    },
+    "MOCK_ATTACK_MONSTER": {
+      "moves": {
+        "ATTACK": "Saldır"
+      },
+      "name": "Canavara Saldır",
+      "move_names": {
+        "Attack": "Saldır"
+      },
+      "move_titles": [
+        "Saldır"
+      ]
+    },
+    "MYSTERIOUS_KNIGHT": {
+      "moves": {
+        "BREAKER": "Kafa Kıran",
+        "FLAIL": "Gürz",
+        "RAM": "Ez"
+      },
+      "name": "Gizemli Şövalye",
+      "move_names": {
+        "Breaker": "Kafa Kıran",
+        "Flail": "Gürz",
+        "Ram": "Ez"
+      },
+      "move_titles": [
+        "Kafa Kıran",
+        "Gürz",
+        "Ez"
+      ]
+    },
+    "MYTE": {
+      "moves": {
+        "BIG_SUCK": "Kocaman Emiş",
+        "BITE": "Isır",
+        "SUCK": "Em",
+        "TOXIC": "Toksik Atış"
+      },
+      "name": "Mayt",
+      "move_names": {
+        "Big Suck": "Kocaman Emiş",
+        "Bite": "Isır",
+        "Suck": "Em",
+        "Toxic Cornucopia": "Toksik Atış"
+      },
+      "move_titles": [
+        "Kocaman Emiş",
+        "Isır",
+        "Em",
+        "Toksik Atış"
+      ]
+    },
+    "NIBBIT": {
+      "moves": {
+        "BUTT": "Toslama",
+        "HESITANT_SLICE": "Tereddütlü Kesiş",
+        "HISS": "Tıslama"
+      },
+      "name": "Kemirbağa",
+      "move_names": {
+        "Butt": "Toslama",
+        "Hesitant Slice": "Tereddütlü Kesiş",
+        "Hiss": "Tıslama"
+      },
+      "move_titles": [
+        "Toslama",
+        "Tereddütlü Kesiş",
+        "Tıslama"
+      ]
+    },
+    "NOISEBOT": {
+      "moves": {
+        "NOISE": "Gürültü"
+      },
+      "name": "Gürültübot",
+      "move_names": {
+        "Noise": "Gürültü"
+      },
+      "move_titles": [
+        "Gürültü"
+      ]
+    },
+    "OSTY": {
+      "name": "Osti"
+    },
+    "OVICOPTER": {
+      "moves": {
+        "LAY_EGGS": "Yumurtla",
+        "NUTRITIONAL_PASTE": "Besleyici Lapa",
+        "SMASH": "Ez",
+        "TENDERIZER": "Aşındırıcı"
+      },
+      "name": "Kuluçkopter",
+      "move_names": {
+        "Lay Eggs": "Yumurtla",
+        "Nutritional Paste": "Besleyici Lapa",
+        "Smash": "Ez",
+        "Tenderizer": "Aşındırıcı"
+      },
+      "move_titles": [
+        "Yumurtla",
+        "Besleyici Lapa",
+        "Ez",
+        "Aşındırıcı"
+      ]
+    },
+    "OWL_MAGISTRATE": {
+      "moves": {
+        "JUDICIAL_FLIGHT": "Adli Uçuş",
+        "MAGISTRATE_SCRUTINY": "Yargıç Gözlemi",
+        "PECK_ASSAULT": "Gaga Saldırısı",
+        "VERDICT": "Karar"
+      },
+      "name": "Yargıç Baykuş",
+      "move_names": {
+        "Judicial Flight": "Adli Uçuş",
+        "Magistrate Scrutiny": "Yargıç Gözlemi",
+        "Peck Assault": "Gaga Saldırısı",
+        "Verdict": "Karar"
+      },
+      "move_titles": [
+        "Adli Uçuş",
+        "Yargıç Gözlemi",
+        "Gaga Saldırısı",
+        "Karar"
+      ]
+    },
+    "PAELS_LEGION": {
+      "moves": {
+        "NOTHING": "Hiçbir Şey"
+      },
+      "name": "Pael'in Ordusu",
+      "move_names": {
+        "Nothing": "Hiçbir Şey"
+      },
+      "move_titles": [
+        "Hiçbir Şey"
+      ]
+    },
+    "PARAFRIGHT": {
+      "moves": {
+        "SLAM": "Ez"
+      },
+      "name": "Korkuzit",
+      "move_names": {
+        "Slam": "Ez"
+      },
+      "move_titles": [
+        "Ez"
+      ]
+    },
+    "PHANTASMAL_GARDENER": {
+      "moves": {
+        "BITE": "Isır",
+        "ENLARGE": "Büyü",
+        "FLAIL": "Vur",
+        "LASH": "Dil Kamçısı"
+      },
+      "name": "Bahçe Yılan Balığı",
+      "move_names": {
+        "Bite": "Isır",
+        "Enlarge": "Büyü",
+        "Flail": "Vur",
+        "Lash": "Dil Kamçısı"
+      },
+      "move_titles": [
+        "Isır",
+        "Büyü",
+        "Vur",
+        "Dil Kamçısı"
+      ]
+    },
+    "PHROG_PARASITE": {
+      "moves": {
+        "INFECT": "Bulaştır",
+        "LASH": "Kırbaç",
+        "LEAP_SLAM": "Ezici Atlayış"
+      },
+      "name": "Parazitli Gurbağa",
+      "move_names": {
+        "Infect": "Bulaştır",
+        "Lash": "Kırbaç",
+        "Leap Slam": "Ezici Atlayış"
+      },
+      "move_titles": [
+        "Bulaştır",
+        "Kırbaç",
+        "Ezici Atlayış"
+      ]
+    },
+    "PUNCH_CONSTRUCT": {
+      "moves": {
+        "FAST_PUNCH": "Hızlı Yumruk",
+        "READY": "HAZIR",
+        "STRONG_PUNCH": "Güçlü Yumruk"
+      },
+      "name": "Yumruklayan Yapı",
+      "move_names": {
+        "Fast Punch": "Hızlı Yumruk",
+        "READY": "HAZIR",
+        "Strong Punch": "Güçlü Yumruk"
+      },
+      "move_titles": [
+        "Hızlı Yumruk",
+        "HAZIR",
+        "Güçlü Yumruk"
+      ]
+    },
+    "QUEEN": {
+      "moves": {
+        "BARRIER": "Bariyer",
+        "BURN_BRIGHT_FOR_ME": "Benim İçin Yan",
+        "EXECUTION": "İnfaz",
+        "IMPOSSIBLE": "İmkansız",
+        "OFF_WITH_YOUR_HEAD": "Kelleni Alırım",
+        "SUMMON_1": "Çağır",
+        "SUMMON_2": "Çağır",
+        "YOURE_MINE": "Benimsin"
+      },
+      "name": "Kraliçe",
+      "move_names": {
+        "Barrier": "Bariyer",
+        "Burn Bright for Me": "Benim İçin Yan",
+        "Execution": "İnfaz",
+        "Impossible": "İmkansız",
+        "Off with Your Head": "Kelleni Alırım",
+        "Summon": "Çağır",
+        "You're Mine": "Benimsin"
+      },
+      "move_titles": [
+        "Bariyer",
+        "Benim İçin Yan",
+        "İnfaz",
+        "İmkansız",
+        "Kelleni Alırım",
+        "Çağır",
+        "Çağır",
+        "Benimsin"
+      ]
+    },
+    "ROCKET": {
+      "moves": {
+        "CHARGE_UP": "Güç Topla",
+        "LASER": "Lazer",
+        "PRECISION_BEAM": "Odak Işını",
+        "RECHARGE": "Yeniden Doldur",
+        "TARGETING_RETICLE": "Hedef Göstergesi"
+      },
+      "name": "Roket",
+      "move_names": {
+        "Charge Up": "Güç Topla",
+        "Laser": "Lazer",
+        "Precision Beam": "Odak Işını",
+        "Recharge": "Yeniden Doldur",
+        "Targeting Reticle": "Hedef Göstergesi"
+      },
+      "move_titles": [
+        "Güç Topla",
+        "Lazer",
+        "Odak Işını",
+        "Yeniden Doldur",
+        "Hedef Göstergesi"
+      ]
+    },
+    "SCROLL_OF_BITING": {
+      "moves": {
+        "CHEW": "Çiğne",
+        "CHOMP": "Isır",
+        "MORE_TEETH": "Daha Çok Diş"
+      },
+      "name": "Isırma Parşömeni",
+      "move_names": {
+        "Chew": "Çiğne",
+        "Chomp": "Isır",
+        "More Teeth": "Daha Çok Diş"
+      },
+      "move_titles": [
+        "Çiğne",
+        "Isır",
+        "Daha Çok Diş"
+      ]
+    },
+    "SEAPUNK": {
+      "moves": {
+        "BUBBLE_BURP": "Baloncuk Geğiriği",
+        "SEA_KICK": "Deniz Tekmesi",
+        "SPINNING_KICK": "Dönen Tekme"
+      },
+      "name": "Deniz Haydutu",
+      "move_names": {
+        "Bubble Burp": "Baloncuk Geğiriği",
+        "Sea Kick": "Deniz Tekmesi",
+        "Spinning Kick": "Dönen Tekme"
+      },
+      "move_titles": [
+        "Baloncuk Geğiriği",
+        "Deniz Tekmesi",
+        "Dönen Tekme"
+      ]
+    },
+    "SEWER_CLAM": {
+      "moves": {
+        "JET": "Su Fışkırtma",
+        "PRESSURIZE": "Basınç Uygula"
+      },
+      "name": "Kanalizasyon İstiridyesi",
+      "move_names": {
+        "Jet": "Su Fışkırtma",
+        "Pressurize": "Basınç Uygula"
+      },
+      "move_titles": [
+        "Su Fışkırtma",
+        "Basınç Uygula"
+      ]
+    },
+    "SHRINKER_BEETLE": {
+      "moves": {
+        "CHOMP": "Isır",
+        "SHRINKER": "Küçültme",
+        "STOMP": "Ez"
+      },
+      "name": "Küçültücü Böcek",
+      "move_names": {
+        "Chomp": "Isır",
+        "Shrinker": "Küçültme",
+        "Stomp": "Ez"
+      },
+      "move_titles": [
+        "Isır",
+        "Küçültme",
+        "Ez"
+      ]
+    },
+    "SKULKING_COLONY": {
+      "moves": {
+        "INERTIA": "Eylemsizlik",
+        "SUPER_CRAB": "Süper Yengeç",
+        "ZOOM": "Hızlan"
+      },
+      "name": "Saklanan Koloni",
+      "move_names": {
+        "Inertia": "Eylemsizlik",
+        "Super Crab": "Süper Yengeç",
+        "Zoom": "Hızlan"
+      },
+      "move_titles": [
+        "Eylemsizlik",
+        "Süper Yengeç",
+        "Hızlan"
+      ]
+    },
+    "SLIMED_BERSERKER": {
+      "name": "Balçıklanmış Vahşi Savaşçı"
+    },
+    "SLITHERING_STRANGLER": {
+      "moves": {
+        "CONSTRICT": "Boğ",
+        "LASH": "Kırbaçla",
+        "THWACK": "Küt!"
+      },
+      "name": "Dikenli Boğucu",
+      "move_names": {
+        "Constrict": "Boğ",
+        "Lash": "Kırbaçla",
+        "Thwack": "Küt!"
+      },
+      "move_titles": [
+        "Boğ",
+        "Kırbaçla",
+        "Küt!"
+      ]
+    },
+    "SLUDGE_SPINNER": {
+      "moves": {
+        "OIL_SPRAY": "Yağ Spreyi",
+        "RAGE": "Öfke",
+        "SLAM": "Ez"
+      },
+      "name": "Çamurdöner",
+      "move_names": {
+        "Oil Spray": "Yağ Spreyi",
+        "Rage": "Öfke",
+        "Slam": "Ez"
+      },
+      "move_titles": [
+        "Yağ Spreyi",
+        "Öfke",
+        "Ez"
+      ]
+    },
+    "SLUMBERING_BEETLE": {
+      "moves": {
+        "CRASH": "Çarp",
+        "RESOLVE": "Azim",
+        "ROLL_OUT": "Dönen Saldırı",
+        "SNORE": "Horla"
+      },
+      "name": "Uyuyan Böcek",
+      "move_names": {
+        "Crash": "Çarp",
+        "Resolve": "Azim",
+        "Roll Out": "Dönen Saldırı",
+        "Snore": "Horla"
+      },
+      "move_titles": [
+        "Çarp",
+        "Azim",
+        "Dönen Saldırı",
+        "Horla"
+      ]
+    },
+    "SNAPPING_JAXFRUIT": {
+      "moves": {
+        "COLLECT_POWER": "Güç Topla",
+        "ENERGY_ORB": "Enerji Küresi"
+      },
+      "name": "Isıran Meyve",
+      "move_names": {
+        "Collect Power": "Güç Topla",
+        "Energy Orb": "Enerji Küresi"
+      },
+      "move_titles": [
+        "Güç Topla",
+        "Enerji Küresi"
+      ]
+    },
+    "SNEAKY_GREMLIN": {
+      "moves": {
+        "TACKLE": "Saldır"
+      },
+      "name": "Sinsi Gremlin",
+      "move_names": {
+        "Tackle": "Saldır"
+      },
+      "move_titles": [
+        "Saldır"
+      ]
+    },
+    "SOUL_FYSH": {
+      "moves": {
+        "BURP": "Geğir",
+        "DE_GAS": "Gazını Al",
+        "SCREAM": "Çığlık At"
+      },
+      "name": "Ruh Baluğu",
+      "move_names": {
+        "Burp": "Geğir",
+        "De-Gas": "Gazını Al",
+        "Scream": "Çığlık At"
+      },
+      "move_titles": [
+        "Geğir",
+        "Gazını Al",
+        "Çığlık At"
+      ]
+    },
+    "SOUL_NEXUS": {
+      "moves": {
+        "DRAIN_LIFE": "Yaşam Em",
+        "MAELSTROM": "Girdap",
+        "SOUL_BURN": "Ruh Yanışı"
+      },
+      "name": "Ruh Bileşiği",
+      "move_names": {
+        "Drain Life": "Yaşam Em",
+        "Maelstrom": "Girdap",
+        "Soul Burn": "Ruh Yanışı"
+      },
+      "move_titles": [
+        "Yaşam Em",
+        "Girdap",
+        "Ruh Yanışı"
+      ]
+    },
+    "SPECTRAL_KNIGHT": {
+      "moves": {
+        "HEX": "Büyü",
+        "SOUL_FLAME": "Ruh Ateşi",
+        "SOUL_SLASH": "Ruh Kesişi"
+      },
+      "name": "Hayalet Şövalye",
+      "move_names": {
+        "Hex": "Büyü",
+        "Soul Flame": "Ruh Ateşi",
+        "Soul Slash": "Ruh Kesişi"
+      },
+      "move_titles": [
+        "Büyü",
+        "Ruh Ateşi",
+        "Ruh Kesişi"
+      ]
+    },
+    "SPINY_TOAD": {
+      "moves": {
+        "PROTRUDING_SPIKES": "Diken Çıkar",
+        "SPIKE_EXPLOSION": "Diken Patlaması",
+        "TONGUE_LASH": "Dil Kamçısı"
+      },
+      "name": "Dikenli Kurbağa",
+      "move_names": {
+        "Protruding Spikes": "Diken Çıkar",
+        "Spike Explosion": "Diken Patlaması",
+        "Tongue Lash": "Dil Kamçısı"
+      },
+      "move_titles": [
+        "Diken Çıkar",
+        "Diken Patlaması",
+        "Dil Kamçısı"
+      ]
+    },
+    "STABBOT": {
+      "moves": {
+        "STAB": "Sapla"
+      },
+      "name": "Saplabot",
+      "move_names": {
+        "Stab": "Sapla"
+      },
+      "move_titles": [
+        "Sapla"
+      ]
+    },
+    "TERROR_EEL": {
+      "name": "Korkunç Yılan Balığı"
+    },
+    "TEST_SUBJECT": {
+      "moves": {
+        "BIG_POUNCE_MOVE": "Vahşi Sıçrayış",
+        "BITE_MOVE": "Isır",
+        "BURNING_GROWL_MOVE": "Yanan Kükreyiş",
+        "MULTI_CLAW_MOVE": "Çoklu Pençe",
+        "PHASE3_LACERATE_MOVE": "Parçala",
+        "POUNCE_MOVE": "Sıçra",
+        "RESPAWN_MOVE": "Yeniden Doğ",
+        "SKULL_BASH_MOVE": "Kafa At"
+      },
+      "name": "Denek #C{Count}",
+      "move_names": {
+        "Big Pounce": "Vahşi Sıçrayış",
+        "Bite": "Isır",
+        "Burning Growl": "Yanan Kükreyiş",
+        "Multi-Claw": "Çoklu Pençe",
+        "Lacerate": "Parçala",
+        "Pounce": "Sıçra",
+        "Respawn": "Yeniden Doğ",
+        "Skull Bash": "Kafa At"
+      },
+      "move_titles": [
+        "Vahşi Sıçrayış",
+        "Isır",
+        "Yanan Kükreyiş",
+        "Çoklu Pençe",
+        "Parçala",
+        "Sıçra",
+        "Yeniden Doğ",
+        "Kafa At"
+      ]
+    },
+    "THE_ADVERSARY_MK_ONE": {
+      "moves": {
+        "BARRAGE": "Bombardıman",
+        "BEAM": "Işın",
+        "SMASH": "Ez"
+      },
+      "name": "Rakip Model 1",
+      "move_names": {
+        "Barrage": "Bombardıman",
+        "Beam": "Işın",
+        "Smash": "Ez"
+      },
+      "move_titles": [
+        "Bombardıman",
+        "Işın",
+        "Ez"
+      ]
+    },
+    "THE_ADVERSARY_MK_THREE": {
+      "moves": {
+        "BARRAGE": "Bombardıman",
+        "CRASH": "Çarp",
+        "FLAME_BEAM": "Ateş Işını"
+      },
+      "name": "Rakip Model 3",
+      "move_names": {
+        "Barrage": "Bombardıman",
+        "Crash": "Çarp",
+        "Flame Beam": "Ateş Işını"
+      },
+      "move_titles": [
+        "Bombardıman",
+        "Çarp",
+        "Ateş Işını"
+      ]
+    },
+    "THE_ADVERSARY_MK_TWO": {
+      "moves": {
+        "BARRAGE": "Bombardıman",
+        "BASH": "Göçürt",
+        "FLAME_BEAM": "Ateş Işını"
+      },
+      "name": "Rakip Model 2",
+      "move_names": {
+        "Barrage": "Bombardıman",
+        "Bash": "Göçürt",
+        "Flame Beam": "Ateş Işını"
+      },
+      "move_titles": [
+        "Bombardıman",
+        "Göçürt",
+        "Ateş Işını"
+      ]
+    },
+    "THE_ARM": {
+      "moves": {
+        "GRAB": "Tut",
+        "PUNCH": "Yumrukla",
+        "WRESTLE": "Güreş"
+      },
+      "name": "Kol",
+      "move_names": {
+        "Grab": "Tut",
+        "Punch": "Yumrukla",
+        "Wrestle": "Güreş"
+      },
+      "move_titles": [
+        "Tut",
+        "Yumrukla",
+        "Güreş"
+      ]
+    },
+    "THE_BELL": {
+      "moves": {
+        "CACOPHONY": "Ahenksizlik",
+        "CLANG": "Çın Çın",
+        "RING": "Çal"
+      },
+      "name": "Zil",
+      "move_names": {
+        "Cacophony": "Ahenksizlik",
+        "Clang": "Çın Çın",
+        "Ring": "Çal"
+      },
+      "move_titles": [
+        "Ahenksizlik",
+        "Çın Çın",
+        "Çal"
+      ]
+    },
+    "THE_DREAMER": {
+      "moves": {
+        "DREAM": "Hayal Et",
+        "FEND_OFF": "Savuştur",
+        "RUMINATE": "Düşüncelere Dal",
+        "SNORE": "Horla"
+      },
+      "name": "Düşçü",
+      "move_names": {
+        "Dream": "Hayal Et",
+        "Fend Off": "Savuştur",
+        "Ruminate": "Düşüncelere Dal",
+        "Snore": "Horla"
+      },
+      "move_titles": [
+        "Hayal Et",
+        "Savuştur",
+        "Düşüncelere Dal",
+        "Horla"
+      ]
+    },
+    "THE_FORGOTTEN": {
+      "moves": {
+        "DREAD": "Dehşet",
+        "MIASMA": "Zehirli Hava"
+      },
+      "name": "Unutulmuş Olan",
+      "move_names": {
+        "Dread": "Dehşet",
+        "Miasma": "Zehirli Hava"
+      },
+      "move_titles": [
+        "Dehşet",
+        "Zehirli Hava"
+      ]
+    },
+    "THE_INSATIABLE": {
+      "moves": {
+        "LIQUIFY_GROUND": "Zemini Sıvılaştır",
+        "LUNGING_BITE": "Atılıp Isır",
+        "SALIVATE": "Salya Akıt",
+        "THRASH": "Saldır"
+      },
+      "name": "Doyumsuz",
+      "move_names": {
+        "Liquify Ground": "Zemini Sıvılaştır",
+        "Lunging Bite": "Atılıp Isır",
+        "Salivate": "Salya Akıt",
+        "Thrash": "Saldır"
+      },
+      "move_titles": [
+        "Zemini Sıvılaştır",
+        "Atılıp Isır",
+        "Salya Akıt",
+        "Saldır"
+      ]
+    },
+    "THE_LOST": {
+      "moves": {
+        "DEBILITATING_SMOG": "Zayıflatan Duman",
+        "EYE_LASERS": "Göz Lazerleri"
+      },
+      "name": "Kayıp Olan",
+      "move_names": {
+        "Debilitating Smog": "Zayıflatan Duman",
+        "Eye Lasers": "Göz Lazerleri"
+      },
+      "move_titles": [
+        "Zayıflatan Duman",
+        "Göz Lazerleri"
+      ]
+    },
+    "THE_OBSCURA": {
+      "moves": {
+        "HARDENING_STRIKE": "Sertleştiren Saldırı",
+        "ILLUSION": "İlüzyon",
+        "PIERCING_GAZE": "Delici Bakış",
+        "WAIL": "Haykırış"
+      },
+      "name": "Belirsiz",
+      "move_names": {
+        "Hardening Strike": "Sertleştiren Saldırı",
+        "Illusion": "İlüzyon",
+        "Piercing Gaze": "Delici Bakış",
+        "Wail": "Haykırış"
+      },
+      "move_titles": [
+        "Sertleştiren Saldırı",
+        "İlüzyon",
+        "Delici Bakış",
+        "Haykırış"
+      ]
+    },
+    "THIEVING_HOPPER": {
+      "moves": {
+        "ESCAPE": "Kaç",
+        "FLUTTER": "Çırpın",
+        "HAT_TRICK": "Alçak Hamle",
+        "NAB": "Aşır",
+        "THIEVERY": "Hırsızlık"
+      },
+      "name": "Hırsız Çekirge",
+      "move_names": {
+        "Escape": "Kaç",
+        "Flutter": "Çırpın",
+        "Hat Trick": "Alçak Hamle",
+        "Nab": "Aşır",
+        "Thievery": "Hırsızlık"
+      },
+      "move_titles": [
+        "Kaç",
+        "Çırpın",
+        "Alçak Hamle",
+        "Aşır",
+        "Hırsızlık"
+      ]
+    },
+    "TOADPOLE": {
+      "moves": {
+        "SPIKEN": "Diken Çıkar",
+        "SPIKE_SPIT": "Diken Tükürüğü",
+        "WHIRL": "Fırıl Fırıl Dön"
+      },
+      "name": "İribaş",
+      "move_names": {
+        "Spiken": "Diken Çıkar",
+        "Spike Spit": "Diken Tükürüğü",
+        "Whirl": "Fırıl Fırıl Dön"
+      },
+      "move_titles": [
+        "Diken Çıkar",
+        "Diken Tükürüğü",
+        "Fırıl Fırıl Dön"
+      ]
+    },
+    "TORCH_HEAD_AMALGAM": {
+      "moves": {
+        "TACKLE": "Saldır"
+      },
+      "name": "Meşale Kafalı Bileşim",
+      "move_names": {
+        "Tackle": "Saldır"
+      },
+      "move_titles": [
+        "Saldır"
+      ]
+    },
+    "TOUGH_EGG": {
+      "moves": {
+        "HATCH": "KULUÇKAYA YATIR"
+      },
+      "name": "Dayanıklı Yumurta",
+      "move_names": {
+        "HATCH": "KULUÇKAYA YATIR"
+      },
+      "move_titles": [
+        "KULUÇKAYA YATIR"
+      ]
+    },
+    "TRACKER_RUBY_RAIDER": {
+      "moves": {
+        "HOUNDS": "Domuzları Sal",
+        "TRACK": "İzini Sür"
+      },
+      "name": "İz Süren Yağmacı",
+      "move_names": {
+        "Unleash the Hounds": "Domuzları Sal",
+        "Track": "İzini Sür"
+      },
+      "move_titles": [
+        "Domuzları Sal",
+        "İzini Sür"
+      ]
+    },
+    "TUNNELER": {
+      "moves": {
+        "BELOW": "Yer Altından Saldır",
+        "BITE": "Isır",
+        "BURROW": "Gömül",
+        "STRIKE": "Yüzeye Çıkış Saldırısı"
+      },
+      "name": "Tünelci",
+      "move_names": {
+        "Attack from Below": "Yer Altından Saldır",
+        "Bite": "Isır",
+        "Burrow": "Gömül",
+        "Emerging Strike": "Yüzeye Çıkış Saldırısı"
+      },
+      "move_titles": [
+        "Yer Altından Saldır",
+        "Isır",
+        "Gömül",
+        "Yüzeye Çıkış Saldırısı"
+      ]
+    },
+    "TURRET_OPERATOR": {
+      "moves": {
+        "LOADING": "Dolduruluyor",
+        "UNLOAD": "Boşalt!"
+      },
+      "name": "Taret Operatörü",
+      "move_names": {
+        "Loading": "Dolduruluyor",
+        "Unload!": "Boşalt!"
+      },
+      "move_titles": [
+        "Dolduruluyor",
+        "Boşalt!"
+      ]
+    },
+    "TWIG_SLIME_M": {
+      "moves": {
+        "CHOMP": "Isır",
+        "POKEY_POUNCE": "Dürten Saldırı",
+        "STICKY_SHOT": "Yapışkan Atış"
+      },
+      "name": "Dal Balçığı (O)",
+      "move_names": {
+        "Chomp": "Isır",
+        "Pokey Pounce": "Dürten Saldırı",
+        "Sticky Shot": "Yapışkan Atış"
+      },
+      "move_titles": [
+        "Isır",
+        "Dürten Saldırı",
+        "Yapışkan Atış"
+      ]
+    },
+    "TWIG_SLIME_S": {
+      "moves": {
+        "GOOP": "Balçık Atışı",
+        "TACKLE": "Saldır"
+      },
+      "name": "Dal Balçığı (K)",
+      "move_names": {
+        "Goop": "Balçık Atışı",
+        "Tackle": "Saldır"
+      },
+      "move_titles": [
+        "Balçık Atışı",
+        "Saldır"
+      ]
+    },
+    "TWO_TAILED_RAT": {
+      "moves": {
+        "CALL_FOR_BACKUP": "Destek Çağır",
+        "DISEASE_BITE": "Hastalıklı Isırık",
+        "SCRATCH": "Çiz",
+        "SCREECH": "Çığlık"
+      },
+      "name": "İki Kuyruklu Fare",
+      "move_names": {
+        "Call for Backup": "Destek Çağır",
+        "Disease Bite": "Hastalıklı Isırık",
+        "Scratch": "Çiz",
+        "Screech": "Çığlık"
+      },
+      "move_titles": [
+        "Destek Çağır",
+        "Hastalıklı Isırık",
+        "Çiz",
+        "Çığlık"
+      ]
+    },
+    "VANTOM": {
+      "moves": {
+        "DISMEMBER": "Parçalara Ayır",
+        "INKY_LANCE": "Mürekkepli Mızrak",
+        "INK_BLOT": "Mürekkep Lekesi",
+        "PREPARE": "Hazırlan"
+      },
+      "name": "Vantom",
+      "move_names": {
+        "Dismember": "Parçalara Ayır",
+        "Inky Lance": "Mürekkepli Mızrak",
+        "Ink Blot": "Mürekkep Lekesi",
+        "Prepare": "Hazırlan"
+      },
+      "move_titles": [
+        "Parçalara Ayır",
+        "Mürekkepli Mızrak",
+        "Mürekkep Lekesi",
+        "Hazırlan"
+      ]
+    },
+    "VINE_SHAMBLER": {
+      "moves": {
+        "CHOMP": "Isır",
+        "GRASPING_VINES": "Saran Sarmaşıklar",
+        "SWIPE": "Çiz"
+      },
+      "name": "Sarmaşık Yığını",
+      "move_names": {
+        "Chomp": "Isır",
+        "Grasping Vines": "Saran Sarmaşıklar",
+        "Swipe": "Çiz"
+      },
+      "move_titles": [
+        "Isır",
+        "Saran Sarmaşıklar",
+        "Çiz"
+      ]
+    },
+    "WATERFALL_GIANT": {
+      "moves": {
+        "PRESSURE_GUN": "Basınçlı Su",
+        "PRESSURIZE": "Basınç Uygula",
+        "RAM": "Ez",
+        "SIPHON": "Su Akıt",
+        "STOMP": "Ez"
+      },
+      "name": "Akarsu Devi",
+      "move_names": {
+        "Pressure Gun": "Basınçlı Su",
+        "Pressurize": "Basınç Uygula",
+        "Ram": "Ez",
+        "Siphon": "Su Akıt",
+        "Stomp": "Ez"
+      },
+      "move_titles": [
+        "Basınçlı Su",
+        "Basınç Uygula",
+        "Ez",
+        "Su Akıt",
+        "Ez"
+      ]
+    },
+    "WRIGGLER": {
+      "moves": {
+        "PARASITIZE_PLAYER": "Parazit Yay",
+        "WRIGGLE_STRIKE": "Kımıldama Saldırısı"
+      },
+      "name": "Kımıldak",
+      "move_names": {
+        "Parasitize Player": "Parazit Yay",
+        "Wriggle Strike": "Kımıldama Saldırısı"
+      },
+      "move_titles": [
+        "Parazit Yay",
+        "Kımıldama Saldırısı"
+      ]
+    },
+    "ZAPBOT": {
+      "moves": {
+        "ZAP": "Çarp"
+      },
+      "name": "Çarpbot",
+      "move_names": {
+        "Zap": "Çarp"
+      },
+      "move_titles": [
+        "Çarp"
+      ]
+    }
   }
 }

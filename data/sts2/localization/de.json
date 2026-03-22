@@ -348,7 +348,7 @@
       "name": "Chaos"
     },
     "CHARGE": {
-      "description": "Wähle 2 Karte aus deinem Nachziehstapel, die du zu \n",
+      "description": "Wähle 2 Karte aus deinem Nachziehstapel, die du zu \n{IfUpgraded:show:Diener-Schlag+ transformierst.",
       "name": "ATTACKE!!"
     },
     "CHARGE_BATTERY": {
@@ -1054,7 +1054,7 @@
       "name": "Versteckter Schatz"
     },
     "HIDDEN_DAGGERS": {
-      "description": "Wirf 2 Karte ab.\nErhalte 2 ",
+      "description": "Wirf 2 Karte ab.\nErhalte 2 {IfUpgraded:show:Messer+ auf deine Hand.",
       "name": "Versteckte Dolche"
     },
     "HIDDEN_GEM": {
@@ -5182,175 +5182,1098 @@
   },
   "events": {
     "ABYSSAL_BATHS": {
-      "name": "Abgründige Bäder"
+      "name": "Abgründige Bäder",
+      "description": "Du entdeckst eine abgelegene Kammer.\n\nDampf steigt aus brodelnden Becken voll heißer Flüssigkeit, welche in hypnotischem Rhythmus die Farbe wechselt. Von der Decke hängen Meeresgewächse, aus denen eine zähe Flüssigkeit tropft, welche beim Berühren der Oberfläche zischt und sich windet. Die Luft fühlt sich schwer an, gefüllt mit Salz und etwas unverkennbar Organischem.\n\nDu näherst dich der Kante des größten Beckens, da kräuselt sich die Flussigkeit. Das Wasser blubbert intensiver, als würde es deinen Eintritt erwarten.",
+      "choices": [
+        {
+          "name": "Verzichten",
+          "description": "Heile 10 TP."
+        },
+        {
+          "name": "Eintauchen",
+          "description": "Erhalte 2 max. TP. Nimm 3 Schaden."
+        }
+      ]
     },
     "AMALGAMATOR": {
-      "name": "Amalgamierer"
+      "name": "Amalgamierer",
+      "description": "KLONG! KLONG!!!\n\nDu hörst das Echo von Metall auf Metall auf der anderen Seite einer Mauer...\n\nDu drückst deinen Kopf gegen die Mauer, um zu lauschen—da öffnet sich die Wand und offenbart eine klobige sechsarmige Figur, die sich abplagt.\nIhr “Gesicht” ist ein wirbelnder Strudel aus leuchtenden Siegeln, die sich umstellen.\n\n“Jemand mit Aufstiegsgeist hat meine Werkstatt gefunden? Fangen wir an, zu KOMBINIEREN!”",
+      "choices": [
+        {
+          "name": "Verteidigen kombinieren",
+          "description": "Entferne 2 Verteidigen. Erhalte Ultimatives Verteidigen in dein Deck."
+        },
+        {
+          "name": "Schläge kombinieren",
+          "description": "Entferne 2 Schläge. Erhalte Ultimativer Schlag in dein Deck."
+        }
+      ]
     },
     "AROMA_OF_CHAOS": {
-      "name": "Geruch des Chaos"
+      "name": "Geruch des Chaos",
+      "description": "Als du durch dichtes Unterholz stampfst und eine Lichtung erreichst, trifft dich eine unbestimmte Nostalgie.\n\nEine Mischung aus blumigen Düften, fauliger Verwesung und etwas völlig anderem. Der Duft wird mit jedem Schritt stärker und du fühlst dich, als würde sich die Welt um dich herum krümmen und verdrehen.\n\nDu bist so überwältigt von einem Gefühl des verschiebenden Chaos, dass du anfängst, dein Selbstgefühl zu verlieren.",
+      "choices": [
+        {
+          "name": "Loslassen",
+          "description": "Transformiere eine Karte aus deinem Deck."
+        },
+        {
+          "name": "Kontrolle bewahren",
+          "description": "Verbessere eine Karte aus deinem Deck."
+        }
+      ]
     },
     "BATTLEWORN_DUMMY": {
-      "name": "Kampferprobter Dummy"
+      "name": "Kampferprobter Dummy",
+      "description": "Als du näher kommst, beginnt er zu rattern und zu zischen und strahlt hell auf!\n\n“BZZZT! ZEIT FÜRS TRAINING!!! DU HAST 3 ZÜGE, UM MICH ZU BESIEGEN!\nWÄHLE EINE EINSTELLUNG ODER BEGEGNE TÖDLICHER SCHMACH.\nHier sind die Optionen:”\n\nNach der erschreckenden Nachricht liest der Dummy sorgsam die ausführlichen Anweisungen vor.\n\nWas wählst du aus?",
+      "choices": [
+        {
+          "name": "Einstellung 1",
+          "description": "Bekämpfe einen 75-TP-Dummy. Beschaffe 1 zufälligen Trank."
+        },
+        {
+          "name": "Einstellung 2",
+          "description": "Bekämpfe einen 150-TP-Dummy. Verbessere 2 zufällige Karten."
+        },
+        {
+          "name": "Einstellung 3",
+          "description": "Bekämpfe einen 300-TP-Dummy. Erhalte ein zufälliges Relikt."
+        }
+      ]
     },
     "BRAIN_LEECH": {
-      "name": "Hirn-Egel"
+      "name": "Hirn-Egel",
+      "description": "*bumms*\n\nEin scharfer Schmerz ist oben an deinem Kopf zu fühlen und ein Gedanke sticht dir in den Sinn.\n\n“WISSEN TEILEN???”\n\nDu bist unsicher, wie es weitergeht...",
+      "choices": [
+        {
+          "name": "Den Egel abreißen",
+          "description": "Verliere 5 TP. Erhalte eine farblose Kartenbelohnung."
+        },
+        {
+          "name": "Wissen teilen",
+          "description": "Erhalte 1 von 5 zufälligen Karten in dein Deck."
+        }
+      ]
     },
     "BUGSLAYER": {
-      "name": "Käferbezwinger"
+      "name": "Käferbezwinger",
+      "description": "Du kämpfst gegen einen Schwarm aggressiver Insekten. Plötzlich bemerkst du einen Mächtigen Robusten Krieger, der die ganze Zeit neben dir gekämpft hat!\n\nDie Insekten wittern eine Niederlage und zerstreuen sich. Du drehst dich zu deinem Mitkämpfer.\n“Möchtest du Tipps haben, wie man dieses Ungeziefer ausrottet?”\n\nWie höflich. Du nickst und akzeptierst sein Angebot.",
+      "choices": [
+        {
+          "name": "Ausrottungstechnik lernen",
+          "description": "Erhalte Ausrotten in dein Deck."
+        },
+        {
+          "name": "Quetschtechnik lernen",
+          "description": "Erhalte Zerdrücken in dein Deck."
+        }
+      ]
     },
     "BYRDONIS_NEST": {
-      "name": "Foglonis-Nest"
+      "name": "Foglonis-Nest",
+      "description": "Du beobachtest, wie ein riesiges Schlurfendes Biest einen verletzten Grünen Fogl davonjagt.\n\nIn der Nische, aus der der Fogl geflohen ist, liegt zurückgelassen ein einziges unbewachtes Ei.\n\nDein Magen knurrt...",
+      "choices": [
+        {
+          "name": "Das Ei essen",
+          "description": "Erhalte 7 max TP."
+        },
+        {
+          "name": "Das Ei nehmen",
+          "description": "Erhalte Foglonis-Ei in dein Deck."
+        }
+      ]
     },
     "COLORFUL_PHILOSOPHERS": {
-      "name": "Bunte Philosophen"
+      "name": "Bunte Philosophen",
+      "description": "Vor dir liegt ein ziemlich spektakulärer Anblick.\nDu siehst 3 verschiedenfarbige Statuen über einem Podium aufragen, die eine hitzige Debatte über die philosophischen Bedeutungen von Farbe führen.\n\nBeim Zuhören bekommst du das Gefühl, dass gerade die wichtigste Frage ist, welche Farbe wirklich DIE BESTE ist.\n\nDu mischst dich mit deinen Gedanken ein.",
+      "choices": [
+        {
+          "name": "Blau",
+          "description": "Erhalte 3 Defekte-Karte."
+        },
+        {
+          "name": "Ebenbürtigkeit",
+          "description": "Erhalte die Prisma-Scherbe."
+        },
+        {
+          "name": "Rot",
+          "description": "Erhalte 3 Eisernen-Karte."
+        },
+        {
+          "name": "Rosa",
+          "description": "Erhalte 3 Totenbinderin-Karte."
+        },
+        {
+          "name": "Orange",
+          "description": "Erhalte 3 Regenten-Karte."
+        },
+        {
+          "name": "Grün",
+          "description": "Erhalte 3 Stille-Karte."
+        }
+      ]
     },
     "COLOSSAL_FLOWER": {
-      "name": "Riesige Blume"
+      "name": "Riesige Blume",
+      "description": "Da ist eine riesige Blume, die auf einem Berg aus Knochen wächst.\n\nIhre farbwechselnden Blütenblätter pulsieren und du ahnst, dass in der Mitte ein Machtvoller Pollenklumpen ist, aber die wiegenden Blätter sind messerscharf und unvorhersehbar.\n\nDu könntest ein wenig von dem goldenen Nektar nehmen, aber bist verlockt, den Preis in der Mitte zu erreichen...",
+      "choices": [
+        {
+          "name": "Nektar gewinnen",
+          "description": "Erhalte X Gold."
+        },
+        {
+          "name": "Tiefer greifen",
+          "description": "Dringe tiefer ein. Verliere 5 TP."
+        }
+      ],
+      "pages": [
+        {
+          "description": "Da ist eine riesige Blume, die auf einem Berg aus Knochen wächst.\n\nIhre farbwechselnden Blütenblätter pulsieren und du ahnst, dass in der Mitte ein Machtvoller Pollenklumpen ist, aber die wiegenden Blätter sind messerscharf und unvorhersehbar.\n\nDu könntest ein wenig von dem goldenen Nektar nehmen, aber bist verlockt, den Preis in der Mitte zu erreichen...",
+          "choices": [
+            {
+              "name": "Nektar gewinnen",
+              "description": "Erhalte X Gold."
+            },
+            {
+              "name": "Tiefer greifen",
+              "description": "Dringe tiefer ein. Verliere 5 TP."
+            }
+          ]
+        },
+        {
+          "description": "Du schiebst dich an einer Lage messerscharfer Blütenblätter vorbei. Sie sind umhüllt mit einer Substanz, die deine Haut zum Kribbeln bringt. Das scheint den Schmerz zu betäuben?\n\nVielleicht ist deshalb hier ein Haufen Knochen...",
+          "choices": [
+            {
+              "name": "Nektar gewinnen",
+              "description": "Erhalte X Gold."
+            },
+            {
+              "name": "Tiefer greifen",
+              "description": "Dringe noch tiefer ein. Verliere 6 TP."
+            }
+          ]
+        },
+        {
+          "description": "Bei deinem Vordringen wird aus dem Kribbeln eine pochende Schwachheit...\n\nDiese Blume möchte mich fressen. Warum bin ich hineingegangen?",
+          "choices": [
+            {
+              "name": "Nektar gewinnen",
+              "description": "Erhalte X Gold."
+            },
+            {
+              "name": "Zur Mitte gelangen",
+              "description": "Verliere 7 TP. Erhalte Pollenreicher Kern."
+            }
+          ]
+        }
+      ]
     },
     "CRYSTAL_SPHERE": {
-      "name": "Kristallkugel"
+      "name": "Kristallkugel",
+      "description": "“Ich habe vorhergesagt, dass du eintreten würdest...!”\n\nEine kratzige Stimme ruft zu dir, als du eine geheimnisvolle Hütte betrittst.\n\n“Dein Schicksal hat dich hierher gebracht. Wir müssen deine Zukunft und Geschicke enthüllen, damit du UNS ALLE RETTEN KANNST!!”\n“Gut, hier sind die Optionen für eine Kristallkugel-Lesung. Auf jeden Fall unterschreibe auch das hier,” sagt sie und holt Stift und Pergament hervor.",
+      "choices": [
+        {
+          "name": "Zahlungsplan",
+          "description": "Erhalte Schulden. Weissage 6 Mal."
+        },
+        {
+          "name": "Zukunft enthüllen",
+          "description": "Zahle 50 Gold. Weissage 3 Mal."
+        }
+      ]
     },
     "DENSE_VEGETATION": {
-      "name": "Dichte Vegetation"
+      "name": "Dichte Vegetation",
+      "description": "Du warst schon eine ganze Weile auf dem falschen Pfad, jetzt findest du dich in einem dichten Dschungel aus Farnen, Büschen und Ranken. Vor Allem Ranken. Die Erschöpfung setzt ein und ein düsterer Gedanke kommt dir in den Kopf:\n\n“Du bist verloren, unvorbereitet und die Unvermeidlichkeit des Todes nähert sich.”\n\nWas machst du?",
+      "choices": [
+        {
+          "name": "Ausruhen",
+          "description": "Heile X TP. Bekämpfe einige Gegner."
+        },
+        {
+          "name": "Dich weiterschleppen",
+          "description": "Entferne eine Karte aus deinem Deck. Verliere 11 TP."
+        }
+      ]
     },
     "DOLL_ROOM": {
-      "name": "Puppenraum"
+      "name": "Puppenraum",
+      "description": "Du betrittst einen versteckten Raum...\n\nEr ist brechend voll mit einer Unmenge von Puppen. Jede ist anders, ihre Ausdrücke reichen von Freude bis Schmerz, ihre Kleidung stammt aus unterschiedlichsten Jahrhunderten und Reichen außer deinem.\n\nEin Flüsterchor wird lauter und lauter, bis die Puppen schreien und sich gegenseitig übertönend nach dir rufen...\n\nDu musst sofort eine auswählen und weggehen.",
+      "choices": [
+        {
+          "name": "Jede untersuchen und die beste Wahl treffen",
+          "description": "Verliere 15 TP. Wähle 1 von 3 Puppen-Relikten."
+        },
+        {
+          "name": "Irgendeine nehmen",
+          "description": "Erhalte ein zufälliges Puppen-Relikt."
+        },
+        {
+          "name": "Etwas Zeit lassen",
+          "description": "Verliere 5 TP. Wähle 1 von 2 Puppen-Relikten."
+        }
+      ]
     },
     "DOORS_OF_LIGHT_AND_DARK": {
-      "name": "Türen des Lichts und Dunkels"
+      "name": "Türen des Lichts und Dunkels",
+      "description": "Eine Tür öffnet sich, wo Augenblicke zuvor noch keine war...\n\nDu trittst ein und stößt auf zwei schimmernde Eingänge sowie einen gut gekleideten Türsteher.\n“Endlich, ein Besucher! Bitte bitte! Wähle eine Tür, irgendeine Tür!”\n\nSind wir noch im Spire? Wie ist dieser Ort so sauber?",
+      "choices": [
+        {
+          "name": "Dunkle Tür",
+          "description": "Entferne 1 Karte aus deinem Deck."
+        },
+        {
+          "name": "Helle Tür",
+          "description": "Verbessere 2 zufällige Karten."
+        }
+      ]
     },
     "DROWNING_BEACON": {
-      "name": "Sinkendes Fanal"
+      "name": "Sinkendes Fanal",
+      "description": "Du durchquerst eine Traumlandschaft aus Felsen und stillen Gewässern und tauchst vor einem versinkenden Leuchtturm auf, der Anti-Licht ausstrahlt.\n\nDu könntest das schaurig-leuchtende Wasser abfüllen, das sich hier gesammelt hat – oder das marode Bauwerk erklimmen, um die Linse zu bergen.",
+      "choices": [
+        {
+          "name": "Abfüllen",
+          "description": "Beschaffe Glühwasser-Trank."
+        },
+        {
+          "name": "Erklimmen",
+          "description": "Erhalte Fresnel-Linse. Verliere 13 max. TP."
+        }
+      ]
     },
     "ENDLESS_CONVEYOR": {
-      "name": "Endloses Band"
+      "name": "Endloses Band",
+      "description": "Du stampfst in eine Baracke mit einem hellen, aber verbogenen Schild, auf dem steht:\n“ENDLOSES FESTMAHL – ZAHLE JE NACH HUNGER!”\n\nDrinnen bereitet ein gertenschlanker vielarmiger Koch geschickt Essenshappen vor, die er auf einem kurvigen chitinösen Band platziert.\n\nEiner der Arme des Koches weist auf ein Schild:\nJe 35 Gold",
+      "choices": [
+        {
+          "name": "Den Koch beobachten",
+          "description": "Verbessere eine zufällige Karte in deinem Deck."
+        }
+      ]
     },
     "FAKE_MERCHANT": {
       "name": "Der Händler???"
     },
     "FIELD_OF_MAN_SIZED_HOLES": {
-      "name": "Feld der menschengroßen Löcher"
+      "name": "Feld der menschengroßen Löcher",
+      "description": "Der plötzliche Anblick eines riesigen Feldes, das ausgehöhlt mit großen Umrissen von Körpern ist, lässt dich innehalten.\n\nEiner dieser Umrisse passt zu deinem.\n\nEr ist perfekt...",
+      "choices": [
+        {
+          "name": "Dein Loch betreten",
+          "description": "Verzaubere eine Karte mit Passt perfekt."
+        },
+        {
+          "name": "Widerstehen",
+          "description": "Entferne 2 Karten aus deinem Deck. Erhalte Normalität in dein Deck."
+        }
+      ]
     },
     "GRAVE_OF_THE_FORGOTTEN": {
-      "name": "Grab des Vergessenen"
+      "name": "Grab des Vergessenen",
+      "description": "Dort ist ein einzelnes Grab mit einer aufgescheuchten blauen Flamme...\n\nEin stolzer Krieger ist im Kampf gestorben, aber seine Seele ist ruhelos. Sie möchte weiterkämpfen und bettelt, mit dir reisen zu dürfen.\n\nAber vielleicht ist es besser, wenn sie die Wahrheit anerkennt?",
+      "choices": [
+        {
+          "name": "Die Vergessene Seele annehmen",
+          "description": "Erhalte Vergessene Seele."
+        },
+        {
+          "name": "Mit der Wahrheit konfrontieren",
+          "description": "Erhalte Verfall in dein Deck. Verzaubere eine Karte, die Erschöpft, mit Seelenkraft."
+        }
+      ]
     },
     "HUNGRY_FOR_MUSHROOMS": {
-      "name": "Hungrig auf Pilze"
+      "name": "Hungrig auf Pilze",
+      "description": "Wie lange hast du nicht mehr gegessen?\n...Moment, was ist das für ein großartiger Geruch?\n\nDu folgst dem Geruch und erreichst einen gemütlichen Lagerplatz, auf dem allerlei leckere Pilze gegart werden! Dir ist egal, ob diese Pilze sicher zu verzehren sind, weil du so hungrig bist.\n(So hungrig, dass du die tote Abenteurerin nicht bemerkst)",
+      "choices": [
+        {
+          "name": "Großer Pilz"
+        },
+        {
+          "name": "Wohlriechender Pilz"
+        }
+      ]
     },
     "INFESTED_AUTOMATON": {
-      "name": "Infiziertes Automaton"
+      "name": "Infiziertes Automaton",
+      "description": "Da ist eine Kammer, die voller toter Roboter ist.\n\nEin einsames Automaton hat noch einen schwach leuchtenden Kern, aber ist von einem grotesken organischen Wuchs überwachsen und antwortet nicht.",
+      "choices": [
+        {
+          "name": "Untersuchen",
+          "description": "Erhalte eine zufällige Macht."
+        },
+        {
+          "name": "Den Kern berühren",
+          "description": "Erhalte eine zufällige 0-Kosten-Karte."
+        }
+      ]
     },
     "JUNGLE_MAZE_ADVENTURE": {
-      "name": "Abenteuer im Dschungellabyrinth"
+      "name": "Abenteuer im Dschungellabyrinth",
+      "description": "Auf einer Lichtung stößt du auf eine bunt gemischte Abenteuergruppe, die auf ein riesiges Labyrinth herabschauen und dorthin gestikulieren.\n\nSie bieten an, sich mit dir für eine epische Quest zusammenzutun, um die Schätze dieses Labyrinths zu plündern. Als {characterGender:choose(feminine):erfahrene Abenteurerin|erfahrener Abenteurer} ist dir klar, dass dieses Labyrinth voller tödlicher Fallen und Wächter ist.\n\nEs wäre einfacher, wenn ihr zusammenarbeitet, aber dann müsstet ihr die Beute aufteilen.",
+      "choices": [
+        {
+          "name": "Zusammenschließen",
+          "description": "Erhalte 50 Gold."
+        },
+        {
+          "name": "Solo-Quest",
+          "description": "Erhalte 150 Gold. Verliere 18 TP."
+        }
+      ]
     },
     "LOST_WISP": {
-      "name": "Das verlorene Irrlicht"
+      "name": "Das verlorene Irrlicht",
+      "description": "Etwas entfernt siehst du etwas Seltsames. Hügel über Hügel von toten Insekten bilden einen Kreis um etwas, das aussieht wie ein kleiner leuchtender Schwebepunkt.\nDas scheint ein effektives Lockmittel für alle Arten Ungeziefer zu sein, aber du siehst, wie es Flammen ausspuckt!\n\nDu kommst näher, um es zu untersuchen.",
+      "choices": [
+        {
+          "name": "Das Irrlicht fangen",
+          "description": "Erhalte Verfall in dein Deck. Erhalte Verlorenes Irrlicht."
+        },
+        {
+          "name": "Gesperrt",
+          "description": "Deine max. TP sind zu niedrig."
+        }
+      ]
     },
     "LUMINOUS_CHOIR": {
-      "name": "Leuchtender Chor"
+      "name": "Leuchtender Chor",
+      "description": "Du gelangst auf eine Lichtung, die in einen unnatürlich blauen Schein getunkt ist. Türme von Pilzen pulsieren mit Biolumineszenz, ihre angeschwollenen Hüte funkeln. Als du dich näherst, beginnen die Pilze gespenstische, melodische Klänge von sich zu geben, die dir völlig durch Mark und Bein gehen.\n\nDu erkennst etwas Schimmerndes, das im Fleisch des größten Pilzes eingeschlossen ist und im Rhythmus mit dem Lied der Pilze pulsiert.",
+      "choices": [
+        {
+          "name": "Tribut darbieten",
+          "description": "Zahle 149 Gold. Erhalte ein zufälliges Relikt."
+        },
+        {
+          "name": "Gesperrt",
+          "description": "Benötigt 149 Gold."
+        }
+      ]
     },
     "MORPHIC_GROVE": {
-      "name": "Morpher-Wäldchen"
+      "name": "Morpher-Wäldchen",
+      "description": "Du betrittst ein Wäldchen aus Kristallbäumen, die daraufhin anfangen, aufgeregt zu zittern!\nEin Chor aus Hallos und Willkommens bombardiert dich und eine Gruppe Morpher platzt aus Bäumen hervor.\n\nEiner der Morpher hampelt in der Ecke herum, offensichtlich ist er nicht so gesellig wie die anderen.\n\nGehst du zur Gruppe oder zum Einzelgänger?",
+      "choices": [
+        {
+          "name": "Gruppe",
+          "description": "Verliere 100 Gold. Transformiere 2 Karten."
+        },
+        {
+          "name": "Einzelgänger",
+          "description": "Erhalte 5 max. TP."
+        }
+      ]
     },
     "POTION_COURIER": {
-      "name": "Trankkurier"
+      "name": "Trankkurier",
+      "description": "Es liegt ein säuerlicher Geruch in der Luft und kurz darauf {IsMultiplayer:findet ihr|findest du} einen auf dem Boden zusammengebrochenen Trankkurier.\nReglos. Leblos. Tot!?\nZwar wurde der Inhalt seiner Taschen geplündert, aber da ist noch ein Bündel mit Faul Riechenden Tränken mit einer Notiz: \"Empfänger: Händler\".",
+      "choices": [
+        {
+          "name": "Tränke mitnehmen",
+          "description": "Beschaffe 3 Fauligen Trank."
+        },
+        {
+          "name": "Wühlen",
+          "description": "Beschaffe 1 zufälligen Ungewöhnlichen Trank."
+        }
+      ]
     },
     "PUNCH_OFF": {
-      "name": "Wegboxen"
+      "name": "Wegboxen",
+      "description": "Zwei Boxer-Konstrukte boxen gegeneinander und du siehst einen Schatz zwischen ihnen...\n\nSolltest du versuchen, ihn wegzuschnappen?",
+      "choices": [
+        {
+          "name": "Ich komme mit ihnen klar",
+          "description": "Bekämpfe sie für Bessere Belohnungen."
+        },
+        {
+          "name": "Schnappen",
+          "description": "Erhalte Verletzung in dein Deck. Erhalte ein zufälliges Relikt."
+        }
+      ]
     },
     "RANWID_THE_ELDER": {
-      "name": "Ranwid der Älteste"
+      "name": "Ranwid der Älteste",
+      "description": "Die älteste Person, die du je gesehen hast, kommt dir entgegen.\n“Wir treffen uns ein weiteres Mal... ich bin's, Ranwid!”\n\nDu kennst diesen Mann nicht.",
+      "choices": [
+        {
+          "name": "100 Gold geben",
+          "description": "Erhalte ein zufälliges Relikt."
+        },
+        {
+          "name": "Trank geben",
+          "description": "Erhalte ein zufälliges Relikt."
+        },
+        {
+          "name": "Gesperrt",
+          "description": "Du hast keine Tränke, die du abgeben könntest."
+        }
+      ]
     },
     "REFLECTIONS": {
-      "name": "Reflexionen nenoixelfeR"
+      "name": "Reflexionen nenoixelfeR",
+      "description": "Was ist das? Irgendwas ist hier falsch...\n...hcslaf reih tsi sawdnegrI ?sad tsi saW",
+      "choices": [
+        {
+          "name": "Zerschlagen",
+          "description": "Dupliziere dein Deck. Erhalte Unglück."
+        },
+        {
+          "name": "Einen Spiegel berühren",
+          "description": "Verschlechtere 2 zufällige Karten. Verbessere 4 zufällige Karten."
+        }
+      ]
     },
     "RELIC_TRADER": {
-      "name": "Relikt-Händler"
+      "name": "Relikt-Händler",
+      "description": "Du gehst um eine Ecke und plötzlich steht da einfach eine düstere Figur. Er dreht sich dir entgegen.\n\n“Willkommen! Was tauschst du ein?”\nFragt die Figur, indem sie den Mantel öffnet und eine Menge ominöser Waren präsentiert.",
+      "choices": [
+        {
+          "name": "Das untere nehmen",
+          "description": "Tausche dein Relikt gegen ein neues Relikt."
+        },
+        {
+          "name": "Das mittlere nehmen",
+          "description": "Tausche dein Relikt gegen ein neues Relikt."
+        },
+        {
+          "name": "Das obere nehmen",
+          "description": "Tausche dein Relikt gegen ein neues Relikt."
+        }
+      ]
     },
     "ROOM_FULL_OF_CHEESE": {
-      "name": "Raum voller Käse"
+      "name": "Raum voller Käse",
+      "description": "Dieser Raum ist voller Käse!!!\n\nDu schaust dich um, ob hier irgendwelche Fallen sind und über dir ist... mehr Käse. Die Kerzen in diesem Raum sind anscheinend aus Käse. Die Möbel sind auch aus Käse.\nPlötzlich knallt die Tür hinter dir zu.\n\nSie ist aus Käse.",
+      "choices": [
+        {
+          "name": "Vollfressen",
+          "description": "Wähle 2 von 8 zufälligen Gewöhnlichen Karten für dein Deck."
+        },
+        {
+          "name": "Suchen",
+          "description": "Verliere 14 TP. Erhalte den Erlesenen Käse."
+        }
+      ]
     },
     "ROUND_TEA_PARTY": {
-      "name": "Die Ritter der Teerunde"
+      "name": "Die Ritter der Teerunde",
+      "description": "Du findest eine Einladung an einen “Sir Galalot” zu einer Teerunde und entscheidest dich, an seiner Stelle zu erscheinen.\n\nDu betrittst einen unscheinbaren Rundbau und befindest dich mitten zwischen Kommandeuren, Generälen, Bandenchefs und Söldnern, die... Tee trinken?\nDer gigantische Ritter, der eine goldene Krone trägt, spricht.\n\n“Kommest du zu spät zum Tee?!”",
+      "choices": [
+        {
+          "name": "Deinen Tee genießen",
+          "description": "Erhalte Königliches Gift. Heile auf volle TP."
+        },
+        {
+          "name": "Schlägerei anzetteln",
+          "description": "Verliere 11 TP. Erhalte ein zufälliges Relikt."
+        }
+      ]
     },
     "SAPPHIRE_SEED": {
-      "name": "Saphirsame"
+      "name": "Saphirsame",
+      "description": "Beinahe wärst du auf einen hellen, spitzen... Samen getreten? Seine unverwechselbare Farbe verrät, dass es ein Saphirsame ist! Sollten diese unglaublichen Samen nicht ausgestorben sein!?\n\nLegenden zufolge soll der Verzehr besonders deine Ausdauer verstärken, aber was, wenn du ihn stattdessen einpflanzt und pflegst?",
+      "choices": [
+        {
+          "name": "Verzehren",
+          "description": "Heile 9 TP. Verbessere eine Karte aus deinem Deck."
+        },
+        {
+          "name": "Einpflanzen und pflegen",
+          "description": "Verzaubere eine Karte mit Eingesät."
+        }
+      ]
     },
     "SELF_HELP_BOOK": {
-      "name": "Selbsthilfebuch"
+      "name": "Selbsthilfebuch",
+      "description": "Auf dem Boden liegt ein Wälzer:\n“Die 3 besten Wege, den Spire zu erobern”\n\nDas Buch ist voller verkrustetem Blut, daher ist dir das Manuskript äußerst suspekt.\n\nWirst du es lesen?",
+      "choices": [
+        {
+          "name": "Weitergehen",
+          "description": "Du hast keine Karten, die Verzaubert werden können."
+        },
+        {
+          "name": "Das ganze Buch lesen",
+          "description": "Wähle eine Macht, die du mit Flott 2 verzauberst."
+        },
+        {
+          "name": "Gesperrt",
+          "description": "Du hast keine Mächte, die verzaubert werden können."
+        },
+        {
+          "name": "Irgendeinen Abschnitt lesen",
+          "description": "Wähle eine Fertigkeit, die du mit Geschickt 2 verzauberst."
+        }
+      ]
     },
     "SLIPPERY_BRIDGE": {
-      "name": "Rutschige Brücke"
+      "name": "Rutschige Brücke",
+      "description": "Du überquerst gerade eine wackelige Holzbrücke, als plötzlich ein sturzfluthafter Regen einsetzt. Heftige Windböen werfen dich umher und drohen, deine Reise zu beenden.",
+      "choices": [
+        {
+          "name": "Festhalten",
+          "description": "Verliere X TP. Die Karte in der oberen Option wird geändert."
+        },
+        {
+          "name": "Überwinden",
+          "description": "zufällige Karte wird aus deinem Deck entfernt."
+        }
+      ]
     },
     "SPIRALING_WHIRLPOOL": {
-      "name": "Wasserstrudel"
+      "name": "Wasserstrudel",
+      "description": "Du gelangst zu einem Riesigen Wasserstrudel. Das Wasser wirbelt mit ästhetischer Präzision und die Wände ringsum sind mit Spiralmustern verziert.\n\nRingsumher und... ringsum...her...\n....und rings... umher.... welch ein Anblick......\n\nWas machst du?",
+      "choices": [
+        {
+          "name": "Trinken",
+          "description": "Heile X TP."
+        },
+        {
+          "name": "Betrachten",
+          "description": "Verzaubere einen Schlag oder ein Verteidigen mit Spirale."
+        },
+        {
+          "name": "Hineinfassen",
+          "description": "Erhalte ein zufälliges Relikt. Erhalte Leid in dein Deck."
+        }
+      ]
     },
     "SPIRIT_GRAFTER": {
-      "name": "Geistespfropfer"
+      "name": "Geistespfropfer",
+      "description": "Über {IsMultiplayer:euch|dir} wackelt und zappelt ein Kokon – kurz vor dem Aufplatzen!\n\n...er hört auf zu zappeln. Der Kokon geht in Feuer auf! Was ist hier los?\nIn einem Blitz aus Licht und Flamme fährt ein Geistespfropfer in dich hinein und droht, sich mit deinem Wesen zu vereinen, um sich zu vervollkommnen.",
+      "choices": [
+        {
+          "name": "Ihn hereinlassen",
+          "description": "Heile 25 TP. Erhalte Metamorphose in dein Deck."
+        },
+        {
+          "name": "Ablehnung",
+          "description": "Verliere 9 TP. Entferne eine Karte aus deinem Deck."
+        }
+      ]
     },
     "STONE_OF_ALL_TIME": {
-      "name": "Stein aller Zeiten"
+      "name": "Stein aller Zeiten",
+      "description": "Ein riesiger Fels ruht in der Mitte eines verlassenen Innenhofes.\n\nAuf einem Schild steht:\nStein aller Zeiten.\n\nSeine Präsenz, Form und Verzierungen weisen darauf hin, dass dieser Innenhof um diesen Stein herum gebaut wurde und dass er niemals vom Fleck bewegt wurde.",
+      "choices": [
+        {
+          "name": "Trinken und Anheben",
+          "description": "Verliere zufälliger Trank. Erhalte 10 max. TP."
+        },
+        {
+          "name": "Gesperrt",
+          "description": "Benötigt einen Trank."
+        }
+      ]
     },
     "SUNKEN_STATUE": {
-      "name": "Die Versunkene Statue"
+      "name": "Die Versunkene Statue",
+      "description": "Du sichtest eine alte Statue, die halb in einem Teich versunken ist; ihre Hände ruhen friedlich auf einem Steinschwert.\n\nAußerdem glitzert etwas am Boden des Teiches.\nVielleicht Opfergaben?\n\nDu könntest wirklich etwas Geld gebrauchen...",
+      "choices": [
+        {
+          "name": "Ins Wasser tauchen",
+          "description": "Erhalte 111 Gold. Verliere 7 TP."
+        },
+        {
+          "name": "Das Schwert mitnehmen",
+          "description": "Erhalte das Schwert aus Stein."
+        }
+      ]
     },
     "SUNKEN_TREASURY": {
-      "name": "Versunkene Schatzkammer"
+      "name": "Versunkene Schatzkammer",
+      "description": "Ein Pfad führt dich in ein Gewölbe, von dem Teile unter Wasser liegen.\nDort sind 2 Truhen, aber nur 1 brüchiger Schlüssel.\n\nDie erste Truhe: Beim Schütteln klimpert und klappert es. Etwas Gold.\nDie zweite Truhe: Gewaltig, kunstvoll und eindeutig verflucht. Viel Gold!",
+      "choices": [
+        {
+          "name": "Erste Truhe",
+          "description": "Erhalte 60 Gold."
+        },
+        {
+          "name": "Zweite Truhe",
+          "description": "Erhalte 333 Gold. Erhalte Gier."
+        }
+      ]
     },
     "SYMBIOTE": {
-      "name": "Symbiont"
+      "name": "Symbiont",
+      "description": "Auf deinen Reisen stößt du auf einen dunklen, gliederlosen Polypen. Du kannst spüren, dass er sehr alt ist – und sehr böse.\n\nKomm näher...",
+      "choices": [
+        {
+          "name": "Näherkommen",
+          "description": "Verzaubere einen Angriff mit Korrumpiert."
+        },
+        {
+          "name": "Gesperrt",
+          "description": "Keiner deiner Angriffe kann verzaubert werden."
+        }
+      ]
     },
     "TABLET_OF_TRUTH": {
-      "name": "Tafel der Wahrheit"
+      "name": "Tafel der Wahrheit",
+      "description": "Du besiegst zwei Sippen-Wächter und gelangst in ein geschütztes Gewölbe.\n\nDrinnen ist eine Tafel mit vertrauten Inschriften. Deine Intuition sagt dir, dass diese Sprache ziemlich leicht entziffert werden kann... Wenn du jedoch einmal am Entziffern bist, würdest du hierbleiben müssen.\n\nDie Tafel strahlt eine beruhigende Kraft aus. Du könntest sie stattdessen zerschmettern, um ihre heilenden Energien in dich aufzunehmen.",
+      "choices": [
+        {
+          "name": "Entziffern",
+          "description": "Verliere 3 max. TP. Verbessere eine zufällige Karte."
+        },
+        {
+          "name": "Zertrümmern",
+          "description": "Heile 20 TP."
+        }
+      ]
     },
     "TEA_MASTER": {
-      "name": "Teemeister"
+      "name": "Teemeister",
+      "description": "Du stolperst in eine spärlich beleuchtete Hütte und fühlst dich eingetaucht in einen sehr friedlichen Ort, der eine obsessive Vielfalt an Tee beherbergt.\n\nDer Mann drinnen deutet auf eine Auswahl von Tees, von denen jeder ordentlich mit einem hochwertigen Preis beschriftet ist.",
+      "choices": [
+        {
+          "name": "Knochentee",
+          "description": "Zahle 50 Gold. Knochentee"
+        },
+        {
+          "name": "Gesperrt",
+          "description": "Benötigt 50 Gold."
+        },
+        {
+          "name": "Glut-Tee",
+          "description": "Zahle 150 Gold. Glut-Tee"
+        }
+      ]
     },
     "THE_FUTURE_OF_POTIONS": {
-      "name": "Die Zukunft der Tränke?"
+      "name": "Die Zukunft der Tränke?",
+      "description": "Du spürst ein entferntes Rumpeln, dann entdeckst du hinter der nächsten Ecke einen riesigen drehenden Apparat!\nEr hat verschiedene Öffnungen, die anscheinend Flüssigkeiten in eine sehr komprimierte essbare Tablette umwandeln.\n\nDer Gedanke, aus diesen starken Tränken einen winzigen Happen zu machen, klingt unangenehm. Aber vielleicht ist es gut, neue Dinge auszuprobieren?",
+      "choices": [
+        {
+          "name": "{Rarity:choose(Ereignis|Token):Ereignis-Trank|Token-Trank|{}en Trank} einfüllen",
+          "description": "Verliere Trank. Erhalte {Type:choose(Angriff):einen verbesserten|eine verbesserte} ?e{Type:choose(Angriff):n {}| {}}."
+        }
+      ]
     },
     "THE_LANTERN_KEY": {
-      "name": "Der Laternenschlüssel"
+      "name": "Der Laternenschlüssel",
+      "description": "Du findest einen schwach leuchtenden Schlüssel und möchtest ihn aufheben.\n\n“Diesen Schlüssel hab ich überall gesucht! Nun, wenn es dir nichts ausmacht...”\n\nDiese Person sieht nicht nach einem guten Umgang aus, aber vielleicht solltest du nicht so schnell urteilen.",
+      "choices": [
+        {
+          "name": "Den Schlüssel behalten",
+          "description": "Kämpfe, um den Schlüssel zu erhalten."
+        },
+        {
+          "name": "Den Schlüssel zurückgeben",
+          "description": "Erhalte 100 Gold."
+        }
+      ]
     },
     "THE_LEGENDS_WERE_TRUE": {
-      "name": "Die Legenden waren wahr"
+      "name": "Die Legenden waren wahr",
+      "description": "Beim Betreten einer stockdunklen Kammer durchbricht ein plötzliches Licht von oben die Finsternis, gerade als die Tür hinter dir zuschlägt.\n\nBeleuchtet liegt vor dir ein Podest mit einer Schatzkarte darauf. Du verspürst einen Drang, sie zu nehmen.\n\nVerdächtig.",
+      "choices": [
+        {
+          "name": "Die Karte schnappen",
+          "description": "Erhalte die Beuteschatzkarte."
+        },
+        {
+          "name": "Langsam einen Ausgang finden",
+          "description": "Verliere 8 TP. Beschaffe 1 zufälligen Trank."
+        }
+      ]
     },
     "THIS_OR_THAT": {
-      "name": "Dies oder Das?"
+      "name": "Dies oder Das?",
+      "description": "Plötzlich ragen Arme aus einem nahen Loch hervor, die einen verdächtigen Sack mit Reichtümern und ein eindeutig verfluchtes Relikt halten.\n\n“Dies... oder Das?”\nflüstert eine aufgekratzte Stimme von unten.",
+      "choices": [
+        {
+          "name": "Das",
+          "description": "Erhalte Ungeschickt in dein Deck. Erhalte ein zufälliges Relikt."
+        },
+        {
+          "name": "Dies",
+          "description": "Verliere 6 TP. Erhalte X Gold."
+        }
+      ]
     },
     "TINKER_TIME": {
-      "name": "Bastelstunde"
+      "name": "Bastelstunde",
+      "description": "“Welche Art Werkzeug wird dir helfen, alle zu töten?”",
+      "pages": [
+        {
+          "description": "“Welche Art Werkzeug wird dir helfen, alle zu töten?”",
+          "choices": [
+            {
+              "name": "Waffe",
+              "description": "Erstelle einen Angriff."
+            },
+            {
+              "name": "Hilfsmittel",
+              "description": "Erstelle eine Macht."
+            },
+            {
+              "name": "Schutz",
+              "description": "Erstelle eine Fertigkeit."
+            }
+          ]
+        },
+        {
+          "description": "“Großartige Wahl! Was soll sie jetzt TUN?”\nDie Forscherin reibt sich vor Freude die Hände.",
+          "choices": [
+            {
+              "name": "Chaos",
+              "description": "Erhalte eine zufällige Karte auf deine Hand. Sie kostet in diesem Zug 0 [E]."
+            },
+            {
+              "name": "Würgend",
+              "description": "Immer wenn du in diesem Zug eine Karte spielst, verliert der Gegner 6 TP."
+            },
+            {
+              "name": "Neugierig",
+              "description": "Mächte kosten 1 [E] weniger."
+            },
+            {
+              "name": "Energetisch",
+              "description": "Erhalte [E]."
+            },
+            {
+              "name": "Expertise",
+              "description": "Erhalte 2 Stärke. Erhalte 2 Geschicklichkeit."
+            },
+            {
+              "name": "Steigerung",
+              "description": "Verbessere am Ende des Kampfes eine zufällige Karte."
+            },
+            {
+              "name": "Schwächend",
+              "description": "Wende 2 Schwach an. Wende 2 Verwundbar an."
+            },
+            {
+              "name": "Gewalt",
+              "description": "Trifft 2 weitere Male."
+            },
+            {
+              "name": "Weisheit",
+              "description": "Ziehe 3 Karten."
+            }
+          ]
+        }
+      ]
     },
     "TRASH_HEAP": {
-      "name": "Schrotthügel"
+      "name": "Schrotthügel",
+      "description": "Du entdeckst einen aufgetürmten Haufen mit entsorgten Waffen, abgelegten Hilfsmitteln und anderen Merkwürdigkeiten. Der riesige Haufen bewegt sich und rumpelt, als würde er von innen wachsen...\n\nWenn du etwas an der Oberfläche suchst, könntest du einige brauchbare Dinge finden. Aber wenn du wirklich da reingehst, könntest du exotische Schätze finden.",
+      "choices": [
+        {
+          "name": "Hineinspringen",
+          "description": "Verliere 8 TP. Erhalte ein zufälliges vergessenes Relikt aus der Vergangenheit."
+        },
+        {
+          "name": "Irgendwelchen Müll mitnehmen",
+          "description": "Erhalte 100 Gold. Erhalte eine zufällige vergessene Karte von früher."
+        }
+      ]
     },
     "TRIAL": {
-      "name": "Der Prozess"
+      "name": "Der Prozess",
+      "description": "Du stellst dich hinter einigen Leuten an, die ein riesiges Gebäude betreten.\n\nAls du unter einem goldenen Torbogen durchgehst, schmettert eine Fanfare, Konfetti explodiert und Luftschlangen gleiten von der Decke herab!\n\n“Teilnehmer{characterGender:choose(feminine):in|} ?, du bist ENTSCHEIDER{characterGender:choose(feminine):IN|} für den heutigen Prozess.”",
+      "choices": [
+        {
+          "name": "Akzeptieren",
+          "description": "Diene als {characterGender:choose(feminine):heutige Entscheiderin|heutiger Entscheider}."
+        },
+        {
+          "name": "Ablehnen",
+          "description": "Es ist dir nicht erlaubt, abzulehnen."
+        }
+      ]
     },
     "UNREST_SITE": {
-      "name": "Unruhestätte"
+      "name": "Unruhestätte",
+      "description": "Du findest eine Lagerstätte und zündest ein Feuer an, um etwas Ruhe zu haben.\nDachtest du dir jedenfalls.\n\nSobald das Feuer brennt, beginnt es anzuschwellen, aber nicht nach oben, sondern seitwärts in Richtung eines Wäldchens mit öltropfenden Bäumen.\n\nSollst du trotzdem versuchen, dich auszuruhen?",
+      "choices": [
+        {
+          "name": "Die Bäume fällen",
+          "description": "Verliere 8 max. TP. Erhalte ein zufälliges Relikt."
+        },
+        {
+          "name": "Trotzdem ausruhen",
+          "description": "Heile alle deine TP. Erhalte Schlechter Schlaf."
+        }
+      ]
     },
     "WAR_HISTORIAN_REPY": {
-      "name": "Kriegshistoriker Repy"
+      "name": "Kriegshistoriker Repy",
+      "description": "Ein Akademiker ist in einem hängenden Käfig neben einer Schatzkiste eingesperrt.\n\nDer Akademiker murmelt etwas von “Einweg-Nutzungs-Schlüsseln”, während er wütend etwas schreibt.\n\nAnscheinend kannst du den Käfig oder die Truhe aufschließen.",
+      "choices": [
+        {
+          "name": "Den Käfig aufschließen",
+          "description": "Verliere Laternenschlüssel. Erhalte Geschichtskurs."
+        },
+        {
+          "name": "Die Truhe aufschließen",
+          "description": "Verliere Laternenschlüssel. Beschaffe 2 zufällige Tränke. Erhalte 2 zufällige Relikte."
+        }
+      ]
     },
     "WATERLOGGED_SCRIPTORIUM": {
-      "name": "Unterwasser-Schreibstube"
+      "name": "Unterwasser-Schreibstube",
+      "description": "Als du durch die trüben Kanäle steuerst, stößt du auf eine welke Figur, die einen kleinen Laden betreibt. Die Vielzahl an Regalen ist vollgestopft mit klammen Schriftrollen und Pergamenten.\n\nAls er merkt, dass ein Kunde gekommen ist, wird der Schreiber-Verkäufer ruckartig aufmerksam und deutet auf einige Utensilien, die auf einem Tisch drapiert sind.",
+      "choices": [
+        {
+          "name": "Blutige Tinte",
+          "description": "Erhalte 6 max. TP."
+        },
+        {
+          "name": "Dorniger Schwamm",
+          "description": "Zahle 155 Gold. Verzaubere 2 Karte mit Beständig."
+        },
+        {
+          "name": "Gesperrt",
+          "description": "Benötigt 155 Gold."
+        }
+      ]
     },
     "WELCOME_TO_WONGOS": {
-      "name": "Willkommen bei Wongo"
+      "name": "Willkommen bei Wongo",
+      "description": "“Willkommen bei Wongo. Wir haben, was du willst, zu wongtastischen Preisen.”, sagt der begeisterungsloseste Verkäufer, den du je getroffen hast.\n\n“Schau unsere Waren durch und genieße deine Zeit im Wongo,” fährt er fort, ohne überhaupt aufzublicken.",
+      "choices": [
+        {
+          "name": "Wongos Schnäppchenkorb",
+          "description": "Zahle 100 Gold. Erhalte 1 zufälliges Gewöhnliches Relikt."
+        },
+        {
+          "name": "Gesperrt",
+          "description": "Benötigt 100 Gold."
+        },
+        {
+          "name": "Wongos Spezialartikel",
+          "description": "Zahle 200 Gold. Erhalte zufälliges Relikt."
+        },
+        {
+          "name": "Gesperrt",
+          "description": "Benötigt 200 Gold."
+        }
+      ]
     },
     "WELLSPRING": {
-      "name": "Quellbrunnen"
+      "name": "Quellbrunnen",
+      "description": "Du verfolgst ein tiefes Grollen bis zu seinem Ursprung und gelangst zu einer ruhigen Quelle. Das Wasser ist smaragdgrün mit Häufchen aus leuchtenden Punkten.\n\nEs sieht einladend aus. Was soll schon schiefgehen?",
+      "choices": [
+        {
+          "name": "Baden",
+          "description": "Entferne 1 Karte aus deinem Deck. Erhalte 1 Schuldgefühl in dein Deck."
+        },
+        {
+          "name": "Abfüllen",
+          "description": "Beschaffe 1 zufälligen Trank."
+        }
+      ]
     },
     "WHISPERING_HOLLOW": {
-      "name": "Flüstertal"
+      "name": "Flüstertal",
+      "description": "Du kommst durch ein Tal mit toten Bäumen, wo dir ein einzelner knochenweißer Baum auffällt. Tonkugeln hängen an seinen Zweigen, welche sich wie schützende Rippen nach innen krümmen.\n\nSo ein unheimlicher Baum. Er flüstert.\n\n...Tausch machen.....",
+      "choices": [
+        {
+          "name": "Gold wegtauschen",
+          "description": "Verliere 50 Gold. Beschaffe 2 zufällige Tränke."
+        },
+        {
+          "name": "Den Baum umarmen",
+          "description": "Verliere 9 TP. Wähle eine Karte, die du Transformierst."
+        }
+      ]
     },
     "WOOD_CARVINGS": {
-      "name": "Holzschnitzereien"
+      "name": "Holzschnitzereien",
+      "description": "Du öffnest eine verstaubte Schachtel. Darin ist ein Satz mit 3 kunstvollen Holzschnitzereien:\n\nEin Vogel, eine Schlange und... ein Torus?\n\nEin Podest in der Nähe hat Vertiefungen, die zum Fuß der Schnitzereien passen. Welche Schnitzerei stellst du auf das Podest?",
+      "choices": [
+        {
+          "name": "Vogel",
+          "description": "Wähle 1 Startkarte, die du zu Picken Transformierst."
+        },
+        {
+          "name": "Schlange",
+          "description": "Verzaubere 1 Karte mit Schlängeln."
+        },
+        {
+          "name": "Gesperrt",
+          "description": "Keine deiner Karten kann mit Schlängeln verzaubert werden."
+        }
+      ]
     },
     "ZEN_WEAVER": {
-      "name": "Zen-Weberin"
+      "name": "Zen-Weberin",
+      "description": "Du läufst durch ein Spinnennetz und gerätst in PANIK!\nAber dann überkommt dich eine Welle der Ruhe...\n\n“Beruhige dich. Hör mir auf, mein Netz durcheinanderzubringen.”\n\nWie hast du dich so schnell beruhigt?\nEine klitzekleine Spinne seilt sich ab, um dir zu begegnen. Sie scheint willens, gegen Gold einige Techniken zu vermitteln.",
+      "choices": [
+        {
+          "name": "Arachnide Akupunktur",
+          "description": "Zahle 250 Gold. Entferne 2 Karten aus deinem Deck."
+        },
+        {
+          "name": "Atemtechniken",
+          "description": "Zahle 50 Gold. Erhalte 2 Erleuchtung in dein Deck."
+        },
+        {
+          "name": "Emotionales Bewusstsein",
+          "description": "Zahle 125 Gold. Entferne 1 Karte aus deinem Deck."
+        }
+      ]
+    },
+    "DARV": {
+      "name": "Darv",
+      "description": "Darv, Der Hortende, wühlt in einem Haufen mächtiger Relikte und präsentiert dir einen wechselnden Vorrat. Du siehst Dusty Tome sowie drei zufällige Relikte aus dem Hauptpool und aktspezifischen Sets, wobei manche Optionen nur unter bestimmten Bedingungen erscheinen."
+    },
+    "NEOW": {
+      "name": "Neow",
+      "description": "Neow, die Mutter der Auferstehung, erwartet dich zu Beginn jedes Laufs. Sie bietet drei Segnungen – zwei positive und einen verfluchten. Die Optionen werden zufällig aus den unten stehenden Pools gezogen.",
+      "choices": [
+        {
+          "name": "Arkane Schriftrolle",
+          "description": "Erhalte beim Aufheben eine zufällige seltene Karte für dein Deck.",
+          "relic_id": "ARCANE_SCROLL",
+          "pool": "positive"
+        },
+        {
+          "name": "Brausende Muschel",
+          "description": "Ziehe zu Beginn von Elite-Kämpfen 2 Karte mehr.",
+          "relic_id": "BOOMING_CONCH",
+          "pool": "positive"
+        },
+        {
+          "name": "Bisamapfel",
+          "description": "Verbessere beim Aufheben eine Karte.",
+          "relic_id": "POMANDER",
+          "pool": "positive"
+        },
+        {
+          "name": "Goldene Perle",
+          "description": "Erhalte beim Aufheben X Gold.",
+          "relic_id": "GOLDEN_PEARL",
+          "pool": "positive"
+        },
+        {
+          "name": "Bleierner Briefbeschwerer",
+          "description": "Wähle beim Aufheben 1 von 2 farblosen Karten, die in dein Deck erhältst.",
+          "relic_id": "LEAD_PAPERWEIGHT",
+          "pool": "positive"
+        },
+        {
+          "name": "Neues Blatt",
+          "description": "Transformiere beim Aufheben 1 Karte.",
+          "relic_id": "NEW_LEAF",
+          "pool": "positive"
+        },
+        {
+          "name": "Neows Folter",
+          "description": "Erhalte beim Aufheben 1 Neows Wut in dein Deck.",
+          "relic_id": "NEOWS_TORMENT",
+          "pool": "positive"
+        },
+        {
+          "name": "Präzise Schere",
+          "description": "Entferne beim Aufheben 1 Karte aus deinem Deck.",
+          "relic_id": "PRECISE_SCISSORS",
+          "pool": "positive"
+        },
+        {
+          "name": "Verlorene Truhe",
+          "description": "Erhalte beim Aufheben 1 Kartenbelohnung und beschaffe 1 zufälligen Trank.",
+          "relic_id": "LOST_COFFER",
+          "pool": "positive"
+        },
+        {
+          "name": "Verfluchte Perle",
+          "description": "Erhalte beim Aufheben Gier. Erhalte X Gold.",
+          "relic_id": "CURSED_PEARL",
+          "pool": "cursed"
+        },
+        {
+          "name": "Große Kapsel",
+          "description": "Erhalte beim Aufheben 2 zufälliges Relikt. Erhalte einen zusätzlichen Schlag und Verteidigen in dein Deck.",
+          "relic_id": "LARGE_CAPSULE",
+          "pool": "cursed"
+        },
+        {
+          "name": "Blätterwickel",
+          "description": "Transformiere beim Aufheben 1 deiner Schläge und 1 deiner Verteidigen und verliere 10 max. TP.",
+          "relic_id": "LEAFY_POULTICE",
+          "pool": "cursed"
+        },
+        {
+          "name": "Heikle Schere",
+          "description": "Entferne beim Aufheben 2 Karte aus deinem Deck und nimm 13 Schaden.",
+          "relic_id": "PRECARIOUS_SHEARS",
+          "pool": "cursed"
+        },
+        {
+          "name": "Nahrhafte Auster",
+          "description": "Erhöhe beim Aufheben deine max. TP um 11.",
+          "relic_id": "NUTRITIOUS_OYSTER",
+          "pool": "positive"
+        },
+        {
+          "name": "Steinerner Luftbefeuchter",
+          "description": "Immer wenn du dich an einem Lagerfeuer ausruhst, erhöhe deine max. TP um 5.",
+          "relic_id": "STONE_HUMIDIFIER",
+          "pool": "positive"
+        },
+        {
+          "name": "Wuchtige Schriftrolle",
+          "description": "Wähle beim Aufheben 1 von 3 Mehrspieler-Karten, die du deinem Deck hinzufügst.",
+          "relic_id": "MASSIVE_SCROLL",
+          "pool": "positive"
+        },
+        {
+          "name": "Lavastein",
+          "description": "Der Akt-1-Boss hinterlässt 2 Relikte.",
+          "relic_id": "LAVA_ROCK",
+          "pool": "positive"
+        },
+        {
+          "name": "Kleine Kapsel",
+          "description": "Erhalte beim Aufheben ein zufälliges Relikt.",
+          "relic_id": "SMALL_CAPSULE",
+          "pool": "positive"
+        },
+        {
+          "name": "Silbertiegel",
+          "description": "Die ersten 3 Kartenbelohnungen, die du siehst, sind verbessert. Die erste Schatztruhe, die du öffnest, ist leer.",
+          "relic_id": "SILVER_CRUCIBLE",
+          "pool": "cursed"
+        },
+        {
+          "name": "Kisten mit Schriftrollen",
+          "description": "Verliere beim Aufheben alles Gold und wähle 1 von 2 Kartenpaketen, das du deinem Deck hinzufügst.",
+          "relic_id": "SCROLL_BOXES",
+          "pool": "cursed"
+        }
+      ]
+    },
+    "NONUPEIPE": {
+      "name": "Nonupeipe",
+      "description": "Nonupeipe, Personifiziertes Glück, umgibt dich mit einer funkelnden Sammlung glücksbringender Schätze. Bei jedem Besuch werden drei zufällige Relikte aus dem Hauptpool angeboten; Beautiful Bracelet erscheint nur, wenn seine besondere Bedingung erfüllt ist."
+    },
+    "OROBAS": {
+      "name": "Orobas",
+      "description": "Orobas, der Lebendige Regenbogen, breitet ein Spektrum von Relikten über drei verschiedene Pools aus. Bei jeder Begegnung wird dir ein Relikt aus jedem Pool angeboten; Prismatic Gem kommt für Charaktere hinzu, die Orbs kanalisieren können."
+    },
+    "PAEL": {
+      "name": "Pael",
+      "description": "Pael, der Schmelzende Drache, bietet dir drei Reliktoptionen aus verdrehten Pools aus Fleisch, Flügeln und Augen an. Bei jeder Begegnung erscheint je ein Relikt aus Pool 1, Pool 2 und Pool 3; zusätzliche Optionen können auftauchen, wenn dein Deck oder deine Begleiter Paels seltsame Bedingungen erfüllen."
+    },
+    "TANX": {
+      "name": "Tanx",
+      "description": "Tanx, der Khimären-König, rüstet dich aus einem brutalen Waffenlager aus. Bei jeder Begegnung werden drei zufällige Relikte aus Tanx' Arsenal angeboten; Tri-Boomerang kommt hinzu, wenn du bereits genug Waffen trägst, um den König zu beeindrucken."
+    },
+    "TEZCATARA": {
+      "name": "Tezcatara",
+      "description": "Tezcatara, Das, was das Feuer füttert, legt seine Gaben in drei sorgfältig vorbereiteten Pools aus. Bei jeder Begegnung wird dir ein Relikt aus jedem Pool angeboten, von stärkenden Leckereien bis zu seltsamen Erinnerungsstücken und kostbaren Kuriositäten."
+    },
+    "THE_ARCHITECT": {
+      "name": "Der Architekt",
+      "description": "Der Architekt erwartet dich am Ende jedes erfolgreichen Laufs. Die Begegnung entfaltet sich als Dialog mit charakterspezifischen Zeilen und gipfelt in einer letzten Konfrontation."
+    },
+    "VAKUU": {
+      "name": "Vakuu",
+      "description": "Vakuu, der Erste Dämon, lockt dich mit Relikten aus drei unheilvollen Pools. Bei jeder Begegnung wird dir ein Relikt aus jedem Pool angeboten — blutige Abmachungen, konservierte Trophäen und elegante dämonische Zierstücke."
     }
   },
   "keywords": {
@@ -5473,258 +6396,2042 @@
       "name": "Kräftig"
     }
   },
-  "mechanics": {
-    "ascension": [
-      {
-        "level": 0,
-        "title": "Kein Aufstieg",
-        "description": "Spiele ohne Aufstiegs-Modifikatoren."
+  "monsters": {
+    "ARCHITECT": {
+      "moves": {
+        "NOTHING": "Nichts"
       },
-      {
-        "level": 1,
-        "title": "Eliten-Gewimmel",
-        "description": "Eliten tauchen häufiger auf."
+      "name": "Der Architekt",
+      "move_names": {
+        "Nothing": "Nichts"
       },
-      {
-        "level": 2,
-        "title": "Ermüdende Reise",
-        "description": "Ahnen heilen nur 80% deiner fehlenden TP."
+      "move_titles": [
+        "Nichts"
+      ]
+    },
+    "ASSASSIN_RUBY_RAIDER": {
+      "moves": {
+        "KILLSHOT": "Todesschuss"
       },
-      {
-        "level": 3,
-        "title": "Armut",
-        "description": "Gegner und Schatztruhen geben 25% weniger Gold."
+      "name": "Meuchelplünderer",
+      "move_names": {
+        "Killshot": "Todesschuss"
       },
-      {
-        "level": 4,
-        "title": "Enger Gürtel",
-        "description": "Beginne jeden Run mit 1 Trankslot weniger."
+      "move_titles": [
+        "Todesschuss"
+      ]
+    },
+    "ATTACK_MOVE_MONSTER": {
+      "moves": {
+        "POKE": "Stochern"
       },
-      {
-        "level": 5,
-        "title": "Aufstiegsfluch",
-        "description": "Beginne jeden Run Verflucht."
+      "name": "Angriffszug Monster",
+      "move_names": {
+        "Poke": "Stochern"
       },
-      {
-        "level": 6,
-        "title": "Düsternis",
-        "description": "Weniger Lagerfeuer."
+      "move_titles": [
+        "Stochern"
+      ]
+    },
+    "AXEBOT": {
+      "moves": {
+        "BOOT_UP": "Startroutine",
+        "HAMMER_UPPERCUT": "Hammer-Kinnhaken",
+        "ONE_TWO": "Doppelstreich",
+        "SHARPEN": "Schärfen"
       },
-      {
-        "level": 7,
-        "title": "Knappheit",
-        "description": "Seltene und verbesserte Karten erscheinen weniger häufig."
+      "name": "Axtbot",
+      "move_names": {
+        "Boot Up": "Startroutine",
+        "Hammer Uppercut": "Hammer-Kinnhaken",
+        "The One-Two": "Doppelstreich",
+        "Sharpen": "Schärfen"
       },
-      {
-        "level": 8,
-        "title": "Harte Gegner",
-        "description": "Alle Gegner sind schwerer zu töten."
+      "move_titles": [
+        "Startroutine",
+        "Hammer-Kinnhaken",
+        "Doppelstreich",
+        "Schärfen"
+      ]
+    },
+    "AXE_RUBY_RAIDER": {
+      "moves": {
+        "BIG_SWING": "Schwungvoller Hieb"
       },
-      {
-        "level": 9,
-        "title": "Tödliche Gegner",
-        "description": "Alle Gegner haben tödlichere Angriffe."
+      "name": "Axtplünderer",
+      "move_names": {
+        "Big Swing": "Schwungvoller Hieb"
       },
-      {
-        "level": 10,
-        "title": "Doppelter Boss",
-        "description": "Bekämpfe zwei Bosse am Ende von Akt 3."
-      }
-    ],
-    "map_rooms": [
-      {
-        "id": "ROOM_ENEMY",
-        "title": "Gegner",
-        "description": "Feindlich gesinnte Gegner hausen in diesen Räumen."
+      "move_titles": [
+        "Schwungvoller Hieb"
+      ]
+    },
+    "BATTLE_FRIEND_V1": {
+      "moves": {
+        "NOTHING": "Nichts"
       },
-      {
-        "id": "ROOM_ELITE",
-        "title": "Elite",
-        "description": "Mächtige Feinde sind in diesen Räumen.\n\nSie zu besiegen, wird dich mit einem Relikt belohnen."
+      "name": "Kampffreund V1.0",
+      "move_names": {
+        "Nothing": "Nichts"
       },
-      {
-        "id": "ROOM_BOSS",
-        "title": "Boss",
-        "description": "Der tödlichste Feind in der Gegend.\n\nIhn zu besiegen, erlaubt dir, in den nächsten Akt fortzuschreiten."
+      "move_titles": [
+        "Nichts"
+      ]
+    },
+    "BATTLE_FRIEND_V2": {
+      "moves": {
+        "NOTHING": "Nichts"
       },
-      {
-        "id": "ROOM_EVENT",
-        "title": "Ereignis",
-        "description": "Etwas ungewöhnliches geschieht in diesen Räumen..."
+      "name": "Kampffreund V2.0",
+      "move_names": {
+        "Nothing": "Nichts"
       },
-      {
-        "id": "ROOM_MERCHANT",
-        "title": "Laden",
-        "description": "Der geheimnisvolle Händler verkauft seine Waren in diesen Räumen.\n\nGib dein wohlverdientes Gold hier aus!"
+      "move_titles": [
+        "Nichts"
+      ]
+    },
+    "BATTLE_FRIEND_V3": {
+      "moves": {
+        "NOTHING": "Nichts"
       },
-      {
-        "id": "ROOM_REST",
-        "title": "Lagerfeuer",
-        "description": "Halte in diesen Räumen an, um ein paar TP zu heilen oder eine Karte zu verbessern."
+      "name": "Kampffreund V3.0",
+      "move_names": {
+        "Nothing": "Nichts"
       },
-      {
-        "id": "ROOM_TREASURE",
-        "title": "Schatzraum",
-        "description": "Relikte und Gold können in diesen begehrten Räumen gefunden werden."
+      "move_titles": [
+        "Nichts"
+      ]
+    },
+    "BIG_DUMMY": {
+      "moves": {
+        "NOTHING": "Nichts"
       },
-      {
-        "id": "ROOM_ANCIENT",
-        "title": "Ahne",
-        "description": "Ahnen bewohnen diese Räume.\n\nSie gewähren unglaubliche Vorteile, Schätze und Wissen."
-      }
-    ],
-    "core_concepts": [
-      {
-        "id": "ENERGY",
-        "title": "Energie",
-        "description": "Energie wird genutzt, um Handkarten zu spielen."
+      "name": "Großer Dummy",
+      "move_names": {
+        "Nothing": "Nichts"
       },
-      {
-        "id": "BLOCK",
-        "title": "Block",
-        "description": "Verhindert Schaden bis zum nächsten Zug."
+      "move_titles": [
+        "Nichts"
+      ]
+    },
+    "BOWLBUG_EGG": {
+      "moves": {
+        "BITE": "Beißen",
+        "PROTECT": "Schützen"
       },
-      {
-        "id": "HIT_POINTS",
-        "title": "Trefferpunkte (TP)",
-        "description": "Wenn dir die TP ausgehen, stirbst du."
+      "name": "Schalenkäfer (Ei)",
+      "move_names": {
+        "Bite": "Beißen",
+        "Protect": "Schützen"
       },
-      {
-        "id": "MONEY_POUCH",
-        "title": "Gold",
-        "description": "Wie viel Gold du hast. Gold ist die Währung im Spire."
+      "move_titles": [
+        "Beißen",
+        "Schützen"
+      ]
+    },
+    "BOWLBUG_NECTAR": {
+      "moves": {
+        "BUFF": "Trainieren",
+        "THRASH": "Verdreschen",
+        "THRASH2": "Verdreschen"
       },
-      {
-        "id": "DRAW_PILE",
-        "title": "Nachziehstapel (A)",
-        "description": "Zu Beginn jedes Zuges werden\n5 Karten von hier gezogen.\n\nKlicke, um die Karten in deinem Nachziehstapel anzusehen (gemischt)."
+      "name": "Schalenkäfer (Nektar)",
+      "move_names": {
+        "Buff": "Trainieren",
+        "Thrash": "Verdreschen"
       },
-      {
-        "id": "DISCARD_PILE",
-        "title": "Abwurfstapel (S)",
-        "description": "Wenn dein Nachziehstapel leer ist, wird der Abwurfstapel in den Nachziehstapel gemischt.\n\nKlicke, um die Karten in deinem Abwurfstapel zu sehen."
+      "move_titles": [
+        "Trainieren",
+        "Verdreschen",
+        "Verdreschen"
+      ]
+    },
+    "BOWLBUG_ROCK": {
+      "moves": {
+        "HEADBUTT": "Kopfnuss"
       },
-      {
-        "id": "EXHAUST_PILE",
-        "title": "Erschöpfte Karten (X)",
-        "description": "Klicke, um Karten zu siehen, die in diesem Kampf erschöpft wurden."
-      }
-    ],
-    "orbs": [
-      {
-        "id": "LIGHTNING",
-        "title": "Blitz",
-        "description": "Passiv: Füge am Ende deines Zuges einem zufälligen Gegner {Passive} Schaden zu.\nEntladen: Füge einem zufälligen Gegner {Evoke} Schaden zu.",
-        "passive": "",
-        "evoke": ""
+      "name": "Schalenkäfer (Stein)",
+      "move_names": {
+        "Headbutt": "Kopfnuss"
       },
-      {
-        "id": "FROST",
-        "title": "Frost",
-        "description": "Passiv: Erhalte am Ende deines Zuges {Passive} Block.\nEntladen: Erhalte {Evoke} Block.",
-        "passive": "",
-        "evoke": ""
+      "move_titles": [
+        "Kopfnuss"
+      ]
+    },
+    "BOWLBUG_SILK": {
+      "moves": {
+        "SPIN_WEB": "Netz spinnen",
+        "THRASH": "Verdreschen"
       },
-      {
-        "id": "DARK",
-        "title": "Schatten",
-        "description": "Passiv: Erhöhe am Ende deines Zuges den Schaden dieses Orbs um {Passive}.\nEntladen: Füge dem Gegner mit den wenigsten TP {Evoke} Schaden zu.",
-        "passive": "",
-        "evoke": ""
+      "name": "Schalenkäfer (Seide)",
+      "move_names": {
+        "Spin Web": "Netz spinnen",
+        "Thrash": "Verdreschen"
       },
-      {
-        "id": "PLASMA",
-        "title": "Plasma",
-        "description": "Passiv: Erhalte zu Beginn deines Zuges 1 Energy.\nEntladen: Erhalte 2 Energy.\nPlasma wird durch Focus nicht beeinflusst.",
-        "passive": "",
-        "evoke": ""
+      "move_titles": [
+        "Netz spinnen",
+        "Verdreschen"
+      ]
+    },
+    "BRUTE_RUBY_RAIDER": {
+      "moves": {
+        "BEAT": "Schlagen",
+        "CLAP": "Klapsen"
       },
-      {
-        "id": "GLASS",
-        "title": "Glas",
-        "description": "Passive: Füge am Ende des Zuges ALLEN Gegnern {Passive} Schaden zu und reduziere den Wert dieses Orbs um 1.\nEntladen: Füge ALLEN Gegnern {Evoke} Schaden zu.",
-        "passive": "Füge am Ende des Zuges ALLEN Gegnern {Passive} Schaden zu und reduziere den Wert dieses Orbs um 1.\nEntladen: Füge ALLEN Gegnern {Evoke} Schaden zu.",
-        "evoke": ""
-      }
-    ],
-    "stances": [],
-    "character_mechanics": [
-      {
-        "id": "STAR_COUNT",
-        "title": "Sterne",
-        "description": "Deine momentane Menge Sterne (★). Die Karten des Regenten können ★ zum Spielen benötigen."
+      "name": "Bestienplünderer",
+      "move_names": {
+        "Beat": "Schlagen",
+        "Clap": "Klapsen"
       },
-      {
-        "id": "SUMMON",
-        "title": "Beschwören",
-        "description": "Beschwöre Osty.\nFalls er schon beschworen ist, erhöhe seine max. TP für diesen Kampf."
+      "move_titles": [
+        "Schlagen",
+        "Klapsen"
+      ]
+    },
+    "BYGONE_EFFIGY": {
+      "moves": {
+        "SLASHES": "Aufschlitzen",
+        "SLEEP": "Schlafen"
       },
-      {
-        "id": "FORGE",
-        "title": "Schmieden",
-        "description": "Wenn du zum ersten Mal in einem Kampf schmiedest, erhalte Hoheitsklinge auf deine Hand. Erhöht den Schaden der Hoheitsklinge."
+      "name": "Vergessenes Bildnis",
+      "move_names": {
+        "Slashes": "Aufschlitzen",
+        "Sleep": "Schlafen"
       },
-      {
-        "id": "REPLAY",
-        "title": "Erneut Spielen",
-        "description": "Spielt diese Karte ein weiteres Mal."
+      "move_titles": [
+        "Aufschlitzen",
+        "Schlafen"
+      ]
+    },
+    "BYRDONIS": {
+      "moves": {
+        "BITE": "Beißen",
+        "PECK": "Picken",
+        "PROTECT": "Schützen"
       },
-      {
-        "id": "FATAL",
-        "title": "Tödlich",
-        "description": "Wird ausgelöst, wenn diese Karte einen Gegner tötet, der kein Untertan ist."
-      }
-    ],
-    "keywords": [
-      {
-        "id": "ETERNAL",
-        "names": [
-          "Ewig"
-        ],
-        "description": "Kann aus deinem Deck nicht entfernt oder transformiert werden."
+      "name": "Foglonis",
+      "move_names": {
+        "Bite": "Beißen",
+        "Peck": "Picken",
+        "Protect": "Schützen"
       },
-      {
-        "id": "ETHEREAL",
-        "names": [
-          "Flüchtig"
-        ],
-        "description": "Wenn du diese Karte am Ende dieses Zuges auf deiner Hand hältst, wird sie erschöpft."
+      "move_titles": [
+        "Beißen",
+        "Picken",
+        "Schützen"
+      ]
+    },
+    "BYRDONIS_NEST": {
+      "moves": {
+        "NOTHING": "Nichts"
       },
-      {
-        "id": "EXHAUST",
-        "names": [
-          "Erschöpft"
-        ],
-        "description": "Wird bis zum Ende des Kampfes entfernt."
+      "name": "Nest",
+      "move_names": {
+        "Nothing": "Nichts"
       },
-      {
-        "id": "INNATE",
-        "names": [
-          "Angeboren"
-        ],
-        "description": "Beginne jeden Kampf mit dieser Karte auf deiner Hand."
+      "move_titles": [
+        "Nichts"
+      ]
+    },
+    "BYRDPIP": {
+      "moves": {
+        "NOTHING": "Nichts"
       },
-      {
-        "id": "RETAIN",
-        "names": [
-          "Behalten"
-        ],
-        "description": "Behaltene Karten werden am Ende des Zuges nicht abgeworfen."
+      "name": "Foglpip",
+      "move_names": {
+        "Nothing": "Nichts"
       },
-      {
-        "id": "SLY",
-        "names": [
-          "Listig"
-        ],
-        "description": "Falls diese Karte vor dem Ende deines Zuges aus deiner Hand abgeworfen wird, spiele sie kostenlos aus."
+      "move_titles": [
+        "Nichts"
+      ]
+    },
+    "CALCIFIED_CULTIST": {
+      "moves": {
+        "DARK_STRIKE": "Dunkelschlag",
+        "INCANTATION": "Ritualformel"
       },
-      {
-        "id": "UNPLAYABLE",
-        "names": [
-          "Unspielbar"
-        ],
-        "description": "Unspielbare Karten können nicht ausgespielt werden."
-      }
-    ]
+      "name": "Verkalkter Kultist",
+      "move_names": {
+        "Dark Strike": "Dunkelschlag",
+        "Incantation": "Ritualformel"
+      },
+      "move_titles": [
+        "Dunkelschlag",
+        "Ritualformel"
+      ]
+    },
+    "CEREMONIAL_BEAST": {
+      "moves": {
+        "BEAST_CRY": "Bestienschrei",
+        "CRUSH": "Zermalmen",
+        "PLOW": "Pflügen",
+        "STAMP": "Zerstampfen",
+        "STOMP": "Aufstampfen"
+      },
+      "name": "Zeremonienbiest",
+      "move_names": {
+        "Beast Cry": "Bestienschrei",
+        "Crush": "Zermalmen",
+        "Plow": "Pflügen",
+        "Stamp": "Zerstampfen",
+        "Stomp": "Aufstampfen"
+      },
+      "move_titles": [
+        "Bestienschrei",
+        "Zermalmen",
+        "Pflügen",
+        "Zerstampfen",
+        "Aufstampfen"
+      ]
+    },
+    "CHOMPER": {
+      "moves": {
+        "CLAMP": "Einklemmen",
+        "SCREECH": "Kreisch",
+        "THRASH": "Verdreschen"
+      },
+      "name": "Mampfer",
+      "move_names": {
+        "Clamp": "Einklemmen",
+        "Screech": "Kreisch",
+        "Thrash": "Verdreschen"
+      },
+      "move_titles": [
+        "Einklemmen",
+        "Kreisch",
+        "Verdreschen"
+      ]
+    },
+    "COCOON": {
+      "moves": {
+        "NOTHING": "Nichts"
+      },
+      "name": "Kokon",
+      "move_names": {
+        "Nothing": "Nichts"
+      },
+      "move_titles": [
+        "Nichts"
+      ]
+    },
+    "CORPSE_SLUG": {
+      "moves": {
+        "TACKLE": "Angreifen",
+        "WHIP_SLAP": "Ohrfeige"
+      },
+      "name": "Leichenschnecke",
+      "move_names": {
+        "Tackle": "Angreifen",
+        "Whip Slap": "Ohrfeige"
+      },
+      "move_titles": [
+        "Angreifen",
+        "Ohrfeige"
+      ]
+    },
+    "CROSSBOW_RUBY_RAIDER": {
+      "moves": {
+        "FIRE": "Feuer frei!",
+        "RELOAD": "Nachladen"
+      },
+      "name": "Armbrustplünderer",
+      "move_names": {
+        "Fire!": "Feuer frei!",
+        "Reload": "Nachladen"
+      },
+      "move_titles": [
+        "Feuer frei!",
+        "Nachladen"
+      ]
+    },
+    "CRUSHER": {
+      "moves": {
+        "ADAPT": "Anpassen",
+        "BUG_STING": "Insektenstich",
+        "ENLARGING_STRIKE": "Großmachender Schlag",
+        "GUARDED_STRIKE": "Behüteter Schlag",
+        "THRASH": "Verdreschen"
+      },
+      "name": "Quetscher",
+      "move_names": {
+        "Adapt": "Anpassen",
+        "Bug Sting": "Insektenstich",
+        "Enlarging Strike": "Großmachender Schlag",
+        "Guarded Strike": "Behüteter Schlag",
+        "Thrash": "Verdreschen"
+      },
+      "move_titles": [
+        "Anpassen",
+        "Insektenstich",
+        "Großmachender Schlag",
+        "Behüteter Schlag",
+        "Verdreschen"
+      ]
+    },
+    "CUBEX_CONSTRUCT": {
+      "moves": {
+        "CHARGE_UP": "Aufladen",
+        "REPEATER_BLAST": "Repetierfeuer",
+        "SUBMERGE": "Untertauchen"
+      },
+      "name": "Kubex-Konstrukt",
+      "move_names": {
+        "Charge Up": "Aufladen",
+        "Repeater Blast": "Repetierfeuer",
+        "Submerge": "Untertauchen"
+      },
+      "move_titles": [
+        "Aufladen",
+        "Repetierfeuer",
+        "Untertauchen"
+      ]
+    },
+    "DAMP_CULTIST": {
+      "moves": {
+        "DARK_STRIKE": "Dunkelschlag",
+        "INCANTATION": "Ritualformel"
+      },
+      "name": "Nasser Kultist",
+      "move_names": {
+        "Dark Strike": "Dunkelschlag",
+        "Incantation": "Ritualformel"
+      },
+      "move_titles": [
+        "Dunkelschlag",
+        "Ritualformel"
+      ]
+    },
+    "DECIMILLIPEDE_SEGMENT": {
+      "moves": {
+        "BULK": "Aufschütten",
+        "DEAD": "Tot",
+        "OUTGAS": "Gas loslassen",
+        "REATTACH": "Wieder anwachsen",
+        "TACKLE": "Angreifen",
+        "WRITHE": "Winden"
+      },
+      "name": "Zigtausendfüßer",
+      "move_names": {
+        "Bulk": "Aufschütten",
+        "Dead": "Tot",
+        "Outgas": "Gas loslassen",
+        "Reattach": "Wieder anwachsen",
+        "Tackle": "Angreifen",
+        "Writhe": "Winden"
+      },
+      "move_titles": [
+        "Aufschütten",
+        "Tot",
+        "Gas loslassen",
+        "Wieder anwachsen",
+        "Angreifen",
+        "Winden"
+      ]
+    },
+    "DEVOTED_SCULPTOR": {
+      "name": "Eifriger Bildhauer"
+    },
+    "DOOR": {
+      "name": "Tür"
+    },
+    "DOORMAKER": {
+      "name": "Türmacher"
+    },
+    "ENTOMANCER": {
+      "moves": {
+        "AGITATE_SWARM": "Schwarm hetzen",
+        "BEES": "Biiienen!",
+        "PHEROMONE_SPIT": "Pheromon spucken",
+        "SPEAR": "Aufspießen!"
+      },
+      "name": "Entomant",
+      "move_names": {
+        "Agitate Swarm": "Schwarm hetzen",
+        "Beeeees!": "Biiienen!",
+        "Pheromone Spit": "Pheromon spucken",
+        "Spear!": "Aufspießen!"
+      },
+      "move_titles": [
+        "Schwarm hetzen",
+        "Biiienen!",
+        "Pheromon spucken",
+        "Aufspießen!"
+      ]
+    },
+    "EXOSKELETON": {
+      "moves": {
+        "ENRAGE": "Erzürnen",
+        "MANDIBLES": "Kieferbacken",
+        "SKITTER": "Flink"
+      },
+      "name": "Exoskelett",
+      "move_names": {
+        "Enrage": "Erzürnen",
+        "Mandibles": "Kieferbacken",
+        "Skitter": "Flink"
+      },
+      "move_titles": [
+        "Erzürnen",
+        "Kieferbacken",
+        "Flink"
+      ]
+    },
+    "EYE_WITH_TEETH": {
+      "moves": {
+        "DISTRACT": "Ablenken",
+        "STARTLE": "Erschrecken"
+      },
+      "name": "Auge mit Zähnen",
+      "move_names": {
+        "Distract": "Ablenken",
+        "Startle": "Erschrecken"
+      },
+      "move_titles": [
+        "Ablenken",
+        "Erschrecken"
+      ]
+    },
+    "FABRICATOR": {
+      "moves": {
+        "DISINTEGRATE": "Zerschlagen",
+        "FABRICATE": "Fabrizieren"
+      },
+      "name": "Fabrikateur",
+      "move_names": {
+        "Disintegrate": "Zerschlagen",
+        "Fabricate": "Fabrizieren"
+      },
+      "move_titles": [
+        "Zerschlagen",
+        "Fabrizieren"
+      ]
+    },
+    "FAKE_MERCHANT_MONSTER": {
+      "moves": {
+        "ENRAGE": "Erzürnen",
+        "SPEW_COINS": "Münzen spucken",
+        "SWIPE": "Schlagen",
+        "THROW_RELIC": "Relikt werfen"
+      },
+      "name": "Der Händler???",
+      "move_names": {
+        "Enrage": "Erzürnen",
+        "Spew Coins": "Münzen spucken",
+        "Swipe": "Schlagen",
+        "Throw Relic": "Relikt werfen"
+      },
+      "move_titles": [
+        "Erzürnen",
+        "Münzen spucken",
+        "Schlagen",
+        "Relikt werfen"
+      ]
+    },
+    "FAT_GREMLIN": {
+      "moves": {
+        "FLEE": "Fliehen"
+      },
+      "name": "Fetter Gremlin",
+      "move_names": {
+        "Flee": "Fliehen"
+      },
+      "move_titles": [
+        "Fliehen"
+      ]
+    },
+    "FLAIL_KNIGHT": {
+      "moves": {
+        "BREAKER": "Brecher",
+        "FLAIL": "Flegeln",
+        "RAM": "Rammen"
+      },
+      "name": "Flegel-Ritter",
+      "move_names": {
+        "Breaker": "Brecher",
+        "Flail": "Flegeln",
+        "Ram": "Rammen"
+      },
+      "move_titles": [
+        "Brecher",
+        "Flegeln",
+        "Rammen"
+      ]
+    },
+    "FLYCONID": {
+      "moves": {
+        "FRAIL_SPORES": "Gebrechlichkeitssporen",
+        "SMASH": "Schmettern"
+      },
+      "name": "Fliegonide",
+      "move_names": {
+        "Frail Spores": "Gebrechlichkeitssporen",
+        "Smash": "Schmettern"
+      },
+      "move_titles": [
+        "Gebrechlichkeitssporen",
+        "Schmettern"
+      ]
+    },
+    "FOGMOG": {
+      "moves": {
+        "ILLUSORY_SPORES": "Schwummrige Sporen",
+        "THWACK": "Schwumms"
+      },
+      "name": "Schwummschwamm",
+      "move_names": {
+        "Illusory Spores": "Schwummrige Sporen",
+        "Thwack": "Schwumms"
+      },
+      "move_titles": [
+        "Schwummrige Sporen",
+        "Schwumms"
+      ]
+    },
+    "FOSSIL_STALKER": {
+      "moves": {
+        "LASH": "Peitschen",
+        "LATCH": "Festklammern",
+        "TACKLE": "Anpacken"
+      },
+      "name": "Fossil-Pirscher",
+      "move_names": {
+        "Lash": "Peitschen",
+        "Latch": "Festklammern",
+        "Tackle": "Anpacken"
+      },
+      "move_titles": [
+        "Peitschen",
+        "Festklammern",
+        "Anpacken"
+      ]
+    },
+    "FROG_KNIGHT": {
+      "moves": {
+        "BEETLE_CHARGE": "Käfer-Ansturm",
+        "FOR_THE_QUEEN": "Für die Königin",
+        "STRIKE_DOWN_EVIL": "Böses niederstrecken",
+        "TONGUE_LASH": "Zungenpeitsche"
+      },
+      "name": "Froschritter",
+      "move_names": {
+        "Beetle Charge": "Käfer-Ansturm",
+        "For the Queen": "Für die Königin",
+        "Strike Down Evil": "Böses niederstrecken",
+        "Tongue Lash": "Zungenpeitsche"
+      },
+      "move_titles": [
+        "Käfer-Ansturm",
+        "Für die Königin",
+        "Böses niederstrecken",
+        "Zungenpeitsche"
+      ]
+    },
+    "FUZZY_WURM_CRAWLER": {
+      "moves": {
+        "ACID_GOOP": "Säure-Pampe"
+      },
+      "name": "Flaumiger Wurmkrabbler",
+      "move_names": {
+        "Acid Goop": "Säure-Pampe"
+      },
+      "move_titles": [
+        "Säure-Pampe"
+      ]
+    },
+    "GAS_BOMB": {
+      "moves": {
+        "EXPLODE": "Explodieren"
+      },
+      "name": "Gasbombe",
+      "move_names": {
+        "Explode": "Explodieren"
+      },
+      "move_titles": [
+        "Explodieren"
+      ]
+    },
+    "GAZING_MOTH": {
+      "moves": {
+        "GLARE": "Anstarren",
+        "POWDER": "Pulversieren"
+      },
+      "name": "Glotzende Motte",
+      "move_names": {
+        "Glare": "Anstarren",
+        "Powder": "Pulversieren"
+      },
+      "move_titles": [
+        "Anstarren",
+        "Pulversieren"
+      ]
+    },
+    "GEM_EATER": {
+      "moves": {
+        "FOCUS_BEAM": "Fokusstrahl",
+        "GEM_LASER": "Juwelenlaser"
+      },
+      "name": "Juwelenfresser",
+      "move_names": {
+        "Focus Beam": "Fokusstrahl",
+        "Gem Laser": "Juwelenlaser"
+      },
+      "move_titles": [
+        "Fokusstrahl",
+        "Juwelenlaser"
+      ]
+    },
+    "GLOBE_HEAD": {
+      "moves": {
+        "CHANNEL_LIGHTNING": "Blitz erschaffen",
+        "DUAL_CAST": "Doppelentladung",
+        "SHOCKING_SLAP": "Schockschlag"
+      },
+      "name": "Kugelkopf",
+      "move_names": {
+        "Channel Lightning": "Blitz erschaffen",
+        "Dual Cast": "Doppelentladung",
+        "Shocking Slap": "Schockschlag"
+      },
+      "move_titles": [
+        "Blitz erschaffen",
+        "Doppelentladung",
+        "Schockschlag"
+      ]
+    },
+    "GREMLIN_MERC": {
+      "moves": {
+        "DOUBLE_SMASH": "Doppelschmettern",
+        "GIMME": "Her damit",
+        "HEHE": "Hihi"
+      },
+      "name": "Gremlin-Söldner",
+      "move_names": {
+        "Double Smash": "Doppelschmettern",
+        "Gimme": "Her damit",
+        "Hehe": "Hihi"
+      },
+      "move_titles": [
+        "Doppelschmettern",
+        "Her damit",
+        "Hihi"
+      ]
+    },
+    "GUARDBOT": {
+      "moves": {
+        "GUARD": "Schützen"
+      },
+      "name": "Schutzbot",
+      "move_names": {
+        "Guard": "Schützen"
+      },
+      "move_titles": [
+        "Schützen"
+      ]
+    },
+    "HATCHLING": {
+      "name": "Schlüpfling"
+    },
+    "HAUNTED_SHIP": {
+      "moves": {
+        "HAUNT": "Spuk",
+        "RAMMING_SPEED": "Rammtempo",
+        "STOMP": "Zerstampfen",
+        "SWIPE": "Schlagen"
+      },
+      "name": "Spukschiff",
+      "move_names": {
+        "Haunt": "Spuk",
+        "Ramming Speed": "Rammtempo",
+        "Stomp": "Zerstampfen",
+        "Swipe": "Schlagen"
+      },
+      "move_titles": [
+        "Spuk",
+        "Rammtempo",
+        "Zerstampfen",
+        "Schlagen"
+      ]
+    },
+    "HUNTER_KILLER": {
+      "moves": {
+        "BITE": "Beißen",
+        "PUNCTURE": "Aufstechen",
+        "TENDERIZING_GOOP": "Zartmachende Pampe"
+      },
+      "name": "Mörder der Jäger",
+      "move_names": {
+        "Bite": "Beißen",
+        "Puncture": "Aufstechen",
+        "Tenderizing Goop": "Zartmachende Pampe"
+      },
+      "move_titles": [
+        "Beißen",
+        "Aufstechen",
+        "Zartmachende Pampe"
+      ]
+    },
+    "INFESTED_PRISM": {
+      "moves": {
+        "JAB": "Stoßen",
+        "PULSATE": "Pulsieren",
+        "RADIATE": "Strahlen",
+        "WHIRLWIND": "Wirbelsturm"
+      },
+      "name": "Befallenes Prisma",
+      "move_names": {
+        "Jab": "Stoßen",
+        "Pulsate": "Pulsieren",
+        "Radiate": "Strahlen",
+        "Whirlwind": "Wirbelsturm"
+      },
+      "move_titles": [
+        "Stoßen",
+        "Pulsieren",
+        "Strahlen",
+        "Wirbelsturm"
+      ]
+    },
+    "INKLET": {
+      "moves": {
+        "JAB": "Stoßen",
+        "PIERCING_GAZE": "Stechender Blick",
+        "WINDUP_PUNCH": "Kurbelschlag"
+      },
+      "name": "Tintchen",
+      "move_names": {
+        "Jab": "Stoßen",
+        "Piercing Gaze": "Stechender Blick",
+        "Windup Punch": "Kurbelschlag"
+      },
+      "move_titles": [
+        "Stoßen",
+        "Stechender Blick",
+        "Kurbelschlag"
+      ]
+    },
+    "KIN_FOLLOWER": {
+      "moves": {
+        "BOOMERANG_MOVE": "Bumerang",
+        "POWER_DANCE_MOVE": "Machttanz",
+        "QUICK_SLASH_MOVE": "Schneller Schlitzer"
+      },
+      "name": "Sippen-Anhänger",
+      "move_names": {
+        "Boomerang": "Bumerang",
+        "Power Dance": "Machttanz",
+        "Quick Slash": "Schneller Schlitzer"
+      },
+      "move_titles": [
+        "Bumerang",
+        "Machttanz",
+        "Schneller Schlitzer"
+      ]
+    },
+    "KIN_PRIEST": {
+      "moves": {
+        "BEAM_MOVE": "Seelenstrahl",
+        "OR_OF_FRAILTY_MOVE": "Orb des Gebrechens",
+        "OR_OF_WEAKNESS_MOVE": "Orb der Schwäche",
+        "RITUAL_MOVE": "Dunkles Ritual"
+      },
+      "name": "Sippen-Priester",
+      "move_names": {
+        "Soul Beam": "Seelenstrahl",
+        "Orb of Frailty": "Orb des Gebrechens",
+        "Orb of Weakness": "Orb der Schwäche",
+        "Dark Ritual": "Dunkles Ritual"
+      },
+      "move_titles": [
+        "Seelenstrahl",
+        "Orb des Gebrechens",
+        "Orb der Schwäche",
+        "Dunkles Ritual"
+      ]
+    },
+    "KNOWLEDGE_DEMON": {
+      "moves": {
+        "BLUE_FLAME": "Blaue Flamme",
+        "CURSE_OF_KNOWLEDGE": "Fluch des Wissens",
+        "HAVE_A_TASTE": "Probier mal davon",
+        "KNOWLEDGE_OVERWHELMING": "Überwältigendes Wissen",
+        "PONDER": "Grübeln"
+      },
+      "name": "Wissensdämon",
+      "move_names": {
+        "Blue Flame": "Blaue Flamme",
+        "Curse of Knowledge": "Fluch des Wissens",
+        "Have a Taste": "Probier mal davon",
+        "Knowledge Overwhelming": "Überwältigendes Wissen",
+        "Ponder": "Grübeln"
+      },
+      "move_titles": [
+        "Blaue Flamme",
+        "Fluch des Wissens",
+        "Probier mal davon",
+        "Überwältigendes Wissen",
+        "Grübeln"
+      ]
+    },
+    "LAGAVULIN_MATRIARCH": {
+      "moves": {
+        "DISEMBOWEL": "Ausweiden",
+        "SLASH": "Schlitzen",
+        "SLEEP": "Schlafen",
+        "SOUL_SIPHON": "Seele aussaugen"
+      },
+      "name": "Lagavulin-Matriarchin",
+      "move_names": {
+        "Disembowel": "Ausweiden",
+        "Slash": "Schlitzen",
+        "Sleep": "Schlafen",
+        "Soul Siphon": "Seele aussaugen"
+      },
+      "move_titles": [
+        "Ausweiden",
+        "Schlitzen",
+        "Schlafen",
+        "Seele aussaugen"
+      ]
+    },
+    "LEAF_SLIME_M": {
+      "moves": {
+        "CLUMP_SHOT": "Büschelschuss",
+        "STICKY_SHOT": "Klebriger Schuss"
+      },
+      "name": "Blattschleim (mi.)",
+      "move_names": {
+        "Clump Shot": "Büschelschuss",
+        "Sticky Shot": "Klebriger Schuss"
+      },
+      "move_titles": [
+        "Büschelschuss",
+        "Klebriger Schuss"
+      ]
+    },
+    "LEAF_SLIME_S": {
+      "moves": {
+        "GOOP": "Pampe",
+        "TACKLE": "Anpacken"
+      },
+      "name": "Blattschleim (kl.)",
+      "move_names": {
+        "Goop": "Pampe",
+        "Tackle": "Anpacken"
+      },
+      "move_titles": [
+        "Pampe",
+        "Anpacken"
+      ]
+    },
+    "LIVING_FOG": {
+      "moves": {
+        "BLOAT": "Abgas"
+      },
+      "name": "Lebender Nebel",
+      "move_names": {
+        "Bloat": "Abgas"
+      },
+      "move_titles": [
+        "Abgas"
+      ]
+    },
+    "LIVING_SHIELD": {
+      "moves": {
+        "SHIELD_SLAM": "Schildschlag"
+      },
+      "name": "Lebender Schild",
+      "move_names": {
+        "Shield Slam": "Schildschlag"
+      },
+      "move_titles": [
+        "Schildschlag"
+      ]
+    },
+    "LOUSE_PROGENITOR": {
+      "moves": {
+        "ACID_DUST": "Säurestaub",
+        "CURL_AND_GROW": "Einrollen und wachsen",
+        "WEB_CANNON": "Netzkanone"
+      },
+      "name": "Laus-Stammvater",
+      "move_names": {
+        "Acid Dust": "Säurestaub",
+        "Curl and Grow": "Einrollen und wachsen",
+        "Web Cannon": "Netzkanone"
+      },
+      "move_titles": [
+        "Säurestaub",
+        "Einrollen und wachsen",
+        "Netzkanone"
+      ]
+    },
+    "MAGI_KNIGHT": {
+      "moves": {
+        "MAGIC_BOMB": "Magische Bombe",
+        "POWER_SHIELD": "Machtschild",
+        "RAM": "Rammen"
+      },
+      "name": "Magus-Ritter",
+      "move_names": {
+        "Magic Bomb": "Magische Bombe",
+        "Power Shield": "Machtschild",
+        "Ram": "Rammen"
+      },
+      "move_titles": [
+        "Magische Bombe",
+        "Machtschild",
+        "Rammen"
+      ]
+    },
+    "MAWLER": {
+      "moves": {
+        "CLAW": "Kralle",
+        "RIP_AND_TEAR": "Reißen und Fetzen",
+        "ROAR": "Brüllen"
+      },
+      "name": "Mauler",
+      "move_names": {
+        "Claw": "Kralle",
+        "Rip and Tear": "Reißen und Fetzen",
+        "Roar": "Brüllen"
+      },
+      "move_titles": [
+        "Kralle",
+        "Reißen und Fetzen",
+        "Brüllen"
+      ]
+    },
+    "MECHA_KNIGHT": {
+      "moves": {
+        "CHARGE": "Ansturm",
+        "FLAMETHROWER": "Flammenwerfer",
+        "HEAVY_CLEAVE": "Schweres Spalten",
+        "WINDUP": "Aufziehen"
+      },
+      "name": "Mecha-Ritter",
+      "move_names": {
+        "Charge": "Ansturm",
+        "Flamethrower": "Flammenwerfer",
+        "Heavy Cleave": "Schweres Spalten",
+        "Windup": "Aufziehen"
+      },
+      "move_titles": [
+        "Ansturm",
+        "Flammenwerfer",
+        "Schweres Spalten",
+        "Aufziehen"
+      ]
+    },
+    "MOCK_ATTACK_AND_SUMMON_MINION_MONSTER": {
+      "moves": {
+        "ATTACK_AND_SUMMON_MINION": "Angriff und Beschwörung eines Untertanen"
+      },
+      "name": "Angriff und Beschwörung eines Untertan-Monsters",
+      "move_names": {
+        "Attack and Summon Minion": "Angriff und Beschwörung eines Untertanen"
+      },
+      "move_titles": [
+        "Angriff und Beschwörung eines Untertanen"
+      ]
+    },
+    "MOCK_ATTACK_MONSTER": {
+      "moves": {
+        "ATTACK": "Angriff"
+      },
+      "name": "Monsterangriff",
+      "move_names": {
+        "Attack": "Angriff"
+      },
+      "move_titles": [
+        "Angriff"
+      ]
+    },
+    "MYSTERIOUS_KNIGHT": {
+      "moves": {
+        "BREAKER": "Brecher",
+        "FLAIL": "Flegeln",
+        "RAM": "Rammen"
+      },
+      "name": "Geheimnisvoller Ritter",
+      "move_names": {
+        "Breaker": "Brecher",
+        "Flail": "Flegeln",
+        "Ram": "Rammen"
+      },
+      "move_titles": [
+        "Brecher",
+        "Flegeln",
+        "Rammen"
+      ]
+    },
+    "MYTE": {
+      "moves": {
+        "BIG_SUCK": "Großer Sauger",
+        "BITE": "Beißen",
+        "SUCK": "Saugen",
+        "TOXIC": "Giftiger Überfluss"
+      },
+      "name": "Myte",
+      "move_names": {
+        "Big Suck": "Großer Sauger",
+        "Bite": "Beißen",
+        "Suck": "Saugen",
+        "Toxic Cornucopia": "Giftiger Überfluss"
+      },
+      "move_titles": [
+        "Großer Sauger",
+        "Beißen",
+        "Saugen",
+        "Giftiger Überfluss"
+      ]
+    },
+    "NIBBIT": {
+      "moves": {
+        "BUTT": "Stoßen",
+        "HESITANT_SLICE": "Zögerlicher Schnitt",
+        "HISS": "Fauchen"
+      },
+      "name": "Mümmel",
+      "move_names": {
+        "Butt": "Stoßen",
+        "Hesitant Slice": "Zögerlicher Schnitt",
+        "Hiss": "Fauchen"
+      },
+      "move_titles": [
+        "Stoßen",
+        "Zögerlicher Schnitt",
+        "Fauchen"
+      ]
+    },
+    "NOISEBOT": {
+      "moves": {
+        "NOISE": "Lärm"
+      },
+      "name": "Lärmbot",
+      "move_names": {
+        "Noise": "Lärm"
+      },
+      "move_titles": [
+        "Lärm"
+      ]
+    },
+    "OSTY": {
+      "name": "Osty"
+    },
+    "OVICOPTER": {
+      "moves": {
+        "LAY_EGGS": "Eier legen",
+        "NUTRITIONAL_PASTE": "Nahrhafte Paste",
+        "SMASH": "Schmettern",
+        "TENDERIZER": "Zartmacher"
+      },
+      "name": "Ovikopter",
+      "move_names": {
+        "Lay Eggs": "Eier legen",
+        "Nutritional Paste": "Nahrhafte Paste",
+        "Smash": "Schmettern",
+        "Tenderizer": "Zartmacher"
+      },
+      "move_titles": [
+        "Eier legen",
+        "Nahrhafte Paste",
+        "Schmettern",
+        "Zartmacher"
+      ]
+    },
+    "OWL_MAGISTRATE": {
+      "moves": {
+        "JUDICIAL_FLIGHT": "Richterlicher Flug",
+        "MAGISTRATE_SCRUTINY": "Magistrale Untersuchung",
+        "PECK_ASSAULT": "Wildes Picken",
+        "VERDICT": "Urteilsspruch"
+      },
+      "name": "Eulenmagistratin",
+      "move_names": {
+        "Judicial Flight": "Richterlicher Flug",
+        "Magistrate Scrutiny": "Magistrale Untersuchung",
+        "Peck Assault": "Wildes Picken",
+        "Verdict": "Urteilsspruch"
+      },
+      "move_titles": [
+        "Richterlicher Flug",
+        "Magistrale Untersuchung",
+        "Wildes Picken",
+        "Urteilsspruch"
+      ]
+    },
+    "PAELS_LEGION": {
+      "moves": {
+        "NOTHING": "Nichts"
+      },
+      "name": "Paels Legion",
+      "move_names": {
+        "Nothing": "Nichts"
+      },
+      "move_titles": [
+        "Nichts"
+      ]
+    },
+    "PARAFRIGHT": {
+      "moves": {
+        "SLAM": "Aufprallen"
+      },
+      "name": "Parafratze",
+      "move_names": {
+        "Slam": "Aufprallen"
+      },
+      "move_titles": [
+        "Aufprallen"
+      ]
+    },
+    "PHANTASMAL_GARDENER": {
+      "moves": {
+        "BITE": "Beißen",
+        "ENLARGE": "Vergrößern",
+        "FLAIL": "Dreschen",
+        "LASH": "Auspeitschen"
+      },
+      "name": "Trügerischer Gärtner",
+      "move_names": {
+        "Bite": "Beißen",
+        "Enlarge": "Vergrößern",
+        "Flail": "Dreschen",
+        "Lash": "Auspeitschen"
+      },
+      "move_titles": [
+        "Beißen",
+        "Vergrößern",
+        "Dreschen",
+        "Auspeitschen"
+      ]
+    },
+    "PHROG_PARASITE": {
+      "moves": {
+        "INFECT": "Infizieren",
+        "LASH": "Auspeitschen",
+        "LEAP_SLAM": "Wuchtiger Sprung"
+      },
+      "name": "Phroschparasit",
+      "move_names": {
+        "Infect": "Infizieren",
+        "Lash": "Auspeitschen",
+        "Leap Slam": "Wuchtiger Sprung"
+      },
+      "move_titles": [
+        "Infizieren",
+        "Auspeitschen",
+        "Wuchtiger Sprung"
+      ]
+    },
+    "PUNCH_CONSTRUCT": {
+      "moves": {
+        "FAST_PUNCH": "Schnell Boxen",
+        "READY": "BEREIT",
+        "STRONG_PUNCH": "Stark Boxen"
+      },
+      "name": "Boxer-Konstrukt",
+      "move_names": {
+        "Fast Punch": "Schnell Boxen",
+        "READY": "BEREIT",
+        "Strong Punch": "Stark Boxen"
+      },
+      "move_titles": [
+        "Schnell Boxen",
+        "BEREIT",
+        "Stark Boxen"
+      ]
+    },
+    "QUEEN": {
+      "moves": {
+        "BARRIER": "Barriere",
+        "BURN_BRIGHT_FOR_ME": "Brenne hell für mich",
+        "EXECUTION": "Hinrichtung",
+        "IMPOSSIBLE": "Unmöglich",
+        "OFF_WITH_YOUR_HEAD": "Ab mit deinem Kopf",
+        "SUMMON_1": "Beschwören",
+        "SUMMON_2": "Beschwören",
+        "YOURE_MINE": "Du gehörst mir"
+      },
+      "name": "Königin",
+      "move_names": {
+        "Barrier": "Barriere",
+        "Burn Bright for Me": "Brenne hell für mich",
+        "Execution": "Hinrichtung",
+        "Impossible": "Unmöglich",
+        "Off with Your Head": "Ab mit deinem Kopf",
+        "Summon": "Beschwören",
+        "You're Mine": "Du gehörst mir"
+      },
+      "move_titles": [
+        "Barriere",
+        "Brenne hell für mich",
+        "Hinrichtung",
+        "Unmöglich",
+        "Ab mit deinem Kopf",
+        "Beschwören",
+        "Beschwören",
+        "Du gehörst mir"
+      ]
+    },
+    "ROCKET": {
+      "moves": {
+        "CHARGE_UP": "Aufladen",
+        "LASER": "Laser",
+        "PRECISION_BEAM": "Präzisionsstrahl",
+        "RECHARGE": "Wieder aufladen",
+        "TARGETING_RETICLE": "Fadenkreuz ausrichten"
+      },
+      "name": "Rakete",
+      "move_names": {
+        "Charge Up": "Aufladen",
+        "Precision Beam": "Präzisionsstrahl",
+        "Recharge": "Wieder aufladen",
+        "Targeting Reticle": "Fadenkreuz ausrichten"
+      },
+      "move_titles": [
+        "Aufladen",
+        "Laser",
+        "Präzisionsstrahl",
+        "Wieder aufladen",
+        "Fadenkreuz ausrichten"
+      ]
+    },
+    "SCROLL_OF_BITING": {
+      "moves": {
+        "CHEW": "Kauen",
+        "CHOMP": "Schnappen",
+        "MORE_TEETH": "Mehr Zähne"
+      },
+      "name": "Pergament des Beißens",
+      "move_names": {
+        "Chew": "Kauen",
+        "Chomp": "Schnappen",
+        "More Teeth": "Mehr Zähne"
+      },
+      "move_titles": [
+        "Kauen",
+        "Schnappen",
+        "Mehr Zähne"
+      ]
+    },
+    "SEAPUNK": {
+      "moves": {
+        "BUBBLE_BURP": "Blasen rülpsen",
+        "SEA_KICK": "Meerestritt",
+        "SPINNING_KICK": "Kreisender Kick"
+      },
+      "name": "Meerespunk",
+      "move_names": {
+        "Bubble Burp": "Blasen rülpsen",
+        "Sea Kick": "Meerestritt",
+        "Spinning Kick": "Kreisender Kick"
+      },
+      "move_titles": [
+        "Blasen rülpsen",
+        "Meerestritt",
+        "Kreisender Kick"
+      ]
+    },
+    "SEWER_CLAM": {
+      "moves": {
+        "JET": "Ausstoßen",
+        "PRESSURIZE": "Druck aufbauen"
+      },
+      "name": "Kloakenmuschel",
+      "move_names": {
+        "Jet": "Ausstoßen",
+        "Pressurize": "Druck aufbauen"
+      },
+      "move_titles": [
+        "Ausstoßen",
+        "Druck aufbauen"
+      ]
+    },
+    "SHRINKER_BEETLE": {
+      "moves": {
+        "CHOMP": "Schnappen",
+        "SHRINKER": "Schrumpfer",
+        "STOMP": "Zerstampfen"
+      },
+      "name": "Schrumpfkäfer",
+      "move_names": {
+        "Chomp": "Schnappen",
+        "Shrinker": "Schrumpfer",
+        "Stomp": "Zerstampfen"
+      },
+      "move_titles": [
+        "Schnappen",
+        "Schrumpfer",
+        "Zerstampfen"
+      ]
+    },
+    "SKULKING_COLONY": {
+      "moves": {
+        "INERTIA": "Beharrung",
+        "SUPER_CRAB": "Superkrabbe",
+        "ZOOM": "Rasen"
+      },
+      "name": "Versteckte Kolonie",
+      "move_names": {
+        "Inertia": "Beharrung",
+        "Super Crab": "Superkrabbe",
+        "Zoom": "Rasen"
+      },
+      "move_titles": [
+        "Beharrung",
+        "Superkrabbe",
+        "Rasen"
+      ]
+    },
+    "SLIMED_BERSERKER": {
+      "name": "Schleimiger Berserker"
+    },
+    "SLITHERING_STRANGLER": {
+      "moves": {
+        "CONSTRICT": "Einschnüren",
+        "LASH": "Peitschen",
+        "THWACK": "Wuchtschlag"
+      },
+      "name": "Kriechwürger",
+      "move_names": {
+        "Constrict": "Einschnüren",
+        "Lash": "Peitschen",
+        "Thwack": "Wuchtschlag"
+      },
+      "move_titles": [
+        "Einschnüren",
+        "Peitschen",
+        "Wuchtschlag"
+      ]
+    },
+    "SLUDGE_SPINNER": {
+      "moves": {
+        "OIL_SPRAY": "Ölspritzer",
+        "RAGE": "Wut",
+        "SLAM": "Aufprallen"
+      },
+      "name": "Schlickschleuder",
+      "move_names": {
+        "Oil Spray": "Ölspritzer",
+        "Rage": "Wut",
+        "Slam": "Aufprallen"
+      },
+      "move_titles": [
+        "Ölspritzer",
+        "Wut",
+        "Aufprallen"
+      ]
+    },
+    "SLUMBERING_BEETLE": {
+      "moves": {
+        "CRASH": "Gegenkrachen",
+        "RESOLVE": "Entschließen",
+        "ROLL_OUT": "Ausrollen",
+        "SNORE": "Schnarchen"
+      },
+      "name": "Schlummernder Käfer",
+      "move_names": {
+        "Crash": "Gegenkrachen",
+        "Resolve": "Entschließen",
+        "Roll Out": "Ausrollen",
+        "Snore": "Schnarchen"
+      },
+      "move_titles": [
+        "Gegenkrachen",
+        "Entschließen",
+        "Ausrollen",
+        "Schnarchen"
+      ]
+    },
+    "SNAPPING_JAXFRUIT": {
+      "moves": {
+        "COLLECT_POWER": "Macht sammeln",
+        "ENERGY_ORB": "Energie-Orb"
+      },
+      "name": "Schnappende Jaxfrucht",
+      "move_names": {
+        "Collect Power": "Macht sammeln",
+        "Energy Orb": "Energie-Orb"
+      },
+      "move_titles": [
+        "Macht sammeln",
+        "Energie-Orb"
+      ]
+    },
+    "SNEAKY_GREMLIN": {
+      "moves": {
+        "TACKLE": "Anpacken"
+      },
+      "name": "Schleichender Gremlin",
+      "move_names": {
+        "Tackle": "Anpacken"
+      },
+      "move_titles": [
+        "Anpacken"
+      ]
+    },
+    "SOUL_FYSH": {
+      "moves": {
+        "BURP": "Rülpsen",
+        "DE_GAS": "Gas ablassen",
+        "SCREAM": "Schreien"
+      },
+      "name": "Seelenfysch",
+      "move_names": {
+        "Burp": "Rülpsen",
+        "De-Gas": "Gas ablassen",
+        "Scream": "Schreien"
+      },
+      "move_titles": [
+        "Rülpsen",
+        "Gas ablassen",
+        "Schreien"
+      ]
+    },
+    "SOUL_NEXUS": {
+      "moves": {
+        "DRAIN_LIFE": "Leben entziehen",
+        "MAELSTROM": "Mahlstrom",
+        "SOUL_BURN": "Seelenbrand"
+      },
+      "name": "Seelennexus",
+      "move_names": {
+        "Drain Life": "Leben entziehen",
+        "Maelstrom": "Mahlstrom",
+        "Soul Burn": "Seelenbrand"
+      },
+      "move_titles": [
+        "Leben entziehen",
+        "Mahlstrom",
+        "Seelenbrand"
+      ]
+    },
+    "SPECTRAL_KNIGHT": {
+      "moves": {
+        "HEX": "Verfluchen",
+        "SOUL_FLAME": "Seelenflamme",
+        "SOUL_SLASH": "Seelenschnitt"
+      },
+      "name": "Spektral-Ritter",
+      "move_names": {
+        "Hex": "Verfluchen",
+        "Soul Flame": "Seelenflamme",
+        "Soul Slash": "Seelenschnitt"
+      },
+      "move_titles": [
+        "Verfluchen",
+        "Seelenflamme",
+        "Seelenschnitt"
+      ]
+    },
+    "SPINY_TOAD": {
+      "moves": {
+        "PROTRUDING_SPIKES": "Vorspringende Stacheln",
+        "SPIKE_EXPLOSION": "Stachelexplosion",
+        "TONGUE_LASH": "Zungenpeitsche"
+      },
+      "name": "Stachlige Kröte",
+      "move_names": {
+        "Protruding Spikes": "Vorspringende Stacheln",
+        "Spike Explosion": "Stachelexplosion",
+        "Tongue Lash": "Zungenpeitsche"
+      },
+      "move_titles": [
+        "Vorspringende Stacheln",
+        "Stachelexplosion",
+        "Zungenpeitsche"
+      ]
+    },
+    "STABBOT": {
+      "moves": {
+        "STAB": "Abstechen"
+      },
+      "name": "Abstechbot",
+      "move_names": {
+        "Stab": "Abstechen"
+      },
+      "move_titles": [
+        "Abstechen"
+      ]
+    },
+    "TERROR_EEL": {
+      "name": "Furcht-Aal"
+    },
+    "TEST_SUBJECT": {
+      "moves": {
+        "BIG_POUNCE_MOVE": "Schwer anfallen",
+        "BITE_MOVE": "Beißen",
+        "BURNING_GROWL_MOVE": "Brennendes Fauchen",
+        "MULTI_CLAW_MOVE": "Multiklinge",
+        "PHASE3_LACERATE_MOVE": "Zerfleischen",
+        "POUNCE_MOVE": "Anfallen",
+        "RESPAWN_MOVE": "Wiederkehr",
+        "SKULL_BASH_MOVE": "Schädel schmettern"
+      },
+      "name": "Testsubjekt #C{Count}",
+      "move_names": {
+        "Big Pounce": "Schwer anfallen",
+        "Bite": "Beißen",
+        "Burning Growl": "Brennendes Fauchen",
+        "Multi-Claw": "Multiklinge",
+        "Lacerate": "Zerfleischen",
+        "Pounce": "Anfallen",
+        "Respawn": "Wiederkehr",
+        "Skull Bash": "Schädel schmettern"
+      },
+      "move_titles": [
+        "Schwer anfallen",
+        "Beißen",
+        "Brennendes Fauchen",
+        "Multiklinge",
+        "Zerfleischen",
+        "Anfallen",
+        "Wiederkehr",
+        "Schädel schmettern"
+      ]
+    },
+    "THE_ADVERSARY_MK_ONE": {
+      "moves": {
+        "BARRAGE": "Kreuzfeuer",
+        "BEAM": "Strahl",
+        "SMASH": "Schmettern"
+      },
+      "name": "Der Kontrahent Mod. 1",
+      "move_names": {
+        "Barrage": "Kreuzfeuer",
+        "Beam": "Strahl",
+        "Smash": "Schmettern"
+      },
+      "move_titles": [
+        "Kreuzfeuer",
+        "Strahl",
+        "Schmettern"
+      ]
+    },
+    "THE_ADVERSARY_MK_THREE": {
+      "moves": {
+        "BARRAGE": "Kreuzfeuer",
+        "CRASH": "Gegenkrachen",
+        "FLAME_BEAM": "Flammenstrahl"
+      },
+      "name": "Der Kontrahent Mod. 3",
+      "move_names": {
+        "Barrage": "Kreuzfeuer",
+        "Crash": "Gegenkrachen",
+        "Flame Beam": "Flammenstrahl"
+      },
+      "move_titles": [
+        "Kreuzfeuer",
+        "Gegenkrachen",
+        "Flammenstrahl"
+      ]
+    },
+    "THE_ADVERSARY_MK_TWO": {
+      "moves": {
+        "BARRAGE": "Kreuzfeuer",
+        "BASH": "Schmettern",
+        "FLAME_BEAM": "Flammenstrahl"
+      },
+      "name": "Der Kontrahent Mod. 2",
+      "move_names": {
+        "Barrage": "Kreuzfeuer",
+        "Bash": "Schmettern",
+        "Flame Beam": "Flammenstrahl"
+      },
+      "move_titles": [
+        "Kreuzfeuer",
+        "Schmettern",
+        "Flammenstrahl"
+      ]
+    },
+    "THE_ARM": {
+      "moves": {
+        "GRAB": "Greifen",
+        "PUNCH": "Schlagen",
+        "WRESTLE": "Ringen"
+      },
+      "name": "Der Arm",
+      "move_names": {
+        "Grab": "Greifen",
+        "Punch": "Schlagen",
+        "Wrestle": "Ringen"
+      },
+      "move_titles": [
+        "Greifen",
+        "Schlagen",
+        "Ringen"
+      ]
+    },
+    "THE_BELL": {
+      "moves": {
+        "CACOPHONY": "Kakophonie",
+        "CLANG": "Klong",
+        "RING": "Läuten"
+      },
+      "name": "Die Glocke",
+      "move_names": {
+        "Cacophony": "Kakophonie",
+        "Clang": "Klong",
+        "Ring": "Läuten"
+      },
+      "move_titles": [
+        "Kakophonie",
+        "Klong",
+        "Läuten"
+      ]
+    },
+    "THE_DREAMER": {
+      "moves": {
+        "DREAM": "Träumen",
+        "FEND_OFF": "Abwehren",
+        "RUMINATE": "Nachsinnen",
+        "SNORE": "Schnarchen"
+      },
+      "name": "Der Träumer",
+      "move_names": {
+        "Dream": "Träumen",
+        "Fend Off": "Abwehren",
+        "Ruminate": "Nachsinnen",
+        "Snore": "Schnarchen"
+      },
+      "move_titles": [
+        "Träumen",
+        "Abwehren",
+        "Nachsinnen",
+        "Schnarchen"
+      ]
+    },
+    "THE_FORGOTTEN": {
+      "moves": {
+        "DREAD": "Grauen",
+        "MIASMA": "Gestank"
+      },
+      "name": "Die Vergessene",
+      "move_names": {
+        "Dread": "Grauen",
+        "Miasma": "Gestank"
+      },
+      "move_titles": [
+        "Grauen",
+        "Gestank"
+      ]
+    },
+    "THE_INSATIABLE": {
+      "moves": {
+        "LIQUIFY_GROUND": "Boden verflüssigen",
+        "LUNGING_BITE": "Hervorstürzender Biss",
+        "SALIVATE": "Speicheln",
+        "THRASH": "Verdreschen"
+      },
+      "name": "Der Nimmersatt",
+      "move_names": {
+        "Liquify Ground": "Boden verflüssigen",
+        "Lunging Bite": "Hervorstürzender Biss",
+        "Salivate": "Speicheln",
+        "Thrash": "Verdreschen"
+      },
+      "move_titles": [
+        "Boden verflüssigen",
+        "Hervorstürzender Biss",
+        "Speicheln",
+        "Verdreschen"
+      ]
+    },
+    "THE_LOST": {
+      "moves": {
+        "DEBILITATING_SMOG": "Lähmender Dampf",
+        "EYE_LASERS": "Augenlaser"
+      },
+      "name": "Die Verlassene",
+      "move_names": {
+        "Debilitating Smog": "Lähmender Dampf",
+        "Eye Lasers": "Augenlaser"
+      },
+      "move_titles": [
+        "Lähmender Dampf",
+        "Augenlaser"
+      ]
+    },
+    "THE_OBSCURA": {
+      "moves": {
+        "HARDENING_STRIKE": "Härtender Schlag",
+        "ILLUSION": "Illusion",
+        "PIERCING_GAZE": "Stechender Blick",
+        "WAIL": "Heulen"
+      },
+      "name": "Die Obscura",
+      "move_names": {
+        "Hardening Strike": "Härtender Schlag",
+        "Piercing Gaze": "Stechender Blick",
+        "Wail": "Heulen"
+      },
+      "move_titles": [
+        "Härtender Schlag",
+        "Illusion",
+        "Stechender Blick",
+        "Heulen"
+      ]
+    },
+    "THIEVING_HOPPER": {
+      "moves": {
+        "ESCAPE": "Fliehen",
+        "FLUTTER": "Flattern",
+        "HAT_TRICK": "Hattrick",
+        "NAB": "Schnappen",
+        "THIEVERY": "Diebstahl"
+      },
+      "name": "Diebischer Hüpfer",
+      "move_names": {
+        "Escape": "Fliehen",
+        "Flutter": "Flattern",
+        "Hat Trick": "Hattrick",
+        "Nab": "Schnappen",
+        "Thievery": "Diebstahl"
+      },
+      "move_titles": [
+        "Fliehen",
+        "Flattern",
+        "Hattrick",
+        "Schnappen",
+        "Diebstahl"
+      ]
+    },
+    "TOADPOLE": {
+      "moves": {
+        "SPIKEN": "Stachel ausbilden",
+        "SPIKE_SPIT": "Stachel spucken",
+        "WHIRL": "Wirbeln"
+      },
+      "name": "Krötling",
+      "move_names": {
+        "Spiken": "Stachel ausbilden",
+        "Spike Spit": "Stachel spucken",
+        "Whirl": "Wirbeln"
+      },
+      "move_titles": [
+        "Stachel ausbilden",
+        "Stachel spucken",
+        "Wirbeln"
+      ]
+    },
+    "TORCH_HEAD_AMALGAM": {
+      "moves": {
+        "TACKLE": "Anpacken"
+      },
+      "name": "Fackelkopf-Amalgam",
+      "move_names": {
+        "Tackle": "Anpacken"
+      },
+      "move_titles": [
+        "Anpacken"
+      ]
+    },
+    "TOUGH_EGG": {
+      "moves": {
+        "HATCH": "SCHLÜPFEN"
+      },
+      "name": "Robustes Ei",
+      "move_names": {
+        "HATCH": "SCHLÜPFEN"
+      },
+      "move_titles": [
+        "SCHLÜPFEN"
+      ]
+    },
+    "TRACKER_RUBY_RAIDER": {
+      "moves": {
+        "HOUNDS": "Die Hunde loslassen",
+        "TRACK": "Verfolgen"
+      },
+      "name": "Fährtenplünderer",
+      "move_names": {
+        "Unleash the Hounds": "Die Hunde loslassen",
+        "Track": "Verfolgen"
+      },
+      "move_titles": [
+        "Die Hunde loslassen",
+        "Verfolgen"
+      ]
+    },
+    "TUNNELER": {
+      "moves": {
+        "BELOW": "Angriff von unten",
+        "BITE": "Beißen",
+        "BURROW": "Einwühlen",
+        "STRIKE": "Auftauch-Schlag"
+      },
+      "name": "Tunnler",
+      "move_names": {
+        "Attack from Below": "Angriff von unten",
+        "Bite": "Beißen",
+        "Burrow": "Einwühlen",
+        "Emerging Strike": "Auftauch-Schlag"
+      },
+      "move_titles": [
+        "Angriff von unten",
+        "Beißen",
+        "Einwühlen",
+        "Auftauch-Schlag"
+      ]
+    },
+    "TURRET_OPERATOR": {
+      "moves": {
+        "LOADING": "Laden",
+        "UNLOAD": "Entladen!"
+      },
+      "name": "Geschütz-Operateur",
+      "move_names": {
+        "Loading": "Laden",
+        "Unload!": "Entladen!"
+      },
+      "move_titles": [
+        "Laden",
+        "Entladen!"
+      ]
+    },
+    "TWIG_SLIME_M": {
+      "moves": {
+        "CHOMP": "Schnappen",
+        "POKEY_POUNCE": "Stocherstoß",
+        "STICKY_SHOT": "Klebriger Schuss"
+      },
+      "name": "Zweigschleim (mi.)",
+      "move_names": {
+        "Chomp": "Schnappen",
+        "Pokey Pounce": "Stocherstoß",
+        "Sticky Shot": "Klebriger Schuss"
+      },
+      "move_titles": [
+        "Schnappen",
+        "Stocherstoß",
+        "Klebriger Schuss"
+      ]
+    },
+    "TWIG_SLIME_S": {
+      "moves": {
+        "GOOP": "Pampe",
+        "TACKLE": "Anpacken"
+      },
+      "name": "Zweigschleim (kl.)",
+      "move_names": {
+        "Goop": "Pampe",
+        "Tackle": "Anpacken"
+      },
+      "move_titles": [
+        "Pampe",
+        "Anpacken"
+      ]
+    },
+    "TWO_TAILED_RAT": {
+      "moves": {
+        "CALL_FOR_BACKUP": "Verstärkung rufen",
+        "DISEASE_BITE": "Krankheitsbiss",
+        "SCRATCH": "Kratzen",
+        "SCREECH": "Kreischen"
+      },
+      "name": "Zweischwänzige Ratte",
+      "move_names": {
+        "Call for Backup": "Verstärkung rufen",
+        "Disease Bite": "Krankheitsbiss",
+        "Scratch": "Kratzen",
+        "Screech": "Kreischen"
+      },
+      "move_titles": [
+        "Verstärkung rufen",
+        "Krankheitsbiss",
+        "Kratzen",
+        "Kreischen"
+      ]
+    },
+    "VANTOM": {
+      "moves": {
+        "DISMEMBER": "Verstümmeln",
+        "INKY_LANCE": "Lanze voller Tinte",
+        "INK_BLOT": "Tintenklecks",
+        "PREPARE": "Vorbereiten"
+      },
+      "name": "Vantom",
+      "move_names": {
+        "Dismember": "Verstümmeln",
+        "Inky Lance": "Lanze voller Tinte",
+        "Ink Blot": "Tintenklecks",
+        "Prepare": "Vorbereiten"
+      },
+      "move_titles": [
+        "Verstümmeln",
+        "Lanze voller Tinte",
+        "Tintenklecks",
+        "Vorbereiten"
+      ]
+    },
+    "VINE_SHAMBLER": {
+      "moves": {
+        "CHOMP": "Schnappen",
+        "GRASPING_VINES": "Greifende Ranken",
+        "SWIPE": "Tatzenhieb"
+      },
+      "name": "Ranken-Schlurfer",
+      "move_names": {
+        "Chomp": "Schnappen",
+        "Grasping Vines": "Greifende Ranken",
+        "Swipe": "Tatzenhieb"
+      },
+      "move_titles": [
+        "Schnappen",
+        "Greifende Ranken",
+        "Tatzenhieb"
+      ]
+    },
+    "WATERFALL_GIANT": {
+      "moves": {
+        "PRESSURE_GUN": "Druckgewehr",
+        "PRESSURIZE": "Druck aufbauen",
+        "RAM": "Rammen",
+        "SIPHON": "Abschöpfen",
+        "STOMP": "Zerstampfen"
+      },
+      "name": "Wasserfall-Riese",
+      "move_names": {
+        "Pressure Gun": "Druckgewehr",
+        "Pressurize": "Druck aufbauen",
+        "Ram": "Rammen",
+        "Siphon": "Abschöpfen",
+        "Stomp": "Zerstampfen"
+      },
+      "move_titles": [
+        "Druckgewehr",
+        "Druck aufbauen",
+        "Rammen",
+        "Abschöpfen",
+        "Zerstampfen"
+      ]
+    },
+    "WRIGGLER": {
+      "moves": {
+        "PARASITIZE_PLAYER": "Spieler mit Parasiten befallen",
+        "WRIGGLE_STRIKE": "Schlängelschlag"
+      },
+      "name": "Schlängler",
+      "move_names": {
+        "Parasitize Player": "Spieler mit Parasiten befallen",
+        "Wriggle Strike": "Schlängelschlag"
+      },
+      "move_titles": [
+        "Spieler mit Parasiten befallen",
+        "Schlängelschlag"
+      ]
+    },
+    "ZAPBOT": {
+      "moves": {
+        "ZAP": "Blitz"
+      },
+      "name": "Blitzbot",
+      "move_names": {
+        "Zap": "Blitz"
+      },
+      "move_titles": [
+        "Blitz"
+      ]
+    }
   }
 }
