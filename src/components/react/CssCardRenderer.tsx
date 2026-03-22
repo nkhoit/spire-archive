@@ -311,7 +311,7 @@ function Sts2Renderer({ card, upgraded, size, locale = 'en' }: { card: any; upgr
   const upgradedNumbers = new Set<string>();
   if (upgraded) {
     const upg = card.upgrade ?? {};
-    if (upg.description) {
+    if (upg.description && locale === 'en') {
       description = upg.description;
       // Find numbers that changed value between base and upgraded descriptions
       // Only highlight numbers that are NEW values (not present anywhere in base)
@@ -324,7 +324,7 @@ function Sts2Renderer({ card, upgraded, size, locale = 'en' }: { card: any; upgr
       }
     } else {
       const vars = { ...(card.vars ?? {}) };
-      const template = (card as any).description_template as string | undefined;
+      const template = locale === 'en' ? (card as any).description_template as string | undefined : undefined;
       // Check if upgrade has any numeric deltas (not just keyword changes)
       const hasNumericUpgrade = Object.entries(upg).some(([k]) =>
         !['add_keywords', 'remove_keywords', 'description'].includes(k)
