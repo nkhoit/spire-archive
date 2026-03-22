@@ -211,17 +211,3 @@ export function t(key: string, locale: Locale | string = 'en'): string {
   if (locale === 'en') return key;
   return strings[key]?.[locale as Locale] ?? key;
 }
-
-/**
- * Get all translations as a flat object for client-side use.
- * Only includes strings that differ from English for the given locale.
- */
-export function getTranslations(locale: Locale | string): Record<string, string> {
-  if (locale === 'en') return {};
-  const result: Record<string, string> = {};
-  for (const [key, translations] of Object.entries(strings)) {
-    const val = translations[locale as Locale];
-    if (val) result[key] = val;
-  }
-  return result;
-}

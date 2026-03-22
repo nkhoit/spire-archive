@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import CssCardRenderer from './CssCardRenderer';
 import { t } from '../../lib/ui-strings';
-import { useUrlOffset } from './SimpleExplorer';
+import { useUrlOffset, type ApiResp } from './SimpleExplorer';
 
 type Card = {
   id: string;
@@ -18,8 +18,6 @@ type Card = {
   image_url?: string | null;
   star_cost?: number | null;
 };
-
-type ApiResp<T> = { total: number; offset: number; limit: number; items: T[] };
 
 const colorClasses: Record<string, string> = {
   ironclad: 'bg-red-500/15 text-red-200 ring-red-500/30',

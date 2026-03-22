@@ -409,7 +409,6 @@ async function loadBaseData(game: string): Promise<Dataset> {
     enchantmentById: toMap(enchantments),
   };
 
-  cache.set(game, dataset);
   return dataset;
 }
 
