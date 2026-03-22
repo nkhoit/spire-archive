@@ -49,17 +49,22 @@ const navLinks = game ? [
     <meta property="og:title" content={ogTitle ?? title} />
     <meta property="og:description" content={ogDescription ?? description} />
 
-    {/* hreflang tags for i18n SEO */}
+    {/* canonical + hreflang tags for i18n SEO */}
     {(() => {
       const locales = ['en', 'ja', 'ko', 'zh', 'de', 'fr', 'es', 'pt', 'it', 'pl', 'ru', 'tr', 'th'];
       const path = Astro.url.pathname;
       // Strip locale prefix to get the canonical path
       const localePrefix = locales.find(l => path.startsWith('/' + l + '/') || path === '/' + l);
       const canonicalPath = localePrefix ? path.slice(localePrefix.length + 1) : path;
-      return locales.map(l => {
-        const href = 'https://spire-archive.com' + (l === 'en' ? '' : '/' + l) + canonicalPath;
-        return <link rel="alternate" hreflang={l === 'zh' ? 'zh-Hans' : l} href={href} />;
-      });
+      const currentLocale = localePrefix || 'en';
+      const canonicalHref = 'https://spire-archive.com' + (currentLocale === 'en' ? '' : '/' + currentLocale) + canonicalPath;
+      return [
+        <link rel="canonical" href={canonicalHref} />,
+        ...locales.map(l => {
+          const href = 'https://spire-archive.com' + (l === 'en' ? '' : '/' + l) + canonicalPath;
+          return <link rel="alternate" hreflang={l === 'zh' ? 'zh-Hans' : l} href={href} />;
+        }),
+      ];
     })()}
     <link rel="alternate" hreflang="x-default" href={'https://spire-archive.com' + (() => {
       const locales = ['ja', 'ko', 'zh', 'de', 'fr', 'es', 'pt', 'it', 'pl', 'ru', 'tr', 'th'];

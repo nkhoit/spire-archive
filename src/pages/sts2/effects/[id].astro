@@ -12,7 +12,7 @@ const data = await getData('sts2', locale);
 const power = data.powers.find((p: any) => p.id === id);
 
 if (!power) {
-  return Astro.redirect('/effects');
+  return new Response(null, { status: 404, statusText: 'Not Found' });
 }
 
 // Find matching keyword

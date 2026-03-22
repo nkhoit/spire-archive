@@ -13,7 +13,7 @@ const power = data.powers.find((p: any) => p.id === id);
 const basePower = baseData.powers.find((p: any) => p.id === id);
 
 if (!power || !basePower) {
-  return Astro.redirect('/effects');
+  return new Response(null, { status: 404, statusText: 'Not Found' });
 }
 
 // Find matching keyword
