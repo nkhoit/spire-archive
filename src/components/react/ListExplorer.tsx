@@ -122,17 +122,17 @@ export default function ListExplorer<T>(props: {
 
   return (
     <div className="mt-4">
-      <div className="sticky top-[53px] z-[5] -mx-4 border-b border-white/[0.06] bg-[#0a0d13]/80 px-4 py-3 backdrop-blur-xl">
+      <div className="sticky top-[53px] z-[5] -mx-4 border-b border-white/[0.06] bg-[rgb(var(--bg-base-rgb)/0.8)] px-4 py-3 backdrop-blur-xl">
         <div className="flex gap-2">
           <input
-            className="flex-1 rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm transition-colors focus:border-amber-500/40 focus:outline-none"
+            className="flex-1 rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm transition-colors focus:border-[rgb(var(--accent-rgb)/0.45)] focus:outline-none"
             placeholder={t('Search', locale) + ' ' + t(title, locale).toLowerCase() + '…'}
             value={filterValues.q ?? ''}
             onChange={(e) => updateFilter('q', e.target.value)}
           />
           {extraFilters.length > 0 && (
             <button
-              className={`md:hidden rounded-md border px-3 py-2 text-xs font-medium transition-colors ${hasActiveFilters ? 'border-amber-500/40 bg-amber-500/10 text-amber-300' : 'border-white/[0.08] bg-white/[0.04] text-slate-400'}`}
+              className={`md:hidden rounded-md border px-3 py-2 text-xs font-medium transition-colors ${hasActiveFilters ? 'border-[rgb(var(--accent-rgb)/0.45)] bg-[rgb(var(--accent-rgb)/0.12)] text-[var(--accent-300)]' : 'border-white/[0.08] bg-white/[0.04] text-slate-400'}`}
               onClick={() => setFiltersOpen(!filtersOpen)}
             >
               ⚙ {hasActiveFilters ? '✦' : ''}
@@ -145,7 +145,7 @@ export default function ListExplorer<T>(props: {
             {extraFilters.map((filter) => (
               <select
                 key={filter.key}
-                className="rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm transition-colors focus:border-amber-500/40 focus:outline-none"
+                className="rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm transition-colors focus:border-[rgb(var(--accent-rgb)/0.45)] focus:outline-none"
                 value={filterValues[filter.key] ?? ''}
                 onChange={(e) => updateFilter(filter.key, e.target.value)}
               >

@@ -7,7 +7,7 @@ const { locale, langPrefix } = getLocale(Astro);
 ---
 <Layout title="Spire Archive" description="Slay the Spire companion — browse cards, relics, and more for STS1 and STS2.">
   <div class="flex flex-col items-center text-center mt-8">
-    <h1 class="text-3xl font-bold text-amber-200/90">Spire Archive</h1>
+    <h1 class="font-game text-3xl font-bold text-amber-200/90">Spire Archive</h1>
     <p class="mt-2 max-w-md text-sm text-slate-500">
       {t('Choose a game to get started.', locale)}
     </p>
@@ -17,10 +17,10 @@ const { locale, langPrefix } = getLocale(Astro);
     <a href={`${langPrefix}/sts1/`} class="group rounded-xl border border-white/[0.06] bg-white/[0.02] overflow-hidden hover:bg-white/[0.05] hover:border-white/[0.12] transition-all">
       <div class="relative">
         <img src="/images/sts1/banner_sm.jpg" alt="Slay the Spire" class="w-full h-44 object-cover opacity-70 group-hover:opacity-90 transition-opacity" />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0a0d13] via-transparent to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[var(--bg-base)] via-transparent to-transparent"></div>
       </div>
       <div class="p-5 -mt-6 relative">
-        <div class="text-lg font-bold">Slay the Spire</div>
+        <div class="font-game text-lg font-bold">Slay the Spire</div>
         <div class="mt-1.5 text-sm text-slate-500">{t('361 cards, 181 relics, 4 characters — the complete original game database.', locale)}</div>
         <div class="mt-3 text-xs text-amber-400/80 font-medium group-hover:text-amber-300">{t('Browse', locale)} →</div>
       </div>
@@ -29,10 +29,10 @@ const { locale, langPrefix } = getLocale(Astro);
     <a href={`${langPrefix}/sts2/`} class="group rounded-xl border border-white/[0.06] bg-white/[0.02] overflow-hidden hover:bg-white/[0.05] hover:border-white/[0.12] transition-all">
       <div class="relative">
         <img src="/images/sts2/landing.jpg" alt="Slay the Spire 2" class="w-full h-44 object-cover opacity-70 group-hover:opacity-90 transition-opacity" />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0a0d13] via-transparent to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[var(--bg-base)] via-transparent to-transparent"></div>
       </div>
       <div class="p-5 -mt-6 relative">
-        <div class="text-lg font-bold">Slay the Spire 2</div>
+        <div class="font-game text-lg font-bold">Slay the Spire 2</div>
         <div class="mt-1.5 text-sm text-slate-500">{t('577 cards, 289 relics, 5 characters — early access data from game files.', locale)}</div>
         <div class="mt-3 text-xs text-amber-400/80 font-medium group-hover:text-amber-300">{t('Browse', locale)} →</div>
       </div>

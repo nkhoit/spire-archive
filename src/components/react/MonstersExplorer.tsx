@@ -60,7 +60,7 @@ export default function MonstersExplorer(props: { game?: 'sts1' | 'sts2'; acts: 
           <div className="flex items-center gap-2">
             <span className="text-sm font-semibold">{monster.name}</span>
             <span className={`text-xs font-medium ${TYPE_COLORS[monster.type] ?? 'text-slate-300'}`}>{t(monster.type, itemLocale)}</span>
-            {(monster.acts ?? []).map((act) => <Badge key={act} label={t(act, itemLocale)} rounded="rounded-full" className="bg-sky-500/15 text-sky-300 ring-sky-500/30" />)}
+            {(monster.acts ?? []).map((act) => <Badge key={act} label={t(act, itemLocale)} rounded="rounded-full" className="bg-[rgb(var(--accent-rgb)/0.15)] text-[var(--accent-300)] ring-[rgb(var(--accent-rgb)/0.3)]" />)}
             {hpText && <span className="text-xs text-slate-400">{hpText}</span>}
           </div>
           {titles.length > 0 && <div className="mt-1 text-xs text-slate-400">{titles.join(' · ')}</div>}

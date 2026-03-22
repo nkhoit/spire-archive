@@ -80,9 +80,9 @@ const sts1IntentLabels: Record<string, { label: string; color: string }> = {
   BUFF: { label: 'Buff', color: 'text-amber-400' },
   DEBUFF: { label: 'Debuff', color: 'text-purple-400' },
   STRONG_DEBUFF: { label: 'Strong Debuff', color: 'text-purple-400' },
-  DEFEND: { label: 'Defend', color: 'text-sky-400' },
-  DEFEND_DEBUFF: { label: 'Defend + Debuff', color: 'text-sky-400' },
-  DEFEND_BUFF: { label: 'Defend + Buff', color: 'text-sky-400' },
+  DEFEND: { label: 'Defend', color: 'theme-link' },
+  DEFEND_DEBUFF: { label: 'Defend + Debuff', color: 'theme-link' },
+  DEFEND_BUFF: { label: 'Defend + Buff', color: 'theme-link' },
   ESCAPE: { label: 'Escape', color: 'text-slate-400' },
   MAGIC: { label: 'Magic', color: 'text-purple-400' },
   SLEEP: { label: 'Sleep', color: 'text-slate-500' },
@@ -146,8 +146,8 @@ for (const bp of baseData.powers ?? []) {
 <Layout game={game} title={title} description={isSts2 ? `${monster.type} · ${hpText ?? 'HP unknown'}` : `${monster.name} — ${actLabels[(monster as any).act] ?? (monster as any).act} ${monster.type}`}>
   {!isSts2 ? (
     <div class="max-w-2xl mx-auto">
-      <a href={langPrefix + `/${game}/monsters`} class="text-xs text-sky-400 hover:underline">← {t('Monsters', locale)}</a>
-      <h1 class="mt-2 text-2xl font-semibold">{monster.name}</h1>
+      <a href={langPrefix + `/${game}/monsters`} class="theme-link text-xs hover:underline">← {t('Monsters', locale)}</a>
+      <h1 class="font-game mt-2 text-2xl font-semibold">{monster.name}</h1>
       <div class="mt-2 flex flex-wrap gap-2">
         <Badge label={actLabels[(monster as any).act] ?? (monster as any).act} tone={actColors[(monster as any).act] ?? 'slate'} locale={locale} />
         <Badge label={monster.type} tone={typeColors[monster.type] ?? 'slate'} locale={locale} />
@@ -162,7 +162,7 @@ for (const bp of baseData.powers ?? []) {
 
       {(monster as any).moves?.length > 0 && (
         <section class="mt-6">
-          <h2 class="text-sm font-semibold text-slate-400 uppercase tracking-wide mb-3">{t('Moves', locale)}</h2>
+          <h2 class="font-game text-sm font-semibold text-slate-400 uppercase tracking-wide mb-3">{t('Moves', locale)}</h2>
           <div class="space-y-2">
             {(monster as any).moves.map((mv: any) => {
               const intent = sts1IntentLabels[mv.intent] ?? sts1IntentLabels.UNKNOWN;
@@ -180,8 +180,8 @@ for (const bp of baseData.powers ?? []) {
     </div>
   ) : (
     <>
-      <a href={langPrefix + '/sts2/monsters'} class="text-xs text-sky-400 hover:underline">← {t('Monsters', locale)}</a>
-      <h1 class="mt-2 text-2xl font-semibold">{monster.name}</h1>
+      <a href={langPrefix + '/sts2/monsters'} class="theme-link text-xs hover:underline">← {t('Monsters', locale)}</a>
+      <h1 class="font-game mt-2 text-2xl font-semibold">{monster.name}</h1>
       <div class="mt-2 flex flex-wrap items-center gap-2">
         <Badge label={monster.type} tone={typeTones[monster.type] ?? ''} locale={locale} />
         {((monster as any).acts ?? []).map((act: string) => <Badge label={act} tone="blue" locale={locale} />)}
@@ -191,7 +191,7 @@ for (const bp of baseData.powers ?? []) {
 
       {((monster as any).powers ?? []).length > 0 && (
         <section class="mt-6">
-          <h2 class="text-sm font-semibold text-slate-200">{t('Starting Powers', locale)}</h2>
+          <h2 class="font-game text-sm font-semibold text-slate-200">{t('Starting Powers', locale)}</h2>
           <div class="mt-2 space-y-1.5">
             {((monster as any).powers ?? []).map((p: any) => {
               const name = typeof p === 'string' ? p : p.name;
@@ -209,7 +209,7 @@ for (const bp of baseData.powers ?? []) {
 
       {movePattern.length > 0 && (
         <section class="mt-6">
-          <h2 class="text-sm font-semibold text-slate-200">{t('Move Pattern', locale)}</h2>
+          <h2 class="font-game text-sm font-semibold text-slate-200">{t('Move Pattern', locale)}</h2>
           {sequences.length > 0 && <div class="mt-3 space-y-2">{sequences.map((chain: any, ci: number) => <div class="flex flex-wrap items-center gap-1 text-xs text-slate-300">{sequences.length > 1 && <span class="text-[10px] text-slate-500 uppercase tracking-wider mr-1">{t('Phase', locale)} {ci + 1}:</span>}{chain.seq.map((moveId: string, i: number) => { const move = movePattern.find((m: any) => m.id === moveId); if (!move) return null; const isLast = i === chain.seq.length - 1; const isStart = ci === 0 && i === 0; if (move.type === 'random') { const branches = (move.branches ?? []).map((bid: string) => movePattern.find((m: any) => m.id === bid)).filter(Boolean); return <><span class="text-slate-500">→</span><span class="flex flex-wrap items-center gap-1 px-2 py-1 rounded bg-white/5 border border-dashed border-white/20"><span class="text-[10px] text-slate-500 mr-1">🎲</span>{branches.map((b: any, bi: number) => <><span class="px-1.5 py-0.5 rounded bg-white/10 text-xs">{intentIcons[b.intent?.type] ?? ''} {b.name}</span>{bi < branches.length - 1 && <span class="text-slate-500">/</span>}</>)}</span><span class="text-slate-500">↻</span></>; } return <><span class={`px-2 py-1 rounded ${isStart ? 'bg-amber-500/20 text-amber-200 border border-amber-500/30' : 'bg-white/10'}`}>{intentIcons[move.intent?.type] ?? ''} {move.name}</span>{!isLast && <span class="text-slate-500">→</span>}{isLast && move.loops && <span class="text-slate-500">↻</span>}</>; })}</div>)}</div>}
 
           <div class="mt-4 space-y-2">
@@ -236,7 +236,7 @@ for (const bp of baseData.powers ?? []) {
 
       {(!movePattern.length && (monster as any).moves?.length > 0) && (
         <section class="mt-6">
-          <h2 class="text-sm font-semibold text-slate-200">{t('Moves', locale)}</h2>
+          <h2 class="font-game text-sm font-semibold text-slate-200">{t('Moves', locale)}</h2>
           <div class="mt-3 space-y-2">{(monster as any).moves.map((mv: any) => { const dmgText = mv.damage != null ? (mv.hits && mv.hits > 1 ? `${mv.damage} × ${mv.hits}` : `${mv.damage}`) : null; return <div class="rounded-md border border-white/10 bg-white/5 p-3"><span class="text-sm font-semibold">{mv.name || mv.id || t('Unknown', locale)}</span>{dmgText && <span class="ml-2 text-sm text-red-300">⚔ {dmgText} {t('damage', locale)}</span>}</div>; })}</div>
         </section>
       )}

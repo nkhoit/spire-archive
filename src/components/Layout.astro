@@ -75,15 +75,15 @@ const navLinks = game ? [
 
     <!-- favicon intentionally omitted (optional) -->
   </head>
-  <body class="min-h-dvh bg-slate-950 text-slate-100">
-    <header class="sticky top-0 z-10 border-b border-white/[0.06] bg-[#0a0d13]/70 backdrop-blur-xl">
+  <body data-game={game} class="min-h-dvh bg-[var(--bg-base)] text-slate-100">
+    <header class="sticky top-0 z-10 border-b border-white/[0.06] bg-[rgb(var(--bg-base-rgb)/0.72)] backdrop-blur-xl">
       <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3">
         <div class="flex items-center gap-2 min-w-0">
           <a href={langPrefix + '/'} class="font-['KreonGame','Kreon',serif] text-base font-bold tracking-wide text-amber-200/90 hover:text-amber-100 transition-colors shrink-0">Spire Archive</a>
           {game && (
             <>
               <span class="text-white/15 hidden sm:inline">|</span>
-              <a href={langPrefix + '/' + game} class="text-sm font-medium text-slate-300 hover:text-white transition-colors hidden sm:inline">{gameLabels[game]}</a>
+              <a href={langPrefix + '/' + game} class="theme-link-subtle text-sm font-medium transition-colors hidden sm:inline">{gameLabels[game]}</a>
             </>
           )}
         </div>
@@ -91,18 +91,18 @@ const navLinks = game ? [
           <GlobalSearch client:load game={game} locale={locale} langPrefix={langPrefix} />
           {navLinks.length > 0 && (
             <div class="relative">
-              <button id="nav-toggle" class="p-1.5 rounded-md text-slate-300 hover:text-white hover:bg-white/10 transition-colors" aria-label="Toggle menu">
+              <button id="nav-toggle" class="p-1.5 rounded-md text-[var(--accent-300)] hover:text-[var(--accent-200)] hover:bg-white/10 transition-colors" aria-label="Toggle menu">
                 <svg id="nav-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
                 <svg id="nav-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
               </button>
-              <nav id="nav-dropdown" class="hidden absolute right-0 top-full mt-2 z-50 min-w-[180px] rounded-lg border border-white/[0.1] bg-[#0d1117] shadow-2xl shadow-black/80 py-1.5">
+              <nav id="nav-dropdown" class="hidden absolute right-0 top-full mt-2 z-50 min-w-[180px] rounded-lg border border-white/[0.1] bg-[rgb(var(--bg-base-rgb)/0.96)] shadow-2xl shadow-black/80 py-1.5">
                 {navLinks.map((link) => (
-                  <a class="block px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-white/[0.06] transition-colors" href={link.href}>{link.label}</a>
+                  <a class="block px-4 py-2 text-sm font-game theme-link hover:bg-white/[0.06] transition-colors" href={link.href}>{link.label}</a>
                 ))}
                 {game && (
                   <>
                     <div class="my-1.5 border-t border-white/[0.06]"></div>
-                    <a class="block px-4 py-2 text-sm text-slate-400 hover:text-white hover:bg-white/[0.06] transition-colors" href={langPrefix + (game === 'sts1' ? '/sts2' : '/sts1')}>
+                    <a class="block px-4 py-2 text-sm font-game text-slate-400 hover:text-[var(--accent-200)] hover:bg-white/[0.06] transition-colors" href={langPrefix + (game === 'sts1' ? '/sts2' : '/sts1')}>
                       {t('Switch to', locale)} {game === 'sts1' ? 'Spire 2' : 'Spire 1'}
                     </a>
                   </>
@@ -143,8 +143,8 @@ const navLinks = game ? [
       <div class="mx-auto max-w-7xl px-4 py-6 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500">
         <span><span class="font-['KreonGame','Kreon',serif] text-amber-200/40">Spire Archive</span> — {t('a Slay the Spire companion', locale)}</span>
         <div class="flex items-center gap-4">
-          <a href="/api-docs" class="hover:text-slate-300 transition-colors">API</a>
-          <a href="https://github.com/nkhoit/spire-archive" class="hover:text-slate-300 transition-colors">GitHub</a>
+          <a href="/api-docs" class="theme-link-subtle transition-colors">API</a>
+          <a href="https://github.com/nkhoit/spire-archive" class="theme-link-subtle transition-colors">GitHub</a>
         </div>
       </div>
     </footer>

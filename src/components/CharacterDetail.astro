@@ -43,9 +43,9 @@ const getRelicImgSrc = (r: any) => {
     alt=""
     class="absolute inset-0 w-full h-full object-cover opacity-30 blur-lg scale-110"
   />
-  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0d13]/50 to-[#0a0d13]"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[rgb(var(--bg-base-rgb)/0.5)] to-[var(--bg-base)]"></div>
   <div class="absolute bottom-0 left-0 right-0 px-6 pb-6" style="z-index: 1;">
-    <h1 class="text-3xl font-bold" style="font-family: 'KreonGame', 'Kreon', serif;">{character.name}</h1>
+    <h1 class="font-game text-3xl font-bold">{character.name}</h1>
     <p class="mt-1 text-sm text-slate-300 max-w-lg">{description}</p>
     <div class="mt-3 flex flex-wrap gap-2">
       <Badge label={color} tone={color} locale={locale} />
@@ -57,12 +57,12 @@ const getRelicImgSrc = (r: any) => {
 
 <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
   <section class="rounded-lg border border-white/[0.06] bg-white/[0.03] p-4">
-    <h2 class="text-sm font-semibold">{t('Starting Deck', locale)} ({startingDeck.reduce((s, d) => s + d.count, 0)} {t('Cards', locale)})</h2>
+    <h2 class="font-game text-sm font-semibold">{t('Starting Deck', locale)} ({startingDeck.reduce((s, d) => s + d.count, 0)} {t('Cards', locale)})</h2>
     <ul class="mt-2 space-y-1">
       {startingDeck.map(({ cardId, card, count }) => (
         <li class="text-sm flex items-center gap-2">
           <img src={`/images/${cardImageDir}/${cardId.toLowerCase()}.png`} alt="" class="w-6 h-5 object-cover rounded-sm shrink-0" />
-          <CardHoverLink client:load href={`${langPrefix}/${game}/cards/${cardId}`} card={card} game={game} locale={locale} className="text-sky-300 hover:text-sky-200 hover:underline">
+          <CardHoverLink client:load href={`${langPrefix}/${game}/cards/${cardId}`} card={card} game={game} locale={locale} className="font-game theme-link hover:underline">
             {card.name}{count > 1 ? ` ×${count}` : ''}
           </CardHoverLink>
         </li>
@@ -72,12 +72,12 @@ const getRelicImgSrc = (r: any) => {
 
   {startingRelic && (
     <section class="rounded-lg border border-white/[0.06] bg-white/[0.03] p-4">
-      <h2 class="text-sm font-semibold">{t('Starting Relic', locale)}</h2>
+      <h2 class="font-game text-sm font-semibold">{t('Starting Relic', locale)}</h2>
       <div class="mt-2 flex items-center gap-2">
         {hasRelicImages && (
           <img src={getRelicImgSrc(startingRelic)} alt="" class="w-8 h-8 object-contain" />
         )}
-        <a href={`${langPrefix}/${game}/relics/${startingRelic.id}`} class="text-sm text-sky-300 hover:text-sky-200 hover:underline">{startingRelic.name}</a>
+        <a href={`${langPrefix}/${game}/relics/${startingRelic.id}`} class="font-game text-sm theme-link hover:underline">{startingRelic.name}</a>
       </div>
       {startingRelic.description && <p class="mt-1 text-sm text-slate-300" set:html={replaceGameTokens(startingRelic.description, color)} />}
     </section>
@@ -86,16 +86,16 @@ const getRelicImgSrc = (r: any) => {
 
 {charCards.length > 0 && (
   <section class="mt-6">
-    <h2 class="text-lg font-semibold">{t('Cards', locale)} ({charCards.length})</h2>
+    <h2 class="font-game text-lg font-semibold">{t('Cards', locale)} ({charCards.length})</h2>
     <div class="mt-3 grid grid-cols-1 gap-4 md:grid-cols-3">
       {Array.from(cardsByType.entries()).sort().map(([type, cards]) => (
         <div class="rounded-lg border border-white/[0.06] bg-white/[0.03] p-4">
-          <h3 class="text-sm font-semibold capitalize">{t(type.charAt(0).toUpperCase() + type.slice(1) + 's', locale)} ({cards.length})</h3>
+          <h3 class="font-game text-sm font-semibold capitalize">{t(type.charAt(0).toUpperCase() + type.slice(1) + 's', locale)} ({cards.length})</h3>
           <ul class="mt-2 space-y-1">
             {cards.sort((a: any, b: any) => a.name.localeCompare(b.name)).map((c: any) => (
               <li class="flex items-center gap-2">
                 <img src={`/images/${cardImageDir}/${c.id.toLowerCase()}.png`} alt="" class="w-6 h-5 object-cover rounded-sm shrink-0" />
-                <CardHoverLink client:load href={`${langPrefix}/${game}/cards/${c.id}`} card={c} game={game} locale={locale} className="text-sm text-sky-300 hover:text-sky-200 hover:underline">{c.name}</CardHoverLink>
+                <CardHoverLink client:load href={`${langPrefix}/${game}/cards/${c.id}`} card={c} game={game} locale={locale} className="font-game text-sm theme-link hover:underline">{c.name}</CardHoverLink>
                 <span class="text-xs text-slate-400"> · {t(c.rarity, locale)} · {c.cost ?? 'X'}</span>
               </li>
             ))}
@@ -108,7 +108,7 @@ const getRelicImgSrc = (r: any) => {
 
 {charRelics.length > 0 && (
   <section class="mt-6">
-    <h2 class="text-lg font-semibold">{t('Exclusive Relics', locale)} ({charRelics.length})</h2>
+    <h2 class="font-game text-lg font-semibold">{t('Exclusive Relics', locale)} ({charRelics.length})</h2>
     <ul class="mt-3 divide-y divide-white/10 rounded-lg border border-white/[0.06] bg-white/[0.03]">
       {charRelics.map((r: any) => (
         <li class="p-3">
@@ -117,7 +117,7 @@ const getRelicImgSrc = (r: any) => {
               <img src={getRelicImgSrc(r)} alt="" class="w-8 h-8 object-contain shrink-0" />
             )}
             <div>
-              <a href={`${langPrefix}/${game}/relics/${r.id}`} class="text-sm font-semibold text-sky-300 hover:text-sky-200 hover:underline">{r.name}</a>
+              <a href={`${langPrefix}/${game}/relics/${r.id}`} class="font-game text-sm font-semibold theme-link hover:underline">{r.name}</a>
               <span class="ml-2 text-xs text-slate-400">{r[relicTierField]}</span>
             </div>
           </div>

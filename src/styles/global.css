@@ -15,12 +15,25 @@
 
 :root {
   color-scheme: dark;
-  --bg-base: #0a0d13;
+  --bg-base: #0c0a07;
+  --bg-base-rgb: 12 10 7;
+  --bg-elevated: #120f0a;
   --bg-surface: rgba(255, 255, 255, 0.03);
   --bg-surface-hover: rgba(255, 255, 255, 0.06);
   --border-subtle: rgba(255, 255, 255, 0.08);
-  --accent-amber: #d4a843;
-  --accent-amber-dim: rgba(212, 168, 67, 0.15);
+  --accent-200: #f5df9b;
+  --accent-300: #e8c96c;
+  --accent-400: #d9ab45;
+  --accent-500: #b57d2d;
+  --accent-rgb: 217 171 69;
+}
+
+body[data-game='sts2'] {
+  --accent-200: #b9f3df;
+  --accent-300: #72dec0;
+  --accent-400: #2fb592;
+  --accent-500: #1d8e73;
+  --accent-rgb: 47 181 146;
 }
 
 html {
@@ -31,8 +44,15 @@ html {
 /* Ambient background */
 body {
   background:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(212, 168, 67, 0.04), transparent),
-    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(56, 89, 120, 0.06), transparent),
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgb(var(--accent-rgb) / 0.06), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(120, 54, 32, 0.08), transparent),
+    var(--bg-base);
+}
+
+body[data-game='sts2'] {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgb(var(--accent-rgb) / 0.05), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(22, 78, 99, 0.08), transparent),
     var(--bg-base);
 }
 
@@ -40,9 +60,59 @@ a {
   color: inherit;
 }
 
-/* Kreon headings */
-h1, h2, h3 {
+/* Game typography */
+h1,
+h2 {
   font-family: 'KreonGame', 'Kreon', serif;
+}
+
+.font-game {
+  font-family: 'KreonGame', 'Kreon', serif;
+}
+
+.theme-link {
+  color: var(--accent-300);
+  transition: color 150ms ease, text-decoration-color 150ms ease, border-color 150ms ease, background-color 150ms ease;
+}
+.theme-link:hover {
+  color: var(--accent-200);
+}
+
+.theme-link-subtle {
+  color: rgb(var(--accent-rgb) / 0.8);
+  transition: color 150ms ease, text-decoration-color 150ms ease;
+}
+.theme-link-subtle:hover {
+  color: var(--accent-300);
+}
+
+.theme-kicker {
+  color: rgb(var(--accent-rgb) / 0.72);
+}
+
+.theme-title {
+  color: var(--accent-300);
+}
+
+.theme-bg {
+  background-color: rgb(var(--bg-base-rgb) / 0.8);
+}
+
+.theme-elevated {
+  background-color: rgb(var(--bg-base-rgb) / 0.92);
+}
+
+.theme-ring {
+  border-color: rgb(var(--accent-rgb) / 0.28);
+}
+
+.theme-panel-accent {
+  border-color: rgb(var(--accent-rgb) / 0.18);
+  background: linear-gradient(180deg, rgb(var(--accent-rgb) / 0.08), rgb(var(--accent-rgb) / 0.04));
+}
+
+.theme-choice-title {
+  color: var(--accent-300);
 }
 
 /* Glass panels */
