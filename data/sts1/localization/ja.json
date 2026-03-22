@@ -4593,5 +4593,600 @@
       ],
       "description": "このスタンスに移行したとき、 [W] [W] [W] を得る。アタックが3倍のダメージを与える。次のターン開始時、この スタンス を解除する。"
     }
+  },
+  "mechanics": {
+    "ascension": [
+      {
+        "level": 1,
+        "title": "登塔モードレベル1",
+        "description": "出現するエリートの数が増加する。"
+      },
+      {
+        "level": 2,
+        "title": "登塔モードレベル2",
+        "description": "通常の敵の攻撃力が増加する。"
+      },
+      {
+        "level": 3,
+        "title": "登塔モードレベル3",
+        "description": "エリートの攻撃力が増加する。"
+      },
+      {
+        "level": 4,
+        "title": "登塔モードレベル4",
+        "description": "ボスの攻撃力が増加する。"
+      },
+      {
+        "level": 5,
+        "title": "登塔モードレベル5",
+        "description": "ボス戦後の回復量が減少する。"
+      },
+      {
+        "level": 6,
+        "title": "登塔モードレベル6",
+        "description": "ダメージを受けた状態で侵攻を開始する。"
+      },
+      {
+        "level": 7,
+        "title": "登塔モードレベル7",
+        "description": "通常の敵のHPが増加する。"
+      },
+      {
+        "level": 8,
+        "title": "登塔モードレベル8",
+        "description": "エリートのHPが増加する。"
+      },
+      {
+        "level": 9,
+        "title": "登塔モードレベル9",
+        "description": "ボスのHPが増加する。"
+      },
+      {
+        "level": 10,
+        "title": "登塔モードレベル10",
+        "description": "呪いを受けた状態で侵攻を開始する。"
+      },
+      {
+        "level": 11,
+        "title": "登塔モードレベル11",
+        "description": "ポーションスロットの数が減少する。"
+      },
+      {
+        "level": 12,
+        "title": "登塔モードレベル12",
+        "description": "アップグレード済みのカードの出現率が減少する。"
+      },
+      {
+        "level": 13,
+        "title": "登塔モードレベル13",
+        "description": "ボスの持つゴールドが減少する。"
+      },
+      {
+        "level": 14,
+        "title": "登塔モードレベル14",
+        "description": "最大HPが減少する。"
+      },
+      {
+        "level": 15,
+        "title": "登塔モードレベル15",
+        "description": "イベントの内容がより厳しくなる。"
+      },
+      {
+        "level": 16,
+        "title": "登塔モードレベル16",
+        "description": "ショップの販売価格が上昇する。"
+      },
+      {
+        "level": 17,
+        "title": "登塔モードレベル17",
+        "description": "通常の敵がより強力な行動と能力を持つ。"
+      },
+      {
+        "level": 18,
+        "title": "登塔モードレベル18",
+        "description": "エリートがより強力な行動と能力を持つ。"
+      },
+      {
+        "level": 19,
+        "title": "登塔モードレベル19",
+        "description": "ボスがより強力な行動と能力を持つ。"
+      },
+      {
+        "level": 20,
+        "title": "登塔モードレベル20",
+        "description": "(最大レベル) ボスが2体登場する。"
+      }
+    ],
+    "map_rooms": [
+      {
+        "id": "UNKNOWN",
+        "title": "未知",
+        "description": "未知の部屋。\n\n出会うのは敵か、宝箱か、ショップか、はたまたまったく別のものか。"
+      },
+      {
+        "id": "SHOP",
+        "title": "商人",
+        "description": "部屋では不思議な商人が品物を売っている。\n\n稼いだ ゴールド はここで使おう！"
+      },
+      {
+        "id": "TREASURE",
+        "title": "宝箱",
+        "description": "皆が訪れたがるこの部屋では、 レリック や ゴールド が見つかる。"
+      },
+      {
+        "id": "REST",
+        "title": "休憩",
+        "description": "部屋ではHPを 回復 したり、カードを アップグレード したりできる。"
+      },
+      {
+        "id": "ENEMY",
+        "title": "敵",
+        "description": "部屋には通常の敵が潜んでいる。"
+      },
+      {
+        "id": "ELITE",
+        "title": "エリート",
+        "description": "強力な敵が潜んでいる。\n\n倒すと報酬としてレリックを1個もらえる。"
+      }
+    ],
+    "core_concepts": [
+      {
+        "id": "BLOCK",
+        "title": "ブロック",
+        "description": "次のターン開始時まで、ダメージを軽減する。"
+      },
+      {
+        "id": "EXHAUST",
+        "title": "廃棄",
+        "description": "廃棄されたカードは戦闘終了まで取り除かれる。"
+      },
+      {
+        "id": "ETHEREAL",
+        "title": "エーテリアル",
+        "description": "ターン終了時に手札にあると廃棄されるカードのタイプ。廃棄されたカードは戦闘終了まで取り除かれる。"
+      },
+      {
+        "id": "RETAIN",
+        "title": "保留",
+        "description": "保留したカードはターン終了時に手札に残る。"
+      },
+      {
+        "id": "STATUS",
+        "title": "状態異常",
+        "description": "状態異常カードは戦闘終了時に取り除かれる。"
+      },
+      {
+        "id": "CURSE",
+        "title": "呪い",
+        "description": "マイナス効果を持つカードのタイプ。デッキに残り続ける。"
+      },
+      {
+        "id": "DRAW_PILE",
+        "title": "戻る",
+        "description": "ターン開始時にここからカードを引く。"
+      },
+      {
+        "id": "DISCARD_PILE",
+        "title": "捨て札",
+        "description": "山札がすべてなくなると、これらのカードがシャッフルされて山札になる。"
+      },
+      {
+        "id": "ENERGY",
+        "title": "エナジー",
+        "description": "エナジー 不足だ。"
+      }
+    ],
+    "orbs": [
+      {
+        "id": "DARK",
+        "title": "ダーク",
+        "description": "自動効果: ターン終了時、このオーブのダメージが 増加する。\n解放: HPが最も少ない敵に ダメージを与える。",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "FROST",
+        "title": "フロスト",
+        "description": "自動効果: ターン終了時、 ブロック を得る。\n解放: ブロック を得る。",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "LIGHTNING",
+        "title": "ライトニング",
+        "description": "自動効果: ターン終了時、ランダムな敵に ダメージを与える。\n解放: ランダムな敵に ダメージを与える。",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "PLASMA",
+        "title": "プラズマ",
+        "description": "自動効果: ターン開始時、 Energy を得る。\n解放: Energy を得る。\nプラズマは 集中力 の影響を受けない。",
+        "passive": "",
+        "evoke": ""
+      }
+    ],
+    "stances": [
+      {
+        "id": "WRATH",
+        "title": "憤怒",
+        "description": "アタックで与えるダメージと、敵の攻撃から受けるダメージが2倍になる。"
+      },
+      {
+        "id": "CALM",
+        "title": "平静",
+        "description": "この スタンス を解除したとき、 Energy Energy を得る。"
+      },
+      {
+        "id": "DIVINITY",
+        "title": "神聖",
+        "description": "この スタンス に移行したとき、 Energy Energy Energy を得る。アタックが3倍のダメージを与える。次のターン開始時、この スタンス を解除する。"
+      }
+    ],
+    "character_mechanics": [],
+    "keywords": [
+      {
+        "id": "ARTIFACT",
+        "names": [
+          "人の作りし物"
+        ],
+        "description": "次に受けるデバフを打ち消す。"
+      },
+      {
+        "id": "BLOCK",
+        "names": [
+          "ブロック",
+          "ブロック"
+        ],
+        "description": "次のターン開始時まで、ダメージを軽減する。"
+      },
+      {
+        "id": "BURN",
+        "names": [
+          "火傷",
+          "火傷"
+        ],
+        "description": "使用不可の状態異常カードで、ダメージを受ける。"
+      },
+      {
+        "id": "CHANNEL",
+        "names": [
+          "生成",
+          "生成"
+        ],
+        "description": "オーブを先頭の空きスロットに生成する。空きスロットがない場合は、先頭のオーブを自動的に 解放 して空きを作る。"
+      },
+      {
+        "id": "CONFUSED",
+        "names": [
+          "混乱"
+        ],
+        "description": "カードを引くたび、コストがランダムに変化する。"
+      },
+      {
+        "id": "CURSE",
+        "names": [
+          "呪い"
+        ],
+        "description": "マイナス効果を持つカードのタイプ。デッキに残り続ける。"
+      },
+      {
+        "id": "DARK",
+        "names": [
+          "ダーク",
+          "ダーク+"
+        ],
+        "description": "オーブ: 毎ターンダメージが増加する。 解放 すると、HPが最も少ない敵にダメージを与える。"
+      },
+      {
+        "id": "DAZED",
+        "names": [
+          "めまい"
+        ],
+        "description": "めまいは使用不可の状態異常カード。"
+      },
+      {
+        "id": "DEXTERITY",
+        "names": [
+          "敏捷性"
+        ],
+        "description": "カードから得るブロック値を増加する。"
+      },
+      {
+        "id": "ETHEREAL",
+        "names": [
+          "エーテリアル"
+        ],
+        "description": "ターン終了時に手札にあると廃棄されるカードのタイプ。廃棄されたカードは戦闘終了まで取り除かれる。"
+      },
+      {
+        "id": "EVOKE",
+        "names": [
+          "解放",
+          "解放"
+        ],
+        "description": "一番右にあるオーブを発動して、その解放時の効果を引き起こす。"
+      },
+      {
+        "id": "EXHAUST",
+        "names": [
+          "廃棄",
+          "廃棄",
+          "廃棄"
+        ],
+        "description": "廃棄されたカードは戦闘終了まで取り除かれる。"
+      },
+      {
+        "id": "FOCUS",
+        "names": [
+          "集中力"
+        ],
+        "description": "生成 しているオーブの効果を増加する。"
+      },
+      {
+        "id": "FRAIL",
+        "names": [
+          "脆弱化"
+        ],
+        "description": "カードから得る ブロック 値が 25% 減少する。"
+      },
+      {
+        "id": "FROST",
+        "names": [
+          "フロスト",
+          "フロスト+"
+        ],
+        "description": "オーブ: ブロック を得る。"
+      },
+      {
+        "id": "INNATE",
+        "names": [
+          "天賦"
+        ],
+        "description": "戦闘開始時に手札に含まれるカードのタイプ。"
+      },
+      {
+        "id": "INTANGIBLE",
+        "names": [
+          "無形"
+        ],
+        "description": "すべての被ダメージとHPを失う効果を 1 に軽減。"
+      },
+      {
+        "id": "LIGHTNING",
+        "names": [
+          "ライトニング",
+          "ライトニング+"
+        ],
+        "description": "オーブ: ランダムな敵にダメージを与える。"
+      },
+      {
+        "id": "LOCKED",
+        "names": [
+          "ロック中"
+        ],
+        "description": "このカードはまだアンロックされていない。"
+      },
+      {
+        "id": "LOCK_ON",
+        "names": [
+          "ロックオン"
+        ],
+        "description": "ロックオン対象は、オーブから受けるダメージが 50% 増加する。"
+      },
+      {
+        "id": "OPENER",
+        "names": [
+          "オープナー"
+        ],
+        "description": "各ターンの最初のカードとしてのみ使用できるカード。"
+      },
+      {
+        "id": "PLASMA",
+        "names": [
+          "プラズマ",
+          "プラズマ+"
+        ],
+        "description": "オーブ: エナジーを得る。"
+      },
+      {
+        "id": "POISON",
+        "names": [
+          "毒",
+          "毒"
+        ],
+        "description": "自身のターン開始時にHPを失う。毒は毎ターン 1 ずつ減少する。"
+      },
+      {
+        "id": "RETAIN",
+        "names": [
+          "保留",
+          "retains",
+          "retained"
+        ],
+        "description": "保留したカードはターン終了時に手札に残る。"
+      },
+      {
+        "id": "SHIV",
+        "names": [
+          "ナイフ",
+          "ナイフ"
+        ],
+        "description": "0 コストのアタックカード。廃棄される。"
+      },
+      {
+        "id": "STATUS",
+        "names": [
+          "状態異常"
+        ],
+        "description": "状態異常カードは戦闘終了時に取り除かれる。"
+      },
+      {
+        "id": "STRENGTH",
+        "names": [
+          "筋力"
+        ],
+        "description": "アタックに追加ダメージを加える。"
+      },
+      {
+        "id": "STRIKE",
+        "names": [
+          "ストライク"
+        ],
+        "description": "「ストライク」と名前に付くすべてのカード。"
+      },
+      {
+        "id": "THORNS",
+        "names": [
+          "トゲ"
+        ],
+        "description": "アタック ダメージを受けるたび、反撃ダメージを与える。"
+      },
+      {
+        "id": "TODO",
+        "names": [
+          "ToDo",
+          "JUST FOR DEVS, DONT TRANSLATE",
+          "JUST FOR DEVS, DONT TRANSLATE",
+          "JUST FOR DEVS, DONT TRANSLATE",
+          "JUST FOR DEVS, DONT TRANSLATE"
+        ],
+        "description": "このカードは実装されていません。修正が必要です。"
+      },
+      {
+        "id": "TRANSFORM",
+        "names": [
+          "変化"
+        ],
+        "description": "対象のカードは、レア度を問わずランダムに選ばれたカードに変化する。"
+      },
+      {
+        "id": "UNKNOWN",
+        "names": [
+          "未知"
+        ],
+        "description": "このカードはまだ発見されていない。"
+      },
+      {
+        "id": "UNPLAYABLE",
+        "names": [
+          "使用不可"
+        ],
+        "description": "手札から自由に使用できないカード。"
+      },
+      {
+        "id": "UPGRADE",
+        "names": [
+          "アップグレード",
+          "アップグレード"
+        ],
+        "description": "カードをアップグレードするとより強力になる。カードは一度しかアップグレードできない。"
+      },
+      {
+        "id": "VOID",
+        "names": [
+          "虚無",
+          "虚無"
+        ],
+        "description": "使用不可の状態異常カードで、引いた時にエナジーを消費する。"
+      },
+      {
+        "id": "VULNERABLE",
+        "names": [
+          "弱体化"
+        ],
+        "description": "アタックで受けるダメージが 50% 増加する。"
+      },
+      {
+        "id": "WEAK",
+        "names": [
+          "脱力",
+          "脱力",
+          "脱力",
+          "脱力"
+        ],
+        "description": "アタックで与えるダメージが 25% 減少する。"
+      },
+      {
+        "id": "WOUND",
+        "names": [
+          "負傷",
+          "負傷"
+        ],
+        "description": "負傷は使用不可の状態異常カード。"
+      },
+      {
+        "id": "WRATH",
+        "names": [
+          "憤怒"
+        ],
+        "description": "この スタンス の間、与えるダメージと受けるダメージが2倍になる。"
+      },
+      {
+        "id": "FATAL",
+        "names": [
+          "致命"
+        ],
+        "description": "このカードでミニオン以外の敵を倒すたびに発動する。"
+      },
+      {
+        "id": "STANCE",
+        "names": [
+          "スタンス",
+          "スタンス"
+        ],
+        "description": "スタンスは一度に1つしか持てない。"
+      },
+      {
+        "id": "PRAYER",
+        "names": [
+          "マントラ",
+          "暴力による救済"
+        ],
+        "description": "マントラ を 10 得ると 神聖 スタンスに移行する。"
+      },
+      {
+        "id": "VIGOR",
+        "names": [
+          "活力"
+        ],
+        "description": "次のアタックが追加ダメージを与える。"
+      },
+      {
+        "id": "SCRY",
+        "names": [
+          "占術"
+        ],
+        "description": "山札を上からX枚見て、その中から好きなだけカードを捨てる。"
+      },
+      {
+        "id": "RITUAL",
+        "names": [
+          "儀式"
+        ],
+        "description": "自身のターン終了時に 筋力 を得る。"
+      },
+      {
+        "id": "REGEN",
+        "names": [
+          "再生"
+        ],
+        "description": "自身のターン終了時にHPを回復する。再生はターンごとに 1 ずつ減っていく。"
+      },
+      {
+        "id": "CALM",
+        "names": [
+          "平静"
+        ],
+        "description": "この スタンス を解除したとき、 Energy Energy を得る。"
+      },
+      {
+        "id": "DIVINITY",
+        "names": [
+          "神聖"
+        ],
+        "description": "このスタンスに移行したとき、 Energy Energy Energy を得る。アタックが3倍のダメージを与える。次のターン開始時、この スタンス を解除する。"
+      }
+    ]
   }
 }

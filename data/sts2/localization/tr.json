@@ -5472,5 +5472,259 @@
       "description": "Bu kart ilk oynanışında fazladan {Amount} hasar verir.",
       "name": "Güçlü"
     }
+  },
+  "mechanics": {
+    "ascension": [
+      {
+        "level": 0,
+        "title": "Yükseliş Kapalı",
+        "description": "Yükseliş kuralları olmadan oyna."
+      },
+      {
+        "level": 1,
+        "title": "Elit Yağmuru",
+        "description": "Elitler daha sık ortaya çıkar."
+      },
+      {
+        "level": 2,
+        "title": "Yorgun Yolcu",
+        "description": "Kadimler eksik canının sadece %80'ini iyileştirir."
+      },
+      {
+        "level": 3,
+        "title": "Yoksulluk",
+        "description": "Düşmanlar ve Hazine Sandıkları %25 daha az Altın düşürür."
+      },
+      {
+        "level": 4,
+        "title": "Dar Kemer",
+        "description": "Her oyuna 1 eksik iksir yuvası ile başla."
+      },
+      {
+        "level": 5,
+        "title": "Yükselenin Belası",
+        "description": "Her oyuna Lanetli başla."
+      },
+      {
+        "level": 6,
+        "title": "Kasvet",
+        "description": "Daha az Dinlenme Yerleri."
+      },
+      {
+        "level": 7,
+        "title": "Kıtlık",
+        "description": "Nadir ve Geliştirilmiş kartlar daha az sıklıkla belirir."
+      },
+      {
+        "level": 8,
+        "title": "Dayanıklı Düşmanlar",
+        "description": "Tüm düşmanları öldürmek daha zor hale gelir."
+      },
+      {
+        "level": 9,
+        "title": "Ölümcül Düşmanlar",
+        "description": "Tüm düşmanların saldırıları daha ölümcül olur."
+      },
+      {
+        "level": 10,
+        "title": "Çifte Boss",
+        "description": "3. Sahne'nin sonunda iki boss ile yüzleş."
+      }
+    ],
+    "map_rooms": [
+      {
+        "id": "ROOM_ENEMY",
+        "title": "Düşman",
+        "description": "Bu odalarda saldırgan düşmanlar bulunur."
+      },
+      {
+        "id": "ROOM_ELITE",
+        "title": "Elit",
+        "description": "Bu odalarda güçlü düşmanlar bulunur.\n\nOnları alt etmek, sana bir Kalıntı kazandırır."
+      },
+      {
+        "id": "ROOM_BOSS",
+        "title": "Boss",
+        "description": "Bu bölgedeki en ölümcül düşman.\n\nOnları alt etmek, bir sonraki Sahne'ye geçmeni sağlayacak."
+      },
+      {
+        "id": "ROOM_EVENT",
+        "title": "Etkinlik",
+        "description": "Bu odalarda sıra dışı şeyler yaşanır..."
+      },
+      {
+        "id": "ROOM_MERCHANT",
+        "title": "Dükkan",
+        "description": "Esrarengiz Tüccar, bu odalarda mallarını satar.\n\nKazandığın Altın’ı burada harca!"
+      },
+      {
+        "id": "ROOM_REST",
+        "title": "Dinlenme Yeri",
+        "description": "Bu odalara uğrayarak bir miktar CP İyileştir veya bir kartı Geliştir."
+      },
+      {
+        "id": "ROOM_TREASURE",
+        "title": "Hazine Odası",
+        "description": "Bu gözde odalarda Kalıntılar ve Altın bulunabilir."
+      },
+      {
+        "id": "ROOM_ANCIENT",
+        "title": "Kadim",
+        "description": "Bu odalar Kadimlere ev sahipliği yapar.\n\nSana eşi benzeri görülmemiş nimetleri, hazineleri ve bilgeliklerini sunarlar."
+      }
+    ],
+    "core_concepts": [
+      {
+        "id": "ENERGY",
+        "title": "Enerji",
+        "description": "Enerji, El'indeki kartları oynamak için kullanılır."
+      },
+      {
+        "id": "BLOCK",
+        "title": "Blok",
+        "description": "Bir sonraki tura kadar hasarı engeller."
+      },
+      {
+        "id": "HIT_POINTS",
+        "title": "Can Puanı (CP)",
+        "description": "Sahip olduğun CP biterse ölürsün."
+      },
+      {
+        "id": "MONEY_POUCH",
+        "title": "Altın",
+        "description": "Sahip olduğun Altın miktarı. Altın, Spire içindeki para birimidir."
+      },
+      {
+        "id": "DRAW_PILE",
+        "title": "Çekme Destesi (A)",
+        "description": "Her turun başında\nburadan 5 kart çekilir.\n\nKarışık sırayla dizilmiş çekme desteni göstermek için tıkla."
+      },
+      {
+        "id": "DISCARD_PILE",
+        "title": "Atık Destesi (S)",
+        "description": "Eğer çekme desten boşsa, atık desten çekme destene karıştırılır.\n\nAtık destendeki kartları göstermek için tıkla."
+      },
+      {
+        "id": "EXHAUST_PILE",
+        "title": "Tüketilen Kartlar (X)",
+        "description": "Bu savaşta Tüketilen kartları göstermek için tıkla."
+      }
+    ],
+    "orbs": [
+      {
+        "id": "LIGHTNING",
+        "title": "Yıldırım",
+        "description": "Pasif: Turunun sonunda rastgele bir düşmana {Passive} hasar ver.\nTetikle: Rastgele bir düşmana {Evoke} hasar ver.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "FROST",
+        "title": "Buz",
+        "description": "Pasif: Turunun sonunda {Passive} Blok elde et.\nTetikle: {Evoke} Blok elde et.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "DARK",
+        "title": "Karanlık",
+        "description": "Pasif: Turunun sonunda bu Küre'nin hasarını {Passive} artır.\nTetikle: En düşük CP'ye sahip düşmana {Evoke} hasar ver.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "PLASMA",
+        "title": "Plazma",
+        "description": "Pasif: Turunun başında\n1 Energy elde et.\nTetikle: 2 Energy elde et.\nPlazma, Odak'tan etkilenmez.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "GLASS",
+        "title": "Cam",
+        "description": "Pasif: Turunun sonunda TÜM düşmanlara {Passive} hasar ver ve bu kürenin değerini 1 azalt.\nTetikle: TÜM düşmanlara {Evoke} hasar ver.",
+        "passive": "",
+        "evoke": ""
+      }
+    ],
+    "stances": [],
+    "character_mechanics": [
+      {
+        "id": "STAR_COUNT",
+        "title": "Yıldızlar",
+        "description": "Mevcut Yıldız (★) adedin. Naip'in kartlarını oynamak ★ gerektirebilir."
+      },
+      {
+        "id": "SUMMON",
+        "title": "Çağır",
+        "description": "Osti'yi çağır.\nEğer önceden çağrılmışsa, bu savaş için Maksimum CP'sini artır."
+      },
+      {
+        "id": "FORGE",
+        "title": "Döv",
+        "description": "Her savaşta ilk kez Dövdüğünde El'ine Egemen Kılıcı'nı eklersin. Egemen Kılıcı'na fazladan hasar ekler."
+      },
+      {
+        "id": "REPLAY",
+        "title": "Yeniden Oyna",
+        "description": "Bu kartı fazladan bir kez daha oynar."
+      },
+      {
+        "id": "FATAL",
+        "title": "Ölümcül",
+        "description": "Bu kart, yancı olmayan bir düşmanı öldürdüğünde tetiklenir."
+      }
+    ],
+    "keywords": [
+      {
+        "id": "ETERNAL",
+        "names": [
+          "Sonsuz"
+        ],
+        "description": "Dönüştürülemez veya Deste'nden çıkarılamaz."
+      },
+      {
+        "id": "ETHEREAL",
+        "names": [
+          "Ruhani"
+        ],
+        "description": "Eğer bu kart turun sonunda El'inde kalırsa Tüketilir."
+      },
+      {
+        "id": "EXHAUST",
+        "names": [
+          "Tüket"
+        ],
+        "description": "Savaşın sonuna kadar kaldırılır."
+      },
+      {
+        "id": "INNATE",
+        "names": [
+          "Yerleşik"
+        ],
+        "description": "Her savaşa El'inde bu kartla başla."
+      },
+      {
+        "id": "RETAIN",
+        "names": [
+          "Sakla"
+        ],
+        "description": "Saklanan kartlar tur sonunda elden çıkarılmaz."
+      },
+      {
+        "id": "SLY",
+        "names": [
+          "Kurnaz"
+        ],
+        "description": "Bu kartı turun bitmeden El'inden çıkartırsan ücretsiz oynarsın."
+      },
+      {
+        "id": "UNPLAYABLE",
+        "names": [
+          "Oynanamaz"
+        ],
+        "description": "Bu kart Oynanamaz."
+      }
+    ]
   }
 }

@@ -5208,5 +5208,259 @@
       "description": "Gdy zagrasz tę kartę po raz pierwszy w walce, zadaje dodatkowo {Amount} pkt. obrażeń.",
       "name": "Werwa"
     }
+  },
+  "mechanics": {
+    "ascension": [
+      {
+        "level": 0,
+        "title": "Bez Wyniesienia",
+        "description": "Graj bez utrudnień Wyniesienia."
+      },
+      {
+        "level": 1,
+        "title": "Elitarna horda",
+        "description": "Elitarni przeciwnicy pojawiają się częściej."
+      },
+      {
+        "level": 2,
+        "title": "Strudzony podróżnik",
+        "description": "Starożytni przywracają tylko 80% brakujących PŻ."
+      },
+      {
+        "level": 3,
+        "title": "Bieda",
+        "description": "Przeciwnicy i Skarby upuszczają 25% mniej Złota."
+      },
+      {
+        "level": 4,
+        "title": "Ciasny pas",
+        "description": "Zaczynasz wyprawę z jednym miejscem na miksturę mniej."
+      },
+      {
+        "level": 5,
+        "title": "Zmora wyniesionego",
+        "description": "Zaczynasz wyprawę z Klątwą."
+      },
+      {
+        "level": 6,
+        "title": "Mrok",
+        "description": "Na mapie pojawia się mniej Obozowisk."
+      },
+      {
+        "level": 7,
+        "title": "Niedobór",
+        "description": "Rzadkie i Ulepszone karty pojawiają się rzadziej."
+      },
+      {
+        "level": 8,
+        "title": "Wytrzymali przeciwnicy",
+        "description": "Wszyscy przeciwnicy są wytrzymalsi."
+      },
+      {
+        "level": 9,
+        "title": "Zabójczy przeciwnicy",
+        "description": "Wszyscy przeciwnicy zadają większe obrażenia."
+      },
+      {
+        "level": 10,
+        "title": "Podwójny boss",
+        "description": "Walczysz z dwoma bossami na koniec Aktu 3."
+      }
+    ],
+    "map_rooms": [
+      {
+        "id": "ROOM_ENEMY",
+        "title": "Przeciwnik",
+        "description": "Przeciwnicy okupują to pomieszczenie."
+      },
+      {
+        "id": "ROOM_ELITE",
+        "title": "Elitarny",
+        "description": "Potężni przeciwnicy okupują to pomieszczenie.\n\nZa ich pokonanie otrzymasz Artefakt."
+      },
+      {
+        "id": "ROOM_BOSS",
+        "title": "Boss",
+        "description": "Najgroźniejszy przeciwnik.\n\nZa jego pokonanie dostaniesz się do następnego Aktu."
+      },
+      {
+        "id": "ROOM_EVENT",
+        "title": "Unikalna",
+        "description": "W tym pomieszczeniu dzieje się coś niespotykanego..."
+      },
+      {
+        "id": "ROOM_MERCHANT",
+        "title": "Handlarz",
+        "description": "W tym pomieszczeniu spotkasz Handlarza sprzedającego różnorodne towary.\n\nMożesz tutaj wydać całe ciężko zarobione Złoto!"
+      },
+      {
+        "id": "ROOM_REST",
+        "title": "Obozowisko",
+        "description": "W tym pomieszczeniu możesz przywrócić utracone PŻ lub Ulepszyć kartę."
+      },
+      {
+        "id": "ROOM_TREASURE",
+        "title": "Skarb",
+        "description": "W tym pomieszczeniu znajdziesz Artefakty oraz Złoto."
+      },
+      {
+        "id": "ROOM_ANCIENT",
+        "title": "Starożytny",
+        "description": "W tym pomieszczeniu przebywa Starożytny.\n\nOtrzymasz od niego specjalne wzmocnienia, drogocenne skarby oraz przydatną wiedzę."
+      }
+    ],
+    "core_concepts": [
+      {
+        "id": "ENERGY",
+        "title": "Energia",
+        "description": "Energia jest używana do zagrywania kart z ręki."
+      },
+      {
+        "id": "BLOCK",
+        "title": "Blok",
+        "description": "Pochłania otrzymywane obrażenia."
+      },
+      {
+        "id": "HIT_POINTS",
+        "title": "Punkty Życia (PŻ)",
+        "description": "Kiedy skończą ci się PŻ, umierasz."
+      },
+      {
+        "id": "MONEY_POUCH",
+        "title": "Złoto",
+        "description": "Pokazuje, ile posiadasz Złota. Jest ono główną walutą w Iglicy."
+      },
+      {
+        "id": "DRAW_PILE",
+        "title": "Stos rozgrywający (A)",
+        "description": "Na początku każdej tury\ndobierasz stąd 5 kart.\n\nKliknij, aby wyświetlić (potasowane) karty na stosie rozgrywającym."
+      },
+      {
+        "id": "DISCARD_PILE",
+        "title": "Stos kart odrzuconych (S)",
+        "description": "Jeżeli stos rozgrywający jest pusty, stos kart odrzuconych zostanie do niego wtasowany.\n\nKliknij, aby wyświetlić karty na stosie kart odrzuconych."
+      },
+      {
+        "id": "EXHAUST_PILE",
+        "title": "Wyczerpane karty (X)",
+        "description": "Kliknij, aby wyświetlić karty Wyczerpane w tej walce."
+      }
+    ],
+    "orbs": [
+      {
+        "id": "LIGHTNING",
+        "title": "Grom",
+        "description": "Umiejętność pasywna: Na koniec tury zadaj {Passive} pkt. obrażeń losowemu przeciwnikowi.\nWyładowanie: Zadaj {Evoke} pkt. obrażeń losowemu przeciwnikowi.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "FROST",
+        "title": "Mróz",
+        "description": "Umiejętność bierna: Na koniec tury zyskaj {Passive} pkt. Bloku.\nWyładowanie: Zyskaj {Evoke} pkt. Bloku.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "DARK",
+        "title": "Ciemność",
+        "description": "Umiejętność bierna: Na koniec tury zwiększ obrażenia zadawane przez Sferę o {Passive} pkt.\nWyładowanie: Zadaj {Evoke} pkt. obrażeń przeciwnikowi z najmniejszą liczbą PŻ.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "PLASMA",
+        "title": "Plazma",
+        "description": "Umiejętność pasywna: Na początku tury\nzyskaj 1 Energy.\nWyładowanie: Zyskaj 2 Energy.\nSkupienie nie wpływa na Plazmę.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "GLASS",
+        "title": "Szkło",
+        "description": "Umiejętność pasywna: Na koniec tury zadaj {Passive} pkt. obrażeń WSZYSTKIM przeciwnikom i zmniejsz wartość Sfery o 1 pkt.\nWyładowanie: Zadaj {Evoke} pkt. obrażeń WSZYSTKIM przeciwnikom.",
+        "passive": "",
+        "evoke": ""
+      }
+    ],
+    "stances": [],
+    "character_mechanics": [
+      {
+        "id": "STAR_COUNT",
+        "title": "Gwiazdy",
+        "description": "Twoja obecna liczba Gwiazd (★). Karty Monarchy mogą wymagać ★ do zagrania."
+      },
+      {
+        "id": "SUMMON",
+        "title": "Przywołaj",
+        "description": "Przywołaj Kostka.\nJeżeli jest już przywołany, zwiększ jego maks. PŻ w tej walce."
+      },
+      {
+        "id": "FORGE",
+        "title": "Wykuj",
+        "description": "Gdy zagrasz kartę z Wykuj po raz pierwszy w walce, dodaj Niebańskie Ostrze do ręki. Zwiększ obrażenia zadawane przez Niebiańskie Ostrze."
+      },
+      {
+        "id": "REPLAY",
+        "title": "Powtórka",
+        "description": "Karta jest zagrywana dodatkowy raz."
+      },
+      {
+        "id": "FATAL",
+        "title": "Uśmiercenie",
+        "description": "Efekt aktywuje się, gdy ta karta zabije przeciwnika, który nie jest stworkiem."
+      }
+    ],
+    "keywords": [
+      {
+        "id": "ETERNAL",
+        "names": [
+          "Wieczna"
+        ],
+        "description": "Karta nie może być zmieniona ani usunięta z twojej talii."
+      },
+      {
+        "id": "ETHEREAL",
+        "names": [
+          "Eteryczna"
+        ],
+        "description": "Jeżeli trzymasz tę kartę w ręce pod koniec tury, Wyczerp ją."
+      },
+      {
+        "id": "EXHAUST",
+        "names": [
+          "Wyczerpanie"
+        ],
+        "description": "Karta zostaje usunięta do końca walki."
+      },
+      {
+        "id": "INNATE",
+        "names": [
+          "Startowa"
+        ],
+        "description": "Zaczynasz walkę z tą kartą w ręce."
+      },
+      {
+        "id": "RETAIN",
+        "names": [
+          "Zachowanie"
+        ],
+        "description": "Zachowane karty nie są odrzucane pod koniec tury."
+      },
+      {
+        "id": "SLY",
+        "names": [
+          "Chytra"
+        ],
+        "description": "Jeśli odrzucisz tę kartę z ręki przed zakończeniem tury, zagraj ją za darmo."
+      },
+      {
+        "id": "UNPLAYABLE",
+        "names": [
+          "Niezagrywalna"
+        ],
+        "description": "Niezagrywalnych kart nie można zagrać."
+      }
+    ]
   }
 }

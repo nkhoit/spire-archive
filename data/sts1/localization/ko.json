@@ -4723,5 +4723,721 @@
       ],
       "description": "이 카드를 통해 하수인이 아닌 적을 죽일 경우 발동합니다."
     }
+  },
+  "mechanics": {
+    "ascension": [
+      {
+        "level": 1,
+        "title": "승천 모드 1",
+        "description": "엘리트가 더 많이 발생합니다."
+      },
+      {
+        "level": 2,
+        "title": "승천 모드 2",
+        "description": "일반적인 적들이 더 많은 피해를 줍니다."
+      },
+      {
+        "level": 3,
+        "title": "승천 모드 3",
+        "description": "엘리트들이 더 많은 피해를 줍니다."
+      },
+      {
+        "level": 4,
+        "title": "승천 모드 4",
+        "description": "보스들이 더 많은 피해를 줍니다."
+      },
+      {
+        "level": 5,
+        "title": "승천 모드 5",
+        "description": "보스 전투 이후에 회복량이 감소합니다."
+      },
+      {
+        "level": 6,
+        "title": "승천 모드 6",
+        "description": "피해를 입은 채로 시작합니다."
+      },
+      {
+        "level": 7,
+        "title": "승천 모드 7",
+        "description": "일반적인 적들이 더 많은 체력을 가집니다."
+      },
+      {
+        "level": 8,
+        "title": "승천 모드 8",
+        "description": "엘리트들이 더 많은 체력을 가집니다."
+      },
+      {
+        "level": 9,
+        "title": "승천 모드 9",
+        "description": "보스들이 더 많은 체력을 가집니다."
+      },
+      {
+        "level": 10,
+        "title": "승천 모드 10",
+        "description": "저주받은 상태로 시작합니다."
+      },
+      {
+        "level": 11,
+        "title": "승천 모드 11",
+        "description": "포션 슬롯이 줄어듭니다."
+      },
+      {
+        "level": 12,
+        "title": "승천 모드 12",
+        "description": "강화 상태의 카드가 더 적게 나타납니다."
+      },
+      {
+        "level": 13,
+        "title": "승천 모드 13",
+        "description": "보스가 가난해집니다."
+      },
+      {
+        "level": 14,
+        "title": "승천 모드 14",
+        "description": "최대 체력이 감소합니다."
+      },
+      {
+        "level": 15,
+        "title": "승천 모드 15",
+        "description": "이벤트가 부정적으로 변합니다."
+      },
+      {
+        "level": 16,
+        "title": "승천 모드 16",
+        "description": "상점을 이용하기 위한 비용이 증가합니다."
+      },
+      {
+        "level": 17,
+        "title": "승천 모드 17",
+        "description": "일반적인 적들이 더 난이도 있는 행동 패턴과 능력치를 지닙니다."
+      },
+      {
+        "level": 18,
+        "title": "승천 모드 18",
+        "description": "엘리트들이 더 난이도 있는 행동 패턴과 능력치를 지닙니다."
+      },
+      {
+        "level": 19,
+        "title": "승천 모드 19",
+        "description": "보스들이 더 난이도 있는 행동 패턴과 능력치를 지닙니다."
+      },
+      {
+        "level": 20,
+        "title": "승천 모드 20",
+        "description": "(최고 단계) 두 마리의 마지막 보스."
+      }
+    ],
+    "map_rooms": [
+      {
+        "id": "UNKNOWN",
+        "title": "미지",
+        "description": "미지의 방입니다.\n\n몬스터, 보물, 상점 혹은 완전히 색다른 것을 마주칠 수 있습니다."
+      },
+      {
+        "id": "SHOP",
+        "title": "상인",
+        "description": "신비로운 상인의 상점입니다.\n\n그 동안 모은 골드 를 사용합시다!"
+      },
+      {
+        "id": "TREASURE",
+        "title": "보물",
+        "description": "유물 과 골드 를 얻을 수 있는 방입니다."
+      },
+      {
+        "id": "REST",
+        "title": "휴식",
+        "description": "체력을 회복 하거나 카드를 강화 할 수 있는 방입니다."
+      },
+      {
+        "id": "ENEMY",
+        "title": "적",
+        "description": "적대적인 존재들이 기다리고 있는 방입니다."
+      },
+      {
+        "id": "ELITE",
+        "title": "엘리트",
+        "description": "강력한 적들이 기다리고 있습니다.\n\n그들을 물리치면 유물을 얻을 수 있습니다."
+      }
+    ],
+    "core_concepts": [
+      {
+        "id": "BLOCK",
+        "title": "방어도",
+        "description": "다음 턴까지 피해량을 감소시킵니다."
+      },
+      {
+        "id": "EXHAUST",
+        "title": "소멸",
+        "description": "전투가 종료될 때까지 덱에서 제외됩니다."
+      },
+      {
+        "id": "ETHEREAL",
+        "title": "휘발성",
+        "description": "턴 종료시 손에 있을 경우 소멸되는 카드입니다. 소멸된 카드는 전투가 종료될 때까지 덱에서 제외됩니다."
+      },
+      {
+        "id": "RETAIN",
+        "title": "보존",
+        "description": "턴 종료시 버려지지 않습니다."
+      },
+      {
+        "id": "STATUS",
+        "title": "상태이상",
+        "description": "전투가 끝나면 사라지는 카드입니다."
+      },
+      {
+        "id": "CURSE",
+        "title": "저주",
+        "description": "자신에게 부정적인 효과를 갖고 있는 카드입니다."
+      },
+      {
+        "id": "DRAW_PILE",
+        "title": "돌아가기",
+        "description": "자신의 턴이 시작될 때 이 곳에서 카드를 가져옵니다."
+      },
+      {
+        "id": "DISCARD_PILE",
+        "title": "버린 카드 더미",
+        "description": "가져올 카드가 남아있지 않으면 이 카드들을 섞어 뽑을 카드 더미로 가져옵니다."
+      },
+      {
+        "id": "ENERGY",
+        "title": "에너지",
+        "description": "에너지가 부족해."
+      }
+    ],
+    "orbs": [
+      {
+        "id": "DARK",
+        "title": "암흑",
+        "description": "지속: 내 턴이 끝날 때, 이 구체의 피해량이 증가합니다.\n발현: 체력이 가장 낮은 적에게 의 피해를 줍니다.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "FROST",
+        "title": "냉기",
+        "description": "지속: 내 턴이 끝날 때, 방어도를 얻습니다.\n발현: 방어도를 얻습니다.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "LIGHTNING",
+        "title": "전기",
+        "description": "지속: 내 턴이 끝날 때, 무작위 적에게 피해를 줍니다.\n발현: 무작위 적에게 피해를 줍니다.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "PLASMA",
+        "title": "플라즈마",
+        "description": "지속: 내 턴이 시작될 때, Energy 를 얻습니다.\n발현: Energy 를 얻습니다.\n플라즈마는 밀집의 효과를 받지 않습니다.",
+        "passive": "",
+        "evoke": ""
+      }
+    ],
+    "stances": [
+      {
+        "id": "CALM",
+        "title": "명상",
+        "description": "이 경지 에서 벗어나면, Energy Energy 를 얻습니다."
+      },
+      {
+        "id": "DIVINITY",
+        "title": "강림",
+        "description": "이 경지 에 도달하면, Energy Energy Energy 를 얻습니다. 공격 이 세 배의 피해를 줍니다. 다음 턴 시작 시 이 경지 에서 벗어납니다."
+      },
+      {
+        "id": "WRATH",
+        "title": "진노",
+        "description": "공격 이 두 배의 피해를 주지만 받는 피해도 두 배가 됩니다."
+      }
+    ],
+    "character_mechanics": [],
+    "keywords": [
+      {
+        "id": "ARTIFACT",
+        "names": [
+          "인공물",
+          "인공물을",
+          "인공물이",
+          "artifact"
+        ],
+        "description": "다음에 걸리는 대부분의 해로운 효과를 무효화합니다."
+      },
+      {
+        "id": "BLOCK",
+        "names": [
+          "방어도",
+          "방어도를",
+          "방어도가",
+          "방어도만큼",
+          "block",
+          "blocks"
+        ],
+        "description": "다음 턴까지 피해량을 감소시킵니다."
+      },
+      {
+        "id": "CURSE",
+        "names": [
+          "저주",
+          "저주가",
+          "저주를",
+          "저주에서",
+          "curse"
+        ],
+        "description": "자신에게 부정적인 효과를 갖고 있는 카드입니다."
+      },
+      {
+        "id": "DEXTERITY",
+        "names": [
+          "민첩",
+          "민첩을",
+          "민첩이",
+          "dexterity"
+        ],
+        "description": "카드 사용시 얻는 방어도를 증가시킵니다."
+      },
+      {
+        "id": "ETHEREAL",
+        "names": [
+          "휘발성"
+        ],
+        "description": "턴 종료시 손에 있을 경우 소멸되는 카드입니다. 소멸된 카드는 전투가 종료될 때까지 덱에서 제외됩니다."
+      },
+      {
+        "id": "EXHAUST",
+        "names": [
+          "소멸",
+          "소멸된",
+          "소멸합니다",
+          "소멸됩니다",
+          "소멸시키고",
+          "소멸될",
+          "소멸시킵니다",
+          "소멸시킨",
+          "소멸되면",
+          "소멸하면서",
+          "exhausted",
+          "exhausts"
+        ],
+        "description": "전투가 종료될 때까지 덱에서 제외됩니다."
+      },
+      {
+        "id": "INNATE",
+        "names": [
+          "선천성",
+          "innate"
+        ],
+        "description": "전투 시작 시 뽑는 카드에 포함됩니다."
+      },
+      {
+        "id": "LOCKED",
+        "names": [
+          "잠김",
+          "locked"
+        ],
+        "description": "아직 해금되지 않은 카드입니다."
+      },
+      {
+        "id": "POISON",
+        "names": [
+          "중독",
+          "중독이",
+          "중독을",
+          "중독의",
+          "중독된",
+          "posion",
+          "posioned"
+        ],
+        "description": "상대 턴이 시작할 때 중독된 적은 그 만큼 피해를 받습니다. 중독은 매 턴 1 씩 감소합니다."
+      },
+      {
+        "id": "RETAIN",
+        "names": [
+          "보존",
+          "보존될",
+          "보존된",
+          "보존합니다",
+          "retain"
+        ],
+        "description": "턴 종료시 버려지지 않습니다."
+      },
+      {
+        "id": "SHIV",
+        "names": [
+          "단도",
+          "단도를"
+        ],
+        "description": "사용 시 소멸되는 비용이 0 인 카드입니다."
+      },
+      {
+        "id": "STATUS",
+        "names": [
+          "상태이상",
+          "상태이상을",
+          "상태이상이",
+          "상태이상이나"
+        ],
+        "description": "전투가 끝나면 사라지는 카드입니다."
+      },
+      {
+        "id": "STRENGTH",
+        "names": [
+          "힘",
+          "힘을",
+          "힘이",
+          "힘의"
+        ],
+        "description": "가하는 공격 피해량을 증가시킵니다."
+      },
+      {
+        "id": "TRANSFORM",
+        "names": [
+          "변화",
+          "변화된",
+          "변화하는",
+          "변화를",
+          "변화가",
+          "변화되거나",
+          "변화시키고"
+        ],
+        "description": "무작위로 정해진 카드로 교체됩니다."
+      },
+      {
+        "id": "UNKNOWN",
+        "names": [
+          "미지"
+        ],
+        "description": "아직 본 적 없는 카드입니다."
+      },
+      {
+        "id": "UNPLAYABLE",
+        "names": [
+          "사용불가"
+        ],
+        "description": "사용할 수 없는 카드입니다."
+      },
+      {
+        "id": "UPGRADE",
+        "names": [
+          "강화",
+          "강화된",
+          "강화합니다",
+          "강화됩니다"
+        ],
+        "description": "강화를 통해 카드를 더욱 강력하게 만들 수 있습니다. 이는 카드당 한 번만 가능합니다."
+      },
+      {
+        "id": "VULNERABLE",
+        "names": [
+          "취약",
+          "취약을",
+          "취약이",
+          "취약과",
+          "취약에"
+        ],
+        "description": "공격을 받을 시 50% 의 피해를 추가로 받습니다."
+      },
+      {
+        "id": "WEAK",
+        "names": [
+          "약화",
+          "weaken",
+          "약화된",
+          "weakens",
+          "약화를",
+          "약화가",
+          "약화와"
+        ],
+        "description": "공격 시 피해량이 25% 감소합니다."
+      },
+      {
+        "id": "WOUND",
+        "names": [
+          "부상",
+          "부상"
+        ],
+        "description": "사용 불가인 상태이상 카드입니다."
+      },
+      {
+        "id": "FRAIL",
+        "names": [
+          "손상",
+          "손상을",
+          "손상이",
+          "손상과"
+        ],
+        "description": "카드로부터 얻는 방어도 가 25% 감소합니다."
+      },
+      {
+        "id": "STRIKE",
+        "names": [
+          "타격"
+        ],
+        "description": "\"타격\"이 이름에 포함되어 있는 카드입니다."
+      },
+      {
+        "id": "CONFUSED",
+        "names": [
+          "혼란",
+          "혼란을",
+          "혼란이"
+        ],
+        "description": "카드를 가져올 때 마다 비용이 무작위로 정해집니다."
+      },
+      {
+        "id": "TODO",
+        "names": [
+          "todo",
+          "JUST FOR DEVS, DONT TRANSLATE",
+          "JUST FOR DEVS, DONT TRANSLATE",
+          "JUST FOR DEVS, DONT TRANSLATE",
+          "JUST FOR DEVS, DONT TRANSLATE"
+        ],
+        "description": "This card is NOT IMPLEMENTED. Someone should really fix that..."
+      },
+      {
+        "id": "INTANGIBLE",
+        "names": [
+          "불가침",
+          "불가침을",
+          "불가침이"
+        ],
+        "description": "받는 공격 피해와 체력 손실을 전부 1 로 감소시킵니다."
+      },
+      {
+        "id": "BURN",
+        "names": [
+          "화상",
+          "화상들"
+        ],
+        "description": "화상은 턴 종료 시 손에 있으면 자신에게 피해를 주는 사용 불가인 상태이상 카드입니다."
+      },
+      {
+        "id": "DAZED",
+        "names": [
+          "어지러움"
+        ],
+        "description": "어지러움은 사용 불가인 상태이상 카드입니다."
+      },
+      {
+        "id": "VOID",
+        "names": [
+          "공허",
+          "공허들"
+        ],
+        "description": "공허는 카드를 뽑을 때 에너지를 잃는 사용 불가인 상태이상 카드입니다."
+      },
+      {
+        "id": "FOCUS",
+        "names": [
+          "밀집",
+          "밀집을",
+          "밀집이"
+        ],
+        "description": "밀집은 영창된 구체의 효율을 증가시킵니다."
+      },
+      {
+        "id": "EVOKE",
+        "names": [
+          "발현",
+          "발현된",
+          "발현합니다",
+          "발현한",
+          "발현시킵니다",
+          "발현시킨"
+        ],
+        "description": "가장 오른쪽의 구체를 사용해서 발현 효과를 발동시킵니다."
+      },
+      {
+        "id": "PLASMA",
+        "names": [
+          "플라즈마",
+          "플라즈마+",
+          "플라즈마가",
+          "플라즈마+가",
+          "플라즈마를",
+          "플라즈마+를",
+          "플라즈마로"
+        ],
+        "description": "구체: (지속/발현)에너지를 얻습니다."
+      },
+      {
+        "id": "CHANNEL",
+        "names": [
+          "영창",
+          "영창된",
+          "영창합니다",
+          "영창을",
+          "영창이",
+          "영창했습니다"
+        ],
+        "description": "구체를 영창하면 가장 오른쪽의 빈 슬롯에 구체를 넣습니다. 빈 슬롯이 없을 경우, 가장 오른쪽의 구체가 발현 되어 자리를 비웁니다."
+      },
+      {
+        "id": "DARK",
+        "names": [
+          "암흑",
+          "암흑+",
+          "암흑을",
+          "암흑+를",
+          "암흑이",
+          "암흑+가",
+          "암흑의"
+        ],
+        "description": "구체: (지속)매 턴 피해량을 증가시킵니다. (발현)체력이 가장 낮은 적에게 누적된 피해를 줍니다."
+      },
+      {
+        "id": "OPENER",
+        "names": [
+          "개전"
+        ],
+        "description": "개전 카드는 매 턴의 첫번째 카드로만 사용할 수 있습니다."
+      },
+      {
+        "id": "LIGHTNING",
+        "names": [
+          "전기",
+          "전기+",
+          "전기를",
+          "전기+를",
+          "전기가",
+          "전기+가"
+        ],
+        "description": "구체: (지속/발현)무작위 적에게 피해를 줍니다."
+      },
+      {
+        "id": "FROST",
+        "names": [
+          "냉기",
+          "냉기+",
+          "냉기를",
+          "냉기+를",
+          "냉기가",
+          "냉기+가",
+          "냉기의"
+        ],
+        "description": "구체: (지속/발현) 방어도 를 얻습니다."
+      },
+      {
+        "id": "THORNS",
+        "names": [
+          "가시",
+          "가시를",
+          "가시가"
+        ],
+        "description": "공격 피해를 받을 때, 공격한 상대에게 피해를 줍니다."
+      },
+      {
+        "id": "LOCK_ON",
+        "names": [
+          "조준",
+          "조준을",
+          "조준이"
+        ],
+        "description": "조준된 대상은 구체의 피해를 50% 추가로 받습니다."
+      },
+      {
+        "id": "STANCE",
+        "names": [
+          "경지",
+          "경지들",
+          "경지에서",
+          "경지에서는",
+          "경지만",
+          "경지를",
+          "경지가",
+          "경지에"
+        ],
+        "description": "동시에 하나의 경지만 가질 수 있습니다."
+      },
+      {
+        "id": "WRATH",
+        "names": [
+          "진노",
+          "진노가",
+          "진노를",
+          "진노하고",
+          "진노할",
+          "진노합니다"
+        ],
+        "description": "이 경지에서는, 주고 받는 공격 피해가 2배가 됩니다."
+      },
+      {
+        "id": "CALM",
+        "names": [
+          "명상",
+          "명상을",
+          "명상이",
+          "명상합니다"
+        ],
+        "description": "이 경지에서 벗어나면 Energy Energy 를 얻습니다."
+      },
+      {
+        "id": "DIVINITY",
+        "names": [
+          "강림",
+          "강림을",
+          "강림이",
+          "강림합니다"
+        ],
+        "description": "이 경지 에 도달하면 Energy Energy Energy 를 얻습니다. 공격이 3배의 피해를 줍니다. 다음 턴 시작 시 이 경지 에서 벗어납니다."
+      },
+      {
+        "id": "PRAYER",
+        "names": [
+          "만트라",
+          "만트라를",
+          "만트라가",
+          "만트라만큼",
+          "무력 돌파"
+        ],
+        "description": "10 만트라를 얻으면, 강림합니다."
+      },
+      {
+        "id": "SCRY",
+        "names": [
+          "예지",
+          "예지할",
+          "예지로",
+          "예지합니다"
+        ],
+        "description": "뽑을 카드 더미 위에서 X장의 카드를 봅니다. 원하는 만큼 버릴 수 있습니다."
+      },
+      {
+        "id": "REGEN",
+        "names": [
+          "재생",
+          "재생을",
+          "재생이"
+        ],
+        "description": "턴 종료 시 체력을 회복합니다. 재생은 매 턴 1 씩 감소합니다."
+      },
+      {
+        "id": "VIGOR",
+        "names": [
+          "활력"
+        ],
+        "description": "다음 공격 이 추가 피해를 줍니다."
+      },
+      {
+        "id": "RITUAL",
+        "names": [
+          "의식",
+          "의식을"
+        ],
+        "description": "턴 종료 시 힘을 얻습니다."
+      },
+      {
+        "id": "FATAL",
+        "names": [
+          "치명타",
+          "치명타라면",
+          "치명타일"
+        ],
+        "description": "이 카드를 통해 하수인이 아닌 적을 죽일 경우 발동합니다."
+      }
+    ]
   }
 }

@@ -5472,5 +5472,259 @@
       "description": "La primera vez que juegues esta carta, inflige {Amount} de daño adicional.",
       "name": "Robustez"
     }
+  },
+  "mechanics": {
+    "ascension": [
+      {
+        "level": 0,
+        "title": "Sin Ascensión",
+        "description": "Juega sin modificadores de Ascensión."
+      },
+      {
+        "level": 1,
+        "title": "Élites a tutiplén",
+        "description": "Los Élites aparecen más a menudo."
+      },
+      {
+        "level": 2,
+        "title": "Viaje agotador",
+        "description": "Los Antiguos solo curan un 80 % de los PV que has perdido."
+      },
+      {
+        "level": 3,
+        "title": "Pobreza",
+        "description": "Los enemigos y cofres del tesoro sueltan un 25 % menos de Oro."
+      },
+      {
+        "level": 4,
+        "title": "Cinturón apretado",
+        "description": "Comienza la partida con 1 espacio para pociones menos."
+      },
+      {
+        "level": 5,
+        "title": "Ascensión accidentada",
+        "description": "Comienza la partida con una Maldición."
+      },
+      {
+        "level": 6,
+        "title": "Pesadumbre",
+        "description": "Los lugares de descanso son menos comunes."
+      },
+      {
+        "level": 7,
+        "title": "Escasez",
+        "description": "Las cartas raras y mejoradas aparecen con menos frecuencia."
+      },
+      {
+        "level": 8,
+        "title": "Enemigos resistentes",
+        "description": "Todos los enemigos son más resistentes."
+      },
+      {
+        "level": 9,
+        "title": "Enemigos letales",
+        "description": "Todos los enemigos tienen ataques más poderosos."
+      },
+      {
+        "level": 10,
+        "title": "Jefe doble",
+        "description": "Combate contra dos jefes al final del Acto 3."
+      }
+    ],
+    "map_rooms": [
+      {
+        "id": "ROOM_ENEMY",
+        "title": "Enemigo",
+        "description": "En estas salas te esperan enemigos hostiles."
+      },
+      {
+        "id": "ROOM_ELITE",
+        "title": "Élite",
+        "description": "En esta sala te esperan enemigos muy poderosos.\n\nAl derrotarlos, conseguirás una Reliquia."
+      },
+      {
+        "id": "ROOM_BOSS",
+        "title": "Jefe",
+        "description": "El enemigo más poderoso de esta zona.\n\nDerrotarlo te permitirá continuar al siguiente Acto."
+      },
+      {
+        "id": "ROOM_EVENT",
+        "title": "Evento",
+        "description": "En estas salas ocurren cosas inusuales..."
+      },
+      {
+        "id": "ROOM_MERCHANT",
+        "title": "Tienda",
+        "description": "En estas salas, el Comerciante vende sus mercancías.\n\n¡Gasta el Oro que has conseguido aquí!"
+      },
+      {
+        "id": "ROOM_REST",
+        "title": "Lugar de descanso",
+        "description": "En estas salas puedes Recuperar PV o Mejorar una carta."
+      },
+      {
+        "id": "ROOM_TREASURE",
+        "title": "Sala del tesoro",
+        "description": "En estas codiciadas salas puedes encontrar Reliquias y Oro."
+      },
+      {
+        "id": "ROOM_ANCIENT",
+        "title": "Antiguo",
+        "description": "Los Antiguos residen en estas salas.\n\nConceden bonificaciones, tesoros y conocimiento increíbles."
+      }
+    ],
+    "core_concepts": [
+      {
+        "id": "ENERGY",
+        "title": "Energía",
+        "description": "La Energía se usa para jugar las cartas de tu Mano."
+      },
+      {
+        "id": "BLOCK",
+        "title": "Bloqueo",
+        "description": "Previene el daño hasta el siguiente turno."
+      },
+      {
+        "id": "HIT_POINTS",
+        "title": "Puntos de Vida (PV)",
+        "description": "Si te quedas sin PV, mueres."
+      },
+      {
+        "id": "MONEY_POUCH",
+        "title": "Oro",
+        "description": "La cantidad de Oro que tienes. El Oro es la moneda que se usa en la Torre."
+      },
+      {
+        "id": "DRAW_PILE",
+        "title": "Pila de robo (A)",
+        "description": "Al comienzo de cada turno,\nrobas 5 cartas de esta pila.\n\nHaz clic para ver las cartas de tu Pila de robo (bajaradas)."
+      },
+      {
+        "id": "DISCARD_PILE",
+        "title": "Pila de descarte (S)",
+        "description": "Si tu Pila de robo está vacía, la Pila de descarte se baraja y se coloca en la Pila de robo.\n\nHaz clic para ver las cartas en tu Pila de descarte."
+      },
+      {
+        "id": "EXHAUST_PILE",
+        "title": "Cartas Agotadas (X)",
+        "description": "Haz clic para ver las cartas Agotadas durante este combate."
+      }
+    ],
+    "orbs": [
+      {
+        "id": "LIGHTNING",
+        "title": "Relámpago",
+        "description": "Pasiva: al final del turno, inflige {Passive} de daño a un enemigo aleatorio.\nDescarga: inflige {Evoke} de daño a un enemigo aleatorio.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "FROST",
+        "title": "Escarcha",
+        "description": "Pasiva: al final del turno, gana {Passive} de Bloqueo.\nDescarga: gana {Evoke} de Bloqueo.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "DARK",
+        "title": "Oscuridad",
+        "description": "Pasiva: al final del turno, aumenta el daño de este Orbe en {Passive}.\nDescarga: inflige {Evoke} de daño al enemigo con menos PV.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "PLASMA",
+        "title": "Plasma",
+        "description": "Pasiva: al comienzo del turno,\ngana 1 Energy.\nDescarga: gana 2 Energy.\nLa Concentración no afecta al Plasma.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "GLASS",
+        "title": "Cristal",
+        "description": "Pasiva: al final del turno, inflige {Passive} de daño a TODOS los enemigos y reduce el valor de este orbe en 1.\nDescarga: inflige {Evoke} de daño a TODOS los enemigos.",
+        "passive": "",
+        "evoke": ""
+      }
+    ],
+    "stances": [],
+    "character_mechanics": [
+      {
+        "id": "STAR_COUNT",
+        "title": "Estrellas",
+        "description": "Tus Estrellas (★) actuales. Algunas cartas del Regente gastan ★ al jugarse."
+      },
+      {
+        "id": "SUMMON",
+        "title": "Vincular",
+        "description": "Invoca a Nudillos.\nSi ya está invocado, aumenta sus PV máx. durante este combate."
+      },
+      {
+        "id": "FORGE",
+        "title": "Forjar",
+        "description": "La primera vez que Forjes cada combate, añade Espada del soberano a tu Mano. Forjar añade daño adicional a Espada del soberano."
+      },
+      {
+        "id": "REPLAY",
+        "title": "Repetición",
+        "description": "Juega esta carta una vez más."
+      },
+      {
+        "id": "FATAL",
+        "title": "Letal",
+        "description": "Se activa cuando esta carta mata a un enemigo que no sea un esbirro."
+      }
+    ],
+    "keywords": [
+      {
+        "id": "ETERNAL",
+        "names": [
+          "Eterna"
+        ],
+        "description": "No se puede transformar ni eliminar de tu Mazo."
+      },
+      {
+        "id": "ETHEREAL",
+        "names": [
+          "Etérea"
+        ],
+        "description": "Si esta carta está en tu Mano al final del turno, se Agota."
+      },
+      {
+        "id": "EXHAUST",
+        "names": [
+          "Agotamiento"
+        ],
+        "description": "Elimina esta carta hasta el final del combate."
+      },
+      {
+        "id": "INNATE",
+        "names": [
+          "Innata"
+        ],
+        "description": "Comienza cada combate con esta carta en tu Mano."
+      },
+      {
+        "id": "RETAIN",
+        "names": [
+          "Retención"
+        ],
+        "description": "Las cartas retenidas no se descartan al final del turno."
+      },
+      {
+        "id": "SLY",
+        "names": [
+          "Astucia"
+        ],
+        "description": "Si esta carta es descartada de tu Mano antes de que acabe tu turno, juégala gratis."
+      },
+      {
+        "id": "UNPLAYABLE",
+        "names": [
+          "Injugable"
+        ],
+        "description": "Las cartas injugables no pueden jugarse."
+      }
+    ]
   }
 }

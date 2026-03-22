@@ -5472,5 +5472,259 @@
       "description": "各戦闘で初めてプレイした時、{Amount}の追加ダメージを与える。",
       "name": "活気"
     }
+  },
+  "mechanics": {
+    "ascension": [
+      {
+        "level": 0,
+        "title": "アセンションなし",
+        "description": "アセンションの変更要素なしでプレイする。"
+      },
+      {
+        "level": 1,
+        "title": "エリートの群れ",
+        "description": "エリートの出現率が上昇する。"
+      },
+      {
+        "level": 2,
+        "title": "疲れ果てた旅人",
+        "description": "エンシェントによる回復量が、減少HPの80%に低下する。"
+      },
+      {
+        "level": 3,
+        "title": "貧困",
+        "description": "敵と宝箱から得られるゴールドが25%減少する。"
+      },
+      {
+        "level": 4,
+        "title": "きつめのベルト",
+        "description": "ポーションスロットが1つ少ない状態でプレイを開始する。"
+      },
+      {
+        "level": 5,
+        "title": "アセンダーの災厄",
+        "description": "プレイ開始時、呪いを受ける。"
+      },
+      {
+        "level": 6,
+        "title": "陰鬱",
+        "description": "休憩所の数が減る。"
+      },
+      {
+        "level": 7,
+        "title": "枯渇",
+        "description": "レアおよびアップグレード済みカードの出現率が下がる。"
+      },
+      {
+        "level": 8,
+        "title": "頑強なる敵",
+        "description": "すべての敵の耐久力が上昇する。"
+      },
+      {
+        "level": 9,
+        "title": "凶悪なる敵",
+        "description": "すべての敵の攻撃が激化する。"
+      },
+      {
+        "level": 10,
+        "title": "ダブル・ボス",
+        "description": "第3層の最後に戦うボスが2体になる。"
+      }
+    ],
+    "map_rooms": [
+      {
+        "id": "ROOM_ENEMY",
+        "title": "敵",
+        "description": "敵が待ち受ける部屋。"
+      },
+      {
+        "id": "ROOM_ELITE",
+        "title": "エリート",
+        "description": "強敵が待ち受ける部屋。\n\n倒せば、報酬としてレリックを1個獲得できる。"
+      },
+      {
+        "id": "ROOM_BOSS",
+        "title": "ボス",
+        "description": "このエリアで最も危険な敵。\n\n打ち倒すことで、次の層へ進むことができる。"
+      },
+      {
+        "id": "ROOM_EVENT",
+        "title": "イベント",
+        "description": "この部屋では何か奇妙な出来事が起こる……"
+      },
+      {
+        "id": "ROOM_MERCHANT",
+        "title": "ショップ",
+        "description": "謎めいた商人が品物を売っている部屋。\n\n稼いだゴールドで買い物をしよう!"
+      },
+      {
+        "id": "ROOM_REST",
+        "title": "休憩所",
+        "description": "HPを回復したり、カードを1枚アップグレードできる部屋。"
+      },
+      {
+        "id": "ROOM_TREASURE",
+        "title": "宝箱",
+        "description": "レリックやゴールドが手に入る、誰もが羨む部屋。"
+      },
+      {
+        "id": "ROOM_ANCIENT",
+        "title": "エンシェント",
+        "description": "エンシェントがいる部屋\n\n彼らは素晴らしい恩寵、宝物、そして知識を授けてくれる"
+      }
+    ],
+    "core_concepts": [
+      {
+        "id": "ENERGY",
+        "title": "エナジー",
+        "description": "エナジーは手札からカードをプレイするために使用する。"
+      },
+      {
+        "id": "BLOCK",
+        "title": "ブロック",
+        "description": "次のターンまで、受けるダメージを防ぐ。"
+      },
+      {
+        "id": "HIT_POINTS",
+        "title": "ヒットポイント (HP)",
+        "description": "HPがゼロになると死亡する。"
+      },
+      {
+        "id": "MONEY_POUCH",
+        "title": "ゴールド",
+        "description": "所持しているゴールドの量。ゴールドはスパイア内での通貨だ。"
+      },
+      {
+        "id": "DRAW_PILE",
+        "title": "山札 (A)",
+        "description": "毎ターンの開始時に、\nここから5枚のカードを引く。\n\nクリックすると山札のカードを確認できる（表示は順不同）。"
+      },
+      {
+        "id": "DISCARD_PILE",
+        "title": "捨て札 (S)",
+        "description": "山札が空になると、捨て札がシャッフルされて新たな山札になる。\n\nクリックすると捨て札のカードを確認できる。"
+      },
+      {
+        "id": "EXHAUST_PILE",
+        "title": "廃棄札 (X)",
+        "description": "クリックするとこの戦闘で廃棄されたカードを確認できる。"
+      }
+    ],
+    "orbs": [
+      {
+        "id": "LIGHTNING",
+        "title": "ライトニング",
+        "description": "自動効果: ターン終了時、ランダムな敵に{Passive}ダメージを与える。\n解放: ランダムな敵に{Evoke}ダメージを与える。",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "FROST",
+        "title": "フロスト",
+        "description": "自動効果: ターン終了時、{Passive}ブロックを得る。\n解放: {Evoke}ブロックを得る。",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "DARK",
+        "title": "ダーク",
+        "description": "自動効果: ターン終了時、このオーブのダメージが{Passive}増加する。\n解放: HPが最も低い敵に{Evoke}ダメージを与える。",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "PLASMA",
+        "title": "プラズマ",
+        "description": "自動効果: ターン開始時、\n1 Energyを得る。\n解放: 2 Energyを得る。\nプラズマは集中力の影響を受けない。",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "GLASS",
+        "title": "グラス",
+        "description": "自動効果: ターン終了時、すべての敵に{Passive}ダメージを与え、このオーブの値が1減少する。\n解放: すべての敵に{Evoke}ダメージを与える。",
+        "passive": "",
+        "evoke": ""
+      }
+    ],
+    "stances": [],
+    "character_mechanics": [
+      {
+        "id": "STAR_COUNT",
+        "title": "スター",
+        "description": "現在のスター(★)の数。リージェントのカードをプレイする際、★が必要になることがある。"
+      },
+      {
+        "id": "SUMMON",
+        "title": "召喚",
+        "description": "オスティを召喚する。\nすでに召喚されている場合、この戦闘中、彼の最大HPを増加させる。"
+      },
+      {
+        "id": "FORGE",
+        "title": "鍛造",
+        "description": "各戦闘で初めて鍛造を行った時、ソヴリン・ブレードを1枚手札に加える。ソヴリン・ブレードのダメージを増加させる。"
+      },
+      {
+        "id": "REPLAY",
+        "title": "リプレイ",
+        "description": "このカードを追加でプレイする。"
+      },
+      {
+        "id": "FATAL",
+        "title": "リーサル",
+        "description": "このカードでミニオン以外の敵を倒したときに発動する。"
+      }
+    ],
+    "keywords": [
+      {
+        "id": "ETERNAL",
+        "names": [
+          "永劫"
+        ],
+        "description": "デッキから削除、または変化させることができない"
+      },
+      {
+        "id": "ETHEREAL",
+        "names": [
+          "エセリアル"
+        ],
+        "description": "このターンの終了時にこのカードが手札にある場合、廃棄される。"
+      },
+      {
+        "id": "EXHAUST",
+        "names": [
+          "廃棄"
+        ],
+        "description": "戦闘終了時まで取り除かれる。"
+      },
+      {
+        "id": "INNATE",
+        "names": [
+          "天賦"
+        ],
+        "description": "このカードが手札にある状態で戦闘を開始する。"
+      },
+      {
+        "id": "RETAIN",
+        "names": [
+          "保留"
+        ],
+        "description": "保留されたカードは、ターン終了時に捨て札にならない。"
+      },
+      {
+        "id": "SLY",
+        "names": [
+          "スライ"
+        ],
+        "description": "自分のターン終了前にこのカードが手札から捨てられた場合、コストを支払わずにプレイする。"
+      },
+      {
+        "id": "UNPLAYABLE",
+        "names": [
+          "プレイ不可"
+        ],
+        "description": "プレイ不可のカードはプレイできない。"
+      }
+    ]
   }
 }

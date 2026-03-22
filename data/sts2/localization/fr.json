@@ -5472,5 +5472,259 @@
       "description": "La première fois que cette carte est jouée, elle inflige {Amount} dégâts supplémentaires.",
       "name": "Vigoureux"
     }
+  },
+  "mechanics": {
+    "ascension": [
+      {
+        "level": 0,
+        "title": "Sans ascension",
+        "description": "Jouer sans modificateurs d'Ascension."
+      },
+      {
+        "level": 1,
+        "title": "Invasion d'Élite",
+        "description": "Les Élites apparaissent plus fréquemment."
+      },
+      {
+        "level": 2,
+        "title": "Voyageur fatigué",
+        "description": "Les Anciens ne soignent plus que 80% de vos PV manquants."
+      },
+      {
+        "level": 3,
+        "title": "Précarité",
+        "description": "Les ennemis et les coffres donnent 25% moins de Pièces d'or."
+      },
+      {
+        "level": 4,
+        "title": "Ceinture serrée",
+        "description": "Chaque partie commence avec 1 emplacement de potion en moins."
+      },
+      {
+        "level": 5,
+        "title": "Fléau de l'ascendant",
+        "description": "Chaque partie commence avec une Malédiction."
+      },
+      {
+        "level": 6,
+        "title": "Obscurité",
+        "description": "Moins de sites de repos."
+      },
+      {
+        "level": 7,
+        "title": "Pénurie",
+        "description": "Les cartes Rares et les cartes Améliorées apparaissent moins souvent."
+      },
+      {
+        "level": 8,
+        "title": "Ennemis coriaces",
+        "description": "Tous les ennemis sont plus difficiles à vaincre."
+      },
+      {
+        "level": 9,
+        "title": "Ennemis meurtriers",
+        "description": "Les ennemis possèdent des attaques plus dangereuses."
+      },
+      {
+        "level": 10,
+        "title": "Double boss",
+        "description": "L'Acte 3 comporte deux Boss au lieu d'un seul."
+      }
+    ],
+    "map_rooms": [
+      {
+        "id": "ROOM_ENEMY",
+        "title": "Ennemi",
+        "description": "Des créatures hostiles se trouvent dans ces salles."
+      },
+      {
+        "id": "ROOM_ELITE",
+        "title": "Élite",
+        "description": "De puissants adversaires se trouvent dans ces salles.\n\nLes vaincre vous récompensera d'une Relique."
+      },
+      {
+        "id": "ROOM_BOSS",
+        "title": "Boss",
+        "description": "L'ennemi le plus redoutable dans cette zone.\n\nVous devrez l'affronter pour procéder à l'acte suivant."
+      },
+      {
+        "id": "ROOM_EVENT",
+        "title": "Événement",
+        "description": "Des choses inhabituelles se produisent dans ce type de salles..."
+      },
+      {
+        "id": "ROOM_MERCHANT",
+        "title": "Boutique",
+        "description": "Le mystérieux Marchand expose ses biens dans ces salles.\n\nVous pouvez y dépenser vos Pièces d'or."
+      },
+      {
+        "id": "ROOM_REST",
+        "title": "Site de repos",
+        "description": "Passez par ces salles pour Soigner vos PV ou pour Améliorer une carte."
+      },
+      {
+        "id": "ROOM_TREASURE",
+        "title": "Salle au trésor",
+        "description": "Vous trouverez des Reliques et des Pièces d'or dans ces salles convoitées."
+      },
+      {
+        "id": "ROOM_ANCIENT",
+        "title": "Ancien",
+        "description": "Les Anciens habitent ces salles.\n\nIls accordent de puissantes bénédictions et des trésors précieux."
+      }
+    ],
+    "core_concepts": [
+      {
+        "id": "ENERGY",
+        "title": "Énergie",
+        "description": "Vous dépensez votre Énergie pour jouer les cartes depuis votre Main."
+      },
+      {
+        "id": "BLOCK",
+        "title": "Armure",
+        "description": "Vous protège des dégâts jusqu'au prochain tour."
+      },
+      {
+        "id": "HIT_POINTS",
+        "title": "Points de vie (PV)",
+        "description": "Si vous n'avez plus de PV, vous perdez la partie."
+      },
+      {
+        "id": "MONEY_POUCH",
+        "title": "Pièces d'or",
+        "description": "Votre total de pièces d'or. L'or est la devise de la Tour."
+      },
+      {
+        "id": "DRAW_PILE",
+        "title": "Pioche (A)",
+        "description": "Au début de chaque tour,\nvous piochez 5 cartes de cette pile.\n\nCliquez pour visionner les cartes de la pioche (dans le désordre)."
+      },
+      {
+        "id": "DISCARD_PILE",
+        "title": "Défausse (S)",
+        "description": "Si votre pioche est vide, la défausse est remélangée à la pioche.\n\nCliquez pour visionner les cartes dans la défausse."
+      },
+      {
+        "id": "EXHAUST_PILE",
+        "title": "Cartes Épuisées (X)",
+        "description": "Cliquez pour visionner les cartes Épuisées pendant ce combat."
+      }
+    ],
+    "orbs": [
+      {
+        "id": "LIGHTNING",
+        "title": "Orbe kéraunique",
+        "description": "Passif: À la fin du tour, infligez {Passive} dégâts à un ennemi aléatoire.\nActivation: Infligez {Evoke} dégâts à un ennemi aléatoire.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "FROST",
+        "title": "Orbe glaciaire",
+        "description": "Passif: À la fin du tour, gagnez {Passive} d'Armure.\nActivation: Gagnez {Evoke} d'Armure.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "DARK",
+        "title": "Orbe ténébreux",
+        "description": "Passif: À la fin du tour, les dégâts de cet Orbe augmentent de {Passive}.\nActivation: Infligez {Evoke} dégâts à l'ennemi ayant le moins de PV.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "PLASMA",
+        "title": "Orbe Plasmique",
+        "description": "Passif: Au début de votre tour,\ngagnez 1 Energy.\nActivation: Gagnez 2 Energy.\nN'est pas affecté par la Focalisation.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "GLASS",
+        "title": "Orbe vitreux",
+        "description": "Passif: À la fin du tour, infligez {Passive} dégâts à TOUS les ennemis et réduisez la valeur de cet orbe de 1.\nActivation: Infligez {Evoke} dégâts à TOUS les ennemis.",
+        "passive": "",
+        "evoke": ""
+      }
+    ],
+    "stances": [],
+    "character_mechanics": [
+      {
+        "id": "STAR_COUNT",
+        "title": "Étoiles",
+        "description": "Votre quantité d'Étoiles (★) actuelle. Certaines cartes du Régent nécessitent des ★ pour être jouées."
+      },
+      {
+        "id": "SUMMON",
+        "title": "Invocation",
+        "description": "Invoque Titos.\nS'il est déjà en vie, augmente ses PV Max ce combat."
+      },
+      {
+        "id": "FORGE",
+        "title": "Forger",
+        "description": "La première fois que vous Forgez pendant un combat, ajoutez Lame souveraine à votre Main. Augmente les dégâts de la Lame souveraine."
+      },
+      {
+        "id": "REPLAY",
+        "title": "Écho",
+        "description": "Cette carte est jouée une fois supplémentaire."
+      },
+      {
+        "id": "FATAL",
+        "title": "Coup de grâce",
+        "description": "Déclenché lorsque cette carte tue un ennemi (ne fonctionne pas sur les serviteurs)."
+      }
+    ],
+    "keywords": [
+      {
+        "id": "ETERNAL",
+        "names": [
+          "Éternel"
+        ],
+        "description": "Ne peuvent être retirées de votre Deck ou transformées."
+      },
+      {
+        "id": "ETHEREAL",
+        "names": [
+          "Éthéré"
+        ],
+        "description": "Si cette carte est dans votre Main à la fin de ce tour, elle s'épuise."
+      },
+      {
+        "id": "EXHAUST",
+        "names": [
+          "Épuisement"
+        ],
+        "description": "Retiré de votre Deck jusqu'à la fin du combat."
+      },
+      {
+        "id": "INNATE",
+        "names": [
+          "Inné"
+        ],
+        "description": "Cette carte commence dans votre Main au début de chaque combat."
+      },
+      {
+        "id": "RETAIN",
+        "names": [
+          "Retenue"
+        ],
+        "description": "Les cartes Retenues ne sont pas défaussées à la fin de votre tour."
+      },
+      {
+        "id": "SLY",
+        "names": [
+          "Ruse"
+        ],
+        "description": "Si cette carte est défaussée de votre Main avant la fin de votre tour, elle est jouée sans coût."
+      },
+      {
+        "id": "UNPLAYABLE",
+        "names": [
+          "Injouable"
+        ],
+        "description": "Les cartes Injouables ne peuvent pas être jouées."
+      }
+    ]
   }
 }

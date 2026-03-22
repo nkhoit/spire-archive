@@ -4662,5 +4662,666 @@
       ],
       "description": "Efekt wywoływany poprzez zabicie tą kartą przeciwnika nie będącego sługą."
     }
+  },
+  "mechanics": {
+    "ascension": [
+      {
+        "level": 1,
+        "title": "Tryb Wyniesienia – poziom 1",
+        "description": "Przeciwnicy Elitarni pojawiają się częściej."
+      },
+      {
+        "level": 2,
+        "title": "Tryb Wyniesienia – poziom 2",
+        "description": "Pospolici przeciwnicy są groźniejsi."
+      },
+      {
+        "level": 3,
+        "title": "Tryb Wyniesienia – poziom 3",
+        "description": "Przeciwnicy Elitarni są groźniejsi."
+      },
+      {
+        "level": 4,
+        "title": "Tryb Wyniesienia – poziom 4",
+        "description": "Bossowie są groźniejsi."
+      },
+      {
+        "level": 5,
+        "title": "Tryb Wyniesienia – poziom 5",
+        "description": "Odzyskujesz mniej PŻ po pokonaniu Bossa."
+      },
+      {
+        "level": 6,
+        "title": "Tryb Wyniesienia – poziom 6",
+        "description": "Zaczynasz wyprawę będąc ranny."
+      },
+      {
+        "level": 7,
+        "title": "Tryb Wyniesienia – poziom 7",
+        "description": "Pospolici przeciwnicy są wytrzymalsi."
+      },
+      {
+        "level": 8,
+        "title": "Tryb Wyniesienia – poziom 8",
+        "description": "Przeciwnicy Elitarni są wytrzymalsze."
+      },
+      {
+        "level": 9,
+        "title": "Tryb Wyniesienia – poziom 9",
+        "description": "Bossowie są wytrzymalsi."
+      },
+      {
+        "level": 10,
+        "title": "Tryb Wyniesienia – poziom 10",
+        "description": "Zaczynasz każdą wyprawę z klątwą"
+      },
+      {
+        "level": 11,
+        "title": "Tryb Wyniesienia – poziom 11",
+        "description": "Mniej miejsc na mikstury."
+      },
+      {
+        "level": 12,
+        "title": "Tryb Wyniesienia – poziom 12",
+        "description": "Ulepszone karty są rzadsze."
+      },
+      {
+        "level": 13,
+        "title": "Tryb Wyniesienia – poziom 13",
+        "description": "Spłukani bossowie."
+      },
+      {
+        "level": 14,
+        "title": "Tryb Wyniesienia – poziom 14",
+        "description": "Mniej maksymalnych PŻ."
+      },
+      {
+        "level": 15,
+        "title": "Tryb Wyniesienia – poziom 15",
+        "description": "Nieprzychylne wydarzenia."
+      },
+      {
+        "level": 16,
+        "title": "Tryb Wyniesienia – poziom 16",
+        "description": "Handlarz to chciwiec."
+      },
+      {
+        "level": 17,
+        "title": "Tryb Wyniesienia – poziom 17",
+        "description": "Pospolici przeciwnicy posiadają lepsze zdolności."
+      },
+      {
+        "level": 18,
+        "title": "Tryb Wyniesienia – poziom 18",
+        "description": "Przeciwnicy Elitarni posiadają lepsze zdolności."
+      },
+      {
+        "level": 19,
+        "title": "Tryb Wyniesienia – poziom 19",
+        "description": "Bossowie posiadają lepsze zdolności."
+      },
+      {
+        "level": 20,
+        "title": "Tryb Wyniesienia – poziom 20",
+        "description": "(Maksymalny poziom) Podwójni Bossowie."
+      }
+    ],
+    "map_rooms": [
+      {
+        "id": "UNKNOWN",
+        "title": "Nieznane",
+        "description": "Tajemnicze pomieszczenie.\n\nMożesz w nim znaleźć przeciwników, skarby, Handlarza lub coś zupełnie innego."
+      },
+      {
+        "id": "SHOP",
+        "title": "Handlarz",
+        "description": "W tym pomieszczeniu spotkasz Handlarza sprzedającego różnorodne towary.\n\nMożesz tutaj wydać całe ciężko zarobione Złoto!"
+      },
+      {
+        "id": "TREASURE",
+        "title": "Skarb",
+        "description": "W tych pomieszczeniu znajdziesz Artefakty oraz Złoto."
+      },
+      {
+        "id": "REST",
+        "title": "Obozowisko",
+        "description": "W tym pomieszczeniu możesz przywrócić utracone PŻ lub ulepszyć kartę."
+      },
+      {
+        "id": "ENEMY",
+        "title": "Przeciwnik",
+        "description": "Wrogo nastawione stworzenie okupuje te pomieszczenie."
+      },
+      {
+        "id": "ELITE",
+        "title": "Elitarny",
+        "description": "Potężne stworzenie zamieszkuje te pomieszczenie.\n\nZa jego pokonanie otrzymasz artefakt."
+      }
+    ],
+    "core_concepts": [
+      {
+        "id": "BLOCK",
+        "title": "blok",
+        "description": "Pochłania otrzymywane obrażenia."
+      },
+      {
+        "id": "EXHAUST",
+        "title": "wykluczenie",
+        "description": "Karta zostanie usunięta z talii do końca walki."
+      },
+      {
+        "id": "ETHEREAL",
+        "title": "eteryczność",
+        "description": "Jeśli ta karta będzie w twojej ręce pod koniec tury, zostanie wykluczona. Wykluczone karty są usuwane z talii do końca walki."
+      },
+      {
+        "id": "RETAIN",
+        "title": "zachowanie",
+        "description": "Zachowane karty nie zostają odrzucone pod koniec tury."
+      },
+      {
+        "id": "STATUS",
+        "title": "stan",
+        "description": "Karty Stanu są usuwane z talii po zakończeniu walki."
+      },
+      {
+        "id": "CURSE",
+        "title": "klątwa",
+        "description": "Negatywna karta będąca na stałe w twojej talii."
+      },
+      {
+        "id": "DRAW_PILE",
+        "title": "Wróć",
+        "description": "Karty stąd są dobierane na początku każdej tury."
+      },
+      {
+        "id": "DISCARD_PILE",
+        "title": "Stos kart odrzuconych",
+        "description": "Karty stąd są wtasowywane do stosu rozgrywającego, gdy ten stanie się pusty."
+      },
+      {
+        "id": "ENERGY",
+        "title": "Energia",
+        "description": "Brak wystarczającej Energii."
+      }
+    ],
+    "orbs": [
+      {
+        "id": "DARK",
+        "title": "Ciemność",
+        "description": "Umiejętność Pasywna: Na koniec tury, zwiększ obrażenia Sfery o.\nWyładowanie: Zadaj pkt. przeciwnikowi z najmniejszą ilością PŻ.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "FROST",
+        "title": "Mróz",
+        "description": "Umiejętność Pasywna: Na koniec tury, zyskaj pkt. Bloku.\nWyładowanie: Zyskaj pkt. Bloku.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "LIGHTNING",
+        "title": "Grom",
+        "description": "Umiejętność Pasywna: Na koniec tury, zadaj pkt. obrażeń losowemu przeciwnikowi.\nWyładowanie: Zadaj pkt. obrażeń losowemu przeciwnikowi.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "PLASMA",
+        "title": "Plazma",
+        "description": "Umiejętność Pasywna: Na początku tury, zyskaj Energy.\nWyładowanie: Zyskaj Energy.\nSkupienie nie wpływa na Plazmę.",
+        "passive": "",
+        "evoke": ""
+      }
+    ],
+    "stances": [
+      {
+        "id": "WRATH",
+        "title": "Gniew",
+        "description": "W tej Postawie, zadajesz i otrzymujesz podwójne obrażenia od ataków."
+      },
+      {
+        "id": "CALM",
+        "title": "Spokój",
+        "description": "Po opuszczeniu tej Postawy, zyskaj Energy Energy."
+      },
+      {
+        "id": "DIVINITY",
+        "title": "Boskość",
+        "description": "Po przyjęciu tej Postawy, zyskaj Energy Energy Energy. Karty Ataku zadają potrójne obrażenia. Opuść tę Postawę na początku następnej tury."
+      }
+    ],
+    "character_mechanics": [],
+    "keywords": [
+      {
+        "id": "ARTIFACT",
+        "names": [
+          "hart",
+          "hartu"
+        ],
+        "description": "Neutralizuje negatywny efekt."
+      },
+      {
+        "id": "BLOCK",
+        "names": [
+          "blok",
+          "bloku",
+          "blokuje"
+        ],
+        "description": "Pochłania otrzymywane obrażenia."
+      },
+      {
+        "id": "BURN",
+        "names": [
+          "poparzenie",
+          "poparzenia",
+          "poparzeń"
+        ],
+        "description": "Niezagrywalna karta Stanu, zadająca obrażenia."
+      },
+      {
+        "id": "CHANNEL",
+        "names": [
+          "przywołanie",
+          "przywołaj",
+          "przywołanych",
+          "przywołasz",
+          "przywołany",
+          "przywołano",
+          "przywołaną",
+          "przywołane",
+          "przywołać"
+        ],
+        "description": "Umieszcza Sferę w pierwszym pustym miejscu. Jeżeli nie masz już miejsca, twoja pierwsza Sfera zostaje Wyładowana."
+      },
+      {
+        "id": "CONFUSED",
+        "names": [
+          "dezorientacja",
+          "dezorientacji",
+          "dezorientacją"
+        ],
+        "description": "Koszt każdej dobranej karty jest losowy."
+      },
+      {
+        "id": "CURSE",
+        "names": [
+          "klątwa",
+          "klątwy",
+          "klątw"
+        ],
+        "description": "Negatywna karta będąca na stałe w twojej talii."
+      },
+      {
+        "id": "DARK",
+        "names": [
+          "ciemność",
+          "ciemność+",
+          "ciemności"
+        ],
+        "description": "Sfera: Zwiększa obrażenia w każdej turze. Wyładowanie zadaje obrażenia przeciwnikowi z najmniejszą liczbą PŻ."
+      },
+      {
+        "id": "DAZED",
+        "names": [
+          "oszołomienie",
+          "oszołomienia"
+        ],
+        "description": "Niezagrywalna Eteryczna karta Stanu."
+      },
+      {
+        "id": "DEXTERITY",
+        "names": [
+          "zręczność",
+          "zręczności"
+        ],
+        "description": "Zwiększa ilość otrzymywanego Bloku z kart."
+      },
+      {
+        "id": "ETHEREAL",
+        "names": [
+          "eteryczność",
+          "eteryczne",
+          "eteryczna"
+        ],
+        "description": "Jeśli ta karta będzie w twojej ręce pod koniec tury, zostanie wykluczona. Wykluczone karty są usuwane z talii do końca walki."
+      },
+      {
+        "id": "EVOKE",
+        "names": [
+          "wyładowanie",
+          "wyładuj",
+          "wyładowaną",
+          "wyładowana"
+        ],
+        "description": "Zużyj Sferę pierwszą od prawej, aby ją Wyładować."
+      },
+      {
+        "id": "EXHAUST",
+        "names": [
+          "wykluczenie",
+          "wyklucz",
+          "wykluczona",
+          "wykluczone",
+          "wykluczysz",
+          "wyklucza",
+          "wykluczoną"
+        ],
+        "description": "Karta zostanie usunięta z talii do końca walki."
+      },
+      {
+        "id": "FOCUS",
+        "names": [
+          "skupienie",
+          "skupienia"
+        ],
+        "description": "Zwiększa efektywność Przywołanych Sfer."
+      },
+      {
+        "id": "FRAIL",
+        "names": [
+          "kruchość",
+          "kruchości"
+        ],
+        "description": "Zmniejsza otrzymywane z kart pkt. Bloku o 25%."
+      },
+      {
+        "id": "FROST",
+        "names": [
+          "mróz",
+          "mróz+",
+          "mrozu"
+        ],
+        "description": "Sfera: Zyskujesz Blok."
+      },
+      {
+        "id": "INNATE",
+        "names": [
+          "startowa"
+        ],
+        "description": "Zaczniesz walkę z tą kartą\nw ręce."
+      },
+      {
+        "id": "INTANGIBLE",
+        "names": [
+          "nieuchwytność",
+          "nieuchwytności"
+        ],
+        "description": "Zmniejsza WSZYSTKIE otrzymywane obrażenia do 1 pkt."
+      },
+      {
+        "id": "LIGHTNING",
+        "names": [
+          "grom",
+          "grom+",
+          "gromu"
+        ],
+        "description": "Sfera: Zadaje obrażenia losowym przeciwnikom."
+      },
+      {
+        "id": "LOCKED",
+        "names": [
+          "zablokowana"
+        ],
+        "description": "Karta musi zostać wcześniej odblokowana."
+      },
+      {
+        "id": "OPENER",
+        "names": [
+          "Starter"
+        ],
+        "description": "Starter może zostać zagrany jedynie jako pierwsza karta w turze."
+      },
+      {
+        "id": "PLASMA",
+        "names": [
+          "plazma",
+          "plazma+",
+          "plazmy",
+          "plazmę"
+        ],
+        "description": "Sfera: Zyskujesz energię."
+      },
+      {
+        "id": "POISON",
+        "names": [
+          "trucizna",
+          "trucizny",
+          "truciznę"
+        ],
+        "description": "Zatrute istoty tracą PŻ na początku swojej tury. W każdej turze wartość Trucizny\nzmniejsza się o 1."
+      },
+      {
+        "id": "RETAIN",
+        "names": [
+          "zachowanie",
+          "zachowaj",
+          "zachowana",
+          "zachowaniem",
+          "zachowaną",
+          "zachowaniu"
+        ],
+        "description": "Zachowane karty nie zostają odrzucone pod koniec tury."
+      },
+      {
+        "id": "SHIV",
+        "names": [
+          "nóż",
+          "noże",
+          "noży"
+        ],
+        "description": "Karta Ataku kosztująca 0\ni wykluczana po zagraniu."
+      },
+      {
+        "id": "STATUS",
+        "names": [
+          "stan",
+          "stanu"
+        ],
+        "description": "Karty Stanu są usuwane z talii po zakończeniu walki."
+      },
+      {
+        "id": "STRENGTH",
+        "names": [
+          "siła",
+          "siły"
+        ],
+        "description": "Zwiększa obrażenia zadawane kartami Ataku."
+      },
+      {
+        "id": "STRIKE",
+        "names": [
+          "uderzenie"
+        ],
+        "description": "Dowolna karta z \"uderzenie\" w nazwie."
+      },
+      {
+        "id": "THORNS",
+        "names": [
+          "ciernie",
+          "cierni"
+        ],
+        "description": "Kiedy otrzymujesz obrażenia od Ataku, zadajesz obrażenia atakującemu cię przeciwnikowi."
+      },
+      {
+        "id": "TODO",
+        "names": [
+          "todo",
+          "JUST FOR DEVS, DONT TRANSLATE",
+          "JUST FOR DEVS, DONT TRANSLATE",
+          "JUST FOR DEVS, DONT TRANSLATE",
+          "JUST FOR DEVS, DONT TRANSLATE"
+        ],
+        "description": "This card is NOT IMPLEMENTED. Someone should really fix that..."
+      },
+      {
+        "id": "TRANSFORM",
+        "names": [
+          "podmień",
+          "podmienione"
+        ],
+        "description": "Podmieniona karta staje się kartą o losowej rzadkości."
+      },
+      {
+        "id": "UNKNOWN",
+        "names": [
+          "nieznane"
+        ],
+        "description": "Tę kartę należy wcześniej odkryć."
+      },
+      {
+        "id": "UNPLAYABLE",
+        "names": [
+          "niezagrywalna"
+        ],
+        "description": "Karta ta jest, no... niezagrywalna."
+      },
+      {
+        "id": "UPGRADE",
+        "names": [
+          "ulepszenie",
+          "ulepsz",
+          "ulepsza",
+          "ulepszy"
+        ],
+        "description": "Sprawia, że karty stają się potężniejsze. Karty można ulepszyć tylko raz."
+      },
+      {
+        "id": "VOID",
+        "names": [
+          "otchłań",
+          "otchłani"
+        ],
+        "description": "Niezagrywalna karta stanu, która przy dobraniu zużywa energię."
+      },
+      {
+        "id": "VULNERABLE",
+        "names": [
+          "wrażliwość",
+          "wrażliwości",
+          "wrażliwi"
+        ],
+        "description": "Wrażliwe istoty otrzymują 50% więcej obrażeń od Ataków."
+      },
+      {
+        "id": "WEAK",
+        "names": [
+          "słabość",
+          "słabości",
+          "osłabienia",
+          "osłabiona",
+          "osłabieni"
+        ],
+        "description": "Osłabione istoty zadają 25% mniej obrażeń Atakami."
+      },
+      {
+        "id": "WOUND",
+        "names": [
+          "rana",
+          "rany",
+          "ran",
+          "ranę"
+        ],
+        "description": "Niezagrywalna karta Stanu."
+      },
+      {
+        "id": "LOCK_ON",
+        "names": [
+          "namierzenie",
+          "namierz",
+          "namierza",
+          "namierzy",
+          "namierzenia"
+        ],
+        "description": "Namierzeni przeciwnicy otrzymują 50% więcej obrażeń od Sfer."
+      },
+      {
+        "id": "STANCE",
+        "names": [
+          "postawa",
+          "postawy",
+          "postaw",
+          "postawę",
+          "postawie"
+        ],
+        "description": "Możesz posiadać tylko jedną postawę w danym momencie."
+      },
+      {
+        "id": "WRATH",
+        "names": [
+          "gniew",
+          "gniewu"
+        ],
+        "description": "W tej Postawie, zadajesz i otrzymujesz podwójne obrażenia od ataków."
+      },
+      {
+        "id": "CALM",
+        "names": [
+          "spokój",
+          "spokoju"
+        ],
+        "description": "Po opuszczeniu tej Postawy, zyskaj Energy Energy."
+      },
+      {
+        "id": "DIVINITY",
+        "names": [
+          "boskość",
+          "boskości"
+        ],
+        "description": "Po przyjęciu tej Postawy, zyskaj Energy Energy Energy. Karty Ataku zadają potrójne obrażenia. Opuść tę Postawę na początku następnej tury."
+      },
+      {
+        "id": "PRAYER",
+        "names": [
+          "mantra",
+          "mantry",
+          "poprzez przemoc"
+        ],
+        "description": "Po zdobyciu 10 pkt. Mantry, przyjmij postawę Boskości."
+      },
+      {
+        "id": "SCRY",
+        "names": [
+          "prognozowanie",
+          "prognozuj",
+          "prognozowania",
+          "prognozujesz"
+        ],
+        "description": "Podejrzyj X kart ze stosu rozgrywającego. Każdą z nich możesz odrzucić."
+      },
+      {
+        "id": "REGEN",
+        "names": [
+          "regeneracja",
+          "regeneracji"
+        ],
+        "description": "Regeneracja przywraca PŻ na koniec tury. W każdej turze zmniejsza się o 1."
+      },
+      {
+        "id": "VIGOR",
+        "names": [
+          "wigor",
+          "wigoru"
+        ],
+        "description": "Twój następny atak zadaje dodatkowe obrażenia."
+      },
+      {
+        "id": "RITUAL",
+        "names": [
+          "rytuał",
+          "rytuału"
+        ],
+        "description": "Zyskaj pkt. Siły na koniec swojej tury."
+      },
+      {
+        "id": "FATAL",
+        "names": [
+          "uśmiercenie",
+          "uśmierceniu"
+        ],
+        "description": "Efekt wywoływany poprzez zabicie tą kartą przeciwnika nie będącego sługą."
+      }
+    ]
   }
 }

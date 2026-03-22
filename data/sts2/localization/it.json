@@ -5418,5 +5418,259 @@
       "description": "La prima volta che questa carta viene giocata, infligge {Amount} di danno extra.",
       "name": "Vigorosità"
     }
+  },
+  "mechanics": {
+    "ascension": [
+      {
+        "level": 0,
+        "title": "Nessuna Ascensione",
+        "description": "Gioca senza modificatori di Ascensione."
+      },
+      {
+        "level": 1,
+        "title": "Invasione di nemici Élite",
+        "description": "I nemici Élite compaiono più spesso."
+      },
+      {
+        "level": 2,
+        "title": "Viaggio spossante",
+        "description": "Gli Antichi ripristinano solo l'80% dei PV che hai perso."
+      },
+      {
+        "level": 3,
+        "title": "Povertà",
+        "description": "I nemici e le casse del tesoro offrono il 25% in meno d'oro."
+      },
+      {
+        "level": 4,
+        "title": "Stringere la cinghia",
+        "description": "Inizi ogni partita con 1 spazio pozioni in meno."
+      },
+      {
+        "level": 5,
+        "title": "Cruccio dell'Asceso",
+        "description": "Inizi ogni partita con una Maledizione."
+      },
+      {
+        "level": 6,
+        "title": "A corto di sonno",
+        "description": "Incontrerai meno luoghi di riposo."
+      },
+      {
+        "level": 7,
+        "title": "Scarsità",
+        "description": "Le carte rare e potenziate compaiono con meno frequenza."
+      },
+      {
+        "level": 8,
+        "title": "Nemici resistenti",
+        "description": "Tutti i nemici sono più difficili da uccidere."
+      },
+      {
+        "level": 9,
+        "title": "Nemici letali",
+        "description": "Tutti i nemici sferrano attacchi più forti."
+      },
+      {
+        "level": 10,
+        "title": "Boss doppi",
+        "description": "Affronti due boss al termine dell'Atto 3."
+      }
+    ],
+    "map_rooms": [
+      {
+        "id": "ROOM_ENEMY",
+        "title": "Nemico",
+        "description": "Dei nemici ostili risiedono in queste stanze."
+      },
+      {
+        "id": "ROOM_ELITE",
+        "title": "Nem. Élite",
+        "description": "In queste stanze si trovano nemici potenti.\n\nSconfiggendoli riceverai una reliquia."
+      },
+      {
+        "id": "ROOM_BOSS",
+        "title": "Boss",
+        "description": "Il nemico più forte dell'area.\n\nSconfiggerlo ti permetterà di avanzare all'Atto successivo."
+      },
+      {
+        "id": "ROOM_EVENT",
+        "title": "Evento",
+        "description": "Qualcosa di insolito avviene in queste stanze..."
+      },
+      {
+        "id": "ROOM_MERCHANT",
+        "title": "Negozio",
+        "description": "Il misterioso mercante vende la sua merce in queste stanze.\n\nQui puoi spendere l'oro che hai guadagnato con tanta fatica!"
+      },
+      {
+        "id": "ROOM_REST",
+        "title": "Luogo di riposo",
+        "description": "Passa in queste stanze per recuperare dei PV o potenziare una carta."
+      },
+      {
+        "id": "ROOM_TREASURE",
+        "title": "Stanza del tesoro",
+        "description": "Le reliquie e l'oro si possono trovare in queste stanze tanto agognate."
+      },
+      {
+        "id": "ROOM_ANCIENT",
+        "title": "Antico",
+        "description": "Gli Antichi risiedono in queste stanze.\n\nOffrono bonus, tesori e informazioni incredibili."
+      }
+    ],
+    "core_concepts": [
+      {
+        "id": "ENERGY",
+        "title": "Energia",
+        "description": "L'Energia viene usata per giocare carte dalla tua mano."
+      },
+      {
+        "id": "BLOCK",
+        "title": "Blocco",
+        "description": "Ti evita di subire danno fino al prossimo turno."
+      },
+      {
+        "id": "HIT_POINTS",
+        "title": "Punti vita (PV)",
+        "description": "Quando termini i PV, il tuo personaggio morirà."
+      },
+      {
+        "id": "MONEY_POUCH",
+        "title": "Oro",
+        "description": "Mostra quanto oro possiedi. L'oro è la valuta della Guglia."
+      },
+      {
+        "id": "DRAW_PILE",
+        "title": "Mazzo di pesca (A)",
+        "description": "All'inizio di ogni turno,\npeschi 5 carte da questo mazzo.\n\nFai clic per vedere le carte del tuo mazzo di pesca (mischiate)."
+      },
+      {
+        "id": "DISCARD_PILE",
+        "title": "Pila degli scarti (S)",
+        "description": "Se il tuo mazzo di pesca è vuoto, la pila degli scarti viene mischiata nel mazzo di pesca.\n\nFai clic per vedere le carte della tua pila degli scarti."
+      },
+      {
+        "id": "EXHAUST_PILE",
+        "title": "Carte esaurite (X)",
+        "description": "Fai clic per vedere le carte esaurite in questo combattimento."
+      }
+    ],
+    "orbs": [
+      {
+        "id": "LIGHTNING",
+        "title": "Elettroglobo",
+        "description": "Effetto passivo: al termine del turno, infliggi {Passive} di danno a un nemico casuale.\nEvocazione: infliggi {Evoke} di danno a un nemico casuale.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "FROST",
+        "title": "Crioglobo",
+        "description": "Effetto passivo: al termine del turno, ottieni {Passive} Blocco.\nEvocazione: ottieni {Evoke} di Blocco.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "DARK",
+        "title": "Tetroglobo",
+        "description": "Effetto passivo: al termine del turno, aumenta il danno di questo Globo di {Passive}.\nEvocazione: infligge {Evoke} di danno al nemico con PV più bassi.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "PLASMA",
+        "title": "Plasmaglobo",
+        "description": "Effetto passivo: all'inizio del turno\nottieni 1 Energy.\nEvocazione: ottieni 2 Energy.\nIl Plasmaglobo non è influenzato da Focus.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "GLASS",
+        "title": "Vitreoglobo",
+        "description": "Effetto passivo: al termine del turno, infliggi {Passive} di danno a TUTTI i nemici e riduce il valore di questo Globo di 1.\nEvocazione: infliggi {Evoke} di danno a TUTTI i nemici.",
+        "passive": "",
+        "evoke": ""
+      }
+    ],
+    "stances": [],
+    "character_mechanics": [
+      {
+        "id": "STAR_COUNT",
+        "title": "Stelle",
+        "description": "Il tuo numero di Stelle (★). Le carte del Regent potrebbero richiedere ★ per essere giocate."
+      },
+      {
+        "id": "SUMMON",
+        "title": "Invocazione",
+        "description": "Invochi Osty.\nSe l'hai già invocato, aumenti i suoi PV massimi per questo combattimento."
+      },
+      {
+        "id": "FORGE",
+        "title": "Forgiatura",
+        "description": "La prima volta che esegui una Forgiatura in un combattimento, aggiungi la carta Spada Sovrana alla tua mano. Forgiatura aggiunge danno extra alla carta Spada Sovrana."
+      },
+      {
+        "id": "REPLAY",
+        "title": "Riattivazione",
+        "description": "Giochi questa carta una volta in più."
+      },
+      {
+        "id": "FATAL",
+        "title": "Letale",
+        "description": "Si attiva ogni volta che questa carta uccide un nemico non seguace."
+      }
+    ],
+    "keywords": [
+      {
+        "id": "ETERNAL",
+        "names": [
+          "Eternità"
+        ],
+        "description": "Non può essere trasformata o rimossa dal tuo mazzo."
+      },
+      {
+        "id": "ETHEREAL",
+        "names": [
+          "Evanescenza"
+        ],
+        "description": "Se questa carta è nella tua mano al termine di questo turno, diventa esaurita."
+      },
+      {
+        "id": "EXHAUST",
+        "names": [
+          "Esaurimento"
+        ],
+        "description": "Viene rimossa fino al termine del combattimento."
+      },
+      {
+        "id": "INNATE",
+        "names": [
+          "Innatismo"
+        ],
+        "description": "Inizi ogni combattimento con questa carta nella tua mano."
+      },
+      {
+        "id": "RETAIN",
+        "names": [
+          "Conservazione"
+        ],
+        "description": "Le carte con Conservazione non vengono scartate al termine del turno."
+      },
+      {
+        "id": "SLY",
+        "names": [
+          "Astuzia"
+        ],
+        "description": "Se questa carta viene scartata dalla tua mano prima della fine del tuo turno, giocala senza nessun costo."
+      },
+      {
+        "id": "UNPLAYABLE",
+        "names": [
+          "Ingiocabilità"
+        ],
+        "description": "Le carte con Ingiocabilità non possono essere usate."
+      }
+    ]
   }
 }

@@ -1485,5 +1485,259 @@
         "Zap"
       ]
     }
+  },
+  "mechanics": {
+    "ascension": [
+      {
+        "level": 0,
+        "title": "No Ascension",
+        "description": "Play without any Ascension modifiers."
+      },
+      {
+        "level": 1,
+        "title": "Swarming Elites",
+        "description": "Elites spawn more often."
+      },
+      {
+        "level": 2,
+        "title": "Weary Traveler",
+        "description": "Ancients only heal 80% of your missing HP."
+      },
+      {
+        "level": 3,
+        "title": "Poverty",
+        "description": "Enemies and Treasure Chests drop 25% less Gold."
+      },
+      {
+        "level": 4,
+        "title": "Tight Belt",
+        "description": "Start each run with 1 less potion slot."
+      },
+      {
+        "level": 5,
+        "title": "Ascender's Bane",
+        "description": "Start each run Cursed."
+      },
+      {
+        "level": 6,
+        "title": "Gloom",
+        "description": "Less Rest Sites."
+      },
+      {
+        "level": 7,
+        "title": "Scarcity",
+        "description": "Rare and Upgraded cards appear less often."
+      },
+      {
+        "level": 8,
+        "title": "Tough Enemies",
+        "description": "All enemies are harder to kill."
+      },
+      {
+        "level": 9,
+        "title": "Deadly Enemies",
+        "description": "All enemies have deadlier attacks."
+      },
+      {
+        "level": 10,
+        "title": "Double Boss",
+        "description": "Fight two bosses at the end of Act 3."
+      }
+    ],
+    "map_rooms": [
+      {
+        "id": "ROOM_ENEMY",
+        "title": "Enemy",
+        "description": "Hostile enemies reside in these rooms."
+      },
+      {
+        "id": "ROOM_ELITE",
+        "title": "Elite",
+        "description": "Powerful foes are in these rooms.\n\nDefeating them will reward you a Relic."
+      },
+      {
+        "id": "ROOM_BOSS",
+        "title": "Boss",
+        "description": "The deadliest foe in the area.\n\nDefeating them will let you proceed to the next Act."
+      },
+      {
+        "id": "ROOM_EVENT",
+        "title": "Event",
+        "description": "Something unusual occurs in these rooms..."
+      },
+      {
+        "id": "ROOM_MERCHANT",
+        "title": "Shop",
+        "description": "The mysterious Merchant sells his wares in these rooms.\n\nSpend your well-earned Gold here!"
+      },
+      {
+        "id": "ROOM_REST",
+        "title": "Rest Site",
+        "description": "Stop by these rooms to Heal some HP or Upgrade a card."
+      },
+      {
+        "id": "ROOM_TREASURE",
+        "title": "Treasure Room",
+        "description": "Relics and Gold can be found in these coveted rooms."
+      },
+      {
+        "id": "ROOM_ANCIENT",
+        "title": "Ancient",
+        "description": "Ancients reside in these rooms.\n\nThey grant incredible bonuses, treasures, and knowledge."
+      }
+    ],
+    "core_concepts": [
+      {
+        "id": "ENERGY",
+        "title": "Energy",
+        "description": "Energy is used to play cards from your Hand."
+      },
+      {
+        "id": "BLOCK",
+        "title": "Block",
+        "description": "Until next turn, prevents damage."
+      },
+      {
+        "id": "HIT_POINTS",
+        "title": "Hit Points (HP)",
+        "description": "If you run out of HP, you die."
+      },
+      {
+        "id": "MONEY_POUCH",
+        "title": "Gold",
+        "description": "How much Gold you have. Gold is the currency within the Spire."
+      },
+      {
+        "id": "DRAW_PILE",
+        "title": "Draw Pile (A)",
+        "description": "At the start of each turn,\n5 cards are drawn from here.\n\nClick to view the cards in your draw pile (shuffled)."
+      },
+      {
+        "id": "DISCARD_PILE",
+        "title": "Discard Pile (S)",
+        "description": "If your draw pile is empty, the discard pile is shuffled into the draw pile.\n\nClick to view the cards in your discard pile."
+      },
+      {
+        "id": "EXHAUST_PILE",
+        "title": "Exhausted Cards (X)",
+        "description": "Click to view cards Exhausted this combat."
+      }
+    ],
+    "orbs": [
+      {
+        "id": "LIGHTNING",
+        "title": "Lightning",
+        "description": "Passive: At the end of turn, deal {Passive} damage to a random enemy.\nEvoke: Deal {Evoke} damage to a random enemy.",
+        "passive": "At the end of turn, deal {Passive} damage to a random enemy.",
+        "evoke": "Deal {Evoke} damage to a random enemy."
+      },
+      {
+        "id": "FROST",
+        "title": "Frost",
+        "description": "Passive: At the end of turn, gain {Passive} Block.\nEvoke: Gain {Evoke} Block.",
+        "passive": "At the end of turn, gain {Passive} Block.",
+        "evoke": "Gain {Evoke} Block."
+      },
+      {
+        "id": "DARK",
+        "title": "Dark",
+        "description": "Passive: At the end of turn, increase this Orb's damage by {Passive}.\nEvoke: Deal {Evoke} damage to the enemy with the lowest HP.",
+        "passive": "At the end of turn, increase this Orb's damage by {Passive}.",
+        "evoke": "Deal {Evoke} damage to the enemy with the lowest HP."
+      },
+      {
+        "id": "PLASMA",
+        "title": "Plasma",
+        "description": "Passive: At the start of turn,\ngain 1 Energy.\nEvoke: Gain 2 Energy.\nPlasma is unaffected by Focus.",
+        "passive": "At the start of turn,\ngain 1 Energy.",
+        "evoke": "Gain 2 Energy.\nPlasma is unaffected by Focus."
+      },
+      {
+        "id": "GLASS",
+        "title": "Glass",
+        "description": "Passive: At the end of turn, deal {Passive} damage to ALL enemies and reduce this orb's value by 1.\nEvoke: Deal {Evoke} damage to ALL enemies.",
+        "passive": "At the end of turn, deal {Passive} damage to ALL enemies and reduce this orb's value by 1.",
+        "evoke": "Deal {Evoke} damage to ALL enemies."
+      }
+    ],
+    "stances": [],
+    "character_mechanics": [
+      {
+        "id": "STAR_COUNT",
+        "title": "Stars",
+        "description": "Your current Star (★) count. The Regent's cards may require ★ to play."
+      },
+      {
+        "id": "SUMMON",
+        "title": "Summon",
+        "description": "Summon Osty.\nIf already summoned, raise his Max HP for this combat."
+      },
+      {
+        "id": "FORGE",
+        "title": "Forge",
+        "description": "The first time you Forge each combat, add Sovereign Blade into your Hand. Adds additional damage to Sovereign Blade."
+      },
+      {
+        "id": "REPLAY",
+        "title": "Replay",
+        "description": "Plays this card an additional time."
+      },
+      {
+        "id": "FATAL",
+        "title": "Fatal",
+        "description": "Triggers whenever this card kills a non-minion enemy."
+      }
+    ],
+    "keywords": [
+      {
+        "id": "ETERNAL",
+        "names": [
+          "Eternal"
+        ],
+        "description": "Cannot be removed or transformed from your Deck."
+      },
+      {
+        "id": "ETHEREAL",
+        "names": [
+          "Ethereal"
+        ],
+        "description": "If this card is in your Hand at the end of this turn, it is Exhausted."
+      },
+      {
+        "id": "EXHAUST",
+        "names": [
+          "Exhaust"
+        ],
+        "description": "Removed until the end of combat."
+      },
+      {
+        "id": "INNATE",
+        "names": [
+          "Innate"
+        ],
+        "description": "Start each combat with this card in your Hand."
+      },
+      {
+        "id": "RETAIN",
+        "names": [
+          "Retain"
+        ],
+        "description": "Retained cards are not discarded at the end of turn."
+      },
+      {
+        "id": "SLY",
+        "names": [
+          "Sly"
+        ],
+        "description": "If this card is discarded from your Hand before the end of your turn, play it for free."
+      },
+      {
+        "id": "UNPLAYABLE",
+        "names": [
+          "Unplayable"
+        ],
+        "description": "Unplayable cards cannot be played."
+      }
+    ]
   }
 }

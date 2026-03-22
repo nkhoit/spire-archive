@@ -4570,5 +4570,618 @@
       ],
       "description": "É acionado sempre que esta carta matar um inimigo não lacaio."
     }
+  },
+  "mechanics": {
+    "ascension": [
+      {
+        "level": 1,
+        "title": "Modo Ascensão Nível 1",
+        "description": "Elites aparecerão com maior frequência."
+      },
+      {
+        "level": 2,
+        "title": "Modo Ascensão Nível 2",
+        "description": "Inimigos normais são mais mortais."
+      },
+      {
+        "level": 3,
+        "title": "Modo Ascensão Nível 3",
+        "description": "Elites são mais mortais."
+      },
+      {
+        "level": 4,
+        "title": "Modo Ascensão Nível 4",
+        "description": "Chefes são mais mortais."
+      },
+      {
+        "level": 5,
+        "title": "Modo Ascensão Nível 5",
+        "description": "Cure menos depois de batalhas de Chefe."
+      },
+      {
+        "level": 6,
+        "title": "Modo Ascensão Nível 6",
+        "description": "Comece cada jornada danificado."
+      },
+      {
+        "level": 7,
+        "title": "Modo Ascensão Nível 7",
+        "description": "Inimigos normais são mais resistentes."
+      },
+      {
+        "level": 8,
+        "title": "Modo Ascensão Nível 8",
+        "description": "Elites são mais resistentes."
+      },
+      {
+        "level": 9,
+        "title": "Modo Ascensão Nível 9",
+        "description": "Chefes são mais resistentes."
+      },
+      {
+        "level": 10,
+        "title": "Modo Ascensão Nível 10",
+        "description": "Comece cada jornada amaldiçoado(a)."
+      },
+      {
+        "level": 11,
+        "title": "Modo Ascensão Nível 11",
+        "description": "Menos espaço para Poções."
+      },
+      {
+        "level": 12,
+        "title": "Modo Ascensão Nível 12",
+        "description": "Cartas aprimoradas aparecem menos."
+      },
+      {
+        "level": 13,
+        "title": "Modo Ascensão Nível 13",
+        "description": "Chefes pobres."
+      },
+      {
+        "level": 14,
+        "title": "Modo Ascensão Nível 14",
+        "description": "PV Máximo menor."
+      },
+      {
+        "level": 15,
+        "title": "Modo Ascensão Nível 15",
+        "description": "Eventos Desfavoráveis."
+      },
+      {
+        "level": 16,
+        "title": "Modo Ascensão Nível 16",
+        "description": "Lojas são mais caras."
+      },
+      {
+        "level": 17,
+        "title": "Modo Ascensão Nível 17",
+        "description": "Inimigos normais tem ataques e técnicas mais desafiadores."
+      },
+      {
+        "level": 18,
+        "title": "Modo Ascensão Nível 18",
+        "description": "Elites tem ataques e técnicas mais desafiadores."
+      },
+      {
+        "level": 19,
+        "title": "Modo Ascensão Nível 19",
+        "description": "Chefes tem ataques e técnicas mais desafiadores."
+      },
+      {
+        "level": 20,
+        "title": "Modo Ascensão Nível 20",
+        "description": "(Nivel Máximo) Chefes Duplos"
+      }
+    ],
+    "map_rooms": [
+      {
+        "id": "UNKNOWN",
+        "title": "Desconhecido",
+        "description": "Uma sala desconhecida.\n\nVocê pode encontrar monstros, tesouros, lojas ou algo completamente diferente."
+      },
+      {
+        "id": "SHOP",
+        "title": "Vendedor",
+        "description": "O Vendedor misterioso vende seus produtos nessas salas.\n\nGaste o seu Ouro bem ganho aqui!"
+      },
+      {
+        "id": "TREASURE",
+        "title": "Tesouro",
+        "description": "Reliquias e Ouro podem ser encontrados nessas cobiçadas salas."
+      },
+      {
+        "id": "REST",
+        "title": "Descansar",
+        "description": "Pare nessas salas para Curar algum PV ou Aprimore uma carta"
+      },
+      {
+        "id": "ENEMY",
+        "title": "Inimigo",
+        "description": "Inimigos hostis residem nessas salas."
+      },
+      {
+        "id": "ELITE",
+        "title": "Elite",
+        "description": "Inimigos poderosos estão nessas salas.\n\nDerrotá-los irá o recompensar com uma Relíquia."
+      }
+    ],
+    "core_concepts": [
+      {
+        "id": "BLOCK",
+        "title": "proteção",
+        "description": "Até o próximo turno, previne dano."
+      },
+      {
+        "id": "EXHAUST",
+        "title": "exaurir",
+        "description": "Removida até o fim do combate."
+      },
+      {
+        "id": "ETHEREAL",
+        "title": "etéreo",
+        "description": "Se esta carta estiver em sua mão no fim do turno, ela será exaurida. Cartas exauridas são removidas do seu baralho até o fim do combate."
+      },
+      {
+        "id": "RETAIN",
+        "title": "reter",
+        "description": "Cartas retidas não são descartadas no fim do turno."
+      },
+      {
+        "id": "STATUS",
+        "title": "condição",
+        "description": "Cartas de condição são removidas no fim do combate."
+      },
+      {
+        "id": "CURSE",
+        "title": "maldição",
+        "description": "Cartas de maldição são cartas negativas que permanecem no seu baralho."
+      },
+      {
+        "id": "DRAW_PILE",
+        "title": "Retornar",
+        "description": "As cartas são compradas daqui no início de cada turno."
+      },
+      {
+        "id": "DISCARD_PILE",
+        "title": "Pilha de Descarte",
+        "description": "As cartas daqui são embaralhadas na sua pilha de compra quando fica sem cartas."
+      },
+      {
+        "id": "ENERGY",
+        "title": "Energia",
+        "description": "Não tenho Energia suficiente."
+      }
+    ],
+    "orbs": [
+      {
+        "id": "DARK",
+        "title": "Trevas",
+        "description": "Passiva: No fim do seu turno, aumente o dano desta Orbe em.\nEvocar: Cause de dano ao inimigo com menos PV.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "FROST",
+        "title": "Gelo",
+        "description": "Passiva: No fim do seu turno, ganhe Proteção.\nEvocar: Ganhe Proteção.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "LIGHTNING",
+        "title": "Relâmpago",
+        "description": "Passiva: No fim do seu turno, cause de dano a um inimigo aleatório.\nEvocar: Cause de dano a um inimigo aleatório.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "PLASMA",
+        "title": "Plasma",
+        "description": "Passiva: No começo do seu turno, ganhe Energy.\nEvocar: Ganhe Energy.\nPlasma não é afetada por Foco.",
+        "passive": "",
+        "evoke": ""
+      }
+    ],
+    "stances": [
+      {
+        "id": "WRATH",
+        "title": "Fúria",
+        "description": "Seus Ataques causam o dobro de dano e você recebe o dobro de dano de ataques."
+      },
+      {
+        "id": "CALM",
+        "title": "Calma",
+        "description": "Ao sair desta Postura, ganhe Energy Energy."
+      },
+      {
+        "id": "DIVINITY",
+        "title": "Divindade",
+        "description": "Ao entrar nesta Postura, ganhe Energy Energy Energy. Ataques causam triplo de dano. Saia desta Postura ao começo do seu próximo turno."
+      }
+    ],
+    "character_mechanics": [],
+    "keywords": [
+      {
+        "id": "ARTIFACT",
+        "names": [
+          "artefato"
+        ],
+        "description": "Nega o próximo efeito negativo."
+      },
+      {
+        "id": "BLOCK",
+        "names": [
+          "proteção",
+          "proteções"
+        ],
+        "description": "Até o próximo turno, previne dano."
+      },
+      {
+        "id": "CURSE",
+        "names": [
+          "maldição",
+          "maldições"
+        ],
+        "description": "Cartas de maldição são cartas negativas que permanecem no seu baralho."
+      },
+      {
+        "id": "DEXTERITY",
+        "names": [
+          "destreza"
+        ],
+        "description": "Destreza melhora a Proteção ganha de Cartas."
+      },
+      {
+        "id": "ETHEREAL",
+        "names": [
+          "etéreo",
+          "etérea"
+        ],
+        "description": "Se esta carta estiver em sua mão no fim do turno, ela será exaurida. Cartas exauridas são removidas do seu baralho até o fim do combate."
+      },
+      {
+        "id": "EXHAUST",
+        "names": [
+          "exaurir",
+          "exaurida",
+          "exaura"
+        ],
+        "description": "Removida até o fim do combate."
+      },
+      {
+        "id": "INNATE",
+        "names": [
+          "inato",
+          "inata"
+        ],
+        "description": "Comece cada combate com esta carta em sua mão."
+      },
+      {
+        "id": "LOCKED",
+        "names": [
+          "bloqueado",
+          "bloqueada"
+        ],
+        "description": "Esta carta ainda precisa ser desbloqueada."
+      },
+      {
+        "id": "POISON",
+        "names": [
+          "veneno",
+          "envenenado",
+          "envenenar"
+        ],
+        "description": "Criaturas envenenadas perdem PV no início de seus turnos. A cada turno, o Veneno é reduzido em 1."
+      },
+      {
+        "id": "RETAIN",
+        "names": [
+          "reter",
+          "retido",
+          "retida",
+          "retenha",
+          "retem"
+        ],
+        "description": "Cartas retidas não são descartadas no fim do turno."
+      },
+      {
+        "id": "SHIV",
+        "names": [
+          "estoque",
+          "estoques"
+        ],
+        "description": "Estoques são cartas de Ataque com custo 0 com Exaurir."
+      },
+      {
+        "id": "STATUS",
+        "names": [
+          "condição",
+          "condições"
+        ],
+        "description": "Cartas de condição são removidas no fim do combate."
+      },
+      {
+        "id": "STRENGTH",
+        "names": [
+          "força"
+        ],
+        "description": "Força adiciona dano a Ataques."
+      },
+      {
+        "id": "TRANSFORM",
+        "names": [
+          "transformar",
+          "transforme"
+        ],
+        "description": "Cartas transformadas se tornam cartas aleatórias de qualquer raridade."
+      },
+      {
+        "id": "UNKNOWN",
+        "names": [
+          "desconhecido",
+          "desconhecida"
+        ],
+        "description": "Essa carta ainda não foi encontrada."
+      },
+      {
+        "id": "UNPLAYABLE",
+        "names": [
+          "injogável"
+        ],
+        "description": "Cartas injogáveis não podem ser jogadas da sua mão."
+      },
+      {
+        "id": "UPGRADE",
+        "names": [
+          "aprimorar",
+          "aprimorada",
+          "aprimore"
+        ],
+        "description": "Aprimorar cartas as fazem mais poderosas. Cartas só podem ser aprimoradas uma vez."
+      },
+      {
+        "id": "VULNERABLE",
+        "names": [
+          "vulnerabilidade",
+          "vulnerável"
+        ],
+        "description": "Criaturas vulneráveis recebem 50% a mais de dano de Ataques."
+      },
+      {
+        "id": "WEAK",
+        "names": [
+          "fraqueza",
+          "enfraquecido",
+          "enfraquecer",
+          "enfraquece"
+        ],
+        "description": "Criaturas enfraquecidas causam 25% a menos de dano em Ataques."
+      },
+      {
+        "id": "WOUND",
+        "names": [
+          "ferida",
+          "feridas"
+        ],
+        "description": "Feridas são cartas de condição injogáveis."
+      },
+      {
+        "id": "DAZED",
+        "names": [
+          "atordoado"
+        ],
+        "description": "Atordoato são cartas de condição não-jogáveis."
+      },
+      {
+        "id": "BURN",
+        "names": [
+          "queimadura",
+          "queima",
+          "queimaduras"
+        ],
+        "description": "Queimaduras são cartas de condição não-jogáveios que lhe causam dano."
+      },
+      {
+        "id": "FRAIL",
+        "names": [
+          "fragilizado"
+        ],
+        "description": "Enquanto Fragilizado, ganhe 25% menos Proteção de cartas."
+      },
+      {
+        "id": "STRIKE",
+        "names": [
+          "golpe"
+        ],
+        "description": "Qualquer carta que contenha \"Golpe\" em seu nome."
+      },
+      {
+        "id": "CONFUSED",
+        "names": [
+          "confuso"
+        ],
+        "description": "Sempre que você comprar uma carta, aleatorize seu custo."
+      },
+      {
+        "id": "INTANGIBLE",
+        "names": [
+          "intangível"
+        ],
+        "description": "Reduza TODO dano recebido e perda de PV para 1."
+      },
+      {
+        "id": "TODO",
+        "names": [
+          "to do",
+          "JUST FOR DEVS, DONT TRANSLATE",
+          "JUST FOR DEVS, DONT TRANSLATE",
+          "JUST FOR DEVS, DONT TRANSLATE",
+          "JUST FOR DEVS, DONT TRANSLATE"
+        ],
+        "description": "This card is NOT IMPLEMENTED. Someone should really fix that..."
+      },
+      {
+        "id": "VOID",
+        "names": [
+          "vácuo",
+          "vácuos"
+        ],
+        "description": "Vácuos são cartas de status injogáveis que consomoem energia quando compradas."
+      },
+      {
+        "id": "FOCUS",
+        "names": [
+          "foco"
+        ],
+        "description": "Foco aumenta a eficiência de Orbes Canalizados."
+      },
+      {
+        "id": "EVOKE",
+        "names": [
+          "evocar",
+          "evocado",
+          "evoque"
+        ],
+        "description": "Consuma o seu Orbe mais a direita e use seu efeito de Evocação."
+      },
+      {
+        "id": "PLASMA",
+        "names": [
+          "plasma",
+          "plasma+"
+        ],
+        "description": "Orbe: Ganhe Energia."
+      },
+      {
+        "id": "CHANNEL",
+        "names": [
+          "canalizar",
+          "canalizado",
+          "canalizados",
+          "canalize"
+        ],
+        "description": "Canalizar um Orbe coloca-o em seu primeiro slot vazio. Se voce não tem slots vazios, o seu primeiro Orbe é automaticamente Evocado para abrir espaço."
+      },
+      {
+        "id": "DARK",
+        "names": [
+          "trevas",
+          "trevas+"
+        ],
+        "description": "Orbe: Aumenta o dano a cada turno. Quando Evocado, cause dano ao inimigo com menos PV."
+      },
+      {
+        "id": "OPENER",
+        "names": [
+          "abertura"
+        ],
+        "description": "Cartas de Abertura só podem ser jogadas como a primeira carta em cada turno."
+      },
+      {
+        "id": "LIGHTNING",
+        "names": [
+          "relâmpago",
+          "relâmpagos",
+          "relâmpago+"
+        ],
+        "description": "Orbe: Cause dano a inimigos aleatórios."
+      },
+      {
+        "id": "FROST",
+        "names": [
+          "gelo",
+          "gelo+"
+        ],
+        "description": "Orbe: Ganhe Proteção."
+      },
+      {
+        "id": "THORNS",
+        "names": [
+          "espinhos"
+        ],
+        "description": "Quando receber dano de Ataque, cause dano de volta."
+      },
+      {
+        "id": "LOCK_ON",
+        "names": [
+          "na mira"
+        ],
+        "description": "Alvos com Na Mira recebem 50% de dano adicional de Orbes."
+      },
+      {
+        "id": "WRATH",
+        "names": [
+          "fúria"
+        ],
+        "description": "Nesta Postura, você causa e recebe dano em dobro."
+      },
+      {
+        "id": "CALM",
+        "names": [
+          "calma"
+        ],
+        "description": "Ao abandonar esta Postura, ganhe Energy Energy."
+      },
+      {
+        "id": "STANCE",
+        "names": [
+          "postura",
+          "posturas"
+        ],
+        "description": "Você pode estar em apenas uma postura de cada vez."
+      },
+      {
+        "id": "SCRY",
+        "names": [
+          "vidência"
+        ],
+        "description": "Veja as X primeiras cartas da sua pilha de compras. Você pode descartar quaisquer delas."
+      },
+      {
+        "id": "DIVINITY",
+        "names": [
+          "divindade"
+        ],
+        "description": "Ao entrar nesta postura, ganhe Energy Energy Energy. Ataques causam o triplo de dano. Saia desta Postura no começo do seu próximo turno."
+      },
+      {
+        "id": "PRAYER",
+        "names": [
+          "mantra",
+          "recurso à violência"
+        ],
+        "description": "Quando você obtiver 10 Mantras, entre em Divindade."
+      },
+      {
+        "id": "VIGOR",
+        "names": [
+          "vigor"
+        ],
+        "description": "Seu próximo ataque causa dano adicional."
+      },
+      {
+        "id": "REGEN",
+        "names": [
+          "regeneração",
+          "regenerar"
+        ],
+        "description": "Regeneração cura PV ao final do seu turno. Regeneração é reduzida em 1 a cada turno."
+      },
+      {
+        "id": "RITUAL",
+        "names": [
+          "ritual"
+        ],
+        "description": "Ganhe Força no final do seu turno."
+      },
+      {
+        "id": "FATAL",
+        "names": [
+          "fatal"
+        ],
+        "description": "É acionado sempre que esta carta matar um inimigo não lacaio."
+      }
+    ]
   }
 }

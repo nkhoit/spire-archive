@@ -5472,5 +5472,259 @@
       "description": "Na primeira vez que esta carta for jogada, ela causa {Amount} de dano adicional.",
       "name": "Vigorosa"
     }
+  },
+  "mechanics": {
+    "ascension": [
+      {
+        "level": 0,
+        "title": "Sem Ascensão",
+        "description": "Jogue sem nenhum modificador de Ascensão."
+      },
+      {
+        "level": 1,
+        "title": "Elites em Massa",
+        "description": "Elites surgem com mais frequência."
+      },
+      {
+        "level": 2,
+        "title": "Viajante Exausto",
+        "description": "Ancestrais curam apenas 80% de seus PV perdidos."
+      },
+      {
+        "level": 3,
+        "title": "Pobreza",
+        "description": "Inimigos e Baús de Tesouro concedem 25% menos Ouro."
+      },
+      {
+        "level": 4,
+        "title": "Cinturão Apertado",
+        "description": "Inicie cada partida com um 1 espaço de poções a menos."
+      },
+      {
+        "level": 5,
+        "title": "Ruína do Ascendente",
+        "description": "Inicie cada partida com uma Maldição."
+      },
+      {
+        "level": 6,
+        "title": "Trevas",
+        "description": "Menos Locais de Descanso."
+      },
+      {
+        "level": 7,
+        "title": "Escassez",
+        "description": "Cartas Raras e Aprimoradas aparecem com menos frequência."
+      },
+      {
+        "level": 8,
+        "title": "Inimigos Robustos",
+        "description": "Todos os inimigos são mais difíceis de derrotar."
+      },
+      {
+        "level": 9,
+        "title": "Inimigos Mortais",
+        "description": "Todos os inimigos têm ataques mais letais."
+      },
+      {
+        "level": 10,
+        "title": "Dupla Chefia",
+        "description": "Lute contra dois chefes no final do Ato 3."
+      }
+    ],
+    "map_rooms": [
+      {
+        "id": "ROOM_ENEMY",
+        "title": "Inimigo",
+        "description": "Inimigos hostis residem nestas salas."
+      },
+      {
+        "id": "ROOM_ELITE",
+        "title": "Elite",
+        "description": "Inimigos poderosos residem nestas salas.\n\nAo derrotá-los, você encontrará uma Relíquia como recompensa."
+      },
+      {
+        "id": "ROOM_BOSS",
+        "title": "Chefe",
+        "description": "O oponente mais letal desta área.\n\nDerrotá-los permite que você prossiga para o próximo Ato."
+      },
+      {
+        "id": "ROOM_EVENT",
+        "title": "Evento",
+        "description": "Algo misterioso acontece nestas salas..."
+      },
+      {
+        "id": "ROOM_MERCHANT",
+        "title": "Loja",
+        "description": "O misterioso Mercador vende suas mercadorias nestas salas.\n\nGaste seu Ouro aqui!"
+      },
+      {
+        "id": "ROOM_REST",
+        "title": "Local de Descanso",
+        "description": "Passe por estas salas para Curar um pouco de PV ou Aprimorar uma carta."
+      },
+      {
+        "id": "ROOM_TREASURE",
+        "title": "Sala de Tesouros",
+        "description": "Relíquias e Ouro podem ser encontrados nestas salas cobiçadas."
+      },
+      {
+        "id": "ROOM_ANCIENT",
+        "title": "Ancestral",
+        "description": "Ancestrais residem nestas salas.\n\nPodem conceder incríveis gratificações, tesouros e conhecimento."
+      }
+    ],
+    "core_concepts": [
+      {
+        "id": "ENERGY",
+        "title": "Energia",
+        "description": "Energia é usada para jogar cartas da sua Mão."
+      },
+      {
+        "id": "BLOCK",
+        "title": "Proteção",
+        "description": "Previne dano até o próximo turno."
+      },
+      {
+        "id": "HIT_POINTS",
+        "title": "Pontos de Vida (PV)",
+        "description": "Se os seus PV acabarem, você perde a partida."
+      },
+      {
+        "id": "MONEY_POUCH",
+        "title": "Ouro",
+        "description": "A quantidade de Ouro que você possui. Ouro é a moeda de troca dentro do Pináculo."
+      },
+      {
+        "id": "DRAW_PILE",
+        "title": "Pilha de Compra (A)",
+        "description": "No início de cada turno\n5 cartas são compradas daqui.\n\nClique para exibir as cartas na sua pilha de compra (embaralhadas)."
+      },
+      {
+        "id": "DISCARD_PILE",
+        "title": "Pilha de Descarte (S)",
+        "description": "Se a sua pilha de compra estiver vazia, a pilha de descarte é embaralhada na pilha de compra.\n\nClique para exibir as cartas na sua pilha de descarte."
+      },
+      {
+        "id": "EXHAUST_PILE",
+        "title": "Cartas Exauridas (X)",
+        "description": "Clique para exibir as cartas Exauridas neste combate."
+      }
+    ],
+    "orbs": [
+      {
+        "id": "LIGHTNING",
+        "title": "Relâmpago",
+        "description": "Passiva: No final do turno, causa {Passive} de dano a um inimigo aleatório.\nEvocar: Causa {Evoke} de dano a um inimigo aleatório.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "FROST",
+        "title": "Gelo",
+        "description": "Passiva: No final do turno, receba {Passive} Proteção.\nEvocar: Receba {Evoke} Proteção.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "DARK",
+        "title": "Trevas",
+        "description": "Passiva: No final do turno, aumenta o dano desta Orbe em {Passive}.\nEvocar: Causa {Evoke} de dano ao inimigo com menos PV.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "PLASMA",
+        "title": "Plasma",
+        "description": "Passiva: No início do turno,\nreceba 1 Energy.\nEvocar: Receba 2 Energy.\nPlasma não é afetado por Foco.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "GLASS",
+        "title": "Vidro",
+        "description": "Passiva: No final do turno, causa {Passive} de dano a TODOS os inimigos e reduz o valor desta orbe em 1.\nEvocar: Causa {Evoke} de dano a TODOS os inimigos.",
+        "passive": "",
+        "evoke": ""
+      }
+    ],
+    "stances": [],
+    "character_mechanics": [
+      {
+        "id": "STAR_COUNT",
+        "title": "Estrelas",
+        "description": "Sua quantidade atual de Estrelas (★). As cartas do Regente podem precisar de ★ para serem jogadas."
+      },
+      {
+        "id": "SUMMON",
+        "title": "Vincular",
+        "description": "Invoca Ostheo.\nSe já estiver sido invocado, aumenta seus PV Máximos neste combate."
+      },
+      {
+        "id": "FORGE",
+        "title": "Forjar",
+        "description": "Na primeira vez que você Forjar a cada combate, adicione Espada Soberana na sua Mão. Acumula dano adicional na Espada Soberana."
+      },
+      {
+        "id": "REPLAY",
+        "title": "Repetir",
+        "description": "Jogue esta carta mais uma vez."
+      },
+      {
+        "id": "FATAL",
+        "title": "Fatal",
+        "description": "Ativa quando esta carta derrota um inimigo que não seja lacaio."
+      }
+    ],
+    "keywords": [
+      {
+        "id": "ETERNAL",
+        "names": [
+          "Perpétua"
+        ],
+        "description": "Não pode ser transformada ou removida do seu Baralho."
+      },
+      {
+        "id": "ETHEREAL",
+        "names": [
+          "Etérea"
+        ],
+        "description": "Se esta carta estiver na sua Mão no final deste turno, ela é Exaurida."
+      },
+      {
+        "id": "EXHAUST",
+        "names": [
+          "Exaurir"
+        ],
+        "description": "Remova a carta até o final do combate."
+      },
+      {
+        "id": "INNATE",
+        "names": [
+          "Inata"
+        ],
+        "description": "Inicie cada combate com esta carta na sua Mão."
+      },
+      {
+        "id": "RETAIN",
+        "names": [
+          "Manter"
+        ],
+        "description": "Cartas mantidas não são descartadas no final do seu turno."
+      },
+      {
+        "id": "SLY",
+        "names": [
+          "Sagaz"
+        ],
+        "description": "Se esta carta for descartada da sua Mão antes do final do seu turno, jogue-a de graça."
+      },
+      {
+        "id": "UNPLAYABLE",
+        "names": [
+          "Injogável"
+        ],
+        "description": "Cartas Injogáveis não podem ser jogadas."
+      }
+    ]
   }
 }

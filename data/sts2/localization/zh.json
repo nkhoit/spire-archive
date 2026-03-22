@@ -5472,5 +5472,259 @@
       "description": "第一次打出这张牌时，造成{Amount}点额外伤害。",
       "name": "活力"
     }
+  },
+  "mechanics": {
+    "ascension": [
+      {
+        "level": 0,
+        "title": "无进阶",
+        "description": "在没有任何进阶调整的影响下游玩。"
+      },
+      {
+        "level": 1,
+        "title": "精英蜂拥",
+        "description": "精英敌人出现更加频繁。"
+      },
+      {
+        "level": 2,
+        "title": "旅途劳顿",
+        "description": "先古之民只会回复你已损失生命值的80%。"
+      },
+      {
+        "level": 3,
+        "title": "贫穷",
+        "description": "敌人和宝箱掉落的金币减少25%。"
+      },
+      {
+        "level": 4,
+        "title": "收紧腰带",
+        "description": "游戏开始时药水栏位减少1。"
+      },
+      {
+        "level": 5,
+        "title": "进阶之灾",
+        "description": "游戏开始时被诅咒。"
+      },
+      {
+        "level": 6,
+        "title": "阴郁",
+        "description": "休息处变少。"
+      },
+      {
+        "level": 7,
+        "title": "稀缺",
+        "description": "稀有和已升级卡牌更少出现。"
+      },
+      {
+        "level": 8,
+        "title": "强韧敌人",
+        "description": "所有的敌人变得更难杀死。"
+      },
+      {
+        "level": 9,
+        "title": "致命敌人",
+        "description": "所有的敌人变得更加致命。"
+      },
+      {
+        "level": 10,
+        "title": "双重Boss",
+        "description": "在第3幕末尾与两名首领战斗。"
+      }
+    ],
+    "map_rooms": [
+      {
+        "id": "ROOM_ENEMY",
+        "title": "敌人",
+        "description": "这些房间里有好战的敌人们。"
+      },
+      {
+        "id": "ROOM_ELITE",
+        "title": "精英",
+        "description": "这些房间中有强大的敌人。\n\n击败他们将会获得遗物奖励。"
+      },
+      {
+        "id": "ROOM_BOSS",
+        "title": "Boss",
+        "description": "整个地区最强大的敌人。\n\n将其击败就可以进入下一阶段。"
+      },
+      {
+        "id": "ROOM_EVENT",
+        "title": "事件",
+        "description": "这些房间里会发生不同寻常的事情……"
+      },
+      {
+        "id": "ROOM_MERCHANT",
+        "title": "商店",
+        "description": "神秘的商人会在这些房间中出售他的货物。\n\n辛苦赚到的金币就用在这里吧！"
+      },
+      {
+        "id": "ROOM_REST",
+        "title": "休息处",
+        "description": "在这些房间可以回复一些生命或是升级一张卡牌。"
+      },
+      {
+        "id": "ROOM_TREASURE",
+        "title": "宝箱房",
+        "description": "这些房间中有着众人觊觎的遗物与金币。"
+      },
+      {
+        "id": "ROOM_ANCIENT",
+        "title": "先古之民",
+        "description": "先古之民居住在这些房间中。\n\n他们会赐予你惊人的奖励、财宝与知识。"
+      }
+    ],
+    "core_concepts": [
+      {
+        "id": "ENERGY",
+        "title": "能量",
+        "description": "能量用于打出你手牌中的卡牌。"
+      },
+      {
+        "id": "BLOCK",
+        "title": "格挡",
+        "description": "在下个回合前，阻挡伤害。"
+      },
+      {
+        "id": "HIT_POINTS",
+        "title": "生命值（HP）",
+        "description": "当你耗尽生命时，你就会死亡。"
+      },
+      {
+        "id": "MONEY_POUCH",
+        "title": "金币",
+        "description": "你所拥有的金币数。它是高塔中的货币。"
+      },
+      {
+        "id": "DRAW_PILE",
+        "title": "抽牌堆（D）",
+        "description": "在每回合开始时，\n你会从这里抽取5张卡牌。\n\n点击这里查看你抽牌堆中的卡牌（顺序打乱）。"
+      },
+      {
+        "id": "DISCARD_PILE",
+        "title": "弃牌堆（S）",
+        "description": "如果你的抽牌堆为空，则弃牌堆会被洗入抽牌堆。\n\n点击查看你弃牌堆中的卡牌。"
+      },
+      {
+        "id": "EXHAUST_PILE",
+        "title": "消耗牌堆（X）",
+        "description": "点击查看在本场战斗中被消耗的卡牌。"
+      }
+    ],
+    "orbs": [
+      {
+        "id": "LIGHTNING",
+        "title": "闪电",
+        "description": "被动：回合结束时，对一名随机敌人造成{Passive}点伤害。\n激发：对一名随机敌人造成{Evoke}点伤害。",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "FROST",
+        "title": "冰霜",
+        "description": "被动：在回合结束时，获得{Passive}点格挡。\n激发：获得{Evoke}点格挡。",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "DARK",
+        "title": "黑暗",
+        "description": "被动：回合结束时，将这个充能球的伤害增加{Passive}。\n激发：对生命值最少的敌人造成{Evoke}点伤害。",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "PLASMA",
+        "title": "等离子",
+        "description": "被动：回合开始时，\n获得1 Energy。\n激发：获得2 Energy。\n等离子充能球不受集中影响。",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "GLASS",
+        "title": "玻璃",
+        "description": "被动：在回合结束时，对所有敌人造成{Passive}点伤害，然后将这个充能球的数值减少1。\n激发：对所有敌人造成{Evoke}点伤害。",
+        "passive": "",
+        "evoke": ""
+      }
+    ],
+    "stances": [],
+    "character_mechanics": [
+      {
+        "id": "STAR_COUNT",
+        "title": "辉星",
+        "description": "你当前的辉星（★）数。储君的部分卡牌可能会需要★才能打出。"
+      },
+      {
+        "id": "SUMMON",
+        "title": "召唤",
+        "description": "召唤奥斯提。\n如果已经召唤，则在本场战斗提升其最大生命值。"
+      },
+      {
+        "id": "FORGE",
+        "title": "铸造",
+        "description": "每场战斗你第一次铸造时，将君王之剑加入你的手牌。为君王之剑增加额外伤害。"
+      },
+      {
+        "id": "REPLAY",
+        "title": "重放",
+        "description": "将这张牌额外打出一次。"
+      },
+      {
+        "id": "FATAL",
+        "title": "斩杀",
+        "description": "当这张牌杀死一名非爪牙敌人时触发。"
+      }
+    ],
+    "keywords": [
+      {
+        "id": "ETERNAL",
+        "names": [
+          "永恒"
+        ],
+        "description": "无法从你的牌组中移除或变化。"
+      },
+      {
+        "id": "ETHEREAL",
+        "names": [
+          "虚无"
+        ],
+        "description": "如果这张牌在这个回合结束时留在你的手牌中，则将其消耗。"
+      },
+      {
+        "id": "EXHAUST",
+        "names": [
+          "消耗"
+        ],
+        "description": "在战斗结束前移除。"
+      },
+      {
+        "id": "INNATE",
+        "names": [
+          "固有"
+        ],
+        "description": "每场战斗开始时这张牌会出现在你的手牌。"
+      },
+      {
+        "id": "RETAIN",
+        "names": [
+          "保留"
+        ],
+        "description": "保留的牌不会在回合结束时被弃掉。"
+      },
+      {
+        "id": "SLY",
+        "names": [
+          "奇巧"
+        ],
+        "description": "如果这张牌在你的回合结束前从你的手牌中被丢弃，则免费将其打出。"
+      },
+      {
+        "id": "UNPLAYABLE",
+        "names": [
+          "不能被打出"
+        ],
+        "description": "不能被打出的牌无法被打出。"
+      }
+    ]
   }
 }

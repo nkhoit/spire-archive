@@ -1,0 +1,595 @@
+{
+  "ascension": [
+    {
+      "level": 1,
+      "title": "Ascension Mode Level 1",
+      "description": "Elites spawn more often."
+    },
+    {
+      "level": 2,
+      "title": "Ascension Mode Level 2",
+      "description": "Normal enemies are deadlier."
+    },
+    {
+      "level": 3,
+      "title": "Ascension Mode Level 3",
+      "description": "Elites are deadlier."
+    },
+    {
+      "level": 4,
+      "title": "Ascension Mode Level 4",
+      "description": "Bosses are deadlier."
+    },
+    {
+      "level": 5,
+      "title": "Ascension Mode Level 5",
+      "description": "Heal less after Boss battles."
+    },
+    {
+      "level": 6,
+      "title": "Ascension Mode Level 6",
+      "description": "Start each run damaged."
+    },
+    {
+      "level": 7,
+      "title": "Ascension Mode Level 7",
+      "description": "Normal enemies are tougher."
+    },
+    {
+      "level": 8,
+      "title": "Ascension Mode Level 8",
+      "description": "Elites are tougher."
+    },
+    {
+      "level": 9,
+      "title": "Ascension Mode Level 9",
+      "description": "Bosses are tougher."
+    },
+    {
+      "level": 10,
+      "title": "Ascension Mode Level 10",
+      "description": "Start each run cursed."
+    },
+    {
+      "level": 11,
+      "title": "Ascension Mode Level 11",
+      "description": "Fewer Potion Slots."
+    },
+    {
+      "level": 12,
+      "title": "Ascension Mode Level 12",
+      "description": "Upgraded cards appear less often."
+    },
+    {
+      "level": 13,
+      "title": "Ascension Mode Level 13",
+      "description": "Poor bosses."
+    },
+    {
+      "level": 14,
+      "title": "Ascension Mode Level 14",
+      "description": "Lower Max HP."
+    },
+    {
+      "level": 15,
+      "title": "Ascension Mode Level 15",
+      "description": "Unfavorable Events."
+    },
+    {
+      "level": 16,
+      "title": "Ascension Mode Level 16",
+      "description": "Shops are more costly."
+    },
+    {
+      "level": 17,
+      "title": "Ascension Mode Level 17",
+      "description": "Normal enemies have more challenging movesets and abilities."
+    },
+    {
+      "level": 18,
+      "title": "Ascension Mode Level 18",
+      "description": "Elites have more challenging movesets and abilities."
+    },
+    {
+      "level": 19,
+      "title": "Ascension Mode Level 19",
+      "description": "Bosses have more challenging movesets and abilities."
+    },
+    {
+      "level": 20,
+      "title": "Ascension Mode Level 20",
+      "description": "(Max Level) Double Boss."
+    }
+  ],
+  "map_rooms": [
+    {
+      "id": "UNKNOWN",
+      "title": "Unknown",
+      "description": "An unknown room.\n\nYou may encounter monsters, treasures, shops, or something entirely different."
+    },
+    {
+      "id": "SHOP",
+      "title": "Merchant",
+      "description": "The mysterious Merchant sells his wares in these rooms.\n\nSpend your well earned Gold here!"
+    },
+    {
+      "id": "TREASURE",
+      "title": "Treasure",
+      "description": "Relics and Gold can be found in these coveted rooms."
+    },
+    {
+      "id": "REST",
+      "title": "Rest",
+      "description": "Stop by these rooms to Heal some HP or Upgrade a card."
+    },
+    {
+      "id": "ENEMY",
+      "title": "Enemy",
+      "description": "Hostile enemies reside in these rooms."
+    },
+    {
+      "id": "ELITE",
+      "title": "Elite",
+      "description": "Powerful foes are in these rooms.\n\nDefeating them will reward you a Relic."
+    }
+  ],
+  "core_concepts": [
+    {
+      "id": "BLOCK",
+      "title": "block",
+      "description": "Until next turn, prevents damage."
+    },
+    {
+      "id": "EXHAUST",
+      "title": "exhaust",
+      "description": "Removed until end of combat."
+    },
+    {
+      "id": "ETHEREAL",
+      "title": "ethereal",
+      "description": "If this card is in your hand at the end of turn, it is exhausted. Exhausted cards are removed from your deck until the end of combat."
+    },
+    {
+      "id": "RETAIN",
+      "title": "retain",
+      "description": "Retained cards are not discarded at the end of turn."
+    },
+    {
+      "id": "STATUS",
+      "title": "status",
+      "description": "Status cards are removed at the end of combat."
+    },
+    {
+      "id": "CURSE",
+      "title": "curse",
+      "description": "Curse cards are negative cards that stay in your deck."
+    },
+    {
+      "id": "DRAW_PILE",
+      "title": "Return",
+      "description": "Cards are drawn from here at the start of each turn."
+    },
+    {
+      "id": "DISCARD_PILE",
+      "title": "Discard Pile",
+      "description": "Cards here are shuffled into your draw pile when it runs out of cards."
+    },
+    {
+      "id": "ENERGY",
+      "title": "Energy",
+      "description": "Not enough Energy."
+    }
+  ],
+  "orbs": [
+    {
+      "id": "DARK",
+      "title": "Dark",
+      "description": "Passive: At the end of turn, increase this Orb's damage by.\nEvoke: Deal damage to the enemy with lowest HP.",
+      "passive": "At the end of turn, increase this Orb's damage by.",
+      "evoke": "Deal damage to the enemy with lowest HP."
+    },
+    {
+      "id": "FROST",
+      "title": "Frost",
+      "description": "Passive: At the end of turn, gain Block.\nEvoke: Gain Block.",
+      "passive": "At the end of turn, gain Block.",
+      "evoke": "Gain Block."
+    },
+    {
+      "id": "LIGHTNING",
+      "title": "Lightning",
+      "description": "Passive: At the end of turn, deal damage to a random enemy.\nEvoke: Deal damage to a random enemy.",
+      "passive": "At the end of turn, deal damage to a random enemy.",
+      "evoke": "Deal damage to a random enemy."
+    },
+    {
+      "id": "PLASMA",
+      "title": "Plasma",
+      "description": "Passive: At the start of turn, gain Energy.\nEvoke: Gain Energy.\nPlasma is unaffected by Focus.",
+      "passive": "At the start of turn, gain Energy.",
+      "evoke": "Gain Energy.\nPlasma is unaffected by Focus."
+    }
+  ],
+  "stances": [
+    {
+      "id": "WRATH",
+      "title": "Wrath",
+      "description": "Your Attacks deal double damage and you take double damage from attacks."
+    },
+    {
+      "id": "CALM",
+      "title": "Calm",
+      "description": "Upon exiting this Stance, gain Energy Energy."
+    },
+    {
+      "id": "DIVINITY",
+      "title": "Divinity",
+      "description": "Upon entering this Stance, gain Energy Energy Energy. Attacks deal triple damage. Exit this Stance at the start of your next turn."
+    }
+  ],
+  "character_mechanics": [],
+  "keywords": [
+    {
+      "id": "ARTIFACT",
+      "names": [
+        "artifact"
+      ],
+      "description": "Negates the next debuff."
+    },
+    {
+      "id": "BLOCK",
+      "names": [
+        "block",
+        "blocks"
+      ],
+      "description": "Until next turn, prevents damage."
+    },
+    {
+      "id": "BURN",
+      "names": [
+        "burn",
+        "burns"
+      ],
+      "description": "Burns are unplayable status cards that damage you."
+    },
+    {
+      "id": "CHANNEL",
+      "names": [
+        "channel",
+        "channeled"
+      ],
+      "description": "Channeling an Orb puts it into your first empty slot. If you have no empty slots, your first Orb is automatically Evoked to make room."
+    },
+    {
+      "id": "CONFUSED",
+      "names": [
+        "confused"
+      ],
+      "description": "Whenever you draw a card, randomize its cost."
+    },
+    {
+      "id": "CURSE",
+      "names": [
+        "curse"
+      ],
+      "description": "Curse cards are negative cards that stay in your deck."
+    },
+    {
+      "id": "DARK",
+      "names": [
+        "dark",
+        "dark+"
+      ],
+      "description": "Orb: Increases damage every turn. When Evoked, deals damage to the enemy with the least HP."
+    },
+    {
+      "id": "DAZED",
+      "names": [
+        "dazed"
+      ],
+      "description": "Dazed are unplayable status cards."
+    },
+    {
+      "id": "DEXTERITY",
+      "names": [
+        "dexterity"
+      ],
+      "description": "Dexterity improves Block gained from cards."
+    },
+    {
+      "id": "ETHEREAL",
+      "names": [
+        "ethereal"
+      ],
+      "description": "If this card is in your hand at the end of turn, it is exhausted. Exhausted cards are removed from your deck until the end of combat."
+    },
+    {
+      "id": "EVOKE",
+      "names": [
+        "evoke",
+        "evoked"
+      ],
+      "description": "Consume your rightmost Orb and use its Evoke effect."
+    },
+    {
+      "id": "EXHAUST",
+      "names": [
+        "exhaust",
+        "exhausted",
+        "exhausts"
+      ],
+      "description": "Removed until end of combat."
+    },
+    {
+      "id": "FOCUS",
+      "names": [
+        "focus"
+      ],
+      "description": "Focus increases the effectiveness of Channeled Orbs."
+    },
+    {
+      "id": "FRAIL",
+      "names": [
+        "frail"
+      ],
+      "description": "While Frail, gain 25% less Block from cards."
+    },
+    {
+      "id": "FROST",
+      "names": [
+        "frost",
+        "frost+"
+      ],
+      "description": "Orb: Gains Block."
+    },
+    {
+      "id": "INNATE",
+      "names": [
+        "innate"
+      ],
+      "description": "Start each combat with this card in your hand."
+    },
+    {
+      "id": "INTANGIBLE",
+      "names": [
+        "intangible"
+      ],
+      "description": "Reduce ALL damage taken and HP loss to 1."
+    },
+    {
+      "id": "LIGHTNING",
+      "names": [
+        "lightning",
+        "lightning+"
+      ],
+      "description": "Orb: Deals damage to random enemies."
+    },
+    {
+      "id": "LOCKED",
+      "names": [
+        "locked"
+      ],
+      "description": "This card has yet to be unlocked."
+    },
+    {
+      "id": "LOCK_ON",
+      "names": [
+        "lock-on"
+      ],
+      "description": "Lock-On targets receive 50% more damage from Orbs."
+    },
+    {
+      "id": "OPENER",
+      "names": [
+        "opener"
+      ],
+      "description": "Opener cards may only be played as the first card each turn."
+    },
+    {
+      "id": "PLASMA",
+      "names": [
+        "plasma",
+        "plasma+"
+      ],
+      "description": "Orb: Gains Energy."
+    },
+    {
+      "id": "POISON",
+      "names": [
+        "poison",
+        "poisoned"
+      ],
+      "description": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1."
+    },
+    {
+      "id": "RETAIN",
+      "names": [
+        "retain",
+        "retains",
+        "retained"
+      ],
+      "description": "Retained cards are not discarded at the end of turn."
+    },
+    {
+      "id": "SHIV",
+      "names": [
+        "shiv",
+        "shivs"
+      ],
+      "description": "Shivs are 0 cost Attack cards which Exhaust."
+    },
+    {
+      "id": "STATUS",
+      "names": [
+        "status"
+      ],
+      "description": "Status cards are removed at the end of combat."
+    },
+    {
+      "id": "STRENGTH",
+      "names": [
+        "strength"
+      ],
+      "description": "Strength adds additional damage to attacks."
+    },
+    {
+      "id": "STRIKE",
+      "names": [
+        "strike"
+      ],
+      "description": "Any card with the word \"Strike\" in its name."
+    },
+    {
+      "id": "THORNS",
+      "names": [
+        "thorns"
+      ],
+      "description": "When receiving Attack damage, deals damage back."
+    },
+    {
+      "id": "TODO",
+      "names": [
+        "todo",
+        "JUST FOR DEVS, DONT TRANSLATE",
+        "JUST FOR DEVS, DONT TRANSLATE",
+        "JUST FOR DEVS, DONT TRANSLATE",
+        "JUST FOR DEVS, DONT TRANSLATE"
+      ],
+      "description": "This card is NOT IMPLEMENTED. Someone should really fix that..."
+    },
+    {
+      "id": "TRANSFORM",
+      "names": [
+        "transform"
+      ],
+      "description": "Transformed cards become a random card of any rarity."
+    },
+    {
+      "id": "UNKNOWN",
+      "names": [
+        "unknown"
+      ],
+      "description": "This card has yet to be encountered."
+    },
+    {
+      "id": "UNPLAYABLE",
+      "names": [
+        "unplayable"
+      ],
+      "description": "Unplayable cards cannot be played from your hand."
+    },
+    {
+      "id": "UPGRADE",
+      "names": [
+        "upgrade",
+        "upgraded"
+      ],
+      "description": "Upgrading cards makes them more powerful. Cards can only be upgraded once."
+    },
+    {
+      "id": "VOID",
+      "names": [
+        "void",
+        "voids"
+      ],
+      "description": "Voids are unplayable status cards that consume energy when drawn."
+    },
+    {
+      "id": "VULNERABLE",
+      "names": [
+        "vulnerable"
+      ],
+      "description": "Vulnerable creatures take 50% more damage from Attacks."
+    },
+    {
+      "id": "WEAK",
+      "names": [
+        "weak",
+        "weaken",
+        "weakened",
+        "weakens"
+      ],
+      "description": "Weakened creatures deal 25% less damage with Attacks."
+    },
+    {
+      "id": "WOUND",
+      "names": [
+        "wound",
+        "wounds"
+      ],
+      "description": "Wounds are unplayable status cards."
+    },
+    {
+      "id": "WRATH",
+      "names": [
+        "wrath"
+      ],
+      "description": "In this Stance, you deal and receive double attack damage."
+    },
+    {
+      "id": "CALM",
+      "names": [
+        "calm"
+      ],
+      "description": "Upon exiting this Stance, gain Energy Energy."
+    },
+    {
+      "id": "STANCE",
+      "names": [
+        "stance",
+        "stances"
+      ],
+      "description": "You can only have one stance at a time."
+    },
+    {
+      "id": "SCRY",
+      "names": [
+        "scry"
+      ],
+      "description": "Look at the top X cards of your draw pile. You may discard any of them."
+    },
+    {
+      "id": "DIVINITY",
+      "names": [
+        "divinity"
+      ],
+      "description": "Upon entering this stance, gain Energy Energy Energy. Attacks deal triple damage. Exit this Stance at the start of your next turn."
+    },
+    {
+      "id": "PRAYER",
+      "names": [
+        "mantra",
+        "through violence"
+      ],
+      "description": "When you obtain 10 Mantra, enter Divinity."
+    },
+    {
+      "id": "VIGOR",
+      "names": [
+        "vigor"
+      ],
+      "description": "Your next Attack deals additional damage."
+    },
+    {
+      "id": "REGEN",
+      "names": [
+        "regen"
+      ],
+      "description": "Regen heals HP at the end of your turn. Each turn, Regen is reduced by 1."
+    },
+    {
+      "id": "RITUAL",
+      "names": [
+        "ritual"
+      ],
+      "description": "Gain Strength at the end of your turn."
+    },
+    {
+      "id": "FATAL",
+      "names": [
+        "fatal"
+      ],
+      "description": "Triggers whenever this card kills a non-minion enemy."
+    }
+  ]
+}

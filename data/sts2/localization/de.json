@@ -5472,5 +5472,259 @@
       "description": "Wenn du diese Karte zum ersten Mal in einem Kampf spielst, fügt sie {Amount} Schaden mehr zu.",
       "name": "Kräftig"
     }
+  },
+  "mechanics": {
+    "ascension": [
+      {
+        "level": 0,
+        "title": "Kein Aufstieg",
+        "description": "Spiele ohne Aufstiegs-Modifikatoren."
+      },
+      {
+        "level": 1,
+        "title": "Eliten-Gewimmel",
+        "description": "Eliten tauchen häufiger auf."
+      },
+      {
+        "level": 2,
+        "title": "Ermüdende Reise",
+        "description": "Ahnen heilen nur 80% deiner fehlenden TP."
+      },
+      {
+        "level": 3,
+        "title": "Armut",
+        "description": "Gegner und Schatztruhen geben 25% weniger Gold."
+      },
+      {
+        "level": 4,
+        "title": "Enger Gürtel",
+        "description": "Beginne jeden Run mit 1 Trankslot weniger."
+      },
+      {
+        "level": 5,
+        "title": "Aufstiegsfluch",
+        "description": "Beginne jeden Run Verflucht."
+      },
+      {
+        "level": 6,
+        "title": "Düsternis",
+        "description": "Weniger Lagerfeuer."
+      },
+      {
+        "level": 7,
+        "title": "Knappheit",
+        "description": "Seltene und verbesserte Karten erscheinen weniger häufig."
+      },
+      {
+        "level": 8,
+        "title": "Harte Gegner",
+        "description": "Alle Gegner sind schwerer zu töten."
+      },
+      {
+        "level": 9,
+        "title": "Tödliche Gegner",
+        "description": "Alle Gegner haben tödlichere Angriffe."
+      },
+      {
+        "level": 10,
+        "title": "Doppelter Boss",
+        "description": "Bekämpfe zwei Bosse am Ende von Akt 3."
+      }
+    ],
+    "map_rooms": [
+      {
+        "id": "ROOM_ENEMY",
+        "title": "Gegner",
+        "description": "Feindlich gesinnte Gegner hausen in diesen Räumen."
+      },
+      {
+        "id": "ROOM_ELITE",
+        "title": "Elite",
+        "description": "Mächtige Feinde sind in diesen Räumen.\n\nSie zu besiegen, wird dich mit einem Relikt belohnen."
+      },
+      {
+        "id": "ROOM_BOSS",
+        "title": "Boss",
+        "description": "Der tödlichste Feind in der Gegend.\n\nIhn zu besiegen, erlaubt dir, in den nächsten Akt fortzuschreiten."
+      },
+      {
+        "id": "ROOM_EVENT",
+        "title": "Ereignis",
+        "description": "Etwas ungewöhnliches geschieht in diesen Räumen..."
+      },
+      {
+        "id": "ROOM_MERCHANT",
+        "title": "Laden",
+        "description": "Der geheimnisvolle Händler verkauft seine Waren in diesen Räumen.\n\nGib dein wohlverdientes Gold hier aus!"
+      },
+      {
+        "id": "ROOM_REST",
+        "title": "Lagerfeuer",
+        "description": "Halte in diesen Räumen an, um ein paar TP zu heilen oder eine Karte zu verbessern."
+      },
+      {
+        "id": "ROOM_TREASURE",
+        "title": "Schatzraum",
+        "description": "Relikte und Gold können in diesen begehrten Räumen gefunden werden."
+      },
+      {
+        "id": "ROOM_ANCIENT",
+        "title": "Ahne",
+        "description": "Ahnen bewohnen diese Räume.\n\nSie gewähren unglaubliche Vorteile, Schätze und Wissen."
+      }
+    ],
+    "core_concepts": [
+      {
+        "id": "ENERGY",
+        "title": "Energie",
+        "description": "Energie wird genutzt, um Handkarten zu spielen."
+      },
+      {
+        "id": "BLOCK",
+        "title": "Block",
+        "description": "Verhindert Schaden bis zum nächsten Zug."
+      },
+      {
+        "id": "HIT_POINTS",
+        "title": "Trefferpunkte (TP)",
+        "description": "Wenn dir die TP ausgehen, stirbst du."
+      },
+      {
+        "id": "MONEY_POUCH",
+        "title": "Gold",
+        "description": "Wie viel Gold du hast. Gold ist die Währung im Spire."
+      },
+      {
+        "id": "DRAW_PILE",
+        "title": "Nachziehstapel (A)",
+        "description": "Zu Beginn jedes Zuges werden\n5 Karten von hier gezogen.\n\nKlicke, um die Karten in deinem Nachziehstapel anzusehen (gemischt)."
+      },
+      {
+        "id": "DISCARD_PILE",
+        "title": "Abwurfstapel (S)",
+        "description": "Wenn dein Nachziehstapel leer ist, wird der Abwurfstapel in den Nachziehstapel gemischt.\n\nKlicke, um die Karten in deinem Abwurfstapel zu sehen."
+      },
+      {
+        "id": "EXHAUST_PILE",
+        "title": "Erschöpfte Karten (X)",
+        "description": "Klicke, um Karten zu siehen, die in diesem Kampf erschöpft wurden."
+      }
+    ],
+    "orbs": [
+      {
+        "id": "LIGHTNING",
+        "title": "Blitz",
+        "description": "Passiv: Füge am Ende deines Zuges einem zufälligen Gegner {Passive} Schaden zu.\nEntladen: Füge einem zufälligen Gegner {Evoke} Schaden zu.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "FROST",
+        "title": "Frost",
+        "description": "Passiv: Erhalte am Ende deines Zuges {Passive} Block.\nEntladen: Erhalte {Evoke} Block.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "DARK",
+        "title": "Schatten",
+        "description": "Passiv: Erhöhe am Ende deines Zuges den Schaden dieses Orbs um {Passive}.\nEntladen: Füge dem Gegner mit den wenigsten TP {Evoke} Schaden zu.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "PLASMA",
+        "title": "Plasma",
+        "description": "Passiv: Erhalte zu Beginn deines Zuges 1 Energy.\nEntladen: Erhalte 2 Energy.\nPlasma wird durch Focus nicht beeinflusst.",
+        "passive": "",
+        "evoke": ""
+      },
+      {
+        "id": "GLASS",
+        "title": "Glas",
+        "description": "Passive: Füge am Ende des Zuges ALLEN Gegnern {Passive} Schaden zu und reduziere den Wert dieses Orbs um 1.\nEntladen: Füge ALLEN Gegnern {Evoke} Schaden zu.",
+        "passive": "Füge am Ende des Zuges ALLEN Gegnern {Passive} Schaden zu und reduziere den Wert dieses Orbs um 1.\nEntladen: Füge ALLEN Gegnern {Evoke} Schaden zu.",
+        "evoke": ""
+      }
+    ],
+    "stances": [],
+    "character_mechanics": [
+      {
+        "id": "STAR_COUNT",
+        "title": "Sterne",
+        "description": "Deine momentane Menge Sterne (★). Die Karten des Regenten können ★ zum Spielen benötigen."
+      },
+      {
+        "id": "SUMMON",
+        "title": "Beschwören",
+        "description": "Beschwöre Osty.\nFalls er schon beschworen ist, erhöhe seine max. TP für diesen Kampf."
+      },
+      {
+        "id": "FORGE",
+        "title": "Schmieden",
+        "description": "Wenn du zum ersten Mal in einem Kampf schmiedest, erhalte Hoheitsklinge auf deine Hand. Erhöht den Schaden der Hoheitsklinge."
+      },
+      {
+        "id": "REPLAY",
+        "title": "Erneut Spielen",
+        "description": "Spielt diese Karte ein weiteres Mal."
+      },
+      {
+        "id": "FATAL",
+        "title": "Tödlich",
+        "description": "Wird ausgelöst, wenn diese Karte einen Gegner tötet, der kein Untertan ist."
+      }
+    ],
+    "keywords": [
+      {
+        "id": "ETERNAL",
+        "names": [
+          "Ewig"
+        ],
+        "description": "Kann aus deinem Deck nicht entfernt oder transformiert werden."
+      },
+      {
+        "id": "ETHEREAL",
+        "names": [
+          "Flüchtig"
+        ],
+        "description": "Wenn du diese Karte am Ende dieses Zuges auf deiner Hand hältst, wird sie erschöpft."
+      },
+      {
+        "id": "EXHAUST",
+        "names": [
+          "Erschöpft"
+        ],
+        "description": "Wird bis zum Ende des Kampfes entfernt."
+      },
+      {
+        "id": "INNATE",
+        "names": [
+          "Angeboren"
+        ],
+        "description": "Beginne jeden Kampf mit dieser Karte auf deiner Hand."
+      },
+      {
+        "id": "RETAIN",
+        "names": [
+          "Behalten"
+        ],
+        "description": "Behaltene Karten werden am Ende des Zuges nicht abgeworfen."
+      },
+      {
+        "id": "SLY",
+        "names": [
+          "Listig"
+        ],
+        "description": "Falls diese Karte vor dem Ende deines Zuges aus deiner Hand abgeworfen wird, spiele sie kostenlos aus."
+      },
+      {
+        "id": "UNPLAYABLE",
+        "names": [
+          "Unspielbar"
+        ],
+        "description": "Unspielbare Karten können nicht ausgespielt werden."
+      }
+    ]
   }
 }
