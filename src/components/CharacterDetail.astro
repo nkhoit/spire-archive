@@ -2,6 +2,7 @@
 import Badge from './Badge.astro';
 import { t } from '../lib/ui-strings';
 import { getLocale } from '../lib/i18n';
+import CardHoverLink from './react/CardHoverLink';
 import { replaceGameTokens } from '../lib/energy-icons';
 
 interface Props {
@@ -94,7 +95,7 @@ const getRelicImgSrc = (r: any) => {
             {cards.sort((a: any, b: any) => a.name.localeCompare(b.name)).map((c: any) => (
               <li class="flex items-center gap-2">
                 <img src={`/images/${cardImageDir}/${c.id.toLowerCase()}.png`} alt="" class="w-6 h-5 object-cover rounded-sm shrink-0" />
-                <a href={`${langPrefix}/${game}/cards/${c.id}`} class="text-sm text-sky-300 hover:text-sky-200 hover:underline">{c.name}</a>
+                <CardHoverLink client:load href={`${langPrefix}/${game}/cards/${c.id}`} card={c} game={game} locale={locale} className="text-sm text-sky-300 hover:text-sky-200 hover:underline">{c.name}</CardHoverLink>
                 <span class="text-xs text-slate-400"> · {t(c.rarity, locale)} · {c.cost ?? 'X'}</span>
               </li>
             ))}
