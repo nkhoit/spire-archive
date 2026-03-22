@@ -199,6 +199,30 @@ export interface Achievement {
   description?: string | null;
 }
 
+export interface MechanicsEntry {
+  id: string;
+  title: string;
+  description: string;
+  passive?: string;
+  evoke?: string;
+}
+
+export interface AscensionLevel {
+  level: number;
+  title: string;
+  description: string;
+}
+
+export interface MechanicsData {
+  ascension: AscensionLevel[];
+  map_rooms: MechanicsEntry[];
+  core_concepts: MechanicsEntry[];
+  orbs: MechanicsEntry[];
+  stances: MechanicsEntry[];
+  character_mechanics: MechanicsEntry[];
+  keywords: Keyword[];
+}
+
 export interface Dataset {
   cards: Card[];
   relics: Relic[];
@@ -214,6 +238,7 @@ export interface Dataset {
   achievements: Achievement[];
   cardPowers: Record<string, Array<{name: string; description: string}>>;
   enchantments: Enchantment[];
+  mechanics: MechanicsData;
 
   cardById: Map<string, Card>;
   relicById: Map<string, Relic>;
@@ -328,6 +353,7 @@ async function loadBaseData(game: string): Promise<Dataset> {
     achievements,
     cardPowers,
     enchantments,
+    mechanics,
   ] = await Promise.all([
     readJson<Card[]>(game, 'cards.json'),
     readJson<Relic[]>(game, 'relics.json'),
@@ -345,6 +371,9 @@ async function loadBaseData(game: string): Promise<Dataset> {
     existsSync(path.join(rootDir(), 'data', game, 'enchantments.json'))
       ? readJson<Enchantment[]>(game, 'enchantments.json')
       : Promise.resolve([] as Enchantment[]),
+    existsSync(path.join(rootDir(), 'data', game, 'mechanics.json'))
+      ? readJson<MechanicsData>(game, 'mechanics.json')
+      : Promise.resolve({ ascension: [], map_rooms: [], core_concepts: [], orbs: [], stances: [], character_mechanics: [], keywords: [] } as MechanicsData),
   ]);
 
   const dataset: Dataset = {
@@ -362,6 +391,7 @@ async function loadBaseData(game: string): Promise<Dataset> {
     achievements,
     cardPowers,
     enchantments,
+    mechanics,
 
     cardById: toMap(cards),
     relicById: toMap(relics),
@@ -392,6 +422,7 @@ interface LocData {
   keywords?: Record<string, { name?: string; names?: string[]; description?: string }>;
   enchantments?: Record<string, { name?: string; description?: string }>;
   monsters?: Record<string, { name?: string; moves?: Record<string, string>; move_names?: Record<string, string>; move_titles?: string[] }>;
+  mechanics?: MechanicsData;
 }
 
 async function applyLocalization(game: string, locale: Locale, base: Dataset): Promise<Dataset> {
@@ -522,6 +553,7 @@ async function applyLocalization(game: string, locale: Locale, base: Dataset): P
     events,
     keywords,
     enchantments,
+    mechanics: loc.mechanics ?? base.mechanics,
 
     cardById: toMap(cards),
     relicById: toMap(relics),

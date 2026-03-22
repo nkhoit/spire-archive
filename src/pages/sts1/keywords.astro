@@ -1,29 +1,13 @@
 ---
 import Layout from '../../components/Layout.astro';
+import MechanicsPage from '../../components/MechanicsPage.astro';
 import { getData } from '../../lib/data';
 import { getLocale } from '../../lib/i18n';
 import { t } from '../../lib/ui-strings';
 
 const { locale, langPrefix } = getLocale(Astro);
 const data = await getData('sts1', locale);
-const keywords = data.keywords.filter((k) => k.names?.length).sort((a, b) => (a.names[0] ?? '').localeCompare(b.names[0] ?? ''));
 ---
-<Layout game="sts1" title="Keywords — Spire Archive" description="Game keyword glossary for Slay the Spire.">
-  <h1 class="text-xl font-semibold">{t('Keywords', locale)}</h1>
-  <p class="mt-1 text-sm text-slate-300">{keywords.length} game keywords and mechanics.</p>
-
-  <ul class="mt-4 divide-y divide-white/10 rounded-lg border border-white/10 bg-white/5">
-    {keywords.map((k) => (
-      <li class="p-3">
-        <div class="flex items-center gap-2">
-          {k.effect_id ? (
-            <a href={langPrefix + '/sts1/effects/' + k.effect_id} class="text-sm font-semibold capitalize text-sky-400 hover:text-sky-300 underline decoration-sky-400/30 hover:decoration-sky-300">{k.names[0]} ↗</a>
-          ) : (
-            <span class="text-sm font-semibold capitalize">{k.names[0]}</span>
-          )}
-        </div>
-        <div class="mt-1 text-sm text-slate-200">{k.description}</div>
-      </li>
-    ))}
-  </ul>
+<Layout game="sts1" title={`${t('Game Mechanics', locale)} — Spire Archive`} description="Game mechanics reference for Slay the Spire.">
+  <MechanicsPage game="sts1" data={data} locale={locale} langPrefix={langPrefix} />
 </Layout>

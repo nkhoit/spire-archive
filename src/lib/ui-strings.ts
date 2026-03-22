@@ -19,6 +19,7 @@ const strings: Record<string, Partial<Record<Locale, string>>> = {
   'Buffs & Debuffs': { ja: 'バフ＆デバフ', ko: '버프 & 디버프', zh: '增益与减益', de: 'Buffs & Debuffs', fr: 'Effets', es: 'Efectos', pt: 'Efeitos', it: 'Effetti', pl: 'Efekty', ru: 'Эффекты', tr: 'Etkiler', th: 'บัฟและดีบัฟ' },
   'Enchantments': { ja: 'エンチャント', ko: '인챈트', zh: '附魔', de: 'Verzauberungen', fr: 'Enchantements', es: 'Encantamientos', pt: 'Encantamentos', it: 'Incantesimi', pl: 'Zaklęcia', ru: 'Зачарования', tr: 'Büyüler', th: 'เสน่ห์' },
   'Keywords': { ja: 'キーワード', ko: '키워드', zh: '关键词', de: 'Schlüsselwörter', fr: 'Mots-clés', es: 'Palabras clave', pt: 'Palavras-chave', it: 'Parole chiave', pl: 'Słowa kluczowe', ru: 'Ключевые слова', tr: 'Anahtar Kelimeler', th: 'คำสำคัญ' },
+  'Game Mechanics': { ja: 'ゲームメカニクス', ko: '게임 메커니즘', zh: '游戏机制', de: 'Spielmechaniken', fr: 'Mécaniques de jeu', es: 'Mecánicas del juego', pt: 'Mecânicas do jogo', it: 'Meccaniche di gioco', pl: 'Mechaniki gry', ru: 'Игровые механики', tr: 'Oyun Mekanikleri', th: 'กลไกของเกม' },
   'Search': { ja: '検索', ko: '검색', zh: '搜索', de: 'Suche', fr: 'Recherche', es: 'Buscar', pt: 'Buscar', it: 'Cerca', pl: 'Szukaj', ru: 'Поиск', tr: 'Ara', th: 'ค้นหา' },
 
   // Card detail
@@ -195,6 +196,11 @@ const strings: Record<string, Partial<Record<Locale, string>>> = {
   'weekly updates': { ja: '件の週間アップデート', ko: '개의 주간 업데이트', zh: '次每周更新', de: 'wöchentliche Updates', fr: 'mises à jour hebdomadaires', es: 'actualizaciones semanales', pt: 'atualizações semanais', it: 'aggiornamenti settimanali', pl: 'tygodniowych aktualizacji', ru: 'еженедельных обновлений', tr: 'haftalık güncelleme', th: 'การอัปเดตรายสัปดาห์' },
   'updates from the development of Slay the Spire 2': { ja: '件のSlay the Spire 2開発アップデート', ko: '개의 Slay the Spire 2 개발 업데이트', zh: '次Slay the Spire 2开发更新', de: 'Updates aus der Entwicklung von Slay the Spire 2', fr: 'mises à jour du développement de Slay the Spire 2', es: 'actualizaciones del desarrollo de Slay the Spire 2', pt: 'atualizações do desenvolvimento de Slay the Spire 2', it: 'aggiornamenti dallo sviluppo di Slay the Spire 2', pl: 'aktualizacji z rozwoju Slay the Spire 2', ru: 'обновлений из разработки Slay the Spire 2', tr: 'Slay the Spire 2 geliştirme güncellemesi', th: 'การอัปเดตจากการพัฒนา Slay the Spire 2' },
   // Section headings
+  'Core Concepts': { ja: '基本概念', ko: '핵심 개념', zh: '核心概念', de: 'Grundkonzepte', fr: 'Concepts de base', es: 'Conceptos básicos', pt: 'Conceitos centrais', it: 'Concetti fondamentali', pl: 'Podstawowe pojęcia', ru: 'Основные понятия', tr: 'Temel Kavramlar', th: 'แนวคิดหลัก' },
+  'Map Rooms': { ja: 'マップ部屋', ko: '맵 방', zh: '地图房间', de: 'Kartenräume', fr: 'Salles de la carte', es: 'Habitaciones del mapa', pt: 'Salas do mapa', it: 'Stanze della mappa', pl: 'Pomieszczenia mapy', ru: 'Комнаты карты', tr: 'Harita Odaları', th: 'ห้องบนแผนที่' },
+  'Card Keywords': { ja: 'カードキーワード', ko: '카드 키워드', zh: '卡牌关键词', de: 'Karten-Schlüsselwörter', fr: 'Mots-clés de carte', es: 'Palabras clave de cartas', pt: 'Palavras-chave das cartas', it: 'Parole chiave delle carte', pl: 'Słowa kluczowe kart', ru: 'Ключевые слова карт', tr: 'Kart Anahtar Kelimeleri', th: 'คีย์เวิร์ดของการ์ด' },
+  'Ascension Levels': { ja: 'アセンションレベル', ko: '승천 레벨', zh: '进阶等级', de: 'Aufstiegsstufen', fr: 'Niveaux d’Ascension', es: 'Niveles de Ascensión', pt: 'Níveis de Ascensão', it: 'Livelli di Ascensione', pl: 'Poziomy Wstąpienia', ru: 'Уровни Вознесения', tr: 'Yükseliş Seviyeleri', th: 'ระดับ Ascension' },
+  'Character Mechanics': { ja: 'キャラクターメカニクス', ko: '캐릭터 메커니즘', zh: '角色机制', de: 'Charaktermechaniken', fr: 'Mécaniques de personnage', es: 'Mecánicas de personaje', pt: 'Mecânicas de personagem', it: 'Meccaniche del personaggio', pl: 'Mechaniki postaci', ru: 'Механики персонажа', tr: 'Karakter Mekanikleri', th: 'กลไกเฉพาะตัวละคร' },
 };
 
 /**
