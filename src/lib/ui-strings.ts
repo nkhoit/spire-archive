@@ -9,6 +9,7 @@ import type { Locale } from './data';
 
 const strings: Record<string, Partial<Record<Locale, string>>> = {
   // Nav
+  'Switch to': { ja: '切り替え:', ko: '전환:', zh: '切换到', de: 'Wechsel zu', fr: 'Passer à', es: 'Cambiar a', pt: 'Mudar para', it: 'Passa a', pl: 'Przejdź do', ru: 'Перейти к', tr: 'Geçiş:', th: 'สลับไป' },
   'Characters': { ja: 'キャラクター', ko: '캐릭터', zh: '角色', de: 'Charaktere', fr: 'Personnages', es: 'Personajes', pt: 'Personagens', it: 'Personaggi', pl: 'Postacie', ru: 'Персонажи', tr: 'Karakterler', th: 'ตัวละคร' },
   'Cards': { ja: 'カード', ko: '카드', zh: '卡牌', de: 'Karten', fr: 'Cartes', es: 'Cartas', pt: 'Cartas', it: 'Carte', pl: 'Karty', ru: 'Карты', tr: 'Kartlar', th: 'การ์ด' },
   'Relics': { ja: 'レリック', ko: '유물', zh: '遗物', de: 'Relikte', fr: 'Reliques', es: 'Reliquias', pt: 'Relíquias', it: 'Reliquie', pl: 'Relikty', ru: 'Реликвии', tr: 'Kalıntılar', th: 'เรลิค' },

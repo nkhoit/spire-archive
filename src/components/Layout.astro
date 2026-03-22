@@ -98,7 +98,7 @@ const navLinks = game ? [
                   <>
                     <div class="my-1.5 border-t border-white/[0.06]"></div>
                     <a class="block px-4 py-2 text-sm text-slate-400 hover:text-white hover:bg-white/[0.06] transition-colors" href={langPrefix + (game === 'sts1' ? '/sts2' : '/sts1')}>
-                      Switch to {game === 'sts1' ? 'STS2' : 'STS1'}
+                      {t('Switch to', locale)} {game === 'sts1' ? 'Spire 2' : 'Spire 1'}
                     </a>
                   </>
                 )}
