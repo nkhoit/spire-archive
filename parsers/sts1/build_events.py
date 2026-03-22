@@ -14,7 +14,7 @@ import re
 import sys
 from pathlib import Path
 
-PROJECT_ROOT = Path(__file__).parent.parent
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 EVENTS_DIR = PROJECT_ROOT / "sts-full" / "com" / "megacrit" / "cardcrawl" / "events"
 LOC_DIR = PROJECT_ROOT / "sts-data" / "localization"
 

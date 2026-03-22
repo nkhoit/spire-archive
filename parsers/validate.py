@@ -17,7 +17,7 @@ import sys
 import urllib.request
 from pathlib import Path
 
-PROJECT_ROOT = Path(__file__).resolve().parent
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_ROOT / "data"
 API_BASE = "http://localhost:4321/api"
 LOCALES = ["en", "de", "es", "fr", "it", "ja", "ko", "pl", "pt", "ru", "th", "tr", "zh"]

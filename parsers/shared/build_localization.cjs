@@ -11,7 +11,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { PROJECT_ROOT, PCK_DIR, DECOMPILED_DIR, OUTPUT_DIR } = require('./config.cjs');
+const { PROJECT_ROOT, PCK_DIR, DECOMPILED_DIR, OUTPUT_DIR } = require('../config.cjs');
 
 // 13 shared languages (mapped to ISO 639-1 for URLs and our internal code)
 const LANG_MAP = {

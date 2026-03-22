@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { PROJECT_ROOT, PCK_DIR, DECOMPILED_DIR, OUTPUT_DIR } = require('./config.cjs');
+const { PROJECT_ROOT, PCK_DIR, DECOMPILED_DIR, OUTPUT_DIR } = require('../config.cjs');
 
 const PATCH_DIR = path.join(PCK_DIR, 'localization', 'eng', 'patch_notes');
 const OUTPUT_FILE = path.join(OUTPUT_DIR, 'patch_notes.json');

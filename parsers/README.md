@@ -1,215 +1,97 @@
-# STS2 Game Data Extraction
+# Parsers
 
-How to extract and update game data when Slay the Spire 2 gets a patch.
+Extraction and transform scripts for both games live here.
 
-## Overview
+## Structure
 
-Two sources of data need extraction after each game update:
+```text
+parsers/
+├── README.md
+├── update.sh
+├── extract_game_data.sh
+├── config.cjs
+├── config.mjs
+├── config.py
+├── utils.py
+├── validate.py
+├── subset_fonts.py
+├── sts1/
+│   ├── README.md
+│   ├── card_parser.py
+│   ├── relic_parser.py
+│   ├── potion_parser.py
+│   ├── power_parser.py
+│   ├── monster_parser.py
+│   ├── event_parser.py
+│   ├── misc_parser.py
+│   ├── parse_all.py
+│   ├── build_events.py
+│   ├── resolve_upgrades.py
+│   ├── render_cards.py
+│   ├── extract_relic_values.cjs
+│   └── build_mechanics_data.py
+├── sts2/
+│   ├── README.md
+│   ├── parse_all.py
+│   ├── parse_cards.py
+│   ├── parse_events.js
+│   ├── parse_monsters.js
+│   ├── resolve_vars.py
+│   ├── resolve_localized_vars.cjs
+│   ├── add_ancient_descriptions.cjs
+│   └── build_patch_notes.cjs
+└── shared/
+    ├── build_localization.cjs
+    ├── build_event_localization.cjs
+    ├── build_monster_data.cjs
+    ├── build_monster_localization.cjs
+    └── resolve_relic_vars.js
+```
 
-1. **PCK (Godot resource pack)** — localization files, fonts, scenes, images, themes
-2. **C# DLL** — game logic (card/relic/monster definitions, variables, formulas)
-
-## Prerequisites
-
-| Tool | Purpose | Install |
-|------|---------|---------|
-| [GDRE Tools](https://github.com/bruvzg/gdsdecomp) | Extract .pck files | GitHub releases (macOS/Win/Linux) |
-| [ILSpy](https://github.com/icsharpcode/ILSpy) | Decompile C# DLLs | `dotnet tool install -g ilspycmd` or GUI app |
-| Python 3.10+ | Run parsers | Already installed |
-| Node.js 20+ | Run parsers | Already installed |
-| fonttools + brotli | Font subsetting | `pip install fonttools brotli` |
-
-## Step 1: Update the Game
+## Common commands
 
 ```bash
-# Steam auto-updates, or force it:
-# Steam → Library → Slay the Spire 2 → Properties → Updates → Always keep up to date
-```
+# Extract STS2 raw game files
+bash parsers/extract_game_data.sh
 
-Game install location (macOS):
-```
-~/Library/Application Support/Steam/steamapps/common/Slay the Spire 2/
-```
-
-Key files:
-- **PCK**: `SlayTheSpire2.app/Contents/Resources/Slay the Spire 2.pck`
-- **DLL**: `SlayTheSpire2.app/Contents/Resources/data_sts2_macos_arm64/sts2.dll`
-
-## Step 2: Extract PCK (GDRE Tools)
-
-The PCK file has an encrypted directory listing (flag `0x0002`). GDRE Tools handles this automatically — no manual key needed.
-
-```bash
-# CLI (headless):
-gdre_tools --headless \
-  --recover="~/Library/Application Support/Steam/steamapps/common/Slay the Spire 2/SlayTheSpire2.app/Contents/Resources/Slay the Spire 2.pck" \
-  --output-dir=/tmp/sts2-pck
-
-# Or use the GUI: File → Open PCK → select the .pck → Extract
-```
-
-> **Note**: If a future update adds full file encryption (flag `0x0003`), GDRE may need the encryption key. The key is typically embedded in the game executable — GDRE can often extract it automatically, or you may need to pass `--key=<hex>`. Check the GDRE docs.
-
-This produces `/tmp/sts2-pck/` with:
-- `localization/` — JSON files per language (eng, jpn, kor, zhs, deu, fra, spa, ptb, ita, pol, rus, tur, tha)
-- `fonts/` — game fonts (+ locale subdirs: jpn, kor, zhs, rus, tha)
-- `themes/` — font scale transforms per locale
-- `scenes/` — Godot scene files (.tscn)
-- `images/` — card portraits, UI elements
-- `src/` — GDScript source
-
-Last known GDRE version: **v2.4.0**
-Last known game engine: **Godot 4.5.1**
-
-## Step 3: Decompile C# DLL (ILSpy)
-
-```bash
-# Using ilspycmd:
-ilspycmd \
-  "~/Library/Application Support/Steam/steamapps/common/Slay the Spire 2/SlayTheSpire2.app/Contents/Resources/data_sts2_macos_arm64/sts2.dll" \
-  -p -o ~/code/sts2-research/decompiled/
-
-# Or use ILSpy GUI: File → Open → sts2.dll → File → Save Code
-```
-
-Output structure: one folder per namespace, e.g.:
-- `MegaCrit.Sts2.Core.Models.Cards/` — card definitions (Bash.cs, etc.)
-- `MegaCrit.Sts2.Core.Models.Relics/` — relic definitions
-- `MegaCrit.Sts2.Core.Models.Potions/` — potion definitions
-- `MegaCrit.Sts2.Core.Models.Monsters/` — monster definitions
-- `MegaCrit.Sts2.Core.MonsterMoves/` — monster move logic
-- `MegaCrit.Sts2.Core.Models.Acts/` — act definitions
-- `MegaCrit.Sts2.Core.Models.Encounters/` — encounter definitions
-
-Decompiled source location: `~/code/sts2-research/decompiled/`
-
-## Step 4: Run the Parser Pipeline
-
-```bash
-cd ~/code/spire-archive
+# Run the STS2 parser pipeline
 bash parsers/update.sh
+
+# Validate API output against generated data
+python3 parsers/validate.py --all
+
+# Rebuild subsetted fonts only
+python3 parsers/subset_fonts.py
 ```
 
-Or with explicit paths:
-```bash
-bash parsers/update.sh \
-  --pck-dir /tmp/sts2-pck \
-  --decompiled-dir ~/code/sts2-research/decompiled
-```
+## STS2 pipeline
 
-### Pipeline Steps (12 total)
+`parsers/update.sh` currently runs these steps:
 
-| Step | Script | What It Does |
-|------|--------|-------------|
-| 1-4 | `parse_sts2_all.py` | Extract cards, relics, potions, keywords, characters from C# source |
-| 5 | `parse_sts2_events.js` | Parse events from C# + localization |
-| 6 | `build_monster_data.cjs` | Parse monster data from C# (moves, patterns, effects, acts) |
-| 7 | `resolve_sts2_vars.py` | Resolve template variables in English descriptions |
-| 8 | `resolve_localized_vars.cjs` | Resolve template vars in localized descriptions |
-| 9 | `build_event_localization.cjs` | Build event localization from raw game files |
-| 10 | `build_monster_localization.cjs` | Build monster move name localization |
-| 11 | `add_sts2_ancient_descriptions.cjs` | Add Ancient (boss NPC) descriptions |
-| 12 | `build_patch_notes.cjs` | Convert BBCode patch notes to HTML |
-| 13 | `subset_fonts.py` | Subset game fonts to woff2 (only chars we use) |
+1. `python3 parsers/sts2/parse_all.py`
+2. `node parsers/sts2/parse_events.js`
+3. `node parsers/sts2/parse_monsters.js`
+4. `node parsers/shared/build_monster_data.cjs`
+5. `python3 parsers/sts2/resolve_vars.py`
+6. `node parsers/shared/build_localization.cjs`
+7. `node parsers/shared/build_event_localization.cjs`
+8. `node parsers/sts2/resolve_localized_vars.cjs`
+9. `node parsers/shared/build_monster_localization.cjs`
+10. `node parsers/sts2/add_ancient_descriptions.cjs`
+11. `node parsers/sts2/build_patch_notes.cjs`
+12. `python3 parsers/subset_fonts.py`
 
-### Environment Variables
+## Validation
 
-| Variable | Default | Purpose |
-|----------|---------|---------|
-| `STS2_PCK_DIR` | `/tmp/sts2-pck` | Extracted PCK directory |
-| `STS2_DECOMPILED_DIR` | `~/code/sts2-research/decompiled` | Decompiled C# source |
-
-## Step 5: Validate
+Validation requires the dev server on port `4321`:
 
 ```bash
-# Run the data validator across all entities and locales
+npx astro dev --port 4321
 python3 parsers/validate.py --all
 ```
 
-This compares API output against parsed JSON source data for both games across all 13 locales. Expect all checks to pass (✅). If warnings appear:
+## Notes
 
-- **New `{Amount}` in enchantments/powers** — add to `RUNTIME_VAR_FALLBACKS` in `parsers/resolve_localized_vars.cjs`
-- **New `{:diff()}` patterns** — should auto-resolve (generic inference logic)
-- **New `{Var:diff)}` typos** — should auto-correct (generic regex pre-processing)
-- **New runtime-only vars** — trace the C# source to find the default value, add a fallback entry
-
-> **Note**: The dev server must be running for validation. Start it with `npx astro dev --port 4321` first.
-
-## Step 6: Build & Test
-
-```bash
-# Type check
-npx astro check
-
-# Full build
-npm run build
-
-# Playwright smoke tests
-npx playwright test
-```
-
-### What to Check After an Update
-
-- New cards/relics/potions appear in explorer pages
-- Card descriptions render correctly (no unresolved `{variables}`)
-- Localized text looks right for CJK + RTL languages
-- Card images load (may need new portraits from PCK)
-- Monster pages if new monsters added
-- Patch notes page has the new entry
-
-## Step 7: Extract New Card Images (if needed)
-
-Card portraits are in the PCK at `images/cards/`:
-```bash
-# Copy new card images
-cp /tmp/sts2-pck/images/cards/*.png public/images/sts2/cards/
-
-# Filenames should be lowercase: bash.png, creative_ai.png, etc.
-# The game uses the card ID lowercased as the filename
-```
-
-## Troubleshooting
-
-### "unresolved template variable" warnings
-Some variables are runtime-only (set when the game applies a power/enchantment, not in source). These are handled by `RUNTIME_VAR_FALLBACKS` in `parsers/resolve_localized_vars.cjs` — a lookup table mapping entity IDs to their default values derived from C# source.
-
-If a new patch adds entities with runtime vars, the validator will flag them. Trace the C# source to find the canonical default and add a new fallback entry.
-
-### New DynamicVar types
-If `resolve_sts2_vars.py` logs unknown var types, add them to the `VAR_TYPES` dict. Check the C# source for the var class definition.
-
-### Missing card from character page
-Check `parse_sts2_all.py` — the card might have a new `CardColor` enum value that needs mapping.
-
-### Font rendering looks wrong for a locale
-Check `themes/fonts/{locale}/` in the PCK for any new scale transforms, then update `LOCALE_FONTS` in `CssCardRenderer.tsx`.
-
-## File Locations Summary
-
-```
-~/code/spire-archive/             # Project root
-├── parsers/                      # All extraction/transform scripts
-│   ├── update.sh                 # Pipeline orchestrator
-│   ├── validate.py               # Data validation (all entities × locales)
-│   ├── config.cjs                # Shared config (paths)
-│   ├── config.py                 # Python config
-│   ├── resolve_localized_vars.cjs # Template variable resolution (incl. RUNTIME_VAR_FALLBACKS)
-│   └── subset_fonts.py           # Font subsetting
-├── data/sts2/                    # Generated JSON data
-│   ├── cards.json
-│   ├── relics.json
-│   ├── potions.json
-│   ├── powers.json
-│   ├── monsters.json
-│   ├── events.json
-│   ├── enchantments.json
-│   ├── characters.json
-│   ├── keywords.json
-│   ├── patch_notes.json
-│   └── localization/{lang}.json
-├── public/fonts/                 # Subsetted game fonts
-├── public/images/sts2/           # Game images
-└── docs/                         # This documentation
-    ├── extraction.md             # ← you are here
-    └── font-system.md
-```
+- Root-level config files are shared by both STS1 and STS2 scripts.
+- `shared/` contains cross-cutting builders used by the STS2 pipeline.
+- `extract_game_data.sh` stays at the parsers root because it prepares input data for the whole STS2 pipeline.

@@ -6,6 +6,7 @@ import json
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from config import DECOMPILED_DIR, OUTPUT_DIR
 
 def camel_to_snake(name: str) -> str:
@@ -15,7 +16,7 @@ def camel_to_snake(name: str) -> str:
 
 DECOMPILED = DECOMPILED_DIR
 OUTPUT = OUTPUT_DIR
-LOC_DIR = Path(__file__).parent.parent / "data/sts2-localization/eng"
+LOC_DIR = Path(__file__).resolve().parents[2] / "data" / "sts2-localization" / "eng"
 
 def load_loc(filename: str) -> dict:
     """Load a localization JSON file and return as dict."""
@@ -29,7 +30,7 @@ _bbcode_re = re.compile(r'\[/?[a-z]+\]')
 _var_fmt_re = re.compile(r'\{(\w+)(?::[^}]*)?\}')
 
 def clean_desc(text: str, vars: dict = None) -> str:
-    """Strip BBCode tags. Var resolution is handled by resolve_sts2_vars.py."""
+    """Strip BBCode tags. Var resolution is handled by resolve_vars.py."""
     if not text:
         return text
     # Strip [gold]...[/gold], [blue]...[/blue], [red]...[/red], etc.

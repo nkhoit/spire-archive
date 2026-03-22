@@ -7,7 +7,7 @@ import re
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from utils import (  # noqa: E402
     DEFAULT_LOCALIZATION_DIR,
     DEFAULT_SOURCE_DIR,
@@ -34,7 +34,7 @@ SITE_LANGS = {
     "th": "tha",
 }
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_OUTPUT = PROJECT_ROOT / "data" / "sts1" / "monsters.json"
 DEFAULT_LOC_OUTPUT_DIR = PROJECT_ROOT / "data" / "sts1" / "localization"
 DEFAULT_LOC_ROOT = PROJECT_ROOT / "sts-data" / "localization"

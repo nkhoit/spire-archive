@@ -2,7 +2,7 @@
 
 import fs from "fs";
 import path from "path";
-import { DECOMPILED_DIR, PCK_DIR, OUTPUT_DIR } from './config.mjs';
+import { DECOMPILED_DIR, PCK_DIR, OUTPUT_DIR } from '../config.mjs';
 
 const MONSTERS_DIR = path.join(DECOMPILED_DIR, 'MegaCrit.Sts2.Core.Models.Monsters');
 const ENCOUNTERS_DIR = path.join(DECOMPILED_DIR, 'MegaCrit.Sts2.Core.Models.Encounters');

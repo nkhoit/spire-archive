@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { PROJECT_ROOT, PCK_DIR, DECOMPILED_DIR, OUTPUT_DIR } = require('./config.cjs');
+const { PROJECT_ROOT, PCK_DIR, DECOMPILED_DIR, OUTPUT_DIR } = require('../config.cjs');
 
 const CS_BASE = DECOMPILED_DIR;
 const MONSTERS_DIR = path.join(CS_BASE, 'MegaCrit.Sts2.Core.Models.Monsters');

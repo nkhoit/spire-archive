@@ -30,10 +30,13 @@ npm run dev
 
 Parsers in `./parsers/` extract and transform game data:
 
-- `parse_all.py` — STS1 data from decompiled game sources
-- `parse_sts2_all.py` / `parse_sts2_cards.py` — STS2 data from game files
-- `resolve_sts2_vars.py` — resolves template variables in STS2 card descriptions
-- `resolve_upgrades.py` — computes upgraded card stats
+- `parsers/sts1/parse_all.py` — STS1 data from decompiled game sources
+- `parsers/sts2/parse_all.py` — STS2 data from game files
+- `parsers/sts2/resolve_vars.py` — resolves template variables in STS2 card descriptions
+- `parsers/sts1/resolve_upgrades.py` — computes upgraded card stats
+- `parsers/update.sh` — runs the STS2 pipeline
+
+See `parsers/README.md` for the full parser layout.
 
 ## API
 

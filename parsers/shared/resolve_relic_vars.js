@@ -8,7 +8,7 @@
 
 import fs from 'fs';
 import path from 'path';
-import { DECOMPILED_DIR, OUTPUT_DIR } from './config.mjs';
+import { DECOMPILED_DIR, OUTPUT_DIR } from '../config.mjs';
 
 const RELICS_DIR = path.join(DECOMPILED_DIR, 'MegaCrit.Sts2.Core.Models.Relics');
 const RELICS_JSON = path.join(OUTPUT_DIR, 'relics.json');
