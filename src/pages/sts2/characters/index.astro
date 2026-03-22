@@ -16,6 +16,14 @@ const colorMap: Record<string, string> = {
   REGENT: 'regent',
 };
 
+const charBorders: Record<string, string> = {
+  IRONCLAD: 'border-red-500/20 hover:border-red-500/40',
+  SILENT: 'border-green-500/20 hover:border-green-500/40',
+  DEFECT: 'border-blue-500/20 hover:border-blue-500/40',
+  NECROBINDER: 'border-purple-500/20 hover:border-purple-500/40',
+  REGENT: 'border-amber-500/20 hover:border-amber-500/40',
+};
+
 const portraitMap: Record<string, string> = {
   IRONCLAD: '/images/sts2/characters/ironclad.jpg',
   SILENT: '/images/sts2/characters/silent.jpg',
@@ -42,7 +50,7 @@ const descMap: Record<string, string> = {
       const color = colorMap[ch.id] ?? '';
       const desc = descMap[ch.id] ?? '';
       return (
-        <a href={langPrefix + '/sts2/characters/' + ch.id} class="block rounded-lg border border-white/10 bg-white/5 overflow-hidden hover:bg-white/10 transition-colors">
+        <a href={langPrefix + '/sts2/characters/' + ch.id} class={'block rounded-lg border bg-white/5 overflow-hidden hover:bg-white/10 transition-all ' + (charBorders[ch.id] ?? 'border-white/10')}>
           <img src={portraitMap[ch.id]} alt={ch.name} class="w-full h-40 object-cover" style="object-position: right center" />
           <div class="p-4">
             <h2 class="text-lg font-semibold">{ch.name}</h2>
