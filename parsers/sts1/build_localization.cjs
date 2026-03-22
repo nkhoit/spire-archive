@@ -9,7 +9,8 @@
 
 const fs = require('fs');
 const path = require('path');
-const { PROJECT_ROOT } = require('../config.cjs');
+
+const PROJECT_ROOT = path.resolve(__dirname, '../..');
 
 const LANG_MAP = {
   eng: 'en', deu: 'de', fra: 'fr', ita: 'it', spa: 'es', ptb: 'pt',

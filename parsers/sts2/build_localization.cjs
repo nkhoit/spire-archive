@@ -9,7 +9,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { PROJECT_ROOT, PCK_DIR } = require('../config.cjs');
+const { PROJECT_ROOT, PCK_DIR } = require('./config.cjs');
 
 const LANG_MAP = {
   eng: 'en', deu: 'de', fra: 'fr', ita: 'it', spa: 'es', ptb: 'pt',

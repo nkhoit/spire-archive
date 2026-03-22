@@ -7,7 +7,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { PROJECT_ROOT, PCK_DIR, DECOMPILED_DIR, OUTPUT_DIR } = require('../config.cjs');
+const { PROJECT_ROOT, PCK_DIR, DECOMPILED_DIR, OUTPUT_DIR } = require('./config.cjs');
 
 const CS_DIRS = {
   cards: path.join(DECOMPILED_DIR, 'MegaCrit.Sts2.Core.Models.Cards'),

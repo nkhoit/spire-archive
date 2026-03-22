@@ -7,7 +7,7 @@ import re
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from utils import (  # noqa: E402
     DEFAULT_LOCALIZATION_DIR,
     DEFAULT_SOURCE_DIR,

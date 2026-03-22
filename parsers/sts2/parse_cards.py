@@ -6,7 +6,7 @@ import json
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from config import DECOMPILED_DIR, OUTPUT_DIR
 
 DECOMPILED = DECOMPILED_DIR

@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 import path from 'path';
-import { PCK_DIR, DECOMPILED_DIR, OUTPUT_DIR } from '../config.mjs';
+import { PCK_DIR, DECOMPILED_DIR, OUTPUT_DIR } from './config.mjs';
 
 const ANCIENT_EVENT_DATA = {
   NEOW: {

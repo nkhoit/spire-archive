@@ -11,7 +11,7 @@ import sys
 import time
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from utils import DEFAULT_LOCALIZATION_DIR, DEFAULT_SOURCE_DIR
 from card_parser import parse_cards
 from relic_parser import parse_relics
