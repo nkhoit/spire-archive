@@ -88,35 +88,39 @@ const navLinks = game ? [
         <div class="flex items-center gap-3 shrink-0">
           <GlobalSearch client:load game={game} locale={locale} langPrefix={langPrefix} />
           {navLinks.length > 0 && (
-            <button id="nav-toggle" class="p-1.5 rounded-md text-slate-300 hover:text-white hover:bg-white/10 transition-colors" aria-label="Toggle menu">
-              <svg id="nav-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
-              <svg id="nav-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
-            </button>
+            <div class="relative">
+              <button id="nav-toggle" class="p-1.5 rounded-md text-slate-300 hover:text-white hover:bg-white/10 transition-colors" aria-label="Toggle menu">
+                <svg id="nav-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                <svg id="nav-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
+              </button>
+              <nav id="nav-dropdown" class="hidden absolute right-0 top-full mt-2 z-50 min-w-[180px] rounded-lg border border-white/[0.1] bg-[#0d1117] shadow-2xl shadow-black/80 py-1.5">
+                {navLinks.map((link) => (
+                  <a class="block px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-white/[0.06] transition-colors" href={link.href}>{link.label}</a>
+                ))}
+              </nav>
+            </div>
         )}
           <LanguagePicker client:load locale={locale} />
         </div>
       </div>
-      {navLinks.length > 0 && (
-        <nav id="nav-mobile" class="hidden border-t border-white/10 px-4 py-3">
-          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-sm text-slate-200">
-            {navLinks.map((link) => (
-              <a class="hover:text-white py-1.5" href={link.href}>{link.label}</a>
-            ))}
-          </div>
-        </nav>
-      )}
     </header>
 
     <script is:inline>
       const toggle = document.getElementById('nav-toggle');
-      const mobile = document.getElementById('nav-mobile');
+      const dropdown = document.getElementById('nav-dropdown');
       const iconOpen = document.getElementById('nav-icon-open');
       const iconClose = document.getElementById('nav-icon-close');
-      if (toggle && mobile) {
-        toggle.addEventListener('click', () => {
-          const open = mobile.classList.toggle('hidden');
-          iconOpen?.classList.toggle('hidden', !open);
-          iconClose?.classList.toggle('hidden', open);
+      if (toggle && dropdown) {
+        toggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isHidden = dropdown.classList.toggle('hidden');
+          iconOpen?.classList.toggle('hidden', !isHidden);
+          iconClose?.classList.toggle('hidden', isHidden);
+        });
+        document.addEventListener('click', () => {
+          dropdown.classList.add('hidden');
+          iconOpen?.classList.remove('hidden');
+          iconClose?.classList.add('hidden');
         });
       }
     </script>

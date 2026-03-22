@@ -77,6 +77,7 @@ export default function GlobalSearch({ game, locale = 'en', langPrefix = '' }: {
   const [selected, setSelected] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const anchorRef = useRef<HTMLButtonElement>(null);
 
   // ⌘K / Ctrl+K
   useEffect(() => {
@@ -145,80 +146,101 @@ export default function GlobalSearch({ game, locale = 'en', langPrefix = '' }: {
   if (!open) {
     return (
       <button
+        ref={anchorRef}
         onClick={() => setOpen(true)}
-        className="flex items-center gap-2 rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-1.5 text-xs text-slate-400 hover:text-slate-200 hover:border-white/[0.15] transition-colors whitespace-nowrap"
+        className="flex items-center gap-2 rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-1.5 text-xs text-slate-400 hover:text-slate-200 hover:border-white/[0.15] transition-colors whitespace-nowrap min-w-[140px] sm:min-w-[200px] md:min-w-[280px]"
       >
-        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-        <span>{t('Search', locale)}</span>
+        <svg className="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+        <span className="flex-1 text-left">{t('Search', locale)}</span>
+        <kbd className="hidden sm:inline text-[10px] text-slate-600 border border-white/[0.06] rounded px-1">⌘K</kbd>
       </button>
     );
   }
 
+  const resultList = (
+    <>
+      <div className="flex items-center gap-3 border-b border-white/[0.06] px-4 py-3">
+        <svg className="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+        <input
+          ref={inputRef}
+          type="text"
+          className="flex-1 bg-transparent text-sm text-white placeholder-slate-500 outline-none"
+          placeholder={t('Search cards, relics, events…', locale)}
+          value={query}
+          onChange={e => setQuery(e.target.value)}
+          onKeyDown={handleKeyDown}
+        />
+        <button onClick={() => setOpen(false)} className="shrink-0 rounded px-1.5 py-0.5 text-[10px] text-slate-500 border border-white/[0.08] hover:text-slate-300 hover:border-white/[0.15] transition-colors">ESC</button>
+      </div>
+
+      {results.length > 0 && (
+        <div ref={containerRef} className="max-h-[50vh] overflow-y-auto py-2">
+          {Array.from(grouped.entries()).map(([type, items]) => (
+            <div key={type}>
+              <div className="px-4 py-1.5 text-[10px] font-semibold text-slate-500 uppercase tracking-widest">
+                {typeLabels[type] ?? type}
+              </div>
+              {items.map(item => {
+                const idx = flatIdx++;
+                return (
+                  <a
+                    key={`${item.game}-${item.type}-${item.id}`}
+                    data-idx={idx}
+                    href={getHref(item, langPrefix)}
+                    className={`flex items-center gap-3 px-4 py-2 text-sm transition-colors ${idx === selected ? 'bg-amber-500/10 text-white' : 'text-slate-300 hover:bg-white/[0.04]'}`}
+                    onMouseEnter={() => setSelected(idx)}
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.img ? (
+                      <img src={item.img} alt="" className="w-8 h-8 object-contain shrink-0 rounded" loading="lazy" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+                    ) : (
+                      <span className="w-8 h-8 flex items-center justify-center text-lg shrink-0">{typeIcons[item.type] ?? '📄'}</span>
+                    )}
+                    <div className="min-w-0 flex-1">
+                      <div className="flex items-center gap-2">
+                        <span className="font-medium truncate">{item.name}</span>
+                        {!game && <span className="text-[10px] text-slate-500 uppercase shrink-0">{item.game}</span>}
+                      </div>
+                      {item.desc && <div className="text-xs text-slate-500 truncate">{item.desc}</div>}
+                    </div>
+                  </a>
+                );
+              })}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {query.trim() && results.length === 0 && (
+        <div className="px-4 py-8 text-center text-sm text-slate-500">
+          {t('No results for', locale)} "{query}"
+        </div>
+      )}
+    </>
+  );
+
+  // Desktop: dropdown anchored to search button position
+  // Mobile: full-width centered modal
   const modal = (
-      <div className="fixed inset-0 z-50 flex items-start justify-center pt-[15vh] bg-black/50" onClick={() => setOpen(false)}>
+    <div className="fixed inset-0 z-50 bg-black/50" onClick={() => setOpen(false)}>
+      {/* Mobile: centered modal */}
+      <div className="sm:hidden flex items-start justify-center pt-[15vh] h-full">
         <div
           className="w-full max-w-lg mx-4 rounded-xl border border-white/[0.1] bg-[#0d1117] shadow-2xl shadow-black/80 overflow-hidden"
           onClick={(e) => e.stopPropagation()}
-          >
-        <div className="flex items-center gap-3 border-b border-white/[0.06] px-4 py-3">
-          <svg className="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-          <input
-            ref={inputRef}
-            type="text"
-            className="flex-1 bg-transparent text-sm text-white placeholder-slate-500 outline-none"
-            placeholder={t('Search cards, relics, events…', locale)}
-            value={query}
-            onChange={e => setQuery(e.target.value)}
-            onKeyDown={handleKeyDown}
-          />
-          <button onClick={() => setOpen(false)} className="shrink-0 rounded px-1.5 py-0.5 text-[10px] text-slate-500 border border-white/[0.08] hover:text-slate-300 hover:border-white/[0.15] transition-colors">ESC</button>
-        </div>
-
-        {results.length > 0 && (
-          <div ref={containerRef} className="max-h-[50vh] overflow-y-auto py-2">
-            {Array.from(grouped.entries()).map(([type, items]) => (
-              <div key={type}>
-                <div className="px-4 py-1.5 text-[10px] font-semibold text-slate-500 uppercase tracking-widest">
-                  {typeLabels[type] ?? type}
-                </div>
-                {items.map(item => {
-                  const idx = flatIdx++;
-                  return (
-                    <a
-                      key={`${item.game}-${item.type}-${item.id}`}
-                      data-idx={idx}
-                      href={getHref(item, langPrefix)}
-                      className={`flex items-center gap-3 px-4 py-2 text-sm transition-colors ${idx === selected ? 'bg-amber-500/10 text-white' : 'text-slate-300 hover:bg-white/[0.04]'}`}
-                      onMouseEnter={() => setSelected(idx)}
-                      onClick={() => setOpen(false)}
-                    >
-                      {item.img ? (
-                        <img src={item.img} alt="" className="w-8 h-8 object-contain shrink-0 rounded" loading="lazy" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
-                      ) : (
-                        <span className="w-8 h-8 flex items-center justify-center text-lg shrink-0">{typeIcons[item.type] ?? '📄'}</span>
-                      )}
-                      <div className="min-w-0 flex-1">
-                        <div className="flex items-center gap-2">
-                          <span className="font-medium truncate">{item.name}</span>
-                          {!game && <span className="text-[10px] text-slate-500 uppercase shrink-0">{item.game}</span>}
-                        </div>
-                        {item.desc && <div className="text-xs text-slate-500 truncate">{item.desc}</div>}
-                      </div>
-                    </a>
-                  );
-                })}
-              </div>
-            ))}
-          </div>
-        )}
-
-        {query.trim() && results.length === 0 && (
-          <div className="px-4 py-8 text-center text-sm text-slate-500">
-            {t('No results for', locale)} "{query}"
-          </div>
-        )}
+        >
+          {resultList}
         </div>
       </div>
+      {/* Desktop: anchored dropdown */}
+      <div className="hidden sm:block absolute top-[52px] right-4 md:right-[max(1rem,calc((100vw-80rem)/2+1rem))]"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="w-[400px] md:w-[480px] rounded-xl border border-white/[0.1] bg-[#0d1117] shadow-2xl shadow-black/80 overflow-hidden">
+          {resultList}
+        </div>
+      </div>
+    </div>
   );
 
   return createPortal(modal, document.body);
