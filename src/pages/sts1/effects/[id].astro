@@ -2,6 +2,7 @@
 import Layout from '../../../components/Layout.astro';
 import { getData } from '../../../lib/data';
 import { getLocale } from '../../../lib/i18n';
+import { t } from '../../../lib/ui-strings';
 import CssCardRenderer from '../../../components/react/CssCardRenderer';
 
 const { id } = Astro.params;
@@ -54,7 +55,7 @@ const colorMap: Record<string, string> = {
 };
 ---
 <Layout game="sts1" title={`${power.name} — Spire Archive`} description={power.description}>
-  <a href={langPrefix + '/sts1/effects'} class="text-sm text-slate-400 hover:text-white">← Buffs & Debuffs</a>
+  <a href={langPrefix + '/sts1/effects'} class="text-sm text-slate-400 hover:text-white">← {t('Buffs & Debuffs', locale)}</a>
 
   <div class="mt-4 flex items-center gap-4">
     {power.icon ? (
@@ -78,7 +79,7 @@ const colorMap: Record<string, string> = {
 
   {relatedCards.length > 0 && (
     <section class="mt-8">
-      <h2 class="text-lg font-semibold mb-3">Cards that apply {power.name}</h2>
+      <h2 class="text-lg font-semibold mb-3">{t('Cards that apply', locale)} {power.name}</h2>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
         {relatedCards.map((card) => (
           <a href={langPrefix + '/sts1/cards/' + card.id} class="group flex items-center justify-center rounded-lg border border-white/10 bg-white/5 p-2 hover:bg-white/10 transition">
