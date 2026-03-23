@@ -28,6 +28,7 @@ const ungrouped = choices.filter((c: any) => !c.pool);
 const isAncient = event.type === 'ancient';
 const ancientRelicPools = (event as any).relic_pools ?? [];
 const dialogue: { character: string; text: string }[] = (event as any).dialogue ?? [];
+const flavorSequences = Object.entries((event as any).flavor_sequences ?? {}) as [string, string[]][];
 const hasAncientRelicPools = isAncient && ancientRelicPools.length > 0;
 const showStandardChoices = !hasAncientRelicPools;
 
@@ -75,7 +76,12 @@ function linkifyRefs(text: string, refs?: any[], langPrefix?: string): string {
 function renderChoices(choices: any[], eventRefs?: any[], langPrefix?: string) {
   return choices.map((c: any) => {
     const allRefs = [...(eventRefs ?? []), ...(c.references ?? [])];
-    return { ...c, _html: c.description ? linkifyRefs(c.description, allRefs, langPrefix) : '', _locked: c.locked ?? null };
+    return {
+      ...c,
+      _html: c.description ? linkifyRefs(c.description, allRefs, langPrefix) : '',
+      _outcomeHtml: c.outcome ? linkifyRefs(c.outcome, allRefs, langPrefix) : '',
+      _locked: c.locked ?? null,
+    };
   });
 }
 
@@ -186,11 +192,11 @@ function getPoolLabel(name: string, locale: string) {
                   const ungroupedPage = pageChoices.filter((c: any) => !c.pool);
                   return (
                     <div class="space-y-2">
-                      {ungroupedPage.map((c: any) => (<div class="rounded-md border border-white/10 bg-white/5 p-3"><div class="font-game text-sm font-semibold theme-title">{c.name}</div>{c._html && <p class="mt-1 text-sm text-slate-300" set:html={c._html} />}{c._locked && <p class="mt-1 text-xs text-slate-500 italic">🔒 {c._locked}</p>}</div>))}
+                      {ungroupedPage.map((c: any) => (<div class="rounded-md border border-white/10 bg-white/5 p-3"><div class="font-game text-sm font-semibold theme-title">{c.name}</div>{c._html && <p class="mt-1 text-sm text-slate-300" set:html={c._html} />}{c._locked && <p class="mt-1 text-xs text-slate-500 italic">🔒 {c._locked}</p>}{c._outcomeHtml && (<details class="mt-2"><summary class="text-xs text-slate-500 cursor-pointer hover:text-slate-400 transition-colors select-none">What happens...</summary><p class="mt-1 text-sm text-slate-400 italic pl-2 border-l border-white/10" set:html={c._outcomeHtml} /></details>)}</div>))}
                       {hasSubPools && poolNames.map((pool: any) => (
                         <div class="mt-2">
                           <h4 class="font-game text-xs font-semibold theme-kicker mb-1">{pool}</h4>
-                          <div class="space-y-1.5 ml-2">{pageChoices.filter((c: any) => c.pool === pool).map((c: any) => (<div class="rounded-md border border-white/10 bg-white/5 p-2.5"><div class="font-game text-sm font-semibold theme-title">{c.name}</div>{c._html && <p class="mt-1 text-sm text-slate-300" set:html={c._html} />}</div>))}</div>
+                          <div class="space-y-1.5 ml-2">{pageChoices.filter((c: any) => c.pool === pool).map((c: any) => (<div class="rounded-md border border-white/10 bg-white/5 p-2.5"><div class="font-game text-sm font-semibold theme-title">{c.name}</div>{c._html && <p class="mt-1 text-sm text-slate-300" set:html={c._html} />}{c._outcomeHtml && (<details class="mt-2"><summary class="text-xs text-slate-500 cursor-pointer hover:text-slate-400 transition-colors select-none">What happens...</summary><p class="mt-1 text-sm text-slate-400 italic pl-2 border-l border-white/10" set:html={c._outcomeHtml} /></details>)}</div>))}</div>
                         </div>
                       ))}
                     </div>
@@ -205,9 +211,24 @@ function getPoolLabel(name: string, locale: string) {
       {showStandardChoices && ungrouped.length > 0 && pages.length === 0 && (
         <section class="mt-4">
           <h2 class="font-game text-sm font-semibold text-slate-200">{t('Choices', locale)}</h2>
-          <div class="mt-3 space-y-2">{renderChoices(ungrouped, (event as any).references, langPrefix).map((c: any) => (<div class="rounded-md border border-white/10 bg-white/5 p-3"><div class="font-game text-sm font-semibold theme-title">{c.name}</div>{c._html && <p class="mt-1 text-sm text-slate-300" set:html={c._html} />}{c._locked && <p class="mt-1 text-xs text-slate-500 italic">🔒 {c._locked}</p>}</div>))}</div>
+          <div class="mt-3 space-y-2">{renderChoices(ungrouped, (event as any).references, langPrefix).map((c: any) => (<div class="rounded-md border border-white/10 bg-white/5 p-3"><div class="font-game text-sm font-semibold theme-title">{c.name}</div>{c._html && <p class="mt-1 text-sm text-slate-300" set:html={c._html} />}{c._locked && <p class="mt-1 text-xs text-slate-500 italic">🔒 {c._locked}</p>}{c._outcomeHtml && (<details class="mt-2"><summary class="text-xs text-slate-500 cursor-pointer hover:text-slate-400 transition-colors select-none">What happens...</summary><p class="mt-1 text-sm text-slate-400 italic pl-2 border-l border-white/10" set:html={c._outcomeHtml} /></details>)}</div>))}</div>
         </section>
       )}
+
+
+
+      {showStandardChoices && flavorSequences.length > 0 && flavorSequences.map(([, texts]) => (
+        <details class="mt-4 rounded-lg border border-white/10 bg-white/[0.03]">
+          <summary class="cursor-pointer px-5 py-3 font-game text-sm font-semibold text-slate-400 uppercase tracking-wide hover:text-slate-200 transition-colors select-none">
+            Flavor Text ({texts.length})
+          </summary>
+          <ol class="px-5 pb-4 space-y-2 list-decimal list-inside">
+            {texts.map((t) => (
+              <li class="text-sm text-slate-400 italic">{t}</li>
+            ))}
+          </ol>
+        </details>
+      ))}
 
       {showStandardChoices && hasPoolGroups && pools.map((pool: any) => {
         const poolChoices = choices.filter((c: any) => c.pool === pool);
@@ -225,6 +246,7 @@ function getPoolLabel(name: string, locale: string) {
                   </div>
                   {c._html && <p class="mt-1 text-sm text-slate-300 ml-10" set:html={c._html} />}
                   {c._locked && <p class="mt-1 text-xs text-slate-500 italic ml-10">🔒 {c._locked}</p>}
+                  {c._outcomeHtml && (<details class="mt-2 ml-10"><summary class="text-xs text-slate-500 cursor-pointer hover:text-slate-400 transition-colors select-none">What happens...</summary><p class="mt-1 text-sm text-slate-400 italic pl-2 border-l border-white/10" set:html={c._outcomeHtml} /></details>)}
                 </div>
               ))}
             </div>

@@ -375,6 +375,73 @@ function mergeLockedChoices(choices = []) {
   return merged;
 }
 
+function collectFlavorOnlyPages(localization, eventId, vars) {
+  const pagePattern = new RegExp(`^${eventId}\\.pages\\.([^.]+)\\.description$`);
+  const pages = [];
+
+  for (const key in localization) {
+    const match = key.match(pagePattern);
+    if (!match) continue;
+
+    const pageName = match[1];
+    if (pageName === 'INITIAL' || pageName === 'DONE') continue;
+
+    const rawDescription = localization[key];
+    if (!rawDescription) continue;
+
+    const hasOwnOptions = Object.keys(localization).some(locKey => locKey.startsWith(`${eventId}.pages.${pageName}.options.`));
+    if (hasOwnOptions) continue;
+
+    pages.push({
+      pageName,
+      description: substituteVars(stripBBCode(rawDescription), vars),
+    });
+  }
+
+  return pages;
+}
+
+function attachChoiceOutcomes(choices, flavorPages) {
+  const matchedPages = new Set();
+
+  for (const choice of choices) {
+    if (!choice._optionKey) continue;
+    const page = flavorPages.find(p => p.pageName === choice._optionKey);
+    if (!page?.description) continue;
+    choice.outcome = page.description;
+    matchedPages.add(page.pageName);
+  }
+
+  for (const choice of choices) {
+    delete choice._optionKey;
+  }
+
+  return matchedPages;
+}
+
+function collectFlavorSequences(flavorPages, matchedPages) {
+  const groups = new Map();
+
+  for (const page of flavorPages) {
+    if (matchedPages.has(page.pageName)) continue;
+    const match = page.pageName.match(/^([A-Z_]+?)(\d+)$/);
+    if (!match || !page.description) continue;
+
+    const [, prefix, num] = match;
+    if (!groups.has(prefix)) groups.set(prefix, []);
+    groups.get(prefix).push({ index: Number(num), text: page.description });
+  }
+
+  const sequences = {};
+  for (const [prefix, entries] of groups) {
+    if (entries.length < 2) continue;
+    entries.sort((a, b) => a.index - b.index);
+    sequences[prefix] = entries.map(entry => entry.text);
+  }
+
+  return sequences;
+}
+
 function buildNeowChoices(relicsData) {
   // Parse Neow.cs to extract blessing relic pools automatically
   const neowPath = path.join(DECOMPILED_DIR, 'MegaCrit.Sts2.Core.Models.Events', 'Neow.cs');
@@ -801,6 +868,7 @@ async function parseEvents() {
         const choice = {
           name: stripBBCode(title),
           description: cleanDesc,
+          _optionKey: optionName,
         };
         // Attach references from C# HoverTipFactory
         const eventRefs = refMap[event.id];
@@ -811,9 +879,17 @@ async function parseEvents() {
       }
     }
 
+    const flavorPages = collectFlavorOnlyPages(localization, event.id, vars);
+    const matchedFlavorPages = attachChoiceOutcomes(choices, flavorPages);
+    const flavorSequences = collectFlavorSequences(flavorPages, matchedFlavorPages);
+
     if (choices.length > 0) {
       event.choices = choices;
       enrichedCount++;
+    }
+
+    if (Object.keys(flavorSequences).length > 0) {
+      event.flavor_sequences = flavorSequences;
     }
   }
 

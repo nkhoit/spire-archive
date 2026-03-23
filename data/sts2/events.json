@@ -33,7 +33,20 @@
           }
         ]
       }
-    ]
+    ],
+    "flavor_sequences": {
+      "LINGER": [
+        "The temperature keeps rising!\n\nHow long can you endure before the steam cooks you from within?",
+        "It keeps getting hotter!\n\nThe pool's bubbling sounds like laughter.",
+        "IT'S SO HOT!\n\nYou wonder if this is what it's like to live in the Village of Demons?",
+        "You have bathed so long you have lost track of time and your mind...",
+        "It's nice in here.",
+        "Really fantastic.",
+        "You feel great",
+        "Mmm...",
+        "Zzz...\n..zzzz...."
+      ]
+    }
   },
   {
     "id": "AMALGAMATOR",
@@ -50,7 +63,8 @@
             "id": "ULTIMATE_DEFEND",
             "name": "Ultimate Defend"
           }
-        ]
+        ],
+        "outcome": "CLANG! CLANG!!!\n\nThe Amalgamator strikes its Bone Anvil.\n\nMemories of combat, protecting, and defensive strategies sharpen with each blow.\nYour most ultimate technique returns to you."
       },
       {
         "name": "Combine Strikes",
@@ -61,7 +75,8 @@
             "id": "ULTIMATE_STRIKE",
             "name": "Ultimate Strike"
           }
-        ]
+        ],
+        "outcome": "CLANG! CLANG!!!\n\nThe Amalgamator strikes its Bone Anvil.\n\nMemories of combat, attacking, and offensive strategies sharpen with each blow.\nYour most ultimate technique returns to you."
       }
     ]
   },
@@ -73,11 +88,13 @@
     "choices": [
       {
         "name": "Let Go",
-        "description": "Transform a card in your Deck."
+        "description": "Transform a card in your Deck.",
+        "outcome": "You give in and your mind drifts...\nYou see yourself communing with friends, fighting as a team, and dueling great foes. Is this a dream? Reality? Somehow both? Many sets of eyes perceive you and your dreams. Who are they...?\n\nYou awaken after an unknown amount of time.\nThe aroma weakens and its effects fade as you regain clarity. Upon restabilizing, you're more clearheaded than ever.\n\nWhat were those eyes?"
       },
       {
         "name": "Maintain Control",
-        "description": "Upgrade a card in your Deck."
+        "description": "Upgrade a card in your Deck.",
+        "outcome": "Resisting the temptation to give in, you climb atop a tree where the aroma doesn't reach but its effects claw at your mind.\n\nMaintaining control is difficult; you tether your thoughts to your Core Principles.\n\n{AromaPrinciple}\n{AromaPrinciple}\n{AromaPrinciple}\n\nThe aroma subsides."
       }
     ]
   },
@@ -109,11 +126,13 @@
     "choices": [
       {
         "name": "Rip the Leech Off",
-        "description": "Lose 5 HP. Gain a Colorless card reward."
+        "description": "Lose 5 HP. Gain a Colorless card reward.",
+        "outcome": "You violently rip the leech off your head and chuck it far far away!\n\nThere's a voice in your head:\n“NOOOOOOoOoooooOOOOoooo....”"
       },
       {
         "name": "Share Knowledge",
-        "description": "Choose 1 of 5 random cards to add to your Deck."
+        "description": "Choose 1 of 5 random cards to add to your Deck.",
+        "outcome": "“HOW OSTENTATIOUSLY SCHOLASTIC OF A LABYRINTHINE MIND!\nA VERITABLE CORNUCOPIA OF CEREBRAL SUSTENANCE TO DIGEST!”.\n\nSatisfied, the creature pops off and crawls away.\nYou are flabbergasted."
       }
     ]
   },
@@ -132,7 +151,8 @@
             "id": "EXTERMINATE",
             "name": "Exterminate"
           }
-        ]
+        ],
+        "outcome": "“I see... you wish to learn the Extermination Technique. Very good...”\n\nHe pauses briefly, thinking how best to endow you with this maneuver...\n\n“THIS IS THE TECHNIQUE! BEHOLD!!”\nHe boasts while holding up a can of Insecticide."
       },
       {
         "name": "Learn Squash Technique",
@@ -143,7 +163,8 @@
             "id": "SQUASH",
             "name": "Squash"
           }
-        ]
+        ],
+        "outcome": "“I see... you wish to learn the Squash Technique. Very good...”\n\nHe pauses briefly, thinking how best to endow you with this maneuver...\n\n“THIS IS THE TECHNIQUE! BEHOLD!!”\nHe boasts while stepping on a giant bug."
       }
     ]
   },
@@ -155,7 +176,8 @@
     "choices": [
       {
         "name": "Eat the Egg",
-        "description": "Gain 7 Max HP."
+        "description": "Gain 7 Max HP.",
+        "outcome": "You crack the egg open and gobble it up.\nGood breakfast."
       },
       {
         "name": "Take the Egg",
@@ -166,7 +188,8 @@
             "id": "BYRDONIS_EGG",
             "name": "Byrdonis Egg"
           }
-        ]
+        ],
+        "outcome": "You gently scoop up the egg and stow it, thinking it may hatch into something useful later."
       }
     ]
   },
@@ -323,11 +346,13 @@
             "id": "DEBT",
             "name": "Debt"
           }
-        ]
+        ],
+        "outcome": "Payment Plan"
       },
       {
         "name": "Uncover Future",
-        "description": "Pay 50 Gold. Divine 3 times."
+        "description": "Pay 50 Gold. Divine 3 times.",
+        "outcome": "Uncover Future"
       }
     ]
   },
@@ -550,7 +575,8 @@
       },
       {
         "name": "Trudge On",
-        "description": "Remove a card from your Deck. Lose 11 HP."
+        "description": "Remove a card from your Deck. Lose 11 HP.",
+        "outcome": "You hack and slash your way through the jungle but it goes on and on...\n\nYou sustain yourself on strange fruits, crunchy bugs, and drink the nectar of glowing plants but you start feeling paranoid...\n\nBut then you find a clearing, a trail, and some drawings of maps on the ground.\nProblem solved."
       }
     ]
   },
@@ -562,7 +588,8 @@
     "choices": [
       {
         "name": "Examine Each and Make the Best Choice",
-        "description": "Lose 15 HP. Choose 1 of 3 Doll Relics."
+        "description": "Lose 15 HP. Choose 1 of 3 Doll Relics.",
+        "outcome": "You examine each and every doll before you make your choice.\n\nThe shouting has reached a piercing crescendo but you manage to make a choice before going completely mad!"
       },
       {
         "name": "Pick at Random",
@@ -570,7 +597,8 @@
       },
       {
         "name": "Take Some Time",
-        "description": "Lose 5 HP. Choose 1 of 2 Doll Relics."
+        "description": "Lose 5 HP. Choose 1 of 2 Doll Relics.",
+        "outcome": "Amid the shouting, you quickly examine the dolls.\n\nOne of these two may be good?\nIt's hard to concentrate through the mental anguish."
       }
     ],
     "references": [
@@ -599,11 +627,13 @@
     "choices": [
       {
         "name": "Dark Door",
-        "description": "Remove 1 card from your Deck."
+        "description": "Remove 1 card from your Deck.",
+        "outcome": "Into the darkness...\n\nYou see nothing.\nBut this helps you think... You shed pointless thoughts.\n\nYou're back in the Underdocks.\nHow did you? Huh...?"
       },
       {
         "name": "Light Door",
-        "description": "Upgrade 2 random cards."
+        "description": "Upgrade 2 random cards.",
+        "outcome": "Into the light...\n\nIt's blinding!! But the light strengthens you.\n\nYou're back in the Underdocks.\nHow did you? Huh...?"
       }
     ]
   },
@@ -622,7 +652,8 @@
             "id": "GLOWWATER_POTION",
             "name": "Glowwater Potion"
           }
-        ]
+        ],
+        "outcome": "Using a nearby bottle, you calmly scoop up the glowing liquid as the lighthouse peacefully sinks into the mud.\n\nGood thing you weren't in there."
       },
       {
         "name": "Climb",
@@ -633,7 +664,8 @@
             "id": "FRESNEL_LENS",
             "name": "Fresnel Lens"
           }
-        ]
+        ],
+        "outcome": "You climb to the top of the lighthouse, unnerved by its steady sinking.\n\nUpon reaching the lanthorn room, you start prying off the lens as the anti-light saps your vitality!\n\nFinally, you wring it free; the lighthouse stops sinking."
       }
     ]
   },
@@ -645,7 +677,8 @@
     "choices": [
       {
         "name": "Observe the Chef",
-        "description": "Upgrade a random card in your Deck."
+        "description": "Upgrade a random card in your Deck.",
+        "outcome": "Keeping your distance from a seat, you loiter in the shadows of the establishment's entrance.\n\nThe chef, unfazed, continues working. Studying this behavior and discipline, you seek to minimize unnecessary movement and emotion during combat."
       }
     ],
     "references": [
@@ -730,7 +763,8 @@
             "id": "PERFECT_FIT",
             "name": "Perfect Fit"
           }
-        ]
+        ],
+        "outcome": "It's a snug fit, but you squeeze yourself into the hole...\n\nThe further you go, the darker it becomes.\nEventually, you see a faint light grow brighter and reveal the other side.\n\nYou step out unchanged, but now understand the intimate secrets of life."
       },
       {
         "name": "Resist",
@@ -741,7 +775,8 @@
             "id": "NORMALITY",
             "name": "Normality"
           }
-        ]
+        ],
+        "outcome": "You walk past all the holes, even the one carved perfectly in your shape...\n\nWhy didn't I go inside? What would have happened? Have I been in that hole before? Who made these holes?\n\nWhat is... who... where?"
       }
     ]
   },
@@ -760,7 +795,8 @@
             "id": "FORGOTTEN_SOUL",
             "name": "Forgotten Soul"
           }
-        ]
+        ],
+        "outcome": "You place your hand on the grave and whisper...\n\n“Ascend with me...”\n\nIn response, the flames draw out from the grave and coalesce into a burning soul and hover around you loyally.\nIt knows what you are, and wishes to escort you to your final destination."
       },
       {
         "name": "Confront with Truth",
@@ -772,6 +808,7 @@
             "name": "Soul's Power"
           }
         ],
+        "outcome": "You place your hand on the grave and whisper...\n\n“Your fight is over...”\n\nIn response, the soul crashes into yours and a SOUL FIGHT ensues!\nStunned by the countless battles you have endured, it concedes.",
         "locked": "You have no cards with Exhaust that can be Enchanted."
       }
     ]
@@ -784,11 +821,13 @@
     "choices": [
       {
         "name": "Big Mushroom",
-        "description": "Obtain Big Mushroom."
+        "description": "Obtain Big Mushroom.",
+        "outcome": "You bite into the Big Mushroom. Its flesh is firm, starchy, and satisfying. The more you eat, the hungrier you become, as if the mushroom is feeding on your hunger.\n\nSo yummy... you enter a food coma.\nThis gluttony will cost you."
       },
       {
         "name": "Fragrant Mushroom",
-        "description": "Obtain Fragrant Mushroom. Lose 15 HP."
+        "description": "Obtain Fragrant Mushroom. Lose 15 HP.",
+        "outcome": "You sample the Fragrant One, a small woody mushroom with a delicate scent of shellfish...\n\nA burst of energy spurs you to run, jump, and rigorously train!\nThen, a sudden stabbing pain hits you as the living fungi struggles within you during its brief final moments."
       }
     ],
     "references": [
@@ -812,11 +851,13 @@
     "choices": [
       {
         "name": "Study",
-        "description": "Obtain a random Power."
+        "description": "Obtain a random Power.",
+        "outcome": "By studying the Glowing Automaton and how its inner workings are laid out, you realize that specific metals and their arrangements resist various ailments!\n\nYou apply this Technology to yourself."
       },
       {
         "name": "Touch the Core",
-        "description": "Obtain a random 0 cost card."
+        "description": "Obtain a random 0 cost card.",
+        "outcome": "At the slightest touch of the core, you are jolted by electricity.\n\nYou scamper away, feeling altered from the experience."
       }
     ]
   },
@@ -828,11 +869,13 @@
     "choices": [
       {
         "name": "Join Forces",
-        "description": "Gain 50 Gold."
+        "description": "Gain 50 Gold.",
+        "outcome": "Everyone's face immediately lights up, including {IsMultiplayer:yours and your friends'|your own}!\n\nOne of the adventurers turns out to be a bard!\nYou merrily waltz into the maze as Aquid the squid wizard effortlessly disarms traps, while you and the Grathorian fighter take out the spiky club-wielding guards with ease.\n\nThis was the most joyous adventure of your life and you've made some truly Great Memories."
       },
       {
         "name": "Solo Quest",
-        "description": "Gain 150 Gold. Lose 18 HP."
+        "description": "Gain 150 Gold. Lose 18 HP.",
+        "outcome": "Feeling misanthropic, you {IsMultiplayer:and your friends |}wordlessly walk past their now-frowning faces. One of them even shakes their fist at you.\n\nThe maze is not welcoming. You fall into a spike trap, you are struck by a massive log with spikes, and feisty creatures with spiky clubs fight you along the entire journey.\n\nYou are sick of spikes, and consider teamwork for the next adventure."
       }
     ]
   },
@@ -852,11 +895,13 @@
             "name": "Decay"
           }
         ],
+        "outcome": "You approach the Wisp cautiously...\nThe closer you get, the more it reacts to your presence.\n\nWhen in arm's reach, you grasp the Wisp but it scalds you with a blast of hot steam and flame!\n\nStill, you fumble and wrestle the creature into submission. Eventually, the Wisp concedes and recognizes you as its new owner.",
         "locked": "Your Max HP is too low."
       },
       {
         "name": "Search the Nearby Area",
-        "description": "Gain 60 Gold."
+        "description": "Gain 60 Gold.",
+        "outcome": "You decide to leave the little one alone. Better play it safe!\n\nNot much is in the area, but you find some gold scattered amongst the dead bugs.\nYou don't seek an answer."
       }
     ]
   },
@@ -869,6 +914,7 @@
       {
         "name": "Offer Tribute",
         "description": "Pay 149 Gold. Obtain a random Relic.",
+        "outcome": "Placing gold upon the spongy ground. The coins slowly sink as tendrils gently push the relic to the surface, allowing a clean retrieval.",
         "locked": "Requires 149 Gold."
       },
       {
@@ -880,7 +926,8 @@
             "id": "SPORE_MIND",
             "name": "Spore Mind"
           }
-        ]
+        ],
+        "outcome": "You plunge your hand directly into the spongy tissue of the dominant mushroom to extract the relic within. The fungal network shudders at your intrusion, and your mind quivers in response."
       }
     ]
   },
@@ -892,11 +939,13 @@
     "choices": [
       {
         "name": "Group",
-        "description": "Lose 100 Gold. Transform 2 cards."
+        "description": "Lose 100 Gold. Transform 2 cards.",
+        "outcome": "You greet the chittering Morphics and they embrace you into their crystally arms.\n\nThey share their combined knowledge and inject you with Morphic Magic, changing your nature... Such lovely creatures, these Morphics.\n\nOne of them stole your gold."
       },
       {
         "name": "Loner",
-        "description": "Gain 5 Max HP."
+        "description": "Gain 5 Max HP.",
+        "outcome": "You reach out a hand to the lone Morphic, sympathizing with its nature.\nIt gifts you a tiny crystal fruit, and you consume it, as is custom.\n\nThe fruit clarifies your mind and purpose. You give thanks, then make your way onwards."
       }
     ]
   },
@@ -1520,11 +1569,13 @@
             "id": "FOUL_POTION",
             "name": "Foul Potion"
           }
-        ]
+        ],
+        "outcome": "What could the Merchant want with these potions?"
       },
       {
         "name": "Ransack",
-        "description": "Procure 1 random Uncommon Potion."
+        "description": "Procure 1 random Uncommon Potion.",
+        "outcome": "Only a single potion was intact."
       }
     ]
   },
@@ -1547,7 +1598,8 @@
             "id": "INJURY",
             "name": "Injury"
           }
-        ]
+        ],
+        "outcome": "You successfully nab the relic!\n\n...or so you thought. A right-hook clocks you in the face."
       }
     ]
   },
@@ -1559,16 +1611,19 @@
     "choices": [
       {
         "name": "Give X Gold",
-        "description": "Obtain a random Relic."
+        "description": "Obtain a random Relic.",
+        "outcome": "“Mag.. nificent...”\n\nRanwid mumbles while chewing the gold."
       },
       {
         "name": "Give Potion",
         "description": "Obtain a random Relic.",
+        "outcome": "“Exquisite...”\n\nGlup glup glup\n\nHe downs the {Potion} in one go.",
         "locked": "You don't have any Potions that can be given."
       },
       {
         "name": "Give Relic",
         "description": "Obtain 2 random Relics.",
+        "outcome": "“Exemplary...”\n\nRanwid observes the relic studiously for several minutes...\n\nThen eats the {Relic}.",
         "locked": "You don't have any Relics that can be given."
       }
     ]
@@ -1588,11 +1643,13 @@
             "id": "BAD_LUCK",
             "name": "Bad Luck"
           }
-        ]
+        ],
+        "outcome": "You concentrate and identify a giant seamless mirror in front of you.\nWith a swift kick you SHATTER the giant mirror!\nRight as you shatter the mirror your reflection braces {pronounObject}self as {pronounSubject} becomes a thousand beautiful glittering shards.\n\nHow can a place like this exist?"
       },
       {
         "name": "Touch a Mirror",
-        "description": "Downgrade 2 random cards. Upgrade 4 random cards."
+        "description": "Downgrade 2 random cards. Upgrade 4 random cards.",
+        "outcome": "You reach forth and meld into the reflection in front of you.\nWhich one am I?"
       }
     ]
   },
@@ -1624,7 +1681,8 @@
     "choices": [
       {
         "name": "Gorge",
-        "description": "Choose 2 of 8 random Common cards to add to your Deck."
+        "description": "Choose 2 of 8 random Common cards to add to your Deck.",
+        "outcome": "You take a little nibble of cheese but this fuels you to eat even more cheese.\n\nTime passes...\n\n You have eaten an awe-inspiring amount of cheese.\nTonight, dreams will be cheese."
       },
       {
         "name": "Search",
@@ -1635,7 +1693,8 @@
             "id": "CHOSEN_CHEESE",
             "name": "The Chosen Cheese"
           }
-        ]
+        ],
+        "outcome": "You scrounge about for hours and hours...\n\nTime slips by as your mind travels to strange places from the sheer presence of all this cheese, and you fade into a stupor....\nYou snap awake and realize you're holding something.\n\nThe Chosen Cheese."
       }
     ]
   },
@@ -1654,7 +1713,8 @@
             "id": "ROYAL_POISON",
             "name": "Royal Poison"
           }
-        ]
+        ],
+        "outcome": "You grab a teacup and down it one go.\nIt's SCALDING HOT but you don't change your expression. The patrons are stunned by your lack of self preservation.\n\n“We meant no offense, Sir Galalot. our sincerest apologies.”\n\nYou enjoy some tea and crumpets, unaware of the poison you've ingested."
       },
       {
         "name": "Pick a Fight",
@@ -1670,7 +1730,8 @@
     "choices": [
       {
         "name": "Consume",
-        "description": "Heal 9 HP. Upgrade a card in your Deck."
+        "description": "Heal 9 HP. Upgrade a card in your Deck.",
+        "outcome": "You ingest the Sapphire Seed and within moments your limbs feel more agile, colors sharpen, and you sense the souls of nearby foes.\n\nGood thing you didn't step on it."
       },
       {
         "name": "Plant and Nourish",
@@ -1681,7 +1742,8 @@
             "id": "SOWN",
             "name": "Sown"
           }
-        ]
+        ],
+        "outcome": "You scour the Overgrowth and find a pot with good aeration. Then, you trek around, searching for an untouched spot where light peeks through a cracked wall. Carefully, you reinforce the pot with bark and vine to camouflage it, fill it with loamy, nutrient-rich soil, and nestle the seed just beneath the surface.\n\nFinally, you gather dew from nearby plants and pour it over the soil.\n\nGrow big, little seed...\nUnknowingly, the Sapphire Seed attaches to you spiritually.\nThankful of your hard work."
       }
     ]
   },
@@ -1693,7 +1755,8 @@
     "choices": [
       {
         "name": "Move On",
-        "description": "You don't have any cards that can be Enchanted."
+        "description": "You don't have any cards that can be Enchanted.",
+        "outcome": "You don't particularly care for books, let alone blood-encrusted ones."
       },
       {
         "name": "Read the Entire Book",
@@ -1705,6 +1768,7 @@
             "name": "Swift"
           }
         ],
+        "outcome": "What an engrossing read! Some choice quotes remain fresh in your mind:\n“Avoid big monsters.”\n“Take every card.”\n“Blocking is for cowards.”\n\nYour hands are covered in blood.",
         "locked": "You don't have any Powers that can be Enchanted."
       },
       {
@@ -1717,6 +1781,7 @@
             "name": "Nimble"
           }
         ],
+        "outcome": "You flip to a random page:\n“Defense 101: Don't get hit!”\n\nYou read the rest of the passage and it's surprisingly illuminating. You incorporate these ideas into your battle tactics.",
         "locked": "You don't have any Skills that can be Enchanted."
       },
       {
@@ -1729,6 +1794,7 @@
             "name": "Sharp"
           }
         ],
+        "outcome": "You flip the book over and read the summary:\n“Critics and Cultists agree that sharp and pointy weapons are the best way to inflict damage!”\n\nThere's a price sticker on the back of the book, crossed out and marked with a greatly reduced price.",
         "locked": "You don't have any Attacks that can be Enchanted."
       }
     ]
@@ -1745,7 +1811,8 @@
       },
       {
         "name": "Overcome",
-        "description": "A random card is removed from your Deck."
+        "description": "A random card is removed from your Deck.",
+        "outcome": "I hate bridges."
       }
     ]
   },
@@ -1757,7 +1824,8 @@
     "choices": [
       {
         "name": "Drink",
-        "description": "Heal 0 HP."
+        "description": "Heal 0 HP.",
+        "outcome": "You cup your hands and dip it into the Spiraling Whirlpool.\n\nIts waters fill your hands at a gentle rate as you take small sips with your eyes closed.\n\nDelicious water spirals through you to your Center, washing away harmful thoughts and physical ailments..."
       },
       {
         "name": "Observe",
@@ -1768,11 +1836,13 @@
             "id": "SPIRAL",
             "name": "Spiral"
           }
-        ]
+        ],
+        "outcome": "...ah-   so beautiful.....\nSo it spins... still spinning around. Yes...\nOh! Was that..... a little splash...?\n....of course. You deserve some fun, too Mr. Spiral... haha...\n... .......   ...\n\nIt's time to go now.\nYou whisper something as you take your leave.\n\n“Thank you, Spiral.”"
       },
       {
         "name": "Reach In",
-        "description": "Obtain a random Relic. Add Writhe to your Deck."
+        "description": "Obtain a random Relic. Add Writhe to your Deck.",
+        "outcome": "Foolishly, you plunge your arm into the center of the Spiraling Whirlpool, disrupting the equilibrium. The water becomes frigid and grasps you, carving Invisible Spirals into your arm.\n\nYour fingers brush against something solid, and you grasp around in pain to finally wrestle a Relic out of there!"
       }
     ]
   },
@@ -1791,11 +1861,13 @@
             "id": "METAMORPHOSIS",
             "name": "Metamorphosis"
           }
-        ]
+        ],
+        "outcome": "The Spirit Grafter merges with you. The vital kindred spirit swiftly heals you up.\n\nYou are reborn."
       },
       {
         "name": "Rejection",
-        "description": "Lose 9 HP. Remove a card from your Deck."
+        "description": "Lose 9 HP. Remove a card from your Deck.",
+        "outcome": "The Spirit Grafter is easily stopped by your will.\n\nHowever, it repeatedly flies into you, desperate for a host. Its strength runs out and it dissolves with a poof.\n\nA fleeting spirit."
       }
     ]
   },
@@ -1808,6 +1880,7 @@
       {
         "name": "Drink and Lift",
         "description": "Lose a random Potion. Gain 10 Max HP.",
+        "outcome": "You slam the {DrinkRandomPotion} down and lift with all your might!!\n\nNothing happens.",
         "locked": "Requires a Potion."
       },
       {
@@ -1820,6 +1893,7 @@
             "name": "Vigorous"
           }
         ],
+        "outcome": "You push and push with everything you've got!!\n\nNothing happens.",
         "locked": "Requires an Attack."
       }
     ]
@@ -1832,7 +1906,8 @@
     "choices": [
       {
         "name": "Dive into the Water",
-        "description": "Gain 111 Gold. Lose 7 HP."
+        "description": "Gain 111 Gold. Lose 7 HP.",
+        "outcome": "You plunge deep into the water!\n\nWhile collecting the offerings you hear a dull echo and you're struck by stones!\n\nOnce you surface, you see that the old statue had crumbled due to your disturbance; physical and spiritual."
       },
       {
         "name": "Grab the Sword",
@@ -1843,7 +1918,8 @@
             "id": "SWORD_OF_STONE",
             "name": "Sword of Stone"
           }
-        ]
+        ],
+        "outcome": "You wrest the sword out of the statue's hands and the whole thing crumbles apart!\n\nIt's too dangerous to pick up whatever was glittering at the bottom of the pond now...\n\nInspecting the sword, you sense an incredible dormant power within."
       }
     ]
   },
@@ -1855,7 +1931,8 @@
     "choices": [
       {
         "name": "First Chest",
-        "description": "Gain 60 Gold."
+        "description": "Gain 60 Gold.",
+        "outcome": "Yup, there was gold in it."
       },
       {
         "name": "Second Chest",
@@ -1866,7 +1943,8 @@
             "id": "GREED",
             "name": "Greed"
           }
-        ]
+        ],
+        "outcome": "You've never seen so much gold in one place!\n\nAll of the Merchant's wares can be bought...\n{Monologue}\nDangerous thugs can be paid off...\n\nThe feverishly greedy thoughts stay with you forever..."
       }
     ]
   },
@@ -1886,11 +1964,13 @@
             "name": "Corrupted"
           }
         ],
+        "outcome": "It suddenly jumps onto you. You feel a searing pain as it latches onto your arm, but in an instant it is gone.\n\n...? Where did it go?",
         "locked": "None of your Attacks can be Enchanted."
       },
       {
         "name": "Kill with Fire",
-        "description": "Choose a card to Transform."
+        "description": "Choose a card to Transform.",
+        "outcome": "You torch the dark polyp. As it screeches and burns into ashes, your head pulses painfully but you manage not to faint.\nWhat was that thing?"
       }
     ]
   },
@@ -1906,7 +1986,8 @@
       },
       {
         "name": "Smash",
-        "description": "Heal 20 HP."
+        "description": "Heal 20 HP.",
+        "outcome": "The tablet is smashed to pieces, energy expelled from the tablet seeps into your body.\n\nYou feel refreshed!"
       }
     ]
   },
@@ -2077,7 +2158,8 @@
             "id": "TEA_OF_DISCOURTESY",
             "name": "Tea of Discourtesy"
           }
-        ]
+        ],
+        "outcome": "You politely decline the tea and—\n\n*SLAM*\n\nThe door behind you slams shut. The tea master stares at you for a moment, then presents an ugly cup.\nOh, this tea is for the discourteous..."
       }
     ]
   },
@@ -2375,11 +2457,13 @@
             "id": "SPOILS_MAP",
             "name": "Spoils Map"
           }
-        ]
+        ],
+        "outcome": "What's the worst that could happen? As you grab the map, an opening appears before you on the other side of the room."
       },
       {
         "name": "Slowly Find an Exit",
-        "description": "Lose 8 HP. Procure 1 random Potion."
+        "description": "Lose 8 HP. Procure 1 random Potion.",
+        "outcome": "As you sneak around the dark, looking for a way out the room starts to violently shake. With a sudden crash, the entire chamber collapses around you.\n\nBarely making it out of the rubble, you find a vial of something useful that must have been hidden in the room."
       }
     ]
   },
@@ -2398,11 +2482,13 @@
             "id": "CLUMSY",
             "name": "Clumsy"
           }
-        ]
+        ],
+        "outcome": "You grab the Cursed Relic. As soon as you grasp it, shackles materialize on your wrists.\n\nYou hear a ghostly laughter and a bright plume of fire fills your vision!\n\nThe hole and arms are gone."
       },
       {
         "name": "This",
-        "description": "Lose 6 HP. Gain 0 Gold."
+        "description": "Lose 6 HP. Gain 0 Gold.",
+        "outcome": "You grab the bag and as soon as you do, a THIRD hand appears and clutches at you!!\n\nAfter a frantic struggle, it releases—the arms and the hole have vanished."
       }
     ]
   },
@@ -2499,11 +2585,13 @@
     "choices": [
       {
         "name": "Dive In",
-        "description": "Lose 8 HP. Obtain a random forgotten Relic from the past."
+        "description": "Lose 8 HP. Obtain a random forgotten Relic from the past.",
+        "outcome": "You spend a decent amount of time wading through the dangerous garbage and find a relic of the past!\n\nWhy was this thrown out?"
       },
       {
         "name": "Grab Random Junk",
-        "description": "Gain 100 Gold. Obtain a random forgotten card from the past."
+        "description": "Gain 100 Gold. Obtain a random forgotten card from the past.",
+        "outcome": "You walk around the pile from a safe distance and pick up some forgotten valuables and oddities here and there.\n\nWhy were these created in the first place?"
       }
     ],
     "references": [
@@ -2625,7 +2713,8 @@
     "choices": [
       {
         "name": "Kill the Trees",
-        "description": "Lose 8 Max HP. Obtain a random Relic."
+        "description": "Lose 8 Max HP. Obtain a random Relic.",
+        "outcome": "These trees are clearly malicious so you decide to get rid of them.\nDays later, you're covered in ash and oily goop.\n\nA massive flock of little byrd spirits rise from the slain trees and drop a small box at your feet.\n“Thank you for freeing us from those trees... cheep cheep!”\n\nYou should really sleep more."
       },
       {
         "name": "Rest Anyways",
@@ -2636,7 +2725,8 @@
             "id": "POOR_SLEEP",
             "name": "Poor Sleep"
           }
-        ]
+        ],
+        "outcome": "All this adventuring has left you exhausted, and despite the oddities, you decide to sleep.\n\nYou toss and turn as the fire roars and crackles through the night. The disgusting trees give off a wretched scent from their pitch-black sap.\n\nYou wake up, recovered, but not replenished."
       }
     ]
   },
@@ -2806,7 +2896,8 @@
             "id": "LANTERN_KEY",
             "name": "Lantern Key"
           }
-        ]
+        ],
+        "outcome": "Repy bows in appreciation as you open the cage. He hands you a thick leather tome.\n\n“Those who know not of history are doomed to repeat it. But you seem to know a thing or two about repeats don't you?”"
       },
       {
         "name": "Unlock the Chest",
@@ -2817,7 +2908,8 @@
             "id": "LANTERN_KEY",
             "name": "Lantern Key"
           }
-        ]
+        ],
+        "outcome": "“Not going to free the scholar, Repy? Based on classic philosophy, you would be considered a moral failure. That's right, maybe consider the LIVING PERSON that is locked up next time! It is not as if there is a valuable member of society in a DIRE PREDICAMENT or anything!!”\n\n“Look, okay, see how small this cage is!? Why am I complaining? You've already made your unscholarly decision... oh, what's inside there? Some potions and relics? Isn't that just great. Just great. Really great for you...”\n\nRepy's eyes follow you with disdain as you walk away."
       }
     ]
   },
@@ -2829,7 +2921,8 @@
     "choices": [
       {
         "name": "Bloody Ink",
-        "description": "Gain 6 Max HP."
+        "description": "Gain 6 Max HP.",
+        "outcome": "The scribe carefully picks up the vial filled with a bright red ink and gives it a shake, then gestures with their own hand a dipping motion.\n\nYou dip your fingers into the ink and a jolt of vitality courses through you!\n\nPleased with your reaction, the scribe gives a polite bow and waves you goodbye."
       },
       {
         "name": "Prickly Sponge",
@@ -2841,6 +2934,7 @@
             "name": "Steady"
           }
         ],
+        "outcome": "The scribe grabs the prickly sponge (it squeaks) and dabs it across your scrolls.\n\n*squeak squeak squeak*\n\nThe prickly texture leaves behind shimmering marks that seem to stabilize the ink...",
         "locked": "Requires 155 Gold."
       },
       {
@@ -2853,6 +2947,7 @@
             "name": "Steady"
           }
         ],
+        "outcome": "The scribe lifts the wriggly quill and with swift, practiced movements, etches a strange mark unto your head.\n\nThe mark glows bright, then vanishes...",
         "locked": "Requires 65 Gold."
       }
     ]
@@ -2875,7 +2970,8 @@
       },
       {
         "name": "Leave",
-        "description": "Downgrade a random card."
+        "description": "Downgrade a random card.",
+        "outcome": "“Um... excuse me you can't just leave without buying something at Wongo's,” says the clerk with an irritated tone.\n\nYou have a heated debate over customer choice and it leaves you mentally drained."
       },
       {
         "name": "Wongo's Mystery Box",
@@ -2899,11 +2995,13 @@
             "id": "GUILTY",
             "name": "Guilty"
           }
-        ]
+        ],
+        "outcome": "You emerge from the pool with a slight feeling of unease.\n\nHowever, you feel surprisingly refreshed."
       },
       {
         "name": "Bottle",
-        "description": "Procure 1 random Potion."
+        "description": "Procure 1 random Potion.",
+        "outcome": "Bathing in the beautiful water seems suspicious... you decide to bottle some up instead.\n\nThis will come in handy."
       }
     ]
   },
@@ -2915,11 +3013,13 @@
     "choices": [
       {
         "name": "Exchange Gold",
-        "description": "Lose 50 Gold. Procure 2 random Potions."
+        "description": "Lose 50 Gold. Procure 2 random Potions.",
+        "outcome": "You scatter some gold at the base of the tree and two of the clay vessels drop to the floor soundlessly.\n\nThey break open, and contain perfectly intact potions within.\n\nYou nab the potions and flee."
       },
       {
         "name": "Hug the Tree",
-        "description": "Lose 9 HP. Choose a card to Transform."
+        "description": "Lose 9 HP. Choose a card to Transform.",
+        "outcome": "The whispering compels you to give it gold but you resist and give the tree a big hug instead!\n\nIt thrashes about, scratching you with its branches, but eventually calms down. The tree-hugging experience transforms you.\n\n...make hug.....?"
       }
     ]
   },
@@ -2938,7 +3038,8 @@
             "id": "PECK",
             "name": "Peck"
           }
-        ]
+        ],
+        "outcome": "You place the bird carving on the pedestal and the statue's EYES LIGHT UP and you hear a faint ringing within your mind.\n\n...caw.... caw caaaawww...\n\nThe pedestal opens and a strange fluid begins to pour out.\nNaturally, you drink it all."
       },
       {
         "name": "Snake",
@@ -2950,6 +3051,7 @@
             "name": "Slither"
           }
         ],
+        "outcome": "You place the snake carving on the pedestal and the statue's SCALES LIGHT UP! You feel a bit warm, comfortable, and wobbly.",
         "locked": "None of your cards can be Enchanted with Slither."
       },
       {
@@ -2961,7 +3063,8 @@
             "id": "TORIC_TOUGHNESS",
             "name": "Toric Toughness"
           }
-        ]
+        ],
+        "outcome": "You place the torus carving on the pedestal and your STOMACH LIGHTS UP as the statue transforms into a piping hot fried confection. An insatiable hunger takes over and you quickly consume the donut.\n\nYou feel tougher, but slower."
       }
     ]
   },
@@ -2973,7 +3076,8 @@
     "choices": [
       {
         "name": "Arachnid Acupuncture",
-        "description": "Pay 250 Gold. Remove 2 cards from your Deck."
+        "description": "Pay 250 Gold. Remove 2 cards from your Deck.",
+        "outcome": "“Don't... move...” mutters the miniature spider as its forelegs begin to glow.\n\nThen— in a rush of jabbing motions, pierces you all over!\nA sense of weightlessness comes over you. Well worth the money."
       },
       {
         "name": "Breathing Techniques",
@@ -2984,11 +3088,13 @@
             "id": "ENLIGHTENMENT",
             "name": "Enlightenment"
           }
-        ]
+        ],
+        "outcome": "“Visualize your airways staying open... Each breath is meaningful.”\n\nYou practice the technique in a way that makes sense to you."
       },
       {
         "name": "Emotional Awareness",
         "description": "Pay 125 Gold. Remove 1 card from your Deck.",
+        "outcome": "The teeny-weeny spider begins a hypnotic dance and repeatedly chants.\n\n“Thoughts don't affect reality. Panic is the thought-killer. Follow the plan.”\n\nThis makes sense to you. Big wise words from a tiny spider.",
         "locked": "Not enough Gold."
       }
     ]
