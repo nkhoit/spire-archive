@@ -78,35 +78,69 @@ test.describe('Detail pages return 200 and show expected content', () => {
   }
 });
 
-// ── Localization (Japanese as representative) ──
+// ── Localization (Japanese as representative — mirrors English tests) ──
 
-test.describe('Localization — Japanese', () => {
-  const jaPages = [
-    '/ja/sts2',
-    '/ja/sts2/cards',
-    '/ja/sts2/relics',
-    '/ja/sts2/events',
-    '/ja/sts2/effects',
-    '/ja/sts2/characters',
-    '/ja/sts1',
-    '/ja/sts1/cards',
-    '/ja/sts1/effects',
-  ];
+// Japanese regex: hiragana, katakana, CJK
+const JA = /[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]/;
 
-  for (const path of jaPages) {
-    test(`${path} renders Japanese content`, async ({ page }) => {
-      await page.goto(path);
-      const content = await page.textContent('body');
-      expect(content).toMatch(/[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]/);
-    });
+// Japanese names for the same entities tested in English
+const JA_DETAIL_PAGES: Record<string, [string, string, string][]> = {
+  // [jaPath, expectedJaText, englishTextThatShouldNotAppear]
+  sts1: [
+    ['/ja/sts1/cards/BASH', '強打', 'Bash'],
+    ['/ja/sts1/relics/BURNING_BLOOD', '燃える血', 'Burning Blood'],
+    ['/ja/sts1/potions/AMBROSIA', '神々の飲料', 'Ambrosia'],
+    ['/ja/sts1/events/BIG_FISH', 'ビッグフィッシュ', 'Big Fish'],
+    ['/ja/sts1/effects/ACCURACY', '精度上昇', 'Accuracy'],
+  ],
+  sts2: [
+    ['/ja/sts2/cards/BASH', '強打', 'Bash'],
+    ['/ja/sts2/relics/AKABEKO', '赤べこ', 'Akabeko'],
+    ['/ja/sts2/potions/BEETLE_JUICE', '甲虫ジュース', 'Beetle Juice'],
+    ['/ja/sts2/events/SELF_HELP_BOOK', '自己啓発本', 'Self-Help Book'],
+    ['/ja/sts2/effects/KNOCKDOWN_POWER', 'ノックダウン', 'Knockdown'],
+    ['/ja/sts2/enchantments/SWIFT', '迅速', 'Swift'],
+  ],
+};
+
+test.describe('Localization — Japanese index pages', () => {
+  for (const game of GAMES) {
+    for (const section of SHARED_PAGES) {
+      test(`/ja/${game}/${section} renders Japanese content`, async ({ page }) => {
+        const res = await page.goto(`/ja/${game}/${section}`);
+        expect(res?.status()).toBe(200);
+        const content = await page.textContent('body');
+        expect(content).toMatch(JA);
+      });
+    }
   }
 
-  test('/ja/sts2/cards/BASH has translated description', async ({ page }) => {
-    await page.goto('/ja/sts2/cards/BASH');
-    const content = await page.textContent('body');
-    expect(content).toMatch(/[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]/);
-    expect(content).not.toMatch(/Deal \d+ damage/);
-  });
+  for (const section of STS2_ONLY_PAGES) {
+    test(`/ja/sts2/${section} renders Japanese content`, async ({ page }) => {
+      const res = await page.goto(`/ja/sts2/${section}`);
+      expect(res?.status()).toBe(200);
+      const content = await page.textContent('body');
+      expect(content).toMatch(JA);
+    });
+  }
+});
+
+test.describe('Localization — Japanese detail pages show translated names', () => {
+  for (const game of GAMES) {
+    for (const [path, jaText, enText] of JA_DETAIL_PAGES[game]) {
+      test(`${path} shows "${jaText}" (not "${enText}")`, async ({ page }) => {
+        const res = await page.goto(path);
+        expect(res?.status()).toBe(200);
+        const content = await page.textContent('body');
+        expect(content).toContain(jaText);
+        // Title/heading should be Japanese, not English
+        const heading = await page.textContent('h1');
+        if (heading) {
+          expect(heading).not.toBe(enText);
+        }
+      });
+    }
+  }
 });
 
 // ── Link integrity (locale prefix preserved) ──
