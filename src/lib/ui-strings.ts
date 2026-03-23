@@ -8,6 +8,14 @@
 import type { Locale } from './data';
 
 const strings: Record<string, Partial<Record<Locale, string>>> = {
+  // Character names (used as card color badges, filter labels, etc.)
+  'Ironclad': { ja: 'アイアンクラッド', ko: '아이언클래드', zh: '铁甲战士', de: 'Der Eiserne', fr: 'Le Soldat de fer', es: 'El Blindado', pt: 'O Rígido', it: 'Ironclad', pl: 'Pancernik', ru: 'Латоносец', tr: 'Demirkaplı', th: 'นักรบเกราะเหล็ก' },
+  'Silent': { ja: 'サイレント', ko: '사일런트', zh: '静默猎手', de: 'Die Stille', fr: 'La Silencieuse', es: 'La Silenciosa', pt: 'A Sorrateira', it: 'Silent', pl: 'Cień', ru: 'Безмолвная', tr: 'Sessiz', th: 'นักฆ่าแห่งความเงียบ' },
+  'Defect': { ja: 'ディフェクト', ko: '디펙트', zh: '故障机器人', de: 'Das Defekte', fr: 'Le Défectueux', es: 'El Defectuoso', pt: 'O Defeituoso', it: 'Defect', pl: 'Defekt', ru: 'Дефект', tr: 'Arızalı', th: 'นักเวทแปรพักตร์' },
+  'Watcher': { ja: 'ウォッチャー', ko: '와쳐', zh: '观者', de: 'Die Seherin', fr: 'La gardienne', es: 'La Vigilante', pt: 'A Observadora', it: 'Watcher', pl: 'Obserwatorka', ru: 'Созерцающая', tr: 'Gözlemci', th: 'นักพรตเฝ้าการณ์' },
+  'Necrobinder': { ja: 'ネクロバインダー', ko: '네크로바인더', zh: '亡灵契约师', de: 'Die Totenbinderin', fr: 'La Tisse-Mort', es: 'La Vinculahuesos', pt: 'A Necroartífice', it: 'Necrobinder', pl: 'Nekromantka', ru: 'Призывающая', tr: 'Ölübağlayan', th: 'นักผูกวิญญาณ' },
+  'Regent': { ja: 'リージェント', ko: '리젠트', zh: '储君', de: 'Der Regent', fr: 'Le Régent', es: 'El Regente', pt: 'O Regente', it: 'Regent', pl: 'Monarcha', ru: 'Наследник', tr: 'Naip', th: 'ผู้สำเร็จราชการ' },
+
   // Nav
   'Switch to': { ja: '切り替え:', ko: '전환:', zh: '切换到', de: 'Wechsel zu', fr: 'Passer à', es: 'Cambiar a', pt: 'Mudar para', it: 'Passa a', pl: 'Przejdź do', ru: 'Перейти к', tr: 'Geçiş:', th: 'สลับไป' },
   'Characters': { ja: 'キャラクター', ko: '캐릭터', zh: '角色', de: 'Charaktere', fr: 'Personnages', es: 'Personajes', pt: 'Personagens', it: 'Personaggi', pl: 'Postacie', ru: 'Персонажи', tr: 'Karakterler', th: 'ตัวละคร' },
