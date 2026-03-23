@@ -10,7 +10,7 @@ The complete database for [Slay the Spire](https://store.steampowered.com/app/64
 - **Spire 2**: 577 cards, 289 relics, 5 characters, enchantments, and more — parsed from game files (Early Access)
 - **CSS card renderer**: Pure HTML/CSS card rendering that closely matches the in-game look
 - **13 languages**: English, German, Spanish, French, Italian, Japanese, Korean, Polish, Portuguese, Russian, Thai, Turkish, Chinese
-- **JSON API**: Filterable, localized endpoints for all game data — [interactive docs](/api-docs)
+- **JSON API**: Filterable, localized endpoints for all game data — [interactive docs](https://spire-archive.com/api-docs)
 
 ## Stack
 
