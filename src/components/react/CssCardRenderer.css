@@ -290,9 +290,9 @@
  *   Desc: Y=590–848 → top≈57.6% height≈25.2%
  */
 
-/* Crop dead space: assets live in a 1024×1024 canvas but visible content
- * spans roughly (12,7)→(839,934). We keep the internal canvas at 1024×1024
- * so all %-based positions stay correct, and clip the dead space. */
+/* Crop dead space: assets live in a 1024×1024 canvas but the visible card
+ * occupies roughly (175,70)→(840,935). Energy orb starts at ~(185,80).
+ * We keep the internal canvas at 1024×1024 and clip the dead space. */
 .cr1 {
   position: relative;
   width: calc(1024px * var(--s));
@@ -301,12 +301,12 @@
   flex-shrink: 0;
   overflow: hidden;
   clip-path: inset(
-    calc(7px * var(--s))
-    calc(185px * var(--s))
+    calc(70px * var(--s))
+    calc(186px * var(--s))
     calc(90px * var(--s))
-    calc(12px * var(--s))
+    calc(175px * var(--s))
   );
-  margin: calc(-7px * var(--s)) calc(-185px * var(--s)) calc(-90px * var(--s)) calc(-12px * var(--s));
+  margin: calc(-70px * var(--s)) calc(-186px * var(--s)) calc(-90px * var(--s)) calc(-175px * var(--s));
 }
 
 /* All full-canvas layers */
