@@ -4919,175 +4919,828 @@
   },
   "events": {
     "ABYSSAL_BATHS": {
-      "name": "Głęboka kąpiel"
+      "description": "Odkrywasz ustronną komnatę.\n\nPara unosi się z bulgoczących zbiorników gorącej cieczy, zmieniającej kolory w hipnotyzującym rytmie. Z sufitu wystaje zeskorupiała narośl, z której ocieka lepki płyn, sycząc z każdym skapnięciem. W gęstym powietrzu czuć zapach soli oraz czegoś ewidentnie organicznego.\n\nZbliżasz się do brzegu największego zbiornika, a powierzchnia zebranej w nim cieczy zaczyna falować. Wody bulgoczą coraz mocniej, jakby oczekiwały twojego wejścia.",
+      "name": "Głęboka kąpiel",
+      "choices": [
+        {
+          "name": "Powstrzymaj się",
+          "description": "Przywróć 10 PŻ."
+        },
+        {
+          "name": "Zanurz się",
+          "description": "Zyskaj 2 maks. PŻ. Otrzymaj 3 pkt. obrażeń."
+        }
+      ]
     },
     "AMALGAMATOR": {
-      "name": "Amalgamator"
+      "description": "BRZDĘK! BRZDĘK!!!\n\nPo drugiej stronie ściany słychać odgłosy wykuwania metalu...\n\nPróbujesz ich podsłuchać, przykładając głowę do ściany, która nagle otwiera się i ujawnia kolosalną, sześcioręczną postać skupioną na pracy.\n Jej „twarz” to symbole jarzące się w płomiennym wirze.\n\n„Wyniesiony odnalazł mój warsztat? Czas na SPAWANIE!”",
+      "name": "Amalgamator",
+      "choices": [
+        {
+          "name": "Spawaj Obrony",
+          "description": "Usuń 2 Obrony. Dodaj Ultra Obrona do talii."
+        },
+        {
+          "name": "Spawaj Uderzenia",
+          "description": "Usuń 2 Uderzenia. Dodaj Ultra Uderzenie do talii."
+        }
+      ]
     },
     "AROMA_OF_CHAOS": {
-      "name": "Woń chaosu"
+      "description": "Z trudem przechodzisz przez grube poszycie, gdy po dotarciu na polanę dopada cię nagle fala nostalgii.\n\nCzujesz mieszaninę zapachu kwiatów, fetoru zgnilizny i jeszcze czegoś innego. Z każdym krokiem zapach robi się coraz bardziej intensywny i masz wrażenie, że wszystko dookoła ciebie zaczyna się zniekształcać.\n\nPogrążając się w zmiennym chaosie, tracisz poczucie tożsamości.",
+      "name": "Woń chaosu",
+      "choices": [
+        {
+          "name": "Odpuść",
+          "description": "Zmień kartę w talii."
+        },
+        {
+          "name": "Zachowaj kontrolę",
+          "description": "Ulepsz kartę w talii."
+        }
+      ]
     },
     "BATTLEWORN_DUMMY": {
-      "name": "Drewnobot"
+      "description": "Ziemia zaczyna się trząść i wszędzie zapalają się światła!\n\n„BZZZT! CZAS NA TRENING!!! MASZ 3 TURY NA POKONANIE MNIE!\nWYBIERZ POZIOM TRUDNOŚCI ALBO PONIESIESZ UPOKARZAJĄCĄ KLĘSKĘ.\nOto dostępne opcje.”\n\nPo dostarczeniu tej mrożącej krew w żyłach wiadomości Drewnobot uważnie czyta podane instrukcje.\n\nKtóry poziom wybierasz?",
+      "name": "Drewnobot",
+      "choices": [
+        {
+          "name": "Łatwy",
+          "description": "Walcz z Drewnobotem z {Setting1Hp} PŻ. Otrzymaj 1 losową Miksturę."
+        },
+        {
+          "name": "Średni",
+          "description": "Walcz z Drewnobotem z {Setting2Hp} PŻ. Ulepsz 2 losowe karty."
+        },
+        {
+          "name": "Trudny",
+          "description": "Walcz z Drewnobotem z {Setting3Hp} PŻ. Otrzymaj losowy Artefakt."
+        }
+      ]
     },
     "BRAIN_LEECH": {
-      "name": "Pijawka mózgowa"
+      "description": "*łup*\n\nOdczuwasz przeszywający ból głowy i nagle przeszywa cię pewna myśl.\n\n„CHCESZ WIEDZĘ???”\n\nNie do końca wiesz, jak masz postąpić...",
+      "name": "Pijawka mózgowa",
+      "choices": [
+        {
+          "name": "Oderwij pijawkę",
+          "description": "Utrać 5 PŻ. Wybierz bezbarwną kartę z łupów."
+        },
+        {
+          "name": "Chcę wiedzę",
+          "description": "Wybierz 1 z 5 losowych kart i dodaj ją do talii."
+        }
+      ]
     },
     "BUGSLAYER": {
-      "name": "Pogromca robali"
+      "description": "Gdy próbujesz odeprzeć atak agresywnych robali, nagle zauważasz, że potężny wojownik walczył u twojego boku przez cały ten czas!\n\n Robale rozbiegają się, wyczuwając porażkę. Zwracasz się w stronę wojownika.\n„Czy potrzebujesz pomocy w walce z tymi szkodnikami?”\n\nJaki uprzejmy. Zgadzasz się na propozycję.",
+      "name": "Pogromca robali",
+      "choices": [
+        {
+          "name": "Naucz się Tępienia szkodników",
+          "description": "Dodaj Tępienie szkodników do talii."
+        },
+        {
+          "name": "Naucz się Zgniatania szkodników",
+          "description": "Dodaj Zgniatanie szkodników do talii."
+        }
+      ]
     },
     "BYRDONIS_NEST": {
-      "name": "Gniazdo Ptaszora"
+      "description": "Widzisz, że jakaś ogromna pnączasta bestia przegania rannego zielonego Ptaszora.\n\nWe wnęce, z której uciekł, dostrzegasz porzucone jajo. \n\nBurczy ci w brzuchu...",
+      "name": "Gniazdo Ptaszora",
+      "choices": [
+        {
+          "name": "Zjedz jajo",
+          "description": "Zyskaj 7 maks. PŻ."
+        },
+        {
+          "name": "Zabierz jajo",
+          "description": "Dodaj Jajo Ptaszora do talii."
+        }
+      ]
     },
     "COLORFUL_PHILOSOPHERS": {
-      "name": "Kolorowi filozofowie"
+      "description": "Przed tobą dość urzekający widok.\nWysokie posągi o 3 różnych kolorach prowadzą gorącą debatę o filozoficznych implikacjach koloru.\n\nPrzysłuchując się zażartej dyskusji, odnosisz wrażenie, że cały spór tak naprawdę toczy się o to, który kolor jest NAJLEPSZY.\n\nDorzucasz swoją opinię na ten temat.",
+      "name": "Kolorowi filozofowie",
+      "choices": [
+        {
+          "name": "Niebieski",
+          "description": null
+        },
+        {
+          "name": "Równość",
+          "description": "Otrzymaj Pryzmatyczny odłamek."
+        },
+        {
+          "name": "Czerwony",
+          "description": null
+        },
+        {
+          "name": "Różowy",
+          "description": null
+        },
+        {
+          "name": "Pomarańczowy",
+          "description": null
+        },
+        {
+          "name": "Zielony",
+          "description": null
+        }
+      ]
     },
     "COLOSSAL_FLOWER": {
-      "name": "Kolosalny kwiat"
+      "description": "Kolosalny kwiat wyrasta ze gigantycznej sterty kości.\n\nJego kolorowe płatki pulsują. Wyczuwasz, że w środku znajduje się Potężny Zapylony Rdzeń, lecz otaczające go faliste płatki są ostre jak brzytwa.\n\nWystarczyło by zebrać trochę złotego nektaru, ale sięgniecie po sam rdzeń wydaje się niezwykle kuszące...",
+      "name": "Kolosalny kwiat",
+      "choices": [
+        {
+          "name": "Zbierz nektar",
+          "description": "Zyskaj {Prize1} szt. Złota."
+        },
+        {
+          "name": "Sięgnij głębiej",
+          "description": "Wejdź głębiej. Utrać 5 PŻ."
+        }
+      ]
     },
     "CRYSTAL_SPHERE": {
-      "name": "Kryształowa Kula"
+      "description": "„Nasze spotkanie było zapisane w gwiazdach!”\n\nPo wejściu do mistycznej chaty słyszysz chrapliwy głos.\n\n„To musiało być przeznaczenie. Dziś odkryjemy twoją przyszłość! Z pewnością pomoże ci to URATOWAĆ NAS WSZYSTKICH!!”\n„Przygotuj się na moc Kryształowej Kuli.” Po chwili dodaje: „Poproszę tylko wpisać tutaj dzisiejszą datę i podpis”, a następnie wyciąga pióro i pergamin.",
+      "name": "Kryształowa Kula",
+      "choices": [
+        {
+          "name": "Zadłużenie",
+          "description": "Otrzymaj Dług. Zyskaj Wróżenie 6 razy."
+        },
+        {
+          "name": "Odkryj przyszłość",
+          "description": "Zapłać 50 szt. Złota. Zyskaj Wróżenie 3 razy."
+        }
+      ]
     },
     "DENSE_VEGETATION": {
-      "name": "Gęsta roślinność"
+      "description": "Błądzisz już od jakiegoś czasu i nie możesz odnaleźć drogi w gęstej dżungli pełnej paproci, zarośli oraz pnączy. Zwłaszcza pnączy. Dopada cię wyczerpanie, przez co nachodzi cię mroczna myśl:\n\n„Nie wiem, co zrobić. Nawet nie wiem, gdzie jestem. Na pewno tu zaraz zginę.”\n\nCo zamierzasz zrobić?",
+      "name": "Gęsta roślinność",
+      "choices": [
+        {
+          "name": "Odpocznij",
+          "description": "Przywróć 0 PŻ. Walcz z paroma przeciwnikami."
+        },
+        {
+          "name": "Brnij dalej",
+          "description": "Usuń kartę z talii. Utrać 11 PŻ."
+        }
+      ]
     },
     "DOLL_ROOM": {
-      "name": "Pokój dla lalek"
+      "description": "Wchodzisz do ukrytego pomieszczenia...\n\nJest wypełniony różnorodnymi lalkami. Każda jest jedyna w swoim rodzaju, a ich miny wyrażają przeróżne emocje, od radości aż po smutek.\n\nSzmery i szepty robią się coraz głośniejsze, aż w końcu lalki zaczynają się przekrzykiwać, wołając cię...\n\nMusisz wybrać jedną z nich i jak najszybciej stąd uciekać.",
+      "name": "Pokój dla lalek",
+      "choices": [
+        {
+          "name": "Przyjrzyj się każdej i wybierz najlepszą",
+          "description": "Utrać 15 PŻ. Wybierz 1 z 3 Lalkowych Artefaktów."
+        },
+        {
+          "name": "Wybierz losowo",
+          "description": "Otrzymaj losowy Lalkowy Artefakt."
+        },
+        {
+          "name": "Zastanów się na spokojnie",
+          "description": "Utrać 5 PŻ. Wybierz 1 z 2 Lalkowych Artefaktów."
+        }
+      ]
     },
     "DOORS_OF_LIGHT_AND_DARK": {
-      "name": "Drzwi Światła i Ciemności"
+      "description": "Przed tobą pojawiają się dwa połyskujące wejścia oraz elegancko ubrany stróż.\n„Nareszcie jakiś gość! Proszę, zapraszam! Proszę wybrać drzwi, dowolne drzwi!”\n\nCzy wciąż jesteśmy w Iglicy? Jakim cudem to miejsce jest takie czyste?",
+      "name": "Drzwi Światła i Ciemności",
+      "choices": [
+        {
+          "name": "Drzwi Ciemności",
+          "description": "Usuń 1 kartę z talii."
+        },
+        {
+          "name": "Drzwi Światła",
+          "description": "Ulepsz 2 losowe karty."
+        }
+      ]
     },
     "DROWNING_BEACON": {
-      "name": "Tonąca latarnia"
+      "description": "Mijasz oniryczny krajobraz olbrzymich skał oraz spokojnych wód i napotykasz się na tonącą latarnię, która emituje antyświatło.\n\nMożesz zaczerpnąć upiornie świecącej wody, która się tam zgromadziła albo wspiąć się na zniszczoną budowlę, aby wyciągnąć z niej soczewkę.",
+      "name": "Tonąca latarnia",
+      "choices": [
+        {
+          "name": "Zaczerpnij wody",
+          "description": "Otrzymaj Miksturę: Świecąca woda."
+        },
+        {
+          "name": "Wspinaj się",
+          "description": "Otrzymaj Artefakt: Soczewka Fresnela. Utrać 13 maks. PŻ."
+        }
+      ]
     },
     "ENDLESS_CONVEYOR": {
-      "name": "Niekończąca się uczta"
+      "description": "Wchodzisz do chaty z jasnym, przekrzywionym napisem: \n„NIEKOŃCZĄCA SIĘ UCZTA: PŁAĆ I JEDZ”\n\nW środku znajdujesz zwinnego kucharza o wielu ramionach, który wprawnie przyrządza potrawy i umieszcza je na chitynowym taśmociągu.\n\nJedno z ramion kucharza pokazuje na znak:\n„35 szt. Złota za kawałek”.",
+      "name": "Niekończąca się uczta",
+      "choices": [
+        {
+          "name": "Obserwuj kucharza",
+          "description": "Ulepsz losową kartę w talii."
+        }
+      ]
     },
     "FAKE_MERCHANT": {
+      "description": "Handlarz???",
       "name": "Handlarz???"
     },
     "FIELD_OF_MAN_SIZED_HOLES": {
-      "name": "Pole dziur w kształcie ludzkich ciał"
+      "description": "Zatrzymujesz się na widok ogromnego pola wypełnionego wyżłobionymi konturami ludzkich ciał.\n\nJeden z nich pasuje do ciebie.\n\nJest idealny...",
+      "name": "Pole dziur w kształcie ludzkich ciał",
+      "choices": [
+        {
+          "name": "Wejdź do swojej dziury",
+          "description": "Rzuć Zaklęcie Pętla na kartę."
+        },
+        {
+          "name": "Stawiaj opór",
+          "description": "Usuń 2 karty z talii. Dodaj Normalność do talii."
+        }
+      ]
     },
     "GRAVE_OF_THE_FORGOTTEN": {
-      "name": "Grób Zapomnianego Wojownika"
+      "description": "Widzisz pojedynczy grób z falującym, błękitnym płomieniem...\n\nDumny wojownik umarł w walce, ale jego dusza nadal nie może zaznać spokoju, ponieważ wciąż chce walczyć. Czujesz, że błaga cię o to, żeby dołączyć do twojej podróży.\n\nMoże lepiej byłoby dla niego, gdyby spojrzał prawdzie w oczy?",
+      "name": "Grób Zapomnianego Wojownika",
+      "choices": [
+        null,
+        {
+          "name": "Niech zmierzy się z prawdą",
+          "description": "Dodaj Rozkład do talii. Rzuć Zaklęcie Zapał na kartę z Wyczerpaniem."
+        }
+      ]
     },
     "HUNGRY_FOR_MUSHROOMS": {
-      "name": "Grzybobranie"
+      "description": "Umierasz z głodu. Już nie pamiętasz, ile minęło czasu od ostatniego posiłku.\n...Zaraz, zaraz, co to za cudowny zapach?\n\nPodążając za zapachem, docierasz do przytulnego obozowiska, w którym są gotowane wszystkie rodzaje smakowitych grzybów! Przez głód nie bierzesz pod uwagę tego, czy są w ogóle jadalne.\n(Nawet nie zauważasz martwego podróżnika w pobliżu)",
+      "name": "Grzybobranie",
+      "choices": [
+        {
+          "name": "Wielki grzyb",
+          "description": null
+        },
+        {
+          "name": "Aromatyczny grzyb",
+          "description": null
+        }
+      ]
     },
     "INFESTED_AUTOMATON": {
-      "name": "Zainfekowany Automaton"
+      "description": "Wchodzisz do komnaty pełnej martwych robotów.\n\nW jednym automatonie wciąż świeci się rdzeń, ale nie reaguje i jest pochłonięty groteskową, organiczną naroślą.",
+      "name": "Zainfekowany Automaton",
+      "choices": [
+        {
+          "name": "Zbadaj",
+          "description": "Otrzymaj losową Moc."
+        },
+        {
+          "name": "Dotknij rdzeń",
+          "description": "Otrzymaj losową kartę kosztującą 0."
+        }
+      ]
     },
     "JUNGLE_MAZE_ADVENTURE": {
-      "name": "Przygoda w labiryncie"
+      "description": "Znajdujesz na przesieku kolorową drużynę poszukiwaczy przygód. Wskazują ci na gigantyczny labirynt pod wami.\n\nProponują połączyć siły w epickiej misji zdobycia skarbów w tym labiryncie. Jako poszukiwacz przygód wiesz już z doświadczenia, że labirynt musi być wypełniony śmiertelnymi pułapkami i strażnikami.\n\nByłoby łatwiej wyruszyć razem w drużynie, ale wtedy trzeba byłoby podzielić się znalezionymi skarbami.",
+      "name": "Przygoda w labiryncie",
+      "choices": [
+        {
+          "name": "Połącz siły",
+          "description": "Zyskaj 50 szt. Złota."
+        },
+        {
+          "name": "Samotna misja",
+          "description": "Zyskaj 150 szt. Złota. Utrać 18 PŻ."
+        }
+      ]
     },
     "LOST_WISP": {
-      "name": "Zagubiony ognik"
+      "description": "Dostrzegasz nietypowy widok w oddali. Widzisz stertę martwych owadów otaczającą mały, świecący ognik.\nPewnie musiał zwabić do siebie te wszystkie robale. Ognik nagle zapala się jasnym płomieniem!\n\nZ ciekawości podchodzisz bliżej.",
+      "name": "Zagubiony ognik",
+      "choices": [
+        {
+          "name": "Złap ognika",
+          "description": "Dodaj Rozkład do talii. Otrzymaj Artefakt: {Relic}."
+        },
+        {
+          "name": "Przeszukaj obszar",
+          "description": "Zyskaj 60 szt. Złota."
+        }
+      ]
     },
     "LUMINOUS_CHOIR": {
-      "name": "Świecący chór"
+      "description": "Napotykasz się na ogromne grzyby, które emanują nienaturalną, niebieską poświatą. Pulsują bioluminescencją tak mocno, że ich kapelusze puchną i świecą się. Gdy podchodzisz bliżej, zaczynają wydawać z siebie melodyjne dźwięki, które rozbrzmiewają w twojej głowie.\n\nWe wnętrzu największego grzyba zauważasz coś świecącego i pulsującego w rytmie melodii.",
+      "name": "Świecący chór",
+      "choices": [
+        {
+          "name": "Złóż hołd",
+          "description": "Zapłać 149 szt. Złota. Otrzymaj losowy Artefakt."
+        },
+        {
+          "name": "Sięgnij do wnętrza",
+          "description": "Usuń 2 karty z talii. Dodaj Zarodnik do talii."
+        }
+      ]
     },
     "MORPHIC_GROVE": {
-      "name": "Zagajnik Imitatorów"
+      "description": "Wchodzisz do zagajnika z krystalicznymi drzewami, które zaczynają drgać radośnie!\nSłyszysz falę serdecznych powitań od całej grupy Imitatorów, którzy nagle wyrastają z drzew.\n\nWidać, że jeden z nich wierci się niespokojnie gdzieś z boku, pewnie nie jest aż tak towarzyski jak reszta.\n\nDo kogo podejść? Do grupy czy do samotnika?",
+      "name": "Zagajnik Imitatorów",
+      "choices": [
+        {
+          "name": "Podejdź do grupy",
+          "description": "Utrać 100 szt. Złota. Zmień 2 karty."
+        },
+        {
+          "name": "Podejdź do samotnika",
+          "description": "Zyskaj 5 maks. PŻ."
+        }
+      ]
     },
     "POTION_COURIER": {
-      "name": "Dostawca Mikstur"
+      "description": "Czujesz kwaśny zapach, a chwilę później znajdujesz Dostawcę Mikstur leżącego na ziemii.\nJest nieruchomy. Bez życia. Martwy!?\nPomimo że już pewnie został okradziony ze wszystkich rzeczy, jest jeszcze porcja Paskudnie pachnących Mikstur z notatką: „Odbiorca: Handlarz”.",
+      "name": "Dostawca Mikstur",
+      "choices": [
+        {
+          "name": "Weź Mikstury",
+          "description": null
+        },
+        {
+          "name": "Przeszukaj",
+          "description": "Otrzymaj 1 losową niepospolitą Miksturę."
+        }
+      ]
     },
     "PUNCH_OFF": {
-      "name": "Bójka"
+      "description": "Widzisz dwóch bijących się Robokserów oraz błyszczący skarb pomiędzy nimi...\n\nMoże cię nie zauważą, jak im go zabierzesz?",
+      "name": "Bójka",
+      "choices": [
+        {
+          "name": "Dam sobie z nimi radę",
+          "description": "Walcz z nimi po większe nagrody."
+        },
+        {
+          "name": "Zabierz skarb",
+          "description": "Dodaj Kontuzję do talii. Otrzymaj losowy Artefakt."
+        }
+      ]
     },
     "RANWID_THE_ELDER": {
-      "name": "Ranwid Stary"
+      "description": "Podchodzi do ciebie chyba najstarsza osoba w całej Iglicy.\n„Znów się spotykamy... to ja, Ranwid!”\n\nNie masz bladego pojęcia, kim ten człowiek jest.",
+      "name": "Ranwid Stary",
+      "choices": [
+        null,
+        null,
+        null
+      ]
     },
     "REFLECTIONS": {
-      "name": "Odbicia aicibdO"
+      "description": "Co to za miejsce? Coś tu jest nie tak...\n...kat ein tsej ut śoC ?ecsjeim az ot oC",
+      "name": "Odbicia aicibdO",
+      "choices": [
+        {
+          "name": "Roztrzaskaj",
+          "description": "Zduplikuj swoją talię. Otrzymaj Klątwę Pech."
+        },
+        {
+          "name": "Dotknij lustra",
+          "description": "Zdegraduj 2 losowe karty. Ulepsz 4 losowe karty."
+        }
+      ]
     },
     "RELIC_TRADER": {
-      "name": "Handlarz Artefaktów"
+      "description": "You turn a corner and suddenly, a shadowy figure is just standing there. He pivots to face you.\n\n“Welcome! What're ya trading?”\nThe figure inquires as he flares open his cloak to reveal a slew of suspicious wares.",
+      "name": "Handlarz Artefaktów",
+      "choices": [
+        {
+          "name": "Weź ten na dole",
+          "description": "Zamień Artefakt: {BottomRelicOwned} na {BottomRelicNew}."
+        },
+        {
+          "name": "Weź ten na środku",
+          "description": "Zamień Artefakt: {MiddleRelicOwned} na {MiddleRelicNew}."
+        },
+        {
+          "name": "Weź ten na górze",
+          "description": "Zamień Artefakt: {TopRelicOwned} na {TopRelicNew}."
+        }
+      ]
     },
     "ROOM_FULL_OF_CHEESE": {
-      "name": "Pomieszczenie pełne sera"
+      "description": "This room is full of cheese!!!\n\nYou look around to see if there are any traps and above you is... more cheese. The candles in this room appear to be made of cheese. The furniture is also cheese.\nSuddenly, the door behind you slams shut.\n\nIt is made of cheese.",
+      "name": "Pomieszczenie pełne sera",
+      "choices": [
+        {
+          "name": "Napchaj się serem",
+          "description": "Wybierz 2 z 8 losowych Pospolitych kart i dodaj je do talii."
+        },
+        {
+          "name": "Poszukaj",
+          "description": "Utrać 14 PŻ. Otrzymaj Najlepszy ser."
+        }
+      ]
     },
     "ROUND_TEA_PARTY": {
-      "name": "Herbata przy Okrągłym Stole"
+      "description": "You find an invitation for a “Sir Galalot” to a tea party and decide to show up in his stead.\n\nUpon entering an unassuming rotunda, you find yourself in the midst of commanders, generals, warlords, and mercenaries having... tea?\nThe gigantic knight donning a golden crown speaks.\n\n“Thou art late for Tea?!”",
+      "name": "Herbata przy Okrągłym Stole",
+      "choices": [
+        {
+          "name": "Napij się herbaty",
+          "description": "Otrzymaj Królewska trucizna. Przywróć wszystkie PŻ."
+        },
+        {
+          "name": "Wywołaj kłótnię",
+          "description": "Utrać 11 PŻ. Otrzymaj losowy Artefakt."
+        }
+      ]
     },
     "SAPPHIRE_SEED": {
-      "name": "Szafirowe nasiono"
+      "description": "You narrowly avoid stepping on a bright, sharp... seed? Its unmistakable color gives away that it's a Sapphire Seed! Weren't these incredible seeds supposed to be extinct!?\n\nLegends say that consuming one can greatly amplify your endurance, but what if you plant and nourish it instead?",
+      "name": "Szafirowe nasiono",
+      "choices": [
+        {
+          "name": "Zjedz nasiono",
+          "description": "Przywróć 9 HP. Ulepsz kartę w talii."
+        },
+        {
+          "name": "Zasiej nasiono",
+          "description": "Rzuć Zaklęcie Nasiono na kartę."
+        }
+      ]
     },
     "SELF_HELP_BOOK": {
-      "name": "Poradnik"
+      "description": "On the floor lies a tome,\n“Top 3 Ways to Conquer the Spire”\n\nThe book is encrusted with blood so you find this manuscript highly suspicious.\n\nWill you read it?",
+      "name": "Poradnik",
+      "choices": [
+        {
+          "name": "Przejdź dalej",
+          "description": "Nie masz żadnych kart, na które można rzucić Zaklęcie."
+        },
+        {
+          "name": "Przeczytaj całą książkę",
+          "description": "Rzuć Zaklęcie Sprint 2 na Moc."
+        },
+        {
+          "name": "Przeczytaj losowy fragment",
+          "description": "Rzuć Zaklęcie Zwinność 2 na Umiejętność."
+        },
+        {
+          "name": "Przeczytaj tył",
+          "description": "Rzuć Zaklęcie Szlifierka 2 na Atak."
+        }
+      ]
     },
     "SLIPPERY_BRIDGE": {
-      "name": "Chwiejny most"
+      "description": "While crossing a rickety wooden bridge, there is a sudden torrent of rain. Massive gusts of wind buffet you, threatening to end your journey.",
+      "name": "Chwiejny most",
+      "choices": [
+        {
+          "name": "Trzymaj się",
+          "description": "Utrać {HpLoss} PŻ. Karta w opcji powyżej zostanie ponownie wylosowana."
+        },
+        {
+          "name": "Overcome",
+          "description": "Usuń {RandomCard} z talii."
+        }
+      ]
     },
     "SPIRALING_WHIRLPOOL": {
-      "name": "Spirujący wir"
+      "description": "You happen upon a Massive Spiraling Whirlpool. The water swirls with beautiful precision and its surrounding walls are adorned with spiral patterns.\n\nAround and around... around...\n....and around.... what a sight......\n\nWhat do you do?",
+      "name": "Spirujący wir",
+      "choices": [
+        {
+          "name": "Wypij",
+          "description": "Przywróć 0 PŻ."
+        },
+        {
+          "name": "Obserwuj",
+          "description": "Rzuć Zaklęcie Spirala na Uderzenie albo Obronę."
+        },
+        {
+          "name": "Sięgnij",
+          "description": "Otrzymaj losowy Artefakt. Dodaj Zwijanie z bólu do talii."
+        }
+      ]
     },
     "SPIRIT_GRAFTER": {
-      "name": "Łapacz dusz"
+      "description": "Above, a cocoon is shaking and wriggling, about to burst forth!\n\n...it stops wriggling. The cocoon ignites! What is going on?\nIn a flash of light and flame, a Spirit Grafter rushes into you, threatening to merge with your being to become complete.",
+      "name": "Łapacz dusz",
+      "choices": [
+        {
+          "name": "Wpuść",
+          "description": "Przywróć 25 PŻ. Dodaj Metamorfozę do talii."
+        },
+        {
+          "name": "Odrzuć",
+          "description": "Utrać 9 PŻ. Usuń kartę z talii."
+        }
+      ]
     },
     "STONE_OF_ALL_TIME": {
-      "name": "Kamień wszech czasów"
+      "description": "A massive boulder sits in the middle of an abandoned courtyard.\n\nA plaque reads:\nStone of All Time.\n\nIts presence, shape, and adornments indicate that this courtyard was built around this Stone and that it has never moved from this spot.",
+      "name": "Kamień wszech czasów",
+      "choices": [
+        {
+          "name": "Wypij i podnieś",
+          "description": "Utrać Miksturę: {DrinkRandomPotion}. Zyskaj 10 maks. PŻ."
+        },
+        {
+          "name": "Pchnij",
+          "description": "Utrać 6 PŻ. Rzuć Zaklęcie Werwa 8 na Atak."
+        }
+      ]
     },
     "SUNKEN_STATUE": {
-      "name": "Zatopiony posąg"
+      "description": "You spot an aged statue half submerged in a pond; its hands gently rest atop a stone sword.\n\nSomething is also glittering at the bottom of the pond.\nVotive offerings perhaps?\n\nYou could really use some money...",
+      "name": "Zatopiony posąg",
+      "choices": [
+        {
+          "name": "Skocz do wody",
+          "description": "Zyskaj 111 szt. Złota. Utrać 7 PŻ."
+        },
+        {
+          "name": "Weź miecz",
+          "description": "Otrzymaj Kamienny miecz."
+        }
+      ]
     },
     "SUNKEN_TREASURY": {
-      "name": "Zatopiony skarb"
+      "description": "A path leads you into a partially submerged vault.\nThere are 2 chests but only 1 brittle key.\n\nThe First Chest: Shaking it, you get jingly-jangly noises. Bit of gold.\nThe Second Chest: Enormous, ornate, and clearly cursed. Mnóstwo złota!",
+      "name": "Zatopiony skarb",
+      "choices": [
+        {
+          "name": "Pierwsza skrzynia",
+          "description": "Zyskaj 60 szt. Złota."
+        },
+        {
+          "name": "Druga skrzynia",
+          "description": "Zyskaj 333 szt. Złota. Otrzymaj Chciwość."
+        }
+      ]
     },
     "SYMBIOTE": {
-      "name": "Symbiont"
+      "description": "Along your travels, you stumble upon a dark, amorphous polyp. You can sense that it is very old, and very evil.\n\nApproach...",
+      "name": "Symbiont",
+      "choices": [
+        {
+          "name": "Podejdź",
+          "description": "Rzuć Zaklęcie Korupcja na Atak."
+        },
+        {
+          "name": "Podpal",
+          "description": "Wybierz kartę do Zmiany."
+        }
+      ]
     },
     "TABLET_OF_TRUTH": {
-      "name": "Kamień prawdy"
+      "description": "You defeat a pair of Guardian Kin and make your way into a protected vault.\n\nInside is a tablet with familiar inscriptions. Your intuition tells you that this language can be deciphered rather easily... However, once you begin deciphering you'll be locked in.\n\nThe tablet gives off a soothing energy and you can smash it to receive its healing energies instead.",
+      "name": "Kamień prawdy",
+      "choices": [
+        {
+          "name": "Rozszyfruj",
+          "description": "Utrać 3 maks. PŻ. Ulepsz losową kartę."
+        },
+        {
+          "name": "Rozwal",
+          "description": "Przywróć 20 PŻ."
+        }
+      ]
     },
     "TEA_MASTER": {
-      "name": "Mistrz herbaty"
+      "description": "You stumble into a dimly lit shack and find yourself immersed in a very peaceful space containing an obsessive variety of tea.\n\nThe man inside gestures to a selection of teas, each neatly labeled with a premium price.",
+      "name": "Mistrz herbaty",
+      "choices": [
+        {
+          "name": "Herbata z kości",
+          "description": "Pay 50 Gold. {BoneTeaDescription}"
+        },
+        {
+          "name": "Piekielnie gorąca herbata",
+          "description": "Zapłać 150 szt. Złota. {EmberTeaDescription}"
+        },
+        {
+          "name": "Herbata dla nieuprzejmych",
+          "description": "{TeaOfDiscourtesyDescription}"
+        }
+      ]
     },
     "THE_FUTURE_OF_POTIONS": {
-      "name": "Przyszłość Mikstur?"
+      "description": "You feel a faint rumbling as you round the corner to discover a gigantic spinning apparatus!\nIt has several slots which appear to convert liquids into a highly compressed digestible tablet.\n\nThe idea of turning these health tonics into a tiny morsel is uncomfortable but perhaps it's good to try new things?",
+      "name": "Przyszłość Mikstur?",
+      "choices": [
+        null
+      ]
     },
     "THE_LANTERN_KEY": {
-      "name": "Klucz"
+      "description": "Natrafiasz na świecący się klucz i podnosisz go.\n\n„Szukałem tego klucza wszędzie! Jeżeli nie masz nic przeciwko...”\n\n Wygląda to trochę kłopotliwie, więc może lepiej nie ryzykować.",
+      "name": "Klucz",
+      "choices": [
+        {
+          "name": "Zatrzymaj Klucz",
+          "description": "Walcz o Klucz"
+        },
+        {
+          "name": "Oddaj Klucz",
+          "description": "Zyskaj 100 szt. Złota."
+        }
+      ]
     },
     "THE_LEGENDS_WERE_TRUE": {
-      "name": "Legendy były prawdziwe"
+      "description": "Tuż po wejściu do ciemnej komnaty drzwi za tobą niespodziewanie się zamykają.\n\nŚwiatło przebija się z sufitu i oświetla przed tobą podium, na którym leży mapa. Czujesz, że musisz ją wziąć.\n\nPodejrzane.",
+      "name": "Legendy były prawdziwe",
+      "choices": [
+        {
+          "name": "Weź mapę",
+          "description": "Otrzymaj Mapę skarbów."
+        },
+        {
+          "name": "Zmierzaj powoli do wyjścia",
+          "description": "Utrać 8 PŻ. Otrzymaj 1 losową Miksturę."
+        }
+      ]
     },
     "THIS_OR_THAT": {
-      "name": "To czy tamto?"
+      "description": "Arms suddenly jut out from a nearby hole, clutching a suspicious bag of riches and a clearly cursed relic.\n\n“This... or That?”\na scratched-up voice whispers from below.",
+      "name": "To czy tamto?",
+      "choices": [
+        {
+          "name": "To",
+          "description": "Dodaj Niezdarność do talii. Otrzymaj losowy Artefakt."
+        },
+        {
+          "name": "Tamto",
+          "description": "Utrać 6 PŻ. Zyskaj 0 szt. Złota."
+        }
+      ]
     },
     "TINKER_TIME": {
-      "name": "Majsterkowanie"
+      "description": "Navigating through an endless sea of corpses, you find a mad scientist scavenging for various scraps.\n\n“Yes. Hej, witaj! Wyglądasz na zdolnego wojownika... Potrzebuję testera do mojego nowego okrutniko-natora! Co ty na to?”",
+      "name": "Majsterkowanie",
+      "choices": []
     },
     "TRASH_HEAP": {
-      "name": "Śmietnisko"
+      "description": "You discover a towering pile of scrapped weapons, discarded trinkets, and other oddities. The massive pile shifts and rumbles, as if growing from within...\n\nIf you scavenge from the surface, you may find some decent things. But if you really get in there, you may find some exotic treasures.",
+      "name": "Śmietnisko",
+      "choices": [
+        {
+          "name": "Zanurkuj",
+          "description": "Utrać 8 PŻ. Otrzymaj losowy Artefakt z przeszłości."
+        },
+        {
+          "name": "Weź losowy śmieć",
+          "description": "Zyskaj 100 szt. Złota. Otrzymaj losową kartę z przeszłości."
+        }
+      ]
     },
     "TRIAL": {
-      "name": "Proces"
+      "description": "You join a line of people entering a massive building.\n\nAs you pass under a golden archway, horns blare, confetti explodes, and streamers glide down from the ceiling!\n\n“Entrant {EntrantNumber}, you are the DECIDER for today's Trial.”",
+      "name": "Proces",
+      "choices": [
+        {
+          "name": "Zgódź się",
+          "description": "Służ jako dzisiejszy Decydujący."
+        },
+        {
+          "name": "Odmów",
+          "description": "Nie wolno ci odmówić."
+        }
+      ]
     },
     "UNREST_SITE": {
-      "name": "Niepokojące obozwisko"
+      "description": "You find a secluded Rest Site and start a fire to get some rest.\nOr so you thought.\n\nOnce the fire is started, it begins to swell, reaching not upwards but sideways towards a grove of oil-seeping trees.\n\nShould you try resting anyways?",
+      "name": "Niepokojące obozwisko",
+      "choices": [
+        {
+          "name": "Zabij Drzewa",
+          "description": "Utrać 8 maks. PŻ. Otrzymaj losowy Artefakt."
+        },
+        {
+          "name": "Odpocznij pomimo to",
+          "description": "Przywróć wszystkie PŻ. Otrzymaj Kiepski sen."
+        }
+      ]
     },
     "WAR_HISTORIAN_REPY": {
-      "name": "Profesor Toperz, historyk wojenny"
+      "description": "Dostrzegasz Profesora Toperza uwięzionego w klatce obok skrzyni ze skarbem.\n\nProfesor mamrocze coś o „jednorazowych kluczach” i szybko coś wpisuje na pergaminie.\n\nWygląda na to, że możesz otworzyć albo klatkę, albo skrzynie.",
+      "name": "Profesor Toperz, historyk wojenny",
+      "choices": [
+        {
+          "name": "Otwórz klatkę",
+          "description": "Utrać Klucz. Otrzymaj Podręcznik do historii."
+        },
+        {
+          "name": "Otwórz skrzynię",
+          "description": "Utrać Klucz. Otrzymaj 2 losowe Mikstury. Otrzymaj 2 losowe Artefakty."
+        }
+      ]
     },
     "WATERLOGGED_SCRIPTORIUM": {
-      "name": "Waterlogged Scriptorium"
+      "description": "Navigating the murky passages, you stumble upon a withered figure working a small shop. The multitude of shelves are stuffed full of damp scrolls and parchment.\n\nNoticing a patron has entered, the scribe-shopkeeper snaps to attention and gestures at some implements arranged on a desk.",
+      "name": "Waterlogged Scriptorium",
+      "choices": [
+        {
+          "name": "Krwisty atrament",
+          "description": "Zyskaj 6 maks. PŻ."
+        },
+        {
+          "name": "Prickly Sponge",
+          "description": null
+        },
+        {
+          "name": "Tentacle Quill",
+          "description": "Zapłać 65 szt. Złota. Rzuć Zaklęcie Pewnik na kartę."
+        }
+      ]
     },
     "WELCOME_TO_WONGOS": {
-      "name": "Witamy w Wongo"
+      "description": "“Welcome to Wongo's. We have what you want at Wongtastic prices.” says the least enthusiastic clerk you have ever met.\n\n“Peruse our wares and enjoy your time at Wongo's,” they continue, without even looking up.",
+      "name": "Witamy w Wongo",
+      "choices": [
+        {
+          "name": "Wongo's Bargain Bin",
+          "description": "Zapłać 100 szt. Złota. Otrzymaj 1 losowy pospolity Artefakt."
+        },
+        {
+          "name": "Wongo's Featured Item",
+          "description": "Zapłać 200 szt. Złota. Otrzymaj {RandomRelic}."
+        },
+        {
+          "name": "Wyjdź",
+          "description": "Zdegraduj losową kartę."
+        },
+        {
+          "name": "Wongo's Mystery Box",
+          "description": "Zapłać 300 szt. Złota. Otrzymaj 3 losowe Artefakty po 5 walkach."
+        }
+      ]
     },
     "WELLSPRING": {
-      "name": "Źródło"
+      "description": "You trace a low rumble to its source and find yourself captivated by a tranquil wellspring. The water is an emerald green with clusters of glowing motes.\n\nIt looks inviting. What can possibly go wrong?",
+      "name": "Źródło",
+      "choices": [
+        {
+          "name": "Weź kąpiel",
+          "description": "Usuń 1 kartę z talii. Dodaj 1 Poczucia winy do talii."
+        },
+        {
+          "name": "Zaczerpnij wody",
+          "description": "Otrzymaj 1 losową Miksturę."
+        }
+      ]
     },
     "WHISPERING_HOLLOW": {
-      "name": "Szepczące drzewo"
+      "description": "Making your way through a hollow of dead trees you happen upon a single bone-white tree. Clay baubles hang off its branches, which curve inward like protective ribs.\n\nSuch a creepy tree. It whispers.\n\n...make exchange.....",
+      "name": "Szepczące drzewo",
+      "choices": [
+        {
+          "name": "Wymień Złoto.",
+          "description": "Utrać 50 szt. Złota. Otrzymaj 2 losowe Mikstury."
+        },
+        {
+          "name": "Przytul drzewo",
+          "description": "Utrać 9 PŻ. Wybierz kartę do Zmiany."
+        }
+      ]
     },
     "WOOD_CARVINGS": {
-      "name": "Drewniane rzeźby"
+      "description": "You open a dusty box to find a set of 3 elaborate wood carvings:\n\nA bird, snake, and... a torus?\n\nA nearby pedestal has indentations which match the bottom of the carvings. Which carving will you place on the pedestal?",
+      "name": "Drewniane rzeźby",
+      "choices": [
+        {
+          "name": "Ptak",
+          "description": "Wybierz 1 kartę startową i Zmień ją w Dziobanie."
+        },
+        {
+          "name": "Wąż",
+          "description": "Rzuć ZaklęcieŚlizg na 1 kartę."
+        },
+        {
+          "name": "Torus",
+          "description": "Wybierz 1 kartę startową i Zmień ją w Twardy charakter."
+        }
+      ]
     },
     "ZEN_WEAVER": {
-      "name": "Pająk zen"
+      "description": "You walk through a spider web and PANIC!\nBut then, a wave of calm washes over you...\n\n“Calm down. I need you to quit fussing up my web.”\n\nHow did you calm down so quickly?\nAn itsy bitsy spider abseils down to meet you. It seems willing to impart some techniques for gold.",
+      "name": "Pająk zen",
+      "choices": [
+        {
+          "name": "Pajęczakowa akupunktura",
+          "description": "Zapłać 250 szt. Złota. Usuń 2 karty z talii."
+        },
+        {
+          "name": "Techniki oddechowe",
+          "description": "Zapłać 50 szt. Złota. Dodaj 2 Oświecenia do talii."
+        },
+        {
+          "name": "Świadomość emocjonalna",
+          "description": "Zapłać 125 szt. Złota. Usuń 1 kartę z talii."
+        }
+      ]
     },
     "DARV": {
       "description": "Zbieracz",

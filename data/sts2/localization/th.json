@@ -4389,50 +4389,687 @@
     }
   },
   "events": {
+    "ABYSSAL_BATHS": {
+      "choices": [
+        {
+          "name": null,
+          "description": "ฟื้นฟู 10 HP"
+        },
+        {
+          "name": null,
+          "description": "ได้รับ 2 HP สูงสุด ได้รับความเสียหาย 3"
+        }
+      ]
+    },
+    "AMALGAMATOR": {
+      "choices": [
+        {
+          "name": null,
+          "description": "กำจัดป้องกัน 2 ใบ เพิ่ม{Card2}เข้ากองการ์ด"
+        },
+        {
+          "name": null,
+          "description": "กำจัดจู่โจม 2 ใบ เพิ่ม{Card1}เข้ากองการ์ด"
+        }
+      ]
+    },
+    "AROMA_OF_CHAOS": {
+      "choices": [
+        {
+          "name": null,
+          "description": "แปรสภาพการ์ด 1 ใบในกองการ์ด"
+        },
+        null
+      ]
+    },
     "BATTLEWORN_DUMMY": {
-      "name": "หุ่นฝึกซ้อมโชกโชน"
+      "description": "พอคุณเข้าใกล้ มันก็เริ่มสั่นและประกายไฟก็สว่างวาบขึ้นทันที!\n\n“ตืดดด! ได้เวลาซ้อม!!! คุณมีเวลา 3 เทิร์นในการเอาชนะฉัน!\nเลือกการตั้งค่า ไม่งั้นเจอความอัปยศถึงตาย\nมีตัวเลือกดังต่อไปนี้:”\n\nหลังจบข้อความน่ากลัวแล้ว หุ่นก็บรรจงอ่านคำชี้แจงให้ฟังอย่างละเอียด\n\nคุณจะเลือกอะไร?",
+      "name": "หุ่นฝึกซ้อมโชกโชน",
+      "choices": [
+        {
+          "name": "การตั้งค่า 1",
+          "description": "ต่อสู้กับหุ่นฝึกซ้อม {Setting1Hp} HP จัดหาขวดยา 1 ขวดแบบสุ่ม"
+        },
+        {
+          "name": "การตั้งค่า 2",
+          "description": "ต่อสู้กับหุ่นฝึกซ้อม {Setting2Hp} HP พัฒนาการ์ด 2 ใบแบบสุ่ม"
+        },
+        {
+          "name": "การตั้งค่า 3",
+          "description": "ต่อสู้กับหุ่นฝึกซ้อม {Setting3Hp} HP ได้รับเครื่องราง 1 ชิ้นแบบสุ่ม"
+        }
+      ]
     },
     "BRAIN_LEECH": {
-      "name": "ปลิงสมอง"
+      "description": "*จี๊ด*\n\nคุณรู้สึกถึงความเจ็บแปลบบริเวณศีรษะ และมีความคิดพุ่งเข้าหัวคุณ\n\n“แบ่งปันความรู้กันไหม???”\n\nคุณไม่แน่ใจว่าควรทำอย่างไร...",
+      "name": "ปลิงสมอง",
+      "choices": [
+        {
+          "name": "ดึงปลิงออก",
+          "description": "เสีย 5 HP ได้รับรางวัลการ์ดไร้สี 1 ใบ"
+        },
+        {
+          "name": "แบ่งปันความรู้",
+          "description": "เลือกการ์ด 1 จาก 5 ใบที่ถูกสุ่มมาเพื่อเพิ่มเข้ากองการ์ด"
+        }
+      ]
     },
     "BUGSLAYER": {
-      "name": "ผู้สังหารแมลง"
+      "description": "ขณะที่คุณจัดการกับฝูงแมลงก้าวร้าว ทันใดนั้นคุณก็สังเกตเห็นนักรบแข็งแกร่งทรงพลังซึ่งต่อสู้ร่วมกับคุณมาโดยตลอด!\n\nฝูงแมลงสัมผัสได้ถึงความพ่ายแพ้ จึงกระจายตัวไป คุณหันไปหาสหายร่วมรบ\n“เจ้าอยากได้คำแนะนำในการกำจัดแมลงชั้นต่ำพวกนี้หรือไม่?”\n\nช่างสุภาพอะไรเช่นนี้ คุณพยักหน้าตอบรับข้อเสนอของเขา",
+      "name": "ผู้สังหารแมลง",
+      "choices": [
+        {
+          "name": "เรียนวิชาล้างผลาญ",
+          "description": "เพิ่ม{Card1}เข้ากองการ์ด"
+        },
+        {
+          "name": "เรียนวิชาบดขยี้",
+          "description": "เพิ่ม{Card2}เข้ากองการ์ด"
+        }
+      ]
+    },
+    "BYRDONIS_NEST": {
+      "choices": [
+        {
+          "name": "กินไข่",
+          "description": "ได้รับ 7 HP สูงสุด"
+        },
+        {
+          "name": "เก็บไข่",
+          "description": "เพิ่ม{Card}เข้ากองการ์ด"
+        }
+      ]
     },
     "COLORFUL_PHILOSOPHERS": {
-      "name": "เหล่าปราชญ์มากสีสัน"
+      "description": "เบื้องหน้าของคุณเป็นทัศนียภาพแสนอลังการ\nคุณเห็นรูปปั้น 3 สีไม่ซ้ำกันตั้งอยู่บนแท่น กำลังถกเถียงกันอย่างดุเดือดเกี่ยวกับนัยยะเชิงปรัชญาของสีสัน\n\nพอฟังดู คุณก็พอจับประเด็นได้ว่า คำถามที่สำคัญที่สุดคือ สีไหนดีที่สุด\n\nคุณจึงแทรกความคิดเห็นของตัวเองเข้าไป",
+      "name": "เหล่าปราชญ์มากสีสัน",
+      "choices": [
+        {
+          "name": "ฟ้า",
+          "description": "ได้รับการ์ดนักเวทแปรพักตร์ 3 ใบ"
+        },
+        {
+          "name": "เท่าเทียมกัน",
+          "description": null
+        },
+        {
+          "name": "แดง",
+          "description": "ได้รับการ์ดนักรบเกราะเหล็ก 3 ใบ"
+        },
+        {
+          "name": "ชมพู",
+          "description": "ได้รับการ์ดของNecrobinder 3 ใบ"
+        },
+        {
+          "name": "ส้ม",
+          "description": "ได้รับการ์ดของRegent 3 ใบ"
+        },
+        {
+          "name": "เขียว",
+          "description": "ได้รับการ์ดนักฆ่าแห่งความเงียบ 3 ใบ"
+        }
+      ]
+    },
+    "COLOSSAL_FLOWER": {
+      "description": "มีดอกไม้มหึมาเติบโตอยู่บนกองภูเขากระดูก\n\nในขณะที่กลีบดอกเปลี่ยนสีได้กำลังขยับเป็นช่วงๆ คุณก็สัมผัสได้ว่ามีกองเกสรทรงพลังอยู่ใจกลาง แต่กลีบดอกที่ขยับขึ้นลงอยู่นั้นแหลมคมมากและคาดเดาไม่ได้\n\nคุณสามารถเก็บน้ำหวานทองคำได้ แต่รางวัล ณ ใจกลางก็เย้ายวนใจเหลือเกิน...",
+      "choices": [
+        {
+          "name": "สกัดน้ำหวาน",
+          "description": "ได้รับ {Prize1} ทอง"
+        },
+        {
+          "name": "ลึกเข้าไปอีก",
+          "description": "เข้าไปลึกขึ้นอีก เสีย 5 HP"
+        }
+      ]
+    },
+    "DENSE_VEGETATION": {
+      "choices": [
+        {
+          "name": "พักผ่อน",
+          "description": "ฟื้นฟู 0 HP และต่อสู้ศัตรูกลุ่มหนึ่ง"
+        },
+        {
+          "name": null,
+          "description": "กำจัดการ์ด 1 ใบจากกองการ์ด เสีย 11 HP"
+        }
+      ]
     },
     "DOLL_ROOM": {
-      "name": "ห้องตุ๊กตา"
+      "name": "ห้องตุ๊กตา",
+      "choices": [
+        {
+          "name": "ตรวจสอบแต่ละชิ้นแล้วเลือกให้ดีที่สุด",
+          "description": "เสีย 15 HP เลือกเครื่องรางตุ๊กตา 1 จาก 3 ชิ้น"
+        },
+        {
+          "name": "เลือกแบบสุ่ม",
+          "description": "ได้รับเครื่องรางตุ๊กตา 1 ชิ้นแบบสุ่ม"
+        },
+        {
+          "name": "ขอเวลาสักพัก",
+          "description": "เสีย 5 HP เลือกเครื่องรางตุ๊กตา 1 จาก 2 ชิ้น"
+        }
+      ]
     },
     "DOORS_OF_LIGHT_AND_DARK": {
-      "name": "ประตูแห่งแสงและความมืด"
+      "name": "ประตูแห่งแสงและความมืด",
+      "choices": [
+        {
+          "name": "ประตูแห่งความมืด",
+          "description": "กำจัดการ์ด 1ใบในกองการ์ด"
+        },
+        {
+          "name": "ประตูแห่งแสง",
+          "description": "พัฒนาการ์ด 2 ใบแบบสุ่ม"
+        }
+      ]
+    },
+    "DROWNING_BEACON": {
+      "choices": [
+        {
+          "name": null,
+          "description": "จัดหา น้ำยาเรืองแสง"
+        },
+        {
+          "name": null,
+          "description": "ได้รับ{Relic} เสีย 13 HP สูงสุด"
+        }
+      ]
+    },
+    "ENDLESS_CONVEYOR": {
+      "choices": [
+        {
+          "name": null,
+          "description": "พัฒนาการ์ด 1 ใบในกองการ์ด แบบสุ่ม"
+        }
+      ]
     },
     "FAKE_MERCHANT": {
       "name": "พ่อค้า???"
     },
+    "FIELD_OF_MAN_SIZED_HOLES": {
+      "choices": [
+        {
+          "name": null,
+          "description": "ร่ายมนตร์ใส่การ์ด 1 ใบด้วยมนตร์เหมาะเหม็ง"
+        },
+        {
+          "name": null,
+          "description": "กำจัดการ์ด 2 ใบจากกองการ์ด เพิ่มจำกัดฐานะเข้ากองการ์ด"
+        }
+      ]
+    },
+    "GRAVE_OF_THE_FORGOTTEN": {
+      "choices": [
+        null,
+        {
+          "name": "เผชิญหน้ากับความจริง",
+          "description": "เพิ่มความเสื่อมสลายเข้ากองการ์ด ร่ายมนตร์การ์ด 1 ใบที่มีสลายด้วยมนตร์พลังวิญญาณ"
+        }
+      ]
+    },
+    "INFESTED_AUTOMATON": {
+      "choices": [
+        {
+          "name": null,
+          "description": "ได้รับการ์ดพลัง 1 ใบแบบสุ่ม"
+        },
+        {
+          "name": null,
+          "description": "ได้รับการ์ดค่าร่าย 0 1 ใบแบบสุ่ม"
+        }
+      ]
+    },
     "JUNGLE_MAZE_ADVENTURE": {
-      "name": "ผจญภัยเขาวงกตดงดิบ"
+      "name": "ผจญภัยเขาวงกตดงดิบ",
+      "choices": [
+        {
+          "name": null,
+          "description": "ได้รับ 50 ทอง"
+        },
+        {
+          "name": null,
+          "description": "ได้รับ 150 ทอง เสีย 18 HP"
+        }
+      ]
+    },
+    "LOST_WISP": {
+      "choices": [
+        {
+          "name": null,
+          "description": "เพิ่มความเสื่อมสลายเข้ากองการ์ด ได้รับ{Relic}"
+        },
+        {
+          "name": "ค้นหาบริเวณรอบข้าง",
+          "description": "ได้รับ 60 ทอง"
+        }
+      ]
+    },
+    "LUMINOUS_CHOIR": {
+      "choices": [
+        {
+          "name": null,
+          "description": "จ่าย 149 ทอง ได้รับเครื่องราง 1 ชิ้นแบบสุ่ม"
+        },
+        {
+          "name": null,
+          "description": "กำจัดการ์ด 2 ใบจากกองการ์ด เพิ่มSpore Mindเข้ากองการ์ด"
+        }
+      ]
+    },
+    "MORPHIC_GROVE": {
+      "choices": [
+        {
+          "name": null,
+          "description": "เสีย 100 ทอง แปรสภาพการ์ด 2 ใบ"
+        },
+        {
+          "name": null,
+          "description": "ได้รับ 5 HP สูงสุด­"
+        }
+      ]
+    },
+    "POTION_COURIER": {
+      "choices": [
+        null,
+        {
+          "name": null,
+          "description": "จัดหาขวดยาไม่ธรรมดา 1 ขวดแบบสุ่ม"
+        }
+      ]
+    },
+    "PUNCH_OFF": {
+      "choices": [
+        {
+          "name": "ฉันเอาอยู่",
+          "description": "ต่อสู้พวกมันเพื่อรางวัลที่ดีขึ้น"
+        },
+        {
+          "name": null,
+          "description": "เพิ่มInjuryเข้ากองการ์ด ได้รับเครื่องราง 1 ชิ้นแบบสุ่ม"
+        }
+      ]
+    },
+    "RANWID_THE_ELDER": {
+      "choices": [
+        null,
+        null,
+        null
+      ]
     },
     "REFLECTIONS": {
-      "name": "ภาพสะท้อน นอท้ะสพาภ"
+      "name": "ภาพสะท้อน นอท้ะสพาภ",
+      "choices": [
+        {
+          "name": "ทุบให้แตก",
+          "description": "ทำสำเนาทั้งกองการ์ด ได้รับโชคร้าย"
+        },
+        {
+          "name": "สัมผัสกระจก",
+          "description": "ย้อนการพัฒนาการ์ด 2 ใบแบบสุ่ม พัฒนาการ์ด 4 ใบแบบสุ่ม"
+        }
+      ]
     },
     "RELIC_TRADER": {
-      "name": "วาณิชเครื่องราง"
+      "name": "วาณิชเครื่องราง",
+      "choices": [
+        {
+          "name": "เอาอันล่าง",
+          "description": "แลก{BottomRelicOwned}เป็น{BottomRelicNew}"
+        },
+        {
+          "name": "เอาอันกลาง",
+          "description": "แลก{MiddleRelicOwned}เป็น{MiddleRelicNew}"
+        },
+        {
+          "name": "เอาอันบน",
+          "description": "แลก{TopRelicOwned}เป็น{TopRelicNew}"
+        }
+      ]
     },
     "ROOM_FULL_OF_CHEESE": {
-      "name": "ห้องที่เต็มไปด้วยชีส"
+      "name": "ห้องที่เต็มไปด้วยชีส",
+      "choices": [
+        {
+          "name": null,
+          "description": "เลือกการ์ดธรรมดา 2 จากที่สุ่มมา8 ใบเพื่อเพิ่มเข้ากองการ์ด"
+        },
+        {
+          "name": "ค้นหา",
+          "description": "เสีย 14 HP ได้รับชีสที่ถูกเลือก"
+        }
+      ]
+    },
+    "ROUND_TEA_PARTY": {
+      "choices": [
+        {
+          "name": "ดื่มด่ำกับชา",
+          "description": "ได้รับ{Relic} ฟื้นฟู HP จนเต็ม"
+        },
+        {
+          "name": null,
+          "description": "เสีย 11 HP ได้รับเครื่องราง 1 ชิ้นแบบสุ่ม"
+        }
+      ]
+    },
+    "SAPPHIRE_SEED": {
+      "choices": [
+        {
+          "name": null,
+          "description": "ฟื้นฟู 9 HP พัฒนาการ์ด 1 ใบในกองการ์ด"
+        },
+        {
+          "name": null,
+          "description": "ร่ายมนตร์ใส่การ์ด 1 ใบด้วยมนตร์หว่านเมล็ด"
+        }
+      ]
     },
     "SELF_HELP_BOOK": {
-      "name": "หนังสือพัฒนาตัวเอง"
+      "name": "หนังสือพัฒนาตัวเอง",
+      "choices": [
+        {
+          "name": "ช่างมัน",
+          "description": "คุณไม่มีการ์ดให้ร่ายมนตร์ใส่"
+        },
+        {
+          "name": "อ่านทั้งเล่ม",
+          "description": "เลือกการ์ดพลัง 1 ใบเพื่อร่ายมนตร์ด้วยมนตร์ฉับพลัน 2"
+        },
+        {
+          "name": "สุ่มอ่าน 1 ย่อหน้า",
+          "description": "เลือกการ์ดทักษะ 1 ใบเพื่อร่ายมนตร์ด้วยมนตร์ปราดเปรียว 2"
+        },
+        {
+          "name": "อ่านปกหลัง",
+          "description": "เลือกการ์ดโจมตี 1 ใบเพื่อร่ายมนตร์ด้วยมนตร์แหลมคม 2"
+        }
+      ]
     },
     "SLIPPERY_BRIDGE": {
-      "name": "สะพานลื่น"
+      "name": "สะพานลื่น",
+      "choices": [
+        {
+          "name": "จับไว้",
+          "description": "เสีย {HpLoss} HP สุ่มการ์ดในตัวเลือกด้านบน"
+        },
+        {
+          "name": "พิชิต",
+          "description": "{RandomCard}ถูกกำจัดออกจากกองการ์ด"
+        }
+      ]
+    },
+    "SPIRALING_WHIRLPOOL": {
+      "choices": [
+        {
+          "name": "ดื่ม",
+          "description": "ฟื้นฟู 0 HP"
+        },
+        {
+          "name": "สังเกต",
+          "description": "ร่ายมนตร์ จู่โจมหรือป้องกันด้วยSpiral"
+        },
+        {
+          "name": null,
+          "description": "ได้รับเครื่องราง 1 ชิ้นแบบสุ่ม เพิ่มอาการชักเข้ากองการ์ด"
+        }
+      ]
+    },
+    "SPIRIT_GRAFTER": {
+      "choices": [
+        {
+          "name": "ให้มันเข้ามา",
+          "description": "ฟื้นฟู 25 HP เพิ่มMetamorphosisเข้ากองการ์ด"
+        },
+        {
+          "name": "ปฏิเสธ",
+          "description": "เสีย 9 HP กำจัดการ์ด 1 ใบจากกองการ์ด"
+        }
+      ]
+    },
+    "STONE_OF_ALL_TIME": {
+      "choices": [
+        {
+          "name": "ดื่มแล้วยก",
+          "description": "เสีย {DrinkRandomPotion} ได้รับ 10 HP สูงสุด"
+        },
+        {
+          "name": "ผลัก",
+          "description": "เสีย 6 HP ร่ายมนตร์การ์ดโจมตี 1 ใบด้วยVigorous 8"
+        }
+      ]
+    },
+    "SUNKEN_STATUE": {
+      "choices": [
+        {
+          "name": null,
+          "description": "ได้รับ 111 ทอง เสีย 7 HP"
+        },
+        {
+          "name": null,
+          "description": "ได้รับ{Relic}"
+        }
+      ]
+    },
+    "SUNKEN_TREASURY": {
+      "choices": [
+        {
+          "name": "กล่องสมบัติใบแรก",
+          "description": "ได้รับ 60 ทอง"
+        },
+        {
+          "name": "กล่องสมบัติใบที่ 2",
+          "description": "ได้รับ 333 ทอง ได้รับGreed"
+        }
+      ]
+    },
+    "SYMBIOTE": {
+      "choices": [
+        {
+          "name": null,
+          "description": "ร่ายมนตร์การ์ดโจมตี 1 ใบด้วยมนตร์ผุพัง"
+        },
+        {
+          "name": null,
+          "description": "เลือกการ์ด 1 ใบเพื่อแปรสภาพ"
+        }
+      ]
+    },
+    "TABLET_OF_TRUTH": {
+      "choices": [
+        {
+          "name": "ถอดรหัส",
+          "description": "เสีย 3 HP สูงสุด พัฒนาการ์ด 1 ใบแบบสุ่ม"
+        },
+        {
+          "name": null,
+          "description": "ฟื้นฟู 20 HP"
+        }
+      ]
+    },
+    "TEA_MASTER": {
+      "choices": [
+        {
+          "name": null,
+          "description": "จ่าย 50 ทอง {BoneTeaDescription}"
+        },
+        {
+          "name": null,
+          "description": "จ่าย 150 ทอง {EmberTeaDescription}"
+        },
+        {
+          "name": null,
+          "description": "{TeaOfDiscourtesyDescription}"
+        }
+      ]
+    },
+    "THE_FUTURE_OF_POTIONS": {
+      "choices": [
+        null
+      ]
+    },
+    "THE_LANTERN_KEY": {
+      "choices": [
+        {
+          "name": "เก็บกุญแจไว้",
+          "description": "ต่อสู้เพื่อชิงกุญแจ"
+        },
+        {
+          "name": "คืนกุญแจ",
+          "description": "ได้รับ 100 ทอง"
+        }
+      ]
+    },
+    "THE_LEGENDS_WERE_TRUE": {
+      "choices": [
+        null,
+        {
+          "name": "ค่อยๆ หาทางออก",
+          "description": "เสีย 8 HP จัดหาขวดยา 1 ขวดแบบสุ่ม"
+        }
+      ]
     },
     "THIS_OR_THAT": {
-      "name": "อันนี้หรืออันนั้น?"
+      "name": "อันนี้หรืออันนั้น?",
+      "choices": [
+        {
+          "name": "อันนั้น",
+          "description": "เพิ่มความซุ่มซ่ามเข้ากองการ์ด ได้รับเครื่องราง 1 ชิ้นแบบสุ่ม"
+        },
+        {
+          "name": "อันนี้",
+          "description": "เสีย 6 HP ได้รับ 0 ทอง"
+        }
+      ]
+    },
+    "TINKER_TIME": {
+      "choices": []
+    },
+    "TRIAL": {
+      "choices": [
+        null,
+        {
+          "name": "ปฏิเสธ",
+          "description": "ไม่อนุญาตให้ปฏิเสธ"
+        }
+      ]
+    },
+    "UNREST_SITE": {
+      "choices": [
+        {
+          "name": null,
+          "description": "เสีย 8 HP สูงสุด ได้รับเครื่องรางแบบสุ่ม"
+        },
+        {
+          "name": "ก็จะพักผ่อนอยู่ดี",
+          "description": "ฟื้นฟู HP จนเต็ม ได้รับPoor Sleep"
+        }
+      ]
+    },
+    "WAR_HISTORIAN_REPY": {
+      "choices": [
+        {
+          "name": "ปลดล็อกกรง",
+          "description": "เสียLantern Key ได้รับHistory Course"
+        },
+        {
+          "name": "ปลดล็อกกล่องสมบัติ",
+          "description": "เสียLantern Key จัดหาขวดยา 2 ขวดแบบสุ่ม ได้รับเครื่องราง 2 ชิ้นแบบสุ่ม"
+        }
+      ]
+    },
+    "WATERLOGGED_SCRIPTORIUM": {
+      "choices": [
+        {
+          "name": null,
+          "description": "ได้รับ 6 HP สูงสุด"
+        },
+        {
+          "name": null,
+          "description": "จ่าย 155 ทอง ร่ายมนตร์การ์ด 2 ใบด้วยSteady"
+        },
+        {
+          "name": null,
+          "description": "จ่าย 65 ทอง ร่ายมนตร์การ์ด 1 ใบด้วยSteady"
+        }
+      ]
+    },
+    "WELCOME_TO_WONGOS": {
+      "choices": [
+        {
+          "name": null,
+          "description": "จ่าย 100 ทอง ได้รับเครื่องรางธรรมดา 1 ชิ้นแบบสุ่ม"
+        },
+        {
+          "name": null,
+          "description": "จ่าย 200 ทอง ได้รับ{RandomRelic}"
+        },
+        {
+          "name": null,
+          "description": "ลดระดับการ์ด 1 ใบแบบสุ่ม"
+        },
+        {
+          "name": null,
+          "description": "จ่าย 300 ทอง ได้รับเครื่องราง 3 ชิ้นแบบสุ่ม หลังจาก 5 การต่อสู้"
+        }
+      ]
+    },
+    "WELLSPRING": {
+      "choices": [
+        {
+          "name": null,
+          "description": "กำจัดการ์ด 1 ใบจากกองการ์ด เพิ่มGuilty 1 ใบเข้ากองการ์ด"
+        },
+        {
+          "name": null,
+          "description": "จัดหาขวดยา 1 ขวดแบบสุ่ม"
+        }
+      ]
+    },
+    "WHISPERING_HOLLOW": {
+      "choices": [
+        {
+          "name": null,
+          "description": "เสีย 50 ทอง จัดหาขวดยา 2 ขวดแบบสุ่ม"
+        },
+        {
+          "name": "กอดต้นไม้",
+          "description": "เสีย 9 HP เลือกการ์ด 1 ใบเพื่อแปรสภาพ"
+        }
+      ]
     },
     "WOOD_CARVINGS": {
-      "name": "ไม้แกะสลัก"
+      "name": "ไม้แกะสลัก",
+      "choices": [
+        {
+          "name": "นก",
+          "description": "เลือกการ์ดเริ่มต้น 1 ใบเพื่อแปรสภาพให้เป็น{BirdCard}"
+        },
+        {
+          "name": "งู",
+          "description": "ร่ายมนตร์การ์ด 1 ใบด้วยมนตร์อสรพิษ"
+        },
+        {
+          "name": null,
+          "description": "เลือกการ์ดเริ่มต้น 1 ใบเพื่อแปรสภาพให้เป็น{ToricCard}"
+        }
+      ]
+    },
+    "ZEN_WEAVER": {
+      "choices": [
+        {
+          "name": null,
+          "description": "จ่าย 250 ทอง กำจัดการ์ด 2 ใบจากกองการ์ด"
+        },
+        {
+          "name": null,
+          "description": "จ่าย 50 ทอง เพิ่มEnlightenment 2 ใบเข้ากองการ์ด"
+        },
+        {
+          "name": null,
+          "description": "จ่าย 125 ทอง กำจัดการ์ด 1 ใบจากกองการ์ด"
+        }
+      ]
     },
     "NEOW": {
       "dialogue": [

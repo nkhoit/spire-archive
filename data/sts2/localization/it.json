@@ -5182,121 +5182,581 @@
   },
   "events": {
     "ABYSSAL_BATHS": {
-      "name": "Pozze abissali"
+      "description": "Scopri una stanza defilata.\n\nIl vapore si innalza da pozze ribollenti di liquido caldo che cambia colore con un ritmo ipnotico. Dal soffitto pendono formazioni di cirripedi, che fanno gocciolare un liquido viscoso che sibila e si contorce a contatto con la superficie. L'aria è pesante, carica di sale e di qualcosa di inconfondibilmente organico . \n\nMentre ti avvicini al bordo della pozza più grande, il liquido si increspa. Le acque ribollono con maggiore intensità, come se stessero aspettando che ti immergi.",
+      "name": "Pozze abissali",
+      "choices": [
+        {
+          "name": "Non immergerti",
+          "description": "Recuperi 10 PV."
+        },
+        {
+          "name": "Immergiti",
+          "description": "Ottieni i seguenti PV massimi: 2. Subisci 3 di danno."
+        }
+      ]
     },
     "AMALGAMATOR": {
-      "name": "Amalgamatore"
+      "description": "CLANG! CLANG!!!\n\nSenti rumori di metalli che si scontrano tra di loro dall'altra parte del muro...\n\nMentre appoggi la testa sul muro per ascoltare, questo si apre rivelando una figura gigantesca a sei braccia che lavora senza sosta.\nIl suo \"volto\" è un turbinio di sigilli luminosi  in movimento.\n\n\"Un essere con uno spirito ascendente ha trovato il mio atelier, eh? È il momento di fare una COMBINAZIONE!\"",
+      "name": "Amalgamatore",
+      "choices": [
+        {
+          "name": "Combina le carte Difendi",
+          "description": "Rimuovi 2 carte Difendi. Aggiungi Difesa Strenua al tuo mazzo."
+        },
+        {
+          "name": "Combina le carte Colpo",
+          "description": "Rimuovi 2 carte Colpo. Aggiungi Colpo Definitivo al tuo mazzo."
+        }
+      ]
     },
     "AROMA_OF_CHAOS": {
-      "name": "Aroma del caos"
+      "description": "Dopo aver attraversato un fitto sottobosco e aver raggiunto una radura, il tuo corpo viene attanagliato da una nostalgia indefinibile.\n\nPercepisci una miscela di aromi floreali, decomposizione putrida e  qualcos'altro di completamente differente. L'aroma si fa più intenso a ogni passo e hai la sensazione che il mondo intorno a te si stia deformando e contorcendo.\n\nInizi a provare una sensazione di caos mutevole e non riesci più a riconoscere chi sei.",
+      "name": "Aroma del caos",
+      "choices": [
+        {
+          "name": "Lasciati andare",
+          "description": "Trasformi una carta nel tuo mazzo."
+        },
+        {
+          "name": "Mantieni il controllo",
+          "description": "Potenzi una carta nel tuo mazzo."
+        }
+      ]
     },
     "BATTLEWORN_DUMMY": {
-      "name": "Manichino da allenamento martoriato"
+      "description": "Mentre ti avvicini comincia a rumoreggiare e a sibilare, illuminandosi poi intensamente!\n\n\"BZZZT! È IL MOMENTO DI ALLENARSI! HAI 3 TURNI PER SCONFIGGERMI!\nSCEGLI UN'OPZIONE O PREPARATI A SUBIRE UN'UMILIAZIONE TOTALE.\nEcco le opzioni:\"\n\nDopo questo messaggio terrificante, il manichino legge attentamente le istruzioni.\n\nQuale opzione scegli?",
+      "name": "Manichino da allenamento martoriato",
+      "choices": [
+        {
+          "name": "Opzione 1",
+          "description": "Affronti un manichino da {Setting1Hp} PV. Ricevi 1 pozione casuale."
+        },
+        {
+          "name": "Opzione 2",
+          "description": "Affronti un manichino da {Setting2Hp} PV. Potenzi 2 carte casuali."
+        },
+        {
+          "name": "Opzione 3",
+          "description": "Affronti un manichino da {Setting3Hp} PV. Ottieni una reliquia casuale."
+        }
+      ]
     },
     "BRAIN_LEECH": {
-      "name": "Sanguisuga cerebrale"
+      "description": "*Tonf*\n\nSenti un dolore lancinante sopra la testa e un pensiero pervade la tua mente.\n\n\"VUOI CONDIVIDERE LA TUA CONOSCENZA???\"\n\nNon sai bene cosa fare...",
+      "name": "Sanguisuga cerebrale",
+      "choices": [
+        {
+          "name": "Rimuovi la sanguisuga",
+          "description": "Perdi 5 PV. Ottieni una carta ricompensa incolore."
+        },
+        {
+          "name": "Condividi la tua conoscenza",
+          "description": "Scegli 1 tra 5 carte casuali da aggiungere al tuo mazzo."
+        }
+      ]
     },
     "BUGSLAYER": {
-      "name": "Ammazzainsetti"
+      "description": "Mentre stai respingendo uno sciame di insetti aggressivi, all'improvviso noti un possente guerriero rude che stava combattendo al tuo fianco per tutto il tempo!\n\nGli insetti, sentendosi sconfitti, si disperdono. Guardi il tuo compagno di battaglia.\n\"Vorresti qualche consiglio su come sterminare questi parassiti?\"\n\nChe brava persona. Annuisci e accetti la sua offerta.",
+      "name": "Ammazzainsetti",
+      "choices": [
+        {
+          "name": "Impara la tecnica Sterminio",
+          "description": "Aggiungi Disinfestazione al tuo mazzo."
+        },
+        {
+          "name": "Impara la tecnica Schiacciaparassita",
+          "description": "Aggiungi Pestata al tuo mazzo."
+        }
+      ]
     },
     "BYRDONIS_NEST": {
-      "name": "Nido del Gryfone"
+      "description": "Vedi un'enorme bestia barcollante che insegue un Gryfone verde ferito.\n\nNel nido da cui il Gryfone è fuggito, giace un uovo abbandonato e incustodito.\n\nIl tuo stomaco brontola...",
+      "name": "Nido del Gryfone",
+      "choices": [
+        {
+          "name": "Mangia l'uovo",
+          "description": "Ottieni i seguenti PV massimi: 7."
+        },
+        {
+          "name": "Prendi l'uovo",
+          "description": "Aggiungi Uovo di Gryfone al tuo mazzo."
+        }
+      ]
     },
     "COLORFUL_PHILOSOPHERS": {
-      "name": "Filosofi cromatici"
+      "description": "Davanti a te scorgi una scena epica.\nVedi 3 statue di colori diversi su una pedana impegnate in un acceso dibattiti sulle implicazioni filosofiche del colore.\n\nMentre le ascolti, hai la sensazione che la domanda più importante ricada su quale sia il colore MIGLIORE.\n\nIntervieni dando la tua opinione.",
+      "name": "Filosofi cromatici",
+      "choices": [
+        {
+          "name": "Blu",
+          "description": "Ottieni 3 carta di Defect."
+        },
+        {
+          "name": "Non esiste colore migliore",
+          "description": "Ottieni Scheggia prismatica."
+        },
+        {
+          "name": "Rosso",
+          "description": "Ottieni 3 carta di Ironclad."
+        },
+        {
+          "name": "Rosa",
+          "description": "Ottieni 3 carta di Necrobinder."
+        },
+        {
+          "name": "Arancione",
+          "description": "Ottieni 3 carta di Regent."
+        },
+        {
+          "name": "Verde",
+          "description": "Ottieni 3 carta di Silent."
+        }
+      ]
     },
     "COLOSSAL_FLOWER": {
-      "name": "Fiore colossale"
+      "description": "C'è un fiore colossale che cresce sulla vetta di una montagna di ossa.\n\nMentre i suoi petali cangianti palpitano, percepisci che c'è un potente ammasso di polline al centro, ma i petali ondulati sono affilati e imprevedibili.\n\nPotresti prendere un po' di nettare dorato, ma la tentazione di raggiungere il tesoro al centro è veramente forte...",
+      "name": "Fiore colossale",
+      "choices": [
+        {
+          "name": "Estrai il nettare",
+          "description": "Ottieni {Prize1} unità d'oro."
+        },
+        {
+          "name": "Addentrati nelle profondità",
+          "description": "Ti addentri nelle profondità. Perdi 5 PV."
+        }
+      ]
     },
     "CRYSTAL_SPHERE": {
-      "name": "Sfera di cristallo"
+      "description": "\"Ho previsto il tuo arrivo...!\"\n\nUna voce rauca ti chiama mentre entri in una capanna mistica.\n\n\"Il tuo destino ti ha portato qui. Dobbiamo scoprire il tuo futuro e la tua fortuna così potrai SALVARCI TUTTI!\"\n\"Bene, ecco le opzioni per la lettura della sfera di cristallo. Assicurati di firmare anche questa liberatoria\", dice mentre tira fuori una penna e una pergamena.",
+      "name": "Sfera di cristallo",
+      "choices": [
+        {
+          "name": "Chiedi piano di pagamento",
+          "description": "Ottieni Debito. Puoi effettuare 6 divinazioni."
+        },
+        {
+          "name": "Rivela il futuro",
+          "description": "Paghi 50 unità d'oro. Puoi effettuare 3 divinazioni."
+        }
+      ]
     },
     "DENSE_VEGETATION": {
-      "name": "Vegetazione densa"
+      "description": "Dopo aver preso la strada sbagliata per un bel po' di tempo, ti ritrovi in una fitta giungla di felci, arbusti e viticci. Soprattutto viticci. La stanchezza ti assale e un pensiero oscuro pervade la tua testa:\n\n\"Hai smarrito la strada, non hai la minima idea di cosa fare e l'inevitabilità della morte si avvicina.\"\n\nCosa fai?",
+      "name": "Vegetazione densa",
+      "choices": [
+        {
+          "name": "Riposa",
+          "description": "Recuperi 0 PV. Affronti dei nemici."
+        },
+        {
+          "name": "Avanza a fatica",
+          "description": "Rimuovi una carta dal tuo mazzo. Perdi 11 PV."
+        }
+      ]
     },
     "DOLL_ROOM": {
-      "name": "Stanza delle bambole"
+      "description": "Entri in una stanza nascosta...\n\nÈ piena di bambole di ogni tipo. Ognuna di loro è unica: le loro espressioni spaziano dalla gioia alla tristezza, i loro abiti abbracciano secoli e regni che trascendono il tuo.\n\nUn coro di sussurri diventa sempre più forte finché le bambole gridano tra loro e ti chiamano...\n\nDevi sceglierne una e andartene immediatamente.",
+      "name": "Stanza delle bambole",
+      "choices": [
+        {
+          "name": "Esamina ogni bambola e fai la scelta migliore",
+          "description": "Perdi 15 PV. Scegli 1 tra 3 Reliquie Bambolesche."
+        },
+        {
+          "name": "Scegli in modo casuale",
+          "description": "Ottieni una Reliquia Bambolesca."
+        },
+        {
+          "name": "Prenditi del tempo prima di decidere",
+          "description": "Perdi 5 PV. Scegli 1 tra 2 Reliquie Bambolesche."
+        }
+      ]
     },
     "DOORS_OF_LIGHT_AND_DARK": {
-      "name": "Porte della luce e dell'oscurità"
+      "description": "Ora c'è una porta dove prima non esisteva nulla...\n\nEntri e trovi due porte scintillanti e un portiere ben vestito.\n\"Finalmente una visita! Prego, prego! Scegli una porta qualsiasi!\"\n\nSiamo ancora nella Guglia? Come fa questo posto a essere così pulito?",
+      "name": "Porte della luce e dell'oscurità",
+      "choices": [
+        {
+          "name": "Porta dell'oscurità",
+          "description": "Rimuovi 1 carta dal tuo mazzo."
+        },
+        {
+          "name": "Porta della luce",
+          "description": "Potenzi 2 carte casuali."
+        }
+      ]
     },
     "DROWNING_BEACON": {
-      "name": "Faro sprofondante"
+      "description": "Attraversando un paesaggio onirico di rocce e acque tranquille, ti trovi di fronte a un faro che affonda che emette anti-luce.\n\nPuoi imbottigliare l'acqua misteriosamente luminosa che si è accumulata qui o salire attraverso la struttura fatiscente per recuperare la lente.",
+      "name": "Faro sprofondante",
+      "choices": [
+        {
+          "name": "Imbottiglia",
+          "description": "Ricevi Pozione Luminacqua."
+        },
+        {
+          "name": "Sali",
+          "description": "Ottieni Lenti di Fresnel. Perdi i seguenti PV massimi: 13."
+        }
+      ]
     },
     "ENDLESS_CONVEYOR": {
-      "name": "Nastro trasportatore infinito"
+      "description": "Entri a fatica in una baracca con un cartello luminoso ma storto che recita:\n\"BANCHETTO INFINITO - PAGA IN BASE ALLA TUA FAME!\"\n\nAll'interno, uno chef snello e dalle molteplici braccia sta preparando abilmente dei bocconcini di cibo e li sistema su un chitinoso nastro trasportatore avvolgente.\n\nUna delle braccia dello chef indica un cartello:\n35 unità d'oro per ogni piatto",
+      "name": "Nastro trasportatore infinito",
+      "choices": [
+        {
+          "name": "Osservi lo chef",
+          "description": "Potenzi una carta casuale nel tuo mazzo."
+        }
+      ]
     },
     "FAKE_MERCHANT": {
+      "description": "Testo provvisorio",
       "name": "Il mercante???"
     },
     "FIELD_OF_MAN_SIZED_HOLES": {
-      "name": "Campo di buchi antropomorfi"
+      "description": "Rimani a bocca aperta quando all'improvviso vedi un vasto campo brulicante di grandi figure corporee.\n\nUna di queste sagome corrisponde alla tua.\n\nÈ perfetta...",
+      "name": "Campo di buchi antropomorfi",
+      "choices": [
+        {
+          "name": "Entra nel tuo buco",
+          "description": "Incanti una carta con Incastro Perfetto."
+        },
+        {
+          "name": "Resisti",
+          "description": "Rimuovi 2 carte dal tuo Deck. Aggiungi Normalità al tuo mazzo."
+        }
+      ]
     },
     "GRAVE_OF_THE_FORGOTTEN": {
-      "name": "Tomba del guerriero dimenticato"
+      "description": "C'è una tomba con una fiamma blu turbolenta...\n\nUn fiero guerriero è morto in battaglia, ma la sua anima è inquieta. Vuole continuare a combattere e la senti che ti implora di viaggiare insieme a te.\n\nMa forse non sarebbe meglio che accettasse la realtà dei fatti?",
+      "name": "Tomba del guerriero dimenticato",
+      "choices": [
+        null,
+        {
+          "name": "Mostri la realtà dei fatti",
+          "description": "Aggiungi Decomposizione al mazzo. Usi Potere dell'Anima per incantare una carta con Esaurimento."
+        }
+      ]
     },
     "HUNGRY_FOR_MUSHROOMS": {
-      "name": "Fame di funghi"
+      "description": "Da quanto tempo non mangi?\n...aspetta, cos'è questo odore fantastico?\n\nSeguendo l'aroma, raggiungi un accogliente campeggio nel quale si cucinano funghi saporiti di ogni tipo! Non ti viene il dubbio se sia sicuro o meno mangiare questi funghi... Anche perché hai una fame da lupi.\n(Hai talmente tanta fame che non noti il cadavere di un avventuriero)",
+      "name": "Fame di funghi",
+      "choices": [
+        {
+          "name": "Grande fungo",
+          "description": null
+        },
+        {
+          "name": "Fungo fragrante",
+          "description": null
+        }
+      ]
     },
     "INFESTED_AUTOMATON": {
-      "name": "Automa infestato"
+      "description": "Giungi a una stanza piena di robot morti.\n\nUn automa solitario ha ancora un nucleo con un leggero scintillio. Tuttavia, è avvolto da una grottesca formazione organica e sembra non dare segni di vita.",
+      "name": "Automa infestato",
+      "choices": [
+        {
+          "name": "Esamina",
+          "description": "Ottieni una carta Potere casuale."
+        },
+        {
+          "name": "Tocca il nucleo",
+          "description": "Ottieni una carta da costo 0 casuale."
+        }
+      ]
     },
     "JUNGLE_MAZE_ADVENTURE": {
-      "name": "Avventura nel labirinto selvatico"
+      "description": "In una radura, ti imbatti in un gruppo raffazzonato di avventurieri che guarda in basso e indica un gigantesco labirinto.\n\nGli avventurieri ti propongono di collaborare in una missione epica per saccheggiare i tesori di questo labirinto. Avendo preso parte a numerose avventure, sai benissimo che questo labirinto sarà pieno di trappole mortali e guardiani.\n\nL'impresa sarebbe più facile se collaboraste, ma poi dovreste dividere il bottino.",
+      "name": "Avventura nel labirinto selvatico",
+      "choices": [
+        {
+          "name": "Collabora",
+          "description": "Ottieni 50 unità d'oro."
+        },
+        {
+          "name": "Non collaborare",
+          "description": "Ottieni 150 unità d'oro. Perdi 18 PV."
+        }
+      ]
     },
     "LOST_WISP": {
-      "name": "Il fuoco fatuo perduto"
+      "description": "In lontananza scorgi uno scenario inquietante: una miriade di insetti morti che circondano quello che sembra essere un piccolo granello luminoso.\nSembra attirare ogni tipo di insetto allo stesso modo, ma vedi che sprigiona delle fiamme!\n\nTi avvicini per indagare.",
+      "name": "Il fuoco fatuo perduto",
+      "choices": [
+        {
+          "name": "Cattura il fuoco fatuo",
+          "description": "Aggiungi Decomposizione al tuo mazzo. Ottieni {Relic}."
+        },
+        {
+          "name": "Esplora i dintorni",
+          "description": "Ottieni 60 unità d'oro."
+        }
+      ]
     },
     "LUMINOUS_CHOIR": {
-      "name": "Coro luminoso"
+      "description": "Ti imbatti in una radura immersa in una luce blu innaturale. Dei funghi giganti pulsano di bioluminescenza, con i cappelli gonfi e luminosi. Avvicinandoti, i funghi iniziano a emettere suoni evocativi e melodici che ti riecheggiano nel petto.\n\nNoti qualcosa di luccicante incastonato nella polpa del fungo più grande che palpita al ritmo della melodia fungina.",
+      "name": "Coro luminoso",
+      "choices": [
+        {
+          "name": "Offri un tributo",
+          "description": "Paga 149 unità d'oro. Ottieni una reliquia casuale."
+        },
+        {
+          "name": "Tocca la polpa",
+          "description": "Rimuovi 2 carte dal tuo mazzo. Aggiungi la carta Spora Cerebrale al tuo mazzo."
+        }
+      ]
     },
     "MORPHIC_GROVE": {
-      "name": "Bosco morfico"
+      "description": "Entri in un boschetto di alberi di cristallo, che iniziano a tremare dall'emozione!\nUn coro di saluti e benvenuti ti accoglie mentre un gruppo di morfici compare dagli alberi.\n\nUno dei morfici si agita nervosamente in un angolo; è chiaramente meno socievole degli altri.\n\nA chi ti avvicini? Al gruppo o al morfico solitario?",
+      "name": "Bosco morfico",
+      "choices": [
+        {
+          "name": "Avvicinati al gruppo",
+          "description": "Perdi 100 unità d'oro. Trasformi 2 carte."
+        },
+        {
+          "name": "Avvicinati al morfico solitario",
+          "description": "Ottieni i seguenti PV massimi: 5."
+        }
+      ]
     },
     "POTION_COURIER": {
-      "name": "Addetto alle consegne di pozioni"
+      "description": "C'è un odore acre nell'aria. Poco dopo, trovi un addetto alle consegne di pozioni accasciato a terra.\nÈ immobile, senza vita... Sarà morto!?\nSebbene i suoi averi siano stati saccheggiati, c'è una partita di Pozioni Nefaste con un biglietto: \"Destinatario: mercante\".",
+      "name": "Addetto alle consegne di pozioni",
+      "choices": [
+        {
+          "name": "Prendi pozioni",
+          "description": "Ricevi 3  Pozione Nefasta."
+        },
+        {
+          "name": "Rovista",
+          "description": "Ricevi 1 pozione non comune."
+        }
+      ]
     },
     "PUNCH_OFF": {
-      "name": "Scazzottata"
+      "description": "Due Assemblaggi pugili sono impegnati in una lotta senza esclusione di colpi, ma in mezzo a loro scorgi un tesoro...\n\nVuoi provare a rubarlo?",
+      "name": "Scazzottata",
+      "choices": [
+        {
+          "name": "Posso batterli",
+          "description": "Affrontali per ottenere ricompense migliori."
+        },
+        {
+          "name": "Ruba il tesoro",
+          "description": "Aggiungi una carta Lesione al tuo mazzo. Ottieni una reliquia casuale."
+        }
+      ]
     },
     "RANWID_THE_ELDER": {
-      "name": "Ranwid l'anziano"
+      "description": "Ti si avvicina la persona più anziana che tu abbia mai visto.\n\"Ci incontriamo di nuovo... Sono io, Ranwid!\"\n\nNon hai idea di chi sia quest'uomo.",
+      "name": "Ranwid l'anziano",
+      "choices": [
+        null,
+        null,
+        null
+      ]
     },
     "REFLECTIONS": {
-      "name": "Riflessi | snoitcelfeR"
+      "description": "Che succede? C'è qualcosa che non va...\n...daijdsad sdadas weww oadlaoD? sade si xczW",
+      "name": "Riflessi | snoitcelfeR",
+      "choices": [
+        {
+          "name": "Rompi lo specchio",
+          "description": "Duplichi il tuo mazzo. Ricevi la carta Sfortuna."
+        },
+        {
+          "name": "Tocca lo specchio",
+          "description": "Depotenzi 2 carte casuali. Potenzi 4 carte casuali."
+        }
+      ]
     },
     "RELIC_TRADER": {
-      "name": "Commerciante di reliquie"
+      "description": "Svolti l'angolo e all'improvviso ti ritrovi davanti a una figura misteriosa. Dopodiché, si gira verso di te.\n\n\"Ti do il benvenuto! Che ne dici di fare qualche scambio?\"\nChiede la figura mentre apre il mantello per rivelare un mucchio di merce sospetta.",
+      "name": "Commerciante di reliquie",
+      "choices": [
+        {
+          "name": "Scegli quella in basso",
+          "description": "Scambia {BottomRelicOwned} con {BottomRelicNew}."
+        },
+        {
+          "name": "Prendi quella al centro",
+          "description": "Scambia {MiddleRelicOwned} con {MiddleRelicNew}."
+        },
+        {
+          "name": "Prendi quella in alto",
+          "description": "Scambia {TopRelicOwned} con {TopRelicNew}."
+        }
+      ]
     },
     "ROOM_FULL_OF_CHEESE": {
-      "name": "Stanza formaggiosa"
+      "description": "Questa stanza è piena di formaggio!!!\n\nTi guardi intorno per vedere se ci sono trappole e sopra di te c'è... altro formaggio. Le candele in questa stanza sembrano fatte di formaggio. Anche i mobili sono fatti di formaggio.\nImprovvisamente, la porta dietro di te si chiude facendo un gran rumore.\n\nSì, anche questa è fatta di formaggio.",
+      "name": "Stanza formaggiosa",
+      "choices": [
+        {
+          "name": "Ingozzati di formaggio",
+          "description": "Scegli 2 tra 8 carte comuni casuali da aggiungere al tuo mazzo."
+        },
+        {
+          "name": "Cerca",
+          "description": "Perdi 14 PV. Ottieni Il Formaggio Prescelto."
+        }
+      ]
     },
     "ROUND_TEA_PARTY": {
-      "name": "Ricevimento del tè della tavola rotonda"
+      "description": "Trovi un invito diretto a un tale \"Sir Galalot\" per un ricevimento del tè e decidi di presenziare l'evento al suo posto.\n\nDopo aver varcato le porte di un sobrio edificio circolare, ti ritrovi tra comandanti, generali, signori della guerra e mercenari che bevono... il tè?\nIl gigantesco cavaliere con indosso una corona d'oro prende parola.\n\n\"Come osi arrivare in ritardo al ricevimento del tè?!\"",
+      "name": "Ricevimento del tè della tavola rotonda",
+      "choices": [
+        {
+          "name": "Bevi il tè",
+          "description": "Ottieni Veleno Regale. Recuperi tutti i tuoi PV."
+        },
+        {
+          "name": "Litiga",
+          "description": "Perdi 11 PV. Ottieni una reliquia casuale."
+        }
+      ]
     },
     "SAPPHIRE_SEED": {
-      "name": "Seme zaffiro"
+      "description": "C'è mancato poco che calpestassi un... seme luminoso e affilato? Il suo colore inconfondibile non lascia dubbi: è un seme di zaffiro! Ma questi semi incredibili non erano ormai estinti?\n\nLe leggende narrano che mangiarne uno possa aumentare notevolmente la resistenza, ma cosa succederebbe se lo piantassi e lo coltivassi?",
+      "name": "Seme zaffiro",
+      "choices": [
+        {
+          "name": "Ingerisci il seme",
+          "description": "Recuperi 9 PV. Potenzi una carta nel tuo mazzo."
+        },
+        {
+          "name": "Pianta e coltiva il seme",
+          "description": "Incanti una carta con Semina."
+        }
+      ]
     },
     "SELF_HELP_BOOK": {
-      "name": "Libro di auto-aiuto"
+      "description": "Sul pavimento giace un libro,\n\"I 3 modi migliori per conquistare la Guglia\"\n\nIl libro è ricoperto di sangue, quindi ritieni che questo manoscritto sia altamente sospetto.\n\nLo leggerai?",
+      "name": "Libro di auto-aiuto",
+      "choices": [
+        {
+          "name": "Ignora il libro",
+          "description": "Non hai nessuna carta da incantare."
+        },
+        {
+          "name": "Leggi tutto il libro",
+          "description": "Scegli un carta Potere da incantare con 2 di Rapidità."
+        },
+        {
+          "name": "Leggi una pagina casuale",
+          "description": "Scegli una carta Abilità da incantare con 2 di Scioltezza."
+        },
+        {
+          "name": "Leggi il retro",
+          "description": "Scegli una carta Attacco da incantare con 2 di Affilatura."
+        }
+      ]
     },
     "SLIPPERY_BRIDGE": {
-      "name": "Ponte scivoloso"
+      "description": "Mentre attraversi un ponte di legno instabile, d'improvviso inizia a cadere una pioggia torrenziale. Forti raffiche di vento ti colpiscono, minacciando di porre fine al tuo viaggio.",
+      "name": "Ponte scivoloso",
+      "choices": [
+        {
+          "name": "Resisti",
+          "description": "Perdi {HpLoss} PV. La carta dell'opzione superiore viene generata in modo casuale."
+        },
+        {
+          "name": "Oltrepassa",
+          "description": "La seguente carta viene rimossa dal tuo mazzo: {RandomCard}."
+        }
+      ]
     },
     "SPIRALING_WHIRLPOOL": {
-      "name": "Vortice a spirale"
+      "description": "Ti imbatti in un immenso vortice a spirale. L'acqua turbina con meravigliosa precisione e le pareti circostanti sono decorate con motivi a spirale.\n\nGira, gira... gira...\ne gira ancora... Che spettacolo!\n\nCosa fai?",
+      "name": "Vortice a spirale",
+      "choices": [
+        {
+          "name": "Bevi",
+          "description": "Recuperi 0 PV."
+        },
+        {
+          "name": "Osserva",
+          "description": "Incanti una carta Colpo o una carta Difendi con Spirale."
+        },
+        {
+          "name": "Immergi il braccio",
+          "description": "Ottieni una reliquia casuale. Aggiungi la carta Convulsioni al tuo mazzo."
+        }
+      ]
     },
     "SPIRIT_GRAFTER": {
-      "name": "Spirito innestatore"
+      "description": "Sopra la tua testa giace un bozzolo pronto a schiudersi che trema e si contorce!\n\nSmette di contorcersi... Il bozzolo inizia a brillare! Cosa sta succedendo?\nDopo un bagliore di luce e fiamme, uno spirito innestatore si avventa su di te, minacciando di fondersi con il tuo corpo per diventare completo.",
+      "name": "Spirito innestatore",
+      "choices": [
+        {
+          "name": "Non opporre resistenza",
+          "description": "Recuperi 25 PV. Aggiungi la carta Metamorfosi al tuo mazzo."
+        },
+        {
+          "name": "Rifiuta",
+          "description": "Perdi 9 PV. Rimuovi una carta dal tuo mazzo."
+        }
+      ]
     },
     "STONE_OF_ALL_TIME": {
-      "name": "Roccia onnitemporale"
+      "description": "Un'enorme roccia giace al centro di un cortile abbandonato.\n\nTrovi una placca con la seguente iscrizione:\nroccia onnitemporale.\n\nLa sua presenza, la sua forma e le sue decorazioni indicano che questo cortile è stato costruito intorno a questa roccia e che non si è mai mossa da questa posizione.",
+      "name": "Roccia onnitemporale",
+      "choices": [
+        {
+          "name": "Bevi e solleva",
+          "description": "Perdi {DrinkRandomPotion}. Ottieni i seguenti PV massimi: 10."
+        },
+        {
+          "name": "Spingi",
+          "description": "Perdi 6 PV. Incanti una carta Attacco con 8 di Vigorosità."
+        }
+      ]
     },
     "SUNKEN_STATUE": {
-      "name": "La statua sommersa"
+      "description": "Vedi una statua antica semisommersa in uno stagno; le sue mani sono appoggiate delicatamente su una spada di pietra.\n\nC'è anche qualcosa che luccica sul fondo dello stagno.\nSaranno delle offerte votive?\n\nEffettivamente un po' di denaro ti farebbero comodo...",
+      "name": "La statua sommersa",
+      "choices": [
+        {
+          "name": "Immergiti in acqua",
+          "description": "Ottieni 111 unità d'oro. Perdi 7 PV."
+        },
+        {
+          "name": "Prendi la spada",
+          "description": "Ottieni la seguente reliquia: Spada di Pietra."
+        }
+      ]
     },
     "SUNKEN_TREASURY": {
-      "name": "Tesoro sommerso"
+      "description": "Un sentiero ti conduce in una cripta parzialmente sommersa.\nCi sono 2 forzieri ma hai solo 1 chiave fragile.\n\nPrimo forziere: scuotendolo, senti dei tintinnii. Ci sarà un po' d'oro.\nSecondo forziere: è enorme, decorato e chiaramente maledetto. Ci sarà oro a palate!",
+      "name": "Tesoro sommerso",
+      "choices": [
+        {
+          "name": "Primo forziere",
+          "description": "Ottieni 60 unità d'oro."
+        },
+        {
+          "name": "Secondo forziere",
+          "description": "Ottieni 333 unità d'oro. Ricevi la carta Avidità."
+        }
+      ]
+    },
+    "SYMBIOTE": {
+      "description": "Nel coso dei tuoi viaggi, ti imbatti in un polipo scuro e amorfo. Intuisci che è molto antico e malvagio.\n\nAvvicinati...",
+      "choices": [
+        {
+          "name": "Avvicinati",
+          "description": "Incanti una carta Attacco con Corruzione."
+        },
+        {
+          "name": "Uccidi con il fuoco",
+          "description": "Scegli una carta da trasformare."
+        }
+      ]
     },
     "DARV": {
       "description": "L'Accumulatore",

@@ -73,13 +73,32 @@ function buildLang(gameLang) {
   const events = JSON.parse(fs.readFileSync(path.join(dir, 'events.json'), 'utf8'));
   for (const [key, value] of Object.entries(events)) {
     const m = key.match(/^([A-Z0-9_]+)\.(title|description|choice\d+|choice\d+_locked|choice\d+_description)$/);
-    if (!m) continue;
-    const [, id, field] = m;
-    if (!result.events[id]) result.events[id] = {};
-    if (field === 'title') {
-      result.events[id].name = cleanMarkup(value);
-    } else {
-      result.events[id][field] = cleanMarkup(value);
+    if (m) {
+      const [, id, field] = m;
+      if (!result.events[id]) result.events[id] = {};
+      if (field === 'title') {
+        result.events[id].name = cleanMarkup(value);
+      } else {
+        result.events[id][field] = cleanMarkup(value);
+      }
+      continue;
+    }
+    // Use INITIAL page description as the event description (localized intro text)
+    const mInitial = key.match(/^([A-Z0-9_]+)\.pages\.INITIAL\.description$/);
+    if (mInitial) {
+      const id = mInitial[1];
+      if (!result.events[id]) result.events[id] = {};
+      result.events[id].description = cleanMarkup(value);
+      continue;
+    }
+    // Extract INITIAL page options (choice name + description)
+    const mOpt = key.match(/^([A-Z0-9_]+)\.pages\.INITIAL\.options\.([A-Z0-9_]+)\.(title|description)$/);
+    if (mOpt) {
+      const [, id, optId, field] = mOpt;
+      if (!result.events[id]) result.events[id] = {};
+      if (!result.events[id]._options) result.events[id]._options = {};
+      if (!result.events[id]._options[optId]) result.events[id]._options[optId] = {};
+      result.events[id]._options[optId][field === 'title' ? 'name' : 'description'] = cleanMarkup(value);
     }
   }
 
@@ -178,11 +197,45 @@ function main() {
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
   updateEnglishCharacters();
 
+  // Load English event option mapping (option ID → English title) for choice matching
+  const engEvents = JSON.parse(fs.readFileSync(path.join(LOC_DIR, 'eng', 'events.json'), 'utf8'));
+  const engOptionMap = {}; // eventId → { optionId: englishTitle }
+  for (const [key, value] of Object.entries(engEvents)) {
+    const m = key.match(/^([A-Z0-9_]+)\.pages\.INITIAL\.options\.([A-Z0-9_]+)\.title$/);
+    if (m) {
+      const [, id, optId] = m;
+      if (!engOptionMap[id]) engOptionMap[id] = {};
+      engOptionMap[id][optId] = cleanMarkup(value);
+    }
+  }
+  // Also load base events to get choice order
+  const baseEvents = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'events.json'), 'utf8'));
+  const baseEventMap = {};
+  for (const ev of baseEvents) baseEventMap[ev.id] = ev;
+
   for (const [gameLang, isoLang] of Object.entries(LANG_MAP)) {
     if (gameLang === 'eng') continue;
     const dir = path.join(LOC_DIR, gameLang);
     if (fs.existsSync(dir)) {
       const data = buildLang(gameLang);
+
+      // Convert _options to choices array matching base event choice order
+      for (const [eventId, evt] of Object.entries(data.events)) {
+        if (!evt._options) continue;
+        const baseEvt = baseEventMap[eventId];
+        const engOpts = engOptionMap[eventId] || {};
+        if (baseEvt?.choices) {
+          evt.choices = baseEvt.choices.map(choice => {
+            // Find the option ID whose English title matches this choice's name
+            const optId = Object.entries(engOpts).find(([, title]) => title === choice.name)?.[0];
+            const locOpt = optId ? evt._options[optId] : null;
+            if (!locOpt) return null;
+            return { name: locOpt.name || null, description: locOpt.description || null };
+          });
+        }
+        delete evt._options;
+      }
+
       fs.writeFileSync(path.join(OUTPUT_DIR, `${isoLang}.json`), JSON.stringify(data, null, 2));
       const counts = Object.entries(data).map(([k, v]) => `${k}:${Object.keys(v).length}`).join(', ');
       console.log(`${isoLang} (${gameLang}): ${counts}`);
