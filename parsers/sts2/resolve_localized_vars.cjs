@@ -234,8 +234,10 @@ function resolveTokens(desc, vars, fullStr) {
       i = end; continue;
     }
     if (rest === 'starIcons()') {
-      if (tag in vars) result.push(vars[tag] + ' Stars');
-      else result.push('{' + inner + '}');
+      if (tag in vars) {
+        const n = parseInt(vars[tag]);
+        result.push(n === 1 ? '[S]' : `${n}[S]`);
+      } else result.push('{' + inner + '}');
       i = end; continue;
     }
     if (tag === 'energyPrefix' && rest.startsWith('energyIcons(')) {
