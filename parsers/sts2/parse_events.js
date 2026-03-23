@@ -529,6 +529,12 @@ function applyManualFixes(events, relicsData = []) {
       event.choices[0].description = 'Heal like resting at a Rest Site. Fight some enemies.';
     }
 
+    // SPIRALING_WHIRLPOOL: Drink heals 33% of Max HP (CalculateVars overrides the 0 canonical var)
+    if (event.id === 'SPIRALING_WHIRLPOOL') {
+      const drink = event.choices?.find(c => c.name === 'Drink');
+      if (drink) drink.description = 'Heal 33% of Max HP.';
+    }
+
     // THE_FUTURE_OF_POTIONS: dynamic choices based on held potions (up to 3).
     // The game uses a single localization template instantiated per potion at runtime.
     // Requires ≥2 potions to appear.
