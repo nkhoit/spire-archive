@@ -180,7 +180,7 @@ function getPoolLabel(name: string, locale: string) {
         <section class="mt-4">
           <div class="relative">
             {pages.map((page: any, i: number) => (
-              <div class="relative pl-6 pb-6">
+              <div class="relative pl-8 pb-6">
                 {i < pages.length - 1 && <div class="absolute left-[11px] top-6 bottom-0 w-px bg-white/15" />}
                 <div class="absolute left-0 top-1 w-[23px] h-[23px] rounded-full border-2 border-amber-500/50 bg-slate-900 flex items-center justify-center"><span class="text-[10px] font-bold text-amber-300">{i + 1}</span></div>
                 <h3 class="font-game text-sm font-semibold text-slate-200 mb-1">{page.label}</h3>
