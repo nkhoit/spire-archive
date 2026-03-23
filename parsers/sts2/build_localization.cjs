@@ -83,16 +83,25 @@ function buildLang(gameLang) {
     }
   }
 
-  // Ancients (NPC events like Darv, Neow, etc. — names stored in ancients.json)
+  // Ancients (NPC events like Darv, Neow, etc. — names and epithets in ancients.json)
   const ancientsPath = path.join(dir, 'ancients.json');
   if (fs.existsSync(ancientsPath)) {
     const ancients = JSON.parse(fs.readFileSync(ancientsPath, 'utf8'));
     for (const [key, value] of Object.entries(ancients)) {
-      const m = key.match(/^([A-Z0-9_]+)\.title$/);
-      if (!m) continue;
-      const id = m[1];
-      if (!result.events[id]) result.events[id] = {};
-      result.events[id].name = cleanMarkup(value);
+      const mTitle = key.match(/^([A-Z0-9_]+)\.title$/);
+      if (mTitle) {
+        const id = mTitle[1];
+        if (!result.events[id]) result.events[id] = {};
+        result.events[id].name = cleanMarkup(value);
+        continue;
+      }
+      const mEpithet = key.match(/^([A-Z0-9_]+)\.epithet$/);
+      if (mEpithet) {
+        const id = mEpithet[1];
+        if (!result.events[id]) result.events[id] = {};
+        result.events[id].description = cleanMarkup(value);
+        result.events[id].epithet = cleanMarkup(value);
+      }
     }
   }
 
