@@ -315,7 +315,7 @@
     "id": "DARV",
     "name": "Darv",
     "act": "unknown",
-    "description": "Darv, the Hoarder, digs through a heap of powerful relics and presents a rotating stash. You are shown Dusty Tome plus three random relics drawn from the main pool and act-specific sets, with some options only appearing when their conditions are met.",
+    "description": "The Hoarder",
     "choices": [],
     "type": "ancient",
     "relic_pools": [
@@ -414,7 +414,109 @@
         "name": "Velvet Choker"
       }
     ],
-    "epithet": "The Hoarder"
+    "epithet": "The Hoarder",
+    "dialogue": [
+      {
+        "character": "ANY",
+        "text": "Here, take one of these forgotten gems with ya!"
+      },
+      {
+        "character": "ANY",
+        "text": "I’ve got things to do today! Take whatever ya want from that pile!!"
+      },
+      {
+        "character": "DEFECT",
+        "text": "You’re a beautiful hunk of junk, you know that?"
+      },
+      {
+        "character": "DEFECT",
+        "text": "Still keeping at it, I see... Let’s see if we can upgrade ya!"
+      },
+      {
+        "character": "DEFECT",
+        "text": "I’ve been holding on to your friend’s uhh... um. Nevermind nevermind!!"
+      },
+      {
+        "character": "DEFECT",
+        "text": "My scrappy scrapper, forget I said all that!"
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "The flaming warrior has returned! I’ve got just the thing for ya!"
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "Good to see ya still kickin’ and bashin’ em heads in!"
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "I’m still holding on to that heavy blade of yours... but I can’t find no one to restore it."
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "Maybe the Architect knows somethin’."
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "I can tell you’re a serious one. What can I do for ya missy?"
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "Very well then... have a gander!"
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "Still on that warpath? I ain’t gonna stop ya!"
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "This book seems tied to ya, been around longer than you have."
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "Scary things have a way of ending up in my collection."
+      },
+      {
+        "character": "REGENT",
+        "text": "What brings the likes of you up here? Wanna take a look at my collection?"
+      },
+      {
+        "character": "REGENT",
+        "text": "Yeah!"
+      },
+      {
+        "character": "REGENT",
+        "text": "Back for more your highness?!"
+      },
+      {
+        "character": "REGENT",
+        "text": "To my new friend, do I have somethin’ for ya!"
+      },
+      {
+        "character": "REGENT",
+        "text": "I’d give it but the Architect nabbed it from me!! Help a buddy out! Do me a favor will ya?"
+      },
+      {
+        "character": "SILENT",
+        "text": "Back in the Spire for you too huh? Can’t resist those shinies right?!"
+      },
+      {
+        "character": "SILENT",
+        "text": "I’ll trade ya somethin’ nice for that trophy you got there!"
+      },
+      {
+        "character": "SILENT",
+        "text": "Pity ya don’t remember all my generosity! Yeah yeah, you know how Neow is..."
+      },
+      {
+        "character": "SILENT",
+        "text": "Well! Let’s get you equipped for that final showdown or whatevah!"
+      },
+      {
+        "character": "firstVisitEver",
+        "text": "...where did I put... Oh! Come to see my collection!? Take anything from that pile over there, put it to good use!"
+      }
+    ]
   },
   {
     "id": "DENSE_VEGETATION",
@@ -782,7 +884,7 @@
     "id": "NEOW",
     "name": "Neow",
     "act": "unknown",
-    "description": "Neow, the Mother of Resurrection, awaits at the start of each run. She offers three blessings — two positive and one cursed. The options are drawn randomly from the pools below.",
+    "description": "Mother of Resurrection (Exiled)",
     "choices": [
       {
         "name": "Arcane Scroll",
@@ -906,13 +1008,119 @@
       }
     ],
     "type": "ancient",
-    "epithet": "Mother of Resurrection (Exiled)"
+    "epithet": "Mother of Resurrection (Exiled)",
+    "dialogue": [
+      {
+        "character": "ANY",
+        "text": "...hello... ..again....."
+      },
+      {
+        "character": "ANY",
+        "text": "...awaken... ..Awaken....."
+      },
+      {
+        "character": "ANY",
+        "text": "..receive.... this.... ..blessing.. ...go......"
+      },
+      {
+        "character": "ANY",
+        "text": "..I’ve... ..brought... ..you back..."
+      },
+      {
+        "character": "ANY",
+        "text": "...kill.. the... ARCHITECT"
+      },
+      {
+        "character": "DEFECT",
+        "text": "...construct.. what... ....have you.. become...?"
+      },
+      {
+        "character": "DEFECT",
+        "text": "...he.. can... ....fix.. you.. ...everything...."
+      },
+      {
+        "character": "DEFECT",
+        "text": "...I.. can’t... ..make... ...you.. forget...."
+      },
+      {
+        "character": "DEFECT",
+        "text": "...good...."
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "..arise.. my.. warrior... ..time... to fight...again..."
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "..still.. lost.. to rage... good..."
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "..remember.. the.. first..time ...you ..came...before me.."
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "..so..furious..."
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "...so..useful..."
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "...we.... share... ..the same... ..goal...."
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "...my power..... is yours..."
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "He... still.. ....breathes..."
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "... Architect.... ..weakening.... ..we.... stronger..."
+      },
+      {
+        "character": "REGENT",
+        "text": "..cute... ...you... will see.. ..me... ...again...."
+      },
+      {
+        "character": "REGENT",
+        "text": "...again..?"
+      },
+      {
+        "character": "REGENT",
+        "text": "...receive.. this... ..blessing..."
+      },
+      {
+        "character": "SILENT",
+        "text": "...returned.. from... outside? ..knew... you’d... be back..."
+      },
+      {
+        "character": "SILENT",
+        "text": "...your..  ...trophy.. awaits..."
+      },
+      {
+        "character": "SILENT",
+        "text": "..both...know..agony..of..family..."
+      },
+      {
+        "character": "SILENT",
+        "text": "..still...seeking..approval...? ...FOOLISH..."
+      },
+      {
+        "character": "firstVisitEver",
+        "text": "I’ve... remade you.... ...go... ..up....."
+      }
+    ]
   },
   {
     "id": "NONUPEIPE",
     "name": "Nonupeipe",
     "act": "unknown",
-    "description": "Nonupeipe, Serendipity Incarnate, surrounds you with a glittering collection of lucky treasures. Each visit offers three random relics from the main pool, with Beautiful Bracelet appearing only when its special condition is met.",
+    "description": "Serendipity Incarnate",
     "choices": [],
     "type": "ancient",
     "relic_pools": [
@@ -932,13 +1140,95 @@
         ]
       }
     ],
-    "epithet": "Serendipity Incarnate"
+    "epithet": "Serendipity Incarnate",
+    "dialogue": [
+      {
+        "character": "ANY",
+        "text": "Madness awaits at the top. Don my power and vanquish."
+      },
+      {
+        "character": "ANY",
+        "text": "You’ve traveled so far to reach me! Come closer, receive my blessing."
+      },
+      {
+        "character": "DEFECT",
+        "text": "Could a construct truly be worthy of my blessings? Come forward, Defect. You will be the most beautiful of all automata."
+      },
+      {
+        "character": "DEFECT",
+        "text": "My poor, battered machine, let me refine you."
+      },
+      {
+        "character": "DEFECT",
+        "text": "I usually don’t like the Architect’s things, but I admit you’re growing on me."
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "Ah, the Ironclad finally arrives before me. Come forth and I shall endow you with my power."
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "Ironclad ironclad... was my previous gift not enough?"
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "You return again my champion? How many times? Were you not strong enough to wipe out entire clans before?"
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "I appreciate someone capable and shall grant a measure of my power. Next time, don’t kill my guards."
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "A mage needs fine accouterments for battle. Come forth, Necrobinder."
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "The Architect won’t be pleased to see that pet of yours."
+      },
+      {
+        "character": "REGENT",
+        "text": "Such beautiful robes you’ve brought from faraway lands! Have your minions bring you closer and I will bless thee."
+      },
+      {
+        "character": "REGENT",
+        "text": "Royal blessings for royal visitors. Servants! Fetch some tea for us."
+      },
+      {
+        "character": "REGENT",
+        "text": "The Architect has gone mad! If only a noble champion could save us from this plight..."
+      },
+      {
+        "character": "SILENT",
+        "text": "A little thief has snuck into my domain? Don’t think I can’t see you? Come on out!"
+      },
+      {
+        "character": "SILENT",
+        "text": "A huntress, what beckons your return to the Spire? Approach and don these blessings."
+      },
+      {
+        "character": "SILENT",
+        "text": "I have prepared gifts for you, assassin, don’t be shy."
+      },
+      {
+        "character": "SILENT",
+        "text": "Of all of her puppets, you surprise me most."
+      },
+      {
+        "character": "SILENT",
+        "text": "What took your first life? Did Neow find you? A shame you don’t speak."
+      },
+      {
+        "character": "firstVisitEver",
+        "text": "I haven’t had a visitor in a millennia! You’re looking quite drab, here, let’s find something delightful for you to wear."
+      }
+    ]
   },
   {
     "id": "OROBAS",
     "name": "Orobas",
     "act": "unknown",
-    "description": "Orobas, the Living Rainbow, spreads a spectrum of relics across three distinct pools. Each encounter offers one relic from each pool, with Prismatic Gem joining the selection for characters who can channel Orbs.",
+    "description": "Living Rainbow",
     "choices": [],
     "type": "ancient",
     "relic_pools": [
@@ -985,13 +1275,103 @@
         "name": "Archaic Tooth"
       }
     ],
-    "epithet": "Living Rainbow"
+    "epithet": "Living Rainbow",
+    "dialogue": [
+      {
+        "character": "ANY",
+        "text": "Try this!!!"
+      },
+      {
+        "character": "ANY",
+        "text": "Very good finds!! Look look!"
+      },
+      {
+        "character": "DEFECT",
+        "text": "What! Servant construct?! Still working!! Why here? Why not at Factory??"
+      },
+      {
+        "character": "DEFECT",
+        "text": "Shiny orbs! How work? Ouch!!"
+      },
+      {
+        "character": "DEFECT",
+        "text": "Core broken? Neow use broken construct? Manipulated?"
+      },
+      {
+        "character": "DEFECT",
+        "text": "Architect fix you?"
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "An Ironclad!? How possible?? Scary. Very scary!!"
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "Contract signer? Why!? Bad choice? Yes. Mistake!"
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "Wishing you freedom!! Wishing hard! Vakuu bad. Very bad! Architect free you?"
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "Dead?! Not dead! Why puppet? Big hand!!"
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "Killing bad!! Take this instead!"
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "Not dead one! Good gifts for you!! Violence bad."
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "No violence! Collect shiny instead... Shiny!!"
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "Architect not bad! Maybe talk? Talking good!! Very good!"
+      },
+      {
+        "character": "REGENT",
+        "text": "Traveller! From space!? Where in space? How from space? Pointy head! Little friends!!"
+      },
+      {
+        "character": "REGENT",
+        "text": "Exciting! Impressive!! More! More!!!"
+      },
+      {
+        "character": "REGENT",
+        "text": "More stories! Found these for you! Now tell more story!!"
+      },
+      {
+        "character": "REGENT",
+        "text": "Stories?!"
+      },
+      {
+        "character": "SILENT",
+        "text": "Infection...? BLIGHT!? Take and go!!"
+      },
+      {
+        "character": "SILENT",
+        "text": "Not contagious? Very dying? Architect help you?"
+      },
+      {
+        "character": "SILENT",
+        "text": "Where sisters? Scary mean sisters! Be good person! Don’t be like sisters!!"
+      },
+      {
+        "character": "firstVisitEver",
+        "text": "Puppet puppet!! All the way up here?! Take these, take take!"
+      }
+    ]
   },
   {
     "id": "PAEL",
     "name": "Pael",
     "act": "unknown",
-    "description": "Pael, the Melting Dragon, offers three relic choices drawn from twisting pools of flesh, wing, and eye. Each visit presents one relic from Pool 1, one from Pool 2, and one from Pool 3, with extra options appearing when your deck or companions meet Pael's peculiar conditions.",
+    "description": "Melting Dragon",
     "choices": [],
     "type": "ancient",
     "relic_pools": [
@@ -1021,7 +1401,89 @@
         ]
       }
     ],
-    "epithet": "Melting Dragon"
+    "epithet": "Melting Dragon",
+    "dialogue": [
+      {
+        "character": "ANY",
+        "text": "Welcome back friend. Let my flesh help you..."
+      },
+      {
+        "character": "ANY",
+        "text": "Pael is sleeping. His snoring shakes the room."
+      },
+      {
+        "character": "DEFECT",
+        "text": "Troubled automaton, looking for your friend? Let me help..."
+      },
+      {
+        "character": "DEFECT",
+        "text": "Do constructs dream? Watch and copy me..."
+      },
+      {
+        "character": "DEFECT",
+        "text": "I dreamt of your friend... Father can restore Flaw..."
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "You contain such rage. Take from me and find some peace..."
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "Do you remember how it feels to dream? It is good to sleep..."
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "You must quell your flames. Father can free you..."
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "Such malice paints your heart."
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "There is no peace on your path. Take a part of me to ease your burdens..."
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "The one with the Hand returns. Painful memories. Take my strength and leave..."
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "Killing Father won’t bring peace."
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "We do not choose our family..."
+      },
+      {
+        "character": "REGENT",
+        "text": "Quiet down now. Take a part of me and be on your way..."
+      },
+      {
+        "character": "REGENT",
+        "text": "Why not give when I have an abundance of flesh?"
+      },
+      {
+        "character": "REGENT",
+        "text": "When you return, I will be replenished anew. That’s what sleep does..."
+      },
+      {
+        "character": "SILENT",
+        "text": "Murderous creature, no need for violence here. Have part of me and find peace..."
+      },
+      {
+        "character": "SILENT",
+        "text": "Trophy hunting? Sure, take a part of me... Whatever grants you comfort..."
+      },
+      {
+        "character": "SILENT",
+        "text": "You’ve poisoned me...? What is this going to...? zZZzz..."
+      },
+      {
+        "character": "firstVisitEver",
+        "text": "A puppet has arrived? Can you check on Father? I’m too tired..."
+      }
+    ]
   },
   {
     "id": "POTION_COURIER",
@@ -1432,7 +1894,7 @@
     "id": "TANX",
     "name": "Tanx",
     "act": "unknown",
-    "description": "Tanx, the Khimera King, arms you from a brutal cache of weapons. Each meeting offers three random relics from Tanx's arsenal, with Tri-Boomerang added when you already carry enough weapons to impress the king.",
+    "description": "Khimera King",
     "choices": [],
     "type": "ancient",
     "relic_pools": [
@@ -1452,7 +1914,109 @@
         ]
       }
     ],
-    "epithet": "Khimera King"
+    "epithet": "Khimera King",
+    "dialogue": [
+      {
+        "character": "ANY",
+        "text": "GROW STRONGER SO WE CAN FIGHT!!!"
+      },
+      {
+        "character": "ANY",
+        "text": "YOU CAN NEVER HAVE TOO MANY WEAPONS!!"
+      },
+      {
+        "character": "DEFECT",
+        "text": "CONSTRUCT! NO WEAPONS!? HAVE THIS!"
+      },
+      {
+        "character": "DEFECT",
+        "text": "ORBS ARE NOT WEAPONS!!"
+      },
+      {
+        "character": "DEFECT",
+        "text": "FIGHT ME, DEFECT!!"
+      },
+      {
+        "character": "DEFECT",
+        "text": "ORBS ARE WEAPONS!?"
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "IMPRESSIVE SWORD, WARRIOR! YOU CAN USE MORE WEAPONS!"
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "WEAPONS FOR THE WARRIOR! GRAB A WEAPON! LET’S FIGHT!"
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "FIGHT ME, IRONCLAD!!"
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "YEEES!! MIGHTY FIGHT, TAKE WEAPON!"
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "WHAT A MIGHTY SCYTHE!"
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "DOES THE HAND NEED A WEAPON!?"
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "FIGHT ME, OSTY!!"
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "FIGHT ME, NECROBINDER!!"
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "MIGHTY TEAMWORK!! HAVE A WEAPON!"
+      },
+      {
+        "character": "REGENT",
+        "text": "ORANGE!? HOW IS THIS BEING ORANGE!??"
+      },
+      {
+        "character": "REGENT",
+        "text": "INCREDIBLE! SO MIGHTY!!"
+      },
+      {
+        "character": "REGENT",
+        "text": "ORANGE ONE!! CHOOSE A MIGHTY WEAPON!"
+      },
+      {
+        "character": "REGENT",
+        "text": "FIGHT ME, REGENT!!"
+      },
+      {
+        "character": "REGENT",
+        "text": "FIGHT ME AGAIN!!"
+      },
+      {
+        "character": "SILENT",
+        "text": "A HUNTRESS! I WILL SHARPEN YOUR CLAW!!"
+      },
+      {
+        "character": "SILENT",
+        "text": "WHY DAGGERS!! UNMIGHTY!"
+      },
+      {
+        "character": "SILENT",
+        "text": "FIGHT ME, SILENT!!"
+      },
+      {
+        "character": "SILENT",
+        "text": "WHERE DID YOU GO!!!"
+      },
+      {
+        "character": "firstVisitEver",
+        "text": "SO WEAK! BUT YOU HAVE POTENTIAL! USE THIS WEAPON!!"
+      }
+    ]
   },
   {
     "id": "TEA_MASTER",
@@ -1501,7 +2065,7 @@
     "id": "TEZCATARA",
     "name": "Tezcatara",
     "act": "unknown",
-    "description": "Tezcatara, It Which Feeds the Fire, sets out gifts in three carefully prepared pools. Each encounter offers one relic from each pool, ranging from comforting treats to strange keepsakes and treasured curios.",
+    "description": "It Which Feeds the Fire",
     "choices": [],
     "type": "ancient",
     "relic_pools": [
@@ -1531,7 +2095,109 @@
         ]
       }
     ],
-    "epithet": "It Which Feeds the Fire"
+    "epithet": "It Which Feeds the Fire",
+    "dialogue": [
+      {
+        "character": "ANY",
+        "text": "Welcome back, sweetie. Let me burn away your flaws."
+      },
+      {
+        "character": "ANY",
+        "text": "Do come in, dear! What can Tezcatara do for you today?"
+      },
+      {
+        "character": "DEFECT",
+        "text": "Not here to annoy me? What an unusual little construct..."
+      },
+      {
+        "character": "DEFECT",
+        "text": "Now how silly would it be if he were unmade by one of his own?"
+      },
+      {
+        "character": "DEFECT",
+        "text": "Are you sure you want to be fixed up?"
+      },
+      {
+        "character": "DEFECT",
+        "text": "Well, if you’re really certain."
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "You burn so pretty! Come in, come in!"
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "Such a strong boy you are! Come and eat something. Can’t slaughter on an empty stomach!"
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "Ohh, Architect still alive? Kill him quickly would you? I’ll be waiting right here!"
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "Now what’s a skeleton doing inside these walls?"
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "Wonderful!"
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "Come in, come in! Let’s make your flames burn brighter."
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "Those flames around you remind me of something forbidden."
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "I know who wrote that book."
+      },
+      {
+        "character": "REGENT",
+        "text": "Oh my, what an exotic visitor! Who might you be, sweetie?"
+      },
+      {
+        "character": "REGENT",
+        "text": "Where are my manners? Tezcatara cackles with delight."
+      },
+      {
+        "character": "REGENT",
+        "text": "You and your friends are back again? I’ve made treats for you!"
+      },
+      {
+        "character": "REGENT",
+        "text": "Welcome back regal boy! Looks like you’re doing great out there."
+      },
+      {
+        "character": "REGENT",
+        "text": "We all need to learn from our mistakes."
+      },
+      {
+        "character": "SILENT",
+        "text": "Come closer, quiet one. I can’t see well..."
+      },
+      {
+        "character": "SILENT",
+        "text": "You can trust me."
+      },
+      {
+        "character": "SILENT",
+        "text": "Such a nasty sickness you have. Let’s take care of you."
+      },
+      {
+        "character": "SILENT",
+        "text": "I’ve met your sisters, you know? Such lovely girls they are."
+      },
+      {
+        "character": "SILENT",
+        "text": "Oh dear... you haven’t been fighting have you?"
+      },
+      {
+        "character": "firstVisitEver",
+        "text": "Oh, a visitor! Do come in, dear! What can Tezcatara do for you?"
+      }
+    ]
   },
   {
     "id": "THE_ARCHITECT",
@@ -1539,7 +2205,97 @@
     "act": "unknown",
     "description": "The Architect awaits at the end of each successful run. The encounter plays out as a dialogue with character-specific lines, culminating in a final confrontation.",
     "choices": [],
-    "type": "ancient"
+    "type": "ancient",
+    "dialogue": [
+      {
+        "character": "DEFECT",
+        "text": "What are you doing here?"
+      },
+      {
+        "character": "DEFECT",
+        "text": "Repair you? Make me."
+      },
+      {
+        "character": "DEFECT",
+        "text": "You’re back? Didn’t I dismantle you?"
+      },
+      {
+        "character": "DEFECT",
+        "text": "Fix you? Fix your friend? Ridiculous."
+      },
+      {
+        "character": "DEFECT",
+        "text": "How do you keep coming back? Is this Neow’s doing?"
+      },
+      {
+        "character": "DEFECT",
+        "text": "Foolish"
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "So the arch demon’s thrall has arrived?"
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "Cursed to fight forever, aren’t you?"
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "Do you even know your name?"
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "I pity you."
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "Return to the bottom, Ironclad."
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "Vengeance is it? No thank you."
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "You cannot change the past with anger."
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "I did what I must to maintain order."
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "Life"
+      },
+      {
+        "character": "REGENT",
+        "text": "I need quiet..."
+      },
+      {
+        "character": "REGENT",
+        "text": "The loud fool returns?"
+      },
+      {
+        "character": "REGENT",
+        "text": "Something we can both agree on."
+      },
+      {
+        "character": "SILENT",
+        "text": "Not even an introduction?"
+      },
+      {
+        "character": "SILENT",
+        "text": "Where did you come from? What are you after?"
+      },
+      {
+        "character": "SILENT",
+        "text": "Hrrgh! DIE!!"
+      },
+      {
+        "character": "SILENT",
+        "text": "Annoying wretch! BE GONE!!"
+      }
+    ]
   },
   {
     "id": "THE_FUTURE_OF_POTIONS",
@@ -1860,7 +2616,7 @@
     "id": "VAKUU",
     "name": "Vakuu",
     "act": "unknown",
-    "description": "Vakuu, the First Demon, tempts you with relics sorted into three ominous pools. Each encounter offers one relic from each pool, mixing bloody bargains, preserved trophies, and elegant demonic finery.",
+    "description": "The First Demon",
     "choices": [],
     "type": "ancient",
     "relic_pools": [
@@ -1890,7 +2646,117 @@
         ]
       }
     ],
-    "epithet": "The First Demon"
+    "epithet": "The First Demon",
+    "dialogue": [
+      {
+        "character": "ANY",
+        "text": "Seeking glory in the Spire are we? I have some propositions for you..."
+      },
+      {
+        "character": "ANY",
+        "text": "143. 143 times you’ve been here."
+      },
+      {
+        "character": "ANY",
+        "text": "You realize this never ends?"
+      },
+      {
+        "character": "DEFECT",
+        "text": "Broken one, let me perfect you."
+      },
+      {
+        "character": "DEFECT",
+        "text": "Do you find it strange that your fellow constructs want you dead?"
+      },
+      {
+        "character": "DEFECT",
+        "text": "If you bring me the Architect’s heart, I will restore your companion."
+      },
+      {
+        "character": "DEFECT",
+        "text": "What’s more important? Your creator or your friend?"
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "Imagine seeing you again after so long."
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "Exactly what you bargained for."
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "Do the lost tribes weigh on you...? Vakuu howls with laughter."
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "My puppet of puppets... why haven’t you killed the Architect yet?"
+      },
+      {
+        "character": "IRONCLAD",
+        "text": "Yawn I look forward to watching you fail."
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "We both seek vengeance. It will have a cost to pay."
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "I know where you got that Hand."
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "The Architect has gravely wounded us both."
+      },
+      {
+        "character": "NECROBINDER",
+        "text": "Straight to business. Very well..."
+      },
+      {
+        "character": "REGENT",
+        "text": "A being from the stars? Within these accursed walls?"
+      },
+      {
+        "character": "REGENT",
+        "text": "Yes, I think we can help each other."
+      },
+      {
+        "character": "REGENT",
+        "text": "More of my power can be yours for a small price."
+      },
+      {
+        "character": "REGENT",
+        "text": "You read the contracts thoroughly have you not? You have signed them with full intent and responsibility no?"
+      },
+      {
+        "character": "REGENT",
+        "text": "Are you not going to fulfill your end of the bargain? How about another contract? Isn’t that better?"
+      },
+      {
+        "character": "SILENT",
+        "text": "Killer."
+      },
+      {
+        "character": "SILENT",
+        "text": "This won’t end well for you."
+      },
+      {
+        "character": "SILENT",
+        "text": "Vakuu displays his various contracts to the Silent"
+      },
+      {
+        "character": "SILENT",
+        "text": "The Architect is not enough, kill your sisters too!"
+      },
+      {
+        "character": "SILENT",
+        "text": "No need for words, we are the same."
+      },
+      {
+        "character": "firstVisitEver",
+        "text": "Give yourself to me and you will be feared as much as I."
+      }
+    ]
   },
   {
     "id": "WAR_HISTORIAN_REPY",

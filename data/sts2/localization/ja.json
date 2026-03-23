@@ -5355,44 +5355,910 @@
     "DARV": {
       "description": "収集家",
       "epithet": "収集家",
+      "dialogue": [
+        {
+          "character": "ANY",
+          "text": "ほら、この忘れられた宝石を持っていきな！"
+        },
+        {
+          "character": "ANY",
+          "text": "今日は忙しいんでな。\nその山から好きなもんを持っていきな！！"
+        },
+        {
+          "character": "DEFECT",
+          "text": "お前さん、美しいガラクタの塊だな。 言ってる意味、分かるか？"
+        },
+        {
+          "character": "DEFECT",
+          "text": "まだ頑張ってんのか…… お前さんをアップグレードできるか見てみようぜ！"
+        },
+        {
+          "character": "DEFECT",
+          "text": "お前さんのダチの、えーっと…… うーん。\nいや、気にすんな！ なんでもねぇ！！"
+        },
+        {
+          "character": "DEFECT",
+          "text": "オレの可愛いガラクタちゃん、今言ったことは全部忘れな！"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "炎の戦士がお戻りだな！\nお前さんにぴったりのモンがあるぜ！"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "手あたり次第、頭をカチ割ってるらしいな。\n元気そうで何よりだ！"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "お前さんのあの重い剣、まだオレが預かってるぜ…… だが、修復できるヤツが誰一人見つからねぇんだ。"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "もしかしたら、アーキテクトが何か知ってるかもしれねぇな。"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "お嬢ちゃん、マジな顔してんな。 何かオレに手伝えることはあるかい？"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "そうかい…… なら、ちょっと見ていきな！"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "まだ復讐の道を歩んでるのか？ 俺は止めねぇけどよ！"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "この本はお嬢ちゃんと繋がってるみたいだな。お前さんが生まれる前からあったんだけどな。"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "恐ろしいモンってのは、なぜか俺のコレクションに集まるのさ。"
+        },
+        {
+          "character": "REGENT",
+          "text": "お前さんみたいなのが、こんな上まで何しに来たんだ？ 俺のコレクションを見ていくかい？"
+        },
+        {
+          "character": "REGENT",
+          "text": "いいねェ！"
+        },
+        {
+          "character": "REGENT",
+          "text": "また来たのかい、殿下！"
+        },
+        {
+          "character": "REGENT",
+          "text": "新しいダチに、ピッタリのモンを用意してるぜ！"
+        },
+        {
+          "character": "REGENT",
+          "text": "渡してやりたいんだが、アーキテクトの野郎にパクられちまったんだ！！\nダチを助けると思ってさ！ 頼みを聞いてくれねぇか？"
+        },
+        {
+          "character": "SILENT",
+          "text": "お前さんもスパイアに戻ってきたのかい？\n光り輝くモンには目がねえってか！？"
+        },
+        {
+          "character": "SILENT",
+          "text": "お前さんが持ってるその「狩りの証」、何かいいモンと交換してやろうか！"
+        },
+        {
+          "character": "SILENT",
+          "text": "オレ様の寛大さを覚えてねぇとは残念だぜ！\nまあ、ネオーのやり方は知ってるけどよ……"
+        },
+        {
+          "character": "SILENT",
+          "text": "最後の決戦か何からしいな。よし、お前さんの装備を整えてやろう！"
+        },
+        {
+          "character": "firstVisitEver",
+          "text": "…… どこに置いたっけな…… おお！オレのコレクションを見に来たのか！？\nあの山から好きなモンを持ってってくれ！きっと役に立つぜ！"
+        }
+      ],
       "name": "ダーヴ"
     },
     "NEOW": {
       "description": "復活の母（追放されし者）",
       "epithet": "復活の母（追放されし者）",
+      "dialogue": [
+        {
+          "character": "ANY",
+          "text": "…… また…… 会ったな…… "
+        },
+        {
+          "character": "ANY",
+          "text": "…… 目覚めよ……\n…… 目覚めるのだ………… "
+        },
+        {
+          "character": "ANY",
+          "text": "…… 受け取れ…… 祝福を……\n…… そして…… 行くのだ……… "
+        },
+        {
+          "character": "ANY",
+          "text": "…… 私が…… お前を…… 連れ戻した…… "
+        },
+        {
+          "character": "ANY",
+          "text": "…… 殺せ…… 奴を…… アーキテクトを…… "
+        },
+        {
+          "character": "DEFECT",
+          "text": "…… 造られし者よ…… お前は……\n…… 何になったと…… いうのだ……？ "
+        },
+        {
+          "character": "DEFECT",
+          "text": "…… 奴なら…… お前を……\n…… 直せる…… すべてを………… "
+        },
+        {
+          "character": "DEFECT",
+          "text": "…… 私は…… お前を……\n…… 忘れさせることは…… できぬ………… "
+        },
+        {
+          "character": "DEFECT",
+          "text": "…… よかろう………… "
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "…… 立ち上がれ…… 我が戦士よ……\n…… 再び…… 戦いの時…… "
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "…… まだ怒りに…… 飲まれているか…… 素晴らしい…… "
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "…… 覚えているか…… 初めて……\n…… 私の前に…… 現れた時のこと…… "
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "…… あんなにも…… 怒り狂っていて…… "
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "…… あんなにも…… 利用価値があった………… "
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "…… 私たちの…… 目的は…… 同じだ…… "
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "…… 私の力を…… お前に授けよう…… "
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "奴は…… まだ…… 息をしている………… "
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "…… アーキテクトは…… 弱っている……\n…… 私たちは…… 強くなっている…… "
+        },
+        {
+          "character": "REGENT",
+          "text": "…… 可愛らしいこと……\n…… お前とは…… また…… 会うことに…… なる…… "
+        },
+        {
+          "character": "REGENT",
+          "text": "…… まだやるか……？ "
+        },
+        {
+          "character": "REGENT",
+          "text": "…… 受け取れ…… この…… 祝福を…… "
+        },
+        {
+          "character": "SILENT",
+          "text": "……帰ってきたのだな…… 外から……\n…… 戻ってくると…… 分かっていた…… "
+        },
+        {
+          "character": "SILENT",
+          "text": "…… お前の……\n…… 「狩りの証」が…… 待っている…… "
+        },
+        {
+          "character": "SILENT",
+          "text": "…… 私たちは…… 知っている…… 家族による痛み…… "
+        },
+        {
+          "character": "SILENT",
+          "text": "…… まだ…… 認めてほしいと…… 思っているのか……？\n…… 愚かな…… "
+        },
+        {
+          "character": "firstVisitEver",
+          "text": "私が…… お前を…… “作り直した”……\n…… 行け…… 上へ………… "
+        }
+      ],
       "name": "ネオー"
     },
     "NONUPEIPE": {
       "description": "美と幸運の化身",
       "epithet": "美と幸運の化身",
+      "dialogue": [
+        {
+          "character": "ANY",
+          "text": "イカレ野郎が頂上で待っているわ。 あたしの力でやっちゃいなさい。"
+        },
+        {
+          "character": "ANY",
+          "text": "あたしに会うために、遠くからよく来たものね！\nもっとこっち来なよ、祝福あげちゃう。"
+        },
+        {
+          "character": "DEFECT",
+          "text": "造られた機械風情が、ホントにあたしの祝福に釣り合うのかなー？\n前においでよ、ディフェクト。 あんたをオートマトンの中で一番カワイくしてあげる。"
+        },
+        {
+          "character": "DEFECT",
+          "text": "かわいそう、ボロボロじゃん。 あたしがキレイにしてあげる。"
+        },
+        {
+          "character": "DEFECT",
+          "text": "普段はアーキテクトの物なんて好きじゃないんだけど。 あんたのこと、ちょっと気に入ってきたかも。"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "あ、アイアンクラッドじゃん。 やっとあたしのとこ来たんだ。\n前に出なよ、チカラを授けてあげる。"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "アイアンクラッド、アイアンクラッド…… 前のプレゼントじゃ足りなかった感じ？"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "また戻ってきたのね？ あたしの英雄さん。\nこれで何回目？ 前はもっと強かったじゃん？ 一族を丸ごと滅しちゃうぐらいに。"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "デキる子は嫌いじゃないわ。 あたしの力を分けてあげる。\n次は、あたしの衛兵を殺すのやめてよね。"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "魔術師にはバトるのに相応しい、上質なアクセが必要でしょ？ 前へ出なさい、ネクロバインダー。"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "あんたのそのペット、アーキテクトは嫌がりそう。"
+        },
+        {
+          "character": "REGENT",
+          "text": "すっごいキレイなローブじゃん！ 遠い国から来たって？\nミニオンたちに担がせて、もっとこっちに来なよ。 あんたを祝福してあげる。"
+        },
+        {
+          "character": "REGENT",
+          "text": "お偉いさんが来たなら、それなりの対応をしないとね。\n誰か！ お茶を持ってきて。"
+        },
+        {
+          "character": "REGENT",
+          "text": "アーキテクトってば、狂っちゃったワケ！ 誰か高貴なヒーロー様が、このピンチから救ってくれたりしないかなー……"
+        },
+        {
+          "character": "SILENT",
+          "text": "あたしの領域に、小さい泥棒さんが忍び込んだみたいね。\n隠れられるとでも思ってんの？ 出てきなよ！"
+        },
+        {
+          "character": "SILENT",
+          "text": "女狩人さん、何があんたをスパイアに呼び戻したのかしら？\nこっちに来て。 あたしの祝福をまといなさい。"
+        },
+        {
+          "character": "SILENT",
+          "text": "あんたのために贈り物を用意したわ、暗殺者さん。 恥ずかしがらないでよ。"
+        },
+        {
+          "character": "SILENT",
+          "text": "ネオーのオモチャの中でも、あんたが一番オドロキだわ。"
+        },
+        {
+          "character": "SILENT",
+          "text": "何があんたの最初の命を奪ったの？ ネオーがあんたを見つけたって？\nだんまりなんて、つまんないわね"
+        },
+        {
+          "character": "firstVisitEver",
+          "text": "お客さんなんて千年ぶりかしら！\n随分と地味な格好じゃん。 ほら、カワイイ服を着せてあげる。"
+        }
+      ],
       "name": "ノヌペイペ"
     },
     "OROBAS": {
       "description": "生きた虹",
       "epithet": "生きた虹",
+      "dialogue": [
+        {
+          "character": "ANY",
+          "text": "コレタメシテ！！"
+        },
+        {
+          "character": "ANY",
+          "text": "トテモイイモノ、ミツケタ！！ ミテミテ！"
+        },
+        {
+          "character": "DEFECT",
+          "text": "ナンダ！ オツカイノキカイ！？ マダウゴイテル！！\nナンデココ？ ナンデ、コウジョウジャナイ？？"
+        },
+        {
+          "character": "DEFECT",
+          "text": "ピカピカノオーブ！ ドウヤッテウゴク？\nイテッ！！ "
+        },
+        {
+          "character": "DEFECT",
+          "text": "コア、コワレテル？ ネオー、コワレタキカイ、ツカッテル？\nアヤツラレテル？"
+        },
+        {
+          "character": "DEFECT",
+          "text": "アーキテクト、キミヲナオス？"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "アイアンクラッド！？ ドウシテ？？ コワイ。 トテモコワイ！！"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "ケイヤク、サインシタ？ ナンデ！？ ワルイセンタク？ ウン。 マチガイ！"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "ジユウニナアレ！ ジユウニナアレ！\nヴァクー、ワルイ。 トテモワルイ！ アーキテクト、キミヲジユウニスル？"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "シンデル！？ シンデナイ！ ナンデ、ニンギョウ？ オオキナ、テ！！"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "コロス、ワルイ！！ カワリニ、コレモッテケ！"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "シンデナイヒト！ イイオクリモノ、アゲル！！ ボウリョク、ワルイ。"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "ボウリョクダメ！ カワリニ、ピカピカアツメテ…… ピカピカ！！"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "アーキテクト、ワルクナイ！ タブン、オハナシ？ オハナシ、イイ！！ トテモイイ！"
+        },
+        {
+          "character": "REGENT",
+          "text": "タビビト！ ウチュウカラ！？ ウチュウノドコ？\nドウヤッテ、ウチュウカラ？ トガッタアタマ！ チイサナトモダチ！！"
+        },
+        {
+          "character": "REGENT",
+          "text": "ワクワク！ スゴイ！！ モット！ モット！！！"
+        },
+        {
+          "character": "REGENT",
+          "text": "モットオハナシ！ コレ、キミノタメニミツケタ！\nサア、モットオハナシシテ！！"
+        },
+        {
+          "character": "REGENT",
+          "text": "オハナシ！？"
+        },
+        {
+          "character": "SILENT",
+          "text": "カンセン……？ ビョーキ！？  コレモッテ、アッチイケ！！"
+        },
+        {
+          "character": "SILENT",
+          "text": "ウツラナイ？ トテモ、シニソウ？ アーキテクト、キミヲタスケル？"
+        },
+        {
+          "character": "SILENT",
+          "text": "シマイタチ、ドコ？ コワクテイジワルナ、シマイタチ！\nイイヒトニナレ！ シマイタチニ、ナルナ！！"
+        },
+        {
+          "character": "firstVisitEver",
+          "text": "ニンギョウ！ ニンギョウ！！ コンナウエマデキタ！？ コレモッテケ、モッテケ！"
+        }
+      ],
       "name": "オロバス"
     },
     "PAEL": {
       "description": "溶けゆくドラゴン",
       "epithet": "溶けゆくドラゴン",
+      "dialogue": [
+        {
+          "character": "ANY",
+          "text": "おかえり、友よ。 私の“肉”が君の助けになればいいが…… "
+        },
+        {
+          "character": "ANY",
+          "text": "パエルは眠っている。 彼のいびきで部屋が揺れている。 "
+        },
+        {
+          "character": "DEFECT",
+          "text": "悩めるオートマトンよ、友を探しているのか？\n手伝ってやろう…… "
+        },
+        {
+          "character": "DEFECT",
+          "text": "機械も夢を見るのだろうか？\n私を見て、真似るといい…… "
+        },
+        {
+          "character": "DEFECT",
+          "text": "君の友の夢を見た……\n父様なら、フロウを直せるだろう…… "
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "凄まじい怒りを抱えているな。 私の一部を持っていき、安らぎとしたまえ…… "
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "夢を見る感覚を覚えているか？\n眠るのは良いぞ…… "
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "炎を鎮めるのだ。\n父様なら、君を自由にできるだろう…… "
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "君の心は、酷い悪意に染まっているな。 "
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "君の道に安らぎはない。\n私の一部を持っていき、重荷を和らげなさい…… "
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "「手」を持つ者が戻ってきたか。\n痛ましい記憶だ。 私の力を受け取りなさい…… "
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "父様を殺しても、そこに安らぎはないぞ。 "
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "家族は選べないものだ…… "
+        },
+        {
+          "character": "REGENT",
+          "text": "静かにしなさい。\n私の一部をやるから、もう行ってくれ…… "
+        },
+        {
+          "character": "REGENT",
+          "text": "有り余るほどの肉があるのだ。それを与えない理由はあるまい。"
+        },
+        {
+          "character": "REGENT",
+          "text": "君が戻ってくる頃には、私は新たに満たされている。\n眠るとはそういうことだ…… "
+        },
+        {
+          "character": "SILENT",
+          "text": "殺意に満ちた生き物よ、ここで暴力を振るう必要はない。\n私の一部を持っていき、安らぎを見つけなさい…… "
+        },
+        {
+          "character": "SILENT",
+          "text": "「狩りの証」を探しているのか？ いいとも、私の一部を持っていきなさい……\n君の慰めになるのなら…… "
+        },
+        {
+          "character": "SILENT",
+          "text": "私に毒を盛ったのか……？\nこれは一体どう……？ むにゃ…… zZZzz…… "
+        },
+        {
+          "character": "firstVisitEver",
+          "text": "操り人形が来たのか。\n父様の様子を見てきてくれないか？ 私はもう眠くて…… "
+        }
+      ],
       "name": "パエル"
     },
     "TANX": {
       "description": "キメラ王",
       "epithet": "キメラ王",
+      "dialogue": [
+        {
+          "character": "ANY",
+          "text": "もっと強くなれ！ そしてオレと戦え！！！"
+        },
+        {
+          "character": "ANY",
+          "text": "武器はいくらあっても困らねぇ！！"
+        },
+        {
+          "character": "DEFECT",
+          "text": "造り物！ 武器がねえだと！？ コレを持ってけ！"
+        },
+        {
+          "character": "DEFECT",
+          "text": "オーブなんざ武器じゃねぇ！！"
+        },
+        {
+          "character": "DEFECT",
+          "text": "オレと戦え、ディフェクト！！"
+        },
+        {
+          "character": "DEFECT",
+          "text": "オーブは武器なのか！？"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "見事な剣だな、戦士よ！ もっとたくさん武器を使え！"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "戦士に武器を！ さあ武器を取れ！戦ろうぜ！"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "オレと戦え、アイアンクラッド！！"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "ウオオオオ！！ 最高の戦いだったぜ！ さあ 武器を持っていけ！"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "なんて強ェ大鎌だ！"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "その「手」にも武器がいるんじゃねえか！？"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "オレと戦え、オスティ！！"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "オレと戦え、ネクロバインダー！！"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "いいチームワークじゃねか！！ 武器を持っていけ！！"
+        },
+        {
+          "character": "REGENT",
+          "text": "オレンジ！？ どうやったらオレンジになれる！！？"
+        },
+        {
+          "character": "REGENT",
+          "text": "すげぇ！！ 超強そうだ！！"
+        },
+        {
+          "character": "REGENT",
+          "text": "オレンジのヤツ！！ 強ェ武器を選べ！"
+        },
+        {
+          "character": "REGENT",
+          "text": "オレと戦え、リージェント！！"
+        },
+        {
+          "character": "REGENT",
+          "text": "もう一回だ、戦るぞ！！"
+        },
+        {
+          "character": "SILENT",
+          "text": "狩人か！ お前のその“爪”を研ぎ澄ましてやろう！！"
+        },
+        {
+          "character": "SILENT",
+          "text": "なぜダガーなんぞを！！ 弱ェ！"
+        },
+        {
+          "character": "SILENT",
+          "text": "オレと戦え、サイレント！！"
+        },
+        {
+          "character": "SILENT",
+          "text": "どこへ行きやがった！！！"
+        },
+        {
+          "character": "firstVisitEver",
+          "text": "弱すぎる！ だが見込みはあるな！\nこの武器を使え！！"
+        }
+      ],
       "name": "タンクス"
     },
     "TEZCATARA": {
       "description": "炎を育むもの",
       "epithet": "炎を育むもの",
+      "dialogue": [
+        {
+          "character": "ANY",
+          "text": "おかえり、愛しい子よ。 あなたの良くないところを焼き尽くしてあげましょうねえ。"
+        },
+        {
+          "character": "ANY",
+          "text": "さあ入ってちょうだい！ 今日はテスカタラに何をしてほしいのかしら？"
+        },
+        {
+          "character": "DEFECT",
+          "text": "私をからかいに来たわけじゃないのね？ なんて珍しい、小さな機械の坊や……"
+        },
+        {
+          "character": "DEFECT",
+          "text": "自分が作ったものに壊されるなんて、滑稽だとは思わない？"
+        },
+        {
+          "character": "DEFECT",
+          "text": "本当に直してもらいたいの？"
+        },
+        {
+          "character": "DEFECT",
+          "text": "まあ、あなたが本当にそうしたいなら。"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "とっても綺麗に燃えるのね！ さあ入って、入って！"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "なんて強い子なんでしょう！ さあこっちへ来て、何か食べていきなさい。\nお腹が空いてたら殺戮なんてできないでしょう？"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "あらら、アーキテクトったらまだ生きてるの？ さっさと殺してきてくれないかしら？\nここで待ってるからねえ！"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "あら。こんな壁の中で、ガイコツちゃんが何をしているの？"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "すばらしいわぁ！"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "さあ入って、入って！ あなたの炎を、もっと明るくしてあげましょうねえ。"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "あなたを包むその炎、何か禁じられたものを思い出させるわねえ。"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "誰があの本を書いたか、わたしは知っているわ。"
+        },
+        {
+          "character": "REGENT",
+          "text": "あらまあ、なんて珍しいお客様！ あなたは何者かしら、可愛い坊や？"
+        },
+        {
+          "character": "REGENT",
+          "text": "あらあら、これはとんだ御無礼を。\nテスカタラはうれしそうに高笑いした。 "
+        },
+        {
+          "character": "REGENT",
+          "text": "また戻ってきてくれたの？お友達も一緒ねえ。\nあなたたちのためにおやつを作ったのよ！"
+        },
+        {
+          "character": "REGENT",
+          "text": "おかえりなさい、王様坊や！ 外では上手くやっているようねえ。"
+        },
+        {
+          "character": "REGENT",
+          "text": "誰だって間違いから学ぶものよ。"
+        },
+        {
+          "character": "SILENT",
+          "text": "近くにいらっしゃい、無口な子。 あんまりよく見えないわね……"
+        },
+        {
+          "character": "SILENT",
+          "text": "私を信用していいのよ。"
+        },
+        {
+          "character": "SILENT",
+          "text": "ひどく厄介な病気にかかっているのね。 さあ、手当てをしてあげましょう。"
+        },
+        {
+          "character": "SILENT",
+          "text": "私、あなたの姉妹に会ったことがあるのよ？ とってもかわいい子たちだったわあ。"
+        },
+        {
+          "character": "SILENT",
+          "text": "あらやだ…… ケンカなんてしてないわよね？"
+        },
+        {
+          "character": "firstVisitEver",
+          "text": "あら、お客様ね！ さあ入ってちょうだい、愛しい子！\n今日はテスカタラに何をしてほしいの？"
+        }
+      ],
       "name": "テスカタラ"
     },
     "THE_ARCHITECT": {
+      "dialogue": [
+        {
+          "character": "DEFECT",
+          "text": "ここで何をしている？"
+        },
+        {
+          "character": "DEFECT",
+          "text": "お前を直せだと？ 命令するな。"
+        },
+        {
+          "character": "DEFECT",
+          "text": "戻ってきたのか？ 解体したはずだが。"
+        },
+        {
+          "character": "DEFECT",
+          "text": "お前を直せ？ お前の友を直せだと？ くだらん。"
+        },
+        {
+          "character": "DEFECT",
+          "text": "なぜ何度も戻ってくる？ ネオーの仕業か？"
+        },
+        {
+          "character": "DEFECT",
+          "text": "愚かな。"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "大悪魔の奴隷がご到着か。"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "永遠に戦い続ける呪い、だろう？"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "自分の名前すら分からないのか？"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "哀れだな。"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "塔の底へと帰れ、アイアンクラッド。"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "復讐だと？ まっぴら御免だな。"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "怒りで過去を変えることはできん。"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "必要なことをしたまでだ。秩序を保つためにな。"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "「人生すべてを」、かね？"
+        },
+        {
+          "character": "REGENT",
+          "text": "五月蠅くて敵わんな……"
+        },
+        {
+          "character": "REGENT",
+          "text": "騒々しい愚か者が戻ってきたか。"
+        },
+        {
+          "character": "REGENT",
+          "text": "それについては、同意見だ。"
+        },
+        {
+          "character": "SILENT",
+          "text": "挨拶もなしか？"
+        },
+        {
+          "character": "SILENT",
+          "text": "どこから来た？\n何が狙いだ？"
+        },
+        {
+          "character": "SILENT",
+          "text": "ぐっ！ \n死ね！！ "
+        },
+        {
+          "character": "SILENT",
+          "text": "鬱陶しいクズめ！\n消え失せろ！！ "
+        }
+      ],
       "name": "アーキテクト"
     },
     "VAKUU": {
       "description": "最初の悪魔",
       "epithet": "最初の悪魔",
+      "dialogue": [
+        {
+          "character": "ANY",
+          "text": "スパイアで栄光をお求めですか？ あなたにいくつかご提案があるのですが……"
+        },
+        {
+          "character": "ANY",
+          "text": "143回。 あなたがここへ来るのは143回目です。"
+        },
+        {
+          "character": "ANY",
+          "text": "お気づきですか？これが永遠に終わらないことに。"
+        },
+        {
+          "character": "DEFECT",
+          "text": "壊れたお方、私があなたを完璧にしてさしあげましょう。"
+        },
+        {
+          "character": "DEFECT",
+          "text": "仲間の機械があなたの死を望んでいること、奇妙だとは思いませんか？"
+        },
+        {
+          "character": "DEFECT",
+          "text": "アーキテクトの心臓を持ってくるなら、あなたのお友達を修復してさしあげましょう。"
+        },
+        {
+          "character": "DEFECT",
+          "text": "どちらが大切ですか？ あなたの創造主？それともお友達？"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "こんなにも長い時を経て、再びあなたに会えるとは。"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "あなたが契約した通りに、ですよ。"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "滅んだ一族のことが気がかりですか……？\nヴァクーは笑い声を上げる。 "
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "私の最高の操り人形よ…… なぜまだアーキテクトを殺していないのですか？"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "あくび\nあなたが失敗する様…… 楽しみにしていますよ。"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "私たちはどちらも復讐を求めています。 それには支払うべき代償が伴いますよ。"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "あなたがその手をどこで手に入れたのか、私は知っていますよ。"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "アーキテクトは私たち双方に深い傷を負わせました。"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "話が早くて助かります。 それでは……"
+        },
+        {
+          "character": "REGENT",
+          "text": "星々からの来訪者ですか？ この忌まわしい壁の中に？"
+        },
+        {
+          "character": "REGENT",
+          "text": "ええ、お互いに助け合えると思いますよ。"
+        },
+        {
+          "character": "REGENT",
+          "text": "ちょっとした対価をいただければ、私の力をさらに授けましょう。"
+        },
+        {
+          "character": "REGENT",
+          "text": "契約書は隅々まで読みましたよね？\n十分な意思と責任を持って署名したはずですよ。"
+        },
+        {
+          "character": "REGENT",
+          "text": "取引の義務を果たさないおつもりで？\nならば、別の契約はいかがでしょう？ そちらもオススメですよ。"
+        },
+        {
+          "character": "SILENT",
+          "text": "殺し屋の方ですね。"
+        },
+        {
+          "character": "SILENT",
+          "text": "これはあなたにとって良い結末にはならないでしょうね。"
+        },
+        {
+          "character": "SILENT",
+          "text": "ヴァクーはサイレントに様々な契約書を見せた。 "
+        },
+        {
+          "character": "SILENT",
+          "text": "アーキテクトだけでは不十分です。 あなたの姉妹たちも殺してしまいなさい！"
+        },
+        {
+          "character": "SILENT",
+          "text": "言葉は不要です。私たちは“同じ”なのですから。"
+        },
+        {
+          "character": "firstVisitEver",
+          "text": "私に身を委ねなさい。 そうすれば、私と同じくらい恐れられる存在になれますよ。"
+        }
+      ],
       "name": "ヴァクー"
     }
   },

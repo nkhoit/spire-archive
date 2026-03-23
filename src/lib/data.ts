@@ -501,6 +501,7 @@ async function applyLocalization(game: string, locale: Locale, base: Dataset): P
       ...(l.name && { name: l.name }),
       ...(l.description && { description: l.description }),
       ...(l.epithet && { epithet: l.epithet }),
+      ...(l.dialogue && { dialogue: l.dialogue }),
       choices,
       ...(pages && { pages }),
     };

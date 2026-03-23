@@ -5301,44 +5301,910 @@
     "DARV": {
       "description": "L'Accumulatore",
       "epithet": "L'Accumulatore",
+      "dialogue": [
+        {
+          "character": "ANY",
+          "text": "Ecco, prendi una di queste gemme dimenticate!"
+        },
+        {
+          "character": "ANY",
+          "text": "Ho da fare oggi!\nPrendi quello che vuoi da quella pila!"
+        },
+        {
+          "character": "DEFECT",
+          "text": "Devo ammettere che sei veramente un incantevole assemblaggio di rottami."
+        },
+        {
+          "character": "DEFECT",
+          "text": "Sembra che tu sia ancora in vita... Vediamo un po' se posso potenziarti!"
+        },
+        {
+          "character": "DEFECT",
+          "text": "Stavo conversando le cose dell'assemblaggio a cui sei legat... ehm.\nNulla, lascia stare!!!"
+        },
+        {
+          "character": "DEFECT",
+          "text": "Mio dolcissimo assemblaggio, fa' come se non avessi detto nulla!"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "Il guerriero ardente è tornato!\nHo qualcosa cucito su misura per te!"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "Adoro vederti ridurre in poltiglia i nemici!"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "Custodisco ancora quella tua pesante spada... ma non riesco a trovare nessuno che possa restaurarla."
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "Forse l'Architetto ne sa qualcosa."
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "Sembra che tu faccia sul serio. Come posso aiutarti, signorina?"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "Beh in tal caso... Dai pure un'occhiata!"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "Sei ancora sul piede di guerra? Tranquilla, non cercherò di fermarti!"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "Questo libro sembra legato alla tua anima... Ha molti più anni di te."
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "Gli oggetti inquietanti tendono a finire nella mia collezione."
+        },
+        {
+          "character": "REGENT",
+          "text": "Qual buon vento ti porta qui? Vuoi dare un'occhiata alla mia collezione?"
+        },
+        {
+          "character": "REGENT",
+          "text": "Fantastico!"
+        },
+        {
+          "character": "REGENT",
+          "text": "Ha bisogno di altro, sua Maestà?!"
+        },
+        {
+          "character": "REGENT",
+          "text": "Mio nuovo amico, ho qualcosa per te!"
+        },
+        {
+          "character": "REGENT",
+          "text": "Vorrei tanto offrirti questo regalo, ma ora è nelle mani dell'Architetto!\nTi andrebbe di aiutare un tuo amico in difficoltà?"
+        },
+        {
+          "character": "SILENT",
+          "text": "Anche tu fai ritorno nella Guglia, eh?\nNon riesci a resistere a quei tesori sbrilluccicanti, vero?!"
+        },
+        {
+          "character": "SILENT",
+          "text": "Ti regalerò qualcosa di bello se mi dai quel bel trofeo che porti!"
+        },
+        {
+          "character": "SILENT",
+          "text": "È un peccato che non ti ricordi della mia generosità!\nSì, sì, lo sai com'è fatta Neow..."
+        },
+        {
+          "character": "SILENT",
+          "text": "Bene! Ti darò qualcosa da impiegare per il duello finale o per qualsiasi altra cosa tu voglia fare!"
+        },
+        {
+          "character": "firstVisitEver",
+          "text": "...Ma dove diavolo l'ho messo... Oh!\nVuoi vedere la mia collezione!? Prendi qualcosa da quella pila laggiù e fanne buon uso!"
+        }
+      ],
       "name": "Darv"
     },
     "NEOW": {
       "description": "Madre della resurrezione (Esiliata)",
       "epithet": "Madre della resurrezione (Esiliata)",
+      "dialogue": [
+        {
+          "character": "ANY",
+          "text": "... Ci... rincontriamo... "
+        },
+        {
+          "character": "ANY",
+          "text": "... Forza...\nSvegliati..."
+        },
+        {
+          "character": "ANY",
+          "text": "... Accetta... questa...\nbenedizione... vai..."
+        },
+        {
+          "character": "ANY",
+          "text": "... Ti... ho... ridato... la... vita..."
+        },
+        {
+          "character": "ANY",
+          "text": "... Uccidi... L'ARCHITETTO"
+        },
+        {
+          "character": "DEFECT",
+          "text": "... Assemblaggio... cosa...\nti... è... successo...?"
+        },
+        {
+          "character": "DEFECT",
+          "text": "... Lui... può...\nripararti... completamente..."
+        },
+        {
+          "character": "DEFECT",
+          "text": "... Non... posso...\nfarti... dimenticare..."
+        },
+        {
+          "character": "DEFECT",
+          "text": "... Bene..."
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "... Alzati... mio... guerriero...\nè... ora... di... combattere... di... nuovo..."
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "... Sei... ancora... consumato... dalla... rabbia... Ottimo..."
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "... ti... ricordi... la... prima... volta...\nche... sei... venuto... qui... davanti... a... me..."
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "... Eri... furioso..."
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "... Molto... utile..."
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "... Condividiamo... lo... stesso... obiettivo..."
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "... Il... mio... potere... è... tuo..."
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "... Ancora... respira..."
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "... L'Architetto... si... sta... indebolendo...\ne... noi... diventiamo... più... forti..."
+        },
+        {
+          "character": "REGENT",
+          "text": " Che... simpatico...\nci... vedremo... di... nuovo..."
+        },
+        {
+          "character": "REGENT",
+          "text": "... di... nuovo...?"
+        },
+        {
+          "character": "REGENT",
+          "text": "... Accetta... questa... benedizione..."
+        },
+        {
+          "character": "SILENT",
+          "text": "... Sei... tornata...?\nSapevo... che... saresti... tornata..."
+        },
+        {
+          "character": "SILENT",
+          "text": "... Il... tuo...\n trofeo... ti... aspetta..."
+        },
+        {
+          "character": "SILENT",
+          "text": "... Entrambe... sappiamo... cosa... vuol... dire... soffrire.. per... mano... della... propria... famiglia..."
+        },
+        {
+          "character": "SILENT",
+          "text": "... Cerchi... ancora... approvazione...?\n...CHE INGENUA..."
+        },
+        {
+          "character": "firstVisitEver",
+          "text": "Ti... ho... ridato... la... vita...\nalzati..."
+        }
+      ],
       "name": "Neow"
     },
     "NONUPEIPE": {
       "description": "Incarnazione della serendipità",
       "epithet": "Incarnazione della serendipità",
+      "dialogue": [
+        {
+          "character": "ANY",
+          "text": "In cima ti attende il caos. Sfrutta il mio potere per conquistare la Guglia."
+        },
+        {
+          "character": "ANY",
+          "text": "Ne hai fatta di strada per arrivare fin qui!\nAvvicinati, accetta la mia benedizione."
+        },
+        {
+          "character": "DEFECT",
+          "text": "Un semplice assemblaggio può davvero essere degno della mia benedizione?\nVieni, Defect. Sarai l'automa più affascinante di tutti."
+        },
+        {
+          "character": "DEFECT",
+          "text": "Mia povero ammasso di ferraglia malridotto, lascia che ti dia una sistemata."
+        },
+        {
+          "character": "DEFECT",
+          "text": "Di solito non mi piacciono le creazioni dell'Architetto, ma devo ammettere che comincio a trovarti affascinante."
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "Ah, il famoso Ironclad è finalmente al mio cospetto.\nAvvicinati e ti conferirò il mio potere."
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "Ah, Ironclad... Per caso il mio ultimo regalo non è bastato?"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "Quante volte sei già tornato mio campione?\nIn passato non eri così forte da riuscire a spazzare via clan interi?"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "Apprezzo gli esseri capaci, pertanto ti donerò una parte del mio potere.\nLa prossima volta, non uccidere le mie guardie."
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "Una maga necessita di accessori raffinati da impiegare in battaglia. Avvicinati, Necrobinder."
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "All'Architetto non piacerà vedere quel tuo animaletto."
+        },
+        {
+          "character": "REGENT",
+          "text": "Che bei vestiti di terre remote che indossi!\nOrdina ai tuoi seguaci di farti avvicinare e ti conferirò la mia benedizione."
+        },
+        {
+          "character": "REGENT",
+          "text": "Una benedizione regale per un visitatore della medesima caratura.\nServi, portateci una tazza di tè!"
+        },
+        {
+          "character": "REGENT",
+          "text": "L'Architetto è andato fuori di senno! Se solo un nobile campione potesse salvarci da questa sciagura..."
+        },
+        {
+          "character": "SILENT",
+          "text": "Una ladruncola si è intrufolata nel mio territorio.\nCredi davvero che non ti abbia visto? Forza, esci allo scoperto!"
+        },
+        {
+          "character": "SILENT",
+          "text": "Una cacciatrice... Per quale motivo ritorni nella Guglia?\nAvvicinati e accetta le mie benedizioni."
+        },
+        {
+          "character": "SILENT",
+          "text": "Assassina, ho dei regali per te. Non essere timida."
+        },
+        {
+          "character": "SILENT",
+          "text": "Di tutte le sue marionette, tu sei quella che più mi attira."
+        },
+        {
+          "character": "SILENT",
+          "text": "Come sei morta la prima volta? Per caso Neow ti ha trovata?\nÈ un peccato che non spiccichi parola."
+        },
+        {
+          "character": "firstVisitEver",
+          "text": "È da un millennio che non ricevo visite!\nNon hai una bella cera. Forza, cerchiamo qualcosa di grazioso da farti indossare."
+        }
+      ],
       "name": "Nonupeipe"
     },
     "OROBAS": {
       "description": "Arcobaleno vivente",
       "epithet": "Arcobaleno vivente",
+      "dialogue": [
+        {
+          "character": "ANY",
+          "text": "Prova!!!"
+        },
+        {
+          "character": "ANY",
+          "text": "Oggetti bellissimi! Guarda, guarda!"
+        },
+        {
+          "character": "DEFECT",
+          "text": "Cosa! Assemblaggio servitore funzionante?!\nPerché qui? Perché non in fabbrica?"
+        },
+        {
+          "character": "DEFECT",
+          "text": "Globi luccicanti! Come funzionare?\nAhia!"
+        },
+        {
+          "character": "DEFECT",
+          "text": "Nucleo rotto? Neow usa assemblaggio rotto?\nManipolato te?"
+        },
+        {
+          "character": "DEFECT",
+          "text": "Architetto riparato te?"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "Ironclad!? Impossibile! Che paura. Molta paura!"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "Contratto firmato? Peché!? Errore! Errore grave!"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "Io augurare te libertà!\nVakuu cattivo. Molto cattivo! Architetto liberato te?"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "Morto?! Non morto! Perché marionetta? Grande mano!"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "Uccidere brutto! Prendi! Così meglio!"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "Non morta! Bei regali per te! Violenza brutta."
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "No violenza! Meglio collezionare cose luccicanti... luccicanti!"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "Architetto no cattivo! Perché non parlare? Parlare bello! Molto bello!"
+        },
+        {
+          "character": "REGENT",
+          "text": "Viaggiatore! Dallo spazio!? Dove provenire dallo spazio?\nCome venire dallo spazio? Testa a punta! Piccoli amici!"
+        },
+        {
+          "character": "REGENT",
+          "text": "Bello! Molto bello! Ancora! Ancora!"
+        },
+        {
+          "character": "REGENT",
+          "text": "Altre storie! Trovato questo per te!\nOra altre storie!"
+        },
+        {
+          "character": "REGENT",
+          "text": "Storie?!"
+        },
+        {
+          "character": "SILENT",
+          "text": "Infezione...? CORRUZIONE!? Prendere e scappare!"
+        },
+        {
+          "character": "SILENT",
+          "text": "Non contagiosa? Letale? Architetto aiutato te?"
+        },
+        {
+          "character": "SILENT",
+          "text": "Sorelle dove? Sorelle cattive e spaventose!\nTu comportare bene! Non essere come sorelle!"
+        },
+        {
+          "character": "firstVisitEver",
+          "text": "Marionetta, marionetta! Arrivata fin qui? Prendi, prendi!"
+        }
+      ],
       "name": "Orobas"
     },
     "PAEL": {
       "description": "Drago fuso",
       "epithet": "Drago fuso",
+      "dialogue": [
+        {
+          "character": "ANY",
+          "text": "Ti do il bentornato. Lascia che la mia carne ti aiuti..."
+        },
+        {
+          "character": "ANY",
+          "text": "Pael sta dormendo. Il suo ronfio fa vibrare tutta la stanza."
+        },
+        {
+          "character": "DEFECT",
+          "text": "Automa dall'aria preoccupata, cerchi l'assemblaggio a cui sei legato?\nLascia che ti aiuti..."
+        },
+        {
+          "character": "DEFECT",
+          "text": "Anche gli assemblaggi sognano?\nGuardami e imita ciò che faccio..."
+        },
+        {
+          "character": "DEFECT",
+          "text": "Ho sognato l'assemblaggio a cui sei legato...\nMio padre può riparare Flaw..."
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "Percepisco molta rabbia in te. Prendi una parte di me e prova trova un po' di quiete..."
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "Ti ricordi la sensazione che si prova quando si sogna?\nÈ bello dormire..."
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "Devi placare il tuo fuoco interiore.\nMio padre può liberarti..."
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "Il tuo cuore è avvolto da una grande malvagità."
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "Non c'è pace sul tuo cammino.\nPrendi una parte di me per alleggerire i tuoi fardelli..."
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "La creatura con la mano ossuta è tornata.\nMi trasmetti ricordi dolorosi. Prendi la mia forza e vattene..."
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "Uccidere mio padre non allevierà il tuo dolore."
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "Non siamo noi a scegliere la nostra famiglia..."
+        },
+        {
+          "character": "REGENT",
+          "text": "Silenzio.\nPrendi una parte di me e prosegui il tuo cammino..."
+        },
+        {
+          "character": "REGENT",
+          "text": "Perché non farlo? Ho carne in abbondanza per l'intero universo."
+        },
+        {
+          "character": "REGENT",
+          "text": "Quando sarai ritornato, la mia carne sarà completamente rigenerata.\nÈ per questo che dormo così tanto..."
+        },
+        {
+          "character": "SILENT",
+          "text": "Creatura assassina, qui non c'è posto per la violenza.\nPrendi una parte di me e cerca la quiete..."
+        },
+        {
+          "character": "SILENT",
+          "text": "Sei a caccia di trofei? Certo, prendi una parte di me...\nSpero solo che possa darti conforto..."
+        },
+        {
+          "character": "SILENT",
+          "text": "Mi hai avvelenato...?\nCosa sta succedendo...? zZZzz..."
+        },
+        {
+          "character": "firstVisitEver",
+          "text": "È arrivata una marionetta?\nPuoi andare a vedere come sta mio padre? Sono troppo stanco per farlo..."
+        }
+      ],
       "name": "Pael"
     },
     "TANX": {
       "description": "Re chimera",
       "epithet": "Re chimera",
+      "dialogue": [
+        {
+          "character": "ANY",
+          "text": "DIVENTA PIÙ FORTE E POI COMBATTEREMO!"
+        },
+        {
+          "character": "ANY",
+          "text": "LE ARMI NON SONO MAI ABBASTANZA!"
+        },
+        {
+          "character": "DEFECT",
+          "text": "ASSEMBLAGGIO! NON HAI NESSUN'ARMA!? TIENI!"
+        },
+        {
+          "character": "DEFECT",
+          "text": "I GLOBI NON SONO ARMI!"
+        },
+        {
+          "character": "DEFECT",
+          "text": "AFFRONTAMI, DEFECT!"
+        },
+        {
+          "character": "DEFECT",
+          "text": "I GLOBI SONO ARMI!?"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "GUERRIERO, POSSIEDI UNA SPADA INCREDIBILE! PERÒ UN'ARMA IN PIÙ NON TI FAREBBE MALE!"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "ARMI PER IL GUERRIERO! PRENDI UN'ARMA! COMBATTIAMO!"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "AFFRONTAMI, IRONCLAD!"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "WOW! CHE COMBATTIMENTO FANTASTICO! PRENDI UN ARMA!"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "CHE FALCE MERAVIGLIOSA!"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "ANCHE ALLA MANO SERVE UN'ARMA!?"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "AFFRONTAMI, OSTY!"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "AFFRONTAMI, NECROBINDER!"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "CHE LAVORO DI SQUADRA INCREDIBILE! PRENDI UN'ARMA!"
+        },
+        {
+          "character": "REGENT",
+          "text": "ARANCIONE!? COME FA QUESTA CREATURA A ESSERE ARANCIONE?"
+        },
+        {
+          "character": "REGENT",
+          "text": "INCREDIBILE! CHE POTENZA!"
+        },
+        {
+          "character": "REGENT",
+          "text": "CREATURA ARANCIONE! SCEGLI UN'ARMA POTENTE!"
+        },
+        {
+          "character": "REGENT",
+          "text": "AFFRONTAMI, REGENT!"
+        },
+        {
+          "character": "REGENT",
+          "text": "AFFRONTAMI DI NUOVO!"
+        },
+        {
+          "character": "SILENT",
+          "text": "UNA CACCIATRICE! AFFILERÒ I TUOI ARTIGLI!"
+        },
+        {
+          "character": "SILENT",
+          "text": "PERCHÉ HAI DEI PUGNALI!? NON SONO AFFATTO POTENTI!"
+        },
+        {
+          "character": "SILENT",
+          "text": "AFFRONTAMI, SILENT!"
+        },
+        {
+          "character": "SILENT",
+          "text": "DOVE SEI ANDATA!!!"
+        },
+        {
+          "character": "firstVisitEver",
+          "text": "SEI DEBOLE! MA HAI DEL POTENZIALE!\nUSA QUEST'ARMA!"
+        }
+      ],
       "name": "Tanx"
     },
     "TEZCATARA": {
       "description": "L'Alimentafuoco",
       "epithet": "L'Alimentafuoco",
+      "dialogue": [
+        {
+          "character": "ANY",
+          "text": "Ti do il bentornato. Lasciami che la mia fiamma purifichi i tuoi difetti."
+        },
+        {
+          "character": "ANY",
+          "text": "Vieni, non fare complimenti! In che modo può aiutarti la tua cara Tezcatara?"
+        },
+        {
+          "character": "DEFECT",
+          "text": "Non se qui per infastidirmi? Sei proprio un piccolo assemblaggio inusuale..."
+        },
+        {
+          "character": "DEFECT",
+          "text": "Sarebbe veramente divertente se fosse una delle sue creazioni a porre fine alla sua vita."
+        },
+        {
+          "character": "DEFECT",
+          "text": "Vuoi davvero che ti dia una sistemata?"
+        },
+        {
+          "character": "DEFECT",
+          "text": "Beh, se proprio lo desideri."
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "Il tuo fuoco interiore brucia splendidamente! Forza, vieni!"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "Come sei forte! Vieni e mangia qualcosa.\nNon puoi mica uccidere a stomaco vuoto!"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "Oh, l'Architetto è ancora vivo? Uccidilo velocemente, ok?\nTi aspetterò qui!"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "Cosa ci fa un essere scheletrico da queste parti?"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "Che meraviglia!"
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "Vieni, vieni! Facciamo ardere le tue fiamme con ancora più intensità."
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "Quelle fiamme intorno a te mi ricordano qualcosa di proibito."
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "So chi ha scritto quel libro."
+        },
+        {
+          "character": "REGENT",
+          "text": "Oh cielo, che visitatore esotico! Chi saresti tu, caro?"
+        },
+        {
+          "character": "REGENT",
+          "text": "Ma come sono sgarbata!\nTezcatara ride di gioia."
+        },
+        {
+          "character": "REGENT",
+          "text": "Tu e i tuoi amici siete già tornati?\nVi ho preparato delle specialità deliziose!"
+        },
+        {
+          "character": "REGENT",
+          "text": "Ti do il bentornato, mister regalità! Sembra che tu te la stia cavando alla grande."
+        },
+        {
+          "character": "REGENT",
+          "text": "Tutti noi dobbiamo imparare dai nostri errori."
+        },
+        {
+          "character": "SILENT",
+          "text": "Avvicinati, essere silenziosa. Non riesco a vederti bene..."
+        },
+        {
+          "character": "SILENT",
+          "text": "Puoi fidarti di me."
+        },
+        {
+          "character": "SILENT",
+          "text": "Oh, hai una malattia terribile. Lascia che ti aiuti."
+        },
+        {
+          "character": "SILENT",
+          "text": "Ho conosciuto le tue sorelle, sai? Sono delle ragazze splendide."
+        },
+        {
+          "character": "SILENT",
+          "text": "Oh cara... Per caso hai combattuto?"
+        },
+        {
+          "character": "firstVisitEver",
+          "text": "Oh, finalmente ho ricevuto una visita! Vieni pure!\nCosa può fare Tezcatara per te?"
+        }
+      ],
       "name": "Tezcatara"
     },
     "THE_ARCHITECT": {
+      "dialogue": [
+        {
+          "character": "DEFECT",
+          "text": "Cosa ci fai qui?"
+        },
+        {
+          "character": "DEFECT",
+          "text": "Vuoi che ti ripari? Dovrai costringermi a farlo."
+        },
+        {
+          "character": "DEFECT",
+          "text": "Hai fatto ritorno? Credevo di averti smontato in mille pezzi."
+        },
+        {
+          "character": "DEFECT",
+          "text": "Vuoi che ripari te e l'altro assemblaggio? Ma non farmi ridere."
+        },
+        {
+          "character": "DEFECT",
+          "text": "Come fai a tornare ogni volta? Sarà opera di Neow?"
+        },
+        {
+          "character": "DEFECT",
+          "text": "Quanta ingenuità"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "Quindi lo schiavo dell'arcidemone è finalmente arrivato."
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "Sei stato maledetto a combattere in eterno, eh?"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "Sai almeno come ti chiami?"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "Provo tanta pena per te."
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "Ironclad, torna da dove sei venuto."
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "Cerchi vendetta? No, grazie, non mi interessa."
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "La tua rabbia non cambierà il passato."
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "Ho fatto ciò che dovevo per mantenere l'ordine."
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "Vita..."
+        },
+        {
+          "character": "REGENT",
+          "text": "Ho bisogno di silenzio..."
+        },
+        {
+          "character": "REGENT",
+          "text": "Quel fastidioso idiota è già tornato?"
+        },
+        {
+          "character": "REGENT",
+          "text": "Finalmente siamo d'accordo su qualcosa."
+        },
+        {
+          "character": "SILENT",
+          "text": "Non ti presenti nemmeno?"
+        },
+        {
+          "character": "SILENT",
+          "text": "Da dove vieni?\nCosa cerchi?"
+        },
+        {
+          "character": "SILENT",
+          "text": "Aaarg!\nMUORI!"
+        },
+        {
+          "character": "SILENT",
+          "text": "Miserabile insolente!\nSPARISCI!"
+        }
+      ],
       "name": "L'Architetto"
     },
     "VAKUU": {
       "description": "Demone primordiale",
       "epithet": "Demone primordiale",
+      "dialogue": [
+        {
+          "character": "ANY",
+          "text": "Cerchi la gloria nella Guglia? Ho delle proposte da farti..."
+        },
+        {
+          "character": "ANY",
+          "text": "Sai quante volte hai messo piede qui? Ben 143 volte."
+        },
+        {
+          "character": "ANY",
+          "text": "Sei consapevole che non ci sarà mai fine a tutto questo?"
+        },
+        {
+          "character": "DEFECT",
+          "text": "Ammasso di ferraglia, lascia che ti rimetta a nuovo."
+        },
+        {
+          "character": "DEFECT",
+          "text": "Non trovi strano che gli altri assemblaggi ti vogliano morto?"
+        },
+        {
+          "character": "DEFECT",
+          "text": "Se mi porti il cuore dell'Architetto, riparerò l'assemblaggio a cui sei tanto legato."
+        },
+        {
+          "character": "DEFECT",
+          "text": "Cos'è più importante? Il tuo creatore o l'assemblaggio a cui sei tanto legato?"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "Immagina di rivederti dopo tanto tempo."
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "Esattamente ciò che mi avevi chiesto."
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "Ti senti in colpa per le tribù perdute...?\nVakuu ride a crepapelle."
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "Mia preziosissima marionetta... Perché non hai ancora ucciso l'Architetto?"
+        },
+        {
+          "character": "IRONCLAD",
+          "text": "Vakuu sbadiglia\nBramo il momento in cui ti vedrò soccombere."
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "Entrambi desideriamo la vendetta. Tuttavia, questa richiede un prezzo da pagare."
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "So dove hai trovato quella mano ossuta."
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "L'Architetto ci ha ferito gravemente a entrambi."
+        },
+        {
+          "character": "NECROBINDER",
+          "text": "Vedo che non ti piace perderti in chiacchiere. Molto bene..."
+        },
+        {
+          "character": "REGENT",
+          "text": "Un essere stellare? All'interno di queste mura maledette?"
+        },
+        {
+          "character": "REGENT",
+          "text": "Sì, e credo che possiamo aiutarci a vicenda."
+        },
+        {
+          "character": "REGENT",
+          "text": "Posso donarti una grande quantità del mio potere a un piccolo prezzo."
+        },
+        {
+          "character": "REGENT",
+          "text": "Hai letto attentamente i contratti?\nLi hai firmati sapendo ciò a cui andavi incontro, giusto?"
+        },
+        {
+          "character": "REGENT",
+          "text": "Rispetterai la tua parte dell'accordo?\nO preferisci firmare un altro contratto?"
+        },
+        {
+          "character": "SILENT",
+          "text": "Assassina."
+        },
+        {
+          "character": "SILENT",
+          "text": "Non finirà bene per te."
+        },
+        {
+          "character": "SILENT",
+          "text": "Vakuu mostra i suoi vari contratti a Silent"
+        },
+        {
+          "character": "SILENT",
+          "text": "L'Architetto non basta, uccidi anche le tue sorelle!"
+        },
+        {
+          "character": "SILENT",
+          "text": "Non servono le parole, siamo uguali io e te."
+        },
+        {
+          "character": "firstVisitEver",
+          "text": "Consegnami la tua anima e tutti ti temeranno tanto quanto me."
+        }
+      ],
       "name": "Vakuu"
     }
   },

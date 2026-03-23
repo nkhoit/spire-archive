@@ -93,6 +93,7 @@ const strings: Record<string, Partial<Record<Locale, string>>> = {
 
   // Event detail
   'Choices': { ja: '選択肢', ko: '선택지', zh: '选项', de: 'Optionen', fr: 'Choix', es: 'Opciones', pt: 'Opções', it: 'Scelte', pl: 'Wybory', ru: 'Варианты', tr: 'Seçenekler', th: 'ตัวเลือก' },
+  'Dialogue': { ja: 'セリフ', ko: '대사', zh: '对话', de: 'Dialog', fr: 'Dialogue', es: 'Diálogo', pt: 'Diálogo', it: 'Dialogo', pl: 'Dialog', ru: 'Диалог', tr: 'Diyalog', th: 'บทสนทนา' },
   'choices': { ja: '選択肢', ko: '선택지', zh: '个选项', de: 'Optionen', fr: 'choix', es: 'opciones', pt: 'opções', it: 'scelte', pl: 'wybory', ru: 'вариантов', tr: 'seçenek', th: 'ตัวเลือก' },
 
   // Footer / branding

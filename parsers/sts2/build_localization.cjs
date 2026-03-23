@@ -101,6 +101,17 @@ function buildLang(gameLang) {
         if (!result.events[id]) result.events[id] = {};
         result.events[id].description = cleanMarkup(value);
         result.events[id].epithet = cleanMarkup(value);
+        continue;
+      }
+      const mTalk = key.match(/^([A-Z0-9_]+)\.talk\.(\w+)\.\d+-\d+r?\.ancient$/);
+      if (mTalk) {
+        const [, id, character] = mTalk;
+        if (!result.events[id]) result.events[id] = {};
+        if (!result.events[id].dialogue) result.events[id].dialogue = [];
+        const text = cleanMarkup(value);
+        if (!result.events[id].dialogue.some(d => d.text === text)) {
+          result.events[id].dialogue.push({ character, text });
+        }
       }
     }
   }
