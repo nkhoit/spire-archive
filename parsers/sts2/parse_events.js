@@ -718,12 +718,20 @@ function applyManualFixes(events, relicsData = []) {
       '{BottomRelicOwned}': 'your Relic', '{BottomRelicNew}': 'a new Relic',
       '{MiddleRelicOwned}': 'your Relic', '{MiddleRelicNew}': 'a new Relic',
       '{TopRelicOwned}': 'your Relic', '{TopRelicNew}': 'a new Relic',
+      '{pronounObject}': 'them', '{pronounSubject}': 'they',
+      '{pronounPossessive}': 'theirs', '{character}': 'the character',
     };
     const resolveRuntime = (text) => {
       if (!text) return text;
       for (const [k, v] of Object.entries(RUNTIME_REPLACEMENTS)) {
         if (text.includes(k)) text = text.replaceAll(k, v);
       }
+      // Fix "they" + third-person singular verb agreement from pronoun substitution
+      text = text.replace(/\bthey (becomes|goes|has|does|is|was|gets|feels|seems)\b/gi,
+        (_, verb) => {
+          const fixes = { becomes: 'become', goes: 'go', has: 'have', does: 'do', is: 'are', was: 'were', gets: 'get', feels: 'feel', seems: 'seem' };
+          return `they ${fixes[verb.toLowerCase()] || verb}`;
+        });
       return text;
     };
     if (event.description) event.description = resolveRuntime(event.description);
@@ -731,6 +739,7 @@ function applyManualFixes(events, relicsData = []) {
       for (const c of event.choices) {
         if (c.name) c.name = resolveRuntime(c.name);
         if (c.description) c.description = resolveRuntime(c.description);
+        if (c.outcome) c.outcome = resolveRuntime(c.outcome);
       }
     }
     if (event.pages) {
@@ -740,8 +749,14 @@ function applyManualFixes(events, relicsData = []) {
           for (const c of p.choices) {
             if (c.name) c.name = resolveRuntime(c.name);
             if (c.description) c.description = resolveRuntime(c.description);
+            if (c.outcome) c.outcome = resolveRuntime(c.outcome);
           }
         }
+      }
+    }
+    if (event.flavor_sequences) {
+      for (const [key, texts] of Object.entries(event.flavor_sequences)) {
+        event.flavor_sequences[key] = texts.map(t => resolveRuntime(t));
       }
     }
 
