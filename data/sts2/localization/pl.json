@@ -6792,5 +6792,198 @@
       "name": "Monarcha",
       "description": "Dziedzic Gwiezdnego Tronu.\nWłada kosmicznymi mocami, ale to jego służba wykonuje brudną robotę."
     }
+  },
+  "mechanics": {
+    "ascension": [
+      {
+        "level": 0,
+        "title": "Bez Wstąpienia",
+        "description": "Graj bez modyfikatorów Wstąpienia."
+      },
+      {
+        "level": 1,
+        "title": "Rój Elit",
+        "description": "Elity pojawiają się częściej."
+      },
+      {
+        "level": 2,
+        "title": "Zmęczony podróżnik",
+        "description": "Starożytni leczą tylko 80% brakującego HP."
+      },
+      {
+        "level": 3,
+        "title": "Bieda",
+        "description": "Wrogowie i skrzynie dają 25% mniej Złota."
+      },
+      {
+        "level": 4,
+        "title": "Ciasny pasek",
+        "description": "Zacznij każdy bieg z 1 mniejszą liczbą slotów na mikstury."
+      },
+      {
+        "level": 5,
+        "title": "Klątwa Wspinacza",
+        "description": "Zacznij każdy bieg z klątwą."
+      },
+      {
+        "level": 6,
+        "title": "Mrok",
+        "description": "Mniej Miejsc odpoczynku."
+      },
+      {
+        "level": 7,
+        "title": "Niedobór",
+        "description": "Rzadkie i ulepszone karty pojawiają się rzadziej."
+      },
+      {
+        "level": 8,
+        "title": "Twardzi wrogowie",
+        "description": "Wszyscy wrogowie są trudniejsi do pokonania."
+      },
+      {
+        "level": 9,
+        "title": "Śmiercionośni wrogowie",
+        "description": "Wszyscy wrogowie mają groźniejsze ataki."
+      },
+      {
+        "level": 10,
+        "title": "Podwójny Boss",
+        "description": "Walcz z dwoma bossami na końcu Aktu 3."
+      }
+    ],
+    "map_rooms": [
+      {
+        "id": "ROOM_ENEMY",
+        "title": "Wróg",
+        "description": "Wrodzy wrogowie zamieszkują te pokoje."
+      },
+      {
+        "id": "ROOM_ELITE",
+        "title": "Elita",
+        "description": "Potężni wrogowie znajdują się w tych pokojach.\n\nPokonanie ich nagrodzi cię Reliktem."
+      },
+      {
+        "id": "ROOM_BOSS",
+        "title": "Boss",
+        "description": "Najgroźniejszy wróg w okolicy.\n\nPokonanie go pozwoli przejść do następnego Aktu."
+      },
+      {
+        "id": "ROOM_EVENT",
+        "title": "Zdarzenie",
+        "description": "Coś niezwykłego dzieje się w tych pokojach..."
+      },
+      {
+        "id": "ROOM_MERCHANT",
+        "title": "Sklep",
+        "description": "Tajemniczy Kupiec sprzedaje swoje towary w tych pokojach.\n\nWydaj tu swoje ciężko zarobione Złoto!"
+      },
+      {
+        "id": "ROOM_REST",
+        "title": "Miejsce odpoczynku",
+        "description": "Zatrzymaj się w tych pokojach, aby uleczyć HP lub ulepszyć kartę."
+      },
+      {
+        "id": "ROOM_TREASURE",
+        "title": "Skarbiec",
+        "description": "Relikty i Złoto można znaleźć w tych pożądanych pokojach."
+      },
+      {
+        "id": "ROOM_ANCIENT",
+        "title": "Starożytny",
+        "description": "Starożytni zamieszkują te pokoje.\n\nDają niesamowite bonusy, skarby i wiedzę."
+      }
+    ],
+    "core_concepts": [
+      {
+        "id": "ENERGY",
+        "title": "Energia",
+        "description": "Energia jest używana do grania kart z Ręki."
+      },
+      {
+        "id": "BLOCK",
+        "title": "Blok",
+        "description": "Do następnej tury zapobiega obrażeniom."
+      },
+      {
+        "id": "HIT_POINTS",
+        "title": "Punkty Życia (HP)",
+        "description": "Jeśli stracisz wszystkie HP, umierasz."
+      },
+      {
+        "id": "MONEY_POUCH",
+        "title": "Złoto",
+        "description": "Ile masz Złota. Złoto jest walutą w Iglicy."
+      },
+      {
+        "id": "DRAW_PILE",
+        "title": "Stos dobierania (A)",
+        "description": "Na początku każdej tury\ndobieranych jest stąd 5 kart.\n\nKliknij, aby zobaczyć karty w stosie dobierania (potasowane)."
+      },
+      {
+        "id": "DISCARD_PILE",
+        "title": "Stos odrzutów (S)",
+        "description": "Jeśli stos dobierania jest pusty, stos odrzutów jest tasowany do stosu dobierania.\n\nKliknij, aby zobaczyć karty w stosie odrzutów."
+      },
+      {
+        "id": "EXHAUST_PILE",
+        "title": "Wyczerpane karty (X)",
+        "description": "Kliknij, aby zobaczyć karty wyczerpane w tej walce."
+      }
+    ],
+    "orbs": [
+      {
+        "id": "LIGHTNING",
+        "title": "Błyskawica",
+        "description": "Pasywnie: Na końcu tury zadaj {Passive} obrażeń losowemu wrogowi.\nPrzywołanie: Zadaj {Evoke} obrażeń losowemu wrogowi."
+      },
+      {
+        "id": "FROST",
+        "title": "Mróz",
+        "description": "Pasywnie: Na końcu tury zyskaj {Passive} Bloku.\nPrzywołanie: Zyskaj {Evoke} Bloku."
+      },
+      {
+        "id": "DARK",
+        "title": "Ciemność",
+        "description": "Pasywnie: Na końcu tury zwiększ obrażenia tej Kuli o {Passive}.\nPrzywołanie: Zadaj {Evoke} obrażeń wrogowi z najmniejszą ilością HP."
+      },
+      {
+        "id": "PLASMA",
+        "title": "Plazma",
+        "description": "Pasywnie: Na początku tury\nzyskaj 1 Energię.\nPrzywołanie: Zyskaj 2 Energię.\nPlazma nie podlega wpływowi Skupienia."
+      },
+      {
+        "id": "GLASS",
+        "title": "Szkło",
+        "description": "Pasywnie: Na końcu tury zadaj {Passive} obrażeń WSZYSTKIM wrogom i zmniejsz wartość tej kuli o 1.\nPrzywołanie: Zadaj {Evoke} obrażeń WSZYSTKIM wrogom."
+      }
+    ],
+    "stances": [],
+    "character_mechanics": [
+      {
+        "id": "STAR_COUNT",
+        "title": "Gwiazdy",
+        "description": "Twoja aktualna liczba Gwiazd (★). Karty Monarchy mogą wymagać ★ do zagrania."
+      },
+      {
+        "id": "SUMMON",
+        "title": "Przywołanie",
+        "description": "Przywołaj Osty'ego.\nJeśli już przywołany, zwiększ jego maksymalne HP na tę walkę."
+      },
+      {
+        "id": "FORGE",
+        "title": "Kucie",
+        "description": "Przy pierwszym Kuciu w walce dodaj Suwerenne Ostrze do Ręki. Dodaje dodatkowe obrażenia do Suwerennego Ostrza."
+      },
+      {
+        "id": "REPLAY",
+        "title": "Powtórka",
+        "description": "Zagraj tę kartę dodatkowy raz."
+      },
+      {
+        "id": "FATAL",
+        "title": "Śmiertelny",
+        "description": "Aktywuje się, gdy ta karta zabije wroga niebędącego sługą."
+      }
+    ]
   }
 }

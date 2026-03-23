@@ -7056,5 +7056,198 @@
       "name": "リージェント",
       "description": "星の王座の継承者。\n宇宙の力を行使するが、面倒はミニオン任せ。"
     }
+  },
+  "mechanics": {
+    "ascension": [
+      {
+        "level": 0,
+        "title": "アセンションなし",
+        "description": "アセンション修正なしでプレイ。"
+      },
+      {
+        "level": 1,
+        "title": "エリートの群れ",
+        "description": "エリートがより頻繁に出現する。"
+      },
+      {
+        "level": 2,
+        "title": "疲れた旅人",
+        "description": "エンシェントは失ったHPの80%しか回復しない。"
+      },
+      {
+        "level": 3,
+        "title": "貧困",
+        "description": "敵と宝箱からのゴールドが25%減少。"
+      },
+      {
+        "level": 4,
+        "title": "節約",
+        "description": "各ランのポーションスロットが1つ少ない状態で開始。"
+      },
+      {
+        "level": 5,
+        "title": "アセンダーの呪い",
+        "description": "各ランを呪い状態で開始。"
+      },
+      {
+        "level": 6,
+        "title": "暗闇",
+        "description": "休憩所が減少。"
+      },
+      {
+        "level": 7,
+        "title": "希少",
+        "description": "レアカードと強化カードの出現率が減少。"
+      },
+      {
+        "level": 8,
+        "title": "強敵",
+        "description": "全ての敵が倒しにくくなる。"
+      },
+      {
+        "level": 9,
+        "title": "致命的な敵",
+        "description": "全ての敵の攻撃がより致命的に。"
+      },
+      {
+        "level": 10,
+        "title": "ダブルボス",
+        "description": "第3幕の最後にボスを2体と戦う。"
+      }
+    ],
+    "map_rooms": [
+      {
+        "id": "ROOM_ENEMY",
+        "title": "敵",
+        "description": "敵対する敵がこの部屋に潜んでいる。"
+      },
+      {
+        "id": "ROOM_ELITE",
+        "title": "エリート",
+        "description": "強力な敵がこの部屋にいる。\n\n倒すとレリックが手に入る。"
+      },
+      {
+        "id": "ROOM_BOSS",
+        "title": "ボス",
+        "description": "このエリアで最も恐ろしい敵。\n\n倒すと次の幕に進める。"
+      },
+      {
+        "id": "ROOM_EVENT",
+        "title": "イベント",
+        "description": "この部屋では何か不思議なことが起こる..."
+      },
+      {
+        "id": "ROOM_MERCHANT",
+        "title": "ショップ",
+        "description": "謎の商人がこの部屋で商品を売っている。\n\n苦労して稼いだゴールドをここで使おう！"
+      },
+      {
+        "id": "ROOM_REST",
+        "title": "休憩所",
+        "description": "この部屋に立ち寄ってHPを回復したり、カードを強化しよう。"
+      },
+      {
+        "id": "ROOM_TREASURE",
+        "title": "宝物庫",
+        "description": "この憧れの部屋にはレリックとゴールドがある。"
+      },
+      {
+        "id": "ROOM_ANCIENT",
+        "title": "エンシェント",
+        "description": "エンシェントがこの部屋にいる。\n\n素晴らしいボーナス、宝物、知識を授けてくれる。"
+      }
+    ],
+    "core_concepts": [
+      {
+        "id": "ENERGY",
+        "title": "エナジー",
+        "description": "エナジーは手札からカードをプレイするために使用する。"
+      },
+      {
+        "id": "BLOCK",
+        "title": "ブロック",
+        "description": "次のターンまでダメージを防ぐ。"
+      },
+      {
+        "id": "HIT_POINTS",
+        "title": "ヒットポイント（HP）",
+        "description": "HPがなくなると死亡する。"
+      },
+      {
+        "id": "MONEY_POUCH",
+        "title": "ゴールド",
+        "description": "所持ゴールド。ゴールドはスパイア内の通貨。"
+      },
+      {
+        "id": "DRAW_PILE",
+        "title": "ドローパイル（A）",
+        "description": "各ターンの開始時に\nここから5枚のカードを引く。\n\nクリックしてドローパイルのカードを確認（シャッフル済み）。"
+      },
+      {
+        "id": "DISCARD_PILE",
+        "title": "捨て札（S）",
+        "description": "ドローパイルが空の場合、捨て札がシャッフルされてドローパイルに戻る。\n\nクリックして捨て札のカードを確認。"
+      },
+      {
+        "id": "EXHAUST_PILE",
+        "title": "廃棄カード（X）",
+        "description": "クリックしてこの戦闘で廃棄されたカードを確認。"
+      }
+    ],
+    "orbs": [
+      {
+        "id": "LIGHTNING",
+        "title": "ライトニング",
+        "description": "パッシブ: ターン終了時、ランダムな敵に{Passive}ダメージを与える。\n解放: ランダムな敵に{Evoke}ダメージを与える。"
+      },
+      {
+        "id": "FROST",
+        "title": "フロスト",
+        "description": "パッシブ: ターン終了時、{Passive}ブロックを得る。\n解放: {Evoke}ブロックを得る。"
+      },
+      {
+        "id": "DARK",
+        "title": "ダーク",
+        "description": "パッシブ: ターン終了時、このオーブのダメージが{Passive}増加する。\n解放: HPが最も低い敵に{Evoke}ダメージを与える。"
+      },
+      {
+        "id": "PLASMA",
+        "title": "プラズマ",
+        "description": "パッシブ: ターン開始時、\nエナジーを1得る。\n解放: エナジーを2得る。\nプラズマは集中の影響を受けない。"
+      },
+      {
+        "id": "GLASS",
+        "title": "グラス",
+        "description": "パッシブ: ターン終了時、全ての敵に{Passive}ダメージを与え、このオーブの値を1減少させる。\n解放: 全ての敵に{Evoke}ダメージを与える。"
+      }
+    ],
+    "stances": [],
+    "character_mechanics": [
+      {
+        "id": "STAR_COUNT",
+        "title": "スター",
+        "description": "現在のスター（★）の数。リージェントのカードはプレイに★が必要な場合がある。"
+      },
+      {
+        "id": "SUMMON",
+        "title": "召喚",
+        "description": "オスティを召喚する。\nすでに召喚されている場合、この戦闘中のオスティの最大HPが上がる。"
+      },
+      {
+        "id": "FORGE",
+        "title": "鍛造",
+        "description": "各戦闘で最初に鍛造すると、ソブリンブレードを手札に加える。ソブリンブレードに追加ダメージを付与する。"
+      },
+      {
+        "id": "REPLAY",
+        "title": "リプレイ",
+        "description": "このカードを追加で1回プレイする。"
+      },
+      {
+        "id": "FATAL",
+        "title": "フェイタル",
+        "description": "このカードがミニオンでない敵を倒した時に発動する。"
+      }
+    ]
   }
 }

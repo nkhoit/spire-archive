@@ -7056,5 +7056,198 @@
       "name": "Naip",
       "description": "Yıldızların Tahtı'nın varisi.\nKozmik güçlere sahiptir, ancak işleri onun hizmetkarları yapar."
     }
+  },
+  "mechanics": {
+    "ascension": [
+      {
+        "level": 0,
+        "title": "Yükseliş Yok",
+        "description": "Yükseliş değiştiricileri olmadan oyna."
+      },
+      {
+        "level": 1,
+        "title": "Elit Sürüsü",
+        "description": "Elitler daha sık ortaya çıkar."
+      },
+      {
+        "level": 2,
+        "title": "Yorgun Gezgin",
+        "description": "Kadimler eksik HP'nin yalnızca %80'ini iyileştirir."
+      },
+      {
+        "level": 3,
+        "title": "Yoksulluk",
+        "description": "Düşmanlar ve hazine sandıkları %25 daha az Altın bırakır."
+      },
+      {
+        "level": 4,
+        "title": "Sıkı Kemer",
+        "description": "Her koşuya 1 eksik iksir yuvasıyla başla."
+      },
+      {
+        "level": 5,
+        "title": "Yükselicinin Laneti",
+        "description": "Her koşuya lanetli başla."
+      },
+      {
+        "level": 6,
+        "title": "Kasvet",
+        "description": "Daha az Dinlenme Noktası."
+      },
+      {
+        "level": 7,
+        "title": "Kıtlık",
+        "description": "Ender ve Yükseltilmiş kartlar daha az görünür."
+      },
+      {
+        "level": 8,
+        "title": "Zorlu Düşmanlar",
+        "description": "Tüm düşmanlar daha zor öldürülür."
+      },
+      {
+        "level": 9,
+        "title": "Ölümcül Düşmanlar",
+        "description": "Tüm düşmanların saldırıları daha ölümcül."
+      },
+      {
+        "level": 10,
+        "title": "Çift Patron",
+        "description": "3. Perdenin sonunda iki patronla savaş."
+      }
+    ],
+    "map_rooms": [
+      {
+        "id": "ROOM_ENEMY",
+        "title": "Düşman",
+        "description": "Düşman yaratıklar bu odalarda bulunur."
+      },
+      {
+        "id": "ROOM_ELITE",
+        "title": "Elit",
+        "description": "Güçlü düşmanlar bu odalarda bulunur.\n\nOnları yenmek seni bir Kalıntı ile ödüllendirir."
+      },
+      {
+        "id": "ROOM_BOSS",
+        "title": "Patron",
+        "description": "Bölgedeki en ölümcül düşman.\n\nOnu yenmek bir sonraki Perdeye geçmeni sağlar."
+      },
+      {
+        "id": "ROOM_EVENT",
+        "title": "Etkinlik",
+        "description": "Bu odalarda olağandışı bir şeyler olur..."
+      },
+      {
+        "id": "ROOM_MERCHANT",
+        "title": "Mağaza",
+        "description": "Gizemli Tüccar bu odalarda mallarını satar.\n\nZor kazandığın Altını burada harca!"
+      },
+      {
+        "id": "ROOM_REST",
+        "title": "Dinlenme Noktası",
+        "description": "Bu odalarda HP iyileştirmek veya bir kartı Yükseltmek için dur."
+      },
+      {
+        "id": "ROOM_TREASURE",
+        "title": "Hazine Odası",
+        "description": "Bu gıpta edilen odalarda Kalıntılar ve Altın bulunabilir."
+      },
+      {
+        "id": "ROOM_ANCIENT",
+        "title": "Kadim",
+        "description": "Kadimler bu odalarda bulunur.\n\nİnanılmaz bonuslar, hazineler ve bilgi sunarlar."
+      }
+    ],
+    "core_concepts": [
+      {
+        "id": "ENERGY",
+        "title": "Enerji",
+        "description": "Enerji, Elindeki kartları oynamak için kullanılır."
+      },
+      {
+        "id": "BLOCK",
+        "title": "Blok",
+        "description": "Sonraki tura kadar hasarı önler."
+      },
+      {
+        "id": "HIT_POINTS",
+        "title": "Can Puanı (HP)",
+        "description": "HP'n biterse ölürsün."
+      },
+      {
+        "id": "MONEY_POUCH",
+        "title": "Altın",
+        "description": "Sahip olduğun Altın. Altın, Kule içindeki para birimidir."
+      },
+      {
+        "id": "DRAW_PILE",
+        "title": "Çekme Destesi (A)",
+        "description": "Her turun başında\nburadan 5 kart çekilir.\n\nÇekme destesindeki kartları görmek için tıkla (karışık)."
+      },
+      {
+        "id": "DISCARD_PILE",
+        "title": "Atma Yığını (S)",
+        "description": "Çekme desten boşsa, atma yığını çekme destesine karıştırılır.\n\nAtma yığınındaki kartları görmek için tıkla."
+      },
+      {
+        "id": "EXHAUST_PILE",
+        "title": "Tüketilmiş Kartlar (X)",
+        "description": "Bu savaşta Tüketilen kartları görmek için tıkla."
+      }
+    ],
+    "orbs": [
+      {
+        "id": "LIGHTNING",
+        "title": "Yıldırım",
+        "description": "Pasif: Tur sonunda rastgele bir düşmana {Passive} hasar ver.\nUyandırma: Rastgele bir düşmana {Evoke} hasar ver."
+      },
+      {
+        "id": "FROST",
+        "title": "Buz",
+        "description": "Pasif: Tur sonunda {Passive} Blok kazan.\nUyandırma: {Evoke} Blok kazan."
+      },
+      {
+        "id": "DARK",
+        "title": "Karanlık",
+        "description": "Pasif: Tur sonunda bu Kürenin hasarını {Passive} artır.\nUyandırma: En az HP'ye sahip düşmana {Evoke} hasar ver."
+      },
+      {
+        "id": "PLASMA",
+        "title": "Plazma",
+        "description": "Pasif: Tur başında\n1 Enerji kazan.\nUyandırma: 2 Enerji kazan.\nPlazma Odaklanmadan etkilenmez."
+      },
+      {
+        "id": "GLASS",
+        "title": "Cam",
+        "description": "Pasif: Tur sonunda TÜM düşmanlara {Passive} hasar ver ve bu kürenin değerini 1 azalt.\nUyandırma: TÜM düşmanlara {Evoke} hasar ver."
+      }
+    ],
+    "stances": [],
+    "character_mechanics": [
+      {
+        "id": "STAR_COUNT",
+        "title": "Yıldızlar",
+        "description": "Mevcut Yıldız (★) sayın. Naip'in kartları oynamak için ★ gerektirebilir."
+      },
+      {
+        "id": "SUMMON",
+        "title": "Çağırma",
+        "description": "Osty'yi çağır.\nZaten çağrılmışsa, bu savaş için maksimum HP'sini artır."
+      },
+      {
+        "id": "FORGE",
+        "title": "Dövme",
+        "description": "Her savaşta ilk Dövme'de Egemen Kılıç'ı Eline ekle. Egemen Kılıç'a ek hasar ekler."
+      },
+      {
+        "id": "REPLAY",
+        "title": "Tekrar",
+        "description": "Bu kartı bir kez daha oynar."
+      },
+      {
+        "id": "FATAL",
+        "title": "Öldürücü",
+        "description": "Bu kart uşak olmayan bir düşmanı öldürdüğünde tetiklenir."
+      }
+    ]
   }
 }

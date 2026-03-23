@@ -7056,5 +7056,198 @@
       "name": "El Regente",
       "description": "Heredero del Trono Estelar.\nCuenta con poderes cósmicos, pero sus esbirros hacen todo el trabajo."
     }
+  },
+  "mechanics": {
+    "ascension": [
+      {
+        "level": 0,
+        "title": "Sin Ascensión",
+        "description": "Juega sin modificadores de Ascensión."
+      },
+      {
+        "level": 1,
+        "title": "Enjambre de Élites",
+        "description": "Los Élites aparecen con más frecuencia."
+      },
+      {
+        "level": 2,
+        "title": "Viajero cansado",
+        "description": "Los Antiguos solo curan el 80% de tu HP perdido."
+      },
+      {
+        "level": 3,
+        "title": "Pobreza",
+        "description": "Enemigos y cofres sueltan un 25% menos de Oro."
+      },
+      {
+        "level": 4,
+        "title": "Cinturón apretado",
+        "description": "Comienza cada partida con 1 ranura de poción menos."
+      },
+      {
+        "level": 5,
+        "title": "Maldición del Ascensor",
+        "description": "Comienza cada partida maldecido."
+      },
+      {
+        "level": 6,
+        "title": "Penumbra",
+        "description": "Menos Sitios de descanso."
+      },
+      {
+        "level": 7,
+        "title": "Escasez",
+        "description": "Cartas Raras y Mejoradas aparecen menos."
+      },
+      {
+        "level": 8,
+        "title": "Enemigos duros",
+        "description": "Todos los enemigos son más difíciles de matar."
+      },
+      {
+        "level": 9,
+        "title": "Enemigos letales",
+        "description": "Todos los enemigos tienen ataques más letales."
+      },
+      {
+        "level": 10,
+        "title": "Doble Jefe",
+        "description": "Lucha contra dos jefes al final del Acto 3."
+      }
+    ],
+    "map_rooms": [
+      {
+        "id": "ROOM_ENEMY",
+        "title": "Enemigo",
+        "description": "Enemigos hostiles residen en estas salas."
+      },
+      {
+        "id": "ROOM_ELITE",
+        "title": "Élite",
+        "description": "Enemigos poderosos están en estas salas.\n\nDerrotarlos te recompensará con una Reliquia."
+      },
+      {
+        "id": "ROOM_BOSS",
+        "title": "Jefe",
+        "description": "El enemigo más letal de la zona.\n\nDerrotarlo te permitirá avanzar al siguiente Acto."
+      },
+      {
+        "id": "ROOM_EVENT",
+        "title": "Evento",
+        "description": "Algo inusual ocurre en estas salas..."
+      },
+      {
+        "id": "ROOM_MERCHANT",
+        "title": "Tienda",
+        "description": "El misterioso Mercader vende sus productos en estas salas.\n\n¡Gasta tu Oro bien ganado aquí!"
+      },
+      {
+        "id": "ROOM_REST",
+        "title": "Sitio de descanso",
+        "description": "Detente en estas salas para curar HP o Mejorar una carta."
+      },
+      {
+        "id": "ROOM_TREASURE",
+        "title": "Sala del tesoro",
+        "description": "Reliquias y Oro se encuentran en estas codiciadas salas."
+      },
+      {
+        "id": "ROOM_ANCIENT",
+        "title": "Antiguo",
+        "description": "Los Antiguos residen en estas salas.\n\nOtorgan increíbles bonificaciones, tesoros y conocimiento."
+      }
+    ],
+    "core_concepts": [
+      {
+        "id": "ENERGY",
+        "title": "Energía",
+        "description": "La Energía se usa para jugar cartas de tu Mano."
+      },
+      {
+        "id": "BLOCK",
+        "title": "Bloqueo",
+        "description": "Previene daño hasta el siguiente turno."
+      },
+      {
+        "id": "HIT_POINTS",
+        "title": "Puntos de Vida (PV)",
+        "description": "Si te quedas sin PV, mueres."
+      },
+      {
+        "id": "MONEY_POUCH",
+        "title": "Oro",
+        "description": "Tu cantidad de Oro. El Oro es la moneda dentro de la Aguja."
+      },
+      {
+        "id": "DRAW_PILE",
+        "title": "Mazo de robo (A)",
+        "description": "Al inicio de cada turno,\nse roban 5 cartas de aquí.\n\nHaz clic para ver las cartas en tu mazo de robo (barajado)."
+      },
+      {
+        "id": "DISCARD_PILE",
+        "title": "Pila de descarte (S)",
+        "description": "Si tu mazo de robo está vacío, la pila de descarte se baraja en el mazo de robo.\n\nHaz clic para ver las cartas en tu pila de descarte."
+      },
+      {
+        "id": "EXHAUST_PILE",
+        "title": "Cartas Agotadas (X)",
+        "description": "Haz clic para ver las cartas Agotadas en este combate."
+      }
+    ],
+    "orbs": [
+      {
+        "id": "LIGHTNING",
+        "title": "Rayo",
+        "description": "Pasivo: Al final del turno, inflige {Passive} de daño a un enemigo aleatorio.\nEvocar: Inflige {Evoke} de daño a un enemigo aleatorio."
+      },
+      {
+        "id": "FROST",
+        "title": "Escarcha",
+        "description": "Pasivo: Al final del turno, obtén {Passive} de Bloqueo.\nEvocar: Obtén {Evoke} de Bloqueo."
+      },
+      {
+        "id": "DARK",
+        "title": "Oscuridad",
+        "description": "Pasivo: Al final del turno, aumenta el daño de este Orbe en {Passive}.\nEvocar: Inflige {Evoke} de daño al enemigo con menos PV."
+      },
+      {
+        "id": "PLASMA",
+        "title": "Plasma",
+        "description": "Pasivo: Al inicio del turno,\nobtén 1 de Energía.\nEvocar: Obtén 2 de Energía.\nEl Plasma no se ve afectado por la Concentración."
+      },
+      {
+        "id": "GLASS",
+        "title": "Cristal",
+        "description": "Pasivo: Al final del turno, inflige {Passive} de daño a TODOS los enemigos y reduce el valor de este orbe en 1.\nEvocar: Inflige {Evoke} de daño a TODOS los enemigos."
+      }
+    ],
+    "stances": [],
+    "character_mechanics": [
+      {
+        "id": "STAR_COUNT",
+        "title": "Estrellas",
+        "description": "Tu cuenta actual de Estrellas (★). Las cartas del Regente pueden requerir ★ para jugarse."
+      },
+      {
+        "id": "SUMMON",
+        "title": "Invocar",
+        "description": "Invoca a Osty.\nSi ya está invocado, aumenta su PV máximo en este combate."
+      },
+      {
+        "id": "FORGE",
+        "title": "Forjar",
+        "description": "La primera vez que Forjas en cada combate, añade Espada Soberana a tu Mano. Añade daño adicional a Espada Soberana."
+      },
+      {
+        "id": "REPLAY",
+        "title": "Repetir",
+        "description": "Juega esta carta una vez adicional."
+      },
+      {
+        "id": "FATAL",
+        "title": "Fatal",
+        "description": "Se activa cuando esta carta mata a un enemigo que no sea esbirro."
+      }
+    ]
   }
 }

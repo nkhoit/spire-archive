@@ -7056,5 +7056,198 @@
       "name": "리젠트",
       "description": "별의 왕좌를 계승하는 존재입니다.\n우주적인 힘을 다루지만 실질적인 일은 하수인들이 처리합니다."
     }
+  },
+  "mechanics": {
+    "ascension": [
+      {
+        "level": 0,
+        "title": "승천 없음",
+        "description": "승천 수정 없이 플레이."
+      },
+      {
+        "level": 1,
+        "title": "엘리트 떼",
+        "description": "엘리트가 더 자주 출현한다."
+      },
+      {
+        "level": 2,
+        "title": "지친 여행자",
+        "description": "고대인이 잃은 HP의 80%만 회복시켜 준다."
+      },
+      {
+        "level": 3,
+        "title": "빈곤",
+        "description": "적과 보물 상자의 골드가 25% 감소."
+      },
+      {
+        "level": 4,
+        "title": "허리띠 졸라매기",
+        "description": "포션 슬롯 1개가 적은 상태로 시작."
+      },
+      {
+        "level": 5,
+        "title": "승천자의 저주",
+        "description": "저주 상태로 시작."
+      },
+      {
+        "level": 6,
+        "title": "어둠",
+        "description": "휴식 장소 감소."
+      },
+      {
+        "level": 7,
+        "title": "희소",
+        "description": "희귀 및 업그레이드 카드 출현율 감소."
+      },
+      {
+        "level": 8,
+        "title": "강한 적",
+        "description": "모든 적이 더 강해진다."
+      },
+      {
+        "level": 9,
+        "title": "치명적인 적",
+        "description": "모든 적의 공격이 더 치명적이다."
+      },
+      {
+        "level": 10,
+        "title": "더블 보스",
+        "description": "3막 끝에서 보스 2체와 전투."
+      }
+    ],
+    "map_rooms": [
+      {
+        "id": "ROOM_ENEMY",
+        "title": "적",
+        "description": "적대적인 적이 이 방에 있다."
+      },
+      {
+        "id": "ROOM_ELITE",
+        "title": "엘리트",
+        "description": "강력한 적이 이 방에 있다.\n\n처치하면 유물을 얻는다."
+      },
+      {
+        "id": "ROOM_BOSS",
+        "title": "보스",
+        "description": "이 지역에서 가장 위험한 적.\n\n처치하면 다음 막으로 진행할 수 있다."
+      },
+      {
+        "id": "ROOM_EVENT",
+        "title": "이벤트",
+        "description": "이 방에서 무언가 특이한 일이 일어난다..."
+      },
+      {
+        "id": "ROOM_MERCHANT",
+        "title": "상점",
+        "description": "신비로운 상인이 이 방에서 물건을 판다.\n\n힘들게 번 골드를 여기서 사용하자!"
+      },
+      {
+        "id": "ROOM_REST",
+        "title": "휴식 장소",
+        "description": "이 방에 들러 HP를 회복하거나 카드를 업그레이드하자."
+      },
+      {
+        "id": "ROOM_TREASURE",
+        "title": "보물방",
+        "description": "이 탐나는 방에서 유물과 골드를 찾을 수 있다."
+      },
+      {
+        "id": "ROOM_ANCIENT",
+        "title": "고대인",
+        "description": "고대인이 이 방에 있다.\n\n놀라운 보너스, 보물, 지식을 부여한다."
+      }
+    ],
+    "core_concepts": [
+      {
+        "id": "ENERGY",
+        "title": "에너지",
+        "description": "에너지는 손에서 카드를 사용하는 데 쓰인다."
+      },
+      {
+        "id": "BLOCK",
+        "title": "방어도",
+        "description": "다음 턴까지 피해를 방지한다."
+      },
+      {
+        "id": "HIT_POINTS",
+        "title": "체력 (HP)",
+        "description": "HP가 0이 되면 사망한다."
+      },
+      {
+        "id": "MONEY_POUCH",
+        "title": "골드",
+        "description": "보유 골드. 골드는 첨탑 내의 화폐이다."
+      },
+      {
+        "id": "DRAW_PILE",
+        "title": "뽑기 더미 (A)",
+        "description": "매 턴 시작 시\n여기서 카드 5장을 뽑는다.\n\n클릭하여 뽑기 더미의 카드를 확인 (셔플됨)."
+      },
+      {
+        "id": "DISCARD_PILE",
+        "title": "버린 카드 더미 (S)",
+        "description": "뽑기 더미가 비면 버린 카드 더미가 셔플되어 뽑기 더미로 돌아간다.\n\n클릭하여 버린 카드를 확인."
+      },
+      {
+        "id": "EXHAUST_PILE",
+        "title": "소멸 카드 (X)",
+        "description": "클릭하여 이 전투에서 소멸된 카드를 확인."
+      }
+    ],
+    "orbs": [
+      {
+        "id": "LIGHTNING",
+        "title": "번개",
+        "description": "패시브: 턴 종료 시, 무작위 적에게 {Passive} 피해.\n발동: 무작위 적에게 {Evoke} 피해."
+      },
+      {
+        "id": "FROST",
+        "title": "서리",
+        "description": "패시브: 턴 종료 시, {Passive} 방어도 획득.\n발동: {Evoke} 방어도 획득."
+      },
+      {
+        "id": "DARK",
+        "title": "어둠",
+        "description": "패시브: 턴 종료 시, 이 오브의 피해가 {Passive} 증가.\n발동: HP가 가장 낮은 적에게 {Evoke} 피해."
+      },
+      {
+        "id": "PLASMA",
+        "title": "플라즈마",
+        "description": "패시브: 턴 시작 시,\n에너지 1 획득.\n발동: 에너지 2 획득.\n플라즈마는 집중의 영향을 받지 않는다."
+      },
+      {
+        "id": "GLASS",
+        "title": "유리",
+        "description": "패시브: 턴 종료 시, 모든 적에게 {Passive} 피해를 주고 이 오브의 값을 1 감소.\n발동: 모든 적에게 {Evoke} 피해."
+      }
+    ],
+    "stances": [],
+    "character_mechanics": [
+      {
+        "id": "STAR_COUNT",
+        "title": "별",
+        "description": "현재 별(★) 수. 리젠트의 카드는 사용에 ★이 필요할 수 있다."
+      },
+      {
+        "id": "SUMMON",
+        "title": "소환",
+        "description": "오스티를 소환한다.\n이미 소환된 경우, 이 전투 중 오스티의 최대 HP가 증가한다."
+      },
+      {
+        "id": "FORGE",
+        "title": "단조",
+        "description": "전투에서 처음 단조할 때, 소버린 블레이드를 손에 추가한다. 소버린 블레이드에 추가 피해를 부여한다."
+      },
+      {
+        "id": "REPLAY",
+        "title": "리플레이",
+        "description": "이 카드를 추가로 1회 사용한다."
+      },
+      {
+        "id": "FATAL",
+        "title": "페이탈",
+        "description": "이 카드가 미니언이 아닌 적을 처치할 때 발동한다."
+      }
+    ]
   }
 }

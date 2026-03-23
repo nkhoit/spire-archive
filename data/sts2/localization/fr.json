@@ -7052,5 +7052,198 @@
       "name": "Le Régent",
       "description": "L'héritier du Trône Stellaire.\nManie des pouvoirs cosmiques mais laisse ses sbires faire le travail à sa place."
     }
+  },
+  "mechanics": {
+    "ascension": [
+      {
+        "level": 0,
+        "title": "Pas d'Ascension",
+        "description": "Jouer sans modificateurs d'Ascension."
+      },
+      {
+        "level": 1,
+        "title": "Élites en masse",
+        "description": "Les Élites apparaissent plus souvent."
+      },
+      {
+        "level": 2,
+        "title": "Voyageur fatigué",
+        "description": "Les Anciens ne soignent que 80% de vos HP manquants."
+      },
+      {
+        "level": 3,
+        "title": "Pauvreté",
+        "description": "Les ennemis et coffres au trésor donnent 25% d'Or en moins."
+      },
+      {
+        "level": 4,
+        "title": "Ceinture serrée",
+        "description": "Commencez chaque aventure avec 1 emplacement de potion en moins."
+      },
+      {
+        "level": 5,
+        "title": "Fléau de l'Ascenseur",
+        "description": "Commencez chaque aventure avec une Malédiction."
+      },
+      {
+        "level": 6,
+        "title": "Morosité",
+        "description": "Moins de Sites de repos."
+      },
+      {
+        "level": 7,
+        "title": "Rareté",
+        "description": "Les cartes Rares et Améliorées apparaissent moins souvent."
+      },
+      {
+        "level": 8,
+        "title": "Ennemis coriaces",
+        "description": "Tous les ennemis sont plus difficiles à tuer."
+      },
+      {
+        "level": 9,
+        "title": "Ennemis mortels",
+        "description": "Tous les ennemis ont des attaques plus mortelles."
+      },
+      {
+        "level": 10,
+        "title": "Double Boss",
+        "description": "Affrontez deux boss à la fin de l'Acte 3."
+      }
+    ],
+    "map_rooms": [
+      {
+        "id": "ROOM_ENEMY",
+        "title": "Ennemi",
+        "description": "Des ennemis hostiles résident dans ces salles."
+      },
+      {
+        "id": "ROOM_ELITE",
+        "title": "Élite",
+        "description": "De puissants ennemis se trouvent dans ces salles.\n\nLes vaincre vous récompensera d'une Relique."
+      },
+      {
+        "id": "ROOM_BOSS",
+        "title": "Boss",
+        "description": "L'ennemi le plus mortel de la zone.\n\nLe vaincre vous permettra de passer à l'Acte suivant."
+      },
+      {
+        "id": "ROOM_EVENT",
+        "title": "Événement",
+        "description": "Quelque chose d'inhabituel se produit dans ces salles..."
+      },
+      {
+        "id": "ROOM_MERCHANT",
+        "title": "Boutique",
+        "description": "Le mystérieux Marchand vend ses marchandises dans ces salles.\n\nDépensez votre Or durement gagné ici !"
+      },
+      {
+        "id": "ROOM_REST",
+        "title": "Site de repos",
+        "description": "Arrêtez-vous dans ces salles pour soigner des HP ou Améliorer une carte."
+      },
+      {
+        "id": "ROOM_TREASURE",
+        "title": "Salle au trésor",
+        "description": "Des Reliques et de l'Or se trouvent dans ces salles convoitées."
+      },
+      {
+        "id": "ROOM_ANCIENT",
+        "title": "Ancien",
+        "description": "Les Anciens résident dans ces salles.\n\nIls octroient d'incroyables bonus, trésors et connaissances."
+      }
+    ],
+    "core_concepts": [
+      {
+        "id": "ENERGY",
+        "title": "Énergie",
+        "description": "L'Énergie est utilisée pour jouer des cartes de votre Main."
+      },
+      {
+        "id": "BLOCK",
+        "title": "Blocage",
+        "description": "Empêche les dégâts jusqu'au prochain tour."
+      },
+      {
+        "id": "HIT_POINTS",
+        "title": "Points de Vie (PV)",
+        "description": "Si vos PV tombent à 0, vous mourrez."
+      },
+      {
+        "id": "MONEY_POUCH",
+        "title": "Or",
+        "description": "Votre quantité d'Or. L'Or est la monnaie de la Flèche."
+      },
+      {
+        "id": "DRAW_PILE",
+        "title": "Pioche (A)",
+        "description": "Au début de chaque tour,\n5 cartes sont piochées d'ici.\n\nCliquez pour voir les cartes de votre pioche (mélangée)."
+      },
+      {
+        "id": "DISCARD_PILE",
+        "title": "Défausse (S)",
+        "description": "Si votre pioche est vide, la défausse est mélangée dans la pioche.\n\nCliquez pour voir les cartes de votre défausse."
+      },
+      {
+        "id": "EXHAUST_PILE",
+        "title": "Cartes Épuisées (X)",
+        "description": "Cliquez pour voir les cartes Épuisées durant ce combat."
+      }
+    ],
+    "orbs": [
+      {
+        "id": "LIGHTNING",
+        "title": "Foudre",
+        "description": "Passif : En fin de tour, inflige {Passive} dégâts à un ennemi aléatoire.\nÉvocation : Inflige {Evoke} dégâts à un ennemi aléatoire."
+      },
+      {
+        "id": "FROST",
+        "title": "Givre",
+        "description": "Passif : En fin de tour, gagne {Passive} Blocage.\nÉvocation : Gagne {Evoke} Blocage."
+      },
+      {
+        "id": "DARK",
+        "title": "Ténèbres",
+        "description": "Passif : En fin de tour, augmente les dégâts de cet Orbe de {Passive}.\nÉvocation : Inflige {Evoke} dégâts à l'ennemi ayant le moins de PV."
+      },
+      {
+        "id": "PLASMA",
+        "title": "Plasma",
+        "description": "Passif : Au début du tour,\ngagne 1 Énergie.\nÉvocation : Gagne 2 Énergie.\nLe Plasma n'est pas affecté par la Concentration."
+      },
+      {
+        "id": "GLASS",
+        "title": "Verre",
+        "description": "Passif : En fin de tour, inflige {Passive} dégâts à TOUS les ennemis et réduit la valeur de cet orbe de 1.\nÉvocation : Inflige {Evoke} dégâts à TOUS les ennemis."
+      }
+    ],
+    "stances": [],
+    "character_mechanics": [
+      {
+        "id": "STAR_COUNT",
+        "title": "Étoiles",
+        "description": "Votre nombre actuel d'Étoiles (★). Les cartes du Régent peuvent nécessiter des ★ pour être jouées."
+      },
+      {
+        "id": "SUMMON",
+        "title": "Invocation",
+        "description": "Invoque Osty.\nS'il est déjà invoqué, augmente ses PV max pour ce combat."
+      },
+      {
+        "id": "FORGE",
+        "title": "Forge",
+        "description": "La première fois que vous Forgez par combat, ajoutez Lame Souveraine à votre Main. Ajoute des dégâts supplémentaires à Lame Souveraine."
+      },
+      {
+        "id": "REPLAY",
+        "title": "Rejeu",
+        "description": "Joue cette carte une fois supplémentaire."
+      },
+      {
+        "id": "FATAL",
+        "title": "Fatal",
+        "description": "Se déclenche quand cette carte tue un ennemi non-serviteur."
+      }
+    ]
   }
 }

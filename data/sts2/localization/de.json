@@ -7056,5 +7056,198 @@
       "name": "Der Regent",
       "description": "Erbe des Sternenthrons.\nVerfügt über kosmische Mächte, aber seine Diener machen die Arbeit."
     }
+  },
+  "mechanics": {
+    "ascension": [
+      {
+        "level": 0,
+        "title": "Kein Aufstieg",
+        "description": "Spiele ohne Aufstiegsmodifikatoren."
+      },
+      {
+        "level": 1,
+        "title": "Elite-Schwarm",
+        "description": "Eliten erscheinen häufiger."
+      },
+      {
+        "level": 2,
+        "title": "Müder Reisender",
+        "description": "Uralte heilen nur 80% deines fehlenden HP."
+      },
+      {
+        "level": 3,
+        "title": "Armut",
+        "description": "Feinde und Schatztruhen lassen 25% weniger Gold fallen."
+      },
+      {
+        "level": 4,
+        "title": "Enger Gürtel",
+        "description": "Starte jeden Lauf mit 1 Trankplatz weniger."
+      },
+      {
+        "level": 5,
+        "title": "Fluch des Aufsteigers",
+        "description": "Starte jeden Lauf verflucht."
+      },
+      {
+        "level": 6,
+        "title": "Finsternis",
+        "description": "Weniger Rastplätze."
+      },
+      {
+        "level": 7,
+        "title": "Knappheit",
+        "description": "Seltene und aufgewertete Karten erscheinen seltener."
+      },
+      {
+        "level": 8,
+        "title": "Zähe Feinde",
+        "description": "Alle Feinde sind schwerer zu besiegen."
+      },
+      {
+        "level": 9,
+        "title": "Tödliche Feinde",
+        "description": "Alle Feinde haben tödlichere Angriffe."
+      },
+      {
+        "level": 10,
+        "title": "Doppelboss",
+        "description": "Kämpfe am Ende von Akt 3 gegen zwei Bosse."
+      }
+    ],
+    "map_rooms": [
+      {
+        "id": "ROOM_ENEMY",
+        "title": "Feind",
+        "description": "Feindliche Gegner befinden sich in diesen Räumen."
+      },
+      {
+        "id": "ROOM_ELITE",
+        "title": "Elite",
+        "description": "Mächtige Feinde sind in diesen Räumen.\n\nSie zu besiegen belohnt dich mit einem Relikt."
+      },
+      {
+        "id": "ROOM_BOSS",
+        "title": "Boss",
+        "description": "Der tödlichste Feind des Gebiets.\n\nIhn zu besiegen lässt dich zum nächsten Akt vorrücken."
+      },
+      {
+        "id": "ROOM_EVENT",
+        "title": "Ereignis",
+        "description": "In diesen Räumen geschieht etwas Ungewöhnliches..."
+      },
+      {
+        "id": "ROOM_MERCHANT",
+        "title": "Laden",
+        "description": "Der mysteriöse Händler verkauft seine Waren in diesen Räumen.\n\nGib dein hart verdientes Gold hier aus!"
+      },
+      {
+        "id": "ROOM_REST",
+        "title": "Rastplatz",
+        "description": "Halte in diesen Räumen an, um HP zu heilen oder eine Karte aufzuwerten."
+      },
+      {
+        "id": "ROOM_TREASURE",
+        "title": "Schatzkammer",
+        "description": "Relikte und Gold können in diesen begehrten Räumen gefunden werden."
+      },
+      {
+        "id": "ROOM_ANCIENT",
+        "title": "Uralte",
+        "description": "Uralte befinden sich in diesen Räumen.\n\nSie gewähren unglaubliche Boni, Schätze und Wissen."
+      }
+    ],
+    "core_concepts": [
+      {
+        "id": "ENERGY",
+        "title": "Energie",
+        "description": "Energie wird verwendet, um Karten aus deiner Hand zu spielen."
+      },
+      {
+        "id": "BLOCK",
+        "title": "Block",
+        "description": "Verhindert Schaden bis zum nächsten Zug."
+      },
+      {
+        "id": "HIT_POINTS",
+        "title": "Trefferpunkte (HP)",
+        "description": "Wenn dir die HP ausgehen, stirbst du."
+      },
+      {
+        "id": "MONEY_POUCH",
+        "title": "Gold",
+        "description": "Dein Goldvorrat. Gold ist die Währung im Spire."
+      },
+      {
+        "id": "DRAW_PILE",
+        "title": "Nachziehstapel (A)",
+        "description": "Zu Beginn jedes Zuges werden\nhier 5 Karten gezogen.\n\nKlicke, um die Karten im Nachziehstapel zu sehen (gemischt)."
+      },
+      {
+        "id": "DISCARD_PILE",
+        "title": "Ablagestapel (S)",
+        "description": "Wenn der Nachziehstapel leer ist, wird der Ablagestapel in den Nachziehstapel gemischt.\n\nKlicke, um die Karten im Ablagestapel zu sehen."
+      },
+      {
+        "id": "EXHAUST_PILE",
+        "title": "Erschöpfte Karten (X)",
+        "description": "Klicke, um die in diesem Kampf erschöpften Karten zu sehen."
+      }
+    ],
+    "orbs": [
+      {
+        "id": "LIGHTNING",
+        "title": "Blitz",
+        "description": "Passiv: Am Ende des Zuges, füge einem zufälligen Feind {Passive} Schaden zu.\nHervorrufen: Füge einem zufälligen Feind {Evoke} Schaden zu."
+      },
+      {
+        "id": "FROST",
+        "title": "Frost",
+        "description": "Passiv: Am Ende des Zuges, erhalte {Passive} Block.\nHervorrufen: Erhalte {Evoke} Block."
+      },
+      {
+        "id": "DARK",
+        "title": "Dunkelheit",
+        "description": "Passiv: Am Ende des Zuges, erhöhe den Schaden dieser Kugel um {Passive}.\nHervorrufen: Füge dem Feind mit den niedrigsten HP {Evoke} Schaden zu."
+      },
+      {
+        "id": "PLASMA",
+        "title": "Plasma",
+        "description": "Passiv: Zu Beginn des Zuges,\nerhalte 1 Energie.\nHervorrufen: Erhalte 2 Energie.\nPlasma wird nicht von Fokus beeinflusst."
+      },
+      {
+        "id": "GLASS",
+        "title": "Glas",
+        "description": "Passiv: Am Ende des Zuges, füge ALLEN Feinden {Passive} Schaden zu und reduziere den Wert dieser Kugel um 1.\nHervorrufen: Füge ALLEN Feinden {Evoke} Schaden zu."
+      }
+    ],
+    "stances": [],
+    "character_mechanics": [
+      {
+        "id": "STAR_COUNT",
+        "title": "Sterne",
+        "description": "Deine aktuelle Sterne-Anzahl (★). Die Karten des Regenten benötigen möglicherweise ★ zum Spielen."
+      },
+      {
+        "id": "SUMMON",
+        "title": "Beschwören",
+        "description": "Beschwöre Osty.\nWenn bereits beschworen, erhöhe seine maximalen HP für diesen Kampf."
+      },
+      {
+        "id": "FORGE",
+        "title": "Schmieden",
+        "description": "Beim ersten Schmieden pro Kampf wird Souveräne Klinge der Hand hinzugefügt. Fügt Souveräner Klinge zusätzlichen Schaden hinzu."
+      },
+      {
+        "id": "REPLAY",
+        "title": "Wiederholen",
+        "description": "Spielt diese Karte ein zusätzliches Mal."
+      },
+      {
+        "id": "FATAL",
+        "title": "Fatal",
+        "description": "Wird ausgelöst, wenn diese Karte einen Nicht-Diener-Feind tötet."
+      }
+    ]
   }
 }

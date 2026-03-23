@@ -7056,5 +7056,198 @@
       "name": "储君",
       "description": "群星王座的继承人。\n拥有宇宙的力量，但总是让他的仆从们去做各种事情。"
     }
+  },
+  "mechanics": {
+    "ascension": [
+      {
+        "level": 0,
+        "title": "无进阶",
+        "description": "无进阶修正进行游戏。"
+      },
+      {
+        "level": 1,
+        "title": "精英蜂拥",
+        "description": "精英出现得更频繁。"
+      },
+      {
+        "level": 2,
+        "title": "疲惫旅人",
+        "description": "远古只恢复你失去HP的80%。"
+      },
+      {
+        "level": 3,
+        "title": "贫穷",
+        "description": "敌人和宝箱掉落的金币减少25%。"
+      },
+      {
+        "level": 4,
+        "title": "勒紧裤带",
+        "description": "每次冒险少1个药水槽位。"
+      },
+      {
+        "level": 5,
+        "title": "攀登者之祸",
+        "description": "每次冒险以诅咒状态开始。"
+      },
+      {
+        "level": 6,
+        "title": "阴暗",
+        "description": "篝火减少。"
+      },
+      {
+        "level": 7,
+        "title": "匮乏",
+        "description": "稀有和升级卡牌出现率降低。"
+      },
+      {
+        "level": 8,
+        "title": "强敌",
+        "description": "所有敌人更难击杀。"
+      },
+      {
+        "level": 9,
+        "title": "致命之敌",
+        "description": "所有敌人的攻击更加致命。"
+      },
+      {
+        "level": 10,
+        "title": "双Boss",
+        "description": "在第3幕末尾面对两个Boss。"
+      }
+    ],
+    "map_rooms": [
+      {
+        "id": "ROOM_ENEMY",
+        "title": "敌人",
+        "description": "敌对的敌人潜伏在这些房间中。"
+      },
+      {
+        "id": "ROOM_ELITE",
+        "title": "精英",
+        "description": "强大的敌人在这些房间中。\n\n击败它们可获得遗物。"
+      },
+      {
+        "id": "ROOM_BOSS",
+        "title": "Boss",
+        "description": "该区域最致命的敌人。\n\n击败它们可进入下一幕。"
+      },
+      {
+        "id": "ROOM_EVENT",
+        "title": "事件",
+        "description": "这些房间中会发生不寻常的事..."
+      },
+      {
+        "id": "ROOM_MERCHANT",
+        "title": "商店",
+        "description": "神秘商人在这些房间中出售商品。\n\n在这里花掉你辛苦赚来的金币吧！"
+      },
+      {
+        "id": "ROOM_REST",
+        "title": "篝火",
+        "description": "在这些房间中休息以恢复HP或升级卡牌。"
+      },
+      {
+        "id": "ROOM_TREASURE",
+        "title": "宝藏室",
+        "description": "在这些令人垂涎的房间中可找到遗物和金币。"
+      },
+      {
+        "id": "ROOM_ANCIENT",
+        "title": "远古",
+        "description": "远古存在于这些房间中。\n\n它们赐予惊人的加成、宝藏和知识。"
+      }
+    ],
+    "core_concepts": [
+      {
+        "id": "ENERGY",
+        "title": "能量",
+        "description": "能量用于从手牌中打出卡牌。"
+      },
+      {
+        "id": "BLOCK",
+        "title": "格挡",
+        "description": "在下一回合前防止伤害。"
+      },
+      {
+        "id": "HIT_POINTS",
+        "title": "生命值（HP）",
+        "description": "HP耗尽即死亡。"
+      },
+      {
+        "id": "MONEY_POUCH",
+        "title": "金币",
+        "description": "你的金币数量。金币是尖塔内的货币。"
+      },
+      {
+        "id": "DRAW_PILE",
+        "title": "抽牌堆（A）",
+        "description": "每回合开始时，\n从这里抽取5张牌。\n\n点击查看抽牌堆中的卡牌（已洗牌）。"
+      },
+      {
+        "id": "DISCARD_PILE",
+        "title": "弃牌堆（S）",
+        "description": "抽牌堆为空时，弃牌堆会被洗入抽牌堆。\n\n点击查看弃牌堆中的卡牌。"
+      },
+      {
+        "id": "EXHAUST_PILE",
+        "title": "消耗牌（X）",
+        "description": "点击查看本次战斗中被消耗的卡牌。"
+      }
+    ],
+    "orbs": [
+      {
+        "id": "LIGHTNING",
+        "title": "闪电",
+        "description": "被动：回合结束时，对随机敌人造成{Passive}伤害。\n激发：对随机敌人造成{Evoke}伤害。"
+      },
+      {
+        "id": "FROST",
+        "title": "冰霜",
+        "description": "被动：回合结束时，获得{Passive}格挡。\n激发：获得{Evoke}格挡。"
+      },
+      {
+        "id": "DARK",
+        "title": "暗影",
+        "description": "被动：回合结束时，此球体伤害增加{Passive}。\n激发：对HP最低的敌人造成{Evoke}伤害。"
+      },
+      {
+        "id": "PLASMA",
+        "title": "等离子",
+        "description": "被动：回合开始时，\n获得1点能量。\n激发：获得2点能量。\n等离子不受集中影响。"
+      },
+      {
+        "id": "GLASS",
+        "title": "玻璃",
+        "description": "被动：回合结束时，对所有敌人造成{Passive}伤害并将此球体的值减少1。\n激发：对所有敌人造成{Evoke}伤害。"
+      }
+    ],
+    "stances": [],
+    "character_mechanics": [
+      {
+        "id": "STAR_COUNT",
+        "title": "星辰",
+        "description": "当前星辰（★）数量。储君的卡牌可能需要★才能打出。"
+      },
+      {
+        "id": "SUMMON",
+        "title": "召唤",
+        "description": "召唤奥斯提。\n若已召唤，则增加本次战斗中奥斯提的最大HP。"
+      },
+      {
+        "id": "FORGE",
+        "title": "锻造",
+        "description": "每次战斗首次锻造时，将至尊之刃加入手牌。为至尊之刃增加额外伤害。"
+      },
+      {
+        "id": "REPLAY",
+        "title": "重放",
+        "description": "额外打出此卡牌一次。"
+      },
+      {
+        "id": "FATAL",
+        "title": "致命",
+        "description": "当此卡牌击杀非仆从敌人时触发。"
+      }
+    ]
   }
 }

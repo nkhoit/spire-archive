@@ -6809,5 +6809,198 @@
       "name": "Regent",
       "description": "L'erede del trono stellare.\nNonostante possieda poteri cosmici, sono i suoi seguaci a fare il lavoro sporco."
     }
+  },
+  "mechanics": {
+    "ascension": [
+      {
+        "level": 0,
+        "title": "Nessuna Ascensione",
+        "description": "Gioca senza modificatori di Ascensione."
+      },
+      {
+        "level": 1,
+        "title": "Sciame di Élite",
+        "description": "Le Élite appaiono più spesso."
+      },
+      {
+        "level": 2,
+        "title": "Viaggiatore stanco",
+        "description": "Gli Antichi curano solo l'80% degli HP mancanti."
+      },
+      {
+        "level": 3,
+        "title": "Povertà",
+        "description": "Nemici e forzieri lasciano il 25% di Oro in meno."
+      },
+      {
+        "level": 4,
+        "title": "Cinghia stretta",
+        "description": "Inizia ogni run con 1 slot pozione in meno."
+      },
+      {
+        "level": 5,
+        "title": "Flagello dell'Ascensore",
+        "description": "Inizia ogni run maledetto."
+      },
+      {
+        "level": 6,
+        "title": "Oscurità",
+        "description": "Meno Siti di riposo."
+      },
+      {
+        "level": 7,
+        "title": "Scarsità",
+        "description": "Carte Rare e Potenziate appaiono meno spesso."
+      },
+      {
+        "level": 8,
+        "title": "Nemici coriacei",
+        "description": "Tutti i nemici sono più difficili da uccidere."
+      },
+      {
+        "level": 9,
+        "title": "Nemici mortali",
+        "description": "Tutti i nemici hanno attacchi più letali."
+      },
+      {
+        "level": 10,
+        "title": "Doppio Boss",
+        "description": "Affronta due boss alla fine dell'Atto 3."
+      }
+    ],
+    "map_rooms": [
+      {
+        "id": "ROOM_ENEMY",
+        "title": "Nemico",
+        "description": "Nemici ostili risiedono in queste stanze."
+      },
+      {
+        "id": "ROOM_ELITE",
+        "title": "Élite",
+        "description": "Nemici potenti si trovano in queste stanze.\n\nSconfiggerli ti ricompenserà con una Reliquia."
+      },
+      {
+        "id": "ROOM_BOSS",
+        "title": "Boss",
+        "description": "Il nemico più letale dell'area.\n\nSconfiggerlo ti permetterà di procedere all'Atto successivo."
+      },
+      {
+        "id": "ROOM_EVENT",
+        "title": "Evento",
+        "description": "Qualcosa di insolito accade in queste stanze..."
+      },
+      {
+        "id": "ROOM_MERCHANT",
+        "title": "Negozio",
+        "description": "Il misterioso Mercante vende le sue merci in queste stanze.\n\nSpendi il tuo Oro duramente guadagnato qui!"
+      },
+      {
+        "id": "ROOM_REST",
+        "title": "Sito di riposo",
+        "description": "Fermati in queste stanze per curare HP o Potenziare una carta."
+      },
+      {
+        "id": "ROOM_TREASURE",
+        "title": "Stanza del tesoro",
+        "description": "Reliquie e Oro si trovano in queste ambite stanze."
+      },
+      {
+        "id": "ROOM_ANCIENT",
+        "title": "Antico",
+        "description": "Gli Antichi risiedono in queste stanze.\n\nConcedono incredibili bonus, tesori e conoscenza."
+      }
+    ],
+    "core_concepts": [
+      {
+        "id": "ENERGY",
+        "title": "Energia",
+        "description": "L'Energia è usata per giocare carte dalla tua Mano."
+      },
+      {
+        "id": "BLOCK",
+        "title": "Blocco",
+        "description": "Previene i danni fino al prossimo turno."
+      },
+      {
+        "id": "HIT_POINTS",
+        "title": "Punti Vita (PV)",
+        "description": "Se esaurisci i PV, muori."
+      },
+      {
+        "id": "MONEY_POUCH",
+        "title": "Oro",
+        "description": "Il tuo Oro. L'Oro è la valuta all'interno della Guglia."
+      },
+      {
+        "id": "DRAW_PILE",
+        "title": "Mazzo di pesca (A)",
+        "description": "All'inizio di ogni turno,\n5 carte vengono pescate da qui.\n\nClicca per vedere le carte nel mazzo di pesca (mescolato)."
+      },
+      {
+        "id": "DISCARD_PILE",
+        "title": "Pila degli scarti (S)",
+        "description": "Se il mazzo di pesca è vuoto, la pila degli scarti viene mescolata nel mazzo di pesca.\n\nClicca per vedere le carte nella pila degli scarti."
+      },
+      {
+        "id": "EXHAUST_PILE",
+        "title": "Carte Esaurite (X)",
+        "description": "Clicca per vedere le carte Esaurite in questo combattimento."
+      }
+    ],
+    "orbs": [
+      {
+        "id": "LIGHTNING",
+        "title": "Fulmine",
+        "description": "Passivo: A fine turno, infliggi {Passive} danni a un nemico casuale.\nEvocazione: Infliggi {Evoke} danni a un nemico casuale."
+      },
+      {
+        "id": "FROST",
+        "title": "Gelo",
+        "description": "Passivo: A fine turno, ottieni {Passive} Blocco.\nEvocazione: Ottieni {Evoke} Blocco."
+      },
+      {
+        "id": "DARK",
+        "title": "Oscurità",
+        "description": "Passivo: A fine turno, aumenta i danni di questa Sfera di {Passive}.\nEvocazione: Infliggi {Evoke} danni al nemico con meno PV."
+      },
+      {
+        "id": "PLASMA",
+        "title": "Plasma",
+        "description": "Passivo: A inizio turno,\nottieni 1 Energia.\nEvocazione: Ottieni 2 Energia.\nIl Plasma non è influenzato dalla Concentrazione."
+      },
+      {
+        "id": "GLASS",
+        "title": "Vetro",
+        "description": "Passivo: A fine turno, infliggi {Passive} danni a TUTTI i nemici e riduci il valore di questa sfera di 1.\nEvocazione: Infliggi {Evoke} danni a TUTTI i nemici."
+      }
+    ],
+    "stances": [],
+    "character_mechanics": [
+      {
+        "id": "STAR_COUNT",
+        "title": "Stelle",
+        "description": "Il tuo conteggio attuale di Stelle (★). Le carte del Reggente possono richiedere ★ per essere giocate."
+      },
+      {
+        "id": "SUMMON",
+        "title": "Evocazione",
+        "description": "Evoca Osty.\nSe già evocato, aumenta i suoi PV massimi per questo combattimento."
+      },
+      {
+        "id": "FORGE",
+        "title": "Forgia",
+        "description": "La prima volta che Forgi in ogni combattimento, aggiungi Lama Sovrana alla tua Mano. Aggiunge danno aggiuntivo a Lama Sovrana."
+      },
+      {
+        "id": "REPLAY",
+        "title": "Rigioca",
+        "description": "Gioca questa carta una volta in più."
+      },
+      {
+        "id": "FATAL",
+        "title": "Fatale",
+        "description": "Si attiva quando questa carta uccide un nemico non-servitore."
+      }
+    ]
   }
 }
