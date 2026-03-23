@@ -16,15 +16,6 @@ const colorMap: Record<string, string> = { IRONCLAD: 'ironclad', THE_SILENT: 'si
 const charBorders: Record<string, string> = { IRONCLAD: 'border-red-500/20 hover:border-red-500/40', THE_SILENT: 'border-green-500/20 hover:border-green-500/40', SILENT: 'border-green-500/20 hover:border-green-500/40', DEFECT: 'border-blue-500/20 hover:border-blue-500/40', WATCHER: 'border-purple-500/20 hover:border-purple-500/40', NECROBINDER: 'border-purple-500/20 hover:border-purple-500/40', REGENT: 'border-amber-500/20 hover:border-amber-500/40' };
 const portraitMap: Record<string, string> = { IRONCLAD: isSts2 ? '/images/sts2/characters/ironclad.jpg' : '/images/sts1/characters/ironclad.jpg', THE_SILENT: '/images/sts1/characters/silent.jpg', SILENT: '/images/sts2/characters/silent.jpg', DEFECT: isSts2 ? '/images/sts2/characters/defect.jpg' : '/images/sts1/characters/defect.jpg', WATCHER: '/images/sts1/characters/watcher.jpg', NECROBINDER: '/images/sts2/characters/necrobinder.jpg', REGENT: '/images/sts2/characters/regent.jpg' };
 const positionMap: Record<string, string> = { IRONCLAD: isSts2 ? 'right center' : 'center 35%', THE_SILENT: 'center 40%', SILENT: 'right center', DEFECT: isSts2 ? 'right center' : 'center 25%', WATCHER: 'center 30%', NECROBINDER: 'right center', REGENT: 'right center' };
-const descMap: Record<string, string> = {
-  IRONCLAD: t('A hardened warrior who wields powerful attacks and self-healing. Starts with the most HP and excels at strength-based strategies.', locale),
-  THE_SILENT: t('A deadly huntress who relies on poisons, shivs, and card draw. Starts with the largest deck and a focus on discard synergies.', locale),
-  SILENT: t('A deadly huntress who relies on poisons, shivs, and card draw. Starts with the largest deck and a focus on discard synergies.', locale),
-  DEFECT: t('An ancient automaton that channels elemental Orbs for passive and active effects. Unique focus on Lightning, Frost, Dark, and Plasma orbs.', locale),
-  WATCHER: t('A blind ascetic who shifts between powerful Stances. Wrath doubles damage dealt and taken, while Calm grants energy on exit.', locale),
-  NECROBINDER: t('A dark summoner who commands Osty and raises undead minions. Manipulates souls and sacrifices allies for power.', locale),
-  REGENT: t('A celestial ruler who harnesses Stars for powerful abilities. Balances resource management with explosive turns.', locale),
-};
 ---
 <Layout game={game} title="Characters — Spire Archive" description={isSts2 ? 'Browse the five playable characters of Slay the Spire 2.' : 'Browse the four playable characters of Slay the Spire.'}>
   <h1 class="font-game text-xl font-semibold">{t('Characters', locale)}</h1>
@@ -33,7 +24,7 @@ const descMap: Record<string, string> = {
   <div class:list={['mt-6 grid grid-cols-1 gap-4 md:grid-cols-2', isSts2 ? 'lg:grid-cols-3' : '']}>
     {data.characters.map((ch) => {
       const color = colorMap[ch.id] ?? '';
-      const desc = descMap[ch.id] ?? '';
+      const desc = ch.description ?? '';
       return (
         <a href={`${langPrefix}/${game}/characters/${ch.id}`} class={'block rounded-lg border bg-white/5 overflow-hidden hover:bg-white/10 transition-all ' + (charBorders[ch.id] ?? 'border-white/10')}>
           <img src={portraitMap[ch.id]} alt={ch.name} class="w-full h-40 object-cover" style={`object-position: ${positionMap[ch.id] ?? 'center 30%'}`} />
