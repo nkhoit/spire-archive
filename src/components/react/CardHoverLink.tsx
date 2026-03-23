@@ -79,11 +79,11 @@ export default function CardHoverLink({ href, card, game, locale, children, clas
   useEffect(() => { ensurePortal(); }, []);
 
   const handleEnter = useCallback((e: React.MouseEvent) => {
-    const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
     const cardW = 200, cardH = 280;
-    const flipLeft = rect.right + cardW + 16 > window.innerWidth;
-    const x = flipLeft ? rect.left - cardW - 8 : rect.right + 8;
-    const y = rect.top + cardH > window.innerHeight ? Math.max(8, rect.bottom - cardH) : rect.top;
+    const mx = e.clientX, my = e.clientY;
+    const flipLeft = mx + cardW + 24 > window.innerWidth;
+    const x = flipLeft ? mx - cardW - 16 : mx + 16;
+    const y = my + cardH > window.innerHeight ? Math.max(8, window.innerHeight - cardH - 8) : my;
     (window as any).__cardHoverShow?.({ card, game, locale, x, y });
   }, [card, game, locale]);
 
