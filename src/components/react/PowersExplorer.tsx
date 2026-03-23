@@ -25,7 +25,7 @@ export default function PowersExplorer(props: { game?: 'sts1' | 'sts2'; locale?:
   ];
 
   return <ListExplorer<Power>
-    endpoint={`/api/${game}/effects`}
+    endpoint={`/api/${game}/powers`}
     pathSegment="effects"
     game={game}
     locale={locale}
