@@ -5,8 +5,8 @@ const GAMES = ['sts1', 'sts2'] as const;
 
 // List endpoints (return paginated { data, total })
 const LIST_ENDPOINTS: Record<string, string[]> = {
-  sts1: ['cards', 'relics', 'potions', 'events', 'effects', 'powers', 'monsters'],
-  sts2: ['cards', 'relics', 'potions', 'events', 'effects', 'powers', 'monsters', 'enchantments'],
+  sts1: ['cards', 'relics', 'potions', 'events', 'powers', 'monsters'],
+  sts2: ['cards', 'relics', 'potions', 'events', 'powers', 'monsters', 'enchantments'],
 };
 
 // Reference endpoints (return flat arrays or objects)
