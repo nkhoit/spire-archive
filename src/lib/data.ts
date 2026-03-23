@@ -464,9 +464,9 @@ async function applyLocalization(game: string, locale: Locale, base: Dataset): P
     const l = loc.events?.[e.id];
     if (!l) return e;
 
-    const choices = l.choices
+    const choices = (l.choices || l.options)
       ? e.choices.map((choice: EventChoice, index: number) => {
-          const lc = l.choices?.[index];
+          const lc = (l.choices || l.options)?.[index];
           if (!lc) return choice;
           // STS1: choices are strings; STS2: choices are objects with name/description
           if (typeof lc === 'string') {
