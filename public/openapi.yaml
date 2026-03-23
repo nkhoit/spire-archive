@@ -3,7 +3,7 @@ info:
   title: Spire Archive API
   version: 1.0.0
   description: |
-    Read-only API for **Slay the Spire 1 & 2** game data — cards, relics, potions, monsters, events, enchantments, effects, and more.
+    Read-only API for **Slay the Spire 1 & 2** game data — cards, relics, potions, monsters, events, enchantments, powers, and more.
 
     ## Base URL
     `https://spire-archive.com`
@@ -15,7 +15,7 @@ info:
     List endpoints return `{ items, total, offset, limit }`. Default `limit=50`, max `400`.
 
     ## Localization
-    Pass `lang` (cards) or `locale` to get localized names and descriptions. Supported: `en`, `ja`, `ko`, `zh`, `de`, `fr`, `es`, `pt`, `it`, `pl`, `ru`, `tr`, `th`.
+    Pass `lang` to get localized names and descriptions. Supported: `en`, `ja`, `ko`, `zh`, `de`, `fr`, `es`, `pt`, `it`, `pl`, `ru`, `tr`, `th`.
 
     ## Rate Limits
     No hard rate limit, but please be respectful. Cache responses on your side.
@@ -35,14 +35,7 @@ components:
         type: string
         default: en
         enum: [en, ja, ko, zh, de, fr, es, pt, it, pl, ru, tr, th]
-    locale:
-      name: locale
-      in: query
-      description: Locale code for translations
-      schema:
-        type: string
-        default: en
-        enum: [en, ja, ko, zh, de, fr, es, pt, it, pl, ru, tr, th]
+
     q:
       name: q
       in: query
@@ -473,7 +466,7 @@ paths:
       summary: List relics
       tags: [STS2 — Relics]
       parameters:
-        - $ref: '#/components/parameters/locale'
+        - $ref: '#/components/parameters/lang'
         - $ref: '#/components/parameters/q'
         - $ref: '#/components/parameters/offset'
         - $ref: '#/components/parameters/limit'
@@ -512,7 +505,7 @@ paths:
           schema:
             type: string
           example: AKABEKO
-        - $ref: '#/components/parameters/locale'
+        - $ref: '#/components/parameters/lang'
       responses:
         '200':
           description: Relic details
@@ -528,7 +521,7 @@ paths:
       summary: List potions
       tags: [STS2 — Potions]
       parameters:
-        - $ref: '#/components/parameters/locale'
+        - $ref: '#/components/parameters/lang'
         - $ref: '#/components/parameters/q'
         - $ref: '#/components/parameters/offset'
         - $ref: '#/components/parameters/limit'
@@ -563,7 +556,7 @@ paths:
           schema:
             type: string
           example: BEETLE_JUICE
-        - $ref: '#/components/parameters/locale'
+        - $ref: '#/components/parameters/lang'
       responses:
         '200':
           description: Potion details
@@ -579,7 +572,7 @@ paths:
       summary: List monsters
       tags: [STS2 — Monsters]
       parameters:
-        - $ref: '#/components/parameters/locale'
+        - $ref: '#/components/parameters/lang'
         - $ref: '#/components/parameters/q'
         - $ref: '#/components/parameters/offset'
         - $ref: '#/components/parameters/limit'
@@ -618,7 +611,7 @@ paths:
           schema:
             type: string
           example: CALCIFIED_CULTIST
-        - $ref: '#/components/parameters/locale'
+        - $ref: '#/components/parameters/lang'
       responses:
         '200':
           description: Monster details
@@ -634,7 +627,7 @@ paths:
       summary: List events
       tags: [STS2 — Events]
       parameters:
-        - $ref: '#/components/parameters/locale'
+        - $ref: '#/components/parameters/lang'
         - $ref: '#/components/parameters/q'
         - $ref: '#/components/parameters/offset'
         - $ref: '#/components/parameters/limit'
@@ -668,7 +661,7 @@ paths:
           schema:
             type: string
           example: COLOSSAL_FLOWER
-        - $ref: '#/components/parameters/locale'
+        - $ref: '#/components/parameters/lang'
       responses:
         '200':
           description: Event details
@@ -684,7 +677,7 @@ paths:
       summary: List enchantments
       tags: [STS2 — Enchantments]
       parameters:
-        - $ref: '#/components/parameters/locale'
+        - $ref: '#/components/parameters/lang'
         - $ref: '#/components/parameters/q'
         - $ref: '#/components/parameters/offset'
         - $ref: '#/components/parameters/limit'
@@ -718,7 +711,7 @@ paths:
           schema:
             type: string
           example: SWIFT
-        - $ref: '#/components/parameters/locale'
+        - $ref: '#/components/parameters/lang'
       responses:
         '200':
           description: Enchantment details
@@ -729,42 +722,12 @@ paths:
         '404':
           description: Enchantment not found
 
-  /api/sts2/effects:
-    get:
-      summary: List buffs & debuffs
-      tags: [STS2 — Effects]
-      parameters:
-        - $ref: '#/components/parameters/locale'
-        - $ref: '#/components/parameters/q'
-        - $ref: '#/components/parameters/offset'
-        - $ref: '#/components/parameters/limit'
-        - name: type
-          in: query
-          description: Filter by buff or debuff
-          schema:
-            type: string
-            enum: [buff, debuff]
-      responses:
-        '200':
-          description: Paginated power/effect list
-          content:
-            application/json:
-              schema:
-                allOf:
-                  - $ref: '#/components/schemas/PaginatedResponse'
-                  - type: object
-                    properties:
-                      items:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/Power'
-
   /api/sts2/powers:
     get:
-      summary: List powers (alias for effects)
-      tags: [STS2 — Effects]
+      summary: List powers (buffs & debuffs)
+      tags: [STS2 — Powers]
       parameters:
-        - $ref: '#/components/parameters/locale'
+        - $ref: '#/components/parameters/lang'
         - $ref: '#/components/parameters/q'
         - $ref: '#/components/parameters/offset'
         - $ref: '#/components/parameters/limit'
@@ -788,6 +751,28 @@ paths:
                         items:
                           $ref: '#/components/schemas/Power'
 
+  /api/sts2/powers/{id}:
+    get:
+      summary: Get a power
+      tags: [STS2 — Powers]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          example: KNOCKDOWN_POWER
+        - $ref: '#/components/parameters/lang'
+      responses:
+        '200':
+          description: Power details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Power'
+        '404':
+          description: Power not found
+
   /api/sts2/search:
     get:
       summary: Full-text search
@@ -800,7 +785,8 @@ paths:
           description: Search query
           schema:
             type: string
-        - $ref: '#/components/parameters/locale'
+        - $ref: '#/components/parameters/lang'
+        - $ref: '#/components/parameters/offset'
         - name: limit
           in: query
           schema:
@@ -815,22 +801,22 @@ paths:
               schema:
                 type: object
                 properties:
-                  query:
-                    type: string
                   total:
                     type: integer
-                  results:
+                  offset:
+                    type: integer
+                  limit:
+                    type: integer
+                  items:
                     type: array
                     items:
                       type: object
                       properties:
+                        type:
+                          type: string
                         id:
                           type: string
                         name:
-                          type: string
-                        type:
-                          type: string
-                        game:
                           type: string
 
   # ── STS1 Endpoints ──
@@ -905,6 +891,7 @@ paths:
       summary: List relics
       tags: [STS1 — Relics]
       parameters:
+        - $ref: '#/components/parameters/lang'
         - $ref: '#/components/parameters/q'
         - $ref: '#/components/parameters/offset'
         - $ref: '#/components/parameters/limit'
@@ -943,6 +930,7 @@ paths:
           schema:
             type: string
           example: AKABEKO
+        - $ref: '#/components/parameters/lang'
       responses:
         '200':
           description: Relic details
@@ -958,6 +946,7 @@ paths:
       summary: List potions
       tags: [STS1 — Potions]
       parameters:
+        - $ref: '#/components/parameters/lang'
         - $ref: '#/components/parameters/q'
         - $ref: '#/components/parameters/offset'
         - $ref: '#/components/parameters/limit'
@@ -992,6 +981,7 @@ paths:
           schema:
             type: string
           example: AMBROSIA
+        - $ref: '#/components/parameters/lang'
       responses:
         '200':
           description: Potion details
@@ -1007,6 +997,7 @@ paths:
       summary: List monsters
       tags: [STS1 — Monsters]
       parameters:
+        - $ref: '#/components/parameters/lang'
         - $ref: '#/components/parameters/q'
         - $ref: '#/components/parameters/offset'
         - $ref: '#/components/parameters/limit'
@@ -1045,6 +1036,7 @@ paths:
           schema:
             type: string
           example: ACIDSLIME_L
+        - $ref: '#/components/parameters/lang'
       responses:
         '200':
           description: Monster details
@@ -1060,6 +1052,7 @@ paths:
       summary: List events
       tags: [STS1 — Events]
       parameters:
+        - $ref: '#/components/parameters/lang'
         - $ref: '#/components/parameters/q'
         - $ref: '#/components/parameters/offset'
         - $ref: '#/components/parameters/limit'
@@ -1093,6 +1086,7 @@ paths:
           schema:
             type: string
           example: BIG_FISH
+        - $ref: '#/components/parameters/lang'
       responses:
         '200':
           description: Event details
@@ -1103,39 +1097,12 @@ paths:
         '404':
           description: Event not found
 
-  /api/sts1/effects:
-    get:
-      summary: List buffs & debuffs
-      tags: [STS1 — Effects]
-      parameters:
-        - $ref: '#/components/parameters/q'
-        - $ref: '#/components/parameters/offset'
-        - $ref: '#/components/parameters/limit'
-        - name: type
-          in: query
-          schema:
-            type: string
-            enum: [buff, debuff]
-      responses:
-        '200':
-          description: Paginated effect list
-          content:
-            application/json:
-              schema:
-                allOf:
-                  - $ref: '#/components/schemas/PaginatedResponse'
-                  - type: object
-                    properties:
-                      items:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/Power'
-
   /api/sts1/powers:
     get:
-      summary: List powers (alias for effects)
-      tags: [STS1 — Effects]
+      summary: List powers (buffs & debuffs)
+      tags: [STS1 — Powers]
       parameters:
+        - $ref: '#/components/parameters/lang'
         - $ref: '#/components/parameters/q'
         - $ref: '#/components/parameters/offset'
         - $ref: '#/components/parameters/limit'
@@ -1159,6 +1126,28 @@ paths:
                         items:
                           $ref: '#/components/schemas/Power'
 
+  /api/sts1/powers/{id}:
+    get:
+      summary: Get a power
+      tags: [STS1 — Powers]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          example: ACCURACY
+        - $ref: '#/components/parameters/lang'
+      responses:
+        '200':
+          description: Power details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Power'
+        '404':
+          description: Power not found
+
   /api/sts1/search:
     get:
       summary: Full-text search
@@ -1170,6 +1159,8 @@ paths:
           required: true
           schema:
             type: string
+        - $ref: '#/components/parameters/lang'
+        - $ref: '#/components/parameters/offset'
         - name: limit
           in: query
           schema:
@@ -1184,14 +1175,23 @@ paths:
               schema:
                 type: object
                 properties:
-                  query:
-                    type: string
                   total:
                     type: integer
-                  results:
+                  offset:
+                    type: integer
+                  limit:
+                    type: integer
+                  items:
                     type: array
                     items:
                       type: object
+                      properties:
+                        type:
+                          type: string
+                        id:
+                          type: string
+                        name:
+                          type: string
 
   /api/sts1/reference/characters:
     get:
