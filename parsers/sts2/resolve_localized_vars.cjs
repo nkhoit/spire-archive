@@ -340,6 +340,7 @@ function getVarsForId(id, category) {
 // Format: { 'category:ID': { 'VarName': 'value' } }
 const RUNTIME_VAR_FALLBACKS = {
   // Enchantments: Amount varies by tier, English uses "X"
+  'enchantments:ADROIT': { Block: 'X' },
   'enchantments:MOMENTUM': { Amount: 'X' },
   'enchantments:NIMBLE': { Amount: 'X' },
   'enchantments:SHARP': { Amount: 'X' },
@@ -422,7 +423,7 @@ for (const lang of langs) {
       totalItems++;
       const rawVars = getVarsForId(itemId, category);
       const fallbacks = RUNTIME_VAR_FALLBACKS[`${category}:${itemId}`] || {};
-      const vars = { ...fallbacks, ...resolveEntityRefs(rawVars, entityNameMap) };
+      const vars = { ...resolveEntityRefs(rawVars, entityNameMap), ...fallbacks };
       const unresolved = new Set();
       let touched = false;
 
