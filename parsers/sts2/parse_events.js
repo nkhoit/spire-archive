@@ -462,6 +462,27 @@ function applyManualFixes(events, relicsData = []) {
       event.choices[0].description = 'Heal like resting at a Rest Site. Fight some enemies.';
     }
 
+    // THE_FUTURE_OF_POTIONS: dynamic choices based on held potions (up to 3).
+    // The game uses a single localization template instantiated per potion at runtime.
+    // Requires ≥2 potions to appear.
+    if (event.id === 'THE_FUTURE_OF_POTIONS') {
+      event.description = "You feel a faint rumbling as you round the corner to discover a gigantic spinning apparatus! It has several slots which appear to convert liquids into a highly compressed digestible tablet.\n\nThe idea of turning these health tonics into a tiny morsel is uncomfortable but perhaps it's good to try new things?\n\nUp to 3 choices are offered — one for each potion you're carrying. This event only appears if you have at least 2 potions.";
+      event.choices = [
+        {
+          name: 'Insert Common Potion',
+          description: 'Lose the potion. Choose 1 of 3 Upgraded Common cards (Attack or Skill).',
+        },
+        {
+          name: 'Insert Uncommon Potion',
+          description: 'Lose the potion. Choose 1 of 3 Upgraded Uncommon cards (Attack, Skill, or Power).',
+        },
+        {
+          name: 'Insert Rare Potion',
+          description: 'Lose the potion. Choose 1 of 3 Upgraded Rare cards (Attack, Skill, or Power).',
+        },
+      ];
+    }
+
     // Multi-page event: COLOSSAL_FLOWER has 3 dig depths
     if (event.id === 'COLOSSAL_FLOWER') {
       event.pages = [
