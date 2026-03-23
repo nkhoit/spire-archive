@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Parse all STS2 entity types from decompiled C# into JSON files."""
 
+import os
 import re
 import json
 import sys
@@ -16,7 +17,7 @@ def camel_to_snake(name: str) -> str:
 
 DECOMPILED = DECOMPILED_DIR
 OUTPUT = OUTPUT_DIR
-LOC_DIR = Path(__file__).resolve().parents[2] / "data" / "sts2-localization" / "eng"
+LOC_DIR = Path(os.environ.get('STS2_PCK_DIR', '/tmp/sts2-pck')) / "localization" / "eng"
 
 def load_loc(filename: str) -> dict:
     """Load a localization JSON file and return as dict."""

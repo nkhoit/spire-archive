@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import json
+import os
 import re
 import zipfile
 from copy import deepcopy
@@ -7,7 +8,7 @@ from pathlib import Path
 
 ROOT = Path('/Users/kuro/code/spire-archive')
 STS1_JAR = Path.home() / 'Library/Application Support/Steam/steamapps/common/SlayTheSpire/SlayTheSpire.app/Contents/Resources/desktop-1.0.jar'
-STS2_LOC_ROOT = ROOT / 'data' / 'sts2-localization'
+STS2_LOC_ROOT = Path(os.environ.get('STS2_PCK_DIR', '/tmp/sts2-pck')) / 'localization'
 
 STS1_ISO_TO_GAME = {
     'en': 'eng',
