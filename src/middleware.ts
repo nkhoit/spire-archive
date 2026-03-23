@@ -36,6 +36,14 @@ export const onRequest = defineMiddleware(async (context, next) => {
   const start = Date.now();
   const response = await next();
   logRequest(context, response, path, Date.now() - start, url.search);
+
+  // --- CORS for API routes ---
+  if (path.startsWith('/api/')) {
+    response.headers.set('Access-Control-Allow-Origin', '*');
+    response.headers.set('Access-Control-Allow-Methods', 'GET, OPTIONS');
+    response.headers.set('Access-Control-Allow-Headers', 'Content-Type');
+  }
+
   return response;
 });
 
