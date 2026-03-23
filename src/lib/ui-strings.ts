@@ -16,6 +16,8 @@ const strings: Record<string, Partial<Record<Locale, string>>> = {
   'Necrobinder': { ja: 'ネクロバインダー', ko: '네크로바인더', zh: '亡灵契约师', de: 'Die Totenbinderin', fr: 'La Tisse-Mort', es: 'La Vinculahuesos', pt: 'A Necroartífice', it: 'Necrobinder', pl: 'Nekromantka', ru: 'Призывающая', tr: 'Ölübağlayan', th: 'นักผูกวิญญาณ' },
   'Regent': { ja: 'リージェント', ko: '리젠트', zh: '储君', de: 'Der Regent', fr: 'Le Régent', es: 'El Regente', pt: 'O Regente', it: 'Regent', pl: 'Monarcha', ru: 'Наследник', tr: 'Naip', th: 'ผู้สำเร็จราชการ' },
 
+  'First Visit': { ja: '初訪問', ko: '첫 방문', zh: '首次访问', de: 'Erstbesuch', fr: 'Première visite', es: 'Primera visita', pt: 'Primeira visita', it: 'Prima visita', pl: 'Pierwsza wizyta', ru: 'Первый визит', tr: 'İlk Ziyaret', th: 'เยี่ยมชมครั้งแรก' },
+
   // Nav
   'Switch to': { ja: '切り替え:', ko: '전환:', zh: '切换到', de: 'Wechsel zu', fr: 'Passer à', es: 'Cambiar a', pt: 'Mudar para', it: 'Passa a', pl: 'Przejdź do', ru: 'Перейти к', tr: 'Geçiş:', th: 'สลับไป' },
   'Characters': { ja: 'キャラクター', ko: '캐릭터', zh: '角色', de: 'Charaktere', fr: 'Personnages', es: 'Personajes', pt: 'Personagens', it: 'Personaggi', pl: 'Postacie', ru: 'Персонажи', tr: 'Karakterler', th: 'ตัวละคร' },

@@ -141,7 +141,7 @@ function getPoolLabel(name: string, locale: string) {
           <div class="px-5 pb-4 space-y-2">
             {dialogue.map((d) => (
               <div class="flex gap-2 text-sm">
-                {d.character !== 'ANY' && <span class="shrink-0 text-amber-400/70 text-xs mt-0.5">({d.character})</span>}
+                {d.character !== 'ANY' && <span class="shrink-0 text-amber-400/70 text-xs mt-0.5">({d.character === 'firstVisitEver' ? t('First Visit', locale) : t(d.character.charAt(0) + d.character.slice(1).toLowerCase(), locale)})</span>}
                 <p class="text-slate-300 italic">"{d.text}"</p>
               </div>
             ))}
