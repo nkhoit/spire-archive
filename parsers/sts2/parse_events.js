@@ -535,6 +535,14 @@ function applyManualFixes(events, relicsData = []) {
       if (drink) drink.description = 'Heal 33% of Max HP.';
     }
 
+    // LOST_WISP: The CLAIM_LOCKED localization key is dead code — not referenced
+    // in the event's GenerateInitialOptions(). Confirmed via fresh decompile.
+    // Remove the phantom lock so it doesn't confuse readers.
+    if (event.id === 'LOST_WISP') {
+      const claim = event.choices?.find(c => c.name === 'Capture the Wisp');
+      if (claim) delete claim.locked;
+    }
+
     // THE_FUTURE_OF_POTIONS: dynamic choices based on held potions (up to 3).
     // The game uses a single localization template instantiated per potion at runtime.
     // Requires ≥2 potions to appear.
