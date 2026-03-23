@@ -483,6 +483,30 @@ function applyManualFixes(events, relicsData = []) {
       ];
     }
 
+    // ABYSSAL_BATHS: repeating immerse/linger loop with escalating damage.
+    // Base: +2 Max HP, 3 damage. Each Linger: +2 Max HP, damage increases by 1.
+    // Up to 10 lingers (damage capped at iteration 10). Warns before lethal.
+    if (event.id === 'ABYSSAL_BATHS') {
+      event.choices = [];
+      event.pages = [
+        {
+          label: 'Initial',
+          choices: [
+            { name: 'Abstain', description: 'Heal 10 HP.' },
+            { name: 'Immerse', description: 'Gain 2 Max HP. Take 3 damage. Enter the baths.' },
+          ],
+        },
+        {
+          label: 'In the Baths',
+          description: 'You can keep lingering — each time you gain 2 Max HP but the damage increases by 1. If the next linger would kill you, the game warns you. Up to 10 times.',
+          choices: [
+            { name: 'Linger', description: 'Gain 2 Max HP. Take damage (starts at 4, increases by 1 each time).' },
+            { name: 'Exit Baths', description: 'Leave the baths.' },
+          ],
+        },
+      ];
+    }
+
     // Multi-page event: COLOSSAL_FLOWER has 3 dig depths
     if (event.id === 'COLOSSAL_FLOWER') {
       event.pages = [

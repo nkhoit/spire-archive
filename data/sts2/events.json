@@ -4,14 +4,34 @@
     "name": "Abyssal Baths",
     "act": "unknown",
     "description": "You discover a secluded chamber.\n\nSteam rises from bubbling pools of hot liquid that shifts colors with hypnotic rhythm. Barnacled growths hang from the ceiling, dripping viscous fluid that hisses and writhes when it touches the surface. The air feels heavy, laden with salt and something unmistakably organic.\n\nAs you approach the edge of the largest pool, the liquid ripples. The waters bubble more intensely as if anticipating your entry.",
-    "choices": [
+    "choices": [],
+    "pages": [
       {
-        "name": "Abstain",
-        "description": "Heal 10 HP."
+        "label": "Initial",
+        "choices": [
+          {
+            "name": "Abstain",
+            "description": "Heal 10 HP."
+          },
+          {
+            "name": "Immerse",
+            "description": "Gain 2 Max HP. Take 3 damage. Enter the baths."
+          }
+        ]
       },
       {
-        "name": "Immerse",
-        "description": "Gain 2 Max HP. Take 3 damage."
+        "label": "In the Baths",
+        "description": "You can keep lingering — each time you gain 2 Max HP but the damage increases by 1. If the next linger would kill you, the game warns you. Up to 10 times.",
+        "choices": [
+          {
+            "name": "Linger",
+            "description": "Gain 2 Max HP. Take damage (starts at 4, increases by 1 each time)."
+          },
+          {
+            "name": "Exit Baths",
+            "description": "Leave the baths."
+          }
+        ]
       }
     ]
   },
