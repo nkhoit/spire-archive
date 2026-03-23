@@ -76,7 +76,7 @@ function cleanDescription(text, cardInfo, isUpgrade) {
 
 function buildLang(gameLang) {
   const dir = path.join(STS1_LOC_DIR, gameLang);
-  const result = { cards: {}, relics: {}, powers: {}, potions: {}, events: {}, keywords: {} };
+  const result = { cards: {}, relics: {}, powers: {}, potions: {}, events: {}, keywords: {}, monsters: {} };
 
   // Cards
   const cards = JSON.parse(fs.readFileSync(path.join(dir, 'cards.json'), 'utf8'));
@@ -150,6 +150,21 @@ function buildLang(gameLang) {
       description: (data.DESCRIPTIONS || []).join(''),
       ...(data.OPTIONS && { options: data.OPTIONS }),
     };
+  }
+
+  // Monsters
+  const monstersPath = path.join(dir, 'monsters.json');
+  if (fs.existsSync(monstersPath)) {
+    const monsters = JSON.parse(fs.readFileSync(monstersPath, 'utf8'));
+    for (const [id, data] of Object.entries(monsters)) {
+      if (!data.NAME) continue;
+      const monsterId = toUpperSnake(id);
+      const entry = { name: data.NAME };
+      if (data.MOVES && data.MOVES.length > 0) {
+        entry.move_names = data.MOVES;
+      }
+      result.monsters[monsterId] = entry;
+    }
   }
 
   // Keywords — STS1 wraps all keywords under "Game Dictionary" key

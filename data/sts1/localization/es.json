@@ -4621,617 +4621,442 @@
       "description": "Se activa cuando esta carta mata a un enemigo no súbdito."
     }
   },
-  "mechanics": {
-    "ascension": [
-      {
-        "level": 1,
-        "title": "¡Modo de ascensión nivel 1",
-        "description": "Los élites aparecen más seguido."
-      },
-      {
-        "level": 2,
-        "title": "¡Modo de ascensión nivel 2",
-        "description": "Los enemigos normales son más letales."
-      },
-      {
-        "level": 3,
-        "title": "¡Modo de ascensión nivel 3",
-        "description": "Los Élites son más letales."
-      },
-      {
-        "level": 4,
-        "title": "¡Modo de ascensión nivel 4",
-        "description": "Los Jefes son más letales."
-      },
-      {
-        "level": 5,
-        "title": "¡Modo de ascensión nivel 5",
-        "description": "Te curas menos después de Batallas con Jefes."
-      },
-      {
-        "level": 6,
-        "title": "¡Modo de ascensión nivel 6",
-        "description": "Empieza cada partida dañado."
-      },
-      {
-        "level": 7,
-        "title": "¡Modo de ascensión nivel 7",
-        "description": "Los enemigos normales son más resistentes."
-      },
-      {
-        "level": 8,
-        "title": "¡Modo de ascensión nivel 8",
-        "description": "Los Élites son más resistentes."
-      },
-      {
-        "level": 9,
-        "title": "¡Modo de ascensión nivel 9",
-        "description": "Los Jefes son más resistentes."
-      },
-      {
-        "level": 10,
-        "title": "¡Modo de ascensión nivel 10",
-        "description": "Empieza cada partida maldito."
-      },
-      {
-        "level": 11,
-        "title": "¡Modo de ascensión nivel 11",
-        "description": "Menos huecos de pociones."
-      },
-      {
-        "level": 12,
-        "title": "¡Modo de ascensión nivel 12",
-        "description": "Las cartas mejoradas aparecen menos seguido."
-      },
-      {
-        "level": 13,
-        "title": "¡Modo de ascensión nivel 13",
-        "description": "Jefes pobres."
-      },
-      {
-        "level": 14,
-        "title": "¡Modo de ascensión nivel 14",
-        "description": "PV máximos reducidos."
-      },
-      {
-        "level": 15,
-        "title": "¡Modo de ascensión nivel 15",
-        "description": "Eventos desfavorables."
-      },
-      {
-        "level": 16,
-        "title": "¡Modo de ascensión nivel 16",
-        "description": "Las tiendas son más caras."
-      },
-      {
-        "level": 17,
-        "title": "¡Modo de ascensión nivel 17",
-        "description": "Los enemigos normales tienen movimientos y habilidades más desafiantes."
-      },
-      {
-        "level": 18,
-        "title": "¡Modo de ascensión nivel 18",
-        "description": "Los Élites tienen movimientos y habilidades más desafiantes."
-      },
-      {
-        "level": 19,
-        "title": "¡Modo de ascensión nivel 19",
-        "description": "Los Jefes tienen movimientos y habilidades más desafiantes."
-      },
-      {
-        "level": 20,
-        "title": "¡Modo de ascensión nivel 20",
-        "description": "(Nivel Máximo) Jefe Doble"
-      }
-    ],
-    "map_rooms": [
-      {
-        "id": "UNKNOWN",
-        "title": "Desconocido",
-        "description": "Una habitación desconocida.\n\nPuedes encontrar monstruos, tesoros, tiendas o algo totalmente diferente."
-      },
-      {
-        "id": "SHOP",
-        "title": "Comerciante",
-        "description": "El Mercader misterioso vende sus mercancías en estas habitaciones.\n\n¡Gasta tu bien Obtenido Oro aquí!"
-      },
-      {
-        "id": "TREASURE",
-        "title": "Tesoro",
-        "description": "Reliquias y Oro pueden ser encontrados en estas habitaciones codiciadas."
-      },
-      {
-        "id": "REST",
-        "title": "Descanso",
-        "description": "Pasa por estas habitaciones para Curar algunos HP o Mejorar una carta."
-      },
-      {
-        "id": "ENEMY",
-        "title": "Enemigo",
-        "description": "Enemigos hostiles aguardan en estas habitaciones."
-      },
-      {
-        "id": "ELITE",
-        "title": "Élite",
-        "description": "Poderosos enemigos aguardan en estas habitaciones.\n\nDerrotarlos te recompensará con una Reliquia."
-      }
-    ],
-    "core_concepts": [
-      {
-        "id": "BLOCK",
-        "title": "bloqueo",
-        "description": "Hasta el siguiente turno, previene daño."
-      },
-      {
-        "id": "EXHAUST",
-        "title": "agotar",
-        "description": "Eliminada hasta el fin del combate."
-      },
-      {
-        "id": "ETHEREAL",
-        "title": "etérea",
-        "description": "Si esta Carta está en tu mano al final del turno, se agota. Las Cartas Agotadas son eliminadas de tu mazo hasta el fin del combate."
-      },
-      {
-        "id": "RETAIN",
-        "title": "retiene",
-        "description": "Las Cartas Retenidas no son descartadas al final del turno."
-      },
-      {
-        "id": "STATUS",
-        "title": "estado",
-        "description": "Las Cartas de estado son eliminadas al final del combate."
-      },
-      {
-        "id": "CURSE",
-        "title": "maldición",
-        "description": "Las Cartas de Maldición son Cartas negativas que se quedan en tu mazo."
-      },
-      {
-        "id": "DRAW_PILE",
-        "title": "Regresar",
-        "description": "Cartas se roban de aquí al final de cada turno."
-      },
-      {
-        "id": "DISCARD_PILE",
-        "title": "Pila de Descarte",
-        "description": "Las cartas aquí se barajan en tu pila de extracción cuando se quede sin cartas."
-      },
-      {
-        "id": "ENERGY",
-        "title": "Energia",
-        "description": "Energía Insuficiente."
-      }
-    ],
-    "orbs": [
-      {
-        "id": "DARK",
-        "title": "Oscuridad",
-        "description": "Pasiva: Al final de cada turno, aumenta el daño de este Orbe en.\nDescargar: Causa de daño al enemigo con menos PV.",
-        "passive": "",
-        "evoke": ""
-      },
-      {
-        "id": "FROST",
-        "title": "Escarcha",
-        "description": "Pasiva: Al final de cada turno, gana Bloqueo.\nDescargar: Gana Bloqueo.",
-        "passive": "",
-        "evoke": ""
-      },
-      {
-        "id": "LIGHTNING",
-        "title": "Relámpago",
-        "description": "Pasiva: Al final de cada turno, causa de daño a un enemigo aleatorio.\nDescargar: Causa de daño a un enemigo aleatorio.",
-        "passive": "",
-        "evoke": ""
-      },
-      {
-        "id": "PLASMA",
-        "title": "Plasma",
-        "description": "Pasiva: Al principio de cada turno, gana Energy.\nDescargar: Gana Energy.\nEl Plasma no se ve afectado por la Concentración.",
-        "passive": "",
-        "evoke": ""
-      }
-    ],
-    "stances": [
-      {
-        "id": "WRATH",
-        "title": "Cólera",
-        "description": "Tus Ataques hacen el doble de daño y recibes el doble de daño de Ataques."
-      },
-      {
-        "id": "CALM",
-        "title": "Calma",
-        "description": "Al salir de esta Postura, gana Energy Energy."
-      },
-      {
-        "id": "DIVINITY",
-        "title": "Divinidad",
-        "description": "Al entrar en esta Postura, gana Energy Energy Energy. Los Ataques hacen el triple de daño. Sal de esta Postura al final de tu próximo turno."
-      }
-    ],
-    "character_mechanics": [],
-    "keywords": [
-      {
-        "id": "ARTIFACT",
-        "names": [
-          "artefacto"
-        ],
-        "description": "Niega el siguiente perjuicio."
-      },
-      {
-        "id": "BLOCK",
-        "names": [
-          "bloqueo",
-          "bloqueos"
-        ],
-        "description": "Hasta el siguiente turno, previene daño."
-      },
-      {
-        "id": "BURN",
-        "names": [
-          "quemadura",
-          "quemaduras"
-        ],
-        "description": "Las Quemaduras son Cartas de estado Injugables que te dañan."
-      },
-      {
-        "id": "CHANNEL",
-        "names": [
-          "invoca",
-          "invocar",
-          "invocado"
-        ],
-        "description": "Invocar un Orbe lo pone en tu primer hueco vacío. Si no tienes espacios vacíos, tu primer Orbe será Descargado para hacer espacio."
-      },
-      {
-        "id": "CONFUSED",
-        "names": [
-          "confundido"
-        ],
-        "description": "Cuando robes una Carta, su coste será aleatorio."
-      },
-      {
-        "id": "CURSE",
-        "names": [
-          "maldición"
-        ],
-        "description": "Las Cartas de Maldición son Cartas negativas que se quedan en tu mazo."
-      },
-      {
-        "id": "DARK",
-        "names": [
-          "oscuridad",
-          "oscuridad+"
-        ],
-        "description": "Orbe: Aumenta el daño cada turno. Cuando sea Descargado, causa daño al enemigo con menos PV."
-      },
-      {
-        "id": "DAZED",
-        "names": [
-          "desorientado"
-        ],
-        "description": "Desorientado es una Carta de estado injugable."
-      },
-      {
-        "id": "DEXTERITY",
-        "names": [
-          "destreza"
-        ],
-        "description": "La Destreza aumenta el Bloqueo ganado por medio de Cartas."
-      },
-      {
-        "id": "ETHEREAL",
-        "names": [
-          "etérea"
-        ],
-        "description": "Si esta Carta está en tu mano al final del turno, se agota. Las Cartas Agotadas son eliminadas de tu mazo hasta el fin del combate."
-      },
-      {
-        "id": "EVOKE",
-        "names": [
-          "descargar",
-          "descargado",
-          "descarga"
-        ],
-        "description": "Consume tu Orbe de más a la derecha y usa su efecto de Descargar."
-      },
-      {
-        "id": "EXHAUST",
-        "names": [
-          "agotar",
-          "agotada",
-          "agotadas",
-          "agotan",
-          "agota"
-        ],
-        "description": "Eliminada hasta el fin del combate."
-      },
-      {
-        "id": "FOCUS",
-        "names": [
-          "Concentración"
-        ],
-        "description": "La Concentración aumenta la efectividad de los Orbes Invocados."
-      },
-      {
-        "id": "FRAIL",
-        "names": [
-          "fragil"
-        ],
-        "description": "Mientras seas Frágil, gana 25% menos Bloqueo por medio de Cartas."
-      },
-      {
-        "id": "FROST",
-        "names": [
-          "escarcha",
-          "escarcha+"
-        ],
-        "description": "Orbe: Gana Bloqueo."
-      },
-      {
-        "id": "INNATE",
-        "names": [
-          "innata"
-        ],
-        "description": "Empieza cada combate con esta Carta en tu mano."
-      },
-      {
-        "id": "INTANGIBLE",
-        "names": [
-          "intangible"
-        ],
-        "description": "Reduce TODO el daño recibido y la pérdida de vida a 1."
-      },
-      {
-        "id": "LIGHTNING",
-        "names": [
-          "relámpago",
-          "relámpago+"
-        ],
-        "description": "Orbe: Causa daño a enemigos aleatorios."
-      },
-      {
-        "id": "LOCKED",
-        "names": [
-          "bloqueada"
-        ],
-        "description": "Esta Carta aún no ha sido desbloqueada."
-      },
-      {
-        "id": "LOCK_ON",
-        "names": [
-          "localizar"
-        ],
-        "description": "Los enemigos marcados con Localizar reciben un 50% más de daño de los Orbes."
-      },
-      {
-        "id": "OPENER",
-        "names": [
-          "abridor"
-        ],
-        "description": "Las Cartas Innatas sólo pueden jugarse como la primera Carta de cada turno."
-      },
-      {
-        "id": "PLASMA",
-        "names": [
-          "plasma",
-          "plasma+"
-        ],
-        "description": "Orbe: Gana Energía."
-      },
-      {
-        "id": "POISON",
-        "names": [
-          "veneno",
-          "envenenado"
-        ],
-        "description": "Las Criaturas envenenadas pierden PV al inicio de su turno. Cada turno, el Veneno es reducido por 1."
-      },
-      {
-        "id": "RETAIN",
-        "names": [
-          "retiene",
-          "mantiene",
-          "retenido",
-          "retén",
-          "retenla",
-          "retenlas"
-        ],
-        "description": "Las Cartas Retenidas no son descartadas al final del turno."
-      },
-      {
-        "id": "SHIV",
-        "names": [
-          "navaja",
-          "navajas",
-          "'navaja'",
-          "'navaja+'"
-        ],
-        "description": "Las Navajas son Cartas de Ataque con coste 0 que se Agotan al jugarlas."
-      },
-      {
-        "id": "STATUS",
-        "names": [
-          "estado"
-        ],
-        "description": "Las Cartas de estado son eliminadas al final del combate."
-      },
-      {
-        "id": "STRENGTH",
-        "names": [
-          "fuerza"
-        ],
-        "description": "La Fuerza agrega daño adicional a los ataques."
-      },
-      {
-        "id": "STRIKE",
-        "names": [
-          "golpe",
-          "'golpe'"
-        ],
-        "description": "Cualquier Carta con la palabra \"Golpe\" en su nombre."
-      },
-      {
-        "id": "THORNS",
-        "names": [
-          "espinas"
-        ],
-        "description": "Cuando recibes daño de Ataque, dañas al enemigo."
-      },
-      {
-        "id": "TODO",
-        "names": [
-          "todo",
-          "JUST FOR DEVS, DONT TRANSLATE",
-          "JUST FOR DEVS, DONT TRANSLATE",
-          "JUST FOR DEVS, DONT TRANSLATE",
-          "JUST FOR DEVS, DONT TRANSLATE"
-        ],
-        "description": "This card is NOT IMPLEMENTED. Someone should really fix that..."
-      },
-      {
-        "id": "TRANSFORM",
-        "names": [
-          "transforma",
-          "transformar",
-          "transformada"
-        ],
-        "description": "Las Cartas Transformadas se convierten en una Carta al azar de cualquier rareza."
-      },
-      {
-        "id": "UNKNOWN",
-        "names": [
-          "desconocida"
-        ],
-        "description": "Esta Carta no ha sido encontrada."
-      },
-      {
-        "id": "UNPLAYABLE",
-        "names": [
-          "injugable"
-        ],
-        "description": "Las Cartas Injugables no pueden ser usadas desde tu mano."
-      },
-      {
-        "id": "UPGRADE",
-        "names": [
-          "mejora",
-          "mejorar"
-        ],
-        "description": "Mejorar Cartas las hace más poderosas. Las Cartas solo pueden ser mejoradas una vez."
-      },
-      {
-        "id": "VOID",
-        "names": [
-          "vacío",
-          "vacíos"
-        ],
-        "description": "Los Vacíos son Cartas Injugables que consumen energía al ser robados."
-      },
-      {
-        "id": "VULNERABLE",
-        "names": [
-          "vulnerable"
-        ],
-        "description": "Las Criaturas Vulnerables toman 50% más daño de Ataques."
-      },
-      {
-        "id": "WEAK",
-        "names": [
-          "debil",
-          "débil",
-          "debilitar",
-          "debilitado",
-          "debilita",
-          "débil"
-        ],
-        "description": "Las Criaturas Debilitadas causan un 25% menos de daño de Ataques."
-      },
-      {
-        "id": "WOUND",
-        "names": [
-          "herida",
-          "heridas"
-        ],
-        "description": "Las Heridas son Cartas de estado Injugables."
-      },
-      {
-        "id": "STANCE",
-        "names": [
-          "postura",
-          "posturas"
-        ],
-        "description": "Solo puedes tener una postura a la vez."
-      },
-      {
-        "id": "WRATH",
-        "names": [
-          "cólera",
-          "colera"
-        ],
-        "description": "En esta Postura, haces y recibes el doble de daño de ataques."
-      },
-      {
-        "id": "CALM",
-        "names": [
-          "calma"
-        ],
-        "description": "Al salir de esta Postura, gana Energy Energy."
-      },
-      {
-        "id": "DIVINITY",
-        "names": [
-          "divinidad"
-        ],
-        "description": "Al salir de esta Postura, gana Energy Energy Energy. Los ataques hacen el triple de daño. Sal de esta Postura al final de tu próximo turno."
-      },
-      {
-        "id": "PRAYER",
-        "names": [
-          "mantra",
-          "mediante violencia"
-        ],
-        "description": "Cuando obtienes 10 Mantra, entra en Divinidad."
-      },
-      {
-        "id": "SCRY",
-        "names": [
-          "adivina",
-          "adivinar"
-        ],
-        "description": "Mira las primeras X cartas de tu pila de robado. Puedes descartar las que quieras."
-      },
-      {
-        "id": "REGEN",
-        "names": [
-          "regenera",
-          "regen",
-          "regeneración"
-        ],
-        "description": "Regeneración cura PV al final de tu turno. Cada turno, Regeneración se reduce en 1."
-      },
-      {
-        "id": "VIGOR",
-        "names": [
-          "vigor"
-        ],
-        "description": "Tu próximo Ataque hace daño adicional."
-      },
-      {
-        "id": "RITUAL",
-        "names": [
-          "ritual"
-        ],
-        "description": "Gana Fuerza al final de cada turno."
-      },
-      {
-        "id": "FATAL",
-        "names": [
-          "fatal"
-        ],
-        "description": "Se activa cuando esta carta mata a un enemigo no súbdito."
-      }
-    ]
+  "monsters": {
+    "ACIDSLIME_L": {
+      "name": "Babosa Ácida (L)",
+      "move_names": [
+        "Escupitajo corrosivo",
+        "Dividirse",
+        "Lamer"
+      ]
+    },
+    "ACIDSLIME_M": {
+      "name": "Babosa Ácida (M)",
+      "move_names": [
+        "Escupitajo Corrosivo",
+        "Lamer"
+      ]
+    },
+    "ACIDSLIME_S": {
+      "name": "Babosa Ácida (S)"
+    },
+    "APOLOGY_SLIME": {
+      "name": "Babosa Apenada"
+    },
+    "AWAKENEDONE": {
+      "name": "El Despertado",
+      "move_names": [
+        "Golpe de alma",
+        "Ecos oscuros",
+        "Purificar",
+        "Enfangar"
+      ]
+    },
+    "BANDITBEAR": {
+      "name": "Oso",
+      "move_names": [
+        ""
+      ]
+    },
+    "BANDITCHILD": {
+      "name": "Puntiagudo",
+      "move_names": [
+        ""
+      ]
+    },
+    "BANDITLEADER": {
+      "name": "Romeo",
+      "move_names": [
+        ""
+      ]
+    },
+    "BOOKOFSTABBING": {
+      "name": "Libro Apuñalador",
+      "move_names": [
+        ""
+      ]
+    },
+    "BRONZEAUTOMATON": {
+      "name": "Autómata de Bronce",
+      "move_names": [
+        "HYPER BEAM"
+      ]
+    },
+    "BRONZEORB": {
+      "name": "Orbe de Bronce",
+      "move_names": [
+        ""
+      ]
+    },
+    "BYRD": {
+      "name": "Jáparo",
+      "move_names": [
+        ""
+      ]
+    },
+    "CENTURION": {
+      "name": "Centurión",
+      "move_names": [
+        ""
+      ]
+    },
+    "CHAMP": {
+      "name": "El Campeón",
+      "move_names": [
+        "Posición defensiva",
+        "Ejecutar",
+        "Bofetada"
+      ]
+    },
+    "CHOSEN": {
+      "name": "Elegido",
+      "move_names": [
+        ""
+      ]
+    },
+    "CORRUPTHEART": {
+      "name": "Corazón Corrupto",
+      "move_names": [
+        ""
+      ]
+    },
+    "CULTIST": {
+      "name": "Cultista",
+      "move_names": [
+        "",
+        "",
+        "Conjuro"
+      ]
+    },
+    "DARKLING": {
+      "name": "Prole Oscura",
+      "move_names": [
+        "¡Ñam! ¡Ñam!"
+      ]
+    },
+    "DECA": {
+      "name": "Deca",
+      "move_names": [
+        ""
+      ]
+    },
+    "DONU": {
+      "name": "Donu",
+      "move_names": [
+        "Círculo de poder"
+      ]
+    },
+    "EXPLODER": {
+      "name": "Explosivo",
+      "move_names": [
+        ""
+      ]
+    },
+    "FIREORB": {
+      "name": "Orbe de Fuego",
+      "move_names": [
+        ""
+      ]
+    },
+    "DAGGER": {
+      "name": "Dagger",
+      "move_names": [
+        ""
+      ]
+    },
+    "FLAMEBRUISER": {
+      "name": "Matón en Llamas",
+      "move_names": [
+        ""
+      ]
+    },
+    "REPTOMANCER": {
+      "name": "Vibora Vidente",
+      "move_names": [
+        ""
+      ]
+    },
+    "FUNGIBEAST": {
+      "name": "Bestia Hongo",
+      "move_names": [
+        "Crecer"
+      ]
+    },
+    "FUZZYLOUSEDEFENSIVE": {
+      "name": "Piojo",
+      "move_names": [
+        "Escupir telaraña"
+      ]
+    },
+    "FUZZYLOUSENORMAL": {
+      "name": "Piojo",
+      "move_names": [
+        "Crecer"
+      ]
+    },
+    "GIANTHEAD": {
+      "name": "Cabeza Gigante",
+      "move_names": [
+        ""
+      ]
+    },
+    "GREMLINFAT": {
+      "name": "Gremlin obeso",
+      "move_names": [
+        "Golpetazo"
+      ]
+    },
+    "GREMLINLEADER": {
+      "name": "Gremlin Líder",
+      "move_names": [
+        "¡Reagrupaos!"
+      ]
+    },
+    "GREMLINNOB": {
+      "name": "Gremlin Idiota",
+      "move_names": [
+        "Golpe al cráneo",
+        "Carga de embestida"
+      ]
+    },
+    "GREMLINTHIEF": {
+      "name": "Gremlin Ladrón",
+      "move_names": [
+        ""
+      ]
+    },
+    "GREMLINTSUNDERE": {
+      "name": "Gremlin Reservado",
+      "move_names": [
+        "Proteger",
+        "Golpe con escudo"
+      ]
+    },
+    "GREMLINWARRIOR": {
+      "name": "Gremlin Guerrero",
+      "move_names": [
+        "Garra"
+      ]
+    },
+    "GREMLINWIZARD": {
+      "name": "Gremlin Mago",
+      "move_names": [
+        "Cargando",
+        "Golpe Final"
+      ]
+    },
+    "HEALER": {
+      "name": "Curandero",
+      "move_names": [
+        ""
+      ]
+    },
+    "HEXAGHOST": {
+      "name": "Hexafantasma",
+      "move_names": [
+        "Prender",
+        "Abrasar",
+        "Infierno"
+      ]
+    },
+    "JAWWORM": {
+      "name": "Gusano Dentudo",
+      "move_names": [
+        "Grito",
+        "Azotar"
+      ]
+    },
+    "LAGAVULIN": {
+      "name": "Lagavulin",
+      "move_names": [
+        "Succionar alma"
+      ]
+    },
+    "LOOTER": {
+      "name": "Saqueador",
+      "move_names": [
+        "Asalto",
+        "Robar"
+      ]
+    },
+    "MAW": {
+      "name": "Las Fauces",
+      "move_names": [
+        ""
+      ]
+    },
+    "MUGGER": {
+      "name": "Carterista",
+      "move_names": [
+        "Asalto",
+        "Robar"
+      ]
+    },
+    "NEMESIS": {
+      "name": "Némesis",
+      "move_names": [
+        ""
+      ]
+    },
+    "ORB_WALKER": {
+      "name": "Orbe Andante",
+      "move_names": [
+        "Aumento de Fuerza"
+      ]
+    },
+    "PUPPETEER": {
+      "name": "Maestro de Marionetas",
+      "move_names": [
+        ""
+      ]
+    },
+    "REPULSOR": {
+      "name": "Repulsor",
+      "move_names": [
+        ""
+      ]
+    },
+    "SENTRY": {
+      "name": "Centinela",
+      "move_names": [
+        "Desintegrar"
+      ]
+    },
+    "SERPENT": {
+      "name": "Raiz de la Torre",
+      "move_names": [
+        ""
+      ]
+    },
+    "SHELLED_PARASITE": {
+      "name": "Parásito con Caparazón",
+      "move_names": [
+        ""
+      ]
+    },
+    "SLAVERBLUE": {
+      "name": "Esclavista",
+      "move_names": [
+        "Rastrillar"
+      ]
+    },
+    "SLAVERBOSS": {
+      "name": "Capataz",
+      "move_names": [
+        ""
+      ]
+    },
+    "SLAVERRED": {
+      "name": "Esclavista",
+      "move_names": [
+        "Raspar",
+        "Enredar"
+      ]
+    },
+    "SLIMEBOSS": {
+      "name": "Rey Babosa",
+      "move_names": [
+        "Golpe",
+        "Preparando",
+        "Dividirse",
+        "Chorro de baba"
+      ]
+    },
+    "SNAKEPLANT": {
+      "name": "Lengua de Tigre",
+      "move_names": [
+        "Esporas debilitantes"
+      ]
+    },
+    "SNECKO": {
+      "name": "Serpentija",
+      "move_names": [
+        "Mirada confundidora",
+        "Golpe de cola",
+        "Mordida"
+      ]
+    },
+    "SPHERICGUARDIAN": {
+      "name": "Guardián Esférico",
+      "move_names": [
+        ""
+      ]
+    },
+    "SPIKESLIME_L": {
+      "name": "Babosa Puntiaguda (L)",
+      "move_names": [
+        "Lamer",
+        "Dividirse"
+      ]
+    },
+    "SPIKESLIME_M": {
+      "name": "Babosa Puntiaguda (M)",
+      "move_names": [
+        "Lamer"
+      ]
+    },
+    "SPIKESLIME_S": {
+      "name": "Babosa Puntiaguda (S)"
+    },
+    "SPIKER": {
+      "name": "Punzante",
+      "move_names": [
+        ""
+      ]
+    },
+    "THECOLLECTOR": {
+      "name": "El Coleccionista",
+      "move_names": [
+        ""
+      ]
+    },
+    "THEGUARDIAN": {
+      "name": "El Guardián",
+      "move_names": [
+        "Modo Defensivo",
+        "Impacto fuerte",
+        "Rodar",
+        "Doble golpe",
+        "Torbellino",
+        "Potenciando",
+        "Descargar vapor"
+      ]
+    },
+    "TIMEEATER": {
+      "name": "Devorador de Tiempo",
+      "move_names": [
+        ""
+      ]
+    },
+    "TORCHHEAD": {
+      "name": "Cabeza Antorcha",
+      "move_names": [
+        ""
+      ]
+    },
+    "TRANSIENT": {
+      "name": "Transeúnte",
+      "move_names": [
+        ""
+      ]
+    },
+    "SPIRESHIELD": {
+      "name": "Escudo de la Aguja",
+      "move_names": [
+        ""
+      ]
+    },
+    "SPIRESPEAR": {
+      "name": "Lanza de la Aguja",
+      "move_names": [
+        ""
+      ]
+    },
+    "WRITHINGMASS": {
+      "name": "Masa Inquieta",
+      "move_names": [
+        ""
+      ]
+    }
   }
 }

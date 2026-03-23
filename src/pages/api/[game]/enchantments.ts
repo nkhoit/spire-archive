@@ -5,6 +5,7 @@ import { getGame, getLocale, getPaging, getString, jsonResponse, notFoundRespons
 export const GET: APIRoute = async ({ params, url }) => {
   const game = getGame(params);
   if (!game) return notFoundResponse();
+  if (game === 'sts1') return jsonResponse({ error: 'enchantments are not available for sts1' }, { status: 404 });
 
   const locale = getLocale(url);
   const { enchantments } = await getData(game, locale);

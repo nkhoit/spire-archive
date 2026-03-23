@@ -4564,616 +4564,442 @@
       "description": "Wird ausgelöst, wenn diese Karte einen Gegner tötet, der kein Untertan ist."
     }
   },
-  "mechanics": {
-    "ascension": [
-      {
-        "level": 1,
-        "title": "Aufstiegsmodus Level 1",
-        "description": "Eliten spawnen öfter."
-      },
-      {
-        "level": 2,
-        "title": "Aufstiegsmodus Level 2",
-        "description": "Normale Gegner sind tödlicher."
-      },
-      {
-        "level": 3,
-        "title": "Aufstiegsmodus Level 3",
-        "description": "Eliten sind tödlicher."
-      },
-      {
-        "level": 4,
-        "title": "Aufstiegsmodus Level 4",
-        "description": "Bosse sind tödlicher."
-      },
-      {
-        "level": 5,
-        "title": "Aufstiegsmodus Level 5",
-        "description": "Weniger Heilung nach Bosskämpfen."
-      },
-      {
-        "level": 6,
-        "title": "Aufstiegsmodus Level 6",
-        "description": "Beginne jeden Run verletzt."
-      },
-      {
-        "level": 7,
-        "title": "Aufstiegsmodus Level 7",
-        "description": "Normale Gegner halten mehr aus."
-      },
-      {
-        "level": 8,
-        "title": "Aufstiegsmodus Level 8",
-        "description": "Eliten halten mehr aus."
-      },
-      {
-        "level": 9,
-        "title": "Aufstiegsmodus Level 9",
-        "description": "Bosse halten mehr aus."
-      },
-      {
-        "level": 10,
-        "title": "Aufstiegsmodus Level 10",
-        "description": "Beginne jeden Run verflucht."
-      },
-      {
-        "level": 11,
-        "title": "Aufstiegsmodus Level 11",
-        "description": "Weniger Trank-Slots."
-      },
-      {
-        "level": 12,
-        "title": "Aufstiegsmodus Level 12",
-        "description": "Verbesserte Karten erscheinen seltener."
-      },
-      {
-        "level": 13,
-        "title": "Aufstiegsmodus Level 13",
-        "description": "Arme Bosse."
-      },
-      {
-        "level": 14,
-        "title": "Aufstiegsmodus Level 14",
-        "description": "Weniger max. TP."
-      },
-      {
-        "level": 15,
-        "title": "Aufstiegsmodus Level 15",
-        "description": "Ungünstige Ereignisse."
-      },
-      {
-        "level": 16,
-        "title": "Aufstiegsmodus Level 16",
-        "description": "Läden sind teurer."
-      },
-      {
-        "level": 17,
-        "title": "Aufstiegsmodus Level 17",
-        "description": "Normale Gegner haben schwerere Fähigkeiten."
-      },
-      {
-        "level": 18,
-        "title": "Aufstiegsmodus Level 18",
-        "description": "Eliten haben schwerere Fähigkeiten."
-      },
-      {
-        "level": 19,
-        "title": "Aufstiegsmodus Level 19",
-        "description": "Bosse haben schwerere Fähigkeiten."
-      },
-      {
-        "level": 20,
-        "title": "Aufstiegsmodus Level 20",
-        "description": "(Höchstes Level) Doppelter Boss."
-      }
-    ],
-    "map_rooms": [
-      {
-        "id": "UNKNOWN",
-        "title": "Unbekannt",
-        "description": "Ein unbekannter Raum.\n\nDu könntest auf Monster, Schätze, Läden oder etwas völlig anderes treffen."
-      },
-      {
-        "id": "SHOP",
-        "title": "Händler",
-        "description": "Ein mysteriöser Händler verkauft seine Waren in diesen Räumen.\n\nGib hier dein wohlverdientes Gold aus!"
-      },
-      {
-        "id": "TREASURE",
-        "title": "Schatz",
-        "description": "In diesen begehrten Räumen kannst du Relikte und Gold finden."
-      },
-      {
-        "id": "REST",
-        "title": "Lagerfeuer",
-        "description": "Halte an diesen Orten inne, um deine TP zu heilen oder eine Karte zu verbessern."
-      },
-      {
-        "id": "ENEMY",
-        "title": "Gegner",
-        "description": "Feindselige Gegner hausen in diesen Räumen."
-      },
-      {
-        "id": "ELITE",
-        "title": "Elite",
-        "description": "Mächtige Gegner befinden sich in diesen Räumen.\n\nSie zu besiegen, beschert dir ein Relikt."
-      }
-    ],
-    "core_concepts": [
-      {
-        "id": "BLOCK",
-        "title": "block",
-        "description": "Verhindert Schaden bis zum nächsten Zug."
-      },
-      {
-        "id": "EXHAUST",
-        "title": "erschöpfen",
-        "description": "Erschöpfte Karten werden für den Rest dieses Kampfes aus deinem Deck entfernt."
-      },
-      {
-        "id": "ETHEREAL",
-        "title": "flüchtig",
-        "description": "Hast du diese Karte am Ende deines Zuges auf der Hand, erschöpft sie, ist also für den Rest des Kampfes aus deinem Deck entfernt."
-      },
-      {
-        "id": "RETAIN",
-        "title": "behalten",
-        "description": "Karten, die du behältst, wirfst du am Ende des Zuges nicht ab."
-      },
-      {
-        "id": "STATUS",
-        "title": "status",
-        "description": "Statuskarten werden am Ende des Kampfes entfernt."
-      },
-      {
-        "id": "CURSE",
-        "title": "fluch",
-        "description": "Fluchkarten sind negative Karten, die in deinem Deck bleiben."
-      },
-      {
-        "id": "DRAW_PILE",
-        "title": "Zurückkehren",
-        "description": "Von hier werden zu Beginn jedes Zuges Karten gezogen."
-      },
-      {
-        "id": "DISCARD_PILE",
-        "title": "Abwurfstapel",
-        "description": "Diese Karten werden in deinen Nachziehstapel gemischt, wenn dort die Karten ausgehen."
-      },
-      {
-        "id": "ENERGY",
-        "title": "Energie",
-        "description": "Nicht genug Energie."
-      }
-    ],
-    "orbs": [
-      {
-        "id": "DARK",
-        "title": "Schatten",
-        "description": "Passiv: Erhöhe am Ende deines Zuges den Schaden dieses Orbs um.\nEntladen: Füge dem Gegner mit den wenigsten TP Schaden zu.",
-        "passive": "",
-        "evoke": ""
-      },
-      {
-        "id": "FROST",
-        "title": "Frost",
-        "description": "Passiv: Erhalte am Ende deines Zuges Block.\nEntladen: Erhalte Block.",
-        "passive": "",
-        "evoke": ""
-      },
-      {
-        "id": "LIGHTNING",
-        "title": "Blitz",
-        "description": "Passiv: Füge am Ende deines Zuges einem zufälligen Gegner Schaden zu.\nEntladen: Füge einem zufälligen Gegner Schaden zu.",
-        "passive": "",
-        "evoke": ""
-      },
-      {
-        "id": "PLASMA",
-        "title": "Plasma",
-        "description": "Passiv: Erhalte zu Beginn deines Zuges Energy.\nEntladen: Erhalte Energy.\nPlasma wird durch Fokus nicht beeinflusst.",
-        "passive": "",
-        "evoke": ""
-      }
-    ],
-    "stances": [
-      {
-        "id": "WRATH",
-        "title": "Zorn",
-        "description": "Deine Angriffe fügen doppelten Schaden zu und du nimmst doppelten Schaden von Angriffen."
-      },
-      {
-        "id": "CALM",
-        "title": "Ruhe",
-        "description": "Erhalte beim Verlassen dieser Haltung Energy Energy."
-      },
-      {
-        "id": "DIVINITY",
-        "title": "Göttlichkeit",
-        "description": "Erhalte beim Annehmen dieser Haltung Energy Energy Energy. Angriffe fügen dreifachen Schaden zu. Verlasse diese Haltung am Beginn deines nächsten Zuges."
-      }
-    ],
-    "character_mechanics": [],
-    "keywords": [
-      {
-        "id": "ARTIFACT",
-        "names": [
-          "artefakt"
-        ],
-        "description": "Negiert den nächsten Debuff."
-      },
-      {
-        "id": "BLOCK",
-        "names": [
-          "block",
-          "blockt"
-        ],
-        "description": "Verhindert Schaden bis zum nächsten Zug."
-      },
-      {
-        "id": "BURN",
-        "names": [
-          "brennen",
-          "burns"
-        ],
-        "description": "Brennen ist eine unspielbare Statuskarte, die dir Schaden zufügt."
-      },
-      {
-        "id": "CHANNEL",
-        "names": [
-          "erschaffen",
-          "erschaffe",
-          "erschaffst",
-          "erschaffene",
-          "erschaffenen"
-        ],
-        "description": "Ein erschaffener Orb kommt in deinen vordersten freien Slot. Hast du keine freien Slots, so entlädt sich dein vorderster Orb, um Platz zu machen."
-      },
-      {
-        "id": "CONFUSED",
-        "names": [
-          "verwirrt",
-          "Gepreised sei Snecko!"
-        ],
-        "description": "Immer wenn du eine Karte ziehst, sind ihre Kosten zufällig."
-      },
-      {
-        "id": "CURSE",
-        "names": [
-          "fluch",
-          "flüche",
-          "fluchkarte"
-        ],
-        "description": "Fluchkarten sind negative Karten, die in deinem Deck bleiben."
-      },
-      {
-        "id": "DARK",
-        "names": [
-          "schatten",
-          "dark+"
-        ],
-        "description": "Orb: Erhöht seinen Schaden pro Zug. Beim Entladen fügt er dem Gegner mit den wenigsten TP Schaden zu."
-      },
-      {
-        "id": "DAZED",
-        "names": [
-          "benommen"
-        ],
-        "description": "Benommen ist eine unspielbare, flüchtige Statuskarte."
-      },
-      {
-        "id": "DEXTERITY",
-        "names": [
-          "geschicklichkeit"
-        ],
-        "description": "Geschicklichkeit verbessert von Karten erhaltenen Block."
-      },
-      {
-        "id": "ETHEREAL",
-        "names": [
-          "flüchtig"
-        ],
-        "description": "Hast du diese Karte am Ende deines Zuges auf der Hand, erschöpft sie, ist also für den Rest des Kampfes aus deinem Deck entfernt."
-      },
-      {
-        "id": "EVOKE",
-        "names": [
-          "entladen",
-          "entlade",
-          "entladene",
-          "entladenen"
-        ],
-        "description": "Verbrauche den Orb auf der rechten Seite und nutze seinen Entladen-Effekt."
-      },
-      {
-        "id": "EXHAUST",
-        "names": [
-          "erschöpfen",
-          "erschöpfe",
-          "erschöpft"
-        ],
-        "description": "Erschöpfte Karten werden für den Rest dieses Kampfes aus deinem Deck entfernt."
-      },
-      {
-        "id": "FOCUS",
-        "names": [
-          "fokus"
-        ],
-        "description": "Fokus erhöht die Effektivität von erschaffenen Orbs."
-      },
-      {
-        "id": "FRAIL",
-        "names": [
-          "gebrechlich"
-        ],
-        "description": "Bist du Gebrechlich, erhältst du 25% weniger Block von Karten."
-      },
-      {
-        "id": "FROST",
-        "names": [
-          "frost",
-          "frosts"
-        ],
-        "description": "Orb: Erhalte Block."
-      },
-      {
-        "id": "INNATE",
-        "names": [
-          "angeboren"
-        ],
-        "description": "Beginne jeden Kampf mit dieser Karte auf deiner Hand."
-      },
-      {
-        "id": "INTANGIBLE",
-        "names": [
-          "immateriell"
-        ],
-        "description": "Reduziere jeglichen genommenen Schaden und TP-Verlust auf 1."
-      },
-      {
-        "id": "LIGHTNING",
-        "names": [
-          "blitz",
-          "blitze"
-        ],
-        "description": "Orb: Fügt zufälligen Gegnern Schaden zu."
-      },
-      {
-        "id": "LOCKED",
-        "names": [
-          "gesperrt"
-        ],
-        "description": "Diese Karte muss noch freigeschaltet werden."
-      },
-      {
-        "id": "LOCK_ON",
-        "names": [
-          "anvisieren"
-        ],
-        "description": "Anvisierte Ziele erhalten 50% mehr Schaden durch Orbs."
-      },
-      {
-        "id": "OPENER",
-        "names": [
-          "eröffnung"
-        ],
-        "description": "Eine Karte mit Eröffnung kann nur als erste Karte eines Zuges gespielt werden."
-      },
-      {
-        "id": "PLASMA",
-        "names": [
-          "plasma",
-          "plasma+"
-        ],
-        "description": "Orb: Erhalte Energie."
-      },
-      {
-        "id": "POISON",
-        "names": [
-          "gift",
-          "vergiftet"
-        ],
-        "description": "Vergiftete Kreaturen verlieren zu Beginn ihres Zuges entsprechend viele TP. Gift verringert sich in jedem Zug um 1."
-      },
-      {
-        "id": "RETAIN",
-        "names": [
-          "behalten",
-          "behalte",
-          "behaltene"
-        ],
-        "description": "Karten, die du behältst, wirfst du am Ende des Zuges nicht ab."
-      },
-      {
-        "id": "SHIV",
-        "names": [
-          "messer",
-          "messer"
-        ],
-        "description": "Messer sind kostenlose Angriffskarten, die bei Benutzung erschöpfen."
-      },
-      {
-        "id": "STATUS",
-        "names": [
-          "status"
-        ],
-        "description": "Statuskarten werden am Ende des Kampfes entfernt."
-      },
-      {
-        "id": "STRENGTH",
-        "names": [
-          "stärke"
-        ],
-        "description": "Stärke lässt Angriffe mehr Schaden zufügen."
-      },
-      {
-        "id": "STRIKE",
-        "names": [
-          "schlag"
-        ],
-        "description": "Jede Karte mit dem Wort \"Schlag\" in ihrem Namen."
-      },
-      {
-        "id": "THORNS",
-        "names": [
-          "stachel",
-          "stacheln"
-        ],
-        "description": "Gibt beim Erleiden von Angriffsschaden Schaden zurück."
-      },
-      {
-        "id": "TODO",
-        "names": [
-          "todo",
-          "JUST FOR DEVS, DONT TRANSLATE",
-          "JUST FOR DEVS, DONT TRANSLATE",
-          "JUST FOR DEVS, DONT TRANSLATE",
-          "JUST FOR DEVS, DONT TRANSLATE"
-        ],
-        "description": "This card is NOT IMPLEMENTED. Someone should really fix that..."
-      },
-      {
-        "id": "TRANSFORM",
-        "names": [
-          "transformieren",
-          "transformierst",
-          "transformiere"
-        ],
-        "description": "Transformierte Karten ändern sich zu einer Karte gleicher Farbe, aber zufälliger Seltenheit."
-      },
-      {
-        "id": "UNKNOWN",
-        "names": [
-          "unbekannt"
-        ],
-        "description": "Du bist dieser Karte noch nicht begegnet."
-      },
-      {
-        "id": "UNPLAYABLE",
-        "names": [
-          "unspielbar"
-        ],
-        "description": "Unspielbare Karten kannst du nicht aus deiner Hand spielen."
-      },
-      {
-        "id": "UPGRADE",
-        "names": [
-          "verbessern",
-          "verbessere",
-          "verbesserte",
-          "verbessertes",
-          "verbessert"
-        ],
-        "description": "Verbessern macht Karten mächtiger. Karten können nur einmal verbessert werden."
-      },
-      {
-        "id": "VOID",
-        "names": [
-          "leere",
-          "voids"
-        ],
-        "description": "Leere ist eine unspielbare Statuskarte, die beim Ziehen Energie verbraucht."
-      },
-      {
-        "id": "VULNERABLE",
-        "names": [
-          "verwundbar"
-        ],
-        "description": "Verwundbare Kreaturen erleiden 50% mehr Schaden durch Angriffe."
-      },
-      {
-        "id": "WEAK",
-        "names": [
-          "schwach",
-          "schwächen",
-          "schwach",
-          "schwächt"
-        ],
-        "description": "Schwache Kreaturen fügen mit Angriffen 25% weniger Schaden zu."
-      },
-      {
-        "id": "WOUND",
-        "names": [
-          "wunde",
-          "wunden"
-        ],
-        "description": "Wunden sind unspielbare Statuskarten."
-      },
-      {
-        "id": "STANCE",
-        "names": [
-          "haltung",
-          "haltungen",
-          "haltungswechsel"
-        ],
-        "description": "Du kannst immer nur eine Haltung haben."
-      },
-      {
-        "id": "WRATH",
-        "names": [
-          "zorn"
-        ],
-        "description": "In dieser Haltung verursachst und erhältst du doppelten Angriffsschaden."
-      },
-      {
-        "id": "CALM",
-        "names": [
-          "ruhe"
-        ],
-        "description": "Erhalte beim Verlassen dieser Haltung Energy Energy."
-      },
-      {
-        "id": "DIVINITY",
-        "names": [
-          "göttlichkeit"
-        ],
-        "description": "Erhalte beim Annehmen dieser Haltung Energy Energy Energy. Angriffe fügen dreifachen Schaden zu. Verlasse diese Haltung am Beginn deines nächsten Zuges."
-      },
-      {
-        "id": "PRAYER",
-        "names": [
-          "mantra",
-          "durch gewalt"
-        ],
-        "description": "Wenn du 10 Mantra erhältst, nimm Göttlichkeit an."
-      },
-      {
-        "id": "SCRY",
-        "names": [
-          "spähen",
-          "spähe",
-          "spähst"
-        ],
-        "description": "Sieh die obersten X Karten deines Nachziehstapels an. Du darfst beliebige davon abwerfen."
-      },
-      {
-        "id": "REGEN",
-        "names": [
-          "erholen"
-        ],
-        "description": "Erholen heilt am Ende deines Zuges TP. Erholen verringert sich in jedem Zug um 1."
-      },
-      {
-        "id": "VIGOR",
-        "names": [
-          "kraft"
-        ],
-        "description": "Dein nächster Angriff fügt mehr Schaden zu."
-      },
-      {
-        "id": "RITUAL",
-        "names": [
-          "ritual"
-        ],
-        "description": "Erhalte am Ende deines Zuges Stärke."
-      },
-      {
-        "id": "FATAL",
-        "names": [
-          "tödlich"
-        ],
-        "description": "Wird ausgelöst, wenn diese Karte einen Gegner tötet, der kein Untertan ist."
-      }
-    ]
+  "monsters": {
+    "ACIDSLIME_L": {
+      "name": "Säureschleim (G)",
+      "move_names": [
+        "Ätzende Spucke",
+        "Spalten",
+        "Wabbeln"
+      ]
+    },
+    "ACIDSLIME_M": {
+      "name": "Säureschleim (M)",
+      "move_names": [
+        "Ätzende Spucke",
+        "Wabbeln"
+      ]
+    },
+    "ACIDSLIME_S": {
+      "name": "Säureschleim (K)"
+    },
+    "APOLOGY_SLIME": {
+      "name": "Entschuldigungsschleim"
+    },
+    "AWAKENEDONE": {
+      "name": "Der Erweckte",
+      "move_names": [
+        "Seelenschlag",
+        "Dunkles Echo",
+        "Reinigung",
+        "Schlamm"
+      ]
+    },
+    "BANDITBEAR": {
+      "name": "Bär",
+      "move_names": [
+        ""
+      ]
+    },
+    "BANDITCHILD": {
+      "name": "Pointy",
+      "move_names": [
+        ""
+      ]
+    },
+    "BANDITLEADER": {
+      "name": "Romeo",
+      "move_names": [
+        ""
+      ]
+    },
+    "BOOKOFSTABBING": {
+      "name": "Buch des Stechens",
+      "move_names": [
+        ""
+      ]
+    },
+    "BRONZEAUTOMATON": {
+      "name": "Bronze-Automaton",
+      "move_names": [
+        "HYPERSTRAHL"
+      ]
+    },
+    "BRONZEORB": {
+      "name": "Bronzeorb",
+      "move_names": [
+        ""
+      ]
+    },
+    "BYRD": {
+      "name": "Fogl",
+      "move_names": [
+        ""
+      ]
+    },
+    "CENTURION": {
+      "name": "Zenturio",
+      "move_names": [
+        ""
+      ]
+    },
+    "CHAMP": {
+      "name": "Der Champ",
+      "move_names": [
+        "Defensivhaltung",
+        "Hinrichten",
+        "Schlag ins Gesicht"
+      ]
+    },
+    "CHOSEN": {
+      "name": "Auserwählte",
+      "move_names": [
+        ""
+      ]
+    },
+    "CORRUPTHEART": {
+      "name": "Verdorbenes Herz",
+      "move_names": [
+        ""
+      ]
+    },
+    "CULTIST": {
+      "name": "Kultist",
+      "move_names": [
+        "",
+        "",
+        "Zauberformel"
+      ]
+    },
+    "DAGGER": {
+      "name": "Dolch",
+      "move_names": [
+        ""
+      ]
+    },
+    "DARKLING": {
+      "name": "Dunkeling",
+      "move_names": [
+        "Mampf! Mampf!"
+      ]
+    },
+    "DECA": {
+      "name": "Deka",
+      "move_names": [
+        ""
+      ]
+    },
+    "DONU": {
+      "name": "Donu",
+      "move_names": [
+        "Kreis der Macht"
+      ]
+    },
+    "EXPLODER": {
+      "name": "Explodierer",
+      "move_names": [
+        ""
+      ]
+    },
+    "FIREORB": {
+      "name": "Feuerorb",
+      "move_names": [
+        ""
+      ]
+    },
+    "FLAMEBRUISER": {
+      "name": "Flammenschläger",
+      "move_names": [
+        ""
+      ]
+    },
+    "FUNGIBEAST": {
+      "name": "Pilzbestie",
+      "move_names": [
+        "Wachsen"
+      ]
+    },
+    "FUZZYLOUSEDEFENSIVE": {
+      "name": "Laus",
+      "move_names": [
+        "Speichelnetz"
+      ]
+    },
+    "FUZZYLOUSENORMAL": {
+      "name": "Laus",
+      "move_names": [
+        "Wachsen"
+      ]
+    },
+    "GIANTHEAD": {
+      "name": "Riesenkopf",
+      "move_names": [
+        ""
+      ]
+    },
+    "GREMLINFAT": {
+      "name": "Fetter Gremlin",
+      "move_names": [
+        "Zerschmettern"
+      ]
+    },
+    "GREMLINLEADER": {
+      "name": "Gremlinanführer",
+      "move_names": [
+        "Versammeln!"
+      ]
+    },
+    "GREMLINNOB": {
+      "name": "Gremlin-Aristo",
+      "move_names": [
+        "Schädelstoß",
+        "Bullenangriff"
+      ]
+    },
+    "GREMLINTHIEF": {
+      "name": "Schleichender Gremlin",
+      "move_names": [
+        ""
+      ]
+    },
+    "GREMLINTSUNDERE": {
+      "name": "Schildgremlin",
+      "move_names": [
+        "Beschützen",
+        "Schildstoß"
+      ]
+    },
+    "GREMLINWARRIOR": {
+      "name": "Wütender Gremlin",
+      "move_names": [
+        "Kralle"
+      ]
+    },
+    "GREMLINWIZARD": {
+      "name": "Gremlinzauberer",
+      "move_names": [
+        "Vorbereiten",
+        "Ultimativer Stoß"
+      ]
+    },
+    "HEALER": {
+      "name": "Mystikerin",
+      "move_names": [
+        ""
+      ]
+    },
+    "HEXAGHOST": {
+      "name": "Hexageist",
+      "move_names": [
+        "Entflammen",
+        "Versengen",
+        "Inferno"
+      ]
+    },
+    "JAWWORM": {
+      "name": "Kieferwurm",
+      "move_names": [
+        "Brüllen",
+        "Dreschen"
+      ]
+    },
+    "LAGAVULIN": {
+      "name": "Lagavulin",
+      "move_names": [
+        "Seele aussaugen"
+      ]
+    },
+    "LOOTER": {
+      "name": "Plünderer",
+      "move_names": [
+        "Ausfallschritt",
+        "Ausrauben"
+      ]
+    },
+    "MAW": {
+      "name": "Der Schlund",
+      "move_names": [
+        ""
+      ]
+    },
+    "MUGGER": {
+      "name": "Straßenräuber",
+      "move_names": [
+        "Ausfallschritt",
+        "Ausrauben"
+      ]
+    },
+    "NEMESIS": {
+      "name": "Nemesis",
+      "move_names": [
+        ""
+      ]
+    },
+    "ORB_WALKER": {
+      "name": "Kugelwandler",
+      "move_names": [
+        "Verstärken"
+      ]
+    },
+    "PUPPETEER": {
+      "name": "Puppenspieler",
+      "move_names": [
+        ""
+      ]
+    },
+    "REPTOMANCER": {
+      "name": "Reptilomantin",
+      "move_names": [
+        ""
+      ]
+    },
+    "REPULSOR": {
+      "name": "Repulsor",
+      "move_names": [
+        ""
+      ]
+    },
+    "SENTRY": {
+      "name": "Wache",
+      "move_names": [
+        "Zerfallen"
+      ]
+    },
+    "SERPENT": {
+      "name": "Spire-Wuchs",
+      "move_names": [
+        ""
+      ]
+    },
+    "SHELLED_PARASITE": {
+      "name": "Gepanzerter Parasit",
+      "move_names": [
+        ""
+      ]
+    },
+    "SLAVERBLUE": {
+      "name": "Sklavenhändler",
+      "move_names": [
+        "Harken"
+      ]
+    },
+    "SLAVERBOSS": {
+      "name": "Zuchtmeister",
+      "move_names": [
+        ""
+      ]
+    },
+    "SLAVERRED": {
+      "name": "Sklavenhändler",
+      "move_names": [
+        "Kratzen",
+        "Verwickeln"
+      ]
+    },
+    "SLIMEBOSS": {
+      "name": "Schleimboss",
+      "move_names": [
+        "Zuschlagen",
+        "Vorbereiten",
+        "Spalten",
+        "Klebriger Nebel"
+      ]
+    },
+    "SNAKEPLANT": {
+      "name": "Schlangenpflanze",
+      "move_names": [
+        "Schwächende Sporen"
+      ]
+    },
+    "SNECKO": {
+      "name": "Snecko",
+      "move_names": [
+        "Verwirrendes Blenden",
+        "Rutenschlag",
+        "Biss"
+      ]
+    },
+    "SPHERICGUARDIAN": {
+      "name": "Sphärischer Wächter",
+      "move_names": [
+        ""
+      ]
+    },
+    "SPIKESLIME_L": {
+      "name": "Stachelschleim (G)",
+      "move_names": [
+        "Wabbeln",
+        "Spalten"
+      ]
+    },
+    "SPIKESLIME_M": {
+      "name": "Stachelschleim (M)",
+      "move_names": [
+        "Wabbeln"
+      ]
+    },
+    "SPIKESLIME_S": {
+      "name": "Stachelschleim (K)"
+    },
+    "SPIKER": {
+      "name": "Stachler",
+      "move_names": [
+        ""
+      ]
+    },
+    "SPIRESHIELD": {
+      "name": "Spire-Schild",
+      "move_names": [
+        ""
+      ]
+    },
+    "SPIRESPEAR": {
+      "name": "Spire-Speer",
+      "move_names": [
+        ""
+      ]
+    },
+    "THECOLLECTOR": {
+      "name": "Der Sammler",
+      "move_names": [
+        ""
+      ]
+    },
+    "THEGUARDIAN": {
+      "name": "Der Wächter",
+      "move_names": [
+        "Defensivmodus",
+        "Erbitterter Hieb",
+        "Einrollen",
+        "Zwillingsschlag",
+        "Wirbelwind",
+        "Aufladen",
+        "Dampf ablassen"
+      ]
+    },
+    "TIMEEATER": {
+      "name": "Zeitfresser",
+      "move_names": [
+        ""
+      ]
+    },
+    "TORCHHEAD": {
+      "name": "Fackelkopf",
+      "move_names": [
+        ""
+      ]
+    },
+    "TRANSIENT": {
+      "name": "Schwundling",
+      "move_names": [
+        ""
+      ]
+    },
+    "WRITHINGMASS": {
+      "name": "Knäuelmasse",
+      "move_names": [
+        ""
+      ]
+    }
   }
 }

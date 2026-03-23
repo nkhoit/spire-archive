@@ -4643,637 +4643,442 @@
       "description": "Eğer bu kart minyon harici bir düşmanı öldürürse devreye girer."
     }
   },
-  "mechanics": {
-    "ascension": [
-      {
-        "level": 1,
-        "title": "Yükseliş Seviye 1",
-        "description": "Elitler daha sık çıkar."
-      },
-      {
-        "level": 2,
-        "title": "Yükseliş Seviye 2",
-        "description": "Normal düşmanlar daha ölümcül."
-      },
-      {
-        "level": 3,
-        "title": "Yükseliş Seviye 3",
-        "description": "Elitler daha ölümcül."
-      },
-      {
-        "level": 4,
-        "title": "Yükseliş Seviye 4",
-        "description": "Bosslar daha ölümcül."
-      },
-      {
-        "level": 5,
-        "title": "Yükseliş Seviye 5",
-        "description": "Boss dövüşlerinden sonra daha az iyileş."
-      },
-      {
-        "level": 6,
-        "title": "Yükseliş Seviye 6",
-        "description": "Oyuna hasarlı başla."
-      },
-      {
-        "level": 7,
-        "title": "Yükseliş Seviye 7",
-        "description": "Normal düşmanlar daha canlı."
-      },
-      {
-        "level": 8,
-        "title": "Yükseliş Seviye 8",
-        "description": "Elitler daha canlı."
-      },
-      {
-        "level": 9,
-        "title": "Yükseliş Seviye 9",
-        "description": "Bosslar daha canlı."
-      },
-      {
-        "level": 10,
-        "title": "Yükseliş Seviye 10",
-        "description": "Lanetle başla."
-      },
-      {
-        "level": 11,
-        "title": "Yükseliş Seviye 11",
-        "description": "Eksik iksir yuvası."
-      },
-      {
-        "level": 12,
-        "title": "Yükseliş Seviye 12",
-        "description": "Gelişmiş kartlar daha az görünür."
-      },
-      {
-        "level": 13,
-        "title": "Yükseliş Seviye 13",
-        "description": "Fakir Bosslar."
-      },
-      {
-        "level": 14,
-        "title": "Yükseliş Seviye 14",
-        "description": "Daha düşük Maksimum CP."
-      },
-      {
-        "level": 15,
-        "title": "Yükseliş Seviye 15",
-        "description": "Dezavantajlı olaylar."
-      },
-      {
-        "level": 16,
-        "title": "Yükseliş Seviye 16",
-        "description": "Dükkanlar daha pahalı."
-      },
-      {
-        "level": 17,
-        "title": "Yükseliş Seviye 17",
-        "description": "Normal düşmanlar daha zorlayıcı zeka ve özelliklere sahip."
-      },
-      {
-        "level": 18,
-        "title": "Yükseliş Seviye 18",
-        "description": "Elitler daha zorlayıcı zeka ve özelliklere sahip."
-      },
-      {
-        "level": 19,
-        "title": "Yükseliş Seviye 19",
-        "description": "Bosslar daha zorlayıcı zeka ve özelliklere sahip."
-      },
-      {
-        "level": 20,
-        "title": "Yükseliş Seviye 20",
-        "description": "(Son Seviye) Sahne 3'de çift boss."
-      }
-    ],
-    "map_rooms": [
-      {
-        "id": "UNKNOWN",
-        "title": "Bilinmeyen",
-        "description": "Bilinmeyen oda.\n\nCanavarlar, defineler, dükkanlar veya tamamen farklı şeylerle karşılaşabilirsin."
-      },
-      {
-        "id": "SHOP",
-        "title": "Tüccar",
-        "description": "Gizemli bir Tüccar mallarını bu odalarda satıyor.\n\nHakkınla kazandığın Altınlarını burada harca!"
-      },
-      {
-        "id": "TREASURE",
-        "title": "Hazine",
-        "description": "Bu gıpta ile bakılan odalarda Kalıntı ve Altınlar bulunabilir."
-      },
-      {
-        "id": "REST",
-        "title": "Dinlenme",
-        "description": "Biraz İyileşmek veya bir kart Geliştirmek için bu odalara uğra."
-      },
-      {
-        "id": "ENEMY",
-        "title": "Düşman",
-        "description": "Düşmanlar bu odalarda bulunur."
-      },
-      {
-        "id": "ELITE",
-        "title": "Elit",
-        "description": "Güçlü düşmanlar bu odalarda bulunur.\n\nOnları yenmek sana Kalıntı kazandırır."
-      }
-    ],
-    "core_concepts": [
-      {
-        "id": "BLOCK",
-        "title": "blok",
-        "description": "Sonraki tur başına kadar gelen hasarı önler."
-      },
-      {
-        "id": "EXHAUST",
-        "title": "tüketme",
-        "description": "Dövüşün sonuna kadar destenden kaldırılır."
-      },
-      {
-        "id": "ETHEREAL",
-        "title": "ruhani",
-        "description": "Eğer bu kart tur sonunda elinde kaldıysa tüketilir. Tüketilen kartlar dövüşün sonuna kadar destenden kaldırılır."
-      },
-      {
-        "id": "RETAIN",
-        "title": "saklama",
-        "description": "Saklanan kartlar tur sonunda elinden atılmazlar."
-      },
-      {
-        "id": "STATUS",
-        "title": "durum",
-        "description": "Durum kartları dövüş sonunda kaldırılır."
-      },
-      {
-        "id": "CURSE",
-        "title": "lanet",
-        "description": "Lanet kartları, destende bulunan zararlı özelliklere sahip kartlardır."
-      },
-      {
-        "id": "DRAW_PILE",
-        "title": "Geri Dön",
-        "description": "Kartlar her tur başında buradan çekilir."
-      },
-      {
-        "id": "DISCARD_PILE",
-        "title": "Atma Yığını",
-        "description": "Çekme yığınında kart kalmadığı zaman buradaki kartlar çekme yığınına karıştırılır."
-      },
-      {
-        "id": "ENERGY",
-        "title": "Enerji",
-        "description": "Yeterli Enerji yok."
-      }
-    ],
-    "orbs": [
-      {
-        "id": "DARK",
-        "title": "Karanlık",
-        "description": "Pasif: Tur sonunda bu kürenin hasarı artar.\nUyarma: En düşük CP'li düşmana hasar ver.",
-        "passive": "",
-        "evoke": ""
-      },
-      {
-        "id": "FROST",
-        "title": "Ayaz",
-        "description": "Pasif: Tur sonunda Blok kazan.\nUyarma: Blok kazan.",
-        "passive": "",
-        "evoke": ""
-      },
-      {
-        "id": "LIGHTNING",
-        "title": "Yıldırım",
-        "description": "Pasif: Tur sonunda rastgele bir düşmana hasar ver.\nUyarma: Rastgele bir düşmana hasar ver.",
-        "passive": "",
-        "evoke": ""
-      },
-      {
-        "id": "PLASMA",
-        "title": "Plazma",
-        "description": "Pasif: Tur başında Energy kazan.\nUyarma: Energy kazan.\nPlazma Odak ile değişmez.",
-        "passive": "",
-        "evoke": ""
-      }
-    ],
-    "stances": [
-      {
-        "id": "WRATH",
-        "title": "Gazap",
-        "description": "Bu Duruş sırasında gelen ve giden saldırıların hasarı iki katına çıkar."
-      },
-      {
-        "id": "CALM",
-        "title": "Huzur",
-        "description": "Bu Duruştan çıktığında Energy Energy kazan."
-      },
-      {
-        "id": "DIVINITY",
-        "title": "Kutsal",
-        "description": "Bu Duruşa girdiğinde Energy Energy Energy kazan. Saldırıların düşmana 3 kat hasar verir. Sonraki tur başında bu Duruştan çıkarsın."
-      }
-    ],
-    "character_mechanics": [],
-    "keywords": [
-      {
-        "id": "ARTIFACT",
-        "names": [
-          "yapı"
-        ],
-        "description": "Gelen olumsuz etkiyi engeller."
-      },
-      {
-        "id": "BLOCK",
-        "names": [
-          "blok",
-          "bloğu",
-          "bloğunu"
-        ],
-        "description": "Sonraki tur başına kadar gelen hasarı önler."
-      },
-      {
-        "id": "BURN",
-        "names": [
-          "yanık",
-          "yanıklar"
-        ],
-        "description": "Yanık kartı, sana hasar veren oynanamaz bir durum kartıdır."
-      },
-      {
-        "id": "CHANNEL",
-        "names": [
-          "aktarma",
-          "aktar",
-          "aktarılmış",
-          "aktarılan",
-          "aktarılır"
-        ],
-        "description": "Bir Küreyi aktarmak onu ilk boş küre yuvasına koyar. Eğer boş yuvan yoksa ilk Küren yer açmak için kendiliğinden Uyarılır."
-      },
-      {
-        "id": "CONFUSED",
-        "names": [
-          "şaşkınlık",
-          "şaşkın",
-          "şaşırmış"
-        ],
-        "description": "Ne zaman kart çekersen maliyetini rastgele belirle."
-      },
-      {
-        "id": "CURSE",
-        "names": [
-          "lanet",
-          "lanetten"
-        ],
-        "description": "Lanet kartları, destende bulunan zararlı özelliklere sahip kartlardır."
-      },
-      {
-        "id": "DARK",
-        "names": [
-          "karanlık",
-          "karanlık+"
-        ],
-        "description": "Küre: Her tur hasarı artar. Uyarıldığında en düşük CP'li düşmana hasar verir."
-      },
-      {
-        "id": "DAZED",
-        "names": [
-          "sersemlik"
-        ],
-        "description": "Sersemlik kartı, oynanamaz bir durum kartıdır."
-      },
-      {
-        "id": "DEXTERITY",
-        "names": [
-          "çeviklik"
-        ],
-        "description": "Çeviklik, kartlardan kazanılan Bloğu artırır."
-      },
-      {
-        "id": "ETHEREAL",
-        "names": [
-          "ruhani"
-        ],
-        "description": "Eğer bu kart tur sonunda elinde kaldıysa tüketilir. Tüketilen kartlar dövüşün sonuna kadar destenden kaldırılır."
-      },
-      {
-        "id": "EVOKE",
-        "names": [
-          "uyarma",
-          "uyar",
-          "uyarılmış",
-          "uyarılma"
-        ],
-        "description": "En sağdaki Küreni harca ve onun Uyarılma etkisini kullan."
-      },
-      {
-        "id": "EXHAUST",
-        "names": [
-          "tüketme",
-          "tüket",
-          "tükenmiş",
-          "tükense",
-          "tükenirse",
-          "tüketilirse",
-          "tüketilme",
-          "tükenir",
-          "tükenirler"
-        ],
-        "description": "Dövüşün sonuna kadar destenden kaldırılır."
-      },
-      {
-        "id": "FOCUS",
-        "names": [
-          "odak"
-        ],
-        "description": "Odak, Aktarılmış Kürelerin gücünü artırır."
-      },
-      {
-        "id": "FRAIL",
-        "names": [
-          "kırılgan"
-        ],
-        "description": "Kırılgan iken kartlardan %25 daha az Blok kazanırsın."
-      },
-      {
-        "id": "FROST",
-        "names": [
-          "ayaz",
-          "ayaz+"
-        ],
-        "description": "Küre: Blok kazandırır."
-      },
-      {
-        "id": "INNATE",
-        "names": [
-          "yerleşik"
-        ],
-        "description": "Her dövüşe elinde bu kartla başla."
-      },
-      {
-        "id": "INTANGIBLE",
-        "names": [
-          "soyutluk"
-        ],
-        "description": "Alınan her hasar ve CP kaybını 1'e indirir."
-      },
-      {
-        "id": "LIGHTNING",
-        "names": [
-          "yıldırım",
-          "yıldırım+"
-        ],
-        "description": "Küre: Rastgele bir düşmana hasar verir."
-      },
-      {
-        "id": "LOCKED",
-        "names": [
-          "kilitli"
-        ],
-        "description": "Bu kart henüz açılmadı."
-      },
-      {
-        "id": "LOCK_ON",
-        "names": [
-          "kilitlenme"
-        ],
-        "description": "Kilitlenilen düşmanlar Kürelerden %50 daha fazla hasar alır."
-      },
-      {
-        "id": "OPENER",
-        "names": [
-          "açılış"
-        ],
-        "description": "Açılış kartları her tur yalnızca ilk kart olarak oynanabilirler."
-      },
-      {
-        "id": "PLASMA",
-        "names": [
-          "plazma",
-          "plazma+"
-        ],
-        "description": "Küre: Enerji kazandırır."
-      },
-      {
-        "id": "POISON",
-        "names": [
-          "zehir",
-          "zehri",
-          "zehrini",
-          "zehirlenmiş",
-          "zehirlenmişse"
-        ],
-        "description": "Zehirlenmiş yaratıklar kendi turlarının başında CP kaybederler. Zehir her tur 1 azalır."
-      },
-      {
-        "id": "RETAIN",
-        "names": [
-          "saklama",
-          "sakla",
-          "sakladığın",
-          "saklanır",
-          "saklanma",
-          "saklandığında"
-        ],
-        "description": "Saklanan kartlar tur sonunda elinden atılmazlar."
-      },
-      {
-        "id": "SHIV",
-        "names": [
-          "kama",
-          "kamalar"
-        ],
-        "description": "Kama, maliyeti 0 olan bir Saldırı kartıdır ve oynandığında Tüketilir."
-      },
-      {
-        "id": "STATUS",
-        "names": [
-          "durum"
-        ],
-        "description": "Durum kartları dövüş sonunda kaldırılır."
-      },
-      {
-        "id": "STRENGTH",
-        "names": [
-          "kuvvet",
-          "kuvvetini"
-        ],
-        "description": "Kuvvet, saldırıların verdiği hasarı artırır."
-      },
-      {
-        "id": "STRIKE",
-        "names": [
-          "darbe"
-        ],
-        "description": "Adında \"Darbe\" geçen her kart."
-      },
-      {
-        "id": "THORNS",
-        "names": [
-          "diken"
-        ],
-        "description": "Her düşman Saldırısında geri hasar verir."
-      },
-      {
-        "id": "TODO",
-        "names": [
-          "todo",
-          "JUST FOR DEVS, DONT TRANSLATE",
-          "JUST FOR DEVS, DONT TRANSLATE",
-          "JUST FOR DEVS, DONT TRANSLATE",
-          "JUST FOR DEVS, DONT TRANSLATE"
-        ],
-        "description": "This card is NOT IMPLEMENTED. Someone should really fix that..."
-      },
-      {
-        "id": "TRANSFORM",
-        "names": [
-          "dönüşüm",
-          "dönüştür",
-          "dönüşen",
-          "dönüştürülen"
-        ],
-        "description": "Dönüştürülen kartlar herhangi bir nadirlikten rastgele bir kart olurlar."
-      },
-      {
-        "id": "UNKNOWN",
-        "names": [
-          "bilinmeyen"
-        ],
-        "description": "Bu kartla henüz karşılaşılmadı."
-      },
-      {
-        "id": "UNPLAYABLE",
-        "names": [
-          "oynanamaz"
-        ],
-        "description": "Oynanamaz kartları elindeyken direkt olarak oynayamazsın."
-      },
-      {
-        "id": "UPGRADE",
-        "names": [
-          "geliştirme",
-          "geliştir",
-          "geliştirmek",
-          "geliştirilmiş",
-          "geliştirilebilir",
-          "geliştirir"
-        ],
-        "description": "Kartları geliştirmek onları daha güçlü yapar. Kartlar yalnızca bir kez geliştirilebilir."
-      },
-      {
-        "id": "VOID",
-        "names": [
-          "boşluk",
-          "boşluklar",
-          "boşlukları"
-        ],
-        "description": "Boşluk kartı, çekildiği an 1 enerji harcayan oynanamaz bir durum kartıdır."
-      },
-      {
-        "id": "VULNERABLE",
-        "names": [
-          "savunmasız"
-        ],
-        "description": "Savunmasız yaratıklar Saldırılardan %50 daha fazla hasar alır."
-      },
-      {
-        "id": "WEAK",
-        "names": [
-          "zayıf",
-          "zayıfı",
-          "zayıflamış",
-          "zayıflatır"
-        ],
-        "description": "Zayıf yaratıkların Saldırıları %25 daha az hasar verir."
-      },
-      {
-        "id": "WOUND",
-        "names": [
-          "yara",
-          "yaralar"
-        ],
-        "description": "Yara kartı, oynanamaz bir durum kartıdır."
-      },
-      {
-        "id": "STANCE",
-        "names": [
-          "duruş",
-          "duruşlar",
-          "duruşu",
-          "duruşa",
-          "duruştan"
-        ],
-        "description": "Aynı anda yalnızca tek bir duruşta olabilirsin."
-      },
-      {
-        "id": "WRATH",
-        "names": [
-          "gazap",
-          "gazaba"
-        ],
-        "description": "Bu Duruş sırasında gelen ve giden saldırıların hasarı iki katına çıkar."
-      },
-      {
-        "id": "CALM",
-        "names": [
-          "huzur",
-          "huzura",
-          "huzurlu"
-        ],
-        "description": "Bu Duruştan çıktığında Energy Energy kazan."
-      },
-      {
-        "id": "DIVINITY",
-        "names": [
-          "kutsal"
-        ],
-        "description": "Bu Duruşa girdiğinde Energy Energy Energy kazan. Saldırıların düşmana 3 kat hasar verir. Sonraki tur başında bu Duruştan çıkarsın."
-      },
-      {
-        "id": "PRAYER",
-        "names": [
-          "mantra",
-          "through violence"
-        ],
-        "description": "10 Mantra'ya ulaştığında Kutsal duruşa girersin."
-      },
-      {
-        "id": "SCRY",
-        "names": [
-          "keşif",
-          "keşfet"
-        ],
-        "description": "Çekme yığınının üstündeki X karta bak. İstediklerini atma yığınına yollayabilirsin."
-      },
-      {
-        "id": "REGEN",
-        "names": [
-          "yenilenme"
-        ],
-        "description": "Her tur sonunda yenilenme miktarı kadar iyileştirir. Her tur yenilenme 1 azalır."
-      },
-      {
-        "id": "VIGOR",
-        "names": [
-          "dinç",
-          "dinçlik"
-        ],
-        "description": "Bir sonraki Saldırın fazladan hasar verecek."
-      },
-      {
-        "id": "RITUAL",
-        "names": [
-          "ayin"
-        ],
-        "description": "Her tur sonunda Kuvvet kazan."
-      },
-      {
-        "id": "FATAL",
-        "names": [
-          "ölümcül"
-        ],
-        "description": "Eğer bu kart minyon harici bir düşmanı öldürürse devreye girer."
-      }
-    ]
+  "monsters": {
+    "APOLOGY_SLIME": {
+      "name": "Kötü Örnek Balçık"
+    },
+    "CORRUPTHEART": {
+      "name": "Yozlaşmış Kalp",
+      "move_names": [
+        ""
+      ]
+    },
+    "NEMESIS": {
+      "name": "Ezeli Düşman",
+      "move_names": [
+        ""
+      ]
+    },
+    "CHOSEN": {
+      "name": "Seçilmiş",
+      "move_names": [
+        ""
+      ]
+    },
+    "BYRD": {
+      "name": "Guş",
+      "move_names": [
+        ""
+      ]
+    },
+    "SNECKO": {
+      "name": "Snecko",
+      "move_names": [
+        "Şaşırtıcı Parıltı",
+        "Kuyruk Kırbacı",
+        "Isırık"
+      ]
+    },
+    "GREMLINWIZARD": {
+      "name": "Gremlin Büyücüsü",
+      "move_names": [
+        "Şarj Ediyorum",
+        "Nihai Patlama"
+      ]
+    },
+    "BANDITCHILD": {
+      "name": "Sivri",
+      "move_names": [
+        ""
+      ]
+    },
+    "ORB_WALKER": {
+      "name": "Yürüyen Küre",
+      "move_names": [
+        "Kuvvet Toplama"
+      ]
+    },
+    "THEGUARDIAN": {
+      "name": "Gardiyan",
+      "move_names": [
+        "Savunma Modu",
+        "Sert Darbe",
+        "Yuvarlanma",
+        "Çift Ezme",
+        "Hortum",
+        "Dolduruyorum",
+        "Havalandırma Buharı"
+      ]
+    },
+    "GREMLINWARRIOR": {
+      "name": "Deli Gremlin",
+      "move_names": [
+        "Pençe"
+      ]
+    },
+    "GREMLINTHIEF": {
+      "name": "Sinsi Gremlin",
+      "move_names": [
+        ""
+      ]
+    },
+    "CULTIST": {
+      "name": "Tarikatçı",
+      "move_names": [
+        "",
+        "",
+        "Sihirli Sözler"
+      ]
+    },
+    "FLAMEBRUISER": {
+      "name": "Alevli Boksör",
+      "move_names": [
+        ""
+      ]
+    },
+    "GREMLINLEADER": {
+      "name": "Gremlin Lideri",
+      "move_names": [
+        "Koşun!"
+      ]
+    },
+    "CENTURION": {
+      "name": "Bölük Komutanı",
+      "move_names": [
+        ""
+      ]
+    },
+    "GIANTHEAD": {
+      "name": "Devasa Kafa",
+      "move_names": [
+        ""
+      ]
+    },
+    "BANDITBEAR": {
+      "name": "Ayı",
+      "move_names": [
+        ""
+      ]
+    },
+    "BANDITLEADER": {
+      "name": "Çapkın",
+      "move_names": [
+        ""
+      ]
+    },
+    "SPIKESLIME_M": {
+      "name": "Dikenli Balçık (O)",
+      "move_names": [
+        "Yalama"
+      ]
+    },
+    "SPIKESLIME_S": {
+      "name": "Dikenli Balçık (K)"
+    },
+    "MUGGER": {
+      "name": "Yan Kesici",
+      "move_names": [
+        "Hamle",
+        "Gasp"
+      ]
+    },
+    "TIMEEATER": {
+      "name": "Zaman Yiyen",
+      "move_names": [
+        ""
+      ]
+    },
+    "THECOLLECTOR": {
+      "name": "Koleksiyoncu",
+      "move_names": [
+        ""
+      ]
+    },
+    "TORCHHEAD": {
+      "name": "Meşale Kafa",
+      "move_names": [
+        ""
+      ]
+    },
+    "ACIDSLIME_M": {
+      "name": "Asitli Balçık (O)",
+      "move_names": [
+        "Aşındırıcı Tükürük",
+        "Yalama"
+      ]
+    },
+    "ACIDSLIME_S": {
+      "name": "Asitli Balçık (K)"
+    },
+    "SNAKEPLANT": {
+      "name": "Yılan Bitki",
+      "move_names": [
+        "Güçsüzleştiren Spor"
+      ]
+    },
+    "CHAMP": {
+      "name": "Şampiyon",
+      "move_names": [
+        "Savunma Duruşu",
+        "İdam",
+        "Tokatlama"
+      ]
+    },
+    "EXPLODER": {
+      "name": "Patlayan",
+      "move_names": [
+        ""
+      ]
+    },
+    "FUNGIBEAST": {
+      "name": "Mantarsı Canavar",
+      "move_names": [
+        "Büyüme"
+      ]
+    },
+    "SPIKER": {
+      "name": "Çivili",
+      "move_names": [
+        ""
+      ]
+    },
+    "SLAVERBOSS": {
+      "name": "Şef",
+      "move_names": [
+        ""
+      ]
+    },
+    "REPULSOR": {
+      "name": "İtici",
+      "move_names": [
+        ""
+      ]
+    },
+    "LOOTER": {
+      "name": "Yağmacı",
+      "move_names": [
+        "Hamle",
+        "Gasp"
+      ]
+    },
+    "SENTRY": {
+      "name": "Nöbetçi",
+      "move_names": [
+        "Parçalara Ayırma"
+      ]
+    },
+    "FUZZYLOUSEDEFENSIVE": {
+      "name": "Bit",
+      "move_names": [
+        "Ağ Atma"
+      ]
+    },
+    "FUZZYLOUSENORMAL": {
+      "name": "Bit",
+      "move_names": [
+        "Büyüme"
+      ]
+    },
+    "PUPPETEER": {
+      "name": "Kuklacı",
+      "move_names": [
+        ""
+      ]
+    },
+    "SHELLED_PARASITE": {
+      "name": "Kabuklu Parazit",
+      "move_names": [
+        ""
+      ]
+    },
+    "BRONZEORB": {
+      "name": "Küre",
+      "move_names": [
+        ""
+      ]
+    },
+    "HEXAGHOST": {
+      "name": "Hexahayalet",
+      "move_names": [
+        "Alevlenme",
+        "Soldurma",
+        "Cehennem"
+      ]
+    },
+    "SLAVERRED": {
+      "name": "Köle Tüccarı",
+      "move_names": [
+        "Sıyrık",
+        "El Ayak Dolaştırma"
+      ]
+    },
+    "SLAVERBLUE": {
+      "name": "Köle Tüccarı",
+      "move_names": [
+        "Tırmık"
+      ]
+    },
+    "SLIMEBOSS": {
+      "name": "Balçık Reyiz",
+      "move_names": [
+        "Gömçürme",
+        "Hazırlanıyor",
+        "İkiye Ayrılma",
+        "Yapışkan Serpinti"
+      ]
+    },
+    "ACIDSLIME_L": {
+      "name": "Asitli Balçık (B)",
+      "move_names": [
+        "Aşındırıcı Tükürük",
+        "İkiye Bölünme",
+        "Yalama"
+      ]
+    },
+    "GREMLINTSUNDERE": {
+      "name": "Kalkancı Gremlin",
+      "move_names": [
+        "Koruma",
+        "Kalkan Vuruşu"
+      ]
+    },
+    "LAGAVULIN": {
+      "name": "Lagavulin",
+      "move_names": [
+        "Ruh Çekme"
+      ]
+    },
+    "JAWWORM": {
+      "name": "Çene Kurdu",
+      "move_names": [
+        "Feryat",
+        "Dayak Atma"
+      ]
+    },
+    "DONU": {
+      "name": "Donu",
+      "move_names": [
+        "Güç Halkası"
+      ]
+    },
+    "SERPENT": {
+      "name": "Engerek",
+      "move_names": [
+        ""
+      ]
+    },
+    "BRONZEAUTOMATON": {
+      "name": "Bronz Otomaton",
+      "move_names": [
+        "HİPERIŞIN"
+      ]
+    },
+    "HEALER": {
+      "name": "Şifacı",
+      "move_names": [
+        ""
+      ]
+    },
+    "GREMLINFAT": {
+      "name": "Şişko Gremlin",
+      "move_names": [
+        "Parçalama"
+      ]
+    },
+    "DECA": {
+      "name": "Deca",
+      "move_names": [
+        ""
+      ]
+    },
+    "BOOKOFSTABBING": {
+      "name": "Saplama Kitabı",
+      "move_names": [
+        ""
+      ]
+    },
+    "AWAKENEDONE": {
+      "name": "Uyanmış Olan",
+      "move_names": [
+        "Ruh Darbesi",
+        "Karanlık Yankısı",
+        "Temizlenme",
+        "Sulu Çamur"
+      ]
+    },
+    "SPIKESLIME_L": {
+      "name": "Dikenli Balçık (B)",
+      "move_names": [
+        "Yalama",
+        "İkiye Ayrılma"
+      ]
+    },
+    "FIREORB": {
+      "name": "Ateş Küresi",
+      "move_names": [
+        ""
+      ]
+    },
+    "SPHERICGUARDIAN": {
+      "name": "Küresel Gardiyan",
+      "move_names": [
+        ""
+      ]
+    },
+    "DARKLING": {
+      "name": "Karanlıktaki",
+      "move_names": [
+        "Çap! Çap!"
+      ]
+    },
+    "MAW": {
+      "name": "Gırtlak Canavarı",
+      "move_names": [
+        ""
+      ]
+    },
+    "GREMLINNOB": {
+      "name": "Züppe Gremlin",
+      "move_names": [
+        "Kafa Darbesi",
+        "Kaba Güç"
+      ]
+    },
+    "TRANSIENT": {
+      "name": "Süreksiz",
+      "move_names": [
+        ""
+      ]
+    },
+    "DAGGER": {
+      "name": "Hançer",
+      "move_names": [
+        ""
+      ]
+    },
+    "REPTOMANCER": {
+      "name": "Sürüngen Büyücü",
+      "move_names": [
+        ""
+      ]
+    },
+    "WRITHINGMASS": {
+      "name": "Kıvranan Kitle",
+      "move_names": [
+        ""
+      ]
+    },
+    "SPIRESHIELD": {
+      "name": "Spire Kalkanı",
+      "move_names": [
+        ""
+      ]
+    },
+    "SPIRESPEAR": {
+      "name": "Spire Mızrağı",
+      "move_names": [
+        ""
+      ]
+    }
   }
 }

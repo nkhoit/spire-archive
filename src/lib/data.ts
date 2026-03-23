@@ -420,7 +420,7 @@ interface LocData {
   events?: Record<string, { name?: string; [key: string]: any }>;
   keywords?: Record<string, { name?: string; names?: string[]; description?: string }>;
   enchantments?: Record<string, { name?: string; description?: string }>;
-  monsters?: Record<string, { name?: string; moves?: Record<string, string>; move_names?: Record<string, string>; move_titles?: string[] }>;
+  monsters?: Record<string, { name?: string; moves?: Record<string, string>; move_names?: Record<string, string> | string[]; move_titles?: string[] }>;
   mechanics?: MechanicsData;
 }
 
@@ -520,18 +520,20 @@ async function applyLocalization(game: string, locale: Locale, base: Dataset): P
     const l = loc.monsters?.[m.id];
     if (!l) return m;
     const nameMap = l.move_names ?? {};
-    const localizeMoveByKey = (mv: any) => {
-      // Try move_names (English display name → localized name)
-      if (mv.name && nameMap[mv.name]) return { ...mv, name: nameMap[mv.name] };
+    const localizeMoveByKey = (mv: any, index: number) => {
+      // STS1: move_names is an array — map by index
+      if (Array.isArray(nameMap) && nameMap[index]) return { ...mv, name: nameMap[index] };
+      // STS2: move_names is a map (English display name → localized name)
+      if (!Array.isArray(nameMap) && mv.name && nameMap[mv.name]) return { ...mv, name: nameMap[mv.name] };
       // Try localization key match (strip _MOVE suffix from ID)
       const moveKey = mv.id?.replace(/_MOVE$/, '') ?? '';
       const locName = l.moves?.[mv.id ?? ''] ?? l.moves?.[moveKey] ?? null;
       return locName ? { ...mv, name: locName } : mv;
     };
-    const moves = m.moves.map((mv: MonsterMove) => localizeMoveByKey(mv));
-    const movePattern = (m as any).move_pattern ? (m as any).move_pattern.map((mp: any) => {
+    const moves = m.moves.map((mv: MonsterMove, i: number) => localizeMoveByKey(mv, i));
+    const movePattern = (m as any).move_pattern ? (m as any).move_pattern.map((mp: any, i: number) => {
       if (mp.type === 'random') return mp;
-      return localizeMoveByKey(mp);
+      return localizeMoveByKey(mp, i);
     }) : (m as any).move_pattern;
     return {
       ...m,

@@ -4589,627 +4589,442 @@
       "description": "Se déclenche lorsque la carte tue un ennemi qui n'est pas un sbire."
     }
   },
-  "mechanics": {
-    "ascension": [
-      {
-        "level": 1,
-        "title": "Mode Ascension niveau 1",
-        "description": "Les Élites sont plus fréquents."
-      },
-      {
-        "level": 2,
-        "title": "Mode Ascension niveau 2",
-        "description": "Les ennemis normaux font plus de dégâts."
-      },
-      {
-        "level": 3,
-        "title": "Mode Ascension niveau 3",
-        "description": "Les Élites font plus de dégâts."
-      },
-      {
-        "level": 4,
-        "title": "Mode Ascension niveau 4",
-        "description": "Les Boss font plus de dégâts."
-      },
-      {
-        "level": 5,
-        "title": "Mode Ascension niveau 5",
-        "description": "Vous récupérez moins de vie après avoir battu un Boss."
-      },
-      {
-        "level": 6,
-        "title": "Mode Ascension niveau 6",
-        "description": "Commencez chaque partie blessé."
-      },
-      {
-        "level": 7,
-        "title": "Mode Ascension niveau 7",
-        "description": "Les ennemis normaux ont plus de vie."
-      },
-      {
-        "level": 8,
-        "title": "Mode Ascension niveau 8",
-        "description": "Les Élites ont plus de vie."
-      },
-      {
-        "level": 9,
-        "title": "Mode Ascension niveau 9",
-        "description": "Les Boss ont plus de vie."
-      },
-      {
-        "level": 10,
-        "title": "Mode Ascension niveau 10",
-        "description": "Commencez chaque partie maudit!"
-      },
-      {
-        "level": 11,
-        "title": "Mode Ascension niveau 11",
-        "description": "Moins d'emplacements de potions."
-      },
-      {
-        "level": 12,
-        "title": "Mode Ascension niveau 12",
-        "description": "Les cartes améliorées apparaissent moins souvent."
-      },
-      {
-        "level": 13,
-        "title": "Mode Ascension niveau 13",
-        "description": "Les boss sont pauvres."
-      },
-      {
-        "level": 14,
-        "title": "Mode Ascension niveau 14",
-        "description": "Commencez avec moins de PV max."
-      },
-      {
-        "level": 15,
-        "title": "Mode Ascension niveau 15",
-        "description": "Les Événements sont moins favorables."
-      },
-      {
-        "level": 16,
-        "title": "Mode Ascension niveau 16",
-        "description": "Les boutiques sont plus chères."
-      },
-      {
-        "level": 17,
-        "title": "Mode Ascension niveau 17",
-        "description": "Les ennemis normaux ont des attaques et capacités plus puissantes."
-      },
-      {
-        "level": 18,
-        "title": "Mode Ascension niveau 18",
-        "description": "Les Élites ont des attaques et capacités plus puissantes."
-      },
-      {
-        "level": 19,
-        "title": "Mode Ascension niveau 19",
-        "description": "Les Boss ont des attaques et capacités plus puissantes."
-      },
-      {
-        "level": 20,
-        "title": "Mode Ascension niveau 20",
-        "description": "(Niveau max) Double boss final."
-      }
-    ],
-    "map_rooms": [
-      {
-        "id": "UNKNOWN",
-        "title": "Inconnu",
-        "description": "Une salle inconnue.\n\nVous pourriez y trouver des monstres, des trésors, des boutiques et bien plus encore."
-      },
-      {
-        "id": "SHOP",
-        "title": "Marchand",
-        "description": "L'étrange Marchand fait commerce dans ces salles.\n\nDépensez-y votre or bien mérité!"
-      },
-      {
-        "id": "TREASURE",
-        "title": "Trésor",
-        "description": "Vous pourrez trouver des Reliques et de l'Or en ces salles très convoitées."
-      },
-      {
-        "id": "REST",
-        "title": "Repos",
-        "description": "Reposez-vous dans ces salles pour Récupérer quelques PV ou bien Améliorer une carte."
-      },
-      {
-        "id": "ENEMY",
-        "title": "Ennemi",
-        "description": "Des ennemis hostiles résident en ces salles."
-      },
-      {
-        "id": "ELITE",
-        "title": "Ennemi d'élite",
-        "description": "De puissants ennemis se trouvent dans ces salles.\n\nEn les terrassant, vous recevrez une Relique."
-      }
-    ],
-    "core_concepts": [
-      {
-        "id": "BLOCK",
-        "title": "armure",
-        "description": "Bloque les dégâts jusqu'au prochain tour."
-      },
-      {
-        "id": "EXHAUST",
-        "title": "épuisement",
-        "description": "Écarté jusqu'à la fin du combat."
-      },
-      {
-        "id": "ETHEREAL",
-        "title": "éthérée",
-        "description": "Si cette carte est dans votre main à la fin de votre tour, elle est épuisée. Les cartes épuisées sont enlevées de votre deck jusqu'à la fin du combat."
-      },
-      {
-        "id": "RETAIN",
-        "title": "retenue",
-        "description": "Les cartes retenues ne sont pas défaussées à la fin du tour."
-      },
-      {
-        "id": "STATUS",
-        "title": "statut",
-        "description": "Les cartes Statut sont enlevées à la fin du combat."
-      },
-      {
-        "id": "CURSE",
-        "title": "malédiction",
-        "description": "Les cartes malédiction sont des cartes négatives qui restent dans votre deck."
-      },
-      {
-        "id": "DRAW_PILE",
-        "title": "Retour",
-        "description": "C'est d'ici que vos cartes sont piochées au début de chaque tour."
-      },
-      {
-        "id": "DISCARD_PILE",
-        "title": "Défausse",
-        "description": "Ces cartes sont placées dans votre pioche lorsque vous n'en avez plus."
-      },
-      {
-        "id": "ENERGY",
-        "title": "Énergie",
-        "description": "Pas assez d'Énergie."
-      }
-    ],
-    "orbs": [
-      {
-        "id": "DARK",
-        "title": "Orbe Obscur",
-        "description": "Passif: À la fin du tour, augmente les dégâts de cet Orbe de.\nActivation: Inflige dégâts à l'ennemi qui a le moins de PV.",
-        "passive": "",
-        "evoke": ""
-      },
-      {
-        "id": "FROST",
-        "title": "Orbe Glaciaire",
-        "description": "Passif: À la fin du tour, gagnez d'Armure.\nActivation: Gagnez d'Armure.",
-        "passive": "",
-        "evoke": ""
-      },
-      {
-        "id": "LIGHTNING",
-        "title": "Orbe Kéraunique",
-        "description": "Passif: À la fin du tour, infligez dégâts à un ennemi aléatoire.\nActivation: Infligez dégâts à un ennemi aléatoire.",
-        "passive": "",
-        "evoke": ""
-      },
-      {
-        "id": "PLASMA",
-        "title": "Orbe Plasmique",
-        "description": "Passif: Au début du tour, gagnez Energy.\nActivation: Gagnez Energy.\nLes Orbes Plasmiques ne sont pas affectés par la Concentration.",
-        "passive": "",
-        "evoke": ""
-      }
-    ],
-    "stances": [
-      {
-        "id": "WRATH",
-        "title": "Colère",
-        "description": "Vos attaques infligent deux fois plus de dégâts et vous subissez deux fois plus de dégâts des attaques."
-      },
-      {
-        "id": "CALM",
-        "title": "Calme",
-        "description": "En quittant cette Position, gagnez Energy Energy."
-      },
-      {
-        "id": "DIVINITY",
-        "title": "Divinité",
-        "description": "En entrant dans cette Position, gagnez Energy Energy Energy. Vos attaques infligent trois fois plus de dégâts. Quittez cette Position au début de votre prochain tour."
-      }
-    ],
-    "character_mechanics": [],
-    "keywords": [
-      {
-        "id": "ARTIFACT",
-        "names": [
-          "artefact",
-          "d'artefact"
-        ],
-        "description": "Annule le prochain malus."
-      },
-      {
-        "id": "BLOCK",
-        "names": [
-          "armure",
-          "l'armure",
-          "d'armure",
-          "bloque"
-        ],
-        "description": "Bloque les dégâts jusqu'au prochain tour."
-      },
-      {
-        "id": "CURSE",
-        "names": [
-          "malédiction",
-          "malédictions"
-        ],
-        "description": "Les cartes malédiction sont des cartes négatives qui restent dans votre deck."
-      },
-      {
-        "id": "DEXTERITY",
-        "names": [
-          "dextérité"
-        ],
-        "description": "La dextérité augmente l'armure apportée par les cartes."
-      },
-      {
-        "id": "ETHEREAL",
-        "names": [
-          "éthérée"
-        ],
-        "description": "Si cette carte est dans votre main à la fin de votre tour, elle est épuisée. Les cartes épuisées sont enlevées de votre deck jusqu'à la fin du combat."
-      },
-      {
-        "id": "EXHAUST",
-        "names": [
-          "épuisement",
-          "épuisé",
-          "épuisée",
-          "épuisez",
-          "s'épuise",
-          "s'épuisent"
-        ],
-        "description": "Écarté jusqu'à la fin du combat."
-      },
-      {
-        "id": "INNATE",
-        "names": [
-          "inné"
-        ],
-        "description": "Commencez chaque combat avec cette carte dans votre main."
-      },
-      {
-        "id": "LOCKED",
-        "names": [
-          "verrouillé"
-        ],
-        "description": "Cette carte doit encore être déverrouillée."
-      },
-      {
-        "id": "POISON",
-        "names": [
-          "poison",
-          "empoisonné"
-        ],
-        "description": "Les créatures empoisonnées perdent des PV au début de leur tour. Chaque tour, le Poison diminue de 1."
-      },
-      {
-        "id": "RETAIN",
-        "names": [
-          "retenue",
-          "retenues",
-          "retenir",
-          "retenez",
-          "retenez-la",
-          "retenez-les"
-        ],
-        "description": "Les cartes retenues ne sont pas défaussées à la fin du tour."
-      },
-      {
-        "id": "SHIV",
-        "names": [
-          "surin",
-          "surins"
-        ],
-        "description": "Les Surins sont des cartes d'attaque qui coûtent 0 et s'épuisent."
-      },
-      {
-        "id": "STATUS",
-        "names": [
-          "statut"
-        ],
-        "description": "Les cartes Statut sont enlevées à la fin du combat."
-      },
-      {
-        "id": "STRENGTH",
-        "names": [
-          "force"
-        ],
-        "description": "La force ajoute des dégâts supplémentaires aux attaques."
-      },
-      {
-        "id": "TRANSFORM",
-        "names": [
-          "transformer",
-          "transforme",
-          "transformez"
-        ],
-        "description": "Les cartes transformées sont changées en de nouvelles cartes aléatoires de n'importe quelle rareté."
-      },
-      {
-        "id": "UNKNOWN",
-        "names": [
-          "inconnu"
-        ],
-        "description": "Cette carte n'a pas encore été découverte."
-      },
-      {
-        "id": "UNPLAYABLE",
-        "names": [
-          "injouable"
-        ],
-        "description": "Les cartes non jouables ne peuvent pas être jouées depuis votre main."
-      },
-      {
-        "id": "UPGRADE",
-        "names": [
-          "amélioration",
-          "améliorez",
-          "améliorée",
-          "améliorées",
-          "améliorer",
-          "d'améliorer",
-          "améliorable",
-          "améliorez-les",
-          "améliorés"
-        ],
-        "description": "Améliorer une carte la rend plus puissante. Une carte ne peut être améliorée qu'une fois."
-      },
-      {
-        "id": "VULNERABLE",
-        "names": [
-          "vulnérabilité",
-          "vulnérable"
-        ],
-        "description": "Les créatures vulnérables subissent 50 % de dégâts supplémentaires."
-      },
-      {
-        "id": "WEAK",
-        "names": [
-          "faiblesse",
-          "affaiblir",
-          "affaibli",
-          "affaiblit"
-        ],
-        "description": "Les attaques d'une créature affaiblie inflige 25 % de dégâts en moins."
-      },
-      {
-        "id": "WOUND",
-        "names": [
-          "plaie",
-          "plaies"
-        ],
-        "description": "Les plaies sont des cartes Statut injouables."
-      },
-      {
-        "id": "FRAIL",
-        "names": [
-          "fragilité",
-          "fragilisé"
-        ],
-        "description": "Les créatures fragilisées reçoivent 25 % d'armure en moins."
-      },
-      {
-        "id": "STRIKE",
-        "names": [
-          "frappe"
-        ],
-        "description": "Toute carte dont le nom contient le mot \"frappe\"."
-      },
-      {
-        "id": "CONFUSED",
-        "names": [
-          "confus"
-        ],
-        "description": "Quand vous piochez une carte, son coût est rendu aléatoire."
-      },
-      {
-        "id": "TODO",
-        "names": [
-          "todo",
-          "JUST FOR DEVS, DONT TRANSLATE",
-          "JUST FOR DEVS, DONT TRANSLATE",
-          "JUST FOR DEVS, DONT TRANSLATE",
-          "JUST FOR DEVS, DONT TRANSLATE"
-        ],
-        "description": "This card is NOT IMPLEMENTED. Someone should really fix that..."
-      },
-      {
-        "id": "INTANGIBLE",
-        "names": [
-          "intangible"
-        ],
-        "description": "Réduit TOUS les dégâts subis et la perte de PV à 1."
-      },
-      {
-        "id": "DAZED",
-        "names": [
-          "hébétement"
-        ],
-        "description": "Les hébétements sont des cartes Statut non jouables."
-      },
-      {
-        "id": "BURN",
-        "names": [
-          "brûlure",
-          "brûlures"
-        ],
-        "description": "Les brûlures sont des cartes Statut qui vous infligent des dégâts."
-      },
-      {
-        "id": "FROST",
-        "names": [
-          "glaciaire",
-          "glaciaires"
-        ],
-        "description": "Orbe: Procure de l'Armure."
-      },
-      {
-        "id": "EVOKE",
-        "names": [
-          "activation",
-          "activé",
-          "activés",
-          "activez"
-        ],
-        "description": "Utilisez la capacité d'Activation de votre Orbe le plus à droite puis détruisez-le."
-      },
-      {
-        "id": "LIGHTNING",
-        "names": [
-          "kéraunique",
-          "kérauniques",
-          "kéraunique(s)"
-        ],
-        "description": "Orbe: Inflige des dégâts à un ennemi aléatoire."
-      },
-      {
-        "id": "DARK",
-        "names": [
-          "obscur",
-          "obscurs"
-        ],
-        "description": "Orbe: Augmente les dégâts chaque tour. Quand il est activé, inflige des dégâts à l'ennemi qui a le moins de PV."
-      },
-      {
-        "id": "CHANNEL",
-        "names": [
-          "canaliser",
-          "canalisez",
-          "canalisé",
-          "canalisés"
-        ],
-        "description": "Canaliser un Orbe le place dans votre premier emplacement vide. Si vous n'avez pas d'emplacement vide, votre premier Orbe est automatiquement Activé pour faire de la place."
-      },
-      {
-        "id": "VOID",
-        "names": [
-          "néant",
-          "néants"
-        ],
-        "description": "Les néants sont des cartes Statut injouables qui consomment de l'énergie quand elles sont piochées."
-      },
-      {
-        "id": "OPENER",
-        "names": [
-          "ouverture"
-        ],
-        "description": "Les cartes avec ouverture doivent être la première carte jouée du tour."
-      },
-      {
-        "id": "PLASMA",
-        "names": [
-          "plasmique",
-          "plasmiques"
-        ],
-        "description": "Orbe: Procure de l'Énergie."
-      },
-      {
-        "id": "FOCUS",
-        "names": [
-          "concentration"
-        ],
-        "description": "La Concentration accroît la puissance des Orbes Canalisés."
-      },
-      {
-        "id": "THORNS",
-        "names": [
-          "épines",
-          "d'épines"
-        ],
-        "description": "Quand vous recevez des dégâts d'Attaque, infligez des dégâts en retour."
-      },
-      {
-        "id": "LOCK_ON",
-        "names": [
-          "ciblage"
-        ],
-        "description": "Les ennemis Verrouillés recoivent 50 % de dégâts supplémentaires des Orbes."
-      },
-      {
-        "id": "STANCE",
-        "names": [
-          "position",
-          "positions"
-        ],
-        "description": "Vous ne pouvez adopter qu'une seule position à la fois."
-      },
-      {
-        "id": "WRATH",
-        "names": [
-          "colère"
-        ],
-        "description": "Dans cette Position, vous infligez et recevez deux fois plus de dégâts."
-      },
-      {
-        "id": "CALM",
-        "names": [
-          "calme"
-        ],
-        "description": "Quand vous quittez cette Position, gagnez Energy Energy."
-      },
-      {
-        "id": "DIVINITY",
-        "names": [
-          "divinité"
-        ],
-        "description": "Quand vous entrez dans cette Position, gagnez Energy Energy Energy. Vos attaques infligent trois fois plus de dégâts. Quittez cette Position au début de votre prochain tour."
-      },
-      {
-        "id": "PRAYER",
-        "names": [
-          "mantra",
-          "par la violence"
-        ],
-        "description": "Quand vous obtenez 10 de Mantra, entrez en Divinité."
-      },
-      {
-        "id": "SCRY",
-        "names": [
-          "scruter",
-          "scrutez"
-        ],
-        "description": "Regardez les X premières cartes de votre pioche. Vous pouvez défausser n'importe lesquelles."
-      },
-      {
-        "id": "REGEN",
-        "names": [
-          "régénération"
-        ],
-        "description": "La Régénération vous soigne à la fin de votre tour. Chaque tour, la Régénération est diminuée de 1."
-      },
-      {
-        "id": "VIGOR",
-        "names": [
-          "vigueur"
-        ],
-        "description": "Votre prochaine attaque inflige des dégâts supplémentaires."
-      },
-      {
-        "id": "RITUAL",
-        "names": [
-          "rituel"
-        ],
-        "description": "Gagnez de la Force à la fin de votre tour."
-      },
-      {
-        "id": "FATAL",
-        "names": [
-          "fatal"
-        ],
-        "description": "Se déclenche lorsque la carte tue un ennemi qui n'est pas un sbire."
-      }
-    ]
+  "monsters": {
+    "APOLOGY_SLIME": {
+      "name": "Slime désolé"
+    },
+    "CORRUPTHEART": {
+      "name": "Cœur corrompu",
+      "move_names": [
+        ""
+      ]
+    },
+    "NEMESIS": {
+      "name": "Némésis",
+      "move_names": [
+        ""
+      ]
+    },
+    "CHOSEN": {
+      "name": "Élu",
+      "move_names": [
+        ""
+      ]
+    },
+    "BYRD": {
+      "name": "Oizo",
+      "move_names": [
+        ""
+      ]
+    },
+    "SNECKO": {
+      "name": "Geckobra",
+      "move_names": [
+        "Regard déroutant",
+        "Fouet caudal",
+        "Morsure"
+      ]
+    },
+    "GREMLINWIZARD": {
+      "name": "Diablotin sorcier",
+      "move_names": [
+        "En chargement",
+        "Détonation ultime"
+      ]
+    },
+    "BANDITCHILD": {
+      "name": "Pointu",
+      "move_names": [
+        ""
+      ]
+    },
+    "ORB_WALKER": {
+      "name": "L'Orbiste",
+      "move_names": [
+        "Renforcement"
+      ]
+    },
+    "THEGUARDIAN": {
+      "name": "Le Gardien",
+      "move_names": [
+        "Mode défensif",
+        "Heurt furieux",
+        "Roulade",
+        "Écrasement double",
+        "Tourbillon",
+        "Chargement",
+        "Canon à vapeur"
+      ]
+    },
+    "GREMLINWARRIOR": {
+      "name": "Diablotin fou",
+      "move_names": [
+        "Griffe"
+      ]
+    },
+    "GREMLINTHIEF": {
+      "name": "Diablotin sournois",
+      "move_names": [
+        ""
+      ]
+    },
+    "CULTIST": {
+      "name": "Adepte",
+      "move_names": [
+        "Sombre frappe",
+        "Bénédiction tordue",
+        "Incantation"
+      ]
+    },
+    "FLAMEBRUISER": {
+      "name": "Malabar enflammé",
+      "move_names": [
+        ""
+      ]
+    },
+    "GREMLINLEADER": {
+      "name": "Diablotin en chef",
+      "move_names": [
+        "Au combat !"
+      ]
+    },
+    "CENTURION": {
+      "name": "Centurion",
+      "move_names": [
+        ""
+      ]
+    },
+    "GIANTHEAD": {
+      "name": "Tête géante",
+      "move_names": [
+        ""
+      ]
+    },
+    "BANDITBEAR": {
+      "name": "Balourd",
+      "move_names": [
+        ""
+      ]
+    },
+    "BANDITLEADER": {
+      "name": "Roméo",
+      "move_names": [
+        ""
+      ]
+    },
+    "SPIKESLIME_M": {
+      "name": "Slime épineux (M)",
+      "move_names": [
+        "Léchouille"
+      ]
+    },
+    "SPIKESLIME_S": {
+      "name": "Slime épineux (P)"
+    },
+    "MUGGER": {
+      "name": "Pickpocket",
+      "move_names": [
+        "Avancée",
+        "Vol à la tire"
+      ]
+    },
+    "TIMEEATER": {
+      "name": "Dévor'Heures",
+      "move_names": [
+        ""
+      ]
+    },
+    "THECOLLECTOR": {
+      "name": "Le Collectionneur",
+      "move_names": [
+        ""
+      ]
+    },
+    "TORCHHEAD": {
+      "name": "Tête de torche",
+      "move_names": [
+        ""
+      ]
+    },
+    "ACIDSLIME_M": {
+      "name": "Slime acide (M)",
+      "move_names": [
+        "Crachat acide",
+        "Léchouille"
+      ]
+    },
+    "ACIDSLIME_S": {
+      "name": "Slime acide (P)"
+    },
+    "SNAKEPLANT": {
+      "name": "Serplante",
+      "move_names": [
+        "Spores affaiblissantes"
+      ]
+    },
+    "CHAMP": {
+      "name": "Le Champion",
+      "move_names": [
+        "Position défensive",
+        "Exécution",
+        "Gifle"
+      ]
+    },
+    "EXPLODER": {
+      "name": "Explosif",
+      "move_names": [
+        ""
+      ]
+    },
+    "FUNGIBEAST": {
+      "name": "Champi-bête",
+      "move_names": [
+        "Croissance"
+      ]
+    },
+    "SPIKER": {
+      "name": "Épineux",
+      "move_names": [
+        ""
+      ]
+    },
+    "SLAVERBOSS": {
+      "name": "Tyran",
+      "move_names": [
+        ""
+      ]
+    },
+    "REPULSOR": {
+      "name": "Répugnant",
+      "move_names": [
+        ""
+      ]
+    },
+    "LOOTER": {
+      "name": "Brigand",
+      "move_names": [
+        "Avancée",
+        "Vol à la tire"
+      ]
+    },
+    "SENTRY": {
+      "name": "Sentinelle",
+      "move_names": [
+        "Désintégration"
+      ]
+    },
+    "FUZZYLOUSEDEFENSIVE": {
+      "name": "Pou",
+      "move_names": [
+        "Toile de crachat"
+      ]
+    },
+    "FUZZYLOUSENORMAL": {
+      "name": "Pou",
+      "move_names": [
+        "Croissance"
+      ]
+    },
+    "PUPPETEER": {
+      "name": "Marionnettiste",
+      "move_names": [
+        ""
+      ]
+    },
+    "SHELLED_PARASITE": {
+      "name": "Parasite en carapace",
+      "move_names": [
+        ""
+      ]
+    },
+    "BRONZEORB": {
+      "name": "Orbe",
+      "move_names": [
+        ""
+      ]
+    },
+    "HEXAGHOST": {
+      "name": "Hexaplasme",
+      "move_names": [
+        "Enflammer",
+        "Incinération",
+        "Brasier"
+      ]
+    },
+    "SLAVERRED": {
+      "name": "Esclavagiste",
+      "move_names": [
+        "Éraflure",
+        "Enchevêtrement"
+      ]
+    },
+    "SLAVERBLUE": {
+      "name": "Esclavagiste",
+      "move_names": [
+        "Griffure"
+      ]
+    },
+    "SLIMEBOSS": {
+      "name": "Parrain Slime",
+      "move_names": [
+        "Écrasement",
+        "Préparation",
+        "Séparation",
+        "Bombe visqueuse"
+      ]
+    },
+    "ACIDSLIME_L": {
+      "name": "Slime acide (G)",
+      "move_names": [
+        "Crachat acide",
+        "Séparation",
+        "Léchouille"
+      ]
+    },
+    "GREMLINTSUNDERE": {
+      "name": "Diablotin à bouclier",
+      "move_names": [
+        "Protection",
+        "Heurt de bouclier"
+      ]
+    },
+    "LAGAVULIN": {
+      "name": "Lagavulin",
+      "move_names": [
+        "Âme siphonneuse"
+      ]
+    },
+    "JAWWORM": {
+      "name": "Mâchouilleur",
+      "move_names": [
+        "Beuglement",
+        "Rossée"
+      ]
+    },
+    "DONU": {
+      "name": "Donu",
+      "move_names": [
+        "Cercle de pouvoir"
+      ]
+    },
+    "SERPENT": {
+      "name": "Excroissance de la Tour",
+      "move_names": [
+        ""
+      ]
+    },
+    "BRONZEAUTOMATON": {
+      "name": "Automate de bronze",
+      "move_names": [
+        "ULTRALASER"
+      ]
+    },
+    "HEALER": {
+      "name": "Soigneur",
+      "move_names": [
+        ""
+      ]
+    },
+    "GREMLINFAT": {
+      "name": "Gros diablotin",
+      "move_names": [
+        "Détruire"
+      ]
+    },
+    "DECA": {
+      "name": "Déca",
+      "move_names": [
+        ""
+      ]
+    },
+    "BOOKOFSTABBING": {
+      "name": "Manuel d'assassinat",
+      "move_names": [
+        ""
+      ]
+    },
+    "AWAKENEDONE": {
+      "name": "L'Éveillé",
+      "move_names": [
+        "Frappe d'âme",
+        "Sombre écho",
+        "Purification",
+        "Vase"
+      ]
+    },
+    "SPIKESLIME_L": {
+      "name": "Slime épineux (G)",
+      "move_names": [
+        "Léchouille",
+        "Séparation"
+      ]
+    },
+    "FIREORB": {
+      "name": "Orbe de feu",
+      "move_names": [
+        ""
+      ]
+    },
+    "SPHERICGUARDIAN": {
+      "name": "Gardien sphérique",
+      "move_names": [
+        ""
+      ]
+    },
+    "DARKLING": {
+      "name": "Être sombre",
+      "move_names": [
+        "Croque ! Croque !"
+      ]
+    },
+    "MAW": {
+      "name": "La gueule",
+      "move_names": [
+        ""
+      ]
+    },
+    "GREMLINNOB": {
+      "name": "Diablotin Nob",
+      "move_names": [
+        "Heurt de crâne",
+        "Ruée de taureau"
+      ]
+    },
+    "TRANSIENT": {
+      "name": "L'Éphémère",
+      "move_names": [
+        ""
+      ]
+    },
+    "REPTOMANCER": {
+      "name": "Reptomancien",
+      "move_names": [
+        ""
+      ]
+    },
+    "DAGGER": {
+      "name": "Assassin",
+      "move_names": [
+        ""
+      ]
+    },
+    "WRITHINGMASS": {
+      "name": "Masse agonisante",
+      "move_names": [
+        ""
+      ]
+    },
+    "SPIRESHIELD": {
+      "name": "Bouclier de la Tour",
+      "move_names": [
+        ""
+      ]
+    },
+    "SPIRESPEAR": {
+      "name": "Lance de la Tour",
+      "move_names": [
+        ""
+      ]
+    }
   }
 }

@@ -11,8 +11,9 @@ export const GET: APIRoute = async ({ params, url }) => {
   if (!game) return notFoundResponse();
 
   const q = getString(url, 'q')?.toLowerCase() ?? '';
+  const offset = Math.max(0, getNumber(url, 'offset') ?? 0);
   const limit = Math.min(200, Math.max(1, getNumber(url, 'limit') ?? 20));
-  if (!q) return jsonResponse({ total: 0, items: [] });
+  if (!q) return jsonResponse({ total: 0, offset, limit, items: [] });
 
   const locale = getLocale(url);
   const data = await getData(game, locale);
@@ -43,5 +44,5 @@ export const GET: APIRoute = async ({ params, url }) => {
     pushMatches('enchantment', data.enchantments, (e) => haystack(e.id, e.name, e.description, e.rarity));
   }
 
-  return jsonResponse({ total: results.length, items: results.slice(0, limit) });
+  return jsonResponse({ total: results.length, offset, limit, items: results.slice(offset, offset + limit) });
 };
