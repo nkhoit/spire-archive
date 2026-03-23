@@ -17,15 +17,17 @@ const LANG_MAP = {
 };
 
 const LOC_DIR = path.join(PCK_DIR, 'localization');
-const OUTPUT_DIR = path.join(PROJECT_ROOT, 'data', 'sts2', 'localization');
+const DATA_DIR = path.join(PROJECT_ROOT, 'data', 'sts2');
+const OUTPUT_DIR = path.join(DATA_DIR, 'localization');
+const CHARACTER_IDS = ['IRONCLAD', 'SILENT', 'DEFECT', 'NECROBINDER', 'REGENT'];
 
 function cleanMarkup(text) {
-  return text.replace(/\[(\/?)(?:gold|blue|green|red|white|gray|grey)\]/gi, '');
+  return String(text).replace(/\[\/?[^\]]+\]/g, '');
 }
 
 function buildLang(gameLang) {
   const dir = path.join(LOC_DIR, gameLang);
-  const result = { cards: {}, relics: {}, powers: {}, potions: {}, events: {}, keywords: {}, enchantments: {} };
+  const result = { cards: {}, relics: {}, powers: {}, potions: {}, events: {}, keywords: {}, enchantments: {}, characters: {} };
 
   // Cards
   const cards = JSON.parse(fs.readFileSync(path.join(dir, 'cards.json'), 'utf8'));
@@ -81,6 +83,21 @@ function buildLang(gameLang) {
     }
   }
 
+  // Characters
+  const charactersPath = path.join(dir, 'characters.json');
+  if (fs.existsSync(charactersPath)) {
+    const characters = JSON.parse(fs.readFileSync(charactersPath, 'utf8'));
+    for (const id of CHARACTER_IDS) {
+      const name = characters[`${id}.title`];
+      const description = characters[`${id}.description`];
+      if (!name && !description) continue;
+      result.characters[id] = {
+        ...(name && { name: cleanMarkup(name) }),
+        ...(description && { description: cleanMarkup(description) }),
+      };
+    }
+  }
+
   // Keywords
   if (fs.existsSync(path.join(dir, 'card_keywords.json'))) {
     const keywords = JSON.parse(fs.readFileSync(path.join(dir, 'card_keywords.json'), 'utf8'));
@@ -108,9 +125,25 @@ function buildLang(gameLang) {
   return result;
 }
 
+function updateEnglishCharacters() {
+  const charactersPath = path.join(LOC_DIR, 'eng', 'characters.json');
+  const basePath = path.join(DATA_DIR, 'characters.json');
+  if (!fs.existsSync(charactersPath) || !fs.existsSync(basePath)) return;
+
+  const locCharacters = JSON.parse(fs.readFileSync(charactersPath, 'utf8'));
+  const characters = JSON.parse(fs.readFileSync(basePath, 'utf8'));
+  const updated = characters.map((character) => ({
+    ...character,
+    description: locCharacters[`${character.id}.description`] ? cleanMarkup(locCharacters[`${character.id}.description`]) : character.description ?? null,
+  }));
+
+  fs.writeFileSync(basePath, JSON.stringify(updated, null, 2) + '\n');
+}
+
 function main() {
   let count = 0;
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+  updateEnglishCharacters();
 
   for (const [gameLang, isoLang] of Object.entries(LANG_MAP)) {
     if (gameLang === 'eng') continue;

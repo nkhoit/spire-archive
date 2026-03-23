@@ -420,6 +420,7 @@ interface LocData {
   events?: Record<string, { name?: string; [key: string]: any }>;
   keywords?: Record<string, { name?: string; names?: string[]; description?: string }>;
   enchantments?: Record<string, { name?: string; description?: string }>;
+  characters?: Record<string, { name?: string; description?: string }>;
   monsters?: Record<string, { name?: string; moves?: Record<string, string>; move_names?: Record<string, string> | string[]; move_titles?: string[] }>;
   mechanics?: MechanicsData;
 }
@@ -516,6 +517,12 @@ async function applyLocalization(game: string, locale: Locale, base: Dataset): P
     return { ...e, ...(l.name && { name: l.name }), ...(l.description && { description: l.description }) };
   });
 
+  const characters = base.characters.map(c => {
+    const l = loc.characters?.[c.id];
+    if (!l) return c;
+    return { ...c, ...(l.name && { name: l.name }), ...(l.description && { description: l.description }) };
+  });
+
   const monsters = base.monsters.map(m => {
     const l = loc.monsters?.[m.id];
     if (!l) return m;
@@ -554,6 +561,7 @@ async function applyLocalization(game: string, locale: Locale, base: Dataset): P
     events,
     keywords,
     enchantments,
+    characters,
     mechanics: loc.mechanics ?? base.mechanics,
 
     cardById: toMap(cards),
@@ -563,6 +571,7 @@ async function applyLocalization(game: string, locale: Locale, base: Dataset): P
     eventById: toMap(events),
     powerById: toMap(powers),
     keywordById: toMap(keywords),
+    characterById: toMap(characters),
     enchantmentById: toMap(enchantments),
   };
 
