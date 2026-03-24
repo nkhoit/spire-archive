@@ -5182,50 +5182,68 @@
   },
   "events": {
     "ABYSSAL_BATHS": {
-      "description": "Gözlerden uzak bir oda keşfedersin.\n\nBuhar, kaynar havuzlarda hipnotik bir ritimle renk değiştiren sıcak bir sıvının üzerinden yükselir. Tavandan sarkan midyemsi oluşumlar, yüzeye değdiğinde tıslayıp kıvranan, koyu, yapışkan bir sıvı damlatır. Hava ağırdır; tuz ve şüphesiz derecede organik bir kokuyla doludur.\n\nEn büyük havuzun kenarına yaklaştığında sıvı dalgalanır. Sular, sanki girişini bekliyormuşçasına daha şiddetli kabarmaya başlar.",
       "name": "Dipsiz Havuzlar",
-      "choices": [
+      "description": "Gözlerden uzak bir oda keşfedersin.\n\nBuhar, kaynar havuzlarda hipnotik bir ritimle renk değiştiren sıcak bir sıvının üzerinden yükselir. Tavandan sarkan midyemsi oluşumlar, yüzeye değdiğinde tıslayıp kıvranan, koyu, yapışkan bir sıvı damlatır. Hava ağırdır; tuz ve şüphesiz derecede organik bir kokuyla doludur.\n\nEn büyük havuzun kenarına yaklaştığında sıvı dalgalanır. Sular, sanki girişini bekliyormuşçasına daha şiddetli kabarmaya başlar.",
+      "pages": [
         {
-          "name": "Kaçın",
-          "description": "10 CP iyileş."
+          "choices": [
+            {
+              "name": "Havuzlardan Ayrıl"
+            },
+            {
+              "name": "Biraz Daha Kal",
+              "description": "2 Maksimum CP elde et. 3 hasar al."
+            }
+          ]
         },
         {
-          "name": "Gir",
-          "description": "2 Maksimum CP elde et. 3 hasar al."
+          "choices": [
+            {
+              "name": "Havuzlardan Ayrıl"
+            },
+            {
+              "name": "Biraz Daha Kal",
+              "description": "2 Maksimum CP elde et. 3 hasar al."
+            }
+          ]
         }
       ]
     },
     "AMALGAMATOR": {
-      "description": "ÇIN! ÇIN!!!\n\nBir duvarın öte yanında, metalin metalle temasının yankılarını duyarsın...\n\nDinlemek için başını duvara yasladığında duvar açılır ve içeride, harıl harıl çalışan iri, altı kollu bir figür ortaya çıkar.\nParıldayan mühürlerden oluşan ve dönüp duran bir girdabı andıran \"yüzü,\" sürekli şekil değiştiriyordu.\n\n“Yükselen Ruh’a sahip biri atölyemi mi buldu? Hadi KAYNAŞTIRALIM!”",
       "name": "Kaynaştırıcı",
+      "description": "ÇIN! ÇIN!!!\n\nBir duvarın öte yanında, metalin metalle temasının yankılarını duyarsın...\n\nDinlemek için başını duvara yasladığında duvar açılır ve içeride, harıl harıl çalışan iri, altı kollu bir figür ortaya çıkar.\nParıldayan mühürlerden oluşan ve dönüp duran bir girdabı andıran \"yüzü,\" sürekli şekil değiştiriyordu.\n\n“Yükselen Ruh’a sahip biri atölyemi mi buldu? Hadi KAYNAŞTIRALIM!”",
       "choices": [
         {
           "name": "Savunmaları Birleştir",
-          "description": "2 Savunma kartını kaldır. Deste'ne Nihai Savunma ekle."
+          "description": "2 Savunma kartını kaldır. Deste'ne Ultimate Defend ekle.",
+          "outcome": "ÇIN! ÇIN!!!\n\nKaynaştırıcı, Kemik Örsü’nü döver.\n\nHer darbe ile birlikte dövüşe, korumaya ve savunma stratejilerine dair anılar keskinleşir.\nEn nihai tekniğin sana geri döner."
         },
         {
           "name": "Saldırıları Birleştir",
-          "description": "2 Saldırı kartını kaldır. Deste'ne Nihai Saldırı ekle."
+          "description": "2 Saldırı kartını kaldır. Deste'ne Ultimate Strike ekle.",
+          "outcome": "ÇIN! ÇIN!!!\n\nKaynaştırıcı, Kemik Örsü’nü döver.\n\nHer darbeyle birlikte dövüşe, saldırıya ve hücum stratejilerine dair anılar keskinleşir.\nEn nihai tekniğin sana geri döner."
         }
       ]
     },
     "AROMA_OF_CHAOS": {
-      "description": "Sık bir çalılığın arasından güçlükle ilerleyip bir açıklığa çıktığında adını koyamadığın bir nostalji duygusu seni sarar.\n\nÇiçeksi kokuların, iğrenç bir çürümenin ve tamamen farklı bir şeyin karışımı... Attığın her adımda koku daha da yoğunlaşır ve çevrendeki dünyanın eğilip büküldüğünü hissedersin.\n\nDeğişken bir kaos hissiyle kuşatıldığında benlik duygunu yavaş yavaş kaybetmeye başlarsın.",
       "name": "Kaos'un Aroması",
+      "description": "Sık bir çalılığın arasından güçlükle ilerleyip bir açıklığa çıktığında adını koyamadığın bir nostalji duygusu seni sarar.\n\nÇiçeksi kokuların, iğrenç bir çürümenin ve tamamen farklı bir şeyin karışımı... Attığın her adımda koku daha da yoğunlaşır ve çevrendeki dünyanın eğilip büküldüğünü hissedersin.\n\nDeğişken bir kaos[/rainbow] hissiyle kuşatıldığında benlik duygunu yavaş yavaş kaybetmeye başlarsın.",
       "choices": [
         {
           "name": "Kendini Bırak",
-          "description": "Deste'ndeki bir kartı Dönüştür."
+          "description": "Deste'ndeki bir kartı Dönüştür.",
+          "outcome": "Teslim olursun ve zihnin sürüklenir...\nKendini dostlarla iletişim hâlinde, bir ekip olarak savaşırken ve büyük düşmanlarla düello yaparken görürsün. Bu bir rüya mı? Yoksa gerçek mi? Ya da ikisi de mi? Pek çok çift göz seni ve düşlerini algılar. Bunlar da kim?..\n\nBelirsiz bir süre zarfının ardından uyanırsın.\nKoku zayıflar, ve sen aygın hale geldikçe etkileri kaybolur. Dengen yerine geldiğinde zihnin hiç olmadığı kadar açıktır.\n\nO gözler de neydi?"
         },
         {
           "name": "Kontrolü Elinde Tut",
-          "description": "Deste'ndeki bir kartı Geliştir."
+          "description": "Deste'ndeki bir kartı Geliştir.",
+          "outcome": "Teslim olmanın cazibesine karşı direnir, kokunun ulaşmadığı bir noktaya, bir ağacın tepesine, tırmanırsın; ancak kokunun etkileri zihnine saldırmaya devam eder.\n\nKontrolü elinde tutmak zordur; düşüncelerini Temel İlkelerine bağlarsın.\n\n{AromaPrinciple}\n{AromaPrinciple}\n{AromaPrinciple}\n\nKoku yatışır."
         }
       ]
     },
     "BATTLEWORN_DUMMY": {
-      "description": "Yaklaştığında, titremeye ve cızırdamaya başlar; ardından göz kamaştırıcı bir şekilde ışıldar!\n\n“BZZZT! TALİM VAKTİ!!! BENİ YENMEK İÇİN 3 TURUN VAR!\nBİR AYAR SEÇ YA DA ÖLÜMCÜL AŞAĞILAMAYLA YÜZLEŞ.\nİşte seçenekler:”\n\nBu dehşet verici mesajın ardından, manken ayrıntılı talimatları büyük bir özenle okumaya başlar.\n\nNe seçeceksin?",
       "name": "Savaşta Yıpranmış Manken",
+      "description": "Yaklaştığında, titremeye ve cızırdamaya başlar; ardından göz kamaştırıcı bir şekilde ışıldar!\n\n“BZZZT! TALİM VAKTİ!!! BENİ YENMEK İÇİN 3 TURUN VAR!\nBİR AYAR SEÇ YA DA ÖLÜMCÜL AŞAĞILAMAYLA YÜZLEŞ.\nİşte seçenekler:”\n\nBu dehşet verici mesajın ardından, manken ayrıntılı talimatları büyük bir özenle okumaya başlar.\n\nNe seçeceksin?",
       "choices": [
         {
           "name": "1. Ayar",
@@ -5242,50 +5260,56 @@
       ]
     },
     "BRAIN_LEECH": {
-      "description": "*tak*\n\nBaşının tepesinde keskin bir acı hissedersin ve bir düşünce zihnine saplanır.\n\n“BİLGİYİ PAYLAŞ???”\n\nNasıl devam edeceğinden emin değilsin...",
       "name": "Beyin Sülüğü",
+      "description": "*tak*\n\nBaşının tepesinde keskin bir acı hissedersin ve bir düşünce zihnine saplanır.\n\n“BİLGİYİ PAYLAŞ???”\n\nNasıl devam edeceğinden emin değilsin...",
       "choices": [
         {
           "name": "Sülüğü Kafandan Sök",
-          "description": "5 CP kaybet. Renksiz bir kart elde et."
+          "description": "5 CP kaybet. Renksiz bir kart elde et.",
+          "outcome": "Şiddetle sülüğü kafandan koparıp çok ama çok uzağa fırlatırsın!\n\nZihninde bir ses yankılanır:\n“HAYIIIIIIRRrRrrrrrRRRRrrr....”"
         },
         {
           "name": "Bilgiyi Paylaş",
-          "description": "Deste'ne eklemek için 5 rastgele karttan 1 tanesini seç."
+          "description": "Deste'ne eklemek için 5 rastgele karttan 1 tanesini seç.",
+          "outcome": "“NE KADAR DA GÖSTERİŞLİ DERECEDE AKADEMİK, LABİRENTVARİ BİR ZİHİN!\nSİNDİRMEK İÇİN OLDUKÇA HAKİKİ VE BESLEYİCİ BİR ZİHİNSEL ZİYAFET!”\n\nTatmin olmuş görünen yaratık senden ayrılır ve sürünerek uzaklaşır.\nAdeta afallamışsındır."
         }
       ]
     },
     "BUGSLAYER": {
-      "description": "Agresif böceklerden oluşan bir sürüyle boğuşurken, bir anda fark edersin ki tüm bu süre boyunca yanında Heybetli, Çetin bir Savaşçı da savaşıyordur!\n\nYenilgiyi sezen böcekler sağa sola dağılıp kaçar. Sen de silah arkadaşına dönersin.\n“Bu haşereleri yok etmeye dair birkaç ipucu ister misin?”\n\nNe kadar da kibar. Başını sallayıp teklifini kabul edersin.",
       "name": "Böcek Avcısı",
+      "description": "Agresif böceklerden oluşan bir sürüyle boğuşurken, bir anda fark edersin ki tüm bu süre boyunca yanında Heybetli, Çetin bir Savaşçı da savaşıyordur!\n\nYenilgiyi sezen böcekler sağa sola dağılıp kaçar. Sen de silah arkadaşına dönersin.\n“Bu haşereleri yok etmeye dair birkaç ipucu ister misin?”\n\nNe kadar da kibar. Başını sallayıp teklifini kabul edersin.",
       "choices": [
         {
           "name": "Yok Etme Tekniğini Öğren",
-          "description": "Deste'ne İmha Et kartını ekle."
+          "description": "Deste'ne Exterminate kartını ekle.",
+          "outcome": "“Anlıyorum... Yok Etme Tekniği’ni öğrenmek istiyorsun. Pekâlâ...”\n\nSana bu manevrayı en iyi nasıl bahşedeceğini düşünmek için kısa bir an duraksar...\n\n“İŞTE TEKNİK BU! İZLE!!”\nElinde bir teneke Böcek İlacını gösterirken böbürlenir."
         },
         {
           "name": "Ezme Tekniğini Öğren",
-          "description": "Deste'ne Çiğne Geç kartını ekle."
+          "description": "Deste'ne Squash kartını ekle.",
+          "outcome": "“Anlıyorum... Ezme Tekniği’ni öğrenmek istiyorsun. Pekâlâ...”\n\nSana bu manevrayı en iyi nasıl bahşedeceğini düşünmek için kısa bir an duraksar...\n\n“İŞTE TEKNİK BU! İZLE!!”\nDev bir böceğin üzerine basarken böbürlenir."
         }
       ]
     },
     "BYRDONIS_NEST": {
-      "description": "Sendeleyen Devasa Bir Yaratığın, yaralı bir Yeşil Guş'u kovalayıp gittiğini görürsün.\n\nGuşun kaçıp gittiği oyukta, korunmasız tek bir yumurta, terk edilmiş hâlde durmaktadır.\n\nMiden guruldar...",
       "name": "Guşdeniz Yuvası",
+      "description": "Sendeleyen Devasa Bir Yaratığın, yaralı bir Yeşil Guş'u kovalayıp gittiğini görürsün.\n\nGuşun kaçıp gittiği oyukta, korunmasız tek bir yumurta, terk edilmiş hâlde durmaktadır.\n\nMiden guruldar...",
       "choices": [
         {
           "name": "Yumurtayı Ye",
-          "description": "7 Maksimum CP elde et."
+          "description": "7 Maksimum CP elde et.",
+          "outcome": "Yumurtayı kırıp, yiyip bitiriyorsun.\nGüzel bir kahvaltı oldu."
         },
         {
           "name": "Yumurtayı Al",
-          "description": "Deste'ne Guşdeniz Yumurtası kartını ekle."
+          "description": "Deste'ne Byrdonis Egg kartını ekle.",
+          "outcome": "İleride çatlayıp işe yarar bir şeye dönüşebileceğini düşünerek yumurtayı nazikçe alıp yanında taşırsın."
         }
       ]
     },
     "COLORFUL_PHILOSOPHERS": {
-      "description": "Karşında hayli epik bir manzara duruyor.\nBir platformun üzerinde yükselen üç farklı renkteki heykelin, rengin felsefi sonuçları üzerine hararetli bir tartışmaya girdiğini görüyorsun.\n\nKulak kabarttıkça, ortadaki en önemli sorunun aslında hangisinin gerçekten EN İYİ renk olduğu üzerine olduğunu anlıyorsun.\n\nSen de fikirlerinle lafa karışırsın.",
       "name": "Renkli Filozoflar",
+      "description": "Karşında hayli epik bir manzara duruyor.\nBir platformun üzerinde yükselen üç farklı renkteki heykelin, rengin felsefi sonuçları üzerine hararetli bir tartışmaya girdiğini görüyorsun.\n\nKulak kabarttıkça, ortadaki en önemli sorunun aslında hangisinin gerçekten EN İYİ renk olduğu üzerine olduğunu anlıyorsun.\n\nSen de fikirlerinle lafa karışırsın.",
       "choices": [
         {
           "name": "Mavi",
@@ -5314,36 +5338,79 @@
       ]
     },
     "COLOSSAL_FLOWER": {
-      "description": "Kemiklerden oluşan bir dağın tepesinde devasa bir çiçek büyümektedir.\n\nRenk değiştiren taç yaprakları nabız gibi atarken, merkezinde Güçlü Bir Polen Kümesi olduğunu sezersin; ancak dalgalanan yapraklar ustura keskinliğindedir ve son derece öngörülemezdir.\n\nBiraz altın nektar alabilirsin... ama merkezdeki ödüle uzanmak da fazlasıyla cezbedicidir.",
       "name": "Devasa Çiçek",
+      "description": "Kemiklerden oluşan bir dağın tepesinde devasa bir çiçek büyümektedir.\n\nRenk değiştiren taç yaprakları[/rainbow] nabız gibi atarken, merkezinde Güçlü Bir Polen Kümesi olduğunu sezersin; ancak dalgalanan yapraklar ustura keskinliğindedir ve son derece öngörülemezdir.\n\nBiraz altın nektar alabilirsin... ama merkezdeki ödüle uzanmak da fazlasıyla cezbedicidir.",
       "choices": [
         {
           "name": "Nektarı Topla",
-          "description": "{Prize1} Altın elde et."
+          "description": "X Altın elde et."
         },
         {
           "name": "Daha Derine Ulaş",
           "description": "Daha derine ilerle. 5 CP kaybet."
         }
+      ],
+      "pages": [
+        {
+          "description": "Ustura keskinliğindeki taç yapraklardan bir katmanı zorla aşarsın. Üzerleri, tenini karıncalandıran bir maddeyle kaplıdır. Bu his, sanki acıyı uyuşturuyor gibidir.\n\nBelki de burada bir kemik yığınının olmasının sebebi budur...",
+          "choices": [
+            {
+              "name": "Nektarı Topla",
+              "description": "X Altın elde et."
+            },
+            {
+              "name": "Derine İlerle",
+              "description": "Daha da derine ilerle. 6 CP kaybet."
+            }
+          ]
+        },
+        {
+          "description": "Ustura keskinliğindeki taç yapraklardan bir katmanı zorla aşarsın. Üzerleri, tenini karıncalandıran bir maddeyle kaplıdır. Bu his, sanki acıyı uyuşturuyor gibidir.\n\nBelki de burada bir kemik yığınının olmasının sebebi budur...",
+          "choices": [
+            {
+              "name": "Nektarı Topla",
+              "description": "X Altın elde et."
+            },
+            {
+              "name": "Derine İlerle",
+              "description": "Daha da derine ilerle. 6 CP kaybet."
+            }
+          ]
+        },
+        {
+          "description": "Ustura keskinliğindeki taç yapraklardan bir katmanı zorla aşarsın. Üzerleri, tenini karıncalandıran bir maddeyle kaplıdır. Bu his, sanki acıyı uyuşturuyor gibidir.\n\nBelki de burada bir kemik yığınının olmasının sebebi budur...",
+          "choices": [
+            {
+              "name": "Nektarı Topla",
+              "description": "X Altın elde et."
+            },
+            {
+              "name": "Derine İlerle",
+              "description": "Daha da derine ilerle. 6 CP kaybet."
+            }
+          ]
+        }
       ]
     },
     "CRYSTAL_SPHERE": {
-      "description": "“İçeri gireceğini öngörmüştüm!..”\n\nHırıltılı bir ses, mistik bir kulübeye adım attığında yankılanır.\n\n“Kaderin seni buraya getirdi. HEPİMİZİ KURTARABİLMEN için geleceğini ve talihini açığa çıkarmalıyız!!”\n“Pekâlâ, işte Kristal Küre okuması için seçenekler. Şunu da imzalamayı unutma,” derken kalemle parşömeni ortaya çıkarır.",
       "name": "Kristal Küre",
+      "description": "“İçeri gireceğini öngörmüştüm!..”\n\nHırıltılı bir ses, mistik bir kulübeye adım attığında yankılanır.\n\n“Kaderin seni buraya getirdi. HEPİMİZİ KURTARABİLMEN için geleceğini ve talihini açığa çıkarmalıyız!!”\n“Pekâlâ, işte Kristal Küre okuması için seçenekler. Şunu da imzalamayı unutma,” derken kalemle parşömeni ortaya çıkarır.",
       "choices": [
         {
           "name": "Ödeme Planı",
-          "description": "Borç elde et. 6 kez Kehanetini Ortaya Çıkar."
+          "description": "Debt elde et. 6 kez Kehanetini Ortaya Çıkar.",
+          "outcome": "Ödeme Planı"
         },
         {
           "name": "Geleceğini Ortaya Çıkar",
-          "description": "50 Altın öde. 3 kez Kehanetini Ortaya Çıkar."
+          "description": "50 Altın öde. 3 kez Kehanetini Ortaya Çıkar.",
+          "outcome": "Geleceğini Ortaya Çıkar"
         }
       ]
     },
     "DENSE_VEGETATION": {
-      "description": "Bir süredir yanlış yoldan ilerledikten sonra, kendini eğrelti otları, çalılıklar ve sarmaşıklarla dolu sık bir ormanda bulursun. Özellikle de sarmaşıklarla dolup taşmaktadır burası. Üstüne bir yorgunluk çöker ve aklına iç karartıcı bir fikir gelir:\n\n“Kayboldun, hazırlıksızsın ve ölümün kaçınılmazlığı yaklaşıyor.”\n\nNe yapacaksın?",
       "name": "Yoğun Bitki Örtüsü",
+      "description": "Bir süredir yanlış yoldan ilerledikten sonra, kendini eğrelti otları, çalılıklar ve sarmaşıklarla dolu sık bir ormanda bulursun. Özellikle de sarmaşıklarla dolup taşmaktadır burası. Üstüne bir yorgunluk çöker ve aklına iç karartıcı bir fikir gelir:\n\n“Kayboldun, hazırlıksızsın ve ölümün kaçınılmazlığı yaklaşıyor.”\n\nNe yapacaksın?",
       "choices": [
         {
           "name": "Dinlen",
@@ -5351,17 +5418,19 @@
         },
         {
           "name": "Güçlükle Yürümeye Devam Et",
-          "description": "Deste'nden bir kartı kaldır. 11 CP kaybet."
+          "description": "Deste'nden bir kartı kaldır. 11 CP kaybet.",
+          "outcome": "Ormanı yarıp geçerek yoluna devam edersin; ama orman bitmek bilmez...\n\nTuhaf meyvelerle ve çıtır böceklerle beslenip, parlayan bitkilerin nektarını içerek hayatta kalırsın. Ancak kendini paranoyak... hissetmeye başlarsın.\n\nSonra bir açıklık, bir patika ve yerde birkaç harita çizimi bulursun.\nSorun çözüldü."
         }
       ]
     },
     "DOLL_ROOM": {
-      "description": "Gizli bir odaya girersin...\n\nOda, sayısız bebekle tıka basa doludur. Her biri benzersizdir; yüz ifadeleri neşeden kedere değişir, kıyafetleri ise yüzyılları ve bildiğin diyarları aşar.\n\nFısıltılardan oluşan bir koronun sesi giderek yükselir; ta ki bebekler birbirlerinin üzerine bağırmaya ve seni çağırmaya başlayana dek...\n\nBirini seçmeli ve derhâl çıkmalısın.",
       "name": "Bebek Odası",
+      "description": "Gizli bir odaya girersin...\n\nOda, sayısız bebekle tıka basa doludur. Her biri benzersizdir; yüz ifadeleri neşeden kedere değişir, kıyafetleri ise yüzyılları ve bildiğin diyarları aşar.\n\nFısıltılardan oluşan bir koronun sesi giderek yükselir; ta ki bebekler birbirlerinin üzerine bağırmaya ve seni çağırmaya başlayana dek...\n\nBirini seçmeli ve derhâl çıkmalısın.",
       "choices": [
         {
           "name": "Her Birini İncele ve En İyi Kararı Ver",
-          "description": "15 CP kaybet. 3 Bebek Kalıntısı'ndan 1 tanesini seç."
+          "description": "15 CP kaybet. 3 Bebek Kalıntısı'ndan 1 tanesini seç.",
+          "outcome": "Seçim yapmadan önce her bir bebeği tek tek incelersin.\n\nBağırışlar kulakları sağır edecek bir doruğa ulaşmıştır; ama tamamen delirmeden önce bir seçim yapmayı başarırsın!"
         },
         {
           "name": "Rastgele Birini Seç",
@@ -5369,178 +5438,206 @@
         },
         {
           "name": "Biraz Zaman Ayır",
-          "description": "5 CP kaybet. 2 Bebek Kalıntısı'ndan 1 tanesini seç."
+          "description": "5 CP kaybet. 2 Bebek Kalıntısı'ndan 1 tanesini seç.",
+          "outcome": "Bağırışlar arasında bebekleri hızla incelersin.\n\nBu ikisinden biri iyi olabilir mi?\nBu zihinsel ıstırabın içinde odaklanmak zordur."
         }
       ]
     },
     "DOORS_OF_LIGHT_AND_DARK": {
-      "description": "Az önce hiçbir şeyin olmadığı yerde bir kapı beliriverir...\n\nİçeri girdiğinde iki parıldayan kapı ve şık giyimli bir kapıcı ile karşılaşırsın.\n“Sonunda, bir ziyaretçi! Lütfen, lütfen! Bir kapı seçin. Herhangi bir kapı olabilir!”\n\nHâlâ Spire’da mıyız? Burası nasıl bu kadar temiz?",
       "name": "Karanlığın ve Aydınlığın Kapıları",
+      "description": "Az önce hiçbir şeyin olmadığı yerde bir kapı beliriverir...\n\nİçeri girdiğinde iki parıldayan kapı ve şık giyimli bir kapıcı ile karşılaşırsın.\n“Sonunda, bir ziyaretçi! Lütfen, lütfen! Bir kapı seçin. Herhangi bir kapı olabilir!”\n\nHâlâ Spire’da mıyız? Burası nasıl bu kadar temiz?",
       "choices": [
         {
           "name": "Karanlık Kapı",
-          "description": "Deste'nden 1 kart kaldır."
+          "description": "Deste'nden 1 kart kaldır.",
+          "outcome": "Karanlığın içine doğru...\n\nHiçbir şey görmezsin;\nama bu düşünmene yardımcı olur... Anlamsız düşünceleri üzerinden atarsın.\n\nYeniden Dip Rıhtımlar’dasın.\nNasıl oldu bu? Hı?.."
         },
         {
           "name": "Aydınlık Kapı",
-          "description": "Rastgele 2 kartını Geliştir."
+          "description": "Rastgele 2 kartını Geliştir.",
+          "outcome": "Işığın içine doğru...\n\nIşık kör ediyor!! Ama aynı zamanda seni güçlendiriyor.\n\nYeniden Dip Rıhtımlar’dasın.\nNasıl oldu bu? Hı?.."
         }
       ]
     },
     "DROWNING_BEACON": {
-      "description": "Kayalar ve durgun sulardan oluşan bir düş manzarasını aşarak ilerler, batmakta olan bir deniz feneriyle yüz yüze gelirsin. Fener, anti-ışık saçmaktadır.\n\nBurada birikmiş olan tekinsizce parlayan suyu şişeye doldurabilirsin ya da harap yapıya tırmanıp merceği ele geçirebilirsin.",
       "name": "Batan Deniz Feneri",
+      "description": "Kayalar ve durgun sulardan oluşan bir düş manzarasını aşarak ilerler, batmakta olan bir deniz feneriyle yüz yüze gelirsin. Fener, anti-ışık saçmaktadır.\n\nBurada birikmiş olan tekinsizce parlayan suyu şişeye doldurabilirsin ya da harap yapıya tırmanıp merceği ele geçirebilirsin.",
       "choices": [
         {
           "name": "Şişele",
-          "description": "Işıldayan Su İksiri elde et."
+          "description": "Glowwater Potion elde et.",
+          "outcome": "Yakındaki bir şişeyi kullanarak parlayan sıvıyı sakince toplarsın. Bu sırada deniz feneri ise huzur içinde çamurun içine gömülür.\n\nNeyse ki içerisinde değildin."
         },
         {
           "name": "Tırman",
-          "description": "Fresnel Mercek elde et. 13 Maksimum CP kaybet."
+          "description": "Fresnel Lens elde et. 13 Maksimum CP kaybet.",
+          "outcome": "Deniz fenerinin durmaksızın batışı seni tedirgin ederken tepesine tırmanırsın.\n\nFener odasına ulaştığında, merceği sökmeye başlarsın. Bu sırada anti-ışık yaşama gücünü emip tüketir!\n\nNihayet onu zorla çıkarırsın; deniz feneri batmayı bırakır."
         }
       ]
     },
     "ENDLESS_CONVEYOR": {
-      "description": "Parlak ama eğri büğrü bir tabelası olan bir kulübeye ağır adımlarla girersin. Tabelada şunlar yazar:\n“SONSUZ ZİYAFET - NE KADAR AÇSAN O KADAR ÖDE!”\n\nİçeride, ince yapılı, çok kollu bir aşçı ustalıkla lokmalık yiyecekler hazırlar ve bunları kıvrıla kıvrıla uzanan kitinsi bir banda yerleştirir.\n\nAşçının kollarından biri bir tabelayı işaret eder:\nTanesi 35 Altın",
       "name": "Sonsuz Bant",
+      "description": "Parlak ama eğri büğrü bir tabelası olan bir kulübeye ağır adımlarla girersin. Tabelada şunlar yazar:\n“SONSUZ ZİYAFET - NE KADAR AÇSAN O KADAR ÖDE!”\n\nİçeride, ince yapılı, çok kollu bir aşçı ustalıkla lokmalık yiyecekler hazırlar ve bunları kıvrıla kıvrıla uzanan kitinsi bir banda yerleştirir.\n\nAşçının kollarından biri bir tabelayı işaret eder:\nTanesi 35 Altın",
       "choices": [
         {
           "name": "Şefi Gözlemle",
-          "description": "Deste'ndeki rastgele bir kartı Geliştir."
+          "description": "Deste'ndeki rastgele bir kartı Geliştir.",
+          "outcome": "Bir koltuğa yönelmeden mekânın girişindeki gölgelerde oyalanırsın.\n\nAşçı, aldırış etmeden işine devam eder. Bu davranışı ve disiplini gözlemleyerek, çatışma sırasında gereksiz hareketleri ve duyguları en aza indirmeyi hedeflersin."
         }
       ]
     },
     "FAKE_MERCHANT": {
-      "description": "Geçici",
-      "name": "Tüccar???"
+      "name": "Tüccar???",
+      "description": "Geçici"
     },
     "FIELD_OF_MAN_SIZED_HOLES": {
-      "description": "Bir anda karşına çıkan, devasa beden hatlarıyla oyulmuş uçsuz bucaksız bir alan, adımlarını olduğu yerde dondurur.\n\nBu siluetlerden biri seninkiyle birebir örtüşür.\n\nBu mükemmel...",
       "name": "İnsan Boyutunda Delikler Arazisi",
+      "description": "Bir anda karşına çıkan, devasa beden hatlarıyla oyulmuş uçsuz bucaksız bir alan, adımlarını olduğu yerde dondurur.\n\nBu siluetlerden biri seninkiyle birebir örtüşür.\n\nBu mükemmel...",
       "choices": [
         {
           "name": "Deliğine Gir",
-          "description": "Bir kartı Cuk Oturdu ile Büyüle."
+          "description": "Bir kartı Perfect Fit ile Büyüle.",
+          "outcome": "Daracık olsa da kendini sıkıştırıp deliğin içine girersin...\n\nİlerledikçe, karanlık daha da koyulaşır.\nNihayet, soluk bir ışığın giderek parladığını ve öteki tarafı ortaya çıkardığını görürsün.\n\nDeğişmeden dışarı adımını atarsın; ama artık yaşamın mahrem sırlarını kavramışsındır."
         },
         {
           "name": "Diren",
-          "description": "Deste'nden 2 kart kaldır. Deste'ne Sıradanlık ekle."
+          "description": "Deste'nden 2 kart kaldır. Deste'ne Normality ekle.",
+          "outcome": "Tüm oyukların yanından geçip gidersin; tam olarak senin biçiminde oyulmuş olanın bile...\n\nNeden içine girmedim? Girsem ne olurdu? Daha önce o oyukta bulunmuş muydum? Bu oyukları kim yaptı?\n\nNe... kim... nerede?"
         }
       ]
     },
     "GRAVE_OF_THE_FORGOTTEN": {
-      "description": "Kaynayıp duran mavi bir alevle işaretlenmiş tek bir mezar vardır...\n\nGururlu bir savaşçı savaşta ölmüştür; fakat ruhu huzursuzdur. Savaşmaya devam etmek ister. Seninle birlikte yolculuk etmeyi yalvarırcasına dilediğini hissedersin.\n\nBelki de onun için en iyisi gerçekle yüzleşmektir.",
       "name": "Unutulanın Mezarı",
+      "description": "Kaynayıp duran mavi bir alevle işaretlenmiş tek bir mezar vardır...\n\nGururlu bir savaşçı savaşta ölmüştür; fakat ruhu huzursuzdur. Savaşmaya devam etmek ister. Seninle birlikte yolculuk etmeyi yalvarırcasına dilediğini hissedersin.\n\nBelki de onun için en iyisi gerçekle yüzleşmektir.",
       "choices": [
-        null,
+        {
+          "name": "Kalıntı'u Kabul Et",
+          "description": "Forgotten Soul elde et.",
+          "outcome": "Mezarın üzerine elini koyar ve fısıldarsın...\n\n“Benimle yüksel...”\n\nBuna karşılık olarak alevler, mezardan çekilip ayrılır ve yanan bir ruhta birleşerek etrafında sadakatle süzülür.\nO, senin ne olduğunu bilir ve son varış noktana kadar eşlik etmeyi ister."
+        },
         {
           "name": "Gerçekle Yüzleştir",
-          "description": "Deste'ne Çürüme ekle. Tüketilen bir kartı Ruh'un Gücü ile Büyüle."
+          "description": "Deste'ne Decay ekle. Tüketilen bir kartı Soul's Power ile Büyüle.",
+          "locked": "Büyülenebilecek hiçbir Tüket kartın yok.",
+          "outcome": "Mezarın üzerine elini koyar ve fısıldarsın:\n\n“Savaşın sona erdi...”\n\nBuna karşılık, ruh senin ruhunla çarpışır ve BİR RUH DÜELLOSU başlar!\nKatlandığın sayısız savaş karşısında afallayan ruh, sonunda pes eder."
         }
       ]
     },
     "HUNGRY_FOR_MUSHROOMS": {
-      "description": "En son ne zaman bir şey yemiştin?\n...dur, bu muhteşem koku da ne?\n\nKokunun peşine düşersin ve her türden lezzetli mantarın pişirildiği, sıcak ve sevimli bir kamp alanına ulaşırsın! O kadar açsındır ki bu mantarları yemenin güvenli olup olmadığını hiç düşünmezsin.\n(Hatta o kadar açsındır ki ölü maceracıyı fark etmezsin bile.)",
       "name": "Mantar İştahı",
+      "description": "En son ne zaman bir şey yemiştin?\n...dur, bu muhteşem koku da ne?\n\nKokunun peşine düşersin ve her türden lezzetli mantarın pişirildiği, sıcak ve sevimli bir kamp alanına ulaşırsın! O kadar açsındır ki bu mantarları yemenin güvenli olup olmadığını hiç düşünmezsin.\n(Hatta o kadar açsındır ki ölü maceracıyı fark etmezsin bile.)",
       "choices": [
         {
           "name": "Büyük Mantar",
-          "description": null
+          "outcome": "Büyük Mantarı ısırırsın. Mantar serttir, nişastalıdır ve doyurucudur. Yedikçe daha da acıkırsın. Sanki mantar açlığınla besleniyormuş gibidir.\n\nÇok lezzetli... bir yemek komasına girersin.\nBu oburluğun bir bedeli olacak."
         },
         {
           "name": "Kokulu Mantar",
-          "description": null
+          "outcome": "Kokulu Olan’dan bir parça tadarsın. Su kabuklularını andıran narin bir kokuya sahip, küçük ve odunsu bir mantar...\n\nBir enerji patlaması seni koşmaya, zıplamaya ve amansızca antrenman yapmaya iter!\nCanlı mantarın son anlarında içinde çırpınmasıyla birlikte ani bir acı, göğsüne batıp canını yakar."
         }
       ]
     },
     "INFESTED_AUTOMATON": {
-      "description": "Ölü robotlarla dolu bir odadasındır.\n\nYalnız bir otomatonun hafifçe parıldayan bir çekirdeği hâlâ duruyor; ancak iğrenç, organik bir oluşum tarafından sarılmış ve hiçbir tepki vermiyor.",
       "name": "İstila Edilmiş Otomaton",
+      "description": "Ölü robotlarla dolu bir odadasındır.\n\nYalnız bir otomatonun hafifçe parıldayan bir çekirdeği hâlâ duruyor; ancak iğrenç, organik bir oluşum tarafından sarılmış ve hiçbir tepki vermiyor.",
       "choices": [
         {
           "name": "İncele",
-          "description": "Rastgele bir Güç kartı elde et."
+          "description": "Rastgele bir Güç kartı elde et.",
+          "outcome": "Parıldayan Otomaton'u ve iç düzeneklerinin nasıl inşa edildiğini inceleyerek belirli metallerin ve bunların yerleşimlerinin çeşitli rahatsızlıklara karşı direnç sağladığını fark edersin!\n\nBu Teknoloji'yi kendine uygularsın."
         },
         {
           "name": "Çekirdeğe Dokun",
-          "description": "Maliyeti 0 olan rastgele bir kart elde et."
+          "description": "Maliyeti 0 olan rastgele bir kart elde et.",
+          "outcome": "Çekirdeğe en ufak bir dokunuşunda elektrik seni çarpar.\n\nRobottan uzağa kaçışırsın; bu tecrübeden sonra kendini değişmiş hissedersin."
         }
       ]
     },
     "JUNGLE_MAZE_ADVENTURE": {
-      "description": "Bir açıklıkta, bakışlarını aşağıya dikmiş ve devasa bir labirenti işaret eden derme çatma bir maceracı grubuyla karşılaşırsın.\n\nLabirentin zenginliklerini yağmalamak için seni Destansı bir Göreve birlikte atılmaya davet ederler. Deneyimli bir maceracı olarak bu labirentin ölümcül tuzaklarla ve muhafızlarla dolu olduğu gerçeği, senin için apaçıktır.\n\nBirlikte çalışmak işleri kolaylaştırırdı... ama öyle yaparsan ganimeti paylaşmak zorunda kalırsın.",
       "name": "Vahşi Orman Labirentinde Macera",
+      "description": "Bir açıklıkta, bakışlarını aşağıya dikmiş ve devasa bir labirenti işaret eden derme çatma bir maceracı grubuyla karşılaşırsın.\n\nLabirentin zenginliklerini yağmalamak için seni Destansı bir Göreve birlikte atılmaya davet ederler. Deneyimli bir maceracı olarak bu labirentin ölümcül tuzaklarla ve muhafızlarla dolu olduğu gerçeği, senin için apaçıktır.\n\nBirlikte çalışmak işleri kolaylaştırırdı... ama öyle yaparsan ganimeti paylaşmak zorunda kalırsın.",
       "choices": [
         {
           "name": "Güçlerinizi Birleştirin",
-          "description": "50 Altın elde et."
+          "description": "50 Altın elde et.",
+          "outcome": "Herkesin yüzü bir anda aydınlanır; {IsMultiplayer:seninki ve arkadaşlarınınki|seninki} dâhil!\n\nMaceracılardan birinin aslında bir ozan olduğu ortaya çıkar!\nAhtapot büyücü Aquid, tuzakları zahmetsizce etkisiz hâle getirirken, sen ve Grathor'lu savaşçı dikenli sopalar taşıyan muhafızları kolayca alt edersiniz.\n\nBu, hayatının en keyifli macerası olmuştur ve gerçekten Harika Anılar biriktirmişsindir."
         },
         {
           "name": "Tek Kişilik Görev",
-          "description": "150 Altın elde et. 18 CP kaybet."
+          "description": "150 Altın elde et. 18 CP kaybet.",
+          "outcome": "İnsanlardan soğumuş bir hâlde, {IsMultiplayer:sen ve arkadaşların tek kelime etmeden artık asılmış yüzlerin yanından geçip gidersiniz|tek kelime etmeden artık asılmış yüzlerin yanından geçip gidersin}. Hatta içlerinden biri sana doğru yumruğunu sallar.\n\nLabirent hiç de misafirperver değildir. Bir diken tuzağına düşersin, dikenlerle kaplı devasa bir kütük sana çarpar ve yol boyunca dikenli sopalar taşıyan hırçın yaratıklar seninle savaşır.\n\nArtık dikenlerden bıkmışsındır ve bir sonraki macerada birlikte hareket etmenin belki de daha akıllıca olacağını düşünürsün."
         }
       ]
     },
     "LOST_WISP": {
-      "description": "Uzakta tuhaf bir manzara göze çarpar. Ölü böceklerden oluşan yığınlar, ortasında küçük, parıldayan bir zerreyi andıran bir şeyin çevresini sarmıştır.\nHer türden böcek için son derece etkili bir çekici gibi görünür; ama alevler savurduğunu da fark edersin!\n\nİncelemek için daha da yaklaşırsın.",
       "name": "Kayıp Kıvılcım",
+      "description": "Uzakta tuhaf bir manzara göze çarpar. Ölü böceklerden oluşan yığınlar, ortasında küçük, parıldayan bir zerreyi andıran bir şeyin çevresini sarmıştır.\nHer türden böcek için son derece etkili bir çekici gibi görünür; ama alevler savurduğunu da fark edersin!\n\nİncelemek için daha da yaklaşırsın.",
       "choices": [
         {
           "name": "Kıvılcımı Yakala",
-          "description": "Deste'ne Çürüme kartını ekle. {Relic} kalıntısını elde et."
+          "description": "Deste'ne Decay kartını ekle. Kalıntı kalıntısını elde et.",
+          "locked": "Sahip olduğun maksimum CP çok düşük.",
+          "outcome": "Kıvılcım'a temkinle yaklaşırsın...\nYaklaştıkça, varlığına verdiği tepki giderek artar.\n\nElinin değeceği mesafeye geldiğinde Ateş Kıvılcımı'nı kavrarsın; fakat o, sıcak buhar ve alev patlamasıyla seni yakar!\n\nYine de yaratığı tutmaya çalışıp boğuşarak boyun eğmeye zorlarsın. Sonunda Kıvılcım pes eder ve seni yeni sahibi olarak kabul eder."
         },
         {
           "name": "Etrafı Araştır",
-          "description": "60 Altın elde et."
+          "description": "60 Altın elde et.",
+          "outcome": "Küçük kıvılcıma dokunmamaya karar verirsin. En iyisi işi sağlama almak!\n\nÇevrede pek bir şey yoktur; ama ölü böceklerin arasına saçılmış biraz altın bulursun.\nBuna dair bir cevap aramazsın."
         }
       ]
     },
     "LUMINOUS_CHOIR": {
-      "description": "Doğal olmayan mavi bir parıltıya bulanmış bir açıklığa rastlarsın. Devasa mantarlar ışık üreterek nabız gibi atar; şapkaları şişkindir ve ıslaktır. Yaklaştıkça, mantarlar ürkütücü, melodik tonlar yaymaya başlar ve bu sesler göğsünün derinliklerinde yankılanır.\n\nEn büyük mantarın etli dokusunun içine gömülü, parıldayan bir şey fark edersin. Bu şey, mantarların şarkısıyla aynı ritimde atarak titreşmektedir.",
       "name": "Işık Saçan Koro",
+      "description": "Doğal olmayan mavi bir parıltıya bulanmış bir açıklığa rastlarsın. Devasa mantarlar ışık üreterek nabız gibi atar; şapkaları şişkindir ve ıslaktır. Yaklaştıkça, mantarlar ürkütücü, melodik tonlar yaymaya başlar ve bu sesler göğsünün derinliklerinde yankılanır.\n\nEn büyük mantarın etli dokusunun içine gömülü, parıldayan bir şey fark edersin. Bu şey, mantarların şarkısıyla aynı ritimde atarak titreşmektedir.",
       "choices": [
         {
           "name": "Adak Sun",
-          "description": "149 Altın öde. Rastgele bir Kalıntı elde et."
+          "description": "149 Altın öde. Rastgele bir Kalıntı elde et.",
+          "locked": "149 Altın gerektirir.",
+          "outcome": "Altını süngerimsi zeminin üzerine bırakırsın. Sikkeler yavaşça içine gömülürken, ince uzantılar kalıntıyı nazikçe yüzeye iter ve temiz bir şekilde alınmasına imkân tanır."
         },
         {
           "name": "Canlı Dokuya Elini Uzat",
-          "description": "Deste'nden 2 kartı çıkar. Deste'ne bir adet Zihin İstilası ekle."
+          "description": "Deste'nden 2 kartı çıkar. Deste'ne bir adet Zihin İstilası ekle.",
+          "outcome": "İçindeki emaneti çıkarmak için elini baskın mantarın süngerimsi dokusuna doğrudan daldırırsın. Kolektif mantar ağı bu müdahaleyle ürperir; karşılık olarak da zihnin titreşir."
         }
       ]
     },
     "MORPHIC_GROVE": {
-      "description": "Kristal ağaçlardan oluşan bir koruya girersin. Ağaçlar heyecanla titreşmeye başlar!\nSelamlar ve hoş geldinlerden oluşan bir koro seni adeta bombardımana tutarken bir grup Şekillenen, ağaçlardanfırlayarak ortaya çıkar.\n\nŞekillenenlerden biri köşede huzursuzca kıpırdanmaktadır. Diğerleri kadar sosyal olmadığı bellidir.\n\nGruba mı yaklaşacaksın, yoksa yalnız olana mı?",
       "name": "Şekillenen Koruluğu",
+      "description": "Kristal ağaçlardan oluşan bir koruya girersin. Ağaçlar heyecanla titreşmeye başlar!\nSelamlar ve hoş geldinlerden oluşan bir koro seni adeta bombardımana tutarken bir grup Şekillenen, ağaçlardanfırlayarak ortaya çıkar.\n\nŞekillenenlerden biri köşede huzursuzca kıpırdanmaktadır. Diğerleri kadar sosyal olmadığı bellidir.\n\nGruba mı yaklaşacaksın, yoksa yalnız olana mı?",
       "choices": [
         {
           "name": "Grup",
-          "description": "100 Altın kaybet. 2 kartını Dönüştür."
+          "description": "100 Altın kaybet. 2 kartını Dönüştür.",
+          "outcome": "Cıvıldaşan Şekillenenleri selamlarsın. Onlar da seni kristalimsi kollarının arasına alır.\n\nOrtak bilgilerini seninle paylaşırlar ve sana Şekillenen Büyüsü enjekte ederek doğanı değiştirirler... Ne hoş yaratıklar şu Şekillenenler.\n\nİçlerinden biri altınını çaldı."
         },
         {
           "name": "Yalnız",
-          "description": "5 maksimum CP elde et."
+          "description": "5 maksimum CP elde et.",
+          "outcome": "Yalnız Şekillenen'e elini uzatırsın; doğasını anlayıp ona sempati duyarsın.\nO da sana küçük, kristal bir meyve armağan eder ve geleneklerinde olduğu gibi sen de onu tüketirsin.\n\nMeyve zihnini berraklaştırıp ve amacını netleştirir. Teşekkür edip yoluna devam edersin."
         }
       ]
     },
     "POTION_COURIER": {
-      "description": "Havada ekşi bir koku vardır ve kısa bir süre sonra yerde yığılmış bir İksir Kuryesi bulursun.\nKıpırdamaz. Cansızdır. Ölmüş mü!?\nEşyaları talan edilmiş olsa da üzerinde şu notun iliştirildiği bir paket İğrenç Kokulu İksir durmaktadır: “Alıcı: Tüccar”",
       "name": "İksir Kuryesi",
+      "description": "Havada ekşi bir koku vardır ve kısa bir süre sonra yerde yığılmış bir İksir Kuryesi bulursun.\nKıpırdamaz. Cansızdır. Ölmüş mü!?\nEşyaları talan edilmiş olsa da üzerinde şu notun iliştirildiği bir paket İğrenç Kokulu İksir durmaktadır: “Alıcı: Tüccar”",
       "choices": [
         {
           "name": "İksirleri Al",
-          "description": "3 adet İğrenç İksir elde et."
+          "description": "3 adet İğrenç İksir elde et.",
+          "outcome": "Tüccar bu iksirlerle ne ypamak istiyor olabilir ki?"
         },
         {
           "name": "Yağmala",
-          "description": "Rastgele 1 Az Yaygın İksir elde et."
+          "description": "Rastgele 1 Az Yaygın İksir elde et.",
+          "outcome": "Sadece tek bir iksir sağlamdı."
         }
       ]
     },
     "PUNCH_OFF": {
-      "description": "İki Yumruklayan Yapı birbirine girişmiş durumdadır ve aralarında biraz ganimet görürsün...\n\nOnu kapmaya çalışmalı mısın?",
       "name": "Yumruklaşma",
+      "description": "İki Yumruklayan Yapı birbirine girişmiş durumdadır ve aralarında biraz ganimet görürsün...\n\nOnu kapmaya çalışmalı mısın?",
       "choices": [
         {
           "name": "Haklarından Gelebilirim",
@@ -5548,72 +5645,92 @@
         },
         {
           "name": "Çaktırmadan Aşır",
-          "description": "Deste'ne bir Yaralanma ekle. Rastgele bir Kalıntı elde et."
+          "description": "Deste'ne bir Yaralanma ekle. Rastgele bir Kalıntı elde et.",
+          "outcome": "Başarıyla kalıntıyı aşırırsın!\n\n...ya da öyle sanarsın. Sağdan gelen bir kroşe yüzünde patlar."
         }
       ]
     },
     "RANWID_THE_ELDER": {
-      "description": "Hayatında gördüğün en yaşlı kişi sana doğru yaklaşır.\n“Bir kez daha karşılaştık... Benim, Ranwid!”\n\nBu adamı tanımıyorsun.",
       "name": "İhtiyar Ranwid",
+      "description": "Hayatında gördüğün en yaşlı kişi sana doğru yaklaşır.\n“Bir kez daha karşılaştık... Benim, Ranwid!”\n\nBu adamı tanımıyorsun.",
       "choices": [
-        null,
-        null,
-        null
+        {
+          "name": "X Altın ver.",
+          "description": "Rastgele bir Kalıntı elde et.",
+          "outcome": "Ranwid, altını çiğnerken mırıldanır:\n\n“Muh... teşem...”"
+        },
+        {
+          "name": "İksiri Ver: İksir",
+          "description": "Rastgele bir Kalıntı elde et.",
+          "locked": "Verebileceğin hiçbir İksir yok.",
+          "outcome": "“Nefis...”\n\nGluk gluk gluk\n\nİksir, tek seferde Ranwid'in midesine iner."
+        },
+        {
+          "name": "Kalıntı'yı Ver: Kalıntı",
+          "description": "Rastgele 2 Kalıntı elde et.",
+          "locked": "Verebileceğin hiçbir Kalıntın yok.",
+          "outcome": "“Kusursuz...”\n\nRanwid, kalıntıyı birkaç dakika boyunca dikkatle inceler...\n\nSonrasında Kalıntı, Ranwid'in midesine gider."
+        }
       ]
     },
     "REFLECTIONS": {
-      "description": "Bu da ne? Burada bir şey yanlış gibi...\n...ibig şılnay yeş rib adaruB ?en ad uB",
       "name": "Yansımalar ralamısnaY",
+      "description": "Bu da ne? Burada bir şey yanlış gibi...\n...ibig şılnay yeş rib adaruB ?en ad uB",
       "choices": [
         {
           "name": "Parçala",
-          "description": "Deste'ni birebir kopyala. Kötü Şans elde et."
+          "description": "Deste'ni birebir kopyala. Kötü Şans elde et.",
+          "outcome": "Odaklanır ve karşında devasa, kusursuz bir ayna olduğunu fark edersin.\nHızlı bir tekmeyle dev aynayı PARAMPARÇA edersin!\nTam aynayı paramparça ederken yansıman kendini hazırlar ve binlerce güzel, parıldayan parçaya dönüşür.\n\nBöyle bir yer nasıl var olabilir?"
         },
         {
           "name": "Bir Aynaya Dokun",
-          "description": "Rastgele 2 kartın geliştirmesini kaldır. Rastgele 4 kartı Geliştir."
+          "description": "Rastgele 2 kartın geliştirmesini kaldır. Rastgele 4 kartı Geliştir.",
+          "outcome": "Önündeki yansımaya doğru uzanır ve onunla bütünleşirsin.\nBen hangisiyim?"
         }
       ]
     },
     "RELIC_TRADER": {
-      "description": "Bir köşeyi dönersin ve bir anda, gölgeler içinden bir figür karşında öylece durmaktadır. Sana dönerek yüzünü sana çevirir:\n\n“Hoş geldin! Ne alıp satıyorsun?”\nFigür, soruyu sorarken pelerinini bir anda savurarak şüpheli mallardan oluşan bir koleksiyon sergiler.",
       "name": "Kalıntı Tüccarı",
+      "description": "Bir köşeyi dönersin ve bir anda, gölgeler içinden bir figür karşında öylece durmaktadır. Sana dönerek yüzünü sana çevirir:\n\n“Hoş geldin! Ne alıp satıyorsun?”\nFigür, soruyu sorarken pelerinini bir anda savurarak şüpheli mallardan oluşan bir koleksiyon sergiler.",
       "choices": [
         {
           "name": "En Alttakini Al",
-          "description": "{BottomRelicOwned} karşılığında {BottomRelicNew} al."
+          "description": "Kalıntın karşılığında yeni bir Kalıntı al."
         },
         {
           "name": "Ortadakini Al",
-          "description": "{MiddleRelicOwned} karşılığında {MiddleRelicNew} al."
+          "description": "Kalıntın karşılığında yeni bir Kalıntı al."
         },
         {
           "name": "En Yukardakini Al",
-          "description": "{TopRelicOwned} karşılığında {TopRelicNew} al."
+          "description": "Kalıntın karşılığında yeni bir Kalıntı al."
         }
       ]
     },
     "ROOM_FULL_OF_CHEESE": {
-      "description": "Bu oda peynirle dolu!!!\n\nEtrafta tuzak var mı diye bakınırsın. Başının üzerinde de... daha fazla peynir vardır. Bu odadaki mumlar peynirden yapılmış gibi görünmektedir. Mobilyalar da peynirdir.\nBir anda, arkandaki kapı gürültüyle kapanır.\n\nKapı da peynirdendir.",
       "name": "Peynir Dolu Oda",
+      "description": "Bu oda peynirle dolu!!!\n\nEtrafta tuzak var mı diye bakınırsın. Başının üzerinde de... daha fazla peynir vardır. Bu odadaki mumlar peynirden yapılmış gibi görünmektedir. Mobilyalar da peynirdir.\nBir anda, arkandaki kapı gürültüyle kapanır.\n\nKapı da peynirdendir.",
       "choices": [
         {
           "name": "Tıkın",
-          "description": "Deste'ne eklemek için rastgele 8 Sıradan karttan 2 tanesini seç."
+          "description": "Deste'ne eklemek için rastgele 8 Sıradan karttan 2 tanesini seç.",
+          "outcome": "Peynirden biraz atıştırırsın ama bu, seni daha da fazla peynir yemeye iter.\n\nZaman ilerler...\n\nHayranlık uyandıran bir miktarda peynir yemişsindir.\nBu gece rüyalar peynir tadında olacak."
         },
         {
           "name": "Ara",
-          "description": "14 CP kaybet. Seçilmiş Peynir'i elde et."
+          "description": "14 CP kaybet. Seçilmiş Peynir'i elde et.",
+          "outcome": "Saatlerce, saatlerce... etrafı didiklersin.\n\nBunca peynirin salt varlığıyla zihnin tuhaf diyarlara sürüklenirken zaman akıp gider; ağır bir sersemliğin içine gömülürsün.\nBirden irkilip uyanırsın ve elinde bir şey tuttuğunu fark edersin.\n\nSeçilmiş Peynir."
         }
       ]
     },
     "ROUND_TEA_PARTY": {
-      "description": "\"Beyefendi Galalot\" adına gönderilmiş bir çay partisi davetiyesi bulur ve onun yerine gitmeye karar verirsin.\n\nMütevazı görünen bir rotundaya adım attığında kendini komutanlar, generaller, savaş beyleri ve paralı askerlerin arasında bulursun... Çay mı içiyorlar?\nBaşında altın bir taç taşıyan devasa şövalye konuşur:\n\n“Çay vaktine teşrifte geciktin mi!?”",
       "name": "Yuvarlak Masada Çay Partisi",
+      "description": "\"Beyefendi Galalot\" adına gönderilmiş bir çay partisi davetiyesi bulur ve onun yerine gitmeye karar verirsin.\n\nMütevazı görünen bir rotundaya adım attığında kendini komutanlar, generaller, savaş beyleri ve paralı askerlerin arasında bulursun... Çay mı içiyorlar?\nBaşında altın bir taç taşıyan devasa şövalye konuşur:\n\n“Çay vaktine teşrifte geciktin mi!?”",
       "choices": [
         {
           "name": "Çayının Tadını Çıkar",
-          "description": "Kraliyet Zehri elde et. Tüm CP'ni iyileştir."
+          "description": "Royal Poison elde et. Tüm CP'ni iyileştir.",
+          "outcome": "Bir çay fincanını kapar ve çayı tek seferde indirirsin.\nÇay, KAYNAR DERECEDE SICAKTIR ama yüz ifaden zerre değişmez. Müdavimler, kendini koruma içgüdüsünden bu denli yoksun oluşuna hayrete düşer.\n\n“Amacımız asla saygısızlık değildi, Beyefendi Galalot. En içten özürlerimizi kabul edin.”\n\nYuttuğun zehirden habersiz, biraz çay ve çörek keyfi yaparsın."
         },
         {
           "name": "Kavga Çıkar",
@@ -5622,146 +5739,172 @@
       ]
     },
     "SAPPHIRE_SEED": {
-      "description": "Parlak ve keskin bir şeye basmaktan son anda kaçınırsın. Bu bir tohum mu? Ayırt edici rengi, onun bir Safir Tohumu olduğunu ele verir! Bu inanılmaz tohumların nesli tükenmemiş miydi!?\n\nEfsaneler der ki bir tanesini tüketmek, dayanıklılığını büyük ölçüde artırır... ama ya onu ekip büyütmeyi seçersen?",
       "name": "Safir Tohum",
+      "description": "Parlak ve keskin bir şeye basmaktan son anda kaçınırsın. Bu bir tohum mu? Ayırt edici rengi, onun bir Safir Tohumu olduğunu ele verir! Bu inanılmaz tohumların nesli tükenmemiş miydi!?\n\nEfsaneler der ki bir tanesini tüketmek, dayanıklılığını büyük ölçüde artırır... ama ya onu ekip büyütmeyi seçersen?",
       "choices": [
         {
           "name": "Tüket",
-          "description": "9 CP iyileştir. Deste'ndeki bir kartı Geliştir."
+          "description": "9 CP iyileştir. Deste'ndeki bir kartı Geliştir.",
+          "outcome": "Safir Tohumu yutarsın ve birkaç dakika içinde uzuvların daha çevik hisseder, renkler keskinleşir ve yakındaki düşmanların ruhlarını sezersin.\n\nİyi ki üstüne basmamışsın."
         },
         {
           "name": "Ek ve Besle",
-          "description": "Bir kartı Yatırım ile Büyüle."
+          "description": "Bir kartı Sown ile Büyüle.",
+          "outcome": "Aşırı Yeşerme'yi didik didik arar ve iyi havalanan bir saksı bulursun. Ardından çatlamış bir duvardan ışığın sızdığı, el değmemiş bir nokta aramak için dolaşırsın. Saksıyı ağaç kabuğu ve sarmaşıklarla dikkatlice güçlendirip kamufle eder, içini gevşek yapılı, besince zengin toprakla doldurur ve tohumu yüzeyin hemen altına usulca yerleştirirsin.\n\nSon olarak, yakındaki bitkilerden çiy toplar ve toprağın üzerine dökersin.\n\nBüyü bakalım küçük tohum...\nSen farkında olmadan Safir Tohumu ruhsal olarak sana bağlanır.\nVerdiğin emek için minnettardır."
         }
       ]
     },
     "SELF_HELP_BOOK": {
-      "description": "Yerde büyük bir kitap durmaktadır:\n“Spire’ı Fethetmenin En İyi 3 Yolu”\n\nKitap kana bulanmıştır; bu yüzden bu el yazmasını son derece şüpheli bulursun.\n\nOkuyacak mısın?",
       "name": "Kişisel Gelişim Kitabı",
+      "description": "Yerde büyük bir kitap durmaktadır:\n“Spire’ı Fethetmenin En İyi 3 Yolu”\n\nKitap kana bulanmıştır; bu yüzden bu el yazmasını son derece şüpheli bulursun.\n\nOkuyacak mısın?",
       "choices": [
         {
           "name": "Yoluna Devam Et",
-          "description": "Büyüleyebileceğin hiçbir kartın yok."
+          "description": "Büyüleyebileceğin hiçbir kartın yok.",
+          "outcome": "Kitaplara pek düşkün değilsindir; hele kana bulanmış olanlara hiç."
         },
         {
           "name": "Tüm Kitabı Oku",
-          "description": "2 Hızlı ile Büyülemek için bir Güç kartı seç."
+          "description": "2 Swift ile Büyülemek için bir Güç kartı seç.",
+          "locked": "Büyüleyebileceğin hiçbir Güç kartın yok.",
+          "outcome": "Ne sürükleyici bir kitap! Seçilmiş birkaç alıntı zihninde capcanlı kalır:\n“Büyük canavarlardan kaçın.”\n“Her kartı al.”\n“Savunma korkaklar içindir.”\n\nEllerin kana bulanmıştır."
         },
         {
           "name": "Rastgele Bir Bölüm Oku",
-          "description": "2 Atik ile Büyülemek için bir Beceri kartı seç."
+          "description": "2 Nimble ile Büyülemek için bir Beceri kartı seç.",
+          "locked": "Büyüleyebileceğin hiçbir Beceri kartın yok.",
+          "outcome": "Rastgele bir sayfayı çevirirsin:\n“Savunma 101: Darbe alma!”\n\nMetnin geri kalanını okursun ve şaşırtıcı derecede aydınlatıcı bulursun. Bu fikirleri savaş taktiklerine dâhil edersin."
         },
         {
           "name": "Arkasını Oku",
-          "description": "2 Keskin ile Büyülemek için bir Saldırı kartı seç."
+          "description": "2 Sharp ile Büyülemek için bir Saldırı kartı seç.",
+          "locked": "Büyüleyebileceğin hiçbir Saldırı kartın yok.",
+          "outcome": "Kitabı ters çevirir ve özetini okursun:\n“Eleştirmenler ve Tarikat Mensupları, keskin ve sivri silahların hasar vermenin en iyi yolu olduğu konusunda hemfikir!”\n\nKitabın arka kapağında, üzeri çizilmiş ve büyük ölçüde indirilmiş bir fiyatla işaretlenmiş bir etiket vardır."
         }
       ]
     },
     "SLIPPERY_BRIDGE": {
-      "description": "Derme çatma bir ahşap köprüden geçerken bir anda sağanak bir yağmur bastırır. Şiddetli rüzgârlar seni savurur; yolculuğunu sona erdirecek bir tehdit doğurur.",
       "name": "Kaygan Köprü",
+      "description": "Derme çatma bir ahşap köprüden geçerken bir anda sağanak bir yağmur bastırır. Şiddetli rüzgârlar seni savurur; yolculuğunu sona erdirecek bir tehdit doğurur.",
       "choices": [
         {
           "name": "Tutun",
-          "description": "{HpLoss} CP kaybet. Üstteki seçenekteki kart değişir."
+          "description": "X CP kaybet. Üstteki seçenekteki kart değişir."
         },
         {
           "name": "Üstesinden Gel",
-          "description": "{RandomCard} Deste'nden kaldırılır."
+          "description": "rastgele Kart Deste'nden kaldırılır.",
+          "outcome": "Köprülerden nefret ediyorum."
         }
       ]
     },
     "SPIRALING_WHIRLPOOL": {
-      "description": "Devasa, Sarmal Bir Girdap ile karşılaşırsın. Sular kusursuz bir zarafetle döner; çevresindeki duvarlar sarmal desenlerle bezenmiştir.\n\nDöne döne... döne...\n...ve yine döne... ne manzara ama...\n\nNe yapacaksın?",
       "name": "Sarmal Girdap",
+      "description": "Devasa, Sarmal Bir Girdap ile karşılaşırsın. Sular kusursuz bir zarafetle döner; çevresindeki duvarlar sarmal desenlerle bezenmiştir.\n\nDöne döne... döne...\n...ve yine döne... ne manzara ama...\n\nNe yapacaksın?",
       "choices": [
         {
           "name": "İç",
-          "description": "0 CP iyileştir."
+          "description": "0 CP iyileştir.",
+          "outcome": "İki elini birleştirip avuçlarını Sarmal Girdap'a daldırırsın.\n\nGözlerini kapatıp küçük yudumlar alırken, sular avuçlarını usulca doldurur.\n\nLezzetli su spiraller çizerek Merkez’ine doğru ilerler; zararlı düşünceleri ve fiziksel rahatsızlıkları silip süpürür..."
         },
         {
           "name": "Gözlemle",
-          "description": "Bir Saldırı veya Savunma kartını Sarmal ile Büyüle."
+          "description": "Bir Saldırı veya Savunma kartını Sarmal ile Büyüle.",
+          "outcome": "...ah ne kadar da güzel.....\nDönüyor... hâlâ dönüyor. Evet...\nAh! Bu da neydi? Küçük bir sıçrama mı?\nElbette. Sen de biraz eğlenceyi hak ediyorsun Bay Sarmal... haha...\n... ......... ...\n\nArtık gitme vakti.\nAyrılırken fısıldarsın:\n\n“Teşekkür ederim Sarmal.”"
         },
         {
           "name": "Uzan",
-          "description": "Rastgele bir Kalıntı elde et. Deste'ne bir Kıvranma ekle."
+          "description": "Rastgele bir Kalıntı elde et. Deste'ne bir Kıvranma ekle.",
+          "outcome": "Aptalca bir hamleyle kolunu Sarmal Girdap'ın merkezine daldırır, dengeyi bozarsın. Su buz gibi olur ve seni kavrayarak koluna Görünmez Spiraller oyar.\n\nParmakların sert bir şeye sürtünür; acı içinde etrafı yoklar ve sonunda oradan bir Kalıntı söküp çıkarırsın!"
         }
       ]
     },
     "SPIRIT_GRAFTER": {
-      "description": "Yukarıda bir koza sarsılıp kıvranır; açılmak üzeredir!\n\nKıpırdanma bir anda durur. Koza tutuşur! Neler oluyor?\nIşık ve alevden oluşan bir parıltı içinde, bir Ruh Yamalayan sana doğru atılır; bütünleşmek için varlığınla birleşmekle tehdit eder.",
       "name": "Ruh Yamalayan",
+      "description": "Yukarıda bir koza sarsılıp kıvranır; açılmak üzeredir!\n\nKıpırdanma bir anda durur. Koza tutuşur! Neler oluyor?\nIşık ve alevden oluşan bir parıltı içinde, bir Ruh Yamalayan sana doğru atılır; bütünleşmek için varlığınla birleşmekle tehdit eder.",
       "choices": [
         {
           "name": "İçine Al",
-          "description": "25 CP iyileştir. Deste'ne bir Başkalaşım ekle."
+          "description": "25 CP iyileştir. Deste'ne bir Başkalaşım ekle.",
+          "outcome": "Ruh Yamalayan seninle birleşir. Hayat veren ruh seni hızla iyileştirir.\n\nYeniden doğdun."
         },
         {
           "name": "Reddet",
-          "description": "9 CP kaybet. Deste'nden bir kartı kaldır."
+          "description": "9 CP kaybet. Deste'nden bir kartı kaldır.",
+          "outcome": "Ruh Yamalayan, iraden tarafından kolayca durdurulur.\n\nYine de, bir taşıyıcı bulma umuduyla defalarca sana doğru atılır. Gücü tükenir ve puf diye dağılıp yok olur.\n\nKısa ömürlü bir ruh."
         }
       ]
     },
     "STONE_OF_ALL_TIME": {
-      "description": "Terk edilmiş bir avlunun tam ortasında devasa bir kaya durmaktadır.\n\nBir levhada şunlar yazar:\nTüm Zamanların Taşı.\n\nVarlığı, biçimi ve üzerindeki süslemeler bu avlunun Taş'ın etrafına inşa edildiğini ve onun bu noktadan hiç kıpırdamadığını gösterir.",
       "name": "Tüm Zamanların Taşı",
+      "description": "Terk edilmiş bir avlunun tam ortasında devasa bir kaya durmaktadır.\n\nBir levhada şunlar yazar:\nTüm Zamanların Taşı.\n\nVarlığı, biçimi ve üzerindeki süslemeler bu avlunun Taş'ın etrafına inşa edildiğini ve onun bu noktadan hiç kıpırdamadığını gösterir.",
       "choices": [
         {
           "name": "İksir İç ve Kaldır",
-          "description": "İksiri kaybet: {DrinkRandomPotion}. 10 Maksimum CP elde et."
+          "description": "İksiri kaybet: rastgele İksir. 10 Maksimum CP elde et.",
+          "locked": "Bir İksir gerektirir.",
+          "outcome": "Tek dikişte bitirdiğin rastgele İksir ile tüm gücünle taşa yüklenirsin!!\n\nHiçbir şey olmaz."
         },
         {
           "name": "İt",
-          "description": "6 CP kaybet. Bir Saldırı kartını 8 Güçlü ile Büyüle."
+          "description": "6 CP kaybet. Bir Saldırı kartını 8 Güçlü ile Büyüle.",
+          "locked": "Bir Saldırı gerektirir.",
+          "outcome": "Elinden gelen her şeyle itersin de itersin!!\n\nHiçbir şey olmaz."
         }
       ]
     },
     "SUNKEN_STATUE": {
-      "description": "Bir göletin içinde yarı yarıya batmış eski bir heykel fark edersin. Elleri nazikçe taş bir kılıcın üzerinde durmaktadır.\n\nAyrıca göletin dibinde parıldayan bir şey de gözüne çarpar.\nBunlar para mı acaba?\n\nGerçekten de biraz paraya ihtiyacın vardı...",
       "name": "Batık Heykel",
+      "description": "Bir göletin içinde yarı yarıya batmış eski bir heykel fark edersin. Elleri nazikçe taş bir kılıcın üzerinde durmaktadır.\n\nAyrıca göletin dibinde parıldayan bir şey de gözüne çarpar.\nBunlar para mı acaba?\n\nGerçekten de biraz paraya ihtiyacın vardı...",
       "choices": [
         {
           "name": "Suya Dal",
-          "description": "111 Altın elde et. 7 CP kaybet."
+          "description": "111 Altın elde et. 7 CP kaybet.",
+          "outcome": "Suyun derinliklerine dalarsın!\n\nParaları toplarken boğuk bir yankı duyarsın ve birden taşlanırsın!\n\nYüzeye çıktığında verdiğin rahatsızlık yüzünden eski heykelin çöktüğünü görürsün; hem fiziksel hem de ruhsal olarak."
         },
         {
           "name": "Kılıcı Al",
-          "description": "Kalıntıyı elde et: Taş Kılıç"
+          "description": "Kalıntıyı elde et: Sword of Stone",
+          "outcome": "Heykelin ellerinden kılıcı söküp alırsın ve heykel bir anda parçalanıp çöker!\n\nArtık göletin dibinde parıldayan her ne varsa almaya çalışmak fazla tehlikelidir...\n\nKılıcı incelerken içinde inanılmaz, dokunulmamış bir güç olduğunu sezersin."
         }
       ]
     },
     "SUNKEN_TREASURY": {
-      "description": "Bir yol seni kısmen suya gömülmüş bir mahzene götürür.\nİçeride 2 adet sandık bulunmaktadır fakat yalnızca 1 tane kırılgan anahtar bulursun.\n\nBirinci Sandık: Salladığında şıngır mıngır sesler gelir. Biraz altın var gibi.\nİkinci Sandık: Devasa, süslü ve apaçık lanetli. Bir sürü altını var!",
       "name": "Batık Hazinelik",
+      "description": "Bir yol seni kısmen suya gömülmüş bir mahzene götürür.\nİçeride 2 adet sandık bulunmaktadır fakat yalnızca 1 tane kırılgan anahtar bulursun.\n\nBirinci Sandık: Salladığında şıngır mıngır sesler gelir. Biraz altın var gibi.\nİkinci Sandık: Devasa, süslü ve apaçık lanetli. Bir sürü altını var!",
       "choices": [
         {
           "name": "Birinci Sandık",
-          "description": "60 Altın elde et."
+          "description": "60 Altın elde et.",
+          "outcome": "Evet, içinde altın vardı."
         },
         {
           "name": "İkinci Sandık",
-          "description": "333 Altın ve Açgözlülük elde et."
+          "description": "333 Altın ve Açgözlülük elde et.",
+          "outcome": "Tek bir yerde hiç bu kadar çok altın görmemiştin!\n\nTüccar'ın bütün malları satın alınabilir...\n{Monologue}\nTehlikeli serseriler bile parayla susturulabilir...\n\nHummalı bir açgözlülüğün düşünceleri sonsuza dek seninle kalır..."
         }
       ]
     },
     "SYMBIOTE": {
-      "description": "Yolculuğun sırasında karanlık, biçimsiz bir poliple karşılaşırsın. Onun çok yaşlı, ve son derece kötü olduğunu hissedebiliyorsundur.\n\nYaklaş...",
       "name": "Simbiyot",
+      "description": "Yolculuğun sırasında karanlık, biçimsiz bir poliple karşılaşırsın. Onun çok yaşlı, ve son derece kötü olduğunu hissedebiliyorsundur.\n\nYaklaş...",
       "choices": [
         {
           "name": "Yaklaş",
-          "description": "Bir Saldırı kartını Yozlaşmış ile Büyüle."
+          "description": "Bir Saldırı kartını Corrupted ile Büyüle.",
+          "locked": "Hiçbir Saldırı kartın Büyülenemiyor.",
+          "outcome": "Bir anda üzerine atlar. Koluna yapıştığı anda yakıcı bir acı hissedersin; ama simbiyot bir anda ortadan kaybolur.\n\n?.. Nereye gitti?"
         },
         {
           "name": "Ateşle Öldür",
-          "description": "Dönüştürmek için bir kart seç."
+          "description": "Dönüştürmek için bir kart seç.",
+          "outcome": "Karanlık polipi ateşe verirsin. Çığlık atarak yanıp küle dönerken başın acıyla zonklar; ama bayılmamayı başarırsın.\nBu şey de neydi?"
         }
       ]
     },
     "TABLET_OF_TRUTH": {
-      "description": "Bir çift Soydaş Muhafız'ı alt eder ve koruma altındaki bir mahzene ilerlersin.\n\nİçeride tanıdık yazıtlarla bezeli bir tablet durmaktadır. Sezgilerin, bu dilin oldukça kolay çözülebileceğini söyler... ancak çözmeye başladığında geri dönüş olmayacaktır.\n\nTablet yatıştırıcı bir enerji yayar; dilersen onu parçalayıp iyileştirici enerjilerini alabilirsin.",
       "name": "Doğruluğun Tableti",
+      "description": "Bir çift Soydaş Muhafız'ı alt eder ve koruma altındaki bir mahzene ilerlersin.\n\nİçeride tanıdık yazıtlarla bezeli bir tablet durmaktadır. Sezgilerin, bu dilin oldukça kolay çözülebileceğini söyler... ancak çözmeye başladığında geri dönüş olmayacaktır.\n\nTablet yatıştırıcı bir enerji yayar; dilersen onu parçalayıp iyileştirici enerjilerini alabilirsin.",
       "choices": [
         {
           "name": "Çözümle",
@@ -5769,38 +5912,47 @@
         },
         {
           "name": "Ezip Parçala",
-          "description": "20 CP iyileştir."
+          "description": "20 CP iyileştir.",
+          "outcome": "Tablet paramparça olur; içinden boşalan enerji bedenine sızar.\n\nKendini yenilenmiş hissedersin!"
         }
       ]
     },
     "TEA_MASTER": {
-      "description": "Loş ışıkla aydınlanan bir kulübeye rastlarsın ve kendini, takıntılı denecek kadar çeşitli çaylarla dolu son derece huzurlu bir ortamın içinde bulursun.\n\nİçerideki adam, her biri yüksek bir fiyat etiketiyle özenle etiketlenmiş çaylardan oluşan bir seçkiye işaret eder.",
       "name": "Çay Ustası",
+      "description": "Loş ışıkla aydınlanan bir kulübeye rastlarsın ve kendini, takıntılı denecek kadar çeşitli çaylarla dolu son derece huzurlu bir ortamın içinde bulursun.\n\nİçerideki adam, her biri yüksek bir fiyat etiketiyle özenle etiketlenmiş çaylardan oluşan bir seçkiye işaret eder.",
       "choices": [
         {
           "name": "Kemik Çayı",
-          "description": "50 Altın öde. {BoneTeaDescription}"
+          "description": "50 Altın öde. Bone Tea",
+          "locked": "50 Altın gerektiriyor."
         },
         {
           "name": "Köz Çayı",
-          "description": "150 Altın öde. {EmberTeaDescription}"
+          "description": "150 Altın öde. Ember Tea",
+          "locked": "150 Altın gerektirir."
         },
         {
           "name": "Nezaketsizlik Çayı",
-          "description": "{TeaOfDiscourtesyDescription}"
+          "description": "Tea of Discourtesy",
+          "outcome": "Çayı nazikçe reddedersin ve...\n\n*GÜM*\n\nArkandaki kapı sertçe kapanır. Çay ustası bir an seni gözleriyle süzer, ardından çirkin bir fincan uzatır.\nAh... bu çay, nezaketsizler içindir..."
         }
       ]
     },
     "THE_FUTURE_OF_POTIONS": {
-      "description": "Köşeyi döndüğünde hafif bir sarsıntı hissedersin ve devasa, dönen bir aygıtla karşılaşırsın!\nÜzerindeki birkaç yuva vardır; bu yuvaların sıvıları son derece sıkıştırılmış ve yenilebilir tabletlere dönüştürdüğü anlaşılmaktadır.\n\nBu sağlık iksirlerini minicik bir lokmaya dönüştürme fikri rahatsız edici olabilir. Yine de yeni bir şeyler denemek iyi olabilir mi?",
       "name": "İksirlerin Geleceği?",
+      "description": "Köşeyi döndüğünde hafif bir sarsıntı hissedersin ve devasa, dönen bir aygıtla karşılaşırsın!\nÜzerindeki birkaç yuva vardır; bu yuvaların sıvıları son derece sıkıştırılmış ve yenilebilir tabletlere dönüştürdüğü anlaşılmaktadır.\n\nBu sağlık iksirlerini minicik bir lokmaya dönüştürme fikri rahatsız edici olabilir. Yine de yeni bir şeyler denemek iyi olabilir mi?",
       "choices": [
-        null
+        {
+          "name": "? Bir İksir Yerleştir",
+          "description": "İksiri kaybet: İksir. Geliştirilmiş bir ? ? elde et."
+        },
+        {},
+        {}
       ]
     },
     "THE_LANTERN_KEY": {
-      "description": "Hafifçe parıldayan bir anahtarla karşılaşırsın ve onu almak için eğilirsin.\n\n“Her yerde bu anahtarı arıyordum! Müsaade edersen alayım...”\n\nBu kişi pek hayra alamet gibi görünmüyor; ama belki de peşin hükümlü olmamak gerekir.",
       "name": "Fener Anahtar",
+      "description": "Hafifçe parıldayan bir anahtarla karşılaşırsın ve onu almak için eğilirsin.\n\n“Her yerde bu anahtarı arıyordum! Müsaade edersen alayım...”\n\nBu kişi pek hayra alamet gibi görünmüyor; ama belki de peşin hükümlü olmamak gerekir.",
       "choices": [
         {
           "name": "Anahtarı Sakla",
@@ -5813,55 +5965,120 @@
       ]
     },
     "THE_LEGENDS_WERE_TRUE": {
-      "description": "Zifiri karanlık bir odaya adım attığın anda kapı arkandan sertçe kapanırken yukarıdan gelen ani bir ışık, karanlığı yarar.\n\nÜzerinde bir harita bulunan bir kürsü, önünde aydınlanır. Onu almak için güçlü bir dürtü hissedersin.\n\nŞüpheli duruyor.",
       "name": "Efsaneler Doğruymuş",
+      "description": "Zifiri karanlık bir odaya adım attığın anda kapı arkandan sertçe kapanırken yukarıdan gelen ani bir ışık, karanlığı yarar.\n\nÜzerinde bir harita bulunan bir kürsü, önünde aydınlanır. Onu almak için güçlü bir dürtü hissedersin.\n\nŞüpheli duruyor.",
       "choices": [
         {
           "name": "Haritayı Aşır",
-          "description": "Ganimet Haritası'nı elde et."
+          "description": "Ganimet Haritası'nı elde et.",
+          "outcome": "En kötü ne olabilir ki? Haritayı kaptığın anda odanın diğer tarafında bir açıklık belirir."
         },
         {
           "name": "Yavaşça Bir Çıkış Yolu Bul",
-          "description": "8 CP kaybet. Rastgele 1 İksir elde et."
+          "description": "8 CP kaybet. Rastgele 1 İksir elde et.",
+          "outcome": "Karanlıkta gizlice dolaşıp bir çıkış yolu ararken oda şiddetle sarsılmaya başlar. Ani bir gürültüyle tüm oda üstüne yıkılmaya başlar.\n\nEnkazdan kıl payı kurtulmayı başarırsın ve odada bir yerde saklı olduğunu düşündüğün, işe yarar bir şey içeren küçük bir şişe bulursun."
         }
       ]
     },
     "THIS_OR_THAT": {
-      "description": "Yakındaki bir delikten kollar aniden fırlar. Bir elinde bol zenginliklerle dolu, şüpheli bir torba, diğerinde ise apaçık lanetli bir kalıntı tutar.\n\nAşağıdan kısık bir ses fısıldar:\n“Bu mu? Şu mu?”",
       "name": "Bu mu? Şu mu?",
+      "description": "Yakındaki bir delikten kollar aniden fırlar. Bir elinde bol zenginliklerle dolu, şüpheli bir torba, diğerinde ise apaçık lanetli bir kalıntı tutar.\n\nAşağıdan kısık bir ses fısıldar:\n“Bu mu? Şu mu?”",
       "choices": [
         {
           "name": "Şu",
-          "description": "Deste'ne bir Sakar ekle. Rastgele bir Kalıntı elde et."
+          "description": "Deste'ne bir Clumsy ekle. Rastgele bir Kalıntı elde et.",
+          "outcome": "Lanetli Kalıntı'yı kaparsın. Ona dokunduğun anda bileklerinde prangalar belirir.\n\nHayaletimsi bir kahkaha duyarsın ve parlak, ateşli bir duman görüşünü kapatır!\n\nDelik ve kollar ortadan kaybolmuştur."
         },
         {
           "name": "Bu",
-          "description": "6 CP kaybet. 0 Altın elde et."
+          "description": "6 CP kaybet. 0 Altın elde et.",
+          "outcome": "Torbayı kaparsın ve kapar kapmaz ÜÇÜNCÜ bir el ortaya çıkar ve koluna yapışır!!\n\nÇılgınca bir boğuşmanın ardından kollar seni bırakır. Kollar da delik de ortadan kaybolmuştur."
         }
       ]
     },
     "TINKER_TIME": {
-      "description": "Sonsuz bir ceset denizinin içinde yolunu bulmaya çalışırken, çeşitli hurdalar toplayan çılgın bir bilim insanına rastlarsın.\n\n“Evet. Şey... merhaba! Güçlü bir savaşçıya benziyorsun... Bir sonraki vahşet aygıtım için bir deneğe ihtiyacım var! Ne dersin?”",
       "name": "Kurcalama Vakti",
-      "choices": []
+      "description": "Sonsuz bir ceset denizinin içinde yolunu bulmaya çalışırken, çeşitli hurdalar toplayan çılgın bir bilim insanına rastlarsın.\n\n“Evet. Şey... merhaba! Güçlü bir savaşçıya benziyorsun... Bir sonraki vahşet aygıtım için bir deneğe ihtiyacım var! Ne dersin?”",
+      "pages": [
+        {
+          "description": "“Sana herkesi öldürmende yardım edecek nasıl bir araç istersin?”",
+          "choices": [
+            {
+              "name": "Silah",
+              "description": "Bir Saldırı oluştur."
+            },
+            {
+              "name": "Alet",
+              "description": "Bir Güç oluştur."
+            },
+            {
+              "name": "Koruyucu",
+              "description": "Bir Beceri oluştur."
+            }
+          ]
+        },
+        {
+          "description": "“Mükemmel bir seçim! Peki bu şey NE YAPMALI?”\nBilim insanı, keyifle ellerini ovuşturur.",
+          "choices": [
+            {
+              "name": "Kaos",
+              "description": "El'ine rastgele bir kart ekle. Bu tur maliyeti 0 {energyPrefix:energyIcons(1)} olur."
+            },
+            {
+              "name": "Boğucu",
+              "description": "Bu tur her kart oynadığında düşman {ChokingDamage} CP kaybeder."
+            },
+            {
+              "name": "Meraklı",
+              "description": "Güç kartlarının maliyeti 1 {energyPrefix:energyIcons(1)} azalır."
+            },
+            {
+              "name": "Enerji Yüklü",
+              "description": "{EnergizedEnergy:energyIcons()} elde et."
+            },
+            {
+              "name": "Uzmanlık",
+              "description": "{ExpertiseStrength} Kuvvet elde et. {ExpertiseDexterity} Çeviklik elde et."
+            },
+            {
+              "name": "Geliştirme",
+              "description": "Savaşın sonunda rastgele bir kartı Geliştir."
+            },
+            {
+              "name": "Zayıflatma",
+              "description": "{SappingWeak} Zayıf uygula. {SappingVulnerable} Savunmasız uygula."
+            },
+            {
+              "name": "Şiddet",
+              "description": "Fazladan 2 kez vurur."
+            },
+            {
+              "name": "Bilgelik",
+              "description": "3 kart çek."
+            }
+          ]
+        }
+      ]
     },
     "TRASH_HEAP": {
-      "description": "Hurdaya ayrılmış silahlardan, atılmış ıvır zıvırlardan ve diğer tuhaf şeylerden oluşan devasa bir yığın keşfedersin. Bu koca yığın, sanki içten içe büyüyormuş gibi hareket eder ve gürültü çıkarır.\n\nYığını yüzeyden karıştırırsan çok da fena olmayan birkaç şey bulabilirsin; fakat gerçekten içine dalarsan, egzotik hazinelere de rastlayabilirsin.",
       "name": "Çöp Yığını",
+      "description": "Hurdaya ayrılmış silahlardan, atılmış ıvır zıvırlardan ve diğer tuhaf şeylerden oluşan devasa bir yığın keşfedersin. Bu koca yığın, sanki içten içe büyüyormuş gibi hareket eder ve gürültü çıkarır.\n\nYığını yüzeyden karıştırırsan çok da fena olmayan birkaç şey bulabilirsin; fakat gerçekten içine dalarsan, egzotik hazinelere de rastlayabilirsin.",
       "choices": [
         {
           "name": "İçine Dal",
-          "description": "8 CP kaybet. Geçmişten kalma, unutulmuş rastgele bir Kalıntı elde et."
+          "description": "8 CP kaybet. Geçmişten kalma, unutulmuş rastgele bir Kalıntı elde et.",
+          "outcome": "Tehlikeli çöplerin arasında yüzmeye epey vakit harcar ve geçmişten kalma bir kalıntı bulursun!\n\nBu neden atılmıştı ki?"
         },
         {
           "name": "Rastgele Hurda Kap",
-          "description": "100 Altın elde et. Geçmişten kalma, unutulmuş rastgele bir Kart elde et."
+          "description": "100 Altın elde et. Geçmişten kalma, unutulmuş rastgele bir Kart elde et.",
+          "outcome": "Yığının etrafını güvenli bir mesafeden dolaşır, oradan buradan, unutulmuş değerli eşyalar ve tuhaf şeyler toplarsın.\n\nBunlar en başta neden yaratılmıştı ki?"
         }
       ]
     },
     "TRIAL": {
-      "description": "Devasa bir binaya giren insanların oluşturduğu sıraya katılırsın.\n\nAltın bir kemerin altından geçerken borazanlar çalar, konfetiler patlar ve tavandan şeritler süzülür!\n\n“{EntrantNumber} numaralı katılımcı, bugünkü Dava için KARAR VERİCİ sensin.”",
       "name": "Dava",
+      "description": "Devasa bir binaya giren insanların oluşturduğu sıraya katılırsın.\n\nAltın bir kemerin altından geçerken borazanlar çalar, konfetiler patlar ve tavandan şeritler süzülür!\n\n“? numaralı katılımcı, bugünkü Dava için KARAR VERİCİ sensin.”",
       "choices": [
         {
           "name": "Kabul Et",
@@ -5874,134 +6091,158 @@
       ]
     },
     "UNREST_SITE": {
-      "description": "Gözlerden uzak bir Dinlenme Alanı bulur ve biraz soluklanmak için bir ateş yakarsın...\nya da en azından öyle sanırsın.\n\nAteş yakıldıktan sonra kabarıp büyümeye başlar; yukarı doğru değil, yağ sızdıran ağaçlardan oluşan bir koruluğa uzanarak yanlara doğru hareket eder.\n\nYine de dinlenmeyi denemeli misin?",
       "name": "Dinlenememe Yeri",
+      "description": "Gözlerden uzak bir Dinlenme Alanı bulur ve biraz soluklanmak için bir ateş yakarsın...\nya da en azından öyle sanırsın.\n\nAteş yakıldıktan sonra kabarıp büyümeye başlar; yukarı doğru değil, yağ sızdıran ağaçlardan oluşan bir koruluğa uzanarak yanlara doğru hareket eder.\n\nYine de dinlenmeyi denemeli misin?",
       "choices": [
         {
           "name": "Ağaçları Öldür",
-          "description": "8 Maksimum CP kaybet. Rastgele bir Kalıntı elde et."
+          "description": "8 Maksimum CP kaybet. Rastgele bir Kalıntı elde et.",
+          "outcome": "Bu ağaçların apaçık kötü niyetli olduğunu düşünür ve onlardan kurtulmaya karar verirsin.\nGünler sonra, kül ve vıcık vıcık bir maddeyle kaplanmış hâldesindir.\n\nMinik guş ruhlarından oluşan devasa bir sürü kesilen ağaçlardan yükselir ve ayaklarının dibine küçük bir kutu bırakır:\n“Bizi o ağaçlardan kurtardığın için teşekkür ederiz... Cik cik!”\n\nGerçekten biraz daha uykuya ihtiyacın var."
         },
         {
           "name": "Yine de Dinlen",
-          "description": "Tüm CP'ni iyileştir. Bir Uykusuzluk elde et."
+          "description": "Tüm CP'ni iyileştir. Bir Uykusuzluk elde et.",
+          "outcome": "Bunca maceradan sonra tükenmiş hissedersin ve tüm tuhaflıklara rağmen uyumaya karar verirsin.\n\nGece boyunca ateş harlanıp çıtırdarken sağa sola dönüp durursun. İğrenç ağaçlar, zift karası reçinelerinden berbat bir koku yayar.\n\nUyandığında toparlanmışsındır; ama tam anlamıyla dinlenmiş sayılmazsın."
         }
       ]
     },
     "WAR_HISTORIAN_REPY": {
-      "description": "Bir akademisyen, bir hazine sandığının yanında duran asılı bir kafeste mahsur kalmıştır.\n\nAkademisyen, bir yandan hararetle bir şeyler karalarken “Tek Kullanımlık Anahtarlar” hakkında söylenip durur.\n\nGörünüşe göre ya sadece kafesi ya da sadece sandığı açabilirsin.",
       "name": "Savaş Tarihçisi Repy",
+      "description": "Bir akademisyen, bir hazine sandığının yanında duran asılı bir kafeste mahsur kalmıştır.\n\nAkademisyen, bir yandan hararetle bir şeyler karalarken “Tek Kullanımlık Anahtarlar” hakkında söylenip durur.\n\nGörünüşe göre ya sadece kafesi ya da sadece sandığı açabilirsin.",
       "choices": [
         {
           "name": "Kafesin Kilidini Aç",
-          "description": "Fener Anahtar'ı kaybet. Tarih Dersi'ni elde et."
+          "description": "Fener Anahtar'ı kaybet. Tarih Dersi'ni elde et.",
+          "outcome": "Repy, kafesi açtığında minnetle önünde eğilir. Sana kalın, deri kaplı bir cilt uzatır.\n\n“Geçmişi bilmeyenler onu tekrar etmeye mahkûmdur. Sen ise... tekrarlar konusunda az çok bir şeyler biliyor gibisin, değil mi?”"
         },
         {
           "name": "Sandığın Kilidini Aç",
-          "description": "Fener Anahtar'ı kaybet. Rastgele 2 İksir elde et. Rastgele 2 Kalıntı elde et."
+          "description": "Fener Anahtar'ı kaybet. Rastgele 2 İksir elde et. Rastgele 2 Kalıntı elde et.",
+          "outcome": "“Akademisyen Repy'i serbest bırakmayacak mısın? Klasik felsefeye göre bu, seni bir ahlaki başarısızlık kılar. Evet, aynen öyle. Bir dahaki sefere kilit altında tutulan bir CANLI İNSANI da düşünmek istersin belki! VAHİM BİR DURUMDA olan, toplum için değerli biri yok burada zaten!!”\n\n“Bir baksana. Şu kafesin ne kadar küçük olduğuna bir bakar mısın!? Neden yakınıyorum ki? Zaten akademik olmayan kararını vermişsin... Aa, onun içinde neler varmış? Birkaç iksir ve kalıntı mı? Ne hoş. Gerçekten çok hoş. Senin için harika...”\n\nOradan uzaklaşırken, Repy, küçümseyen bakışlarla seni izler."
         }
       ]
     },
     "WATERLOGGED_SCRIPTORIUM": {
-      "description": "Bulanık geçitlerde yolunu bulmaya çalışırken, küçük bir dükkân işleten solmuş bir figüre rastlarsın. Sayısız raflar, nemli tomarlar ve parşömenlerle tıka basa doludur.\n\nBir müşterinin içeri girdiğini fark eden dükkan sahibi kâtip, bir anda toparlanır ve masanın üzerine dizilmiş edevatları işaret eder.",
       "name": "Suya Boğulmuş Kâtip Odası",
+      "description": "Bulanık geçitlerde yolunu bulmaya çalışırken, küçük bir dükkân işleten solmuş bir figüre rastlarsın. Sayısız raflar, nemli tomarlar ve parşömenlerle tıka basa doludur.\n\nBir müşterinin içeri girdiğini fark eden dükkan sahibi kâtip, bir anda toparlanır ve masanın üzerine dizilmiş edevatları işaret eder.",
       "choices": [
         {
           "name": "Kanlı Mürekkep",
-          "description": "6 Maksimum CP elde et."
+          "description": "6 Maksimum CP elde et.",
+          "outcome": "Kâtip, capcanlı kırmızı bir mürekkeple dolu şişeyi dikkatle eline alır, hafifçe sallar ve ardından eliyle daldırma hareketi yapar.\n\nParmaklarını mürekkebe batırırsın ve can veren bir titreşim seni şoklar!\n\nTepkinden memnun kalan kâtip, nazikçe eğilir ve seni el sallayarak uğurlar."
         },
         {
           "name": "Dikenli Sünger",
-          "description": "155 Altın öde. 2 kartı Sabit ile Büyüle."
+          "description": "155 Altın öde. 2 kartı Sabit ile Büyüle.",
+          "locked": "155 Altın gerektirir.",
+          "outcome": "Kâtip, dikenli süngeri kapar (sünger gıcırdar) ve parşömenlerinin üzerine hafifçe bastırır.\n\n*gıcır gıcır gıcır*\n\nDikenli doku, mürekkebi sabitliyor gibi görünen ışıltılı izler bırakır..."
         },
         {
           "name": "Dokunaç Kalem",
-          "description": "65 Altın öde. Bir kartı Sabit ile Büyüle."
+          "description": "65 Altın öde. Bir kartı Sabit ile Büyüle.",
+          "locked": "65 Altın gerektirir.",
+          "outcome": "Kâtip, kıpır kıpır olan kalemi kaldırıp hızlı ve ustalıklı hareketlerle başına tuhaf bir işaret çizer.\n\nİşaret, parlak bir şekilde ışıldar ve sonrasında kaybolur..."
         }
       ]
     },
     "WELCOME_TO_WONGOS": {
-      "description": "“Wongo’ya hoş geldiniz. İstediğiniz her şey Wongo-tastik fiyatlarla burada,” der hayatında gördüğün en hevessiz kasiyer.\n\n“Ürünlerimize göz atın ve Wongo’da zamanın tadını çıkarın,” diye başını bile kaldırmadan devam eder.",
       "name": "Wongo's'a Hoş Geldin",
+      "description": "“Wongo’ya hoş geldiniz. İstediğiniz her şey Wongo-tastik fiyatlarla burada,” der hayatında gördüğün en hevessiz kasiyer.\n\n“Ürünlerimize göz atın ve Wongo’da zamanın tadını çıkarın,” diye başını bile kaldırmadan devam eder.",
       "choices": [
         {
           "name": "Wongo'nun Ucuzluk Sepeti",
-          "description": "100 Altın öde. Rastgele 1 Yaygın Kalıntı elde et."
+          "description": "100 Altın öde. Rastgele 1 Yaygın Kalıntı elde et.",
+          "locked": "100 Altın gerektirir."
         },
         {
           "name": "Wongo'nun Öne Çıkan Ürünü",
-          "description": "200 Altın öde. Kalıntı'yı elde et: {RandomRelic}"
+          "description": "200 Altın öde. Kalıntı'yı elde et: rastgele Kalıntı",
+          "locked": "200 Altın gerekir."
         },
         {
           "name": "Ayrıl",
-          "description": "Rastgele bir kartın geliştirmesini kaldır."
+          "description": "Rastgele bir kartın geliştirmesini kaldır.",
+          "outcome": "Kasiyer sinirli bir tonla: “Şey... affedersiniz. Wongo's’tan bir şey satın almadan öylece çıkamazsınız,” der.\n\nMüşteri tercihleri üzerine hararetli bir tartışmaya girersin ve bu seni zihinsel olarak tüketir."
         },
         {
           "name": "Wongo'nun Gizemli Kutusu",
-          "description": "300 Altın öde. 5 savaştan sonra rastgele 3 Kalıntı elde et."
+          "description": "300 Altın öde. 5 savaştan sonra rastgele 3 Kalıntı elde et.",
+          "locked": "300 Altın gerekir."
         }
       ]
     },
     "WELLSPRING": {
-      "description": "Alçak bir uğultunun kaynağını takip eder ve kendini sakin bir pınarın huzuruna kapılmış hâlde bulursun. Su, zümrüt yeşili bir tona sahiptir ve içinde ışıldayan zerrecik kümeleri dolaşmaktadır.\n\nİnsanı içine çağırıyor gibi. Ne ters gidebilir ki?",
       "name": "Pınar",
+      "description": "Alçak bir uğultunun kaynağını takip eder ve kendini sakin bir pınarın huzuruna kapılmış hâlde bulursun. Su, zümrüt yeşili bir tona sahiptir ve içinde ışıldayan zerrecik kümeleri dolaşmaktadır.\n\nİnsanı içine çağırıyor gibi. Ne ters gidebilir ki?",
       "choices": [
         {
           "name": "Yıkan",
-          "description": "Deste'nden 1 kart kaldır. Deste'ne 1 Suçlu ekle."
+          "description": "Deste'nden 1 kart kaldır. Deste'ne 1 Suçlu ekle.",
+          "outcome": "Havuzdan, hafif bir huzursuzluk hissiyle çıkarsın.\n\nYine de şaşırtıcı bir şekilde tazelenmiş hissedersin."
         },
         {
           "name": "Şişele",
-          "description": "Rastgele 1 İksir elde et."
+          "description": "Rastgele 1 İksir elde et.",
+          "outcome": "Bu güzel suda yıkanmak biraz şüpheli gelir. Onun yerine suyun birazını şişeye koymaya karar verirsin.\n\nİleride işine yarayacak."
         }
       ]
     },
     "WHISPERING_HOLLOW": {
-      "description": "Ölü bir ağaçlıktan geçerken kemik gibi bembeyaz bir ağaca rastlarsın. Dalları, kaburgalar gibi içe doğru kıvrılmıştır. Üzerlerinden kil süsler sarkar.\n\nNe ürkütücü bir ağaç. Fısıldıyor.\n\n...takas yap.....",
       "name": "Fısıldayan Ağaçlık",
+      "description": "Ölü bir ağaçlıktan geçerken kemik gibi bembeyaz bir ağaca rastlarsın. Dalları, kaburgalar gibi içe doğru kıvrılmıştır. Üzerlerinden kil süsler sarkar.\n\nNe ürkütücü bir ağaç. Fısıldıyor.\n\n...takas yap.....",
       "choices": [
         {
           "name": "Altın Takası Yap",
-          "description": "50 Altın kaybet. Rastgele 2 İksir elde et."
+          "description": "50 Altın kaybet. Rastgele 2 İksir elde et.",
+          "outcome": "Ağacın dibine biraz altın saçarsın ve kil kaplardan ikisi sessizce yere düşer.\n\nKaplar kırılır ve içlerinden kusursuz şekilde sağlam iksirler çıkar.\n\nİksirleri kapıp hızla uzaklaşırsın."
         },
         {
           "name": "Ağaca Sarıl",
-          "description": "9 CP kaybet. Dönüştürmek için bir kart seç."
+          "description": "9 CP kaybet. Dönüştürmek için bir kart seç.",
+          "outcome": "Fısıltılar senden altın vermeni ister, ama direnir ve onun yerine ağaca kocaman sarılırsın!\n\nAğaç çırpınıp durur, dallarıyla seni çizer; fakat sonunda sakinleşir. Ağaçla kucaklaşma deneyimi seni başka birine dönüştürür.\n\n...sarılmak mı?.."
         }
       ]
     },
     "WOOD_CARVINGS": {
-      "description": "Tozlu bir sandığı açtığında üç adet özenle oyulmuş ahşap figürle karşılaşırsın:\n\nBir kuş, bir yılan ve... galiba bir simit.\n\nYakındaki bir kaidede, oymaların tabanlarıyla birebir uyuşan girintiler vardır. Kaideye hangisini yerleştireceksin?",
       "name": "Ağaç Oymalar",
+      "description": "Tozlu bir sandığı açtığında üç adet özenle oyulmuş ahşap figürle karşılaşırsın:\n\nBir kuş, bir yılan ve... galiba bir simit.\n\nYakındaki bir kaidede, oymaların tabanlarıyla birebir uyuşan girintiler vardır. Kaideye hangisini yerleştireceksin?",
       "choices": [
         {
           "name": "Kuş",
-          "description": "Gagala kartına Dönüştürmek için başlangıç kartlarından 1 tanesini seç."
+          "description": "Peck kartına Dönüştürmek için başlangıç kartlarından 1 tanesini seç.",
+          "outcome": "Kuş oymasını kaidenin üzerine yerleştirirsin ve heykelin GÖZLERİ PARLAR. Zihninin içinde hafif bir çınlama yankılanır.\n\n...gak.... gak gaaaaak...\n\nKaide açılır ve içinden tuhaf bir sıvı akmaya başlar.\nDoğal olarak hepsini içersin."
         },
         {
           "name": "Yılan",
-          "description": "1 kartı Sürüngen ile Büyüle."
+          "description": "1 kartı Slither ile Büyüle.",
+          "locked": "Kartlarından hiçbiri Sürüngen ile Büyülenemiyor.",
+          "outcome": "Yılan oymasını kaidenin üzerine yerleştirirsin ve heykelin PULLARI PARLAR! Biraz sıcakladığını, rahatladığını ve başının döndüğünü hissedersin."
         },
         {
           "name": "Simit",
-          "description": "Torik Dayanıklılık kartına Dönüştürmek için 1 başlangıç kartı seç."
+          "description": "Toric Toughness kartına Dönüştürmek için 1 başlangıç kartı seç.",
+          "outcome": "Simit oymasını kaidenin üzerine yerleştirirsin ve heykel, kızgın yağda yeni kızarmış bir hamur işine dönüşürken KARNIN PARLAR. Doymak bilmez bir açlık seni ele geçirir ve çöreği hızla mideye indirirsin.\n\nKendini daha dayanıklı ama aynı zamanda da yavaş hissedersin."
         }
       ]
     },
     "ZEN_WEAVER": {
-      "description": "Bir örümcek ağından geçerken PANİKLERSİN!\nSonrasında, bir sakinlik hissi üzerine yayılır...\n\n“Sakin ol. Ağımı böyle telaşla bozmayı bırakman lazım.”\n\nBu kadar çabuk nasıl sakinleştiğini merak edersin.\nUfacık tefecik bir örümcek ipini salarak yanına iner. Görünüşe göre altın karşılığında sana bazı teknikler öğretmeye niyetlidir.",
       "name": "Huzur Dokuyan",
+      "description": "Bir örümcek ağından geçerken PANİKLERSİN!\nSonrasında, bir sakinlik hissi üzerine yayılır...\n\n“Sakin ol. Ağımı böyle telaşla bozmayı bırakman lazım.”\n\nBu kadar çabuk nasıl sakinleştiğini merak edersin.\nUfacık tefecik bir örümcek ipini salarak yanına iner. Görünüşe göre altın karşılığında sana bazı teknikler öğretmeye niyetlidir.",
       "choices": [
         {
           "name": "Örümcek Akupunkturu",
-          "description": "250 Altın öde. Deste'nden 2 kart çıkar."
+          "description": "250 Altın öde. Deste'nden 2 kart çıkar.",
+          "outcome": "Ön bacakları parlamaya başlarken “Kımılda...ma...” diye mırıldanır minik örümcek. \n\nArdından, art arda saplanan hamlelerin yarattığı bir sağanakla seni her yerinden deler!\nÜzerine bir hafiflik gelir. Parana kesinlikle değdi."
         },
         {
           "name": "Nefes Alma Teknikleri",
-          "description": "50 Altın öde. Deste'ne 2 Aydınlanma ekle."
+          "description": "50 Altın öde. Deste'ne 2 Aydınlanma ekle.",
+          "outcome": "“Solunum yollarının açık olduğunu hayal et... Her nefes anlamlıdır.”\n\nTekniği, sana en mantıklı gelen şekilde uygularsın."
         },
         {
           "name": "Duygusal Farkındalık",
-          "description": "125 Altın öde. Deste'nden 1 kart çıkar."
+          "description": "125 Altın öde. Deste'nden 1 kart çıkar.",
+          "outcome": "Mini minnacık örümcek, hipnotik bir dansa başlar ve durmadan mırıldanır:\n\n“Düşünceler gerçeği etkilemez. Panik, düşüncenin katilidir. Plana uy.”\n\nBu sana mantıklı gelir. Ufacık bir örümcekten gelen kocaman, bilgece sözler."
         }
       ]
     },
@@ -6113,7 +6354,7 @@
       "name": "Darv"
     },
     "NEOW": {
-      "description": "Yeniden Doğuşun Annesi (Sürgün Edilmiş)",
+      "description": "Diriliş Anası Neow, her koşunun başında bekler. Üç kutsama sunar — iki olumlu ve bir lanetli. Seçenekler aşağıdaki havuzlardan rastgele çekilir.",
       "epithet": "Yeniden Doğuşun Annesi (Sürgün Edilmiş)",
       "dialogue": [
         {
@@ -6221,7 +6462,129 @@
           "text": "Seni... yeniden... yarattım....\n...tırman....."
         }
       ],
-      "name": "Neow"
+      "name": "Neow",
+      "choices": [
+        {
+          "name": "Büyü Parşömeni",
+          "description": "Bu kalıntıyı aldığında rastgele bir Nadir Kartı Deste'ne ekle.",
+          "relic_id": "ARCANE_SCROLL",
+          "pool": "positive"
+        },
+        {
+          "name": "Yankılı Denizkabuğu",
+          "description": "Elit savaşların başında fazladan 2 kart çek.",
+          "relic_id": "BOOMING_CONCH",
+          "pool": "positive"
+        },
+        {
+          "name": "Parfüm Topu",
+          "description": "Bu kalıntıyı aldığında bir kartını Geliştir.",
+          "relic_id": "POMANDER",
+          "pool": "positive"
+        },
+        {
+          "name": "Altın İnci",
+          "description": "Bu kalıntıyı aldığında 150 Altın elde et.",
+          "relic_id": "GOLDEN_PEARL",
+          "pool": "positive"
+        },
+        {
+          "name": "Kurşun Ağırlık",
+          "description": "Bu kalıntıyı aldığında Deste'ne eklemek için 2 Renksiz karttan 1 tanesini seç.",
+          "relic_id": "LEAD_PAPERWEIGHT",
+          "pool": "positive"
+        },
+        {
+          "name": "Yeni Yaprak",
+          "description": "Bu kalıntıyı aldığında 1 kartı Dönüştür.",
+          "relic_id": "NEW_LEAF",
+          "pool": "positive"
+        },
+        {
+          "name": "Neow'un Azabı",
+          "description": "Bu kalıntıyı aldığında, Deste'ne 1 Neow'un Öfkesi ekle.",
+          "relic_id": "NEOWS_TORMENT",
+          "pool": "positive"
+        },
+        {
+          "name": "Keskin Makas",
+          "description": "Bu kalıntıyı aldığında Deste'nden 1 kartı çıkar.",
+          "relic_id": "PRECISE_SCISSORS",
+          "pool": "positive"
+        },
+        {
+          "name": "Kayıp Sandık",
+          "description": "Bu kalıntıyı aldığında 1 kart ödülü ve rastgele 1 iksir elde et.",
+          "relic_id": "LOST_COFFER",
+          "pool": "positive"
+        },
+        {
+          "name": "Lanetli İnci",
+          "description": "Bu kalıntıyı aldığında Açgözlülük elde et. 333 Altın elde et.",
+          "relic_id": "CURSED_PEARL",
+          "pool": "cursed"
+        },
+        {
+          "name": "İri Kapsül",
+          "description": "Bu kalıntıyı aldığında rastgele 2 Kalıntı elde et. Deste'ne fazladan bir Saldırı ve Savunma ekle.",
+          "relic_id": "LARGE_CAPSULE",
+          "pool": "cursed"
+        },
+        {
+          "name": "Yapraklı Merhem",
+          "description": "Bu kalıntıyı aldığında Saldırı kartlarından 1 tanesini ve Savunma kartlarından 1 tanesini Dönüştür. 10 Maksimum CP kaybet.",
+          "relic_id": "LEAFY_POULTICE",
+          "pool": "cursed"
+        },
+        {
+          "name": "Tehlikeli Makas",
+          "description": "Bu kalıntıyı aldığında Deste'nden 2 kartı çıkar ve 13 hasar al.",
+          "relic_id": "PRECARIOUS_SHEARS",
+          "pool": "cursed"
+        },
+        {
+          "name": "Besleyici İstiridye",
+          "description": "Bu kalıntıyı aldığında Maksimum CP'ni 11 artır.",
+          "relic_id": "NUTRITIOUS_OYSTER",
+          "pool": "positive"
+        },
+        {
+          "name": "Taş Nemlendirici",
+          "description": "Bir Dinlenme Yeri'nde Dinlendiğinde Maksimum CP'ni 5 artır.",
+          "relic_id": "STONE_HUMIDIFIER",
+          "pool": "positive"
+        },
+        {
+          "name": "Devasa Parşömen",
+          "description": "Bu kalıntıyı aldığında, Deste'ne eklemek için 3 Çok Oyunculu Kart'tan 1 tanesini seç.",
+          "relic_id": "MASSIVE_SCROLL",
+          "pool": "positive"
+        },
+        {
+          "name": "Lav Taşı",
+          "description": "1. Sahne'nin Boss'u 2 Kalıntı düşürür.",
+          "relic_id": "LAVA_ROCK",
+          "pool": "positive"
+        },
+        {
+          "name": "Küçük Kapsül",
+          "description": "Bu kalıntıyı aldığında rastgele bir Kalıntı elde et.",
+          "relic_id": "SMALL_CAPSULE",
+          "pool": "positive"
+        },
+        {
+          "name": "Gümüş Eritme Potası",
+          "description": "Alacağın ilk 3 kart ödülü Geliştirilir. Açtığın ilk Hazine Sandığı boş çıkar.",
+          "relic_id": "SILVER_CRUCIBLE",
+          "pool": "cursed"
+        },
+        {
+          "name": "Parşömen Kutuları",
+          "description": "Bu kalıntıyı aldığında tüm Altın'ını kaybet ve Deste'ne eklemek için 2 kart paketinden 1 tanesini seç.",
+          "relic_id": "SCROLL_BOXES",
+          "pool": "cursed"
+        }
+      ]
     },
     "NONUPEIPE": {
       "description": "Tesadüfün Vücut Bulmuş Hali",

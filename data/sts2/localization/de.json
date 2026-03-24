@@ -5182,50 +5182,68 @@
   },
   "events": {
     "ABYSSAL_BATHS": {
-      "description": "Du entdeckst eine abgelegene Kammer.\n\nDampf steigt aus brodelnden Becken voll heißer Flüssigkeit, welche in hypnotischem Rhythmus die Farbe wechselt. Von der Decke hängen Meeresgewächse, aus denen eine zähe Flüssigkeit tropft, welche beim Berühren der Oberfläche zischt und sich windet. Die Luft fühlt sich schwer an, gefüllt mit Salz und etwas unverkennbar Organischem.\n\nDu näherst dich der Kante des größten Beckens, da kräuselt sich die Flussigkeit. Das Wasser blubbert intensiver, als würde es deinen Eintritt erwarten.",
       "name": "Abgründige Bäder",
-      "choices": [
+      "description": "Du entdeckst eine abgelegene Kammer.\n\nDampf steigt aus brodelnden Becken voll heißer Flüssigkeit, welche in hypnotischem Rhythmus die Farbe wechselt. Von der Decke hängen Meeresgewächse, aus denen eine zähe Flüssigkeit tropft, welche beim Berühren der Oberfläche zischt und sich windet. Die Luft fühlt sich schwer an, gefüllt mit Salz und etwas unverkennbar Organischem.\n\nDu näherst dich der Kante des größten Beckens, da kräuselt sich die Flussigkeit. Das Wasser blubbert intensiver, als würde es deinen Eintritt erwarten.",
+      "pages": [
         {
-          "name": "Verzichten",
-          "description": "Heile 10 TP."
+          "choices": [
+            {
+              "name": "Bad verlassen"
+            },
+            {
+              "name": "Bleiben",
+              "description": "Erhalte 2 max. TP. Nimm 3 Schaden."
+            }
+          ]
         },
         {
-          "name": "Eintauchen",
-          "description": "Erhalte 2 max. TP. Nimm 3 Schaden."
+          "choices": [
+            {
+              "name": "Bad verlassen"
+            },
+            {
+              "name": "Bleiben",
+              "description": "Erhalte 2 max. TP. Nimm 3 Schaden."
+            }
+          ]
         }
       ]
     },
     "AMALGAMATOR": {
-      "description": "KLONG! KLONG!!!\n\nDu hörst das Echo von Metall auf Metall auf der anderen Seite einer Mauer...\n\nDu drückst deinen Kopf gegen die Mauer, um zu lauschen—da öffnet sich die Wand und offenbart eine klobige sechsarmige Figur, die sich abplagt.\nIhr “Gesicht” ist ein wirbelnder Strudel aus leuchtenden Siegeln, die sich umstellen.\n\n“Jemand mit Aufstiegsgeist hat meine Werkstatt gefunden? Fangen wir an, zu KOMBINIEREN!”",
       "name": "Amalgamierer",
+      "description": "KLONG! KLONG!!!\n\nDu hörst das Echo von Metall auf Metall auf der anderen Seite einer Mauer...\n\nDu drückst deinen Kopf gegen die Mauer, um zu lauschen—da öffnet sich die Wand und offenbart eine klobige sechsarmige Figur, die sich abplagt.\nIhr “Gesicht” ist ein wirbelnder Strudel aus leuchtenden Siegeln, die sich umstellen.\n\n“Jemand mit Aufstiegsgeist hat meine Werkstatt gefunden? Fangen wir an, zu KOMBINIEREN!”",
       "choices": [
         {
           "name": "Verteidigen kombinieren",
-          "description": "Entferne 2 Verteidigen. Erhalte Ultimatives Verteidigen in dein Deck."
+          "description": "Entferne 2 Verteidigen. Erhalte Ultimate Defend in dein Deck.",
+          "outcome": "KLONG! KLONG!!!\n\nDer Amalgamierer schlägt seinen Knochenamboss.\n\nErinnerungen des Kampfs, Beschützens und von Defensivstrategien schärfen sich mit jedem Schlag.\nDeine ultimativste Technik kehrt zu dir zurück."
         },
         {
           "name": "Schläge kombinieren",
-          "description": "Entferne 2 Schläge. Erhalte Ultimativer Schlag in dein Deck."
+          "description": "Entferne 2 Schläge. Erhalte Ultimate Strike in dein Deck.",
+          "outcome": "KLONG! KLONG!!!\n\nDer Amalgamierer schlägt seinen Knochenamboss.\n\nErinnerungen des Kampfs, Angreifens, und von Offensivstrategien schärfen sich mit jedem Schlag.\nDeine ultimativste Technik kehrt zu dir zurück."
         }
       ]
     },
     "AROMA_OF_CHAOS": {
-      "description": "Als du durch dichtes Unterholz stampfst und eine Lichtung erreichst, trifft dich eine unbestimmte Nostalgie.\n\nEine Mischung aus blumigen Düften, fauliger Verwesung und etwas völlig anderem. Der Duft wird mit jedem Schritt stärker und du fühlst dich, als würde sich die Welt um dich herum krümmen und verdrehen.\n\nDu bist so überwältigt von einem Gefühl des verschiebenden Chaos, dass du anfängst, dein Selbstgefühl zu verlieren.",
       "name": "Geruch des Chaos",
+      "description": "Als du durch dichtes Unterholz stampfst und eine Lichtung erreichst, trifft dich eine unbestimmte Nostalgie.\n\nEine Mischung aus blumigen Düften, fauliger Verwesung und etwas völlig anderem. Der Duft wird mit jedem Schritt stärker und du fühlst dich, als würde sich die Welt um dich herum krümmen und verdrehen.\n\nDu bist so überwältigt von einem Gefühl des verschiebenden Chaos[/rainbow], dass du anfängst, dein Selbstgefühl zu verlieren.",
       "choices": [
         {
           "name": "Loslassen",
-          "description": "Transformiere eine Karte aus deinem Deck."
+          "description": "Transformiere eine Karte aus deinem Deck.",
+          "outcome": "Du gibst auf und dein Sinn treibt dahin...\nDu siehst dich mit Freunden absprechen, als ein Team kämpfen und große Feinde duellieren. Ist das ein Traum? Realität? Irgendwie beides? Viele Augenpaare bemerken dich und deine Träume. Wer sind sie...?\n\nDu erwachst nach einer ungewissen Zeitspanne.\nDer Geruch schwindet und seine Auswirkungen klingen ab, du gewinnst wieder Klarheit. Nachdem du dich wieder stabilisiert hast, bist du klarer denn je im Kopf.\n\nWas waren diese Augen?"
         },
         {
           "name": "Kontrolle bewahren",
-          "description": "Verbessere eine Karte aus deinem Deck."
+          "description": "Verbessere eine Karte aus deinem Deck.",
+          "outcome": "Du widerstehst der Versuchung, dich hinzugeben und kletterst auf einen Baum, wo dich der Geruch nicht mehr erreicht, aber seine Wirkungen krallen an deinem Sinn fest.\n\nKontrolle zu behalten ist schwer; du bindest deine Gedanken an deine Kernprinzipien.\n\n{AromaPrinciple}\n{AromaPrinciple}\n{AromaPrinciple}\n\nDer Geruch lässt nach."
         }
       ]
     },
     "BATTLEWORN_DUMMY": {
-      "description": "Als du näher kommst, beginnt er zu rattern und zu zischen und strahlt hell auf!\n\n“BZZZT! ZEIT FÜRS TRAINING!!! DU HAST 3 ZÜGE, UM MICH ZU BESIEGEN!\nWÄHLE EINE EINSTELLUNG ODER BEGEGNE TÖDLICHER SCHMACH.\nHier sind die Optionen:”\n\nNach der erschreckenden Nachricht liest der Dummy sorgsam die ausführlichen Anweisungen vor.\n\nWas wählst du aus?",
       "name": "Kampferprobter Dummy",
+      "description": "Als du näher kommst, beginnt er zu rattern und zu zischen und strahlt hell auf!\n\n“BZZZT! ZEIT FÜRS TRAINING!!! DU HAST 3 ZÜGE, UM MICH ZU BESIEGEN!\nWÄHLE EINE EINSTELLUNG ODER BEGEGNE TÖDLICHER SCHMACH.\nHier sind die Optionen:”\n\nNach der erschreckenden Nachricht liest der Dummy sorgsam die ausführlichen Anweisungen vor.\n\nWas wählst du aus?",
       "choices": [
         {
           "name": "Einstellung 1",
@@ -5242,54 +5260,60 @@
       ]
     },
     "BRAIN_LEECH": {
-      "description": "*bumms*\n\nEin scharfer Schmerz ist oben an deinem Kopf zu fühlen und ein Gedanke sticht dir in den Sinn.\n\n“WISSEN TEILEN???”\n\nDu bist unsicher, wie es weitergeht...",
       "name": "Hirn-Egel",
+      "description": "*bumms*\n\nEin scharfer Schmerz ist oben an deinem Kopf zu fühlen und ein Gedanke sticht dir in den Sinn.\n\n“WISSEN TEILEN???”\n\nDu bist unsicher, wie es weitergeht...",
       "choices": [
         {
           "name": "Den Egel abreißen",
-          "description": "Verliere 5 TP. Erhalte eine farblose Kartenbelohnung."
+          "description": "Verliere 5 TP. Erhalte eine farblose Kartenbelohnung.",
+          "outcome": "Gewaltsam reißt du dir den Egel vom Kopf ab und schmeißt ihn weit weit weg!\n\nDa ist eine Stimme in deinem Kopf:\n“NEEEEEEeEeeeiiiiIIIIiiin....”"
         },
         {
           "name": "Wissen teilen",
-          "description": "Erhalte 1 von 5 zufälligen Karten in dein Deck."
+          "description": "Erhalte 1 von 5 zufälligen Karten in dein Deck.",
+          "outcome": "“WELCH EIN OSTENTATIV SCHOLASTISCHER LABYRINTHARTIGER GEIST!\nEIN WAHRHAFTES FÜLLHORN ZEREBRALER KOST ZUM VERDAUEN!”.\n\nZufriedengestellt ploppt sich das Wesen aus und kriecht davon.\nDu bist baff."
         }
       ]
     },
     "BUGSLAYER": {
-      "description": "Du kämpfst gegen einen Schwarm aggressiver Insekten. Plötzlich bemerkst du einen Mächtigen Robusten Krieger, der die ganze Zeit neben dir gekämpft hat!\n\nDie Insekten wittern eine Niederlage und zerstreuen sich. Du drehst dich zu deinem Mitkämpfer.\n“Möchtest du Tipps haben, wie man dieses Ungeziefer ausrottet?”\n\nWie höflich. Du nickst und akzeptierst sein Angebot.",
       "name": "Käferbezwinger",
+      "description": "Du kämpfst gegen einen Schwarm aggressiver Insekten. Plötzlich bemerkst du einen Mächtigen Robusten Krieger, der die ganze Zeit neben dir gekämpft hat!\n\nDie Insekten wittern eine Niederlage und zerstreuen sich. Du drehst dich zu deinem Mitkämpfer.\n“Möchtest du Tipps haben, wie man dieses Ungeziefer ausrottet?”\n\nWie höflich. Du nickst und akzeptierst sein Angebot.",
       "choices": [
         {
           "name": "Ausrottungstechnik lernen",
-          "description": "Erhalte Ausrotten in dein Deck."
+          "description": "Erhalte Exterminate in dein Deck.",
+          "outcome": "“Verstehe... du willst die Ausrottungstechnik lernen. Sehr gut...”\n\nEr hält kurz inne und denkt nach, wie er dir dieses Manöver am besten präsentieren kann...\n\n“DIE TECHNIK GEHT SO! AUFGEPASST!!”\nPrahlend hält er eine Dose Insektengift hoch."
         },
         {
           "name": "Quetschtechnik lernen",
-          "description": "Erhalte Zerdrücken in dein Deck."
+          "description": "Erhalte Squash in dein Deck.",
+          "outcome": "“Verstehe... du willst die Quetschtechnik lernen. Sehr gut...”\n\nEr hält kurz inne und denkt nach, wie er dir dieses Manöver am besten präsentieren kann...\n\n“DIE TECHNIK GEHT SO! AUFGEPASST!!”\nPrahlend tritt er auf einen riesigen Käfer."
         }
       ]
     },
     "BYRDONIS_NEST": {
-      "description": "Du beobachtest, wie ein riesiges Schlurfendes Biest einen verletzten Grünen Fogl davonjagt.\n\nIn der Nische, aus der der Fogl geflohen ist, liegt zurückgelassen ein einziges unbewachtes Ei.\n\nDein Magen knurrt...",
       "name": "Foglonis-Nest",
+      "description": "Du beobachtest, wie ein riesiges Schlurfendes Biest einen verletzten Grünen Fogl davonjagt.\n\nIn der Nische, aus der der Fogl geflohen ist, liegt zurückgelassen ein einziges unbewachtes Ei.\n\nDein Magen knurrt...",
       "choices": [
         {
           "name": "Das Ei essen",
-          "description": "Erhalte 7 max TP."
+          "description": "Erhalte 7 max TP.",
+          "outcome": "Du brichst das Ei auf und schlingst es herunter.\nGutes Frühstück."
         },
         {
           "name": "Das Ei nehmen",
-          "description": "Erhalte Foglonis-Ei in dein Deck."
+          "description": "Erhalte Byrdonis Egg in dein Deck.",
+          "outcome": "Behutsam hebst du das Ei auf und verstaust es mit dem Gedanken, dass daraus später etwas nützliches schlüpfen könnte."
         }
       ]
     },
     "COLORFUL_PHILOSOPHERS": {
-      "description": "Vor dir liegt ein ziemlich spektakulärer Anblick.\nDu siehst 3 verschiedenfarbige Statuen über einem Podium aufragen, die eine hitzige Debatte über die philosophischen Bedeutungen von Farbe führen.\n\nBeim Zuhören bekommst du das Gefühl, dass gerade die wichtigste Frage ist, welche Farbe wirklich DIE BESTE ist.\n\nDu mischst dich mit deinen Gedanken ein.",
       "name": "Bunte Philosophen",
+      "description": "Vor dir liegt ein ziemlich spektakulärer Anblick.\nDu siehst 3 verschiedenfarbige Statuen über einem Podium aufragen, die eine hitzige Debatte über die philosophischen Bedeutungen von Farbe führen.\n\nBeim Zuhören bekommst du das Gefühl, dass gerade die wichtigste Frage ist, welche Farbe wirklich DIE BESTE ist.\n\nDu mischst dich mit deinen Gedanken ein.",
       "choices": [
         {
           "name": "Blau",
-          "description": "Erhalte 3 Defekte-Karte."
+          "description": "Erhalte 3 Defekte-Karten."
         },
         {
           "name": "Ebenbürtigkeit",
@@ -5297,53 +5321,96 @@
         },
         {
           "name": "Rot",
-          "description": "Erhalte 3 Eisernen-Karte."
+          "description": "Erhalte 3 Eisernen-Karten."
         },
         {
           "name": "Rosa",
-          "description": "Erhalte 3 Totenbinderin-Karte."
+          "description": "Erhalte 3 Totenbinderin-Karten."
         },
         {
           "name": "Orange",
-          "description": "Erhalte 3 Regenten-Karte."
+          "description": "Erhalte 3 Regenten-Karten."
         },
         {
           "name": "Grün",
-          "description": "Erhalte 3 Stille-Karte."
+          "description": "Erhalte 3 Stille-Karten."
         }
       ]
     },
     "COLOSSAL_FLOWER": {
-      "description": "Da ist eine riesige Blume, die auf einem Berg aus Knochen wächst.\n\nIhre farbwechselnden Blütenblätter pulsieren und du ahnst, dass in der Mitte ein Machtvoller Pollenklumpen ist, aber die wiegenden Blätter sind messerscharf und unvorhersehbar.\n\nDu könntest ein wenig von dem goldenen Nektar nehmen, aber bist verlockt, den Preis in der Mitte zu erreichen...",
       "name": "Riesige Blume",
+      "description": "Da ist eine riesige Blume, die auf einem Berg aus Knochen wächst.\n\nIhre farbwechselnden Blütenblätter[/rainbow] pulsieren und du ahnst, dass in der Mitte ein Machtvoller Pollenklumpen ist, aber die wiegenden Blätter sind messerscharf und unvorhersehbar.\n\nDu könntest ein wenig von dem goldenen Nektar nehmen, aber bist verlockt, den Preis in der Mitte zu erreichen...",
       "choices": [
         {
           "name": "Nektar gewinnen",
-          "description": "Erhalte {Prize1} Gold."
+          "description": "Erhalte X Gold."
         },
         {
           "name": "Tiefer greifen",
           "description": "Dringe tiefer ein. Verliere 5 TP."
         }
+      ],
+      "pages": [
+        {
+          "description": "Du schiebst dich an einer Lage messerscharfer Blütenblätter vorbei. Sie sind umhüllt mit einer Substanz, die deine Haut zum Kribbeln bringt. Das scheint den Schmerz zu betäuben?\n\nVielleicht ist deshalb hier ein Haufen Knochen...",
+          "choices": [
+            {
+              "name": "Nektar gewinnen",
+              "description": "Erhalte X Gold."
+            },
+            {
+              "name": "Tiefer greifen",
+              "description": "Dringe noch tiefer ein. Verliere 6 TP."
+            }
+          ]
+        },
+        {
+          "description": "Du schiebst dich an einer Lage messerscharfer Blütenblätter vorbei. Sie sind umhüllt mit einer Substanz, die deine Haut zum Kribbeln bringt. Das scheint den Schmerz zu betäuben?\n\nVielleicht ist deshalb hier ein Haufen Knochen...",
+          "choices": [
+            {
+              "name": "Nektar gewinnen",
+              "description": "Erhalte X Gold."
+            },
+            {
+              "name": "Tiefer greifen",
+              "description": "Dringe noch tiefer ein. Verliere 6 TP."
+            }
+          ]
+        },
+        {
+          "description": "Du schiebst dich an einer Lage messerscharfer Blütenblätter vorbei. Sie sind umhüllt mit einer Substanz, die deine Haut zum Kribbeln bringt. Das scheint den Schmerz zu betäuben?\n\nVielleicht ist deshalb hier ein Haufen Knochen...",
+          "choices": [
+            {
+              "name": "Nektar gewinnen",
+              "description": "Erhalte X Gold."
+            },
+            {
+              "name": "Tiefer greifen",
+              "description": "Dringe noch tiefer ein. Verliere 6 TP."
+            }
+          ]
+        }
       ]
     },
     "CRYSTAL_SPHERE": {
-      "description": "“Ich habe vorhergesagt, dass du eintreten würdest...!”\n\nEine kratzige Stimme ruft zu dir, als du eine geheimnisvolle Hütte betrittst.\n\n“Dein Schicksal hat dich hierher gebracht. Wir müssen deine Zukunft und Geschicke enthüllen, damit du UNS ALLE RETTEN KANNST!!”\n“Gut, hier sind die Optionen für eine Kristallkugel-Lesung. Auf jeden Fall unterschreibe auch das hier,” sagt sie und holt Stift und Pergament hervor.",
       "name": "Kristallkugel",
+      "description": "“Ich habe vorhergesagt, dass du eintreten würdest...!”\n\nEine kratzige Stimme ruft zu dir, als du eine geheimnisvolle Hütte betrittst.\n\n“Dein Schicksal hat dich hierher gebracht. Wir müssen deine Zukunft und Geschicke enthüllen, damit du UNS ALLE RETTEN KANNST!!”\n“Gut, hier sind die Optionen für eine Kristallkugel-Lesung. Auf jeden Fall unterschreibe auch das hier,” sagt sie und holt Stift und Pergament hervor.",
       "choices": [
         {
           "name": "Zahlungsplan",
-          "description": "Erhalte Schulden. Weissage 6 Mal."
+          "description": "Erhalte Debt. Weissage 6 Mal.",
+          "outcome": "Zahlungsplan"
         },
         {
           "name": "Zukunft enthüllen",
-          "description": "Zahle 50 Gold. Weissage 3 Mal."
+          "description": "Zahle 50 Gold. Weissage 3 Mal.",
+          "outcome": "Zukunft enthüllen"
         }
       ]
     },
     "DENSE_VEGETATION": {
-      "description": "Du warst schon eine ganze Weile auf dem falschen Pfad, jetzt findest du dich in einem dichten Dschungel aus Farnen, Büschen und Ranken. Vor Allem Ranken. Die Erschöpfung setzt ein und ein düsterer Gedanke kommt dir in den Kopf:\n\n“Du bist verloren, unvorbereitet und die Unvermeidlichkeit des Todes nähert sich.”\n\nWas machst du?",
       "name": "Dichte Vegetation",
+      "description": "Du warst schon eine ganze Weile auf dem falschen Pfad, jetzt findest du dich in einem dichten Dschungel aus Farnen, Büschen und Ranken. Vor Allem Ranken. Die Erschöpfung setzt ein und ein düsterer Gedanke kommt dir in den Kopf:\n\n“Du bist verloren, unvorbereitet und die Unvermeidlichkeit des Todes nähert sich.”\n\nWas machst du?",
       "choices": [
         {
           "name": "Ausruhen",
@@ -5351,17 +5418,19 @@
         },
         {
           "name": "Dich weiterschleppen",
-          "description": "Entferne eine Karte aus deinem Deck. Verliere 11 TP."
+          "description": "Entferne eine Karte aus deinem Deck. Verliere 11 TP.",
+          "outcome": "Du hackst dir einen Weg durch das Gestrüpp des Dschungels, doch er nimmt kein Ende...\n\nDu stärkst dich mit seltsamen Früchten, knusprigen Käfern und trinkst den Nektar von leuchtenden Pflanzen, aber beginnst dich paranoid zu fühlen...\n\nDoch dann findest du eine Lichtung, einen Pfad und einige auf den Boden gezeichnete Wegweiser.\nProblem gelöst."
         }
       ]
     },
     "DOLL_ROOM": {
-      "description": "Du betrittst einen versteckten Raum...\n\nEr ist brechend voll mit einer Unmenge von Puppen. Jede ist anders, ihre Ausdrücke reichen von Freude bis Schmerz, ihre Kleidung stammt aus unterschiedlichsten Jahrhunderten und Reichen außer deinem.\n\nEin Flüsterchor wird lauter und lauter, bis die Puppen schreien und sich gegenseitig übertönend nach dir rufen...\n\nDu musst sofort eine auswählen und weggehen.",
       "name": "Puppenraum",
+      "description": "Du betrittst einen versteckten Raum...\n\nEr ist brechend voll mit einer Unmenge von Puppen. Jede ist anders, ihre Ausdrücke reichen von Freude bis Schmerz, ihre Kleidung stammt aus unterschiedlichsten Jahrhunderten und Reichen außer deinem.\n\nEin Flüsterchor wird lauter und lauter, bis die Puppen schreien und sich gegenseitig übertönend nach dir rufen...\n\nDu musst sofort eine auswählen und weggehen.",
       "choices": [
         {
           "name": "Jede untersuchen und die beste Wahl treffen",
-          "description": "Verliere 15 TP. Wähle 1 von 3 Puppen-Relikten."
+          "description": "Verliere 15 TP. Wähle 1 von 3 Puppen-Relikten.",
+          "outcome": "Du untersucht jede einzelne Puppe, bevor du deine Wahl triffst.\n\nDas Geschrei hat ein schrilles Crescendo erreicht, aber du schaffst es, dich zu entscheiden, bevor du völlig verrückt wirst!"
         },
         {
           "name": "Irgendeine nehmen",
@@ -5369,178 +5438,206 @@
         },
         {
           "name": "Etwas Zeit lassen",
-          "description": "Verliere 5 TP. Wähle 1 von 2 Puppen-Relikten."
+          "description": "Verliere 5 TP. Wähle 1 von 2 Puppen-Relikten.",
+          "outcome": "Inmitten des Geschreis untersuchst du schnell die Puppen.\n\nEine von den beiden könnte gut sein?\nEs ist schwer, sich bei dieser geistigen Qual zu konzentrieren."
         }
       ]
     },
     "DOORS_OF_LIGHT_AND_DARK": {
-      "description": "Eine Tür öffnet sich, wo Augenblicke zuvor noch keine war...\n\nDu trittst ein und stößt auf zwei schimmernde Eingänge sowie einen gut gekleideten Türsteher.\n“Endlich, ein Besucher! Bitte bitte! Wähle eine Tür, irgendeine Tür!”\n\nSind wir noch im Spire? Wie ist dieser Ort so sauber?",
       "name": "Türen des Lichts und Dunkels",
+      "description": "Eine Tür öffnet sich, wo Augenblicke zuvor noch keine war...\n\nDu trittst ein und stößt auf zwei schimmernde Eingänge sowie einen gut gekleideten Türsteher.\n“Endlich, ein Besucher! Bitte bitte! Wähle eine Tür, irgendeine Tür!”\n\nSind wir noch im Spire? Wie ist dieser Ort so sauber?",
       "choices": [
         {
           "name": "Dunkle Tür",
-          "description": "Entferne 1 Karte aus deinem Deck."
+          "description": "Entferne 1 Karte aus deinem Deck.",
+          "outcome": "In die Dunkelheit...\n\nDu siehst nichts.\nAber das hilft dir, zu denken... Du wirst sinnlose Gedanken los.\n\nDu bist zurück in den Unterdocks.\nWie hast du? Häh...?"
         },
         {
           "name": "Helle Tür",
-          "description": "Verbessere 2 zufällige Karten."
+          "description": "Verbessere 2 zufällige Karten.",
+          "outcome": "Ins Licht hinein...\n\nEs blendet!! Aber das Licht stärkt dich.\n\nDu bist zurück in den Unterdocks.\nHow did you? Huh...?"
         }
       ]
     },
     "DROWNING_BEACON": {
-      "description": "Du durchquerst eine Traumlandschaft aus Felsen und stillen Gewässern und tauchst vor einem versinkenden Leuchtturm auf, der Anti-Licht ausstrahlt.\n\nDu könntest das schaurig-leuchtende Wasser abfüllen, das sich hier gesammelt hat – oder das marode Bauwerk erklimmen, um die Linse zu bergen.",
       "name": "Sinkendes Fanal",
+      "description": "Du durchquerst eine Traumlandschaft aus Felsen und stillen Gewässern und tauchst vor einem versinkenden Leuchtturm auf, der Anti-Licht ausstrahlt.\n\nDu könntest das schaurig-leuchtende Wasser abfüllen, das sich hier gesammelt hat – oder das marode Bauwerk erklimmen, um die Linse zu bergen.",
       "choices": [
         {
           "name": "Abfüllen",
-          "description": "Beschaffe Glühwasser-Trank."
+          "description": "Beschaffe Glowwater Potion.",
+          "outcome": "Mithilfe einer Flasche, die in der Nähe war, schöpfst du ruhig die leuchtende Flüssigkeit, während der Leuchtturm friedlich im Schlamm versinkt.\n\nGut, dass du nicht da drin warst."
         },
         {
           "name": "Erklimmen",
-          "description": "Erhalte Fresnel-Linse. Verliere 13 max. TP."
+          "description": "Erhalte Fresnel Lens. Verliere 13 max. TP.",
+          "outcome": "Du kletterst an die Spitze des Leuchtturms, beunruhigt durch sein stetes Absinken.\n\nAls du den Laternenraum erreichst und beginnst, die Linse herauszuhebeln, zehrt das Anti-Licht an deiner Lebenskraft!\n\nSchließlich kannst du es herausdrehen; der Leuchtturm hört auf zu sinken."
         }
       ]
     },
     "ENDLESS_CONVEYOR": {
-      "description": "Du stampfst in eine Baracke mit einem hellen, aber verbogenen Schild, auf dem steht:\n“ENDLOSES FESTMAHL – ZAHLE JE NACH HUNGER!”\n\nDrinnen bereitet ein gertenschlanker vielarmiger Koch geschickt Essenshappen vor, die er auf einem kurvigen chitinösen Band platziert.\n\nEiner der Arme des Koches weist auf ein Schild:\nJe 35 Gold",
       "name": "Endloses Band",
+      "description": "Du stampfst in eine Baracke mit einem hellen, aber verbogenen Schild, auf dem steht:\n“ENDLOSES FESTMAHL – ZAHLE JE NACH HUNGER!”\n\nDrinnen bereitet ein gertenschlanker vielarmiger Koch geschickt Essenshappen vor, die er auf einem kurvigen chitinösen Band platziert.\n\nEiner der Arme des Koches weist auf ein Schild:\nJe 35 Gold",
       "choices": [
         {
           "name": "Den Koch beobachten",
-          "description": "Verbessere eine zufällige Karte in deinem Deck."
+          "description": "Verbessere eine zufällige Karte in deinem Deck.",
+          "outcome": "Ohne dich einem Sitzplatz zu nähern, lungerst du im Schatten des Lokaleinganges herum.\n\nDer Koch arbeitet unbeeindruckt weiter. Du beobachtest seine Arbeitsweise und Disziplin, damit du im Kampf unnötige Bewegungen und Gefühle minimieren kannst."
         }
       ]
     },
     "FAKE_MERCHANT": {
-      "description": "Platzhalter",
-      "name": "Der Händler???"
+      "name": "Der Händler???",
+      "description": "Platzhalter"
     },
     "FIELD_OF_MAN_SIZED_HOLES": {
-      "description": "Der plötzliche Anblick eines riesigen Feldes, das ausgehöhlt mit großen Umrissen von Körpern ist, lässt dich innehalten.\n\nEiner dieser Umrisse passt zu deinem.\n\nEr ist perfekt...",
       "name": "Feld der menschengroßen Löcher",
+      "description": "Der plötzliche Anblick eines riesigen Feldes, das ausgehöhlt mit großen Umrissen von Körpern ist, lässt dich innehalten.\n\nEiner dieser Umrisse passt zu deinem.\n\nEr ist perfekt...",
       "choices": [
         {
           "name": "Dein Loch betreten",
-          "description": "Verzaubere eine Karte mit Passt perfekt."
+          "description": "Verzaubere eine Karte mit Perfect Fit.",
+          "outcome": "Es ist etwas eng, aber du quetschst dich in das Loch...\n\nJe weiter du gehst, desto dunkler wird es.\nEndlich siehst du ein mattes Licht immer heller werden und die andere Seite zeigen.\n\nDu trittst unverändert hinaus, verstehst jetzt aber die intimen Geheimnisse des Lebens."
         },
         {
           "name": "Widerstehen",
-          "description": "Entferne 2 Karten aus deinem Deck. Erhalte Normalität in dein Deck."
+          "description": "Entferne 2 Karten aus deinem Deck. Erhalte Normality in dein Deck.",
+          "outcome": "Du läufst an all diesen Löchern vorbei, auch an dem, das perfekt in deiner Form geschlagen ist...\n\nWarum bin ich nicht reingegangen? Was wäre passiert? Bin ich vorher mal in diesem Loch gewesen? Wer hat diese Löcher gemacht?\n\nWas ist... wer... wo?"
         }
       ]
     },
     "GRAVE_OF_THE_FORGOTTEN": {
-      "description": "Dort ist ein einzelnes Grab mit einer aufgescheuchten blauen Flamme...\n\nEin stolzer Krieger ist im Kampf gestorben, aber seine Seele ist ruhelos. Sie möchte weiterkämpfen und bettelt, mit dir reisen zu dürfen.\n\nAber vielleicht ist es besser, wenn sie die Wahrheit anerkennt?",
       "name": "Grab des Vergessenen",
+      "description": "Dort ist ein einzelnes Grab mit einer aufgescheuchten blauen Flamme...\n\nEin stolzer Krieger ist im Kampf gestorben, aber seine Seele ist ruhelos. Sie möchte weiterkämpfen und bettelt, mit dir reisen zu dürfen.\n\nAber vielleicht ist es besser, wenn sie die Wahrheit anerkennt?",
       "choices": [
-        null,
+        {
+          "name": "Die Relikt annehmen",
+          "description": "Erhalte Forgotten Soul.",
+          "outcome": "Du legst deine Hand auf das Grab und flüsterst...\n\n“Steige mit mir hinauf...”\n\nDaraufhin ziehen die Flammen aus dem Grab hinaus und vereinen sich zu einer brennenden Seele, die loyal um dich herum schwebt.\nSie weiß, was du bist und möchte dich zu deinem letzten Ziel begleiten."
+        },
         {
           "name": "Mit der Wahrheit konfrontieren",
-          "description": "Erhalte Verfall in dein Deck. Verzaubere eine Karte, die Erschöpft, mit Seelenkraft."
+          "description": "Erhalte Decay in dein Deck. Verzaubere eine Karte, die Erschöpft, mit Soul's Power.",
+          "locked": "Du hast keine Karten mit Erschöpfen, die Verbessert werden können.",
+          "outcome": "Du legst deine Hand auf das Grab und flüsterst...\n\n“Dein Kampf ist vorbei...”\n\nDaraufhin fährt die Seele in deine hinein und ein SEELENKAMPF folgt!\nBeeindruckt von den zahlreichen Schlachten, die du durchgestanden hast, gibt sie auf."
         }
       ]
     },
     "HUNGRY_FOR_MUSHROOMS": {
-      "description": "Wie lange hast du nicht mehr gegessen?\n...Moment, was ist das für ein großartiger Geruch?\n\nDu folgst dem Geruch und erreichst einen gemütlichen Lagerplatz, auf dem allerlei leckere Pilze gegart werden! Dir ist egal, ob diese Pilze sicher zu verzehren sind, weil du so hungrig bist.\n(So hungrig, dass du die tote Abenteurerin nicht bemerkst)",
       "name": "Hungrig auf Pilze",
+      "description": "Wie lange hast du nicht mehr gegessen?\n...Moment, was ist das für ein großartiger Geruch?\n\nDu folgst dem Geruch und erreichst einen gemütlichen Lagerplatz, auf dem allerlei leckere Pilze gegart werden! Dir ist egal, ob diese Pilze sicher zu verzehren sind, weil du so hungrig bist.\n(So hungrig, dass du die tote Abenteurerin nicht bemerkst)",
       "choices": [
         {
           "name": "Großer Pilz",
-          "description": null
+          "outcome": "Du beißt in den Großen Pilz hinein. Sein Fleisch ist fest, stärkehaltig und wohlschmeckend. Je mehr du isst, desto hungriger wirst du, als würde der Pilz sich von deinem Hunger nähren.\n\nSo lecker... du fällst in ein Fresskoma.\nDiese Gefräßigkeit wird dir noch teuer zu stehen kommen."
         },
         {
           "name": "Wohlriechender Pilz",
-          "description": null
+          "outcome": "Du kostest den Wohlriechenden, einen kleinen holzigen Pilz mit einem zarten Geruch nach Meeresfrüchten...\n\nEin Energieschub beflügelt dich, zu laufen, springen und hart zu trainieren!\nDann trifft dich ein plötzlicher stechender Schmerz, als sich der lebende Pilz in deinem Inneren für einige kurze letzte Augenblicke wehrt."
         }
       ]
     },
     "INFESTED_AUTOMATON": {
-      "description": "Da ist eine Kammer, die voller toter Roboter ist.\n\nEin einsames Automaton hat noch einen schwach leuchtenden Kern, aber ist von einem grotesken organischen Wuchs überwachsen und antwortet nicht.",
       "name": "Infiziertes Automaton",
+      "description": "Da ist eine Kammer, die voller toter Roboter ist.\n\nEin einsames Automaton hat noch einen schwach leuchtenden Kern, aber ist von einem grotesken organischen Wuchs überwachsen und antwortet nicht.",
       "choices": [
         {
           "name": "Untersuchen",
-          "description": "Erhalte eine zufällige Macht."
+          "description": "Erhalte eine zufällige Macht.",
+          "outcome": "Bei der Untersuchung des leuchtenden Automatons und dessen, wie seine inneren Funktionen angelegt sind, realisierst du, dass bestimmte Metalle und ihre Anordnungen gegen verschiedene Leiden resistent sind!\n\nDu wendest diese Technik auf dich selbst an."
         },
         {
           "name": "Den Kern berühren",
-          "description": "Erhalte eine zufällige 0-Kosten-Karte."
+          "description": "Erhalte eine zufällige 0-Kosten-Karte.",
+          "outcome": "Bei der kleinsten Berührung des Kerns bekommst du einen elekrischen Schock.\n\nDu hetzt davon und fühlst dich durch diese Erfahrung verändert."
         }
       ]
     },
     "JUNGLE_MAZE_ADVENTURE": {
-      "description": "Auf einer Lichtung stößt du auf eine bunt gemischte Abenteuergruppe, die auf ein riesiges Labyrinth herabschauen und dorthin gestikulieren.\n\nSie bieten an, sich mit dir für eine epische Quest zusammenzutun, um die Schätze dieses Labyrinths zu plündern. Als {characterGender:choose(feminine):erfahrene Abenteurerin|erfahrener Abenteurer} ist dir klar, dass dieses Labyrinth voller tödlicher Fallen und Wächter ist.\n\nEs wäre einfacher, wenn ihr zusammenarbeitet, aber dann müsstet ihr die Beute aufteilen.",
       "name": "Abenteuer im Dschungellabyrinth",
+      "description": "Auf einer Lichtung stößt du auf eine bunt gemischte Abenteuergruppe, die auf ein riesiges Labyrinth herabschauen und dorthin gestikulieren.\n\nSie bieten an, sich mit dir für eine epische Quest zusammenzutun, um die Schätze dieses Labyrinths zu plündern. Als {characterGender:choose(feminine):erfahrene Abenteurerin|erfahrener Abenteurer} ist dir klar, dass dieses Labyrinth voller tödlicher Fallen und Wächter ist.\n\nEs wäre einfacher, wenn ihr zusammenarbeitet, aber dann müsstet ihr die Beute aufteilen.",
       "choices": [
         {
           "name": "Zusammenschließen",
-          "description": "Erhalte 50 Gold."
+          "description": "Erhalte 50 Gold.",
+          "outcome": "Alle Gesichter hellen sich sofort auf, {IsMultiplayer:die von dir und deinen Freunden|dein eigenes} eingeschlossen!\n\nEiner der Abenteurer stellt sich als Barde heraus!\nIhr tänzelt vergnügt ins Labyrinth, wo Aquid der Tintenfisch-Zauberer mühelos Fallen entschärft, während du und der Grathorische Kämpfer die Stachelkeulen tragenden Wachen mit Leichtigkeit bezwingen.\n\nDas war das fröhlichste Abenteuer deines Lebens und du hast einige wirklich großartige Erinnerungen gesammelt."
         },
         {
           "name": "Solo-Quest",
-          "description": "Erhalte 150 Gold. Verliere 18 TP."
+          "description": "Erhalte 150 Gold. Verliere 18 TP.",
+          "outcome": "Mit einem misanthropischen Gefühl {IsMultiplayer:laufen du und deine Freunde|läufst du} wortlos an ihren jetzt schmollenden Gesichtern vorbei. Einer von ihnen fuchtelt mit der Faust nach dir.\n\nDas Labyrinth ist nicht gerade gastfreundlich. Du fällst in eine Stachelfalle, wirst von einem großen Stamm mit Stacheln getoffen und angriffslustige Kreaturen mit stacheligen Keulen kämpfen auf der ganzen Reise gegen dich.\n\nDu hast genug von den Stacheln und erwägst für das nächte Abenteuer lieber Teamarbeit."
         }
       ]
     },
     "LOST_WISP": {
-      "description": "Etwas entfernt siehst du etwas Seltsames. Hügel über Hügel von toten Insekten bilden einen Kreis um etwas, das aussieht wie ein kleiner leuchtender Schwebepunkt.\nDas scheint ein effektives Lockmittel für alle Arten Ungeziefer zu sein, aber du siehst, wie es Flammen ausspuckt!\n\nDu kommst näher, um es zu untersuchen.",
       "name": "Das verlorene Irrlicht",
+      "description": "Etwas entfernt siehst du etwas Seltsames. Hügel über Hügel von toten Insekten bilden einen Kreis um etwas, das aussieht wie ein kleiner leuchtender Schwebepunkt.\nDas scheint ein effektives Lockmittel für alle Arten Ungeziefer zu sein, aber du siehst, wie es Flammen ausspuckt!\n\nDu kommst näher, um es zu untersuchen.",
       "choices": [
         {
           "name": "Das Irrlicht fangen",
-          "description": "Erhalte Verfall in dein Deck. Erhalte {Relic}."
+          "description": "Erhalte Decay in dein Deck. Erhalte Relikt.",
+          "locked": "Deine max. TP sind zu niedrig.",
+          "outcome": "Vorsichtig näherst du dich dem Irrlicht...\nJe näher du kommst, desto stärker reagiert es auf deine Anwesenheit.\n\nSobald du in Reichweite bist, greifst du das Irrlicht, aber du verbrennst dich an einem Strahl aus heißem Dampf und Flammen!\n\nDennoch tastest und rangelst du mit der Kreatur, um sie zu unterwerfen. Schließlich gibt das Irrlicht auf und erkennt dich als {characterGender:choose(feminine):seine neue Besitzerin|seinen neuen Besitzer} an."
         },
         {
           "name": "Die Umgebung durchsuchen",
-          "description": "Erhalte 60 Gold."
+          "description": "Erhalte 60 Gold.",
+          "outcome": "Du entscheidest dich, das kleine Wesen allein zu lassen. Sicher ist sicher!\n\nEs ist nicht viel in der Gegend, aber du findest etwas Gold, das zwischen dem toten Ungeziefer verteilt ist.\nDu suchst nicht nach der Antwort."
         }
       ]
     },
     "LUMINOUS_CHOIR": {
-      "description": "Du gelangst auf eine Lichtung, die in einen unnatürlich blauen Schein getunkt ist. Türme von Pilzen pulsieren mit Biolumineszenz, ihre angeschwollenen Hüte funkeln. Als du dich näherst, beginnen die Pilze gespenstische, melodische Klänge von sich zu geben, die dir völlig durch Mark und Bein gehen.\n\nDu erkennst etwas Schimmerndes, das im Fleisch des größten Pilzes eingeschlossen ist und im Rhythmus mit dem Lied der Pilze pulsiert.",
       "name": "Leuchtender Chor",
+      "description": "Du gelangst auf eine Lichtung, die in einen unnatürlich blauen Schein getunkt ist. Türme von Pilzen pulsieren mit Biolumineszenz, ihre angeschwollenen Hüte funkeln. Als du dich näherst, beginnen die Pilze gespenstische, melodische Klänge von sich zu geben, die dir völlig durch Mark und Bein gehen.\n\nDu erkennst etwas Schimmerndes, das im Fleisch des größten Pilzes eingeschlossen ist und im Rhythmus mit dem Lied der Pilze pulsiert.",
       "choices": [
         {
           "name": "Tribut darbieten",
-          "description": "Zahle 149 Gold. Erhalte ein zufälliges Relikt."
+          "description": "Zahle 149 Gold. Erhalte ein zufälliges Relikt.",
+          "locked": "Benötigt 149 Gold.",
+          "outcome": "Du gibst Gold auf den schwammigen Boden. Die Münzen versinken langsam, während Ranken sachte ein Relikt an die Oberfläche drücken, nun kannst du es sauber mitnehmen."
         },
         {
           "name": "In das Fleisch greifen",
-          "description": "Entferne 2 Karten aus deinem Deck. Erhalte Sporensinn in dein Deck."
+          "description": "Entferne 2 Karten aus deinem Deck. Erhalte Sporensinn in dein Deck.",
+          "outcome": "Du steckst deine Hand direkt in das schwammige Gewebe des beherrschenden Pilzes, um das eingeschlossene Relikt zu gewinnen. Das Pilzgeflecht zittert bei deinem Eindringen und zur Antwort bebt dein Verstand."
         }
       ]
     },
     "MORPHIC_GROVE": {
-      "description": "Du betrittst ein Wäldchen aus Kristallbäumen, die daraufhin anfangen, aufgeregt zu zittern!\nEin Chor aus Hallos und Willkommens bombardiert dich und eine Gruppe Morpher platzt aus Bäumen hervor.\n\nEiner der Morpher hampelt in der Ecke herum, offensichtlich ist er nicht so gesellig wie die anderen.\n\nGehst du zur Gruppe oder zum Einzelgänger?",
       "name": "Morpher-Wäldchen",
+      "description": "Du betrittst ein Wäldchen aus Kristallbäumen, die daraufhin anfangen, aufgeregt zu zittern!\nEin Chor aus Hallos und Willkommens bombardiert dich und eine Gruppe Morpher platzt aus Bäumen hervor.\n\nEiner der Morpher hampelt in der Ecke herum, offensichtlich ist er nicht so gesellig wie die anderen.\n\nGehst du zur Gruppe oder zum Einzelgänger?",
       "choices": [
         {
           "name": "Gruppe",
-          "description": "Verliere 100 Gold. Transformiere 2 Karten."
+          "description": "Verliere 100 Gold. Transformiere 2 Karten.",
+          "outcome": "Du grüßt die zwitschernden Morpher und sie nehmen dich in ihre kristallenen Arme.\n\nSie teilen ihr gemeinsames Wissen und flößen dir Morphermagie ein, was dein Wesen verändert... So entzückende Wesen, diese Morpher.\n\nEiner von ihnen hat dein Gold gestohlen."
         },
         {
           "name": "Einzelgänger",
-          "description": "Erhalte 5 max. TP."
+          "description": "Erhalte 5 max. TP.",
+          "outcome": "Du reichst deine Hand dem einzelnen Morpher entgegen, um Sympathie mit seinem Wesen zu zeigen.\nEs schenkt dir eine winzige Kristallfrucht, welche du verzehrst, wie es Sitte ist.\n\nDie Frucht klärt deinen Geist und Zweck. Du bedankst dich, dann machst du dich weiter auf den Weg."
         }
       ]
     },
     "POTION_COURIER": {
-      "description": "Es liegt ein säuerlicher Geruch in der Luft und kurz darauf {IsMultiplayer:findet ihr|findest du} einen auf dem Boden zusammengebrochenen Trankkurier.\nReglos. Leblos. Tot!?\nZwar wurde der Inhalt seiner Taschen geplündert, aber da ist noch ein Bündel mit Faul Riechenden Tränken mit einer Notiz: \"Empfänger: Händler\".",
       "name": "Trankkurier",
+      "description": "Es liegt ein säuerlicher Geruch in der Luft und kurz darauf {IsMultiplayer:findet ihr|findest du} einen auf dem Boden zusammengebrochenen Trankkurier.\nReglos. Leblos. Tot!?\nZwar wurde der Inhalt seiner Taschen geplündert, aber da ist noch ein Bündel mit Faul Riechenden Tränken mit einer Notiz: \"Empfänger: Händler\".",
       "choices": [
         {
           "name": "Tränke mitnehmen",
-          "description": "Beschaffe 3 Fauligen Trank."
+          "description": "Beschaffe 3 Faulige Tränke.",
+          "outcome": "Was sollte der Händler mit diesen Tränken anfangen können?"
         },
         {
           "name": "Wühlen",
-          "description": "Beschaffe 1 zufälligen Ungewöhnlichen Trank."
+          "description": "Beschaffe 1 zufälligen Ungewöhnlichen Trank.",
+          "outcome": "Bloß ein einziger Trank war unversehrt."
         }
       ]
     },
     "PUNCH_OFF": {
-      "description": "Zwei Boxer-Konstrukte boxen gegeneinander und du siehst einen Schatz zwischen ihnen...\n\nSolltest du versuchen, ihn wegzuschnappen?",
       "name": "Wegboxen",
+      "description": "Zwei Boxer-Konstrukte boxen gegeneinander und du siehst einen Schatz zwischen ihnen...\n\nSolltest du versuchen, ihn wegzuschnappen?",
       "choices": [
         {
           "name": "Ich komme mit ihnen klar",
@@ -5548,72 +5645,92 @@
         },
         {
           "name": "Schnappen",
-          "description": "Erhalte Verletzung in dein Deck. Erhalte ein zufälliges Relikt."
+          "description": "Erhalte Verletzung in dein Deck. Erhalte ein zufälliges Relikt.",
+          "outcome": "Erfolgreich schnappst du das Relikt!\n\n...dachtest du jedenfalls. Ein rechter Haken schmiert dir eine ins Gesicht."
         }
       ]
     },
     "RANWID_THE_ELDER": {
-      "description": "Die älteste Person, die du je gesehen hast, kommt dir entgegen.\n“Wir treffen uns ein weiteres Mal... ich bin's, Ranwid!”\n\nDu kennst diesen Mann nicht.",
       "name": "Ranwid der Älteste",
+      "description": "Die älteste Person, die du je gesehen hast, kommt dir entgegen.\n“Wir treffen uns ein weiteres Mal... ich bin's, Ranwid!”\n\nDu kennst diesen Mann nicht.",
       "choices": [
-        null,
-        null,
-        null
+        {
+          "name": "X Gold geben",
+          "description": "Erhalte ein zufälliges Relikt.",
+          "outcome": "“Groß.. artig...”\n\nMurmelt Ranwid, während er auf das Gold beißt."
+        },
+        {
+          "name": "Trank geben",
+          "description": "Erhalte ein zufälliges Relikt.",
+          "locked": "Du hast keine Tränke, die du abgeben könntest.",
+          "outcome": "“Vorzüglich...”\n\nGluck gluck gluck\n\nEr trinkt die Flasche mit Trank in einem Zug aus."
+        },
+        {
+          "name": "Relikt geben",
+          "description": "Erhalte 2 zufällige Relikte.",
+          "locked": "Du hast keine Relikte, die du abgeben könntest.",
+          "outcome": "“Musterhaft...”\n\nRanwid betrachtet das Relikt für einige Minuten geflissentlich...\n\nDann isst er Relikt auf."
+        }
       ]
     },
     "REFLECTIONS": {
-      "description": "Was ist das? Irgendwas ist hier falsch...\n...hcslaf reih tsi sawdnegrI ?sad tsi saW",
       "name": "Reflexionen nenoixelfeR",
+      "description": "Was ist das? Irgendwas ist hier falsch...\n...hcslaf reih tsi sawdnegrI ?sad tsi saW",
       "choices": [
         {
           "name": "Zerschlagen",
-          "description": "Dupliziere dein Deck. Erhalte Unglück."
+          "description": "Dupliziere dein Deck. Erhalte Unglück.",
+          "outcome": "Du konzentrierst dich und erkennst einen riesigen nahtlosen Spiegel vor dir.\nMit einem flinken Tritt ZERTRÜMMERST du den riesigen Spiegel!\nIn dem Moment, als du den Spiegel zerschlägst, wappnet sich deine Reflexion, doch sie wird zu tausend schönen glänzenden Scherben.\n\nWie kann ein solcher Ort nur existieren?"
         },
         {
           "name": "Einen Spiegel berühren",
-          "description": "Verschlechtere 2 zufällige Karten. Verbessere 4 zufällige Karten."
+          "description": "Verschlechtere 2 zufällige Karten. Verbessere 4 zufällige Karten.",
+          "outcome": "Du streckst dich vor und verschmilzt mit der Reflexion vor dir.\nWelcher von beiden bin ich?"
         }
       ]
     },
     "RELIC_TRADER": {
-      "description": "Du gehst um eine Ecke und plötzlich steht da einfach eine düstere Figur. Er dreht sich dir entgegen.\n\n“Willkommen! Was tauschst du ein?”\nFragt die Figur, indem sie den Mantel öffnet und eine Menge ominöser Waren präsentiert.",
       "name": "Relikt-Händler",
+      "description": "Du gehst um eine Ecke und plötzlich steht da einfach eine düstere Figur. Er dreht sich dir entgegen.\n\n“Willkommen! Was tauschst du ein?”\nFragt die Figur, indem sie den Mantel öffnet und eine Menge ominöser Waren präsentiert.",
       "choices": [
         {
           "name": "Das untere nehmen",
-          "description": "Tausche {BottomRelicOwned} gegen {BottomRelicNew}."
+          "description": "Tausche dein Relikt gegen ein neues Relikt."
         },
         {
           "name": "Das mittlere nehmen",
-          "description": "Tausche {MiddleRelicOwned} gegen {MiddleRelicNew}."
+          "description": "Tausche dein Relikt gegen ein neues Relikt."
         },
         {
           "name": "Das obere nehmen",
-          "description": "Tausche {TopRelicOwned} gegen {TopRelicNew}."
+          "description": "Tausche dein Relikt gegen ein neues Relikt."
         }
       ]
     },
     "ROOM_FULL_OF_CHEESE": {
-      "description": "Dieser Raum ist voller Käse!!!\n\nDu schaust dich um, ob hier irgendwelche Fallen sind und über dir ist... mehr Käse. Die Kerzen in diesem Raum sind anscheinend aus Käse. Die Möbel sind auch aus Käse.\nPlötzlich knallt die Tür hinter dir zu.\n\nSie ist aus Käse.",
       "name": "Raum voller Käse",
+      "description": "Dieser Raum ist voller Käse!!!\n\nDu schaust dich um, ob hier irgendwelche Fallen sind und über dir ist... mehr Käse. Die Kerzen in diesem Raum sind anscheinend aus Käse. Die Möbel sind auch aus Käse.\nPlötzlich knallt die Tür hinter dir zu.\n\nSie ist aus Käse.",
       "choices": [
         {
           "name": "Vollfressen",
-          "description": "Wähle 2 von 8 zufälligen Gewöhnlichen Karten für dein Deck."
+          "description": "Wähle 2 von 8 zufälligen Gewöhnlichen Karten für dein Deck.",
+          "outcome": "Du naschst einen kleinen Bissen Käse, aber das befeuert dich, noch mehr Käse zu essen.\n\nZeit vergeht...\n\nDu hast eine beeindruckende Menge Käse gegessen.\nHeute Nacht werden deine Träume Käse sein."
         },
         {
           "name": "Suchen",
-          "description": "Verliere 14 TP. Erhalte den Erlesenen Käse."
+          "description": "Verliere 14 TP. Erhalte den Erlesenen Käse.",
+          "outcome": "Du suchst herum, Stunde um Stunde...\n\nDie Zeit verrinnt, während deine Gedanken durch die bloße Präsenz von all diesem Käse an seltsame Orte wandern, und du fällst in eine Benommenheit....\nAbrupt bist du wach und bemerkst, dass du etwas in der Hand hältst.\n\nDen erlesenen Käse."
         }
       ]
     },
     "ROUND_TEA_PARTY": {
-      "description": "Du findest eine Einladung an einen “Sir Galalot” zu einer Teerunde und entscheidest dich, an seiner Stelle zu erscheinen.\n\nDu betrittst einen unscheinbaren Rundbau und befindest dich mitten zwischen Kommandeuren, Generälen, Bandenchefs und Söldnern, die... Tee trinken?\nDer gigantische Ritter, der eine goldene Krone trägt, spricht.\n\n“Kommest du zu spät zum Tee?!”",
       "name": "Die Ritter der Teerunde",
+      "description": "Du findest eine Einladung an einen “Sir Galalot” zu einer Teerunde und entscheidest dich, an seiner Stelle zu erscheinen.\n\nDu betrittst einen unscheinbaren Rundbau und befindest dich mitten zwischen Kommandeuren, Generälen, Bandenchefs und Söldnern, die... Tee trinken?\nDer gigantische Ritter, der eine goldene Krone trägt, spricht.\n\n“Kommest du zu spät zum Tee?!”",
       "choices": [
         {
           "name": "Deinen Tee genießen",
-          "description": "Erhalte Königliches Gift. Heile auf volle TP."
+          "description": "Erhalte Royal Poison. Heile auf volle TP.",
+          "outcome": "Du nimmst eine Teetasse und trinkst sie in einem Zug aus.\nSie ist BRÜHHEIẞ, aber du änderst deinen Ausdruck nicht. Die Gäste sind verblüfft von deinem fehlenden Selbstschutz.\n\n“Wir meinten es nicht böse, Sir Galalot. Unsere aufrichtigsten Entschuldigungen.”\n\nDu genießt etwas Tee mit Pfannkuchen, ohne das Gift zu bemerken, das du dir eingeflößt hast."
         },
         {
           "name": "Schlägerei anzetteln",
@@ -5622,146 +5739,172 @@
       ]
     },
     "SAPPHIRE_SEED": {
-      "description": "Beinahe wärst du auf einen hellen, spitzen... Samen getreten? Seine unverwechselbare Farbe verrät, dass es ein Saphirsame ist! Sollten diese unglaublichen Samen nicht ausgestorben sein!?\n\nLegenden zufolge soll der Verzehr besonders deine Ausdauer verstärken, aber was, wenn du ihn stattdessen einpflanzt und pflegst?",
       "name": "Saphirsame",
+      "description": "Beinahe wärst du auf einen hellen, spitzen... Samen getreten? Seine unverwechselbare Farbe verrät, dass es ein Saphirsame ist! Sollten diese unglaublichen Samen nicht ausgestorben sein!?\n\nLegenden zufolge soll der Verzehr besonders deine Ausdauer verstärken, aber was, wenn du ihn stattdessen einpflanzt und pflegst?",
       "choices": [
         {
           "name": "Verzehren",
-          "description": "Heile 9 TP. Verbessere eine Karte aus deinem Deck."
+          "description": "Heile 9 TP. Verbessere eine Karte aus deinem Deck.",
+          "outcome": "Du isst den Saphirsamen und augenblicklich fühlen sich deine Glieder beweglicher an, Farben schärfen sich und du kannst die Seele von Feinden in der Nähe spüren.\n\nWie gut, dass du nicht draufgetreten bist."
         },
         {
           "name": "Einpflanzen und pflegen",
-          "description": "Verzaubere eine Karte mit Eingesät."
+          "description": "Verzaubere eine Karte mit Sown.",
+          "outcome": "Du durchkämmst den Überwuchs und findest einen Topf mit guter Luftzufuhr. Dann ziehst du suchend umher, bis du einen unberührten Ort findest, wo Licht durch eine rissige Wand scheint. Vorsichtig verstärkst du den Topf zur Tarnung mit Rinde und Ranken, füllst ihn mit lehmiger, nährstoffreicher Erde und steckst den Samen gerade unter die Oberfläche.\n\nSchließlich sammelst du Tau von Pflanzen in der Nähe und schüttest ihn darüber.\n\nWachse heran, kleiner Same...\nOhne dass du es merkst, verbindet sich der Saphirsame spirituell mit dir.\nDankbar für deine große Mühe."
         }
       ]
     },
     "SELF_HELP_BOOK": {
-      "description": "Auf dem Boden liegt ein Wälzer:\n“Die 3 besten Wege, den Spire zu erobern”\n\nDas Buch ist voller verkrustetem Blut, daher ist dir das Manuskript äußerst suspekt.\n\nWirst du es lesen?",
       "name": "Selbsthilfebuch",
+      "description": "Auf dem Boden liegt ein Wälzer:\n“Die 3 besten Wege, den Spire zu erobern”\n\nDas Buch ist voller verkrustetem Blut, daher ist dir das Manuskript äußerst suspekt.\n\nWirst du es lesen?",
       "choices": [
         {
           "name": "Weitergehen",
-          "description": "Du hast keine Karten, die Verzaubert werden können."
+          "description": "Du hast keine Karten, die Verzaubert werden können.",
+          "outcome": "Du interessierst dich ganz und gar nicht für Bücher, erst recht nicht für welche voller verkrustetem Blut."
         },
         {
           "name": "Das ganze Buch lesen",
-          "description": "Wähle eine Macht, die du mit Flott 2 verzauberst."
+          "description": "Wähle eine Macht, die du mit Swift 2 verzauberst.",
+          "locked": "Du hast keine Mächte, die verzaubert werden können.",
+          "outcome": "Welch fesselnde Lektüre! Manche ausgewählte Zitate bleiben dir noch im Kopf:\n“Vermeide große Monster.”\n“Nimm jede Karte.”\n“Blocken ist für Feiglinge.”\n\nDeine Hände sind mit Blut überzogen."
         },
         {
           "name": "Irgendeinen Abschnitt lesen",
-          "description": "Wähle eine Fertigkeit, die du mit Geschickt 2 verzauberst."
+          "description": "Wähle eine Fertigkeit, die du mit Nimble 2 verzauberst.",
+          "locked": "Du hast keine Fertigkeiten, die verzaubert werden können.",
+          "outcome": "Du schlägst irgendeine Seite auf:\n“Verteidigung 101: Lass dich nicht treffen!”\n\nDu liest den Rest des Abschnittes und er ist überraschend erhellend. Du lässt diese Ideen in deine Kampftaktik einfließen."
         },
         {
           "name": "Klappentext lesen",
-          "description": "Wähle einen Angriff, den du mit Scharf 2 verzauberst."
+          "description": "Wähle einen Angriff, den du mit Sharp 2 verzauberst.",
+          "locked": "Du hast keine Angriffe, die verbessert werden können.",
+          "outcome": "Du drehst das Buch um und liest die Zusammenfassung:\n“Kritiker und Kultisten sind sich einig, dass scharfe und spitze Waffen der beste Weg sind, Schaden zuzufügen!”\n\nAuf der Buchrückseite klebt ein Preisschild – durchgestrichen und mit einem deutlich reduzierten Preis übermalt."
         }
       ]
     },
     "SLIPPERY_BRIDGE": {
-      "description": "Du überquerst gerade eine wackelige Holzbrücke, als plötzlich ein sturzfluthafter Regen einsetzt. Heftige Windböen werfen dich umher und drohen, deine Reise zu beenden.",
       "name": "Rutschige Brücke",
+      "description": "Du überquerst gerade eine wackelige Holzbrücke, als plötzlich ein sturzfluthafter Regen einsetzt. Heftige Windböen werfen dich umher und drohen, deine Reise zu beenden.",
       "choices": [
         {
           "name": "Festhalten",
-          "description": "Verliere {HpLoss} TP. Die Karte in der oberen Option wird geändert."
+          "description": "Verliere X TP. Die Karte in der oberen Option wird geändert."
         },
         {
           "name": "Überwinden",
-          "description": "{RandomCard} wird aus deinem Deck entfernt."
+          "description": "zufällige Karte wird aus deinem Deck entfernt.",
+          "outcome": "Ich hasse Brücken."
         }
       ]
     },
     "SPIRALING_WHIRLPOOL": {
-      "description": "Du gelangst zu einem Riesigen Wasserstrudel. Das Wasser wirbelt mit ästhetischer Präzision und die Wände ringsum sind mit Spiralmustern verziert.\n\nRingsumher und... ringsum...her...\n....und rings... umher.... welch ein Anblick......\n\nWas machst du?",
       "name": "Wasserstrudel",
+      "description": "Du gelangst zu einem Riesigen Wasserstrudel. Das Wasser wirbelt mit ästhetischer Präzision und die Wände ringsum sind mit Spiralmustern verziert.\n\nRingsumher und... ringsum...her...\n....und rings... umher.... welch ein Anblick......\n\nWas machst du?",
       "choices": [
         {
           "name": "Trinken",
-          "description": "Heile 0 TP."
+          "description": "Heile 0 TP.",
+          "outcome": "Du formst deine Hande zu einer Schale und tauchst sie in den Wasserstrudel.\n\nSein Wasser füllt deine Hände gemächlich, du nimmst mit geschlossenen Augen kleine Schlucke.\n\nKöstliches Wasser kreist durch dich bis in deine Mitte, es wäscht schädliche Gedanken und physische Gebrechen weg..."
         },
         {
           "name": "Betrachten",
-          "description": "Verzaubere einen Schlag oder ein Verteidigen mit Spirale."
+          "description": "Verzaubere einen Schlag oder ein Verteidigen mit Spirale.",
+          "outcome": "...ah–   so schön.....\nSo dreht er sich... dreht sich weiter rundherum. Ja...\nOh! War das..... ein kleiner Spritzer...?\n....natürlich. Du hast auch etwas Spaß verdient, Frau Spirale... haha...\n... .......   ...\n\nJetzt ist es Zeit, zu gehen.\nDu flüsterst etwas zum Abschied.\n\n“Danke, Spirale.”"
         },
         {
           "name": "Hineinfassen",
-          "description": "Erhalte ein zufälliges Relikt. Erhalte Leid in dein Deck."
+          "description": "Erhalte ein zufälliges Relikt. Erhalte Leid in dein Deck.",
+          "outcome": "Törichterweise tauchst du deinen Arm in die Mitte des Wasserstrudels, was ihn aus dem Gleichgewicht bringt. Das Wasser wird kalt und greift nach dir, es ritzt dir Unsichtbare Spiralen in den Arm.\n\nDeine Finger streifen über etwas festes und du versuchst schmerzerfüllt, es zu fassen zu bekommen. Endlich rangelst du ein Relikt da raus!"
         }
       ]
     },
     "SPIRIT_GRAFTER": {
-      "description": "Über {IsMultiplayer:euch|dir} wackelt und zappelt ein Kokon – kurz vor dem Aufplatzen!\n\n...er hört auf zu zappeln. Der Kokon geht in Feuer auf! Was ist hier los?\nIn einem Blitz aus Licht und Flamme fährt ein Geistespfropfer in dich hinein und droht, sich mit deinem Wesen zu vereinen, um sich zu vervollkommnen.",
       "name": "Geistespfropfer",
+      "description": "Über {IsMultiplayer:euch|dir} wackelt und zappelt ein Kokon – kurz vor dem Aufplatzen!\n\n...er hört auf zu zappeln. Der Kokon geht in Feuer auf! Was ist hier los?\nIn einem Blitz aus Licht und Flamme fährt ein Geistespfropfer in dich hinein und droht, sich mit deinem Wesen zu vereinen, um sich zu vervollkommnen.",
       "choices": [
         {
           "name": "Ihn hereinlassen",
-          "description": "Heile 25 TP. Erhalte Metamorphose in dein Deck."
+          "description": "Heile 25 TP. Erhalte Metamorphose in dein Deck.",
+          "outcome": "Der Geistespfropfer verbindet sich mit dir. Die strotzende verwandte Seele heilt dich sogleich.\n\nDu bist neugeboren."
         },
         {
           "name": "Ablehnung",
-          "description": "Verliere 9 TP. Entferne eine Karte aus deinem Deck."
+          "description": "Verliere 9 TP. Entferne eine Karte aus deinem Deck.",
+          "outcome": "Der Geistespfropfer lässt sich durch deinen Willen leicht aufhalten.\n\nTrotzdem fliegt er wiederholt in dich hinein, um verzweifelt einen Wirt zu finden. Seine Stärke nimmt ab und er löst sich mit einem Puffen auf.\n\nEin vergänglicher Geist."
         }
       ]
     },
     "STONE_OF_ALL_TIME": {
-      "description": "Ein riesiger Fels ruht in der Mitte eines verlassenen Innenhofes.\n\nAuf einem Schild steht:\nStein aller Zeiten.\n\nSeine Präsenz, Form und Verzierungen weisen darauf hin, dass dieser Innenhof um diesen Stein herum gebaut wurde und dass er niemals vom Fleck bewegt wurde.",
       "name": "Stein aller Zeiten",
+      "description": "Ein riesiger Fels ruht in der Mitte eines verlassenen Innenhofes.\n\nAuf einem Schild steht:\nStein aller Zeiten.\n\nSeine Präsenz, Form und Verzierungen weisen darauf hin, dass dieser Innenhof um diesen Stein herum gebaut wurde und dass er niemals vom Fleck bewegt wurde.",
       "choices": [
         {
           "name": "Trinken und Anheben",
-          "description": "Verliere {DrinkRandomPotion}. Erhalte 10 max. TP."
+          "description": "Verliere zufälliger Trank. Erhalte 10 max. TP.",
+          "locked": "Benötigt einen Trank.",
+          "outcome": "Du benutzt deinen zufälliger Trank und hebst mit all deiner Macht!!\n\nNichts passiert."
         },
         {
           "name": "Schieben",
-          "description": "Verliere 6 TP. Verzaubere einen Angriff mit Kräftig 8."
+          "description": "Verliere 6 TP. Verzaubere einen Angriff mit Kräftig 8.",
+          "locked": "Benötigt einen Angriff.",
+          "outcome": "Du schiebst und schiebst und gibst alles!!\n\nNichts passiert."
         }
       ]
     },
     "SUNKEN_STATUE": {
-      "description": "Du sichtest eine alte Statue, die halb in einem Teich versunken ist; ihre Hände ruhen friedlich auf einem Steinschwert.\n\nAußerdem glitzert etwas am Boden des Teiches.\nVielleicht Opfergaben?\n\nDu könntest wirklich etwas Geld gebrauchen...",
       "name": "Die Versunkene Statue",
+      "description": "Du sichtest eine alte Statue, die halb in einem Teich versunken ist; ihre Hände ruhen friedlich auf einem Steinschwert.\n\nAußerdem glitzert etwas am Boden des Teiches.\nVielleicht Opfergaben?\n\nDu könntest wirklich etwas Geld gebrauchen...",
       "choices": [
         {
           "name": "Ins Wasser tauchen",
-          "description": "Erhalte 111 Gold. Verliere 7 TP."
+          "description": "Erhalte 111 Gold. Verliere 7 TP.",
+          "outcome": "Du tauchst tief in das Wasser!\n\nBeim Sammeln der Spenden hörst du ein dumpfes Echo und wirst von Steinen getroffen!\n\nAls du wieder auftauchst, siehst du, dass die alte Statue durch deine Störung zusammengefallen ist; physisch wie geistig."
         },
         {
           "name": "Das Schwert mitnehmen",
-          "description": "Erhalte das Schwert aus Stein."
+          "description": "Erhalte das Sword of Stone.",
+          "outcome": "Du entreißt das Schwert aus den Händen der Statue und da bricht das Ganze in sich zusammen!\n\nEs ist jetzt zu gefährlich, das aufzuheben, was am Grund des Teiches geglitzert hat...\n\nBeim Betrachten des Schwerts spürst du eine unglaubliche schlafende Macht darin."
         }
       ]
     },
     "SUNKEN_TREASURY": {
-      "description": "Ein Pfad führt dich in ein Gewölbe, von dem Teile unter Wasser liegen.\nDort sind 2 Truhen, aber nur 1 brüchiger Schlüssel.\n\nDie erste Truhe: Beim Schütteln klimpert und klappert es. Etwas Gold.\nDie zweite Truhe: Gewaltig, kunstvoll und eindeutig verflucht. Viel Gold!",
       "name": "Versunkene Schatzkammer",
+      "description": "Ein Pfad führt dich in ein Gewölbe, von dem Teile unter Wasser liegen.\nDort sind 2 Truhen, aber nur 1 brüchiger Schlüssel.\n\nDie erste Truhe: Beim Schütteln klimpert und klappert es. Etwas Gold.\nDie zweite Truhe: Gewaltig, kunstvoll und eindeutig verflucht. Viel Gold!",
       "choices": [
         {
           "name": "Erste Truhe",
-          "description": "Erhalte 60 Gold."
+          "description": "Erhalte 60 Gold.",
+          "outcome": "Jupp, es war Gold darin."
         },
         {
           "name": "Zweite Truhe",
-          "description": "Erhalte 333 Gold. Erhalte Gier."
+          "description": "Erhalte 333 Gold. Erhalte Gier.",
+          "outcome": "Du hast noch nie so viel Gold an einem Ort gesehen!\n\nAlle Waren des Händlers könnte man kaufen...\n{Monologue}\nGefährliche Diebe können bezahlt werden...\n\nDie fieberhaft gierigen Gedanken begleiten dich für immer..."
         }
       ]
     },
     "SYMBIOTE": {
-      "description": "Auf deinen Reisen stößt du auf einen dunklen, gliederlosen Polypen. Du kannst spüren, dass er sehr alt ist – und sehr böse.\n\nKomm näher...",
       "name": "Symbiont",
+      "description": "Auf deinen Reisen stößt du auf einen dunklen, gliederlosen Polypen. Du kannst spüren, dass er sehr alt ist – und sehr böse.\n\nKomm näher...",
       "choices": [
         {
           "name": "Näherkommen",
-          "description": "Verzaubere einen Angriff mit Korrumpiert."
+          "description": "Verzaubere einen Angriff mit Corrupted.",
+          "locked": "Keiner deiner Angriffe kann verzaubert werden.",
+          "outcome": "Plötzlich springt er dich an. Du spürst einen brennenden Schmerz, als er sich an deinen Arm hängt, aber im nächsten Moment ist er weg.\n\n...? Wo ist er hin?"
         },
         {
           "name": "Mit Feuer töten",
-          "description": "Wähle eine Karte, die du Transformierst."
+          "description": "Wähle eine Karte, die du Transformierst.",
+          "outcome": "Du fackelst den dunklen Polypen ab. Als er kreischt und zu Asche verbrennt, pocht dein Kopf schmerzhaft, aber du schaffst es, nicht ohnmächtig zu werden.\nWas war das für ein Ding?"
         }
       ]
     },
     "TABLET_OF_TRUTH": {
-      "description": "Du besiegst zwei Sippen-Wächter und gelangst in ein geschütztes Gewölbe.\n\nDrinnen ist eine Tafel mit vertrauten Inschriften. Deine Intuition sagt dir, dass diese Sprache ziemlich leicht entziffert werden kann... Wenn du jedoch einmal am Entziffern bist, würdest du hierbleiben müssen.\n\nDie Tafel strahlt eine beruhigende Kraft aus. Du könntest sie stattdessen zerschmettern, um ihre heilenden Energien in dich aufzunehmen.",
       "name": "Tafel der Wahrheit",
+      "description": "Du besiegst zwei Sippen-Wächter und gelangst in ein geschütztes Gewölbe.\n\nDrinnen ist eine Tafel mit vertrauten Inschriften. Deine Intuition sagt dir, dass diese Sprache ziemlich leicht entziffert werden kann... Wenn du jedoch einmal am Entziffern bist, würdest du hierbleiben müssen.\n\nDie Tafel strahlt eine beruhigende Kraft aus. Du könntest sie stattdessen zerschmettern, um ihre heilenden Energien in dich aufzunehmen.",
       "choices": [
         {
           "name": "Entziffern",
@@ -5769,38 +5912,47 @@
         },
         {
           "name": "Zertrümmern",
-          "description": "Heile 20 TP."
+          "description": "Heile 20 TP.",
+          "outcome": "Die Tafel wird in Stücke zertrümmert, die aus der Tafel getriebene Energie strömt in deinen Körper.\n\nDu fühlst dich erquickt!"
         }
       ]
     },
     "TEA_MASTER": {
-      "description": "Du stolperst in eine spärlich beleuchtete Hütte und fühlst dich eingetaucht in einen sehr friedlichen Ort, der eine obsessive Vielfalt an Tee beherbergt.\n\nDer Mann drinnen deutet auf eine Auswahl von Tees, von denen jeder ordentlich mit einem hochwertigen Preis beschriftet ist.",
       "name": "Teemeister",
+      "description": "Du stolperst in eine spärlich beleuchtete Hütte und fühlst dich eingetaucht in einen sehr friedlichen Ort, der eine obsessive Vielfalt an Tee beherbergt.\n\nDer Mann drinnen deutet auf eine Auswahl von Tees, von denen jeder ordentlich mit einem hochwertigen Preis beschriftet ist.",
       "choices": [
         {
           "name": "Knochentee",
-          "description": "Zahle 50 Gold. {BoneTeaDescription}"
+          "description": "Zahle 50 Gold. Bone Tea",
+          "locked": "Benötigt 50 Gold."
         },
         {
           "name": "Glut-Tee",
-          "description": "Zahle 150 Gold. {EmberTeaDescription}"
+          "description": "Zahle 150 Gold. Ember Tea",
+          "locked": "Benötigt 150 Gold."
         },
         {
           "name": "Tee der Unhöflichkeit",
-          "description": "{TeaOfDiscourtesyDescription}"
+          "description": "Tea of Discourtesy",
+          "outcome": "Höflich lehnst du den Tee ab und—\n\n*RUMMS*\n\nDie Tür hinter dir knallt zu. Der Teemeister starrt dich einen Augenblick an, dann zeigt er dir eine hässliche Tasse.\nOh, dieser Tee ist für die Unhöflichen..."
         }
       ]
     },
     "THE_FUTURE_OF_POTIONS": {
-      "description": "Du spürst ein entferntes Rumpeln, dann entdeckst du hinter der nächsten Ecke einen riesigen drehenden Apparat!\nEr hat verschiedene Öffnungen, die anscheinend Flüssigkeiten in eine sehr komprimierte essbare Tablette umwandeln.\n\nDer Gedanke, aus diesen starken Tränken einen winzigen Happen zu machen, klingt unangenehm. Aber vielleicht ist es gut, neue Dinge auszuprobieren?",
       "name": "Die Zukunft der Tränke?",
+      "description": "Du spürst ein entferntes Rumpeln, dann entdeckst du hinter der nächsten Ecke einen riesigen drehenden Apparat!\nEr hat verschiedene Öffnungen, die anscheinend Flüssigkeiten in eine sehr komprimierte essbare Tablette umwandeln.\n\nDer Gedanke, aus diesen starken Tränken einen winzigen Happen zu machen, klingt unangenehm. Aber vielleicht ist es gut, neue Dinge auszuprobieren?",
       "choices": [
-        null
+        {
+          "name": "{Rarity:choose(Ereignis|Token):Ereignis-Trank|Token-Trank|{}en Trank} einfüllen",
+          "description": "Verliere Trank. Erhalte {Type:choose(Angriff):einen verbesserten|eine verbesserte} ?e{Type:choose(Angriff):n {}| {}}."
+        },
+        {},
+        {}
       ]
     },
     "THE_LANTERN_KEY": {
-      "description": "Du findest einen schwach leuchtenden Schlüssel und möchtest ihn aufheben.\n\n“Diesen Schlüssel hab ich überall gesucht! Nun, wenn es dir nichts ausmacht...”\n\nDiese Person sieht nicht nach einem guten Umgang aus, aber vielleicht solltest du nicht so schnell urteilen.",
       "name": "Der Laternenschlüssel",
+      "description": "Du findest einen schwach leuchtenden Schlüssel und möchtest ihn aufheben.\n\n“Diesen Schlüssel hab ich überall gesucht! Nun, wenn es dir nichts ausmacht...”\n\nDiese Person sieht nicht nach einem guten Umgang aus, aber vielleicht solltest du nicht so schnell urteilen.",
       "choices": [
         {
           "name": "Den Schlüssel behalten",
@@ -5813,55 +5965,120 @@
       ]
     },
     "THE_LEGENDS_WERE_TRUE": {
-      "description": "Beim Betreten einer stockdunklen Kammer durchbricht ein plötzliches Licht von oben die Finsternis, gerade als die Tür hinter dir zuschlägt.\n\nBeleuchtet liegt vor dir ein Podest mit einer Schatzkarte darauf. Du verspürst einen Drang, sie zu nehmen.\n\nVerdächtig.",
       "name": "Die Legenden waren wahr",
+      "description": "Beim Betreten einer stockdunklen Kammer durchbricht ein plötzliches Licht von oben die Finsternis, gerade als die Tür hinter dir zuschlägt.\n\nBeleuchtet liegt vor dir ein Podest mit einer Schatzkarte darauf. Du verspürst einen Drang, sie zu nehmen.\n\nVerdächtig.",
       "choices": [
         {
           "name": "Die Karte schnappen",
-          "description": "Erhalte die Beuteschatzkarte."
+          "description": "Erhalte die Beuteschatzkarte.",
+          "outcome": "Was soll schon Schlimmes passieren? Als du die Schatzkarte nimmst, erscheint eine Öffnung vor dir auf der anderen Seite des Raumes."
         },
         {
           "name": "Langsam einen Ausgang finden",
-          "description": "Verliere 8 TP. Beschaffe 1 zufälligen Trank."
+          "description": "Verliere 8 TP. Beschaffe 1 zufälligen Trank.",
+          "outcome": "Während du dich auf der Suche nach einem Ausgang durchs Dunkle schleichst, beginnt der Raum gewaltig zu zittern. Mit einem plötzlichen Krach fällt die ganze Kammer um dich herum zusammen.\n\nGerade so kannst du dich aus den Trümmern retten, dabei findest du ein Fläschchen mit etwas Nützlichem, das wohl in dem Raum versteckt war."
         }
       ]
     },
     "THIS_OR_THAT": {
-      "description": "Plötzlich ragen Arme aus einem nahen Loch hervor, die einen verdächtigen Sack mit Reichtümern und ein eindeutig verfluchtes Relikt halten.\n\n“Dies... oder Das?”\nflüstert eine aufgekratzte Stimme von unten.",
       "name": "Dies oder Das?",
+      "description": "Plötzlich ragen Arme aus einem nahen Loch hervor, die einen verdächtigen Sack mit Reichtümern und ein eindeutig verfluchtes Relikt halten.\n\n“Dies... oder Das?”\nflüstert eine aufgekratzte Stimme von unten.",
       "choices": [
         {
           "name": "Das",
-          "description": "Erhalte Ungeschickt in dein Deck. Erhalte ein zufälliges Relikt."
+          "description": "Erhalte Clumsy in dein Deck. Erhalte ein zufälliges Relikt.",
+          "outcome": "Du greifst nach dem Verfluchten Relikt. Sobald du es berührst, materialisieren sich Fesseln um deine Handgelenke.\n\nDu hörst ein gespenstisches Lachen und eine heller Feuerschwaden füllt deine Sicht aus!\n\nDas Loch und die Arme sind weg."
         },
         {
           "name": "Dies",
-          "description": "Verliere 6 TP. Erhalte 0 Gold."
+          "description": "Verliere 6 TP. Erhalte 0 Gold.",
+          "outcome": "Du nimmst den Sack und sobald du das tust, erscheint eine DRITTE Hand und greift nach dir!!\n\nNach einem wilden Gerangel lässt sie los—die Arme und das Loch sind verschwunden."
         }
       ]
     },
     "TINKER_TIME": {
-      "description": "Als du ein endloses Meer von Leichen durchquerst, findest du eine verrückte Forscherin, die nach diversem verwertbarem Schrott sucht.\n\n“Ja. Hey, hallo! Du siehst aus wie {characterGender:choose(feminine):eine gute Kämpferin|ein guter Kämpfer}... Ich brauche eine Testperson für mein nächstes Gräuelgerät! Wie wär's?”",
       "name": "Bastelstunde",
-      "choices": []
+      "description": "Als du ein endloses Meer von Leichen durchquerst, findest du eine verrückte Forscherin, die nach diversem verwertbarem Schrott sucht.\n\n“Ja. Hey, hallo! Du siehst aus wie {characterGender:choose(feminine):eine gute Kämpferin|ein guter Kämpfer}... Ich brauche eine Testperson für mein nächstes Gräuelgerät! Wie wär's?”",
+      "pages": [
+        {
+          "description": "“Welche Art Werkzeug wird dir helfen, alle zu töten?”",
+          "choices": [
+            {
+              "name": "Waffe",
+              "description": "Erstelle einen Angriff."
+            },
+            {
+              "name": "Hilfsmittel",
+              "description": "Erstelle eine Macht."
+            },
+            {
+              "name": "Schutz",
+              "description": "Erstelle eine Fertigkeit."
+            }
+          ]
+        },
+        {
+          "description": "“Großartige Wahl! Was soll sie jetzt TUN?”\nDie Forscherin reibt sich vor Freude die Hände.",
+          "choices": [
+            {
+              "name": "Chaos",
+              "description": "Erhalte eine zufällige Karte auf deine Hand. Sie kostet in diesem Zug 0 {energyPrefix:energyIcons(1)}."
+            },
+            {
+              "name": "Würgend",
+              "description": "Immer wenn du in diesem Zug eine Karte spielst, verliert der Gegner {ChokingDamage} TP."
+            },
+            {
+              "name": "Neugierig",
+              "description": "Mächte kosten 1 {energyPrefix:energyIcons(1)} weniger."
+            },
+            {
+              "name": "Energetisch",
+              "description": "Erhalte {EnergizedEnergy:energyIcons()}."
+            },
+            {
+              "name": "Expertise",
+              "description": "Erhalte {ExpertiseStrength} Stärke. Erhalte {ExpertiseDexterity} Geschicklichkeit."
+            },
+            {
+              "name": "Steigerung",
+              "description": "Verbessere am Ende des Kampfes eine zufällige Karte."
+            },
+            {
+              "name": "Schwächend",
+              "description": "Wende {SappingWeak} Schwach an. Wende {SappingVulnerable} Verwundbar an."
+            },
+            {
+              "name": "Gewalt",
+              "description": "Trifft 2 weitere Male."
+            },
+            {
+              "name": "Weisheit",
+              "description": "Ziehe 3 Karten."
+            }
+          ]
+        }
+      ]
     },
     "TRASH_HEAP": {
-      "description": "Du entdeckst einen aufgetürmten Haufen mit entsorgten Waffen, abgelegten Hilfsmitteln und anderen Merkwürdigkeiten. Der riesige Haufen bewegt sich und rumpelt, als würde er von innen wachsen...\n\nWenn du etwas an der Oberfläche suchst, könntest du einige brauchbare Dinge finden. Aber wenn du wirklich da reingehst, könntest du exotische Schätze finden.",
       "name": "Schrotthügel",
+      "description": "Du entdeckst einen aufgetürmten Haufen mit entsorgten Waffen, abgelegten Hilfsmitteln und anderen Merkwürdigkeiten. Der riesige Haufen bewegt sich und rumpelt, als würde er von innen wachsen...\n\nWenn du etwas an der Oberfläche suchst, könntest du einige brauchbare Dinge finden. Aber wenn du wirklich da reingehst, könntest du exotische Schätze finden.",
       "choices": [
         {
           "name": "Hineinspringen",
-          "description": "Verliere 8 TP. Erhalte ein zufälliges vergessenes Relikt aus der Vergangenheit."
+          "description": "Verliere 8 TP. Erhalte ein zufälliges vergessenes Relikt aus der Vergangenheit.",
+          "outcome": "Du verbringst eine beträchtliche Zeit damit, dich durch den gefährlichen Müll zu arbeiten und findest ein Relikt der Vergangenheit!\n\nWarum wurde das weggeworfen?"
         },
         {
           "name": "Irgendwelchen Müll mitnehmen",
-          "description": "Erhalte 100 Gold. Erhalte eine zufällige vergessene Karte von früher."
+          "description": "Erhalte 100 Gold. Erhalte eine zufällige vergessene Karte von früher.",
+          "outcome": "Du gehst aus sicherer Entfernung um den Haufen herum und nimmst hier und da einige vergessene Wertsachen und Merkwürdigkeiten mit.\n\nWozu wurden die überhaupt erst gemacht?"
         }
       ]
     },
     "TRIAL": {
-      "description": "Du stellst dich hinter einigen Leuten an, die ein riesiges Gebäude betreten.\n\nAls du unter einem goldenen Torbogen durchgehst, schmettert eine Fanfare, Konfetti explodiert und Luftschlangen gleiten von der Decke herab!\n\n“Teilnehmer{characterGender:choose(feminine):in|} {EntrantNumber}, du bist ENTSCHEIDER{characterGender:choose(feminine):IN|} für den heutigen Prozess.”",
       "name": "Der Prozess",
+      "description": "Du stellst dich hinter einigen Leuten an, die ein riesiges Gebäude betreten.\n\nAls du unter einem goldenen Torbogen durchgehst, schmettert eine Fanfare, Konfetti explodiert und Luftschlangen gleiten von der Decke herab!\n\n“Teilnehmer{characterGender:choose(feminine):in|} ?, du bist ENTSCHEIDER{characterGender:choose(feminine):IN|} für den heutigen Prozess.”",
       "choices": [
         {
           "name": "Akzeptieren",
@@ -5874,134 +6091,158 @@
       ]
     },
     "UNREST_SITE": {
-      "description": "Du findest eine Lagerstätte und zündest ein Feuer an, um etwas Ruhe zu haben.\nDachtest du dir jedenfalls.\n\nSobald das Feuer brennt, beginnt es anzuschwellen, aber nicht nach oben, sondern seitwärts in Richtung eines Wäldchens mit öltropfenden Bäumen.\n\nSollst du trotzdem versuchen, dich auszuruhen?",
       "name": "Unruhestätte",
+      "description": "Du findest eine Lagerstätte und zündest ein Feuer an, um etwas Ruhe zu haben.\nDachtest du dir jedenfalls.\n\nSobald das Feuer brennt, beginnt es anzuschwellen, aber nicht nach oben, sondern seitwärts in Richtung eines Wäldchens mit öltropfenden Bäumen.\n\nSollst du trotzdem versuchen, dich auszuruhen?",
       "choices": [
         {
           "name": "Die Bäume fällen",
-          "description": "Verliere 8 max. TP. Erhalte ein zufälliges Relikt."
+          "description": "Verliere 8 max. TP. Erhalte ein zufälliges Relikt.",
+          "outcome": "Diese Bäume sind eindeutig böswillig, also entscheidest du dich, sie loszuwerden.\nDu bist noch mehrere Tage von Asche und öligem Schleim bedeckt.\n\nEin riesiger Schwarm kleiner Foglgeister erhebt sich aus den gefällten Bäumen und lässt zu deinen Füßen ein Schächtelchen fallen.\n“Danke, dass du uns aus diesen Bäumen befreit hast... Tschilp tschilp!”\n\nDu solltest wirklich mehr schlafen."
         },
         {
           "name": "Trotzdem ausruhen",
-          "description": "Heile alle deine TP. Erhalte Schlechter Schlaf."
+          "description": "Heile alle deine TP. Erhalte Schlechter Schlaf.",
+          "outcome": "All diese Abenteuer haben dich erschöpft gemacht. Du entscheidest dich trotz der Merkwürdigkeiten, zu schlafen.\n\nDu wirfst dich hin und her, während das Feuer über Nacht braust und knistert. Die widerlichen Bäume geben über ihren pechschwarzen Saft einen miesen Geruch ab.\n\nBeim Aufwachen bist du erholt, aber nicht bei Kräften."
         }
       ]
     },
     "WAR_HISTORIAN_REPY": {
-      "description": "Ein Akademiker ist in einem hängenden Käfig neben einer Schatzkiste eingesperrt.\n\nDer Akademiker murmelt etwas von “Einweg-Nutzungs-Schlüsseln”, während er wütend etwas schreibt.\n\nAnscheinend kannst du den Käfig oder die Truhe aufschließen.",
       "name": "Kriegshistoriker Repy",
+      "description": "Ein Akademiker ist in einem hängenden Käfig neben einer Schatzkiste eingesperrt.\n\nDer Akademiker murmelt etwas von “Einweg-Nutzungs-Schlüsseln”, während er wütend etwas schreibt.\n\nAnscheinend kannst du den Käfig oder die Truhe aufschließen.",
       "choices": [
         {
           "name": "Den Käfig aufschließen",
-          "description": "Verliere Laternenschlüssel. Erhalte Geschichtskurs."
+          "description": "Verliere Laternenschlüssel. Erhalte Geschichtskurs.",
+          "outcome": "Repy verbeugt sich dankbar, als du den Käfig öffnest. Er reicht dir einen dicken Lederband.\n\n“Wer nichts von Geschichte weiß, ist verdammt, sie zu wiederholen. Aber du weißt das Eine oder Andere über Wiederholungen, nicht wahr?”"
         },
         {
           "name": "Die Truhe aufschließen",
-          "description": "Verliere Laternenschlüssel. Beschaffe 2 zufällige Tränke. Erhalte 2 zufällige Relikte."
+          "description": "Verliere Laternenschlüssel. Beschaffe 2 zufällige Tränke. Erhalte 2 zufällige Relikte.",
+          "outcome": "“Du wirst nicht den Gelehrten Repy befreien? Ausgehend von klassischer Philosophie würdest du als moralisches Versagen betrachtet werden. Jawoll, bedenke vielleicht beim nächsten Mal die LEBENDE PERSON, die eingesperrt ist! Ist ja nicht so, als wäre ein wertvolles Mitglied der Gesellschaft in einer SCHLIMMEN BREDOUILLE oder sowas!!”\n\n“Guck mal, okay, siehst du, wie klein dieser Käfig ist!? Warum beschwere ich mich? Du hast schon deine ungelehrte Entscheidung getroffen... oh, was ist dort drin? Ein paar Tränke und Relikte? Ist das nicht toll. Einfach toll. Wirklich toll für dich..”\n\nRepys Augen folgen dir verachtlich, als du weggehst."
         }
       ]
     },
     "WATERLOGGED_SCRIPTORIUM": {
-      "description": "Als du durch die trüben Kanäle steuerst, stößt du auf eine welke Figur, die einen kleinen Laden betreibt. Die Vielzahl an Regalen ist vollgestopft mit klammen Schriftrollen und Pergamenten.\n\nAls er merkt, dass ein Kunde gekommen ist, wird der Schreiber-Verkäufer ruckartig aufmerksam und deutet auf einige Utensilien, die auf einem Tisch drapiert sind.",
       "name": "Unterwasser-Schreibstube",
+      "description": "Als du durch die trüben Kanäle steuerst, stößt du auf eine welke Figur, die einen kleinen Laden betreibt. Die Vielzahl an Regalen ist vollgestopft mit klammen Schriftrollen und Pergamenten.\n\nAls er merkt, dass ein Kunde gekommen ist, wird der Schreiber-Verkäufer ruckartig aufmerksam und deutet auf einige Utensilien, die auf einem Tisch drapiert sind.",
       "choices": [
         {
           "name": "Blutige Tinte",
-          "description": "Erhalte 6 max. TP."
+          "description": "Erhalte 6 max. TP.",
+          "outcome": "Der Schreiber nimmt vorsichtig das Fläschchen mit einer leuchtend roten Tinte und schüttelt es, dann deutet er mit seiner eigenen Hand eine eintunkende Bewegung an.\n\nDu tauchst deine Finger in die Tinte und durch dich geht ein Ruck der Lebendigkeit!\n\nErfreut von deiner Reaktion macht der Schreiber eine höfliche Verbeugung und winkt zum Abschied."
         },
         {
           "name": "Dorniger Schwamm",
-          "description": "Zahle 155 Gold. Verzaubere 2 Karte mit Beständig."
+          "description": "Zahle 155 Gold. Verzaubere 2 Karten mit Beständig.",
+          "locked": "Benötigt 155 Gold.",
+          "outcome": "Der Schreiber nimmt den dornigen Schwamm (er quietscht) und tupft mit ihm über deine Schriftrollen.\n\n*quietsch quietsch quietsch*\n\nDie dornige Struktur hinterlässt schimmernde Spuren, die anscheinend die Tinte stabilisieren..."
         },
         {
           "name": "Tentakel-Schreibfeder",
-          "description": "Zahle 65 Gold. Verzaubere eine Karte mit Beständig."
+          "description": "Zahle 65 Gold. Verzaubere eine Karte mit Beständig.",
+          "locked": "Benötigt 65 Gold.",
+          "outcome": "Der Schreiber erhebt die schlängelige Schreibfeder und kratzt mit schnellen, geübten Bewegungen ein seltsames Zeichen auf deine Stirn.\n\nDas Zeichen leuchtet hell, dann verschwindet es..."
         }
       ]
     },
     "WELCOME_TO_WONGOS": {
-      "description": "“Willkommen bei Wongo. Wir haben, was du willst, zu wongtastischen Preisen.”, sagt der begeisterungsloseste Verkäufer, den du je getroffen hast.\n\n“Schau unsere Waren durch und genieße deine Zeit im Wongo,” fährt er fort, ohne überhaupt aufzublicken.",
       "name": "Willkommen bei Wongo",
+      "description": "“Willkommen bei Wongo. Wir haben, was du willst, zu wongtastischen Preisen.”, sagt der begeisterungsloseste Verkäufer, den du je getroffen hast.\n\n“Schau unsere Waren durch und genieße deine Zeit im Wongo,” fährt er fort, ohne überhaupt aufzublicken.",
       "choices": [
         {
           "name": "Wongos Schnäppchenkorb",
-          "description": "Zahle 100 Gold. Erhalte 1 zufälliges Gewöhnliches Relikt."
+          "description": "Zahle 100 Gold. Erhalte 1 zufälliges Gewöhnliches Relikt.",
+          "locked": "Benötigt 100 Gold."
         },
         {
           "name": "Wongos Spezialartikel",
-          "description": "Zahle 200 Gold. Erhalte {RandomRelic}."
+          "description": "Zahle 200 Gold. Erhalte zufälliges Relikt.",
+          "locked": "Benötigt 200 Gold."
         },
         {
           "name": "Verlassen",
-          "description": "Verschlechtere eine zufällige Karte."
+          "description": "Verschlechtere eine zufällige Karte.",
+          "outcome": "“Äh... sorry, du kannst in einem Wongo nicht einfach gehen, ohne etwas zu kaufen,” sagt der Verkäufer mit irritiertem Tonfall.\n\nIhr führt einen hitzigen Streit über Kundenentscheidung, was dich mental erschöpft."
         },
         {
           "name": "Wongos Überraschungskiste",
-          "description": "Zahle 300 Gold. Erhalte nach 5 Kämpfen 3 zufällige Relikte."
+          "description": "Zahle 300 Gold. Erhalte nach 5 Kämpfen 3 zufällige Relikte.",
+          "locked": "Benötigt 300 Gold."
         }
       ]
     },
     "WELLSPRING": {
-      "description": "Du verfolgst ein tiefes Grollen bis zu seinem Ursprung und gelangst zu einer ruhigen Quelle. Das Wasser ist smaragdgrün mit Häufchen aus leuchtenden Punkten.\n\nEs sieht einladend aus. Was soll schon schiefgehen?",
       "name": "Quellbrunnen",
+      "description": "Du verfolgst ein tiefes Grollen bis zu seinem Ursprung und gelangst zu einer ruhigen Quelle. Das Wasser ist smaragdgrün mit Häufchen aus leuchtenden Punkten.\n\nEs sieht einladend aus. Was soll schon schiefgehen?",
       "choices": [
         {
           "name": "Baden",
-          "description": "Entferne 1 Karte aus deinem Deck. Erhalte 1 Schuldgefühl in dein Deck."
+          "description": "Entferne 1 Karte aus deinem Deck. Erhalte 1 Schuldgefühl in dein Deck.",
+          "outcome": "Du tauchst aus dem Becken mit einem leichten Gefühl des Unbehagens auf.\n\nAllerdings fühlst du dich überraschend erfrischt."
         },
         {
           "name": "Abfüllen",
-          "description": "Beschaffe 1 zufälligen Trank."
+          "description": "Beschaffe 1 zufälligen Trank.",
+          "outcome": "Dir scheint es suspekt, in dem schönen Wasser zu baden... stattdessen füllst du dir etwas davon ab.\n\nDas wird noch nützlich sein."
         }
       ]
     },
     "WHISPERING_HOLLOW": {
-      "description": "Du kommst durch ein Tal mit toten Bäumen, wo dir ein einzelner knochenweißer Baum auffällt. Tonkugeln hängen an seinen Zweigen, welche sich wie schützende Rippen nach innen krümmen.\n\nSo ein unheimlicher Baum. Er flüstert.\n\n...Tausch machen.....",
       "name": "Flüstertal",
+      "description": "Du kommst durch ein Tal mit toten Bäumen, wo dir ein einzelner knochenweißer Baum auffällt. Tonkugeln hängen an seinen Zweigen, welche sich wie schützende Rippen nach innen krümmen.\n\nSo ein unheimlicher Baum. Er flüstert.\n\n...Tausch machen.....",
       "choices": [
         {
           "name": "Gold wegtauschen",
-          "description": "Verliere 50 Gold. Beschaffe 2 zufällige Tränke."
+          "description": "Verliere 50 Gold. Beschaffe 2 zufällige Tränke.",
+          "outcome": "Du verteilst am Fuße des Baumes etwas Gold und zwei der Lehmgefäße fallen klanglos zu Boden.\n\nSie brechen auf und enthalten wunderbar intakte Tränke.\n\nDu schnappst die Tränke und fliehst."
         },
         {
           "name": "Den Baum umarmen",
-          "description": "Verliere 9 TP. Wähle eine Karte, die du Transformierst."
+          "description": "Verliere 9 TP. Wähle eine Karte, die du Transformierst.",
+          "outcome": "Das Flüstern nötigt dich dazu, ihm Gold zu geben, aber du widerstehst und gibst dem Baum stattdessen eine dicke Umarmung!\n\nEr drischt um sich, wobei er dich mit seinen Zweigen kratzt, aber schließlich beruhigt er sich. Das Baum-Umarmungs-Erlebnis transformiert dich.\n\n...umarmen.....?"
         }
       ]
     },
     "WOOD_CARVINGS": {
-      "description": "Du öffnest eine verstaubte Schachtel. Darin ist ein Satz mit 3 kunstvollen Holzschnitzereien:\n\nEin Vogel, eine Schlange und... ein Torus?\n\nEin Podest in der Nähe hat Vertiefungen, die zum Fuß der Schnitzereien passen. Welche Schnitzerei stellst du auf das Podest?",
       "name": "Holzschnitzereien",
+      "description": "Du öffnest eine verstaubte Schachtel. Darin ist ein Satz mit 3 kunstvollen Holzschnitzereien:\n\nEin Vogel, eine Schlange und... ein Torus?\n\nEin Podest in der Nähe hat Vertiefungen, die zum Fuß der Schnitzereien passen. Welche Schnitzerei stellst du auf das Podest?",
       "choices": [
         {
           "name": "Vogel",
-          "description": "Wähle 1 Startkarte, die du zu Picken Transformierst."
+          "description": "Wähle 1 Startkarte, die du zu Peck Transformierst.",
+          "outcome": "Du stellst die geflügelte Schnitzerei auf das Podest und die Augen der Statue LEUCHTEN AUF und du hörst ein schwaches Klingeln in deinem Kopf.\n\n...kah.... kah kaaaahhh...\n\nDas Podest öffnet sich und eine seltsame Flüssigkeit beginnt herauszufließen.\nSelbstverständlich trinkst du alles davon."
         },
         {
           "name": "Schlange",
-          "description": "Verzaubere 1 Karte mit Schlängeln."
+          "description": "Verzaubere 1 Karte mit Slither.",
+          "locked": "Keine deiner Karten kann mit Schlängeln verzaubert werden.",
+          "outcome": "Du stellst die Schlangenschnitzerei auf das Podest und die Schuppen der Statue LEUCHTEN AUF! Du fühlst dich etwas warm, gemütlich und wacklig."
         },
         {
           "name": "Torus",
-          "description": "Wähle 1 Startkarte, die du zu Torische Härte Transformierst."
+          "description": "Wähle 1 Startkarte, die du zu Toric Toughness Transformierst.",
+          "outcome": "Du stellst den geschnitzten Torus auf das Podest und dein BAUCH LEUCHTET AUF, als die Statue sich in ein kochend heißes Fettgebäck verwandelt. Ein unersättlicher Hunger überkommt dich und du verzehrst schnell den Donut.\n\nDu fühlst dich zäher, aber langsamer."
         }
       ]
     },
     "ZEN_WEAVER": {
-      "description": "Du läufst durch ein Spinnennetz und gerätst in PANIK!\nAber dann überkommt dich eine Welle der Ruhe...\n\n“Beruhige dich. Hör mir auf, mein Netz durcheinanderzubringen.”\n\nWie hast du dich so schnell beruhigt?\nEine klitzekleine Spinne seilt sich ab, um dir zu begegnen. Sie scheint willens, gegen Gold einige Techniken zu vermitteln.",
       "name": "Zen-Weberin",
+      "description": "Du läufst durch ein Spinnennetz und gerätst in PANIK!\nAber dann überkommt dich eine Welle der Ruhe...\n\n“Beruhige dich. Hör mir auf, mein Netz durcheinanderzubringen.”\n\nWie hast du dich so schnell beruhigt?\nEine klitzekleine Spinne seilt sich ab, um dir zu begegnen. Sie scheint willens, gegen Gold einige Techniken zu vermitteln.",
       "choices": [
         {
           "name": "Arachnide Akupunktur",
-          "description": "Zahle 250 Gold. Entferne 2 Karten aus deinem Deck."
+          "description": "Zahle 250 Gold. Entferne 2 Karten aus deinem Deck.",
+          "outcome": "“Nicht... bewegen...” brummt die winzige Spinne, als ihre Vorderbeine zu glühen beginnen.\n\nDann— ein Gewitter stechender Bewegungen, sie durchbohrt dich überall!\nEin Gefühl der Schwerelosigkeit überkommt dich. Gut angelegtes Geld."
         },
         {
           "name": "Atemtechniken",
-          "description": "Zahle 50 Gold. Erhalte 2 Erleuchtung in dein Deck."
+          "description": "Zahle 50 Gold. Erhalte 2 Erleuchtung in dein Deck.",
+          "outcome": "“Stell dir vor, dass deine Atemwege offen bleiben... Jeder Atemzug ist bedeutsam.”\n\nDu übst die Technik auf eine Weise, die du sinnvoll findest."
         },
         {
           "name": "Emotionales Bewusstsein",
-          "description": "Zahle 125 Gold. Entferne 1 Karte aus deinem Deck."
+          "description": "Zahle 125 Gold. Entferne 1 Karte aus deinem Deck.",
+          "outcome": "Die klitzekleine Spinne fängt einen hypnotischen Tanz an und singt immerfort.\n\n“Gedanken ändern nicht die Realität. Panik tötet die Gedanken. Folge dem Plan.\n\nDas ergibt für dich Sinn. Große weise Worte von einer winzigen Spinne."
         }
       ]
     },
@@ -6113,7 +6354,7 @@
       "name": "Darv"
     },
     "NEOW": {
-      "description": "Mutter der Auferwerckung (exiliert)",
+      "description": "Neow, die Mutter der Auferstehung, erwartet dich zu Beginn jedes Laufs. Sie bietet drei Segnungen – zwei positive und einen verfluchten. Die Optionen werden zufällig aus den unten stehenden Pools gezogen.",
       "epithet": "Mutter der Auferwerckung (exiliert)",
       "dialogue": [
         {
@@ -6221,7 +6462,129 @@
           "text": "Ich habe dich... neu gemacht....\n...geh... ..hoch....."
         }
       ],
-      "name": "Neow"
+      "name": "Neow",
+      "choices": [
+        {
+          "name": "Arkane Schriftrolle",
+          "description": "Erhalte beim Aufheben eine zufällige seltene Karte für dein Deck.",
+          "relic_id": "ARCANE_SCROLL",
+          "pool": "positive"
+        },
+        {
+          "name": "Brausende Muschel",
+          "description": "Ziehe zu Beginn von Elite-Kämpfen 2 Karte mehr.",
+          "relic_id": "BOOMING_CONCH",
+          "pool": "positive"
+        },
+        {
+          "name": "Bisamapfel",
+          "description": "Verbessere beim Aufheben eine Karte.",
+          "relic_id": "POMANDER",
+          "pool": "positive"
+        },
+        {
+          "name": "Goldene Perle",
+          "description": "Erhalte beim Aufheben 150 Gold.",
+          "relic_id": "GOLDEN_PEARL",
+          "pool": "positive"
+        },
+        {
+          "name": "Bleierner Briefbeschwerer",
+          "description": "Wähle beim Aufheben 1 von 2 farblosen Karten, die in dein Deck erhältst.",
+          "relic_id": "LEAD_PAPERWEIGHT",
+          "pool": "positive"
+        },
+        {
+          "name": "Neues Blatt",
+          "description": "Transformiere beim Aufheben 1 Karte.",
+          "relic_id": "NEW_LEAF",
+          "pool": "positive"
+        },
+        {
+          "name": "Neows Folter",
+          "description": "Erhalte beim Aufheben 1 Neows Wut in dein Deck.",
+          "relic_id": "NEOWS_TORMENT",
+          "pool": "positive"
+        },
+        {
+          "name": "Präzise Schere",
+          "description": "Entferne beim Aufheben 1 Karte aus deinem Deck.",
+          "relic_id": "PRECISE_SCISSORS",
+          "pool": "positive"
+        },
+        {
+          "name": "Verlorene Truhe",
+          "description": "Erhalte beim Aufheben 1 Kartenbelohnung und beschaffe 1 zufälligen Trank.",
+          "relic_id": "LOST_COFFER",
+          "pool": "positive"
+        },
+        {
+          "name": "Verfluchte Perle",
+          "description": "Erhalte beim Aufheben Gier. Erhalte 333 Gold.",
+          "relic_id": "CURSED_PEARL",
+          "pool": "cursed"
+        },
+        {
+          "name": "Große Kapsel",
+          "description": "Erhalte beim Aufheben 2 zufälliges Relikt. Erhalte einen zusätzlichen Schlag und Verteidigen in dein Deck.",
+          "relic_id": "LARGE_CAPSULE",
+          "pool": "cursed"
+        },
+        {
+          "name": "Blätterwickel",
+          "description": "Transformiere beim Aufheben 1 deiner Schläge und 1 deiner Verteidigen und verliere 10 max. TP.",
+          "relic_id": "LEAFY_POULTICE",
+          "pool": "cursed"
+        },
+        {
+          "name": "Heikle Schere",
+          "description": "Entferne beim Aufheben 2 Karte aus deinem Deck und nimm 13 Schaden.",
+          "relic_id": "PRECARIOUS_SHEARS",
+          "pool": "cursed"
+        },
+        {
+          "name": "Nahrhafte Auster",
+          "description": "Erhöhe beim Aufheben deine max. TP um 11.",
+          "relic_id": "NUTRITIOUS_OYSTER",
+          "pool": "positive"
+        },
+        {
+          "name": "Steinerner Luftbefeuchter",
+          "description": "Immer wenn du dich an einem Lagerfeuer ausruhst, erhöhe deine max. TP um 5.",
+          "relic_id": "STONE_HUMIDIFIER",
+          "pool": "positive"
+        },
+        {
+          "name": "Wuchtige Schriftrolle",
+          "description": "Wähle beim Aufheben 1 von 3 Mehrspieler-Karten, die du deinem Deck hinzufügst.",
+          "relic_id": "MASSIVE_SCROLL",
+          "pool": "positive"
+        },
+        {
+          "name": "Lavastein",
+          "description": "Der Akt-1-Boss hinterlässt 2 Relikte.",
+          "relic_id": "LAVA_ROCK",
+          "pool": "positive"
+        },
+        {
+          "name": "Kleine Kapsel",
+          "description": "Erhalte beim Aufheben ein zufälliges Relikt.",
+          "relic_id": "SMALL_CAPSULE",
+          "pool": "positive"
+        },
+        {
+          "name": "Silbertiegel",
+          "description": "Die ersten 3 Kartenbelohnungen, die du siehst, sind verbessert. Die erste Schatztruhe, die du öffnest, ist leer.",
+          "relic_id": "SILVER_CRUCIBLE",
+          "pool": "cursed"
+        },
+        {
+          "name": "Kisten mit Schriftrollen",
+          "description": "Verliere beim Aufheben alles Gold und wähle 1 von 2 Kartenpaketen, das du deinem Deck hinzufügst.",
+          "relic_id": "SCROLL_BOXES",
+          "pool": "cursed"
+        }
+      ]
     },
     "NONUPEIPE": {
       "description": "Personifiziertes Glück",

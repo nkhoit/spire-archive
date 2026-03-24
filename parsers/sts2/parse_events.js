@@ -933,7 +933,419 @@ async function parseEvents() {
   console.log(`  Output: ${eventsPath}`);
 }
 
-parseEvents().catch(err => {
-  console.error('Fatal error:', err);
-  process.exit(1);
-});
+// ─── Localization Support ───────────────────────────────────────────
+
+const LANG_MAP = {
+  deu: 'de', fra: 'fr', ita: 'it', esp: 'es', spa: 'es',
+  ptb: 'pt', pol: 'pl', rus: 'ru', tur: 'tr',
+  tha: 'th', jpn: 'ja', kor: 'ko', zhs: 'zh',
+};
+
+const LOCALIZED_RUNTIME_VARS = {
+  ja: { potion: 'ポーション', relic: 'レリック', randomRelic: 'ランダムなレリック', randomCard: 'ランダムなカード', randomPotion: 'ランダムなポーション', yourRelic: 'あなたのレリック', newRelic: '新しいレリック', them: 'them', they: 'they', theirs: 'theirs', character: 'キャラクター' },
+  ko: { potion: '물약', relic: '유물', randomRelic: '무작위 유물', randomCard: '무작위 카드', randomPotion: '무작위 물약', yourRelic: '보유 유물', newRelic: '새 유물', them: 'them', they: 'they', theirs: 'theirs', character: '캐릭터' },
+  zh: { potion: '药水', relic: '遗物', randomRelic: '随机遗物', randomCard: '随机卡牌', randomPotion: '随机药水', yourRelic: '你的遗物', newRelic: '新遗物', them: 'them', they: 'they', theirs: 'theirs', character: '角色' },
+  de: { potion: 'Trank', relic: 'Relikt', randomRelic: 'zufälliges Relikt', randomCard: 'zufällige Karte', randomPotion: 'zufälliger Trank', yourRelic: 'dein Relikt', newRelic: 'ein neues Relikt', them: 'ihn', they: 'er', theirs: 'sein', character: 'der Charakter' },
+  fr: { potion: 'Potion', relic: 'Relique', randomRelic: 'Relique aléatoire', randomCard: 'Carte aléatoire', randomPotion: 'Potion aléatoire', yourRelic: 'votre Relique', newRelic: 'une nouvelle Relique', them: 'lui', they: 'il', theirs: 'le sien', character: 'le personnage' },
+  es: { potion: 'Poción', relic: 'Reliquia', randomRelic: 'Reliquia aleatoria', randomCard: 'Carta aleatoria', randomPotion: 'Poción aleatoria', yourRelic: 'tu Reliquia', newRelic: 'una nueva Reliquia', them: 'él', they: 'él', theirs: 'suyo', character: 'el personaje' },
+  pt: { potion: 'Poção', relic: 'Relíquia', randomRelic: 'Relíquia aleatória', randomCard: 'Carta aleatória', randomPotion: 'Poção aleatória', yourRelic: 'sua Relíquia', newRelic: 'uma nova Relíquia', them: 'ele', they: 'ele', theirs: 'dele', character: 'o personagem' },
+  it: { potion: 'Pozione', relic: 'Reliquia', randomRelic: 'Reliquia casuale', randomCard: 'Carta casuale', randomPotion: 'Pozione casuale', yourRelic: 'la tua Reliquia', newRelic: 'una nuova Reliquia', them: 'lui', they: 'lui', theirs: 'il suo', character: 'il personaggio' },
+  pl: { potion: 'Mikstura', relic: 'Relikt', randomRelic: 'losowy Relikt', randomCard: 'losowa Karta', randomPotion: 'losowa Mikstura', yourRelic: 'twój Relikt', newRelic: 'nowy Relikt', them: 'go', they: 'on', theirs: 'jego', character: 'postać' },
+  ru: { potion: 'Зелье', relic: 'Реликвия', randomRelic: 'случайная Реликвия', randomCard: 'случайная Карта', randomPotion: 'случайное Зелье', yourRelic: 'ваша Реликвия', newRelic: 'новая Реликвия', them: 'его', they: 'он', theirs: 'его', character: 'персонаж' },
+  tr: { potion: 'İksir', relic: 'Kalıntı', randomRelic: 'rastgele Kalıntı', randomCard: 'rastgele Kart', randomPotion: 'rastgele İksir', yourRelic: 'Kalıntın', newRelic: 'yeni bir Kalıntı', them: 'onu', they: 'o', theirs: 'onun', character: 'karakter' },
+  th: { potion: 'ยา', relic: 'เรลิก', randomRelic: 'เรลิกสุ่ม', randomCard: 'การ์ดสุ่ม', randomPotion: 'ยาสุ่ม', yourRelic: 'เรลิกของคุณ', newRelic: 'เรลิกใหม่', them: 'เขา', they: 'เขา', theirs: 'ของเขา', character: 'ตัวละคร' },
+};
+
+const NEOW_DESCRIPTIONS = {
+  ja: 'ネオー（復活の母）は、各ランの開始時に待ち受けている。ポジティブな祝福2つと呪いの祝福1つの計3つの祝福を提供する。選択肢は以下のプールからランダムに選ばれる。',
+  ko: '니오우(부활의 어머니)는 각 게임 시작 시 기다리고 있습니다. 긍정적인 축복 2개와 저주받은 축복 1개, 총 3개의 축복을 제공합니다. 선택지는 아래 풀에서 무작위로 선택됩니다.',
+  zh: '涅奥（复活之母）在每次冒险开始时等待着你。她提供三个祝福——两个正面祝福和一个诅咒祝福。选项从以下池中随机抽取。',
+  de: 'Neow, die Mutter der Auferstehung, erwartet dich zu Beginn jedes Laufs. Sie bietet drei Segnungen – zwei positive und einen verfluchten. Die Optionen werden zufällig aus den unten stehenden Pools gezogen.',
+  fr: "Neow, la Mère de la Résurrection, attend au début de chaque partie. Elle offre trois bénédictions — deux positives et une maudite. Les options sont tirées au hasard parmi les groupes ci-dessous.",
+  es: 'Neow, la Madre de la Resurrección, espera al inicio de cada partida. Ofrece tres bendiciones: dos positivas y una maldita. Las opciones se eligen al azar de los grupos a continuación.',
+  pt: 'Neow, a Mãe da Ressurreição, aguarda no início de cada partida. Ela oferece três bênçãos — duas positivas e uma amaldiçoada. As opções são sorteadas dos grupos abaixo.',
+  it: "Neow, la Madre della Resurrezione, attende all'inizio di ogni partita. Offre tre benedizioni — due positive e una maledetta. Le opzioni vengono estratte casualmente dai gruppi sottostanti.",
+  pl: 'Neow, Matka Zmartwychwstania, czeka na początku każdej rozgrywki. Oferuje trzy błogosławieństwa — dwa pozytywne i jedno przeklęte. Opcje są losowane z poniższych pul.',
+  ru: 'Неоу, Мать Воскрешения, ждёт в начале каждого забега. Она предлагает три благословения — два положительных и одно проклятое. Варианты выбираются случайно из пулов ниже.',
+  tr: 'Diriliş Anası Neow, her koşunun başında bekler. Üç kutsama sunar — iki olumlu ve bir lanetli. Seçenekler aşağıdaki havuzlardan rastgele çekilir.',
+  th: 'นีโอว์ มารดาแห่งการฟื้นคืนชีพ รอคอยที่จุดเริ่มต้นของแต่ละรอบ เธอมอบพร 3 ประการ — 2 พรเชิงบวกและ 1 พรต้องสาป ตัวเลือกจะถูกสุ่มจากกลุ่มด้านล่าง',
+};
+
+function buildLocalizedRuntimeReplacements(iso) {
+  const l = LOCALIZED_RUNTIME_VARS[iso] || LOCALIZED_RUNTIME_VARS.ja;
+  return {
+    '{Prize1}': 'X', '{Prize2}': 'X', '{Prize3}': 'X',
+    '{Heal}': 'X', '{Gold}': 'X', '{HpLoss}': 'X',
+    '{Potion}': l.potion, '{Relic}': l.relic,
+    '{RandomRelic}': l.randomRelic, '{RandomCard}': l.randomCard,
+    '{DrinkRandomPotion}': l.randomPotion,
+    '{Rarity}': '?', '{Type}': '?', '{EntrantNumber}': '?',
+    '{BottomRelicOwned}': l.yourRelic, '{BottomRelicNew}': l.newRelic,
+    '{MiddleRelicOwned}': l.yourRelic, '{MiddleRelicNew}': l.newRelic,
+    '{TopRelicOwned}': l.yourRelic, '{TopRelicNew}': l.newRelic,
+    '{pronounObject}': l.them, '{pronounSubject}': l.they,
+    '{pronounPossessive}': l.theirs, '{character}': l.character,
+  };
+}
+
+function resolveRuntimeLocalized(text, replacements) {
+  if (!text) return text;
+  for (const [k, v] of Object.entries(replacements)) {
+    if (text.includes(k)) text = text.replaceAll(k, v);
+  }
+  return text;
+}
+
+/**
+ * Core event parsing from raw localization data. Shared between English and all languages.
+ * Returns an array of parsed event objects with: id, name, description, choices (with locked, outcome), pages.
+ */
+function parseEventsFromRawLoc(localization, canonicalVars) {
+  // Discover all event IDs from the raw loc keys
+  const eventIds = new Set();
+  for (const key in localization) {
+    const dot = key.indexOf('.');
+    if (dot > 0) eventIds.add(key.substring(0, dot));
+  }
+
+  const results = [];
+  for (const eventId of eventIds) {
+    const titleKey = `${eventId}.title`;
+    const name = localization[titleKey] ? stripBBCode(localization[titleKey]) : undefined;
+
+    const initialDescKey = `${eventId}.pages.INITIAL.description`;
+    const initialDesc = localization[initialDescKey];
+    const description = initialDesc ? stripBBCode(initialDesc) : undefined;
+
+    // Find C# vars for this event
+    const vars = canonicalVars[eventId] || {};
+
+    // Parse choices from INITIAL page options
+    const optionNames = new Set();
+    for (const key in localization) {
+      const match = key.match(/^(.+)\.pages\.INITIAL\.options\.([^.]+)\.(title|description)$/);
+      if (match && match[1] === eventId) optionNames.add(match[2]);
+    }
+
+    // Separate locked keys from regular keys and merge by suffix
+    const sortedOptions = Array.from(optionNames).sort();
+    const lockedKeys = new Set(sortedOptions.filter(k => k.endsWith('_LOCKED')));
+    const regularKeys = sortedOptions.filter(k => !k.endsWith('_LOCKED'));
+
+    const choices = [];
+    for (const optionName of regularKeys) {
+      const title = localization[`${eventId}.pages.INITIAL.options.${optionName}.title`];
+      const desc = localization[`${eventId}.pages.INITIAL.options.${optionName}.description`];
+      if (title || desc) {
+        let cleanDesc = desc ? stripBBCode(desc) : '';
+        cleanDesc = substituteVars(cleanDesc, vars);
+        const choice = {
+          name: title ? stripBBCode(title) : undefined,
+          description: cleanDesc,
+          _optionKey: optionName,
+        };
+        // Check for corresponding _LOCKED key
+        const lockedKey = `${optionName}_LOCKED`;
+        if (lockedKeys.has(lockedKey)) {
+          const lockedDesc = localization[`${eventId}.pages.INITIAL.options.${lockedKey}.description`];
+          if (lockedDesc) choice.locked = stripBBCode(substituteVars(lockedDesc, vars));
+        }
+        choices.push(choice);
+      }
+    }
+
+    const mergedChoices = choices;
+
+    // Collect flavor pages and attach outcomes
+    const flavorPages = collectFlavorOnlyPages(localization, eventId, vars);
+    attachChoiceOutcomes(mergedChoices, flavorPages);
+
+    // Clean up internal keys
+    for (const c of mergedChoices) delete c._optionKey;
+
+    // Parse multi-page events (non-INITIAL pages that have their own options)
+    const pages = [];
+    const pagePattern = new RegExp(`^${eventId}\\.pages\\.([^.]+)\\.`);
+    const pageIds = new Set();
+    for (const key in localization) {
+      const m = key.match(pagePattern);
+      if (m && m[1] !== 'INITIAL' && m[1] !== 'DONE') pageIds.add(m[1]);
+    }
+    for (const pageId of pageIds) {
+      const hasOptions = Object.keys(localization).some(k =>
+        k.startsWith(`${eventId}.pages.${pageId}.options.`)
+      );
+      if (!hasOptions) continue;
+
+      const pageDesc = localization[`${eventId}.pages.${pageId}.description`];
+      const pageOptionNames = new Set();
+      for (const key in localization) {
+        const m = key.match(new RegExp(`^${eventId}\\.pages\\.${pageId}\\.options\\.([^.]+)\\.(title|description)$`));
+        if (m) pageOptionNames.add(m[1]);
+      }
+      const sortedPageOpts = Array.from(pageOptionNames).sort();
+      const lockedPageKeys = new Set(sortedPageOpts.filter(k => k.endsWith('_LOCKED')));
+      const regularPageKeys = sortedPageOpts.filter(k => !k.endsWith('_LOCKED'));
+      const pageChoices = [];
+      for (const optName of regularPageKeys) {
+        const t = localization[`${eventId}.pages.${pageId}.options.${optName}.title`];
+        const d = localization[`${eventId}.pages.${pageId}.options.${optName}.description`];
+        if (t) {
+          let cd = d ? stripBBCode(d) : '';
+          cd = substituteVars(cd, vars);
+          const pc = { name: stripBBCode(t), description: cd };
+          const lk = `${optName}_LOCKED`;
+          if (lockedPageKeys.has(lk)) {
+            const ld = localization[`${eventId}.pages.${pageId}.options.${lk}.description`];
+            if (ld) pc.locked = stripBBCode(substituteVars(ld, vars));
+          }
+          pageChoices.push(pc);
+        }
+      }
+      const mergedPageChoices = pageChoices;
+      if (mergedPageChoices.length > 0) {
+        pages.push({
+          id: pageId,
+          description: pageDesc ? substituteVars(stripBBCode(pageDesc), vars) : undefined,
+          choices: mergedPageChoices,
+        });
+      }
+    }
+
+    results.push({
+      id: eventId,
+      name,
+      description: description ? substituteVars(stripBBCode(description), vars) : undefined,
+      choices: mergedChoices.length > 0 ? mergedChoices : undefined,
+      pages: pages.length > 0 ? pages : undefined,
+    });
+  }
+
+  return results;
+}
+
+async function parseEventsLocalized() {
+  const baseEventsPath = path.join(OUTPUT_DIR, 'events.json');
+  const locOutputDir = path.join(OUTPUT_DIR, 'localization');
+  const csDir = path.join(DECOMPILED_DIR, 'MegaCrit.Sts2.Core.Models.Events');
+
+  let baseEvents;
+  try {
+    baseEvents = JSON.parse(fs.readFileSync(baseEventsPath, 'utf-8'));
+  } catch (err) {
+    console.error(`Failed to read base events.json: ${err.message}`);
+    process.exit(1);
+  }
+
+  const canonicalVars = parseCanonicalVars(csDir);
+
+  // Get available language directories
+  let langDirs;
+  try {
+    langDirs = fs.readdirSync(path.join(PCK_DIR, 'localization'), { withFileTypes: true })
+      .filter(d => d.isDirectory())
+      .map(d => d.name);
+  } catch {
+    console.warn('Warning: Could not read PCK localization directory');
+    return;
+  }
+
+  // Resolve unique iso→gameLang mappings
+  const chosen = new Map();
+  for (const dir of langDirs) {
+    const iso = LANG_MAP[dir];
+    if (!iso || dir === 'eng') continue;
+    if (!chosen.has(iso) || dir === 'esp') chosen.set(iso, dir);
+  }
+
+  for (const [iso, gameLang] of chosen) {
+    const rawPath = path.join(PCK_DIR, 'localization', gameLang, 'events.json');
+    if (!fs.existsSync(rawPath)) continue;
+
+    let rawLoc;
+    try {
+      rawLoc = JSON.parse(fs.readFileSync(rawPath, 'utf-8'));
+    } catch { continue; }
+
+    // Parse events from this language's raw loc using the shared core logic
+    const parsedEvents = parseEventsFromRawLoc(rawLoc, canonicalVars);
+    const parsedMap = new Map(parsedEvents.map(e => [e.id, e]));
+
+    // Build runtime replacements for this locale
+    const runtimeReplacements = buildLocalizedRuntimeReplacements(iso);
+
+    // Read existing localization file
+    const outPath = path.join(locOutputDir, `${iso}.json`);
+    let existing = {};
+    try {
+      existing = JSON.parse(fs.readFileSync(outPath, 'utf-8'));
+    } catch {}
+
+    const nextEvents = { ...(existing.events || {}) };
+
+    // Load localized entity data for StringVar resolution
+    const locRelics = existing.relics || {};
+
+    for (const baseEvent of baseEvents) {
+      const parsed = parsedMap.get(baseEvent.id);
+      if (!parsed) continue;
+
+      const localized = {};
+
+      // Name
+      if (parsed.name) localized.name = parsed.name;
+
+      // Description
+      if (parsed.description) {
+        localized.description = resolveRuntimeLocalized(parsed.description, runtimeReplacements);
+      }
+
+      // Choices — map onto base event's choice structure, only include differing fields
+      if (baseEvent.choices && parsed.choices) {
+        const locChoices = [];
+        // Match parsed choices to base choices by position
+        // The parsed choices include merged locked choices, same as English
+        for (let i = 0; i < baseEvent.choices.length; i++) {
+          const pc = parsed.choices[i];
+          if (!pc) { locChoices.push({}); continue; }
+
+          const entry = {};
+          if (pc.name) entry.name = resolveRuntimeLocalized(pc.name, runtimeReplacements);
+          if (pc.description) entry.description = resolveRuntimeLocalized(pc.description, runtimeReplacements);
+          if (pc.locked) entry.locked = resolveRuntimeLocalized(pc.locked, runtimeReplacements);
+          if (pc.outcome) entry.outcome = resolveRuntimeLocalized(pc.outcome, runtimeReplacements);
+          locChoices.push(entry);
+        }
+        if (locChoices.some(c => Object.keys(c).length > 0)) {
+          localized.choices = locChoices;
+        }
+      }
+
+      // Pages
+      if (baseEvent.pages && parsed.pages) {
+        const locPages = [];
+        for (let i = 0; i < baseEvent.pages.length; i++) {
+          const basePage = baseEvent.pages[i];
+          // Try to find matching parsed page by matching choices
+          let bestPage = null;
+          let bestScore = -1;
+          for (const pp of parsed.pages) {
+            if (!pp.choices || !basePage.choices) continue;
+            let score = 0;
+            const minLen = Math.min(pp.choices.length, basePage.choices.length);
+            for (let j = 0; j < minLen; j++) {
+              // Just check if counts match — same order
+              score++;
+            }
+            if (pp.choices.length === basePage.choices.length) score += 5;
+            if (score > bestScore) { bestScore = score; bestPage = pp; }
+          }
+
+          if (!bestPage) { locPages.push({}); continue; }
+
+          const page = {};
+          if (bestPage.description) page.description = resolveRuntimeLocalized(bestPage.description, runtimeReplacements);
+          if (bestPage.choices && basePage.choices) {
+            page.choices = basePage.choices.map((_, j) => {
+              const pc = bestPage.choices[j];
+              if (!pc) return {};
+              const entry = {};
+              if (pc.name) entry.name = resolveRuntimeLocalized(pc.name, runtimeReplacements);
+              if (pc.description) entry.description = resolveRuntimeLocalized(pc.description, runtimeReplacements);
+              if (pc.locked) entry.locked = resolveRuntimeLocalized(pc.locked, runtimeReplacements);
+              if (pc.outcome) entry.outcome = resolveRuntimeLocalized(pc.outcome, runtimeReplacements);
+              return entry;
+            });
+            if (!page.choices.some(c => Object.keys(c).length > 0)) delete page.choices;
+          }
+          locPages.push(page);
+        }
+        if (locPages.some(p => Object.keys(p).length > 0)) {
+          localized.pages = locPages;
+        }
+      }
+
+      // Resolve C# StringVars (entity names) using localized entity data
+      const vars = canonicalVars[baseEvent.id] || {};
+      for (const [varName, val] of Object.entries(vars)) {
+        if (typeof val === 'string') {
+          // This is an English entity name from parseCanonicalVars; try to find localized version
+          // Look through localized relics, cards, etc.
+          // The var is already substituted in text, so we need to find it via entity lookup
+          // This is handled by substituteVars in parseEventsFromRawLoc already
+        }
+      }
+
+      if (Object.keys(localized).length > 0) {
+        nextEvents[baseEvent.id] = localized;
+      }
+    }
+
+    // Ancient event names and epithets from ancients.json
+    const ancientsPath = path.join(PCK_DIR, 'localization', gameLang, 'ancients.json');
+    if (fs.existsSync(ancientsPath)) {
+      try {
+        const ancients = JSON.parse(fs.readFileSync(ancientsPath, 'utf-8'));
+        for (const baseEvent of baseEvents) {
+          if (baseEvent.type !== 'ancient') continue;
+          const titleKey = `${baseEvent.id}.title`;
+          const epithetKey = `${baseEvent.id}.epithet`;
+          if (ancients[titleKey] || ancients[epithetKey]) {
+            if (!nextEvents[baseEvent.id]) nextEvents[baseEvent.id] = {};
+            if (ancients[titleKey]) nextEvents[baseEvent.id].name = stripBBCode(ancients[titleKey]);
+            if (ancients[epithetKey]) nextEvents[baseEvent.id].epithet = stripBBCode(ancients[epithetKey]);
+          }
+        }
+      } catch {}
+    }
+
+    // NEOW: translated description and localized choices from relic data
+    const neowBase = baseEvents.find(e => e.id === 'NEOW');
+    if (neowBase) {
+      if (!nextEvents['NEOW']) nextEvents['NEOW'] = {};
+      if (NEOW_DESCRIPTIONS[iso]) {
+        nextEvents['NEOW'].description = NEOW_DESCRIPTIONS[iso];
+      }
+      if (neowBase.choices && neowBase.choices.length > 0) {
+        nextEvents['NEOW'].choices = neowBase.choices.map(c => {
+          const locRelic = locRelics[c.relic_id];
+          return {
+            name: locRelic?.name || c.name,
+            description: locRelic?.description || c.description,
+            relic_id: c.relic_id,
+            pool: c.pool,
+          };
+        });
+      }
+    }
+
+    existing.events = nextEvents;
+
+    // Replace runtime-only {Amount} in enchantments with "X" (matches English convention)
+    if (existing.enchantments) {
+      for (const ench of Object.values(existing.enchantments)) {
+        if (ench.description) ench.description = ench.description.replaceAll('{Amount}', 'X');
+      }
+    }
+
+    fs.writeFileSync(outPath, JSON.stringify(existing, null, 2) + '\n', 'utf-8');
+    console.log(`  [${iso}] Updated events in ${iso}.json`);
+  }
+
+  console.log('✓ Event localization complete');
+}
+
+// ─── CLI Entry Point ────────────────────────────────────────────────
+
+const args = process.argv.slice(2);
+if (args.includes('--localize')) {
+  parseEventsLocalized().catch(err => {
+    console.error('Fatal error:', err);
+    process.exit(1);
+  });
+} else {
+  parseEvents().catch(err => {
+    console.error('Fatal error:', err);
+    process.exit(1);
+  });
+}

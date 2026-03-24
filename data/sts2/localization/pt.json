@@ -5182,50 +5182,68 @@
   },
   "events": {
     "ABYSSAL_BATHS": {
-      "description": "Você encontra uma câmara isolada.\n\nVapores sobem de termas borbulhantes cheias de líquido quente que muda de cor em ritmos hipnóticos. Formações de crustáceos se penduram pelo teto, pingando um líquido viscoso que se retorce e evapora ao entrar em contato com a superfície. O ar parece denso, carregado de sal e de algo certamente orgânico.\n\nAo se aproximar da borda de uma das fontes, o líquido cria ondulações. As águas borbulham com maior intensidade, como se estivessem ansiosas pela sua entrada.",
       "name": "Termas Abissais",
-      "choices": [
+      "description": "Você encontra uma câmara isolada.\n\nVapores sobem de termas borbulhantes cheias de líquido quente que muda de cor em ritmos hipnóticos. Formações de crustáceos se penduram pelo teto, pingando um líquido viscoso que se retorce e evapora ao entrar em contato com a superfície. O ar parece denso, carregado de sal e de algo certamente orgânico.\n\nAo se aproximar da borda de uma das fontes, o líquido cria ondulações. As águas borbulham com maior intensidade, como se estivessem ansiosas pela sua entrada.",
+      "pages": [
         {
-          "name": "Abster-se",
-          "description": "Cure 10 PV."
+          "choices": [
+            {
+              "name": "Sair das Termas"
+            },
+            {
+              "name": "Permanecer",
+              "description": "Receba 2 PV Máximos. Sofra 3 de dano."
+            }
+          ]
         },
         {
-          "name": "Submergir",
-          "description": "Receba 2 PV Máximos. Sofra 3 de dano."
+          "choices": [
+            {
+              "name": "Sair das Termas"
+            },
+            {
+              "name": "Permanecer",
+              "description": "Receba 2 PV Máximos. Sofra 3 de dano."
+            }
+          ]
         }
       ]
     },
     "AMALGAMATOR": {
-      "description": "CLANC! CLANC!!!\n\nVocê ouve o eco de metal se chocando contra metal, vindo do outro lado de uma parede...\n\nAssim que você apoia sua cabeça contra a parede para ouvir melhor — a parede se abre, revelando uma imponente figura com seis braços muito focada em sua atividade.\nSua “face” é um vórtex rodopiante de glifos luminosos em constante movimento.\n\n“Alguém com um Espírito de Ascensão encontrou a minha oficina? Hora da COMBINAÇÃO!”",
       "name": "Amalgamador",
+      "description": "CLANC! CLANC!!!\n\nVocê ouve o eco de metal se chocando contra metal, vindo do outro lado de uma parede...\n\nAssim que você apoia sua cabeça contra a parede para ouvir melhor — a parede se abre, revelando uma imponente figura com seis braços muito focada em sua atividade.\nSua “face” é um vórtex rodopiante de glifos luminosos em constante movimento.\n\n“Alguém com um Espírito de Ascensão encontrou a minha oficina? Hora da COMBINAÇÃO!”",
       "choices": [
         {
           "name": "Combinar Defesas",
-          "description": "Remova 2 Defesas. Adicione Defesa Suprema ao seu Baralho."
+          "description": "Remova 2 Defesas. Adicione Ultimate Defend ao seu Baralho.",
+          "outcome": "CLANC! CLANC!!!\n\nO Amalgamador golpeia sua Bigorna de Ossos.\n\nMemórias de combate, proteção e estratégias defensivas se formam a cada golpe.\nVocê recupera sua técnica mais avançada."
         },
         {
           "name": "Combinar Golpes",
-          "description": "Remova 2 Golpes. Adicione Golpe Supremo ao seu Baralho."
+          "description": "Remova 2 Golpes. Adicione Ultimate Strike ao seu Baralho.",
+          "outcome": "CLANC! CLANC!!!\n\nO Amalgamador golpeia sua Bigorna de Ossos.\n\nMemórias de combate, ataques e estratégias ofensivas se formam a cada golpe.\nVocê recupera sua técnica mais avançada."
         }
       ]
     },
     "AROMA_OF_CHAOS": {
-      "description": "Após uma árdua caminhada através de um denso matagal, uma estranha sensação de nostalgia envolve você.\n\nUma mistura de aromas florais, decomposição pútrida e algo completamente único. O aroma se intensifica a cada passo, e você sente como se o mundo ao seu redor começasse a girar e se contorcer.\n\nUma sensação de caos mutável toma conta, e você começa a perder a noção da sua própria existência.",
       "name": "Aroma do Caos",
+      "description": "Após uma árdua caminhada através de um denso matagal, uma estranha sensação de nostalgia envolve você.\n\nUma mistura de aromas florais, decomposição pútrida e algo completamente único. O aroma se intensifica a cada passo, e você sente como se o mundo ao seu redor começasse a girar e se contorcer.\n\nUma sensação de caos mutável[/rainbow] toma conta, e você começa a perder a noção da sua própria existência.",
       "choices": [
         {
           "name": "Não Resistir",
-          "description": "Transforme uma carta no seu Baralho."
+          "description": "Transforme uma carta no seu Baralho.",
+          "outcome": "Você se deixa levar e sua mente vagueia...\nVocê se vê socializando com colegas, lutando como uma equipe e combatendo grandiosos adversários. Seria um sonho? Realidade? Ambos? Muitos pares de olhos assistem a você e seus sonhos. Quem seriam...?\n\nVocê desperta sem ter noção de quanto tempo se passou.\nO aroma se dissipa e seus efeitos se amenizam conforme você recupera a lucidez. Ao se restabelecer, você se sente mais focado do que nunca.\n\nO que eram aqueles olhos?"
         },
         {
           "name": "Manter o Controle",
-          "description": "Aprimore uma carta no seu Baralho."
+          "description": "Aprimore uma carta no seu Baralho.",
+          "outcome": "Resistindo à tentação, você escala uma árvore para se afastar do aroma, mas seus efeitos deixam marcas em sua mente.\n\nManter o controle é difícil; você se concentra em seus Princípios Fundamentais.\n\n{AromaPrinciple}\n{AromaPrinciple}\n{AromaPrinciple}\n\nO aroma se dissipa."
         }
       ]
     },
     "BATTLEWORN_DUMMY": {
-      "description": "Conforme você se aproxima, ele começa a sacudir e estalar, se iluminando!\n\n“BZZZT! HORA DO TREINAMENTO!!! VOCÊ TEM 3 TURNOS PARA ME DERROTAR!\nESCOLHA UM NÍVEL DE DIFICULDADE OU ENCARE HUMILHAÇÃO TOTAL.\nEstas são as opções disponíveis:”\n\nApós a aterrorizante mensagem, o manequim descreve detalhadamente as instruções.\n\nQual a sua escolha?",
       "name": "Manequim de Treinamento Desgastado",
+      "description": "Conforme você se aproxima, ele começa a sacudir e estalar, se iluminando!\n\n“BZZZT! HORA DO TREINAMENTO!!! VOCÊ TEM 3 TURNOS PARA ME DERROTAR!\nESCOLHA UM NÍVEL DE DIFICULDADE OU ENCARE HUMILHAÇÃO TOTAL.\nEstas são as opções disponíveis:”\n\nApós a aterrorizante mensagem, o manequim descreve detalhadamente as instruções.\n\nQual a sua escolha?",
       "choices": [
         {
           "name": "Nível 1",
@@ -5242,54 +5260,60 @@
       ]
     },
     "BRAIN_LEECH": {
-      "description": "*plaft*\n\nUma dor aguda acomete o topo da sua cabeça, e um pensamento penetra a sua mente.\n\n“COMPARTILHAR CONHECIMENTO???”\n\nVocê não tem certeza de como proceder...",
       "name": "Parasita Cerebral",
+      "description": "*plaft*\n\nUma dor aguda acomete o topo da sua cabeça, e um pensamento penetra a sua mente.\n\n“COMPARTILHAR CONHECIMENTO???”\n\nVocê não tem certeza de como proceder...",
       "choices": [
         {
           "name": "Arrancar o Parasita",
-          "description": "Perca 5 PV. Receba uma recompensa de cartas Incolores."
+          "description": "Perca 5 PV. Receba uma recompensa de cartas Incolores.",
+          "outcome": "Você violentamente arranca o parasita da sua cabeça e o arremessa para longe!\n\nUma voz ecoa em sua mente:\n“NÃÃÃÃOOoOoooooOOOOoooo....”"
         },
         {
           "name": "Compartilhar Conhecimento",
-          "description": "Escolha 1 entre 5 cartas aleatória para adicionar ao seu Baralho."
+          "description": "Escolha 1 entre 5 cartas aleatória para adicionar ao seu Baralho.",
+          "outcome": "“UMA MENTE LABIRÍNTICA DE OSTENTAÇÃO EDUCACIONAL!\nUM VERDADEIRO BANQUETE DE SUSTÂNCIA CEREBRAL PARA DIGERIR!”.\n\nSatisfeita, a criatura se desprende e rasteja para longe.\nVocê fica sem palavras."
         }
       ]
     },
     "BUGSLAYER": {
-      "description": "Enquanto você luta contra um enxame de insetos agressivos, você repentinamente nota que um Poderoso e Robusto Guerreiro esteve lutando ao seu lado este tempo todo!\n\nOs insetos, percebendo a derrota iminente, fogem. Você se volta ao seu companheiro de batalha.\n“Gostaria de algumas dicas sobre como exterminar estas pestes?”\n\nQue educado. Você aceita a oferta.",
       "name": "Aniquilador de Insetos",
+      "description": "Enquanto você luta contra um enxame de insetos agressivos, você repentinamente nota que um Poderoso e Robusto Guerreiro esteve lutando ao seu lado este tempo todo!\n\nOs insetos, percebendo a derrota iminente, fogem. Você se volta ao seu companheiro de batalha.\n“Gostaria de algumas dicas sobre como exterminar estas pestes?”\n\nQue educado. Você aceita a oferta.",
       "choices": [
         {
           "name": "Aprender Método da Exterminação",
-          "description": "Adicione Exterminar ao seu Baralho."
+          "description": "Adicione Exterminate ao seu Baralho.",
+          "outcome": "“Certo... você deseja aprender o Método da Exterminação. Muito bem...”\n\nEle pausa brevemente, refletindo sobre a melhor forma de compartilhar tal conhecimento...\n\n“ESTA É A TÁTICA! OBSERVE!!”\nEle se vangloria, enquanto segura um frasco de Inseticida."
         },
         {
           "name": "Aprender Método do Achatamento",
-          "description": "Adicione Achatar ao seu Baralho."
+          "description": "Adicione Squash ao seu Baralho.",
+          "outcome": "“Certo... você deseja aprender o Método do Achatamento. Muito bem...”\n\nEle pausa brevemente, refletindo sobre a melhor forma de compartilhar tal conhecimento...\n\n“ESTA É A TÁTICA! OBSERVE!!”\nEle se vangloria, enquanto pisa em um grande inseto."
         }
       ]
     },
     "BYRDONIS_NEST": {
-      "description": "Você observa uma Enorme Fera perseguir uma Avestriz Verde que parecia estar ferida.\n\nNa alcova de onde a criatura fugiu, um único ovo agora desprotegido e abandonado.\n\nSua barriga ronca...",
       "name": "Ninho de Avestriz Alfa",
+      "description": "Você observa uma Enorme Fera perseguir uma Avestriz Verde que parecia estar ferida.\n\nNa alcova de onde a criatura fugiu, um único ovo agora desprotegido e abandonado.\n\nSua barriga ronca...",
       "choices": [
         {
           "name": "Comer o Ovo",
-          "description": "Receba 7 PV Máximos."
+          "description": "Receba 7 PV Máximos.",
+          "outcome": "Você quebra o ovo e o engole de uma só vez .\nUm ótimo café da manhã."
         },
         {
           "name": "Coletar o Ovo",
-          "description": "Adicione Ovo de Avestriz Alfa ao seu Baralho."
+          "description": "Adicione Byrdonis Egg ao seu Baralho.",
+          "outcome": "Você gentilmente pega o ovo e o guarda, pensando se algo útil poderia nascer dele em algum momento futuro."
         }
       ]
     },
     "COLORFUL_PHILOSOPHERS": {
-      "description": "Diante de você, uma visão épica.\nTrês estátuas de cores distintas erguem-se em um altar. Elas debatem fervorosamente sobre as implicações filosóficas das cores.\n\nConforme escuta, você entende que a questão discutida no momento seria sobre qual cor definitivamente é A MELHOR DE TODAS.\n\nVocê decide compartilhar seus pensamentos e participar da conversa.",
       "name": "Filósofos Cromáticos",
+      "description": "Diante de você, uma visão épica.\nTrês estátuas de cores distintas erguem-se em um altar. Elas debatem fervorosamente sobre as implicações filosóficas das cores.\n\nConforme escuta, você entende que a questão discutida no momento seria sobre qual cor definitivamente é A MELHOR DE TODAS.\n\nVocê decide compartilhar seus pensamentos e participar da conversa.",
       "choices": [
         {
           "name": "Azul",
-          "description": "Receba 3 carta do Defeituoso."
+          "description": "Receba 3 cartas do Defeituoso."
         },
         {
           "name": "Igualdade",
@@ -5297,53 +5321,96 @@
         },
         {
           "name": "Vermelho",
-          "description": "Receba 3 carta do Rígido."
+          "description": "Receba 3 cartas do Rígido."
         },
         {
           "name": "Rosa",
-          "description": "Receba 3 carta da Necroartífice."
+          "description": "Receba 3 cartas da Necroartífice."
         },
         {
           "name": "Laranja",
-          "description": "Receba 3 carta do Regente."
+          "description": "Receba 3 cartas do Regente."
         },
         {
           "name": "Verde",
-          "description": "Receba 3 carta da Sorrateira."
+          "description": "Receba 3 cartas da Sorrateira."
         }
       ]
     },
     "COLOSSAL_FLOWER": {
-      "description": "Você avista uma flor colossal crescendo no topo de uma montanha de ossos.\n\nConforme suas pétalas de cores oscilantes pulsam, você nota um Poderoso Aglomerado de Pólen localizado no centro da flor, mas as pétalas ondulantes parecem extremamente afiadas e imprevisíveis.\n\nVocê poderia pegar apenas um pouco de néctar dourado, mas alcançar o prêmio no centro da flor é tão tentador...",
       "name": "Flor Colossal",
+      "description": "Você avista uma flor colossal crescendo no topo de uma montanha de ossos.\n\nConforme suas pétalas de cores oscilantes[/rainbow] pulsam, você nota um Poderoso Aglomerado de Pólen localizado no centro da flor, mas as pétalas ondulantes parecem extremamente afiadas e imprevisíveis.\n\nVocê poderia pegar apenas um pouco de néctar dourado, mas alcançar o prêmio no centro da flor é tão tentador...",
       "choices": [
         {
           "name": "Extrair Néctar",
-          "description": "Receba {Prize1} de Ouro."
+          "description": "Receba X de Ouro."
         },
         {
           "name": "Adentrar",
           "description": "Adentre mais fundo. Perca 5 PV."
         }
+      ],
+      "pages": [
+        {
+          "description": "Você atravessa uma camada de pétalas afiadas como lâminas, revestidas de uma substância que causa uma sensação de dormência. Isso parece anestesiar sua dor?\n\nTalvez isto explique a enorme pilha de ossos...",
+          "choices": [
+            {
+              "name": "Extrair Néctar",
+              "description": "Receba X de Ouro."
+            },
+            {
+              "name": "Adentrar",
+              "description": "Ir ainda mais fundo. Perca 6 PV."
+            }
+          ]
+        },
+        {
+          "description": "Você atravessa uma camada de pétalas afiadas como lâminas, revestidas de uma substância que causa uma sensação de dormência. Isso parece anestesiar sua dor?\n\nTalvez isto explique a enorme pilha de ossos...",
+          "choices": [
+            {
+              "name": "Extrair Néctar",
+              "description": "Receba X de Ouro."
+            },
+            {
+              "name": "Adentrar",
+              "description": "Ir ainda mais fundo. Perca 6 PV."
+            }
+          ]
+        },
+        {
+          "description": "Você atravessa uma camada de pétalas afiadas como lâminas, revestidas de uma substância que causa uma sensação de dormência. Isso parece anestesiar sua dor?\n\nTalvez isto explique a enorme pilha de ossos...",
+          "choices": [
+            {
+              "name": "Extrair Néctar",
+              "description": "Receba X de Ouro."
+            },
+            {
+              "name": "Adentrar",
+              "description": "Ir ainda mais fundo. Perca 6 PV."
+            }
+          ]
+        }
       ]
     },
     "CRYSTAL_SPHERE": {
-      "description": "“Eu previ a sua chegada...!”\n\nVocê ouve uma voz rouca assim que você entra em uma cabana mística.\n\n“O destino trouxe você até aqui. Devemos desvendar o seu futuro para que então você possa SALVAR A TODOS!!”\n“Certo, aqui estão as suas opções para uma leitura da Esfera de Cristal. Assine este termo de isenção de responsabilidade, por favor.” Ela lhe entrega papel e caneta.",
       "name": "Esfera de Cristal",
+      "description": "“Eu previ a sua chegada...!”\n\nVocê ouve uma voz rouca assim que você entra em uma cabana mística.\n\n“O destino trouxe você até aqui. Devemos desvendar o seu futuro para que então você possa SALVAR A TODOS!!”\n“Certo, aqui estão as suas opções para uma leitura da Esfera de Cristal. Assine este termo de isenção de responsabilidade, por favor.” Ela lhe entrega papel e caneta.",
       "choices": [
         {
           "name": "Plano de Crediário",
-          "description": "Receba uma Dívida. Adivinhe 6 vezes."
+          "description": "Receba uma Debt. Adivinhe 6 vezes.",
+          "outcome": "Plano de Crediário"
         },
         {
           "name": "Desvendar Futuro",
-          "description": "Pague 50 de Ouro. Adivinhe 3 vezes."
+          "description": "Pague 50 de Ouro. Adivinhe 3 vezes.",
+          "outcome": "Desvendar Futuro"
         }
       ]
     },
     "DENSE_VEGETATION": {
-      "description": "Você pegou um caminho duvidoso por algum tempo, e agora encontra-se em uma densa selva de samambaias, arbustos e vinhas. Muitas vinhas. A exaustão pesa, e um pensamento sombrio surge em sua mente:\n\n“Você se perdeu. Sem a devida preparação, a morte parece ser inevitável.”\n\nO que fazer?",
       "name": "Vegetação Densa",
+      "description": "Você pegou um caminho duvidoso por algum tempo, e agora encontra-se em uma densa selva de samambaias, arbustos e vinhas. Muitas vinhas. A exaustão pesa, e um pensamento sombrio surge em sua mente:\n\n“Você se perdeu. Sem a devida preparação, a morte parece ser inevitável.”\n\nO que fazer?",
       "choices": [
         {
           "name": "Descansar",
@@ -5351,17 +5418,19 @@
         },
         {
           "name": "Prosseguir",
-          "description": "Remova uma carta do seu Baralho. Perca 11 PV."
+          "description": "Remova uma carta do seu Baralho. Perca 11 PV.",
+          "outcome": "Você abre caminho entre a densa vegetação, mas a selva parece não ter fim...\n\nVocê se alimenta de estranhos frutos, insetos crocantes e bebe o néctar de plantas brilhantes, mas começa a sentir certa paranoia...\n\nEntão você encontra uma clareira, uma trilha e alguns rascunhos de mapas desenhados no chão.\nProblema resolvido."
         }
       ]
     },
     "DOLL_ROOM": {
-      "description": "Você adentra uma sala secreta...\n\nA sala está repleta de bonecos e bonecas. É uma coleção única, suas expressões variam de alegria a tristeza, suas pequenas roupas parecem ter vindo de séculos e reinos bem diferentes.\n\nVocê ouve um coral de sussurros que fica cada vez mais alto até que todos os brinquedos começam a gritar incessantemente...\n\nVocê deve escolher um e sair imediatamente.",
       "name": "Sala de Brinquedos",
+      "description": "Você adentra uma sala secreta...\n\nA sala está repleta de bonecos e bonecas. É uma coleção única, suas expressões variam de alegria a tristeza, suas pequenas roupas parecem ter vindo de séculos e reinos bem diferentes.\n\nVocê ouve um coral de sussurros que fica cada vez mais alto até que todos os brinquedos começam a gritar incessantemente...\n\nVocê deve escolher um e sair imediatamente.",
       "choices": [
         {
           "name": "Examinar Cada Um e Fazer a Melhor Escolha",
-          "description": "Perca 15 PV. Escolha 1 entre 3 Relíquias de Brinquedo."
+          "description": "Perca 15 PV. Escolha 1 entre 3 Relíquias de Brinquedo.",
+          "outcome": "Você examina cada um dos brinquedos antes de fazer sua escolha.\n\nOs gritos chegaram a um volume aterrador mas ainda assim você consegue se decidir antes de perder a sanidade completamente!"
         },
         {
           "name": "Escolher Aleatoriamente",
@@ -5369,178 +5438,206 @@
         },
         {
           "name": "Decidir Rapidamente",
-          "description": "Perca 5 PV. Escolha 1 entre 2 Relíquias de Brinquedo."
+          "description": "Perca 5 PV. Escolha 1 entre 2 Relíquias de Brinquedo.",
+          "outcome": "Em meio à gritaria, você examina rapidamente alguns bonecos.\n\nAlgum destes dois deve ser útil?\nÉ difícil se concentrar com esta angústia mental."
         }
       ]
     },
     "DOORS_OF_LIGHT_AND_DARK": {
-      "description": "Uma porta surgiu onde antes não havia nada...\n\nVocê entra e se depara com outras duas portas e um porteiro muito bem vestido.\n“Finalmente, uma visita! Venha, venha! Escolha uma porta, qualquer porta!”\n\nAinda estamos no Pináculo? Como este lugar está tão limpo?",
       "name": "Portas de Luz e Trevas",
+      "description": "Uma porta surgiu onde antes não havia nada...\n\nVocê entra e se depara com outras duas portas e um porteiro muito bem vestido.\n“Finalmente, uma visita! Venha, venha! Escolha uma porta, qualquer porta!”\n\nAinda estamos no Pináculo? Como este lugar está tão limpo?",
       "choices": [
         {
           "name": "Porta Obscura",
-          "description": "Remova 1 carta do seu Baralho."
+          "description": "Remova 1 carta do seu Baralho.",
+          "outcome": "Você adentra a escuridão...\n\nVocê não enxerga nada.\nMas isto te ajuda a pensar... Você elimina pensamentos obsoletos.\n\nVocê está de volta às Docas Subterrâneas.\nComo foi que...? Huh...?"
         },
         {
           "name": "Porta Luminosa",
-          "description": "Aprimore 2 cartas aleatórias."
+          "description": "Aprimore 2 cartas aleatórias.",
+          "outcome": "Você adentra a luz...\n\nÉ cegante!! Mas a luminosidade fortalece você.\n\nVocê está de volta às Docas Subterrâneas.\nComo foi que...? Huh...?"
         }
       ]
     },
     "DROWNING_BEACON": {
-      "description": "Atravessando uma paisagem de rochedos e águas calmas, você encontra um farol afundando e emitindo anti-luz.\n\nVocê pode engarrafar a água de brilho sinistro que se acumulou aqui ou subir pela estrutura em ruínas para resgatar as lentes.",
       "name": "Farol Abandonado",
+      "description": "Atravessando uma paisagem de rochedos e águas calmas, você encontra um farol afundando e emitindo anti-luz.\n\nVocê pode engarrafar a água de brilho sinistro que se acumulou aqui ou subir pela estrutura em ruínas para resgatar as lentes.",
       "choices": [
         {
           "name": "Engarrafar",
-          "description": "Receba Poção de Luminágua."
+          "description": "Receba Glowwater Potion.",
+          "outcome": "Usando uma garrafa que encontrou nas proximidades, você calmamente recolhe o líquido brilhante enquanto o farol afunda pacificamente no lodo.\n\nAinda bem que você não estava lá dentro."
         },
         {
           "name": "Escalar",
-          "description": "Receba Lentes de Fresnel. Perca 13 PV Máximos."
+          "description": "Receba Fresnel Lens. Perca 13 PV Máximos.",
+          "outcome": "Você escala até o topo do farol, ainda que com receio pelo seu constante afundar.\n\nAo chegar na sala das lanternas, você tenta arrancar as lentes mas a anti-luz drena a sua vitalidade!\n\nFinalmente, você consegue desacoplar as lentes. O farol para de afundar."
         }
       ]
     },
     "ENDLESS_CONVEYOR": {
-      "description": "Você entra em uma cabana com um letreiro luminoso e capenga onde está escrito:\n“BANQUETE INFINITO - PAGUE DE ACORDO COM A SUA FOME!”\n\nLá dentro, um chefe de cozinha esguio e com múltiplos braços prepara habilidosamente porções de comida e as coloca sobre uma sinuosa esteira.\n\nUm dos braços do chefe aponta para uma placa:\n35 de Ouro por prato.",
       "name": "Esteira Infinita",
+      "description": "Você entra em uma cabana com um letreiro luminoso e capenga onde está escrito:\n“BANQUETE INFINITO - PAGUE DE ACORDO COM A SUA FOME!”\n\nLá dentro, um chefe de cozinha esguio e com múltiplos braços prepara habilidosamente porções de comida e as coloca sobre uma sinuosa esteira.\n\nUm dos braços do chefe aponta para uma placa:\n35 de Ouro por prato.",
       "choices": [
         {
           "name": "Observar o Chefe",
-          "description": "Aprimore uma carta aleatória no seu Baralho."
+          "description": "Aprimore uma carta aleatória no seu Baralho.",
+          "outcome": "Mantendo sua distância dos assentos, você permanece nas sombras da entrada do estabelecimento.\n\nO chefe, inabalável, continua seu trabalho. Estudando seu comportamento e disciplina, você busca minimizar movimentação e sentimentos desnecessários durante o combate."
         }
       ]
     },
     "FAKE_MERCHANT": {
-      "description": "Texto Provisório",
-      "name": "O Mercador???"
+      "name": "O Mercador???",
+      "description": "Texto Provisório"
     },
     "FIELD_OF_MAN_SIZED_HOLES": {
-      "description": "Você para repentinamente ao ver um vasto campo repleto de buracos em formato de corpos.\n\nUm destes buracos tem exatamente o seu próprio formato.\n\nÉ perfeito...",
       "name": "Campo de Buracos Antropomórficos",
+      "description": "Você para repentinamente ao ver um vasto campo repleto de buracos em formato de corpos.\n\nUm destes buracos tem exatamente o seu próprio formato.\n\nÉ perfeito...",
       "choices": [
         {
           "name": "Entrar No Seu Buraco",
-          "description": "Encante uma carta com Encaixe Perfeito."
+          "description": "Encante uma carta com Perfect Fit.",
+          "outcome": "É um encaixe bem justo, mas você se esgueira para dentro do buraco...\n\nQuanto mais você entra, mais escuro fica.\nEventualmente, você enxerga uma luz fraca que vai aumentando até revelar o outro lado.\n\nVocê sai sem notar mudanças exteriores, mas agora compreende os segredos mais profundos sobre a vida."
         },
         {
           "name": "Resistir",
-          "description": "Remova 2 cartas do seu Baralho. Adicione Neutralização ao seu Baralho."
+          "description": "Remova 2 cartas do seu Baralho. Adicione Normality ao seu Baralho.",
+          "outcome": "Você caminha para longe dos buracos, deixando para trás até aquele esculpido perfeitamente no seu formato...\n\nPor que eu não entrei? O que teria acontecido? Eu já estive naquele buraco antes? Quem cavou estes buracos?\n\nO que... quem... quando?"
         }
       ]
     },
     "GRAVE_OF_THE_FORGOTTEN": {
-      "description": "Você encontra um túmulo solitário envolto por uma agitada chama azul...\n\nUma guerreira orgulhosa pareceu em batalha, mas sua alma permanece inquieta. Ela deseja continuar lutando, e você a sente implorando para se aventurar ao seu lado.\n\nMas talvez seja melhor que ela encare a verdade?",
       "name": "Túmulo Esquecido",
+      "description": "Você encontra um túmulo solitário envolto por uma agitada chama azul...\n\nUma guerreira orgulhosa pareceu em batalha, mas sua alma permanece inquieta. Ela deseja continuar lutando, e você a sente implorando para se aventurar ao seu lado.\n\nMas talvez seja melhor que ela encare a verdade?",
       "choices": [
-        null,
+        {
+          "name": "Aceitar a Relíquia",
+          "description": "Receba Forgotten Soul.",
+          "outcome": "Você coloca sua mão no túmulo e sussurra...\n\n“Ascenda comigo...”\n\nEm resposta, as chamas abandonam o túmulo e formam uma alma ardente, que paira ao seu lado.\nA alma sabe o que você é, e deseja te acompanhar até o seu destino final."
+        },
         {
           "name": "Confrontar com a Verdade",
-          "description": "Adicione Deterioração ao seu Baralho. Encante uma carta que contenha Exaurir com Poder Espiritual."
+          "description": "Adicione Decay ao seu Baralho. Encante uma carta que contenha Exaurir com Soul's Power.",
+          "locked": "Você não possui cartas com Exaurir que possam ser Encantadas.",
+          "outcome": "Você coloca sua mão no túmulo e sussurra...\n\n“Sua luta acabou...”\n\nEm resposta, a alma no túmulo avança e colide com a sua, e uma LUTA DE ALMAS acontece!\nPerplexa pelas inúmeras batalhas que você enfrentou, a alma desiste."
         }
       ]
     },
     "HUNGRY_FOR_MUSHROOMS": {
-      "description": "Qual foi a última vez que você se alimentou?\n...espere, que cheiro maravilhoso é esse?\n\nSeguindo o cheiro, você encontra um aconchegante acampamento repleto de suculentos cogumelos assados! Você nem considera se é seguro comer estes cogumelos, pois sua fome fala mais alto.\n(Tão alto que você nem nota o aventureiro morto)",
       "name": "Apetite por Cogumelos",
+      "description": "Qual foi a última vez que você se alimentou?\n...espere, que cheiro maravilhoso é esse?\n\nSeguindo o cheiro, você encontra um aconchegante acampamento repleto de suculentos cogumelos assados! Você nem considera se é seguro comer estes cogumelos, pois sua fome fala mais alto.\n(Tão alto que você nem nota o aventureiro morto)",
       "choices": [
         {
           "name": "Cogumelo Robusto",
-          "description": null
+          "outcome": "Você morde o Cogumelo Robusto. Sua carne é firme, consistente e deliciosa. Quanto mais você come, mais você deseja comer, como se o cogumelo é quem estivesse se alimentando da sua fome.\n\nÉ tão delicioso que... você entra em coma alimentar.\nA gula vai cobrar seu preço."
         },
         {
           "name": "Cogumelo Aromático",
-          "description": null
+          "outcome": "Você experimenta o Cogumelo Aromático, um pequeno fungo de gosto amadeirado e com um suave aroma de mariscos...\n\nUm surto de energia compele você a correr, saltar e treinar rigorosamente!\nEntão, uma dor repentina lhe atravessa, enquanto o fungo ainda vivo se revira dentro de você durante seus últimos instantes de vida."
         }
       ]
     },
     "INFESTED_AUTOMATON": {
-      "description": "Você encontra uma câmara repleta de robôs desativados.\n\nUm autômato solitário ainda possui um núcleo emitindo um fraco brilho, mas ele está envolto por uma formação grotesca e orgânica, e não parece responder.",
       "name": "Autômato Infestado",
+      "description": "Você encontra uma câmara repleta de robôs desativados.\n\nUm autômato solitário ainda possui um núcleo emitindo um fraco brilho, mas ele está envolto por uma formação grotesca e orgânica, e não parece responder.",
       "choices": [
         {
           "name": "Estudar",
-          "description": "Receba um Poder aleatório."
+          "description": "Receba um Poder aleatório.",
+          "outcome": "Ao estudar o Autômato Brilhante e a estrutura de seus mecanismos internos, você entende que metais específicos e suas combinações podem resistir a diversas enfermidades!\n\nEsta Tecnologia pode ser útil a você."
         },
         {
           "name": "Tocar o Núcleo",
-          "description": "Receba uma carta de custo 0 aleatória."
+          "description": "Receba uma carta de custo 0 aleatória.",
+          "outcome": "Ao tocar levemente o núcleo, você sente uma pequena descarga elétrica.\n\nVocê se afasta, sentindo alguma alteração pela experiência."
         }
       ]
     },
     "JUNGLE_MAZE_ADVENTURE": {
-      "description": "Em uma clareira, você se depara com um Grupo de Aventureiros gesticulando em direção a um labirinto gigantesco.\n\nO grupo se oferece a juntar forças com você e partir em uma Épica Missão para saquear as riquezas do labirinto. Com a sua experiência, você deduz que o labirinto está repleto de armadilhas mortais e sentinelas.\n\nSeria mais fácil trabalhar em equipe, mas você teria que dividir os tesouros.",
       "name": "Aventura pelo Labirinto da Selva",
+      "description": "Em uma clareira, você se depara com um Grupo de Aventureiros gesticulando em direção a um labirinto gigantesco.\n\nO grupo se oferece a juntar forças com você e partir em uma Épica Missão para saquear as riquezas do labirinto. Com a sua experiência, você deduz que o labirinto está repleto de armadilhas mortais e sentinelas.\n\nSeria mais fácil trabalhar em equipe, mas você teria que dividir os tesouros.",
       "choices": [
         {
           "name": "Unir Forças",
-          "description": "Receba 50 de Ouro."
+          "description": "Receba 50 de Ouro.",
+          "outcome": "Todos são tomados por uma esperança revigorante, inclusive {IsMultiplayer:você e seus amigos|você}!\n\nUm dos aventureiros se apresenta como um bardo!\nVocês avançam cantarolando pelo labirinto conforme Aquid, o mago molusco desarma armadilhas com facilidade. Você e a guerreira Grathoriana lutam contra guardas armados com clavas e os derrotam sem muito esforço.\n\nEsta foi uma aventura realmente gratificante, e você criou Belas Memórias."
         },
         {
           "name": "Recusar Oferta",
-          "description": "Receba 150 de Ouro. Perca 18 PV."
+          "description": "Receba 150 de Ouro. Perca 18 PV.",
+          "outcome": "Sem vontade de compartilhar nada com este grupo, {IsMultiplayer:vocês avançam|você avança} silenciosamente. Um dos aventureiros gesticula agressivamente com o punho.\n\nO labirinto não é um lugar acolhedor. Armadilhas de espinhos, paredes móveis com espinhos e criaturas hostis armadas com clavas de espinhos dificultam a jornada.\n\nVocê não aguenta mais tantos espinhos, e passa a considerar cooperação para a próxima aventura."
         }
       ]
     },
     "LOST_WISP": {
-      "description": "Ao longe, uma cena estranha. Muitos insetos mortos ao redor o que parece ser uma pequena partícula luminosa.\nParece ser uma armadilha de insetos bastante efetiva, mas você percebe que ela solta algumas chamas e faíscas de forma instável!\n\nVocê se aproxima para investigar.",
       "name": "O Fogo-fátuo Perdido",
+      "description": "Ao longe, uma cena estranha. Muitos insetos mortos ao redor o que parece ser uma pequena partícula luminosa.\nParece ser uma armadilha de insetos bastante efetiva, mas você percebe que ela solta algumas chamas e faíscas de forma instável!\n\nVocê se aproxima para investigar.",
       "choices": [
         {
           "name": "Capturar o Fogo-fátuo",
-          "description": "Adicione Deterioração ao seu Baralho. Receba {Relic}."
+          "description": "Adicione Decay ao seu Baralho. Receba Relíquia.",
+          "locked": "Seus PV Máximos são insuficientes.",
+          "outcome": "Você se aproxima do Fogo-fátuo cautelosamente...\nQuanto mais perto, maior a reação à sua presença.\n\nQuando ele fica ao alcance dos seus braços, você agarra o Fogo-fátuo mas ele queima você com um disparo de chamas e vapor!\n\nAinda assim, você tenta segurar e conter a criatura. Eventualmente, o Fogo-fátuo para de resistir e aceita você como figura de autoridade."
         },
         {
           "name": "Explore as Redondezas",
-          "description": "Receba 60 de Ouro."
+          "description": "Receba 60 de Ouro.",
+          "outcome": "Você decide não intervir. Melhor se precaver!\n\nNão há muita coisa pela região, mas você encontra um pouco de Ouro espalhado entre os insetos mortos.\nVocê não tenta buscar respostas."
         }
       ]
     },
     "LUMINOUS_CHOIR": {
-      "description": "Você se depara com uma clareira iluminada por um estranho brilho azulado. Gigantescos cogumelos pulsam com bioluminescência, suas partes mais altas muito protuberantes e reluzentes. Ao se aproximar, os fungos começam a emitir melodias assombrosas que reverberam através de você.\n\nAlgo brilhante chama a sua atenção, incrustado na carne do maior dos cogumelos, pulsando no mesmo ritmo da melodia fúngica.",
       "name": "Coro Luminoso",
+      "description": "Você se depara com uma clareira iluminada por um estranho brilho azulado. Gigantescos cogumelos pulsam com bioluminescência, suas partes mais altas muito protuberantes e reluzentes. Ao se aproximar, os fungos começam a emitir melodias assombrosas que reverberam através de você.\n\nAlgo brilhante chama a sua atenção, incrustado na carne do maior dos cogumelos, pulsando no mesmo ritmo da melodia fúngica.",
       "choices": [
         {
           "name": "Oferecer Tributo",
-          "description": "Pague 149 de Ouro. Receba uma Relíquia aleatória."
+          "description": "Pague 149 de Ouro. Receba uma Relíquia aleatória.",
+          "locked": "Requer 149 de Ouro.",
+          "outcome": "Você deposita ouro sobre o solo esponjoso. As moedas afundam lentamente enquanto gavinhas empurram gentilmente a relíquia até a superfície, permitindo que você a colete com facilidade."
         },
         {
           "name": "Tocar o Brilho Pulsante",
-          "description": "Remova 2 cartas do seu Baralho. Adicione Mente Fúngica ao seu Baralho."
+          "description": "Remova 2 cartas do seu Baralho. Adicione Mente Fúngica ao seu Baralho.",
+          "outcome": "Você afunda sua mão diretamente no tecido esponjoso do cogumelo para extrair a relíquia de seu interior. A rede de fungos estremece com a sua intrusão, e a sua mente oscila em resposta."
         }
       ]
     },
     "MORPHIC_GROVE": {
-      "description": "Você adentra um bosque de árvores cristalizadas, e elas começam a balançar vigorosamente!\nUm coro de cumprimentos e boas vindas é direcionado a você, e um grupo de Mórficos emerge das árvores.\n\nEm um canto isolado, um dos Mórficos parece mais recluso e tímido, claramente não tão sociável quanto os outros.\n\nVocê se aproxima do grupo ou do solitário?",
       "name": "Bosque Mórfico",
+      "description": "Você adentra um bosque de árvores cristalizadas, e elas começam a balançar vigorosamente!\nUm coro de cumprimentos e boas vindas é direcionado a você, e um grupo de Mórficos emerge das árvores.\n\nEm um canto isolado, um dos Mórficos parece mais recluso e tímido, claramente não tão sociável quanto os outros.\n\nVocê se aproxima do grupo ou do solitário?",
       "choices": [
         {
           "name": "Grupo",
-          "description": "Perca 100 de Ouro. Transforme 2 cartas."
+          "description": "Perca 100 de Ouro. Transforme 2 cartas.",
+          "outcome": "Você cumprimenta os Mórficos entusiasmados, que abraçam você com seus braços cristalizados.\n\nEles compartilham seus conhecimentos e imbuem você com Magia Mórfica, alterando a sua natureza... Que criaturas mais amáveis, estes Mórficos.\n\nUm deles roubou o seu Ouro."
         },
         {
           "name": "Solitário",
-          "description": "Receba 5 PV Máximos."
+          "description": "Receba 5 PV Máximos.",
+          "outcome": "Você estende uma mão ao Mórfico solitário, simpatizando com a sua natureza.\nEle lhe oferece um pequeno fruto cristalizado. Você aceita e o consome, respeitando a tradição.\n\nO fruto limpa a sua mente e amplifica a sua concentração. Você agradece, e então segue seu caminho."
         }
       ]
     },
     "POTION_COURIER": {
-      "description": "Você sente um cheiro azedo no ar e logo em seguida encontra um Caixeiro de Poções caído no chão.\nImóvel. Sem respiração. Morto!?\nSua mercadoria foi saqueada, mas deixaram para trás um lote de Poções Malcheirosas e um bilhete: \"Destinatário: Mercador\".",
       "name": "Caixeiro de Poções",
+      "description": "Você sente um cheiro azedo no ar e logo em seguida encontra um Caixeiro de Poções caído no chão.\nImóvel. Sem respiração. Morto!?\nSua mercadoria foi saqueada, mas deixaram para trás um lote de Poções Malcheirosas e um bilhete: \"Destinatário: Mercador\".",
       "choices": [
         {
           "name": "Recolher Poções",
-          "description": "Receba 3 Poção Nefasta."
+          "description": "Receba 3 Poções Nefastas.",
+          "outcome": "Por que o Mercador estaria interessado nestas poções?"
         },
         {
           "name": "Vasculhar",
-          "description": "Receba 1 Poção Incomum aleatória."
+          "description": "Receba 1 Poção Incomum aleatória.",
+          "outcome": "Uma única poção permaneceu intacta."
         }
       ]
     },
     "PUNCH_OFF": {
-      "description": "Dois Constructos Pugilistas estão trocando socos, e você nota que há um tesouro entre eles...\n\nDevo tentar pegar o tesouro?",
       "name": "Troca de Socos",
+      "description": "Dois Constructos Pugilistas estão trocando socos, e você nota que há um tesouro entre eles...\n\nDevo tentar pegar o tesouro?",
       "choices": [
         {
           "name": "Nocauteá-los",
@@ -5548,72 +5645,92 @@
         },
         {
           "name": "Pegar o Tesouro",
-          "description": "Adicione Lesão ao seu Baralho. Receba uma Relíquia aleatória."
+          "description": "Adicione Lesão ao seu Baralho. Receba uma Relíquia aleatória.",
+          "outcome": "Você coleta a relíquia com sucesso!\n\n...pelo menos, é o que você pensou. Um soco cruzado acerta em cheio o seu rosto."
         }
       ]
     },
     "RANWID_THE_ELDER": {
-      "description": "A pessoa mais velha que você já viu se aproxima de você.\n“Nos encontramos novamente... sou eu, Ranwid!”\n\nVocê não conhece esta pessoa.",
       "name": "Ranwid, o Ancião",
+      "description": "A pessoa mais velha que você já viu se aproxima de você.\n“Nos encontramos novamente... sou eu, Ranwid!”\n\nVocê não conhece esta pessoa.",
       "choices": [
-        null,
-        null,
-        null
+        {
+          "name": "Doar X de Ouro",
+          "description": "Receba uma Relíquia aleatória.",
+          "outcome": "“Mag.. nífico...”\n\nRanwid murmura enquanto mastiga o Ouro."
+        },
+        {
+          "name": "Doar Poção",
+          "description": "Receba uma Relíquia aleatória.",
+          "locked": "Você não possui nenhuma poção que possa entregar.",
+          "outcome": "“Excelente...”\n\nGlub glub glub\n\nEle bebe toda a Poção de uma só vez."
+        },
+        {
+          "name": "Doar Relíquia",
+          "description": "Receba 2 Relíquias aleatórias.",
+          "locked": "Você não possui nenhuma Relíquia que possa entregar.",
+          "outcome": "“Exemplar...”\n\nRanwid observa a Relíquia atenciosamente por alguns minutos...\n\nE então engole Relíquia."
+        }
       ]
     },
     "REFLECTIONS": {
-      "description": "O que é isso? Tem algo muito errado aqui...\n...iuqa odarre otium ogla meT ?ossi é euq O",
       "name": "Reflexos osxelfeR",
+      "description": "O que é isso? Tem algo muito errado aqui...\n...iuqa odarre otium ogla meT ?ossi é euq O",
       "choices": [
         {
           "name": "Quebrar o Espelho",
-          "description": "Duplique o seu Baralho. Receba Azar."
+          "description": "Duplique o seu Baralho. Receba Azar.",
+          "outcome": "Você se concentra e identifica um enorme espelho na sua frente.\nCom um chute veloz você QUEBRA o gigantesco espelho!\nLogo que você destrói o espelho, seu próprio reflexo se desfaz em milhares de fragmentos reluzentes e brilhantes.\n\nComo é possível que exista um lugar assim?"
         },
         {
           "name": "Tocar o Espelho",
-          "description": "Desaprimore 2 cartas aleatórias. Aprimore 4 cartas aleatórias."
+          "description": "Desaprimore 2 cartas aleatórias. Aprimore 4 cartas aleatórias.",
+          "outcome": "Você avança e se funde com o reflexo à sua frente.\nQual é a versão real?"
         }
       ]
     },
     "RELIC_TRADER": {
-      "description": "Você vira em uma esquina e repentinamente encontra uma figura parada bem ali, encoberta pelas sombras. Ela se dirige a você.\n\n“Boas vindas! Gostaria de negociar?”\nA figura abre sua túnica, revelando uma coleção de itens suspeitos.",
       "name": "Negociante de Relíquias",
+      "description": "Você vira em uma esquina e repentinamente encontra uma figura parada bem ali, encoberta pelas sombras. Ela se dirige a você.\n\n“Boas vindas! Gostaria de negociar?”\nA figura abre sua túnica, revelando uma coleção de itens suspeitos.",
       "choices": [
         {
           "name": "Ficar com a de baixo",
-          "description": "Trocar {BottomRelicOwned} por {BottomRelicNew}."
+          "description": "Trocar sua Relíquia por uma nova Relíquia."
         },
         {
           "name": "Ficar com a do meio",
-          "description": "Trocar {MiddleRelicOwned} por {MiddleRelicNew}."
+          "description": "Trocar sua Relíquia por uma nova Relíquia."
         },
         {
           "name": "Ficar com a de cima",
-          "description": "Trocar {TopRelicOwned} por {TopRelicNew}."
+          "description": "Trocar sua Relíquia por uma nova Relíquia."
         }
       ]
     },
     "ROOM_FULL_OF_CHEESE": {
-      "description": "Este salão está cheio de queijo!!!\n\nVocê observa a procura de armadilhas, mas tudo o que enxerga é... mais queijo. As velas parece ser feitas de queijo. A mobília também é feita de queijo.\nDe repente, a porta atrás de você se tranca com um baque.\n\nA porta é feita de queijo.",
       "name": "Salão Cheio de Queijo",
+      "description": "Este salão está cheio de queijo!!!\n\nVocê observa a procura de armadilhas, mas tudo o que enxerga é... mais queijo. As velas parece ser feitas de queijo. A mobília também é feita de queijo.\nDe repente, a porta atrás de você se tranca com um baque.\n\nA porta é feita de queijo.",
       "choices": [
         {
           "name": "Devorar",
-          "description": "Escolha 2 entre 8 cartas Comuns aleatórias para adicionar ao seu Baralho."
+          "description": "Escolha 2 entre 8 cartas Comuns aleatórias para adicionar ao seu Baralho.",
+          "outcome": "Você dá uma mordida no queijo, mas isso te impele a comer ainda mais queijo.\n\nO tempo passa...\n\nVocê comeu uma quantidade absurda de queijo.\nEsta noite, você sonhará com queijo."
         },
         {
           "name": "Vasculhar",
-          "description": "Perca 14 PV. Receba O Queijo Escolhido."
+          "description": "Perca 14 PV. Receba O Queijo Escolhido.",
+          "outcome": "Você explora o salão por horas e mais horas...\n\nO tempo passa e a sua mente vaga por lugares estranhos, a pura presença de tanto queijo afeta seus sentidos e você desmaia...\nVocê desperta e percebe que está segurando algo.\n\nO Queijo Escolhido."
         }
       ]
     },
     "ROUND_TEA_PARTY": {
-      "description": "Você encontra um convite endereçado a um tal “Sir Galalot”, para que compareça a um chá da tarde.\n\nAo chegar no local descrito, você se vê em meio a comandantes, generais, líderes de guerra e mercenários, todos... tomando chá?\nO robusto cavaleiro usando uma coroa dourada se dirige a você.\n\n“Como ousa se atrasar para a hora do Chá?!”",
       "name": "Hora do Chá",
+      "description": "Você encontra um convite endereçado a um tal “Sir Galalot”, para que compareça a um chá da tarde.\n\nAo chegar no local descrito, você se vê em meio a comandantes, generais, líderes de guerra e mercenários, todos... tomando chá?\nO robusto cavaleiro usando uma coroa dourada se dirige a você.\n\n“Como ousa se atrasar para a hora do Chá?!”",
       "choices": [
         {
           "name": "Aceitar o Chá",
-          "description": "Receba Veneno Real. Cure todos os seus PV."
+          "description": "Receba Royal Poison. Cure todos os seus PV.",
+          "outcome": "Você pega uma xícara e bebe tudo de uma só vez.\nO chá estava ESCALDANTE, mas você não altera a sua expressão facial. Os convidados ficam pasmos com a sua falta de instinto de sobrevivência.\n\n“Não pretendíamos lhe ofender, Sir Galalot. Nossas mais sinceras desculpas.”\n\nVocê aprecia mais chá e biscoitos, sem se dar conta do veneno que ingeriu."
         },
         {
           "name": "Comprar uma Briga",
@@ -5622,146 +5739,172 @@
       ]
     },
     "SAPPHIRE_SEED": {
-      "description": "Você por pouco evita pisotear uma brilhante... semente? Sua coloração inconfundível confirma que se trata de uma Semente Safira! Estas incríveis sementes não deveriam estar extintas?!\n\nAs lendas dizem que consumir uma dessas pode amplificar a sua vitalidade, mas o que acontece se você plantar e cuidar dela?",
       "name": "Semente Safira",
+      "description": "Você por pouco evita pisotear uma brilhante... semente? Sua coloração inconfundível confirma que se trata de uma Semente Safira! Estas incríveis sementes não deveriam estar extintas?!\n\nAs lendas dizem que consumir uma dessas pode amplificar a sua vitalidade, mas o que acontece se você plantar e cuidar dela?",
       "choices": [
         {
           "name": "Consumir",
-          "description": "Cure 9 PV. Aprimore uma carta no seu Baralho."
+          "description": "Cure 9 PV. Aprimore uma carta no seu Baralho.",
+          "outcome": "Você ingere a Semente Safira e em instantes sente seus membros mais ágeis, as cores ficam mais nítidas, e você passa a sentir a presença das almas de oponentes próximos.\n\nAinda bem que você não pisou nela."
         },
         {
           "name": "Plantar e Cuidar",
-          "description": "Encante uma carta com Semeada."
+          "description": "Encante uma carta com Sown.",
+          "outcome": "Você vasculha pela Proliferação a procura de um vaso com boa aeração. Então você caminha em busca de um lugar recluso onde a luz entre apenas por uma fresta. Cuidadosamente, você recobre o vaso com cascas e folhas de árvores para camuflagem, o preenche com solo rico em nutrientes, e repousa a semente logo abaixo da superfície.\n\nPor mim, você coleta orvalho de outras plantas e derrama uma quantidade adequada sobre o solo.\n\nCresça bem, pequena semente...\nSem que perceba, a Semente Safira cria um vínculo espiritual com você.\nEla fica muito agradecida pelo seu esforço."
         }
       ]
     },
     "SELF_HELP_BOOK": {
-      "description": "No chão, você encontra um tomo:\n“Top 3 Maneiras de Conquistar o Pináculo”\n\nO livro está sujo de sangue, o que faz você desconfiar da autenticidade do manuscrito.\n\nPausa para uma breve leitura?",
       "name": "Livro de Auto Ajuda",
+      "description": "No chão, você encontra um tomo:\n“Top 3 Maneiras de Conquistar o Pináculo”\n\nO livro está sujo de sangue, o que faz você desconfiar da autenticidade do manuscrito.\n\nPausa para uma breve leitura?",
       "choices": [
         {
           "name": "Ignorar",
-          "description": "Você não possui cartas que possam ser Encantadas."
+          "description": "Você não possui cartas que possam ser Encantadas.",
+          "outcome": "Você não liga muito para livros, principalmente os que tenham manchas de sangue."
         },
         {
           "name": "Ler o Livro Inteiro",
-          "description": "Escolha um Poder para Encantar com Célere 2."
+          "description": "Escolha um Poder para Encantar com Swift 2.",
+          "locked": "Você não possui nenhum Poder que possa ser Encantado.",
+          "outcome": "Que leitura fascinante! Algumas partes ainda permanecem frescas em sua mente:\n“Evite grandes monstros.”\n“Aceite toda e qualquer carta.”\n“Proteção é para covardes.”\n\nSuas mãos estão cobertas de sangue."
         },
         {
           "name": "Ler um Parágrafo Aleatório",
-          "description": "Escolha uma Técnica para Encantar com Ágil 2."
+          "description": "Escolha uma Técnica para Encantar com Nimble 2.",
+          "locked": "Você não possui nenhuma Técnica que possa ser Encantada.",
+          "outcome": "Você abre em uma página aleatória:\n“Defensa Básica: Evite sofrer dano!”\n\nVocê lê o restante do capítulo, que é surpreendentemente esclarecedor. Você incorpora estas ideias em suas táticas de combate."
         },
         {
           "name": "Ler a Contracapa",
-          "description": "Escolha um Ataque para Encantar com Afiada 2."
+          "description": "Escolha um Ataque para Encantar com Sharp 2.",
+          "locked": "Você não possui nenhum Ataque que possa ser Encantado.",
+          "outcome": "Você vira o livro e lê o resumo:\n“Críticos e Cultistas concordam que armas afiadas e pontiagudas são a melhor forma de causar dano!”\n\nTem uma etiqueta de preço no verso do livro. O preço original foi riscado e logo abaixo foi anotado um preço bastante reduzido."
         }
       ]
     },
     "SLIPPERY_BRIDGE": {
-      "description": "Ao atravessar uma precária ponte de madeira, uma chuva torrencial cai de repente. Poderosas rajadas de vento ameaçam terminar aqui a sua jornada.",
       "name": "Ponte Escorregadia",
+      "description": "Ao atravessar uma precária ponte de madeira, uma chuva torrencial cai de repente. Poderosas rajadas de vento ameaçam terminar aqui a sua jornada.",
       "choices": [
         {
           "name": "Manter o Equilíbrio",
-          "description": "Perca {HpLoss} PV. Troca aleatoriamente a carta da opção acima."
+          "description": "Perca X PV. Troca aleatoriamente a carta da opção acima."
         },
         {
           "name": "Atravessar",
-          "description": "{RandomCard} é removida do seu Baralho."
+          "description": "Carta aleatória é removida do seu Baralho.",
+          "outcome": "Eu odeio pontes."
         }
       ]
     },
     "SPIRALING_WHIRLPOOL": {
-      "description": "Você encontra um Enorme Redemoinho Aquático. A água executa um belo e preciso movimento rodopiante, e as paredes ao redor são adornadas em padrões espirais.\n\nGirando e girando... girando...\n....e girando.... que espetáculo......\n\nO que você faz?",
       "name": "Redemoinho Aquático",
+      "description": "Você encontra um Enorme Redemoinho Aquático. A água executa um belo e preciso movimento rodopiante, e as paredes ao redor são adornadas em padrões espirais.\n\nGirando e girando... girando...\n....e girando.... que espetáculo......\n\nO que você faz?",
       "choices": [
         {
           "name": "Beber",
-          "description": "Cure 0 PV."
+          "description": "Cure 0 PV.",
+          "outcome": "Você mergulha suas mãos no Redemoinho.\n\nVocê consegue coletar um pouco de água nas suas mãos e toma pequenos goles com seus olhos fechados.\n\nÁgua refrescante rodopia dentro de você até o seu Centro, lavando pensamentos ruins e aflições físicas..."
         },
         {
           "name": "Observar",
-          "description": "Encante um Golpe ou uma Defesa com Espiral."
+          "description": "Encante um Golpe ou uma Defesa com Espiral.",
+          "outcome": "...ah-   tão belo.....\nGirando... e girando. Sim...\nOh! Aquilo foi..... um respingo...?\n....claro que sim. Você também merece se divertir um pouco, Sr. Espiral... haha...\n... .......   ...\n\nHora de ir.\nVocê sussurra algo ao se despedir.\n\n“Muito obrigado, Espiral.”"
         },
         {
           "name": "Tocar o Fundo",
-          "description": "Receba uma Relíquia aleatória. Adicione Torção ao seu Baralho."
+          "description": "Receba uma Relíquia aleatória. Adicione Torção ao seu Baralho.",
+          "outcome": "Sem pensar nas consequências, você mergulha seu braço no centro do Redemoinho Aquático, perturbando o equilíbrio. A água se torna frígida e se agarra a você, marcando Espirais Invisíveis no seu braço.\n\nSeus dedos encostam em algo sólido, e você agarra e puxa dolorosamente uma Relíquia para fora do redemoinho!"
         }
       ]
     },
     "SPIRIT_GRAFTER": {
-      "description": "Acima, um casulo está se contorcendo e chacoalhando, prestes a romper!\n\n...então a movimentação é interrompida. O casulo entra em combustão! O que está acontecendo?\nEm um clarão de luz e chamas, um Enxertador Espiritual avança em sua direção, ameaçando fundir-se com você para se tornar completo.",
       "name": "Enxertador Espiritual",
+      "description": "Acima, um casulo está se contorcendo e chacoalhando, prestes a romper!\n\n...então a movimentação é interrompida. O casulo entra em combustão! O que está acontecendo?\nEm um clarão de luz e chamas, um Enxertador Espiritual avança em sua direção, ameaçando fundir-se com você para se tornar completo.",
       "choices": [
         {
           "name": "Não Resistir",
-          "description": "Cure 25 PV. Adicione Metamorfose ao seu Baralho."
+          "description": "Cure 25 PV. Adicione Metamorfose ao seu Baralho.",
+          "outcome": "O Enxertador Espiritual se funde a você. O espírito gentilmente cura seus ferimentos.\n\nVocê renasce."
         },
         {
           "name": "Rejeitar",
-          "description": "Perca 9 PV. Remova uma carta do seu Baralho."
+          "description": "Perca 9 PV. Remova uma carta do seu Baralho.",
+          "outcome": "O Enxertador Espiritual é facilmente detido pela sua determinação.\n\nEntretanto, ele voa em sua direção repetidamente. Sua força se esgota e ele dissolve.\n\nUm espírito efêmero."
         }
       ]
     },
     "STONE_OF_ALL_TIME": {
-      "description": "Uma enorme pedra repousa no meio de um campo abandonado.\n\nUma placa descreve:\nPedra Atemporal.\n\nSua presença, formato e adornos indicam que este campo foi construído ao redor da Pedra e que ela nunca foi movida deste exato lugar.",
       "name": "Pedra Atemporal",
+      "description": "Uma enorme pedra repousa no meio de um campo abandonado.\n\nUma placa descreve:\nPedra Atemporal.\n\nSua presença, formato e adornos indicam que este campo foi construído ao redor da Pedra e que ela nunca foi movida deste exato lugar.",
       "choices": [
         {
           "name": "Beber algo e Erguer",
-          "description": "Perca {DrinkRandomPotion}. Receba 10 PV Máximos."
+          "description": "Perca Poção aleatória. Receba 10 PV Máximos.",
+          "locked": "Requer uma Poção.",
+          "outcome": "Você bebe Poção aleatória e ergue a pedra com toda a sua força!!\n\nNada acontece."
         },
         {
           "name": "Empurrar",
-          "description": "Perca 6 PV. Encante um Ataque com Vigorosa 8."
+          "description": "Perca 6 PV. Encante um Ataque com Vigorosa 8.",
+          "locked": "Requer um Ataque.",
+          "outcome": "Você empurra com toda a sua força!!\n\nNada acontece."
         }
       ]
     },
     "SUNKEN_STATUE": {
-      "description": "Você encontra uma antiga estátua submersa até a metade em uma lagoa, suas mãos repousam gentilmente sobre uma espada de pedra.\n\nVocê também nota algo reluzindo no fundo da lagoa.\nOferendas, talvez?\n\nUm pouco de dinheiro seria bastante útil agora...",
       "name": "A Estátua Submersa",
+      "description": "Você encontra uma antiga estátua submersa até a metade em uma lagoa, suas mãos repousam gentilmente sobre uma espada de pedra.\n\nVocê também nota algo reluzindo no fundo da lagoa.\nOferendas, talvez?\n\nUm pouco de dinheiro seria bastante útil agora...",
       "choices": [
         {
           "name": "Mergulhar na Lagoa",
-          "description": "Receba 111 de Ouro. Perca 7 PV."
+          "description": "Receba 111 de Ouro. Perca 7 PV.",
+          "outcome": "Você mergulha fundo!\n\nEnquanto coleta oferendas você ouve um eco abafado e pedras te atingem!\n\nAo voltar para a superfície, você nota que a estátua desmoronou devido à sua interferência física e espiritual."
         },
         {
           "name": "Pegar a Espada",
-          "description": "Receba Espada de Pedra."
+          "description": "Receba Sword of Stone.",
+          "outcome": "Você arranca a espada das mãos da estátua e a coisa toda desmorona em pedaços!\n\nÉ muito perigoso tentar pegar o que quer que estivesse reluzindo no fundo da lagoa...\n\nAo examinar a espada, você sente um incrível poder adormecido emanando dela."
         }
       ]
     },
     "SUNKEN_TREASURY": {
-      "description": "Um caminho levou você até uma câmara parcialmente submersa.\nNela se encontram 2 baús mas apenas 1 chave frágil.\n\nO Primeiro Baú: Ao chacoalhar, você escuta pequenos sons metálicos. Um pouco de Ouro, talvez.\nO Segundo Baú: Enorme, ornamentado e claramente amaldiçoado. Deve estar cheio de Ouro!",
       "name": "Tesouro Submerso",
+      "description": "Um caminho levou você até uma câmara parcialmente submersa.\nNela se encontram 2 baús mas apenas 1 chave frágil.\n\nO Primeiro Baú: Ao chacoalhar, você escuta pequenos sons metálicos. Um pouco de Ouro, talvez.\nO Segundo Baú: Enorme, ornamentado e claramente amaldiçoado. Deve estar cheio de Ouro!",
       "choices": [
         {
           "name": "Primeiro Baú",
-          "description": "Receba 60 de Ouro."
+          "description": "Receba 60 de Ouro.",
+          "outcome": "Sim, tinha Ouro aqui."
         },
         {
           "name": "Segundo Baú",
-          "description": "Receba 333 de Ouro. Receba Ganância."
+          "description": "Receba 333 de Ouro. Receba Ganância.",
+          "outcome": "Você nunca viu tanto Ouro em um único lugar!\n\nVocê poderia comprar o estoque inteiro do Mercador...\n{Monologue}\nVocê poderia subornar inimigos perigosos...\n\nOs pensamentos gananciosos se multiplicam na sua mente..."
         }
       ]
     },
     "SYMBIOTE": {
-      "description": "Enquanto explorava, você se depara com uma espécie de pólipo, amorfo e escuro. Você pode sentir que é algo muito antigo e maligno.\n\nAproxime-se...",
       "name": "Simbionte",
+      "description": "Enquanto explorava, você se depara com uma espécie de pólipo, amorfo e escuro. Você pode sentir que é algo muito antigo e maligno.\n\nAproxime-se...",
       "choices": [
         {
           "name": "Aproximar",
-          "description": "Encante um Ataque com Corrompida."
+          "description": "Encante um Ataque com Corrupted.",
+          "locked": "Nenhum de seus Ataques pode ser Encantado.",
+          "outcome": "A coisa repentinamente pula em você. Você sente uma dor intensa quando a criatura se agarra ao seu braço, mas em um piscar de olhos ela desaparece.\n\n...? Para onde foi?"
         },
         {
           "name": "Matar usando Fogo",
-          "description": "Escolha uma carta para Transformá-la."
+          "description": "Escolha uma carta para Transformá-la.",
+          "outcome": "Você usa uma tocha e coloca fogo no pólipo. Enquanto ele berra e queima, sua cabeça pulsa dolorosamente, mas você consegue não desmaiar.\nO que era essa coisa?"
         }
       ]
     },
     "TABLET_OF_TRUTH": {
-      "description": "Você derrota um par de Guardiões Tribais e se dirige até uma câmara protegida.\n\nEm seu interior, uma tabuleta com inscrições familiares. Sua intuição diz que este idioma poderia ser facilmente decifrado... Entretanto, uma vez que comece a decifrar, você dedicará sua total atenção até o fim.\n\nA tabuleta emana uma energia calmante, e você poderia simplesmente destruí-la para receber energias curativas em vez disso.",
       "name": "Tabuleta da Verdade",
+      "description": "Você derrota um par de Guardiões Tribais e se dirige até uma câmara protegida.\n\nEm seu interior, uma tabuleta com inscrições familiares. Sua intuição diz que este idioma poderia ser facilmente decifrado... Entretanto, uma vez que comece a decifrar, você dedicará sua total atenção até o fim.\n\nA tabuleta emana uma energia calmante, e você poderia simplesmente destruí-la para receber energias curativas em vez disso.",
       "choices": [
         {
           "name": "Decifrar",
@@ -5769,38 +5912,47 @@
         },
         {
           "name": "Quebrar",
-          "description": "Cure 20 PV."
+          "description": "Cure 20 PV.",
+          "outcome": "A tabuleta foi quebrada em muitos pedaços, e energia expelida da tabuleta se infiltra em seu corpo.\n\nUma sensação de revigoramento!"
         }
       ]
     },
     "TEA_MASTER": {
-      "description": "Você entra em uma cabana pouco iluminada e percebe que o local emana tranquilidade e está repleto de muitas variedades de chá.\n\nO homem que percebe a sua entrada gesticula lhe apresentando uma seleção de chás, cada qual cuidadosamente etiquetado com um preço especial.",
       "name": "Mestre dos Chás",
+      "description": "Você entra em uma cabana pouco iluminada e percebe que o local emana tranquilidade e está repleto de muitas variedades de chá.\n\nO homem que percebe a sua entrada gesticula lhe apresentando uma seleção de chás, cada qual cuidadosamente etiquetado com um preço especial.",
       "choices": [
         {
           "name": "Chá de Ossos",
-          "description": "Pague 50 de Ouro. {BoneTeaDescription}"
+          "description": "Pague 50 de Ouro. Bone Tea",
+          "locked": "Requer 50 de Ouro."
         },
         {
           "name": "Chá Ígneo",
-          "description": "Pague 150 de Ouro. {EmberTeaDescription}"
+          "description": "Pague 150 de Ouro. Ember Tea",
+          "locked": "Requer 150 de Ouro."
         },
         {
           "name": "Chá da Descortesia",
-          "description": "{TeaOfDiscourtesyDescription}"
+          "description": "Tea of Discourtesy",
+          "outcome": "Você educadamente recusa o chá e —\n\n*BLAM*\n\nA porta se fecha nas suas costas. O mestre dos chás encara você por algum tempo, e então mostra uma xícara bastante feia .\nOh, este chá é pela descortesia..."
         }
       ]
     },
     "THE_FUTURE_OF_POTIONS": {
-      "description": "Você sente um leve tremor ao fazer uma curva e se deparar com um gigantesco aparato giratório!\nVocê observa muitos espaços que parecem ter a função de converter líquidos em uma compacta pastilha digestível.\n\nA ideia de transformar estes tônicos em um petisco não soa nada agradável, mas talvez seja bom ter uma nova experiência?",
       "name": "O Futuro das Poções?",
+      "description": "Você sente um leve tremor ao fazer uma curva e se deparar com um gigantesco aparato giratório!\nVocê observa muitos espaços que parecem ter a função de converter líquidos em uma compacta pastilha digestível.\n\nA ideia de transformar estes tônicos em um petisco não soa nada agradável, mas talvez seja bom ter uma nova experiência?",
       "choices": [
-        null
+        {
+          "name": "Inserir Poção ?",
+          "description": "Perca Poção. Receba uma ? ? Aprimorada."
+        },
+        {},
+        {}
       ]
     },
     "THE_LANTERN_KEY": {
-      "description": "Você encontra uma chave que emite um fraco brilho e decide se apossar dela.\n\n“Estive procurando esta chave por toda a parte! Se você não se importa...”\n\nEsta pessoa parece má intencionada, por outro lado talvez não seja legal de sua parte julgar alguém assim.",
       "name": "A Chave Lamparina",
+      "description": "Você encontra uma chave que emite um fraco brilho e decide se apossar dela.\n\n“Estive procurando esta chave por toda a parte! Se você não se importa...”\n\nEsta pessoa parece má intencionada, por outro lado talvez não seja legal de sua parte julgar alguém assim.",
       "choices": [
         {
           "name": "Guardar a Chave",
@@ -5813,55 +5965,120 @@
       ]
     },
     "THE_LEGENDS_WERE_TRUE": {
-      "description": "Você entra em uma câmara completamente escura. Vindo de cima, uma luz repentina atravessa a escuridão no mesmo instante em que a porta se tranca atrás de você.\n\nNa sua frente, um pódio está agora iluminado, e um mapa repousa nele. Você sente um impulso em pegar o mapa.\n\nSuspeito.",
       "name": "As Lendas Eram Verdadeiras",
+      "description": "Você entra em uma câmara completamente escura. Vindo de cima, uma luz repentina atravessa a escuridão no mesmo instante em que a porta se tranca atrás de você.\n\nNa sua frente, um pódio está agora iluminado, e um mapa repousa nele. Você sente um impulso em pegar o mapa.\n\nSuspeito.",
       "choices": [
         {
           "name": "Pegar o Mapa",
-          "description": "Receber Mapa de Espólios."
+          "description": "Receber Mapa de Espólios.",
+          "outcome": "O que de pior poderia acontecer? Assim que você pega o mapa, uma abertura aparece do outro lado da sala."
         },
         {
           "name": "Buscar a Saída",
-          "description": "Perca 8 PV. Receba 1 Poção aleatória."
+          "description": "Perca 8 PV. Receba 1 Poção aleatória.",
+          "outcome": "Você tenta se localizar na escuridão total, procurando pela saída. A câmara estremece violentamente, e então tudo começa a desmoronar.\n\nSaindo por entre os escombros, você encontra um frasco de algo útil que devia estar escondido em alguma das paredes."
         }
       ]
     },
     "THIS_OR_THAT": {
-      "description": "De repente, braços saem de um buraco próximo, uma mão segurando uma suspeita bolsa de tesouros e a outra, uma relíquia obviamente amaldiçoada.\n\n“Isto... ou Aquilo?”\nPergunta uma voz rouca de dentro do buraco.",
       "name": "Isto ou Aquilo?",
+      "description": "De repente, braços saem de um buraco próximo, uma mão segurando uma suspeita bolsa de tesouros e a outra, uma relíquia obviamente amaldiçoada.\n\n“Isto... ou Aquilo?”\nPergunta uma voz rouca de dentro do buraco.",
       "choices": [
         {
           "name": "Aquilo",
-          "description": "Adicione Desajeitado ao seu Baralho. Receba uma Relíquia aleatória."
+          "description": "Adicione Clumsy ao seu Baralho. Receba uma Relíquia aleatória.",
+          "outcome": "Você pega a Relíquia Amaldiçoada. Assim que você a toca, grilhões se materializam em seus pulsos.\n\nVocê ouve uma gargalhada nefasta e uma coluna de fogo preenche seu campo de visão!\n\nO buraco e os braços sumiram."
         },
         {
           "name": "Isto",
-          "description": "Perca 6 PV. Receba 0 de Ouro."
+          "description": "Perca 6 PV. Receba 0 de Ouro.",
+          "outcome": "Você pega a bolsa, e ao fazer isso uma TERCEIRA mão aparece repentinamente e agarra você!!\n\nApós uma luta frenética, a mão solta você — os braços e o buraco desapareceram."
         }
       ]
     },
     "TINKER_TIME": {
-      "description": "Atravessando um infinito mar de cadáveres, você encontra um cientista louco vasculhando os corpos.\n\n“Ah. Oi, olá! Você parece ser alguém hábil em combate... preciso de uma cobaia para o meu dispositivo de atrocidades! O que acha?”",
       "name": "Hora de Inventar",
-      "choices": []
+      "description": "Atravessando um infinito mar de cadáveres, você encontra um cientista louco vasculhando os corpos.\n\n“Ah. Oi, olá! Você parece ser alguém hábil em combate... preciso de uma cobaia para o meu dispositivo de atrocidades! O que acha?”",
+      "pages": [
+        {
+          "description": "“Que tipo de ferramenta lhe seria útil para extermínios em massa?”",
+          "choices": [
+            {
+              "name": "Arma",
+              "description": "Construir um Ataque."
+            },
+            {
+              "name": "Aparato",
+              "description": "Construir um Poder."
+            },
+            {
+              "name": "Protetor",
+              "description": "Construir uma Técnica."
+            }
+          ]
+        },
+        {
+          "description": "“Excelente escolha! Agora, o que isto deve FAZER?”\nO cientista esfrega suas mãos com entusiasmo.",
+          "choices": [
+            {
+              "name": "Caos",
+              "description": "Adicione uma carta aleatória na sua Mão. Ela custa 0 {energyPrefix:energyIcons(1)} neste turno."
+            },
+            {
+              "name": "Asfixia",
+              "description": "Sempre que você jogar uma carta neste turno, o inimigo perde {ChokingDamage} PV."
+            },
+            {
+              "name": "Curiosidade",
+              "description": "Poderes custam 1 {energyPrefix:energyIcons(1)} a menos."
+            },
+            {
+              "name": "Estimular",
+              "description": "Receba {EnergizedEnergy:energyIcons()}."
+            },
+            {
+              "name": "Perícia",
+              "description": "Receba {ExpertiseStrength} de Força. Receba {ExpertiseDexterity} de Destreza."
+            },
+            {
+              "name": "Otimização",
+              "description": "No final do combate, Aprimore uma carta aleatória."
+            },
+            {
+              "name": "Desgaste",
+              "description": "Aplique {SappingWeak} de Fraqueza. Aplique {SappingVulnerable} de Vulnerável."
+            },
+            {
+              "name": "Violência",
+              "description": "Golpeia 2 vezes adicionais."
+            },
+            {
+              "name": "Sabedoria",
+              "description": "Compre 3 cartas."
+            }
+          ]
+        }
+      ]
     },
     "TRASH_HEAP": {
-      "description": "Você descobre uma imensa pilha de armas sucateadas, bugigangas descartadas e outras esquisitices. A pilha balança e chacoalha como se estivesse crescendo por dentro...\n\nSe você vasculhar pela superfície, talvez encontre algo decente. Mas se você mergulhar fundo, pode ser que encontre tesouros exóticos.",
       "name": "Pilha de Lixo",
+      "description": "Você descobre uma imensa pilha de armas sucateadas, bugigangas descartadas e outras esquisitices. A pilha balança e chacoalha como se estivesse crescendo por dentro...\n\nSe você vasculhar pela superfície, talvez encontre algo decente. Mas se você mergulhar fundo, pode ser que encontre tesouros exóticos.",
       "choices": [
         {
           "name": "Mergulhar",
-          "description": "Perca 8 PV. Receba uma antiga e esquecida Relíquia aleatória."
+          "description": "Perca 8 PV. Receba uma antiga e esquecida Relíquia aleatória.",
+          "outcome": "Você dedica um bom tempo por entre o perigoso lixo e encontra uma relíquia do passado!\n\nPor que isto foi descartado?"
         },
         {
           "name": "Vasculhar a Superfície",
-          "description": "Receba 100 de Ouro. Receba uma antiga e esquecida carta aleatória."
+          "description": "Receba 100 de Ouro. Receba uma antiga e esquecida carta aleatória.",
+          "outcome": "Você caminha ao redor da pilha mantendo uma distância segura e coleta alguns antigos itens de valor e esquisitices aqui e ali.\n\nCom que intuito criaram estas coisas?"
         }
       ]
     },
     "TRIAL": {
-      "description": "Você entra em uma fila de pessoas de frente a uma enorme edificação.\n\nAo passar por debaixo de um arco dourado cornetas soam, confetes são lançados e fitas caem do teto!\n\n“Ingressante {EntrantNumber}, você tem o papel de DECIDIR o Julgamento de hoje.”",
       "name": "O Julgamento",
+      "description": "Você entra em uma fila de pessoas de frente a uma enorme edificação.\n\nAo passar por debaixo de um arco dourado cornetas soam, confetes são lançados e fitas caem do teto!\n\n“Ingressante ?, você tem o papel de DECIDIR o Julgamento de hoje.”",
       "choices": [
         {
           "name": "Aceitar",
@@ -5874,134 +6091,158 @@
       ]
     },
     "UNREST_SITE": {
-      "description": "Você encontra um recluso Local de Descanso e ascende uma fogueira para se aquecer e descansar.\nOu pelo menos, você achou que poderia fazer isto.\n\nAssim que a fogueira se acendeu, o fogo começou a crescer e se espalhar, não para cima mas para os lados, em direção a um bosque de árvores que vazam óleo.\n\nTentar descansar mesmo assim?",
       "name": "Local Sem Descanso",
+      "description": "Você encontra um recluso Local de Descanso e ascende uma fogueira para se aquecer e descansar.\nOu pelo menos, você achou que poderia fazer isto.\n\nAssim que a fogueira se acendeu, o fogo começou a crescer e se espalhar, não para cima mas para os lados, em direção a um bosque de árvores que vazam óleo.\n\nTentar descansar mesmo assim?",
       "choices": [
         {
           "name": "Cortar as Árvores",
-          "description": "Perca 8 PV Máximos. Receba uma Relíquia aleatória."
+          "description": "Perca 8 PV Máximos. Receba uma Relíquia aleatória.",
+          "outcome": "Aquelas árvores são certamente maliciosas, então você decide se livrar delas.\nDias depois, cinzas e uma gosma oleosa recobrem você por completo.\n\nUm numeroso bando de pequenos espíritos alados sai das árvores cortadas e uma caixa é depositada aos seus pés.\n“Agradecemos por nos livrar daquelas árvores... piio piio piio!”\n\nVocê realmente precisa dormir."
         },
         {
           "name": "Descansar",
-          "description": "Cure todos os PV. Receba Insônia."
+          "description": "Cure todos os PV. Receba Insônia.",
+          "outcome": "Toda essa aventura acabou com as suas energias, e apesar de tudo, você decide descansar.\n\nVocê se remexe e retorce enquanto o fogo ruge e crepita. As árvores estranhas exalam um terrível odor de sua seiva escura e oleosa.\n\nVocê desperta sentindo que poderia ter descansado melhor."
         }
       ]
     },
     "WAR_HISTORIAN_REPY": {
-      "description": "Um estudioso está aprisionado em uma gaiola suspensa próximo a um baú de tesouro.\n\nO estudioso resmunga algo sobre “Chaves de Uso Único” enquanto escreve algo furiosamente.\n\nParece que você pode destrancar a gaiola ou o baú.",
       "name": "Repy, Historiador de Guerra",
+      "description": "Um estudioso está aprisionado em uma gaiola suspensa próximo a um baú de tesouro.\n\nO estudioso resmunga algo sobre “Chaves de Uso Único” enquanto escreve algo furiosamente.\n\nParece que você pode destrancar a gaiola ou o baú.",
       "choices": [
         {
           "name": "Destrancar a Gaiola",
-          "description": "Perca Chave Lamparina. Receba Estudos de História."
+          "description": "Perca Chave Lamparina. Receba Estudos de História.",
+          "outcome": "Repy se curva em agradecimento por você ter aberto a gaiola. Ele lhe entrega um grande tomo encapado em couro.\n\n“Aqueles que desconhecem a história estão fadados a repeti-la. Mas você parece ter certa experiência com repetições, não é mesmo?”"
         },
         {
           "name": "Destrancar o Baú",
-          "description": "Perca Chave Lamparina. Receba 2 Poções aleatórias e 2 Relíquias aleatórias."
+          "description": "Perca Chave Lamparina. Receba 2 Poções aleatórias e 2 Relíquias aleatórias.",
+          "outcome": "“Não vai libertar Repy, o intelectual? Baseando-se na filosofia clássica, poderiam lhe considerar um fracasso moral. É isto mesmo, talvez numa próxima vez você devesse considerar o SER VIVO que está enclausurado! Não é como se um valioso membro da sociedade estivesse em SÉRIOS APUROS ou algo do tipo!!”\n\n“Olha, você faz ideia de como esta gaiola é pequena?! Por que estou reclamando? Você já realizou sua tola escolha... oh, o que temos aí dentro? Algumas poções e relíquias? Puxa, que bom. Muito bom. Realmente muito bom para você...”\n\nOs olhos de Repy fitam você com desdém enquanto se retira."
         }
       ]
     },
     "WATERLOGGED_SCRIPTORIUM": {
-      "description": "Viajando por caminhos obscuros, você encontra uma figura ressequida trabalhando em um pequeno estabelecimento. Uma infinitude de estantes estão repletas de papéis e pergaminhos úmidos.\n\nPercebendo que alguém se aproxima, o comerciante escrivão volta sua atenção a você e gesticula na direção de alguns utensílios organizados em uma mesa.",
       "name": "Escrituras Alagadas",
+      "description": "Viajando por caminhos obscuros, você encontra uma figura ressequida trabalhando em um pequeno estabelecimento. Uma infinitude de estantes estão repletas de papéis e pergaminhos úmidos.\n\nPercebendo que alguém se aproxima, o comerciante escrivão volta sua atenção a você e gesticula na direção de alguns utensílios organizados em uma mesa.",
       "choices": [
         {
           "name": "Tinta Sanguínea",
-          "description": "Receba 6 PV Máximos."
+          "description": "Receba 6 PV Máximos.",
+          "outcome": "O escrivão pega cuidadosamente o frasco contendo tinta de cor vermelho vívido e o agita, então gesticula para que mergulhe sua mão.\n\nVocê mergulha seus dedos na tinta e um solavanco de vitalidade atravessa seu corpo!\n\nContente com sua reação, o escrivão se curva educadamente e lhe acena em despedida."
         },
         {
           "name": "Esponja Espinhosa",
-          "description": "Pague 155 de Ouro. Encante 2 carta com Prontidão."
+          "description": "Pague 155 de Ouro. Encante 2 cartas com Prontidão.",
+          "locked": "Requer 155 de Ouro.",
+          "outcome": "O escrivão pega a esponja espinhosa (que faz um barulhinho de apito) e a esfrega sobre seus pergaminhos.\n\n*squik squik squik*\n\nA textura espinhosa deixa marcas cintilantes que parecem estabilizar a tinta..."
         },
         {
           "name": "Pluma Tentacular",
-          "description": "Pague 65 de Ouro. Encante uma carta com Prontidão."
+          "description": "Pague 65 de Ouro. Encante uma carta com Prontidão.",
+          "locked": "Requer 65 de Ouro.",
+          "outcome": "O escrivão ergue a pluma tentacular e com movimentos rápidos e precisos, desenha uma estranha marca em sua cabeça.\n\nA marca emite um brilho, e então desaparece..."
         }
       ]
     },
     "WELCOME_TO_WONGOS": {
-      "description": "“O Wongo's te dá boas vindas. Temos o que você procura a preços Wongotásticos.” diz o balconista mais entediado que você já conheceu.\n\n“Aprecie nossas opções e aproveite sua estadia no Wongo's,” ele continua, sem nem olhar para cima.",
       "name": "Boas Vindas ao Wongo's",
+      "description": "“O Wongo's te dá boas vindas. Temos o que você procura a preços Wongotásticos.” diz o balconista mais entediado que você já conheceu.\n\n“Aprecie nossas opções e aproveite sua estadia no Wongo's,” ele continua, sem nem olhar para cima.",
       "choices": [
         {
           "name": "Oferta do Wongo's",
-          "description": "Pague 100 de Ouro. Receba 1 Relíquia Comum."
+          "description": "Pague 100 de Ouro. Receba 1 Relíquia Comum.",
+          "locked": "Requer 100 de Ouro."
         },
         {
           "name": "Destaque do Wongo's",
-          "description": "Pague 200 de Ouro. Receba {RandomRelic}."
+          "description": "Pague 200 de Ouro. Receba Relíquia aleatória.",
+          "locked": "Requer 200 de Ouro."
         },
         {
           "name": "Sair",
-          "description": "Remova o Aprimoramento de uma carta aleatória."
+          "description": "Remova o Aprimoramento de uma carta aleatória.",
+          "outcome": "“Erhm... desculpe mas você não pode simplesmente sair sem comprar nada no Wongo's,” diz o balconista em tom irritado.\n\nVocês tem um caloroso debate sobre direitos do consumidor, lhe deixando em estado de exaustão mental."
         },
         {
           "name": "Caixa Misteriosa do Wongo's",
-          "description": "Pague 300 de Ouro. Receba 3 Relíquias aleatórias após 5 combates."
+          "description": "Pague 300 de Ouro. Receba 3 Relíquias aleatórias após 5 combates.",
+          "locked": "Requer 300 de Ouro."
         }
       ]
     },
     "WELLSPRING": {
-      "description": "Você rastreia um leve tremor até sua origem e encontra uma tranquila fonte. A água tem uma coloração verde esmeralda com algumas partículas brilhantes.\n\nParece convidativa. O que poderia dar errado?",
       "name": "Fonte Tranquila",
+      "description": "Você rastreia um leve tremor até sua origem e encontra uma tranquila fonte. A água tem uma coloração verde esmeralda com algumas partículas brilhantes.\n\nParece convidativa. O que poderia dar errado?",
       "choices": [
         {
           "name": "Banhar-se",
-          "description": "Remova 1 carta do seu Baralho. Adicione 1 Culpa ao seu Baralho."
+          "description": "Remova 1 carta do seu Baralho. Adicione 1 Culpa ao seu Baralho.",
+          "outcome": "Você emerge da fonte sentindo um incômodo.\n\nEntretanto, também sente certa renovação."
         },
         {
           "name": "Engarrafar",
-          "description": "Receba 1 Poção aleatória."
+          "description": "Receba 1 Poção aleatória.",
+          "outcome": "A ideia de banhar-se nas belas águas não passa muita confiança... você decide engarrafar um pouco em vez disso.\n\nPode ser útil mais tarde."
         }
       ]
     },
     "WHISPERING_HOLLOW": {
-      "description": "Atravessando uma ravina de árvores secas você se depara com uma única árvore branca como osso. Enfeites de cerâmica pendem de seus galhos, que se curvam para dentro como costelas.\n\nMas que árvore tenebrosa. Ela sussurra.\n\n...realizar troca.....",
       "name": "Ravina Sussurrante",
+      "description": "Atravessando uma ravina de árvores secas você se depara com uma única árvore branca como osso. Enfeites de cerâmica pendem de seus galhos, que se curvam para dentro como costelas.\n\nMas que árvore tenebrosa. Ela sussurra.\n\n...realizar troca.....",
       "choices": [
         {
           "name": "Trocar Ouro",
-          "description": "Perca 50 de Ouro. Receba 2 Poções aleatórias."
+          "description": "Perca 50 de Ouro. Receba 2 Poções aleatórias.",
+          "outcome": "Você espalha um pouco de Ouro na base da árvore, e dois receptáculos de cerâmica caem no solo sem fazer nenhum ruído.\n\nEles se quebram, e dentro deles você encontra poções perfeitamente intactas.\n\nVocê pega as poções e foge."
         },
         {
           "name": "Abraçar a Árvore",
-          "description": "Perca 9 PV. Escolha uma carta para Transforma-la."
+          "description": "Perca 9 PV. Escolha uma carta para Transforma-la.",
+          "outcome": "Os sussurros lhe impulsionam a ceder seu Ouro, mas você resiste e em vez disso, dá um grande abraço na árvore!\n\nEla se debate, arranhando com seus galhos, até eventualmente se acalmar. A experiência de abraçar uma árvore transforma você.\n\n...realizar abraço.....?"
         }
       ]
     },
     "WOOD_CARVINGS": {
-      "description": "Você abre uma caixa empoeirada e encontra um conjunto de 3 elaboradas esculturas de madeira:\n\nUm pássaro, uma serpente e... um toro?\n\nUm pedestal próximo tem ranhuras que parecem coincidir com a base das esculturas. Qual escultura você coloca no pedestal?",
       "name": "Esculturas de Madeira",
+      "description": "Você abre uma caixa empoeirada e encontra um conjunto de 3 elaboradas esculturas de madeira:\n\nUm pássaro, uma serpente e... um toro?\n\nUm pedestal próximo tem ranhuras que parecem coincidir com a base das esculturas. Qual escultura você coloca no pedestal?",
       "choices": [
         {
           "name": "Pássaro",
-          "description": "Escolha 1 carta inicial para Transforma-la em Bicada."
+          "description": "Escolha 1 carta inicial para Transforma-la em Peck.",
+          "outcome": "Você coloca a escultura de pássaro no pedestal e seus OLHOS SE ILUMINAM, e um leve ruído ecoa em sua mente.\n\n...caw.... caw caaaawww...\n\nO pedestal se abre e um estranho líquido começa a vazar.\nNaturalmente, você não bebe nada disso."
         },
         {
           "name": "Serpente",
-          "description": "Encante 1 carta com Rastejante."
+          "description": "Encante 1 carta com Slither.",
+          "locked": "Você não possui cartas que possam ser Encantadas com Rastejante.",
+          "outcome": "Você coloca a escultura de serpente no pedestal e suas ESCAMAS SE ILUMINAM! Uma sensação quente e reconfortante envolve você."
         },
         {
           "name": "Toro",
-          "description": "Escolha 1 carta inicial para Transforma-la em Resistência Tórica."
+          "description": "Escolha 1 carta inicial para Transforma-la em Toric Toughness.",
+          "outcome": "Você coloca a escultura em forma de toro no pedestal e SEU ESTÔMAGO SE ILUMINA ao mesmo tempo que a escultura se transforma em um tipo de confeitaria quente e fresquinha. Uma fome insaciável domina, e você rapidamente consome a rosquinha.\n\nVocê sente que agora possui maior resistência, mas também maior lentidão."
         }
       ]
     },
     "ZEN_WEAVER": {
-      "description": "Você atravessa uma teia de aranha e entra em PÂNICO!\nMas então, uma onda de tranquilidade recai sobre você...\n\n“Acalme-se. Eu preciso que você pare de bagunçar a minha teia.”\n\nComo você se acalmou tão rápido?\nUma pequenina aranha desce por um fio para lhe encontrar. A aranha parece aberta a partilhar algum conhecimento em troca de um pouco de Ouro.",
       "name": "Tecelã Zen",
+      "description": "Você atravessa uma teia de aranha e entra em PÂNICO!\nMas então, uma onda de tranquilidade recai sobre você...\n\n“Acalme-se. Eu preciso que você pare de bagunçar a minha teia.”\n\nComo você se acalmou tão rápido?\nUma pequenina aranha desce por um fio para lhe encontrar. A aranha parece aberta a partilhar algum conhecimento em troca de um pouco de Ouro.",
       "choices": [
         {
           "name": "Acupuntura Aracnídea",
-          "description": "Pagar 250 de Ouro. Remova 2 cartas do seu Baralho."
+          "description": "Pagar 250 de Ouro. Remova 2 cartas do seu Baralho.",
+          "outcome": "“Não se... mova...” sussurra a pequena aranha enquanto suas patas dianteiras começam a emitir um brilho.\n\nEntão — em uma sequência de golpes precisos, alveja todo o seu corpo!\nUma sensação de leveza toma conta de você. Foi um bom investimento."
         },
         {
           "name": "Técnicas de Respiração",
-          "description": "Pague 50 de Ouro. Adicione 2 Iluminação ao seu Baralho."
+          "description": "Pague 50 de Ouro. Adicione 2 Iluminação ao seu Baralho.",
+          "outcome": "“Visualize sua respiração sempre aberta... Cada respiração tem propósito.”\n\nVocê pratica a técnica de forma que faça sentido para você."
         },
         {
           "name": "Consciência Emocional",
-          "description": "Pague 125 de Ouro. Remova 1 carta do seu Baralho."
+          "description": "Pague 125 de Ouro. Remova 1 carta do seu Baralho.",
+          "outcome": "A minúscula aranha inicia uma dança hipnótica e entoa um cântico repetitivo.\n\n“Pensamentos não afetam a realidade. Pânico altera os pensamentos. Siga o plano.”\n\nVocê encontra sentido nisso. Grandes e sábias palavras para um aracnídeo tão pequeno."
         }
       ]
     },
@@ -6113,7 +6354,7 @@
       "name": "Darv"
     },
     "NEOW": {
-      "description": "Mãe da Ressurreição (Exilada)",
+      "description": "Neow, a Mãe da Ressurreição, aguarda no início de cada partida. Ela oferece três bênçãos — duas positivas e uma amaldiçoada. As opções são sorteadas dos grupos abaixo.",
       "epithet": "Mãe da Ressurreição (Exilada)",
       "dialogue": [
         {
@@ -6221,7 +6462,129 @@
           "text": "Eu... reconstruí você....\n...vá... ..suba....."
         }
       ],
-      "name": "Neow"
+      "name": "Neow",
+      "choices": [
+        {
+          "name": "Pergaminho Arcano",
+          "description": "Ao coletar esta relíquia, receba uma Carta Rara aleatória para adicionar ao seu Baralho.",
+          "relic_id": "ARCANE_SCROLL",
+          "pool": "positive"
+        },
+        {
+          "name": "Concha Expansiva",
+          "description": "No início de combates contra Elites, compre 2 carta adicional.",
+          "relic_id": "BOOMING_CONCH",
+          "pool": "positive"
+        },
+        {
+          "name": "Pomandro",
+          "description": "Ao coletar esta relíquia, Aprimore uma carta.",
+          "relic_id": "POMANDER",
+          "pool": "positive"
+        },
+        {
+          "name": "Pérola Dourada",
+          "description": "Ao coletar esta relíquia, receba 150 de Ouro.",
+          "relic_id": "GOLDEN_PEARL",
+          "pool": "positive"
+        },
+        {
+          "name": "Peso de Papel",
+          "description": "Ao coletar esta relíquia, escolha 1 entre 2 cartas Incolores para adicionar ao seu Baralho.",
+          "relic_id": "LEAD_PAPERWEIGHT",
+          "pool": "positive"
+        },
+        {
+          "name": "Folha da Renovação",
+          "description": "Ao coletar esta relíquia, Transforme 1 carta.",
+          "relic_id": "NEW_LEAF",
+          "pool": "positive"
+        },
+        {
+          "name": "Tormento de Neow",
+          "description": "Ao coletar esta relíquia, adicione 1 Fúria de Neow ao seu Baralho.",
+          "relic_id": "NEOWS_TORMENT",
+          "pool": "positive"
+        },
+        {
+          "name": "Tesoura Precisa",
+          "description": "Ao coletar esta relíquia, remova 1 carta do seu Baralho.",
+          "relic_id": "PRECISE_SCISSORS",
+          "pool": "positive"
+        },
+        {
+          "name": "Arca Perdida",
+          "description": "Ao coletar esta relíquia, receba 1 recompensa de cartas e 1 poção aleatória.",
+          "relic_id": "LOST_COFFER",
+          "pool": "positive"
+        },
+        {
+          "name": "Pérola Amaldiçoada",
+          "description": "Ao coletar esta relíquia, receba Ganância. Receba 333 de Ouro.",
+          "relic_id": "CURSED_PEARL",
+          "pool": "cursed"
+        },
+        {
+          "name": "Cápsula Grande",
+          "description": "Ao coletar esta relíquia, receba 2 Relíquia aleatória. Adicione um Golpe e uma Defesa ao seu Baralho.",
+          "relic_id": "LARGE_CAPSULE",
+          "pool": "cursed"
+        },
+        {
+          "name": "Cataplasma de Ervas",
+          "description": "Ao coletar esta relíquia, Transforme 1 dos seus Golpes e 1 das suas Defesas e perca 10 PV Máximos.",
+          "relic_id": "LEAFY_POULTICE",
+          "pool": "cursed"
+        },
+        {
+          "name": "Tesoura Precária",
+          "description": "Ao coletar esta relíquia, remova 2 carta do seu Baralho e sofra 13 de dano.",
+          "relic_id": "PRECARIOUS_SHEARS",
+          "pool": "cursed"
+        },
+        {
+          "name": "Ostra Nutritiva",
+          "description": "Ao coletar esta relíquia, aumente seus PV Máximos em 11.",
+          "relic_id": "NUTRITIOUS_OYSTER",
+          "pool": "positive"
+        },
+        {
+          "name": "Umidificador de Pedra",
+          "description": "Sempre que você Descansar em um Local de Descanso, aumente seus PV Máximos em 5.",
+          "relic_id": "STONE_HUMIDIFIER",
+          "pool": "positive"
+        },
+        {
+          "name": "Pergaminho Extenso",
+          "description": "Ao coletar esta relíquia, escolha 1 entre 3 Cartas de Multijogador para adicionar ao seu Baralho.",
+          "relic_id": "MASSIVE_SCROLL",
+          "pool": "positive"
+        },
+        {
+          "name": "Rocha Vulcânica",
+          "description": "O Chefe do Ato 1 concede 2 Relíquias.",
+          "relic_id": "LAVA_ROCK",
+          "pool": "positive"
+        },
+        {
+          "name": "Cápsula Pequena",
+          "description": "Ao coletar esta relíquia, receba uma Relíquia aleatória.",
+          "relic_id": "SMALL_CAPSULE",
+          "pool": "positive"
+        },
+        {
+          "name": "Crisol de Prata",
+          "description": "As primeiras 3 recompensas de cartas que você encontrar serão Aprimoradas. O primeiro Baú de Tesouro que você encontrar estará vazio.",
+          "relic_id": "SILVER_CRUCIBLE",
+          "pool": "cursed"
+        },
+        {
+          "name": "Caixa de Pergaminhos",
+          "description": "Ao coletar esta relíquia, perca todo o Ouro e escolha 1 entre 2 conjuntos de cartas para adicionar ao seu Baralho.",
+          "relic_id": "SCROLL_BOXES",
+          "pool": "cursed"
+        }
+      ]
     },
     "NONUPEIPE": {
       "description": "Serendipidade Encarnada",
