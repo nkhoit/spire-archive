@@ -477,6 +477,8 @@ async function applyLocalization(game: string, locale: Locale, base: Dataset): P
             ...choice,
             ...(lc.name && { name: lc.name }),
             ...(lc.description && { description: lc.description }),
+            ...(lc.locked && { locked: lc.locked }),
+            ...(lc.outcome && { outcome: lc.outcome }),
           };
         })
       : e.choices;
@@ -484,13 +486,17 @@ async function applyLocalization(game: string, locale: Locale, base: Dataset): P
     const pages = l.pages
       ? (e.pages ?? []).map((page: EventPage, pageIndex: number) => ({
           ...page,
-          ...(l.pages?.[pageIndex]?.label && { label: l.pages[pageIndex].label }),
-          ...(l.pages?.[pageIndex]?.description && { description: l.pages[pageIndex].description }),
+          // When localized page data exists, suppress untranslated editorial label/description
+          // (these are English-only manual overrides, not from the game's loc files)
+          label: l.pages?.[pageIndex]?.label ?? page.label,
+          description: l.pages?.[pageIndex]?.description ?? undefined,
           choices: l.pages?.[pageIndex]?.choices
             ? page.choices.map((choice: EventChoice, choiceIndex: number) => ({
                 ...choice,
                 ...(l.pages?.[pageIndex]?.choices?.[choiceIndex]?.name && { name: l.pages[pageIndex].choices![choiceIndex].name }),
                 ...(l.pages?.[pageIndex]?.choices?.[choiceIndex]?.description && { description: l.pages[pageIndex].choices![choiceIndex].description }),
+                ...(l.pages?.[pageIndex]?.choices?.[choiceIndex]?.locked && { locked: l.pages[pageIndex].choices![choiceIndex].locked }),
+                ...(l.pages?.[pageIndex]?.choices?.[choiceIndex]?.outcome && { outcome: l.pages[pageIndex].choices![choiceIndex].outcome }),
               }))
             : page.choices,
         }))
