@@ -69,7 +69,7 @@ relatedCards.sort((a, b) => a.name.localeCompare(b.name));
     {power.icon ? <img src={`/images/${game}/powers/${power.icon}`} alt="" class="w-16 h-16" /> : game === 'sts2' ? <img src={`/images/sts2/powers/${power.id.toLowerCase()}.png`} alt="" class="w-16 h-16" /> : <div class="w-16 h-16 rounded bg-white/10" />}
     <div>
       <h1 class="font-game text-2xl font-bold">{power.name}</h1>
-      <span class={`text-sm px-2 py-0.5 rounded ${power.type === 'Buff' ? 'bg-emerald-900/50 text-emerald-300' : 'bg-red-900/50 text-red-300'}`}>{game === 'sts2' ? t(power.type, locale) : power.type}</span>
+      <span class={`text-sm px-2 py-0.5 rounded ${power.type === 'Buff' ? 'bg-emerald-900/50 text-emerald-300' : 'bg-red-900/50 text-red-300'}`}>{t(power.type, locale)}</span>
     </div>
   </div>
 
