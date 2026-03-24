@@ -3675,11 +3675,7 @@
     "FORGOTTEN_ALTAR": {
       "name": "Altare Dimenticato",
       "description": "Ti trovi di fronte all'altare di una divinità dimenticata. \n Sopra l'altare una statua femminile ornata riccamente tende le braccia. \n Ti chiama a lei, chiedendo sacricifio.",
-      "choices": [
-        "[Offri: Idolo D'Oro] Ottieni una Reliquia speciale. Perdi Idolo Dorato.",
-        "[Sacrificio] Ottieni PV massimi. Perdi PV.",
-        "[Profana] Vieni Maledetto - Rovina."
-      ]
+      "choices": []
     },
     "UPGRADE_SHRINE": {
       "name": "Altare del Potere",
@@ -3712,12 +3708,9 @@
       "name": "Caduta",
       "description": "Saltando fra un masso sospeso e l'altro, scivoli. \n \n Cadi.",
       "choices": [
-        "[Continua]",
-        "[Atterra] Perdi",
-        "[Incanala] Perdi",
-        "[Colpisci] Perdi",
-        "[Esci]",
-        "[Atterra]"
+        "[Continua] [Atterra] Perdi",
+        "[Bloccata] Richiede: Carta Abilità [Incanala] Perdi",
+        "[Bloccata] Richiede: Carta Potere [Colpisci] Perdi"
       ]
     },
     "GHOSTS": {
@@ -3725,21 +3718,17 @@
       "description": "Mentre scali la Guglia, dai muri e dal terreno trasudano dense nubi di fumo nero. Lentamente, cominciano a condensarsi in tre figure mascherate, che ti parlano. \n \n \"Un altro fantoccio di Neow a quanto pare.\" \n \"CERTAMENTE! LE SUE BAMBOLE SONO SEMPRE ESILARANTI!\" \n \n Il terzo ti rivolge un gigantesco sorriso e si rivolge a te. \n \"Non ti curare di loro... vuoi accedere al nostro potere?\"",
       "choices": [
         "[Accetta] Ricevi 5 Spettro. Perdi PV massimi.",
-        "[Rifiuta]",
-        "[Accetta] Ricevi 3 Spettro. Perdi",
-        "[Prosegui]"
+        "[Rifiuta]"
       ]
     },
     "DESIGNER": {
       "name": "Designer In-Spirato",
       "description": "Sei di fronte a un negozio colorato con l'insegna \"I-SPIRAZIONE\" e ti avvicini per vedere cosa c'è dentro. \n \"No, non si può. Assolutamente. Non puoi entrare così!\" Un uomo vestito in maniera ridicola appare all'entrata per bloccarti.",
       "choices": [
-        "[Prosegui]",
-        "[Modifiche] Perdi",
-        "[Ripulisciti] Perdi",
-        "[Servizio Completo] Perdi",
-        "[Pugno] Perdi PV. Oro. Potenzia carte casuali. Potenzi una carta. Rimuovi una carta. Trasformi carte. Rimuovi una carta e ne potenzi una a caso.",
-        "[Prosegui] Scegli una Carta da Potenziare Scegli 2 Carte da Trasformare Scegli una carta da Rimuovere"
+        "[Modifiche] Perdi Oro. Potenzi una carta.",
+        "[Ripulisciti] Perdi Oro. Rimuovi una carta.",
+        "[Servizio Completo] Perdi Oro. Rimuovi una carta e ne potenzi una a caso.",
+        "[Pugno] Perdi PV."
       ]
     },
     "DUPLICATOR": {
@@ -3791,31 +3780,23 @@
     "GOLDEN_IDOL": {
       "name": "Idolo Dorato",
       "description": "Ti trovi di fronte un piccolo piedistallo sul quale risplende l'idolo dorato, osservandoti beffardo. Parrebbe valere molto oro. \n \n No, sicuramente non è una trappola!",
-      "choices": [
-        "[Prendi] Ottieni l' Idolo Dorato. Fai scattare una trappola.",
-        "[Prosegui]",
-        "[Corri] Vieni Maledetto - Lesione.",
-        "[Attacca] Ricevi Danni.",
-        "[Appiattisciti] Perdi PV massimi."
-      ]
+      "choices": []
     },
     "DEAD_ADVENTURER": {
       "name": "Il Cadavere",
       "description": "Mentre perquisisci l'avventuriero vieni colto di sorpresa!",
       "choices": [
         "[Cerca] Cerca Bottino.",
-        "[Ignora]",
-        "[Combatti]",
-        "[Continua] Cerca Bottino. %: il mostro ritorna."
+        "[Ignora]"
       ]
     },
     "THE_CLERIC": {
       "name": "Il Chierico",
       "description": "Uno stravagante uomo blu dall'elmo dorato ti si avvicina con un ampio sorriso. \n \"Salve amico! Io Chierico! Serve aiuto?!\" urla la creatura.",
       "choices": [
-        "[Cura] 35 Oro: ti Curi di",
+        "[Cura] 35 Oro: ti Curi di PV.",
         "[Purifica] Oro: Rimuovi una carta dal Mazzo",
-        "[Prosegui] Scegli una Carta da Rimuovere. PV."
+        "[Prosegui]"
       ]
     },
     "COLOSSEUM": {
@@ -3841,8 +3822,7 @@
       "description": "Incappi in qualcosa che sembra *davvero* fuori posto. Di fronte a te, una gigantesca testa di pietra sbuca fuori da un segmento di muro che non muta forma come il resto del paesaggio. \n La bocca spalancata della statua rivela grossi denti macchiati di sangue e i pittogrammi che ne ricoprono la superficie sembrano indicare come alcuni si gettassero nelle fauci della statua, venendone divorati. Chi parteciberebbe ad un simile rituale?",
       "choices": [
         "[Salta all'Interno] Curati del tutto. Perdi PV Massimi",
-        "[Offri: Idolo Dorato] Guadagni 333 Oro. Perdi l'Idolo Dorato.",
-        "[Prosegui]"
+        "[Offri: Idolo Dorato] Guadagni 333 Oro. Perdi l'Idolo Dorato."
       ]
     },
     "NEST": {
@@ -3850,9 +3830,7 @@
       "description": "Una lunga fila di figure incappucciate entra in una cattedrale che sembra completamante ordinaria.",
       "choices": [
         "[Unisciti al Culto] Ricevi la Lama Rituale. Perdi PV.",
-        "[Distruggi e Arraffa] Guadagni Oro.",
-        "[Prosegui]",
-        "[Prosegui]"
+        "[Distruggi e Arraffa] Guadagni"
       ]
     },
     "LIARS_GAME": {
@@ -3860,19 +3838,14 @@
       "description": "In questa stanza c'è un enorme buco nel pavimento. Mentre ci passi vicino, un serpente gigantesco sbuca dall'apertura. \n \n \"Ho hooo! Ssalve, salve! E cosa abbiamo mai qui? Salve avventuriero, ora, ti farò una semplice domanda. \n Niente di meglio nella vita che potersi permettere tutto ciò che si desidera, \n Vero?\"",
       "choices": [
         "[Concorda] Guadagni Oro. Vieni Maledetto - Dubbio.",
-        "[Dissenti]",
-        "[Continua]",
-        "[Esci]"
+        "[Dissenti]"
       ]
     },
     "SPIRE_HEART": {
       "name": "Il cuore della Guglia",
       "description": "Tu-tum... Tum-tum... Tu-tum... \n Una pulsante sensazione di profondo terrore riempe la stanza... \n Quindi è questo il cuore della Guglia? La fonte della Corruzione?",
       "choices": [
-        "[Continua]",
-        "[Attacca] ???",
-        "[Dormi]",
-        "[Avvicinati alla Porta]"
+        "[Continua]"
       ]
     },
     "SHINING_LIGHT": {
@@ -3907,8 +3880,7 @@
       "description": "Ti trovi davanti a quello che sembra un edificio abbandonato. \n Noti che per terra c'è una placca rimossa da un muro, che recita \n \"BIBLIOTECA\". \n All'interno dell'edificio trovi una quantità infinita di pergamene, \n libri e manoscritti. \n Prendi in mano un volume e ti siedi su una poltrona, concedendoti una pausa.",
       "choices": [
         "[Leggi] Scegli 1 carta fra 20 da aggiungere al Mazzo.",
-        "[Dormi] Ti Curi di PV.",
-        "[Esci] Scegli una carta da aggiungere al mazzo."
+        "[Dormi] Ti Curi di PV."
       ]
     },
     "THE_WOMAN_IN_BLUE": {
@@ -3918,8 +3890,7 @@
         "[Compra 1 Pozione]",
         "[Compra 2 Pozioni]",
         "[Compra 3 Pozioni] Oro.",
-        "[Prosegui]",
-        "[Prosegui] Ricevi Danni."
+        "[Prosegui]"
       ]
     },
     "THE_JOUST": {
@@ -3927,10 +3898,8 @@
       "description": "Procedendo fra gli immensi palazzi vieni bloccato sul tuo cammino dallo scontro fra due cavalieri che si fronteggiano, ai lati opposti di uno stretto ponte. Ti avvicini... \n \"Alt!\" \n \n Uno dei combattenti ti intima di fermarti, puntandoti contro la sua lancia oblunga.",
       "choices": [
         "[Continua]",
-        "[Assassino] Scommetti Oro - 70%: vinci Oro.",
-        "[Padrone] Scommetti Oro - 30%: vinci",
-        "[Osserva]",
-        "[Esci]"
+        "[Padrone] Scommetti Oro - 30%: vinci Oro.",
+        "[Osserva]"
       ]
     },
     "LAB": {
@@ -3955,8 +3924,7 @@
       "description": "Senti un gorgoglio, accompagnato da uno stridio metallico. Al centro della stanza c'è una melma, che sembra aver ingerito decisamente troppi rottami. Al suo interno balugina una strana luce. È forse qualcosa di magico? Ti sembra che se solo allungassi la mano, potresti afferrare un tesoro... da dentro la creatura. Purtroppo la creatura e gli oggetti taglienti sono pericolosi.",
       "choices": [
         "[Cerca] Perdi PV. %: Raccogli una Reliquia.",
-        "[Prosegui]",
-        "[Più a Fondo] Perdi"
+        "[Prosegui]"
       ]
     },
     "ADDICT": {
@@ -3983,8 +3951,7 @@
       "description": "Cadi in una pozzanghera. \n TUTTO DIVENTA UN MARE DI MELMA!! \n Dopo aver combattuto freneticamente con la melma corrosiva riesci a liberarti. \n Sei inzaccherato dalla testa ai piedi! \n \n Sei finalmente fuori, ma noti che hai perso qualcosa. Eh già, il liquido appiciccoso ora contiene anche i tuoi soldi, oltre all'oro di qualche altro sfortunato avventuriero.",
       "choices": [
         "[Raccogli l'Oro] Guadagni Oro. Perdi PV.",
-        "[Ignora] Perdi Oro.",
-        "[Esci]"
+        "[Ignora] Perdi Oro."
       ]
     },
     "LIVING_WALL": {
@@ -4010,10 +3977,8 @@
       "description": "Attraversando l'Aldilà trovi un ipercubo quadrimensionale incandescente. \n L'entità rotea e trasmuta placidamente a mezz'aria.",
       "choices": [
         "[Ricorda] Ottieni 1 Carta Incolore",
-        "[Ricorda] Ottieni 2 Carte Incolori. Perdi",
-        "[Ricorda] Ottieni 3 Carte Incolori. Perdi PV.",
-        "[Prosegui]",
-        "[Interagisci]"
+        "[Ricorda] Ottieni 2 Carte Incolori. Perdi PV.",
+        "[Ricorda] Ottieni 3 Carte Incolori. Perdi PV."
       ]
     },
     "SECRETPORTAL": {
@@ -4046,25 +4011,17 @@
       "name": "Ruota del Cambiamento",
       "description": "Incontri un goblin allegro e molto elegante. \n \"È tempo di girare la ruota! Sei P R O N T O ? Certo che sì!\"",
       "choices": [
-        "[Gioca]",
-        "[Premio!] YAY!!!!",
-        "[Premio!] Ottieni una Reliquia.",
-        "[Premio!] Ti Curi del Tutto.",
-        "[Premio?] Maledizione - Rovina.",
-        "[Premio!] Rimuovi una carta dal Mazzo.",
-        "[Premio?] Perdi PV.",
-        "[Esci] Scegli una Carta da Rimuovere."
+        "[Gioca]"
       ]
     },
     "WEMEETAGAIN": {
       "name": "Seconda Impressione",
       "description": "\"Ehi! Ci incontriamo di nuovo!\" \n Un individuo esuberante e un po' trasandato ti si avvicina allegramente. Non lo conosci. \n \n \"Sono io, Ranwid! Hai qualcosa per me oggi? Il solito? Uno come me da solo non ce la può fare sai?\" \n Lo osservi con sospetto e consideri il da farsi...",
       "choices": [
-        "[Offri Pozione] Perdi",
-        "[Offri Oro] Perdi",
-        "[Offri Carta] Perdi",
-        "[Attacca]",
-        "[Prosegui] Oro"
+        "[Offri Pozione] Perdi . Ottieni una Reliquia",
+        "[Offri Oro] Perdi Oro . Ottieni una Reliquia",
+        "[Offri Carta] Perdi . Ottieni una Reliquia",
+        "[Attacca]"
       ]
     },
     "MYSTERIOUS_SPHERE": {
@@ -4091,20 +4048,19 @@
       "choices": [
         "[Prega] Rimuovi una carta dal Mazzo. Perdi PV.",
         "[Distruggi] Ottieni - Oro.",
-        "[Prosegui]",
-        "[Continua] Scegli una Carta da Rimuovere."
+        "[Prosegui]"
       ]
     },
     "KNOWING_SKULL": {
       "name": "Teschio Astuto",
       "description": "Ti ritrovi in una antica camera decorata. Al centro della stanza, si trova un grosso teschio posato al disopra di un piedistallo ornato. Mentre ti avvicini, il teschio prende fuoco e si volta verso di te.",
       "choices": [
-        "[Continua] PV.",
+        "[Continua]",
         "[Informazione?] Svela il Boss. Perdi",
-        "[Successo?] Ricevi una Carta Incolore Perdi",
-        "[Un Aiuto?] Ottieni una Pozione. Perdi",
-        "[Ricchezza?] Guadagni Oro. Perdi",
-        "[L'uscita?] Perdi",
+        "[Successo?] Ricevi una Carta Incolore Perdi PV.",
+        "[Un Aiuto?] Ottieni una Pozione. Perdi PV.",
+        "[Ricchezza?] Guadagni Oro. Perdi PV.",
+        "[L'uscita?] Perdi PV.",
         "[Esci]"
       ]
     },
@@ -4144,7 +4100,6 @@
       "choices": [
         "[Accetta] Rimuovi i Colpi, Ricevi 5 Morsi. Perdi PV Massimi.",
         "[Rifiuta]",
-        "[Perdi ] Rimuovi i Colpi ed Ricevi 5 Morsi.",
         "[Prosegui]"
       ]
     },
@@ -4154,17 +4109,16 @@
       "choices": [
         "[Offri Oro] Oro: Rimuovi una carta dal Mazzo.",
         "[Continua]",
-        "[Prosegui] Scegli una Carta da Rimuovere."
+        "[Prosegui]"
       ]
     },
     "WINDING_HALLS": {
       "name": "Vie Tortuose",
       "description": "Avanzi a rilento, ma ti perdi comunque di continuo mentre mura e pavimento sembrano mutare forma inspiegabilmente. Inoltre, il bisbiglio costante delle voci nella tua testa non ti aiuta a raccapezzarti.",
       "choices": [
+        "[Torna Indietro] Perdi PV Massimi.",
         "[Accogli la Follia] Ricevi 2 Follia. Perdi PV.",
-        "[Concentrati] Vieni Maledetto - Convulsioni. Ti Curi di",
-        "[Esci] PV.",
-        "[Torna Indietro] Perdi PV Massimi."
+        "[Concentrati] Vieni Maledetto - Convulsioni. Ti Curi di PV."
       ]
     }
   },

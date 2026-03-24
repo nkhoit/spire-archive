@@ -131,9 +131,58 @@ OPTION_MERGES = {
         ([2, 3], ['a Power']),        # [Channel] Lose a Power.
         ([4, 5], ['an Attack']),      # [Strike] Lose an Attack.
     ],
+    'Designer': [
+        ([1, 6, 9], ['40 ']),         # [Adjustments] Lose 40 Gold. Upgrade a card.
+        ([2, 6, 10], ['60 ']),        # [Clean Up] Lose 60 Gold. Remove a card.
+        ([3, 6, 13], ['90 ']),        # [Full Service] Lose 90 Gold. Remove+upgrade.
+        ([4, 5], ['5']),              # [Punch] Lose 5 HP.
+    ],
     'The Moai Head': [
         ([0, 1], ['?']),              # [Enter] Lose ? Max HP.
         ([2], []),                     # [Leave]
+    ],
+    'Dead Adventurer': [
+        ([0], []),                     # [Search] Loot + chance of combat.
+        ([1], []),                     # [Leave]
+    ],
+    'Drug Dealer': [
+        ([0], []),                     # [Test J.A.X.]
+        ([1], []),                     # [Become Test Subject]
+        ([2], []),                     # [Ingest Mutagens]
+        ([3], []),                     # [Leave]
+    ],
+    'Golden Shrine': [
+        ([0, 1], ['100']),            # [Pray] Gain 100 Gold.
+        ([2], []),                     # [Desecrate] Gain 275 Gold. Become Cursed.
+        ([3], []),                     # [Leave]
+    ],
+    'SensoryStone': [
+        ([0], []),                     # [Recall 1]
+        ([1, 3], ['?']),              # [Recall 2] + Lose ? HP.
+        ([2, 3], ['?']),              # [Recall 3] + Lose ? HP.
+    ],
+    'The Woman in Blue': [
+        ([0], []),                     # [Buy 1 Potion]
+        ([1], []),                     # [Buy 2 Potions]
+        ([2, 3], ['?']),              # [Buy 3 Potions] ? Gold.
+        ([4], []),                     # [Leave]
+    ],
+    'WeMeetAgain': [
+        ([0, 6], []),                  # [Give Potion] Lose Potion. Get Relic.
+        ([2, 9, 6], []),               # [Give Gold] Lose Gold. Get Relic.
+        ([4, 6], []),                  # [Give Card] Lose Card. Get Relic.
+        ([7], []),                     # [Attack]
+    ],
+    'Winding Halls': [
+        ([6, 7], []),                  # [Retrace] Lose Max HP.
+        ([1, 2], []),                  # [Madness] Get Madness. Lose HP.
+        ([3, 5], []),                  # [Focus] Get Writhe. Heal HP.
+    ],
+    'Wheel of Change': [
+        ([0], []),                     # [Play] Spin the wheel.
+    ],
+    'Spire Heart': [
+        ([0], []),                     # [Continue]
     ],
 }
 
@@ -350,8 +399,12 @@ def build_event_map() -> dict[str, str]:
     return event_acts
 
 
-def build_choices_from_merges(merges: list, options_arr: list[str]) -> list[str]:
-    """Build choice strings using merge definitions."""
+def build_choices_from_merges(merges: list, options_arr: list[str], skip_fills: bool = False) -> list[str]:
+    """Build choice strings using merge definitions.
+    
+    If skip_fills is True, index-based merging is used without inserting
+    fill values (which are English-specific like '⅓ Max', '5', '?%').
+    """
     choices = []
     for entry in merges:
         if entry is None:
@@ -361,9 +414,9 @@ def build_choices_from_merges(merges: list, options_arr: list[str]) -> list[str]
         for i, idx in enumerate(indices):
             if idx < len(options_arr):
                 parts.append(clean_text(options_arr[idx]))
-            if i < len(fills):
+            if not skip_fills and i < len(fills):
                 parts.append(fills[i])
-        text = ''.join(parts)
+        text = (' '.join(p for p in parts if p) if skip_fills else ''.join(parts))
         if text:
             choices.append(text)
     return choices
@@ -429,13 +482,16 @@ def build_events_for_locale(event_acts: dict, lang: str, eng_loc: dict | None = 
         intro = clean_text(descriptions[0]) if descriptions else ''
 
         # Build choices
-        # English uses CHOICE_OVERRIDES (clean hand-written text) or OPTION_MERGES (with fill values).
-        # Other languages use the bracket-start fallback heuristic, with English OPTIONS
-        # used to identify locked option indices (since locked labels vary by language).
+        # English uses CHOICE_OVERRIDES (clean hand-written text) first,
+        # then OPTION_MERGES with fill values.
+        # Other languages use OPTION_MERGES with index-only merging (no fill values),
+        # falling back to the bracket-start heuristic.
         if is_english and event_id in CHOICE_OVERRIDES:
             choices = CHOICE_OVERRIDES[event_id]
-        elif is_english and event_id in OPTION_MERGES:
-            choices = build_choices_from_merges(OPTION_MERGES[event_id], options_arr)
+        elif event_id in OPTION_MERGES:
+            choices = build_choices_from_merges(
+                OPTION_MERGES[event_id], options_arr, skip_fills=not is_english
+            )
         else:
             eng_options = eng_loc.get(event_id, {}).get('OPTIONS', []) if eng_loc else None
             choices = build_choices_fallback(options_arr, eng_options)

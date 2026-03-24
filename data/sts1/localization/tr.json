@@ -3669,13 +3669,7 @@
     "GOLDEN_IDOL": {
       "name": "Altın Put",
       "description": "Göze çarpmayan bir sütunun üzerinde sakince duran parıltılı ve altından bir put görüyorsun. Oldukça değerli görünüyor. \n \n Etrafında herhangi bir tuzak varmış gibi görünmüyor.",
-      "choices": [
-        "[Al] Altın Put'u elde et. Tuzağı tetikle.",
-        "[Ayrıl]",
-        "[Depara Kalk] Lanetlen - Sakatlık.",
-        "[Parçala] Hasar Al.",
-        "[Saklan] Maksimum CP kaybet."
-      ]
+      "choices": []
     },
     "GOLDEN_SHRINE": {
       "name": "Altın Tapınak",
@@ -3708,10 +3702,8 @@
       "description": "Geniş binalar arasından yol alırken iki tarafta da yüzleri birbirlerine dönük şövalyelerin olduğu dar bir köprüye geliyorsun. Yaklaşıyorsun... \n \"Dur!\" \n \n Şövalye dev mızrağıyla seni zorla durduruyor.",
       "choices": [
         "[Devam Et]",
-        "[Katil] Altın Yatır - %70 ihtimalle Altın kazan.",
-        "[Sahip] Altın Yatır - %30 ihtimalle",
-        "[İzle]",
-        "[Ayrıl]"
+        "[Sahip] Altın Yatır - %30 ihtimalle Altın kazan.",
+        "[İzle]"
       ]
     },
     "MINDBLOOM": {
@@ -3729,12 +3721,12 @@
       "name": "Bilge Kafatası",
       "description": "Kendini dekore edilmiş eski bir odada buluyorsun. Odanın ortasındaki süslü bir sütunun üzerinde kocaman bir kafatası duruyor. Yaklaştığında kafatası alevler içinde kalıyor ve yüzünü sana dönüyor.",
       "choices": [
-        "[Devam Et] CP kaybet.",
+        "[Devam Et]",
         "[Bilgi?] Boss'u açığa çıkart.",
-        "[Başarı?] Renksiz bir Kart al.",
-        "[Canlandırıcı?] Bir İksir al.",
-        "[Zenginlik?] Altın kazan.",
-        "[Nasıl Ayrılabilirim?]",
+        "[Başarı?] Renksiz bir Kart al. CP kaybet.",
+        "[Canlandırıcı?] Bir İksir al. CP kaybet.",
+        "[Zenginlik?] Altın kazan. CP kaybet.",
+        "[Nasıl Ayrılabilirim?] CP kaybet.",
         "[Ayrıl]"
       ]
     },
@@ -3752,24 +3744,16 @@
       "name": "Değişim Çarkı",
       "description": "Şık görünümlü, neşeli bir gremlinle karşılaşıyorsun. \n \"Çarkı döndürme zamanı! H A Z I R mısın? Tabii ki hazırsın!\"",
       "choices": [
-        "[Oyna]",
-        "[Ödül!] YAŞASIN!!!!",
-        "[Ödül!] Bir Kalıntı edin.",
-        "[Ödül!] Tamamen iyileş.",
-        "[Ödül?] Lanetlen - Çürüme.",
-        "[Ödül!] Destenden bir Kart çıkar.",
-        "[Ödül?] CP kaybet.",
-        "[Ayrıl] Çıkarmak için bir Kart Seç."
+        "[Oyna]"
       ]
     },
     "WINDING_HALLS": {
       "name": "Dolambaçlı Koridorlar",
       "description": "Dolambaçlı yollarda yavaşça ilerlerken duvarlar ve yer izah edilemez bir şekilde değişiyor ve sürekli yolunu kaybetmene neden oluyor. \n \n Başının arkasından sürekli fısıldayan sesler de pek yardımcı sayılmazlar.",
       "choices": [
+        "[Adımlarını Geri İzle] Maksimum CP kaybet.",
         "[Deliliği Kabullen] 2 Delilik kazan. CP kaybet.",
-        "[Odaklan] Lanetlen - Kıvranma.",
-        "[Ayrıl] CP iyileş.",
-        "[Adımlarını Geri İzle] Maksimum CP kaybet."
+        "[Odaklan] Lanetlen - Kıvranma. CP iyileş."
       ]
     },
     "SENSORYSTONE": {
@@ -3777,10 +3761,8 @@
       "description": "Spire'ın Ötesine doğru ilerlerken parlayan dönen ve şekil değiştiren bir teseraktı havada asılı dururken buluyorsun.",
       "choices": [
         "[Geri Çağır] Destene 1 Renksiz kart ekle.",
-        "[Geri Çağır] Destene 2 Renksiz kart ekle.",
-        "[Geri Çağır] Destene 3 Renksiz kart ekle. CP Kaybet.",
-        "[Ayrıl]",
-        "[Etkileşime Geç]"
+        "[Geri Çağır] Destene 2 Renksiz kart ekle. CP Kaybet.",
+        "[Geri Çağır] Destene 3 Renksiz kart ekle. CP Kaybet."
       ]
     },
     "TRANSMORGRIFIER": {
@@ -3795,12 +3777,9 @@
       "name": "Düşüş",
       "description": "Süzülen bir şekilden diğerine atlayıp tırmanırken birden ayağın kayıyor. \n \n Düşmeye başlıyorsun.",
       "choices": [
-        "[Devam Et]",
-        "[İniş] Kaybet:",
-        "[Güç Harca] Kaybet:",
-        "[Vur] Kaybet:",
-        "[Ayrıl]",
-        "[İniş]"
+        "[Devam Et] [İniş] Kaybet:",
+        "[Kilitli] Gereken: Beceri Kartı [Güç Harca] Kaybet:",
+        "[Kilitli] Gereken: Güç Kartı [Vur] Kaybet:"
       ]
     },
     "MATCH_AND_KEEP": {
@@ -3842,9 +3821,7 @@
       "description": "Tırmanmana devam ederken kalın siyah bir duman yerden çıkarak çevreni sarıyor, üç tane maske şekline girip konuşmaya başlıyorlar. \n \n \"Sanırım Neow'un kuklalarından biri daha.\" \n \"KATILIYORUM! O HEP EN EĞLENCELİ OYUNCAKLARI YAPIYOR!\" \n \n Üçüncüleri sana devasa bir gülüş ile bakıp konuşmaya başlıyor. \n \"Diğerlerini boşver... bizim gücümüzü tatmak ister misin?\"",
       "choices": [
         "[Kabul Et] 5 Hayali Varlık kazan. Maksimum CP Kaybet",
-        "[Reddet]",
-        "[Kabul Et] 3 Hayali Varlık kazan. Maksimum CP Kaybet",
-        "[Ayrıl]"
+        "[Reddet]"
       ]
     },
     "SCRAP_OOZE": {
@@ -3852,8 +3829,7 @@
       "description": "Metallerin şırıltı ve taşlama sesleriyle dolu bir odaya giriyorsun. Kendine zarar verecek kadar çok hurda metal parçası yemiş balçığımsı bir yaratık önünde yatıyor. Yaratığın ortasından garip ışık parıltıları geliyor, belki de büyülü bir şeydir? Onun... ağzından içeri ulaşabilirsen biraz ganimet elde edebilirsin gibi görünüyor. Ancak asit ve keskin cisimler canını yakabilir.",
       "choices": [
         "[İçine Uzan] CP Kaybet. % ihtimalle bir Kalıntı bul.",
-        "[Ayrıl]",
-        "[Daha Derine]"
+        "[Ayrıl]"
       ]
     },
     "BONFIRE_ELEMENTALS": {
@@ -3871,8 +3847,7 @@
       "choices": [
         "[Dua Et] Destenden bir Kart çıkar. CP Kaybet.",
         "[Parçala] - Altın kazan.",
-        "[Ayrıl]",
-        "[Devam Et] Çıkarmak için bir Kart Seç."
+        "[Ayrıl]"
       ]
     },
     "NOTEFORYOURSELF": {
@@ -3926,8 +3901,7 @@
       "description": "Terkedilmiş gibi görünen şatafatlı bir binayla karşılaşıyorsun. \n Duvardan kopmuş bir tabela yerde yatıyor. Üzerinde \"KÜTÜPHANE\" yazıyor. \n İçeride sayısız parşömenler, el yazmaları ve kitaplar buluyorsun. \n Birini seçiyorsun, bir koltuğa yerleşip bir süre sessizce vakit geçiriyorsun.",
       "choices": [
         "[Oku] Destene eklemek için 20 karttan birini seç.",
-        "[Uyu] CP iyileş.",
-        "[Ayrıl] Destene bir kart ekle."
+        "[Uyu] CP iyileş."
       ]
     },
     "LAB": {
@@ -3986,8 +3960,7 @@
         "[1 İksir Al]",
         "[2 İksir Al]",
         "[3 İksir Al] Altın.",
-        "[Ayrıl]",
-        "[Ayrıl] hasar al."
+        "[Ayrıl]"
       ]
     },
     "THE_MOAI_HEAD": {
@@ -3995,8 +3968,7 @@
       "description": "Bulunduğun dünyaya *ait* değilmiş gibi hissettiren bir şeyle karşılaşıyorsun. Karşında etrafından farklı görünen büyük bir duvar parçasından çıkan kocaman taş bir kafa bulunuyor. \n Ağzı sonuna kadar açık olan kafa kanla kırmızıya boyanmış korkutucu dişlerini gösteriyor. Heykelin yüzeyi kendilerini bu kafanın ağzına atan ve içinde sindirilen insanların hiyeroglifleriyle dolu. Neden biri böyle bir şey yapar ki?",
       "choices": [
         "[İçine Atla] Tamamen iyileş. Maksimum CP kaybet.",
-        "[Adak: Altın Put] 333 Altın kazan. Altın Put'u kaybet.",
-        "[Ayrıl]"
+        "[Adak: Altın Put] 333 Altın kazan. Altın Put'u kaybet."
       ]
     },
     "N_LOTH": {
@@ -4019,9 +3991,9 @@
       "name": "Rahip",
       "description": "Tuhaf mavi bir insanımsı yaratık kafasında altın renkli bir miğfer(?) ve koca bir gülümsemeyle sana doğru yaklaşıyor. \n \"Merhaba arkadaş! Ben Rahip! Hizmetlerimle ilgileniyor musun?!\" diyerek yüksek sesle bağırıyor.",
       "choices": [
-        "[İyileş] 35 Altın:",
+        "[İyileş] 35 Altın: CP iyileş.",
         "[Arındır] Altın: Destenden bir kart çıkar.",
-        "[Ayrıl] Çıkarmak için bir kart seç. CP iyileş."
+        "[Ayrıl]"
       ]
     },
     "PURIFIER": {
@@ -4036,32 +4008,23 @@
       "name": "Spire'daki Tasarımcı",
       "description": "Afişinde \"SPIRE'DAKİ\" yazan rengarenk bir dükkan keşfediyorsun ve merakla içine doğru yürüyorsun. \n \"Hayır, mümkünatsız. Hayır. Seni içeri alamam!\" \n \n Komik kıyafetler giyen bir adam seni durdurmak için girişte beliriyor.",
       "choices": [
-        "[Devam Et]",
-        "[Ayarlama]",
-        "[Temizlik]",
-        "[Tam Hizmet]",
-        "[Yumrukla] CP kaybet. Altın kaybet. Rastgele kart geliştir. Bir kart geliştir. Bir kart çıkar. kart dönüştür. Bir kart çıkar ve rastgele bir kart geliştir.",
-        "[Ayrıl] Geliştirmek için bir kart seç Dönüştürmek için 2 kart seç Çıkarmak için bir kart seç"
+        "[Ayarlama] Altın kaybet. Bir kart geliştir.",
+        "[Temizlik] Altın kaybet. Bir kart çıkar.",
+        "[Tam Hizmet] Altın kaybet. Bir kart çıkar ve rastgele bir kart geliştir.",
+        "[Yumrukla] CP kaybet."
       ]
     },
     "SPIRE_HEART": {
       "name": "Spire'ın Kalbi",
       "description": "dı-dımm ... dı-dımm ... dı-dımm ... \n Derinden gelen dehşet dolu bir nabız sesi odanın her tarafında hissediliyor... \n Spire'ın kalbi bu mu? Kötülüğün kaynağı?",
       "choices": [
-        "[Devam Et]",
-        "[Saldır] ???",
-        "[Uyu]",
-        "[Kapıya Yaklaş]"
+        "[Devam Et]"
       ]
     },
     "FORGOTTEN_ALTAR": {
       "name": "Unutulmuş Sunak",
       "description": "Önünde unutulmuş bir tanrıya ait bir adak taşı görüyorsun. \n Sunağın üzerinde kolları dışarıya doğru açılmış şatafatlı bir kadın heykeli bulunuyor. \n Seni çağırıyor ve bir adak istiyor.",
-      "choices": [
-        "[Adak: Altın Put] Özel bir Kalıntı edin. Altın Put'u kaybet.",
-        "[Kendini Sun] Maksimum CP kazan. CP kaybet.",
-        "[Hakaret Et] Lanetlen - Çürüme."
-      ]
+      "choices": []
     },
     "ACCURSED_BLACKSMITH": {
       "name": "Uğursuz Demirci",
@@ -4078,7 +4041,6 @@
       "choices": [
         "[Kabul Et] Tüm Darbe'leri çıkar. 5 Isırık al. Maksimum CP kaybet.",
         "[Reddet]",
-        "[Kaybet ] Tüm Darbe'leri çıkar. 5 Isırma al.",
         "[Ayrıl]"
       ]
     },
@@ -4096,8 +4058,7 @@
       "description": "Bir gölete düşüyorsun. \n GÖLET BALÇIKLARDAN OLUŞUYOR!!! \n Yapışkanın seni yakmaya başladığını hissedene kadar birkaç dakika boyunca delice çırpınıyorsun. \n Kulaklarında, burnunda, her yerinde yapışkanı hissedebiliyorsun. \n \n Dışına çıkarken biraz altınının eksik olduğunu farkediyorsun. Gölete dönüp baktığında, eksik altınlarını diğer bahtsız maceracılarınkilerle karışmış şekilde yapışkan göletin içinde görüyorsun.",
       "choices": [
         "[Altınları Topla] Altın kazan. CP kaybet.",
-        "[Orada Bırak] Altın kaybet.",
-        "[Ayrıl]"
+        "[Orada Bırak] Altın kaybet."
       ]
     },
     "LIVING_WALL": {
@@ -4116,18 +4077,17 @@
       "choices": [
         "[Altın Ver] Altın: Destenden bir kart çıkar.",
         "[Devam Et]",
-        "[Ayrıl] Çıkarmak için bir Kart Seç."
+        "[Ayrıl]"
       ]
     },
     "WEMEETAGAIN": {
       "name": "Yine Karşılaştık!",
       "description": "\"Yine karşılaştık!\" \n Keyifli dağınık bir eleman sana neşeyle yaklaşıyor. Bu adamı tanımıyorsun. \n \n \"Benim, Ranwid! Bugün benlik malların var mı? Her zamankinden mi? Benim gibi bir adam kendi başına yapamaz biliyorsun ki.\" \n Ona kuşkuyla bakarken seçeneklerini düşünüyorsun...",
       "choices": [
-        "[İksir Ver] Kaybet:",
-        "[Altın Ver]",
-        "[Kart Ver] Kaybet:",
-        "[Saldır]",
-        "[Ayrıl] Altın kaybet"
+        "[İksir Ver] Kaybet: . Bir Kalıntı edin",
+        "[Altın Ver] Altın kaybet . Bir Kalıntı edin",
+        "[Kart Ver] Kaybet: . Bir Kalıntı edin",
+        "[Saldır]"
       ]
     },
     "NEST": {
@@ -4135,9 +4095,7 @@
       "description": "Uzun bir kapüşonlu insan sırasının mütevazi bir katedrale \n girdiği görülüyor.",
       "choices": [
         "[Tarikata Katıl] Ayin Hançeri al. CP kaybet.",
-        "[Kap ve Kaç] Altın kazan.",
-        "[Ayrıl]",
-        "[Devam Et]"
+        "[Kap ve Kaç]"
       ]
     },
     "FACETRADER": {
@@ -4155,9 +4113,7 @@
       "description": "Yerde kocaman bir deliğin olduğu bir odaya giriyorsun. Deliğe yaklaştığında içinde devasa bir yılan yaratığı beliriyor. \n \n \"Ho hooo! Merhaba merhaba! burada kimler varmış? Merhaba maceracı, basit bir soru soracağım. \n En tatmin edici hayat her şeyi satın alabildiğindir! \n Katılıyor musun?\"",
       "choices": [
         "[Kabul Et] Altın kazan. Lanetlen - Şüphe.",
-        "[Reddet]",
-        "[Devam Et]",
-        "[Ayrıl]"
+        "[Reddet]"
       ]
     },
     "DEAD_ADVENTURER": {
@@ -4165,9 +4121,7 @@
       "description": "Maceracının üstünü ararken gafil avlandın!",
       "choices": [
         "[Ara] Ganimet bul.",
-        "[Ayrıl]",
-        "[Dövüş]",
-        "[Devam Et] Ganimet bul. % ihtimalle canavar geri gelir."
+        "[Ayrıl]"
       ]
     }
   },
