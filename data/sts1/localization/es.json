@@ -3666,10 +3666,10 @@
   "events": {
     "ACCURSED_BLACKSMITH": {
       "name": "Forja Maldita",
-      "description": "Entras en una pequeña choza. Una vez dentro, puedes ver lo que parece ser una forja. Las herramientas de herrería están cubiertas de polvo, pero un fuego ruge dentro del horno. Los nervios te abruman...Decides hacer uso de la forja y... NL #y@CLANG@ #y@CLAAANG@ #y@CLANG!@ NL ...¡mejorar tu arsenal!Decides ver si puedes encontrar algo útil. Después de levantar lonas, revisar cajas, y examinar rincones y grietas, ¡encuentras una #y~Reliquia!~ cubierta de polvo!Dando los últimos toques, las llamas de la forja saltan hacia ti, #r@quemando@ #r@y@ #r@marcando@ tus brazos..NL NL Al coger la reliquia, no puedes evitar sentir un repentino sentimiento de #r~dolor~ #r~agudo~ al salir de la choza. ¿Tal vez perturbaste a algún tipo de espíritu?No parece haber nada útil. Sales por donde entraste, las llamas del horno proyectando #p~inquietantes~ #p~sombras~ en las paredes dentro de la choza...",
+      "description": "Entras en una pequeña choza. Una vez dentro, puedes ver lo que parece ser una forja. Las herramientas de herrería están cubiertas de polvo, pero un fuego ruge dentro del horno. Los nervios te abruman...Decides hacer uso de la forja y...\nCLANG CLAAANG CLANG!\n...¡mejorar tu arsenal!Decides ver si puedes encontrar algo útil. Después de levantar lonas, revisar cajas, y examinar rincones y grietas, ¡encuentras una Reliquia! cubierta de polvo!Dando los últimos toques, las llamas de la forja saltan hacia ti, quemando y marcando tus brazos..\n\nAl coger la reliquia, no puedes evitar sentir un repentino sentimiento de dolor agudo al salir de la choza. ¿Tal vez perturbaste a algún tipo de espíritu?No parece haber nada útil. Sales por donde entraste, las llamas del horno proyectando inquietantes sombras en las paredes dentro de la choza...",
       "options": [
-        "[Forjar] #gMejora #guna #gcarta #gen #gtu #gmazo.",
-        "[Hurgar] #gObtén #guna #gReliquia #gespecial. #rTe #rMaldices #rcon #r- #rDolor.",
+        "[Forjar] Mejora una carta en tu mazo.",
+        "[Hurgar] Obtén una Reliquia especial. Te Maldices con - Dolor.",
         "[Salir]",
         "Elige una Carta y mejórala.",
         "[Bloqueado] Necesitas: Cartas sin mejorar."
@@ -3677,13 +3677,13 @@
     },
     "ADDICT": {
       "name": "Vagabundo Mendigo",
-      "description": "Mientras te escabulles frente a un grupo de figuras envueltas en la penumbra, una se te acerca. NL \"¿Tienes algo para mí, amigo? Por favor... ¿Tal vez alguna #yMoneda?\" NL \"Solo nevesito un sitio para quedarme, tengo tesoros para intercambiar...\" NL Parece desilusionado, pero inofensivo.\"¡Oh, sí, ~sí!~ ¡Aquí tienes, un intercambio justo!\"Le arrancas la preciada #yReliquia de las manos y te vas. NL A tus espaldas escuchas: NL \"¿No sientes vergüenza? ~¿NO~ ~SIENTES~ ~VERGÜEEENZAA?!\"~ NL Y sí, sientes #pvergüenza.",
+      "description": "Mientras te escabulles frente a un grupo de figuras envueltas en la penumbra, una se te acerca.\n\"¿Tienes algo para mí, amigo? Por favor... ¿Tal vez alguna Moneda?\"\n\"Solo nevesito un sitio para quedarme, tengo tesoros para intercambiar...\"\nParece desilusionado, pero inofensivo.\"¡Oh, sí, sí! ¡Aquí tienes, un intercambio justo!\"Le arrancas la preciada Reliquia de las manos y te vas.\nA tus espaldas escuchas:\n\"¿No sientes vergüenza? ¿NO SIENTES VERGÜEEENZAA?!\"\nY sí, sientes vergüenza.",
       "options": [
-        "[Ofrecer oro] #y",
-        " #yOro: #gObtén #guna #gReliquia.",
-        "[Bloqueado] Requiere: ",
-        " Oro.",
-        "[Robar] #gObtén #guna #gReliquia. #rTe #rvuelves #rmaldito: #rVergüenza.",
+        "[Ofrecer oro]",
+        "Oro: Obtén una Reliquia.",
+        "[Bloqueado] Requiere:",
+        "Oro.",
+        "[Robar] Obtén una Reliquia. Te vuelves maldito: Vergüenza.",
         "[Salir]",
         "",
         ""
@@ -3691,22 +3691,22 @@
     },
     "BACK_TO_BASICS": {
       "name": "Antiguas Escrituras",
-      "description": "Subiendo por la ciudad, te fijas en una pared cubierta en las escrituras de los #y~Ancianos.~ Mientras le das vueltas a que pueden significar estos símbolos y glifos, las escrituras comienzan a #b~brillar.~ NL De repente, el mensaje se revela ante tus ojos...La respuesta era elegancia. NL Obviamente.La verdad siempre es simple.",
+      "description": "Subiendo por la ciudad, te fijas en una pared cubierta en las escrituras de los Ancianos. Mientras le das vueltas a que pueden significar estos símbolos y glifos, las escrituras comienzan a brillar.\nDe repente, el mensaje se revela ante tus ojos...La respuesta era elegancia.\nObviamente.La verdad siempre es simple.",
       "options": [
-        "[Elegancia] #gElimina #guna #gcarta #gde #gtu #gmazo.",
-        "[Simpleza] #gMejora #gtodos tus #gGolpes #gy #gDefenderes.",
+        "[Elegancia] Elimina una carta de tu mazo.",
+        "[Simpleza] Mejora todos tus Golpes y Defenderes.",
         "Selecciona una Carta a Eliminar.",
         "[Salir]"
       ]
     },
     "BEGGAR": {
       "name": "Viejo Pordiosero",
-      "description": "Un viejo pordiosero vestido en pieles se te acerca las manos mientras pasas a su lado. \"¿Alguna monedita, pequeña criatura?\"El pordiosero mira al piso mientras pasas de largo. NL \"Nunca marcaras la diferencia... Nunca lo haces.\"El pordiosero se destapa para revelar que ¡Es un #bClérigo! NL @\"Tu@ @posees@ @un@ @alma@ @amable.@ @Recibe@ @mi@ @purificación!\"@ grita. NL No sabes si está agradecido o enojado.@\"Espero@ @que@ @te@ @vaya@ @mejor@ @esta@ @vez,@ @camarada!\"@ grita. NL Preguntándote las implicaciones de esto, continúas avanzando.",
+      "description": "Un viejo pordiosero vestido en pieles se te acerca las manos mientras pasas a su lado. \"¿Alguna monedita, pequeña criatura?\"El pordiosero mira al piso mientras pasas de largo.\n\"Nunca marcaras la diferencia... Nunca lo haces.\"El pordiosero se destapa para revelar que ¡Es un Clérigo!\n\"Tu posees un alma amable. Recibe mi purificación!\" grita.\nNo sabes si está agradecido o enojado.\"Espero que te vaya mejor esta vez, camarada!\" grita.\nPreguntándote las implicaciones de esto, continúas avanzando.",
       "options": [
-        "[Ofrecer] #y",
-        " #yOro: #gElimina #guna #gcarta #gde #gtu #gmazo.",
-        "[Bloqueado] Necesitas: ",
-        " Oro.",
+        "[Ofrecer]",
+        "Oro: Elimina una carta de tu mazo.",
+        "[Bloqueado] Necesitas:",
+        "Oro.",
         "[Continuar]",
         "[Salir]",
         "Selecciona una Carta a Eliminar."
@@ -3714,19 +3714,19 @@
     },
     "BIG_FISH": {
       "name": "Pez Gordo",
-      "description": "Mientras avanzas por un corredor extenso ves un #yplátano, un #ydonut, y una #ycaja ~flotando~ . Aunque… al echar un segundo vistazo, ves que están atados a cordones que bajan del techo. Escuchas un ligero @cacareo@ desde arriba cuando te acercas a los objetos. NL ¿Qué haces?Te comes el #yplátano. Es nutritivo y un poco #bmágico, curándote.Te comes el #ydonut. ¡He dado en el blanco! Tus PV Máximos incrementan.Tomas la caja. Adentro encuentras ¡una #yreliquia! NL Sin embargo, realmente te apetecía la rosquilla... NL Te llenas de ~tristeza,~ pero más que nada #rArrepentimiento.",
+      "description": "Mientras avanzas por un corredor extenso ves un plátano, un donut, y una caja flotando . Aunque… al echar un segundo vistazo, ves que están atados a cordones que bajan del techo. Escuchas un ligero cacareo desde arriba cuando te acercas a los objetos.\n¿Qué haces?Te comes el plátano. Es nutritivo y un poco mágico, curándote.Te comes el donut. ¡He dado en el blanco! Tus PV Máximos incrementan.Tomas la caja. Adentro encuentras ¡una reliquia!\nSin embargo, realmente te apetecía la rosquilla...\nTe llenas de tristeza, pero más que nada Arrepentimiento.",
       "options": [
-        "[Plátano] #gCura #g",
-        " #gPV.",
-        "[Dona] #gPV #gMáximos #g+",
+        "[Plátano] Cura",
+        "PV.",
+        "[Dona] PV Máximos +",
         ".",
-        "[Caja] #gObtén #guna #gReliquia. #rMaldecirte #r- #rLamento.",
+        "[Caja] Obtén una Reliquia. Maldecirte - Lamento.",
         "[Salir]"
       ]
     },
     "BONFIRE_ELEMENTALS": {
       "name": "Espíritus de la Fogata",
-      "description": "Te encuentras con un grupo de lo que parecen ser #pespíritus #pmorados #pde #pfuego ~bailando~ alrededor de una gran fogata. NL Los espíritus avientan pequeños huesos y fragmentos en el fuego, que ~estallan~ ~brillantemente~. NL Cuando te acercas, todos los espíritus se giran hacia ti, deseosos...Arrojas una ofrenda a la fogata. NL NL Sin embargo, los espíritus no están felices porque tu ofrenda era una #pMaldición... La carta desprende humo negro. Recibes... #p~algo~ a cambio.Nada... NL Los espíritus ahora parecen estar ignorándote. Qué decepción...Las llamas brillan un poco más. NL Los espíritus continúan bailando. Su presencia te da un poco de calor... NL Te #gcuras #b5 PV.¡Las llamas estallan, haciéndose significativamente más fuertes! NL Los espíritus bailan con furor alrededor de ti, llenándote con una ~cálida~ ~sensación.~NL Te #gcuras todos tus PV.Las llamas @explotan,@ casi tirándote al suelo, con el fuego  @duplicando@ su fuerza. NL Los espíritus bailan alrededor de ti con furor antes de ~fusionarse~ ~con~ ~tu~ ~ser,~ llenándote de calor y fuerza. NL Tus PV Máximos se incrementa por #b10 y eres #gcurado por todo tus PV.",
+      "description": "Te encuentras con un grupo de lo que parecen ser espíritus morados de fuego bailando alrededor de una gran fogata.\nLos espíritus avientan pequeños huesos y fragmentos en el fuego, que estallan brillantemente.\nCuando te acercas, todos los espíritus se giran hacia ti, deseosos...Arrojas una ofrenda a la fogata.\n\n Sin embargo, los espíritus no están felices porque tu ofrenda era una Maldición... La carta desprende humo negro. Recibes... algo a cambio.Nada...\nLos espíritus ahora parecen estar ignorándote. Qué decepción...Las llamas brillan un poco más.\nLos espíritus continúan bailando. Su presencia te da un poco de calor...\nTe curas 5 PV.¡Las llamas estallan, haciéndose significativamente más fuertes!\nLos espíritus bailan con furor alrededor de ti, llenándote con una cálida sensación.\n Te curas todos tus PV.Las llamas explotan, casi tirándote al suelo, con el fuego  duplicando su fuerza.\nLos espíritus bailan alrededor de ti con furor antes de fusionarse con tu ser, llenándote de calor y fuerza.\nTus PV Máximos se incrementa por 10 y eres curado por todo tus PV.",
       "options": [
         "[Continuar]",
         "[Salir]",
@@ -3736,36 +3736,36 @@
     },
     "CURSED_TOME": {
       "name": "Tomo Maldito",
-      "description": "En un templo abandonado, encuentras un libro gigante, abierto, repleto de #p@escrituras@ #p@crípticas.@ NL NL Cuando tratas de interpretar dicho escrito, este empieza a #b~moverse~ y #b~transformarse~ en un lenguaje que sí conoces.Qué raro. Este libro parece ser de un #yAncestro llamado #yNeow. NL NL Esto te intriga, pero tienes un sentimiento general de #p~malestar.~El Ancestro de la Resurrección, #yNeow, fue exiliado al fondo de la Torre. NL NL Te sientes con necesidad de leer más, pero empiezas a sentir un gran #r~dolor~ en el cuerpo.Buscando venganza, #yNeow bendice a extranjeros, usándolos para sus propios propósitos. NL NL Te empiezas a sentir muy #r~débil~ #r~y~ #r~con sueño...~Aquellos revividos por #yNeow solo recuerdan fragmentos de sus seres pasados, maldecidos a pelear por toda la eternidad. NL NL Al llegar cerca de la última página, ¡tus #r@viejas@ #r@heridas@ #r@empiezan@ #r@a@ #r@abrirse!@Al terminar el tomo, decides llevártelo contigo. Evidencia en mano, ¿Podrás conservar tus recuerdos?Sales, sintiendo una #p~energía~ #p~oscura~ #p~que~ #p~emana~ del libro en el pedestal.Con increíble dificultad y voluntad, resistes el trance del tomo @Y@ @LO@ @CIERRAS@ @DE@ @GOLPE@ . NL Sales pitando del templo, sintiéndote sin #b~energía...~",
+      "description": "En un templo abandonado, encuentras un libro gigante, abierto, repleto de escrituras crípticas.\n\n Cuando tratas de interpretar dicho escrito, este empieza a moverse y transformarse en un lenguaje que sí conoces.Qué raro. Este libro parece ser de un Ancestro llamado Neow.\n\n Esto te intriga, pero tienes un sentimiento general de malestar.El Ancestro de la Resurrección, Neow, fue exiliado al fondo de la Torre.\n\n Te sientes con necesidad de leer más, pero empiezas a sentir un gran dolor en el cuerpo.Buscando venganza, Neow bendice a extranjeros, usándolos para sus propios propósitos.\n\n Te empiezas a sentir muy débil y con sueño...Aquellos revividos por Neow solo recuerdan fragmentos de sus seres pasados, maldecidos a pelear por toda la eternidad.\n\n Al llegar cerca de la última página, ¡tus viejas heridas empiezan a abrirse!Al terminar el tomo, decides llevártelo contigo. Evidencia en mano, ¿Podrás conservar tus recuerdos?Sales, sintiendo una energía oscura que emana del libro en el pedestal.Con increíble dificultad y voluntad, resistes el trance del tomo Y LO CIERRAS DE GOLPE .\nSales pitando del templo, sintiéndote sin energía...",
       "options": [
         "[Leer]",
-        "[Continuar] #rPierdes #r1 #rPV.",
-        "[Continuar] #rPierdes #r2 #rPV.",
-        "[Continuar] #rPierdes #r3 #rPV.",
-        "[Detenerse] #rPierdes #r3 #rPV.",
-        "[Tomar] #gObtienes #gel #gLibro. #rPierdes #r",
-        " #rPV.",
+        "[Continuar] Pierdes 1 PV.",
+        "[Continuar] Pierdes 2 PV.",
+        "[Continuar] Pierdes 3 PV.",
+        "[Detenerse] Pierdes 3 PV.",
+        "[Tomar] Obtienes el Libro. Pierdes",
+        "PV.",
         "[Salir]"
       ]
     },
     "DEAD_ADVENTURER": {
       "name": "Aventurero Muerto",
-      "description": "Mientras examinas el aventurero, ¡Algo te toma por sorpresa!Sales sin hacer ningún sonido.Te encuentras con un #raventurero #rmuerto en el piso. NL ¡Sus #bpantalones han sido robados! Además, su armadura y cara parecen haber sido #r@abrasadas@ #r@por@ #r@llamas.@ parece que ha sido #r@perforado@ #r@y@ #r@aplastado@ por una bestia cornuda. parece que ha sido #r@destripado@ #r@y@ #r@hecho@ #r@pedazos@ por unas garras afiladas. NL Aunque algunas de sus #yposesiones #ysiguen #yintactas, no tienes el menor interés en averiguar qué ha pasado aquí...¡Has encontrado algo de #yoro! NL ¿Sigues buscando?Hmm, no has encontrado nada... NL ¿Sigues buscando?¡Has encontrado una #yreliquia! NL ¿Sigues buscando?¡Parece que has revisado todas sus pertenencias sin problemas!",
+      "description": "Mientras examinas el aventurero, ¡Algo te toma por sorpresa!Sales sin hacer ningún sonido.Te encuentras con un aventurero muerto en el piso.\n¡Sus pantalones han sido robados! Además, su armadura y cara parecen haber sido abrasadas por llamas. parece que ha sido perforado y aplastado por una bestia cornuda. parece que ha sido destripado y hecho pedazos por unas garras afiladas.\nAunque algunas de sus posesiones siguen intactas, no tienes el menor interés en averiguar qué ha pasado aquí...¡Has encontrado algo de oro!\n¿Sigues buscando?Hmm, no has encontrado nada...\n¿Sigues buscando?¡Has encontrado una reliquia!\n¿Sigues buscando?¡Parece que has revisado todas sus pertenencias sin problemas!",
       "options": [
-        "[Buscar] #gEncontrar #gTesoro. #r",
+        "[Buscar] Encontrar Tesoro.",
         "[Salir]",
         "[Pelear]",
-        "[Continuar] #gEncontrar #gTesoro. #r",
-        "%: #rmonstruo #rregresa."
+        "[Continuar] Encontrar Tesoro.",
+        "%: monstruo regresa."
       ]
     },
     "DRUG_DEALER": {
       "name": "Aumentador",
-      "description": "Un hombre con un parche en el ojo y una sonrisa endiablada se acerca a ti. NL \"Forastero. ¿Interesado en ayudar a la ciencia? Te puedo hacer más fuerte que cualquier entrenamiento o bendición. Lo necesitarás si eres uno de esos héroes con deseo de muerte.\" NL NL ~\"¿Qué me dices?\" ~~\"Excelente.\"~ NL El hombre te da una jeringa aparentemente peligrosa, llena de líquido brillante, antes de escabullirse a un callejón en las sombras.~\"Magnifico.\"~ NL El hombre te inyecta tres sustancias desconocidas y saca un bloc de notas. Mientras comienzas a marearte, él se pone a escribir notas frenéticamente. NL Pierdes el sentido del tiempo, y para cuando recuperas el sentido, el turbio personaje ha desaparecido.~\"Maravilloso.\"~ NL Te tragas la misteriosa sustancia. Inmediatamente, te sientes fortalecido y sientes tus músculos @contraerse.@",
+      "description": "Un hombre con un parche en el ojo y una sonrisa endiablada se acerca a ti.\n\"Forastero. ¿Interesado en ayudar a la ciencia? Te puedo hacer más fuerte que cualquier entrenamiento o bendición. Lo necesitarás si eres uno de esos héroes con deseo de muerte.\"\n\n \"¿Qué me dices?\" \"Excelente.\"\nEl hombre te da una jeringa aparentemente peligrosa, llena de líquido brillante, antes de escabullirse a un callejón en las sombras.\"Magnifico.\"\nEl hombre te inyecta tres sustancias desconocidas y saca un bloc de notas. Mientras comienzas a marearte, él se pone a escribir notas frenéticamente.\nPierdes el sentido del tiempo, y para cuando recuperas el sentido, el turbio personaje ha desaparecido.\"Maravilloso.\"\nTe tragas la misteriosa sustancia. Inmediatamente, te sientes fortalecido y sientes tus músculos contraerse.",
       "options": [
-        "[Probar J.A.X.] #gPonerse #gJAXXED.",
-        "[Convertirte en sujeto de prueba] #gTransforma #g2 #gcartas.",
-        "[Ingerir mutágenos] #gObtén #guna #greliquia #gespecial.",
+        "[Probar J.A.X.] Ponerse JAXXED.",
+        "[Convertirte en sujeto de prueba] Transforma 2 cartas.",
+        "[Ingerir mutágenos] Obtén una reliquia especial.",
         "[Salir]",
         "[Bloqueado] Requiere: 2 o más cartas en el mazo.",
         ""
@@ -3775,93 +3775,93 @@
       "name": "Duplicador",
       "description": "Ante ti yace un altar decorado a alguna entidad antigua.Te arrodillas con respeto. Una imagen reflejada espectral aparece del altar y choca contigo.Ignoras el altar, confiando en tu decisión.",
       "options": [
-        "[Rezar] #gDuplicar #guna #gcarta #gen #gtu #gmazo.",
+        "[Rezar] Duplicar una carta en tu mazo.",
         "[Salir]",
         "Selecciona una Carta para Duplicar."
       ]
     },
     "FALLING": {
       "name": "Caída",
-      "description": "Mientras subes saltando de una figura flotante a otra, te resbalas. NL NL Empiezas a caer.En caída libre consideras tus opciones: NL Caer a salvo con tus mejores técnicas. NL Canaliza un Poder para sobrevivir la caída. NL Golpear la pared para colgarte de ella.Aterrizas con extrema gracia antes de continuar.Utilizando y gastando algo de tu poder puro, logras caer sin daño.Eres capaz de colgarte de la pared, y logras hacer un salto corto a otra plataforma estable.Pareces caer lento como una pluma, alcanzando el fondo sin ningún rasguño.",
+      "description": "Mientras subes saltando de una figura flotante a otra, te resbalas.\n\n Empiezas a caer.En caída libre consideras tus opciones:\nCaer a salvo con tus mejores técnicas.\nCanaliza un Poder para sobrevivir la caída.\nGolpear la pared para colgarte de ella.Aterrizas con extrema gracia antes de continuar.Utilizando y gastando algo de tu poder puro, logras caer sin daño.Eres capaz de colgarte de la pared, y logras hacer un salto corto a otra plataforma estable.Pareces caer lento como una pluma, alcanzando el fondo sin ningún rasguño.",
       "options": [
         "[Continuar]",
-        "[Aterrizar] #rPierde ",
+        "[Aterrizar] Pierde",
         "[Bloqueado] Necesitas: Carta de Habilidad",
-        "[Canalizar] #rPierde ",
+        "[Canalizar] Pierde",
         "[Bloqueado] Necesitas: Carta de Poder",
-        "[Golpear] #rPierde ",
+        "[Golpear] Pierde",
         "[Bloqueado] Necesitas: Carta de Ataque",
         "[Salir]",
-        "[Aterrizar] "
+        "[Aterrizar]"
       ]
     },
     "FORGOTTEN_ALTAR": {
       "name": "Altar Olvidado",
-      "description": "En frente de ti yace un altar a un dios olvidado. NL Sobre el altar se sienta una estatua ornamentada de una mujer con los brazos extendidos. NL Te llama, demandando sacrificio.Al colocar el ídolo sobre el altar una ráfaga #bfría de viento sopla por todo el cuarto. NL Los brazos de la estatua empiezan a decolorarse y desmoronarse. NL NL Tu #yídolo #ydorado empieza a perder su color y también a sangrar de sus ojos. NL El sangrado nunca termina.Te colocas sobre el altar y te cortas las venas de tus muñecas. NL Cuando la #rsangre cae en sacrificio, los brazos de la estatua te alcanzan y se cierran alrededor de tus ojos. NL Todo se oscurece. NL Te levantas poco tiempo después, sintiendo un nuevo potencial surgir de ti.Atacas y destruyes la estatua en frente de ti, rompiendo el efecto mágico que el cuarto colocó sobre ti. NL Un grito oscuro hace eco alrededor, y puedes sentir la #p~magia~ #p~maldita~ entrar en tus huesos.",
+      "description": "En frente de ti yace un altar a un dios olvidado.\nSobre el altar se sienta una estatua ornamentada de una mujer con los brazos extendidos.\nTe llama, demandando sacrificio.Al colocar el ídolo sobre el altar una ráfaga fría de viento sopla por todo el cuarto.\nLos brazos de la estatua empiezan a decolorarse y desmoronarse.\n\n Tu ídolo dorado empieza a perder su color y también a sangrar de sus ojos.\nEl sangrado nunca termina.Te colocas sobre el altar y te cortas las venas de tus muñecas.\nCuando la sangre cae en sacrificio, los brazos de la estatua te alcanzan y se cierran alrededor de tus ojos.\nTodo se oscurece.\nTe levantas poco tiempo después, sintiendo un nuevo potencial surgir de ti.Atacas y destruyes la estatua en frente de ti, rompiendo el efecto mágico que el cuarto colocó sobre ti.\nUn grito oscuro hace eco alrededor, y puedes sentir la magia maldita entrar en tus huesos.",
       "options": [
-        "[Ofrendar: Ídolo Dorado] #gObtén #guna #gReliquia #gespecial. #rPierde #rÍdolo #rDorado.",
+        "[Ofrendar: Ídolo Dorado] Obtén una Reliquia especial. Pierde Ídolo Dorado.",
         "[Bloqueado] Necesitas: Ídolo Dorado.",
-        "[Sacrifica] #gGana #g",
-        " #gPV #gMáximos. #rPierde #r",
-        " #rPV.",
+        "[Sacrifica] Gana",
+        "PV Máximos. Pierde",
+        "PV.",
         "[Bloqueado] Necesitas: Humanidad.",
-        "[Profanar] #rMaldecirte #r- #rDescomposición."
+        "[Profanar] Maldecirte - Descomposición."
       ]
     },
     "FOUNTAIN_OF_CLEANSING": {
       "name": "Fuente Purificatoria",
-      "description": "Te encuentras con #b~agua~ #b~resplandeciente~ fluyendo sin fin desde una fuente en una pared cercana.Mientras bebes del #b~agua,~  sientes una #pcarga #poscura desaparecer.Con sospechas de la naturaleza de esta agua, continuas tu camino, con sed.",
+      "description": "Te encuentras con agua resplandeciente fluyendo sin fin desde una fuente en una pared cercana.Mientras bebes del agua,  sientes una carga oscura desaparecer.Con sospechas de la naturaleza de esta agua, continuas tu camino, con sed.",
       "options": [
-        "[Beber] #gElimina #gtodas #glas #gMaldiciones #gde #gtu #gmazo.",
+        "[Beber] Elimina todas las Maldiciones de tu mazo.",
         "[Salir]"
       ]
     },
     "GHOSTS": {
       "name": "Concilio Fantasmal",
-      "description": "Mientras continúas con tu ascenso, un #p~denso~ #p~humo~ #p~negro~ comiemza a fluir del suelo y paredes a tu alrededor, formando tres figuras enmascaradas que comienzan a hablar. NL NL ~\"Otra~ ~marioneta~ ~de~ #y~Neow,~ ~diría~ ~yo.\"~ NL #r@\"COINCIDO!@ #r@ELLA@ #r@SIEMPRE@ #r@HACE@ #r@LOS@ #r@JUGUETES@ #r@MÁS@ #r@RAROS!\"@ NL NL Notas una sonrisa desmesurada cuando el tercero se dirige a tí. NL \"Ignora a los otros... Te gustaría probar nuestro #y~poder?\"~ #y\"¡Excelente!\" NL Mientras la figura fantasmal habla, te fijas en que su gran boca se va abriendo más y más. El #p~denso~ #p~humo~ #p~negro~ se extiende y envuelve la habitación. No puedes ver ni respirar... NL NL Justo antes de perder la consciencia, la sensación se detiene. NL NL Sea lo que fueren esas cosas, se han ido. Continúas, sintiéndote algo #bhueco.\"Qué decepcionante...\" NL ~\"Te~ ~unirás~ ~a~ ~nosotros~ ~tarde~ ~o~ ~temprano.\"~ NL #r@\"HA@ #r@HA@ #r@HA@ #r@HAHAHA!\"@ NL NL Las figuras se desvanecen, dejando sólo una risa enervante zumbando en tus oídos.",
+      "description": "Mientras continúas con tu ascenso, un denso humo negro comiemza a fluir del suelo y paredes a tu alrededor, formando tres figuras enmascaradas que comienzan a hablar.\n\n \"Otra marioneta de Neow, diría yo.\"\n\"COINCIDO! ELLA SIEMPRE HACE LOS JUGUETES MÁS RAROS!\"\n\n Notas una sonrisa desmesurada cuando el tercero se dirige a tí.\n\"Ignora a los otros... Te gustaría probar nuestro poder?\" \"¡Excelente!\"\nMientras la figura fantasmal habla, te fijas en que su gran boca se va abriendo más y más. El denso humo negro se extiende y envuelve la habitación. No puedes ver ni respirar...\n\n Justo antes de perder la consciencia, la sensación se detiene.\n\n Sea lo que fueren esas cosas, se han ido. Continúas, sintiéndote algo hueco.\"Qué decepcionante...\"\n\"Te unirás a nosotros tarde o temprano.\"\n\"HA HA HA HAHAHA!\"\n\n Las figuras se desvanecen, dejando sólo una risa enervante zumbando en tus oídos.",
       "options": [
-        "[Aceptar] #gRecibe #g5 #gFantasmal. #rPierde #r",
-        " #rPV #rMáximos.",
+        "[Aceptar] Recibe 5 Fantasmal. Pierde",
+        "PV Máximos.",
         "[Rechazar]",
-        "[Aceptar] #gRecibe #g3 #gFantasmal. #rPierde #r",
+        "[Aceptar] Recibe 3 Fantasmal. Pierde",
         "",
         "[Salir]"
       ]
     },
     "GOLDEN_IDOL": {
       "name": "Ídolo Dorado",
-      "description": "Te encuentras con un pedestal discreto con un #yídolo #ydorado #yy #ybrillante colocado encima. Parece increíblemente valioso. NL NL Tienes la seguridad de que no hay ninguna trampa en los alrededores.Al tomar el Ídolo y guardarlo, una piedra gigante atraviesa el techo cayendo justo a lado tuyo. NL Te das cuenta de que el piso está inclinado hacia abajo, al mismo tiempo que la piedra empieza a rodar hacia ti.@¡COOORREEEE!@ NL Apenas logras saltar a un corredor en un costado y la piedra continua su camino. Desafortunadamente sientes que te torciste algo.Te arrojas contra la piedra con todo tu poder. Cuando el polvo se calma, logras encontrar una salida segura.@¡SQUISH!@ NL La piedra te aplasta un poco cuando pasa cerca de ti, pero puedes salir de aquí sin más complicaciones.Nunca habías visto una trampa más obvia en tu vida. NL Decides no interferir con objetos sobre pedestales.",
+      "description": "Te encuentras con un pedestal discreto con un ídolo dorado y brillante colocado encima. Parece increíblemente valioso.\n\n Tienes la seguridad de que no hay ninguna trampa en los alrededores.Al tomar el Ídolo y guardarlo, una piedra gigante atraviesa el techo cayendo justo a lado tuyo.\nTe das cuenta de que el piso está inclinado hacia abajo, al mismo tiempo que la piedra empieza a rodar hacia ti.¡COOORREEEE!\nApenas logras saltar a un corredor en un costado y la piedra continua su camino. Desafortunadamente sientes que te torciste algo.Te arrojas contra la piedra con todo tu poder. Cuando el polvo se calma, logras encontrar una salida segura.¡SQUISH!\nLa piedra te aplasta un poco cuando pasa cerca de ti, pero puedes salir de aquí sin más complicaciones.Nunca habías visto una trampa más obvia en tu vida.\nDecides no interferir con objetos sobre pedestales.",
       "options": [
-        "[Tomar] #gRecibir #gÍdolo #gDorado. #rActivar #runa #rtrampa.",
+        "[Tomar] Recibir Ídolo Dorado. Activar una trampa.",
         "[Salir]",
-        "[Adelantarse] #rMaldecirte #r- #rLesión.",
-        "[Destruir] #rRecibe #r",
-        " #rde #rDaño.",
-        "[Esconderse] #rPerder #r",
-        " #rPV #rMáximos."
+        "[Adelantarse] Maldecirte - Lesión.",
+        "[Destruir] Recibe",
+        "de Daño.",
+        "[Esconderse] Perder",
+        "PV Máximos."
       ]
     },
     "GOLDEN_SHRINE": {
       "name": "Altar Dorado",
-      "description": "Ante ti yace el altar de un espíritu antiguo.Cuando tu mano toca el altar, #y¡Oro #yllueve #ydel #ytecho, #y~bañándote~ #y~en~ #y~riquezas.!~Cada vez que golpeas al altar, #y¡Oro #ycae #yuna #yy #yotra #yvez! NL NL Sin embargo, mientras guardas tus riquezas, sientes #r~un~ #r~gran~ #r~peso~ #r~en~ #r~el~ #r~pecho...~Ignoras el altar.",
+      "description": "Ante ti yace el altar de un espíritu antiguo.Cuando tu mano toca el altar, ¡Oro llueve del techo, bañándote en riquezas.!Cada vez que golpeas al altar, ¡Oro cae una y otra vez!\n\n Sin embargo, mientras guardas tus riquezas, sientes un gran peso en el pecho...Ignoras el altar.",
       "options": [
-        "[Rezar] #gGana #y",
-        " #yde #yoro.",
-        "[Profanar] #gGanas #y275 #yde #yoro; #rTe #rvuelves #rmaldito: #rArrepentimiento.",
+        "[Rezar] Gana",
+        "de oro.",
+        "[Profanar] Ganas 275 de oro; Te vuelves maldito: Arrepentimiento.",
         "[Salir]"
       ]
     },
     "GOLDEN_WING": {
       "name": "Ala dorada",
-      "description": "Entre las piedras, te das cuenta de una estatua azul compleja con forma de ala. NL Encuentras #y~oro~ saliendo de sus grietas. Tal vez hay más dentro...Alguien en el pasado te contó sobre un culto que adoraba a una ave gigante. Cuando te arrodillas a rezar, empiezas a ~sentir~ ~mareos...~  NL NL Te despiertas más tarde, sintiéndote extrañamente más ligero.Con todas tus fuerzas, empiezas a atacar a la estatua. NL No tarda nada en @desmoronarse,@ revelando un #ymontón #yde #yoro. Coges tanto como puedes y continúas tu camino.La estatua te hace sentir ~nervioso.~ Pasas de largo y sigues tu camino.",
+      "description": "Entre las piedras, te das cuenta de una estatua azul compleja con forma de ala.\nEncuentras oro saliendo de sus grietas. Tal vez hay más dentro...Alguien en el pasado te contó sobre un culto que adoraba a una ave gigante. Cuando te arrodillas a rezar, empiezas a sentir mareos... \n\n Te despiertas más tarde, sintiéndote extrañamente más ligero.Con todas tus fuerzas, empiezas a atacar a la estatua.\nNo tarda nada en desmoronarse, revelando un montón de oro. Coges tanto como puedes y continúas tu camino.La estatua te hace sentir nervioso. Pasas de largo y sigues tu camino.",
       "options": [
-        "[Rezar] #gElimina #guna #gcarta #gde #gtu #gmazo. #rPierde #r",
-        " #rPV.",
-        "[Destruir] #gGana #g",
-        " #g- #g",
-        " #gOro.",
-        "[Bloqueado] Necesitas: Carta con ",
-        " o más de daño.",
+        "[Rezar] Elimina una carta de tu mazo. Pierde",
+        "PV.",
+        "[Destruir] Gana",
+        "-",
+        "Oro.",
+        "[Bloqueado] Necesitas: Carta con",
+        "o más de daño.",
         "[Salir]",
         "[Continuar]",
         "Selecciona una Carta a Eliminar."
@@ -3869,32 +3869,32 @@
     },
     "KNOWING_SKULL": {
       "name": "Cráneo Sabio",
-      "description": "Te encuentras en una cámara vieja y decorada. En el centro del cuarto, un gran cráneo se sienta sobre un pedestal ornamentado. Cuando te acercas, el cráneo #g@explota@ #g@en@ #g@llamas@ y se voltea hacia ti.\"¿QUÉ ES LO QUE BUSCAS? ¿QUÉ ES LO QUE OFRECES?\" NL En ese mismo instante, la puerta detrás de ti se @cierra.@ NL NL \"¿ALGO MÁS?\" \"¡BEBE!\" NL Obtienes una poción.\"¿QUIZÁS ESTO AYUDE?\" NL Obtienes una carta.\"LOS MORTALES NUNCA CAMBIAN. ESTÁ HECHO.\" NL ¡Y llueve #yOro sobre ti!\"DETRÁS DE TI, MORTAL.\" NL Miras detrás del cráneo. Definitivamente, hay una puerta.",
+      "description": "Te encuentras en una cámara vieja y decorada. En el centro del cuarto, un gran cráneo se sienta sobre un pedestal ornamentado. Cuando te acercas, el cráneo explota en llamas y se voltea hacia ti.\"¿QUÉ ES LO QUE BUSCAS? ¿QUÉ ES LO QUE OFRECES?\"\nEn ese mismo instante, la puerta detrás de ti se cierra.\n\n \"¿ALGO MÁS?\" \"¡BEBE!\"\nObtienes una poción.\"¿QUIZÁS ESTO AYUDE?\"\nObtienes una carta.\"LOS MORTALES NUNCA CAMBIAN. ESTÁ HECHO.\"\n¡Y llueve Oro sobre ti!\"DETRÁS DE TI, MORTAL.\"\nMiras detrás del cráneo. Definitivamente, hay una puerta.",
       "options": [
         "[Continuar]",
-        " #rPV.",
-        "[¿Información?] #gRevela #gal #gJefe. #rPierde #r",
-        "[¿Triunfo?] #gObten #guna #gCarta #gSin #gColor. #rPierde #r",
-        "[¿Un Estimulante?] #gObten #guna #gPoción. #rPierde #r",
-        "[¿Riqueza?] #gGana #g",
-        " #gOro. #rPierde #r",
-        "[¿Cómo salgo de aquí?] #rPierde #r",
+        "PV.",
+        "[¿Información?] Revela al Jefe. Pierde",
+        "[¿Triunfo?] Obten una Carta Sin Color. Pierde",
+        "[¿Un Estimulante?] Obten una Poción. Pierde",
+        "[¿Riqueza?] Gana",
+        "Oro. Pierde",
+        "[¿Cómo salgo de aquí?] Pierde",
         "[Salir]"
       ]
     },
     "LAB": {
       "name": "Laboratorio",
-      "description": "Te encuentras en un cuarto lleno de tubos de ensayo, vasos, matraces, fórceps, abrazaderas de tornillo, varillas agitadoras, tenazas, gafas, embudos, pipetas, cilindros, condensadores, e incluso un extraño tubo en espiral hecho de vidrio. NL NL ¿Por qué te sabes el nombre de todas estas herramientas? No importa, observas a tu alrededor.",
+      "description": "Te encuentras en un cuarto lleno de tubos de ensayo, vasos, matraces, fórceps, abrazaderas de tornillo, varillas agitadoras, tenazas, gafas, embudos, pipetas, cilindros, condensadores, e incluso un extraño tubo en espiral hecho de vidrio.\n\n ¿Por qué te sabes el nombre de todas estas herramientas? No importa, observas a tu alrededor.",
       "options": [
-        "[Buscar] #gEncontrar #galgunas #gPociones!"
+        "[Buscar] Encontrar algunas Pociones!"
       ]
     },
     "LIARS_GAME": {
       "name": "La Ssssserpiente",
-      "description": "Entras a un cuarto y ves un gran hoyo en el suelo. Cuando te acercas al hoyo, una enorme serpiente aparece del mismo. NL NL ~\"¡Ho~ ~hooo!~ ~!Hola~ ~hola!~ ~¿qué~ ~tenemos~ ~aquí?~ Hola, amante de la aventura, mi pregunta es simple. NL La vida más gratificante es aquella en la que puedes, #y~¡comprar~ #y~lo~ #y~que~ #y~sea!~ NL ¿Estás de acuerdo?\"~\"Síííííííssssssssssíssssí!~ NL ~Toooodo~ ~esto~ ~valdra~ ~la~ ~peeeeeena.~ NL ~Ssss...~ ~Sss...~ ~¡Sssss....!\"~La serpiente te mira con unos ojos llenos de decepción.¡La serpiente levanta su cabeza y lanza un río de #yoro hacia arriba! NL Es asombroso y escalofriante al mismo tiempo. NL Recoges todo el #yoro, agradeces a la serpiente, y te vas.",
+      "description": "Entras a un cuarto y ves un gran hoyo en el suelo. Cuando te acercas al hoyo, una enorme serpiente aparece del mismo.\n\n \"¡Ho hooo! !Hola hola! ¿qué tenemos aquí? Hola, amante de la aventura, mi pregunta es simple.\nLa vida más gratificante es aquella en la que puedes, ¡comprar lo que sea!\n¿Estás de acuerdo?\"\"Síííííííssssssssssíssssí!\nToooodo esto valdra la peeeeeena.\nSsss... Sss... ¡Sssss....!\"La serpiente te mira con unos ojos llenos de decepción.¡La serpiente levanta su cabeza y lanza un río de oro hacia arriba!\nEs asombroso y escalofriante al mismo tiempo.\nRecoges todo el oro, agradeces a la serpiente, y te vas.",
       "options": [
-        "[Concordar] #gGana #g",
-        " #gOro. #rMaldecirte #r- #rDuda.",
+        "[Concordar] Gana",
+        "Oro. Maldecirte - Duda.",
         "[Discrepar]",
         "[Continuar]",
         "[Salir]"
@@ -3902,11 +3902,11 @@
     },
     "LIVING_WALL": {
       "name": "Pared Viviente",
-      "description": "Llegas a un callejón sin salida, pero cuando empiezas a darte la vuelta, tres paredes @caen@ @de@ @golpe@ desde el techo, ¡Atrapándote! NL NL Tres caras se materializan en las paredes y hablan. NL #b\"Olvida #blo #bque #bsabes, #by #bte #bdejaré #bir.\" NL #p\"Yo #prequiero #pcambio #ppara #pver #pun #pnuevo #pespacio.\" NL #y\"Si #yquieres #yatravesarme, #yentonces #ydebes #ycrecer.\"Satisfechas, las paredes en frente de ti empiezan replegarse contra el techo, dejando la vía libre.",
+      "description": "Llegas a un callejón sin salida, pero cuando empiezas a darte la vuelta, tres paredes caen de golpe desde el techo, ¡Atrapándote!\n\n Tres caras se materializan en las paredes y hablan.\n\"Olvida lo que sabes, y te dejaré ir.\"\n\"Yo requiero cambio para ver un nuevo espacio.\"\n\"Si quieres atravesarme, entonces debes crecer.\"Satisfechas, las paredes en frente de ti empiezan replegarse contra el techo, dejando la vía libre.",
       "options": [
-        "[Olvidar] #gElimina #guna #gcarta #gde #gtu #gmazo.",
-        "[Cambiar] #gTransforma #guna #gcarta #gen #gtu #gmazo.",
-        "[Crece] #gMejora #guna #gcarta #gen #gtu #gmazo.",
+        "[Olvidar] Elimina una carta de tu mazo.",
+        "[Cambiar] Transforma una carta en tu mazo.",
+        "[Crece] Mejora una carta en tu mazo.",
         "Selecciona una Carta a Eliminar.",
         "Selecciona una Carta a Transformar.",
         "Selecciona una Carta a Mejorar.",
@@ -3916,9 +3916,9 @@
     },
     "MASKED_BANDITS": {
       "name": "Bandidos Enmascarados",
-      "description": "Jejeje… ¡Gracias por el #yoro! NL Oh, amo el #yOro. Es tan bueno. NL #y~Brillante~ #y~brillante~ ¡Escucha #bOso, escucha! NL ¡Este tipo nos dio todo su #yoro! ¿Patético, verdad? NL Mira, sólo tuve que preguntar amablemente. ¡¿Quién lo hubiera imaginado?! NL ¡Ciertamente, yo no! ¡Hay que ser tonto!Pandilla, ¡riámonos todos por esta ocasión tan maravillosa! NL @¡Jajaja!@ NL @Jo@ @JO@ ~¡jojo!~ NL ~¡Jo!~¿Oh? ¿Sigues aquí? NL ¿Oíste algo? Eso pensaba. NL #r@*resopla*@ ~Perdedor....~ @Jajaja@ ~jáaaa…~Encuentras a un grupo de bandidos usando grandes #rmáscaras #rrojas. NL \"Hola, paga para pasar... ¡una tarifa razonable de @TODO@ tu #yoro suena bien! ¡Je je!\"",
+      "description": "Jejeje… ¡Gracias por el oro!\nOh, amo el Oro. Es tan bueno.\nBrillante brillante ¡Escucha Oso, escucha!\n¡Este tipo nos dio todo su oro! ¿Patético, verdad?\nMira, sólo tuve que preguntar amablemente. ¡¿Quién lo hubiera imaginado?!\n¡Ciertamente, yo no! ¡Hay que ser tonto!Pandilla, ¡riámonos todos por esta ocasión tan maravillosa!\n¡Jajaja!\nJo JO ¡jojo!\n¡Jo!¿Oh? ¿Sigues aquí?\n¿Oíste algo? Eso pensaba.\nresopla Perdedor.... Jajaja jáaaa…Encuentras a un grupo de bandidos usando grandes máscaras rojas.\n\"Hola, paga para pasar... ¡una tarifa razonable de TODO tu oro suena bien! ¡Je je!\"",
       "options": [
-        "[Pagar] #rPierde #rTODO tu #yOro.",
+        "[Pagar] Pierde TODO tu Oro.",
         "[Pelear!]",
         "[Continuar]",
         "[Salir]"
@@ -3926,40 +3926,40 @@
     },
     "MATCH_AND_KEEP": {
       "name": "¡Empareja y Quédatelas!",
-      "description": "\" #b¡Doce cartas! ¡Emparéjalas para quedártelas! #bCinco intentos, sin reintentos. NL ¿Qué esperas? ¡Comencemos!\"Completas el juego del gremlin y levantas la mirada. NL ¿Ha desaparecido?Un gremlin está barajando cartas en una mesa. Este parece ser inofensivo. Con curiosidad, te acercas a él.",
+      "description": "\" ¡Doce cartas! ¡Emparéjalas para quedártelas! Cinco intentos, sin reintentos.\n¿Qué esperas? ¡Comencemos!\"Completas el juego del gremlin y levantas la mirada.\n¿Ha desaparecido?Un gremlin está barajando cartas en una mesa. Este parece ser inofensivo. Con curiosidad, te acercas a él.",
       "options": [
         "[Continuar]",
         "[Salir]",
         "[Jugar]",
-        "Intentos Restantes: #y"
+        "Intentos Restantes:"
       ]
     },
     "MUSHROOMS": {
       "name": "Hongos",
-      "description": "Te dejas llevar por un deseo antinatural de comer. Mientras consumes hongo tras hongo, sientes que te empiezas a aturdir y pierdes el conocimiento. Al levantarte, algo se siente extraño. NL Te #gCuras #b25% de tus PV, pero también te #rinfectas.#r@¡¡Emboscada!!@ NL ¡Roedores infestados por los hongos aparecen de la nada!Entras a un corredor lleno de  #b~hongos~ #b~coloridos~ #b~que~ #b~hipnotizan.~ NL Gracias a tu poco conocimiento en micología, no eres capaz de identificar los especímenes. NL Quieres escapar, pero hay algo que te dice que debes comer un #b~hongo...~",
+      "description": "Te dejas llevar por un deseo antinatural de comer. Mientras consumes hongo tras hongo, sientes que te empiezas a aturdir y pierdes el conocimiento. Al levantarte, algo se siente extraño.\nTe Curas 25% de tus PV, pero también te infectas.¡¡Emboscada!!\n¡Roedores infestados por los hongos aparecen de la nada!Entras a un corredor lleno de  hongos coloridos que hipnotizan.\nGracias a tu poco conocimiento en micología, no eres capaz de identificar los especímenes.\nQuieres escapar, pero hay algo que te dice que debes comer un hongo...",
       "options": [
-        "[Pisotear] #rEnfadar #ra #rlos #rHongos.",
-        "[Comer] #gCurar #g",
-        " #gPV. #rMaldecirte #r- #rParásito.",
+        "[Pisotear] Enfadar a los Hongos.",
+        "[Comer] Curar",
+        "PV. Maldecirte - Parásito.",
         "[Pelear]",
         "[Salir]"
       ]
     },
     "MYSTERIOUS_SPHERE": {
       "name": "Esfera Misteriosa",
-      "description": "Emergiendo del terreno caótico alrededor de ti, una esfera huesuda aparece envolviendo a un objeto misterioso. NL Mientras tienes curiosidad de que hay adentro, te das cuenta que algunos centinelas están cuidándolo.¡Al momento que golpeas la esfera, los centinelas cobran vida a tu alrededor!No hay necesidad de caer en la avaricia.",
+      "description": "Emergiendo del terreno caótico alrededor de ti, una esfera huesuda aparece envolviendo a un objeto misterioso.\nMientras tienes curiosidad de que hay adentro, te das cuenta que algunos centinelas están cuidándolo.¡Al momento que golpeas la esfera, los centinelas cobran vida a tu alrededor!No hay necesidad de caer en la avaricia.",
       "options": [
-        "[Abrir Esfera] #rPelear. #gRecompensa: #gReliquia.",
+        "[Abrir Esfera] Pelear. Recompensa: Reliquia.",
         "[Salir]",
         "[Pelear]"
       ]
     },
     "N_LOTH": {
       "name": "N'loth",
-      "description": "Una extraña criatura jorobada y llena de tentáculos está excavando un montón de basura y escombros en frente de ti. Cuando te le acercas, se mueve hacia ti de manera inofensiva. NL \"N'loth hambre. Alimenta N'loth.\"Extendiendo la #yreliquia hacia él, N’loth te la quita de tu mano con sus tentáculos, disloca su mandíbula, y se traga tu ofrenda sin masticar. NL Mientras sonríe ampliamente mostrando los dientes más tentáculos aparecen detrás de su manto, estos cargando una caja imposiblemente limpia. La empuja hacia ti hasta que la tomas.Sacudes la cabeza en negativo. N'loth se joroba mucho más y se retira.",
+      "description": "Una extraña criatura jorobada y llena de tentáculos está excavando un montón de basura y escombros en frente de ti. Cuando te le acercas, se mueve hacia ti de manera inofensiva.\n\"N'loth hambre. Alimenta N'loth.\"Extendiendo la reliquia hacia él, N’loth te la quita de tu mano con sus tentáculos, disloca su mandíbula, y se traga tu ofrenda sin masticar.\nMientras sonríe ampliamente mostrando los dientes más tentáculos aparecen detrás de su manto, estos cargando una caja imposiblemente limpia. La empuja hacia ti hasta que la tomas.Sacudes la cabeza en negativo. N'loth se joroba mucho más y se retira.",
       "options": [
-        "[Ofrenda: ",
-        "] #rPierde #resta #rreliquia. #gObtén #guna #greliquia #gespecial.",
+        "[Ofrenda:",
+        "] Pierde esta reliquia. Obtén una reliquia especial.",
         "[Salir]"
       ]
     },
@@ -3967,25 +3967,25 @@
       "name": "Purificador",
       "description": "Ante ti yace un altar complejo a un espíritu olvidado.Al arrodillarte en reverencias, sientes una carga dejar tus hombros.Ignoras al altar.",
       "options": [
-        "[Rezar] #gEliminar #guna #gcarta #gde #gtu #gmazo.",
+        "[Rezar] Eliminar una carta de tu mazo.",
         "[Salir]",
         "Selecciona una Carta a Eliminar."
       ]
     },
     "SCRAP_OOZE": {
       "name": "Baba de Chatarra",
-      "description": "Cuando entras al cuarto, escuchas un ~gorgojeo~ y el @rechinar@ de metales. Ante ti está una criatura babosa que comió demasiada chatarra para su propio bien. Del centro de la criatura puedes ver rastros de una luz extraña, ¿quizá algo mágico? Parece que puedes encontrar algún #ytesoro si te acercas al... orificio. Sin embargo, el ácido y los objetos punzantes pueden #rdoler.#r@Ouch!@ NL Todo lo que encuentras es metal oxidado y un poco de #r@quemazón.@ NL Sin embargo, sin duda que dentro hay una #yreliquia...#g¡Triunfo! NL Después de hurgar entre el metal y el ácido, finalmente alcanzas una #yreliquia y la sacas de un tirón. NL Te retiras de la baba #rcon #rheridas pero valieron la pena.Decides salir del área. NL La baba no presta atención, feliz con su alimento.",
+      "description": "Cuando entras al cuarto, escuchas un gorgojeo y el rechinar de metales. Ante ti está una criatura babosa que comió demasiada chatarra para su propio bien. Del centro de la criatura puedes ver rastros de una luz extraña, ¿quizá algo mágico? Parece que puedes encontrar algún tesoro si te acercas al... orificio. Sin embargo, el ácido y los objetos punzantes pueden doler.Ouch!\nTodo lo que encuentras es metal oxidado y un poco de quemazón.\nSin embargo, sin duda que dentro hay una reliquia...¡Triunfo!\nDespués de hurgar entre el metal y el ácido, finalmente alcanzas una reliquia y la sacas de un tirón.\nTe retiras de la baba con heridas pero valieron la pena.Decides salir del área.\nLa baba no presta atención, feliz con su alimento.",
       "options": [
-        "[Alcanzar Interior] #rPierde #r",
-        " #rPV. #g",
-        "%: #gEncuentra #guna #gReliquia.",
+        "[Alcanzar Interior] Pierde",
+        "PV.",
+        "%: Encuentra una Reliquia.",
         "[Salir]",
-        "[Más Profundo] #rPierde #r"
+        "[Más Profundo] Pierde"
       ]
     },
     "SECRETPORTAL": {
       "name": "Portal Secreto",
-      "description": "Ante ti hay una vista que parece fuera de lugar en el paisaje alienígena a tu alrededor. Extrañamente colocada en una de las paredes vivientes del Más Allá hay una entrada de piedra tapiada llena con un #p~portal~ #p~mágico~ #p~ondulante.~ NL NL No sabes muy bien dónde lleva, pero quizás acelere tu viaje por la Torre.Al saltar a través del portal, tus sentidos del tiempo y el espacio son destrozados por completo. NL NL Mientras te reorientas a tus nuevos alrededores, te percatas que ante ti se encuentra una temible batalla.Ser precavido y cauteloso parece ser la mejor forma de llegar a la cima de la Torre. Ignorando el portal, continúas tu trayecto.",
+      "description": "Ante ti hay una vista que parece fuera de lugar en el paisaje alienígena a tu alrededor. Extrañamente colocada en una de las paredes vivientes del Más Allá hay una entrada de piedra tapiada llena con un portal mágico ondulante.\n\n No sabes muy bien dónde lleva, pero quizás acelere tu viaje por la Torre.Al saltar a través del portal, tus sentidos del tiempo y el espacio son destrozados por completo.\n\n Mientras te reorientas a tus nuevos alrededores, te percatas que ante ti se encuentra una temible batalla.Ser precavido y cauteloso parece ser la mejor forma de llegar a la cima de la Torre. Ignorando el portal, continúas tu trayecto.",
       "options": [
         "[Atraviesa el Portal] Viaja INMEDIATAMENTE al jefe.",
         "[Salir]"
@@ -3993,127 +3993,127 @@
     },
     "SENSORYSTONE": {
       "name": "Piedra Sensorial",
-      "description": "Avanzando por el Más Allá, descubres un #bteseracto #bbrillante @girando@ y ~cambiando~ suavemente en el aire.Lo tocas. NL NL Un #r@dolor@ #r@agudo@ te atraviesa, seguido de vivaces destellos de un recuerdo lejano. NL ...¿De quién son estos recuerdos?#r~MIEDO.~ NL NL Una criatura demoníaca se alza ante ti, con sus alas desplegadas, y carcajadas aullantes. Los cuerpos sin vida de una tribu te rodean mientras el pueblo es sumido en terribles #p~llamas~ #p~oscuras.~ NL NL El demonio te llama, provocándote. NL NL \" #r@AHORA@ #r@SÍ@ #r@QUE@ #r@ERES@ #r@EL@ #r@MÁS@ #r@FUERTE!@ #r@Haha..@ #r@HEHE...@ #r@HAHAHAAAAH!!@ \" NL NL Su risa resuena eternamente... #g~TRIUNFO.~ NL NL Los restos de una #p~criatura~ #p~fantasmal~ se hunden en el fango ante ti, apenas visibles a la luz de la luna. Has demostrado tu valía entre tus hermanas. NL NL Irguiéndote victorioso, esperas en silencio mientras las otras colocan ceremonialmente la #ycalavera de la #ycriatura en tu cabeza. El ritual ha acabado. NL NL Te diriges hacia la Torre...#b~DESCONOCIDO.~ NL NL Aún sin implementar.#p~SERENIDAD.~ NL NL Dos criaturas primitivas luchan por un cuerpo al lado del camino. Observas, sin ninguna emoción. NL #yObservar. #yRecordar. #yVivir. Esta es la misión de la Vigilante. NL NL Hace poco, uno de tus compañeros ha dejado de informar en su misión: un Aguja de origen desconocido. NL NL Cuando la pelea termina, continuas tu camino, sin inmutarte por la sangrienta pelea que acaba de ocurrir.",
+      "description": "Avanzando por el Más Allá, descubres un teseracto brillante girando y cambiando suavemente en el aire.Lo tocas.\n\n Un dolor agudo te atraviesa, seguido de vivaces destellos de un recuerdo lejano.\n...¿De quién son estos recuerdos?MIEDO.\n\n Una criatura demoníaca se alza ante ti, con sus alas desplegadas, y carcajadas aullantes. Los cuerpos sin vida de una tribu te rodean mientras el pueblo es sumido en terribles llamas oscuras.\n\n El demonio te llama, provocándote.\n\n \" AHORA SÍ QUE ERES EL MÁS FUERTE! Haha.. HEHE... HAHAHAAAAH!! \"\n\n Su risa resuena eternamente... TRIUNFO.\n\n Los restos de una criatura fantasmal se hunden en el fango ante ti, apenas visibles a la luz de la luna. Has demostrado tu valía entre tus hermanas.\n\n Irguiéndote victorioso, esperas en silencio mientras las otras colocan ceremonialmente la calavera de la criatura en tu cabeza. El ritual ha acabado.\n\n Te diriges hacia la Torre...DESCONOCIDO.\n\n Aún sin implementar.SERENIDAD.\n\n Dos criaturas primitivas luchan por un cuerpo al lado del camino. Observas, sin ninguna emoción.\nObservar. Recordar. Vivir. Esta es la misión de la Vigilante.\n\n Hace poco, uno de tus compañeros ha dejado de informar en su misión: un Aguja de origen desconocido.\n\n Cuando la pelea termina, continuas tu camino, sin inmutarte por la sangrienta pelea que acaba de ocurrir.",
       "options": [
-        "[Recordar] #gAñade #g1 #gCartas #gincoloras #ga #gtu #gmazo.",
-        "[Recordar] #gAñade #g2 #gCartas #gincoloras #ga #gtu #gmazo. #rPierde #r",
-        "[Recordar] #gAñade #g3 #gCartas #gincoloras #ga #gtu #gmazo. #rPierde #r",
-        " #rPV.",
+        "[Recordar] Añade 1 Cartas incoloras a tu mazo.",
+        "[Recordar] Añade 2 Cartas incoloras a tu mazo. Pierde",
+        "[Recordar] Añade 3 Cartas incoloras a tu mazo. Pierde",
+        "PV.",
         "[Salir]",
         "[Interactuar]"
       ]
     },
     "SHINING_LIGHT": {
       "name": "Luz Brillante",
-      "description": "Encuentras una #ymasa #yresplandeciente #yde #yluz que llena el centro del cuarto. NL NL Su ~brillo~ ~cálido~ y ~patrones~ ~encantadores~ te invitan a entrar.Cuando caminas dentro de la luz, te das cuenta que la estás absorbiendo. NL ¡Está #r@ardiendo@ ! Sin embargo, el dolor se reduce rápidamente. NL Todo tu ser se #brevigoriza, como si te dieran una cachetada bien merecida.Caminas alrededor de ella, preguntándote lo que podría haber sido.",
+      "description": "Encuentras una masa resplandeciente de luz que llena el centro del cuarto.\n\n Su brillo cálido y patrones encantadores te invitan a entrar.Cuando caminas dentro de la luz, te das cuenta que la estás absorbiendo.\n¡Está ardiendo ! Sin embargo, el dolor se reduce rápidamente.\nTodo tu ser se revigoriza, como si te dieran una cachetada bien merecida.Caminas alrededor de ella, preguntándote lo que podría haber sido.",
       "options": [
-        "[Entrar] #gMejora #g2 #gcartas #gal #gazar. #rPierde #r",
-        " #rPV.",
+        "[Entrar] Mejora 2 cartas al azar. Pierde",
+        "PV.",
         "[Salir]",
         "[Bloqueado] Necesitas: Cartas Mejorables"
       ]
     },
     "SPIRE_HEART": {
       "name": "Corazón de la Torre",
-      "description": "@tu-thump@ ... @tu-thump@ ... @tu-thump@ ... NL Un pavor profundo y pulsante se siente en el cuarto... NL ¿Es este el #r~corazón~ de la Torre? ¿La fuente de esta maldad?Causas #b de daño! NL El corazón se #r@retuerce@ y #r~sangra~ ...pero al final sigue palpitando. NL ¿Son tus ataques más poderosos insuficientes?Te preguntas, ~\"¿He~ ~estado~ ~aquí~ ~antes?\"~ NL Sientes que has causado un total de #b de daño al corazón. NL Un total de #b de daño ha sido causado por todos los que se han enfrentado a él. NL El corazón late fuerte y más fuerte mientras tu #y~consciencia~ se #y~desvanece...~NL Preparas tu espada...NL Preparas tus dagas...NL Cargas tu núcleo a su máxima capacidad... Te preguntas, ~\"¿He~ ~estado~ ~aquí~ ~antes?\"~ NL El corazón late fuerte y más fuerte mientras tu #y~consciencia~ se #y~desvanece...~ NL Un repentino impulso de #y@energía@ emana de tu interior, #b@sacudiendote@ y despertandote. NL El corazon #gretrocede hacia arriba! Una gran puerta se revela en su lugar. NL Cargas tu bastón con energía divina...",
+      "description": "tu-thump ... tu-thump ... tu-thump ...\nUn pavor profundo y pulsante se siente en el cuarto...\n¿Es este el corazón de la Torre? ¿La fuente de esta maldad?Causas  de daño!\nEl corazón se retuerce y sangra ...pero al final sigue palpitando.\n¿Son tus ataques más poderosos insuficientes?Te preguntas, \"¿He estado aquí antes?\"\nSientes que has causado un total de  de daño al corazón.\nUn total de  de daño ha sido causado por todos los que se han enfrentado a él.\nEl corazón late fuerte y más fuerte mientras tu consciencia se desvanece...\n Preparas tu espada...\n Preparas tus dagas...\n Cargas tu núcleo a su máxima capacidad... Te preguntas, \"¿He estado aquí antes?\"\nEl corazón late fuerte y más fuerte mientras tu consciencia se desvanece...\nUn repentino impulso de energía emana de tu interior, sacudiendote y despertandote.\nEl corazon retrocede hacia arriba! Una gran puerta se revela en su lugar.\nCargas tu bastón con energía divina...",
       "options": [
         "[Continuar]",
-        "[Atacar] #b???",
+        "[Atacar] ???",
         "[Dormir]",
         "[Acercarse a la puerta]"
       ]
     },
     "THE_CLERIC": {
       "name": "El Clérigo",
-      "description": "Un extraño humanoide azul con un yelmo dorado se te acerca con una gran sonrisa. NL @\"¡Hola@ @camarada!@ ¡Yo ser #bÉl #bClérigo! ¡¿Te interesan mis servicios?!\" la criatura grita, fuerte.Una luz dorada y cálida rodea tu cuerpo y desaparece. NL La criatura sonríe. \"Clérigo ser mejor curador. @¡Ten@ @un@ @buen@ @día!\"@Una llama fría y azul rodea tu cuerpo y desaparece. NL La criatura sonríe. \"Clérigo ser talentoso. @¡Ten@ @un@ @buen@ @día!\"@No confias en este #b\"´Clérigo\", asi que te retiras.",
+      "description": "Un extraño humanoide azul con un yelmo dorado se te acerca con una gran sonrisa.\n\"¡Hola camarada! ¡Yo ser Él Clérigo! ¡¿Te interesan mis servicios?!\" la criatura grita, fuerte.Una luz dorada y cálida rodea tu cuerpo y desaparece.\nLa criatura sonríe. \"Clérigo ser mejor curador. ¡Ten un buen día!\"Una llama fría y azul rodea tu cuerpo y desaparece.\nLa criatura sonríe. \"Clérigo ser talentoso. ¡Ten un buen día!\"No confias en este \"´Clérigo\", asi que te retiras.",
       "options": [
-        "[Curar] #y35 #yOro: #gCurar #g",
-        "[Bloqueado] Necesitas: ",
-        " Oro.",
-        "[Purificar] #y",
-        " #yOro: #gEliminar #guna #gcarta #gde #gtu #gmazo.",
+        "[Curar] 35 Oro: Curar",
+        "[Bloqueado] Necesitas:",
+        "Oro.",
+        "[Purificar]",
+        "Oro: Eliminar una carta de tu mazo.",
         "[Bloqueado] Necesitas: 50 Oro.",
         "[Salir]",
         "Selecciona una Carta a Eliminar.",
-        " #gPV."
+        "PV."
       ]
     },
     "THE_JOUST": {
       "name": "La Justa",
-      "description": "Al pasar a través de altos edificios te encuentras un puente, largo y estrecho, con caballeros en cada lado, enfrentándose. Te acercas... NL @\"¡Alto!\"@ NL NL Un caballero te señala que te detengas con su lanza gigante.\"Hoy es el día que debo resolver la deuda con el #rasesino de mi mascota preciosa, #yFideos. Hasta entonces, no puedes pasar. NL NL Ya que eres el testigo de fe, ¿por qué no #bapuestas quién ganará?\"\"¡No puedo creer que apuestes en contra de #yFideos!\" NL NL Enfurecido, se coloca su casco y se apresura hacia su némesis.\"¡Dame tu fuerza, #yFideos!\" NL NL Colocándose su casco, el caballero avanza a toda velocidad.NL #y@*¡¡¡CRASH!!!*@ #r@*¡CLAAAANG!*@ NL NL #g@*¡PAM!*@Su némesis ha sido abatido. NL NL El dueño murió. NL NL #gGanaste la apuesta. Sin saber que pensar, tomas tus ganancias y te vas.#rPerdiste la apuesta, pero al menos no te atravesó una lanza.",
+      "description": "Al pasar a través de altos edificios te encuentras un puente, largo y estrecho, con caballeros en cada lado, enfrentándose. Te acercas...\n\"¡Alto!\"\n\n Un caballero te señala que te detengas con su lanza gigante.\"Hoy es el día que debo resolver la deuda con el asesino de mi mascota preciosa, Fideos. Hasta entonces, no puedes pasar.\n\n Ya que eres el testigo de fe, ¿por qué no apuestas quién ganará?\"\"¡No puedo creer que apuestes en contra de Fideos!\"\n\n Enfurecido, se coloca su casco y se apresura hacia su némesis.\"¡Dame tu fuerza, Fideos!\"\n\n Colocándose su casco, el caballero avanza a toda velocidad.\n ¡¡¡CRASH!!! ¡CLAAAANG!\n\n ¡PAM!Su némesis ha sido abatido.\n\n El dueño murió.\n\n Ganaste la apuesta. Sin saber que pensar, tomas tus ganancias y te vas.Perdiste la apuesta, pero al menos no te atravesó una lanza.",
       "options": [
         "[Continuar]",
-        "[Asesino] #yApostar #y",
-        " #yOro - #g70%: #gganar #g",
-        " #gOro.",
-        "[Owner] #yApostar #y",
-        " #yOro - #g30%: #gganar #g",
+        "[Asesino] Apostar",
+        "Oro - 70%: ganar",
+        "Oro.",
+        "[Owner] Apostar",
+        "Oro - 30%: ganar",
         "[Observar]",
         "[Salir]"
       ]
     },
     "THE_LIBRARY": {
       "name": "La Biblioteca",
-      "description": "Te encuentras con un edificio ornamentado que parece abandonado. NL Una placa que cayó de la pared está en el suelo. Dice, #b\"LA #bBIBLIOTECA\". NL Adentro, encuentras incontables filas de pergaminos, manuscritos, y libros. NL Tomas uno y te acomodas en una silla para pasar un rato tranquilo.Leer es para bobos. NL Mejor, te duermes en una silla cómoda. NL ~Zzz...~ ~zzz...~ ~..Zz....~ NL Te levantas sintiéndote mejor.La historia es de una adolescente controladora de insectos que quiere convertirse en héroe. El libro está repleto de usos creativos de los poderes, estrategias de combate, y diversas perspectivas. NL Satisfactorio.La historia es de un hombre que viajó más allá de las estrellas y se encontró desolado en un planeta exterior. Ingenuidad, suerte, perseverancia y humor para conservar su cordura fueron sus herramientas para regresar a casa. NL Fascinante.La historia toma lugar en un edificio gigante y aislado bajo la tierra, debido a que las condiciones afuera son insoportables. La novela está llena de conspiraciones, propaganda, e injusticia. Te preguntas si dinámicas similares ocurren en la Torre. NL Inquietante.",
+      "description": "Te encuentras con un edificio ornamentado que parece abandonado.\nUna placa que cayó de la pared está en el suelo. Dice, \"LA BIBLIOTECA\".\nAdentro, encuentras incontables filas de pergaminos, manuscritos, y libros.\nTomas uno y te acomodas en una silla para pasar un rato tranquilo.Leer es para bobos.\nMejor, te duermes en una silla cómoda.\nZzz... zzz... ..Zz....\nTe levantas sintiéndote mejor.La historia es de una adolescente controladora de insectos que quiere convertirse en héroe. El libro está repleto de usos creativos de los poderes, estrategias de combate, y diversas perspectivas.\nSatisfactorio.La historia es de un hombre que viajó más allá de las estrellas y se encontró desolado en un planeta exterior. Ingenuidad, suerte, perseverancia y humor para conservar su cordura fueron sus herramientas para regresar a casa.\nFascinante.La historia toma lugar en un edificio gigante y aislado bajo la tierra, debido a que las condiciones afuera son insoportables. La novela está llena de conspiraciones, propaganda, e injusticia. Te preguntas si dinámicas similares ocurren en la Torre.\nInquietante.",
       "options": [
-        "[Leer] #gEscoge #g1 #gde #g20 #gcartas #gpara #gagregar #ga #gtu #gmazo.",
-        "[Dormir] #gCurar #g",
-        " #gPV.",
+        "[Leer] Escoge 1 de 20 cartas para agregar a tu mazo.",
+        "[Dormir] Curar",
+        "PV.",
         "[Salir]",
         "Agrega una carta a tu mazo."
       ]
     },
     "THE_MAUSOLEUM": {
       "name": "El Mausoleo",
-      "description": "Aventurándote a través de una serie de tumbas, te encuentras con un gran sarcófago ~incrustado~ ~con~ ~gemas~ en el centro de un cuarto circular. NL No puedes leer la escritura del cofre, sin embargo, te das cuenta que hay una #p~niebla~ #p~negra~ saliendo de dentro.Abres el cofre. ¡Al hacerlo, la #p~niebla~ #p~negra~ emana de este y llena todo el cuarto! Dentro, no encuentras un cuerpo, sólo una #y~reliquia.~ La coges y te vas, #r@tosiendo@ #r@violentamente.@Abres el cofre. La niebla se disipa sin efecto alguno. Dentro, encuentras los restos mortales de un soldado condecorado que sujeta una vieja #yreliquia. Se la robas y continuas.Continuas tu camino, dejando a los muertos olvidados y sin molestar.",
+      "description": "Aventurándote a través de una serie de tumbas, te encuentras con un gran sarcófago incrustado con gemas en el centro de un cuarto circular.\nNo puedes leer la escritura del cofre, sin embargo, te das cuenta que hay una niebla negra saliendo de dentro.Abres el cofre. ¡Al hacerlo, la niebla negra emana de este y llena todo el cuarto! Dentro, no encuentras un cuerpo, sólo una reliquia. La coges y te vas, tosiendo violentamente.Abres el cofre. La niebla se disipa sin efecto alguno. Dentro, encuentras los restos mortales de un soldado condecorado que sujeta una vieja reliquia. Se la robas y continuas.Continuas tu camino, dejando a los muertos olvidados y sin molestar.",
       "options": [
-        "[Abrir Cofre] #gObtén #guna #gReliquia, #r",
-        "% #rde #rrecibir #rmaldición #rRetorcimiento.",
+        "[Abrir Cofre] Obtén una Reliquia,",
+        "% de recibir maldición Retorcimiento.",
         "[Salir]"
       ]
     },
     "THE_MOAI_HEAD": {
       "name": "La Cabeza Moái",
-      "description": "Te encuentras con algo que se siente *muy* fuera de lugar. Ante ti, una enorme cabeza de piedra emerge de un segmento de la pared que no se mueve ni cambia como el resto del área. NL La boca de la cabeza está abierta, y revela dientes largos e intimidantes, manchados de sangre. La superficie de la estatua está repleta con pictogramas que parecen indicar gente aventurándose dentro de la cabeza y siendo devorados. ¿Por qué alguien haría esto?Al principio das un paso dentro de la cabeza de la estatua, y no nada pasa. Cuando empiezas a dudar de todo esto, los enormes molares se cierran sobre ti, aplastándote. NL @Oscuridad.@ NL Un poco más tarde ves un rayo de luz, y escuchas el sonido de dientes de piedra subiendo lentamente. NL NL NL Sales confuso de ahí.Saltas hacia atrás cuando los enormes molares se cierran sobre el ídolo, convirtiéndolo en polvo. Cuando los dientes empiezan a subir, empieza a salir #yoro como un torrente, sumergiéndote en riquezas.Sales de allí, preguntándote en lo que podría haber ocurrido.",
+      "description": "Te encuentras con algo que se siente muy fuera de lugar. Ante ti, una enorme cabeza de piedra emerge de un segmento de la pared que no se mueve ni cambia como el resto del área.\nLa boca de la cabeza está abierta, y revela dientes largos e intimidantes, manchados de sangre. La superficie de la estatua está repleta con pictogramas que parecen indicar gente aventurándose dentro de la cabeza y siendo devorados. ¿Por qué alguien haría esto?Al principio das un paso dentro de la cabeza de la estatua, y no nada pasa. Cuando empiezas a dudar de todo esto, los enormes molares se cierran sobre ti, aplastándote.\nOscuridad.\nUn poco más tarde ves un rayo de luz, y escuchas el sonido de dientes de piedra subiendo lentamente.\n\n\nSales confuso de ahí.Saltas hacia atrás cuando los enormes molares se cierran sobre el ídolo, convirtiéndolo en polvo. Cuando los dientes empiezan a subir, empieza a salir oro como un torrente, sumergiéndote en riquezas.Sales de allí, preguntándote en lo que podría haber ocurrido.",
       "options": [
-        "[Saltar Adentro] #gCurar #gtodos #gtus #gPV. #rPierde #r",
-        " #rPV #rMáximo.",
-        "[Ofrendar: Ídolo Dorado] #gGana #g333 #gde #gOro. #rPierde #rÍdolo #rDorado.",
+        "[Saltar Adentro] Curar todos tus PV. Pierde",
+        "PV Máximo.",
+        "[Ofrendar: Ídolo Dorado] Gana 333 de Oro. Pierde Ídolo Dorado.",
         "[Bloqueado] Necesitas: Ídolo Dorado.",
         "[Salir]"
       ]
     },
     "THE_WOMAN_IN_BLUE": {
       "name": "La Mujer de Azul",
-      "description": "Desde la oscuridad, un brazo te agarra y te mete a una pequeña tienda. Cuando te acostumbras a la oscuridad, ves a una mujer pálida en ropa elegante, señalando hacia una pared de pociones. NL \"Compra una poción. ¡Ahora!\" declara.\"Bien. Ahora vete.\" NL Sales de la tienda con cautela.#r@WHAM@ NL Su puño enguantado se estrella en tu cara, casi tirándote al suelo. NL \"Sal de aquí antes de que manche el suelo con tus entrañas.\" Haces lo que dice y sales con tus entrañas seguras dentro de tu cuerpo.",
+      "description": "Desde la oscuridad, un brazo te agarra y te mete a una pequeña tienda. Cuando te acostumbras a la oscuridad, ves a una mujer pálida en ropa elegante, señalando hacia una pared de pociones.\n\"Compra una poción. ¡Ahora!\" declara.\"Bien. Ahora vete.\"\nSales de la tienda con cautela.WHAM\nSu puño enguantado se estrella en tu cara, casi tirándote al suelo.\n\"Sal de aquí antes de que manche el suelo con tus entrañas.\" Haces lo que dice y sales con tus entrañas seguras dentro de tu cuerpo.",
       "options": [
-        "[Comprar 1 Poción] #y",
-        "[Comprar 2 Pociones] #y",
-        "[Comprar 3 Pociones] #y",
-        " #yOro.",
+        "[Comprar 1 Poción]",
+        "[Comprar 2 Pociones]",
+        "[Comprar 3 Pociones]",
+        "Oro.",
         "[Salir]",
-        "[Salir] #rRecibe #r",
-        " #rde #rDaño."
+        "[Salir] Recibe",
+        "de Daño."
       ]
     },
     "THINKING_WITH_PUDDLES": {
       "name": "Pensando con Charcos",
-      "description": "Caminas dentro de un charco brillante... ¡y caes desde techo justo encima de él! NL En caída libre, consideras tus opciones.Sacudes tus brazos en pánico y desatas todos tus trucos secretos para protegerte de cualquier daño. Sin embargo, caes al charco una...y otra...y otra...y otra vez. Pasan días antes de que te des cuenta cómo salir. Verdaderamente miserable.Te preparas para aterrizar pero no hay ninguna manera buena de caer cuando estás en situación tan bizarra. @THUD@ NL NL ...Te quedas en el suelo por un momento, maldiciendo la existencia de charcos, tanto líquidos como mágicos.",
+      "description": "Caminas dentro de un charco brillante... ¡y caes desde techo justo encima de él!\nEn caída libre, consideras tus opciones.Sacudes tus brazos en pánico y desatas todos tus trucos secretos para protegerte de cualquier daño. Sin embargo, caes al charco una...y otra...y otra...y otra vez. Pasan días antes de que te des cuenta cómo salir. Verdaderamente miserable.Te preparas para aterrizar pero no hay ninguna manera buena de caer cuando estás en situación tan bizarra. THUD\n\n ...Te quedas en el suelo por un momento, maldiciendo la existencia de charcos, tanto líquidos como mágicos.",
       "options": [
-        "[Baboso] #rPierde #runa #rcarta #rRara #ral #razar.",
-        "[Caer De Cabeza] #rRecibe #r",
-        " #rdaño. #rMaldecirte #r- #rLesión.",
+        "[Baboso] Pierde una carta Rara al azar.",
+        "[Caer De Cabeza] Recibe",
+        "daño. Maldecirte - Lesión.",
         "[Salir]"
       ]
     },
     "TOMB_OF_LORD_RED_MASK": {
       "name": "Tumba del Lord Máscara Roja",
-      "description": "Puedes ver una tumba muy ornamentada al otro lado de un camino flotante. Al llegar a la tumba, te fijas en un hueco para monedas de #yoro con una inscripción tachada arriba de él.Te pones la máscara y la tumba se empieza a ~desintegrar...~ ¡un pasaje secreto! NL NL ¡El pasaje está forrado con innumerables bienes robados y montones de #yoro!Una abertura aparece en la tumba y de ella sale una pequeña máscara roja con una nota adjunta. \"¡Toma de otros como yo he tomado de ti!\"",
+      "description": "Puedes ver una tumba muy ornamentada al otro lado de un camino flotante. Al llegar a la tumba, te fijas en un hueco para monedas de oro con una inscripción tachada arriba de él.Te pones la máscara y la tumba se empieza a desintegrar... ¡un pasaje secreto!\n\n ¡El pasaje está forrado con innumerables bienes robados y montones de oro!Una abertura aparece en la tumba y de ella sale una pequeña máscara roja con una nota adjunta. \"¡Toma de otros como yo he tomado de ti!\"",
       "options": [
-        "[Ponte la Máscara Roja] #gGana #g222 #gOro.",
+        "[Ponte la Máscara Roja] Gana 222 Oro.",
         "[Bloqueado] Necesitas: Máscara Roja.",
-        "[Ofrendar: ",
-        " Oro] #rPierde #rtodo #rOro. #gObtén #guna #gReliquia.",
+        "[Ofrendar:",
+        "Oro] Pierde todo Oro. Obtén una Reliquia.",
         "[Salir]"
       ]
     },
@@ -4121,7 +4121,7 @@
       "name": "Transformador",
       "description": "Ante ti yace un altar complejo a un espíritu olvidado.Mientras el poder del altar fluye a traves de ti, tu mente se siente alterada.Ignoras al altar.",
       "options": [
-        "[Rezar] #gTransforma #guna #gcarta.",
+        "[Rezar] Transforma una carta.",
         "[Salir]",
         "Selecciona una Carta a Transformar."
       ]
@@ -4130,7 +4130,7 @@
       "name": "Altar de Mejora",
       "description": "Ante ti yace un altar complejo a un espíritu olvidado.La energía del altar fluye a través de ti, haciéndote más fuerte.Ignoras al altar.",
       "options": [
-        "[Rezar] #gMejorar #guna #gcarta.",
+        "[Rezar] Mejorar una carta.",
         "[Salir]",
         "Selecciona una Carta a Mejorar.",
         "[Bloqueado] Necesitas: Cartas Mejorables"
@@ -4138,138 +4138,138 @@
     },
     "VAMPIRES": {
       "name": "Vampiros",
-      "description": "Navegando una calle sin luz, te encuentras a muchas figuras encapuchadas en medio de un ritual oscuro. Al acercarte, se giran en un unísono espeluznante. El más alto entre ellos te enseña colmillos y extiende una larga y pálida mano hacia ti. NL ~\"Únete a nosotros~ ~hermano,~ ~y~ ~siente~ ~el~ ~calor~ ~de~ ~la~ ~Torre.\"~Navegando una calle sin luz, te encuentras a muchas figuras encapuchadas en medio de un ritual oscuro. Al acercarte, se giras en un unísono espeluznante. El más alto entre ellos te enseña colmillos y extiende una larga y pálida mano hacia ti. NL ~\"Únete a nosotros~ ~hermana,~ ~y~ ~siente~ ~el~ ~calor~ ~de~ ~la~ ~Torre.\"~La figura alta te toma de tu brazo, te atrae hacia adelante y hunde sus colmillos en tu cuello. Sientes una @fuerza@ @oscura@ entrar a tu cuello y @recorrer@ a través de tu cuerpo. NL ... NL Te despiertas algún tiempo después, a solas. Una intensa ~hambruna~ surge en tu estómago. Debes #ralimentarte...Das un paso atrás y levantas tu arma en oposición. La figura alta suspira. \"Muy bien.\" El grupo de figuras encapuchadas se transforma en una niebla negra y espesa que se dispersa lejos de ti. NL Estas a solas de nuevo.La pálida figura jadea cuando sacas el #yFrasco #yDe #ySangre. NL ~\"La~ ~sangre~ ~del~ ~maestro...~ ~la~ ~sangre~ ~del~ ~¡maestro!~ @¡LA@ @SANGRE@ @DEL@ @MAESTRO!\"@ NL Todos cantan fervientemente al mismo momento que la figura alta se inclina ante ti. \" Bebe de Su sangre, y se uno con #yÉl.\" NL El cántico se hace más fuerte, y consumes el contenido del frasco. Tu visión inmediatamente se deforma y desaparece en la oscuridad. NL NL Te despiertas algún tiempo después, a solas. Una intensa ~hambruna~ surge en tu estómago. Debes #ralimentarte...Navegando una calle sin luz, te encuentras a muchas figuras encapuchadas en medio de un ritual oscuro. Al acercarte, se giras en un unísono espeluznante. El más alto entre ellos te enseña colmillos y extiende una larga y pálida mano hacia ti. NL ~\"Únete a nosotros~ ~,~ ~y~ ~siente~ ~el~ ~calor~ ~de~ ~la~ ~Torre.\"~",
+      "description": "Navegando una calle sin luz, te encuentras a muchas figuras encapuchadas en medio de un ritual oscuro. Al acercarte, se giran en un unísono espeluznante. El más alto entre ellos te enseña colmillos y extiende una larga y pálida mano hacia ti.\n\"Únete a nosotros hermano, y siente el calor de la Torre.\"Navegando una calle sin luz, te encuentras a muchas figuras encapuchadas en medio de un ritual oscuro. Al acercarte, se giras en un unísono espeluznante. El más alto entre ellos te enseña colmillos y extiende una larga y pálida mano hacia ti.\n\"Únete a nosotros hermana, y siente el calor de la Torre.\"La figura alta te toma de tu brazo, te atrae hacia adelante y hunde sus colmillos en tu cuello. Sientes una fuerza oscura entrar a tu cuello y recorrer a través de tu cuerpo.\n...\nTe despiertas algún tiempo después, a solas. Una intensa hambruna surge en tu estómago. Debes alimentarte...Das un paso atrás y levantas tu arma en oposición. La figura alta suspira. \"Muy bien.\" El grupo de figuras encapuchadas se transforma en una niebla negra y espesa que se dispersa lejos de ti.\nEstas a solas de nuevo.La pálida figura jadea cuando sacas el Frasco De Sangre.\n\"La sangre del maestro... la sangre del ¡maestro! ¡LA SANGRE DEL MAESTRO!\"\nTodos cantan fervientemente al mismo momento que la figura alta se inclina ante ti. \" Bebe de Su sangre, y se uno con Él.\"\nEl cántico se hace más fuerte, y consumes el contenido del frasco. Tu visión inmediatamente se deforma y desaparece en la oscuridad.\n\n Te despiertas algún tiempo después, a solas. Una intensa hambruna surge en tu estómago. Debes alimentarte...Navegando una calle sin luz, te encuentras a muchas figuras encapuchadas en medio de un ritual oscuro. Al acercarte, se giras en un unísono espeluznante. El más alto entre ellos te enseña colmillos y extiende una larga y pálida mano hacia ti.\n\"Únete a nosotros , y siente el calor de la Torre.\"",
       "options": [
-        "[Aceptar] #gElimina #gtodos #glos #gGolpes. #gRecibe #g5 #gMordidas. #rPierde #r",
-        "% #rPV #rMáximo.",
+        "[Aceptar] Elimina todos los Golpes. Recibe 5 Mordidas. Pierde",
+        "% PV Máximo.",
         "[Negarse]",
-        "[Pierde ",
-        "] #gElimina #gtodos #glos #gGolpes. #gRecibe #g5 #gMordidas.",
+        "[Pierde",
+        "] Elimina todos los Golpes. Recibe 5 Mordidas.",
         "[Salir]"
       ]
     },
     "WHEEL_OF_CHANGE": {
       "name": "Rueda del Cambio",
-      "description": "Encuentras a un gremlin muy alegre y bien vestido. NL \"¡Es hora de girar la rueda! ¿Te sientes con ~S~ ~U~ ~E~ ~R~ ~T~ ~E~ ~?~ ¡Claro que sí!\"\"¡Ganaste algo de #yORO! NL YAY!!!!\"\"¡Ah, un #gregalo! NL ¡Disfruta!\"\"Oooh, ¡Una #gCuración gratis para ti!\"\"¡Parece que has ganado una #pMaldición! NL Eso no es bueno. NL ¡Sin duda que no! ¡Más suerte para la próxima!\"\"Ohh, el poder de la #r~oscuridad...~ NL ¡Escoge una carta para eliminar de tu mazo!\"\"¡Uh oh! NL ¡Perdiste!\" NL Le ves sacar una navaja...Atacas al gremlin, ¡Pero es demasiado rápido! NL Te alcanza unas cuantas veces con una navaja. NL \"¡¡El precio se ha pagado!!\" NL Y con eso, el gremlin y la rueda desaparecen en una ráfaga de humo.",
+      "description": "Encuentras a un gremlin muy alegre y bien vestido.\n\"¡Es hora de girar la rueda! ¿Te sientes con S U E R T E ? ¡Claro que sí!\"\"¡Ganaste algo de ORO!\nYAY!!!!\"\"¡Ah, un regalo!\n¡Disfruta!\"\"Oooh, ¡Una Curación gratis para ti!\"\"¡Parece que has ganado una Maldición!\nEso no es bueno.\n¡Sin duda que no! ¡Más suerte para la próxima!\"\"Ohh, el poder de la oscuridad...\n¡Escoge una carta para eliminar de tu mazo!\"\"¡Uh oh!\n¡Perdiste!\"\nLe ves sacar una navaja...Atacas al gremlin, ¡Pero es demasiado rápido!\nTe alcanza unas cuantas veces con una navaja.\n\"¡¡El precio se ha pagado!!\"\nY con eso, el gremlin y la rueda desaparecen en una ráfaga de humo.",
       "options": [
         "[Jugar]",
         "[¡Premio!] YAY!!!!",
-        "[¡Premio!] #gObtén #una #gReliquia.",
-        "[¡Premio!] #gCura #gtodo #gtus #gPV.",
-        "[¿Premio?] #rMaldición #r- #rDescomposición.",
-        "[¡Premio!] #gElimina #guna #gcarta #gde #gtu #gmazo.",
-        "[¿Premio?] #rPierde #r",
-        " #rPV.",
+        "[¡Premio!] Obtén #una Reliquia.",
+        "[¡Premio!] Cura todo tus PV.",
+        "[¿Premio?] Maldición - Descomposición.",
+        "[¡Premio!] Elimina una carta de tu mazo.",
+        "[¿Premio?] Pierde",
+        "PV.",
         "[Salir]",
         "Selecciona una Carta a Eliminar."
       ]
     },
     "WINDING_HALLS": {
       "name": "Corredores Serpenteantes",
-      "description": "Mientras subes lentamente las vías retorcidas, te empiezas a perder constantemente, ya que las paredes y el suelo parecen moverse inexplicadamente antes tus ojos. NL NL Las constantes #p~voces~ #p~susurrantes~ en tu cabeza tampoco ayudan mucho.Al pasar frente a una estructura la cual sin ninguna duda ya habías visto te empiezas a plantear si estás perdiendo la cabeza, o si la geografía de este lugar está empezando a afectarte. Necesitas cambiar algo, y pronto. NL NL Eso es lo que dicen las #p~voces~ , ¿Y por qué mentirían?Algo en ti se rompe. NL NL Sólo alguien completamente fuera de quicio puede entender un lugar como este, asi que te dejas llevar por las voces y continuas con una #p~\"nueva\"~ perspectiva. Las cosas parecen tener mucho más sentido ahora.Al tomar un momento para parar y observar detenidamente el panorama a tu alrededor, un patrón empieza a emerger dentro del caos. Cuando los ruidos empiezan a interrumpir tus pensamientos, te esfuerzas para aguantar el dolor mental e ignorarlo. NL NL Al final logras encontrar un camino satisfactoriamente y continuar, ahora resistente a la naturaleza nefasta de este extraño lugar.Pasas lo que parece una eternidad perdido en el laberinto. Poco a poco, puedes volver sobre tus pasos, reorientarte y salir de los pasajes tortuosos. NL NL Te sientes #r~agotado~ de la experiencia.",
+      "description": "Mientras subes lentamente las vías retorcidas, te empiezas a perder constantemente, ya que las paredes y el suelo parecen moverse inexplicadamente antes tus ojos.\n\n Las constantes voces susurrantes en tu cabeza tampoco ayudan mucho.Al pasar frente a una estructura la cual sin ninguna duda ya habías visto te empiezas a plantear si estás perdiendo la cabeza, o si la geografía de este lugar está empezando a afectarte. Necesitas cambiar algo, y pronto.\n\n Eso es lo que dicen las voces , ¿Y por qué mentirían?Algo en ti se rompe.\n\n Sólo alguien completamente fuera de quicio puede entender un lugar como este, asi que te dejas llevar por las voces y continuas con una \"nueva\" perspectiva. Las cosas parecen tener mucho más sentido ahora.Al tomar un momento para parar y observar detenidamente el panorama a tu alrededor, un patrón empieza a emerger dentro del caos. Cuando los ruidos empiezan a interrumpir tus pensamientos, te esfuerzas para aguantar el dolor mental e ignorarlo.\n\n Al final logras encontrar un camino satisfactoriamente y continuar, ahora resistente a la naturaleza nefasta de este extraño lugar.Pasas lo que parece una eternidad perdido en el laberinto. Poco a poco, puedes volver sobre tus pasos, reorientarte y salir de los pasajes tortuosos.\n\n Te sientes agotado de la experiencia.",
       "options": [
         "...",
-        "[Aceptar la Locura] #gRecibir #g2 #gLocura. #rPierde #r",
-        " #rPV.",
-        "[Centrarse] #rMaldecirte #r- #rRetorcimiento. #gCura #g",
+        "[Aceptar la Locura] Recibir 2 Locura. Pierde",
+        "PV.",
+        "[Centrarse] Maldecirte - Retorcimiento. Cura",
         "[Salir]",
-        " #gPV.",
-        "[Volver sobre tus pasos] #rPierde #r",
-        " #rPV #rmáximos."
+        "PV.",
+        "[Volver sobre tus pasos] Pierde",
+        "PV máximos."
       ]
     },
     "WORLD_OF_GOOP": {
       "name": "Mundo Viscoso",
-      "description": "Caes en un charco. NL @¡¡ESTÁ@ @LLENO@ @DE@ #g@BABA@ #g@VISCOSA!!@ NL Frenéticamente, te sacudes por varios minutos, sintiendo la baba empezar a quemar. NL Puedes sentir baba en tus oídos, baba en tu nariz, baba en todos lados. NL NL Subiendo fuera de allí, te das cuenta de que perdiste un poco de tu #yoro. Mirando de vuelta al charco, ves tus monedas perdidas junto con #yoro de otros desafortunados aventureros, revueltas en el charco.Sintiendo el ardor de la baba mientras la exposición prolongada de esta empieza a derretir tu piel, logras retomar el #yoro.Decides que este lío no vale la pena.",
+      "description": "Caes en un charco.\n¡¡ESTÁ LLENO DE BABA VISCOSA!!\nFrenéticamente, te sacudes por varios minutos, sintiendo la baba empezar a quemar.\nPuedes sentir baba en tus oídos, baba en tu nariz, baba en todos lados.\n\n Subiendo fuera de allí, te das cuenta de que perdiste un poco de tu oro. Mirando de vuelta al charco, ves tus monedas perdidas junto con oro de otros desafortunados aventureros, revueltas en el charco.Sintiendo el ardor de la baba mientras la exposición prolongada de esta empieza a derretir tu piel, logras retomar el oro.Decides que este lío no vale la pena.",
       "options": [
-        "[Recoger Oro] #gGana #g",
-        " #gOro. #rPierde #r",
-        " #rPV.",
-        "[Dejarlo] #rPierde #r",
-        " #rOro.",
+        "[Recoger Oro] Gana",
+        "Oro. Pierde",
+        "PV.",
+        "[Dejarlo] Pierde",
+        "Oro.",
         "[Salir]"
       ]
     },
     "MINDBLOOM": {
       "name": "Mente Floreciente",
-      "description": "Empiezas a soñar despierto mientras vas asciendo la Torre. Después de algún tiempo, empiezas a notar como tus pensamientos salen de tu cabeza y se manifiestan a tu alrededor.Puede ser así de fácil?Todo tiene sentido ahora. NL La falta de memorias, la ascensión, el #yAntiguo. NL NL Así se ha hecho siempre. NL Y así se hará siempre. NL Todo será olvidado pronto...",
+      "description": "Empiezas a soñar despierto mientras vas asciendo la Torre. Después de algún tiempo, empiezas a notar como tus pensamientos salen de tu cabeza y se manifiestan a tu alrededor.Puede ser así de fácil?Todo tiene sentido ahora.\nLa falta de memorias, la ascensión, el Antiguo.\n\n Así se ha hecho siempre.\nY así se hará siempre.\nTodo será olvidado pronto...",
       "options": [
-        "[Soy la Guerra] #rLucha #rcontra #run #rJefe #rdel #rActo #r1. #gObtén #guna #gReliquia #gRara.",
-        "[Soy Rico] #gGana #g999 #gde #gOro. #rMaldecirte #r- #r2 #rNormalidad.",
-        "[Estoy Saludable] #gCura #gtoda #gtu #gVida. #rMaldecirte #r- #rDuda.",
-        "[Estoy Despierto] #gMejora #gtodas #gtus #gCartas. #rYa #rno #rpuedes #rcurarte.",
+        "[Soy la Guerra] Lucha contra un Jefe del Acto 1. Obtén una Reliquia Rara.",
+        "[Soy Rico] Gana 999 de Oro. Maldecirte - 2 Normalidad.",
+        "[Estoy Saludable] Cura toda tu Vida. Maldecirte - Duda.",
+        "[Estoy Despierto] Mejora todas tus Cartas. Ya no puedes curarte.",
         "[Salir]"
       ]
     },
     "NEST": {
       "name": "El Nido",
-      "description": "Una larga fila de #b~figuras~ #b~encapuchadas~ se pueden ver entrando NL en lo que parece una #pcatedral.Naturalmente, te unes a la fila y rápidamente estás rodeado de #rCultistas! NL Ellos te ignoran ya que están alegremente @cantando@ y ~ondulando~ sus armas. NL NL #r@\"¡¡ASESINO!!@ #r@ASESINATO@ #r@¡¡ASESINATO!!\"@ NL #b~\"CAW~ #b~CAW~ #b~CAAAAAWWW!\"~ NL #r@\"¡ASESINATO!@ #r@ASESINATO@ #r@¡¡ASESINATO!!\"@ NL #b~\"CAAW~ #b~CAW~ #b~CAAAAAAWW!!\"~ NL NL Ves una #yCaja de #yDonativos...Decides permanecer en la fila (del miedo) y ver que pasará. NL NL Finalmente, estás cara a cara con el líder. Un cultista bien vestido te ofrece una #yDaga #yVistosa. Como los otros antes que tú, te cortas tu antebrazo y dejas que la sangre fluya en un tazón deforme. NL NL ¡Los cultistas @cantan@ y @gritan@ para ti! NL NL #b~\"CAAW~ #b~CAW~ #b~CAAAAAAWW!!\"~ NL NL Tú cantas también. ¿Por qué no?Ellos ni se dan cuenta.",
+      "description": "Una larga fila de figuras encapuchadas se pueden ver entrando\nen lo que parece una catedral.Naturalmente, te unes a la fila y rápidamente estás rodeado de Cultistas!\nEllos te ignoran ya que están alegremente cantando y ondulando sus armas.\n\n \"¡¡ASESINO!! ASESINATO ¡¡ASESINATO!!\"\n\"CAW CAW CAAAAAWWW!\"\n\"¡ASESINATO! ASESINATO ¡¡ASESINATO!!\"\n\"CAAW CAW CAAAAAAWW!!\"\n\n Ves una Caja de Donativos...Decides permanecer en la fila (del miedo) y ver que pasará.\n\n Finalmente, estás cara a cara con el líder. Un cultista bien vestido te ofrece una Daga Vistosa. Como los otros antes que tú, te cortas tu antebrazo y dejas que la sangre fluya en un tazón deforme.\n\n ¡Los cultistas cantan y gritan para ti!\n\n \"CAAW CAW CAAAAAAWW!!\"\n\n Tú cantas también. ¿Por qué no?Ellos ni se dan cuenta.",
       "options": [
-        "[Permanecer en la Fila] #gObtén Daga del Ritual. #rPierde #r",
-        " #rPV.",
-        "[Aplastar y Agarrar] #gObtén #g",
-        " #gOro.",
+        "[Permanecer en la Fila] Obtén Daga del Ritual. Pierde",
+        "PV.",
+        "[Aplastar y Agarrar] Obtén",
+        "Oro.",
         "[Salir]",
         "[Continuar]"
       ]
     },
     "FACETRADER": {
       "name": "Comerciante de Caras",
-      "description": "Pasas por una misteriosa estatua que sostiene varias máscaras... NL Algo detrás de ti te susurra suavemente, NL ~\"Para.\"~!Te giras para mirar la estatua que ahora te está mirando! NL En una inspección más cuidadosa, no es una estatua sino un hombre escultural y demacrado. ¿Está incluso respirando? NL NL ~\"Cara.~ ~¿Me~ ~dejas~ ~tocarla?~ ~¿Incluso~ ~cambiarla?\"~~\"¿Compensación?~ ~Compensación.\"~ NL Mecánicamente, saca una pila de una gran cantidad de #yoro y la coloca en tu bolsa. NL NL ~\"Que~ ~bonita~ ~cara.~ ~Buena~ ~cara.\"~ NL ¡Mientras él toca tu cara, empiezas a sentir como tu vida se desvanece! NL Mientras, su máscara se cae y se rompe. ¡Gritando, rápidamente se cubre su cara con sus seis brazos, soltando aún más máscaras! En medio de los gritos y destrozos, te escapas. NL NL Su cara estaba completamente vacía.~\"¿Para~ ~mí?~ @¿PARA@ @MÍ?@ ~Oh~ ~sí..~ ~Sí.~ ~Sí..~ ~mmm...\"~ NL NL ¡Ves uno de sus brazos vacilar, y tu cara está en su mano! Tu cara ha sido intercambiada. NL NL ~\"Bonita~ ~cara.~ ~Bonita~ ~cara.\"~~\"Para.~ ~Para.~ ~Para.~ ~Para.~ ~Para.\"~ NL NL Esta fue probablemente la decisión correcta.",
+      "description": "Pasas por una misteriosa estatua que sostiene varias máscaras...\nAlgo detrás de ti te susurra suavemente,\n\"Para.\"!Te giras para mirar la estatua que ahora te está mirando!\nEn una inspección más cuidadosa, no es una estatua sino un hombre escultural y demacrado. ¿Está incluso respirando?\n\n \"Cara. ¿Me dejas tocarla? ¿Incluso cambiarla?\"\"¿Compensación? Compensación.\"\nMecánicamente, saca una pila de una gran cantidad de oro y la coloca en tu bolsa.\n\n \"Que bonita cara. Buena cara.\"\n¡Mientras él toca tu cara, empiezas a sentir como tu vida se desvanece!\nMientras, su máscara se cae y se rompe. ¡Gritando, rápidamente se cubre su cara con sus seis brazos, soltando aún más máscaras! En medio de los gritos y destrozos, te escapas.\n\n Su cara estaba completamente vacía.\"¿Para mí? ¿PARA MÍ? Oh sí.. Sí. Sí.. mmm...\"\n\n ¡Ves uno de sus brazos vacilar, y tu cara está en su mano! Tu cara ha sido intercambiada.\n\n \"Bonita cara. Bonita cara.\"\"Para. Para. Para. Para. Para.\"\n\n Esta fue probablemente la decisión correcta.",
       "options": [
-        "[Tocar] #rPierde #r",
-        " #gOro.",
-        "[Cambia] #g50%: #gCara #gBuena. #r50%: #rCara #rFMala.",
+        "[Tocar] Pierde",
+        "Oro.",
+        "[Cambia] 50%: Cara Buena. 50%: Cara FMala.",
         "[Salir]",
         "[Continua]",
-        " #rPV, #ggana #g"
+        "PV, gana"
       ]
     },
     "NOTEFORYOURSELF": {
       "name": "Una nota para mí mismo",
-      "description": "Encuentras un ladrillo suelto en un pilar que te llama la atención.En él hay una nota doblada, y una #ycarta dentro. La carta dice: NL \"El Corazón espera.\" NL NL Es tu letra.Elige una carta para guardar.¿Que está pasando?",
+      "description": "Encuentras un ladrillo suelto en un pilar que te llama la atención.En él hay una nota doblada, y una carta dentro. La carta dice:\n\"El Corazón espera.\"\n\n Es tu letra.Elige una carta para guardar.¿Que está pasando?",
       "options": [
         "[Continúa]",
-        "[Dar y Recibir] #gRecibe ",
-        " #gy #gguarda #guna #gcarta.",
+        "[Dar y Recibir] Recibe",
+        "y guarda una carta.",
         "[Ignorar]",
         "[Salir]"
       ]
     },
     "WEMEETAGAIN": {
       "name": "¡Nos volvemos a ver!",
-      "description": "\"¡Nos volvemos a ver!\" NL Un tipo alegre y despeinado se acerca a ti alegremente. No conoces a este hombre. NL NL \"¡Soy yo, #yRanwid! ¿Tienes buena mercancía para mí? ¿Lo de siempre? Un tipo como yo no puede apañárselas por sí solo, ¿sabes?\" NL Le miras de forma dudosa y consideras tus opciones...\"¡Exquisito! Tenía la garganta seca.\" NL #b~Glu,~ #b~Glu,~ #b~Glu...~ NL NL Se bebe la poción de una y deja salir un @eructo@ de satisfacción.\"¡Magnífico! Esto me será muy útil si me encuentro a esos #rmatones #rcon #rmáscara de nuevo.\"\"¡Ejemplar! Lo estudiaré más a fondo en mis aposentos.\"\" @¡¡Au!!@ ¡Que grosero eres a veces!\" NL Sale corriendo.NL NL Hurga sus bolsillos en busca de algo... NL \"¡Eh, mira lo que tengo hoy para ti! ¡Toma, toma!\"",
+      "description": "\"¡Nos volvemos a ver!\"\nUn tipo alegre y despeinado se acerca a ti alegremente. No conoces a este hombre.\n\n \"¡Soy yo, Ranwid! ¿Tienes buena mercancía para mí? ¿Lo de siempre? Un tipo como yo no puede apañárselas por sí solo, ¿sabes?\"\nLe miras de forma dudosa y consideras tus opciones...\"¡Exquisito! Tenía la garganta seca.\"\nGlu, Glu, Glu...\n\n Se bebe la poción de una y deja salir un eructo de satisfacción.\"¡Magnífico! Esto me será muy útil si me encuentro a esos matones con máscara de nuevo.\"\"¡Ejemplar! Lo estudiaré más a fondo en mis aposentos.\"\" ¡¡Au!! ¡Que grosero eres a veces!\"\nSale corriendo.\n\nHurga sus bolsillos en busca de algo...\n\"¡Eh, mira lo que tengo hoy para ti! ¡Toma, toma!\"",
       "options": [
-        "[Dar poción] #rPierde ",
+        "[Dar poción] Pierde",
         "[Bloqueado] Necesitas: Poción.",
-        "[Dar oro] #rPierde #r",
+        "[Dar oro] Pierde",
         "[Bloqueado] Necesitas: Por lo menos 50 de Oro.",
-        "[Dar carta] #rPierde ",
+        "[Dar carta] Pierde",
         "[Bloqueado] Necesitas: Carta.",
-        ". #gObtén #guna #gReliquia.",
+        ". Obtén una Reliquia.",
         "[Atacar]",
         "[Salir]",
-        " #rOro"
+        "Oro"
       ]
     },
     "DESIGNER": {
       "name": "Diseñador en la Torre",
-      "description": "Descubres una #g~colorida~ tienda con el banner \"EN LA TORRE\" y entras para ver que hay dentro. NL \"No, de ningun modo. Nope. No te puedo dejar entrar!\" NL NL Un hombre con ropa ridicula aparece en la entrada para impedirte entrar.\"Esto no servirá, no, no. ¿Qué es este estilo? @Desagradable!@ Estás #rsangrandooo? #p~Asqueroooso.~ @Negocio??@ Eres un cliente? Bien. ~Lo que sea.\"~ NL Suspira de forma exagerada y señala la lista de servicios. NL NL Los servicios estan bien, pero preferirias golpear a este presumido hombre en su presumida cara.\"Okey, adiós adiós.\" NL NL ...tendría que haberle golpeado.Le golpeas tan fuerte que te duele el puño. NL \"Mi @CARA!!@ Ahora tendre que-\" NL NL Se desmaya. ¿Quién es el #p~asqueroso~ y está #rsangrando ahora?",
+      "description": "Descubres una colorida tienda con el banner \"EN LA TORRE\" y entras para ver que hay dentro.\n\"No, de ningun modo. Nope. No te puedo dejar entrar!\"\n\n Un hombre con ropa ridicula aparece en la entrada para impedirte entrar.\"Esto no servirá, no, no. ¿Qué es este estilo? Desagradable! Estás sangrandooo? Asqueroooso. Negocio?? Eres un cliente? Bien. Lo que sea.\"\nSuspira de forma exagerada y señala la lista de servicios.\n\n Los servicios estan bien, pero preferirias golpear a este presumido hombre en su presumida cara.\"Okey, adiós adiós.\"\n\n ...tendría que haberle golpeado.Le golpeas tan fuerte que te duele el puño.\n\"Mi CARA!! Ahora tendre que-\"\n\n Se desmaya. ¿Quién es el asqueroso y está sangrando ahora?",
       "options": [
         "[Continuar]",
-        "[Ajustar] #rPierde #r",
-        "[Limpiar] #rPierde #r",
-        "[Servicio Completo] #rPierde #r",
-        "[Golpear] #rPierde #r",
-        " #rPV.",
-        " #rOro. ",
-        "#gMejora #g",
-        " #gcartas #galeatorias.",
-        "#gMejora #guna #gcarta.",
-        "#gElimina #guna #gcarta.",
-        "#gTransforma #g",
-        " #gcartas.",
-        "#gElimina #guna #gcarta #gy #gmejora #guna #gcarta #galeatoria.",
+        "[Ajustar] Pierde",
+        "[Limpiar] Pierde",
+        "[Servicio Completo] Pierde",
+        "[Golpear] Pierde",
+        "PV.",
+        "Oro.",
+        "Mejora",
+        "cartas aleatorias.",
+        "Mejora una carta.",
+        "Elimina una carta.",
+        "Transforma",
+        "cartas.",
+        "Elimina una carta y mejora una carta aleatoria.",
         "[Salir]",
         "Elije una Carta a Mejorar",
         "Elije 2 Cartas a Transformar",
@@ -4278,7 +4278,7 @@
     },
     "COLOSSEUM": {
       "name": "El Coliseo",
-      "description": "@¡¡Wham!!@ NL ... NL ... ... NL ... NL ~Pierdes~ ~el~ ~conocimiento...~~Atontado~ y con la cabeza @palpitando,@ te despiertas y te encuentras en el centro de un coliseo enorme con una grada desbordante de #bEsclavistas, #pFieles, y otros habitantes de la ciudad! NL  NL Un gigante blindado con una #ycorona #ydorada ruge por encima tuyo, NL @\"¡¡AHORA@ @EMPIEZA@ @EL@ @°@ @COMBATE!!\"@ NL Una puerta al otro lado se abre...@\"BIEN@ @HECHO,@ @DEBILUCHO!\"@ NL El gigante se burla aplaudiendo mientras irrita a la multitud con gestos exagerados. NL #y~Te~ ~llueve~ #y~Oro~ ~y~ ~confeti!~ NL @\"ES@ @LA@ @HORA@ @PARA@ @EL@ @VERDADERO@ @DESAFIO!!\"@ NL NL La última batalla deja una pequeña salida en la pared del coliseo, puedes escapar fácilmente mientras todo el mundo está distraído. NL ¿Quedarse y pelear?",
+      "description": "¡¡Wham!!\n...\n... ...\n...\nPierdes el conocimiento...Atontado y con la cabeza palpitando, te despiertas y te encuentras en el centro de un coliseo enorme con una grada desbordante de Esclavistas, Fieles, y otros habitantes de la ciudad!\n\nUn gigante blindado con una corona dorada ruge por encima tuyo,\n\"¡¡AHORA EMPIEZA EL ° COMBATE!!\"\nUna puerta al otro lado se abre...\"BIEN HECHO, DEBILUCHO!\"\nEl gigante se burla aplaudiendo mientras irrita a la multitud con gestos exagerados.\nTe llueve Oro y confeti!\n\"ES LA HORA PARA EL VERDADERO DESAFIO!!\"\n\n La última batalla deja una pequeña salida en la pared del coliseo, puedes escapar fácilmente mientras todo el mundo está distraído.\n¿Quedarse y pelear?",
       "options": [
         "[Continuar]",
         "[Luchar]",
