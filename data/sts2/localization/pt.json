@@ -5186,13 +5186,17 @@
       "description": "Você encontra uma câmara isolada.\n\nVapores sobem de termas borbulhantes cheias de líquido quente que muda de cor em ritmos hipnóticos. Formações de crustáceos se penduram pelo teto, pingando um líquido viscoso que se retorce e evapora ao entrar em contato com a superfície. O ar parece denso, carregado de sal e de algo certamente orgânico.\n\nAo se aproximar da borda de uma das fontes, o líquido cria ondulações. As águas borbulham com maior intensidade, como se estivessem ansiosas pela sua entrada.",
       "pages": [
         {
+          "description": "Você encontra uma câmara isolada.\n\nVapores sobem de termas borbulhantes cheias de líquido quente que muda de cor em ritmos hipnóticos. Formações de crustáceos se penduram pelo teto, pingando um líquido viscoso que se retorce e evapora ao entrar em contato com a superfície. O ar parece denso, carregado de sal e de algo certamente orgânico.\n\nAo se aproximar da borda de uma das fontes, o líquido cria ondulações. As águas borbulham com maior intensidade, como se estivessem ansiosas pela sua entrada.",
           "choices": [
             {
-              "name": "Sair das Termas"
+              "name": "Abster-se",
+              "description": "Cure 10 PV.",
+              "outcome": "Você não cede à tentação das águas, aproveitando então para coletar sais cristalinos que se acumulam pelas bordas. Ao aplicá-los em sua pele, as fontes borbulham e espumam agitadamente. A temperatura ambiente cai drasticamente, e por um momento todas as superfícies reflexivas exibem uma versão de você com a aparência debilitada e olhos vazios. Você fica com a sensação de que pode ter perdido uma experiência transformadora."
             },
             {
-              "name": "Permanecer",
-              "description": "Receba 2 PV Máximos. Sofra 3 de dano."
+              "name": "Submergir",
+              "description": "Receba 2 PV Máximos. Sofra 3 de dano.",
+              "outcome": "O líquido queima a sua pele, congelante e ao mesmo tempo fervente.\n\nAbaixo da superfície, algo se esfrega nas suas pernas — tentáculos? Correntezas com alguma intenção? E então a dor passa, você sente seu corpo... mais denso, de alguma forma. Mais substancial. As águas parecem cantarolar em satisfação."
             }
           ]
         },
@@ -5227,7 +5231,7 @@
     },
     "AROMA_OF_CHAOS": {
       "name": "Aroma do Caos",
-      "description": "Após uma árdua caminhada através de um denso matagal, uma estranha sensação de nostalgia envolve você.\n\nUma mistura de aromas florais, decomposição pútrida e algo completamente único. O aroma se intensifica a cada passo, e você sente como se o mundo ao seu redor começasse a girar e se contorcer.\n\nUma sensação de caos mutável[/rainbow] toma conta, e você começa a perder a noção da sua própria existência.",
+      "description": "Após uma árdua caminhada através de um denso matagal, uma estranha sensação de nostalgia envolve você.\n\nUma mistura de aromas florais, decomposição pútrida e algo completamente único. O aroma se intensifica a cada passo, e você sente como se o mundo ao seu redor começasse a girar e se contorcer.\n\nUma sensação de caos mutável toma conta, e você começa a perder a noção da sua própria existência.",
       "choices": [
         {
           "name": "Não Resistir",
@@ -5339,7 +5343,7 @@
     },
     "COLOSSAL_FLOWER": {
       "name": "Flor Colossal",
-      "description": "Você avista uma flor colossal crescendo no topo de uma montanha de ossos.\n\nConforme suas pétalas de cores oscilantes[/rainbow] pulsam, você nota um Poderoso Aglomerado de Pólen localizado no centro da flor, mas as pétalas ondulantes parecem extremamente afiadas e imprevisíveis.\n\nVocê poderia pegar apenas um pouco de néctar dourado, mas alcançar o prêmio no centro da flor é tão tentador...",
+      "description": "Você avista uma flor colossal crescendo no topo de uma montanha de ossos.\n\nConforme suas pétalas de cores oscilantes pulsam, você nota um Poderoso Aglomerado de Pólen localizado no centro da flor, mas as pétalas ondulantes parecem extremamente afiadas e imprevisíveis.\n\nVocê poderia pegar apenas um pouco de néctar dourado, mas alcançar o prêmio no centro da flor é tão tentador...",
       "choices": [
         {
           "name": "Extrair Néctar",
@@ -5352,7 +5356,7 @@
       ],
       "pages": [
         {
-          "description": "Você atravessa uma camada de pétalas afiadas como lâminas, revestidas de uma substância que causa uma sensação de dormência. Isso parece anestesiar sua dor?\n\nTalvez isto explique a enorme pilha de ossos...",
+          "description": "Você avista uma flor colossal crescendo no topo de uma montanha de ossos.\n\nConforme suas pétalas de cores oscilantes pulsam, você nota um Poderoso Aglomerado de Pólen localizado no centro da flor, mas as pétalas ondulantes parecem extremamente afiadas e imprevisíveis.\n\nVocê poderia pegar apenas um pouco de néctar dourado, mas alcançar o prêmio no centro da flor é tão tentador...",
           "choices": [
             {
               "name": "Extrair Néctar",
@@ -5360,7 +5364,7 @@
             },
             {
               "name": "Adentrar",
-              "description": "Ir ainda mais fundo. Perca 6 PV."
+              "description": "Adentre mais fundo. Perca 5 PV."
             }
           ]
         },
@@ -5378,15 +5382,15 @@
           ]
         },
         {
-          "description": "Você atravessa uma camada de pétalas afiadas como lâminas, revestidas de uma substância que causa uma sensação de dormência. Isso parece anestesiar sua dor?\n\nTalvez isto explique a enorme pilha de ossos...",
+          "description": "A dormência se torna fraqueza aguda conforme você avança...\n\nA planta pretende me digerir. Por que fui entrar aqui?",
           "choices": [
             {
               "name": "Extrair Néctar",
               "description": "Receba X de Ouro."
             },
             {
-              "name": "Adentrar",
-              "description": "Ir ainda mais fundo. Perca 6 PV."
+              "name": "Adentrar o Centro",
+              "description": "Perca 7 PV. Receba Núcleo Polinoso."
             }
           ]
         }

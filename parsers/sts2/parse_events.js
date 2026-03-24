@@ -217,7 +217,7 @@ function parseCanonicalVars(csDir) {
 
 function stripBBCode(text) {
   if (!text) return text;
-  return text.replace(/\[(?:gold|\/gold|green|\/green|red|\/red|blue|\/blue|sine|\/sine|jitter|\/jitter|b|\/b|orange|\/orange|purple|\/purple|aqua|\/aqua|rainbow[^\]]*)\]/g, '');
+  return text.replace(/\[(?:gold|\/gold|green|\/green|red|\/red|blue|\/blue|sine|\/sine|jitter|\/jitter|b|\/b|orange|\/orange|purple|\/purple|aqua|\/aqua|\/rainbow|rainbow[^\]]*)\]/g, '');
 }
 
 function substituteVars(text, vars) {
@@ -1223,22 +1223,44 @@ async function parseEventsLocalized() {
 
       // Pages
       if (baseEvent.pages && parsed.pages) {
+        // Explicit page-to-raw-loc mappings for manually overridden multi-page events.
+        // These events have curated English page structures that don't match the raw loc page IDs,
+        // so we map base page index → raw loc page ID for correct localization.
+        // 'INITIAL' means use parsed.choices (the INITIAL page options), anything else maps to parsed.pages by id.
+        const MANUAL_PAGE_MAPPINGS = {
+          COLOSSAL_FLOWER: ['INITIAL', 'REACH_DEEPER_1', 'REACH_DEEPER_2'],
+          ABYSSAL_BATHS: ['INITIAL', 'ALL'],
+          TINKER_TIME: ['CHOOSE_CARD_TYPE', 'CHOOSE_RIDER'],
+        };
+
+        const manualMapping = MANUAL_PAGE_MAPPINGS[baseEvent.id];
+        const parsedPageMap = new Map(parsed.pages.map(p => [p.id, p]));
+
         const locPages = [];
         for (let i = 0; i < baseEvent.pages.length; i++) {
           const basePage = baseEvent.pages[i];
-          // Try to find matching parsed page by matching choices
+
           let bestPage = null;
-          let bestScore = -1;
-          for (const pp of parsed.pages) {
-            if (!pp.choices || !basePage.choices) continue;
-            let score = 0;
-            const minLen = Math.min(pp.choices.length, basePage.choices.length);
-            for (let j = 0; j < minLen; j++) {
-              // Just check if counts match — same order
-              score++;
+          if (manualMapping && manualMapping[i]) {
+            if (manualMapping[i] === 'INITIAL') {
+              // Use parsed.choices as a synthetic page
+              bestPage = { id: 'INITIAL', choices: parsed.choices || [], description: parsed.description };
+            } else {
+              bestPage = parsedPageMap.get(manualMapping[i]) || null;
             }
-            if (pp.choices.length === basePage.choices.length) score += 5;
-            if (score > bestScore) { bestScore = score; bestPage = pp; }
+          }
+
+          if (!bestPage) {
+            // Heuristic matching: find best parsed page by choice count similarity
+            let bestScore = -1;
+            for (const pp of parsed.pages) {
+              if (!pp.choices || !basePage.choices) continue;
+              let score = 0;
+              const minLen = Math.min(pp.choices.length, basePage.choices.length);
+              for (let j = 0; j < minLen; j++) score++;
+              if (pp.choices.length === basePage.choices.length) score += 5;
+              if (score > bestScore) { bestScore = score; bestPage = pp; }
+            }
           }
 
           if (!bestPage) { locPages.push({}); continue; }

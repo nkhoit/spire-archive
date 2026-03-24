@@ -5186,13 +5186,17 @@
       "description": "Scopri una stanza defilata.\n\nIl vapore si innalza da pozze ribollenti di liquido caldo che cambia colore con un ritmo ipnotico. Dal soffitto pendono formazioni di cirripedi, che fanno gocciolare un liquido viscoso che sibila e si contorce a contatto con la superficie. L'aria è pesante, carica di sale e di qualcosa di inconfondibilmente organico . \n\nMentre ti avvicini al bordo della pozza più grande, il liquido si increspa. Le acque ribollono con maggiore intensità, come se stessero aspettando che ti immergi.",
       "pages": [
         {
+          "description": "Scopri una stanza defilata.\n\nIl vapore si innalza da pozze ribollenti di liquido caldo che cambia colore con un ritmo ipnotico. Dal soffitto pendono formazioni di cirripedi, che fanno gocciolare un liquido viscoso che sibila e si contorce a contatto con la superficie. L'aria è pesante, carica di sale e di qualcosa di inconfondibilmente organico . \n\nMentre ti avvicini al bordo della pozza più grande, il liquido si increspa. Le acque ribollono con maggiore intensità, come se stessero aspettando che ti immergi.",
           "choices": [
             {
-              "name": "Esci dalle pozze"
+              "name": "Non immergerti",
+              "description": "Recuperi 10 PV.",
+              "outcome": "Rifiuti la tentazione di immergerti in acqua. In cambio raccogli i sali cristallini che si sono formati lungo i bordi. Non appena li applichi sulla tua pelle, le pozze si agitano ed emettono della schiuma con una violenza inaudita. La temperatura cala sensibilmente e per un istante tutte le superfici riflettenti della stanza mostrano una versione di te dall'aspetto affaticato e rinsecchito. Non riesci a scrollarti di dosso la sensazione di aver perso un'opportunità unica."
             },
             {
-              "name": "Resta in acqua",
-              "description": "Ottieni 2 PV massimi. Subisci 3 di danno."
+              "name": "Immergiti",
+              "description": "Ottieni i seguenti PV massimi: 2. Subisci 3 di danno.",
+              "outcome": "Il liquido brucia la tua pelle. Provi una sensazione congelante e ustionante allo stesso tempo.\n\nSotto la superficie, qualcosa ti sfrega le gambe: saranno delle piante o delle correnti acquatiche? Tuttavia, quando il dolore si affievolisce, senti che il tuo corpo... è più denso del normale, come se fosse più robusto. L'acqua sembra soddisfatta della tua scelta."
             }
           ]
         },
@@ -5227,7 +5231,7 @@
     },
     "AROMA_OF_CHAOS": {
       "name": "Aroma del caos",
-      "description": "Dopo aver attraversato un fitto sottobosco e aver raggiunto una radura, il tuo corpo viene attanagliato da una nostalgia indefinibile.\n\nPercepisci una miscela di aromi floreali, decomposizione putrida e  qualcos'altro di completamente differente. L'aroma si fa più intenso a ogni passo e hai la sensazione che il mondo intorno a te si stia deformando e contorcendo.\n\nInizi a provare una sensazione di caos mutevole[/rainbow] e non riesci più a riconoscere chi sei.",
+      "description": "Dopo aver attraversato un fitto sottobosco e aver raggiunto una radura, il tuo corpo viene attanagliato da una nostalgia indefinibile.\n\nPercepisci una miscela di aromi floreali, decomposizione putrida e  qualcos'altro di completamente differente. L'aroma si fa più intenso a ogni passo e hai la sensazione che il mondo intorno a te si stia deformando e contorcendo.\n\nInizi a provare una sensazione di caos mutevole e non riesci più a riconoscere chi sei.",
       "choices": [
         {
           "name": "Lasciati andare",
@@ -5339,7 +5343,7 @@
     },
     "COLOSSAL_FLOWER": {
       "name": "Fiore colossale",
-      "description": "C'è un fiore colossale che cresce sulla vetta di una montagna di ossa.\n\nMentre i suoi petali cangianti[/rainbow] palpitano, percepisci che c'è un potente ammasso di polline al centro, ma i petali ondulati sono affilati e imprevedibili.\n\nPotresti prendere un po' di nettare dorato, ma la tentazione di raggiungere il tesoro al centro è veramente forte...",
+      "description": "C'è un fiore colossale che cresce sulla vetta di una montagna di ossa.\n\nMentre i suoi petali cangianti palpitano, percepisci che c'è un potente ammasso di polline al centro, ma i petali ondulati sono affilati e imprevedibili.\n\nPotresti prendere un po' di nettare dorato, ma la tentazione di raggiungere il tesoro al centro è veramente forte...",
       "choices": [
         {
           "name": "Estrai il nettare",
@@ -5352,15 +5356,15 @@
       ],
       "pages": [
         {
-          "description": "Superi uno strato di petali affilati, ricoperti da una sostanzache ti fa formicolare la pelle. Forse serve ad anestitazzare il tuo dolore?\n\nForse è per questo che c'è un mucchio di ossa qui...",
+          "description": "C'è un fiore colossale che cresce sulla vetta di una montagna di ossa.\n\nMentre i suoi petali cangianti palpitano, percepisci che c'è un potente ammasso di polline al centro, ma i petali ondulati sono affilati e imprevedibili.\n\nPotresti prendere un po' di nettare dorato, ma la tentazione di raggiungere il tesoro al centro è veramente forte...",
           "choices": [
             {
               "name": "Estrai il nettare",
               "description": "Ottieni X unità d'oro."
             },
             {
-              "name": "Addentrati ulteriormente in profondità",
-              "description": "Ti addentri ulteriormente in profondità. Perdi 6 PV."
+              "name": "Addentrati nelle profondità",
+              "description": "Ti addentri nelle profondità. Perdi 5 PV."
             }
           ]
         },
@@ -5378,15 +5382,15 @@
           ]
         },
         {
-          "description": "Superi uno strato di petali affilati, ricoperti da una sostanzache ti fa formicolare la pelle. Forse serve ad anestitazzare il tuo dolore?\n\nForse è per questo che c'è un mucchio di ossa qui...",
+          "description": "Il formicolio si trasforma in una debolezza palpitante man mano che avanzi...\n\nQuesto fiore vuole mangiarmi. Perché ho deciso di entrarci?",
           "choices": [
             {
               "name": "Estrai il nettare",
               "description": "Ottieni X unità d'oro."
             },
             {
-              "name": "Addentrati ulteriormente in profondità",
-              "description": "Ti addentri ulteriormente in profondità. Perdi 6 PV."
+              "name": "Raggiungi il nucleo",
+              "description": "Perdi 7 PV. Ottieni nucleo pollinico."
             }
           ]
         }

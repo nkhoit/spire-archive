@@ -4923,13 +4923,17 @@
       "description": "Odkrywasz ustronną komnatę.\n\nPara unosi się z bulgoczących zbiorników gorącej cieczy, zmieniającej kolory w hipnotyzującym rytmie. Z sufitu wystaje zeskorupiała narośl, z której ocieka lepki płyn, sycząc z każdym skapnięciem. W gęstym powietrzu czuć zapach soli oraz czegoś ewidentnie organicznego.\n\nZbliżasz się do brzegu największego zbiornika, a powierzchnia zebranej w nim cieczy zaczyna falować. Wody bulgoczą coraz mocniej, jakby oczekiwały twojego wejścia.",
       "pages": [
         {
+          "description": "Odkrywasz ustronną komnatę.\n\nPara unosi się z bulgoczących zbiorników gorącej cieczy, zmieniającej kolory w hipnotyzującym rytmie. Z sufitu wystaje zeskorupiała narośl, z której ocieka lepki płyn, sycząc z każdym skapnięciem. W gęstym powietrzu czuć zapach soli oraz czegoś ewidentnie organicznego.\n\nZbliżasz się do brzegu największego zbiornika, a powierzchnia zebranej w nim cieczy zaczyna falować. Wody bulgoczą coraz mocniej, jakby oczekiwały twojego wejścia.",
           "choices": [
             {
-              "name": "Wyjdź z wody"
+              "name": "Powstrzymaj się",
+              "description": "Przywróć 10 PŻ.",
+              "outcome": "Przezwyciężasz pokusę skorzystania z kąpieli i decydujesz się zebrać sole krystaliczne, które zgromadziły się wzdłuż brzegu. Woda pieni się ze wzburzeniem, podczas gdy nakładasz sole na swoją skórę. W komnacie robi się znacznie zimniej. Przez chwilę we wszystkich odbiciach spostrzegasz osłabioną, ponurą wersję siebie. Nie możesz pozbyć się wrażenia, jakby ominęła cię pewna drastyczna zmiana."
             },
             {
-              "name": "Pozostań",
-              "description": "Zyskaj 2 maks. PŻ. Otrzymaj 3 pkt. obrażeń."
+              "name": "Zanurz się",
+              "description": "Zyskaj 2 maks. PŻ. Otrzymaj 3 pkt. obrażeń.",
+              "outcome": "Ciecz zaczyna piec twoją skórę tak mocno, że jednocześnie cię mrozi i parzy.\n\nCoś pod powierzchnią muska twoje nogi. Czy to pnącza? Silne prądy? Gdy ból ustępuje, czujesz się... jakoś inaczej. Odczuwasz pewną satysfakcję i spełnienie. Wody wydają się szumieć z zadowoleniem."
             }
           ]
         },
@@ -4964,7 +4968,7 @@
     },
     "AROMA_OF_CHAOS": {
       "name": "Woń chaosu",
-      "description": "Z trudem przechodzisz przez grube poszycie, gdy po dotarciu na polanę dopada cię nagle fala nostalgii.\n\nCzujesz mieszaninę zapachu kwiatów, fetoru zgnilizny i jeszcze czegoś innego. Z każdym krokiem zapach robi się coraz bardziej intensywny i masz wrażenie, że wszystko dookoła ciebie zaczyna się zniekształcać.\n\nPogrążając się w zmiennym chaosie[/rainbow], tracisz poczucie tożsamości.",
+      "description": "Z trudem przechodzisz przez grube poszycie, gdy po dotarciu na polanę dopada cię nagle fala nostalgii.\n\nCzujesz mieszaninę zapachu kwiatów, fetoru zgnilizny i jeszcze czegoś innego. Z każdym krokiem zapach robi się coraz bardziej intensywny i masz wrażenie, że wszystko dookoła ciebie zaczyna się zniekształcać.\n\nPogrążając się w zmiennym chaosie, tracisz poczucie tożsamości.",
       "choices": [
         {
           "name": "Odpuść",
@@ -5071,7 +5075,7 @@
     },
     "COLOSSAL_FLOWER": {
       "name": "Kolosalny kwiat",
-      "description": "Kolosalny kwiat wyrasta ze gigantycznej sterty kości.\n\nJego kolorowe płatki[/rainbow] pulsują. Wyczuwasz, że w środku znajduje się Potężny Zapylony Rdzeń, lecz otaczające go faliste płatki są ostre jak brzytwa.\n\nWystarczyło by zebrać trochę złotego nektaru, ale sięgniecie po sam rdzeń wydaje się niezwykle kuszące...",
+      "description": "Kolosalny kwiat wyrasta ze gigantycznej sterty kości.\n\nJego kolorowe płatki pulsują. Wyczuwasz, że w środku znajduje się Potężny Zapylony Rdzeń, lecz otaczające go faliste płatki są ostre jak brzytwa.\n\nWystarczyło by zebrać trochę złotego nektaru, ale sięgniecie po sam rdzeń wydaje się niezwykle kuszące...",
       "choices": [
         {
           "name": "Zbierz nektar",
@@ -5084,7 +5088,7 @@
       ],
       "pages": [
         {
-          "description": "Przedostajesz się przez warstwę ostrych płatków pokrytych substancją, która wywołuje mrowienie na twojej skórze. Czy to uśmierza ból?\n\nMoże to dlatego leży tu tyle kości...",
+          "description": "Kolosalny kwiat wyrasta ze gigantycznej sterty kości.\n\nJego kolorowe płatki pulsują. Wyczuwasz, że w środku znajduje się Potężny Zapylony Rdzeń, lecz otaczające go faliste płatki są ostre jak brzytwa.\n\nWystarczyło by zebrać trochę złotego nektaru, ale sięgniecie po sam rdzeń wydaje się niezwykle kuszące...",
           "choices": [
             {
               "name": "Zbierz nektar",
@@ -5092,7 +5096,7 @@
             },
             {
               "name": "Sięgnij głębiej",
-              "description": "Wejdź jeszcze głębiej. Utrać 6 PŻ."
+              "description": "Wejdź głębiej. Utrać 5 PŻ."
             }
           ]
         },
@@ -5110,15 +5114,15 @@
           ]
         },
         {
-          "description": "Przedostajesz się przez warstwę ostrych płatków pokrytych substancją, która wywołuje mrowienie na twojej skórze. Czy to uśmierza ból?\n\nMoże to dlatego leży tu tyle kości...",
+          "description": "Mrowienie zmienia się w pulsujące osłabienie...\n\nTen kwiat chce mnie zjeść. Co ja w ogóle robię?",
           "choices": [
             {
               "name": "Zbierz nektar",
               "description": "Zyskaj X szt. Złota."
             },
             {
-              "name": "Sięgnij głębiej",
-              "description": "Wejdź jeszcze głębiej. Utrać 6 PŻ."
+              "name": "Wejdź do środka",
+              "description": "Utrać 7 PŻ. Otrzymaj Zapylony rdzeń."
             }
           ]
         }

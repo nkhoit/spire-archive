@@ -5186,13 +5186,17 @@
       "description": "Du entdeckst eine abgelegene Kammer.\n\nDampf steigt aus brodelnden Becken voll heißer Flüssigkeit, welche in hypnotischem Rhythmus die Farbe wechselt. Von der Decke hängen Meeresgewächse, aus denen eine zähe Flüssigkeit tropft, welche beim Berühren der Oberfläche zischt und sich windet. Die Luft fühlt sich schwer an, gefüllt mit Salz und etwas unverkennbar Organischem.\n\nDu näherst dich der Kante des größten Beckens, da kräuselt sich die Flussigkeit. Das Wasser blubbert intensiver, als würde es deinen Eintritt erwarten.",
       "pages": [
         {
+          "description": "Du entdeckst eine abgelegene Kammer.\n\nDampf steigt aus brodelnden Becken voll heißer Flüssigkeit, welche in hypnotischem Rhythmus die Farbe wechselt. Von der Decke hängen Meeresgewächse, aus denen eine zähe Flüssigkeit tropft, welche beim Berühren der Oberfläche zischt und sich windet. Die Luft fühlt sich schwer an, gefüllt mit Salz und etwas unverkennbar Organischem.\n\nDu näherst dich der Kante des größten Beckens, da kräuselt sich die Flussigkeit. Das Wasser blubbert intensiver, als würde es deinen Eintritt erwarten.",
           "choices": [
             {
-              "name": "Bad verlassen"
+              "name": "Verzichten",
+              "description": "Heile 10 TP.",
+              "outcome": "Du widerstehst der Versuchung des Wassers und sammelst stattdessen Salzkristalle, die an den Rändern entstanden sind. Während du sie auf deine Haut aufträgst, strudeln und schäumen die Becken wild. Die Umgebungstemparatur sinkt merklich und für einen Moment zeigen alle Spiegelflächen im Raum ein Bild von dir, das hohläugig und geschrumpft wirkt. Du wirst das Gefühl nicht los, etwas erneuerndes verpasst zu haben."
             },
             {
-              "name": "Bleiben",
-              "description": "Erhalte 2 max. TP. Nimm 3 Schaden."
+              "name": "Eintauchen",
+              "description": "Erhalte 2 max. TP. Nimm 3 Schaden.",
+              "outcome": "Die Flüssigkeit brennt an deiner Haut, sie ist gleichzeitig eiskalt und siedend.\n\nUnter der Oberfläche streicht etwas gegen deine Beine—Ranken? Gezielte Strömungen? Doch als der Schmerz nachlässt, fühlst du dich... irgendwie kompakter. Substanzieller. Das Wasser scheint vor Behagen zu blubbern."
             }
           ]
         },
@@ -5227,7 +5231,7 @@
     },
     "AROMA_OF_CHAOS": {
       "name": "Geruch des Chaos",
-      "description": "Als du durch dichtes Unterholz stampfst und eine Lichtung erreichst, trifft dich eine unbestimmte Nostalgie.\n\nEine Mischung aus blumigen Düften, fauliger Verwesung und etwas völlig anderem. Der Duft wird mit jedem Schritt stärker und du fühlst dich, als würde sich die Welt um dich herum krümmen und verdrehen.\n\nDu bist so überwältigt von einem Gefühl des verschiebenden Chaos[/rainbow], dass du anfängst, dein Selbstgefühl zu verlieren.",
+      "description": "Als du durch dichtes Unterholz stampfst und eine Lichtung erreichst, trifft dich eine unbestimmte Nostalgie.\n\nEine Mischung aus blumigen Düften, fauliger Verwesung und etwas völlig anderem. Der Duft wird mit jedem Schritt stärker und du fühlst dich, als würde sich die Welt um dich herum krümmen und verdrehen.\n\nDu bist so überwältigt von einem Gefühl des verschiebenden Chaos, dass du anfängst, dein Selbstgefühl zu verlieren.",
       "choices": [
         {
           "name": "Loslassen",
@@ -5339,7 +5343,7 @@
     },
     "COLOSSAL_FLOWER": {
       "name": "Riesige Blume",
-      "description": "Da ist eine riesige Blume, die auf einem Berg aus Knochen wächst.\n\nIhre farbwechselnden Blütenblätter[/rainbow] pulsieren und du ahnst, dass in der Mitte ein Machtvoller Pollenklumpen ist, aber die wiegenden Blätter sind messerscharf und unvorhersehbar.\n\nDu könntest ein wenig von dem goldenen Nektar nehmen, aber bist verlockt, den Preis in der Mitte zu erreichen...",
+      "description": "Da ist eine riesige Blume, die auf einem Berg aus Knochen wächst.\n\nIhre farbwechselnden Blütenblätter pulsieren und du ahnst, dass in der Mitte ein Machtvoller Pollenklumpen ist, aber die wiegenden Blätter sind messerscharf und unvorhersehbar.\n\nDu könntest ein wenig von dem goldenen Nektar nehmen, aber bist verlockt, den Preis in der Mitte zu erreichen...",
       "choices": [
         {
           "name": "Nektar gewinnen",
@@ -5352,7 +5356,7 @@
       ],
       "pages": [
         {
-          "description": "Du schiebst dich an einer Lage messerscharfer Blütenblätter vorbei. Sie sind umhüllt mit einer Substanz, die deine Haut zum Kribbeln bringt. Das scheint den Schmerz zu betäuben?\n\nVielleicht ist deshalb hier ein Haufen Knochen...",
+          "description": "Da ist eine riesige Blume, die auf einem Berg aus Knochen wächst.\n\nIhre farbwechselnden Blütenblätter pulsieren und du ahnst, dass in der Mitte ein Machtvoller Pollenklumpen ist, aber die wiegenden Blätter sind messerscharf und unvorhersehbar.\n\nDu könntest ein wenig von dem goldenen Nektar nehmen, aber bist verlockt, den Preis in der Mitte zu erreichen...",
           "choices": [
             {
               "name": "Nektar gewinnen",
@@ -5360,7 +5364,7 @@
             },
             {
               "name": "Tiefer greifen",
-              "description": "Dringe noch tiefer ein. Verliere 6 TP."
+              "description": "Dringe tiefer ein. Verliere 5 TP."
             }
           ]
         },
@@ -5378,15 +5382,15 @@
           ]
         },
         {
-          "description": "Du schiebst dich an einer Lage messerscharfer Blütenblätter vorbei. Sie sind umhüllt mit einer Substanz, die deine Haut zum Kribbeln bringt. Das scheint den Schmerz zu betäuben?\n\nVielleicht ist deshalb hier ein Haufen Knochen...",
+          "description": "Bei deinem Vordringen wird aus dem Kribbeln eine pochende Schwachheit...\n\nDiese Blume möchte mich fressen. Warum bin ich hineingegangen?",
           "choices": [
             {
               "name": "Nektar gewinnen",
               "description": "Erhalte X Gold."
             },
             {
-              "name": "Tiefer greifen",
-              "description": "Dringe noch tiefer ein. Verliere 6 TP."
+              "name": "Zur Mitte gelangen",
+              "description": "Verliere 7 TP. Erhalte Pollenreicher Kern."
             }
           ]
         }

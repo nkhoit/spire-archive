@@ -5186,13 +5186,17 @@
       "description": "Vous découvrez dans une pièce solitaire.\n\nDe la vapeur s'élève de bassins bouillonnants d'un liquide brûlant, dont les couleurs ondulent selon un rythme hypnotique. Des excroissances incrustées de coquillages pendent du plafond, laissant goutter une substance visqueuse qui grésille et frémit au contact du sol. L'air est lourd, saturé de sel, et d'une substance qui paraît sans aucun doute organique.\n\nÀ mesure que vous vous approchez du plus grand bassin, le liquide se met à onduler. Les eaux bouillonnent avec de plus en plus d'intensité, comme si elles pressentaient votre arrivée.",
       "pages": [
         {
+          "description": "Vous découvrez dans une pièce solitaire.\n\nDe la vapeur s'élève de bassins bouillonnants d'un liquide brûlant, dont les couleurs ondulent selon un rythme hypnotique. Des excroissances incrustées de coquillages pendent du plafond, laissant goutter une substance visqueuse qui grésille et frémit au contact du sol. L'air est lourd, saturé de sel, et d'une substance qui paraît sans aucun doute organique.\n\nÀ mesure que vous vous approchez du plus grand bassin, le liquide se met à onduler. Les eaux bouillonnent avec de plus en plus d'intensité, comme si elles pressentaient votre arrivée.",
           "choices": [
             {
-              "name": "Quitter les bains"
+              "name": "S'abstenir",
+              "description": "Récupérez 10 PV.",
+              "outcome": "Vous refusez la tentation des eaux. À la place, vous collectez les cristaux de sel qui se sont formés le long des bassins. À mesure que vous les appliquez sur votre peau, les bassins bouillonnent et écument avec agitation. La température ambiante chute soudainement, et, le temps d'un instant, vous apercevez sur toutes les surfaces réfléchissantes de la pièce une version de vous qui paraît diminuée et avec les yeux enfoncés. Vous ne pouvez vous empêcher de ressentir que vous avez manqué une opportunité transformative."
             },
             {
-              "name": "Rester",
-              "description": "Gagnez 2 PV Max. Subissez 3 dégâts."
+              "name": "S'immerger",
+              "description": "Gagnez 2 PV Max. Subissez 3 dégâts.",
+              "outcome": "Le liquide vous brûle la peau. La sensation est à la fois glaçante et corrosive.\n\nSous la surface de l'eau, quelque chose vous frôle les jambes — des tentacules ? Le courant serait-il doté de conscience ? Mais la douleur passe enfin, et vous vous sentez... plus dense. Plus robuste. Les eaux semblent vrombir de contentement."
             }
           ]
         },
@@ -5227,7 +5231,7 @@
     },
     "AROMA_OF_CHAOS": {
       "name": "Arôme du chaos",
-      "description": "Après vous être frayé un chemin à travers un sous-bois dense, vous débouchez dans une clairière. Une nostalgie, impossible à situer, vous frappe de plein fouet.\n\nUn mélange de parfums de fleurs, de pourriture fétide, et autre chose, quelque chose d’indéfinissable. L’odeur s’intensifie à chacun de vos pas, et vous avez l’impression que le monde autour de vous se tord et se déforme.\n\nSubmergé(e) par une sensation de chaos mouvant[/rainbow], vous commencez à en perdre toute notion de vous-même.",
+      "description": "Après vous être frayé un chemin à travers un sous-bois dense, vous débouchez dans une clairière. Une nostalgie, impossible à situer, vous frappe de plein fouet.\n\nUn mélange de parfums de fleurs, de pourriture fétide, et autre chose, quelque chose d’indéfinissable. L’odeur s’intensifie à chacun de vos pas, et vous avez l’impression que le monde autour de vous se tord et se déforme.\n\nSubmergé(e) par une sensation de chaos mouvant, vous commencez à en perdre toute notion de vous-même.",
       "choices": [
         {
           "name": "Lâcher prise",
@@ -5339,7 +5343,7 @@
     },
     "COLOSSAL_FLOWER": {
       "name": "Fleur colossale",
-      "description": "Une fleur colossale pousse au sommet d’un monticule d’ossements.\n\nAu rythme des pulsations de ses pétales aux couleurs changeantes[/rainbow], vous gagnez la sensation qu’un Puissant amas de pollen niche en son centre ; mais les pétales ondoyantes sont aussi tranchants que des lames de rasoir, et leurs mouvements imprévisibles.\n\nVous pourriez vous contenter d’un peu de nectar doré, mais la tentation du trésor au centre est extrêmement forte...",
+      "description": "Une fleur colossale pousse au sommet d’un monticule d’ossements.\n\nAu rythme des pulsations de ses pétales aux couleurs changeantes, vous gagnez la sensation qu’un Puissant amas de pollen niche en son centre ; mais les pétales ondoyantes sont aussi tranchants que des lames de rasoir, et leurs mouvements imprévisibles.\n\nVous pourriez vous contenter d’un peu de nectar doré, mais la tentation du trésor au centre est extrêmement forte...",
       "choices": [
         {
           "name": "Extraire du nectar",
@@ -5352,7 +5356,7 @@
       ],
       "pages": [
         {
-          "description": "Vous forcez votre passage à travers une couche de pétales aussi tranchants que des lames de rasoir, enduits d’une substance qui vous picote la peau. La douleur semble s’anesthésier ?\n\nC’est peut-être pour cela qu’il y a autant d’ossements ici...",
+          "description": "Une fleur colossale pousse au sommet d’un monticule d’ossements.\n\nAu rythme des pulsations de ses pétales aux couleurs changeantes, vous gagnez la sensation qu’un Puissant amas de pollen niche en son centre ; mais les pétales ondoyantes sont aussi tranchants que des lames de rasoir, et leurs mouvements imprévisibles.\n\nVous pourriez vous contenter d’un peu de nectar doré, mais la tentation du trésor au centre est extrêmement forte...",
           "choices": [
             {
               "name": "Extraire du nectar",
@@ -5360,7 +5364,7 @@
             },
             {
               "name": "Pénétrer plus loin",
-              "description": "Enfoncez votre main encore plus loin. Perdez 6 PV."
+              "description": "Enfoncez votre main plus loin. Perdez 5 PV."
             }
           ]
         },
@@ -5378,15 +5382,15 @@
           ]
         },
         {
-          "description": "Vous forcez votre passage à travers une couche de pétales aussi tranchants que des lames de rasoir, enduits d’une substance qui vous picote la peau. La douleur semble s’anesthésier ?\n\nC’est peut-être pour cela qu’il y a autant d’ossements ici...",
+          "description": "Les picotements laissent place à une faiblesse lancinante à mesure que vous forcez le passage...\n\nCette fleur cherche à me manger. Pourquoi m’y suis-je engagé{characterGender:choose(feminine):e|} ?",
           "choices": [
             {
               "name": "Extraire du nectar",
               "description": "Obtenez X Pièces d’or."
             },
             {
-              "name": "Pénétrer plus loin",
-              "description": "Enfoncez votre main encore plus loin. Perdez 6 PV."
+              "name": "Atteindre le centre",
+              "description": "Perdez 7 PV. Obtenez Cœur pollinique."
             }
           ]
         }

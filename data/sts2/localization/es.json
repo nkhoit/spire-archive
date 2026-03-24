@@ -5186,13 +5186,17 @@
       "description": "Descubres una cámara solitaria.\n\nEl vapor se eleva desde pozas burbujeantes de líquido caliente que cambia de color con un ritmo hipnótico. Del techo cuelgan formaciones con percebes que gotean un líquido viscoso que sisea y se retuerce al tocar la superficie. El aire se siente pesado, cargado de sal y algo inequívocamente orgánico.\n\nAl acercarte al borde de la poza más grande, el líquido ondula. Las aguas borbotean con mayor intensidad, como si anticiparan tu inmersión.",
       "pages": [
         {
+          "description": "Descubres una cámara solitaria.\n\nEl vapor se eleva desde pozas burbujeantes de líquido caliente que cambia de color con un ritmo hipnótico. Del techo cuelgan formaciones con percebes que gotean un líquido viscoso que sisea y se retuerce al tocar la superficie. El aire se siente pesado, cargado de sal y algo inequívocamente orgánico.\n\nAl acercarte al borde de la poza más grande, el líquido ondula. Las aguas borbotean con mayor intensidad, como si anticiparan tu inmersión.",
           "choices": [
             {
-              "name": "Salir del balneario"
+              "name": "Abstenerse",
+              "description": "Recuperas 10 PV.",
+              "outcome": "Rechazas la tentación de las aguas; en cambio, tomas las sales cristalinas que se formaron en los bordes. Al aplicarlas sobre la piel, las pozas se agitan y burbujean con violencia. La temperatura ambiente cae de golpe y, por un instante, todas las superficies reflectantes del lugar muestran una versión de ti que parece ojerosa y deteriorada. No puedes evitarlo, pero sientes que te perdiste de vivir una experiencia transformadora."
             },
             {
-              "name": "Quedarse",
-              "description": "Obtienes 2 PV máx. Recibes 3 de daño."
+              "name": "Sumergirse",
+              "description": "Obtienes 2 PV máx. Recibes 3 de daño.",
+              "outcome": "El líquido quema tu piel; de hecho, la congela y escalda al mismo tiempo.\n\nBajo la superficie, algo te roza las piernas: ¿zarcillos? ¿Corrientes acuáticas? Sin embargo, cuando el dolor se disipa, sientes tu cuerpo... más denso que de costumbre, más corpulento. Las aguas parecen vibrar, complacidas."
             }
           ]
         },
@@ -5227,7 +5231,7 @@
     },
     "AROMA_OF_CHAOS": {
       "name": "Aroma del caos",
-      "description": "Tras avanzar con afán entre una maleza espesa y llegar a un claro, te invade una nostalgia indescriptible.\n\nHay una mezcla de aromas florales, descomposición pútrida y algo completamente diferente. El olor se intensifica con cada paso y sientes como si el mundo a tu alrededor se estuviera deformando y retorciendo.\n\nTe abruma una sensación de caos cambiante[/rainbow] y empiezas a perder la noción de quién eres.",
+      "description": "Tras avanzar con afán entre una maleza espesa y llegar a un claro, te invade una nostalgia indescriptible.\n\nHay una mezcla de aromas florales, descomposición pútrida y algo completamente diferente. El olor se intensifica con cada paso y sientes como si el mundo a tu alrededor se estuviera deformando y retorciendo.\n\nTe abruma una sensación de caos cambiante y empiezas a perder la noción de quién eres.",
       "choices": [
         {
           "name": "Dejarse llevar",
@@ -5339,7 +5343,7 @@
     },
     "COLOSSAL_FLOWER": {
       "name": "Flor colosal",
-      "description": "Una flor colosal crece sobre una montaña de huesos.\n\nMientras sus pétalos de color cambiante[/rainbow] palpitan, percibes que en el centro hay un núcleo de polen poderoso, pero los pétalos ondulantes son afilados e impredecibles.\n\nPodrías tomar un poco del néctar dorado que se escurre, pero alcanzar el premio en el centro es muy tentador.",
+      "description": "Una flor colosal crece sobre una montaña de huesos.\n\nMientras sus pétalos de color cambiante palpitan, percibes que en el centro hay un núcleo de polen poderoso, pero los pétalos ondulantes son afilados e impredecibles.\n\nPodrías tomar un poco del néctar dorado que se escurre, pero alcanzar el premio en el centro es muy tentador.",
       "choices": [
         {
           "name": "Extraer néctar",
@@ -5352,15 +5356,15 @@
       ],
       "pages": [
         {
-          "description": "Pasas por una capa de pétalos afilados y recubiertos de una sustancia que te provoca un hormigueo en la piel. ¿Acaso anestesia tu dolor?\n\nQuizás por eso hay un montón de huesos aquí...",
+          "description": "Una flor colosal crece sobre una montaña de huesos.\n\nMientras sus pétalos de color cambiante palpitan, percibes que en el centro hay un núcleo de polen poderoso, pero los pétalos ondulantes son afilados e impredecibles.\n\nPodrías tomar un poco del néctar dorado que se escurre, pero alcanzar el premio en el centro es muy tentador.",
           "choices": [
             {
               "name": "Extraer néctar",
               "description": "Obtienes X de oro."
             },
             {
-              "name": "Adentrarse mucho más en las profundidades",
-              "description": "Te adentras en las profundidades. Pierdes 6 PV."
+              "name": "Adentrarse a las profundidades",
+              "description": "Te adentras en las profundidades. Pierdes 5 PV."
             }
           ]
         },
@@ -5378,15 +5382,15 @@
           ]
         },
         {
-          "description": "Pasas por una capa de pétalos afilados y recubiertos de una sustancia que te provoca un hormigueo en la piel. ¿Acaso anestesia tu dolor?\n\nQuizás por eso hay un montón de huesos aquí...",
+          "description": "El hormigueo se convierte en una debilidad palpitante a medida que sigues avanzando.\n\nEsta flor quiere comerme. ¿Por qué me metí en ella?",
           "choices": [
             {
               "name": "Extraer néctar",
               "description": "Obtienes X de oro."
             },
             {
-              "name": "Adentrarse mucho más en las profundidades",
-              "description": "Te adentras en las profundidades. Pierdes 6 PV."
+              "name": "Adentrarse en el núcleo",
+              "description": "Pierdes 7 PV. Obtienes Núcleo polinoso."
             }
           ]
         }
