@@ -153,7 +153,7 @@ function buildLang(gameLang) {
     if (!data.NAME) continue;
     result.events[toUpperSnake(id)] = {
       name: data.NAME,
-      description: cleanDescription((data.DESCRIPTIONS || []).join('')),
+      description: cleanDescription((data.DESCRIPTIONS || [])[0] || ''),
       ...(data.OPTIONS && { options: data.OPTIONS.map(o => cleanDescription(o)) }),
     };
   }
