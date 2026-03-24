@@ -15,8 +15,8 @@ import sys
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-EVENTS_DIR = PROJECT_ROOT / "sts-full" / "com" / "megacrit" / "cardcrawl" / "events"
-LOC_DIR = PROJECT_ROOT / "sts-data" / "localization"
+EVENTS_DIR = Path(os.environ.get('STS1_EVENTS_DIR', str(Path.home() / 'code' / 'sts1-data' / 'sts-full' / 'com' / 'megacrit' / 'cardcrawl' / 'events')))
+LOC_DIR = Path(os.environ.get('STS1_LOC_DIR', '/tmp/sts1-loc/localization'))
 
 LANG_MAP = {
     'en': 'eng', 'ja': 'jpn', 'ko': 'kor', 'zh': 'zhs',

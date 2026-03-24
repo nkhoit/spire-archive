@@ -3658,466 +3658,327 @@
     }
   },
   "events": {
-    "ACCURSED_BLACKSMITH": {
-      "name": "Złowroga Kuźnia",
-      "description": "Wchodzisz do małej chatki. W środku wydaje znajdować się coś na kształt kuźni. Jej narzędzia pokryte są warstwą kurzu, a mimo to ogień pieca wciąż radośnie tańczy. Zastanawiasz się co z nią zrobić...",
-      "options": [
-        "[Wykuj] Ulepsz kartę z talii.",
-        "[Przeszukaj] Otrzymaj unikalny Artefakt. Otrzymaj Klątwę - Ból.",
-        "[Odejdź]Wybierz kartę do ulepszenia.",
-        "[Zablokowane] Wymagania: karta, którą można ulepszyć."
-      ]
-    },
-    "ADDICT": {
-      "name": "Dziad Proszalny",
-      "description": "Podczas próby ominięcia grupy zakapturzonych postaci, jedna z nich zauważa cię i podchodzi do ciebie.\n\"Masz może coś dla mnie, przyjacielu?  Proszę... może kilka złotych monet?\"\n\"Potrzebuję jedynie miejsca na nocleg. Mam skarby, które mogę przehandlować...\"\nWygląda na wariata, ale raczej nieszkodliwego.",
-      "options": [
-        "[Ofiaruj złoto]szt. złota: Otrzymaj Artefakt.",
-        "[Zablokowane] Wymagania:szt. złota.",
-        "[Okradnij] Otrzymaj Artefakt. Otrzymaj Klątwę - Wstyd.",
-        "[Odejdź]"
-      ]
-    },
     "BACK_TO_BASICS": {
       "name": "Antyczne Ryciny",
-      "description": "Przemierzając miasto zauważasz ścianę pokrytą pismem Starożytnych. W trakcie próby zrozumienia, co te zagadkowe symbole i glify mogą znaczyć, napis zaczyna się świecić.\nNagle zapiski stają się jasne...",
-      "options": [
+      "description": "Przemierzając miasto zauważasz ścianę pokrytą pismem Starożytnych. W trakcie próby zrozumienia, co te zagadkowe symbole i glify mogą znaczyć, napis zaczyna się świecić. \n Nagle zapiski stają się jasne...",
+      "choices": [
         "[Elegancja] Usuń kartę z talii.",
-        "[Prostota] Ulepsz WSZYSTKIE karty Uderzeń oraz Obrony.Wybierz kartę do usunięcia.",
+        "[Prostota] Ulepsz WSZYSTKIE karty Uderzeń oraz Obrony. Wybierz kartę do usunięcia.",
         "[Odejdź]"
       ]
     },
-    "BEGGAR": {
-      "name": "Stary Żebrak",
-      "description": "Stary, przywdziany w futro żebrak wyciąga w twoją stronę dłoń. \"Poratujesz paroma sztukami złota, dziecko?\"",
-      "options": [
-        "[Ofiaruj złoto]szt. złota: Usuń kartę z talii.",
-        "[Zablokowane] Wymagania:szt. złota.",
-        "[Kontynuuj]",
-        "[Odejdź]Wybierz kartę do usunięcia."
+    "WORLD_OF_GOOP": {
+      "name": "Bagno",
+      "description": "Wpadasz w kałużę. \n TO SZLAMOWY GLUT! \n Rozpaczliwie próbujesz wygrzebać się z niego, czując jak powoli zaczyna palić twoją skórę. \n Czujesz maź w uszach, nosie, ABSOLUTNIE WSZĘDZIE. \n \n Po wydostaniu się zauważasz, że brakuje ci trochę złota. Zaglądając w kałużę spostrzegasz swoje zagubione monety, razem ze złotem innych pechowych podróżników.",
+      "choices": [
+        "[Zbierz złoto] Otrzymaj75szt. złota. Utrać11PŻ.",
+        "[Zostaw je] Utrać?szt. złota."
       ]
     },
-    "BIG_FISH": {
-      "name": "Przedostatnia Wieczerza",
-      "description": "Idąc wzdłuż wyjątkowo długiego korytarza zauważasz banana, pączka oraz pudełko, każde z nich lewitujące w powietrzu. Nie... po dokładniejszych oględzinach zauważasz, że zwisają one na cieniutkich sznurkach, wychodzących z otworów w stropie pomieszczenia. Gdy podchodzisz bliżej, z góry dobiega cichy chichot.\nCo robisz?",
-      "options": [
-        "[Banan] PrzywróćPŻ.",
-        "[Pączek] Maksymalne PŻ +.",
-        "[Pudełko] Otrzymaj 1 Artefakt. Otrzymaj Klątwę - Żal.",
-        "[Odejdź]"
-      ]
-    },
-    "BONFIRE_ELEMENTALS": {
-      "name": "Duchy Paleniska",
-      "description": "Natrafiasz na istoty wyglądające jak purpurowe duchy ognia, tańczące wokół potężnego paleniska.",
-      "options": [
-        "[Kontynuuj]",
-        "[Odejdź]",
-        "[Ofiaruj] Otrzymaj nagrodę zależną od ofiarowanej karty.Wybierz kartę do złożenia w ofierze."
-      ]
-    },
-    "CURSED_TOME": {
-      "name": "Przeklęta Księga",
-      "description": "W opuszczonej świątyni znajdujesz ogromną księgę, otwartą i upstrzoną zagadkowymi symbolami.\n\n Gdy próbujesz rozszyfrować ten zawiły tekst, wyrazy zaczynają zmieniać położenie i przekształcać całość w znany ci język.",
-      "options": [
-        "[Czytaj]",
-        "[Kontynuuj] Utrać 1 PŻ.",
-        "[Kontynuuj] Utrać 2 PŻ.",
-        "[Kontynuuj] Utrać 3 PŻ.",
-        "[Przestań] Utrać 3 PŻ.",
-        "[Zabierz] Otrzymaj Księgę. UtraćPŻ.",
-        "[Odejdź]"
-      ]
-    },
-    "DEAD_ADVENTURER": {
-      "name": "Martwy Podróżnik",
-      "description": "W trakcie przeszukiwania dobytku martwego podróżnika powraca bestia, która najprawdopodobniej zabiła nieszczęśnika.",
-      "options": [
-        "[Przeszukaj] Znajdź łup.",
-        "[Odejdź]",
-        "[Walcz]",
-        "[Kontynuuj] Znajdź łup.%: bestia powraca."
-      ]
-    },
-    "DRUG_DEALER": {
-      "name": "Naukowiec",
-      "description": "Podchodzi do ciebie mężczyzna z przepaską na oku i demonicznym uśmiechem.\n\"Witaj, nieznajomy. Masz ochotę na odrobinkę zaawansowanej nauki? Mogę uczynić cię silniejszym niż trening czy dowolne błogosławieństwo. Na pewno ci się przyda w twojej bohaterskiej i samobójczej misji.\"\n\n \"Więc co powiesz?\"",
-      "options": [
-        "[Przetestuj J.A.X.] Otrzymaj J.A.X.",
-        "[Zostań obiektem testowym] Podmień 2 karty.",
-        "[Wypij mutagen] Otrzymaj unikalny Artefakt.",
-        "[Odejdź]",
-        "[Zablokowane] Wymagania: przynajmniej 2 karty w talii.Wybierz karty do podmiany."
-      ]
-    },
-    "DUPLICATOR": {
-      "name": "Powielacz",
-      "description": "Natrafiasz na misternie ozdobioną kapliczkę poświęconą jakiemuś nieznanemu bóstwu.",
-      "options": [
-        "[Módl się] Duplikuje wybraną kartę z talii.",
-        "[Odejdź]Wybierz kartę do zduplikowania."
-      ]
-    },
-    "FALLING": {
-      "name": "Przepaść",
-      "description": "Zmierzając w górę, przeskakujesz z jednej lewitującej struktury na drugą, gdy nagle się potykasz.\n\n Zaczynasz spadać.",
-      "options": [
-        "[Kontynuuj]",
-        "[Wyląduj] Utrać",
-        "[Zablokowane] Wymagania: karta Umiejętności",
-        "[Przekieruj] Utrać",
-        "[Zablokowane] Wymagania: karta Mocy",
-        "[Uderz] Utrać",
-        "[Zablokowane] Wymagania: karta Ataku",
-        "[Odejdź]",
-        "[Wyląduj]"
-      ]
-    },
-    "FORGOTTEN_ALTAR": {
-      "name": "Zapomniany Ołtarz",
-      "description": "Widzisz przed sobą ołtarz jakiegoś zapomnianego bóstwa.\nNa ołtarzu stoi bogato zdobiona figura kobiety z rozpostartymi ramionami.\nWzywa ciebie, żądając ofiary.",
-      "options": [
-        "[Ofiaruj Złotego bożka] Otrzymaj unikalny Artefakt. Utrać Złotego bożka.",
-        "[Zablokowane] Wymagania: Złoty bożek.",
-        "[Ofiara] Otrzymajmaksymalnych PŻ. Utrać",
-        "[Zablokowane] Wymagania: człowieczeństwo.",
-        "[Zniszcz] Otrzymaj Klątwę - Rozkład."
+    "THE_LIBRARY": {
+      "name": "Biblioteka",
+      "description": "Natrafiasz na bogato zdobiony budynek, który wydaje się być opuszczony. \n Zauważasz leżącą na ziemi tabliczkę, najprawdopodobniej oderwaną od ściany. Widnieje na niej napis: \"BIBLIOTEKA\". \n Wewnątrz znajdujesz niezliczone ilości zwojów, manuskryptów i książek. \n Wybierasz jedeną z nich i rozsiadasz się wygodnie w krześle, aby zaznać chwili relaksu.",
+      "choices": [
+        "[Czytaj] Wybierz 1 z 20 kart i dodaj ją do talii.",
+        "[Śpij] Przywróć?PŻ."
       ]
     },
     "FOUNTAIN_OF_CLEANSING": {
       "name": "Boskie Źródło",
       "description": "Natrafiasz na wartki strumień wody wypływający z niewielkiej fontanny.",
-      "options": [
+      "choices": [
         "[Napij się] Usuń wszystkie Klątwy z talii.",
         "[Odejdź]"
       ]
     },
-    "GHOSTS": {
-      "name": "Rada Duchów",
-      "description": "W pewnym momencie twojej wspinaczki gęsty , czarny dym zaczyna wydobywać się spod ziemi oraz ze ścian wokół ciebie. Po chwili kłębowisko zaczyna przeobrażać się w trzy zamaskowane postacie które zwracają się w twoją stronę.\n\n \"Kolejna marionetka Neow.\"\n\"PRAWDA! ONA TWORZY NAJLEPSZE ZABAWKI!\"\n\n Pod maską trzeciej postaci zauważasz przesadnie szeroki uśmiech.\n\"Zignoruj ich... Nie masz może ochoty posmakować naszej mocy?\"",
-      "options": [
-        "[Zgódź się] Otrzymaj 5 kart Duchowej formy. Utraćmaksymalnych PŻ.",
-        "[Odmów]",
-        "[Zgódź się] Otrzymaj 3 karty Duchowej formy. Utrać",
-        "[Odejdź]"
-      ]
-    },
-    "GOLDEN_IDOL": {
-      "name": "Złoty Bożek",
-      "description": "Natrafiasz na niepozornie wyglądający piedestał z błyszczącym złotym bożkiem. Wygląda na wartościowego.\n\n Na pierwszy rzut oka, brak śladu jakichkolwiek pułapek.",
-      "options": [
-        "[Weź] Otrzymaj Złotego bożka. Uruchamiasz pułapkę.",
-        "[Odejdź]",
-        "[Uciekaj] Otrzymaj Klątwę - Kontuzja.",
-        "[Zatrzymaj go] UtraćPŻ.",
-        "[Przylgnij do ściany] Utraćmaksymalnych PŻ."
-      ]
-    },
-    "GOLDEN_SHRINE": {
-      "name": "Złota Kapliczka",
-      "description": "Natrafiasz na ciekawie wyglądającą kapliczkę poświęconą starożytnemu duchowi.",
-      "options": [
-        "[Módl się] Otrzymajszt. złota.",
-        "[Zniszcz] Otrzymaj 250 szt. złota. Otrzymaj Klątwę - Żal.",
-        "[Odejdź]"
-      ]
-    },
-    "GOLDEN_WING": {
-      "name": "Skrzydlata Statua",
-      "description": "W gruzowisku zauważasz intrygującą, przypominającą skrzydło, statuę o niebieskiej barwie.\nDostrzegasz wysypujące się z jej szczelin złoto. Może w środku jest go więcej...",
-      "options": [
-        "[Módl się] Usuń kartę z talii. UtraćPŻ.",
-        "[Zniszcz] Zyskaj-",
-        "[Zablokowane] Wymagania: karta zadającalub więcej pkt. obrażeń.",
-        "[Odejdź]",
-        "[Kontynuuj]Wybierz kartę do usunięcia."
-      ]
-    },
-    "KNOWING_SKULL": {
-      "name": "Wszechwiedząca Czaszka",
-      "description": "Znajdujesz się w starej, zdobionej komnacie. W jej centrum, na kunsztownym piedestale, leży sporych rozmiarów czaszka. Gdy się do niej zbliżasz, czaszka staje w płomieniach, po czym zwraca się w twoją stronę.",
-      "options": [
-        "[Kontynuuj]PŻ.",
-        "[Informacji?] Odkryj Bossa. Utrać",
-        "[Sukcesu?] Otrzymujesz bezbarwną kartę. Utrać",
-        "[Wzocnienia?] Otrzymaj miksturę. Utrać",
-        "[Bogactwa?] Otrzymajszt. złota. Utrać",
-        "[Wyjścia stąd?] Utrać",
-        "[Odejdź]"
-      ]
-    },
-    "LAB": {
-      "name": "Laboratorium",
-      "description": "Natrafiasz na pomieszczenie wypełnione probówkami, zlewkami, kolbami, pęsetami, klamrami zaciskowymi, mieszadełkami, szczypcami, goglami, lejkami, pipetami, cylindrami, chłodnicami i zauważasz nawet rzadką spiralną kolbę laboratoryjną.\n\n Skąd w ogóle znasz nazwy tych wszystkich obiektów?\nNie ma to znaczenia, bo i tak rozglądasz się po pokoju.",
-      "options": [
-        "[Przeszukaj] Znajdź kilka mikstur!"
-      ]
-    },
-    "LIARS_GAME": {
-      "name": "Gadzina",
-      "description": "Przechodząc przez pomieszczenie widzisz dziurę w ziemi. Gdy podchodzisz bliżej, wyłania się z niej ogromne stworzenie, wyglądem przypominające węża.\n\n \"Ho ho! Proszę, proszę! Co my tu mamy? Witaj podróżniku. Zadam ci prossste pytanie.\nNajbardziej sssatysfakcjonujące życie to takie, w którym możesz sobie pozwolić na wszyssstko!\nZgadzasz ssssię ze mną?\"",
-      "options": [
-        "[Zgódź się] Otrzymajszt. złota. Otrzymaj Klątwę - Zwątpienie.",
-        "[Nie zgódź się]",
-        "[Kontynuuj]",
-        "[Odejdź]"
-      ]
-    },
-    "LIVING_WALL": {
-      "name": "Żywa Ściana",
-      "description": "Ślepy zaułek! Odwracasz się, żeby zawrócić. Nagle z góry z łoskotem spada ściana, zagradzając drogę!\n\n Z trzech stron wyłaniają się twarze i mówią:\n\"Zapomnij o czym wiesz i wolność swą odbierz.\"\n\"Do przejścia zmiana jest wymagana.\"\n\"Jeżeli chcesz mnie ominąć, musisz się rozwinąć.\"",
-      "options": [
-        "[Zapomnij] Usuń kartę z talii.",
-        "[Zmień się] Podmień kartę z talii.",
-        "[Rozwiń się] Ulepsz kartę z talii.Wybierz kartę do usunięcia.",
-        "[Odejdź]",
+    "UPGRADE_SHRINE": {
+      "name": "Dobrodziej",
+      "description": "Natrafiasz na intrygującą kapliczkę, poświęconą nieznanemu bóstwu.",
+      "choices": [
+        "[Módl się] Ulepsz kartę.",
+        "[Odejdź] Wybierz kartę do ulepszenia.",
         "[Zablokowane] Wymagania: karta, którą można ulepszyć."
-      ]
-    },
-    "MASKED_BANDITS": {
-      "name": "Zamaskowani Bandyci",
-      "description": "He he.. Dzięki za złoto!\nOh, jak ja kocham złote monety. Są takie piękne.\nBłyszczące cudeńka!",
-      "options": [
-        "[Zapłać] Utrać CAŁE swoje złoto.",
-        "[Walcz!]",
-        "[Kontynuuj]",
-        "[Odejdź]"
       ]
     },
     "MATCH_AND_KEEP": {
       "name": "Dopasuj i Zabierz!",
-      "description": "\"Mam dwanaście kart! Dopasuj je, aby zabrać je ze sobą! Pięć prób, zero powtórek.\nTo co, tasujemy?\"",
-      "options": [
+      "description": "\"Mam dwanaście kart! Dopasuj je, aby zabrać je ze sobą! Pięć prób, zero powtórek. \n To co, tasujemy?\"",
+      "choices": [
         "[Kontynuuj]",
         "[Odejdź]",
-        "[Graj]Pozostałe próby:"
+        "[Graj] Pozostałe próby:"
+      ]
+    },
+    "BONFIRE_ELEMENTALS": {
+      "name": "Duchy Paleniska",
+      "description": "Natrafiasz na istoty wyglądające jak purpurowe duchy ognia, tańczące wokół potężnego paleniska.",
+      "choices": [
+        "[Kontynuuj]",
+        "[Odejdź]",
+        "[Ofiaruj] Otrzymaj nagrodę zależną od ofiarowanej karty. Wybierz kartę do złożenia w ofierze."
+      ]
+    },
+    "ADDICT": {
+      "name": "Dziad Proszalny",
+      "description": "Podczas próby ominięcia grupy zakapturzonych postaci, jedna z nich zauważa cię i podchodzi do ciebie. \n \"Masz może coś dla mnie, przyjacielu? Proszę... może kilka złotych monet?\" \n \"Potrzebuję jedynie miejsca na nocleg. Mam skarby, które mogę przehandlować...\" \n Wygląda na wariata, ale raczej nieszkodliwego.",
+      "choices": [
+        "[Ofiaruj złoto]85szt. złota: Otrzymaj Artefakt.",
+        "[Okradnij] Otrzymaj Artefakt. Otrzymaj Klątwę - Wstyd.",
+        "[Odejdź]"
+      ]
+    },
+    "LIARS_GAME": {
+      "name": "Gadzina",
+      "description": "Przechodząc przez pomieszczenie widzisz dziurę w ziemi. Gdy podchodzisz bliżej, wyłania się z niej ogromne stworzenie, wyglądem przypominające węża. \n \n \"Ho ho! Proszę, proszę! Co my tu mamy? Witaj podróżniku. Zadam ci prossste pytanie. \n Najbardziej sssatysfakcjonujące życie to takie, w którym możesz sobie pozwolić na wszyssstko! \n Zgadzasz ssssię ze mną?\"",
+      "choices": [
+        "[Zgódź się] Otrzymaj150szt. złota. Otrzymaj Klątwę - Zwątpienie.",
+        "[Nie zgódź się]"
+      ]
+    },
+    "NEST": {
+      "name": "Gniazdo",
+      "description": "Widzisz długą kolejkę zakapturzonych postaci wchodzących do \n niesamowitej katedry.",
+      "choices": [
+        "[Zostań] Otrzymaj Rytualny Sztylet. Utrać99PŻ.",
+        "[Okradnij] Otrzymaj"
       ]
     },
     "MUSHROOMS": {
       "name": "Grzybki",
-      "description": "Poddajesz się tej nienaturalnej żądzy. Jedząc grzyba za grzybem, czujesz jak świat zaczyna wirować, a potem mdlejesz. Po przebudzeniu czujesz, że coś jest z tobą nie tak.\nOdzyskujesz 25% PŻ, ale łapiesz też infekcję.",
-      "options": [
+      "description": "Poddajesz się tej nienaturalnej żądzy. Jedząc grzyba za grzybem, czujesz jak świat zaczyna wirować, a potem mdlejesz. Po przebudzeniu czujesz, że coś jest z tobą nie tak. \n Odzyskujesz 25% PŻ, ale łapiesz też infekcję.",
+      "choices": [
         "[Rozdepcz] Rozgniewasz grzyby.",
-        "[Zjedz] PrzywróćPŻ. Otrzymaj Klątwę - Pasożyt.",
+        "[Zjedz] Przywróć PŻ. Otrzymaj Klątwę - Pasożyt.",
         "[Walcz]",
         "[Odejdź]"
       ]
     },
-    "MYSTERIOUS_SPHERE": {
-      "name": "Tajemnicza Sfera",
-      "description": "Natrafiasz na sterczącą z ziemi tajemniczą, kościaną sferę. W jej wnętrzu znajduje się, otoczony zjawiskową poświatą, obiekt.\nPodczas gdy ciekawość każe ci zajrzeć do środka, spostrzegasz kilku nieruchomych wartowników, uważnie pilnujących sfery.",
-      "options": [
-        "[Otwórz sferę] Potyczka. Nagroda: rzadki Artefakt.",
+    "THE_MOAI_HEAD": {
+      "name": "Głowa Moai",
+      "description": "Natrafiasz na *bardzo* dziwne pomieszczenie. Ze ściany o parę kroków przed tobą wyłania się wielka, kamienna głowa. \n Jej usta są szeroko otwarte i odsłaniają ogromne zęby, dosłownie skąpane we krwi. Powierzchnia głowy upstrzona jest rycinami, które wskazują na to, że ludzie wskakują w usta, aby dać się pożreć. Pytanie brzmi – czemu?",
+      "choices": [
+        "[Wskocz] Przywróć utracone PŻ. Utrać?maksymalnych PŻ.",
+        "[Ofiaruj Złotego bożka] Otrzymaj 333 szt. złota. Utrać Złotego bożka."
+      ]
+    },
+    "FACETRADER": {
+      "name": "Handlarz Twarzami",
+      "description": "Mijasz upiorną, sześcioramienną statuę trzymającą kilka masek... \n Nagle coś za tobą łagodnie szepcze, \n \"Stój.\"",
+      "choices": [
+        "[Pozwól] Utrać szt. złota.",
+        "[Wymiana] 50%: Dobra Twarz. 50%: Zła Twarz.",
         "[Odejdź]",
-        "[Walcz]"
+        "[Kontynuuj] PŻ, otrzymaj"
       ]
     },
-    "N_LOTH": {
-      "name": "N'loth",
-      "description": "Dziwna istota z garbem z którego wyrasta kilka macek, grzebie w znajdującej się przed tobą stercie śmieci i odpadków. Gdy się do niej zbliżasz, stworzenie podczłapuje do ciebie.\n\"N'loth głodny. Nakarm N'loth'a.\"",
-      "options": [
-        "[Ofiaruj:] Utrać ten Artefakt. Otrzymaj unikalny Artefakt.",
-        "[Odejdź]"
+    "DESIGNER": {
+      "name": "In-Spirujący Twórca",
+      "description": "Odkrywasz kolorowy sklepik z szyldem \"IN-SPIRACJE\". Wchodzisz do środka, będąc ciekaw co tam ujrzysz. \n \"O nie, nie ma mowy. Nie, nie możesz tu wejść!\" \n \n Dziwacznie ubrany mężczyzna pojawia się przy wejściu i zagradza ci drogę.",
+      "choices": [
+        "[Kontynuuj]",
+        "[Modyfikacje] Utrać",
+        "[Czyszczenie] Utrać",
+        "[Pełna obsługa] Utrać",
+        "[Uderz] Utrać PŻ. szt. złota. Ulepsz losowe karty. Ulepsz kartę. Usuń kartę. Podmień . karty. Usuń kartę oraz ulepsz losową kartę.",
+        "[Odejdź] Wybierz kartę do ulepszenia. Wybierz 2. karty do podmiany. Wybierz kartę do usunięcia."
       ]
     },
-    "PURIFIER": {
-      "name": "Oczyszczenie",
-      "description": "Natrafiasz na ciekawie ozdobioną kapliczkę, poświęconą nieznanemu bóstwu.",
-      "options": [
-        "[Módl się] Usuń kartę z talii.",
-        "[Odejdź]Wybierz kartę do usunięcia."
-      ]
-    },
-    "SCRAP_OOZE": {
-      "name": "Złomoglut",
-      "description": "Wchodząc do pomieszczenia słyszysz bulgot oraz zgrzyt metalu. Widzisz przed sobą szlamową istotę, która zjadła zdecydowanie za dużo żelastwa.\nZ wnętrza istoty wydobywa się dziwne światło, czyżby czegoś magicznego? Być może uda ci się wydobyć ze stwora coś wartościowego, jeżeli tylko sięgniesz do... środka. Jednakże, żrąca maź i ostre kawałki mogą cię zranić.",
-      "options": [
-        "[Sięgnij do środka] UtraćPŻ.",
-        "[Odejdź]",
-        "[Głębiej] Utrać"
-      ]
-    },
-    "SECRETPORTAL": {
-      "name": "Sekretny Portal",
-      "description": "Wędrując poprzez obcy krajobraz natrafiasz na niecodzienny, nawet jak na to miejsce, widok. W jednej z żywych ścian Pogranicza znajduje się ogrodzone wejście za którym kłębi się magiczny portal.\n\n Nie masz pojęcia dokąd prowadzi, ale być może przyspieszy twoją podróż przez Iglicę.",
-      "options": [
-        "[Przejdź przez portal] Natychmiast przenieś się do bossa.",
+    "SHINING_LIGHT": {
+      "name": "Jaśniejące światło",
+      "description": "Natrafiasz na migotliwą koncentrację światła, znajdującą się w centrum pomieszczenia. \n \n Ciepły blask i hipnotyzujące wzory zapraszają cię do środka.",
+      "choices": [
+        "[Wejdź] Ulepsz 2 losowe karty. Utrać20%PŻ.",
         "[Odejdź]"
       ]
     },
     "SENSORYSTONE": {
       "name": "Kamień doznań",
       "description": "Przemierzając Pogranicze natrafiasz na wirujący w powietrzu połyskujący hipersześcian o zmiennej strukturze.",
-      "options": [
+      "choices": [
         "[Przypomnij] Dodaj 1 bezbarwną kartę do swojej talii.",
         "[Przypomnij] Dodaj 2 bezbarwne karty do swojej talii. Utrać",
-        "[Przypomnij] Dodaj 3 bezbarwne karty do swojej talii. UtraćPŻ.",
+        "[Przypomnij] Dodaj 3 bezbarwne karty do swojej talii. Utrać PŻ.",
         "[Odejdź]",
         "[Dotknij]"
       ]
     },
-    "SHINING_LIGHT": {
-      "name": "Jaśniejące światło",
-      "description": "Natrafiasz na migotliwą koncentrację światła, znajdującą się w centrum pomieszczenia.\n\n Ciepły blask i hipnotyzujące wzory zapraszają cię do środka.",
-      "options": [
-        "[Wejdź] Ulepsz 2 losowe karty. UtraćPŻ.",
-        "[Odejdź]",
-        "[Zablokowane] Wymagania: karty, które można ulepszyć."
-      ]
-    },
-    "SPIRE_HEART": {
-      "name": "Serce Iglicy",
-      "description": "Du-dum ... du-dum ... du-dum ...\nGłęboki, pulsujący strach przenika całe pomieszczenie...\nCzy to serce Iglicy? Źródło wszelkiego zła?",
-      "options": [
-        "[Kontynuuj]",
-        "[Atakuj] ???",
-        "[Śpij]",
-        "[Podejdź do drzwi]"
-      ]
-    },
     "THE_CLERIC": {
       "name": "Kleryk",
-      "description": "Nietuzinkowy, niebieski humanoid w złotym hełmie(?) podchodzi do ciebie, nieustannie się uśmiechając.\n\"Witaj przyjacielu! Jestem Klerykiem! Może zainteresują cię moje usługi?!\" – wykrzyknęła ta przedziwna istota.",
-      "options": [
-        "[Ulecz] 35 szt. złota: Przywróć",
-        "[Zablokowane] Wymagania:szt. złota.",
-        "[Oczyść]szt. złota: Usuń kartę z talii.",
-        "[Zablokowane] Wymagania: 50 szt. złota.",
-        "[Odejdź]Wybierz kartę do usunięcia."
-      ]
-    },
-    "THE_JOUST": {
-      "name": "Pojedynek",
-      "description": "Przechodząć przez ogromne pomieszczenie docierasz do wąskiego i długiego mostu. Spostrzegasz, że na każdym z jego końców stoi rycerz. Podchodzisz...\n\"Stać!\"\n\n Rycerz, wymachując swoją lancą, zmusza cię do zatrzymania się.",
-      "options": [
-        "[Kontynuuj]",
-        "[Morderca] Postawszt. złota - 70% szans na zwycięstwo",
-        "[Rycerz] Postawszt. złota - 30% szans na zwycięstwo",
-        "[Oglądaj]",
-        "[Odejdź]"
-      ]
-    },
-    "THE_LIBRARY": {
-      "name": "Biblioteka",
-      "description": "Natrafiasz na bogato zdobiony budynek, który wydaje się być opuszczony.\nZauważasz leżącą na ziemi tabliczkę, najprawdopodobniej oderwaną od ściany. Widnieje na niej napis: \"BIBLIOTEKA\".\nWewnątrz znajdujesz niezliczone ilości zwojów, manuskryptów i książek.\nWybierasz jedeną z nich i rozsiadasz się wygodnie w krześle, aby zaznać chwili relaksu.",
-      "options": [
-        "[Czytaj] Wybierz 1 z 20 kart i dodaj ją do talii.",
-        "[Śpij] PrzywróćPŻ.",
-        "[Odejdź]Dodaj kartę do talii."
-      ]
-    },
-    "THE_MAUSOLEUM": {
-      "name": "Mauzoleum",
-      "description": "Przemierzając kolejne grobowce, natrafiasz na ogromny sarkofag wysadzany klejnotami, stojący na samym środku okrągłego pomieszczenia.\nNie możesz odczytać zapisanych na nim inskrypcji, ale dostrzegasz czarną mgłę wydobywającą się z niego.",
-      "options": [
-        "[Otwórz sarkofag] Otrzymaj 1 Artefakt.% szansy na Klątwę - Cierpienie.",
-        "[Odejdź]"
-      ]
-    },
-    "THE_MOAI_HEAD": {
-      "name": "Głowa Moai",
-      "description": "Natrafiasz na bardzo dziwne pomieszczenie. Ze ściany o parę kroków przed tobą wyłania się wielka, kamienna głowa.\nJej usta są szeroko otwarte i odsłaniają ogromne zęby, dosłownie skąpane we krwi. Powierzchnia głowy upstrzona jest rycinami, które wskazują na to, że ludzie wskakują w usta, aby dać się pożreć. Pytanie brzmi – czemu?",
-      "options": [
-        "[Wskocz] Przywróć utracone PŻ. Utraćmaksymalnych PŻ.",
-        "[Ofiaruj Złotego bożka] Otrzymaj 333 szt. złota. Utrać Złotego bożka.",
-        "[Zablokowane] Wymagania: Złoty bożek.",
+      "description": "Nietuzinkowy, niebieski humanoid w złotym hełmie(?) podchodzi do ciebie, nieustannie się uśmiechając. \n \"Witaj przyjacielu! Jestem Klerykiem! Może zainteresują cię moje usługi?!\" – wykrzyknęła ta przedziwna istota.",
+      "choices": [
+        "[Ulecz] 35 szt. złota: Przywróć⅓ Max PŻ.",
+        "[Oczyść]50szt. złota: Usuń kartę z talii.",
         "[Odejdź]"
       ]
     },
     "THE_WOMAN_IN_BLUE": {
       "name": "Kobieta w Błękicie",
-      "description": "Z ciemności wyłania się ręka, która wciąga cię do małego sklepu. W środku dostrzegasz bladą, schludnie ubraną kobietę wskazującą na ścianę pełną mikstur.\n\"Kup miksturę. Teraz!\"",
-      "options": [
+      "description": "Z ciemności wyłania się ręka, która wciąga cię do małego sklepu. W środku dostrzegasz bladą, schludnie ubraną kobietę wskazującą na ścianę pełną mikstur. \n \"Kup miksturę. Teraz!\"",
+      "choices": [
         "[Kup 1 miksturę]",
         "[Kup 2 mikstury]",
-        "[Kup 3 mikstury]szt. złota",
+        "[Kup 3 mikstury] szt. złota",
         "[Odejdź]",
-        "[Odejdź] UtraćPŻ."
+        "[Odejdź] Utrać PŻ."
       ]
     },
-    "THINKING_WITH_PUDDLES": {
-      "name": "Łamigłówka z Kałużami",
-      "description": "Wchodzisz w połyskującą kałużę... i wypadasz z sufitu zaraz nad nią!\nPodczas spadku rozważasz swoje opcje.",
-      "options": [
-        "[Ogłupienie] Utrać losową rzadką kartę.",
-        "[Wyląduj twarzą] UtraćPŻ. Otrzymaj Klątwę - Kontuzja.",
-        "[Odejdź]"
-      ]
-    },
-    "TOMB_OF_LORD_RED_MASK": {
-      "name": "Krypta Czerwonej Maski",
-      "description": "Po drugiej stronie lewitującej ścieżki zauważasz misternie ozdobioną kryptę. Po dotarciu do niej, twoje oko przykuwa otwór na złote monety z wydrapaną powyżej inskrypcją – niestety, zupełnie nieczytelną.",
-      "options": [
-        "[Załóż Czerwoną maskę] Otrzymaj 222 szt. złota.",
-        "[Zablokowane] Wymagania: Czerwona maska.",
-        "[Ofiaruj:szt. złota] Utrać całe złoto. Otrzymaj Artefakt.",
-        "[Odejdź]"
-      ]
-    },
-    "TRANSMORGRIFIER": {
-      "name": "Zmiennokarty",
-      "description": "Natrafiasz na intrygującą kapliczkę poświęconą nieznanemu bóstwu.",
-      "options": [
-        "[Módl się] Podmień kartę.",
-        "[Odejdź]Wybierz kartę do podmiany."
-      ]
-    },
-    "UPGRADE_SHRINE": {
-      "name": "Dobrodziej",
-      "description": "Natrafiasz na intrygującą kapliczkę, poświęconą nieznanemu bóstwu.",
-      "options": [
-        "[Módl się] Ulepsz kartę.",
-        "[Odejdź]Wybierz kartę do ulepszenia.",
-        "[Zablokowane] Wymagania: karta, którą można ulepszyć."
-      ]
-    },
-    "VAMPIRES": {
-      "name": "Wampiry(?)",
-      "description": "Idąc wzdłuż spowitej mrokiem ulicy, dostrzegasz grupę zakapturzonych postaci, odprawiających jakiś mroczny rytuał. Gdy się zbliżasz, jednocześnie zwracają się w twoją stronę. Najwyższy z nich obnaża długie kły i wyciąga w twoją stronę chudą, bladą rękę.\n\"Dołącz do nas bracie i poczuj żar Iglicy.\"",
-      "options": [
-        "[Zgódź się] Usuń karty Uderzeń. Zyskaj 5 kart Ugryzień. Utrać% maksymalnych PŻ.",
-        "[Odmów]",
-        "[Utrać –] Usuń karty Uderzeń. Zyskaj 5 kart Ugryzień.",
-        "[Odejdź]"
+    "COLOSSEUM": {
+      "name": "Koloseum",
+      "description": "Trach!!! \n .. \n ...... \n ... \n Uderzenie pozbawia cię przytomności...",
+      "choices": [
+        "[Kontynuuj]",
+        "[Walcz]",
+        "[STCHÓRZ] Ucieknij.",
+        "[ZWYCIĘŻ] Trudna walka z wieloma nagrodami."
       ]
     },
     "WHEEL_OF_CHANGE": {
       "name": "Koło Lepszej Zmiany",
-      "description": "Natrafiasz na dostojnie wyglądającego gremlina.\n\"Czas puścić koło w ruch! Jesteś G O T Ó W ? Oczywiście, że jesteś!\"",
-      "options": [
+      "description": "Natrafiasz na dostojnie wyglądającego gremlina. \n \"Czas puścić koło w ruch! Jesteś G O T Ó W ? Oczywiście, że jesteś!\"",
+      "choices": [
         "[Graj]",
         "[Nagroda!] HURRA!",
         "[Nagroda!] Otrzymaj Artefakt.",
         "[Nagroda!] Przywróć utracone PŻ.",
         "[Nagroda?] Klątwa - Rozkład.",
         "[Nagroda!] Usuń kartę z talii.",
-        "[Nagroda?] UtraćPŻ.",
-        "[Odejdź]Wybierz kartę do usunięcia."
+        "[Nagroda?] Utrać PŻ.",
+        "[Odejdź] Wybierz kartę do usunięcia."
+      ]
+    },
+    "TOMB_OF_LORD_RED_MASK": {
+      "name": "Krypta Czerwonej Maski",
+      "description": "Po drugiej stronie lewitującej ścieżki zauważasz misternie ozdobioną kryptę. Po dotarciu do niej, twoje oko przykuwa otwór na złote monety z wydrapaną powyżej inskrypcją – niestety, zupełnie nieczytelną.",
+      "choices": [
+        "[Załóż Czerwoną maskę] Otrzymaj 222 szt. złota.",
+        "[Zablokowane] Wymagania: Czerwona maska.",
+        "[Ofiaruj: szt. złota] Utrać całe złoto. Otrzymaj Artefakt.",
+        "[Odejdź]"
       ]
     },
     "WINDING_HALLS": {
       "name": "Kręte Korytarze",
-      "description": "Z każdym krokiem w głąb krętych korytarzy czujesz, że coraz bardziej gubisz drogę, a ściany zmieniają swoje położenie na twoich oczach.\n\n Te szepty z tyłu głowy również nie pomagają.",
-      "options": [
-        "[Popadnij w obłęd] Otrzymaj 2 karty Szaleństwa. UtraćPŻ.",
+      "description": "Z każdym krokiem w głąb krętych korytarzy czujesz, że coraz bardziej gubisz drogę, a ściany zmieniają swoje położenie na twoich oczach. \n \n Te szepty z tyłu głowy również nie pomagają.",
+      "choices": [
+        "[Popadnij w obłęd] Otrzymaj 2 karty Szaleństwa. Utrać PŻ.",
         "[Skup się] Otrzymaj Klątwę - Cierpienie. Przywróć",
-        "[Odejdź]PŻ.",
-        "[Odtwórz przebytą drogę] Utraćmaks. PŻ."
+        "[Odejdź] PŻ.",
+        "[Odtwórz przebytą drogę] Utrać maks. PŻ."
       ]
     },
-    "WORLD_OF_GOOP": {
-      "name": "Bagno",
-      "description": "Wpadasz w kałużę.\nTO SZLAMOWY GLUT!\nRozpaczliwie próbujesz wygrzebać się z niego, czując jak powoli zaczyna palić twoją skórę.\nCzujesz maź w uszach, nosie, ABSOLUTNIE WSZĘDZIE.\n\n Po wydostaniu się zauważasz, że brakuje ci trochę złota. Zaglądając w kałużę spostrzegasz swoje zagubione monety, razem ze złotem innych pechowych podróżników.",
-      "options": [
-        "[Zbierz złoto] Otrzymajszt. złota. Utrać",
-        "[Zostaw je] Utraćszt. złota.",
+    "LAB": {
+      "name": "Laboratorium",
+      "description": "Natrafiasz na pomieszczenie wypełnione probówkami, zlewkami, kolbami, pęsetami, klamrami zaciskowymi, mieszadełkami, szczypcami, goglami, lejkami, pipetami, cylindrami, chłodnicami i zauważasz nawet rzadką spiralną kolbę laboratoryjną. \n \n Skąd w ogóle znasz nazwy tych wszystkich obiektów? \n Nie ma to znaczenia, bo i tak rozglądasz się po pokoju.",
+      "choices": [
+        "[Przeszukaj] Znajdź kilka mikstur!"
+      ]
+    },
+    "DEAD_ADVENTURER": {
+      "name": "Martwy Podróżnik",
+      "description": "W trakcie przeszukiwania dobytku martwego podróżnika powraca bestia, która najprawdopodobniej zabiła nieszczęśnika.",
+      "choices": [
+        "[Przeszukaj] Znajdź łup.",
+        "[Odejdź]",
+        "[Walcz]",
+        "[Kontynuuj] Znajdź łup. %: bestia powraca."
+      ]
+    },
+    "THE_MAUSOLEUM": {
+      "name": "Mauzoleum",
+      "description": "Przemierzając kolejne grobowce, natrafiasz na ogromny sarkofag wysadzany klejnotami, stojący na samym środku okrągłego pomieszczenia. \n Nie możesz odczytać zapisanych na nim inskrypcji, ale dostrzegasz czarną mgłę wydobywającą się z niego.",
+      "choices": [
+        "[Otwórz sarkofag] Otrzymaj 1 Artefakt.50%% szansy na Klątwę - Cierpienie.",
         "[Odejdź]"
+      ]
+    },
+    "N_LOTH": {
+      "name": "N'loth",
+      "description": "Dziwna istota z garbem z którego wyrasta kilka macek, grzebie w znajdującej się przed tobą stercie śmieci i odpadków. Gdy się do niej zbliżasz, stworzenie podczłapuje do ciebie. \n \"N'loth głodny. Nakarm N'loth'a.\"",
+      "choices": [
+        "[Ofiaruj: ] Utrać ten Artefakt. Otrzymaj unikalny Artefakt.",
+        "[Odejdź]"
+      ]
+    },
+    "DRUG_DEALER": {
+      "name": "Naukowiec",
+      "description": "Podchodzi do ciebie mężczyzna z przepaską na oku i demonicznym uśmiechem. \n \"Witaj, nieznajomy. Masz ochotę na odrobinkę zaawansowanej nauki? Mogę uczynić cię silniejszym niż trening czy dowolne błogosławieństwo. Na pewno ci się przyda w twojej bohaterskiej i samobójczej misji.\" \n \n \"Więc co powiesz?\"",
+      "choices": [
+        "[Przetestuj J.A.X.] Otrzymaj J.A.X.",
+        "[Zostań obiektem testowym] Podmień 2 karty.",
+        "[Wypij mutagen] Otrzymaj unikalny Artefakt.",
+        "[Odejdź]",
+        "[Zablokowane] Wymagania: przynajmniej 2 karty w talii. Wybierz karty do podmiany."
+      ]
+    },
+    "PURIFIER": {
+      "name": "Oczyszczenie",
+      "description": "Natrafiasz na ciekawie ozdobioną kapliczkę, poświęconą nieznanemu bóstwu.",
+      "choices": [
+        "[Módl się] Usuń kartę z talii.",
+        "[Odejdź] Wybierz kartę do usunięcia."
+      ]
+    },
+    "THE_JOUST": {
+      "name": "Pojedynek",
+      "description": "Przechodząć przez ogromne pomieszczenie docierasz do wąskiego i długiego mostu. Spostrzegasz, że na każdym z jego końców stoi rycerz. Podchodzisz... \n \"Stać!\" \n \n Rycerz, wymachując swoją lancą, zmusza cię do zatrzymania się.",
+      "choices": [
+        "[Kontynuuj]",
+        "[Rycerz] Postaw50szt. złota - 30% szans na zwycięstwo250szt. złota.",
+        "[Oglądaj]"
+      ]
+    },
+    "DUPLICATOR": {
+      "name": "Powielacz",
+      "description": "Natrafiasz na misternie ozdobioną kapliczkę poświęconą jakiemuś nieznanemu bóstwu.",
+      "choices": [
+        "[Módl się] Duplikuje wybraną kartę z talii.",
+        "[Odejdź] Wybierz kartę do zduplikowania."
+      ]
+    },
+    "BIG_FISH": {
+      "name": "Przedostatnia Wieczerza",
+      "description": "Idąc wzdłuż wyjątkowo długiego korytarza zauważasz banana, pączka oraz pudełko, każde z nich lewitujące w powietrzu. Nie... po dokładniejszych oględzinach zauważasz, że zwisają one na cieniutkich sznurkach, wychodzących z otworów w stropie pomieszczenia. Gdy podchodzisz bliżej, z góry dobiega cichy chichot. \n Co robisz?",
+      "choices": [
+        "[Banan] Przywróć⅓ Max PŻ.",
+        "[Pączek] Maksymalne PŻ +5.",
+        "[Pudełko] Otrzymaj 1 Artefakt. Otrzymaj Klątwę - Żal.",
+        "[Odejdź]"
+      ]
+    },
+    "CURSED_TOME": {
+      "name": "Przeklęta Księga",
+      "description": "W opuszczonej świątyni znajdujesz ogromną księgę, otwartą i upstrzoną zagadkowymi symbolami. \n \n Gdy próbujesz rozszyfrować ten zawiły tekst, wyrazy zaczynają zmieniać położenie i przekształcać całość w znany ci język.",
+      "choices": [
+        "[Czytaj]",
+        "[Kontynuuj] Utrać 1 PŻ.",
+        "[Kontynuuj] Utrać 2 PŻ.",
+        "[Kontynuuj] Utrać 3 PŻ.",
+        "[Przestań] Utrać 3 PŻ.",
+        "[Zabierz] Otrzymaj Księgę. Utrać?PŻ.",
+        "[Odejdź]"
+      ]
+    },
+    "FALLING": {
+      "name": "Przepaść",
+      "description": "Zmierzając w górę, przeskakujesz z jednej lewitującej struktury na drugą, gdy nagle się potykasz. \n \n Zaczynasz spadać.",
+      "choices": [
+        "[Kontynuuj]a Skill[Wyląduj] Utrać",
+        "[Zablokowane] Wymagania: karta Umiejętnościa Power[Przekieruj] Utrać",
+        "[Zablokowane] Wymagania: karta Mocyan Attack[Uderz] Utrać"
+      ]
+    },
+    "GHOSTS": {
+      "name": "Rada Duchów",
+      "description": "W pewnym momencie twojej wspinaczki gęsty , czarny dym zaczyna wydobywać się spod ziemi oraz ze ścian wokół ciebie. Po chwili kłębowisko zaczyna przeobrażać się w trzy zamaskowane postacie które zwracają się w twoją stronę. \n \n \"Kolejna marionetka Neow.\" \n \"PRAWDA! ONA TWORZY NAJLEPSZE ZABAWKI!\" \n \n Pod maską trzeciej postaci zauważasz przesadnie szeroki uśmiech. \n \"Zignoruj ich... Nie masz może ochoty posmakować naszej mocy?\"",
+      "choices": [
+        "[Zgódź się] Otrzymaj 5 kart Duchowej formy. Utrać?maksymalnych PŻ.",
+        "[Odmów]"
       ]
     },
     "MINDBLOOM": {
       "name": "Rozkwit Umysłu",
-      "description": "Podczas podróży przez Iglicę, nagle zaczynasz się czuć bardzo... prawdziwie...\n\n Wyobrażenia potworów i bogactw zaczynają się maifestować.\nCzujesz, że to uczucie jest bardzo przelotne. Co robisz?",
-      "options": [
+      "description": "Podczas podróży przez Iglicę, nagle zaczynasz się czuć bardzo... prawdziwie... \n \n Wyobrażenia potworów i bogactw zaczynają się maifestować. \n Czujesz, że to uczucie jest bardzo przelotne. Co robisz?",
+      "choices": [
         "[Jestem Wojną] Walcz z Bossem z Aktu 1. Otrzymaj rzadki Artefakt.",
         "[Jestem Bogaczem] Otrzymaj 999 szt. złota. Otrzymaj 2. Klątwy - Przeciętność.",
         "[Jestem Okazem Zdrowia] Przywróć utracone PŻ. Otrzymaj Klątwę - Zwątpienie.",
@@ -4125,70 +3986,161 @@
         "[Odejdź]"
       ]
     },
-    "NEST": {
-      "name": "Gniazdo",
-      "description": "Widzisz długą kolejkę zakapturzonych postaci wchodzących do\nniesamowitej katedry.",
-      "options": [
-        "[Zostań] Otrzymaj Rytualny Sztylet. UtraćPŻ.",
-        "[Okradnij] Otrzymajszt. złota.",
-        "[Odejdź]",
-        "[Kontynuuj]"
+    "SECRETPORTAL": {
+      "name": "Sekretny Portal",
+      "description": "Wędrując poprzez obcy krajobraz natrafiasz na niecodzienny, nawet jak na to miejsce, widok. W jednej z żywych ścian Pogranicza znajduje się ogrodzone wejście za którym kłębi się magiczny portal. \n \n Nie masz pojęcia dokąd prowadzi, ale być może przyspieszy twoją podróż przez Iglicę.",
+      "choices": [
+        "[Przejdź przez portal] Natychmiast przenieś się do bossa.",
+        "[Odejdź]"
       ]
     },
-    "FACETRADER": {
-      "name": "Handlarz Twarzami",
-      "description": "Mijasz upiorną, sześcioramienną statuę trzymającą kilka masek...\nNagle coś za tobą łagodnie szepcze,\n\"Stój.\"",
-      "options": [
-        "[Pozwól] Utraćszt. złota.",
-        "[Wymiana] 50%: Dobra Twarz. 50%: Zła Twarz.",
+    "SPIRE_HEART": {
+      "name": "Serce Iglicy",
+      "description": "Du-dum ... du-dum ... du-dum ... \n Głęboki, pulsujący strach przenika całe pomieszczenie... \n Czy to serce Iglicy? Źródło wszelkiego zła?",
+      "choices": [
+        "[Kontynuuj]",
+        "[Atakuj] ???",
+        "[Śpij]",
+        "[Podejdź do drzwi]"
+      ]
+    },
+    "GOLDEN_WING": {
+      "name": "Skrzydlata Statua",
+      "description": "W gruzowisku zauważasz intrygującą, przypominającą skrzydło, statuę o niebieskiej barwie. \n Dostrzegasz wysypujące się z jej szczelin złoto. Może w środku jest go więcej...",
+      "choices": [
+        "[Módl się] Usuń kartę z talii. Utrać25%PŻ.",
+        "[Zniszcz] Zyskaj50-80szt. złota.",
+        "[Odejdź]"
+      ]
+    },
+    "BEGGAR": {
+      "name": "Stary Żebrak",
+      "description": "Stary, przywdziany w futro żebrak wyciąga w twoją stronę dłoń. \"Poratujesz paroma sztukami złota, dziecko?\"",
+      "choices": [
+        "[Ofiaruj złoto]75szt. złota: Usuń kartę z talii.",
+        "[Kontynuuj]",
+        "[Odejdź]"
+      ]
+    },
+    "MYSTERIOUS_SPHERE": {
+      "name": "Tajemnicza Sfera",
+      "description": "Natrafiasz na sterczącą z ziemi tajemniczą, kościaną sferę. W jej wnętrzu znajduje się, otoczony zjawiskową poświatą, obiekt. \n Podczas gdy ciekawość każe ci zajrzeć do środka, spostrzegasz kilku nieruchomych wartowników, uważnie pilnujących sfery.",
+      "choices": [
+        "[Otwórz sferę] Potyczka. Nagroda: rzadki Artefakt.",
         "[Odejdź]",
-        "[Kontynuuj]PŻ, otrzymaj"
+        "[Walcz]"
+      ]
+    },
+    "VAMPIRES": {
+      "name": "Wampiry(?)",
+      "description": "Idąc wzdłuż spowitej mrokiem ulicy, dostrzegasz grupę zakapturzonych postaci, odprawiających jakiś mroczny rytuał. Gdy się zbliżasz, jednocześnie zwracają się w twoją stronę. Najwyższy z nich obnaża długie kły i wyciąga w twoją stronę chudą, bladą rękę. \n \"Dołącz do nas bracie i poczuj żar Iglicy.\"",
+      "choices": [
+        "[Zgódź się] Usuń karty Uderzeń. Zyskaj 5 kart Ugryzień. Utrać30%% maksymalnych PŻ.",
+        "[Odmów]",
+        "[Odejdź]"
       ]
     },
     "NOTEFORYOURSELF": {
       "name": "Wiadomość dla Siebie",
       "description": "Zauważasz luźną cegłę w filarze, który przyciągnął twoją uwagę.",
-      "options": [
+      "choices": [
         "[Kontynuuj]",
-        "[Weź i zostaw] Otrzymaji zostaw kartę.",
+        "[Weź i zostaw] Otrzymaj i zostaw kartę.",
         "[Ignoruj]",
         "[Odejdź]"
       ]
     },
+    "KNOWING_SKULL": {
+      "name": "Wszechwiedząca Czaszka",
+      "description": "Znajdujesz się w starej, zdobionej komnacie. W jej centrum, na kunsztownym piedestale, leży sporych rozmiarów czaszka. Gdy się do niej zbliżasz, czaszka staje w płomieniach, po czym zwraca się w twoją stronę.",
+      "choices": [
+        "[Kontynuuj]",
+        "[Informacji?] Odkryj Bossa. Utrać",
+        "[Sukcesu?] Otrzymujesz bezbarwną kartę. Utrać?PŻ.",
+        "[Wzocnienia?] Otrzymaj miksturę. Utrać?PŻ.",
+        "[Bogactwa?] Otrzymaj90szt. złota. Utrać?PŻ.",
+        "[Wyjścia stąd?] Utrać6PŻ.",
+        "[Odejdź]"
+      ]
+    },
+    "MASKED_BANDITS": {
+      "name": "Zamaskowani Bandyci",
+      "description": "He he.. Dzięki za złoto! \n Oh, jak ja kocham złote monety. Są takie piękne. \n Błyszczące cudeńka!",
+      "choices": [
+        "[Zapłać] Utrać CAŁE swoje złoto.",
+        "[Walcz!]",
+        "[Kontynuuj]",
+        "[Odejdź]"
+      ]
+    },
+    "FORGOTTEN_ALTAR": {
+      "name": "Zapomniany Ołtarz",
+      "description": "Widzisz przed sobą ołtarz jakiegoś zapomnianego bóstwa. \n Na ołtarzu stoi bogato zdobiona figura kobiety z rozpostartymi ramionami. \n Wzywa ciebie, żądając ofiary.",
+      "choices": []
+    },
+    "TRANSMORGRIFIER": {
+      "name": "Zmiennokarty",
+      "description": "Natrafiasz na intrygującą kapliczkę poświęconą nieznanemu bóstwu.",
+      "choices": [
+        "[Módl się] Podmień kartę.",
+        "[Odejdź] Wybierz kartę do podmiany."
+      ]
+    },
     "WEMEETAGAIN": {
       "name": "Znów się Spotykamy!",
-      "description": "\"Znów się spotykamy!\"\nWesoły, rozczochrany człowieczek podchodzi do ciebie radośnie. Nie znasz go.\n\n \"To ja, Ranwid! Masz coś dzisiaj dla mnie? To co zwykle? Gość taki jak ja, nie da rady sam, wiesz?\"\nSpoglądasz na niego podejrzliwie i rozważasz swoje opcje...",
-      "options": [
+      "description": "\"Znów się spotykamy!\" \n Wesoły, rozczochrany człowieczek podchodzi do ciebie radośnie. Nie znasz go. \n \n \"To ja, Ranwid! Masz coś dzisiaj dla mnie? To co zwykle? Gość taki jak ja, nie da rady sam, wiesz?\" \n Spoglądasz na niego podejrzliwie i rozważasz swoje opcje...",
+      "choices": [
         "[Daj miskturę] Utrać",
         "[Zablokowane] Wymagania: mikstura.",
         "[Daj złoto] Utrać",
         "[Zablokowane] Wymagania: 50 szt. złota.",
         "[Daj kartę] Utrać",
-        "[Zablokowane] Wymagania: karta.. Otrzymaj Artefakt.",
+        "[Zablokowane] Wymagania: karta. . Otrzymaj Artefakt.",
         "[Zaatakuj]",
-        "[Odejdź]szt. złota."
+        "[Odejdź] szt. złota."
       ]
     },
-    "DESIGNER": {
-      "name": "In-Spirujący Twórca",
-      "description": "Odkrywasz kolorowy sklepik z szyldem \"IN-SPIRACJE\". Wchodzisz do środka, będąc ciekaw co tam ujrzysz.\n\"O nie, nie ma mowy. Nie, nie możesz tu wejść!\"\n\n Dziwacznie ubrany mężczyzna pojawia się przy wejściu i zagradza ci drogę.",
-      "options": [
-        "[Kontynuuj]",
-        "[Modyfikacje] Utrać",
-        "[Czyszczenie] Utrać",
-        "[Pełna obsługa] Utrać",
-        "[Uderz] UtraćPŻ.",
-        "[Odejdź]Wybierz kartę do ulepszenia."
+    "SCRAP_OOZE": {
+      "name": "Złomoglut",
+      "description": "Wchodząc do pomieszczenia słyszysz bulgot oraz zgrzyt metalu. Widzisz przed sobą szlamową istotę, która zjadła zdecydowanie za dużo żelastwa. \n Z wnętrza istoty wydobywa się dziwne światło, czyżby czegoś magicznego? Być może uda ci się wydobyć ze stwora coś wartościowego, jeżeli tylko sięgniesz do... środka. Jednakże, żrąca maź i ostre kawałki mogą cię zranić.",
+      "choices": [
+        "[Sięgnij do środka] Utrać?PŻ.?%%: Znajdź Artefakt.",
+        "[Odejdź]"
       ]
     },
-    "COLOSSEUM": {
-      "name": "Koloseum",
-      "description": "Trach!!!\n..\n......\n...\nUderzenie pozbawia cię przytomności...",
-      "options": [
-        "[Kontynuuj]",
-        "[Walcz]",
-        "[STCHÓRZ] Ucieknij.",
-        "[ZWYCIĘŻ] Trudna walka z wieloma nagrodami."
+    "GOLDEN_SHRINE": {
+      "name": "Złota Kapliczka",
+      "description": "Natrafiasz na ciekawie wyglądającą kapliczkę poświęconą starożytnemu duchowi.",
+      "choices": [
+        "[Módl się] Otrzymaj szt. złota.",
+        "[Zniszcz] Otrzymaj 250 szt. złota. Otrzymaj Klątwę - Żal.",
+        "[Odejdź]"
+      ]
+    },
+    "GOLDEN_IDOL": {
+      "name": "Złoty Bożek",
+      "description": "Natrafiasz na niepozornie wyglądający piedestał z błyszczącym złotym bożkiem. Wygląda na wartościowego. \n \n Na pierwszy rzut oka, brak śladu jakichkolwiek pułapek.",
+      "choices": []
+    },
+    "ACCURSED_BLACKSMITH": {
+      "name": "Złowroga Kuźnia",
+      "description": "Wchodzisz do małej chatki. W środku wydaje znajdować się coś na kształt kuźni. Jej narzędzia pokryte są warstwą kurzu, a mimo to ogień pieca wciąż radośnie tańczy. Zastanawiasz się co z nią zrobić...",
+      "choices": [
+        "[Wykuj] Ulepsz kartę z talii.",
+        "[Przeszukaj] Otrzymaj unikalny Artefakt. Otrzymaj Klątwę - Ból.",
+        "[Odejdź] Wybierz kartę do ulepszenia.",
+        "[Zablokowane] Wymagania: karta, którą można ulepszyć."
+      ]
+    },
+    "LIVING_WALL": {
+      "name": "Żywa Ściana",
+      "description": "Ślepy zaułek! Odwracasz się, żeby zawrócić. Nagle z góry z łoskotem spada ściana, zagradzając drogę! \n \n Z trzech stron wyłaniają się twarze i mówią: \n \"Zapomnij o czym wiesz i wolność swą odbierz.\" \n \"Do przejścia zmiana jest wymagana.\" \n \"Jeżeli chcesz mnie ominąć, musisz się rozwinąć.\"",
+      "choices": [
+        "[Zapomnij] Usuń kartę z talii.",
+        "[Zmień się] Podmień kartę z talii.",
+        "[Rozwiń się] Ulepsz kartę z talii. Wybierz kartę do usunięcia. Wybierz kartę do podmiany. Wybierz kartę do ulepszenia.",
+        "[Odejdź]",
+        "[Zablokowane] Wymagania: karta, którą można ulepszyć."
       ]
     }
   },

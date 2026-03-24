@@ -3608,277 +3608,173 @@
     }
   },
   "events": {
-    "ACCURSED_BLACKSMITH": {
-      "name": "Verwunschene Schmiede",
-      "description": "Geduckt betrittst du eine kleine Hütte. Drinnen bemerkst du, dass es eine Schmiede sein muss. Die Schmiedewerkzeuge sind sehr staubig, doch im Ofen lodert ein Feuer. Du bist nervös...",
-      "options": [
-        "[Schmieden] Verbessere eine Karte in deinem Deck.",
-        "[Stöbern] Erhalte ein besonderes Relikt. Werde verflucht – Schmerz.",
-        "[Verlassen]Wähle eine Karte zum Verbessern",
-        "[Gesperrt] Erfordert: Verbesserbare Karten"
-      ]
-    },
-    "ADDICT": {
-      "name": "Flehender Landstreicher",
-      "description": "Gerade willst du dich an einer Gruppe verschleierter Figuren vorbeischleichen, da kommt einer von ihnen auf dich zu.\n„Hast du was für mich, mein Freund? Bitte... ein paar Münzen vielleicht?“\n„Ich brauche nur einen Platz zum Wohnen, ich habe Schätze dafür einzutauschen...“\nEr wirkt wahnhaft, aber harmlos.",
-      "options": [
-        "[Gold geben]Gold: Erhalte ein Relikt.",
-        "[Gesperrt] Erfordert:Gold.",
-        "[Rauben] Erhalte ein Relikt. Werde verflucht - Scham.",
-        "[Verlassen]"
-      ]
-    },
-    "BACK_TO_BASICS": {
-      "name": "Uralte Inschrift",
-      "description": "Als du durch die Stadt stromerst, fällt dir eine Wand ins Auge, die mit Schriftzeichen der Ahnen bedeckt ist. Gerade versuchst du zu begreifen, was die rätselhaften Symbole und Glyphen bedeuten könnten, da beginnt die Inschrift zu leuchten.\nAuf einmal wird dir die Bedeutung klar...",
-      "options": [
-        "[Eleganz] Entferne eine Karte aus deinem Deck.",
-        "[Schlichtheit] Verbessere alle Schläge und Verteidigungen.Wähle eine Karte zum Entfernen.",
-        "[Verlassen]"
-      ]
-    },
     "BEGGAR": {
       "name": "Alter Bettler",
       "description": "Ein alter, in Felle gewickelter Bettler streckt die Hand nach dir aus, als du vorbeikommst. „Hast du ein paar Münzen, mein Kind?“",
-      "options": [
-        "[Gold geben]Gold: Entferne eine Karte aus deinem Deck.",
-        "[Gesperrt] Erfordert:Gold.",
+      "choices": [
+        "[Gold geben]75Gold: Entferne eine Karte aus deinem Deck.",
         "[Weiter]",
-        "[Verlassen]Wähle eine Karte zum Entfernen."
-      ]
-    },
-    "BIG_FISH": {
-      "name": "Großer Fang",
-      "description": "Dein Weg führt dich durch einen langen Korridor, wo du eine Banane, einen Donut und eine Kiste herumschweben siehst. Nein... bei genauerer Betrachtung wird deutlich, dass sie an Schnüre gebunden sind, die aus Löchern in der Decke kommen. Du hörst ein leises hämisches Kichern von oben, als du dich den Objekten näherst.\nWas tust du?",
-      "options": [
-        "[Banane] HeileTP.",
-        "[Donut] Max. TP +.",
-        "[Kiste] Erhalte ein Relikt. Werde verflucht – Reue.",
         "[Verlassen]"
-      ]
-    },
-    "BONFIRE_ELEMENTALS": {
-      "name": "Geister des Lagerfeuers",
-      "description": "Du triffst auf eine Gruppe vermutlich violetter Feuergeister, die um ein großes Lagerfeuer tanzen.",
-      "options": [
-        "[Weiter]",
-        "[Verlassen]",
-        "[Opfern] Erhalte eine Belohnung gemäß deiner Opfergabe.Wähle eine Karte zum Opfern."
       ]
     },
     "COLOSSEUM": {
       "name": "Das Kolosseum",
-      "description": "Tschack!!!\n..\n......\n...\nDu wurdest bewusstlos geschlagen...",
-      "options": [
+      "description": "Tschack!!! \n .. \n ...... \n ... \n Du wurdest bewusstlos geschlagen...",
+      "choices": [
         "[Weiter]",
         "[Kämpfen]",
         "[FEIGHEIT] Fliehen.",
         "[SIEG] Ein mächtiger Kampf mit vielen Belohnungen."
       ]
     },
-    "CURSED_TOME": {
-      "name": "Verfluchter Foliant",
-      "description": "In einem verlassenen Tempel findest du ein riesiges Buch. Es ist geöffnet und gefüllt mit kryptischen Schriften.\n\n Als du versuchst, das komplizierte Skript zu verstehen, beginnt es sich zu verändern und verwandelt sich in eine Schrift, die du lesen kannst.",
-      "options": [
-        "[Lesen]",
-        "[Weiter] Verliere 1 TP.",
-        "[Weiter] Verliere 2 TP.",
-        "[Weiter] Verliere 3 TP.",
-        "[Aufhören] Verliere 3 TP.",
-        "[Nehmen] Erhalte das Buch. VerliereTP.",
+    "THE_MAUSOLEUM": {
+      "name": "Das Mausoleum",
+      "description": "Du wagst dich durch eine Reihe von Gräbern und stehst nun vor einem großen edelsteinbesetzten Sarkophag in der Mitte eines runden Raums. \n Du kannst die Inschrift auf dem Sarg nicht entziffern, bemerkst jedoch, wie schwarzer Nebel aus den Seiten strömt.",
+      "choices": [
+        "[Sarg öffnen] Erhalte ein Relikt.50%%: Werde verflucht – Leid.",
         "[Verlassen]"
       ]
     },
-    "DEAD_ADVENTURER": {
-      "name": "Toter Abenteurer",
-      "description": "Während du den Abenteurer durchsuchst, wirst du überrascht!",
-      "options": [
-        "[Durchsuchen] Finde Beute.",
-        "[Verlassen]",
-        "[Kämpfen]",
-        "[Weitersuchen] Finde Beute.%: Monster kehrt zurück."
-      ]
-    },
-    "DESIGNER": {
-      "name": "Designer In-Spire",
-      "description": "Du entdeckst einen bunten Laden mit dem Banner „IN-SPIRE“ und gehst hinein, um zu schauen, was drinnen ist.\n„Nein, auf keinen Fall. Nö. Ich kann dich nicht reinlassen!“\nEin Mann mit lächerlicher Kleidung erscheint am Eingang, um dich zu blockieren.",
-      "options": [
-        "[Weiter]",
-        "[Anpassungen] Verliere",
-        "[Entrümpeln] Verliere",
-        "[Komplettservice] Verliere",
-        "[Schlagen] VerliereTP.",
-        "[Verlassen]Wähle eine Karte zum Verbessern"
-      ]
-    },
-    "DRUG_DEALER": {
-      "name": "Erweiterer",
-      "description": "Ein Mann mit einer Augenklappe und einem teuflischem Grinsen schlendert lässig zu dir herüber.\n„Heda, Fremdling. Bist du interessiert, die Wissenschaft voranzubringen? Kein Training oder Segen kann dich so stark machen, wie ich es kann. Du wirst es brauchen, falls du einer dieser Helden mit Todessehnsucht bist.\nWas sagste?“",
-      "options": [
-        "[J.A.X. testen] Werde GEJAXXT.",
-        "[Versuchsperson werden] Transformiere 2 Karten.",
-        "[Mutagene einnehmen] Erhalte ein besonderes Relikt.",
-        "[Verlassen]",
-        "[Gesperrt] Erfordert: 2 oder mehr Karten im Deck.Wähle Karten zum Transformieren."
-      ]
-    },
-    "DUPLICATOR": {
-      "name": "Duplikator",
-      "description": "Vor dir befindet sich ein dekorierter Altar, der einem uralten Wesen gewidmet ist.",
-      "options": [
-        "[Beten] Dupliziere eine Karte in deinem Deck.",
-        "[Verlassen]Wähle eine Karte zum Duplizieren."
-      ]
-    },
-    "FACETRADER": {
-      "name": "Gesichtshändler",
-      "description": "Du läufst an einer unheimlichen Statue vorbei, die einige Masken in den Händen hat...\nHinter dir wispert es sanft:\n\"Stopp.\"",
-      "options": [
-        "[Anfassen] VerliereGold.",
-        "[Austauschen] 50%: Gutes Gesicht. 50%: Schlechtes Gesicht.",
-        "[Verlassen]",
-        "[Weiter]TP, erhalte"
-      ]
-    },
-    "FALLING": {
-      "name": "Freier Fall",
-      "description": "Auf dem Weg nach oben hüpfst du von einer schwebenden Form zur nächsten und rutschst dabei aus.\n\n Du beginnst zu fallen.",
-      "options": [
-        "[Weiter]",
-        "[Landen] Verliere",
-        "[Gesperrt] Erfordert: Fertigkeitskarte",
-        "[Kanalisieren] Verliere",
-        "[Gesperrt] Erfordert: Machtkarte",
-        "[Schlagen] Verliere",
-        "[Gesperrt] Erfordert: Angriffskarte",
-        "[Verlassen]",
-        "[Landen]"
-      ]
-    },
-    "FORGOTTEN_ALTAR": {
-      "name": "Vergessener Altar",
-      "description": "Vor dir befindet sich ein Altar, der einem vergessenen Gott gewidmet ist.\nAuf dem Altar sitzt eine verzierte weibliche Statue mit ausgestreckten Armen.\nSie ruft nach dir, sie verlangt ein Opfer.",
-      "options": [
-        "[Opfern: Goldener Götze] Erhalte ein besonderes Relikt. Verliere Goldenen Götzen.",
-        "[Gesperrt] Erfordert: Goldener Götze.",
-        "[Opfern] Erhaltemax. TP Verliere",
-        "[Gesperrt] Erfordert: Menschlichkeit.",
-        "[Entweihen] Werde verflucht – Verfall."
+    "NEST": {
+      "name": "Das Nest",
+      "description": "Eine lange Reihe maskierter Gestalten ist zu sehen, die \n eine bescheidene Kathedrale betreten.",
+      "choices": [
+        "[Einreihen] Erhalte Ritualdolch. Verliere99TP.",
+        "[Schlagen und Stehlen] Erhalte"
       ]
     },
     "FOUNTAIN_OF_CLEANSING": {
       "name": "Der Göttliche Brunnen",
       "description": "Du kommst an einem glitzerndem Wasser vorbei, das endlos aus einem Brunnen auf einer nahen Mauer sprudelt.",
-      "options": [
+      "choices": [
         "[Trinken] Entferne alle Flüche aus deinem Deck.",
         "[Verlassen]"
       ]
     },
-    "GHOSTS": {
-      "name": "Rat der Geister",
-      "description": "Beim weiteren Aufstieg beginnt dicker schwarzer Rauch aus dem Boden und Wänden um dich herum zu quillen, welcher sich zu drei maskierten Gestalten formt.\n\n \"Noch eine von Niaus Puppen, glaube ich.\"\n\"JAWOLL! SIE MACHT IMMER DIE LUSTIGSTEN SPIELZEUGE!\"\n\n Dir fällt ein riesiges Grinsen auf, als sich die dritte Gestalt an dich wendet.\n\"Ignoriere die Anderen... Magst du eine Kostprobe unserer Kraft?\"",
-      "options": [
-        "[Annehmen] Erhalte 5 Apparieren. Verlieremax. TP.",
-        "[Ablehnen]",
-        "[Annehmen] Erhalte 3 Apparieren. Verliere",
+    "THE_MOAI_HEAD": {
+      "name": "Der Moai-Kopf",
+      "description": "Du stolperst über etwas, das *sehr* deplatziert wirkt. Vor dir erhebt sich ein enormer Steinkopf aus einem großen Mauerabschnitt, welcher sich nicht bewegt und verändert, wie alles andere hier. \n Der Mund des Kopfes ist weit geöffnet und zeigt große, einschüchternde Zähne, die von Blut rot befleckt sind. Die Oberfläche der Statue ist überzogen mit Piktogrammen, welche anscheinend Leute darstellen, die sich in den Mund dieses Kopfes werfen und verschlungen werden. Warum sollte jemand das tun?",
+      "choices": [
+        "[Hineinspringen] Heile TP komplett. Verliere?max. TP.",
+        "[Opfern: Goldener Götze] Erhalte 333 Gold. Verliere Goldenen Götzen."
+      ]
+    },
+    "THE_CLERIC": {
+      "name": "Der Priester",
+      "description": "Ein seltsamer blauer Humanoider mit einem goldenen Helm (?) nähert sich dir grinsend. \n \"Hallo, mein Freund! Ich bin Priester! Bist du an meinen Diensten interessiert?!\", schreit die Kreatur laut.",
+      "choices": [
+        "[Heilen] 35 Gold: Heile⅓ Max TP.",
+        "[Reinigen]50Gold: Entferne eine Karte aus deinem Deck.",
         "[Verlassen]"
       ]
     },
-    "GOLDEN_IDOL": {
-      "name": "Goldener Götze",
-      "description": "Du findest ein unscheinbares Podest, auf dem friedlich ein glänzender goldener Götze ruht. Er sieht unglaublich wertvoll aus.\n\n Du bist sicher, keine Fallen in der Nähe zu erkennen.",
-      "options": [
-        "[Nehmen] Erhalte den goldenen Götzen. Löse eine Falle aus.",
-        "[Verlassen]",
-        "[Wegrennen] Werde verflucht – Verletzung.",
-        "[Zerschmettern] ErleideSchaden.",
-        "[Verstecken] Verlieremax. TP."
+    "THE_JOUST": {
+      "name": "Der Tjost",
+      "description": "Als du deinen Weg zwischen den großen Gebäuden fortsetzt, gelangst du an eine lange schmale Brücke. Du bemerkst Ritter an beiden Enden, die einander zugewandt sind. Du kommst näher... \n „Halt!“ \n \n Ein Ritter zwingt dich mit seiner riesigen Lanze, stehen zu bleiben.",
+      "choices": [
+        "[Weiter]",
+        "[Besitzer] Setze50Gold – 30%: Gewinne250Gold.",
+        "[Zusehen]"
       ]
     },
-    "GOLDEN_SHRINE": {
-      "name": "Goldener Schrein",
-      "description": "Vor dir befindet sich ein kunstvoller Schrein, der einem uralten Geist gewidmet ist.",
-      "options": [
-        "[Beten] ErhalteGold.",
-        "[Entweihen] Erhalte 275 Gold. Werde verflucht – Reue.",
+    "DESIGNER": {
+      "name": "Designer In-Spire",
+      "description": "Du entdeckst einen bunten Laden mit dem Banner „IN-SPIRE“ und gehst hinein, um zu schauen, was drinnen ist. \n „Nein, auf keinen Fall. Nö. Ich kann dich nicht reinlassen!“ \n Ein Mann mit lächerlicher Kleidung erscheint am Eingang, um dich zu blockieren.",
+      "choices": [
+        "[Weiter]",
+        "[Anpassungen] Verliere",
+        "[Entrümpeln] Verliere",
+        "[Komplettservice] Verliere",
+        "[Schlagen] Verliere TP. Gold. Verbessere zufällige Karten. Verbessere eine Karte. Entferne eine Karte. Transformiere Karten. Entferne 1 Karte, verbessere 1 zufällige Karte.",
+        "[Verlassen] Wähle eine Karte zum Verbessern Wähle 2 Karten zum Transformieren Wähle eine Karte zum Entfernen"
+      ]
+    },
+    "THE_LIBRARY": {
+      "name": "Die Bibliothek",
+      "description": "Du kommst an einem verzierten, anscheinend verlassenen Gebäude vorbei. \n Eine Tafel, die von der Wand gerissen wurde, liegt auf dem Boden. Darauf steht: „DIE BIBLIOTHEK“. \n Drinnen findest du zahllose Schriftrollen, Manuskripte und Bücher. \n Du nimmst dir eins und genießt etwas stille Zeit auf einem gemütlichen Stuhl.",
+      "choices": [
+        "[Lesen] Wähle 1 von 20 Karten für dein Deck.",
+        "[Schlafen] Heile?TP."
+      ]
+    },
+    "THE_WOMAN_IN_BLUE": {
+      "name": "Die Frau in Blau",
+      "description": "Aus der Dunkelheit zieht dich ein Arm in einen kleinen Laden. Als sich deine Augen an die Dunkelheit gewöhnt haben, erkennst du eine blasse Frau in schicken Kleidern, die auf eine Wand voller Tränke zeigt. \n „Kauf einen Trank. Jetzt!“, sagt sie.",
+      "choices": [
+        "[Kaufe 1 Trank]",
+        "[Kaufe 2 Tränke]",
+        "[Kaufe 3 Tränke] Gold.",
+        "[Verlassen]",
+        "[Verlassen] Erleide Schaden."
+      ]
+    },
+    "LIARS_GAME": {
+      "name": "Die Ssssslange",
+      "description": "Du kommst in einen Raum, wo du ein ein großes Loch im Boden findest. Als du dem Loch näherkommst, erscheint daraus eine enorme Schlangenkreatur. \n \n „Ho hooo! Hallo, hallo! Wassss haben wir denn hier? Hallo Abenteurer, ich stelle dir eine einfache Frage. \n Am erfülltesten ist das Leben, in dem du alles kaufen kannst! \n Stimmst du zu?“",
+      "choices": [
+        "[Zustimmen] Erhalte150Gold. Werde verflucht – Zweifel.",
+        "[Widersprechen]"
+      ]
+    },
+    "DUPLICATOR": {
+      "name": "Duplikator",
+      "description": "Vor dir befindet sich ein dekorierter Altar, der einem uralten Wesen gewidmet ist.",
+      "choices": [
+        "[Beten] Dupliziere eine Karte in deinem Deck.",
+        "[Verlassen] Wähle eine Karte zum Duplizieren."
+      ]
+    },
+    "DRUG_DEALER": {
+      "name": "Erweiterer",
+      "description": "Ein Mann mit einer Augenklappe und einem teuflischem Grinsen schlendert lässig zu dir herüber. \n „Heda, Fremdling. Bist du interessiert, die Wissenschaft voranzubringen? Kein Training oder Segen kann dich so stark machen, wie ich es kann. Du wirst es brauchen, falls du einer dieser Helden mit Todessehnsucht bist. \n Was sagste?“",
+      "choices": [
+        "[J.A.X. testen] Werde GEJAXXT.",
+        "[Versuchsperson werden] Transformiere 2 Karten.",
+        "[Mutagene einnehmen] Erhalte ein besonderes Relikt.",
+        "[Verlassen]",
+        "[Gesperrt] Erfordert: 2 oder mehr Karten im Deck. Wähle Karten zum Transformieren."
+      ]
+    },
+    "MATCH_AND_KEEP": {
+      "name": "Finde die Paare!",
+      "description": "„Hier sind zwölf Karten! Finde Paare, um sie zu behalten! Fünf Versuche, aufgedeckt ist aufgedeckt. \n Bist du bereit? Los geht's!“",
+      "choices": [
+        "[Weiter]",
+        "[Verlassen]",
+        "[Spielen] Übrige Versuche:"
+      ]
+    },
+    "ADDICT": {
+      "name": "Flehender Landstreicher",
+      "description": "Gerade willst du dich an einer Gruppe verschleierter Figuren vorbeischleichen, da kommt einer von ihnen auf dich zu. \n „Hast du was für mich, mein Freund? Bitte... ein paar Münzen vielleicht?“ \n „Ich brauche nur einen Platz zum Wohnen, ich habe Schätze dafür einzutauschen...“ \n Er wirkt wahnhaft, aber harmlos.",
+      "choices": [
+        "[Gold geben]85Gold: Erhalte ein Relikt.",
+        "[Rauben] Erhalte ein Relikt. Werde verflucht - Scham.",
         "[Verlassen]"
       ]
     },
     "GOLDEN_WING": {
       "name": "Flügelstatue",
-      "description": "Zwischen den Steinen und Brocken fällt dir eine aufwändige große blaue Statue auf, die einen Flügel darstellt.\nDu siehst Gold aus einigen Rissen quillen. Vielleicht ist im Inneren noch mehr...",
-      "options": [
-        "[Beten] Entferne eine Karte aus deinem Deck. VerliereTP.",
-        "[Zerstören] Erhalte-",
-        "[Gesperrt] Erfordert: Karte mitoder mehr Schaden.",
-        "[Verlassen]",
-        "[Weiter]Wähle eine Karte zum Entfernen."
-      ]
-    },
-    "KNOWING_SKULL": {
-      "name": "Wissender Schädel",
-      "description": "Du befindest dich in einer alten, dekorierten Kammer. In der Mitte des Raumes sitzt ein großer Schädel auf einem verzierten Podest. Als du dich näherst, geht der Schädel in Flammen auf und wendet sich dir zu.",
-      "options": [
-        "[Weiter]TP.",
-        "[Information?] Enthülle den Boss. Verliere",
-        "[Erfolg?] Erhalte eine farblose Karte. Verliere",
-        "[Stärkung?] Erhalte einen Trank. Verliere",
-        "[Reichtümer?] ErhalteGold. Verliere",
-        "[Wie komme ich hier raus?] Verliere",
+      "description": "Zwischen den Steinen und Brocken fällt dir eine aufwändige große blaue Statue auf, die einen Flügel darstellt. \n Du siehst Gold aus einigen Rissen quillen. Vielleicht ist im Inneren noch mehr...",
+      "choices": [
+        "[Beten] Entferne eine Karte aus deinem Deck. Verliere25%TP.",
+        "[Zerstören] Erhalte50-80Gold.",
         "[Verlassen]"
       ]
     },
-    "LAB": {
-      "name": "Labor",
-      "description": "In diesem Raum stehen lauter Gestelle voller Teströhren, Messbecher, Kolben, Forceps, Klemmschellen, Rührstäbe, Zangen, Schutzbrillen, Trichter, Pipetten, Zylinder, Kondensatoren und sogar einer seltenen gewundenen Glasröhre.\n\n Woher kennst du die Namen all dieser Werkzeuge? Nicht wichtig - du siehst dich um.",
-      "options": [
-        "[Durchsuchen] Finde einige Tränke!"
-      ]
-    },
-    "LIARS_GAME": {
-      "name": "Die Ssssslange",
-      "description": "Du kommst in einen Raum, wo du ein ein großes Loch im Boden findest. Als du dem Loch näherkommst, erscheint daraus eine enorme Schlangenkreatur.\n\n „Ho hooo! Hallo, hallo! Wassss haben wir denn hier? Hallo Abenteurer, ich stelle dir eine einfache Frage.\nAm erfülltesten ist das Leben, in dem du alles kaufen kannst!\nStimmst du zu?“",
-      "options": [
-        "[Zustimmen] ErhalteGold. Werde verflucht – Zweifel.",
-        "[Widersprechen]",
-        "[Weiter]",
-        "[Verlassen]"
-      ]
-    },
-    "LIVING_WALL": {
-      "name": "Lebendige Wand",
-      "description": "Als du eine Sackgasse erreichst und dich umdrehst, krachen Mauern von der Decke - du bist gefangen!\n\n Drei Gesichter materialisieren sich aus den Wänden und sprechen.\n„Vergiss, was du weißt, und ich lasse dich gehen.“\n„Ich verlange Veränderung, um neuen Raum freizugeben.“\n„Wenn du mich passieren willst, musst du wachsen.“",
-      "options": [
-        "[Vergessen] Entferne eine Karte aus deinem Deck.",
-        "[Verändern] Transformiere eine Karte aus deinem Deck.",
-        "[Wachsen] Verbessere eine Karte aus deinem Deck.Wähle eine Karte zum Entfernen.",
-        "[Verlassen]",
-        "[Gesperrt] Erfordert: Verbesserbare Karten"
-      ]
-    },
-    "MASKED_BANDITS": {
-      "name": "Maskierte Banditen",
-      "description": "Hehehe... Danke für das Gold!\nOh, ich liebe Gold. Es ist so schön.\nGlänzende, glitzernde Stücklein sind sie!",
-      "options": [
-        "[Bezahlen] ALL dein Gold verlieren.",
-        "[Kämpfen!]",
-        "[Weiter]",
-        "[Verlassen]"
-      ]
-    },
-    "MATCH_AND_KEEP": {
-      "name": "Finde die Paare!",
-      "description": "„Hier sind zwölf Karten! Finde Paare, um sie zu behalten! Fünf Versuche, aufgedeckt ist aufgedeckt.\nBist du bereit? Los geht's!“",
-      "options": [
-        "[Weiter]",
-        "[Verlassen]",
-        "[Spielen]Übrige Versuche:"
+    "FALLING": {
+      "name": "Freier Fall",
+      "description": "Auf dem Weg nach oben hüpfst du von einer schwebenden Form zur nächsten und rutschst dabei aus. \n \n Du beginnst zu fallen.",
+      "choices": [
+        "[Weiter]a Skill[Landen] Verliere",
+        "[Gesperrt] Erfordert: Fertigkeitskartea Power[Kanalisieren] Verliere",
+        "[Gesperrt] Erfordert: Machtkartean Attack[Schlagen] Verliere"
       ]
     },
     "MINDBLOOM": {
       "name": "Gedankenblüte",
-      "description": "Wie du so läufst und das Chaos des Spires durchquerst, fühlen sich deine Gedanken plötzlich sehr... echt an...\n\n Allmählich manifestieren sich Vorstellungen von Monstern und Reichtümern in der Realität.\nDie Erfahrung eilt flüchtig davon. Was tust du?",
-      "options": [
+      "description": "Wie du so läufst und das Chaos des Spires durchquerst, fühlen sich deine Gedanken plötzlich sehr... echt an... \n \n Allmählich manifestieren sich Vorstellungen von Monstern und Reichtümern in der Realität. \n Die Erfahrung eilt flüchtig davon. Was tust du?",
+      "choices": [
         "[Ich bin Krieg] Bekämpfe einen Boss des 1. Akts. Erhalte 1 seltenes Relikt.",
         "[Ich bin reich] Erhalte 999 Gold. Werde verflucht - 2 Normalität.",
         "[Ich bin gesund] Heile deine TP komplett. Werde verflucht - Zweifel.",
@@ -3886,258 +3782,313 @@
         "[Verlassen]"
       ]
     },
-    "MUSHROOMS": {
-      "name": "Pilze",
-      "description": "Du gibst dem unnatürlichen Verlangen, zu essen nach. Als du Pilz um Pilz verzehrst, spürst du aufkeimende Benommenheit und verlierst das Bewusstsein. Als du erwachst, fühlst du dich sehr seltsam.\nDu heilst 25% deiner TP, wirst aber auch infiziert.",
-      "options": [
-        "[Zertrampeln] Erzürne die Pilze.",
-        "[Essen] HeileTP. Werde verflucht – Parasit.",
-        "[Kämpfen]",
-        "[Verlassen]"
-      ]
-    },
-    "MYSTERIOUS_SPHERE": {
-      "name": "Mysteriöse Sphäre",
-      "description": "Aus dem chaotischen Terrain der Umgebung ragt eine knochige Kugel hervor, die ein mysteriöses leuchtendes Objekt umgibt.\nNeugierig, was sich im Inneren befindet, bemerkst du ein paar Wächter, die ein Auge darauf haben.",
-      "options": [
-        "[Kugel öffnen] Kampf. Belohnung: Seltenes Relikt.",
-        "[Verlassen]",
-        "[Kämpfen]"
-      ]
-    },
-    "N_LOTH": {
-      "name": "N’loth",
-      "description": "Eine seltsame Kreatur, die einen buckligen Rücken hat, aus dem mehrere Tentakel sprießen, wühlt sich durch einen Haufen Müll und Trümmer vor dir. Als du dich näherst, schlurft er auf eine unbedrohlich wirkende Weise auf dich zu.\n„N’loth hungrig. Füttere N’loth.“",
-      "options": [
-        "[Opfern:] Verliere dieses Relikt. Erhalte ein besonderes Relikt.",
-        "[Verlassen]"
-      ]
-    },
-    "NEST": {
-      "name": "Das Nest",
-      "description": "Eine lange Reihe maskierter Gestalten ist zu sehen, die\neine bescheidene Kathedrale betreten.",
-      "options": [
-        "[Einreihen] Erhalte Ritualdolch. VerliereTP.",
-        "[Schlagen und Stehlen] ErhalteGold.",
-        "[Verlassen]",
-        "[Weiter]"
-      ]
-    },
-    "NOTEFORYOURSELF": {
-      "name": "Notiz an dich selbst",
-      "description": "Du bemerkst einen losen Stein einer Säule, der dir besonders ins Auge fällt.",
-      "options": [
-        "[Weiter]",
-        "[Nehmen und Geben] Erhalteund lagere eine Karte ein.",
-        "[Ignorieren]",
-        "[Verlassen]"
-      ]
-    },
-    "PURIFIER": {
-      "name": "Schrein der Reinigung",
-      "description": "Vor dir befindet sich ein kunstvoller Schrein, der einem vergessenen Geist gewidmet ist.",
-      "options": [
-        "[Beten] Entferne eine Karte aus deinem Deck.",
-        "[Verlassen]Wähle eine Karte zum Entfernen."
-      ]
-    },
-    "SCRAP_OOZE": {
-      "name": "Schrottschlamm",
-      "description": "Als du den Raum betrittst, hörst du ein Gurgeln und das Zermahlen von Metallen. Vor dir liegt eine schleimartige Kreatur, die mehr als genug Schrott gegessen hat. Aus dem Inneren der Kreatur siehst du Licht schimmern - vielleicht etwas Magisches? Es scheint, als könntest du ein paar Schätze bekommen, wenn du einfach in seine... Öffnung greifst. Allerdings könnten die Säure und scharfen Dinge schmerzhaft sein.",
-      "options": [
-        "[Hineingreifen] VerliereTP.",
-        "[Verlassen]",
-        "[Tiefer] Verliere"
-      ]
-    },
     "SECRETPORTAL": {
       "name": "Geheimes Portal",
-      "description": "Vor dir erblickst du etwas, was in dieser fremden Landschaft fehl am Platze wirkt. Hier ist, seltsam in eine der lebende Wände des Jenseits eingelassen, ein umschlossener Steineingang, gefüllt mit einem wirbelnden magischen Portal.\n\n Du bist dir nicht sicher, wo es hinführt, aber es könnte deine Reise durch den Spire beschleunigen.",
-      "options": [
+      "description": "Vor dir erblickst du etwas, was in dieser fremden Landschaft fehl am Platze wirkt. Hier ist, seltsam in eine der lebende Wände des Jenseits eingelassen, ein umschlossener Steineingang, gefüllt mit einem wirbelnden magischen Portal. \n \n Du bist dir nicht sicher, wo es hinführt, aber es könnte deine Reise durch den Spire beschleunigen.",
+      "choices": [
         "[Das Portal betreten] Bewege dich DIREKT zum Boss.",
         "[Verlassen]"
       ]
     },
-    "SENSORYSTONE": {
-      "name": "Sinnesstein",
-      "description": "Als du durch das Jenseits wanderst, entdeckst du einen leuchtenden Tesserakt, der sanft in der Luft kreist und schwankt.",
-      "options": [
-        "[Erinnern] Wähle 1 farblose Karte für dein Deck.",
-        "[Erinnern] Wähle 2 farblose Karten für dein Deck. Verliere",
-        "[Erinnern] Wähle 3 farblose Karten für dein Deck. VerliereTP.",
-        "[Verlassen]",
-        "[Interagieren]"
-      ]
-    },
-    "SHINING_LIGHT": {
-      "name": "Lichtschein",
-      "description": "Du findest eine schimmernde Bündelung von Licht im Zentrum des Raumes.\n\n Sein warmes Leuchten und die verzaubernden Muster laden dich zu ihm ein.",
-      "options": [
-        "[Hindurchgehen] Verbessere 2 zufällige Karten. VerliereTP.",
-        "[Verlassen]",
-        "[Gesperrt] Erfordert: Verbesserbare Karten"
-      ]
-    },
-    "SPIRE_HEART": {
-      "name": "Herz des Spire",
-      "description": "Ba-bumm... Ba-bumm... Ba-bumm...\nEine tief pulsierende Bedrohung ist im ganzen Raum zu spüren...\nIst dies das Herz des Spires? Der Quell dieses Bösen?",
-      "options": [
+    "BONFIRE_ELEMENTALS": {
+      "name": "Geister des Lagerfeuers",
+      "description": "Du triffst auf eine Gruppe vermutlich violetter Feuergeister, die um ein großes Lagerfeuer tanzen.",
+      "choices": [
         "[Weiter]",
-        "[Angreifen] ???",
-        "[Schlafen]",
-        "[Zur Tür gehen]"
-      ]
-    },
-    "THE_CLERIC": {
-      "name": "Der Priester",
-      "description": "Ein seltsamer blauer Humanoider mit einem goldenen Helm (?) nähert sich dir grinsend.\n\"Hallo, mein Freund! Ich bin Priester! Bist du an meinen Diensten interessiert?!\", schreit die Kreatur laut.",
-      "options": [
-        "[Heilen] 35 Gold: Heile",
-        "[Gesperrt] Erfordert:Gold.",
-        "[Reinigen]Gold: Entferne eine Karte aus deinem Deck.",
-        "[Gesperrt] Erfordert: 50 Gold.",
-        "[Verlassen]Wähle eine Karte zum Entfernen."
-      ]
-    },
-    "THE_JOUST": {
-      "name": "Der Tjost",
-      "description": "Als du deinen Weg zwischen den großen Gebäuden fortsetzt, gelangst du an eine lange schmale Brücke. Du bemerkst Ritter an beiden Enden, die einander zugewandt sind. Du kommst näher...\n„Halt!“\n\n Ein Ritter zwingt dich mit seiner riesigen Lanze, stehen zu bleiben.",
-      "options": [
-        "[Weiter]",
-        "[Mörder] SetzeGold – 70%: Gewinne",
-        "[Besitzer] SetzeGold – 30%: Gewinne",
-        "[Zusehen]",
-        "[Verlassen]"
-      ]
-    },
-    "THE_LIBRARY": {
-      "name": "Die Bibliothek",
-      "description": "Du kommst an einem verzierten, anscheinend verlassenen Gebäude vorbei.\nEine Tafel, die von der Wand gerissen wurde, liegt auf dem Boden. Darauf steht: „DIE BIBLIOTHEK“.\nDrinnen findest du zahllose Schriftrollen, Manuskripte und Bücher.\nDu nimmst dir eins und genießt etwas stille Zeit auf einem gemütlichen Stuhl.",
-      "options": [
-        "[Lesen] Wähle 1 von 20 Karten für dein Deck.",
-        "[Schlafen] HeileTP.",
-        "[Verlassen]Wähle eine Karte für dein Deck."
-      ]
-    },
-    "THE_MAUSOLEUM": {
-      "name": "Das Mausoleum",
-      "description": "Du wagst dich durch eine Reihe von Gräbern und stehst nun vor einem großen edelsteinbesetzten Sarkophag in der Mitte eines runden Raums.\nDu kannst die Inschrift auf dem Sarg nicht entziffern, bemerkst jedoch, wie schwarzer Nebel aus den Seiten strömt.",
-      "options": [
-        "[Sarg öffnen] Erhalte ein Relikt.%: Werde verflucht – Leid.",
-        "[Verlassen]"
-      ]
-    },
-    "THE_MOAI_HEAD": {
-      "name": "Der Moai-Kopf",
-      "description": "Du stolperst über etwas, das sehr deplatziert wirkt. Vor dir erhebt sich ein enormer Steinkopf aus einem großen Mauerabschnitt, welcher sich nicht bewegt und verändert, wie alles andere hier.\nDer Mund des Kopfes ist weit geöffnet und zeigt große, einschüchternde Zähne, die von Blut rot befleckt sind. Die Oberfläche der Statue ist überzogen mit Piktogrammen, welche anscheinend Leute darstellen, die sich in den Mund dieses Kopfes werfen und verschlungen werden. Warum sollte jemand das tun?",
-      "options": [
-        "[Hineinspringen] Heile TP komplett. Verlieremax. TP.",
-        "[Opfern: Goldener Götze] Erhalte 333 Gold. Verliere Goldenen Götzen.",
-        "[Gesperrt] Erfordert: Goldener Götze.",
-        "[Verlassen]"
-      ]
-    },
-    "THE_WOMAN_IN_BLUE": {
-      "name": "Die Frau in Blau",
-      "description": "Aus der Dunkelheit zieht dich ein Arm in einen kleinen Laden. Als sich deine Augen an die Dunkelheit gewöhnt haben, erkennst du eine blasse Frau in schicken Kleidern, die auf eine Wand voller Tränke zeigt.\n„Kauf einen Trank. Jetzt!“, sagt sie.",
-      "options": [
-        "[Kaufe 1 Trank]",
-        "[Kaufe 2 Tränke]",
-        "[Kaufe 3 Tränke]Gold.",
         "[Verlassen]",
-        "[Verlassen] ErleideSchaden."
+        "[Opfern] Erhalte eine Belohnung gemäß deiner Opfergabe. Wähle eine Karte zum Opfern."
       ]
     },
-    "THINKING_WITH_PUDDLES": {
-      "name": "Mit Pfützen denken",
-      "description": "Du gehst durch eine schimmernde Pfütze... und stürzt plötzlich aus der Decke genau darüber!\nIm freien Fall wägst du deine Optionen ab.",
-      "options": [
-        "[Genarrt] #Verliere eine zufällige seltene Karte.",
-        "[Auf dem Gesicht landen] ErleideSchaden. Werde verflucht – Verletzung.",
-        "[Verlassen]"
+    "FACETRADER": {
+      "name": "Gesichtshändler",
+      "description": "Du läufst an einer unheimlichen Statue vorbei, die einige Masken in den Händen hat... \n Hinter dir wispert es sanft: \n \"Stopp.\"",
+      "choices": [
+        "[Anfassen] Verliere Gold.",
+        "[Austauschen] 50%: Gutes Gesicht. 50%: Schlechtes Gesicht.",
+        "[Verlassen]",
+        "[Weiter] TP, erhalte"
       ]
     },
-    "TOMB_OF_LORD_RED_MASK": {
-      "name": "Grab des Herren der Roten Maske",
-      "description": "Ein reichlich verziertes Grab ist auf der anderen Seite eines schwebenden Pfades zu sehen. Als du das Grab erreichst, bemerkst du einen Schlitz für Goldmünzen, über dem eine Inschrift eingeritzt wurde.",
-      "options": [
-        "[Die Rote Maske aufsetzen] Erhalte 222 Gold.",
-        "[Gesperrt] Erfordert: Rote Maske.",
-        "[Opfern:Gold] Verliere gesamtes Gold. Erhalte ein Relikt.",
-        "[Verlassen]"
-      ]
-    },
-    "TRANSMORGRIFIER": {
-      "name": "Schrein der Verwandlung",
-      "description": "Vor dir befindet sich ein kunstvoller Schrein, der einem vergessenen Geist gewidmet ist.",
-      "options": [
-        "[Beten] Transformiere eine Karte.",
-        "[Verlassen]Wähle eine Karte zum Transformieren."
-      ]
-    },
-    "UPGRADE_SHRINE": {
-      "name": "Schrein der Verbesserung",
-      "description": "Vor dir befindet sich ein kunstvoller Schrein, der einem vergessenen Geist gewidmet ist.",
-      "options": [
-        "[Beten] Verbessere eine Karte.",
-        "[Verlassen]Wähle eine Karte zum Verbessern.",
-        "[Gesperrt] Erfordert: Verbesserbare Karten"
-      ]
-    },
-    "VAMPIRES": {
-      "name": "Vampire (?)",
-      "description": "Auf einer unbeleuchteten Straße triffst du auf ein paar vermummte Gestalten, die gerade mitten in irgendeinem dunklen Ritual sind. Als du näher kommst, wenden sie sich dir in gespenstischem Gleichklang zu. Der Größte von ihnen entblößt Fangzähne und streckt eine lange, blasse Hand nach dir aus.\n„Schließ dich uns an, Bruder, und spüre die Wärme des Spire.“",
-      "options": [
-        "[Annehmen] Entferne alle Schläge. Erhalte 5 Bisse. Verlieremax. TP.",
-        "[Ablehnen]",
-        "[Verliere] Entferne alle Schläge. Erhalte 5 Bisse.",
-        "[Verlassen]"
-      ]
-    },
-    "WEMEETAGAIN": {
-      "name": "So sieht man sich wieder!",
-      "description": "\"So sieht man sich wieder!\"\nEin vergnügter, zerzauster Kerl kommt mit fröhlichen Schritten auf dich zu. Du kennst diesen Mann nicht.\n\n \"Ich bin's, Ranwid! Haste heute Sachen für mich dabei? Das übliche? So 'n Typ wie ich schafft's nicht alleine, weißte?\"\nDu musterst ihn misstrauisch und wägst deine Möglichkeiten ab...",
-      "options": [
-        "[Trank geben] Verliere",
-        "[Gesperrt] Erfordert: Trank",
-        "[Gold geben] Verliere",
-        "[Gesperrt] Erfordert: Mindestens 50 Gold.",
-        "[Karte geben] Verliere",
-        "[Locked] Erfordert: Karte. Erhalte ein Relikt",
-        "[Angreifen]",
-        "[Verlassen]Gold"
+    "WINDING_HALLS": {
+      "name": "Gewundene Hallen",
+      "description": "Auf deinem Weg die gekrümmten Pfade hinauf verläufst du dich immer wieder, weil die Wände und der Boden sich unerklärlicherweise vor deinen Augen zu verschieben scheinen. \n \n Die ständig in deinem Hinterkopf flüsternden Stimmen helfen auch nicht gerade weiter.",
+      "choices": [
+        "[Dem Wahnsinn hingeben] Erhalte 2 Wahnsinn. Verliere TP.",
+        "[Konzentrieren] Werde verflucht – Leid. Heile",
+        "[Verlassen] TP.",
+        "[Spur zurückverfolgen] Verliere max. TP."
       ]
     },
     "WHEEL_OF_CHANGE": {
       "name": "Glücksrad",
-      "description": "Du triffst auf einen adrett aussehenden, fröhlichen Gremlin.\n„Jetzt ist es Zeit, das Rad zu drehen! Bist du B E R E I T ? Natürlich bist du das!“",
-      "options": [
+      "description": "Du triffst auf einen adrett aussehenden, fröhlichen Gremlin. \n „Jetzt ist es Zeit, das Rad zu drehen! Bist du B E R E I T ? Natürlich bist du das!“",
+      "choices": [
         "[Spielen]",
         "[Preis!] YAY!!!!",
         "[Preis!] Erhalte ein Relikt.",
         "[Preis!] Komplett heilen.",
         "[Preis?] Fluch – Verfall.",
         "[Preis!] Entferne eine Karte aus deinem Deck.",
-        "[Preis?] VerliereTP.",
-        "[Verlassen]Wähle eine Karte zum Entfernen."
+        "[Preis?] Verliere TP.",
+        "[Verlassen] Wähle eine Karte zum Entfernen."
       ]
     },
-    "WINDING_HALLS": {
-      "name": "Gewundene Hallen",
-      "description": "Auf deinem Weg die gekrümmten Pfade hinauf verläufst du dich immer wieder, weil die Wände und der Boden sich unerklärlicherweise vor deinen Augen zu verschieben scheinen.\n\n Die ständig in deinem Hinterkopf flüsternden Stimmen helfen auch nicht gerade weiter.",
-      "options": [
-        "[Dem Wahnsinn hingeben] Erhalte 2 Wahnsinn. VerliereTP.",
-        "[Konzentrieren] Werde verflucht – Leid. Heile",
-        "[Verlassen]TP.",
-        "[Spur zurückverfolgen] Verlieremax. TP."
+    "GOLDEN_IDOL": {
+      "name": "Goldener Götze",
+      "description": "Du findest ein unscheinbares Podest, auf dem friedlich ein glänzender goldener Götze ruht. Er sieht unglaublich wertvoll aus. \n \n Du bist sicher, keine Fallen in der Nähe zu erkennen.",
+      "choices": []
+    },
+    "GOLDEN_SHRINE": {
+      "name": "Goldener Schrein",
+      "description": "Vor dir befindet sich ein kunstvoller Schrein, der einem uralten Geist gewidmet ist.",
+      "choices": [
+        "[Beten] Erhalte Gold.",
+        "[Entweihen] Erhalte 275 Gold. Werde verflucht – Reue.",
+        "[Verlassen]"
+      ]
+    },
+    "TOMB_OF_LORD_RED_MASK": {
+      "name": "Grab des Herren der Roten Maske",
+      "description": "Ein reichlich verziertes Grab ist auf der anderen Seite eines schwebenden Pfades zu sehen. Als du das Grab erreichst, bemerkst du einen Schlitz für Goldmünzen, über dem eine Inschrift eingeritzt wurde.",
+      "choices": [
+        "[Die Rote Maske aufsetzen] Erhalte 222 Gold.",
+        "[Gesperrt] Erfordert: Rote Maske.",
+        "[Opfern: Gold] Verliere gesamtes Gold. Erhalte ein Relikt.",
+        "[Verlassen]"
+      ]
+    },
+    "BIG_FISH": {
+      "name": "Großer Fang",
+      "description": "Dein Weg führt dich durch einen langen Korridor, wo du eine Banane, einen Donut und eine Kiste herumschweben siehst. Nein... bei genauerer Betrachtung wird deutlich, dass sie an Schnüre gebunden sind, die aus Löchern in der Decke kommen. Du hörst ein leises hämisches Kichern von oben, als du dich den Objekten näherst. \n Was tust du?",
+      "choices": [
+        "[Banane] Heile⅓ Max TP.",
+        "[Donut] Max. TP +5.",
+        "[Kiste] Erhalte ein Relikt. Werde verflucht – Reue.",
+        "[Verlassen]"
+      ]
+    },
+    "SPIRE_HEART": {
+      "name": "Herz des Spire",
+      "description": "Ba-bumm... Ba-bumm... Ba-bumm... \n Eine tief pulsierende Bedrohung ist im ganzen Raum zu spüren... \n Ist dies das Herz des Spires? Der Quell dieses Bösen?",
+      "choices": [
+        "[Weiter]",
+        "[Angreifen] ???",
+        "[Schlafen]",
+        "[Zur Tür gehen]"
+      ]
+    },
+    "LAB": {
+      "name": "Labor",
+      "description": "In diesem Raum stehen lauter Gestelle voller Teströhren, Messbecher, Kolben, Forceps, Klemmschellen, Rührstäbe, Zangen, Schutzbrillen, Trichter, Pipetten, Zylinder, Kondensatoren und sogar einer seltenen gewundenen Glasröhre. \n \n Woher kennst du die Namen all dieser Werkzeuge? Nicht wichtig - du siehst dich um.",
+      "choices": [
+        "[Durchsuchen] Finde einige Tränke!"
+      ]
+    },
+    "LIVING_WALL": {
+      "name": "Lebendige Wand",
+      "description": "Als du eine Sackgasse erreichst und dich umdrehst, krachen Mauern von der Decke - du bist gefangen! \n \n Drei Gesichter materialisieren sich aus den Wänden und sprechen. \n „Vergiss, was du weißt, und ich lasse dich gehen.“ \n „Ich verlange Veränderung, um neuen Raum freizugeben.“ \n „Wenn du mich passieren willst, musst du wachsen.“",
+      "choices": [
+        "[Vergessen] Entferne eine Karte aus deinem Deck.",
+        "[Verändern] Transformiere eine Karte aus deinem Deck.",
+        "[Wachsen] Verbessere eine Karte aus deinem Deck. Wähle eine Karte zum Entfernen. Wähle eine Karte zum Transformieren. Wähle eine Karte zum Verbessern.",
+        "[Verlassen]",
+        "[Gesperrt] Erfordert: Verbesserbare Karten"
+      ]
+    },
+    "SHINING_LIGHT": {
+      "name": "Lichtschein",
+      "description": "Du findest eine schimmernde Bündelung von Licht im Zentrum des Raumes. \n \n Sein warmes Leuchten und die verzaubernden Muster laden dich zu ihm ein.",
+      "choices": [
+        "[Hindurchgehen] Verbessere 2 zufällige Karten. Verliere20%TP.",
+        "[Verlassen]"
+      ]
+    },
+    "MASKED_BANDITS": {
+      "name": "Maskierte Banditen",
+      "description": "Hehehe... Danke für das Gold! \n Oh, ich liebe Gold. Es ist so schön. \n Glänzende, glitzernde Stücklein sind sie!",
+      "choices": [
+        "[Bezahlen] ALL dein Gold verlieren.",
+        "[Kämpfen!]",
+        "[Weiter]",
+        "[Verlassen]"
+      ]
+    },
+    "MYSTERIOUS_SPHERE": {
+      "name": "Mysteriöse Sphäre",
+      "description": "Aus dem chaotischen Terrain der Umgebung ragt eine knochige Kugel hervor, die ein mysteriöses leuchtendes Objekt umgibt. \n Neugierig, was sich im Inneren befindet, bemerkst du ein paar Wächter, die ein Auge darauf haben.",
+      "choices": [
+        "[Kugel öffnen] Kampf. Belohnung: Seltenes Relikt.",
+        "[Verlassen]",
+        "[Kämpfen]"
+      ]
+    },
+    "NOTEFORYOURSELF": {
+      "name": "Notiz an dich selbst",
+      "description": "Du bemerkst einen losen Stein einer Säule, der dir besonders ins Auge fällt.",
+      "choices": [
+        "[Weiter]",
+        "[Nehmen und Geben] Erhalte und lagere eine Karte ein.",
+        "[Ignorieren]",
+        "[Verlassen]"
+      ]
+    },
+    "N_LOTH": {
+      "name": "N’loth",
+      "description": "Eine seltsame Kreatur, die einen buckligen Rücken hat, aus dem mehrere Tentakel sprießen, wühlt sich durch einen Haufen Müll und Trümmer vor dir. Als du dich näherst, schlurft er auf eine unbedrohlich wirkende Weise auf dich zu. \n „N’loth hungrig. Füttere N’loth.“",
+      "choices": [
+        "[Opfern: ] Verliere dieses Relikt. Erhalte ein besonderes Relikt.",
+        "[Verlassen]"
+      ]
+    },
+    "MUSHROOMS": {
+      "name": "Pilze",
+      "description": "Du gibst dem unnatürlichen Verlangen, zu essen nach. Als du Pilz um Pilz verzehrst, spürst du aufkeimende Benommenheit und verlierst das Bewusstsein. Als du erwachst, fühlst du dich sehr seltsam. \n Du heilst 25% deiner TP, wirst aber auch infiziert.",
+      "choices": [
+        "[Zertrampeln] Erzürne die Pilze.",
+        "[Essen] Heile TP. Werde verflucht – Parasit.",
+        "[Kämpfen]",
+        "[Verlassen]"
+      ]
+    },
+    "GHOSTS": {
+      "name": "Rat der Geister",
+      "description": "Beim weiteren Aufstieg beginnt dicker schwarzer Rauch aus dem Boden und Wänden um dich herum zu quillen, welcher sich zu drei maskierten Gestalten formt. \n \n \"Noch eine von Niaus Puppen, glaube ich.\" \n \"JAWOLL! SIE MACHT IMMER DIE LUSTIGSTEN SPIELZEUGE!\" \n \n Dir fällt ein riesiges Grinsen auf, als sich die dritte Gestalt an dich wendet. \n \"Ignoriere die Anderen... Magst du eine Kostprobe unserer Kraft?\"",
+      "choices": [
+        "[Annehmen] Erhalte 5 Apparieren. Verliere?max. TP.",
+        "[Ablehnen]"
+      ]
+    },
+    "PURIFIER": {
+      "name": "Schrein der Reinigung",
+      "description": "Vor dir befindet sich ein kunstvoller Schrein, der einem vergessenen Geist gewidmet ist.",
+      "choices": [
+        "[Beten] Entferne eine Karte aus deinem Deck.",
+        "[Verlassen] Wähle eine Karte zum Entfernen."
+      ]
+    },
+    "UPGRADE_SHRINE": {
+      "name": "Schrein der Verbesserung",
+      "description": "Vor dir befindet sich ein kunstvoller Schrein, der einem vergessenen Geist gewidmet ist.",
+      "choices": [
+        "[Beten] Verbessere eine Karte.",
+        "[Verlassen] Wähle eine Karte zum Verbessern.",
+        "[Gesperrt] Erfordert: Verbesserbare Karten"
+      ]
+    },
+    "TRANSMORGRIFIER": {
+      "name": "Schrein der Verwandlung",
+      "description": "Vor dir befindet sich ein kunstvoller Schrein, der einem vergessenen Geist gewidmet ist.",
+      "choices": [
+        "[Beten] Transformiere eine Karte.",
+        "[Verlassen] Wähle eine Karte zum Transformieren."
+      ]
+    },
+    "SCRAP_OOZE": {
+      "name": "Schrottschlamm",
+      "description": "Als du den Raum betrittst, hörst du ein Gurgeln und das Zermahlen von Metallen. Vor dir liegt eine schleimartige Kreatur, die mehr als genug Schrott gegessen hat. Aus dem Inneren der Kreatur siehst du Licht schimmern - vielleicht etwas Magisches? Es scheint, als könntest du ein paar Schätze bekommen, wenn du einfach in seine... Öffnung greifst. Allerdings könnten die Säure und scharfen Dinge schmerzhaft sein.",
+      "choices": [
+        "[Hineingreifen] Verliere?TP.?%%: Finde ein Relikt.",
+        "[Verlassen]"
+      ]
+    },
+    "SENSORYSTONE": {
+      "name": "Sinnesstein",
+      "description": "Als du durch das Jenseits wanderst, entdeckst du einen leuchtenden Tesserakt, der sanft in der Luft kreist und schwankt.",
+      "choices": [
+        "[Erinnern] Wähle 1 farblose Karte für dein Deck.",
+        "[Erinnern] Wähle 2 farblose Karten für dein Deck. Verliere",
+        "[Erinnern] Wähle 3 farblose Karten für dein Deck. Verliere TP.",
+        "[Verlassen]",
+        "[Interagieren]"
+      ]
+    },
+    "WEMEETAGAIN": {
+      "name": "So sieht man sich wieder!",
+      "description": "\"So sieht man sich wieder!\" \n Ein vergnügter, zerzauster Kerl kommt mit fröhlichen Schritten auf dich zu. Du kennst diesen Mann nicht. \n \n \"Ich bin's, Ranwid! Haste heute Sachen für mich dabei? Das übliche? So 'n Typ wie ich schafft's nicht alleine, weißte?\" \n Du musterst ihn misstrauisch und wägst deine Möglichkeiten ab...",
+      "choices": [
+        "[Trank geben] Verliere",
+        "[Gesperrt] Erfordert: Trank",
+        "[Gold geben] Verliere",
+        "[Gesperrt] Erfordert: Mindestens 50 Gold.",
+        "[Karte geben] Verliere",
+        "[Angreifen]",
+        "[Verlassen] Gold"
+      ]
+    },
+    "DEAD_ADVENTURER": {
+      "name": "Toter Abenteurer",
+      "description": "Während du den Abenteurer durchsuchst, wirst du überrascht!",
+      "choices": [
+        "[Durchsuchen] Finde Beute.",
+        "[Verlassen]",
+        "[Kämpfen]",
+        "[Weitersuchen] Finde Beute. %: Monster kehrt zurück."
+      ]
+    },
+    "BACK_TO_BASICS": {
+      "name": "Uralte Inschrift",
+      "description": "Als du durch die Stadt stromerst, fällt dir eine Wand ins Auge, die mit Schriftzeichen der Ahnen bedeckt ist. Gerade versuchst du zu begreifen, was die rätselhaften Symbole und Glyphen bedeuten könnten, da beginnt die Inschrift zu leuchten. \n Auf einmal wird dir die Bedeutung klar...",
+      "choices": [
+        "[Eleganz] Entferne eine Karte aus deinem Deck.",
+        "[Schlichtheit] Verbessere alle Schläge und Verteidigungen. Wähle eine Karte zum Entfernen.",
+        "[Verlassen]"
+      ]
+    },
+    "VAMPIRES": {
+      "name": "Vampire (?)",
+      "description": "Auf einer unbeleuchteten Straße triffst du auf ein paar vermummte Gestalten, die gerade mitten in irgendeinem dunklen Ritual sind. Als du näher kommst, wenden sie sich dir in gespenstischem Gleichklang zu. Der Größte von ihnen entblößt Fangzähne und streckt eine lange, blasse Hand nach dir aus. \n „Schließ dich uns an, Bruder, und spüre die Wärme des Spire.“",
+      "choices": [
+        "[Annehmen] Entferne alle Schläge. Erhalte 5 Bisse. Verliere30%max. TP.",
+        "[Ablehnen]",
+        "[Verlassen]"
+      ]
+    },
+    "CURSED_TOME": {
+      "name": "Verfluchter Foliant",
+      "description": "In einem verlassenen Tempel findest du ein riesiges Buch. Es ist geöffnet und gefüllt mit kryptischen Schriften. \n \n Als du versuchst, das komplizierte Skript zu verstehen, beginnt es sich zu verändern und verwandelt sich in eine Schrift, die du lesen kannst.",
+      "choices": [
+        "[Lesen]",
+        "[Weiter] Verliere 1 TP.",
+        "[Weiter] Verliere 2 TP.",
+        "[Weiter] Verliere 3 TP.",
+        "[Aufhören] Verliere 3 TP.",
+        "[Nehmen] Erhalte das Buch. Verliere?TP.",
+        "[Verlassen]"
+      ]
+    },
+    "FORGOTTEN_ALTAR": {
+      "name": "Vergessener Altar",
+      "description": "Vor dir befindet sich ein Altar, der einem vergessenen Gott gewidmet ist. \n Auf dem Altar sitzt eine verzierte weibliche Statue mit ausgestreckten Armen. \n Sie ruft nach dir, sie verlangt ein Opfer.",
+      "choices": []
+    },
+    "ACCURSED_BLACKSMITH": {
+      "name": "Verwunschene Schmiede",
+      "description": "Geduckt betrittst du eine kleine Hütte. Drinnen bemerkst du, dass es eine Schmiede sein muss. Die Schmiedewerkzeuge sind sehr staubig, doch im Ofen lodert ein Feuer. Du bist nervös...",
+      "choices": [
+        "[Schmieden] Verbessere eine Karte in deinem Deck.",
+        "[Stöbern] Erhalte ein besonderes Relikt. Werde verflucht – Schmerz.",
+        "[Verlassen] Wähle eine Karte zum Verbessern",
+        "[Gesperrt] Erfordert: Verbesserbare Karten"
       ]
     },
     "WORLD_OF_GOOP": {
       "name": "Welt aus Schleim",
-      "description": "Du fällst in eine Pfütze.\nSIE IST AUS KLEBRIGEM SCHLEIM!!\nVerzweifelt kämpfst du dich mehrere Minuten lang frei; der Schleim fühlt sich brennend an.\nSchleim in deinen Ohren, Schleim in deiner Nase, Schleim überall.\n\n Beim Herausklettern merkst du, dass etwas von deinem Gold fehlt. Als du zurück in die Pfütze blickst, siehst du deine fehlenden Münzen zusammen mit dem Gold anderer glückloser Abenteurer.",
-      "options": [
-        "[Gold sammeln] ErhalteGold. Verliere",
-        "[Zurücklassen] VerliereGold.",
+      "description": "Du fällst in eine Pfütze. \n SIE IST AUS KLEBRIGEM SCHLEIM!! \n Verzweifelt kämpfst du dich mehrere Minuten lang frei; der Schleim fühlt sich brennend an. \n Schleim in deinen Ohren, Schleim in deiner Nase, Schleim überall. \n \n Beim Herausklettern merkst du, dass etwas von deinem Gold fehlt. Als du zurück in die Pfütze blickst, siehst du deine fehlenden Münzen zusammen mit dem Gold anderer glückloser Abenteurer.",
+      "choices": [
+        "[Gold sammeln] Erhalte75Gold. Verliere11TP.",
+        "[Zurücklassen] Verliere?Gold."
+      ]
+    },
+    "KNOWING_SKULL": {
+      "name": "Wissender Schädel",
+      "description": "Du befindest dich in einer alten, dekorierten Kammer. In der Mitte des Raumes sitzt ein großer Schädel auf einem verzierten Podest. Als du dich näherst, geht der Schädel in Flammen auf und wendet sich dir zu.",
+      "choices": [
+        "[Weiter]",
+        "[Information?] Enthülle den Boss. Verliere",
+        "[Erfolg?] Erhalte eine farblose Karte. Verliere?TP.",
+        "[Stärkung?] Erhalte einen Trank. Verliere?TP.",
+        "[Reichtümer?] Erhalte90Gold. Verliere?TP.",
+        "[Wie komme ich hier raus?] Verliere6TP.",
         "[Verlassen]"
       ]
     }

@@ -148,38 +148,8 @@ function buildLang(gameLang) {
   }
 
   // Events
-  const events = JSON.parse(fs.readFileSync(path.join(dir, 'events.json'), 'utf8'));
-  for (const [id, data] of Object.entries(events)) {
-    if (!data.NAME) continue;
-    // Merge fragmented OPTIONS: entries starting with [ begin a new option,
-    // the next non-bracket entry is a continuation (split at dynamic value points).
-    // Subsequent non-bracket entries are post-event UI text and should be skipped.
-    // After merging, only keep entries that start with [.
-    let mergedOptions;
-    if (data.OPTIONS) {
-      const merged = [];
-      let lastWasBracket = false;
-      for (const raw of data.OPTIONS) {
-        const cleaned = cleanDescription(raw);
-        if (!cleaned) continue;
-        if (cleaned.startsWith('[')) {
-          merged.push(cleaned);
-          lastWasBracket = true;
-        } else if (lastWasBracket && merged.length > 0) {
-          // First continuation after a bracket entry — merge it
-          merged[merged.length - 1] += cleaned;
-          lastWasBracket = false;
-        }
-        // else: orphaned non-bracket entry, skip
-      }
-      mergedOptions = merged.filter(o => o.startsWith('['));
-    }
-    result.events[toUpperSnake(id)] = {
-      name: data.NAME,
-      description: cleanDescription((data.DESCRIPTIONS || [])[0] || ''),
-      ...(mergedOptions && mergedOptions.length > 0 && { options: mergedOptions }),
-    };
-  }
+  // Events: handled by build_events.py (unified English + localized pipeline)
+  // Skip event processing here to avoid duplicate/conflicting logic.
 
   // Characters
   const charactersPath = path.join(dir, 'characters.json');

@@ -3614,466 +3614,185 @@
     }
   },
   "events": {
-    "ACCURSED_BLACKSMITH": {
-      "name": "Forja Sinistra",
-      "description": "Você se esgueira para dentro de uma pequena cabana. Dentro, você encontra o que parece ser uma forja. As ferramentas de metalurgia estão cobertas de poeira, mas o fogo crepita dentro da fornalha. Você se sente no limite...",
-      "options": [
-        "[Forjar] Aprimore uma carta no seu deck.",
-        "[Revistar] Obtenha uma Relíquia especial. Seja Amaldiçoado - Dor.",
-        "[Sair]Escolha uma Carta para Aprimorar",
-        "[Bloqueado] Requer: Cartas Aprimoráveis"
+    "THE_LIBRARY": {
+      "name": "A Biblioteca",
+      "description": "Você se depara com um prédio bem decorado que aparenta estar abandonado. \n Uma placa que que aparenta ter sido arrancada da parede se encontra no chão, onde se lê \"A BIBLIOTECA\". \n Dentro, você entra inúmeros rolos de papiro, manuscritos e livros. \n Você escolhe um e se aconchega em uma cadeira por algum tempo de silêncio.",
+      "choices": [
+        "[Ler] Escolha 1 de 20 cartas para adicionar ao seu deck.",
+        "[Dormir] Cure?PV."
       ]
     },
-    "ADDICT": {
-      "name": "Andarilho Pedinte",
-      "description": "Enquanto se esgueira por um grupo de figuras encapuzadas, um deles se aproxima de você.\n\"Tem alguma coisa para mim, amigo? Por favor... talvez algumas Moedas?\"\n\"Eu só preciso de um lugar para ficar, eu tenho tesouros que posso trocar...\"\nEle parece delirante, mas inofensivo.",
-      "options": [
-        "[Oferecer Ouro]de Ouro: Obtenha uma Relíquia.",
-        "[Bloqueado] Requer:de Ouro.",
-        "[Roubar] obtenha uma Relíquia. Seja Amaldiçoado - Vergonha.",
-        "[Sair]"
-      ]
-    },
-    "BACK_TO_BASICS": {
-      "name": "Inscrição Ancestral",
-      "description": "Escalando a cidade, você nota um muro coberto de inscrições dos Antigos. Conforme você tenta entender o que os enigmáticos símbolos e glifos significam, a inscrição começa a brilhar.\nDe repente, a mensagem se torna clara...",
-      "options": [
-        "[Elegância] Remova uma Carta do seu deck.",
-        "[Simplicidade] Aprimore todos os Golpes e Defender.Escolha uma Carta para Remover",
-        "[Sair]"
-      ]
-    },
-    "BEGGAR": {
-      "name": "Velho Pedinte",
-      "description": "Um velho pedinte sob um manto de pele estende as mãos em sua direção conforme você passa. \"Uma esmola, meu jovem?\"",
-      "options": [
-        "[Oferecer Ouro]de Ouro: Remova uma carta do seu deck.",
-        "[Bloqueado] Requer:de Ouro.",
-        "[Continuar]",
-        "[Sair]Select a Card to Remove."
-      ]
-    },
-    "BIG_FISH": {
-      "name": "Peixe Grande",
-      "description": "Conforme você segue por um longo corredor, você ve uma banana, uma rosquinha, e uma caixa pairando no ar. Não... Ao analisar mais atentamente, elas estão amarradas a linhas vindas de buracos no teto. Há uma quieta gargalhada vinda de cima conforme você se aproxima dos objetos.\nO que você faz?",
-      "options": [
-        "[Banana] CurePV.",
-        "[Rosquinha] PV Máximo +.",
-        "[Caixa] Receba uma Relíquia. Seja Amaldiçoado - Arrependimento.",
-        "[Sair]"
-      ]
-    },
-    "BONFIRE_ELEMENTALS": {
-      "name": "Espíritos da Fogueira",
-      "description": "Você se depara com um grupo do que parecem ser espíritos de fogo roxo dançando ao redor de uma grande fogueira.",
-      "options": [
-        "[Continuar]",
-        "[Sair]",
-        "[Oferecer] Receba uma recompensa baseada na oferenda.Selecione uma Carta para Oferecer."
-      ]
-    },
-    "CURSED_TOME": {
-      "name": "Tomo Amaldiçoado",
-      "description": "Em um templo abandonado, você encontra um livro gigante, aberto, cheio de inscrições enigmáticas.\n\n Conforme você tenta interpretar esses elaborados escritos, eles começam a se alterar e moldar em uma escrita com a qual você é familiar.",
-      "options": [
-        "[Ler]",
-        "[Continuar] Perca 1 PV.",
-        "[Continuar] Perca 2 PV.",
-        "[Continuar] Perca 3 PV.",
-        "[Parar] Perca 3 PV.",
-        "[Pegar] Obtenha o Livro. PercaPV.",
-        "[Sair]"
-      ]
-    },
-    "DEAD_ADVENTURER": {
-      "name": "Aventureiro Morto",
-      "description": "Enquanto vasculhava o aventureiro, você é pego com a guarda baixa!",
-      "options": [
-        "[Vasculhar] Encontre Pilhagem.",
-        "[Sair]",
-        "[Lutar]",
-        "[Continuar] Encontre Pilhagem.%: monstro retorna."
-      ]
-    },
-    "DRUG_DEALER": {
-      "name": "Aprimorador",
-      "description": "Um homem com um tapa olho e sorriso malicioso casualmente vem em sua direção.\n\"E aí, estranho. Interessado em avanços científicos? Eu posso te tornar mais forte que qualquer treinamento ou benção. Você vai precisar disso se for um daqueles heróis com um desejo de morte.\"\n\n \"O que me diz?\"",
-      "options": [
-        "[Testar B.O.M.B.A.] Ganhe BOMBADO.",
-        "[Virar Cobaia] Transforme 2 cartas.",
-        "[Ingerir Agente Mutagênico] Obtenha uma relíquia especial.",
-        "[Sair]",
-        "[Bloqueado] Requer: 2 ou mais cartas no deck.Selecione Cartas para Transformar."
-      ]
-    },
-    "DUPLICATOR": {
-      "name": "Duplicador",
-      "description": "À sua frente está um altar decorado para alguma entidade antiga.",
-      "options": [
-        "[Orar] Duplica uma carta em seu deck.",
-        "[Sair]Selecione uma Carta para Duplicar."
-      ]
-    },
-    "FALLING": {
-      "name": "Caindo",
-      "description": "Conforme você segue para cima pulando de uma forma flutuante para outra, você escorrega.\n\n Você começa a cair.",
-      "options": [
-        "[Continuar]",
-        "[Aterrisar] Perca",
-        "[Bloqueado] Requer: Carta de Técnica",
-        "[Canalizar] Perca",
-        "[Bloqueado] Requer: Carta de Poder",
-        "[Golpear] Perca",
-        "[Bloqueado] Requer: Carta de Ataque",
-        "[Sair]",
-        "[Aterrissar]"
-      ]
-    },
-    "FORGOTTEN_ALTAR": {
-      "name": "Altar Esquecido",
-      "description": "À sua frente repousa um altar de um deus esquecido.\nAo topo do altar repousa uma ornamentada estátua feminina com os braços estendidos.\nEla te chama, exigindo sacrifício.",
-      "options": [
-        "[Oferecer: Ídolo Dourado] Receba uma Relíquia especial. Perca o Ídolo Dourado.",
-        "[Bloqueado] Requer: Ídolo Dourado.",
-        "[Sacrificar] GanhePV Máximo. Perca",
-        "[Bloqueado] Requer: Humanidade.",
-        "[Profanar] Seja Amaldiçoado - Apodrecer."
+    "THE_MOAI_HEAD": {
+      "name": "A Cabeça Moai",
+      "description": "Voçê esbarra em algo que parece *muito* inusitado. A sua frente, uma enorme cabeça de pedra emerge de um grande pedaço da parede que não muda e oscila como o resto da área. \n A boca da cabeça está bem aberta, e revela grandes e intimidantes dentes com manchas vermelhas de sangue. A superfície da estátua está coberta de pictogramas que parecem indicar pessoas se jogando na boca dessa cabeça e sendo devorados. Por que alguém faria isso?",
+      "choices": [
+        "[Pular Dentro] Cure todos os PV. Perca?PV Máximo.",
+        "[Oferecer: Ídolo Dourado] Ganhe 333 Ouro. Perca Ídolo Dourado."
       ]
     },
     "FOUNTAIN_OF_CLEANSING": {
       "name": "A Fonte Divina",
       "description": "Você se depara com águas cintilantes jorrando sem fim de uma fonte em um muro próximo.",
-      "options": [
+      "choices": [
         "[Beber] Remove todas as Maldições do seu deck.",
         "[Sair]"
       ]
     },
-    "GHOSTS": {
-      "name": "Conselho de Fantasmas",
-      "description": "Conforme você continua sua subida, fumaça espessa e negra começa a emergir do chão e paredes ao seu redor, fundindo-se em três formas mascaradas que começam a falar.\n\n \"Outra marionete de Neow, eu creio.\"\n\"CONCORDO! ELA SEMPRE FAZ OS MAIS DIVERTIDOS BRINQUEDOS!\"\n\n Você nota um sorriso extra-grande conforme o terceiro se dirige a você.\n\"Ignore os outros... Você gostaria de uma amostra de nosso poder?\"",
-      "options": [
-        "[Aceitar] Obtenha 5 Aparição. Perca% PV Máximo.",
-        "[Recusar]",
-        "[Aceitar] Obtenha 3 Aparição. Perca",
-        "[Sair]"
+    "THE_JOUST": {
+      "name": "A Justa",
+      "description": "Enquanto percorre seu caminho pelos grandes prédios você se depara com uma longa e estreita ponte e avista cavaleiros em cada lado, encarando um ao outro. Você se aproxima... \n \"Alto!\" \n \n Um cavaleiro gesticula bruscamente com sua lança gigante para que você pare.",
+      "choices": [
+        "[Continuar]",
+        "[Dono] Aposte50Ouro - 30%: ganhar250Ouro.",
+        "[Assistir]"
       ]
     },
-    "GOLDEN_IDOL": {
-      "name": "Ídolo Dourado",
-      "description": "Você se depara com um discreto pedestal apoiando um brilhante #ídolo de ouro. Parece extremamente valioso.\n\n Você não observa nenhuma armadilha por perto.",
-      "options": [
-        "[Pegar] Ganhe o Ídolo Dourado. Ative uma armadilha.",
+    "THE_WOMAN_IN_BLUE": {
+      "name": "A Mulher de Azul",
+      "description": "Da escuridão, um braço te puxa para dentro de uma pequena loja. Enquanto seus olhos se acostumam, você ve uma pálida mulher em roupas sofisticadas gesticulando em direção a uma prateleira de poções. \n \"Compre uma poção. Agora!\" ela afirma.",
+      "choices": [
+        "[Compre 1 Poções]",
+        "[Compre 2 Poções]",
+        "[Compre 3 Poçoes] Ouro.",
         "[Sair]",
-        "[Correr] Receba Maldição - Ferimento.",
-        "[Bater] RecebaDano.",
-        "[Esconder] PercaPV Máximo."
-      ]
-    },
-    "GOLDEN_SHRINE": {
-      "name": "Santuário Dourado",
-      "description": "Perante você se encontra um elaborado santuário em nome de um espírito antigo.",
-      "options": [
-        "[Rezar] GanheOuros.",
-        "[Profanar] Ganhe 275 Ouro. Receba Maldição - Arrependimento.",
-        "[Sair]"
-      ]
-    },
-    "GOLDEN_WING": {
-      "name": "Estátua Alada",
-      "description": "Entre as rochas e pedregulhos, você nota uma grande estátua azul entranhada que lembra a uma asa.\nVocê encontra ouro derramando de suas rachaduras. Talvez tenha mais por dentro...",
-      "options": [
-        "[Rezar] Remova uma carta do seu deck. PercaPV.",
-        "[Destruir] Ganhe-",
-        "[Bloqueado] Requer: Carta comou mais de dano.",
-        "[Sair]",
-        "[Continue]Selecione uma Carta para Remover."
-      ]
-    },
-    "KNOWING_SKULL": {
-      "name": "Crânio do Conhecimento",
-      "description": "Você se encontra em uma câmara velha, bem decorada. No centro da sala, uma grande caveira sobre um pedestal ornamentado. Chegando mais perto, a caveira se acende em chamas e se volta para você.",
-      "options": [
-        "[Continuar]PV.",
-        "[Informação?] Revele o Chefe. Perca",
-        "[Sucesso?] Ganhe uma Carta Sem Cor. Perca",
-        "[Um empurrãozinho?] Ganhe uma Poção. Perca",
-        "[Riquezas?] GanheOuro. Perca",
-        "[Como eu faço para ir embora?] Perca",
-        "[Sair]"
-      ]
-    },
-    "LAB": {
-      "name": "Laboratório",
-      "description": "Você se encontra em uma sala cheia de prateleiras de tubos de ensaio, béqueres, frascos, pinças, grampos de pressão, hastes de agitação, óculos de proteção, funis, pipetas, cilindros, condensadores e até mesmo um raro tubo de vidro em espiral.\n\n Por que você sabe o nome de todos esses utensílios? Não importa, você dá uma olhada em volta.",
-      "options": [
-        "[Procurar] Encontre algumas Poções!"
+        "[Sair] Sofra de Dano."
       ]
     },
     "LIARS_GAME": {
       "name": "A Ssssserpente",
-      "description": "Você entra em uma sala onde encontra um grande buraco no chão. Enquanto se aproxima dele, uma enorme criatura ofídia aparece de dentro.\n\n \"Ho hooo! Olá Olá! Olhe só o que temos aqui? Olá aventureiro, eu lhe faço uma simples pergunta.\nA mais satisfeita das vidas é aquela em que você pode comprar qualquer coisa!\nNão concorda?\"",
-      "options": [
-        "[Concordar] GanheOuro. Receba Maldição - Dúvida.",
-        "[Discordar]",
-        "[Continuar]",
+      "description": "Você entra em uma sala onde encontra um grande buraco no chão. Enquanto se aproxima dele, uma enorme criatura ofídia aparece de dentro. \n \n \"Ho hooo! Olá Olá! Olhe só o que temos aqui? Olá aventureiro, eu lhe faço uma simples pergunta. \n A mais satisfeita das vidas é aquela em que você pode comprar qualquer coisa! \n Não concorda?\"",
+      "choices": [
+        "[Concordar] Ganhe150Ouro. Receba Maldição - Dúvida.",
+        "[Discordar]"
+      ]
+    },
+    "FORGOTTEN_ALTAR": {
+      "name": "Altar Esquecido",
+      "description": "À sua frente repousa um altar de um deus esquecido. \n Ao topo do altar repousa uma ornamentada estátua feminina com os braços estendidos. \n Ela te chama, exigindo sacrifício.",
+      "choices": []
+    },
+    "ADDICT": {
+      "name": "Andarilho Pedinte",
+      "description": "Enquanto se esgueira por um grupo de figuras encapuzadas, um deles se aproxima de você. \n \"Tem alguma coisa para mim, amigo? Por favor... talvez algumas Moedas?\" \n \"Eu só preciso de um lugar para ficar, eu tenho tesouros que posso trocar...\" \n Ele parece delirante, mas inofensivo.",
+      "choices": [
+        "[Oferecer Ouro]85de Ouro: Obtenha uma Relíquia.",
+        "[Roubar] obtenha uma Relíquia. Seja Amaldiçoado - Vergonha.",
         "[Sair]"
       ]
     },
-    "LIVING_WALL": {
-      "name": "Parede viva",
-      "description": "Você chega a um caminho sem saída e quando começa a se virar, as paredes despencam do teto, te prendendo!\n\n Três rostos se materializam das paredes e falam.\n\"Esqueça o que você sabe, e eu deixarei você ir.\"\n\" Eu exijo mudança para uma nova oportunidade.\"\n\"Se quiser passar por mim, então você deve crescer.\"",
-      "options": [
-        "[Esquecer] Remova uma carta do seu deck.",
-        "[Mudar] Transforme uma carta do seu deck.",
-        "[Crescer] Melhore uma carta do seu deck.Selecione uma carta para Remover.",
+    "DRUG_DEALER": {
+      "name": "Aprimorador",
+      "description": "Um homem com um tapa olho e sorriso malicioso casualmente vem em sua direção. \n \"E aí, estranho. Interessado em avanços científicos? Eu posso te tornar mais forte que qualquer treinamento ou benção. Você vai precisar disso se for um daqueles heróis com um desejo de morte.\" \n \n \"O que me diz?\"",
+      "choices": [
+        "[Testar B.O.M.B.A.] Ganhe BOMBADO.",
+        "[Virar Cobaia] Transforme 2 cartas.",
+        "[Ingerir Agente Mutagênico] Obtenha uma relíquia especial.",
         "[Sair]",
-        "[Bloqueado] Requer: Cartas Aprimoráveis"
+        "[Bloqueado] Requer: 2 ou mais cartas no deck. Selecione Cartas para Transformar."
+      ]
+    },
+    "UPGRADE_SHRINE": {
+      "name": "Aprimorar Santuário",
+      "description": "Diante de você está um santuário elaborado para um espírito esquecido.",
+      "choices": [
+        "[Rezar] Aprimore uma carta.",
+        "[Sair] Selecione uma Carta para Aprimorar.",
+        "[Trancado] Requer: Cartas Aprimoráveis"
+      ]
+    },
+    "DEAD_ADVENTURER": {
+      "name": "Aventureiro Morto",
+      "description": "Enquanto vasculhava o aventureiro, você é pego com a guarda baixa!",
+      "choices": [
+        "[Vasculhar] Encontre Pilhagem.",
+        "[Sair]",
+        "[Lutar]",
+        "[Continuar] Encontre Pilhagem. %: monstro retorna."
       ]
     },
     "MASKED_BANDITS": {
       "name": "Bandidos Mascarados",
-      "description": "Hehehe.. Obrigado pelo ouro!\nAh, eu amo ouro. É tão legal.\nbrilhante brilhante pivetes é o que eles são!",
-      "options": [
+      "description": "Hehehe.. Obrigado pelo ouro! \n Ah, eu amo ouro. É tão legal. \n brilhante brilhante pivetes é o que eles são!",
+      "choices": [
         "[Pagar] Perca TODO o seu Ouro.",
         "[Lutar!]",
         "[Continuar]",
         "[Sair]"
       ]
     },
-    "MATCH_AND_KEEP": {
-      "name": "Combine e ganhe!",
-      "description": "\" Doze cartas! Combine as iguais e fique com elas! Cinco tentativas, sem refazer.\nVocê está pronto? Vamos lá!\"",
-      "options": [
-        "[Continuar]",
-        "[Sair]",
-        "[Jogar]Tentativas Restantes:"
+    "FALLING": {
+      "name": "Caindo",
+      "description": "Conforme você segue para cima pulando de uma forma flutuante para outra, você escorrega. \n \n Você começa a cair.",
+      "choices": [
+        "[Continuar]a Skill[Aterrisar] Perca",
+        "[Bloqueado] Requer: Carta de Técnicaa Power[Canalizar] Perca",
+        "[Bloqueado] Requer: Carta de Poderan Attack[Golpear] Perca"
       ]
     },
     "MUSHROOMS": {
       "name": "Cogumelos",
-      "description": "Você cede ao desejo sobrenatural de come-los. Enquanto devora cogumelo após cogumelo você se sente cada vez mais sonolento e desmaia. Quando acorda você se sente diferente.\nVocê Cura 25% dos seus PV, no entanto também fica infectado.",
-      "options": [
+      "description": "Você cede ao desejo sobrenatural de come-los. Enquanto devora cogumelo após cogumelo você se sente cada vez mais sonolento e desmaia. Quando acorda você se sente diferente. \n Você Cura 25% dos seus PV, no entanto também fica infectado.",
+      "choices": [
         "[Esmagar] Irritar os Cogumelos.",
-        "[Comer] CurePV. Receba Maldição - Parasita.",
+        "[Comer] Cure PV. Receba Maldição - Parasita.",
         "[Lutar]",
         "[Sair]"
       ]
     },
-    "MYSTERIOUS_SPHERE": {
-      "name": "Esfera Misteriosa",
-      "description": "Saliente do terreno acidentado que o cerca, uma esfera óssea cerca um misterioso objeto brilhante.\nApesar da curiosidade sobre o que há lá dentro, você percebe algumas sentinelas vigiando-a.",
-      "options": [
-        "[Abrir a esfera] Lutar. Recompensa: Relíquia Rara.",
+    "MATCH_AND_KEEP": {
+      "name": "Combine e ganhe!",
+      "description": "\" Doze cartas! Combine as iguais e fique com elas! Cinco tentativas, sem refazer. \n Você está pronto? Vamos lá!\"",
+      "choices": [
+        "[Continuar]",
         "[Sair]",
-        "[Lutar]"
+        "[Jogar] Tentativas Restantes:"
       ]
     },
-    "N_LOTH": {
-      "name": "N'loth",
-      "description": "Uma criatura peculiar com as costas curvadas brotando vários tentáculos está vasculhando uma pilha de restos e entulhos a sua frente. Quando se aproxima, ele esfrega a suas mãos em sua direção de forma pacífica.\n\"N’loth com fome. Alimente N’loth.\"",
-      "options": [
-        "[Oferecer:] Perca esta relíquia. Obtenha uma relíquia especial.",
-        "[Sair]"
-      ]
-    },
-    "PURIFIER": {
-      "name": "Purificador",
-      "description": "Perante você está um elaborado santuário a um espírito esquecido.",
-      "options": [
-        "[Rezar] Remova uma carta do seu deck.",
-        "[Sair]Selecione uma Carta para Remover."
-      ]
-    },
-    "SCRAP_OOZE": {
-      "name": "Gosma de sucata",
-      "description": "Enquanto entra em uma sala, você ouve um borbulhar e o ranger de metais. Atrás de você está um tipo de criatura gosma que comeu sucata demais pro seu próprio bem. Do centro da criatura você ve uma luz estranha, talvez algo mágico? Parece que você pode conseguir algum tesouro se conseguir alcançar por sua... abertura. No entanto, o ácido e os objetos afiados podem machucar.",
-      "options": [
-        "[Tentar Alcançar] PercaPV.",
-        "[Sair]",
-        "[Mais fundo] Perca"
-      ]
-    },
-    "SECRETPORTAL": {
-      "name": "Portal Secreto",
-      "description": "A sua frente está uma visão inusitada na paisagem alienígena que o cerca. Estranhamente alocada em uma das cercas vivas do Além está um portal de pedra, preenchido por um portal mágico ondulante.\n\n Você não está certo de onde ele pode te levar, mas talvez possa acelerar sua jornada pelo Pináculo.",
-      "options": [
-        "[Entrar no Portal] Viaje IMEDIATAMENTE para o chefe.",
-        "[Sair]"
-      ]
-    },
-    "SENSORYSTONE": {
-      "name": "Pedra Sensorial",
-      "description": "Navegando através do Além, você descobre um brilhante tesseract girando e mudando gentilmente no ar.",
-      "options": [
-        "[Recordar] Adicione 1 carta Sem Cor ao seu deck.",
-        "[Recordar] Adicione 2 carta Sem Cor ao seu deck. Perca",
-        "[Recordar] Adicione 3 carta Sem Cor ao seu deck. PercaPV.",
-        "[Sair]",
-        "[Interagir]"
-      ]
-    },
-    "SHINING_LIGHT": {
-      "name": "Luz Brilhante",
-      "description": "Você encontra uma massa de luz cintilante envolvendo o centro da sala.\n\n Seu brilho caloroso e ritmo encantador o convidam a entrar.",
-      "options": [
-        "[Entrar] Melhore 2 cartas aleatórias. PercaPV.",
-        "[Sair]",
-        "[Bloqueado] Requer: Cartas Aprimoráveis."
+    "GHOSTS": {
+      "name": "Conselho de Fantasmas",
+      "description": "Conforme você continua sua subida, fumaça espessa e negra começa a emergir do chão e paredes ao seu redor, fundindo-se em três formas mascaradas que começam a falar. \n \n \"Outra marionete de Neow, eu creio.\" \n \"CONCORDO! ELA SEMPRE FAZ OS MAIS DIVERTIDOS BRINQUEDOS!\" \n \n Você nota um sorriso extra-grande conforme o terceiro se dirige a você. \n \"Ignore os outros... Você gostaria de uma amostra de nosso poder?\"",
+      "choices": [
+        "[Aceitar] Obtenha 5 Aparição. Perca?% PV Máximo.",
+        "[Recusar]"
       ]
     },
     "SPIRE_HEART": {
       "name": "Coração do Pináculo",
-      "description": "tu-thump ... tu-thump ... tu-thump ...\nUm terror pulsante e profundo pode ser sentido através da sala...\nSeria isso o coração do Pináculo? A origem de todo esse mal?",
-      "options": [
+      "description": "tu-thump ... tu-thump ... tu-thump ... \n Um terror pulsante e profundo pode ser sentido através da sala... \n Seria isso o coração do Pináculo? A origem de todo esse mal?",
+      "choices": [
         "[Continuar]",
         "[Atacar] ???",
         "[Dormir]",
         "[Aproximar-se da porta]"
       ]
     },
-    "THE_CLERIC": {
-      "name": "O Clérigo",
-      "description": "Um estranho humanóide com um capacete dourado(?) se aproxima de você com um enorme sorriso.\n\"Olá Amigo! Eu sou o Clérigo! Você estaria interessado em meus serviços?!\" a criatura brada, vigorosamente.",
-      "options": [
-        "[Curar] 35 Ouro: Cure",
-        "[Bloqueado] Requer:Ouro.",
-        "[Purificar]Ouro: Remova uma carta do seu deck.",
-        "[Bloqueado] Requer: 50 Ouro.",
-        "[Sair]Selecione uma carta para remover."
-      ]
-    },
-    "THE_JOUST": {
-      "name": "A Justa",
-      "description": "Enquanto percorre seu caminho pelos grandes prédios você se depara com uma longa e estreita ponte e avista cavaleiros em cada lado, encarando um ao outro. Você se aproxima...\n\"Alto!\"\n\n Um cavaleiro gesticula bruscamente com sua lança gigante para que  você pare.",
-      "options": [
-        "[Continuar]",
-        "[Assassino] AposteOuro - 70%: ganhar",
-        "[Dono] AposteOuro - 30%: ganhar",
-        "[Assistir]",
-        "[Sair]"
-      ]
-    },
-    "THE_LIBRARY": {
-      "name": "A Biblioteca",
-      "description": "Você se depara com um prédio bem decorado que aparenta estar abandonado.\nUma placa que que aparenta ter sido arrancada da parede se encontra no chão, onde se lê \"A BIBLIOTECA\".\nDentro, você entra inúmeros rolos de papiro, manuscritos e livros.\nVocê escolhe um e se aconchega em uma cadeira por algum tempo de silêncio.",
-      "options": [
-        "[Ler] Escolha 1 de 20 cartas para adicionar ao seu deck.",
-        "[Dormir] CurePV.",
-        "[Sair]Adicione uma carta ao seu deck."
-      ]
-    },
-    "THE_MAUSOLEUM": {
-      "name": "O Mausoléu",
-      "description": "Se aventurando por uma série de tumbas, você se depara com um grande sarcófago cravejado com gemas no centro de uma sala circular.\nvocê não pôde decifrar o que estava escrito no caixão, no entanto, você percebe uma névoa negra escoando pelas aberturas.",
-      "options": [
-        "[Abrir caixão] Obtenha uma Relíquia.%: Receber Maldição - Contorção.",
-        "[Sair]"
-      ]
-    },
-    "THE_MOAI_HEAD": {
-      "name": "A Cabeça Moai",
-      "description": "Voçê esbarra em algo que parece muito inusitado. A sua frente, uma enorme cabeça de pedra emerge de um grande pedaço da parede que não muda e oscila como o resto da área.\nA boca da cabeça está bem aberta, e revela grandes e intimidantes dentes com manchas vermelhas de sangue. A superfície da estátua está coberta de pictogramas que parecem indicar pessoas se jogando na boca dessa cabeça e sendo devorados. Por que alguém faria isso?",
-      "options": [
-        "[Pular Dentro] Cure todos os PV. PercaPV Máximo.",
-        "[Oferecer: Ídolo Dourado] Ganhe 333 Ouro. Perca Ídolo Dourado.",
-        "[Bloqueado] Requer: Ídolo Dourado.",
-        "[Sair]"
-      ]
-    },
-    "THE_WOMAN_IN_BLUE": {
-      "name": "A Mulher de Azul",
-      "description": "Da escuridão, um braço te puxa para dentro de uma pequena loja. Enquanto seus olhos se acostumam, você ve uma pálida mulher em roupas sofisticadas gesticulando em direção a uma prateleira de poções.\n\"Compre uma poção. Agora!\" ela afirma.",
-      "options": [
-        "[Compre 1 Poções]",
-        "[Compre 2 Poções]",
-        "[Compre 3 Poçoes]Ouro.",
-        "[Sair]",
-        "[Sair] Sofrade Dano."
-      ]
-    },
-    "THINKING_WITH_PUDDLES": {
-      "name": "Pensando com Poças",
-      "description": "Você caminha para uma poça cintilante... e você cai do teto logo acima dela!\nEm queda livre, você considera suas opções.",
-      "options": [
-        "[Melecado] Perca uma carta Rara aleatória.",
-        "[Caia de cara] Levedano. Fique Amaldiçoado - Ferimento.",
-        "[Sair]"
-      ]
-    },
-    "TOMB_OF_LORD_RED_MASK": {
-      "name": "Tumba do Senhor Máscara Vermelha",
-      "description": "Uma tumba altamente ornamentada pode ser vista do outro lado de um caminho flutuante. Ao alcançar a tumba, você nota uma fenda para moedas de ouro com uma inscrição arranhada sobre ela.",
-      "options": [
-        "[Vista a Máscara] Ganhe 222 de Ouro.",
-        "[Trancado] Requer: Máscara Vermelha.",
-        "[Ofereça:Ouro] Perca todo o Ouro. Obtenha uma Relíquia.",
-        "[Sair]"
-      ]
-    },
-    "TRANSMORGRIFIER": {
-      "name": "Transmogrificador",
-      "description": "Diante de você está um santuário elaborado para um espírito esquecido.",
-      "options": [
-        "[Rezar] Transformar uma carta.",
-        "[Sair]Selecione uma Carta para Transformar."
-      ]
-    },
-    "UPGRADE_SHRINE": {
-      "name": "Aprimorar Santuário",
-      "description": "Diante de você está um santuário elaborado para um espírito esquecido.",
-      "options": [
-        "[Rezar] Aprimore uma carta.",
-        "[Sair]Selecione uma Carta para Aprimorar.",
-        "[Trancado] Requer: Cartas Aprimoráveis"
-      ]
-    },
-    "VAMPIRES": {
-      "name": "Vampiros(?)",
-      "description": "Ao navegar por uma rua sem iluminação, você se depara com diversas figuras encapuzadas em meio de um ritual sombrio. Ao se aproximar, eles se viram para você em uma sinistra sincronia. O mais alto entre eles possui dentes como presas e extende uma mão pálida e longa em sua direção.\n\"Junte-se a nós, irmão, e sinta o calor do Pináculo.\"",
-      "options": [
-        "[Aceitar] Remova todos os Golpes. Receba 5 Mordidas. Perca% PV Máximo.",
-        "[Recusar]",
-        "[Perca] Remova todos os Golpes. Receba 5 Mordidas.",
-        "[Sair]"
-      ]
-    },
-    "WHEEL_OF_CHANGE": {
-      "name": "Roda da Mudança",
-      "description": "Você se depara com um gremlin de aparência elegante e animada.\n\"É hora de girar a roda! Tudo P R O N T O ? Claro que está!\"",
-      "options": [
-        "[Jogar]",
-        "[Prêmio!] YAY!!!!",
-        "[Prêmio!] Obtenha uma Relíquia.",
-        "[Prêmio!] Cure-se completamente.",
-        "[Prêmio?] Maldição - Decadência.",
-        "[Prêmio!] Remova uma carta do seu deck.",
-        "[Prêmio?] PercaHP.",
-        "[Sair]Selecione uma carta para Remover."
-      ]
-    },
     "WINDING_HALLS": {
       "name": "Corredores Sinuosos",
-      "description": "Conforme você continua subindo vagarosamente as trilhas contorcidas, você constantemente se encontra perdendo o caminho já que as paredes e o chão parecem inexplicavelmente se moverem diante dos seus olhos.\n\n As constantes vozes sussurrantes no seu ouvido também não estão ajudando.",
-      "options": [
-        "[Abraçar Loucura] Receba 2 Loucura. PercaPV.",
+      "description": "Conforme você continua subindo vagarosamente as trilhas contorcidas, você constantemente se encontra perdendo o caminho já que as paredes e o chão parecem inexplicavelmente se moverem diante dos seus olhos. \n \n As constantes vozes sussurrantes no seu ouvido também não estão ajudando.",
+      "choices": [
+        "[Abraçar Loucura] Receba 2 Loucura. Perca PV.",
         "[Focar] Seja Amaldiçoado - Torção. Cure",
-        "[Sair]PV.",
-        "[Refazer os seus passos] PercaPV Máximo."
+        "[Sair] PV.",
+        "[Refazer os seus passos] Perca PV Máximo."
       ]
     },
-    "WORLD_OF_GOOP": {
-      "name": "Mundo de Gosma",
-      "description": "Você cai em uma poça.\nELA É FEITA DE GOSMA!!\nFreneticamente, você se arranha por muitos minutos conforme você sente a gosma começar a queimar.\nVocê consegue sentir gosma em seus ouvidos, gosma em seu nariz, gosma em todo lugar.\n\n Saindo de lá, você nota que parte do seu ouro está faltando. Olhando novamente para a poça você ve suas moedas perdidas combinadas com ouro de outros aventureiros infelizes misturadas juntas dentro da poça.",
-      "options": [
-        "[Coletar Ouro] Obtenhade Ouro. Perca",
-        "[Deixar] Percade Ouro.",
+    "KNOWING_SKULL": {
+      "name": "Crânio do Conhecimento",
+      "description": "Você se encontra em uma câmara velha, bem decorada. No centro da sala, uma grande caveira sobre um pedestal ornamentado. Chegando mais perto, a caveira se acende em chamas e se volta para você.",
+      "choices": [
+        "[Continuar]",
+        "[Informação?] Revele o Chefe. Perca",
+        "[Sucesso?] Ganhe uma Carta Sem Cor. Perca?PV.",
+        "[Um empurrãozinho?] Ganhe uma Poção. Perca?PV.",
+        "[Riquezas?] Ganhe90Ouro. Perca?PV.",
+        "[Como eu faço para ir embora?] Perca6PV.",
         "[Sair]"
       ]
     },
     "MINDBLOOM": {
       "name": "Desabrochar da Mente",
-      "description": "Enquanto você anda e atravessa o caos do Pináculo, os seus pensamentos de repente começam a parecerem muito... reais...\n\n Imaginações de monstros e riquezas começam a se manifestar para realidade.\nEssa sensação é rapidamente fugaz. O que você faz?",
-      "options": [
+      "description": "Enquanto você anda e atravessa o caos do Pináculo, os seus pensamentos de repente começam a parecerem muito... reais... \n \n Imaginações de monstros e riquezas começam a se manifestar para realidade. \n Essa sensação é rapidamente fugaz. O que você faz?",
+      "choices": [
         "[Eu sou a Guerra] Lutar Contra um Chefe do Ato 1. Obtenha uma Relíquia Rara.",
         "[Eu sou a Riqueza] Ganhe 999 #de Ouro. Amaldiçoado - 2 Mediocridade.",
         "[Eu sou Saudável] Cura para o máximo de PV. Amaldiçoado - Dúvida.",
@@ -4081,71 +3800,304 @@
         "[Sair]"
       ]
     },
-    "NEST": {
-      "name": "O Ninho",
-      "description": "Uma longa fila de figuras encapuzadas podem ser vistas entrando\numa catedral modesta.",
-      "options": [
-        "[Ficar na fila] Obtenha Adaga Ritual. PercaPV.",
-        "[Esmagar e Agarrar] ObtenhaOuro.",
+    "DESIGNER": {
+      "name": "Designer In-Spire",
+      "description": "Você descobre uma loja colorida com uma faixa \"IN-SPIRE\" e entra para ver o que tem dentro. \n \"Não, de jeito algum. Nããão. Não posso deixar você entrar!\" \n \n Um homem com roupas ridículas aparece na entrada para te barrar.",
+      "choices": [
+        "[Continuar]",
+        "[Ajustar] Perca",
+        "[Limpar] Perca",
+        "[Serviço total] Perca",
+        "[Socar] Perca PV. Ouro. Aprimore cartas aleatórias. Aprimore uma carta. Remova uma carta. Transforme cartas. Remova uma carta e Aprimore uma carta aleatória.",
+        "[Sair] Escolha uma Carta para Aprimorar Escolha 2 Cartas para Transformar Escolha uma Carta para Remover"
+      ]
+    },
+    "DUPLICATOR": {
+      "name": "Duplicador",
+      "description": "À sua frente está um altar decorado para alguma entidade antiga.",
+      "choices": [
+        "[Orar] Duplica uma carta em seu deck.",
+        "[Sair] Selecione uma Carta para Duplicar."
+      ]
+    },
+    "MYSTERIOUS_SPHERE": {
+      "name": "Esfera Misteriosa",
+      "description": "Saliente do terreno acidentado que o cerca, uma esfera óssea cerca um misterioso objeto brilhante. \n Apesar da curiosidade sobre o que há lá dentro, você percebe algumas sentinelas vigiando-a.",
+      "choices": [
+        "[Abrir a esfera] Lutar. Recompensa: Relíquia Rara.",
         "[Sair]",
-        "[Continuar]"
+        "[Lutar]"
+      ]
+    },
+    "BONFIRE_ELEMENTALS": {
+      "name": "Espíritos da Fogueira",
+      "description": "Você se depara com um grupo do que parecem ser espíritos de fogo roxo dançando ao redor de uma grande fogueira.",
+      "choices": [
+        "[Continuar]",
+        "[Sair]",
+        "[Oferecer] Receba uma recompensa baseada na oferenda. Selecione uma Carta para Oferecer."
+      ]
+    },
+    "GOLDEN_WING": {
+      "name": "Estátua Alada",
+      "description": "Entre as rochas e pedregulhos, você nota uma grande estátua azul entranhada que lembra a uma asa. \n Você encontra ouro derramando de suas rachaduras. Talvez tenha mais por dentro...",
+      "choices": [
+        "[Rezar] Remova uma carta do seu deck. Perca25%PV.",
+        "[Destruir] Ganhe50-80Ouro.",
+        "[Sair]"
+      ]
+    },
+    "ACCURSED_BLACKSMITH": {
+      "name": "Forja Sinistra",
+      "description": "Você se esgueira para dentro de uma pequena cabana. Dentro, você encontra o que parece ser uma forja. As ferramentas de metalurgia estão cobertas de poeira, mas o fogo crepita dentro da fornalha. Você se sente no limite...",
+      "choices": [
+        "[Forjar] Aprimore uma carta no seu deck.",
+        "[Revistar] Obtenha uma Relíquia especial. Seja Amaldiçoado - Dor.",
+        "[Sair] Escolha uma Carta para Aprimorar",
+        "[Bloqueado] Requer: Cartas Aprimoráveis"
+      ]
+    },
+    "SCRAP_OOZE": {
+      "name": "Gosma de sucata",
+      "description": "Enquanto entra em uma sala, você ouve um borbulhar e o ranger de metais. Atrás de você está um tipo de criatura gosma que comeu sucata demais pro seu próprio bem. Do centro da criatura você ve uma luz estranha, talvez algo mágico? Parece que você pode conseguir algum tesouro se conseguir alcançar por sua... abertura. No entanto, o ácido e os objetos afiados podem machucar.",
+      "choices": [
+        "[Tentar Alcançar] Perca?PV.?%%: Encontre uma Relíquia.",
+        "[Sair]"
+      ]
+    },
+    "BACK_TO_BASICS": {
+      "name": "Inscrição Ancestral",
+      "description": "Escalando a cidade, você nota um muro coberto de inscrições dos Antigos. Conforme você tenta entender o que os enigmáticos símbolos e glifos significam, a inscrição começa a brilhar. \n De repente, a mensagem se torna clara...",
+      "choices": [
+        "[Elegância] Remova uma Carta do seu deck.",
+        "[Simplicidade] Aprimore todos os Golpes e Defender. Escolha uma Carta para Remover",
+        "[Sair]"
+      ]
+    },
+    "LAB": {
+      "name": "Laboratório",
+      "description": "Você se encontra em uma sala cheia de prateleiras de tubos de ensaio, béqueres, frascos, pinças, grampos de pressão, hastes de agitação, óculos de proteção, funis, pipetas, cilindros, condensadores e até mesmo um raro tubo de vidro em espiral. \n \n Por que você sabe o nome de todos esses utensílios? Não importa, você dá uma olhada em volta.",
+      "choices": [
+        "[Procurar] Encontre algumas Poções!"
+      ]
+    },
+    "SHINING_LIGHT": {
+      "name": "Luz Brilhante",
+      "description": "Você encontra uma massa de luz cintilante envolvendo o centro da sala. \n \n Seu brilho caloroso e ritmo encantador o convidam a entrar.",
+      "choices": [
+        "[Entrar] Melhore 2 cartas aleatórias. Perca20%PV.",
+        "[Sair]"
+      ]
+    },
+    "WORLD_OF_GOOP": {
+      "name": "Mundo de Gosma",
+      "description": "Você cai em uma poça. \n ELA É FEITA DE GOSMA!! \n Freneticamente, você se arranha por muitos minutos conforme você sente a gosma começar a queimar. \n Você consegue sentir gosma em seus ouvidos, gosma em seu nariz, gosma em todo lugar. \n \n Saindo de lá, você nota que parte do seu ouro está faltando. Olhando novamente para a poça você ve suas moedas perdidas combinadas com ouro de outros aventureiros infelizes misturadas juntas dentro da poça.",
+      "choices": [
+        "[Coletar Ouro] Obtenha75de Ouro. Perca11PV.",
+        "[Deixar] Perca?de Ouro."
+      ]
+    },
+    "N_LOTH": {
+      "name": "N'loth",
+      "description": "Uma criatura peculiar com as costas curvadas brotando vários tentáculos está vasculhando uma pilha de restos e entulhos a sua frente. Quando se aproxima, ele esfrega a suas mãos em sua direção de forma pacífica. \n \"N’loth com fome. Alimente N’loth.\"",
+      "choices": [
+        "[Oferecer: ] Perca esta relíquia. Obtenha uma relíquia especial.",
+        "[Sair]"
       ]
     },
     "FACETRADER": {
       "name": "Negociante de Faces",
-      "description": "Você passa por uma estátua misteriosa segurando várias máscaras...\nAlguma coisa atrás de você sussura suavemente,\n\"Pare.\"",
-      "options": [
-        "[Tocar] PercaOuro.",
+      "description": "Você passa por uma estátua misteriosa segurando várias máscaras... \n Alguma coisa atrás de você sussura suavemente, \n \"Pare.\"",
+      "choices": [
+        "[Tocar] Perca Ouro.",
         "[Trocar] 50%: Face Boa. 50%: Face Ruim.",
         "[Sair]",
-        "[Continuar]PV, ganhe"
-      ]
-    },
-    "NOTEFORYOURSELF": {
-      "name": "Um recado para você",
-      "description": "Você ve um tijolo solto em um pilar que atrai o seu olhar.",
-      "options": [
-        "[Continuar]",
-        "[Pegar e Dar] Recebae Guarde uma Carta.",
-        "[Ignorar]",
-        "[Sair]"
+        "[Continuar] PV, ganhe"
       ]
     },
     "WEMEETAGAIN": {
       "name": "Nos encontramos de novo!",
-      "description": "\"Nos encontramos de novo!\"\nUm animado e desgrenhado rapaz se aproxima de você alegremente. Você não conhece esse homem.\n\n \"Sou eu, Ranwid! Tem algum produto para mim hoje? O de sempre? Um rapaz como eu não consegue se virar sozinho, sabe?\"\nVocê o olha suspeitamente e considera as suas opções...",
-      "options": [
+      "description": "\"Nos encontramos de novo!\" \n Um animado e desgrenhado rapaz se aproxima de você alegremente. Você não conhece esse homem. \n \n \"Sou eu, Ranwid! Tem algum produto para mim hoje? O de sempre? Um rapaz como eu não consegue se virar sozinho, sabe?\" \n Você o olha suspeitamente e considera as suas opções...",
+      "choices": [
         "[Dar Poção] Perca",
         "[Bloqueado] Requer: Poção.",
         "[Dar Ouro] Perca",
         "[Bloqueado] Requer: Pelo menos 50 Ouro.",
         "[Dar Carta] Perca",
-        "[Bloqueado] Requer: Carta.. Obtenha uma Relíquia.",
+        "[Bloqueado] Requer: Carta. . Obtenha uma Relíquia.",
         "[Atacar]",
-        "[Sair]Ouro"
+        "[Sair] Ouro"
       ]
     },
-    "DESIGNER": {
-      "name": "Designer In-Spire",
-      "description": "Você descobre uma loja colorida com uma faixa \"IN-SPIRE\" e entra para ver o que tem dentro.\n\"Não, de jeito algum. Nããão. Não posso deixar você entrar!\"\n\n Um homem com roupas ridículas aparece na entrada para te barrar.",
-      "options": [
-        "[Continuar]",
-        "[Ajustar] Perca",
-        "[Limpar] Perca",
-        "[Serviço total] Perca",
-        "[Socar] PercaPV.",
-        "[Sair]Escolha uma Carta para Aprimorar"
+    "THE_CLERIC": {
+      "name": "O Clérigo",
+      "description": "Um estranho humanóide com um capacete dourado(?) se aproxima de você com um enorme sorriso. \n \"Olá Amigo! Eu sou o Clérigo! Você estaria interessado em meus serviços?!\" a criatura brada, vigorosamente.",
+      "choices": [
+        "[Curar] 35 Ouro: Cure⅓ Max PV.",
+        "[Purificar]50Ouro: Remova uma carta do seu deck.",
+        "[Sair]"
       ]
     },
     "COLOSSEUM": {
       "name": "O Coliseu",
-      "description": "Thwack!!!\n..\n......\n...\nVocê foi nocauteado...",
-      "options": [
+      "description": "Thwack!!! \n .. \n ...... \n ... \n Você foi nocauteado...",
+      "choices": [
         "[Continuar]",
         "[Lutar]",
         "[COVARDIA] Escape.",
         "[VITÓRIA] Uma luta poderosa com muitas recompensas."
       ]
+    },
+    "THE_MAUSOLEUM": {
+      "name": "O Mausoléu",
+      "description": "Se aventurando por uma série de tumbas, você se depara com um grande sarcófago cravejado com gemas no centro de uma sala circular. \n você não pôde decifrar o que estava escrito no caixão, no entanto, você percebe uma névoa negra escoando pelas aberturas.",
+      "choices": [
+        "[Abrir caixão] Obtenha uma Relíquia.50%%: Receber Maldição - Contorção.",
+        "[Sair]"
+      ]
+    },
+    "NEST": {
+      "name": "O Ninho",
+      "description": "Uma longa fila de figuras encapuzadas podem ser vistas entrando \n uma catedral modesta.",
+      "choices": [
+        "[Ficar na fila] Obtenha Adaga Ritual. Perca99PV.",
+        "[Esmagar e Agarrar] Obtenha"
+      ]
+    },
+    "LIVING_WALL": {
+      "name": "Parede viva",
+      "description": "Você chega a um caminho sem saída e quando começa a se virar, as paredes despencam do teto, te prendendo! \n \n Três rostos se materializam das paredes e falam. \n \"Esqueça o que você sabe, e eu deixarei você ir.\" \n \" Eu exijo mudança para uma nova oportunidade.\" \n \"Se quiser passar por mim, então você deve crescer.\"",
+      "choices": [
+        "[Esquecer] Remova uma carta do seu deck.",
+        "[Mudar] Transforme uma carta do seu deck.",
+        "[Crescer] Melhore uma carta do seu deck. Selecione uma carta para Remover. Escolha uma carta para Transformar. Escolha uma carta para Melhorar.",
+        "[Sair]",
+        "[Bloqueado] Requer: Cartas Aprimoráveis"
+      ]
+    },
+    "SENSORYSTONE": {
+      "name": "Pedra Sensorial",
+      "description": "Navegando através do Além, você descobre um brilhante tesseract girando e mudando gentilmente no ar.",
+      "choices": [
+        "[Recordar] Adicione 1 carta Sem Cor ao seu deck.",
+        "[Recordar] Adicione 2 carta Sem Cor ao seu deck. Perca",
+        "[Recordar] Adicione 3 carta Sem Cor ao seu deck. Perca PV.",
+        "[Sair]",
+        "[Interagir]"
+      ]
+    },
+    "BIG_FISH": {
+      "name": "Peixe Grande",
+      "description": "Conforme você segue por um longo corredor, você ve uma banana, uma rosquinha, e uma caixa pairando no ar. Não... Ao analisar mais atentamente, elas estão amarradas a linhas vindas de buracos no teto. Há uma quieta gargalhada vinda de cima conforme você se aproxima dos objetos. \n O que você faz?",
+      "choices": [
+        "[Banana] Cure⅓ Max PV.",
+        "[Rosquinha] PV Máximo +5.",
+        "[Caixa] Receba uma Relíquia. Seja Amaldiçoado - Arrependimento.",
+        "[Sair]"
+      ]
+    },
+    "SECRETPORTAL": {
+      "name": "Portal Secreto",
+      "description": "A sua frente está uma visão inusitada na paisagem alienígena que o cerca. Estranhamente alocada em uma das cercas vivas do Além está um portal de pedra, preenchido por um portal mágico ondulante. \n \n Você não está certo de onde ele pode te levar, mas talvez possa acelerar sua jornada pelo Pináculo.",
+      "choices": [
+        "[Entrar no Portal] Viaje IMEDIATAMENTE para o chefe.",
+        "[Sair]"
+      ]
+    },
+    "PURIFIER": {
+      "name": "Purificador",
+      "description": "Perante você está um elaborado santuário a um espírito esquecido.",
+      "choices": [
+        "[Rezar] Remova uma carta do seu deck.",
+        "[Sair] Selecione uma Carta para Remover."
+      ]
+    },
+    "WHEEL_OF_CHANGE": {
+      "name": "Roda da Mudança",
+      "description": "Você se depara com um gremlin de aparência elegante e animada. \n \"É hora de girar a roda! Tudo P R O N T O ? Claro que está!\"",
+      "choices": [
+        "[Jogar]",
+        "[Prêmio!] YAY!!!!",
+        "[Prêmio!] Obtenha uma Relíquia.",
+        "[Prêmio!] Cure-se completamente.",
+        "[Prêmio?] Maldição - Decadência.",
+        "[Prêmio!] Remova uma carta do seu deck.",
+        "[Prêmio?] Perca HP.",
+        "[Sair] Selecione uma carta para Remover."
+      ]
+    },
+    "GOLDEN_SHRINE": {
+      "name": "Santuário Dourado",
+      "description": "Perante você se encontra um elaborado santuário em nome de um espírito antigo.",
+      "choices": [
+        "[Rezar] Ganhe Ouros.",
+        "[Profanar] Ganhe 275 Ouro. Receba Maldição - Arrependimento.",
+        "[Sair]"
+      ]
+    },
+    "CURSED_TOME": {
+      "name": "Tomo Amaldiçoado",
+      "description": "Em um templo abandonado, você encontra um livro gigante, aberto, cheio de inscrições enigmáticas. \n \n Conforme você tenta interpretar esses elaborados escritos, eles começam a se alterar e moldar em uma escrita com a qual você é familiar.",
+      "choices": [
+        "[Ler]",
+        "[Continuar] Perca 1 PV.",
+        "[Continuar] Perca 2 PV.",
+        "[Continuar] Perca 3 PV.",
+        "[Parar] Perca 3 PV.",
+        "[Pegar] Obtenha o Livro. Perca?PV.",
+        "[Sair]"
+      ]
+    },
+    "TRANSMORGRIFIER": {
+      "name": "Transmogrificador",
+      "description": "Diante de você está um santuário elaborado para um espírito esquecido.",
+      "choices": [
+        "[Rezar] Transformar uma carta.",
+        "[Sair] Selecione uma Carta para Transformar."
+      ]
+    },
+    "TOMB_OF_LORD_RED_MASK": {
+      "name": "Tumba do Senhor Máscara Vermelha",
+      "description": "Uma tumba altamente ornamentada pode ser vista do outro lado de um caminho flutuante. Ao alcançar a tumba, você nota uma fenda para moedas de ouro com uma inscrição arranhada sobre ela.",
+      "choices": [
+        "[Vista a Máscara] Ganhe 222 de Ouro.",
+        "[Trancado] Requer: Máscara Vermelha.",
+        "[Ofereça: Ouro] Perca todo o Ouro. Obtenha uma Relíquia.",
+        "[Sair]"
+      ]
+    },
+    "NOTEFORYOURSELF": {
+      "name": "Um recado para você",
+      "description": "Você ve um tijolo solto em um pilar que atrai o seu olhar.",
+      "choices": [
+        "[Continuar]",
+        "[Pegar e Dar] Receba e Guarde uma Carta.",
+        "[Ignorar]",
+        "[Sair]"
+      ]
+    },
+    "VAMPIRES": {
+      "name": "Vampiros(?)",
+      "description": "Ao navegar por uma rua sem iluminação, você se depara com diversas figuras encapuzadas em meio de um ritual sombrio. Ao se aproximar, eles se viram para você em uma sinistra sincronia. O mais alto entre eles possui dentes como presas e extende uma mão pálida e longa em sua direção. \n \"Junte-se a nós, irmão, e sinta o calor do Pináculo.\"",
+      "choices": [
+        "[Aceitar] Remova todos os Golpes. Receba 5 Mordidas. Perca30%% PV Máximo.",
+        "[Recusar]",
+        "[Sair]"
+      ]
+    },
+    "BEGGAR": {
+      "name": "Velho Pedinte",
+      "description": "Um velho pedinte sob um manto de pele estende as mãos em sua direção conforme você passa. \"Uma esmola, meu jovem?\"",
+      "choices": [
+        "[Oferecer Ouro]75de Ouro: Remova uma carta do seu deck.",
+        "[Continuar]",
+        "[Sair]"
+      ]
+    },
+    "GOLDEN_IDOL": {
+      "name": "Ídolo Dourado",
+      "description": "Você se depara com um discreto pedestal apoiando um brilhante #ídolo de ouro. Parece extremamente valioso. \n \n Você não observa nenhuma armadilha por perto.",
+      "choices": []
     }
   },
   "keywords": {
