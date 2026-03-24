@@ -31,7 +31,7 @@ const positionMap: Record<string, string> = { IRONCLAD: isSts2 ? 'right center' 
           <div class="p-4">
             <h2 class="font-game text-lg font-semibold">{ch.name}</h2>
             <div class="mt-2 flex flex-wrap gap-2">
-              <Badge label={color} tone={color} locale={isSts2 ? locale : undefined} />
+              <Badge label={color} tone={color} locale={locale} />
               <Badge label={`${(ch as any).hp} ${t('HP', locale)}`} />
               <Badge label={`${(ch as any).energy_per_turn} ${t('Energy', locale)}`} />
             </div>

@@ -260,6 +260,10 @@ const keywordNameSet = new Set(mentionedKeywords.flatMap((kw: any) => kw.names.m
 const relatedPowers = allRelatedPowers.filter((p: any) => !keywordNameSet.has(p.name?.toLowerCase()));
 
 // Upgrade summary for STS2 (show what changed)
+const tinkerTimeName = data.eventById?.get('TINKER_TIME')?.name ?? 'Tinker Time';
+const tinkerTimeSentence = t('Created during the {event} event. You choose a type and a rider effect (2 of 3 offered randomly for each).', locale);
+const [tinkerTimeBefore, tinkerTimeAfter = ''] = tinkerTimeSentence.split('{event}');
+
 const upgChanges: string[] = [];
 if (game === 'sts2' && upg) {
   if (upg.cost != null && upg.cost !== card.cost) upgChanges.push(`${t('Cost', locale)} ${upg.cost}`);
@@ -310,7 +314,7 @@ if (game === 'sts2' && upg) {
       <div>
         <h1 id="card-name" class="font-game text-2xl font-semibold">{card.name}</h1>
         <div class="mt-2 flex flex-wrap gap-2">
-          <Badge label={String(card.color)} tone={String(card.color)} />
+          <Badge label={String(card.color)} tone={String(card.color)} locale={locale} />
           <Badge label={t(String(card.type), locale)} />
           <Badge label={t(String(card.rarity), locale)} />
           {card.cost != null && <span id="cost-badge"><Badge label={t('Cost', locale) + ' ' + card.cost} /></span>}
@@ -378,18 +382,18 @@ if (game === 'sts2' && upg) {
 
     {card.tags && card.tags.length > 0 && (
       <section class="mt-4 rounded-lg border border-white/[0.06] bg-white/[0.03] p-4">
-        <h2 class="font-game text-sm font-semibold">Tags</h2>
+        <h2 class="font-game text-sm font-semibold">{t('Tags', locale)}</h2>
         <div class="mt-2 flex flex-wrap gap-2">
-          {card.tags.map((t: string) => <Badge label={t} />)}
+          {card.tags.map((tag: string) => <Badge label={tag} locale={locale} />)}
         </div>
       </section>
     )}
 
     {(card as any).variants && (
       <section class="mt-6">
-        <h2 class="font-game text-sm font-semibold text-slate-400 mb-3">Card Variants</h2>
+        <h2 class="font-game text-sm font-semibold text-slate-400 mb-3">{t('Card Variants', locale)}</h2>
         <p class="text-xs text-slate-400 mb-3 italic">
-          Created during the <a href={`${langPrefix}/sts2/events/TINKER_TIME`} class="theme-link underline decoration-[color:rgb(var(--accent-rgb)/0.4)] hover:decoration-[color:var(--accent-300)]">Tinker Time</a> event. You choose a type and a rider effect (2 of 3 offered randomly for each).
+          {tinkerTimeBefore}<a href={`${langPrefix}/sts2/events/TINKER_TIME`} class="theme-link underline decoration-[color:rgb(var(--accent-rgb)/0.4)] hover:decoration-[color:var(--accent-300)]">{tinkerTimeName}</a>{tinkerTimeAfter}
         </p>
         <div class="grid gap-3 sm:grid-cols-3">
           {Object.entries((card as any).variants).map(([typeName, variant]: [string, any]) => (
@@ -410,7 +414,7 @@ if (game === 'sts2' && upg) {
             </div>
           ))}
         </div>
-        <p class="text-xs text-slate-500 mt-2">Upgrade adds Innate.</p>
+        <p class="text-xs text-slate-500 mt-2">{t('Upgrade adds Innate.', locale)}</p>
       </section>
     )}
   </div>
