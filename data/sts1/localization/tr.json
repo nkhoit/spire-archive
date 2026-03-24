@@ -3669,7 +3669,13 @@
     "GOLDEN_IDOL": {
       "name": "Altın Put",
       "description": "Göze çarpmayan bir sütunun üzerinde sakince duran parıltılı ve altından bir put görüyorsun. Oldukça değerli görünüyor. \n \n Etrafında herhangi bir tuzak varmış gibi görünmüyor.",
-      "choices": []
+      "choices": [
+        "[Al] Altın Put'u elde et. Tuzağı tetikle.",
+        "[Ayrıl]",
+        "[Depara Kalk] Lanetlen - Sakatlık.",
+        "[Parçala] Hasar Al.",
+        "[Saklan] Maksimum CP kaybet."
+      ]
     },
     "GOLDEN_SHRINE": {
       "name": "Altın Tapınak",
@@ -3693,7 +3699,7 @@
       "name": "Anıt Mezar",
       "description": "Bir sıra mezar arasında gezerken yuvarlak bir odanın tam ortasında mücevherlerle işlenmiş büyük bir mezar taşıyla karşılaşıyorsun. \n Tabutun üzerindeki yazıyı okuyamıyorsun, fakat siyah bir dumanın kenarlardan sızdığını farkediyorsun.",
       "choices": [
-        "[Tabutu Aç] Bir Kalıntı edin. %50%ihtimalle Lanetlen - Kıvranma.",
+        "[Tabutu Aç] Bir Kalıntı edin. % ihtimalle Lanetlen - Kıvranma.",
         "[Ayrıl]"
       ]
     },
@@ -3702,8 +3708,10 @@
       "description": "Geniş binalar arasından yol alırken iki tarafta da yüzleri birbirlerine dönük şövalyelerin olduğu dar bir köprüye geliyorsun. Yaklaşıyorsun... \n \"Dur!\" \n \n Şövalye dev mızrağıyla seni zorla durduruyor.",
       "choices": [
         "[Devam Et]",
-        "[Sahip]50Altın Yatır - %30 ihtimalle250Altın kazan.",
-        "[İzle]"
+        "[Katil] Altın Yatır - %70 ihtimalle Altın kazan.",
+        "[Sahip] Altın Yatır - %30 ihtimalle",
+        "[İzle]",
+        "[Ayrıl]"
       ]
     },
     "MINDBLOOM": {
@@ -3721,12 +3729,12 @@
       "name": "Bilge Kafatası",
       "description": "Kendini dekore edilmiş eski bir odada buluyorsun. Odanın ortasındaki süslü bir sütunun üzerinde kocaman bir kafatası duruyor. Yaklaştığında kafatası alevler içinde kalıyor ve yüzünü sana dönüyor.",
       "choices": [
-        "[Devam Et]",
+        "[Devam Et] CP kaybet.",
         "[Bilgi?] Boss'u açığa çıkart.",
-        "[Başarı?] Renksiz bir Kart al.?CP kaybet.",
-        "[Canlandırıcı?] Bir İksir al.?CP kaybet.",
-        "[Zenginlik?]90Altın kazan.?CP kaybet.",
-        "[Nasıl Ayrılabilirim?]6CP kaybet.",
+        "[Başarı?] Renksiz bir Kart al.",
+        "[Canlandırıcı?] Bir İksir al.",
+        "[Zenginlik?] Altın kazan.",
+        "[Nasıl Ayrılabilirim?]",
         "[Ayrıl]"
       ]
     },
@@ -3734,8 +3742,8 @@
       "name": "Büyük Balık",
       "description": "Uzun bir koridordan geçerken havada süzülen bir muz, bir çörek ve bir kutu görüyorsun. Hayır... daha yakından incelediğinde tavandaki deliklerden sarkan tellere bağlı olduklarını görüyorsun. Cisimlere yaklaşırken sessiz kıkırtılar duyulmaya başlıyor. \n Ne yapacaksın?",
       "choices": [
-        "[Muz]⅓ Max CP iyileş.",
-        "[Çörek]5Maksimum CP kazan.",
+        "[Muz] CP iyileş.",
+        "[Çörek] Maksimum CP kazan.",
         "[Kutu] Bir Kalıntı edin. Lanetlen - Pişmanlık.",
         "[Ayrıl]"
       ]
@@ -3787,9 +3795,12 @@
       "name": "Düşüş",
       "description": "Süzülen bir şekilden diğerine atlayıp tırmanırken birden ayağın kayıyor. \n \n Düşmeye başlıyorsun.",
       "choices": [
-        "[Devam Et]a Skill[İniş] Kaybet:",
-        "[Kilitli] Gereken: Beceri Kartıa Power[Güç Harca] Kaybet:",
-        "[Kilitli] Gereken: Güç Kartıan Attack[Vur] Kaybet:"
+        "[Devam Et]",
+        "[İniş] Kaybet:",
+        "[Güç Harca] Kaybet:",
+        "[Vur] Kaybet:",
+        "[Ayrıl]",
+        "[İniş]"
       ]
     },
     "MATCH_AND_KEEP": {
@@ -3806,8 +3817,7 @@
       "description": "Karşında unutulmuş bir ruha ait özenli bir mabet yatıyor.",
       "choices": [
         "[Dua Et] Bir Kart Geliştir.",
-        "[Ayrıl] Geliştirmek için bir Kart seç.",
-        "[Kilitli] Gerekenler: Geliştirilebilir Kartlar"
+        "[Ayrıl] Geliştirmek için bir Kart seç."
       ]
     },
     "MYSTERIOUS_SPHERE": {
@@ -3831,16 +3841,19 @@
       "name": "Hayaletlerin Meclisi",
       "description": "Tırmanmana devam ederken kalın siyah bir duman yerden çıkarak çevreni sarıyor, üç tane maske şekline girip konuşmaya başlıyorlar. \n \n \"Sanırım Neow'un kuklalarından biri daha.\" \n \"KATILIYORUM! O HEP EN EĞLENCELİ OYUNCAKLARI YAPIYOR!\" \n \n Üçüncüleri sana devasa bir gülüş ile bakıp konuşmaya başlıyor. \n \"Diğerlerini boşver... bizim gücümüzü tatmak ister misin?\"",
       "choices": [
-        "[Kabul Et] 5 Hayali Varlık kazan.?Maksimum CP Kaybet",
-        "[Reddet]"
+        "[Kabul Et] 5 Hayali Varlık kazan. Maksimum CP Kaybet",
+        "[Reddet]",
+        "[Kabul Et] 3 Hayali Varlık kazan. Maksimum CP Kaybet",
+        "[Ayrıl]"
       ]
     },
     "SCRAP_OOZE": {
       "name": "Hurdalıktaki Sızıntı",
       "description": "Metallerin şırıltı ve taşlama sesleriyle dolu bir odaya giriyorsun. Kendine zarar verecek kadar çok hurda metal parçası yemiş balçığımsı bir yaratık önünde yatıyor. Yaratığın ortasından garip ışık parıltıları geliyor, belki de büyülü bir şeydir? Onun... ağzından içeri ulaşabilirsen biraz ganimet elde edebilirsin gibi görünüyor. Ancak asit ve keskin cisimler canını yakabilir.",
       "choices": [
-        "[İçine Uzan]?CP Kaybet. %?%ihtimalle bir Kalıntı bul.",
-        "[Ayrıl]"
+        "[İçine Uzan] CP Kaybet. % ihtimalle bir Kalıntı bul.",
+        "[Ayrıl]",
+        "[Daha Derine]"
       ]
     },
     "BONFIRE_ELEMENTALS": {
@@ -3856,9 +3869,10 @@
       "name": "Kanat Heykeli",
       "description": "Taşların ve kayaların arasında kanat görünümlü karmakarışık büyük mavi bir heykel görüyorsun. \n Çatlaklarından altınlar dökülüyor. Belki de içinde daha fazlası vardır...",
       "choices": [
-        "[Dua Et] Destenden bir Kart çıkar.25%CP Kaybet.",
-        "[Parçala]50-80Altın kazan.",
-        "[Ayrıl]"
+        "[Dua Et] Destenden bir Kart çıkar. CP Kaybet.",
+        "[Parçala] - Altın kazan.",
+        "[Ayrıl]",
+        "[Devam Et] Çıkarmak için bir Kart Seç."
       ]
     },
     "NOTEFORYOURSELF": {
@@ -3904,8 +3918,7 @@
         "[J.A.X. dene] JAXX'LAN.",
         "[Test Deneği Ol] Destenden 2 Kart dönüştür.",
         "[Mutajenleri Yut] Özel bir Kalıntı edin.",
-        "[Ayrıl]",
-        "[Kilitli] Gereksinimler: Destede 2 veya daha fazla kart. Dönüştürmek için 2 kart seç"
+        "[Ayrıl]"
       ]
     },
     "THE_LIBRARY": {
@@ -3913,7 +3926,8 @@
       "description": "Terkedilmiş gibi görünen şatafatlı bir binayla karşılaşıyorsun. \n Duvardan kopmuş bir tabela yerde yatıyor. Üzerinde \"KÜTÜPHANE\" yazıyor. \n İçeride sayısız parşömenler, el yazmaları ve kitaplar buluyorsun. \n Birini seçiyorsun, bir koltuğa yerleşip bir süre sessizce vakit geçiriyorsun.",
       "choices": [
         "[Oku] Destene eklemek için 20 karttan birini seç.",
-        "[Uyu]?CP iyileş."
+        "[Uyu] CP iyileş.",
+        "[Ayrıl] Destene bir kart ekle."
       ]
     },
     "LAB": {
@@ -3932,7 +3946,7 @@
         "[Devam Et] 2 CP kaybet.",
         "[Devam Et] 3 CP kaybet.",
         "[Dur] 3 CP kaybet.",
-        "[Al] Kitabı al.?CP kaybet.",
+        "[Al] Kitabı al. CP kaybet.",
         "[Ayrıl]"
       ]
     },
@@ -3941,7 +3955,6 @@
       "description": "Oldukça süslü bir türbe suyun üstündeki yolun sonunda görülebiliyor. Türbeye ulaştığında altın konulacak bir yer ve üzerinde bulunan bir yazıt görüyorsun.",
       "choices": [
         "[Kırmızı Maskeyi Tak] 222 Altın kazan.",
-        "[Kilitli] Gereken: Kırmızı Maske.",
         "[Adak: Altın] Tüm Altınlarını kaybet. Bir Kalıntı edin.",
         "[Ayrıl]"
       ]
@@ -3981,8 +3994,9 @@
       "name": "Moai Kafası",
       "description": "Bulunduğun dünyaya *ait* değilmiş gibi hissettiren bir şeyle karşılaşıyorsun. Karşında etrafından farklı görünen büyük bir duvar parçasından çıkan kocaman taş bir kafa bulunuyor. \n Ağzı sonuna kadar açık olan kafa kanla kırmızıya boyanmış korkutucu dişlerini gösteriyor. Heykelin yüzeyi kendilerini bu kafanın ağzına atan ve içinde sindirilen insanların hiyeroglifleriyle dolu. Neden biri böyle bir şey yapar ki?",
       "choices": [
-        "[İçine Atla] Tamamen iyileş.?Maksimum CP kaybet.",
-        "[Adak: Altın Put] 333 Altın kazan. Altın Put'u kaybet."
+        "[İçine Atla] Tamamen iyileş. Maksimum CP kaybet.",
+        "[Adak: Altın Put] 333 Altın kazan. Altın Put'u kaybet.",
+        "[Ayrıl]"
       ]
     },
     "N_LOTH": {
@@ -3997,7 +4011,7 @@
       "name": "Parlak Işık",
       "description": "Parıltılı bir ışık yığını odanın merkezini kuşatıyor. \n \n Sıcak parlak ve büyüleyici desenler seni içeriye davet ediyor.",
       "choices": [
-        "[Gir] 2 rastgele kart geliştir.20%CP kaybet.",
+        "[Gir] 2 rastgele kart geliştir. CP kaybet.",
         "[Ayrıl]"
       ]
     },
@@ -4005,9 +4019,9 @@
       "name": "Rahip",
       "description": "Tuhaf mavi bir insanımsı yaratık kafasında altın renkli bir miğfer(?) ve koca bir gülümsemeyle sana doğru yaklaşıyor. \n \"Merhaba arkadaş! Ben Rahip! Hizmetlerimle ilgileniyor musun?!\" diyerek yüksek sesle bağırıyor.",
       "choices": [
-        "[İyileş] 35 Altın:⅓ Max CP iyileş.",
-        "[Arındır]50Altın: Destenden bir kart çıkar.",
-        "[Ayrıl]"
+        "[İyileş] 35 Altın:",
+        "[Arındır] Altın: Destenden bir kart çıkar.",
+        "[Ayrıl] Çıkarmak için bir kart seç. CP iyileş."
       ]
     },
     "PURIFIER": {
@@ -4043,7 +4057,11 @@
     "FORGOTTEN_ALTAR": {
       "name": "Unutulmuş Sunak",
       "description": "Önünde unutulmuş bir tanrıya ait bir adak taşı görüyorsun. \n Sunağın üzerinde kolları dışarıya doğru açılmış şatafatlı bir kadın heykeli bulunuyor. \n Seni çağırıyor ve bir adak istiyor.",
-      "choices": []
+      "choices": [
+        "[Adak: Altın Put] Özel bir Kalıntı edin. Altın Put'u kaybet.",
+        "[Kendini Sun] Maksimum CP kazan. CP kaybet.",
+        "[Hakaret Et] Lanetlen - Çürüme."
+      ]
     },
     "ACCURSED_BLACKSMITH": {
       "name": "Uğursuz Demirci",
@@ -4051,16 +4069,16 @@
       "choices": [
         "[Ateşte Döv] Bir kart geliştir.",
         "[Ortalığı Ara] Özel bir Kalıntı edin. Lanetlen - Acı.",
-        "[Ayrıl] Geliştirmek için bir Kart seç",
-        "[Kilitli] Gerekenler: Geliştirilebilir Kart"
+        "[Ayrıl] Geliştirmek için bir Kart seç"
       ]
     },
     "VAMPIRES": {
       "name": "Vampirler(?)",
       "description": "Işıklandırılmamış bir caddede yolunu bulmaya çalışırken karanlık bir ayinin ortasındaki kapüşonlu birkaç kişiyle karşılaşıyorsun. Yaklaştığında ürkütücü bir uyumla sana dönüyorlar. İçlerinden en uzunu azılı dişlerini ortaya çıkartıyor ve uzun, soluk elini sana doğru uzatıyor. \n \"Bize katıl kardeşim, ve Spire'ın sıcaklığını içinde hisset.\"",
       "choices": [
-        "[Kabul Et] Tüm Darbe'leri çıkar. 5 Isırık al.30%Maksimum CP kaybet.",
+        "[Kabul Et] Tüm Darbe'leri çıkar. 5 Isırık al. Maksimum CP kaybet.",
         "[Reddet]",
+        "[Kaybet ] Tüm Darbe'leri çıkar. 5 Isırma al.",
         "[Ayrıl]"
       ]
     },
@@ -4068,7 +4086,7 @@
       "name": "Yalvaran Avare",
       "description": "Yüzlerini gizlemiş bir kaç kişiye görünmeden geçmeye çalışırken içlerinden biri sana doğru yaklaşıyor. \n \"Benim için bir şeylerin var mı arkadaş? Lütfen... belki biraz Bozukluk atarsın?\" \n \"Sadece kalacak bir yere ihtiyacım var, değiş tokuş edebileceğim kıymetli mallarım var...\" \n Kuruntulu, ama zararsız görünüyor.",
       "choices": [
-        "[Altın Ver]85Altın: Bir Kalıntı edin.",
+        "[Altın Ver] Altın: Bir Kalıntı edin.",
         "[Soy] Bir Kalıntı edin. Lanetlen - Utanç.",
         "[Ayrıl]"
       ]
@@ -4077,8 +4095,9 @@
       "name": "Yapışkanların Dünyası",
       "description": "Bir gölete düşüyorsun. \n GÖLET BALÇIKLARDAN OLUŞUYOR!!! \n Yapışkanın seni yakmaya başladığını hissedene kadar birkaç dakika boyunca delice çırpınıyorsun. \n Kulaklarında, burnunda, her yerinde yapışkanı hissedebiliyorsun. \n \n Dışına çıkarken biraz altınının eksik olduğunu farkediyorsun. Gölete dönüp baktığında, eksik altınlarını diğer bahtsız maceracılarınkilerle karışmış şekilde yapışkan göletin içinde görüyorsun.",
       "choices": [
-        "[Altınları Topla]75Altın kazan.11CP kaybet.",
-        "[Orada Bırak]?Altın kaybet."
+        "[Altınları Topla] Altın kazan. CP kaybet.",
+        "[Orada Bırak] Altın kaybet.",
+        "[Ayrıl]"
       ]
     },
     "LIVING_WALL": {
@@ -4088,17 +4107,16 @@
         "[Unut] Destenden bir kart çıkar.",
         "[Değiş] Destenden bir kart dönüştür.",
         "[Geliş] Destendeki bir kartı geliştir. Çıkarmak için bir Kart Seç. Dönüştürmek için bir Kart Seç. Geliştirmek için bir Kart Seç.",
-        "[Ayrıl]",
-        "[Kilitli] Gereken: Geliştirilebilir Kart"
+        "[Ayrıl]"
       ]
     },
     "BEGGAR": {
       "name": "Yaşlı Dilenci",
       "description": "Kürk içinde gizlenmiş yaşlı bir dilenci yanından geçerken elini sana doğru uzatıyor. \"Fazla bozukluğun var mı, evlat?\"",
       "choices": [
-        "[Altın Ver]75Altın: Destenden bir kart çıkar.",
+        "[Altın Ver] Altın: Destenden bir kart çıkar.",
         "[Devam Et]",
-        "[Ayrıl]"
+        "[Ayrıl] Çıkarmak için bir Kart Seç."
       ]
     },
     "WEMEETAGAIN": {
@@ -4106,11 +4124,8 @@
       "description": "\"Yine karşılaştık!\" \n Keyifli dağınık bir eleman sana neşeyle yaklaşıyor. Bu adamı tanımıyorsun. \n \n \"Benim, Ranwid! Bugün benlik malların var mı? Her zamankinden mi? Benim gibi bir adam kendi başına yapamaz biliyorsun ki.\" \n Ona kuşkuyla bakarken seçeneklerini düşünüyorsun...",
       "choices": [
         "[İksir Ver] Kaybet:",
-        "[Kilitli] Gereken: İksir",
         "[Altın Ver]",
-        "[Kilitli] Gerekenler: En az 50 Altın.",
         "[Kart Ver] Kaybet:",
-        "[Kilitli] Gerekenler: Kart. . Bir Kalıntı edin",
         "[Saldır]",
         "[Ayrıl] Altın kaybet"
       ]
@@ -4119,8 +4134,10 @@
       "name": "Yuva",
       "description": "Uzun bir kapüşonlu insan sırasının mütevazi bir katedrale \n girdiği görülüyor.",
       "choices": [
-        "[Tarikata Katıl] Ayin Hançeri al.99CP kaybet.",
-        "[Kap ve Kaç]"
+        "[Tarikata Katıl] Ayin Hançeri al. CP kaybet.",
+        "[Kap ve Kaç] Altın kazan.",
+        "[Ayrıl]",
+        "[Devam Et]"
       ]
     },
     "FACETRADER": {
@@ -4137,8 +4154,10 @@
       "name": "Yııılaaaaan",
       "description": "Yerde kocaman bir deliğin olduğu bir odaya giriyorsun. Deliğe yaklaştığında içinde devasa bir yılan yaratığı beliriyor. \n \n \"Ho hooo! Merhaba merhaba! burada kimler varmış? Merhaba maceracı, basit bir soru soracağım. \n En tatmin edici hayat her şeyi satın alabildiğindir! \n Katılıyor musun?\"",
       "choices": [
-        "[Kabul Et]150Altın kazan. Lanetlen - Şüphe.",
-        "[Reddet]"
+        "[Kabul Et] Altın kazan. Lanetlen - Şüphe.",
+        "[Reddet]",
+        "[Devam Et]",
+        "[Ayrıl]"
       ]
     },
     "DEAD_ADVENTURER": {

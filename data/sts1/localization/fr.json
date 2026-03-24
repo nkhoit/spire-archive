@@ -3627,8 +3627,7 @@
       "description": "Devant vous se trouve un autel élaboré consacré à un esprit oublié.",
       "choices": [
         "[Prier] Améliorez une carte.",
-        "[Partir] Choisissez la carte à Améliorer.",
-        "[Verrouillé] Nécessite : Une carte améliorable"
+        "[Partir] Choisissez la carte à Améliorer."
       ]
     },
     "GOLDEN_SHRINE": {
@@ -3643,7 +3642,11 @@
     "FORGOTTEN_ALTAR": {
       "name": "Autel oublié",
       "description": "Devant vous s'élève un autel consacré à une divinité oubliée. \n Sur l'autel, trône la statue décorée d'une femme aux bras grands ouverts. \n Elle vous appelle, réclamant un sacrifice.",
-      "choices": []
+      "choices": [
+        "[Offrir : idole dorée] Obtenez une Relique spéciale. Perdez l'idole dorée.",
+        "[Vous sacrifier] Vos PV max augmentent de Perdez PV.",
+        "[Profaner] Recevez : Malédiction - Déclin."
+      ]
     },
     "DEAD_ADVENTURER": {
       "name": "Aventurier mort",
@@ -3669,8 +3672,8 @@
       "name": "Belle prise",
       "description": "En parcourant un long couloir, vous découvrez une banane, un beignet et une boîte qui flottent dans les airs. Non... Après inspection, ils sont attachés à des cordes qui pendent de trous dans le plafond. Tandis que vous vous approchez des objets, vous entendez des gloussements en provenance du plafond. \n Que faites-vous ?",
       "choices": [
-        "[Banane] Récupérez⅓ Max PV.",
-        "[Beignet] PV max +5.",
+        "[Banane] Récupérez PV.",
+        "[Beignet] PV max + .",
         "[Boîte] Obtenez une Relique. Recevez : Malédiction - Regret.",
         "[Partir]"
       ]
@@ -3689,26 +3692,31 @@
       "name": "Chute",
       "description": "Vous sautez d'une forme flottante à l'autre, toujours plus haut, mais finissez par glisser. \n \n Vous commencez à tomber.",
       "choices": [
-        "[Continuer]a Skill[Atterrir] Perdez",
-        "[Verrouillé] Nécessite : carte Compétencea Power[Canaliser] Perdez",
-        "[Verrouillé] Nécessite : carte Pouvoiran Attack[Frapper] Perdez"
+        "[Continuer]",
+        "[Atterrir] Perdez",
+        "[Canaliser] Perdez",
+        "[Frapper] Perdez",
+        "[Partir]",
+        "[Atterrir]"
       ]
     },
     "THE_CLERIC": {
       "name": "Clerc",
       "description": "Un étrange humanoïde bleu portant un heaume doré (?) s'approche de vous en vous adressant un large sourire. \n \"Bonjour ! Je m'appelle Clerc ! Puis-je faire quelque chose pour vous ?\", crie bruyamment la créature.",
       "choices": [
-        "[Soin] 35 d'or : récupérez⅓ Max PV.",
-        "[Purification]50d'or : retirez une carte de votre deck.",
-        "[Partir]"
+        "[Soin] 35 d'or : récupérez",
+        "[Purification] d'or : retirez une carte de votre deck.",
+        "[Partir] Choisissez la carte à retirer. PV."
       ]
     },
     "GHOSTS": {
       "name": "Conseil des fantômes",
       "description": "Alors que vous continuez votre ascension, une épaisse fumée noire commence à émaner du sol et des murs autour de vous, se regroupant en trois formes masquées qui commencent à parler. \n \n \"Encore un pantin de Neow je pense.\" \n \"EN EFFET! ELLE CHOISIT TOUJOURS LES MEILLEURS JOUETS!\" \n \n Vous remarquez un sourire surdimensionné alors que le troisième s'adresse à vous. \n \"Ne fais pas attention à eux... Voudrais-tu goûter à notre pouvoir?\"",
       "choices": [
-        "[Accepter] Recevez 5 Apparitions. Perdez?PV max.",
-        "[Refuser]"
+        "[Accepter] Recevez 5 Apparitions. Perdez PV max.",
+        "[Refuser]",
+        "[Accepter] Recevez 3 Apparitions. Perdez",
+        "[Partir]"
       ]
     },
     "WINDING_HALLS": {
@@ -3725,12 +3733,12 @@
       "name": "Crâne savant",
       "description": "Vous arrivez dans une antique chambre décorée. Au centre de la salle, un grand crâne repose sur un piédestal orné. À votre approche, le crâne s'enflamme et se tourne pour vous faire face.",
       "choices": [
-        "[Continuer]",
+        "[Continuer] PV.",
         "[Informations ?] Révélez le boss. Perdez",
-        "[Réussite ?] Obtenez une carte sans couleur. Perdez?PV.",
-        "[Remontant ?] Obtenez une potion. Perdez?PV.",
-        "[Richesses ?] Gagnez90d'or. Perdez?PV.",
-        "[Comment sortir d'ici ?] Perdez6PV.",
+        "[Réussite ?] Obtenez une carte sans couleur. Perdez",
+        "[Remontant ?] Obtenez une potion. Perdez",
+        "[Richesses ?] Gagnez d'or. Perdez",
+        "[Comment sortir d'ici ?] Perdez",
         "[Partir]"
       ]
     },
@@ -3741,8 +3749,7 @@
         "[Tester la D.O.P.E.] Obtenez de la D.O.P.E.",
         "[Devenir un sujet de test] Transformez 2 cartes.",
         "[Ingérer les mutagènes] Obtenez une Relique spéciale.",
-        "[Partir]",
-        "[Verrouillé] Requis : Un deck de 2 cartes ou plus. Choisissez les cartes à Transformer"
+        "[Partir]"
       ]
     },
     "DUPLICATOR": {
@@ -3768,21 +3775,27 @@
       "choices": [
         "[Utiliser la forge] Améliorez une carte de votre deck.",
         "[Fouiller] Obtenez une Relique spéciale. Recevez : Malédiction - Douleur.",
-        "[Partir] Choisissez une carte à Améliorer.",
-        "[Verrouillé] Nécessite : Une carte améliorable"
+        "[Partir] Choisissez une carte à Améliorer."
       ]
     },
     "GOLDEN_IDOL": {
       "name": "Idole dorée",
       "description": "Vous croisez un piédestal des plus anodins sur lequel trône paisiblement une idole dorée étincelante. Elle vous semble extrêmement précieuse. \n \n Vous ne remarquez aucun piège alentour.",
-      "choices": []
+      "choices": [
+        "[Prendre] Obtenez une idole dorée. Déclenchez un piège.",
+        "[Partir]",
+        "[Courir à toutes jambes] Recevez : Malédiction - Blessure.",
+        "[Détruire] Subissez dégâts.",
+        "[Vous cacher] Vos PV max sont réduits de"
+      ]
     },
     "THE_LIBRARY": {
       "name": "La bibliothèque",
       "description": "Vous découvrez un bâtiment ouvragé qui semble abandonné. \n Une plaque arrachée au mur gît au sol. Il y est écrit : LA BIBLIOTHÈQUE. \n À l'intérieur, vous découvrez d'innombrables rangées de parchemins, de manuscrits et de livres. \n Vous en choisissez un et vous installez confortablement sur une chaise pour profiter d'un moment de détente.",
       "choices": [
         "[Lire] Choisissez 1 carte parmi les 20 à disposition.",
-        "[Dormir] Récupérez?PV."
+        "[Dormir] Récupérez PV.",
+        "[Partir] Ajoutez une carte à votre deck."
       ]
     },
     "THE_WOMAN_IN_BLUE": {
@@ -3809,16 +3822,19 @@
       "description": "En traversant les grands bâtiments, vous découvrez un pont long et étroit et repérez des chevaliers qui se font face de part et d'autre. Vous vous approchez... \n \"Halte !\" \n \n L'un d'eux vous fait signe de vous arrêter avec sa lance gigantesque.",
       "choices": [
         "[Continuer]",
-        "[Propriétaire] Pariez50d'or - 30 % : gagnez250d'or.",
-        "[Observer]"
+        "[Meurtrier] Pariez d'or - 70 % : gagnez d'or.",
+        "[Propriétaire] Pariez d'or - 30 % : gagnez",
+        "[Observer]",
+        "[Partir]"
       ]
     },
     "THE_MOAI_HEAD": {
       "name": "La tête moaï",
       "description": "Vous découvrez quelque chose qui ne semble *absolument pas* à sa place. Devant vous, une énorme tête en pierre dépasse d'une grande portion de mur qui ne bouge pas et ne change pas, contrairement au reste de la zone. \n La bouche de la tête est grande ouverte et révèle d'immenses dents intimidantes et tachées de sang. La surface de la statue est couverte de pictogrammes énigmatiques qui semblent représenter des personnes se jetant dans la bouche géante et s'y faisant dévorer. Pourquoi agir de la sorte ?",
       "choices": [
-        "[Sauter dedans] Récupérez tous vos PV. Vos PV max sont réduits de?.",
-        "[Offrir : idole dorée] Gagnez 333 d'or. Perdez l'idole dorée."
+        "[Sauter dedans] Récupérez tous vos PV. Vos PV max sont réduits de .",
+        "[Offrir : idole dorée] Gagnez 333 d'or. Perdez l'idole dorée.",
+        "[Partir]"
       ]
     },
     "LAB": {
@@ -3842,8 +3858,10 @@
       "name": "Le Nid",
       "description": "Vous rencontrez une longue ligne de silhouettes encapuchonnées entrer dans une \n modeste cathédrale.",
       "choices": [
-        "[Rester dans le rang] Obtenez Dague rituelle. Perdez99PV.",
-        "[Voler la boîte] Gagnez"
+        "[Rester dans le rang] Obtenez Dague rituelle. Perdez PV.",
+        "[Voler la boîte] Gagnez d'or.",
+        "[Partir]",
+        "[Continuer]"
       ]
     },
     "SPIRE_HEART": {
@@ -3872,7 +3890,7 @@
       "name": "Le mausolée",
       "description": "Vous parcourez une série de tombes et arrivez face à un imposant sarcophage serti de gemmes situé au centre de la salle circulaire. \n Vous ne parvenez pas à déchiffrer ce qui est écrit sur le cercueil. Cependant, vous remarquez qu'un brouillard noir s'échappe de ses flancs.",
       "choices": [
-        "[Ouvrir le cercueil] Obtenez une Relique.50%% : recevez : Malédiction - Souffrance.",
+        "[Ouvrir le cercueil] Obtenez une Relique. % : recevez : Malédiction - Souffrance.",
         "[Partir]"
       ]
     },
@@ -3880,8 +3898,10 @@
       "name": "Le ssserpent",
       "description": "Vous pénétrez dans une salle et remarquez un grand trou dans le sol. Tandis que vous vous approchez du trou, une énorme créature serpentine en émerge. \n \n \"Oh oooh ! Bonjour, bonjour ! Qu'avons-nous là ? Bonjour, je vais vous poser une simple question. \n Il n'est pas de vie plus satisfaisante que celle où l'on peut tout s'offrir ! \n Êtes-vous d'accord ?\"",
       "choices": [
-        "[D'accord] Gagnez150d'or. Recevez : Malédiction - Doute.",
-        "[Pas d'accord]"
+        "[D'accord] Gagnez d'or. Recevez : Malédiction - Doute.",
+        "[Pas d'accord]",
+        "[Continuer]",
+        "[Partir]"
       ]
     },
     "CURSED_TOME": {
@@ -3893,7 +3913,7 @@
         "[Continuer] Perdez 2 PV.",
         "[Continuer] Perdez 3 PV.",
         "[Arrêter] Perdez 3 PV.",
-        "[Prendre] Obtenez le livre. Perdez?PV.",
+        "[Prendre] Obtenez le livre. Perdez PV.",
         "[Partir]"
       ]
     },
@@ -3901,7 +3921,7 @@
       "name": "Lumière brillante",
       "description": "Vous découvrez une masse de lumière chatoyante qui englobe le centre de la salle. \n \n Sa lumière chaleureuse et les motifs enchanteurs qu'elle dessine vous invitent à y pénétrer.",
       "choices": [
-        "[Entrer] Améliorez 2 cartes aléatoires. Perdez20%PV.",
+        "[Entrer] Améliorez 2 cartes aléatoires. Perdez PV.",
         "[Partir]"
       ]
     },
@@ -3909,8 +3929,9 @@
       "name": "Monde visqueux",
       "description": "Vous tombez dans une flaque. \n ELLE EST COMPOSÉE D'UNE SUBSTANCE VISQUEUSE ! \n Vous vous débattez frénétiquement pendant de longues minutes, car vous sentez que la substance commence à vous brûler. \n Vous en avez dans les oreilles, dans le nez, partout. \n \n Vous vous hissez hors de la flaque et vous rendez compte qu'il vous manque une partie de votre or. Vous scrutez la flaque et repérez les pièces manquantes, agglomérées à l'or d'autres malheureux aventuriers.",
       "choices": [
-        "[Récupérer l'or] Gagnez75d'or. Perdez11PV.",
-        "[Abandonner l'or] Perdez?d'or."
+        "[Récupérer l'or] Gagnez d'or. Perdez PV.",
+        "[Abandonner l'or] Perdez d'or.",
+        "[Partir]"
       ]
     },
     "LIVING_WALL": {
@@ -3920,8 +3941,7 @@
         "[Oublier] Retirez une carte de votre deck.",
         "[Changer] Transformez une carte de votre deck.",
         "[Progresser] Améliorez une carte de votre deck. Choisissez la carte à retirer. Choisissez la carte à Transformer. Choisissez la carte à Améliorer.",
-        "[Partir]",
-        "[Verrouillé] Nécessite : Une carte améliorable"
+        "[Partir]"
       ]
     },
     "N_LOTH": {
@@ -3937,11 +3957,8 @@
       "description": "\"Nous nous rencontrons à nouveau !\" \n Un bonhomme gaillard échevelé vous approche joyeusement. Vous ne connaissez pas cet homme. \n \"C'est moi, Ranwid! Comment allez-vous aujourd'hui ? La routine ? Un gars comme moi ne peut pas s'en sortir seul, vous savez ?\" \n Vous le regardez avec méfiance et considérez ses propositions...",
       "choices": [
         "[Donner une Potion] Perdez",
-        "[Verrouillé] Requis: une Potion.",
         "[Donner de l'Or] Perdez",
-        "[Verrouillé] Requis: au moins 50 d'Or.",
         "[Donner une carte] Perdez",
-        "[Verrouillé] Requis: une Carte. . Obtenez une Relique.",
         "[Attaquer]",
         "[Partir] d'Or"
       ]
@@ -4000,17 +4017,19 @@
       "name": "Statue en forme d'aile",
       "description": "Au milieu des pierres et rochers, vous repérez une complexe statue bleue. De grande taille, elle a l'apparence d'une aile. \n Vous remarquez que de l'or s'écoule de ses fissures. Peut-être y en a-t-il davantage à l'intérieur...?",
       "choices": [
-        "[Prier] Retirez une carte de votre deck. Perdez25%PV.",
-        "[Détruire] Gagnez entre50et80d'or.",
-        "[Partir]"
+        "[Prier] Retirez une carte de votre deck. Perdez PV.",
+        "[Détruire] Gagnez entre et d'or.",
+        "[Partir]",
+        "[Continuer] Choisissez la carte à retirer."
       ]
     },
     "SCRAP_OOZE": {
       "name": "Tas de ferraille",
       "description": "En entrant dans la salle, vous entendez un gargouillis et un grincement métallique. Devant vous se tient une créature visqueuse qui a mangé bien trop de ferraille pour son bien. Au centre de la créature, vous captez l'éclat d'étranges lueurs. Peut-être quelque chose de magique ? On dirait qu'il vous suffirait de tendre le bras par son... ouverture pour saisir un trésor. Cela dit, l'acide et les objets tranchants risquent de vous blesser.",
       "choices": [
-        "[Tendre le bras] Perdez?PV.?%% : Trouvez une Relique.",
-        "[Partir]"
+        "[Tendre le bras] Perdez PV. % : Trouvez une Relique.",
+        "[Partir]",
+        "[S'enfoncer] Perdez"
       ]
     },
     "TOMB_OF_LORD_RED_MASK": {
@@ -4018,7 +4037,6 @@
       "description": "De l'autre côté d'un chemin flottant, vous pouvez apercevoir une tombe richement décorée. Lorsque vous atteignez la tombe, vous remarquez un emplacement à pièces d'or recouvert d'une inscription effacée.",
       "choices": [
         "[Mettre le masque] Gagnez 222 d'or.",
-        "[Verrouillé] Nécessite : masque rouge",
         "[Offrir : d'or] Perdez tout votre or. Obtenez une Relique.",
         "[Partir]"
       ]
@@ -4054,7 +4072,7 @@
       "name": "Vagabond implorant",
       "description": "Alors que vous passez à côté d'un groupe de silhouettes encapuchonnées, l'une d'elles s'approche de vous. \n \"Dites, z'auriez quelque chose pour moi, mon ami ? Allez... Ou quelques pièces peut-être ?\" \n \"J'ai juste besoin d'un endroit où dormir, j'ai des trésors que je peux échanger...\" Il semble délirant, mais inoffensif.",
       "choices": [
-        "[Offrir de l'or]85d'or : Obtenez une Relique.",
+        "[Offrir de l'or] d'or : Obtenez une Relique.",
         "[Voler] Obtenez une Relique. Recevez : Malédiction - Honte.",
         "[Partir]"
       ]
@@ -4063,8 +4081,9 @@
       "name": "Vampires (?)",
       "description": "En passant par une rue non éclairée, vous rencontrez plusieurs silhouettes encapuchonnées au beau milieu d'un rituel maléfique. Tandis que vous vous approchez, elles se tournent vers vous à l'unisson. Inquiétant. La plus grande possède des dents acérées et tend une main aux longs doigts pâles vers vous. \n \"Joignez-vous à nous, mon frère, et venez ressentir la chaleur de la Tour.\"",
       "choices": [
-        "[Accepter] Retirez toutes vos Frappes. Recevez 5 Morsures. Perdez30%PV max.",
+        "[Accepter] Retirez toutes vos Frappes. Recevez 5 Morsures. Perdez PV max.",
         "[Refuser]",
+        "[Perdre ] Retirez toutes vos Frappes. Recevez 5 cartes Morsures.",
         "[Partir]"
       ]
     },
@@ -4072,9 +4091,9 @@
       "name": "Vieux mendiant",
       "description": "Un vieux mendiant enveloppé dans une cape en fourrure tend la main vers vous lorsque vous passez près de lui. \"Auriez-vous une petite pièce, mon enfant ?\"",
       "choices": [
-        "[Offrir de l'or]75d'or : Retirez une carte de votre deck.",
+        "[Offrir de l'or] d'or : Retirez une carte de votre deck.",
         "[Continuer]",
-        "[Partir]"
+        "[Partir] Choisissez la carte à retirer."
       ]
     },
     "FACETRADER": {

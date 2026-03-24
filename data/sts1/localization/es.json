@@ -3668,9 +3668,10 @@
       "name": "Ala dorada",
       "description": "Entre las piedras, te das cuenta de una estatua azul compleja con forma de ala. \n Encuentras oro saliendo de sus grietas. Tal vez hay más dentro...",
       "choices": [
-        "[Rezar] Elimina una carta de tu mazo. Pierde25%PV.",
-        "[Destruir] Gana50-80Oro.",
-        "[Salir]"
+        "[Rezar] Elimina una carta de tu mazo. Pierde PV.",
+        "[Destruir] Gana - Oro.",
+        "[Salir]",
+        "[Continuar] Selecciona una Carta a Eliminar."
       ]
     },
     "GOLDEN_SHRINE": {
@@ -3685,15 +3686,18 @@
     "FORGOTTEN_ALTAR": {
       "name": "Altar Olvidado",
       "description": "En frente de ti yace un altar a un dios olvidado. \n Sobre el altar se sienta una estatua ornamentada de una mujer con los brazos extendidos. \n Te llama, demandando sacrificio.",
-      "choices": []
+      "choices": [
+        "[Ofrendar: Ídolo Dorado] Obtén una Reliquia especial. Pierde Ídolo Dorado.",
+        "[Sacrifica] Gana PV Máximos. Pierde PV.",
+        "[Profanar] Maldecirte - Descomposición."
+      ]
     },
     "UPGRADE_SHRINE": {
       "name": "Altar de Mejora",
       "description": "Ante ti yace un altar complejo a un espíritu olvidado.",
       "choices": [
         "[Rezar] Mejorar una carta.",
-        "[Salir] Selecciona una Carta a Mejorar.",
-        "[Bloqueado] Necesitas: Cartas Mejorables"
+        "[Salir] Selecciona una Carta a Mejorar."
       ]
     },
     "BACK_TO_BASICS": {
@@ -3712,8 +3716,7 @@
         "[Probar J.A.X.] Ponerse JAXXED.",
         "[Convertirte en sujeto de prueba] Transforma 2 cartas.",
         "[Ingerir mutágenos] Obtén una reliquia especial.",
-        "[Salir]",
-        "[Bloqueado] Requiere: 2 o más cartas en el mazo."
+        "[Salir]"
       ]
     },
     "DEAD_ADVENTURER": {
@@ -3730,8 +3733,9 @@
       "name": "Baba de Chatarra",
       "description": "Cuando entras al cuarto, escuchas un gorgojeo y el rechinar de metales. Ante ti está una criatura babosa que comió demasiada chatarra para su propio bien. Del centro de la criatura puedes ver rastros de una luz extraña, ¿quizá algo mágico? Parece que puedes encontrar algún tesoro si te acercas al... orificio. Sin embargo, el ácido y los objetos punzantes pueden doler.",
       "choices": [
-        "[Alcanzar Interior] Pierde?PV.?%%: Encuentra una Reliquia.",
-        "[Salir]"
+        "[Alcanzar Interior] Pierde PV. %: Encuentra una Reliquia.",
+        "[Salir]",
+        "[Más Profundo] Pierde"
       ]
     },
     "MASKED_BANDITS": {
@@ -3748,9 +3752,12 @@
       "name": "Caída",
       "description": "Mientras subes saltando de una figura flotante a otra, te resbalas. \n \n Empiezas a caer.",
       "choices": [
-        "[Continuar]a Skill[Aterrizar] Pierde",
-        "[Bloqueado] Necesitas: Carta de Habilidada Power[Canalizar] Pierde",
-        "[Bloqueado] Necesitas: Carta de Poderan Attack[Golpear] Pierde"
+        "[Continuar]",
+        "[Aterrizar] Pierde",
+        "[Canalizar] Pierde",
+        "[Golpear] Pierde",
+        "[Salir]",
+        "[Aterrizar]"
       ]
     },
     "FACETRADER": {
@@ -3767,8 +3774,10 @@
       "name": "Concilio Fantasmal",
       "description": "Mientras continúas con tu ascenso, un denso humo negro comiemza a fluir del suelo y paredes a tu alrededor, formando tres figuras enmascaradas que comienzan a hablar. \n \n \"Otra marioneta de Neow, diría yo.\" \n \"COINCIDO! ELLA SIEMPRE HACE LOS JUGUETES MÁS RAROS!\" \n \n Notas una sonrisa desmesurada cuando el tercero se dirige a tí. \n \"Ignora a los otros... Te gustaría probar nuestro poder?\"",
       "choices": [
-        "[Aceptar] Recibe 5 Fantasmal. Pierde?PV Máximos.",
-        "[Rechazar]"
+        "[Aceptar] Recibe 5 Fantasmal. Pierde PV Máximos.",
+        "[Rechazar]",
+        "[Aceptar] Recibe 3 Fantasmal. Pierde",
+        "[Salir]"
       ]
     },
     "SPIRE_HEART": {
@@ -3795,12 +3804,12 @@
       "name": "Cráneo Sabio",
       "description": "Te encuentras en una cámara vieja y decorada. En el centro del cuarto, un gran cráneo se sienta sobre un pedestal ornamentado. Cuando te acercas, el cráneo explota en llamas y se voltea hacia ti.",
       "choices": [
-        "[Continuar]",
+        "[Continuar] PV.",
         "[¿Información?] Revela al Jefe. Pierde",
-        "[¿Triunfo?] Obten una Carta Sin Color. Pierde?PV.",
-        "[¿Un Estimulante?] Obten una Poción. Pierde?PV.",
-        "[¿Riqueza?] Gana90Oro. Pierde?PV.",
-        "[¿Cómo salgo de aquí?] Pierde6PV.",
+        "[¿Triunfo?] Obten una Carta Sin Color. Pierde",
+        "[¿Un Estimulante?] Obten una Poción. Pierde",
+        "[¿Riqueza?] Gana Oro. Pierde",
+        "[¿Cómo salgo de aquí?] Pierde",
         "[Salir]"
       ]
     },
@@ -3828,9 +3837,9 @@
       "name": "El Clérigo",
       "description": "Un extraño humanoide azul con un yelmo dorado se te acerca con una gran sonrisa. \n \"¡Hola camarada! ¡Yo ser Él Clérigo! ¡¿Te interesan mis servicios?!\" la criatura grita, fuerte.",
       "choices": [
-        "[Curar] 35 Oro: Curar⅓ Max PV.",
-        "[Purificar]50Oro: Eliminar una carta de tu mazo.",
-        "[Salir]"
+        "[Curar] 35 Oro: Curar",
+        "[Purificar] Oro: Eliminar una carta de tu mazo.",
+        "[Salir] Selecciona una Carta a Eliminar. PV."
       ]
     },
     "COLOSSEUM": {
@@ -3847,7 +3856,7 @@
       "name": "El Mausoleo",
       "description": "Aventurándote a través de una serie de tumbas, te encuentras con un gran sarcófago incrustado con gemas en el centro de un cuarto circular. \n No puedes leer la escritura del cofre, sin embargo, te das cuenta que hay una niebla negra saliendo de dentro.",
       "choices": [
-        "[Abrir Cofre] Obtén una Reliquia,50%% de recibir maldición Retorcimiento.",
+        "[Abrir Cofre] Obtén una Reliquia, % de recibir maldición Retorcimiento.",
         "[Salir]"
       ]
     },
@@ -3855,8 +3864,10 @@
       "name": "El Nido",
       "description": "Una larga fila de figuras encapuchadas se pueden ver entrando \n en lo que parece una catedral.",
       "choices": [
-        "[Permanecer en la Fila] Obtén Daga del Ritual. Pierde99PV.",
-        "[Aplastar y Agarrar] Obtén"
+        "[Permanecer en la Fila] Obtén Daga del Ritual. Pierde PV.",
+        "[Aplastar y Agarrar] Obtén Oro.",
+        "[Salir]",
+        "[Continuar]"
       ]
     },
     "MYSTERIOUS_SPHERE": {
@@ -3883,8 +3894,7 @@
       "choices": [
         "[Forjar] Mejora una carta en tu mazo.",
         "[Hurgar] Obtén una Reliquia especial. Te Maldices con - Dolor.",
-        "[Salir] Elige una Carta y mejórala.",
-        "[Bloqueado] Necesitas: Cartas sin mejorar."
+        "[Salir] Elige una Carta y mejórala."
       ]
     },
     "FOUNTAIN_OF_CLEANSING": {
@@ -3910,15 +3920,17 @@
       "description": "Te encuentras con un edificio ornamentado que parece abandonado. \n Una placa que cayó de la pared está en el suelo. Dice, \"LA BIBLIOTECA\". \n Adentro, encuentras incontables filas de pergaminos, manuscritos, y libros. \n Tomas uno y te acomodas en una silla para pasar un rato tranquilo.",
       "choices": [
         "[Leer] Escoge 1 de 20 cartas para agregar a tu mazo.",
-        "[Dormir] Curar?PV."
+        "[Dormir] Curar PV.",
+        "[Salir] Agrega una carta a tu mazo."
       ]
     },
     "THE_MOAI_HEAD": {
       "name": "La Cabeza Moái",
       "description": "Te encuentras con algo que se siente *muy* fuera de lugar. Ante ti, una enorme cabeza de piedra emerge de un segmento de la pared que no se mueve ni cambia como el resto del área. \n La boca de la cabeza está abierta, y revela dientes largos e intimidantes, manchados de sangre. La superficie de la estatua está repleta con pictogramas que parecen indicar gente aventurándose dentro de la cabeza y siendo devorados. ¿Por qué alguien haría esto?",
       "choices": [
-        "[Saltar Adentro] Curar todos tus PV. Pierde?PV Máximo.",
-        "[Ofrendar: Ídolo Dorado] Gana 333 de Oro. Pierde Ídolo Dorado."
+        "[Saltar Adentro] Curar todos tus PV. Pierde PV Máximo.",
+        "[Ofrendar: Ídolo Dorado] Gana 333 de Oro. Pierde Ídolo Dorado.",
+        "[Salir]"
       ]
     },
     "THE_JOUST": {
@@ -3926,8 +3938,10 @@
       "description": "Al pasar a través de altos edificios te encuentras un puente, largo y estrecho, con caballeros en cada lado, enfrentándose. Te acercas... \n \"¡Alto!\" \n \n Un caballero te señala que te detengas con su lanza gigante.",
       "choices": [
         "[Continuar]",
-        "[Owner] Apostar50Oro - 30%: ganar250Oro.",
-        "[Observar]"
+        "[Asesino] Apostar Oro - 70%: ganar Oro.",
+        "[Owner] Apostar Oro - 30%: ganar",
+        "[Observar]",
+        "[Salir]"
       ]
     },
     "THE_WOMAN_IN_BLUE": {
@@ -3945,8 +3959,10 @@
       "name": "La Ssssserpiente",
       "description": "Entras a un cuarto y ves un gran hoyo en el suelo. Cuando te acercas al hoyo, una enorme serpiente aparece del mismo. \n \n \"¡Ho hooo! !Hola hola! ¿qué tenemos aquí? Hola, amante de la aventura, mi pregunta es simple. \n La vida más gratificante es aquella en la que puedes, ¡comprar lo que sea! \n ¿Estás de acuerdo?\"",
       "choices": [
-        "[Concordar] Gana150Oro. Maldecirte - Duda.",
-        "[Discrepar]"
+        "[Concordar] Gana Oro. Maldecirte - Duda.",
+        "[Discrepar]",
+        "[Continuar]",
+        "[Salir]"
       ]
     },
     "LAB": {
@@ -3960,7 +3976,7 @@
       "name": "Luz Brillante",
       "description": "Encuentras una masa resplandeciente de luz que llena el centro del cuarto. \n \n Su brillo cálido y patrones encantadores te invitan a entrar.",
       "choices": [
-        "[Entrar] Mejora 2 cartas al azar. Pierde20%PV.",
+        "[Entrar] Mejora 2 cartas al azar. Pierde PV.",
         "[Salir]"
       ]
     },
@@ -3979,8 +3995,9 @@
       "name": "Mundo Viscoso",
       "description": "Caes en un charco. \n ¡¡ESTÁ LLENO DE BABA VISCOSA!! \n Frenéticamente, te sacudes por varios minutos, sintiendo la baba empezar a quemar. \n Puedes sentir baba en tus oídos, baba en tu nariz, baba en todos lados. \n \n Subiendo fuera de allí, te das cuenta de que perdiste un poco de tu oro. Mirando de vuelta al charco, ves tus monedas perdidas junto con oro de otros desafortunados aventureros, revueltas en el charco.",
       "choices": [
-        "[Recoger Oro] Gana75Oro. Pierde11PV.",
-        "[Dejarlo] Pierde?Oro."
+        "[Recoger Oro] Gana Oro. Pierde PV.",
+        "[Dejarlo] Pierde Oro.",
+        "[Salir]"
       ]
     },
     "N_LOTH": {
@@ -3998,16 +4015,15 @@
         "[Olvidar] Elimina una carta de tu mazo.",
         "[Cambiar] Transforma una carta en tu mazo.",
         "[Crece] Mejora una carta en tu mazo. Selecciona una Carta a Eliminar. Selecciona una Carta a Transformar. Selecciona una Carta a Mejorar.",
-        "[Salir]",
-        "[Bloqueado] Necesitas: Cartas Mejorables"
+        "[Salir]"
       ]
     },
     "BIG_FISH": {
       "name": "Pez Gordo",
       "description": "Mientras avanzas por un corredor extenso ves un plátano, un donut, y una caja flotando . Aunque… al echar un segundo vistazo, ves que están atados a cordones que bajan del techo. Escuchas un ligero cacareo desde arriba cuando te acercas a los objetos. \n ¿Qué haces?",
       "choices": [
-        "[Plátano] Cura⅓ Max PV.",
-        "[Dona] PV Máximos +5.",
+        "[Plátano] Cura PV.",
+        "[Dona] PV Máximos + .",
         "[Caja] Obtén una Reliquia. Maldecirte - Lamento.",
         "[Salir]"
       ]
@@ -4062,7 +4078,7 @@
         "[Continuar] Pierdes 2 PV.",
         "[Continuar] Pierdes 3 PV.",
         "[Detenerse] Pierdes 3 PV.",
-        "[Tomar] Obtienes el Libro. Pierdes?PV.",
+        "[Tomar] Obtienes el Libro. Pierdes PV.",
         "[Salir]"
       ]
     },
@@ -4079,7 +4095,6 @@
       "description": "Puedes ver una tumba muy ornamentada al otro lado de un camino flotante. Al llegar a la tumba, te fijas en un hueco para monedas de oro con una inscripción tachada arriba de él.",
       "choices": [
         "[Ponte la Máscara Roja] Gana 222 Oro.",
-        "[Bloqueado] Necesitas: Máscara Roja.",
         "[Ofrendar: Oro] Pierde todo Oro. Obtén una Reliquia.",
         "[Salir]"
       ]
@@ -4098,7 +4113,7 @@
       "name": "Vagabundo Mendigo",
       "description": "Mientras te escabulles frente a un grupo de figuras envueltas en la penumbra, una se te acerca. \n \"¿Tienes algo para mí, amigo? Por favor... ¿Tal vez alguna Moneda?\" \n \"Solo nevesito un sitio para quedarme, tengo tesoros para intercambiar...\" \n Parece desilusionado, pero inofensivo.",
       "choices": [
-        "[Ofrecer oro]85Oro: Obtén una Reliquia.",
+        "[Ofrecer oro] Oro: Obtén una Reliquia.",
         "[Robar] Obtén una Reliquia. Te vuelves maldito: Vergüenza.",
         "[Salir]"
       ]
@@ -4107,8 +4122,9 @@
       "name": "Vampiros",
       "description": "Navegando una calle sin luz, te encuentras a muchas figuras encapuchadas en medio de un ritual oscuro. Al acercarte, se giran en un unísono espeluznante. El más alto entre ellos te enseña colmillos y extiende una larga y pálida mano hacia ti. \n \"Únete a nosotros hermano, y siente el calor de la Torre.\"",
       "choices": [
-        "[Aceptar] Elimina todos los Golpes. Recibe 5 Mordidas. Pierde30%% PV Máximo.",
+        "[Aceptar] Elimina todos los Golpes. Recibe 5 Mordidas. Pierde % PV Máximo.",
         "[Negarse]",
+        "[Pierde ] Elimina todos los Golpes. Recibe 5 Mordidas.",
         "[Salir]"
       ]
     },
@@ -4116,9 +4132,9 @@
       "name": "Viejo Pordiosero",
       "description": "Un viejo pordiosero vestido en pieles se te acerca las manos mientras pasas a su lado. \"¿Alguna monedita, pequeña criatura?\"",
       "choices": [
-        "[Ofrecer]75Oro: Elimina una carta de tu mazo.",
+        "[Ofrecer] Oro: Elimina una carta de tu mazo.",
         "[Continuar]",
-        "[Salir]"
+        "[Salir] Selecciona una Carta a Eliminar."
       ]
     },
     "MATCH_AND_KEEP": {
@@ -4135,11 +4151,8 @@
       "description": "\"¡Nos volvemos a ver!\" \n Un tipo alegre y despeinado se acerca a ti alegremente. No conoces a este hombre. \n \n \"¡Soy yo, Ranwid! ¿Tienes buena mercancía para mí? ¿Lo de siempre? Un tipo como yo no puede apañárselas por sí solo, ¿sabes?\" \n Le miras de forma dudosa y consideras tus opciones...",
       "choices": [
         "[Dar poción] Pierde",
-        "[Bloqueado] Necesitas: Poción.",
         "[Dar oro] Pierde",
-        "[Bloqueado] Necesitas: Por lo menos 50 de Oro.",
         "[Dar carta] Pierde",
-        "[Bloqueado] Necesitas: Carta. . Obtén una Reliquia.",
         "[Atacar]",
         "[Salir] Oro"
       ]
@@ -4147,7 +4160,13 @@
     "GOLDEN_IDOL": {
       "name": "Ídolo Dorado",
       "description": "Te encuentras con un pedestal discreto con un ídolo dorado y brillante colocado encima. Parece increíblemente valioso. \n \n Tienes la seguridad de que no hay ninguna trampa en los alrededores.",
-      "choices": []
+      "choices": [
+        "[Tomar] Recibir Ídolo Dorado. Activar una trampa.",
+        "[Salir]",
+        "[Adelantarse] Maldecirte - Lesión.",
+        "[Destruir] Recibe de Daño.",
+        "[Esconderse] Perder PV Máximos."
+      ]
     }
   },
   "keywords": {

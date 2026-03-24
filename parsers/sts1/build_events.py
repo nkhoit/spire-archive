@@ -369,31 +369,49 @@ def build_choices_from_merges(merges: list, options_arr: list[str]) -> list[str]
     return choices
 
 
-def build_choices_fallback(options_arr: list[str]) -> list[str]:
-    """Fallback: merge OPTIONS by bracket-start heuristic."""
+def build_choices_fallback(options_arr: list[str], eng_options: list[str] | None = None) -> list[str]:
+    """Fallback: merge OPTIONS by bracket-start heuristic.
+    
+    Uses English OPTIONS array (if provided) to identify locked options,
+    since the locked label varies by language.
+    """
+    # Build set of indices that are locked in English
+    locked_indices = set()
+    if eng_options:
+        for i, opt in enumerate(eng_options):
+            if opt.strip().startswith('[Locked]'):
+                locked_indices.add(i)
+
     merged = []
     current = None
-    for opt in options_arr:
+    skip_current = False
+    for i, opt in enumerate(options_arr):
         cleaned = clean_text(opt)
-        if not cleaned or cleaned.startswith('Select a Card') or cleaned.startswith('Choose a Card'):
+        if not cleaned:
             continue
         if opt.strip().startswith('['):
-            if current is not None:
+            if current is not None and not skip_current:
                 merged.append(current)
-            if cleaned.startswith('[Locked]'):
+            # Skip if this index is locked in English, or if it's an English-language Locked tag
+            if i in locked_indices or cleaned.startswith('[Locked]'):
                 current = None
+                skip_current = True
                 continue
             current = cleaned
+            skip_current = False
         else:
-            if current is not None:
+            if current is not None and not skip_current:
+                # Skip post-event UI text (English patterns)
+                if cleaned.startswith('Select a Card') or cleaned.startswith('Choose a Card'):
+                    continue
                 current += ' ' + cleaned
             # else: orphaned continuation, skip
-    if current is not None:
+    if current is not None and not skip_current:
         merged.append(current)
     return merged
 
 
-def build_events_for_locale(event_acts: dict, lang: str) -> list[dict]:
+def build_events_for_locale(event_acts: dict, lang: str, eng_loc: dict | None = None) -> list[dict]:
     loc_code = LANG_MAP.get(lang, 'eng')
     loc = load_loc(loc_code)
     is_english = lang == 'en'
@@ -411,12 +429,16 @@ def build_events_for_locale(event_acts: dict, lang: str) -> list[dict]:
         intro = clean_text(descriptions[0]) if descriptions else ''
 
         # Build choices
+        # English uses CHOICE_OVERRIDES (clean hand-written text) or OPTION_MERGES (with fill values).
+        # Other languages use the bracket-start fallback heuristic, with English OPTIONS
+        # used to identify locked option indices (since locked labels vary by language).
         if is_english and event_id in CHOICE_OVERRIDES:
             choices = CHOICE_OVERRIDES[event_id]
-        elif event_id in OPTION_MERGES:
+        elif is_english and event_id in OPTION_MERGES:
             choices = build_choices_from_merges(OPTION_MERGES[event_id], options_arr)
         else:
-            choices = build_choices_fallback(options_arr)
+            eng_options = eng_loc.get(event_id, {}).get('OPTIONS', []) if eng_loc else None
+            choices = build_choices_fallback(options_arr, eng_options)
 
         snake_id = to_upper_snake(event_id)
 
@@ -437,6 +459,9 @@ def main():
     event_acts = build_event_map()
     print(f'Found {len(event_acts)} events from Java source', file=sys.stderr)
 
+    # Load English loc once for cross-referencing locked options
+    eng_loc = load_loc('eng')
+
     events = build_events_for_locale(event_acts, 'en')
     print(f'Built {len(events)} events for English', file=sys.stderr)
 
@@ -453,7 +478,7 @@ def main():
     for lang in LANG_MAP:
         if lang == 'en':
             continue
-        loc_events = build_events_for_locale(event_acts, lang)
+        loc_events = build_events_for_locale(event_acts, lang, eng_loc)
         overlay = {}
         for ev in loc_events:
             overlay[ev['id']] = {
