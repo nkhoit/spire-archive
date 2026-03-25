@@ -1185,6 +1185,25 @@ async function parseEventsLocalized() {
 
     // Load localized entity data for StringVar resolution
     const locRelics = existing.relics || {};
+    const locCards = existing.cards || {};
+    const locPotions = existing.potions || {};
+    const locEnchantments = existing.enchantments || {};
+
+    // Build English→localized entity name replacement function
+    function localizeEntityNames(text, refs) {
+      if (!text || !refs?.length) return text;
+      for (const ref of refs) {
+        const locData = ref.type === 'card' ? locCards[ref.id] :
+                       ref.type === 'relic' ? locRelics[ref.id] :
+                       ref.type === 'potion' ? locPotions[ref.id] :
+                       ref.type === 'enchantment' ? locEnchantments[ref.id] : null;
+        const locName = locData?.name;
+        if (locName && locName !== ref.name && text.includes(ref.name)) {
+          text = text.replaceAll(ref.name, locName);
+        }
+      }
+      return text;
+    }
 
     for (const baseEvent of baseEvents) {
       const parsed = parsedMap.get(baseEvent.id);
@@ -1192,12 +1211,23 @@ async function parseEventsLocalized() {
 
       const localized = {};
 
+      // Collect all references for this event (event-level + per-choice)
+      const allRefs = [...(baseEvent.references || [])];
+      for (const c of baseEvent.choices || []) {
+        if (c.references) allRefs.push(...c.references);
+      }
+      for (const p of baseEvent.pages || []) {
+        for (const c of p.choices || []) {
+          if (c.references) allRefs.push(...c.references);
+        }
+      }
+
       // Name
       if (parsed.name) localized.name = parsed.name;
 
       // Description
       if (parsed.description) {
-        localized.description = resolveRuntimeLocalized(parsed.description, runtimeReplacements);
+        localized.description = localizeEntityNames(resolveRuntimeLocalized(parsed.description, runtimeReplacements), allRefs);
       }
 
       // Choices — map onto base event's choice structure, only include differing fields
@@ -1210,10 +1240,10 @@ async function parseEventsLocalized() {
           if (!pc) { locChoices.push({}); continue; }
 
           const entry = {};
-          if (pc.name) entry.name = resolveRuntimeLocalized(pc.name, runtimeReplacements);
-          if (pc.description) entry.description = resolveRuntimeLocalized(pc.description, runtimeReplacements);
-          if (pc.locked) entry.locked = resolveRuntimeLocalized(pc.locked, runtimeReplacements);
-          if (pc.outcome) entry.outcome = resolveRuntimeLocalized(pc.outcome, runtimeReplacements);
+          if (pc.name) entry.name = localizeEntityNames(resolveRuntimeLocalized(pc.name, runtimeReplacements), allRefs);
+          if (pc.description) entry.description = localizeEntityNames(resolveRuntimeLocalized(pc.description, runtimeReplacements), allRefs);
+          if (pc.locked) entry.locked = localizeEntityNames(resolveRuntimeLocalized(pc.locked, runtimeReplacements), allRefs);
+          if (pc.outcome) entry.outcome = localizeEntityNames(resolveRuntimeLocalized(pc.outcome, runtimeReplacements), allRefs);
           locChoices.push(entry);
         }
         if (locChoices.some(c => Object.keys(c).length > 0)) {
@@ -1266,16 +1296,16 @@ async function parseEventsLocalized() {
           if (!bestPage) { locPages.push({}); continue; }
 
           const page = {};
-          if (bestPage.description) page.description = resolveRuntimeLocalized(bestPage.description, runtimeReplacements);
+          if (bestPage.description) page.description = localizeEntityNames(resolveRuntimeLocalized(bestPage.description, runtimeReplacements), allRefs);
           if (bestPage.choices && basePage.choices) {
             page.choices = basePage.choices.map((_, j) => {
               const pc = bestPage.choices[j];
               if (!pc) return {};
               const entry = {};
-              if (pc.name) entry.name = resolveRuntimeLocalized(pc.name, runtimeReplacements);
-              if (pc.description) entry.description = resolveRuntimeLocalized(pc.description, runtimeReplacements);
-              if (pc.locked) entry.locked = resolveRuntimeLocalized(pc.locked, runtimeReplacements);
-              if (pc.outcome) entry.outcome = resolveRuntimeLocalized(pc.outcome, runtimeReplacements);
+              if (pc.name) entry.name = localizeEntityNames(resolveRuntimeLocalized(pc.name, runtimeReplacements), allRefs);
+              if (pc.description) entry.description = localizeEntityNames(resolveRuntimeLocalized(pc.description, runtimeReplacements), allRefs);
+              if (pc.locked) entry.locked = localizeEntityNames(resolveRuntimeLocalized(pc.locked, runtimeReplacements), allRefs);
+              if (pc.outcome) entry.outcome = localizeEntityNames(resolveRuntimeLocalized(pc.outcome, runtimeReplacements), allRefs);
               return entry;
             });
             if (!page.choices.some(c => Object.keys(c).length > 0)) delete page.choices;
