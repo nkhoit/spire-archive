@@ -5948,10 +5948,16 @@
       "choices": [
         {
           "name": "{Rarity:choose(Ereignis|Token):Ereignis-Trank|Token-Trank|{}en Trank} einfüllen",
-          "description": "Verliere Trank. Erhalte {Type:choose(Angriff):einen verbesserten|eine verbesserte} ?e{Type:choose(Angriff):n {}| {}}."
+          "description": "Verliere Trank. Erhalte {Type:choose(Angriff):einen verbesserten|eine verbesserte} Gewöhnliche{Type:choose(Angriff):n {}| {}}."
         },
-        {},
-        {}
+        {
+          "name": "{Rarity:choose(Ereignis|Token):Ereignis-Trank|Token-Trank|{}en Trank} einfüllen",
+          "description": "Verliere Trank. Erhalte {Type:choose(Angriff):einen verbesserten|eine verbesserte} Ungewöhnliche{Type:choose(Angriff):n {}| {}}."
+        },
+        {
+          "name": "{Rarity:choose(Ereignis|Token):Ereignis-Trank|Token-Trank|{}en Trank} einfüllen",
+          "description": "Verliere Trank. Erhalte {Type:choose(Angriff):einen verbesserten|eine verbesserte} Seltene{Type:choose(Angriff):n {}| {}}."
+        }
       ]
     },
     "THE_LANTERN_KEY": {

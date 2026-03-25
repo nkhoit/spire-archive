@@ -545,23 +545,39 @@ function applyManualFixes(events, relicsData = []) {
 
     // THE_FUTURE_OF_POTIONS: dynamic choices based on held potions (up to 3).
     // The game uses a single localization template instantiated per potion at runtime.
-    // Requires ≥2 potions to appear.
+    // We pre-fill the template for 3 rarity tiers using game loc strings.
     if (event.id === 'THE_FUTURE_OF_POTIONS') {
-      event.description = "You feel a faint rumbling as you round the corner to discover a gigantic spinning apparatus! It has several slots which appear to convert liquids into a highly compressed digestible tablet.\n\nThe idea of turning these health tonics into a tiny morsel is uncomfortable but perhaps it's good to try new things?\n\nUp to 3 choices are offered — one for each potion you're carrying. This event only appears if you have at least 2 potions.";
-      event.choices = [
-        {
-          name: 'Insert Common Potion',
-          description: 'Lose the potion. Choose 1 of 3 Upgraded Common cards (Attack or Skill).',
-        },
-        {
-          name: 'Insert Uncommon Potion',
-          description: 'Lose the potion. Choose 1 of 3 Upgraded Uncommon cards (Attack, Skill, or Power).',
-        },
-        {
-          name: 'Insert Rare Potion',
-          description: 'Lose the potion. Choose 1 of 3 Upgraded Rare cards (Attack, Skill, or Power).',
-        },
-      ];
+      // Read rarity/type names from gameplay_ui.json
+      const gameplayUiPath = path.join(PCK_DIR, 'localization', 'eng', 'gameplay_ui.json');
+      let rarities = { Common: 'Common', Uncommon: 'Uncommon', Rare: 'Rare' };
+      let types = { Attack: 'Attack', Skill: 'Skill', Power: 'Power' };
+      try {
+        const ui = JSON.parse(fs.readFileSync(gameplayUiPath, 'utf-8'));
+        rarities = { Common: ui['CARD_RARITY.COMMON'] || 'Common', Uncommon: ui['CARD_RARITY.UNCOMMON'] || 'Uncommon', Rare: ui['CARD_RARITY.RARE'] || 'Rare' };
+        types = { Attack: ui['CARD_TYPE.ATTACK'] || 'Attack', Skill: ui['CARD_TYPE.SKILL'] || 'Skill', Power: ui['CARD_TYPE.POWER'] || 'Power' };
+      } catch {}
+
+      // Read the event template from loc
+      const eventsLocPath = path.join(PCK_DIR, 'localization', 'eng', 'events.json');
+      let titleTemplate = 'Insert {Rarity} Potion';
+      let descTemplate = 'Lose your potion. Obtain an Upgraded {Rarity} {Type}.';
+      try {
+        const evLoc = JSON.parse(fs.readFileSync(eventsLocPath, 'utf-8'));
+        titleTemplate = stripBBCode(evLoc['THE_FUTURE_OF_POTIONS.pages.INITIAL.options.POTION.title'] || titleTemplate);
+        descTemplate = stripBBCode(evLoc['THE_FUTURE_OF_POTIONS.pages.INITIAL.options.POTION.description'] || descTemplate);
+      } catch {}
+
+      // Common only offers Attack or Skill; Uncommon/Rare offer all three
+      const typesByRarity = {
+        Common: `${types.Attack} or ${types.Skill}`,
+        Uncommon: `${types.Attack}, ${types.Skill}, or ${types.Power}`,
+        Rare: `${types.Attack}, ${types.Skill}, or ${types.Power}`,
+      };
+
+      event.choices = Object.entries(rarities).map(([key, rarity]) => ({
+        name: titleTemplate.replace('{Rarity}', rarity),
+        description: descTemplate.replace('{Potion}', 'your potion').replace('{Rarity}', rarity).replace('{Type}', typesByRarity[key]),
+      }));
     }
 
     // ABYSSAL_BATHS: repeating immerse/linger loop with escalating damage.
@@ -1357,6 +1373,33 @@ async function parseEventsLocalized() {
           };
         });
       }
+    }
+
+    // THE_FUTURE_OF_POTIONS: generate localized 3-rarity choices from game template
+    {
+      const locEventsPath = path.join(PCK_DIR, 'localization', gameLang, 'events.json');
+      const locUiPath = path.join(PCK_DIR, 'localization', gameLang, 'gameplay_ui.json');
+      try {
+        const locEv = JSON.parse(fs.readFileSync(locEventsPath, 'utf-8'));
+        const locUi = JSON.parse(fs.readFileSync(locUiPath, 'utf-8'));
+        const titleTpl = stripBBCode(locEv['THE_FUTURE_OF_POTIONS.pages.INITIAL.options.POTION.title']);
+        const descTpl = stripBBCode(locEv['THE_FUTURE_OF_POTIONS.pages.INITIAL.options.POTION.description']);
+        if (titleTpl && descTpl) {
+          const r = { Common: locUi['CARD_RARITY.COMMON'], Uncommon: locUi['CARD_RARITY.UNCOMMON'], Rare: locUi['CARD_RARITY.RARE'] };
+          const t = { Attack: locUi['CARD_TYPE.ATTACK'], Skill: locUi['CARD_TYPE.SKILL'], Power: locUi['CARD_TYPE.POWER'] };
+          const potionWord = runtimeReplacements['{Potion}'] || 'potion';
+          const typesByRarity = {
+            Common: `${t.Attack} / ${t.Skill}`,
+            Uncommon: `${t.Attack} / ${t.Skill} / ${t.Power}`,
+            Rare: `${t.Attack} / ${t.Skill} / ${t.Power}`,
+          };
+          if (!nextEvents['THE_FUTURE_OF_POTIONS']) nextEvents['THE_FUTURE_OF_POTIONS'] = {};
+          nextEvents['THE_FUTURE_OF_POTIONS'].choices = ['Common', 'Uncommon', 'Rare'].map(key => ({
+            name: titleTpl.replace('{Rarity}', r[key]),
+            description: descTpl.replace('{Potion}', potionWord).replace('{Rarity}', r[key]).replace('{Type}', typesByRarity[key]),
+          }));
+        }
+      } catch {}
     }
 
     existing.events = nextEvents;
