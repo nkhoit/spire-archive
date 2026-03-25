@@ -82,6 +82,7 @@ function renderChoices(choices: any[], eventRefs?: any[], langPrefix?: string) {
     const allRefs = [...(eventRefs ?? []), ...(c.references ?? [])];
     return {
       ...c,
+      _nameHtml: c.name ? linkifyRefs(c.name, allRefs, langPrefix) : '',
       _html: c.description ? linkifyRefs(c.description, allRefs, langPrefix) : '',
       _outcomeHtml: c.outcome ? linkifyRefs(c.outcome, allRefs, langPrefix) : '',
       _locked: c.locked ?? null,
@@ -196,11 +197,11 @@ function getPoolLabel(name: string, locale: string) {
                   const ungroupedPage = pageChoices.filter((c: any) => !c.pool);
                   return (
                     <div class="space-y-2">
-                      {ungroupedPage.map((c: any) => (<div class="rounded-md border border-white/10 bg-white/5 p-3"><div class="font-game text-sm font-semibold theme-title">{c.name}</div>{c._html && <p class="mt-1 text-sm text-slate-300" set:html={c._html} />}{c._locked && <p class="mt-1 text-xs text-slate-500 italic">🔒 {t('Locked if:', locale)} {c._locked}</p>}{c._outcomeHtml && (<details class="mt-2"><summary class="text-xs text-slate-500 cursor-pointer hover:text-slate-400 transition-colors select-none">{t('What happens...', locale)}</summary><p class="mt-1 text-sm text-slate-400 italic pl-2 border-l border-white/10" set:html={c._outcomeHtml} /></details>)}</div>))}
+                      {ungroupedPage.map((c: any) => (<div class="rounded-md border border-white/10 bg-white/5 p-3"><div class="font-game text-sm font-semibold theme-title" set:html={c._nameHtml || c.name} />{c._html && <p class="mt-1 text-sm text-slate-300" set:html={c._html} />}{c._locked && <p class="mt-1 text-xs text-slate-500 italic">🔒 {t('Locked if:', locale)} {c._locked}</p>}{c._outcomeHtml && (<details class="mt-2"><summary class="text-xs text-slate-500 cursor-pointer hover:text-slate-400 transition-colors select-none">{t('What happens...', locale)}</summary><p class="mt-1 text-sm text-slate-400 italic pl-2 border-l border-white/10" set:html={c._outcomeHtml} /></details>)}</div>))}
                       {hasSubPools && poolNames.map((pool: any) => (
                         <div class="mt-2">
                           <h4 class="font-game text-xs font-semibold theme-kicker mb-1">{pool}</h4>
-                          <div class="space-y-1.5 ml-2">{pageChoices.filter((c: any) => c.pool === pool).map((c: any) => (<div class="rounded-md border border-white/10 bg-white/5 p-2.5"><div class="font-game text-sm font-semibold theme-title">{c.name}</div>{c._html && <p class="mt-1 text-sm text-slate-300" set:html={c._html} />}{c._outcomeHtml && (<details class="mt-2"><summary class="text-xs text-slate-500 cursor-pointer hover:text-slate-400 transition-colors select-none">{t('What happens...', locale)}</summary><p class="mt-1 text-sm text-slate-400 italic pl-2 border-l border-white/10" set:html={c._outcomeHtml} /></details>)}</div>))}</div>
+                          <div class="space-y-1.5 ml-2">{pageChoices.filter((c: any) => c.pool === pool).map((c: any) => (<div class="rounded-md border border-white/10 bg-white/5 p-2.5"><div class="font-game text-sm font-semibold theme-title" set:html={c._nameHtml || c.name} />{c._html && <p class="mt-1 text-sm text-slate-300" set:html={c._html} />}{c._outcomeHtml && (<details class="mt-2"><summary class="text-xs text-slate-500 cursor-pointer hover:text-slate-400 transition-colors select-none">{t('What happens...', locale)}</summary><p class="mt-1 text-sm text-slate-400 italic pl-2 border-l border-white/10" set:html={c._outcomeHtml} /></details>)}</div>))}</div>
                         </div>
                       ))}
                     </div>
@@ -215,7 +216,7 @@ function getPoolLabel(name: string, locale: string) {
       {showStandardChoices && ungrouped.length > 0 && pages.length === 0 && (
         <section class="mt-4">
           <h2 class="font-game text-sm font-semibold text-slate-200">{t('Choices', locale)}</h2>
-          <div class="mt-3 space-y-2">{renderChoices(ungrouped, (event as any).references, langPrefix).map((c: any) => (<div class="rounded-md border border-white/10 bg-white/5 p-3"><div class="font-game text-sm font-semibold theme-title">{c.name}</div>{c._html && <p class="mt-1 text-sm text-slate-300" set:html={c._html} />}{c._locked && <p class="mt-1 text-xs text-slate-500 italic">🔒 {t('Locked if:', locale)} {c._locked}</p>}{c._outcomeHtml && (<details class="mt-2"><summary class="text-xs text-slate-500 cursor-pointer hover:text-slate-400 transition-colors select-none">{t('What happens...', locale)}</summary><p class="mt-1 text-sm text-slate-400 italic pl-2 border-l border-white/10" set:html={c._outcomeHtml} /></details>)}</div>))}</div>
+          <div class="mt-3 space-y-2">{renderChoices(ungrouped, (event as any).references, langPrefix).map((c: any) => (<div class="rounded-md border border-white/10 bg-white/5 p-3"><div class="font-game text-sm font-semibold theme-title" set:html={c._nameHtml || c.name} />{c._html && <p class="mt-1 text-sm text-slate-300" set:html={c._html} />}{c._locked && <p class="mt-1 text-xs text-slate-500 italic">🔒 {t('Locked if:', locale)} {c._locked}</p>}{c._outcomeHtml && (<details class="mt-2"><summary class="text-xs text-slate-500 cursor-pointer hover:text-slate-400 transition-colors select-none">{t('What happens...', locale)}</summary><p class="mt-1 text-sm text-slate-400 italic pl-2 border-l border-white/10" set:html={c._outcomeHtml} /></details>)}</div>))}</div>
         </section>
       )}
 
