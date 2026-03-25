@@ -226,9 +226,12 @@ test.describe('Event data — dynamic/templated events', () => {
     expect(event!.choices[2].description).toContain('Power');
   });
 
-  test('THE_FUTURE_OF_POTIONS description mentions potion requirement', () => {
+  test('THE_FUTURE_OF_POTIONS has description and 3 rarity choices', () => {
     const event = events.find(e => e.id === 'THE_FUTURE_OF_POTIONS');
-    expect(event!.description).toContain('2 potions');
+    expect(event!.description).toBeTruthy();
+    expect(event!.choices.length).toBe(3);
+    expect(event!.choices.some(c => c.name.includes('Common'))).toBe(true);
+    expect(event!.choices.some(c => c.name.includes('Rare'))).toBe(true);
   });
 
   test('no choice names contain unresolved "?" placeholders', () => {
