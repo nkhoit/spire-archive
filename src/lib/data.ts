@@ -461,6 +461,18 @@ async function applyLocalization(game: string, locale: Locale, base: Dataset): P
     return { ...p, ...(l.name && { name: l.name }), ...(l.description && { description: l.description }) };
   });
 
+  const enchantments = base.enchantments.map(e => {
+    const l = loc.enchantments?.[e.id];
+    if (!l) return e;
+    return { ...e, ...(l.name && { name: l.name }), ...(l.description && { description: l.description }) };
+  });
+
+  // Build entity name lookup maps for localizing event references
+  const cardById = toMap(cards);
+  const relicById = toMap(relics);
+  const potionById = toMap(potions);
+  const enchantmentById = toMap(enchantments);
+
   const events = base.events.map(e => {
     const l = loc.events?.[e.id];
     if (!l) return e;
@@ -502,13 +514,30 @@ async function applyLocalization(game: string, locale: Locale, base: Dataset): P
         }))
       : e.pages;
 
+    // Localize references using already-translated entity names
+    const localizeRefs = (refs?: EventReference[]): EventReference[] | undefined => {
+      if (!refs?.length || locale === 'en') return refs;
+      return refs.map(ref => {
+        const entityMap = ref.type === 'card' ? cardById :
+                         ref.type === 'relic' ? relicById :
+                         ref.type === 'potion' ? potionById :
+                         ref.type === 'enchantment' ? enchantmentById : null;
+        const locName = entityMap?.get(ref.id)?.name;
+        return locName ? { ...ref, name: locName } : ref;
+      });
+    };
+
     return {
       ...e,
       ...(l.name && { name: l.name }),
       ...(l.description && { description: l.description }),
       ...(l.epithet && { epithet: l.epithet }),
       ...(l.dialogue && { dialogue: l.dialogue }),
-      choices,
+      choices: choices.map((c: any) => ({
+        ...c,
+        ...(c.references && { references: localizeRefs(c.references) }),
+      })),
+      ...(e.references && { references: localizeRefs(e.references) }),
       ...(pages && { pages }),
     };
   });
@@ -517,12 +546,6 @@ async function applyLocalization(game: string, locale: Locale, base: Dataset): P
     const l = loc.keywords?.[k.id];
     if (!l) return k;
     return { ...k, ...(l.names && { names: l.names }), ...(l.name && { names: [l.name] }), ...(l.description && { description: l.description }) };
-  });
-
-  const enchantments = base.enchantments.map(e => {
-    const l = loc.enchantments?.[e.id];
-    if (!l) return e;
-    return { ...e, ...(l.name && { name: l.name }), ...(l.description && { description: l.description }) };
   });
 
   const characters = base.characters.map(c => {
