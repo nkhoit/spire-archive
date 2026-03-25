@@ -677,19 +677,7 @@ function applyManualFixes(events, relicsData = []) {
     }
 
     // Manual choice description overrides (from C# RelicOption/CardOption patterns)
-    const CHOICE_DESC_OVERRIDES = {
-      HUNGRY_FOR_MUSHROOMS: {
-        'Big Mushroom': 'Obtain Big Mushroom.',
-        'Fragrant Mushroom': 'Obtain Fragrant Mushroom. Lose 15 HP.',
-      },
-    };
-    if (CHOICE_DESC_OVERRIDES[event.id]) {
-      for (const c of (event.choices || [])) {
-        if (CHOICE_DESC_OVERRIDES[event.id][c.name] && !c.description) {
-          c.description = CHOICE_DESC_OVERRIDES[event.id][c.name];
-        }
-      }
-    }
+    // CHOICE_DESC_OVERRIDES removed — keep event data game-accurate, no editorial text
 
     // Resolve static event DynamicVars (values from C# source)
     const STATIC_EVENT_VARS = {
