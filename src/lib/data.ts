@@ -527,10 +527,14 @@ async function applyLocalization(game: string, locale: Locale, base: Dataset): P
       });
     };
 
+    // Suppress untranslated editorial descriptions for ancient events
+    // (these have English-only descriptions not from game loc files)
+    const description = l.description ?? (e.type === 'ancient' ? undefined : e.description);
+
     return {
       ...e,
       ...(l.name && { name: l.name }),
-      ...(l.description && { description: l.description }),
+      description,
       ...(l.epithet && { epithet: l.epithet }),
       ...(l.dialogue && { dialogue: l.dialogue }),
       choices: choices.map((c: any) => ({
