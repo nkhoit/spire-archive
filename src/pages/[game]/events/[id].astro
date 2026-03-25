@@ -61,7 +61,11 @@ function linkifyRefs(text: string, refs?: any[], langPrefix?: string): string {
     const { img, desc } = getRefPreviewData(ref);
     if (!href && !desc) continue;
     const escaped = ref.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const re = new RegExp(`(?<!<[^>]*)\\b(${escaped})\\b`, 'gi');
+    // Use word boundaries for Latin names, but not for CJK/non-Latin names where \b doesn't work
+    const hasNonLatin = /[^\u0000-\u024F]/.test(ref.name);
+    const re = hasNonLatin
+      ? new RegExp(`(?<!<[^>]*)(${escaped})`, 'gi')
+      : new RegExp(`(?<!<[^>]*)\\b(${escaped})\\b`, 'gi');
     const dataAttrs = [
       `data-preview-type="${ref.type}"`,
       img ? `data-preview-img="${img}"` : '',
