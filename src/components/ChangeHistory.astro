@@ -1,0 +1,103 @@
+---
+import fs from 'node:fs/promises';
+import { existsSync } from 'node:fs';
+import path from 'node:path';
+
+export interface Props {
+  entityType: string;
+  entityId: string;
+}
+
+interface ChangeValue {
+  old: any;
+  new: any;
+}
+
+interface VersionEntry {
+  version: string;
+  previousVersion: string;
+  date: string;
+  label?: string;
+  changes?: Record<string, {
+    modified?: Record<string, Record<string, ChangeValue>>;
+    added?: string[];
+    removed?: string[];
+  }>;
+}
+
+const { entityType, entityId } = Astro.props;
+
+function rootDir() {
+  const dir = path.dirname(new URL(import.meta.url).pathname);
+  let candidate = path.resolve(dir, '../..');
+  if (!existsSync(path.join(candidate, 'data'))) candidate = process.cwd();
+  return candidate;
+}
+
+function formatValue(value: any): string {
+  if (value === null || value === undefined) return '—';
+  if (Array.isArray(value)) return value.length ? value.join(', ') : '[]';
+  if (typeof value === 'object') return JSON.stringify(value);
+  return String(value);
+}
+
+const changelogPath = path.join(rootDir(), 'data', 'sts2', 'changelog.json');
+const changelog: VersionEntry[] = existsSync(changelogPath)
+  ? JSON.parse(await fs.readFile(changelogPath, 'utf8'))
+  : [];
+
+const history = changelog
+  .map((entry) => {
+    const section = entry.changes?.[entityType] || {};
+    const modified = section.modified?.[entityId];
+    const added = Array.isArray(section.added) && section.added.includes(entityId);
+    const removed = Array.isArray(section.removed) && section.removed.includes(entityId);
+    if (!modified && !added && !removed) return null;
+    return {
+      version: entry.version,
+      previousVersion: entry.previousVersion,
+      date: entry.date,
+      label: entry.label,
+      modified: modified ? Object.entries(modified) : [],
+      added,
+      removed,
+    };
+  })
+  .filter(Boolean);
+---
+{history.length > 0 && (
+  <section class="mt-8 rounded-xl border border-amber-400/20 bg-slate-900/70 p-5 shadow-[0_0_0_1px_rgba(251,191,36,0.04)]">
+    <div class="flex items-center gap-2">
+      <div class="h-2 w-2 rounded-full bg-amber-400"></div>
+      <h2 class="text-lg font-semibold text-slate-100">Patch History</h2>
+    </div>
+
+    <div class="mt-4 space-y-4">
+      {history.map((entry: any) => (
+        <article class="rounded-lg border border-white/8 bg-white/5 p-4">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <div class="text-sm font-medium text-amber-300">
+              {entry.label ? `${entry.version} — ${entry.label}` : entry.version}
+            </div>
+            <div class="text-xs uppercase tracking-wide text-slate-400">{entry.date}</div>
+          </div>
+
+          <div class="mt-3 space-y-2 text-sm text-slate-200">
+            {entry.added && <div><span class="font-medium text-emerald-300">Added</span> in {entry.version}</div>}
+            {entry.removed && <div><span class="font-medium text-rose-300">Removed</span> in {entry.version}</div>}
+            {entry.modified.map(([field, values]: [string, ChangeValue]) => (
+              <div class="rounded-md bg-slate-950/50 px-3 py-2">
+                <div class="text-xs uppercase tracking-wide text-slate-400">{field}</div>
+                <div class="mt-1 text-slate-100">
+                  <span class="text-rose-300">{formatValue(values.old)}</span>
+                  <span class="mx-2 text-amber-300">→</span>
+                  <span class="text-emerald-300">{formatValue(values.new)}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+)}

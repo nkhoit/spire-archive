@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../components/Layout.astro';
 import CardDetail from '../../../components/CardDetail.astro';
+import ChangeHistory from '../../../components/ChangeHistory.astro';
 import { getData } from '../../../lib/data';
 import { getLocale } from '../../../lib/i18n';
 import { getPageGame } from '../../../lib/page-game';
@@ -18,4 +19,5 @@ const desc = `${card.type} · ${card.rarity} · cost ${game === 'sts2' ? (card.c
 ---
 <Layout game={game} title={title} description={card.description} ogTitle={card.name} ogDescription={desc}>
   <CardDetail game={game} card={card} data={data} />
+  {game === 'sts2' && <ChangeHistory entityType="cards" entityId={card.id} />}
 </Layout>

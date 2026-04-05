@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../components/Layout.astro';
 import Badge from '../../../components/Badge.astro';
+import ChangeHistory from '../../../components/ChangeHistory.astro';
 import { getData } from '../../../lib/data';
 import { getLocale } from '../../../lib/i18n';
 import { t } from '../../../lib/ui-strings';
@@ -28,6 +29,8 @@ const title = `${enchantment.name} — Enchantment — Spire Archive — STS2`;
     <h2 class="text-sm font-semibold">{t('Description', locale)}</h2>
     <p class="mt-2 whitespace-pre-line text-sm text-slate-200" set:html={replaceGameTokens(enchantment.description ?? '')} />
   </section>
+
+  <ChangeHistory entityType="enchantments" entityId={enchantment.id} />
 
   <div class="mt-6">
     <a href={langPrefix + '/sts2/enchantments'} class="text-sm text-slate-400 hover:text-white">← {t('Enchantments', locale)}</a>

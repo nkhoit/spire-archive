@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../components/Layout.astro';
 import Badge from '../../../components/Badge.astro';
+import ChangeHistory from '../../../components/ChangeHistory.astro';
 import { getData } from '../../../lib/data';
 import { getLocale } from '../../../lib/i18n';
 import { t } from '../../../lib/ui-strings';
@@ -37,4 +38,6 @@ const imgSrc = game === 'sts2' ? `/images/sts2/relics/${relic.id.toLowerCase()}.
     {game === 'sts2' ? <p class="mt-2 whitespace-pre-line text-sm text-slate-200" set:html={replaceGameTokens(relic.description ?? '')} /> : <p class="mt-2 whitespace-pre-line text-sm text-slate-200">{relic.description}</p>}
     {relic.flavor ? <p class="mt-3 text-sm italic text-slate-400">{relic.flavor}</p> : null}
   </section>
+
+  {game === 'sts2' && <ChangeHistory entityType="relics" entityId={relic.id} />}
 </Layout>

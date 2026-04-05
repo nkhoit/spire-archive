@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../components/Layout.astro';
 import Badge from '../../../components/Badge.astro';
+import ChangeHistory from '../../../components/ChangeHistory.astro';
 import { getData } from '../../../lib/data';
 import { getLocale } from '../../../lib/i18n';
 import { t } from '../../../lib/ui-strings';
@@ -36,4 +37,6 @@ const imgSrc = game === 'sts2' ? `/images/sts2/potions/${potion.id.toLowerCase()
     <h2 class="text-sm font-semibold">{t('Description', locale)}</h2>
     {game === 'sts2' ? <p class="mt-2 whitespace-pre-line text-sm text-slate-200" set:html={replaceGameTokens(potion.description ?? '')} /> : <p class="mt-2 whitespace-pre-line text-sm text-slate-200">{potion.description}</p>}
   </section>
+
+  {game === 'sts2' && <ChangeHistory entityType="potions" entityId={potion.id} />}
 </Layout>

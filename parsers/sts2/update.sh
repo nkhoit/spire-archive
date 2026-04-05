@@ -39,7 +39,7 @@ run_step() {
   echo
 }
 
-TOTAL=12
+TOTAL=13
 run_step 1 "$TOTAL" python3 "$PARSERS_DIR/sts2/parse_all.py"
 run_step 2 "$TOTAL" node "$PARSERS_DIR/sts2/parse_events.js"
 run_step 3 "$TOTAL" node "$PARSERS_DIR/sts2/parse_monsters.js"
@@ -51,7 +51,8 @@ run_step 8 "$TOTAL" node "$PARSERS_DIR/sts2/resolve_localized_vars.cjs"
 run_step 9 "$TOTAL" node "$PARSERS_DIR/sts2/build_monster_localization.cjs"
 run_step 10 "$TOTAL" node "$PARSERS_DIR/sts2/add_ancient_descriptions.cjs"
 run_step 11 "$TOTAL" node "$PARSERS_DIR/sts2/build_patch_notes.cjs"
-run_step 12 "$TOTAL" python3 "$PARSERS_DIR/subset_fonts.py"
+run_step 12 "$TOTAL" bash -c 'node "$1" || true' _ "$PARSERS_DIR/sts2/build_changelog.cjs"
+run_step 13 "$TOTAL" python3 "$PARSERS_DIR/subset_fonts.py"
 
 python3 - <<'PY'
 import json
@@ -68,6 +69,7 @@ files = [
     'events.json',
     'enchantments.json',
     'patch_notes.json',
+    'changelog.json',
 ]
 print('Summary:')
 for name in files:
