@@ -310,6 +310,36 @@ function resolveTokens(desc, vars, fullStr) {
       }
       i = end; continue;
     }
+    // {TargetType:choose(TypeA):branchA|branchB} — pick branchA if card's base TargetType == TypeA, else branchB.
+    if (tag === 'TargetType' && rest.startsWith('choose(')) {
+      const parenEnd = rest.indexOf(')');
+      if (parenEnd !== -1) {
+        const typeName = rest.slice(7, parenEnd).trim();
+        const afterParen = rest.slice(parenEnd + 2);
+        const parts = afterParen.split('|');
+        const currentTarget = vars.__target_type || '';
+        const chosen = currentTarget === typeName
+          ? (parts[0] || '')
+          : (parts[1] || '');
+        result.push(resolveTokens(chosen.trim(), vars, fullStr));
+      }
+      i = end; continue;
+    }
+    // {VarName:percentMore()} → (value - 1) * 100 as integer percent
+    if (rest === 'percentMore()') {
+      const val = tag in vars ? vars[tag] : undefined;
+      if (val !== undefined && val !== null) {
+        const f = parseFloat(val);
+        if (!isNaN(f)) {
+          result.push(String(Math.round((f - 1) * 100)));
+        } else {
+          result.push('{' + inner + '}');
+        }
+      } else {
+        result.push('{' + inner + '}');
+      }
+      i = end; continue;
+    }
     // Unknown token — keep as-is
     result.push('{' + inner + '}');
     i = end;
@@ -392,11 +422,14 @@ function resolveEntityRefs(vars, nameMap) {
 
 // Load English base data IDs to filter orphaned localization entries
 const BASE_IDS = {};
+const BASE_ENTITIES = {};
 for (const cat of CATEGORIES) {
   const basePath = path.join(OUTPUT_DIR, cat + '.json');
   if (fs.existsSync(basePath)) {
     const items = JSON.parse(fs.readFileSync(basePath, 'utf8'));
     BASE_IDS[cat] = new Set(items.map(i => i.id));
+    BASE_ENTITIES[cat] = {};
+    for (const it of items) BASE_ENTITIES[cat][it.id] = it;
   }
 }
 
@@ -424,6 +457,9 @@ for (const lang of langs) {
       const rawVars = getVarsForId(itemId, category);
       const fallbacks = RUNTIME_VAR_FALLBACKS[`${category}:${itemId}`] || {};
       const vars = { ...resolveEntityRefs(rawVars, entityNameMap), ...fallbacks };
+      // Inject entity target so {TargetType:choose(...)} resolves correctly.
+      const baseEntity = BASE_ENTITIES[category] && BASE_ENTITIES[category][itemId];
+      if (baseEntity && baseEntity.target) vars.__target_type = baseEntity.target;
       const unresolved = new Set();
       let touched = false;
 

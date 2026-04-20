@@ -398,6 +398,37 @@ def resolve_tokens(desc: str, vars_map: dict[str, str]) -> str:
             i = end
             continue
 
+        # {TargetType:choose(TypeA):branchA|branchB} — pick branchA if card's base TargetType == TypeA, else branchB.
+        if tag == "TargetType" and rest.startswith("choose("):
+            paren_end = rest.find(")")
+            if paren_end != -1:
+                type_name = rest[7:paren_end].strip()
+                content_after = rest[paren_end+2:]
+                parts = content_after.split("|")
+                current_target = vars_map.get("__target_type", "")
+                if current_target == type_name:
+                    chosen = parts[0] if len(parts) > 0 else ""
+                else:
+                    chosen = parts[1] if len(parts) > 1 else ""
+                result.append(resolve_tokens(chosen.strip(), vars_map))
+            i = end
+            continue
+
+        # {VarName:percentMore()} → (value - 1) * 100 as integer percent (e.g. 1.25 → 25)
+        if rest == "percentMore()":
+            val = vars_map.get(tag)
+            if val is not None:
+                try:
+                    f = float(val)
+                    pct = int(round((f - 1.0) * 100))
+                    result.append(str(pct))
+                except (ValueError, TypeError):
+                    result.append("{" + inner + "}")
+            else:
+                result.append("{" + inner + "}")
+            i = end
+            continue
+
         # Unknown — keep as-is
         result.append("{" + inner + "}")
         i = end
@@ -442,6 +473,10 @@ def resolve_entity_file(json_path: Path, cs_dir: Path, label: str, entity_names:
                 vars_map = extract_vars_from_cs(cs_content)
                 if entity_names:
                     vars_map = _resolve_entity_refs(vars_map, entity_names)
+
+            # Inject entity target so {TargetType:choose(...)} can resolve correctly.
+            if entity.get("target"):
+                vars_map["__target_type"] = entity["target"]
 
             new_desc = resolve_description(desc, vars_map)
 

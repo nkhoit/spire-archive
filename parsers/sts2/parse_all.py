@@ -159,11 +159,12 @@ def parse_dynamic_vars(text: str) -> dict:
     # Named IntVar("Name", Xm) — e.g., IntVar("Increase", 3m)
     for m in re.finditer(r'new IntVar\("(\w+)",\s*(\d+)', text):
         result[camel_to_snake(m.group(1))] = int(m.group(2))
-    # Generic DynamicVar("Name", Xm)
-    for m in re.finditer(r'new DynamicVar\("(\w+)",\s*(\d+)', text):
+    # Generic DynamicVar("Name", Xm or X.Ym)
+    for m in re.finditer(r'new DynamicVar\("(\w+)",\s*(\d+(?:\.\d+)?)', text):
         key = camel_to_snake(m.group(1))
         if key not in result:
-            result[key] = int(m.group(2))
+            raw = m.group(2)
+            result[key] = float(raw) if '.' in raw else int(raw)
     # Named typed vars: e.g., new BlockVar("BlockNextTurn", 4m), new DamageVar("BombDamage", 10m)
     for m in re.finditer(r'new \w+Var\("(\w+)",\s*(\d+)', text):
         key = camel_to_snake(m.group(1))

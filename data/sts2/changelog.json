@@ -631,16 +631,6 @@
             }
           },
           "MINION_STRIKE": {
-            "tags": {
-              "old": [
-                "Minion",
-                "Strike"
-              ],
-              "new": [
-                "Strike",
-                "Minion"
-              ]
-            },
             "description": {
               "old": "Deal 7 damage.\nDraw 1 card.",
               "new": "Deal 6 damage.\nDraw 1 card."
@@ -781,10 +771,6 @@
             }
           },
           "SHIV": {
-            "description": {
-              "old": "Deal 4 damage.",
-              "new": "Deal 4 damage{TargetType:choose(AllEnemies): to ALL enemies|}."
-            },
             "vars.calculation_base": {
               "old": 0,
               "new": null
@@ -1025,7 +1011,7 @@
           "BOWLER_HAT": {
             "description": {
               "old": "Gain 20% additional Gold.",
-              "new": "Gain {GoldIncrease:percentMore()}% additional Gold."
+              "new": "Gain 25% additional Gold."
             }
           },
           "CROSSBOW": {
