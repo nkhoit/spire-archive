@@ -578,6 +578,7 @@ def parse_enchantments():
 # IDs to exclude from output — deprecated/test entities that exist in C# but shouldn't be on the site
 EXCLUDED_IDS = {
     "DEPRECATED_CARD", "DEPRECATED_RELIC", "DEPRECATED_POTION", "DEPRECATED_ENCHANTMENT",
+    "DEPRECATED_CHARACTER",
     "MULTI_ATTACK_MOVE_MONSTER", "SINGLE_ATTACK_MOVE_MONSTER",
     "ONE_HP_MONSTER", "TEN_HP_MONSTER", "TEST_SUBJECT", "FAKE_MERCHANT_MONSTER",
 }
