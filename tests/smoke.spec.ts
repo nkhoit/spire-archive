@@ -197,9 +197,17 @@ test.describe('API — list endpoints return expected counts', () => {
 
   for (const [endpoint, minCount] of apiChecks) {
     test(`${endpoint} returns ≥${minCount} items`, async ({ request }) => {
-      const res = await request.get(`${endpoint}?limit=400`);
-      expect(res.status()).toBe(200);
-      const json = await res.json();
+      // Cloudflare can 429 the big list endpoints when the smoke suite
+      // bursts. Retry a couple times with backoff before giving up so a
+      // transient rate limit doesn't fail deploys.
+      let res;
+      for (let attempt = 0; attempt < 4; attempt += 1) {
+        res = await request.get(`${endpoint}?limit=400`);
+        if (res.status() !== 429) break;
+        await new Promise((r) => setTimeout(r, 1500 * (attempt + 1)));
+      }
+      expect(res!.status()).toBe(200);
+      const json = await res!.json();
       expect(json.total).toBeGreaterThanOrEqual(minCount);
     });
   }
