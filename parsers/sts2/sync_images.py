@@ -32,6 +32,30 @@ CARD_PORTRAIT_SIZE = (250, 190)
 # Card thumb size used by the card list (matches existing webp thumbs: 300x228)
 CARD_THUMB_SIZE = (300, 228)
 
+# Perceptual-hash thresholds (dhash Hamming distance, 16-bit hash = max 256).
+# PNG→PNG is fairly stable, but framing/cropping differences between game re-exports
+# can push into the 20-30 range. WebP has additional encoding noise.
+PHASH_THRESHOLD_PNG = 35
+PHASH_THRESHOLD_WEBP = 40
+
+
+def dhash(img: Image.Image, hash_size: int = 16) -> int:
+    """Difference hash: robust to resize/compression, sensitive to composition changes."""
+    img = img.convert("L").resize((hash_size + 1, hash_size), Image.LANCZOS)
+    pixels = list(img.getdata())
+    bits = 0
+    for row in range(hash_size):
+        for col in range(hash_size):
+            left = pixels[row * (hash_size + 1) + col]
+            right = pixels[row * (hash_size + 1) + col + 1]
+            bits = (bits << 1) | (1 if left > right else 0)
+    return bits
+
+
+def hamming(a: int, b: int) -> int:
+    return bin(a ^ b).count("1")
+
+
 
 def index_images(base: Path) -> dict[str, Path]:
     """Index PNGs by stem, preferring non-beta versions over beta."""
@@ -50,35 +74,92 @@ def index_images(base: Path) -> dict[str, Path]:
     return d
 
 
-def copy_card_image(src: Path, dest: Path, force: bool = False) -> bool:
-    """Copy + resize a card portrait to CARD_PORTRAIT_SIZE. Returns True if written."""
-    if dest.exists() and not force:
-        return False
+def copy_card_image(src: Path, dest: Path, force: bool = False, dry_run: bool = False) -> tuple[bool, str]:
+    """Copy + resize a card portrait to CARD_PORTRAIT_SIZE.
+
+    Returns (written, reason). Only writes when:
+      - dest missing (reason='new')
+      - force=True (reason='forced')
+      - perceptual hash differs meaningfully from current dest (reason='changed')
+    """
+    src_img = Image.open(src)
+    src_img.thumbnail(CARD_PORTRAIT_SIZE, Image.LANCZOS)
+
+    if not dest.exists():
+        reason = "new"
+    elif force:
+        reason = "forced"
+    else:
+        try:
+            dest_img = Image.open(dest)
+            dist = hamming(dhash(src_img), dhash(dest_img))
+            if dist <= PHASH_THRESHOLD_PNG:
+                return False, "unchanged"
+            reason = f"changed (phash dist={dist})"
+        except Exception:
+            reason = "unreadable-dest"
+
+    if dry_run:
+        return True, reason + " [dry-run]"
     dest.parent.mkdir(parents=True, exist_ok=True)
-    img = Image.open(src)
-    img.thumbnail(CARD_PORTRAIT_SIZE, Image.LANCZOS)
-    img.save(dest, optimize=True)
-    return True
+    src_img.save(dest, optimize=True)
+    return True, reason
 
 
-def make_card_thumb(src: Path, dest: Path, force: bool = False) -> bool:
-    """Generate a webp thumbnail at CARD_THUMB_SIZE."""
-    if dest.exists() and not force:
-        return False
+def make_card_thumb(src: Path, dest: Path, force: bool = False, dry_run: bool = False) -> tuple[bool, str]:
+    """Generate a webp thumbnail at CARD_THUMB_SIZE.
+
+    Written when dest missing, force=True, or perceptual hash diverges.
+    """
+    src_img = Image.open(src)
+    src_img.thumbnail(CARD_THUMB_SIZE, Image.LANCZOS)
+
+    if not dest.exists():
+        reason = "new"
+    elif force:
+        reason = "forced"
+    else:
+        try:
+            dest_img = Image.open(dest)
+            dist = hamming(dhash(src_img), dhash(dest_img))
+            if dist <= PHASH_THRESHOLD_WEBP:
+                return False, "unchanged"
+            reason = f"changed (phash dist={dist})"
+        except Exception:
+            reason = "unreadable-dest"
+
+    if dry_run:
+        return True, reason + " [dry-run]"
     dest.parent.mkdir(parents=True, exist_ok=True)
-    img = Image.open(src)
-    img.thumbnail(CARD_THUMB_SIZE, Image.LANCZOS)
-    img.save(dest, format="WEBP", quality=80, method=6)
-    return True
+    src_img.save(dest, format="WEBP", quality=80, method=6)
+    return True, reason
 
 
-def copy_relic_image(src: Path, dest: Path, force: bool = False) -> bool:
-    """Copy relic icon as-is (typically 256x256 native)."""
-    if dest.exists() and not force:
-        return False
+def copy_relic_image(src: Path, dest: Path, force: bool = False, dry_run: bool = False) -> tuple[bool, str]:
+    """Copy relic icon as-is (typically 256x256 native).
+
+    Written when dest missing, force=True, or perceptual hash diverges.
+    """
+    if not dest.exists():
+        reason = "new"
+    elif force:
+        reason = "forced"
+    else:
+        try:
+            src_img = Image.open(src)
+            dest_img = Image.open(dest)
+            dist = hamming(dhash(src_img), dhash(dest_img))
+            if dist <= PHASH_THRESHOLD_PNG:
+                return False, "unchanged"
+            reason = f"changed (phash dist={dist})"
+        except Exception:
+            reason = "unreadable-dest"
+
+    if dry_run:
+        return True, reason + " [dry-run]"
     dest.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy(src, dest)
-    return True
+    return True, reason
 
 
 def main():
@@ -92,6 +173,11 @@ def main():
         "--force",
         action="store_true",
         help="Overwrite existing images instead of skipping them",
+    )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Report what would change without writing anything",
     )
     args = parser.parse_args()
 
@@ -121,6 +207,7 @@ def main():
 
         copied = 0
         thumbed = 0
+        changed = []
         missing = []
         for c in cards:
             cid = c.get("id")
@@ -129,16 +216,27 @@ def main():
             snake = cid.lower()
             src = card_portraits.get(snake)
             if not src:
-                # Only flag missing art for cards that reference an image
                 if c.get("image_url"):
                     missing.append(cid)
                 continue
-            if copy_card_image(src, public_cards / f"{snake}.png", force=args.force):
+            written_p, reason_p = copy_card_image(src, public_cards / f"{snake}.png", force=args.force, dry_run=args.dry_run)
+            if written_p:
                 copied += 1
-            if make_card_thumb(src, public_thumbs / f"{snake}.webp", force=args.force):
+                if "changed" in reason_p:
+                    changed.append((cid, "portrait", reason_p))
+            written_t, reason_t = make_card_thumb(src, public_thumbs / f"{snake}.webp", force=args.force, dry_run=args.dry_run)
+            if written_t:
                 thumbed += 1
+                if "changed" in reason_t:
+                    changed.append((cid, "thumb", reason_t))
 
-        print(f"Cards: copied {copied} portrait(s), generated {thumbed} thumb(s)")
+        print(f"Cards: wrote {copied} portrait(s), {thumbed} thumb(s)")
+        if changed:
+            print(f"  Refreshed art for {len(changed)} card asset(s):")
+            for cid, kind, reason in changed[:20]:
+                print(f"    - {cid} ({kind}) {reason}")
+            if len(changed) > 20:
+                print(f"    ... and {len(changed) - 20} more")
         if missing:
             print(f"  Warning: {len(missing)} card(s) have no portrait in PCK:")
             for cid in missing[:5]:
@@ -155,6 +253,7 @@ def main():
         public_relics = PUBLIC_DIR / "relics"
 
         copied = 0
+        changed = []
         missing = []
         for r in relics:
             rid = r.get("id")
@@ -165,10 +264,19 @@ def main():
             if not src:
                 missing.append(rid)
                 continue
-            if copy_relic_image(src, public_relics / f"{snake}.png", force=args.force):
+            written, reason = copy_relic_image(src, public_relics / f"{snake}.png", force=args.force, dry_run=args.dry_run)
+            if written:
                 copied += 1
+                if "changed" in reason:
+                    changed.append((rid, reason))
 
-        print(f"Relics: copied {copied} icon(s)")
+        print(f"Relics: wrote {copied} icon(s)")
+        if changed:
+            print(f"  Refreshed art for {len(changed)} relic(s):")
+            for rid, reason in changed[:20]:
+                print(f"    - {rid} {reason}")
+            if len(changed) > 20:
+                print(f"    ... and {len(changed) - 20} more")
         if missing:
             print(f"  Warning: {len(missing)} relic(s) have no icon in PCK:")
             for rid in missing[:5]:
