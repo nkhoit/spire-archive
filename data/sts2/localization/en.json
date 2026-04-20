@@ -316,6 +316,9 @@
         "Writhe"
       ]
     },
+    "DEPRECATED_MONSTER": {
+      "name": "Deprecated Monster"
+    },
     "DEVOTED_SCULPTOR": {
       "name": "Devoted Sculptor"
     },
@@ -323,7 +326,17 @@
       "name": "Door"
     },
     "DOORMAKER": {
-      "name": "Doormaker"
+      "moves": {
+        "GRASP_MOVE": "Grasp",
+        "HUNGER_MOVE": "Hunger",
+        "SCRUTINY_MOVE": "Scrutiny"
+      },
+      "name": "Doormaker",
+      "move_titles": [
+        "Grasp",
+        "Hunger",
+        "Scrutiny"
+      ]
     },
     "ENTOMANCER": {
       "moves": {
@@ -1003,13 +1016,13 @@
     "SKULKING_COLONY": {
       "moves": {
         "INERTIA": "Inertia",
-        "SUPER_CRAB": "Super Crab",
+        "PIERCING_STABS": "Piercing Stabs",
         "ZOOM": "Zoom"
       },
       "name": "Skulking Colony",
       "move_titles": [
         "Inertia",
-        "Super Crab",
+        "Piercing Stabs",
         "Zoom"
       ]
     },

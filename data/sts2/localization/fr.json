@@ -57,7 +57,7 @@
       "name": "Sacrement"
     },
     "ANTICIPATE": {
-      "description": "Gagnez 3 de Dextérité jusqu'à la fin du tour.",
+      "description": "Gagnez 2 de Dextérité jusqu'à la fin du tour.",
       "name": "Anticipation"
     },
     "APOTHEOSIS": {
@@ -73,7 +73,7 @@
       "name": "Armement"
     },
     "ARSENAL": {
-      "description": "Lorsque vous jouez une carte Incolore, gagnez 1 de Force.",
+      "description": "Lorsque vous créez une carte, gagnez 1 de Force.",
       "name": "Arsenal"
     },
     "ASCENDERS_BANE": {
@@ -152,7 +152,7 @@
       "name": "Appel"
     },
     "BEGONE": {
-      "description": "Infligez 4 dégâts.\nChoisissez une carte dans votre Main à Transformer en Sbire en piqué.",
+      "description": "Choisissez une carte dans votre Main à Transformer en Frappe de sbire.",
       "name": "HORS DE MA VUE !"
     },
     "BELIEVE_IN_YOU": {
@@ -176,7 +176,7 @@
       "name": "Danse des lames"
     },
     "BLADE_OF_INK": {
-      "description": "Pendant ce tour, lorsque vous jouez une Attaque, gagnez 2 de Force jusqu'à la fin du tour.",
+      "description": "Ajoutez 2 Surin Encré à votre Main.",
       "name": "Lame d'encre"
     },
     "BLIGHT_STRIKE": {
@@ -212,7 +212,7 @@
       "name": "Bolas"
     },
     "BOMBARDMENT": {
-      "description": "Infligez 18 dégâts.\nAu début de votre tour, cette carte est jouée depuis la pile des cartes Épuisées.",
+      "description": "Infligez 18 dégâts.\nAu début de votre tour, si cette carte est dans votre pile de cartes Épuisées, jouez-la.",
       "name": "Bombardement"
     },
     "BONE_SHARDS": {
@@ -228,7 +228,7 @@
       "name": "Programme de démarrage"
     },
     "BORROWED_TIME": {
-      "description": "Appliquez 3 de Fatalité à vous-même.\nGagnez [E].",
+      "description": "Gagnez [E].\nLes cartes coûtent [E] de plus ce tour.",
       "name": "Sursis"
     },
     "BOUNCING_FLASK": {
@@ -348,7 +348,7 @@
       "name": "Chaos"
     },
     "CHARGE": {
-      "description": "Sélectionnez 2 carte de votre Pioche à Transformer en {IfUpgraded:show:Frappe de sbire+.",
+      "description": "Sélectionnez 2 carte de votre Pioche à Transformer en {IfUpgraded:show:Sbire en piqué+.",
       "name": "CHARGEZ !!"
     },
     "CHARGE_BATTERY": {
@@ -364,7 +364,7 @@
       "name": "Frisson"
     },
     "CINDER": {
-      "description": "Infligez 17 dégâts.\nÉpuisez la carte du dessus de votre Pioche.",
+      "description": "Infligez 18 dégâts.\nÉpuisez une carte aléatoire.",
       "name": "Scorie"
     },
     "CLASH": {
@@ -395,7 +395,7 @@
       "name": "Vague de froid"
     },
     "COLLISION_COURSE": {
-      "description": "Infligez 9 dégâts.\nAjoutez un Débris à votre Main.",
+      "description": "Infligez 11 dégâts.\nAjoutez un Débris à votre Main.",
       "name": "Trajectoire de collision"
     },
     "COLOSSUS": {
@@ -408,7 +408,7 @@
     },
     "COMPACT": {
       "description": "Gagnez 6 d'Armure.\nTransformez toutes les cartes Statut de votre Main en Combustible.",
-      "name": "Compostage"
+      "name": "Compactage"
     },
     "COMPILE_DRIVER": {
       "description": "Infligez 7 dégâts.\nPiochez 1 carte pour chaque Orbe unique.\n(Piochez 0 carte)",
@@ -443,7 +443,7 @@
       "name": "Coordination"
     },
     "CORROSIVE_WAVE": {
-      "description": "Lorsque vous piochez une carte ce tour, appliquez 3 de Poison à TOUS les ennemis.",
+      "description": "Lorsque vous piochez une carte ce tour, appliquez 2 de Poison à TOUS les ennemis.",
       "name": "Vague corrosive"
     },
     "CORRUPTION": {
@@ -494,7 +494,7 @@
       "name": "Lancer de couteau"
     },
     "DANSE_MACABRE": {
-      "description": "Lorsque vous jouez une carte qui coûte [E] ou plus, gagnez 3 d'Armure.",
+      "description": "Lorsque vous jouez une carte qui coûte [E] ou plus, gagnez 4 d'Armure.",
       "name": "Danse Macabre"
     },
     "DARKNESS": {
@@ -533,7 +533,7 @@
       "name": "Marche de la mort"
     },
     "DEBILITATE": {
-      "description": "Infligez 7 dégâts.\nL'efficacité de Vulnérable et Affaibli sur l'ennemi est doublée jusqu'au tour suivant.",
+      "description": "Infligez 10 dégâts.\nL'efficacité de Vulnérable et Affaibli sur l'ennemi est doublée jusqu'au tour suivant.",
       "name": "Amoindrir"
     },
     "DEBRIS": {
@@ -616,7 +616,7 @@
       "name": "Oraison"
     },
     "DISCOVERY": {
-      "description": "Choisissez 1 carte parmi 3 aléatoires à ajouter à votre Main. Elle coûte 0 [E] ce tour.",
+      "description": "Choisissez 1 carte parmi 3 aléatoires à ajouter à votre Main. Elle coûte 0 ce tour.",
       "name": "Découverte"
     },
     "DISINTEGRATION": {
@@ -636,7 +636,7 @@
       "name": "Dérobade"
     },
     "DOMINATE": {
-      "description": "Gagnez 1 de Force pour chaque incidence de Vulnérable sur l'ennemi.",
+      "description": "Appliquez Vulnérable (1).\nGagnez 1 de Force pour chaque incidence de Vulnérable sur l'ennemi.",
       "name": "Domination"
     },
     "DOUBLE_ENERGY": {
@@ -732,7 +732,7 @@
       "name": "Plan d'évasion"
     },
     "ETERNAL_ARMOR": {
-      "description": "Gagnez 7 de Blindage.",
+      "description": "Gagnez 9 de Blindage.",
       "name": "Armure éternelle"
     },
     "EVIL_EYE": {
@@ -740,7 +740,7 @@
       "name": "Mauvais œil"
     },
     "EXPECT_A_FIGHT": {
-      "description": "Gagnez [E] pour chaque Attaque dans votre Main.\n(Gagnez [E].)",
+      "description": "Gagnez [E] pour chaque Attaque dans votre Main.\nVous ne pouvez plus gagner d'[E] ce tour.\n(Gagnez [E])",
       "name": "Paré au combat"
     },
     "EXPERTISE": {
@@ -756,7 +756,7 @@
       "name": "Extermination"
     },
     "FALLING_STAR": {
-      "description": "Infligez 7 dégâts.\nAppliquez Affaibli (1).\nAppliquez Vulnérable (1).",
+      "description": "Infligez 8 dégâts.\nAppliquez Affaibli (1).\nAppliquez Vulnérable (1).",
       "name": "Chute d'étoile"
     },
     "FAN_OF_KNIVES": {
@@ -796,7 +796,7 @@
       "name": "Feu démoniaque"
     },
     "FIGHT_ME": {
-      "description": "Infligez 5 dégâts 2 fois.\nGagnez 2 de Force.\nL'ennemi gagne 1 de Force.",
+      "description": "Infligez 5 dégâts 2 fois.\nGagnez 3 de Force.\nL'ennemi gagne 1 de Force.",
       "name": "Viens te battre  !"
     },
     "FIGHT_THROUGH": {
@@ -824,7 +824,7 @@
       "name": "Barrière de flammes"
     },
     "FLANKING": {
-      "description": "L'ennemi subit le double des dégâts infligés par les autres joueurs jusqu'à la fin du tour.",
+      "description": "L'ennemi subit le double des dégâts d'attaque infligés par les autres joueurs jusqu'à la fin du tour.",
       "name": "Encerclement"
     },
     "FLASH_OF_STEEL": {
@@ -840,7 +840,7 @@
       "name": "Fléchettes"
     },
     "FLICK_FLACK": {
-      "description": "Infligez 7 dégâts à TOUS les ennemis.",
+      "description": "Infligez 6 dégâts à TOUS les ennemis.",
       "name": "Tic tac"
     },
     "FOCUSED_STRIKE": {
@@ -848,7 +848,6 @@
       "name": "Frappe focalisée"
     },
     "FOLLOW_THROUGH": {
-      "description": "Infligez 6 dégâts à TOUS les ennemis.\nSi la dernière carte que vous avez jouée ce tour est une Compétence, appliquez Affaibli (1) à TOUS les ennemis.",
       "name": "Fin du geste"
     },
     "FOLLY": {
@@ -891,7 +890,7 @@
       "name": "Fournaise"
     },
     "FUSION": {
-      "description": "Canalisez 1 Orbe plasmatique.",
+      "description": "Canalisez 1 Orbe plasmique.",
       "name": "Fusion"
     },
     "GAMMA_BLAST": {
@@ -903,7 +902,7 @@
       "name": "Meute"
     },
     "GATHER_LIGHT": {
-      "description": "Gagnez 7 d'Armure.\nGagnez [S].",
+      "description": "Gagnez 8 d'Armure.\nGagnez [S].",
       "name": "Lumière rassemblée"
     },
     "GENESIS": {
@@ -935,11 +934,11 @@
       "name": "Vision de l'au-delà"
     },
     "GLITTERSTREAM": {
-      "description": "Gagnez 11 d'Armure.\nAu prochain tour, gagnez 4 d'Armure.",
+      "description": "Gagnez 11 d'Armure.\nAu prochain tour, gagnez 5 d'Armure.",
       "name": "Courant pailleté"
     },
     "GLOW": {
-      "description": "Gagnez [S].\nPiochez 2 carte.",
+      "description": "Gagnez [S].\nPiochez 1 carte.\nAu prochain tour, piochez 1 carte.",
       "name": "Luminosité"
     },
     "GOLD_AXE": {
@@ -951,12 +950,8 @@
       "name": "Viser les yeux"
     },
     "GRAND_FINALE": {
-      "description": "Ne peut être joué que si votre Pioche est vide. Infligez 50 dégâts à TOUS les ennemis.",
+      "description": "Ne peut être joué que si votre Pioche est vide. Infligez 60 dégâts à TOUS les ennemis.",
       "name": "Clou du spectacle"
-    },
-    "GRAPPLE": {
-      "description": "Infligez 7 dégâts.\nLorsque vous gagnez de l'Armure pendant ce tour, infligez 5 dégâts à l'ennemi.",
-      "name": "Prise au sol"
     },
     "GRAVEBLAST": {
       "description": "Infligez 4 dégâts.\nPlacez une carte de votre Défausse dans votre Main.",
@@ -974,7 +969,7 @@
       "name": "GARDES !!!"
     },
     "GUIDING_STAR": {
-      "description": "Infligez 12 dégâts.\nAu prochain tour, piochez 2 carte.",
+      "description": "Infligez 12 dégâts.\nPiochez 2 carte.",
       "name": "Étoile directrice"
     },
     "GUILTY": {
@@ -1030,7 +1025,7 @@
       "name": "Hégémonie"
     },
     "HEIRLOOM_HAMMER": {
-      "description": "Infligez 17 dégâts.\nSélectionnez une carte Incolore dans votre Main. Ajoutez une copie de cette carte à votre Main.",
+      "description": "Infligez 20 dégâts.\nSélectionnez une carte Incolore dans votre Main. Ajoutez une copie de cette carte à votre Main.",
       "name": "Marteau d'héritage"
     },
     "HELIX_DRILL": {
@@ -1046,7 +1041,7 @@
       "name": "Soulèvement infernal"
     },
     "HEMOKINESIS": {
-      "description": "Perdez 2 PV.\nInfligez 14 dégâts.",
+      "description": "Perdez 2 PV.\nInfligez 15 dégâts.",
       "name": "Hémokinésie"
     },
     "HIDDEN_CACHE": {
@@ -1058,7 +1053,7 @@
       "name": "Poignards dissimulés"
     },
     "HIDDEN_GEM": {
-      "description": "Une carte aléatoire de votre Pioche gagne Écho 2.",
+      "description": "Une carte aléatoire sans Écho de votre Pioche gagne Écho 2.",
       "name": "Joyau caché"
     },
     "HIGH_FIVE": {
@@ -1074,11 +1069,11 @@
       "name": "Correctif"
     },
     "HOWL_FROM_BEYOND": {
-      "description": "Infligez 16 dégâts à TOUS les ennemis.\nAu début de votre tour, cette carte est jouée depuis la pile des cartes Épuisées.",
+      "description": "Infligez 16 dégâts à TOUS les ennemis.\nAu début de votre tour, si cette carte est dans votre pile de cartes Épuisées, jouez-la.",
       "name": "Rugissement de l'au-delà"
     },
     "HUDDLE_UP": {
-      "description": "TOUS les alliés piochent 2 cartes.",
+      "description": "TOUS les joueurs piochent 2 cartes.",
       "name": "Grégarité"
     },
     "HYPERBEAM": {
@@ -1090,7 +1085,7 @@
       "name": "Javelot de glace"
     },
     "IGNITION": {
-      "description": "Un autre joueur Canalise un Orbe plasmatique.",
+      "description": "Un autre joueur Canalise un Orbe plasmique.",
       "name": "Allumage"
     },
     "IMPATIENCE": {
@@ -1141,7 +1136,7 @@
       "name": "Itération"
     },
     "I_AM_INVINCIBLE": {
-      "description": "Gagnez 9 d'Armure.\nÀ la fin de votre tour, si cette carte est sur le dessus de votre Pioche, jouez-la.",
+      "description": "Gagnez 10 d'Armure.\nÀ la fin de votre tour, si cette carte est sur le dessus de votre Pioche, jouez-la.",
       "name": "Je suis invincible"
     },
     "JACKPOT": {
@@ -1161,11 +1156,11 @@
       "name": "Jonglage"
     },
     "KINGLY_KICK": {
-      "description": "Infligez 24 dégâts.\nLorsque vous piochez cette carte, réduisez son coût de 1.",
+      "description": "Infligez 27 dégâts.\nLorsque vous piochez cette carte, réduisez son coût de 1.",
       "name": "Coup de pied royal"
     },
     "KINGLY_PUNCH": {
-      "description": "Infligez 8 dégâts.\nLorsque vous piochez cette carte, augmentez les dégâts qu'elle inflige de 3 jusqu'à la fin du combat.",
+      "description": "Infligez 8 dégâts.\nLorsque vous piochez cette carte, augmentez les dégâts qu'elle inflige de 4 jusqu'à la fin du combat.",
       "name": "Coup de poing royal"
     },
     "KNIFE_TRAP": {
@@ -1193,7 +1188,7 @@
       "name": "Largesse"
     },
     "LEADING_STRIKE": {
-      "description": "Infligez 7 dégâts.\nAjoutez 1 Surin à votre Main.",
+      "description": "Infligez 3 dégâts.\nAjoutez 2 Surin à votre Main.",
       "name": "Frappe initiale"
     },
     "LEAP": {
@@ -1237,7 +1232,7 @@
       "name": "Machine Learning"
     },
     "MAD_SCIENCE": {
-      "description": "Infligez 12 dégâts 3 fois\nAppliquez Affaibli (2).\nAppliquez Vulnérable (2).\nLorsque vous jouez une carte pendant ce tour, l'ennemi perd 6 PV.\nGagnez [E].\nPiochez 3 cartes.\nAjoutez une carte aléatoire à votre Main. Elle coûte 0 [E] pendant ce tour.Gagnez 2 de Force.\nGagnez 2 de Dextérité.Les Pouvoirs coûtent 1 [E] en moins.À la fin du combat, Améliorez une carte aléatoire.|???",
+      "description": "Infligez 12 dégâts 3 fois\nAppliquez Affaibli (2).\nAppliquez Vulnérable (2).\nLorsque vous jouez une carte pendant ce tour, l'ennemi perd 6 PV.\nGagnez [E].\nPiochez 3 cartes.\nAjoutez une carte aléatoire à votre Main. Elle coûte 0 ce tour.Gagnez 2 de Force.\nGagnez 2 de Dextérité.Les Pouvoirs coûtent 1 [E] en moins.À la fin du combat, Améliorez une carte aléatoire.|???",
       "name": "Science sans conscience"
     },
     "MAKE_IT_SO": {
@@ -1277,7 +1272,7 @@
       "name": "Mélancolie"
     },
     "MEMENTO_MORI": {
-      "description": "Infligez 8 dégâts.\nInflige 4 dégâts supplémentaires pour chaque carte défaussée ce tour.",
+      "description": "Infligez 9 dégâts.\nInflige 4 dégâts supplémentaires pour chaque carte défaussée ce tour.",
       "name": "Memento mori"
     },
     "METAMORPHOSIS": {
@@ -1289,7 +1284,7 @@
       "name": "Pluie de météores"
     },
     "METEOR_STRIKE": {
-      "description": "Infligez 24 dégâts.\nCanalisez 3 Orbes plasmatiques.",
+      "description": "Infligez 24 dégâts.\nCanalisez 3 Orbes plasmiques.",
       "name": "Frappe météorique"
     },
     "MIMIC": {
@@ -1313,7 +1308,7 @@
       "name": "Sbire sacrificiel"
     },
     "MINION_STRIKE": {
-      "description": "Infligez 7 dégâts.\nPiochez 1 carte.",
+      "description": "Infligez 6 dégâts.\nPiochez 1 carte.",
       "name": "Frappe de sbire"
     },
     "MIRAGE": {
@@ -1388,6 +1383,10 @@
       "description": "La première Attaque ou Compétence que vous jouez chaque tour est placée sur le dessus de votre Pioche.",
       "name": "Nostalgie"
     },
+    "NOT_YET": {
+      "description": "Récupérez 10 PV.",
+      "name": "Pas encore"
+    },
     "NOXIOUS_FUMES": {
       "description": "Au début de votre tour, appliquez 2 de Poison à TOUS les ennemis.",
       "name": "Vapeurs toxiques"
@@ -1409,7 +1408,7 @@
       "name": "Offrande"
     },
     "OMNISLICE": {
-      "description": "Infligez 8 dégâts.\nInfligez aux autres ennemis autant de dégâts que ceux infligés.",
+      "description": "Infligez 8 dégâts.\nInfligez le même montant de dégâts à TOUS les autres ennemis.",
       "name": "Omnilame"
     },
     "ONE_TWO_PUNCH": {
@@ -1421,7 +1420,7 @@
       "name": "Orbite"
     },
     "OUTBREAK": {
-      "description": "À chaque application de Poison, infligez 11 dégâts à TOUS les ennemis.",
+      "description": "À chaque fois que vous appliquez du Poison, infligez 11 dégâts à TOUS les ennemis.",
       "name": "Épidémie"
     },
     "OUTMANEUVER": {
@@ -1453,7 +1452,7 @@
       "name": "Bouton de secours"
     },
     "PARRY": {
-      "description": "Lorsque vous jouez Lame souveraine, gagnez 6 d'Armure.",
+      "description": "Lorsque vous jouez Lame souveraine, gagnez 10 d'Armure.",
       "name": "Parade"
     },
     "PARSE": {
@@ -1465,7 +1464,7 @@
       "name": "Mur de particules"
     },
     "PATTER": {
-      "description": "Gagnez 8 d'Armure.\nGagnez 2 de Vigueur.",
+      "description": "Gagnez 9 d'Armure.\nGagnez 2 de Vigueur.",
       "name": "Petits pas"
     },
     "PECK": {
@@ -1497,7 +1496,7 @@
       "name": "Pilier de la création"
     },
     "PINPOINT": {
-      "description": "Infligez 17 dégâts.\nCoûte 1 [E] en moins pour chaque Compétence jouée pendant ce tour.",
+      "description": "Infligez 15 dégâts.\nCoûte 1 [E] en moins pour chaque Compétence jouée pendant ce tour.",
       "name": "Localisation"
     },
     "POISONED_STAB": {
@@ -1636,7 +1635,7 @@
       "name": "Rebond"
     },
     "REFINE_BLADE": {
-      "description": "Forgez pour 6.\nAu prochain tour, gagnez [E].",
+      "description": "Forgez pour 9.\nAu prochain tour, gagnez [E].",
       "name": "Lame lustrée"
     },
     "REFLECT": {
@@ -1684,7 +1683,7 @@
       "name": "Lacération"
     },
     "ROCKET_PUNCH": {
-      "description": "Infligez 13 dégâts.\nPiochez 1 carte.\nLorsqu'une carte Statut est créée, réduisez le coût de cette carte à 0 [E] jusqu'à la fin du tour.",
+      "description": "Infligez 13 dégâts.\nPiochez 1 carte.\nLorsque vous créez une carte Statut, réduisez le coût de cette carte à 0 [E] jusqu'à ce qu'elle soit jouée.",
       "name": "Poing roquette"
     },
     "ROLLING_BOULDER": {
@@ -1728,7 +1727,7 @@
       "name": "Griffonage"
     },
     "SCULPTING_STRIKE": {
-      "description": "Infligez 8 dégâts.\nAjoutez Éthéré à une carte dans votre Main.",
+      "description": "Infligez 9 dégâts.\nAjoutez Éthéré à une carte dans votre Main.",
       "name": "Frappe du sculpteur"
     },
     "SEANCE": {
@@ -1748,7 +1747,7 @@
       "name": "Arme secrète"
     },
     "SEEKER_STRIKE": {
-      "description": "Infligez 6 dégâts.\nChoisissez 1 carte parmi 3 de votre Pioche à ajouter dans votre Main.",
+      "description": "Infligez 9 dégâts.\nChoisissez 1 carte parmi 3 de votre Pioche à ajouter dans votre Main.",
       "name": "Frappe chercheuse"
     },
     "SEEKING_EDGE": {
@@ -1804,7 +1803,7 @@
       "name": "Frappe rayonnante"
     },
     "SHIV": {
-      "description": "Infligez 4 dégâts.",
+      "description": "Infligez 4 dégâts{TargetType:choose(AllEnemies): à TOUS les ennemis|}.",
       "name": "Surin"
     },
     "SHOCKWAVE": {
@@ -1828,7 +1827,7 @@
       "name": "Amplification du signal"
     },
     "SKEWER": {
-      "description": "Infligez 7 dégâts X fois.",
+      "description": "Infligez 8 dégâts X fois.",
       "name": "Embrocher"
     },
     "SKIM": {
@@ -1868,7 +1867,7 @@
       "name": "Furtif"
     },
     "SOLAR_STRIKE": {
-      "description": "Infligez 8 dégâts.\nGagnez [S].",
+      "description": "Infligez 9 dégâts.\nGagnez [S].",
       "name": "Frappe solaire"
     },
     "SOOT": {
@@ -1907,7 +1906,7 @@
       "name": "Esprit des cendres"
     },
     "SPITE": {
-      "description": "Infligez 6 dégâts.\nSi vous avez perdu des PV pendant ce tour, piochez 1 carte.",
+      "description": "Infligez 5 dégâts.\nSi vous avez perdu des PV pendant ce tour, cette attaque touche l'ennemi 2 fois.",
       "name": "Rancune"
     },
     "SPLASH": {
@@ -1919,7 +1918,7 @@
       "name": "Carte au trésor"
     },
     "SPOILS_OF_BATTLE": {
-      "description": "Forgez pour 10.",
+      "description": "Forgez pour 5.\nPiochez 2 carte.",
       "name": "Butin de guerre"
     },
     "SPORE_MIND": {
@@ -1938,7 +1937,7 @@
       "name": "Joug"
     },
     "STACK": {
-      "description": "Gagnez un montant d'Armure égal au nombre de cartes dans votre Défausse.\n(Gagnez 0 d'Armure.)",
+      "description": "Gagnez un montant d'Armure égal au nombre de cartes dans votre Défausse.\n(Gagnez 0 d'Armure)",
       "name": "Pile"
     },
     "STAMPEDE": {
@@ -1950,7 +1949,7 @@
       "name": "Poussière d'étoiles"
     },
     "STOKE": {
-      "description": "Épuisez votre Main.\nPiochez une carte pour chaque carte Épuisée.",
+      "description": "Épuisez votre Main.\nAjoutez une carte aléatoire  à votre Main pour chaque carte Épuisée.",
       "name": "Attiser les flammes"
     },
     "STOMP": {
@@ -2042,7 +2041,7 @@
       "name": "Épée boomerang"
     },
     "SWORD_SAGE": {
-      "description": "Augmentez le coût de Lame souveraine de 1. Lame souveraine inflige désormais ses dégâts une fois supplémentaire.",
+      "description": "Lame souveraine inflige désormais ses dégâts une fois supplémentaire.",
       "name": "Sage à l'épée"
     },
     "SYNCHRONIZE": {
@@ -2070,7 +2069,7 @@
       "name": "Provocation"
     },
     "TEAR_ASUNDER": {
-      "description": "Infligez 5 dégâts.\nSe déclenche autant de fois supplémentaires que de fois où vous avez perdu des PV pendant ce combat.\n(Se déclenche 0 fois.)",
+      "description": "Infligez 5 dégâts.\nSe déclenche autant de fois supplémentaires que de fois où vous avez perdu des PV pendant ce combat.\n(Se déclenche 0 fois)",
       "name": "En miettes"
     },
     "TEMPEST": {
@@ -2158,7 +2157,7 @@
       "name": "Revalorisation"
     },
     "TREMBLE": {
-      "description": "Appliquez Vulnérable (2).",
+      "description": "Appliquez Vulnérable (3).",
       "name": "Intimidation"
     },
     "TRUE_GRIT": {
@@ -2202,7 +2201,7 @@
       "name": "Acharnement"
     },
     "UNTOUCHABLE": {
-      "description": "Gagnez 9 d'Armure.",
+      "description": "Gagnez 6 d'Armure.",
       "name": "Intouchable"
     },
     "UPPERCUT": {
@@ -2284,7 +2283,7 @@
       "name": "Souffrance"
     },
     "WROUGHT_IN_WAR": {
-      "description": "Infligez 7 dégâts.\nForgez pour 5.",
+      "description": "Infligez 7 dégâts.\nForgez pour 7.",
       "name": "Forgé par la guerre"
     },
     "ZAP": {
@@ -2304,7 +2303,7 @@
       "name": "Caisse d'alchimie"
     },
     "AMETHYST_AUBERGINE": {
-      "description": "Les ennemis donnent 10 Pièces d'or supplémentaires.",
+      "description": "Les ennemis donnent 15 Pièces d'or supplémentaires.",
       "flavor": "Les détails de cette relique seront révélés plus tard...",
       "name": "Aubergine d'améthyste"
     },
@@ -2424,7 +2423,7 @@
       "name": "Marque-page"
     },
     "BOOK_OF_FIVE_RINGS": {
-      "description": "Chaque fois que vous ajoutez 5 carte à votre Deck, récupérez 15 PV.",
+      "description": "Chaque fois que vous ajoutez 5 carte à votre Deck, récupérez 20 PV.",
       "flavor": "Les détails de cette relique seront révélés plus tard...",
       "name": "Livre des cinq anneaux"
     },
@@ -2444,7 +2443,7 @@
       "name": "Phylactère enchaîné"
     },
     "BOWLER_HAT": {
-      "description": "Recevez 20% de Pièces d'or supplémentaires.",
+      "description": "Recevez {GoldIncrease:percentMore()} % de Pièces d'or supplémentaires.",
       "flavor": "Les détails de cette relique seront révélés plus tard...",
       "name": "Chapeau melon"
     },
@@ -2554,7 +2553,7 @@
       "name": "Noyau fissuré"
     },
     "CROSSBOW": {
-      "description": "Au début de votre tour, ajoutez une Attaque aléatoire à votre Main. Elle coûte 0 [E] ce tour.",
+      "description": "Au début de votre tour, ajoutez une Attaque aléatoire à votre Main. Elle coûte 0 ce tour.",
       "flavor": "Les détails de cette relique seront révélés plus tard...",
       "name": "Arbalète"
     },
@@ -2739,7 +2738,7 @@
       "name": "Âme oubliée"
     },
     "FRAGRANT_MUSHROOM": {
-      "description": "Lorsque vous obtenez cette relique, perdez 15 PV et Améliorez 3 carte aléatoire.",
+      "description": "Lorsque vous obtenez cette relique, perdez 15 PV et Améliorez 2 carte aléatoire.",
       "flavor": "Les détails de cette relique seront révélés plus tard...",
       "name": "Champi aromatique"
     },
@@ -2837,6 +2836,11 @@
       "description": "Tous les tours, gagnez [E].",
       "flavor": "Les détails de cette relique seront révélés plus tard...",
       "name": "Fleur joyeuse"
+    },
+    "HEFTY_TABLET": {
+      "description": "Lorsque vous obtenez cette relique, choisissez 1 carte Rare parmi 3 à ajouter à votre Deck, et ajoutez 1 Blessure à votre Deck.",
+      "flavor": "Les détails de cette relique seront révélés plus tard...",
+      "name": "Tablette lourde"
     },
     "HELICAL_DART": {
       "description": "Chaque fois que vous jouez un Surin, gagnez 1 de Dextérité jusqu'à la fin du tour.",
@@ -2944,7 +2948,7 @@
       "name": "Presse-papier en plomb"
     },
     "LEAFY_POULTICE": {
-      "description": "Lorsque vous obtenez cette relique, Transformez 1 Frappe et 1 Défense et perdez 10 PV Max.",
+      "description": "Lorsque vous obtenez cette relique, Transformez 1 Frappe et 1 Défense et perdez 12 PV Max.",
       "flavor": "Les détails de cette relique seront révélés plus tard...",
       "name": "Cataplasme"
     },
@@ -2959,7 +2963,7 @@
       "name": "Coupe-papier"
     },
     "LIZARD_TAIL": {
-      "description": "Vous empêche de mourir UNE FOIS en soignant 50% de vos PV Max.",
+      "description": "Lorsque vos PV sont réduits à 0, récupérez 50 % de vos PV max (ne fonctionne qu'une fois).",
       "flavor": "Les détails de cette relique seront révélés plus tard...",
       "name": "Queue de lézard"
     },
@@ -3077,6 +3081,16 @@
       "description": "Les Attaques Envoûtées infligent 9 dégâts supplémentaires.",
       "flavor": "Les détails de cette relique seront révélés plus tard...",
       "name": "Briquet mystique"
+    },
+    "NEOWS_BONES": {
+      "description": "Lorsque vous ramassez cette relique, gagnez 2 Relique de Neow aléatoire. Ajoutez 1 Malédiction aléatoire à votre Deck.",
+      "flavor": "Les détails de cette relique seront révélés plus tard...",
+      "name": "Os de Neow"
+    },
+    "NEOWS_TALISMAN": {
+      "description": "Lorsque vous obtenez cette relique, Améliorez 1 de vos Frappes et 1 de vos Défenses.",
+      "flavor": "Les détails de cette relique seront révélés plus tard...",
+      "name": "Talisman de Neow"
     },
     "NEOWS_TORMENT": {
       "description": "Lorsque vous obtenez cette relique, ajoutez 1 Fureur de Neow à votre Deck.",
@@ -3219,7 +3233,7 @@
       "name": "Poire"
     },
     "PENDULUM": {
-      "description": "Après avoir mélangé votre Pioche, piochez une carte.",
+      "description": "Tous les 3 tour, piochez 1 carte.",
       "flavor": "Les détails de cette relique seront révélés plus tard...",
       "name": "Pendule"
     },
@@ -3229,7 +3243,7 @@
       "name": "Pointe de stylo"
     },
     "PERMAFROST": {
-      "description": "La première fois que vous jouez un Pouvoir chaque combat, gagnez 6 d'Armure.",
+      "description": "La première fois que vous jouez un Pouvoir chaque combat, gagnez 7 d'Armure.",
       "flavor": "Les détails de cette relique seront révélés plus tard...",
       "name": "Pergélisol"
     },
@@ -3237,6 +3251,11 @@
       "description": "Au début de chaque combat, obtenez une Pierre en forme de potion.",
       "flavor": "Les détails de cette relique seront révélés plus tard...",
       "name": "Crapaud pétrifié"
+    },
+    "PHIAL_HOLSTER": {
+      "description": "Lorsque vous ramassez cette relique, gagnez 1 nouvel emplacement de potion et obtenez 2 potion aléatoire.",
+      "flavor": "Les détails de cette relique seront révélés plus tard...",
+      "name": "Étui à fioles"
     },
     "PHILOSOPHERS_STONE": {
       "description": "Gagnez [E] au début de chaque tour. TOUS les ennemis démarrent le combat avec 1 de Force.",
@@ -3249,7 +3268,7 @@
       "name": "Phylactère déchaîné"
     },
     "PLANISPHERE": {
-      "description": "Lorsque vous entrez dans une salle ?, récupérez 4 PV.",
+      "description": "Lorsque vous entrez dans une salle ?, récupérez 5 PV.",
       "flavor": "Les détails de cette relique seront révélés plus tard...",
       "name": "Planisphère"
     },
@@ -3284,7 +3303,7 @@
       "name": "Moulin à prières"
     },
     "PRECARIOUS_SHEARS": {
-      "description": "Lorsque vous obtenez cette relique, retirez 2 carte de votre Deck et subissez 13 dégâts.",
+      "description": "Lorsque vous obtenez cette relique, retirez 2 carte de votre Deck et perdez16 PV.",
       "flavor": "Les détails de cette relique seront révélés plus tard...",
       "name": "Forces précaires"
     },
@@ -3294,7 +3313,7 @@
       "name": "Ciseaux précis"
     },
     "PRESERVED_FOG": {
-      "description": "Lorsque vous obtenez cette relique, retirez 5 carte de votre Deck. Ajoutez Hubris à votre Deck.",
+      "description": "Lorsque vous obtenez cette relique, retirez 3 carte de votre Deck. Ajoutez Hubris à votre Deck.",
       "flavor": "Les détails de cette relique seront révélés plus tard...",
       "name": "Brouillard en conserve"
     },
@@ -3329,7 +3348,7 @@
       "name": "Dent de rasoir"
     },
     "RED_MASK": {
-      "description": "Au début de chaque combat, appliquez 1 Affaiblissement à TOUS les ennemis.",
+      "description": "Au début de chaque combat, appliquez Affaibli (1) à TOUS les ennemis.",
       "flavor": "Les détails de cette relique seront révélés plus tard...",
       "name": "Masque rouge"
     },
@@ -3339,7 +3358,7 @@
       "name": "Crâne rouge"
     },
     "REGALITE": {
-      "description": "Lorsque vous créez une carte Incolore, gagnez 2 d'Armure.",
+      "description": "Lorsque vous créez une carte, gagnez 2 d'Armure.",
       "flavor": "Les détails de cette relique seront révélés plus tard...",
       "name": "Royalithe"
     },
@@ -3499,7 +3518,7 @@
       "name": "Calendrier de pierre"
     },
     "STONE_CRACKER": {
-      "description": "Au début des combats de Boss, Améliorez 3 carte aléatoire de votre Pioche pour le restant du combat.",
+      "description": "Au début de chaque combat, Améliorez 2 carte aléatoire de votre Pioche pour le restant du combat.",
       "flavor": "Les détails de cette relique seront révélés plus tard...",
       "name": "Marteau-piqueur"
     },
@@ -3579,7 +3598,7 @@
       "name": "Tingsha"
     },
     "TINY_MAILBOX": {
-      "description": "Lorsque vous vous Reposez, obtenez une potion aléatoire.",
+      "description": "Lorsque vous vous Reposez, obtenez 2 potions aléatoires.",
       "flavor": "Les détails de cette relique seront révélés plus tard...",
       "name": "Minuscule boîte aux lettres"
     },
@@ -3674,7 +3693,7 @@
       "name": "Chocolat très chaud"
     },
     "VEXING_PUZZLEBOX": {
-      "description": "Au début de chaque combat, ajoutez une carte aléatoire à votre Main. Elle coûte 0[E].",
+      "description": "Au début de chaque combat, ajoutez une carte aléatoire à votre Main. Elle coûte 0 ce tour.",
       "flavor": "Les détails de cette relique seront révélés plus tard...",
       "name": "Casse-tête vexant"
     },
@@ -3712,6 +3731,11 @@
       "description": "Les Élites donnent une récompense de carte Rare supplémentaire.",
       "flavor": "Les détails de cette relique seront révélés plus tard...",
       "name": "Étoile blanche"
+    },
+    "WINGED_BOOTS": {
+      "description": "Vous pouvez ignorer les trajets indiqués sur la carte lorsque vous choisissez la prochaine salle où vous rendre 3 fois.",
+      "flavor": "Les détails de cette relique seront révélés plus tard...",
+      "name": "Bottes ailées"
     },
     "WING_CHARM": {
       "description": "Une carte aléatoire de chaque récompense de carte est Envoûtée avec Rapide 1.",
@@ -3761,8 +3785,8 @@
       "name": "Agression"
     },
     "ARSENAL_POWER": {
-      "description": "Lorsque vous jouez une carte Incolore, gagnez 1 de Force.",
-      "smartDescription": "Lorsque vous jouez une carte Incolore, gagnez {Amount} de Force.",
+      "description": "Lorsque vous créez une carte, gagnez 1 de Force.",
+      "smartDescription": "Lorsque vous créez une carte, gagnez {Amount} de Force.",
       "name": "Arsenal"
     },
     "ARTIFACT_POWER": {
@@ -3800,7 +3824,7 @@
     },
     "BEACON_OF_HOPE_POWER": {
       "description": "Lorsque vous gagnez de l'Armure pendant votre tour, les autres joueurs en gagnent la moitié.",
-      "smartDescription": "Lorsque vous gagnez de l'Armure pendant votre tour, les autres joueurs en gagnent la moitié {Amount:plural:|{} fois}.",
+      "smartDescription": "Lorsque vous gagnez de l'Armure pendant votre tour, les autres joueurs en gagnent la moitié.",
       "name": "Balise d'espoir"
     },
     "BIASED_COGNITION_POWER": {
@@ -3813,11 +3837,6 @@
       "smartDescription": "Lorsque vous dépensez ou que vous gagnez {singleStarIcon}, infligez {Amount} dégâts à TOUS les ennemis.",
       "name": "Trou noir"
     },
-    "BLADE_OF_INK_POWER": {
-      "description": "Lorsque vous jouez une Attaque pendant ce tour, gagnez 2 de Force jusqu'à la fin du tour.",
-      "smartDescription": "Lorsque vous jouez une Attaque pendant ce tour, gagnez {Amount} de Force jusqu'à la fin du tour.",
-      "name": "Lame d'encre"
-    },
     "BLOCK_NEXT_TURN_POWER": {
       "description": "Au début de votre prochain tour, gagnez 4 d'Armure.",
       "smartDescription": "Au début de votre prochain tour, gagnez {Amount} d'Armure.",
@@ -3827,6 +3846,11 @@
       "description": "Votre Armure persiste au début de votre prochain tour.",
       "smartDescription": "Votre Armure persiste au début de {Amount:plural:votre prochain tour|vos {} prochains tours}.",
       "name": "Trouble"
+    },
+    "BORROWED_TIME_POWER": {
+      "description": "Les cartes coûtent une Énergie supplémentaire ce tour.",
+      "smartDescription": "Les cartes coûtent {Amount:energyIcons()} de plus ce tour.",
+      "name": "Sursis"
     },
     "BUFFER_POWER": {
       "description": "Intercepte la prochaine perte de PV.",
@@ -3840,7 +3864,7 @@
     },
     "BURST_POWER": {
       "description": "La prochaine Compétence que vous jouez ce tour est jouée une fois supplémentaire.",
-      "smartDescription": "{Amount:plural:La prochaine Compétence|Les {} prochaines Compétences} que vous jouez ce tour sont jouées une fois supplémentaire.",
+      "smartDescription": "{Amount:plural:La prochaine Compétence|Les {} prochaines Compétences} que vous jouez ce tour {Amount:plural:est jouée|sont jouées} une fois supplémentaire.",
       "name": "Déflagration"
     },
     "CALAMITY_POWER": {
@@ -4015,10 +4039,6 @@
       "smartDescription": "À la fin du tour {OnPlayer:du joueur|adverse}, si {OwnerName} possède {Amount} PV ou moins, il périt.",
       "name": "Fatalité"
     },
-    "DOOR_REVIVAL_POWER": {
-      "description": "Pouvoir interne pour les mécaniques de régénération de la Porte.",
-      "name": "Porte régénérée"
-    },
     "DOUBLE_DAMAGE_POWER": {
       "description": "Pendant ce tour, les Attaques infligent le double de dégâts.",
       "smartDescription": "{Amount:plural:Pendant ce tour|Pendant les {} prochains tours}, les Attaques infligent le double de dégâts.",
@@ -4094,8 +4114,8 @@
       "name": "Barrière de flammes"
     },
     "FLANKING_POWER": {
-      "description": "Les autres alliés infligent 2x plus de dégâts à cet ennemi pendant ce tour.",
-      "smartDescription": "Les autres alliés infligent {Amount} fois plus de dégâts à cet ennemi pendant ce tour.",
+      "description": "Les autres alliés infligent 2x plus de dégâts d'attaque à cet ennemi pendant ce tour.",
+      "smartDescription": "Les autres alliés infligent {Amount} fois plus de dégâts d'attaque à cet ennemi pendant ce tour.",
       "name": "Encerclement"
     },
     "FLUTTER_POWER": {
@@ -4163,10 +4183,10 @@
       "smartDescription": "{Amount:plural:La prochaine Attaque que vous jouez inflige|Les {} prochaines Attaques que vous jouez infligent} le triple de dégâts.",
       "name": "Géantification"
     },
-    "GRAPPLE_POWER": {
-      "description": "Lorsque vous gagnez de l'Armure pendant ce tour, infligez 5 dégâts à l'ennemi.",
-      "smartDescription": "Lorsque vous gagnez de l'Armure pendant ce tour, infligez {Amount} dégâts à {OwnerName}.",
-      "name": "Prise au sol"
+    "GRASP_POWER": {
+      "description": "Chaque fois que vous jouez une carte, perdez 1 d'Énergie.",
+      "smartDescription": "Chaque fois que vous jouez une carte, perdez {Amount:energyIcons()}.",
+      "name": "Étreinte"
     },
     "GRAVITY_POWER": {
       "description": "Lorsque vous jouez une carte pendant ce tour, infligez 2 dégâts à TOUS les ennemis.",
@@ -4236,6 +4256,11 @@
       "description": "Au début de son tour, cette créature gagne 2 de Force.",
       "smartDescription": "Au début de son tour, {OwnerName} gagne {Amount} de Force.",
       "name": "Voltage élevé"
+    },
+    "HUNGER_POWER": {
+      "description": "Lorsque vous jouez une Attaque ou une Compétence, elle est Épuisée.",
+      "smartDescription": "Lorsque vous jouez une Attaque ou une Compétence, elle est Épuisée.",
+      "name": "Voracité"
     },
     "ILLUSION_POWER": {
       "description": "Si cette créature périt, elle se régénère au prochain tour avec tous ses PV.",
@@ -4396,6 +4421,11 @@
       "smartDescription": "Vous ne pouvez plus piocher de cartes pendant ce tour.",
       "name": "Pas de pioche"
     },
+    "NO_ENERGY_GAIN_POWER": {
+      "description": "Vous ne pouvez plus gagner d'[E] ce tour.",
+      "smartDescription": "Vous ne pouvez plus gagner d'{energyPrefix:energyIcons(1)} ce tour.",
+      "name": "Pas de gain d'Énergie"
+    },
     "OBLIVION_POWER": {
       "description": "Lorsque vous jouez une carte, cet ennemi reçoit 1 de Fatalité.",
       "smartDescription": "Lorsque vous jouez une carte, cet ennemi reçoit {Amount} de Fatalité.",
@@ -4413,7 +4443,7 @@
     },
     "OUTBREAK_POWER": {
       "description": "Toutes les 10 applications de Poison, infligez des dégâts à TOUS les ennemis.",
-      "smartDescription": "Toutes les {Repeat} applications de Poison, infligez {Amount} dégâts à TOUS les ennemis.",
+      "smartDescription": "Toutes les {Repeat} fois que vous appliquez du Poison, infligez {Amount} dégâts à TOUS les ennemis.",
       "name": "Épidémie"
     },
     "PAGESTORM_POWER": {
@@ -4573,8 +4603,13 @@
     },
     "SANDPIT_POWER": {
       "description": "Un pouvoir utilisé par l'Insatiable.",
-      "smartDescription": "{Amount:plural:Au début du prochain tour|Dans {} tours}, vous vous ferez dévorer, et vous périrez.",
+      "smartDescription": "{Amount:plural:Quand l'Insatiable débutera son tour|Dans {} tours}, vous vous ferez dévorer, et vous périrez.",
       "name": "Sables mouvants"
+    },
+    "SCRUTINY_POWER": {
+      "description": "Vous ne pouvez plus piocher de cartes ce tour.",
+      "smartDescription": "Vous ne pouvez plus piocher de cartes ce tour.",
+      "name": "Regard pesant"
     },
     "SEEKING_EDGE_POWER": {
       "description": "Lame souveraine touche désormais TOUS les ennemis.",
@@ -4769,8 +4804,8 @@
       "name": "Chapardage"
     },
     "SWORD_SAGE_POWER": {
-      "description": "Augmentez le coût de Lame Souveraine de 1. Lame Souveraine touche désormais l'ennemi 1 fois de plus.",
-      "smartDescription": "Augmentez le coût de Lame Souveraine de {Amount}. Lame Souveraine touche désormais l'ennemi {Amount} fois de plus.",
+      "description": "Lame Souveraine touche désormais l'ennemi 1 fois de plus.",
+      "smartDescription": "Lame Souveraine touche désormais l'ennemi {Amount} fois de plus.",
       "name": "Sage à l'épée"
     },
     "TAG_TEAM_POWER": {
@@ -5032,7 +5067,7 @@
       "name": "Fortifiant"
     },
     "FOUL_POTION": {
-      "description": "Infligez 12 dégât à TOUT LE MONDE.\nPeut être jetée sur le Marchand pour 100 Pièces d'or.",
+      "description": "Infligez 12 dégât à TOUS les joueurs et ennemis.\nPeut être jetée sur le Marchand pour 100 Pièces d'or.",
       "name": "Potion infecte"
     },
     "FRUIT_JUICE": {
@@ -5072,7 +5107,7 @@
       "name": "Bronze liquide"
     },
     "LIQUID_MEMORIES": {
-      "description": "Ajoutez une carte de votre Défausse à votre Main. Elle coûte 0 [E] ce tour.",
+      "description": "Ajoutez une carte de votre Défausse à votre Main. Elle coûte 0 ce tour.",
       "name": "Souvenirs liquides"
     },
     "LUCKY_TONIC": {
@@ -5176,7 +5211,7 @@
       "name": "Potion de vulnérabilité"
     },
     "WEAK_POTION": {
-      "description": "Appliquez Affaiblissement (3).",
+      "description": "Appliquez Affaibli (3).",
       "name": "Potion d'affaiblissement"
     }
   },
@@ -5281,7 +5316,7 @@
     },
     "BUGSLAYER": {
       "name": "Tueur d’insectes",
-      "description": "Alors que vous affrontez un essaim d’insectes agressifs, vous remarquez soudain qu’un Puissant Guerrier à l’allure rude combattait à vous côtés depuis le début !\n\nSentant venir la défaite, les insectes s’éparpillent. Vous vous tournez vers votre nouveau compagnon.\n« Veux-tu quelques conseils pour exterminer ces nuisibles ? »\n\nQuelle courtoisie. Vous acceptez son offre d’un hochement de la tête.",
+      "description": "Alors que vous affrontez un essaim d’insectes agressifs, vous remarquez soudain qu’un Puissant Guerrier à l’allure rude combattait à vos côtés depuis le début !\n\nSentant venir la défaite, les insectes s’éparpillent. Vous vous tournez vers votre nouveau compagnon.\n« Veux-tu quelques conseils pour exterminer ces nuisibles ? »\n\nQuelle courtoisie. Vous acceptez son offre d’un hochement de la tête.",
       "choices": [
         {
           "name": "Apprendre la Technique d’Extermination",
@@ -5413,7 +5448,7 @@
       ]
     },
     "DENSE_VEGETATION": {
-      "name": "Végétation dense",
+      "name": "Jungle dense",
       "description": "Après avoir emprunté le mauvais chemin depuis un bon moment, vous vous trouvez dans une épaisse jungle de fougères, de buissons et de lianes. Surtout de lianes. L’épuisement vous gagne, et une pensée sombre vous vient à l’esprit :\n\n« Tu es perdu{characterGender:choose(feminine):e|}, pris{characterGender:choose(feminine):e|} au dépourvu, et la mort approche inexorablement. »\n\nQue faites-vous ?",
       "choices": [
         {
@@ -5422,8 +5457,8 @@
         },
         {
           "name": "Avancer malgré tout",
-          "description": "Retirez une carte de votre Deck. Perdez 11 PV.",
-          "outcome": "Vous vous frayez un chemin à travers la jungle, mais elle semble interminable...\n\nVous vous nourrissez de fruits étranges et d’insectes croquants, et buvez le nectar de plantes luminescentes ; mais la paranoïa vous gagne...\n\nCependant, vous tombez bientôt sur une clairière, puis un sentier, agrémenté de dessins gribouillés sur le sol vous indiquant la route.\nProblème réglé."
+          "description": "Recevez 0 Pièces d'or. Perdez 8 PV.",
+          "outcome": "Vous vous frayez un chemin à travers la jungle, mais elle semble interminable...\n\nVous vous nourrissez de fruits étranges et d’insectes croquants, et buvez le nectar de plantes luminescentes ; mais la paranoïa vous gagne...\n\nCependant, vous tombez bientôt sur une clairière, puis un sentier, et quelques Pièces d'or éparpillées au sol. Parmi elles se trouvent des cartes grossièrement dessinées !\nProblème réglé."
         }
       ]
     },
@@ -5464,7 +5499,7 @@
       ]
     },
     "DROWNING_BEACON": {
-      "name": "Balise engloutie",
+      "name": "Phare englouti",
       "description": "Après avoir traversé un paysage onirique d’eaux calmes et de rochers, vous émergez face à un phare en train de s'enfoncer dans la boue et qui émet une lueur d'anti-lumière.\n\nVous pouvez mettre en bouteille un peu du liquide faiblement luminescent qui s’est accumulé ici, ou bien vous pouvez tenter d’atteindre le sommet du phare afin d’en récupérer la lentille.",
       "choices": [
         {
@@ -5481,7 +5516,7 @@
     },
     "ENDLESS_CONVEYOR": {
       "name": "Convoyeur sans fin",
-      "description": "Vous vous traînez jusque dans une baraque à l'enseigne lumineuse (mais de travers) :\n« FESTIN À VOLONTÉ — PAYEZ SELON VOTRE FAIM ! »\n\nÀ l'intérieur, un chef cuisinier svelte doté de nombreux bras prépare avec dextérité des bouchées alléchantes qu'il pose sur un convoyeur en chitine sinueux.\n\nDe l'un de ses bras, le chef indique un panneau :\n35 Pièces d'or par assiette",
+      "description": "Vous vous traînez jusque dans une baraque à l'enseigne lumineuse (mais de travers) :\n« FESTIN À VOLONTÉ — PAYEZ SELON VOTRE FAIM ! »\n\nÀ l'intérieur, un chef cuisinier svelte doté de nombreux bras prépare avec dextérité des bouchées alléchantes qu'il pose sur un convoyeur en chitine sinueux.\n\nDe l'un de ses bras, le chef indique un panneau :\n40 Pièces d'or par assiette",
       "choices": [
         {
           "name": "Observer le chef",
@@ -5528,15 +5563,15 @@
       ]
     },
     "HUNGRY_FOR_MUSHROOMS": {
-      "name": "Affamé de champignons",
+      "name": "Affamé de champis",
       "description": "Depuis combien de temps n’avez-vous rien mangé ?\n... attends, d’où vient cette odeur incroyable ?\n\nVous suivez l’odeur et arrivez dans un campement accueillant où cuisent toutes sortes de champignons appétissants ! Vous avez si faim que vous ne vous préoccupez pas de leur innocuité.\n(Si faim que vous ne remarquez même pas l’aventurier mort qui gît à terre.)",
       "choices": [
         {
-          "name": "Gros champignon",
+          "name": "Gros champi",
           "outcome": "Vous croquez le Gros champignon. Sa chair est ferme, consistante, et rassasiante. À mesure que vous mangez, votre appétit s’intensifie, comme si c’était le champignon qui se nourrissait de votre faim.\n\nMiam... vous tombez dans un coma alimentaire.\nVotre gloutonnerie ne sera pas sans conséquences."
         },
         {
-          "name": "Champignon aromatique",
+          "name": "Champi aromatique",
           "outcome": "Vous goûtez le Champignon aromatique, un petit champignon des bois au délicat parfum de fruits de mer...\n\nUne soudaine vague d’énergie vous pousse à courir et à sautiller, et vous vous lancez dans une séance d’entraînement acharné !\nPuis, une vive douleur vous assaille tandis que le champignon, toujours vivant, se débat à l’intérieur de vous, prolongeant ses derniers instants de vie."
         }
       ]
@@ -5558,7 +5593,7 @@
       ]
     },
     "JUNGLE_MAZE_ADVENTURE": {
-      "name": "Aventure dans le labyrinthe de la jungle",
+      "name": "Aventure du labyrinthe de la jungle",
       "description": "Dans une clairière, vous tombez sur une Bande d’aventuriers hétéroclite. L’air démoralisés, ils vous indiquent un labyrinthe géant.\n\nIls vous proposent d’unir vos forces aux leurs pour vous embarquer dans une Quête épique, dans le but de piller les trésors de ce labyrinthe. Étant vous-même {characterGender:choose(feminine):une aventurière expérimentée|un aventurier expérimenté}, vous ne vous faites pas d’illusions sur les pièges mortels et les gardiens redoutables dont est sûrement rempli ce labyrinthe.\n\nCe serait plus simple si vous travailliez ensemble, mais il faudra alors partager le butin.",
       "choices": [
         {
@@ -5613,8 +5648,8 @@
       "choices": [
         {
           "name": "Groupe",
-          "description": "Perdez 100 Pièces d’or. Transformez 2 cartes.",
-          "outcome": "Vous saluez les Morphiques bavards, qui vous accueillent un à un dans leurs bras cristallins.\n\nIls partagent avec vous leur savoir collectif et vous injectent de Magie morphique, altérant votre nature... Quelles charmantes créatures, ces Morphiques.\n\nL’un d’eux vous a volé votre or."
+          "description": "{IsMultiplayer:Tout le monde perd|Perdez} TOUTES {IsMultiplayer:leurs|vos} Pièces d'or. Transformez 2 cartes.",
+          "outcome": "Vous saluez les Morphiques bavards, qui vous accueillent un à un dans leurs bras cristallins.\n\nIls partagent avec vous leur savoir collectif et vous infusent de Magie morphique, altérant votre nature... Quelles charmantes créatures, ces Morphiques.\n\nL’un d’eux vous a volé votre or."
         },
         {
           "name": "Individu",
@@ -5769,7 +5804,7 @@
         },
         {
           "name": "Lire en entier",
-          "description": "Choisissez un Pouvoir à Envoûter avec Rapide 2.",
+          "description": "Choisissez un Pouvoir à Envoûter avec {Enchantment3} 2.",
           "locked": "Vous ne possédez pas de Pouvoir dans votre Deck pouvant être Envoûté.",
           "outcome": "Quel livre passionnant ! Quelques citations vous restent en tête:\n« Évitez les gros monstres. »\n« Prenez chaque récompense de carte. »\n« Bloquer, c’est pour les mauviettes. »\n\nVos mains sont recouvertes de sang."
         },
@@ -5813,7 +5848,7 @@
         },
         {
           "name": "Observer",
-          "description": "Envoûter une Frappe ou une Défense avec Spiralee.",
+          "description": "Envoûter une Frappe Basique ou une Défense avec Spiralee.",
           "outcome": "...ah — quelle splendeur.....\nEncore et encore... elle tourne et elle tourne. Oui...\nOh ! Un petit..... clapotis... ?\n....bien sûr. Toi aussi, Monsieur Spiralee, tu as besoin de t’amuser... haha...\n... .......   ...\n\nIl est l’heure de partir.\nVous murmurez quelque chose en poursuivant votre chemin\n\n« Merci, Spiralee. »"
         },
         {
@@ -5834,7 +5869,7 @@
         },
         {
           "name": "Rejeter",
-          "description": "Perdez 9 PV. Retirez une carte de votre Deck.",
+          "description": "Perdez 10 PV. Améliorez une carte.",
           "outcome": "Vous arrêtez facilement l’Esprit greffeur par la force de votre volonté.\n\nIl tente néanmoins de fusionner avec vous, désespéré de trouver un hôte. Il faiblit peu à peu, jusqu’à se dissiper dans un nuage de fumée.\n\nCe fut un esprit fugace."
         }
       ]
@@ -5976,7 +6011,7 @@
     },
     "THE_LEGENDS_WERE_TRUE": {
       "name": "La légende disait vrai",
-      "description": "Alors que vous pénétrez dans une pièce où règne le noir total, une lueur venue d’au-dessus transperce soudain l’obscurité — dans le même instant, la porte claque derrière vous.\n\nDevant vous, illuminé, se tient un podium sur lequel est posé une carte dessinée. Vous ressentez l’envie pressante de vous en emparer.\n\nC’est très suspect.",
+      "description": "Vous pénétrez dans une pièce où règne le noir total, lorsque, soudain, une lueur venue d’au-dessus transperce l’obscurité — au même moment, la porte claque derrière vous.\n\nDevant vous, illuminé, se tient un podium sur lequel est posé une carte dessinée. Vous ressentez l’envie pressante de vous en emparer.\n\nTout ceci est très suspect.",
       "choices": [
         {
           "name": "Prendre la carte",
@@ -6032,23 +6067,23 @@
           "choices": [
             {
               "name": "Chaos",
-              "description": "Ajoutez une carte aléatoire à votre Main. Elle coûte 0 {energyPrefix:energyIcons(1)} pendant ce tour."
+              "description": "Ajoutez une carte aléatoire à votre Main. Elle coûte 0 ce tour."
             },
             {
               "name": "Étranglement",
-              "description": "Lorsque vous jouez une carte pendant ce tour, l’ennemi perd {ChokingDamage} PV."
+              "description": "Lorsque vous jouez une carte pendant ce tour, l’ennemi perd 6 PV."
             },
             {
               "name": "Curiosité",
-              "description": "Les Pouvoirs coûtent 1 {energyPrefix:energyIcons(1)} de moins."
+              "description": "Les Pouvoirs coûtent 1 [E] de moins."
             },
             {
               "name": "Stimulation",
-              "description": "Gagnez {EnergizedEnergy:energyIcons()}."
+              "description": "Gagnez [E]."
             },
             {
               "name": "Expertise",
-              "description": "Gagnez {ExpertiseStrength} Force. Gagnez {ExpertiseDexterity} Dextérité."
+              "description": "Gagnez 2 Force. Gagnez 2 Dextérité."
             },
             {
               "name": "Progrès",
@@ -6056,7 +6091,7 @@
             },
             {
               "name": "Abattement",
-              "description": "Appliquez {SappingWeak} Faible. Appliquez {SappingVulnerable} Vulnérable."
+              "description": "Appliquez 2 Faible. Appliquez 2 Vulnérable."
             },
             {
               "name": "Violence",
@@ -6143,14 +6178,14 @@
         },
         {
           "name": "Éponge rêche",
-          "description": "Payez 155 Pièces d’or. Envoûtez 2 cartes avec Stabilité.",
-          "locked": "Coûte 155 Pièces d’or.",
+          "description": "Payez 99 Pièces d’or. Envoûtez 2 cartes avec Stabilité.",
+          "locked": "Coûte 99 Pièces d’or.",
           "outcome": "Le scribe brandit l’éponge rêche et en tamponne vos parchemins.\n\n*couic couic couic*\n\nSa texture rugueuse laisse des traces luisantes qui paraissent stabiliser l’encore..."
         },
         {
           "name": "Stylo tentacule",
-          "description": "Payez 65 Pièces d’or. Envoûtez une carte avec Stabilité.",
-          "locked": "Coûte 65 Pièces d’or.",
+          "description": "Payez 55 Pièces d’or. Envoûtez une carte avec Stabilité.",
+          "locked": "Coûte 55 Pièces d’or.",
           "outcome": "Le scribe lève le stylo tout gigotant et, de quelques mouvements précis, trace sur votre front un signe étrange.\n\nLe glyphe se met à rayonner, et puis il disparaît..."
         }
       ]
@@ -6203,7 +6238,7 @@
       "choices": [
         {
           "name": "Échanger des pièces d’or",
-          "description": "Perdez 50 Pièces d’or. Obtenez 2 Potions aléatoires.",
+          "description": "Perdez 35 Pièces d’or. Obtenez 2 Potions aléatoires.",
           "outcome": "Vous dispersez quelques pièces d’or autour de la base de l’arbre, et deux des réceptacles en argile tombent au sol sans faire un bruit.\n\nEn se brisant, ils libèrent les deux potions parfaitement intactes qu’ils contenaient.\n\nVous prenez les potions, ainsi que la fuite."
         },
         {
@@ -6257,7 +6292,7 @@
       ]
     },
     "DARV": {
-      "description": "L'Amasseur",
+      "description": "Darv, l'Amasseur, fouille dans un tas de puissantes reliques et vous présente une réserve changeante. Vous voyez Dusty Tome ainsi que trois reliques aléatoires issues du pool principal et d'ensembles liés à l'acte, certaines options n'apparaissant que sous conditions.",
       "epithet": "L'Amasseur",
       "dialogue": [
         {
@@ -6487,12 +6522,6 @@
           "pool": "positive"
         },
         {
-          "name": "Pommandre",
-          "description": "Lorsque vous obtenez cette relique, Améliorez une carte.",
-          "relic_id": "POMANDER",
-          "pool": "positive"
-        },
-        {
           "name": "Perle dorée",
           "description": "Lorsque vous obtenez cette relique, gagnez 150 Pièces d'or.",
           "relic_id": "GOLDEN_PEARL",
@@ -6505,9 +6534,9 @@
           "pool": "positive"
         },
         {
-          "name": "Nouvelle page",
-          "description": "Lorsque vous obtenez cette relique, Transformez 1 carte.",
-          "relic_id": "NEW_LEAF",
+          "name": "Coffret perdu",
+          "description": "Lorsque vous obtenez cette relique, gagnez 1 récompense de carte et obtenez 1 potion aléatoire.",
+          "relic_id": "LOST_COFFER",
           "pool": "positive"
         },
         {
@@ -6517,21 +6546,45 @@
           "pool": "positive"
         },
         {
+          "name": "Nouvelle page",
+          "description": "Lorsque vous obtenez cette relique, Transformez 1 carte.",
+          "relic_id": "NEW_LEAF",
+          "pool": "positive"
+        },
+        {
           "name": "Ciseaux précis",
           "description": "Lorsque vous obtenez cette relique, retirez 1 carte de votre Deck.",
           "relic_id": "PRECISE_SCISSORS",
           "pool": "positive"
         },
         {
-          "name": "Coffret perdu",
-          "description": "Lorsque vous obtenez cette relique, gagnez 1 récompense de carte et obtenez 1 potion aléatoire.",
-          "relic_id": "LOST_COFFER",
+          "name": "Étui à fioles",
+          "description": "Lorsque vous ramassez cette relique, gagnez 1 nouvel emplacement de potion et obtenez 2 potion aléatoire.",
+          "relic_id": "PHIAL_HOLSTER",
+          "pool": "positive"
+        },
+        {
+          "name": "Bottes ailées",
+          "description": "Vous pouvez ignorer les trajets indiqués sur la carte lorsque vous choisissez la prochaine salle où vous rendre 3 fois.",
+          "relic_id": "WINGED_BOOTS",
+          "pool": "positive"
+        },
+        {
+          "name": "Parchemin énorme",
+          "description": "Lorsque vous obtenez cette relique, choisissez 1 Carte Multijoueur parmi 3 à ajouter à votre Deck.",
+          "relic_id": "MASSIVE_SCROLL",
           "pool": "positive"
         },
         {
           "name": "Perle maudite",
           "description": "Lorsque vous obtenez cette relique, recevez Cupidité. Obtenez 333 Pièces d'or.",
           "relic_id": "CURSED_PEARL",
+          "pool": "cursed"
+        },
+        {
+          "name": "Tablette lourde",
+          "description": "Lorsque vous obtenez cette relique, choisissez 1 carte Rare parmi 3 à ajouter à votre Deck, et ajoutez 1 Blessure à votre Deck.",
+          "relic_id": "HEFTY_TABLET",
           "pool": "cursed"
         },
         {
@@ -6542,15 +6595,39 @@
         },
         {
           "name": "Cataplasme",
-          "description": "Lorsque vous obtenez cette relique, Transformez 1 Frappe et 1 Défense et perdez 10 PV Max.",
+          "description": "Lorsque vous obtenez cette relique, Transformez 1 Frappe et 1 Défense et perdez 12 PV Max.",
           "relic_id": "LEAFY_POULTICE",
           "pool": "cursed"
         },
         {
           "name": "Forces précaires",
-          "description": "Lorsque vous obtenez cette relique, retirez 2 carte de votre Deck et subissez 13 dégâts.",
+          "description": "Lorsque vous obtenez cette relique, retirez 2 carte de votre Deck et perdez16 PV.",
           "relic_id": "PRECARIOUS_SHEARS",
           "pool": "cursed"
+        },
+        {
+          "name": "Creuset en argent",
+          "description": "Vos 3 premières récompenses de carte sont Améliorées. Le premier Coffre trésor que vous ouvrez est vide.",
+          "relic_id": "SILVER_CRUCIBLE",
+          "pool": "cursed"
+        },
+        {
+          "name": "Os de Neow",
+          "description": "Lorsque vous ramassez cette relique, gagnez 2 Relique de Neow aléatoire. Ajoutez 1 Malédiction aléatoire à votre Deck.",
+          "relic_id": "NEOWS_BONES",
+          "pool": "cursed"
+        },
+        {
+          "name": "Pierre volcanique",
+          "description": "Le Boss de l'Acte 1 octroie 2 Reliques lorsqu'il est vaincu.",
+          "relic_id": "LAVA_ROCK",
+          "pool": "positive"
+        },
+        {
+          "name": "Talisman de Neow",
+          "description": "Lorsque vous obtenez cette relique, Améliorez 1 de vos Frappes et 1 de vos Défenses.",
+          "relic_id": "NEOWS_TALISMAN",
+          "pool": "positive"
         },
         {
           "name": "Huître nourrissante",
@@ -6559,21 +6636,9 @@
           "pool": "positive"
         },
         {
-          "name": "Humidificateur en pierre",
-          "description": "Lorsque vous vous Reposez à un Site de repos, augmentez vos PV Max de 5.",
-          "relic_id": "STONE_HUMIDIFIER",
-          "pool": "positive"
-        },
-        {
-          "name": "Parchemin énorme",
-          "description": "Lorsque vous obtenez cette relique, choisissez 1 Carte Multijoueur parmi 3 à ajouter à votre Deck.",
-          "relic_id": "MASSIVE_SCROLL",
-          "pool": "positive"
-        },
-        {
-          "name": "Pierre volcanique",
-          "description": "Le Boss de l'Acte 1 octroie 2 Reliques lorsqu'il est vaincu.",
-          "relic_id": "LAVA_ROCK",
+          "name": "Pommandre",
+          "description": "Lorsque vous obtenez cette relique, Améliorez une carte.",
+          "relic_id": "POMANDER",
           "pool": "positive"
         },
         {
@@ -6583,10 +6648,10 @@
           "pool": "positive"
         },
         {
-          "name": "Creuset en argent",
-          "description": "Vos 3 premières récompenses de carte sont Améliorées. Le premier Coffre trésor que vous ouvrez est vide.",
-          "relic_id": "SILVER_CRUCIBLE",
-          "pool": "cursed"
+          "name": "Humidificateur en pierre",
+          "description": "Lorsque vous vous Reposez à un Site de repos, augmentez vos PV Max de 5.",
+          "relic_id": "STONE_HUMIDIFIER",
+          "pool": "positive"
         },
         {
           "name": "Caisse de parchemins",
@@ -6597,7 +6662,7 @@
       ]
     },
     "NONUPEIPE": {
-      "description": "Incarnation de la Fortune",
+      "description": "Nonupeipe, l'Incarnation de la Fortune, vous entoure d'une collection étincelante de trésors porte-bonheur. Chaque visite propose trois reliques aléatoires du pool principal, Beautiful Bracelet n'apparaissant que si sa condition spéciale est remplie.",
       "epithet": "Incarnation de la Fortune",
       "dialogue": [
         {
@@ -6684,7 +6749,7 @@
       "name": "Nonupeipée"
     },
     "OROBAS": {
-      "description": "Arc-en-ciel Vivant",
+      "description": "Orobas, l'Arc-en-ciel Vivant, déploie un spectre de reliques réparties en trois pools distincts. Chaque rencontre propose une relique de chaque pool, et Prismatic Gem s'ajoute pour les personnages capables de canaliser des Orbes.",
       "epithet": "Arc-en-ciel Vivant",
       "dialogue": [
         {
@@ -6775,7 +6840,7 @@
       "name": "Orobas"
     },
     "PAEL": {
-      "description": "Dragon de Cire",
+      "description": "Pael, le Dragon de Cire, propose trois choix de reliques tirés de pools de chair, d'ailes et d'yeux déformés. À chaque rencontre, une relique de chaque pool est proposée, avec des options supplémentaires qui peuvent apparaître si votre deck ou vos compagnons remplissent les étranges conditions de Pael.",
       "epithet": "Dragon de Cire",
       "dialogue": [
         {
@@ -6862,7 +6927,7 @@
       "name": "Paël"
     },
     "TANX": {
-      "description": "Roi Chimère",
+      "description": "Tanx, le Roi Chimère, vous arme depuis une réserve d'armes brutale. Chaque rencontre propose trois reliques aléatoires tirées de l'arsenal de Tanx, avec Tri-Boomerang en plus si vous portez déjà assez d'armes pour impressionner le roi.",
       "epithet": "Roi Chimère",
       "dialogue": [
         {
@@ -6969,7 +7034,7 @@
       "name": "Tanx"
     },
     "TEZCATARA": {
-      "description": "Nourricière de la Flamme",
+      "description": "Tezcatara, Nourricière de la Flamme, dispose ses dons dans trois pools soigneusement préparés. Chaque rencontre propose une relique de chaque pool, allant de douceurs réconfortantes à d'étranges souvenirs et précieuses curiosités.",
       "epithet": "Nourricière de la Flamme",
       "dialogue": [
         {
@@ -7166,10 +7231,11 @@
           "text": "Misérable !\nHORS DE MA VUE !!"
         }
       ],
-      "name": "L'Architecte"
+      "name": "L'Architecte",
+      "description": "L'Architecte vous attend à la fin de chaque run victorieuse. La rencontre se déroule comme un dialogue aux répliques propres à chaque personnage avant d'aboutir à un affrontement final."
     },
     "VAKUU": {
-      "description": "Le Premier Démon",
+      "description": "Vakuu, le Premier Démon, vous tente avec des reliques réparties en trois pools inquiétants. Chaque rencontre propose une relique de chaque pool, mêlant pactes sanglants, trophées préservés et élégants atours démoniaques.",
       "epithet": "Le Premier Démon",
       "dialogue": [
         {
@@ -7327,10 +7393,6 @@
       "description": "Inflige 50% de dégâts supplémentaires, mais vous perdez 2 PV.",
       "name": "Corruption"
     },
-    "FAVORED": {
-      "description": "Les dégâts de cette attaque sont doublés.",
-      "name": "Faveur"
-    },
     "GLAM": {
       "description": "Cette carte a Écho (1) une fois par combat.",
       "name": "Glamour"
@@ -7343,8 +7405,12 @@
       "description": "Cette carte est jouée automatiquement au début de chaque combat.",
       "name": "Imprégnation"
     },
+    "INKY": {
+      "description": "Cette carte inflige 2 dégâts supplémentaires et applique Affaibli (1).",
+      "name": "Encrée"
+    },
     "INSTINCT": {
-      "description": "Diminuez le coût de cette carte de 1.",
+      "description": "Les dégâts de cette attaque sont doublés.",
       "name": "Instinct"
     },
     "MOMENTUM": {
@@ -7426,197 +7492,2044 @@
       "description": "L'héritier du Trône Stellaire.\nManie des pouvoirs cosmiques mais laisse ses sbires faire le travail à sa place."
     }
   },
-  "mechanics": {
-    "ascension": [
-      {
-        "level": 0,
-        "title": "Pas d'Ascension",
-        "description": "Jouer sans modificateurs d'Ascension."
+  "monsters": {
+    "ARCHITECT": {
+      "moves": {
+        "NOTHING": "Rien"
       },
-      {
-        "level": 1,
-        "title": "Élites en masse",
-        "description": "Les Élites apparaissent plus souvent."
+      "name": "L'Architecte",
+      "move_names": {
+        "Nothing": "Rien"
       },
-      {
-        "level": 2,
-        "title": "Voyageur fatigué",
-        "description": "Les Anciens ne soignent que 80% de vos HP manquants."
+      "move_titles": [
+        "Rien"
+      ]
+    },
+    "ASSASSIN_RUBY_RAIDER": {
+      "moves": {
+        "KILLSHOT": "Tir meurtrier"
       },
-      {
-        "level": 3,
-        "title": "Pauvreté",
-        "description": "Les ennemis et coffres au trésor donnent 25% d'Or en moins."
+      "name": "Rôdeur assassin",
+      "move_names": {
+        "Killshot": "Tir meurtrier"
       },
-      {
-        "level": 4,
-        "title": "Ceinture serrée",
-        "description": "Commencez chaque aventure avec 1 emplacement de potion en moins."
+      "move_titles": [
+        "Tir meurtrier"
+      ]
+    },
+    "ATTACK_MOVE_MONSTER": {
+      "moves": {
+        "POKE": "Petit coup"
       },
-      {
-        "level": 5,
-        "title": "Fléau de l'Ascenseur",
-        "description": "Commencez chaque aventure avec une Malédiction."
+      "name": "Monstre d'Attaque",
+      "move_names": {
+        "Poke": "Petit coup"
       },
-      {
-        "level": 6,
-        "title": "Morosité",
-        "description": "Moins de Sites de repos."
+      "move_titles": [
+        "Petit coup"
+      ]
+    },
+    "AXEBOT": {
+      "moves": {
+        "BOOT_UP": "Démarrage",
+        "HAMMER_UPPERCUT": "Marteau Uppercut",
+        "ONE_TWO": "Droite-gauche",
+        "SHARPEN": "Affûter"
       },
-      {
-        "level": 7,
-        "title": "Rareté",
-        "description": "Les cartes Rares et Améliorées apparaissent moins souvent."
+      "name": "Hachebots",
+      "move_names": {
+        "Boot Up": "Démarrage",
+        "Hammer Uppercut": "Marteau Uppercut",
+        "The One-Two": "Droite-gauche",
+        "Sharpen": "Affûter"
       },
-      {
-        "level": 8,
-        "title": "Ennemis coriaces",
-        "description": "Tous les ennemis sont plus difficiles à tuer."
+      "move_titles": [
+        "Démarrage",
+        "Marteau Uppercut",
+        "Droite-gauche",
+        "Affûter"
+      ]
+    },
+    "AXE_RUBY_RAIDER": {
+      "moves": {
+        "BIG_SWING": "Balancier"
       },
-      {
-        "level": 9,
-        "title": "Ennemis mortels",
-        "description": "Tous les ennemis ont des attaques plus mortelles."
+      "name": "Rôdeur à la hache",
+      "move_names": {
+        "Big Swing": "Balancier"
       },
-      {
-        "level": 10,
-        "title": "Double Boss",
-        "description": "Affrontez deux boss à la fin de l'Acte 3."
-      }
-    ],
-    "map_rooms": [
-      {
-        "id": "ROOM_ENEMY",
-        "title": "Ennemi",
-        "description": "Des ennemis hostiles résident dans ces salles."
+      "move_titles": [
+        "Balancier"
+      ]
+    },
+    "BATTLE_FRIEND_V1": {
+      "moves": {
+        "NOTHING": "Rien"
       },
-      {
-        "id": "ROOM_ELITE",
-        "title": "Élite",
-        "description": "De puissants ennemis se trouvent dans ces salles.\n\nLes vaincre vous récompensera d'une Relique."
+      "name": "Ami de combat V1.0",
+      "move_names": {
+        "Nothing": "Rien"
       },
-      {
-        "id": "ROOM_BOSS",
-        "title": "Boss",
-        "description": "L'ennemi le plus mortel de la zone.\n\nLe vaincre vous permettra de passer à l'Acte suivant."
+      "move_titles": [
+        "Rien"
+      ]
+    },
+    "BATTLE_FRIEND_V2": {
+      "moves": {
+        "NOTHING": "Rien"
       },
-      {
-        "id": "ROOM_EVENT",
-        "title": "Événement",
-        "description": "Quelque chose d'inhabituel se produit dans ces salles..."
+      "name": "Ami de combat V2.0",
+      "move_names": {
+        "Nothing": "Rien"
       },
-      {
-        "id": "ROOM_MERCHANT",
-        "title": "Boutique",
-        "description": "Le mystérieux Marchand vend ses marchandises dans ces salles.\n\nDépensez votre Or durement gagné ici !"
+      "move_titles": [
+        "Rien"
+      ]
+    },
+    "BATTLE_FRIEND_V3": {
+      "moves": {
+        "NOTHING": "Rien"
       },
-      {
-        "id": "ROOM_REST",
-        "title": "Site de repos",
-        "description": "Arrêtez-vous dans ces salles pour soigner des HP ou Améliorer une carte."
+      "name": "Ami de combat V3.0",
+      "move_names": {
+        "Nothing": "Rien"
       },
-      {
-        "id": "ROOM_TREASURE",
-        "title": "Salle au trésor",
-        "description": "Des Reliques et de l'Or se trouvent dans ces salles convoitées."
+      "move_titles": [
+        "Rien"
+      ]
+    },
+    "BIG_DUMMY": {
+      "moves": {
+        "NOTHING": "Rien"
       },
-      {
-        "id": "ROOM_ANCIENT",
-        "title": "Ancien",
-        "description": "Les Anciens résident dans ces salles.\n\nIls octroient d'incroyables bonus, trésors et connaissances."
-      }
-    ],
-    "core_concepts": [
-      {
-        "id": "ENERGY",
-        "title": "Énergie",
-        "description": "L'Énergie est utilisée pour jouer des cartes de votre Main."
+      "name": "Gros mannequin",
+      "move_names": {
+        "Nothing": "Rien"
       },
-      {
-        "id": "BLOCK",
-        "title": "Blocage",
-        "description": "Empêche les dégâts jusqu'au prochain tour."
+      "move_titles": [
+        "Rien"
+      ]
+    },
+    "BOWLBUG_EGG": {
+      "moves": {
+        "BITE": "Morsure",
+        "PROTECT": "Protection"
       },
-      {
-        "id": "HIT_POINTS",
-        "title": "Points de Vie (PV)",
-        "description": "Si vos PV tombent à 0, vous mourrez."
+      "name": "Sphéropode (Œuf)",
+      "move_names": {
+        "Bite": "Morsure",
+        "Protect": "Protection"
       },
-      {
-        "id": "MONEY_POUCH",
-        "title": "Or",
-        "description": "Votre quantité d'Or. L'Or est la monnaie de la Flèche."
+      "move_titles": [
+        "Morsure",
+        "Protection"
+      ]
+    },
+    "BOWLBUG_NECTAR": {
+      "moves": {
+        "BUFF": "Buff",
+        "THRASH": "Furie",
+        "THRASH2": "Furie"
       },
-      {
-        "id": "DRAW_PILE",
-        "title": "Pioche (A)",
-        "description": "Au début de chaque tour,\n5 cartes sont piochées d'ici.\n\nCliquez pour voir les cartes de votre pioche (mélangée)."
+      "name": "Sphéropode (Nectar)",
+      "move_names": {
+        "Thrash": "Furie"
       },
-      {
-        "id": "DISCARD_PILE",
-        "title": "Défausse (S)",
-        "description": "Si votre pioche est vide, la défausse est mélangée dans la pioche.\n\nCliquez pour voir les cartes de votre défausse."
+      "move_titles": [
+        "Buff",
+        "Furie",
+        "Furie"
+      ]
+    },
+    "BOWLBUG_ROCK": {
+      "moves": {
+        "HEADBUTT": "Coup de boule"
       },
-      {
-        "id": "EXHAUST_PILE",
-        "title": "Cartes Épuisées (X)",
-        "description": "Cliquez pour voir les cartes Épuisées durant ce combat."
-      }
-    ],
-    "orbs": [
-      {
-        "id": "LIGHTNING",
-        "title": "Foudre",
-        "description": "Passif : En fin de tour, inflige {Passive} dégâts à un ennemi aléatoire.\nÉvocation : Inflige {Evoke} dégâts à un ennemi aléatoire."
+      "name": "Sphéropode (Pierre)",
+      "move_names": {
+        "Headbutt": "Coup de boule"
       },
-      {
-        "id": "FROST",
-        "title": "Givre",
-        "description": "Passif : En fin de tour, gagne {Passive} Blocage.\nÉvocation : Gagne {Evoke} Blocage."
+      "move_titles": [
+        "Coup de boule"
+      ]
+    },
+    "BOWLBUG_SILK": {
+      "moves": {
+        "SPIN_WEB": "Entoilage",
+        "THRASH": "Furie"
       },
-      {
-        "id": "DARK",
-        "title": "Ténèbres",
-        "description": "Passif : En fin de tour, augmente les dégâts de cet Orbe de {Passive}.\nÉvocation : Inflige {Evoke} dégâts à l'ennemi ayant le moins de PV."
+      "name": "Sphéropode (Soie)",
+      "move_names": {
+        "Spin Web": "Entoilage",
+        "Thrash": "Furie"
       },
-      {
-        "id": "PLASMA",
-        "title": "Plasma",
-        "description": "Passif : Au début du tour,\ngagne 1 Énergie.\nÉvocation : Gagne 2 Énergie.\nLe Plasma n'est pas affecté par la Concentration."
+      "move_titles": [
+        "Entoilage",
+        "Furie"
+      ]
+    },
+    "BRUTE_RUBY_RAIDER": {
+      "moves": {
+        "BEAT": "Rouer",
+        "CLAP": "Claque"
       },
-      {
-        "id": "GLASS",
-        "title": "Verre",
-        "description": "Passif : En fin de tour, inflige {Passive} dégâts à TOUS les ennemis et réduit la valeur de cet orbe de 1.\nÉvocation : Inflige {Evoke} dégâts à TOUS les ennemis."
-      }
-    ],
-    "stances": [],
-    "character_mechanics": [
-      {
-        "id": "STAR_COUNT",
-        "title": "Étoiles",
-        "description": "Votre nombre actuel d'Étoiles (★). Les cartes du Régent peuvent nécessiter des ★ pour être jouées."
+      "name": "Rôdeur Brute",
+      "move_names": {
+        "Beat": "Rouer",
+        "Clap": "Claque"
       },
-      {
-        "id": "SUMMON",
-        "title": "Invocation",
-        "description": "Invoque Osty.\nS'il est déjà invoqué, augmente ses PV max pour ce combat."
+      "move_titles": [
+        "Rouer",
+        "Claque"
+      ]
+    },
+    "BYGONE_EFFIGY": {
+      "moves": {
+        "SLASHES": "Bourrasque",
+        "SLEEP": "Sommeil"
       },
-      {
-        "id": "FORGE",
-        "title": "Forge",
-        "description": "La première fois que vous Forgez par combat, ajoutez Lame Souveraine à votre Main. Ajoute des dégâts supplémentaires à Lame Souveraine."
+      "name": "Idole Oubliée",
+      "move_names": {
+        "Slashes": "Bourrasque",
+        "Sleep": "Sommeil"
       },
-      {
-        "id": "REPLAY",
-        "title": "Rejeu",
-        "description": "Joue cette carte une fois supplémentaire."
+      "move_titles": [
+        "Bourrasque",
+        "Sommeil"
+      ]
+    },
+    "BYRDONIS": {
+      "moves": {
+        "BITE": "Morsure",
+        "PECK": "Coup de bec",
+        "PROTECT": "Protection"
       },
-      {
-        "id": "FATAL",
-        "title": "Fatal",
-        "description": "Se déclenche quand cette carte tue un ennemi non-serviteur."
-      }
-    ]
+      "name": "Oizodon",
+      "move_names": {
+        "Bite": "Morsure",
+        "Peck": "Coup de bec",
+        "Protect": "Protection"
+      },
+      "move_titles": [
+        "Morsure",
+        "Coup de bec",
+        "Protection"
+      ]
+    },
+    "BYRDONIS_NEST": {
+      "moves": {
+        "NOTHING": "Rien"
+      },
+      "name": "Nid",
+      "move_names": {
+        "Nothing": "Rien"
+      },
+      "move_titles": [
+        "Rien"
+      ]
+    },
+    "BYRDPIP": {
+      "moves": {
+        "NOTHING": "Rien"
+      },
+      "name": "Oizillon",
+      "move_names": {
+        "Nothing": "Rien"
+      },
+      "move_titles": [
+        "Rien"
+      ]
+    },
+    "CALCIFIED_CULTIST": {
+      "moves": {
+        "DARK_STRIKE": "Frappe ténébreuse",
+        "INCANTATION": "Incantation"
+      },
+      "name": "Adepte calcifié",
+      "move_names": {
+        "Dark Strike": "Frappe ténébreuse"
+      },
+      "move_titles": [
+        "Frappe ténébreuse",
+        "Incantation"
+      ]
+    },
+    "CEREMONIAL_BEAST": {
+      "moves": {
+        "BEAST_CRY": "Cri bestial",
+        "CRUSH": "Écrasement",
+        "PLOW": "Cavalcade",
+        "STAMP": "Trépignation",
+        "STOMP": "Piétinement"
+      },
+      "name": "Cerf Auguste",
+      "move_names": {
+        "Beast Cry": "Cri bestial",
+        "Crush": "Écrasement",
+        "Plow": "Cavalcade",
+        "Stamp": "Trépignation",
+        "Stomp": "Piétinement"
+      },
+      "move_titles": [
+        "Cri bestial",
+        "Écrasement",
+        "Cavalcade",
+        "Trépignation",
+        "Piétinement"
+      ]
+    },
+    "CHOMPER": {
+      "moves": {
+        "CLAMP": "Pince",
+        "SCREECH": "Crissement",
+        "THRASH": "Furie"
+      },
+      "name": "Croquebot",
+      "move_names": {
+        "Clamp": "Pince",
+        "Screech": "Crissement",
+        "Thrash": "Furie"
+      },
+      "move_titles": [
+        "Pince",
+        "Crissement",
+        "Furie"
+      ]
+    },
+    "COCOON": {
+      "moves": {
+        "NOTHING": "Rien"
+      },
+      "name": "Cocon",
+      "move_names": {
+        "Nothing": "Rien"
+      },
+      "move_titles": [
+        "Rien"
+      ]
+    },
+    "CORPSE_SLUG": {
+      "moves": {
+        "TACKLE": "Charge",
+        "WHIP_SLAP": "Fouet"
+      },
+      "name": "Putrilimace",
+      "move_names": {
+        "Tackle": "Charge",
+        "Whip Slap": "Fouet"
+      },
+      "move_titles": [
+        "Charge",
+        "Fouet"
+      ]
+    },
+    "CROSSBOW_RUBY_RAIDER": {
+      "moves": {
+        "FIRE": "Feu !",
+        "RELOAD": "Rechargement"
+      },
+      "name": "Rôdeur Arbalétrier",
+      "move_names": {
+        "Fire!": "Feu !",
+        "Reload": "Rechargement"
+      },
+      "move_titles": [
+        "Feu !",
+        "Rechargement"
+      ]
+    },
+    "CRUSHER": {
+      "moves": {
+        "ADAPT": "Adaptation",
+        "BUG_STING": "Piqûre d'insecte",
+        "ENLARGING_STRIKE": "Frappe embrassante",
+        "GUARDED_STRIKE": "Frappe prudente",
+        "THRASH": "Furie"
+      },
+      "name": "Anéantisseur",
+      "move_names": {
+        "Adapt": "Adaptation",
+        "Bug Sting": "Piqûre d'insecte",
+        "Enlarging Strike": "Frappe embrassante",
+        "Guarded Strike": "Frappe prudente",
+        "Thrash": "Furie"
+      },
+      "move_titles": [
+        "Adaptation",
+        "Piqûre d'insecte",
+        "Frappe embrassante",
+        "Frappe prudente",
+        "Furie"
+      ]
+    },
+    "CUBEX_CONSTRUCT": {
+      "moves": {
+        "CHARGE_UP": "Chargement",
+        "REPEATER_BLAST": "Tir répéteur",
+        "SUBMERGE": "Submerger"
+      },
+      "name": "Assemblage Cubex",
+      "move_names": {
+        "Charge Up": "Chargement",
+        "Repeater Blast": "Tir répéteur",
+        "Submerge": "Submerger"
+      },
+      "move_titles": [
+        "Chargement",
+        "Tir répéteur",
+        "Submerger"
+      ]
+    },
+    "DAMP_CULTIST": {
+      "moves": {
+        "DARK_STRIKE": "Frappe ténébreuse",
+        "INCANTATION": "Incantation"
+      },
+      "name": "Adepte moisi",
+      "move_names": {
+        "Dark Strike": "Frappe ténébreuse"
+      },
+      "move_titles": [
+        "Frappe ténébreuse",
+        "Incantation"
+      ]
+    },
+    "DECIMILLIPEDE_SEGMENT": {
+      "moves": {
+        "BULK": "Croissance",
+        "DEAD": "Mort",
+        "OUTGAS": "Gazage",
+        "REATTACH": "Reconnexion",
+        "TACKLE": "Charge",
+        "WRITHE": "Torsion"
+      },
+      "name": "Dix-Mille-Pattes",
+      "move_names": {
+        "Bulk": "Croissance",
+        "Dead": "Mort",
+        "Outgas": "Gazage",
+        "Reattach": "Reconnexion",
+        "Tackle": "Charge",
+        "Writhe": "Torsion"
+      },
+      "move_titles": [
+        "Croissance",
+        "Mort",
+        "Gazage",
+        "Reconnexion",
+        "Charge",
+        "Torsion"
+      ]
+    },
+    "DEPRECATED_MONSTER": {
+      "name": "Monstre obsolète"
+    },
+    "DEVOTED_SCULPTOR": {
+      "name": "Sculpteur dévoué"
+    },
+    "DOOR": {
+      "name": "Porte"
+    },
+    "DOORMAKER": {
+      "moves": {
+        "GRASP_MOVE": "Étreinte",
+        "HUNGER_MOVE": "Voracité",
+        "SCRUTINY_MOVE": "Regard pesant"
+      },
+      "name": "L'Huissier",
+      "move_names": {
+        "Grasp": "Étreinte",
+        "Hunger": "Voracité",
+        "Scrutiny": "Regard pesant"
+      },
+      "move_titles": [
+        "Étreinte",
+        "Voracité",
+        "Regard pesant"
+      ]
+    },
+    "ENTOMANCER": {
+      "moves": {
+        "AGITATE_SWARM": "Agiter l'essaim",
+        "BEES": "Bzzzzzz !!",
+        "PHEROMONE_SPIT": "Crachat de phéromones",
+        "SPEAR": "Javelot !"
+      },
+      "name": "Entomancien",
+      "move_names": {
+        "Agitate Swarm": "Agiter l'essaim",
+        "Beeeees!": "Bzzzzzz !!",
+        "Pheromone Spit": "Crachat de phéromones",
+        "Spear!": "Javelot !"
+      },
+      "move_titles": [
+        "Agiter l'essaim",
+        "Bzzzzzz !!",
+        "Crachat de phéromones",
+        "Javelot !"
+      ]
+    },
+    "EXOSKELETON": {
+      "moves": {
+        "ENRAGE": "Enrager",
+        "MANDIBLES": "Mandibules",
+        "SKITTER": "Détalage"
+      },
+      "name": "Exosquelette",
+      "move_names": {
+        "Enrage": "Enrager",
+        "Mandibles": "Mandibules",
+        "Skitter": "Détalage"
+      },
+      "move_titles": [
+        "Enrager",
+        "Mandibules",
+        "Détalage"
+      ]
+    },
+    "EYE_WITH_TEETH": {
+      "moves": {
+        "DISTRACT": "Distraction",
+        "STARTLE": "Surprise"
+      },
+      "name": "Œil denté",
+      "move_names": {
+        "Distract": "Distraction",
+        "Startle": "Surprise"
+      },
+      "move_titles": [
+        "Distraction",
+        "Surprise"
+      ]
+    },
+    "FABRICATOR": {
+      "moves": {
+        "DISINTEGRATE": "Désintégration",
+        "FABRICATE": "Fabrication"
+      },
+      "name": "Machiniste",
+      "move_names": {
+        "Disintegrate": "Désintégration",
+        "Fabricate": "Fabrication"
+      },
+      "move_titles": [
+        "Désintégration",
+        "Fabrication"
+      ]
+    },
+    "FAKE_MERCHANT_MONSTER": {
+      "moves": {
+        "ENRAGE": "Enrager",
+        "SPEW_COINS": "Projection de pièces",
+        "SWIPE": "Vol",
+        "THROW_RELIC": "Lancer de relique"
+      },
+      "name": "Le Marchand ???",
+      "move_names": {
+        "Enrage": "Enrager",
+        "Spew Coins": "Projection de pièces",
+        "Swipe": "Vol",
+        "Throw Relic": "Lancer de relique"
+      },
+      "move_titles": [
+        "Enrager",
+        "Projection de pièces",
+        "Vol",
+        "Lancer de relique"
+      ]
+    },
+    "FAT_GREMLIN": {
+      "moves": {
+        "FLEE": "Fuite"
+      },
+      "name": "Gros diablotin",
+      "move_names": {
+        "Flee": "Fuite"
+      },
+      "move_titles": [
+        "Fuite"
+      ]
+    },
+    "FLAIL_KNIGHT": {
+      "moves": {
+        "BREAKER": "Briseur",
+        "FLAIL": "Fléau",
+        "RAM": "Bélier"
+      },
+      "name": "Chevalier au fléau",
+      "move_names": {
+        "Breaker": "Briseur",
+        "Flail": "Fléau",
+        "Ram": "Bélier"
+      },
+      "move_titles": [
+        "Briseur",
+        "Fléau",
+        "Bélier"
+      ]
+    },
+    "FLYCONID": {
+      "moves": {
+        "FRAIL_SPORES": "Spores fragilisantes",
+        "SMASH": "Fracas"
+      },
+      "name": "Mycoptère",
+      "move_names": {
+        "Frail Spores": "Spores fragilisantes",
+        "Smash": "Fracas"
+      },
+      "move_titles": [
+        "Spores fragilisantes",
+        "Fracas"
+      ]
+    },
+    "FOGMOG": {
+      "moves": {
+        "ILLUSORY_SPORES": "Spores illusoires",
+        "THWACK": "Claque"
+      },
+      "name": "Fongibrume",
+      "move_names": {
+        "Illusory Spores": "Spores illusoires",
+        "Thwack": "Claque"
+      },
+      "move_titles": [
+        "Spores illusoires",
+        "Claque"
+      ]
+    },
+    "FOSSIL_STALKER": {
+      "moves": {
+        "LASH": "Fouet",
+        "LATCH": "Accrochage",
+        "TACKLE": "Charge"
+      },
+      "name": "Traqueur fossilisé",
+      "move_names": {
+        "Lash": "Fouet",
+        "Latch": "Accrochage",
+        "Tackle": "Charge"
+      },
+      "move_titles": [
+        "Fouet",
+        "Accrochage",
+        "Charge"
+      ]
+    },
+    "FROG_KNIGHT": {
+      "moves": {
+        "BEETLE_CHARGE": "Charge scarabée",
+        "FOR_THE_QUEEN": "Pour la Reine",
+        "STRIKE_DOWN_EVIL": "Expier le mal",
+        "TONGUE_LASH": "Fouet de langue"
+      },
+      "name": "Chevalier rainette",
+      "move_names": {
+        "Beetle Charge": "Charge scarabée",
+        "For the Queen": "Pour la Reine",
+        "Strike Down Evil": "Expier le mal",
+        "Tongue Lash": "Fouet de langue"
+      },
+      "move_titles": [
+        "Charge scarabée",
+        "Pour la Reine",
+        "Expier le mal",
+        "Fouet de langue"
+      ]
+    },
+    "FUZZY_WURM_CRAWLER": {
+      "moves": {
+        "ACID_GOOP": "Acide visqueux"
+      },
+      "name": "Rampeluche",
+      "move_names": {
+        "Acid Goop": "Acide visqueux"
+      },
+      "move_titles": [
+        "Acide visqueux"
+      ]
+    },
+    "GAS_BOMB": {
+      "moves": {
+        "EXPLODE": "Explosion"
+      },
+      "name": "Bombe à gaz",
+      "move_names": {
+        "Explode": "Explosion"
+      },
+      "move_titles": [
+        "Explosion"
+      ]
+    },
+    "GAZING_MOTH": {
+      "moves": {
+        "GLARE": "Fixation",
+        "POWDER": "Poudre"
+      },
+      "name": "Phalène veilleuse",
+      "move_names": {
+        "Glare": "Fixation",
+        "Powder": "Poudre"
+      },
+      "move_titles": [
+        "Fixation",
+        "Poudre"
+      ]
+    },
+    "GEM_EATER": {
+      "moves": {
+        "FOCUS_BEAM": "Rayon focalisé",
+        "GEM_LASER": "Gemme laser"
+      },
+      "name": "Mange-gemmes",
+      "move_names": {
+        "Focus Beam": "Rayon focalisé",
+        "Gem Laser": "Gemme laser"
+      },
+      "move_titles": [
+        "Rayon focalisé",
+        "Gemme laser"
+      ]
+    },
+    "GLOBE_HEAD": {
+      "moves": {
+        "CHANNEL_LIGHTNING": "Éclair canalisé",
+        "DUAL_CAST": "Activation double",
+        "SHOCKING_SLAP": "Claque de choc"
+      },
+      "name": "Globocéphale",
+      "move_names": {
+        "Channel Lightning": "Éclair canalisé",
+        "Dual Cast": "Activation double",
+        "Shocking Slap": "Claque de choc"
+      },
+      "move_titles": [
+        "Éclair canalisé",
+        "Activation double",
+        "Claque de choc"
+      ]
+    },
+    "GREMLIN_MERC": {
+      "moves": {
+        "DOUBLE_SMASH": "Fracas double",
+        "GIMME": "Donne !",
+        "HEHE": "Héhé"
+      },
+      "name": "Diablotin mercenaire",
+      "move_names": {
+        "Double Smash": "Fracas double",
+        "Gimme": "Donne !",
+        "Hehe": "Héhé"
+      },
+      "move_titles": [
+        "Fracas double",
+        "Donne !",
+        "Héhé"
+      ]
+    },
+    "GUARDBOT": {
+      "moves": {
+        "GUARD": "Garde"
+      },
+      "name": "Gardebot",
+      "move_names": {
+        "Guard": "Garde"
+      },
+      "move_titles": [
+        "Garde"
+      ]
+    },
+    "HATCHLING": {
+      "name": "Larve"
+    },
+    "HAUNTED_SHIP": {
+      "moves": {
+        "HAUNT": "Hanter",
+        "RAMMING_SPEED": "Bélier éclair",
+        "STOMP": "Piétinement",
+        "SWIPE": "Griffe"
+      },
+      "name": "Navire hanté",
+      "move_names": {
+        "Haunt": "Hanter",
+        "Ramming Speed": "Bélier éclair",
+        "Stomp": "Piétinement",
+        "Swipe": "Griffe"
+      },
+      "move_titles": [
+        "Hanter",
+        "Bélier éclair",
+        "Piétinement",
+        "Griffe"
+      ]
+    },
+    "HUNTER_KILLER": {
+      "moves": {
+        "BITE": "Morsure",
+        "PUNCTURE": "Perforation",
+        "TENDERIZING_GOOP": "Suc de décomposition"
+      },
+      "name": "Chasseur-tueur",
+      "move_names": {
+        "Bite": "Morsure",
+        "Puncture": "Perforation",
+        "Tenderizing Goop": "Suc de décomposition"
+      },
+      "move_titles": [
+        "Morsure",
+        "Perforation",
+        "Suc de décomposition"
+      ]
+    },
+    "INFESTED_PRISM": {
+      "moves": {
+        "JAB": "Coup sec",
+        "PULSATE": "Pulsation",
+        "RADIATE": "Irradiation",
+        "WHIRLWIND": "Tourbillon"
+      },
+      "name": "Prisme infesté",
+      "move_names": {
+        "Jab": "Coup sec",
+        "Pulsate": "Pulsation",
+        "Radiate": "Irradiation",
+        "Whirlwind": "Tourbillon"
+      },
+      "move_titles": [
+        "Coup sec",
+        "Pulsation",
+        "Irradiation",
+        "Tourbillon"
+      ]
+    },
+    "INKLET": {
+      "moves": {
+        "JAB": "Coup sec",
+        "PIERCING_GAZE": "Regard perçant",
+        "WINDUP_PUNCH": "Poing lourd"
+      },
+      "name": "Encrelin",
+      "move_names": {
+        "Jab": "Coup sec",
+        "Piercing Gaze": "Regard perçant",
+        "Windup Punch": "Poing lourd"
+      },
+      "move_titles": [
+        "Coup sec",
+        "Regard perçant",
+        "Poing lourd"
+      ]
+    },
+    "KIN_FOLLOWER": {
+      "moves": {
+        "BOOMERANG_MOVE": "Boomerang",
+        "POWER_DANCE_MOVE": "Danse de puissance",
+        "QUICK_SLASH_MOVE": "Attaque rapide"
+      },
+      "name": "Disciple de la Tribu",
+      "move_names": {
+        "Power Dance": "Danse de puissance",
+        "Quick Slash": "Attaque rapide"
+      },
+      "move_titles": [
+        "Boomerang",
+        "Danse de puissance",
+        "Attaque rapide"
+      ]
+    },
+    "KIN_PRIEST": {
+      "moves": {
+        "BEAM_MOVE": "Rayon spirituel",
+        "OR_OF_FRAILTY_MOVE": "Orbe fragilisant",
+        "OR_OF_WEAKNESS_MOVE": "Orbe affaiblissant",
+        "RITUAL_MOVE": "Rituel sombre"
+      },
+      "name": "Prêtre de la Tribu",
+      "move_names": {
+        "Soul Beam": "Rayon spirituel",
+        "Orb of Frailty": "Orbe fragilisant",
+        "Orb of Weakness": "Orbe affaiblissant",
+        "Dark Ritual": "Rituel sombre"
+      },
+      "move_titles": [
+        "Rayon spirituel",
+        "Orbe fragilisant",
+        "Orbe affaiblissant",
+        "Rituel sombre"
+      ]
+    },
+    "KNOWLEDGE_DEMON": {
+      "moves": {
+        "BLUE_FLAME": "Flamme bleue",
+        "CURSE_OF_KNOWLEDGE": "Malédiction du savoir",
+        "HAVE_A_TASTE": "Un aperçu",
+        "KNOWLEDGE_OVERWHELMING": "Savoir accablant",
+        "PONDER": "Contemplation"
+      },
+      "name": "Démon de la Connaissance",
+      "move_names": {
+        "Blue Flame": "Flamme bleue",
+        "Curse of Knowledge": "Malédiction du savoir",
+        "Have a Taste": "Un aperçu",
+        "Knowledge Overwhelming": "Savoir accablant",
+        "Ponder": "Contemplation"
+      },
+      "move_titles": [
+        "Flamme bleue",
+        "Malédiction du savoir",
+        "Un aperçu",
+        "Savoir accablant",
+        "Contemplation"
+      ]
+    },
+    "LAGAVULIN_MATRIARCH": {
+      "moves": {
+        "DISEMBOWEL": "Éventration",
+        "SLASH": "Trancher",
+        "SLEEP": "Sommeil",
+        "SOUL_SIPHON": "Siphon d'âme"
+      },
+      "name": "Matriarche Lagavulin",
+      "move_names": {
+        "Disembowel": "Éventration",
+        "Slash": "Trancher",
+        "Sleep": "Sommeil",
+        "Soul Siphon": "Siphon d'âme"
+      },
+      "move_titles": [
+        "Éventration",
+        "Trancher",
+        "Sommeil",
+        "Siphon d'âme"
+      ]
+    },
+    "LEAF_SLIME_M": {
+      "moves": {
+        "CLUMP_SHOT": "Tir groupé",
+        "STICKY_SHOT": "Tir adhésif"
+      },
+      "name": "Limon feuillu (M)",
+      "move_names": {
+        "Clump Shot": "Tir groupé",
+        "Sticky Shot": "Tir adhésif"
+      },
+      "move_titles": [
+        "Tir groupé",
+        "Tir adhésif"
+      ]
+    },
+    "LEAF_SLIME_S": {
+      "moves": {
+        "GOOP": "Gelée",
+        "TACKLE": "Charge"
+      },
+      "name": "Limon feuillu (S)",
+      "move_names": {
+        "Goop": "Gelée",
+        "Tackle": "Charge"
+      },
+      "move_titles": [
+        "Gelée",
+        "Charge"
+      ]
+    },
+    "LIVING_FOG": {
+      "moves": {
+        "BLOAT": "Boursouflure"
+      },
+      "name": "Brouillard vivant",
+      "move_names": {
+        "Bloat": "Boursouflure"
+      },
+      "move_titles": [
+        "Boursouflure"
+      ]
+    },
+    "LIVING_SHIELD": {
+      "moves": {
+        "SHIELD_SLAM": "Heurt de bouclier"
+      },
+      "name": "Bouclier vivant",
+      "move_names": {
+        "Shield Slam": "Heurt de bouclier"
+      },
+      "move_titles": [
+        "Heurt de bouclier"
+      ]
+    },
+    "LOUSE_PROGENITOR": {
+      "moves": {
+        "ACID_DUST": "Poussière acide",
+        "CURL_AND_GROW": "Repli fortifiant",
+        "WEB_CANNON": "Canon de toile"
+      },
+      "name": "Progéniteur de poux",
+      "move_names": {
+        "Acid Dust": "Poussière acide",
+        "Curl and Grow": "Repli fortifiant",
+        "Web Cannon": "Canon de toile"
+      },
+      "move_titles": [
+        "Poussière acide",
+        "Repli fortifiant",
+        "Canon de toile"
+      ]
+    },
+    "MAGI_KNIGHT": {
+      "moves": {
+        "MAGIC_BOMB": "Bombe magique",
+        "POWER_SHIELD": "Bouclier de puissance",
+        "RAM": "Bélier"
+      },
+      "name": "Chevalier mage",
+      "move_names": {
+        "Magic Bomb": "Bombe magique",
+        "Power Shield": "Bouclier de puissance",
+        "Ram": "Bélier"
+      },
+      "move_titles": [
+        "Bombe magique",
+        "Bouclier de puissance",
+        "Bélier"
+      ]
+    },
+    "MAWLER": {
+      "moves": {
+        "CLAW": "Griffe",
+        "RIP_AND_TEAR": "Déchirure",
+        "ROAR": "Rugissement"
+      },
+      "name": "Écharneur",
+      "move_names": {
+        "Claw": "Griffe",
+        "Rip and Tear": "Déchirure",
+        "Roar": "Rugissement"
+      },
+      "move_titles": [
+        "Griffe",
+        "Déchirure",
+        "Rugissement"
+      ]
+    },
+    "MECHA_KNIGHT": {
+      "moves": {
+        "CHARGE": "Charge",
+        "FLAMETHROWER": "Lance-flammes",
+        "HEAVY_CLEAVE": "Balayage lourd",
+        "WINDUP": "Chargement"
+      },
+      "name": "Méca-Chevalier",
+      "move_names": {
+        "Flamethrower": "Lance-flammes",
+        "Heavy Cleave": "Balayage lourd",
+        "Windup": "Chargement"
+      },
+      "move_titles": [
+        "Charge",
+        "Lance-flammes",
+        "Balayage lourd",
+        "Chargement"
+      ]
+    },
+    "MOCK_ATTACK_AND_SUMMON_MINION_MONSTER": {
+      "moves": {
+        "ATTACK_AND_SUMMON_MINION": "Attaque et invocation de serviteur"
+      },
+      "name": "Monstre d'attaque et d'invocation de serviteur",
+      "move_names": {
+        "Attack and Summon Minion": "Attaque et invocation de serviteur"
+      },
+      "move_titles": [
+        "Attaque et invocation de serviteur"
+      ]
+    },
+    "MOCK_ATTACK_MONSTER": {
+      "moves": {
+        "ATTACK": "Attaque"
+      },
+      "name": "Monstre d'attaque",
+      "move_names": {
+        "Attack": "Attaque"
+      },
+      "move_titles": [
+        "Attaque"
+      ]
+    },
+    "MYSTERIOUS_KNIGHT": {
+      "moves": {
+        "BREAKER": "Briseur",
+        "FLAIL": "Fléau",
+        "RAM": "Bélier"
+      },
+      "name": "Chevalier mystérieux",
+      "move_names": {
+        "Breaker": "Briseur",
+        "Flail": "Fléau",
+        "Ram": "Bélier"
+      },
+      "move_titles": [
+        "Briseur",
+        "Fléau",
+        "Bélier"
+      ]
+    },
+    "MYTE": {
+      "moves": {
+        "BIG_SUCK": "Succion profonde",
+        "BITE": "Morsure",
+        "SUCK": "Succion",
+        "TOXIC": "Abondance toxique"
+      },
+      "name": "Sarcopte",
+      "move_names": {
+        "Big Suck": "Succion profonde",
+        "Bite": "Morsure",
+        "Suck": "Succion",
+        "Toxic Cornucopia": "Abondance toxique"
+      },
+      "move_titles": [
+        "Succion profonde",
+        "Morsure",
+        "Succion",
+        "Abondance toxique"
+      ]
+    },
+    "NIBBIT": {
+      "moves": {
+        "BUTT": "Derrière",
+        "HESITANT_SLICE": "Frappe hésitante",
+        "HISS": "Chuintement"
+      },
+      "name": "Grignotin",
+      "move_names": {
+        "Butt": "Derrière",
+        "Hesitant Slice": "Frappe hésitante",
+        "Hiss": "Chuintement"
+      },
+      "move_titles": [
+        "Derrière",
+        "Frappe hésitante",
+        "Chuintement"
+      ]
+    },
+    "NOISEBOT": {
+      "moves": {
+        "NOISE": "Ébruitement"
+      },
+      "name": "Sonobot",
+      "move_names": {
+        "Noise": "Ébruitement"
+      },
+      "move_titles": [
+        "Ébruitement"
+      ]
+    },
+    "OSTY": {
+      "name": "Titos"
+    },
+    "OVICOPTER": {
+      "moves": {
+        "LAY_EGGS": "Ponte",
+        "NUTRITIONAL_PASTE": "Pâte nutritive",
+        "SMASH": "Fracas",
+        "TENDERIZER": "Adoucir"
+      },
+      "name": "Ovicoptère",
+      "move_names": {
+        "Lay Eggs": "Ponte",
+        "Nutritional Paste": "Pâte nutritive",
+        "Smash": "Fracas",
+        "Tenderizer": "Adoucir"
+      },
+      "move_titles": [
+        "Ponte",
+        "Pâte nutritive",
+        "Fracas",
+        "Adoucir"
+      ]
+    },
+    "OWL_MAGISTRATE": {
+      "moves": {
+        "JUDICIAL_FLIGHT": "Envol judiciaire",
+        "MAGISTRATE_SCRUTINY": "Regard du magistrat",
+        "PECK_ASSAULT": "Peck Assault",
+        "VERDICT": "Verdict"
+      },
+      "name": "Magistrix",
+      "move_names": {
+        "Judicial Flight": "Envol judiciaire",
+        "Magistrate Scrutiny": "Regard du magistrat"
+      },
+      "move_titles": [
+        "Envol judiciaire",
+        "Regard du magistrat",
+        "Peck Assault",
+        "Verdict"
+      ]
+    },
+    "PAELS_LEGION": {
+      "moves": {
+        "NOTHING": "Rien"
+      },
+      "name": "Légion de Paël",
+      "move_names": {
+        "Nothing": "Rien"
+      },
+      "move_titles": [
+        "Rien"
+      ]
+    },
+    "PARAFRIGHT": {
+      "moves": {
+        "SLAM": "Heurt"
+      },
+      "name": "Pareffroi",
+      "move_names": {
+        "Slam": "Heurt"
+      },
+      "move_titles": [
+        "Heurt"
+      ]
+    },
+    "PHANTASMAL_GARDENER": {
+      "moves": {
+        "BITE": "Morsure",
+        "ENLARGE": "Croissance",
+        "FLAIL": "Furie",
+        "LASH": "Fouet"
+      },
+      "name": "Jardinier spectral",
+      "move_names": {
+        "Bite": "Morsure",
+        "Enlarge": "Croissance",
+        "Flail": "Furie",
+        "Lash": "Fouet"
+      },
+      "move_titles": [
+        "Morsure",
+        "Croissance",
+        "Furie",
+        "Fouet"
+      ]
+    },
+    "PHROG_PARASITE": {
+      "moves": {
+        "INFECT": "Infection",
+        "LASH": "Fouet",
+        "LEAP_SLAM": "Bondissement"
+      },
+      "name": "Parasite Krapo",
+      "move_names": {
+        "Infect": "Infection",
+        "Lash": "Fouet",
+        "Leap Slam": "Bondissement"
+      },
+      "move_titles": [
+        "Infection",
+        "Fouet",
+        "Bondissement"
+      ]
+    },
+    "PUNCH_CONSTRUCT": {
+      "moves": {
+        "FAST_PUNCH": "Poing rapide",
+        "READY": "PRET",
+        "STRONG_PUNCH": "Poing puissant"
+      },
+      "name": "Assemblage de pugilat",
+      "move_names": {
+        "Fast Punch": "Poing rapide",
+        "READY": "PRET",
+        "Strong Punch": "Poing puissant"
+      },
+      "move_titles": [
+        "Poing rapide",
+        "PRET",
+        "Poing puissant"
+      ]
+    },
+    "QUEEN": {
+      "moves": {
+        "BARRIER": "Barrière",
+        "BURN_BRIGHT_FOR_ME": "De mille feux",
+        "EXECUTION": "Exécution",
+        "IMPOSSIBLE": "Impossible",
+        "OFF_WITH_YOUR_HEAD": "À la guillotine",
+        "SUMMON_1": "Invocation",
+        "SUMMON_2": "Invocation",
+        "YOURE_MINE": "À moi"
+      },
+      "name": "Reine",
+      "move_names": {
+        "Barrier": "Barrière",
+        "Burn Bright for Me": "De mille feux",
+        "Execution": "Exécution",
+        "Off with Your Head": "À la guillotine",
+        "Summon": "Invocation",
+        "You're Mine": "À moi"
+      },
+      "move_titles": [
+        "Barrière",
+        "De mille feux",
+        "Exécution",
+        "Impossible",
+        "À la guillotine",
+        "Invocation",
+        "Invocation",
+        "À moi"
+      ]
+    },
+    "ROCKET": {
+      "moves": {
+        "CHARGE_UP": "Chargement",
+        "LASER": "Laser",
+        "PRECISION_BEAM": "Rayon précis",
+        "RECHARGE": "Recharge",
+        "TARGETING_RETICLE": "Réticule de ciblage"
+      },
+      "name": "Roquette",
+      "move_names": {
+        "Charge Up": "Chargement",
+        "Precision Beam": "Rayon précis",
+        "Targeting Reticle": "Réticule de ciblage"
+      },
+      "move_titles": [
+        "Chargement",
+        "Laser",
+        "Rayon précis",
+        "Recharge",
+        "Réticule de ciblage"
+      ]
+    },
+    "SCROLL_OF_BITING": {
+      "moves": {
+        "CHEW": "Mâchouille",
+        "CHOMP": "Croc",
+        "MORE_TEETH": "Plus de dents"
+      },
+      "name": "Parchemord",
+      "move_names": {
+        "Chew": "Mâchouille",
+        "Chomp": "Croc",
+        "More Teeth": "Plus de dents"
+      },
+      "move_titles": [
+        "Mâchouille",
+        "Croc",
+        "Plus de dents"
+      ]
+    },
+    "SEAPUNK": {
+      "moves": {
+        "BUBBLE_BURP": "Jet de bulles",
+        "SEA_KICK": "Coup de pied marin",
+        "SPINNING_KICK": "Coup de pied tournoyant"
+      },
+      "name": "Voyou marin",
+      "move_names": {
+        "Bubble Burp": "Jet de bulles",
+        "Sea Kick": "Coup de pied marin",
+        "Spinning Kick": "Coup de pied tournoyant"
+      },
+      "move_titles": [
+        "Jet de bulles",
+        "Coup de pied marin",
+        "Coup de pied tournoyant"
+      ]
+    },
+    "SEWER_CLAM": {
+      "moves": {
+        "JET": "Jet",
+        "PRESSURIZE": "Pressurisation"
+      },
+      "name": "Palourde d'égout",
+      "move_names": {
+        "Pressurize": "Pressurisation"
+      },
+      "move_titles": [
+        "Jet",
+        "Pressurisation"
+      ]
+    },
+    "SHRINKER_BEETLE": {
+      "moves": {
+        "CHOMP": "Croc",
+        "SHRINKER": "Rétrécissement",
+        "STOMP": "Piétinement"
+      },
+      "name": "Scarabrideur",
+      "move_names": {
+        "Chomp": "Croc",
+        "Shrinker": "Rétrécissement",
+        "Stomp": "Piétinement"
+      },
+      "move_titles": [
+        "Croc",
+        "Rétrécissement",
+        "Piétinement"
+      ]
+    },
+    "SKULKING_COLONY": {
+      "moves": {
+        "INERTIA": "Inertie",
+        "PIERCING_STABS": "Coups perforants",
+        "ZOOM": "Bourdonnement"
+      },
+      "name": "Colonie de rôdeurs",
+      "move_names": {
+        "Inertia": "Inertie",
+        "Piercing Stabs": "Coups perforants",
+        "Zoom": "Bourdonnement"
+      },
+      "move_titles": [
+        "Inertie",
+        "Coups perforants",
+        "Bourdonnement"
+      ]
+    },
+    "SLIMED_BERSERKER": {
+      "name": "Berserker de vase"
+    },
+    "SLITHERING_STRANGLER": {
+      "moves": {
+        "CONSTRICT": "Étranglement",
+        "LASH": "Fouet",
+        "THWACK": "Frappe"
+      },
+      "name": "Étrangleur",
+      "move_names": {
+        "Constrict": "Étranglement",
+        "Lash": "Fouet",
+        "Thwack": "Frappe"
+      },
+      "move_titles": [
+        "Étranglement",
+        "Fouet",
+        "Frappe"
+      ]
+    },
+    "SLUDGE_SPINNER": {
+      "moves": {
+        "OIL_SPRAY": "Spray huileux",
+        "RAGE": "Rage",
+        "SLAM": "Heurt"
+      },
+      "name": "Tisse-boue",
+      "move_names": {
+        "Oil Spray": "Spray huileux",
+        "Slam": "Heurt"
+      },
+      "move_titles": [
+        "Spray huileux",
+        "Rage",
+        "Heurt"
+      ]
+    },
+    "SLUMBERING_BEETLE": {
+      "moves": {
+        "CRASH": "Collision",
+        "RESOLVE": "Résolution",
+        "ROLL_OUT": "Roulade",
+        "SNORE": "Ronflement"
+      },
+      "name": "Scarabée dormeur",
+      "move_names": {
+        "Crash": "Collision",
+        "Resolve": "Résolution",
+        "Roll Out": "Roulade",
+        "Snore": "Ronflement"
+      },
+      "move_titles": [
+        "Collision",
+        "Résolution",
+        "Roulade",
+        "Ronflement"
+      ]
+    },
+    "SNAPPING_JAXFRUIT": {
+      "moves": {
+        "COLLECT_POWER": "Récupération de puissance",
+        "ENERGY_ORB": "Orbe d'énergie"
+      },
+      "name": "Jaxier à clapet",
+      "move_names": {
+        "Collect Power": "Récupération de puissance",
+        "Energy Orb": "Orbe d'énergie"
+      },
+      "move_titles": [
+        "Récupération de puissance",
+        "Orbe d'énergie"
+      ]
+    },
+    "SNEAKY_GREMLIN": {
+      "moves": {
+        "TACKLE": "Charge"
+      },
+      "name": "Diablotin sournois",
+      "move_names": {
+        "Tackle": "Charge"
+      },
+      "move_titles": [
+        "Charge"
+      ]
+    },
+    "SOUL_FYSH": {
+      "moves": {
+        "BURP": "Éructation",
+        "DE_GAS": "Dégazage",
+        "SCREAM": "Hurlement"
+      },
+      "name": "Poissâme",
+      "move_names": {
+        "Burp": "Éructation",
+        "De-Gas": "Dégazage",
+        "Scream": "Hurlement"
+      },
+      "move_titles": [
+        "Éructation",
+        "Dégazage",
+        "Hurlement"
+      ]
+    },
+    "SOUL_NEXUS": {
+      "moves": {
+        "DRAIN_LIFE": "Drain de vie",
+        "MAELSTROM": "Maelstrom",
+        "SOUL_BURN": "Brûlure d'âme"
+      },
+      "name": "Amalg'âmes",
+      "move_names": {
+        "Drain Life": "Drain de vie",
+        "Soul Burn": "Brûlure d'âme"
+      },
+      "move_titles": [
+        "Drain de vie",
+        "Maelstrom",
+        "Brûlure d'âme"
+      ]
+    },
+    "SPECTRAL_KNIGHT": {
+      "moves": {
+        "HEX": "Sortilège",
+        "SOUL_FLAME": "Flamme spirituelle",
+        "SOUL_SLASH": "Frappe spirituelle"
+      },
+      "name": "Chevalier spectral",
+      "move_names": {
+        "Hex": "Sortilège",
+        "Soul Flame": "Flamme spirituelle",
+        "Soul Slash": "Frappe spirituelle"
+      },
+      "move_titles": [
+        "Sortilège",
+        "Flamme spirituelle",
+        "Frappe spirituelle"
+      ]
+    },
+    "SPINY_TOAD": {
+      "moves": {
+        "PROTRUDING_SPIKES": "Épines saillantes",
+        "SPIKE_EXPLOSION": "Explosion épineuse",
+        "TONGUE_LASH": "Fouet de langue"
+      },
+      "name": "Crapineux",
+      "move_names": {
+        "Protruding Spikes": "Épines saillantes",
+        "Spike Explosion": "Explosion épineuse",
+        "Tongue Lash": "Fouet de langue"
+      },
+      "move_titles": [
+        "Épines saillantes",
+        "Explosion épineuse",
+        "Fouet de langue"
+      ]
+    },
+    "STABBOT": {
+      "moves": {
+        "STAB": "Coup de poignard"
+      },
+      "name": "Poignard-bot",
+      "move_names": {
+        "Stab": "Coup de poignard"
+      },
+      "move_titles": [
+        "Coup de poignard"
+      ]
+    },
+    "TERROR_EEL": {
+      "name": "Murène de l'effroi"
+    },
+    "TEST_SUBJECT": {
+      "moves": {
+        "BIG_POUNCE_MOVE": "Saut féroce",
+        "BITE_MOVE": "Morsure",
+        "BURNING_GROWL_MOVE": "Grognement brûlant",
+        "MULTI_CLAW_MOVE": "Multi-griffe",
+        "PHASE3_LACERATE_MOVE": "Lacération",
+        "POUNCE_MOVE": "Saut",
+        "RESPAWN_MOVE": "Réapparition",
+        "SKULL_BASH_MOVE": "Coup de crâne"
+      },
+      "name": "Cobaye #C{Count}",
+      "move_names": {
+        "Big Pounce": "Saut féroce",
+        "Bite": "Morsure",
+        "Burning Growl": "Grognement brûlant",
+        "Multi-Claw": "Multi-griffe",
+        "Lacerate": "Lacération",
+        "Pounce": "Saut",
+        "Respawn": "Réapparition",
+        "Skull Bash": "Coup de crâne"
+      },
+      "move_titles": [
+        "Saut féroce",
+        "Morsure",
+        "Grognement brûlant",
+        "Multi-griffe",
+        "Lacération",
+        "Saut",
+        "Réapparition",
+        "Coup de crâne"
+      ]
+    },
+    "THE_ADVERSARY_MK_ONE": {
+      "moves": {
+        "BARRAGE": "Barrage",
+        "BEAM": "Rayon",
+        "SMASH": "Fracas"
+      },
+      "name": "L'Adversaire Mk 1",
+      "move_names": {
+        "Beam": "Rayon",
+        "Smash": "Fracas"
+      },
+      "move_titles": [
+        "Barrage",
+        "Rayon",
+        "Fracas"
+      ]
+    },
+    "THE_ADVERSARY_MK_THREE": {
+      "moves": {
+        "BARRAGE": "Barrage",
+        "CRASH": "Collision",
+        "FLAME_BEAM": "Rayon de flammes"
+      },
+      "name": "L'Adversaire Mk 3",
+      "move_names": {
+        "Crash": "Collision",
+        "Flame Beam": "Rayon de flammes"
+      },
+      "move_titles": [
+        "Barrage",
+        "Collision",
+        "Rayon de flammes"
+      ]
+    },
+    "THE_ADVERSARY_MK_TWO": {
+      "moves": {
+        "BARRAGE": "Barrage",
+        "BASH": "Heurt",
+        "FLAME_BEAM": "Rayon de flammes"
+      },
+      "name": "L'Adversaire Mk 2",
+      "move_names": {
+        "Bash": "Heurt",
+        "Flame Beam": "Rayon de flammes"
+      },
+      "move_titles": [
+        "Barrage",
+        "Heurt",
+        "Rayon de flammes"
+      ]
+    },
+    "THE_ARM": {
+      "moves": {
+        "GRAB": "Agrippement",
+        "PUNCH": "Coup de poing",
+        "WRESTLE": "Lutte"
+      },
+      "name": "Le Bras",
+      "move_names": {
+        "Grab": "Agrippement",
+        "Punch": "Coup de poing",
+        "Wrestle": "Lutte"
+      },
+      "move_titles": [
+        "Agrippement",
+        "Coup de poing",
+        "Lutte"
+      ]
+    },
+    "THE_BELL": {
+      "moves": {
+        "CACOPHONY": "Cacophonie",
+        "CLANG": "Résonance",
+        "RING": "Sonnerie"
+      },
+      "name": "La Cloche",
+      "move_names": {
+        "Cacophony": "Cacophonie",
+        "Clang": "Résonance",
+        "Ring": "Sonnerie"
+      },
+      "move_titles": [
+        "Cacophonie",
+        "Résonance",
+        "Sonnerie"
+      ]
+    },
+    "THE_DREAMER": {
+      "moves": {
+        "DREAM": "Le Rêveur",
+        "FEND_OFF": "Repousser",
+        "RUMINATE": "Rumination",
+        "SNORE": "Ronflement"
+      },
+      "name": "Le Rêveur",
+      "move_names": {
+        "Dream": "Le Rêveur",
+        "Fend Off": "Repousser",
+        "Ruminate": "Rumination",
+        "Snore": "Ronflement"
+      },
+      "move_titles": [
+        "Le Rêveur",
+        "Repousser",
+        "Rumination",
+        "Ronflement"
+      ]
+    },
+    "THE_FORGOTTEN": {
+      "moves": {
+        "DREAD": "Angoisse",
+        "MIASMA": "Miasme"
+      },
+      "name": "L'Oublié",
+      "move_names": {
+        "Dread": "Angoisse",
+        "Miasma": "Miasme"
+      },
+      "move_titles": [
+        "Angoisse",
+        "Miasme"
+      ]
+    },
+    "THE_INSATIABLE": {
+      "moves": {
+        "LIQUIFY_GROUND": "Liquéfaction du sol",
+        "LUNGING_BITE": "Morsure brusque",
+        "SALIVATE": "Salivation",
+        "THRASH": "Furie"
+      },
+      "name": "L'Insatiable",
+      "move_names": {
+        "Liquify Ground": "Liquéfaction du sol",
+        "Lunging Bite": "Morsure brusque",
+        "Salivate": "Salivation",
+        "Thrash": "Furie"
+      },
+      "move_titles": [
+        "Liquéfaction du sol",
+        "Morsure brusque",
+        "Salivation",
+        "Furie"
+      ]
+    },
+    "THE_LOST": {
+      "moves": {
+        "DEBILITATING_SMOG": "Brouillard paralysant",
+        "EYE_LASERS": "Lasers oculaires"
+      },
+      "name": "L'Égaré",
+      "move_names": {
+        "Debilitating Smog": "Brouillard paralysant",
+        "Eye Lasers": "Lasers oculaires"
+      },
+      "move_titles": [
+        "Brouillard paralysant",
+        "Lasers oculaires"
+      ]
+    },
+    "THE_OBSCURA": {
+      "moves": {
+        "HARDENING_STRIKE": "Frappe durcissante",
+        "ILLUSION": "Illusion",
+        "PIERCING_GAZE": "Regard perçant",
+        "WAIL": "Gémissement"
+      },
+      "name": "L'Obscura",
+      "move_names": {
+        "Hardening Strike": "Frappe durcissante",
+        "Piercing Gaze": "Regard perçant",
+        "Wail": "Gémissement"
+      },
+      "move_titles": [
+        "Frappe durcissante",
+        "Illusion",
+        "Regard perçant",
+        "Gémissement"
+      ]
+    },
+    "THIEVING_HOPPER": {
+      "moves": {
+        "ESCAPE": "Fuite",
+        "FLUTTER": "Battement d'ailes",
+        "HAT_TRICK": "Tour de chapeau",
+        "NAB": "Prendre",
+        "THIEVERY": "Vol"
+      },
+      "name": "Mante chapardeuse",
+      "move_names": {
+        "Escape": "Fuite",
+        "Flutter": "Battement d'ailes",
+        "Hat Trick": "Tour de chapeau",
+        "Nab": "Prendre",
+        "Thievery": "Vol"
+      },
+      "move_titles": [
+        "Fuite",
+        "Battement d'ailes",
+        "Tour de chapeau",
+        "Prendre",
+        "Vol"
+      ]
+    },
+    "TOADPOLE": {
+      "moves": {
+        "SPIKEN": "Épines",
+        "SPIKE_SPIT": "Jet d'épines",
+        "WHIRL": "Tourbillonnement"
+      },
+      "name": "Crapautard",
+      "move_names": {
+        "Spiken": "Épines",
+        "Spike Spit": "Jet d'épines",
+        "Whirl": "Tourbillonnement"
+      },
+      "move_titles": [
+        "Épines",
+        "Jet d'épines",
+        "Tourbillonnement"
+      ]
+    },
+    "TORCH_HEAD_AMALGAM": {
+      "moves": {
+        "TACKLE": "Charge"
+      },
+      "name": "Amalgame Torchetête",
+      "move_names": {
+        "Tackle": "Charge"
+      },
+      "move_titles": [
+        "Charge"
+      ]
+    },
+    "TOUGH_EGG": {
+      "moves": {
+        "HATCH": "ÉCLOSION"
+      },
+      "name": "Œuf robuste",
+      "move_names": {
+        "HATCH": "ÉCLOSION"
+      },
+      "move_titles": [
+        "ÉCLOSION"
+      ]
+    },
+    "TRACKER_RUBY_RAIDER": {
+      "moves": {
+        "HOUNDS": "Lâcher les chiens",
+        "TRACK": "Traque"
+      },
+      "name": "Rôdeur Traqueur",
+      "move_names": {
+        "Unleash the Hounds": "Lâcher les chiens",
+        "Track": "Traque"
+      },
+      "move_titles": [
+        "Lâcher les chiens",
+        "Traque"
+      ]
+    },
+    "TUNNELER": {
+      "moves": {
+        "BELOW": "Attaque par dessous",
+        "BITE": "Morsure",
+        "BURROW": "Creuser",
+        "STRIKE": "Frappe émergente"
+      },
+      "name": "Tunnelier",
+      "move_names": {
+        "Attack from Below": "Attaque par dessous",
+        "Bite": "Morsure",
+        "Burrow": "Creuser",
+        "Emerging Strike": "Frappe émergente"
+      },
+      "move_titles": [
+        "Attaque par dessous",
+        "Morsure",
+        "Creuser",
+        "Frappe émergente"
+      ]
+    },
+    "TURRET_OPERATOR": {
+      "moves": {
+        "LOADING": "Chargement",
+        "UNLOAD": "Déchargement !"
+      },
+      "name": "Opérateur de tourelle",
+      "move_names": {
+        "Loading": "Chargement",
+        "Unload!": "Déchargement !"
+      },
+      "move_titles": [
+        "Chargement",
+        "Déchargement !"
+      ]
+    },
+    "TWIG_SLIME_M": {
+      "moves": {
+        "CHOMP": "Croc",
+        "POKEY_POUNCE": "Petit saut",
+        "STICKY_SHOT": "Tir collant"
+      },
+      "name": "Limon brindille (M)",
+      "move_names": {
+        "Chomp": "Croc",
+        "Pokey Pounce": "Petit saut",
+        "Sticky Shot": "Tir collant"
+      },
+      "move_titles": [
+        "Croc",
+        "Petit saut",
+        "Tir collant"
+      ]
+    },
+    "TWIG_SLIME_S": {
+      "moves": {
+        "GOOP": "Gelée",
+        "TACKLE": "Charge"
+      },
+      "name": "Limon brindille (S)",
+      "move_names": {
+        "Goop": "Gelée",
+        "Tackle": "Charge"
+      },
+      "move_titles": [
+        "Gelée",
+        "Charge"
+      ]
+    },
+    "TWO_TAILED_RAT": {
+      "moves": {
+        "CALL_FOR_BACKUP": "Appel à l'aide",
+        "DISEASE_BITE": "Morsure infectée",
+        "SCRATCH": "Griffure",
+        "SCREECH": "Cri"
+      },
+      "name": "Rat bicaudé",
+      "move_names": {
+        "Call for Backup": "Appel à l'aide",
+        "Disease Bite": "Morsure infectée",
+        "Scratch": "Griffure",
+        "Screech": "Cri"
+      },
+      "move_titles": [
+        "Appel à l'aide",
+        "Morsure infectée",
+        "Griffure",
+        "Cri"
+      ]
+    },
+    "VANTOM": {
+      "moves": {
+        "DISMEMBER": "Démembrement",
+        "INKY_LANCE": "Javelot d'encre",
+        "INK_BLOT": "Tache d'encre",
+        "PREPARE": "Préparation"
+      },
+      "name": "Vantôme",
+      "move_names": {
+        "Dismember": "Démembrement",
+        "Inky Lance": "Javelot d'encre",
+        "Ink Blot": "Tache d'encre",
+        "Prepare": "Préparation"
+      },
+      "move_titles": [
+        "Démembrement",
+        "Javelot d'encre",
+        "Tache d'encre",
+        "Préparation"
+      ]
+    },
+    "VINE_SHAMBLER": {
+      "moves": {
+        "CHOMP": "Croc",
+        "GRASPING_VINES": "Lianes paralysantes",
+        "SWIPE": "Griffe"
+      },
+      "name": "Bourbelianes",
+      "move_names": {
+        "Chomp": "Croc",
+        "Grasping Vines": "Lianes paralysantes",
+        "Swipe": "Griffe"
+      },
+      "move_titles": [
+        "Croc",
+        "Lianes paralysantes",
+        "Griffe"
+      ]
+    },
+    "WATERFALL_GIANT": {
+      "moves": {
+        "PRESSURE_GUN": "Pistolet à pression",
+        "PRESSURIZE": "Pressurisation",
+        "RAM": "Bélier",
+        "SIPHON": "Siphon",
+        "STOMP": "Piétinement"
+      },
+      "name": "Géant de la Cascade",
+      "move_names": {
+        "Pressure Gun": "Pistolet à pression",
+        "Pressurize": "Pressurisation",
+        "Ram": "Bélier",
+        "Stomp": "Piétinement"
+      },
+      "move_titles": [
+        "Pistolet à pression",
+        "Pressurisation",
+        "Bélier",
+        "Siphon",
+        "Piétinement"
+      ]
+    },
+    "WRIGGLER": {
+      "moves": {
+        "PARASITIZE_PLAYER": "Parasiter le joueur",
+        "WRIGGLE_STRIKE": "Frappe larvaire"
+      },
+      "name": "Larve",
+      "move_names": {
+        "Parasitize Player": "Parasiter le joueur",
+        "Wriggle Strike": "Frappe larvaire"
+      },
+      "move_titles": [
+        "Parasiter le joueur",
+        "Frappe larvaire"
+      ]
+    },
+    "ZAPBOT": {
+      "moves": {
+        "ZAP": "Décharge"
+      },
+      "name": "Déchargebot",
+      "move_names": {
+        "Zap": "Décharge"
+      },
+      "move_titles": [
+        "Décharge"
+      ]
+    }
   }
 }
