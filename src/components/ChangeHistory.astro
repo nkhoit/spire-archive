@@ -108,16 +108,19 @@ const history = changelog
     const added = Array.isArray(section.added) && section.added.includes(entityId);
     const removed = Array.isArray(section.removed) && section.removed.includes(entityId);
     if (!modified && !added && !removed) return null;
-    // Translate the hard-coded "Current Data" label; leave versioned patch
-    // labels (e.g. "EA Patch 2 (Apr 16, 2026)") as-is since they are
-    // free-form English strings authored in versions.json.
+    // Translate the hard-coded 'Current Data' label; versioned entries
+    // have no label and will render as '<version> · <date>'.
     const rawLabel = entry.label;
     const label = rawLabel === 'Current Data' ? t('Current Data', locale) : rawLabel;
+    // For the pending 'current' pseudo-version, show only the translated
+    // label since the version string itself is not meaningful.
+    const displayVersion = entry.version === 'current' ? null : entry.version;
     return {
       version: entry.version,
       previousVersion: entry.previousVersion,
       date: entry.date,
       label,
+      displayVersion,
       modified: modified ? Object.entries(modified) : [],
       added,
       removed,
@@ -137,14 +140,16 @@ const history = changelog
         <article class="rounded-lg border border-white/8 bg-white/5 p-4">
           <div class="flex flex-wrap items-center justify-between gap-2">
             <div class="text-sm font-medium text-amber-300">
-              {entry.label ? `${entry.version} — ${entry.label}` : entry.version}
+              {entry.displayVersion && entry.label
+                ? `${entry.displayVersion} · ${entry.label}`
+                : entry.displayVersion || entry.label}
             </div>
             <div class="text-xs uppercase tracking-wide text-slate-400">{entry.date}</div>
           </div>
 
           <div class="mt-3 space-y-2 text-sm text-slate-200">
-            {entry.added && <div><span class="font-medium text-emerald-300">{t('Added', locale)}</span> {t('added in', locale)} {entry.version}</div>}
-            {entry.removed && <div><span class="font-medium text-rose-300">{t('Removed', locale)}</span> {t('removed in', locale)} {entry.version}</div>}
+            {entry.added && <div><span class="font-medium text-emerald-300">{t('Added', locale)}</span>{entry.displayVersion ? <>{' '}{t('added in', locale)} {entry.displayVersion}</> : null}</div>}
+            {entry.removed && <div><span class="font-medium text-rose-300">{t('Removed', locale)}</span>{entry.displayVersion ? <>{' '}{t('removed in', locale)} {entry.displayVersion}</> : null}</div>}
             {entry.modified.map(([field, values]: [string, ChangeValue]) => (
               <div class="rounded-md bg-slate-950/50 px-3 py-2">
                 <div class="text-xs uppercase tracking-wide text-slate-400">{fieldLabel(field)}</div>
