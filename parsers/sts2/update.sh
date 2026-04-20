@@ -39,7 +39,7 @@ run_step() {
   echo
 }
 
-TOTAL=13
+TOTAL=14
 run_step 1 "$TOTAL" python3 "$PARSERS_DIR/sts2/parse_all.py"
 run_step 2 "$TOTAL" node "$PARSERS_DIR/sts2/parse_events.js"
 run_step 3 "$TOTAL" node "$PARSERS_DIR/sts2/parse_monsters.js"
@@ -52,7 +52,8 @@ run_step 9 "$TOTAL" node "$PARSERS_DIR/sts2/build_monster_localization.cjs"
 run_step 10 "$TOTAL" node "$PARSERS_DIR/sts2/add_ancient_descriptions.cjs"
 run_step 11 "$TOTAL" node "$PARSERS_DIR/sts2/build_patch_notes.cjs"
 run_step 12 "$TOTAL" bash -c 'node "$1" || true' _ "$PARSERS_DIR/sts2/build_changelog.cjs"
-run_step 13 "$TOTAL" python3 "$PARSERS_DIR/subset_fonts.py"
+run_step 13 "$TOTAL" python3 "$PARSERS_DIR/sts2/sync_images.py" --pck-dir "${STS2_PCK_DIR:-/tmp/sts2-pck}"
+run_step 14 "$TOTAL" python3 "$PARSERS_DIR/subset_fonts.py"
 
 python3 - <<'PY'
 import json
