@@ -228,6 +228,14 @@ const strings: Record<string, Partial<Record<Locale, string>>> = {
   'Card Keywords': { ja: 'カードキーワード', ko: '카드 키워드', zh: '卡牌关键词', de: 'Karten-Schlüsselwörter', fr: 'Mots-clés de carte', es: 'Palabras clave de cartas', pt: 'Palavras-chave das cartas', it: 'Parole chiave delle carte', pl: 'Słowa kluczowe kart', ru: 'Ключевые слова карт', tr: 'Kart Anahtar Kelimeleri', th: 'คีย์เวิร์ดของการ์ด' },
   'Ascension Levels': { ja: 'アセンションレベル', ko: '승천 레벨', zh: '进阶等级', de: 'Aufstiegsstufen', fr: 'Niveaux d’Ascension', es: 'Niveles de Ascensión', pt: 'Níveis de Ascensão', it: 'Livelli di Ascensione', pl: 'Poziomy Wstąpienia', ru: 'Уровни Вознесения', tr: 'Yükseliş Seviyeleri', th: 'ระดับ Ascension' },
   'Character Mechanics': { ja: 'キャラクターメカニクス', ko: '캐릭터 메커니즘', zh: '角色机制', de: 'Charaktermechaniken', fr: 'Mécaniques de personnage', es: 'Mecánicas de personaje', pt: 'Mecânicas de personagem', it: 'Meccaniche del personaggio', pl: 'Mechaniki postaci', ru: 'Механики персонажа', tr: 'Karakter Mekanikleri', th: 'กลไกเฉพาะตัวละคร' },
+
+  // Patch history
+  'Patch History': { ja: 'パッチ履歴', ko: '패치 이력', zh: '更新历史', de: 'Patch-Verlauf', fr: 'Historique des patchs', es: 'Historial de parches', pt: 'Histórico de patches', it: 'Cronologia patch', pl: 'Historia aktualizacji', ru: 'История патчей', tr: 'Yama Geçmişi', th: 'ประวัติอัปเดต' },
+  'Added': { ja: '追加', ko: '추가됨', zh: '新增', de: 'Hinzugefügt', fr: 'Ajouté', es: 'Añadido', pt: 'Adicionado', it: 'Aggiunto', pl: 'Dodane', ru: 'Добавлено', tr: 'Eklendi', th: 'เพิ่ม' },
+  'Removed': { ja: '削除', ko: '제거됨', zh: '移除', de: 'Entfernt', fr: 'Supprimé', es: 'Eliminado', pt: 'Removido', it: 'Rimosso', pl: 'Usunięte', ru: 'Удалено', tr: 'Kaldırıldı', th: 'ลบ' },
+  'added in': { ja: 'で追加', ko: '에서 추가됨', zh: '中新增', de: 'hinzugefügt in', fr: 'ajouté dans', es: 'añadido en', pt: 'adicionado em', it: 'aggiunto in', pl: 'dodane w', ru: 'добавлено в', tr: 'şunda eklendi:', th: 'เพิ่มใน' },
+  'removed in': { ja: 'で削除', ko: '에서 제거됨', zh: '中移除', de: 'entfernt in', fr: 'supprimé dans', es: 'eliminado en', pt: 'removido em', it: 'rimosso in', pl: 'usunięte w', ru: 'удалено в', tr: 'şunda kaldırıldı:', th: 'ลบใน' },
+  'Current Data': { ja: '現在のデータ', ko: '현재 데이터', zh: '当前数据', de: 'Aktuelle Daten', fr: 'Données actuelles', es: 'Datos actuales', pt: 'Dados atuais', it: 'Dati attuali', pl: 'Aktualne dane', ru: 'Актуальные данные', tr: 'Güncel Veriler', th: 'ข้อมูลปัจจุบัน' },
 };
 
 /**

@@ -2,6 +2,8 @@
 import fs from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
+import { t } from '../lib/ui-strings';
+import { getLocale } from '../lib/i18n';
 
 export interface Props {
   entityType: string;
@@ -26,6 +28,7 @@ interface VersionEntry {
 }
 
 const { entityType, entityId } = Astro.props;
+const locale = getLocale(Astro).locale;
 
 function rootDir() {
   const dir = path.dirname(new URL(import.meta.url).pathname);
@@ -34,11 +37,63 @@ function rootDir() {
   return candidate;
 }
 
+// Known enum values that have translations in ui-strings.ts (stored with
+// their original English capitalization). Used to decide when to translate
+// a scalar change value.
+const ENUM_VALUES = new Set([
+  // Rarities
+  'Starter', 'Common', 'Uncommon', 'Rare', 'Boss', 'Shop', 'Event', 'Special', 'Basic',
+  // Card types
+  'Attack', 'Skill', 'Power', 'Status', 'Curse',
+  // Colors / classes
+  'Ironclad', 'Silent', 'Defect', 'Watcher', 'Necrobinder', 'Regent',
+  'Colorless', 'Shared',
+  // Tier (relic)
+  'Starter', 'Common', 'Uncommon', 'Rare', 'Boss', 'Shop', 'Event', 'Special',
+]);
+
+function humanizeField(field: string): string {
+  // Strip prefixes like "upgrade." / "vars." for a cleaner label, then
+  // Title Case the remaining snake_case so it matches ui-strings keys
+  // when one exists (e.g. "rarity" -> "Rarity", "upgrade.cost" -> "Cost").
+  const bare = field.replace(/^(upgrade|vars)\./, '');
+  return bare.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
+function fieldLabel(field: string): string {
+  const label = humanizeField(field);
+  const translated = t(label, locale);
+  const prefix = field.startsWith('upgrade.')
+    ? `${t('Upgraded', locale)} · `
+    : '';
+  return prefix + translated;
+}
+
+function titleCase(s: string): string {
+  return s.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
+function translateScalar(value: any): string {
+  if (value === null || value === undefined) return '—';
+  if (typeof value === 'string') {
+    // Try value as-is, then Title-Cased (handles "common" -> "Common" key lookup)
+    const candidates = [value, titleCase(value)];
+    for (const c of candidates) {
+      if (ENUM_VALUES.has(c)) return t(c, locale);
+    }
+    return value;
+  }
+  return String(value);
+}
+
 function formatValue(value: any): string {
   if (value === null || value === undefined) return '—';
-  if (Array.isArray(value)) return value.length ? value.join(', ') : '[]';
+  if (Array.isArray(value)) {
+    if (!value.length) return '[]';
+    return value.map(translateScalar).join(', ');
+  }
   if (typeof value === 'object') return JSON.stringify(value);
-  return String(value);
+  return translateScalar(value);
 }
 
 const changelogPath = path.join(rootDir(), 'data', 'sts2', 'changelog.json');
@@ -53,11 +108,16 @@ const history = changelog
     const added = Array.isArray(section.added) && section.added.includes(entityId);
     const removed = Array.isArray(section.removed) && section.removed.includes(entityId);
     if (!modified && !added && !removed) return null;
+    // Translate the hard-coded "Current Data" label; leave versioned patch
+    // labels (e.g. "EA Patch 2 (Apr 16, 2026)") as-is since they are
+    // free-form English strings authored in versions.json.
+    const rawLabel = entry.label;
+    const label = rawLabel === 'Current Data' ? t('Current Data', locale) : rawLabel;
     return {
       version: entry.version,
       previousVersion: entry.previousVersion,
       date: entry.date,
-      label: entry.label,
+      label,
       modified: modified ? Object.entries(modified) : [],
       added,
       removed,
@@ -69,7 +129,7 @@ const history = changelog
   <section class="mt-8 rounded-xl border border-amber-400/20 bg-slate-900/70 p-5 shadow-[0_0_0_1px_rgba(251,191,36,0.04)]">
     <div class="flex items-center gap-2">
       <div class="h-2 w-2 rounded-full bg-amber-400"></div>
-      <h2 class="text-lg font-semibold text-slate-100">Patch History</h2>
+      <h2 class="text-lg font-semibold text-slate-100">{t('Patch History', locale)}</h2>
     </div>
 
     <div class="mt-4 space-y-4">
@@ -83,11 +143,11 @@ const history = changelog
           </div>
 
           <div class="mt-3 space-y-2 text-sm text-slate-200">
-            {entry.added && <div><span class="font-medium text-emerald-300">Added</span> in {entry.version}</div>}
-            {entry.removed && <div><span class="font-medium text-rose-300">Removed</span> in {entry.version}</div>}
+            {entry.added && <div><span class="font-medium text-emerald-300">{t('Added', locale)}</span> {t('added in', locale)} {entry.version}</div>}
+            {entry.removed && <div><span class="font-medium text-rose-300">{t('Removed', locale)}</span> {t('removed in', locale)} {entry.version}</div>}
             {entry.modified.map(([field, values]: [string, ChangeValue]) => (
               <div class="rounded-md bg-slate-950/50 px-3 py-2">
-                <div class="text-xs uppercase tracking-wide text-slate-400">{field}</div>
+                <div class="text-xs uppercase tracking-wide text-slate-400">{fieldLabel(field)}</div>
                 <div class="mt-1 text-slate-100">
                   <span class="text-rose-300">{formatValue(values.old)}</span>
                   <span class="mx-2 text-amber-300">→</span>
