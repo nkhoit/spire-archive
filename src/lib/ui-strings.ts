@@ -236,6 +236,21 @@ const strings: Record<string, Partial<Record<Locale, string>>> = {
   'added in': { ja: 'で追加', ko: '에서 추가됨', zh: '中新增', de: 'hinzugefügt in', fr: 'ajouté dans', es: 'añadido en', pt: 'adicionado em', it: 'aggiunto in', pl: 'dodane w', ru: 'добавлено в', tr: 'şunda eklendi:', th: 'เพิ่มใน' },
   'removed in': { ja: 'で削除', ko: '에서 제거됨', zh: '中移除', de: 'entfernt in', fr: 'supprimé dans', es: 'eliminado en', pt: 'removido em', it: 'rimosso in', pl: 'usunięte w', ru: 'удалено в', tr: 'şunda kaldırıldı:', th: 'ลบใน' },
   'Current Data': { ja: '現在のデータ', ko: '현재 데이터', zh: '当前数据', de: 'Aktuelle Daten', fr: 'Données actuelles', es: 'Datos actuales', pt: 'Dados atuais', it: 'Dati attuali', pl: 'Aktualne dane', ru: 'Актуальные данные', tr: 'Güncel Veriler', th: 'ข้อมูลปัจจุบัน' },
+  // Patch-history field labels (used as ui-strings keys via FIELD_LABELS in ChangeHistory.astro)
+  'Upgrade bonus': { ja: '強化ボーナス', ko: '업그레이드 보너스', zh: '升级加成', de: 'Aufwertungs-Bonus', fr: 'Bonus d’amélioration', es: 'Bono de mejora', pt: 'Bônus de melhoria', it: 'Bonus di potenziamento', pl: 'Bonus ulepszenia', ru: 'Бонус улучшения', tr: 'Yükseltme bonusu', th: 'โบนัสอัพเกรด' },
+  'Upgraded description': { ja: '強化説明', ko: '업그레이드 설명', zh: '升级描述', de: 'Aufgewertete Beschreibung', fr: 'Description améliorée', es: 'Descripción mejorada', pt: 'Descrição melhorada', it: 'Descrizione potenziata', pl: 'Ulepszony opis', ru: 'Улучшенное описание', tr: 'Yükseltilmiş açıklama', th: 'คำอธิบายอัพเกรด' },
+  'Adds keyword': { ja: 'キーワード追加', ko: '키워드 추가', zh: '添加关键词', de: 'Fügt Schlüsselwort hinzu', fr: 'Ajoute un mot-clé', es: 'Añade palabra clave', pt: 'Adiciona palavra-chave', it: 'Aggiunge parola chiave', pl: 'Dodaje słowo kluczowe', ru: 'Добавляет ключевое слово', tr: 'Anahtar kelime ekler', th: 'เพิ่มคีย์เวิร์ด' },
+  'Removes keyword': { ja: 'キーワード削除', ko: '키워드 제거', zh: '移除关键词', de: 'Entfernt Schlüsselwort', fr: 'Retire un mot-clé', es: 'Elimina palabra clave', pt: 'Remove palavra-chave', it: 'Rimuove parola chiave', pl: 'Usuwa słowo kluczowe', ru: 'Удаляет ключевое слово', tr: 'Anahtar kelime kaldırır', th: 'ลบคีย์เวิร์ด' },
+  'Damage': { ja: 'ダメージ', ko: '피해', zh: '伤害', de: 'Schaden', fr: 'Dégâts', es: 'Daño', pt: 'Dano', it: 'Danno', pl: 'Obrażenia', ru: 'Урон', tr: 'Hasar', th: 'ความเสียหาย' },
+  'Strength': { ja: '力', ko: '힘', zh: '力量', de: 'Stärke', fr: 'Force', es: 'Fuerza', pt: 'Força', it: 'Forza', pl: 'Siła', ru: 'Сила', tr: 'Güç', th: 'พลัง' },
+  'Dexterity': { ja: '敷捷', ko: '민첩', zh: '敏捷', de: 'Geschicklichkeit', fr: 'Dextérité', es: 'Destreza', pt: 'Destreza', it: 'Destrezza', pl: 'Zręczność', ru: 'Ловкость', tr: 'Beceri', th: 'ความว่องไว' },
+  'Vulnerable': { ja: '脆弱', ko: '취약', zh: '脆弱', de: 'Verwundbar', fr: 'Vulnérable', es: 'Vulnerable', pt: 'Vulnerável', it: 'Vulnerabile', pl: 'Wrażliwość', ru: 'Уязвимость', tr: 'Kırılgan', th: 'อ่อนแอ' },
+  'Poisoned': { ja: '毒', ko: '중독', zh: '中毒', de: 'Vergiftet', fr: 'Empoisonné', es: 'Envenenado', pt: 'Envenenado', it: 'Avvelenato', pl: 'Zatrucie', ru: 'Отравление', tr: 'Zehirli', th: 'พิษ' },
+  'Forge': { ja: '鋳造', ko: '제조', zh: '锻造', de: 'Schmieden', fr: 'Forger', es: 'Forjar', pt: 'Forjar', it: 'Forgia', pl: 'Wykuwanie', ru: 'Ковка', tr: 'Dövme', th: 'ตีขึ้นรูป' },
+  'Extra cost': { ja: '追加コスト', ko: '추가 비용', zh: '额外费用', de: 'Zusätzliche Kosten', fr: 'Coût supplémentaire', es: 'Coste adicional', pt: 'Custo adicional', it: 'Costo extra', pl: 'Dodatkowy koszt', ru: 'Дополнительная стоимость', tr: 'Ek maliyet', th: 'ค่าใຊ้จ่ายเพิ่ม' },
+  'Star cost': { ja: 'スターコスト', ko: '별 비용', zh: '星级费用', de: 'Sternkosten', fr: 'Coût en étoiles', es: 'Coste de estrella', pt: 'Custo em estrelas', it: 'Costo stella', pl: 'Koszt gwiazdy', ru: 'Стоимость в звездах', tr: 'Yıldız maliyeti', th: 'ค่าระดับดาว' },
+  'Color': { ja: '色', ko: '색상', zh: '颜色', de: 'Farbe', fr: 'Couleur', es: 'Color', pt: 'Cor', it: 'Colore', pl: 'Kolor', ru: 'Цвет', tr: 'Renk', th: 'สี' },
+  'Name': { ja: '名前', ko: '이름', zh: '名称', de: 'Name', fr: 'Nom', es: 'Nombre', pt: 'Nome', it: 'Nome', pl: 'Nazwa', ru: 'Название', tr: 'İsim', th: 'ชื่อ' },
 };
 
 /**

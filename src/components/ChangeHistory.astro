@@ -52,6 +52,54 @@ const ENUM_VALUES = new Set([
   'Starter', 'Common', 'Uncommon', 'Rare', 'Boss', 'Shop', 'Event', 'Special',
 ]);
 
+// Canonical labels for known fields. Keys here are the raw field names
+// from changelog.json; values are the English label that gets fed into
+// the i18n lookup (so non-English locales can override via ui-strings.ts
+// without touching this file). Falls back to humanizeField() when a
+// field isn't listed.
+const FIELD_LABELS: Record<string, string> = {
+  // Display fields (apply to multiple entity types)
+  description: 'Description',
+  name: 'Name',
+  cost: 'Cost',
+  type: 'Type',
+  rarity: 'Rarity',
+  color: 'Color',
+  keywords: 'Keywords',
+  tags: 'Tags',
+  star_cost: 'Star cost',
+  tier: 'Tier',
+  // Card numeric vars (only show up when description didn't change)
+  'vars.damage': 'Damage',
+  'vars.block': 'Block',
+  'vars.cards': 'Cards',
+  'vars.energy': 'Energy',
+  'vars.forge': 'Forge',
+  'vars.extra_cost': 'Extra cost',
+  'vars.power_strength': 'Strength',
+  'vars.power_dexterity': 'Dexterity',
+  'vars.power_vulnerable': 'Vulnerable',
+  'vars.power_weak': 'Weak',
+  'vars.power_poisoned': 'Poisoned',
+  // Upgrade rows render with an "Upgrade bonus" prefix — see fieldLabel().
+  'upgrade.description': 'Upgraded description',
+  'upgrade.add_keywords': 'Adds keyword',
+  'upgrade.remove_keywords': 'Removes keyword',
+};
+
+// Fields whose values represent additive deltas applied to the upgraded
+// version of a card (e.g. upgrade.damage = 2 means "upgraded version deals
+// +2 damage"). Render their numeric values with a leading + so 2 -> 1
+// reads as +2 -> +1, making the additive nature obvious.
+function isUpgradeDeltaField(field: string): boolean {
+  if (!field.startsWith('upgrade.')) return false;
+  // upgrade.description is text, upgrade.{add,remove}_keywords are arrays —
+  // those don't get the +N treatment.
+  if (field === 'upgrade.description') return false;
+  if (field === 'upgrade.add_keywords' || field === 'upgrade.remove_keywords') return false;
+  return true;
+}
+
 function humanizeField(field: string): string {
   // Strip prefixes like "upgrade." / "vars." for a cleaner label, then
   // Title Case the remaining snake_case so it matches ui-strings keys
@@ -60,13 +108,25 @@ function humanizeField(field: string): string {
   return bare.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
+// Upgrade fields whose canonical label is already self-describing and
+// shouldn't get a redundant "Upgrade bonus · " prefix.
+const SELF_DESCRIBING_UPGRADE_FIELDS = new Set([
+  'upgrade.description',
+  'upgrade.add_keywords',
+  'upgrade.remove_keywords',
+]);
+
 function fieldLabel(field: string): string {
-  const label = humanizeField(field);
-  const translated = t(label, locale);
-  const prefix = field.startsWith('upgrade.')
-    ? `${t('Upgraded', locale)} · `
-    : '';
-  return prefix + translated;
+  const canonical = FIELD_LABELS[field] ?? humanizeField(field);
+  const translated = t(canonical, locale);
+  // Upgrade rows get a translated "Upgrade bonus" prefix so it's clear
+  // they're additive on top of the base value, not the post-upgrade
+  // total — unless the label is already self-describing (e.g.
+  // "Adds keyword", "Upgraded description").
+  if (field.startsWith('upgrade.') && !SELF_DESCRIBING_UPGRADE_FIELDS.has(field)) {
+    return `${t('Upgrade bonus', locale)} · ${translated}`;
+  }
+  return translated;
 }
 
 function titleCase(s: string): string {
@@ -86,13 +146,17 @@ function translateScalar(value: any): string {
   return String(value);
 }
 
-function formatValue(value: any): string {
+function formatValue(value: any, field?: string): string {
   if (value === null || value === undefined) return '—';
   if (Array.isArray(value)) {
     if (!value.length) return '[]';
     return value.map(translateScalar).join(', ');
   }
   if (typeof value === 'object') return JSON.stringify(value);
+  // Numeric upgrade-delta fields render with a leading +.
+  if (field && isUpgradeDeltaField(field) && typeof value === 'number') {
+    return value >= 0 ? `+${value}` : String(value);
+  }
   return translateScalar(value);
 }
 
@@ -154,9 +218,9 @@ const history = changelog
               <div class="rounded-md bg-slate-950/50 px-3 py-2">
                 <div class="text-xs uppercase tracking-wide text-slate-400">{fieldLabel(field)}</div>
                 <div class="mt-1 text-slate-100">
-                  <span class="text-rose-300">{formatValue(values.old)}</span>
+                  <span class="text-rose-300">{formatValue(values.old, field)}</span>
                   <span class="mx-2 text-amber-300">→</span>
-                  <span class="text-emerald-300">{formatValue(values.new)}</span>
+                  <span class="text-emerald-300">{formatValue(values.new, field)}</span>
                 </div>
               </div>
             ))}

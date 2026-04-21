@@ -56,6 +56,45 @@ function diffNumericObject(oldObj, newObj, prefix, changes, { numericOnly = fals
   }
 }
 
+// ---------------------------------------------------------------------------
+// Field-classifier model for player-facing patch history.
+//
+// The raw diff between two data snapshots includes lots of fields that are
+// either pure implementation detail (vars.calculation_*) or 1:1 redundant
+// with a description change (vars.damage / vars.power_dexterity etc.). Show
+// every one of them and patch history reads like a JSON dump. We classify
+// fields into three buckets:
+//
+//   - HIDDEN_FIELDS: never surface (internal-only).
+//   - SUPPRESS_WHEN_DESCRIPTION_CHANGED: numeric stat fields that are
+//     already encoded in the description text. Hide them when the
+//     description (base or upgrade) also changed in the same patch; show
+//     them as a fallback when description is unchanged so SHIV-style
+//     internal tweaks still leave a paper trail.
+//   - everything else: surface as-is.
+//
+// Adding a new game stat means adding one entry here, not refactoring the
+// component.
+const HIDDEN_FIELDS = new Set([
+  'vars.calculation_base',
+  'vars.calculation_extra',
+]);
+
+function isSuppressibleVar(field) {
+  return field.startsWith('vars.') && !HIDDEN_FIELDS.has(field);
+}
+
+function filterNoiseFields(rawChanges) {
+  const filtered = {};
+  const descriptionChanged = 'description' in rawChanges || 'upgrade.description' in rawChanges;
+  for (const [field, value] of Object.entries(rawChanges)) {
+    if (HIDDEN_FIELDS.has(field)) continue;
+    if (descriptionChanged && isSuppressibleVar(field)) continue;
+    filtered[field] = value;
+  }
+  return filtered;
+}
+
 function diffCard(oldEntity, newEntity) {
   const changes = {};
   addChange(changes, 'cost', normalizePrimitive(oldEntity.cost), normalizePrimitive(newEntity.cost));
@@ -68,7 +107,7 @@ function diffCard(oldEntity, newEntity) {
   addChange(changes, 'star_cost', normalizePrimitive(oldEntity.star_cost), normalizePrimitive(newEntity.star_cost));
   diffNumericObject(oldEntity.vars, newEntity.vars, 'vars', changes, { numericOnly: true });
   diffNumericObject(oldEntity.upgrade, newEntity.upgrade, 'upgrade', changes);
-  return changes;
+  return filterNoiseFields(changes);
 }
 
 function diffRelic(oldEntity, newEntity) {

@@ -2,7 +2,7 @@
   {
     "version": "current",
     "previousVersion": "0.103.2",
-    "date": "2026-04-20",
+    "date": "2026-04-21",
     "label": "Current Data",
     "changes": {
       "cards": {
@@ -64,10 +64,6 @@
               "old": "Gain 3 Dexterity this turn.",
               "new": "Gain 2 Dexterity this turn."
             },
-            "vars.power_dexterity": {
-              "old": 3,
-              "new": 2
-            },
             "upgrade.dexterity": {
               "old": 2,
               "new": 1
@@ -112,10 +108,6 @@
               "old": "Deal 4 damage.\nChoose a card in your Hand to Transform into Minion Dive Bomb.",
               "new": "Choose a card in your Hand to Transform into Minion Strike."
             },
-            "vars.damage": {
-              "old": 4,
-              "new": null
-            },
             "upgrade.damage": {
               "old": 1,
               "new": null
@@ -129,24 +121,12 @@
             "description": {
               "old": "Another player gains [E][E][E].",
               "new": "Another player gains [E][E]."
-            },
-            "vars.energy": {
-              "old": 3,
-              "new": 2
             }
           },
           "BLADE_OF_INK": {
             "description": {
               "old": "This turn, whenever you play an Attack, gain 2 Strength this turn.",
               "new": "Add 2 Inky Shivs into your Hand."
-            },
-            "vars.cards": {
-              "old": null,
-              "new": 2
-            },
-            "vars.power_strength": {
-              "old": 2,
-              "new": null
             },
             "upgrade.cards": {
               "old": null,
@@ -175,18 +155,6 @@
             "description": {
               "old": "Apply 3 Doom to yourself.\nGain [E].",
               "new": "Gain [E][E][E][E].\nCards cost an additional [E] this turn."
-            },
-            "vars.energy": {
-              "old": 1,
-              "new": 4
-            },
-            "vars.extra_cost": {
-              "old": null,
-              "new": 1
-            },
-            "vars.power_doom": {
-              "old": 3,
-              "new": null
             },
             "upgrade.energy": {
               "old": 1,
@@ -238,14 +206,6 @@
               "old": "Deal 17 damage.\nExhaust the top card of your Draw Pile.",
               "new": "Deal 18 damage.\nExhaust 1 card at random."
             },
-            "vars.cards_to_exhaust": {
-              "old": 1,
-              "new": null
-            },
-            "vars.damage": {
-              "old": 17,
-              "new": 18
-            },
             "upgrade.damage": {
               "old": 5,
               "new": 6
@@ -255,10 +215,6 @@
             "description": {
               "old": "Deal 9 damage.\nAdd a Debris into your Hand.",
               "new": "Deal 11 damage.\nAdd a Debris into your Hand."
-            },
-            "vars.damage": {
-              "old": 9,
-              "new": 11
             },
             "upgrade.damage": {
               "old": 3,
@@ -275,20 +231,12 @@
             "description": {
               "old": "Whenever you draw a card this turn, apply 3 Poison to ALL enemies.",
               "new": "Whenever you draw a card this turn, apply 2 Poison to ALL enemies."
-            },
-            "vars.corrosive_wave": {
-              "old": 3,
-              "new": 2
             }
           },
           "DANSE_MACABRE": {
             "description": {
               "old": "Whenever you play a card that costs [E][E] or more, gain 3 Block.",
               "new": "Whenever you play a card that costs [E][E] or more, gain 4 Block."
-            },
-            "vars.power_danse_macabre": {
-              "old": 3,
-              "new": 4
             },
             "upgrade.danse_macabre": {
               "old": 1,
@@ -299,10 +247,6 @@
             "description": {
               "old": "Deal 7 damage.\nVulnerable and Weak are twice as effective against the enemy for the next 3 turns.",
               "new": "Deal 10 damage.\nVulnerable and Weak are twice as effective against the enemy for the next 3 turns."
-            },
-            "vars.damage": {
-              "old": 7,
-              "new": 10
             },
             "upgrade.description": {
               "old": "Deal 9 damage.\nVulnerable and Weak are twice as effective against the enemy for the next 4 turns.",
@@ -338,10 +282,6 @@
               "old": "Gain 1 Strength for each Vulnerable on the enemy.",
               "new": "Apply 1 Vulnerable.\nGain 1 Strength for each Vulnerable on the enemy."
             },
-            "vars.power_vulnerable": {
-              "old": null,
-              "new": 1
-            },
             "upgrade.remove_keywords": {
               "old": [
                 "Exhaust"
@@ -358,10 +298,6 @@
               "old": "Gain 7 Plating.",
               "new": "Gain 9 Plating."
             },
-            "vars.power_plating": {
-              "old": 7,
-              "new": 9
-            },
             "upgrade.plating": {
               "old": 2,
               "new": 3
@@ -377,20 +313,12 @@
             "description": {
               "old": "Deal 7 damage.\nApply 1 Weak.\nApply 1 Vulnerable.",
               "new": "Deal 8 damage.\nApply 1 Weak.\nApply 1 Vulnerable."
-            },
-            "vars.damage": {
-              "old": 7,
-              "new": 8
             }
           },
           "FIGHT_ME": {
             "description": {
               "old": "Deal 5 damage twice.\nGain 2 Strength.\nThe enemy gains 1 Strength.",
               "new": "Deal 5 damage twice.\nGain 3 Strength.\nThe enemy gains 1 Strength."
-            },
-            "vars.power_strength": {
-              "old": 2,
-              "new": 3
             }
           },
           "FLANKING": {
@@ -403,10 +331,6 @@
             "description": {
               "old": "Deal 7 damage to ALL enemies.",
               "new": "Deal 6 damage to ALL enemies."
-            },
-            "vars.damage": {
-              "old": 7,
-              "new": 6
             }
           },
           "FOLLOW_THROUGH": {
@@ -417,18 +341,6 @@
             "description": {
               "old": "Deal 6 damage to ALL enemies.\nIf the last card you played this turn was a Skill, apply 1 Weak to ALL enemies.",
               "new": "Deal 7 damage.\nIf you have 5 or more other cards in your Hand, hits an additional time."
-            },
-            "vars.card_count": {
-              "old": null,
-              "new": 5
-            },
-            "vars.damage": {
-              "old": 6,
-              "new": 7
-            },
-            "vars.power_weak": {
-              "old": 1,
-              "new": null
             },
             "upgrade.description": {
               "old": null,
@@ -466,40 +378,24 @@
             "description": {
               "old": "Gain 7 Block.\nGain [S].",
               "new": "Gain 8 Block.\nGain [S]."
-            },
-            "vars.block": {
-              "old": 7,
-              "new": 8
             }
           },
           "GLITTERSTREAM": {
             "description": {
               "old": "Gain 11 Block.\nNext turn, gain 4 Block.",
               "new": "Gain 11 Block.\nNext turn, gain 5 Block."
-            },
-            "vars.block_next_turn": {
-              "old": 4,
-              "new": 5
             }
           },
           "GLOW": {
             "description": {
               "old": "Gain [S].\nDraw 2 cards.",
               "new": "Gain [S].\nDraw 1 card.\nNext turn, draw 1 card."
-            },
-            "vars.cards": {
-              "old": 2,
-              "new": 1
             }
           },
           "GRAND_FINALE": {
             "description": {
               "old": "Can only be played if there are no cards in your Draw Pile. Deal 50 damage to ALL enemies.",
               "new": "Can only be played if there are no cards in your Draw Pile. Deal 60 damage to ALL enemies."
-            },
-            "vars.damage": {
-              "old": 50,
-              "new": 60
             },
             "upgrade.damage": {
               "old": 10,
@@ -530,20 +426,12 @@
             "description": {
               "old": "Deal 17 damage.\nChoose a Colorless card in your Hand. Add a copy of that card into your Hand.",
               "new": "Deal 20 damage.\nChoose a Colorless card in your Hand. Add a copy of that card into your Hand."
-            },
-            "vars.damage": {
-              "old": 17,
-              "new": 20
             }
           },
           "HEMOKINESIS": {
             "description": {
               "old": "Lose 2 HP.\nDeal 14 damage.",
               "new": "Lose 2 HP.\nDeal 15 damage."
-            },
-            "vars.damage": {
-              "old": 14,
-              "new": 15
             }
           },
           "HIDDEN_GEM": {
@@ -602,20 +490,12 @@
             "description": {
               "old": "Gain 9 Block.\nAt the end of your turn, if this is on top of your Draw Pile, play it.",
               "new": "Gain 10 Block.\nAt the end of your turn, if this is on top of your Draw Pile, play it."
-            },
-            "vars.block": {
-              "old": 9,
-              "new": 10
             }
           },
           "KINGLY_KICK": {
             "description": {
               "old": "Deal 24 damage.\nWhenever you draw this card, reduce its cost by 1.",
               "new": "Deal 27 damage.\nWhenever you draw this card, reduce its cost by 1."
-            },
-            "vars.damage": {
-              "old": 24,
-              "new": 27
             },
             "upgrade.damage": {
               "old": 6,
@@ -627,10 +507,6 @@
               "old": "Deal 8 damage.\nWhenever you draw this card, increase its damage by 3 this combat.",
               "new": "Deal 8 damage.\nWhenever you draw this card, increase its damage by 4 this combat."
             },
-            "vars.increase": {
-              "old": 3,
-              "new": 4
-            },
             "upgrade.damage": {
               "old": null,
               "new": 2
@@ -641,14 +517,6 @@
               "old": "Deal 7 damage.\nAdd 1 Shiv into your Hand.",
               "new": "Deal 3 damage.\nAdd 2 Shivs into your Hand."
             },
-            "vars.damage": {
-              "old": 7,
-              "new": 3
-            },
-            "vars.shivs": {
-              "old": 1,
-              "new": 2
-            },
             "upgrade.description": {
               "old": null,
               "new": "Deal 6 damage.\nAdd 2 Shivs into your Hand."
@@ -658,10 +526,6 @@
             "description": {
               "old": "Deal 8 damage.\nDeals 4 additional damage for each card discarded this turn.",
               "new": "Deal 9 damage.\nDeals 4 additional damage for each card discarded this turn."
-            },
-            "vars.calculation_base": {
-              "old": 8,
-              "new": 9
             }
           },
           "MINION_DIVE_BOMB": {
@@ -674,10 +538,6 @@
             "description": {
               "old": "Deal 7 damage.\nDraw 1 card.",
               "new": "Deal 6 damage.\nDraw 1 card."
-            },
-            "vars.damage": {
-              "old": 7,
-              "new": 6
             },
             "upgrade.description": {
               "old": "Deal 10 damage.\nDraw 1 card.",
@@ -699,10 +559,6 @@
               "old": "Whenever you play Sovereign Blade, gain 6 Block.",
               "new": "Whenever you play Sovereign Blade, gain 10 Block."
             },
-            "vars.power_parry": {
-              "old": 6,
-              "new": 10
-            },
             "upgrade.parry": {
               "old": 3,
               "new": 4
@@ -712,20 +568,12 @@
             "description": {
               "old": "Gain 8 Block.\nGain 2 Vigor.",
               "new": "Gain 9 Block.\nGain 2 Vigor."
-            },
-            "vars.block": {
-              "old": 8,
-              "new": 9
             }
           },
           "PINPOINT": {
             "description": {
               "old": "Deal 17 damage.\nCosts 1 less [E] for each Skill played this turn.",
               "new": "Deal 15 damage.\nCosts 1 less [E] for each Skill played this turn."
-            },
-            "vars.damage": {
-              "old": 17,
-              "new": 15
             },
             "upgrade.damage": {
               "old": 5,
@@ -748,10 +596,6 @@
             "description": {
               "old": "Forge 6.\nNext turn, gain [E].",
               "new": "Forge 9.\nNext turn, gain [E]."
-            },
-            "vars.forge": {
-              "old": 6,
-              "new": 9
             }
           },
           "RIP_AND_TEAR": {
@@ -774,10 +618,6 @@
             "description": {
               "old": "Deal 8 damage.\nAdd Ethereal to a card in your Hand.",
               "new": "Deal 9 damage.\nAdd Ethereal to a card in your Hand."
-            },
-            "vars.damage": {
-              "old": 8,
-              "new": 9
             }
           },
           "SEANCE": {
@@ -798,10 +638,6 @@
             "description": {
               "old": "Deal 6 damage.\nChoose 1 of 3 cards in your Draw Pile to add into your Hand.",
               "new": "Deal 9 damage.\nChoose 1 of 3 cards in your Draw Pile to add into your Hand."
-            },
-            "vars.damage": {
-              "old": 6,
-              "new": 9
             }
           },
           "SERPENT_FORM": {
@@ -811,14 +647,6 @@
             }
           },
           "SHIV": {
-            "vars.calculation_base": {
-              "old": 0,
-              "new": null
-            },
-            "vars.calculation_extra": {
-              "old": 1,
-              "new": null
-            },
             "upgrade.description": {
               "old": "Deal 6 damage.",
               "new": null
@@ -828,20 +656,12 @@
             "description": {
               "old": "Deal 7 damage X times.",
               "new": "Deal 8 damage X times."
-            },
-            "vars.damage": {
-              "old": 7,
-              "new": 8
             }
           },
           "SOLAR_STRIKE": {
             "description": {
               "old": "Deal 8 damage.\nGain [S].",
               "new": "Deal 9 damage.\nGain [S]."
-            },
-            "vars.damage": {
-              "old": 8,
-              "new": 9
             }
           },
           "SPEEDSTER": {
@@ -861,18 +681,6 @@
               "old": "Deal 6 damage.\nIf you lost HP this turn, draw 1 card.",
               "new": "Deal 5 damage.\nIf you lost HP this turn,\nhits 2 times."
             },
-            "vars.cards": {
-              "old": 1,
-              "new": null
-            },
-            "vars.damage": {
-              "old": 6,
-              "new": 5
-            },
-            "vars.repeat": {
-              "old": null,
-              "new": 2
-            },
             "upgrade.damage": {
               "old": 3,
               "new": null
@@ -890,14 +698,6 @@
             "description": {
               "old": "Forge 10.",
               "new": "Forge 5.\nDraw 2 cards."
-            },
-            "vars.cards": {
-              "old": null,
-              "new": 2
-            },
-            "vars.forge": {
-              "old": 10,
-              "new": 5
             },
             "upgrade.description": {
               "old": null,
@@ -950,20 +750,12 @@
             "description": {
               "old": "Apply 2 Vulnerable.",
               "new": "Apply 3 Vulnerable."
-            },
-            "vars.power_vulnerable": {
-              "old": 2,
-              "new": 3
             }
           },
           "UNTOUCHABLE": {
             "description": {
               "old": "Gain 9 Block.",
               "new": "Gain 6 Block."
-            },
-            "vars.block": {
-              "old": 9,
-              "new": 6
             },
             "upgrade.block": {
               "old": 3,
@@ -1002,10 +794,6 @@
             "description": {
               "old": "Deal 7 damage.\nForge 5.",
               "new": "Deal 7 damage.\nForge 7."
-            },
-            "vars.forge": {
-              "old": 5,
-              "new": 7
             }
           }
         },
