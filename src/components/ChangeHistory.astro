@@ -146,18 +146,34 @@ function translateScalar(value: any): string {
   return String(value);
 }
 
+// Decode HTML entities (&#39; &amp; &quot; etc.) that slip through from
+// the upstream data pipeline. Descriptions authored through the new
+// content tooling arrive entity-encoded; patch history renders them as
+// plain text, so we need to normalize before display.
+function decodeEntities(s: string): string {
+  return s
+    .replace(/&#(\d+);/g, (_m, n) => String.fromCodePoint(Number(n)))
+    .replace(/&#x([0-9a-fA-F]+);/g, (_m, h) => String.fromCodePoint(parseInt(h, 16)))
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'");
+}
+
 function formatValue(value: any, field?: string): string {
   if (value === null || value === undefined) return '—';
   if (Array.isArray(value)) {
     if (!value.length) return '[]';
-    return value.map(translateScalar).join(', ');
+    return value.map(translateScalar).map((s) => typeof s === 'string' ? decodeEntities(s) : s).join(', ');
   }
   if (typeof value === 'object') return JSON.stringify(value);
   // Numeric upgrade-delta fields render with a leading +.
   if (field && isUpgradeDeltaField(field) && typeof value === 'number') {
     return value >= 0 ? `+${value}` : String(value);
   }
-  return translateScalar(value);
+  const translated = translateScalar(value);
+  return typeof translated === 'string' ? decodeEntities(translated) : String(translated);
 }
 
 const changelogPath = path.join(rootDir(), 'data', 'sts2', 'changelog.json');

@@ -84,12 +84,48 @@ function isSuppressibleVar(field) {
   return field.startsWith('vars.') && !HIDDEN_FIELDS.has(field);
 }
 
+// Common stat names we always want to surface when they appear under
+// upgrade.*. Everything else (bespoke per-card upgrade flags like
+// upgrade.arsenal, upgrade.void_form, upgrade.focus, upgrade.speedster)
+// is treated as noise and suppressed when description / upgrade.description
+// / keyword-mod fields in the same entity already capture the semantic
+// change in human terms. These names come from the live data set and
+// cover the stat/effect fields players actually reason about.
+const KNOWN_UPGRADE_STATS = new Set([
+  'damage', 'block', 'cost', 'cards', 'energy', 'forge',
+  'dexterity', 'strength', 'weak', 'vulnerable', 'poisoned',
+  'magic_number', 'second_damage', 'second_block', 'second_magic',
+  'repeat', 'retain', 'draw',
+]);
+
+function stripUpgradePrefix(field) {
+  return field.startsWith('upgrade.') ? field.slice('upgrade.'.length) : field;
+}
+
+function isBespokeUpgradeFlag(field) {
+  if (!field.startsWith('upgrade.')) return false;
+  // description / keyword mods are structural, not bespoke flags.
+  if (field === 'upgrade.description') return false;
+  if (field === 'upgrade.add_keywords' || field === 'upgrade.remove_keywords') return false;
+  const bare = stripUpgradePrefix(field);
+  return !KNOWN_UPGRADE_STATS.has(bare);
+}
+
 function filterNoiseFields(rawChanges) {
   const filtered = {};
   const descriptionChanged = 'description' in rawChanges || 'upgrade.description' in rawChanges;
+  const upgradeShapeChanged = descriptionChanged
+    || 'upgrade.add_keywords' in rawChanges
+    || 'upgrade.remove_keywords' in rawChanges;
   for (const [field, value] of Object.entries(rawChanges)) {
     if (HIDDEN_FIELDS.has(field)) continue;
     if (descriptionChanged && isSuppressibleVar(field)) continue;
+    // Suppress bespoke per-card upgrade flags (e.g. upgrade.arsenal,
+    // upgrade.void_form) when the same entity already shows a
+    // description rewrite or keyword mod — the flag itself is opaque
+    // internal state and the semantic change is conveyed by the other
+    // rows in player-readable form.
+    if (upgradeShapeChanged && isBespokeUpgradeFlag(field)) continue;
     filtered[field] = value;
   }
   return filtered;
