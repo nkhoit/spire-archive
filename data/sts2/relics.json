@@ -198,7 +198,7 @@
   {
     "id": "BOOMING_CONCH",
     "name": "Booming Conch",
-    "description": "At the start of Elite combats, draw 2 additional cards.",
+    "description": "At the start of Elite combats, draw 2 additional cards and gain [E].",
     "tier": "Ancient",
     "color": "event"
   },
@@ -226,7 +226,7 @@
   {
     "id": "BRILLIANT_SCARF",
     "name": "Brilliant Scarf",
-    "description": "The 5th card you play each turn is free.",
+    "description": "The 5th card you play from your hand each turn is free.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -616,6 +616,13 @@
     "color": "event"
   },
   {
+    "id": "FISHING_ROD",
+    "name": "Fishing Rod",
+    "description": "Every 3 normal combats, Upgrade a random card in your Deck.",
+    "tier": "Ancient",
+    "color": "event"
+  },
+  {
     "id": "FORGOTTEN_SOUL",
     "name": "Forgotten Soul",
     "description": "Whenever you Exhaust a card, deal 1 damage to a random enemy.",
@@ -800,7 +807,7 @@
   {
     "id": "INFUSED_CORE",
     "name": "Infused Core",
-    "description": "At the start of each combat, Channel 3 Lightning.",
+    "description": "At the start of each combat, Channel 3 Lightning. Lightning deals 1 additional damage.",
     "tier": "Starter",
     "color": "event"
   },
@@ -828,7 +835,7 @@
   {
     "id": "JEWELED_MASK",
     "name": "Jeweled Mask",
-    "description": "At the start of combat put a random Power from your Draw Pile into your Hand, it's free to play.",
+    "description": "At the start of each combat, put a random Power from your Draw Pile into your Hand. It's free to play this combat.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -852,6 +859,13 @@
     "description": "Regular enemy combats are no longer encountered in ? rooms.",
     "tier": "Common",
     "color": "shared"
+  },
+  {
+    "id": "KALEIDOSCOPE",
+    "name": "Kaleidoscope",
+    "description": "Upon pickup, obtain 2 card rewards from other characters.",
+    "tier": "Ancient",
+    "color": "event"
   },
   {
     "id": "KIFUDA",
@@ -1444,7 +1458,7 @@
   {
     "id": "PUMPKIN_CANDLE",
     "name": "Pumpkin Candle",
-    "description": "Gain [E] at the start of each turn. Extinguishes at the start of Act 3.",
+    "description": "Gain [E] at the start of each turn. Extinguishes after 5 combats. Can be Kindled at Rest Sites.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -1598,7 +1612,7 @@
   {
     "id": "SCROLL_BOXES",
     "name": "Scroll Boxes",
-    "description": "Upon pickup, lose all Gold and choose 1 of 2 packs of cards to add to your Deck.",
+    "description": "Upon pickup, choose 1 of 2 packs of cards to add to your Deck.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -1648,6 +1662,13 @@
     "id": "SIGNET_RING",
     "name": "Signet Ring",
     "description": "Upon pickup, gain 999 Gold.",
+    "tier": "Ancient",
+    "color": "event"
+  },
+  {
+    "id": "SILKEN_TRESS",
+    "name": "Silken Tress",
+    "description": "Upon pickup, lose all Gold. Enchant all cards in the first card reward with Glam.",
     "tier": "Ancient",
     "color": "event"
   },

@@ -1,5 +1,18 @@
 {
   "monsters": {
+    "AEONGLASS": {
+      "moves": {
+        "EBB": "Ebb",
+        "EYE_LASERS": "Eye Lasers",
+        "INCREASING_INTENSITY": "Increasing Intensity"
+      },
+      "name": "Aeonglass",
+      "move_titles": [
+        "Ebb",
+        "Eye Lasers",
+        "Increasing Intensity"
+      ]
+    },
     "ARCHITECT": {
       "moves": {
         "NOTHING": "Nothing"
@@ -101,69 +114,71 @@
     "BOWLBUG_NECTAR": {
       "moves": {
         "BUFF": "Buff",
-        "THRASH": "Thrash",
-        "THRASH2": "Thrash"
+        "THRASH": "Thrash"
       },
       "name": "Bowlbug (Nectar)",
       "move_titles": [
         "Buff",
-        "Thrash",
         "Thrash"
       ]
     },
     "BOWLBUG_ROCK": {
       "moves": {
+        "DIZZY": "Dizzy",
         "HEADBUTT": "Headbutt"
       },
       "name": "Bowlbug (Rock)",
       "move_titles": [
+        "Dizzy",
         "Headbutt"
       ]
     },
     "BOWLBUG_SILK": {
       "moves": {
-        "SPIN_WEB": "Spin Web",
-        "THRASH": "Thrash"
+        "THRASH": "Thrash",
+        "TOXIC_SPIT": "Toxic Spit"
       },
       "name": "Bowlbug (Silk)",
       "move_titles": [
-        "Spin Web",
-        "Thrash"
+        "Thrash",
+        "Toxic Spit"
       ]
     },
     "BRUTE_RUBY_RAIDER": {
       "moves": {
         "BEAT": "Beat",
-        "CLAP": "Clap"
+        "ROAR": "Roar"
       },
       "name": "Brute Raider",
       "move_titles": [
         "Beat",
-        "Clap"
+        "Roar"
       ]
     },
     "BYGONE_EFFIGY": {
       "moves": {
         "SLASHES": "Slashes",
-        "SLEEP": "Sleep"
+        "SLEEP": "Sleep",
+        "WAKE": "Wake"
       },
       "name": "Bygone Effigy",
       "move_titles": [
         "Slashes",
-        "Sleep"
+        "Sleep",
+        "Wake"
       ]
     },
     "BYRDONIS": {
       "moves": {
         "BITE": "Bite",
         "PECK": "Peck",
-        "PROTECT": "Protect"
+        "SWOOP": "Swoop"
       },
       "name": "Byrdonis",
       "move_titles": [
         "Bite",
         "Peck",
-        "Protect"
+        "Swoop"
       ]
     },
     "BYRDONIS_NEST": {
@@ -236,11 +251,15 @@
     },
     "CORPSE_SLUG": {
       "moves": {
+        "GLOMP": "Glomp",
+        "GOOP": "Goop",
         "TACKLE": "Tackle",
         "WHIP_SLAP": "Whip Slap"
       },
       "name": "Corpse Slug",
       "move_titles": [
+        "Glomp",
+        "Goop",
         "Tackle",
         "Whip Slap"
       ]
@@ -276,14 +295,14 @@
     "CUBEX_CONSTRUCT": {
       "moves": {
         "CHARGE_UP": "Charge Up",
-        "REPEATER_BLAST": "Repeater Blast",
-        "SUBMERGE": "Submerge"
+        "EXPEL": "Expel",
+        "REPEATER_BLAST": "Repeater Blast"
       },
       "name": "Cubex Construct",
       "move_titles": [
         "Charge Up",
-        "Repeater Blast",
-        "Submerge"
+        "Expel",
+        "Repeater Blast"
       ]
     },
     "DAMP_CULTIST": {
@@ -300,19 +319,17 @@
     "DECIMILLIPEDE_SEGMENT": {
       "moves": {
         "BULK": "Bulk",
+        "CONSTRICT": "Constrict",
         "DEAD": "Dead",
-        "OUTGAS": "Outgas",
         "REATTACH": "Reattach",
-        "TACKLE": "Tackle",
         "WRITHE": "Writhe"
       },
       "name": "Decimillipede",
       "move_titles": [
         "Bulk",
+        "Constrict",
         "Dead",
-        "Outgas",
         "Reattach",
-        "Tackle",
         "Writhe"
       ]
     },
@@ -320,22 +337,14 @@
       "name": "Deprecated Monster"
     },
     "DEVOTED_SCULPTOR": {
-      "name": "Devoted Sculptor"
-    },
-    "DOOR": {
-      "name": "Door"
-    },
-    "DOORMAKER": {
       "moves": {
-        "GRASP_MOVE": "Grasp",
-        "HUNGER_MOVE": "Hunger",
-        "SCRUTINY_MOVE": "Scrutiny"
+        "FORBIDDEN_INCANTATION": "Forbidden Incantation",
+        "SAVAGE": "Savage"
       },
-      "name": "Doormaker",
+      "name": "Devoted Sculptor",
       "move_titles": [
-        "Grasp",
-        "Hunger",
-        "Scrutiny"
+        "Forbidden Incantation",
+        "Savage"
       ]
     },
     "ENTOMANCER": {
@@ -371,7 +380,7 @@
         "DISTRACT": "Distract",
         "STARTLE": "Startle"
       },
-      "name": "Eye With Teeth",
+      "name": "Eye with Teeth",
       "move_titles": [
         "Distract",
         "Startle"
@@ -380,12 +389,14 @@
     "FABRICATOR": {
       "moves": {
         "DISINTEGRATE": "Disintegrate",
-        "FABRICATE": "Fabricate"
+        "FABRICATE": "Fabricate",
+        "FABRICATING_STRIKE": "Fabricating Strike"
       },
       "name": "Fabricator",
       "move_titles": [
         "Disintegrate",
-        "Fabricate"
+        "Fabricate",
+        "Fabricating Strike"
       ]
     },
     "FAKE_MERCHANT_MONSTER": {
@@ -405,41 +416,47 @@
     },
     "FAT_GREMLIN": {
       "moves": {
-        "FLEE": "Flee"
+        "FLEE": "Flee",
+        "SPAWNED": "Wake Up"
       },
       "name": "Fat Gremlin",
       "move_titles": [
-        "Flee"
+        "Flee",
+        "Wake Up"
       ]
     },
     "FLAIL_KNIGHT": {
       "moves": {
         "BREAKER": "Breaker",
         "FLAIL": "Flail",
-        "RAM": "Ram"
+        "RAM": "Ram",
+        "WAR_CHANT": "War Chant"
       },
       "name": "Flail Knight",
       "move_titles": [
         "Breaker",
         "Flail",
-        "Ram"
+        "Ram",
+        "War Chant"
       ]
     },
     "FLYCONID": {
       "moves": {
         "FRAIL_SPORES": "Frail Spores",
-        "SMASH": "Smash"
+        "SMASH": "Smash",
+        "VULNERABLE_SPORES": "Vulnerable Spores"
       },
       "name": "Flyconid",
       "move_titles": [
         "Frail Spores",
-        "Smash"
+        "Smash",
+        "Vulnerable Spores"
       ]
     },
     "FOGMOG": {
       "moves": {
-        "ILLUSORY_SPORES": "Illusory Spores",
-        "THWACK": "Thwack"
+        "ILLUSION": "Illusory Spores",
+        "SWIPE": "Thwack"
       },
       "name": "Fogmog",
       "move_titles": [
@@ -477,11 +494,13 @@
     },
     "FUZZY_WURM_CRAWLER": {
       "moves": {
-        "ACID_GOOP": "Acid Goop"
+        "ACID_GOOP": "Acid Goop",
+        "INHALE": "Inhale"
       },
       "name": "Fuzzy Wurm Crawler",
       "move_titles": [
-        "Acid Goop"
+        "Acid Goop",
+        "Inhale"
       ]
     },
     "GAS_BOMB": {
@@ -515,17 +534,23 @@
         "Gem Laser"
       ]
     },
+    "GENERIC": {
+      "moves": {
+        "STUNNED": "Stunned"
+      },
+      "move_titles": [
+        "Stunned"
+      ]
+    },
     "GLOBE_HEAD": {
       "moves": {
-        "CHANNEL_LIGHTNING": "Channel Lightning",
-        "DUAL_CAST": "Dual Cast",
-        "SHOCKING_SLAP": "Shocking Slap"
+        "SHOCKING_SLAP": "Shocking Slap",
+        "THUNDER_STRIKE": "Channel Lightning"
       },
       "name": "Globe Head",
       "move_titles": [
-        "Channel Lightning",
-        "Dual Cast",
-        "Shocking Slap"
+        "Shocking Slap",
+        "Channel Lightning"
       ]
     },
     "GREMLIN_MERC": {
@@ -556,14 +581,12 @@
     "HAUNTED_SHIP": {
       "moves": {
         "HAUNT": "Haunt",
-        "RAMMING_SPEED": "Ramming Speed",
         "STOMP": "Stomp",
         "SWIPE": "Swipe"
       },
       "name": "Haunted Ship",
       "move_titles": [
         "Haunt",
-        "Ramming Speed",
         "Stomp",
         "Swipe"
       ]
@@ -600,20 +623,20 @@
       "moves": {
         "JAB": "Jab",
         "PIERCING_GAZE": "Piercing Gaze",
-        "WINDUP_PUNCH": "Windup Punch"
+        "WHIRLWIND": "Whirlwind"
       },
       "name": "Inklet",
       "move_titles": [
         "Jab",
         "Piercing Gaze",
-        "Windup Punch"
+        "Whirlwind"
       ]
     },
     "KIN_FOLLOWER": {
       "moves": {
-        "BOOMERANG_MOVE": "Boomerang",
-        "POWER_DANCE_MOVE": "Power Dance",
-        "QUICK_SLASH_MOVE": "Quick Slash"
+        "BOOMERANG": "Boomerang",
+        "POWER_DANCE": "Power Dance",
+        "QUICK_SLASH": "Quick Slash"
       },
       "name": "Kin Follower",
       "move_titles": [
@@ -624,10 +647,10 @@
     },
     "KIN_PRIEST": {
       "moves": {
-        "BEAM_MOVE": "Soul Beam",
-        "OR_OF_FRAILTY_MOVE": "Orb of Frailty",
-        "OR_OF_WEAKNESS_MOVE": "Orb of Weakness",
-        "RITUAL_MOVE": "Dark Ritual"
+        "BEAM": "Soul Beam",
+        "ORB_OF_FRAILTY": "Orb of Frailty",
+        "ORB_OF_WEAKNESS": "Orb of Weakness",
+        "RITUAL": "Dark Ritual"
       },
       "name": "Kin Priest",
       "move_titles": [
@@ -643,7 +666,8 @@
         "CURSE_OF_KNOWLEDGE": "Curse of Knowledge",
         "HAVE_A_TASTE": "Have a Taste",
         "KNOWLEDGE_OVERWHELMING": "Knowledge Overwhelming",
-        "PONDER": "Ponder"
+        "PONDER": "Ponder",
+        "SLAP": "Slap"
       },
       "name": "Knowledge Demon",
       "move_titles": [
@@ -651,7 +675,8 @@
         "Curse of Knowledge",
         "Have a Taste",
         "Knowledge Overwhelming",
-        "Ponder"
+        "Ponder",
+        "Slap"
       ]
     },
     "LAGAVULIN_MATRIARCH": {
@@ -659,14 +684,16 @@
         "DISEMBOWEL": "Disembowel",
         "SLASH": "Slash",
         "SLEEP": "Sleep",
-        "SOUL_SIPHON": "Soul Siphon"
+        "SOUL_SIPHON": "Soul Siphon",
+        "WAKE_UP": "Wake Up"
       },
       "name": "Lagavulin Matriarch",
       "move_titles": [
         "Disembowel",
         "Slash",
         "Sleep",
-        "Soul Siphon"
+        "Soul Siphon",
+        "Wake Up"
       ]
     },
     "LEAF_SLIME_M": {
@@ -693,43 +720,53 @@
     },
     "LIVING_FOG": {
       "moves": {
-        "BLOAT": "Bloat"
+        "ADVANCED_GAS": "Advanced Gas",
+        "BLOAT": "Bloat",
+        "SUPER_GAS_BLAST": "Super Gas Blast"
       },
       "name": "Living Fog",
       "move_titles": [
-        "Bloat"
+        "Advanced Gas",
+        "Bloat",
+        "Super Gas Blast"
       ]
     },
     "LIVING_SHIELD": {
       "moves": {
-        "SHIELD_SLAM": "Shield Slam"
+        "SHIELD_SLAM": "Shield Slam",
+        "SMASH": "Smash"
       },
       "name": "Living Shield",
       "move_titles": [
-        "Shield Slam"
+        "Shield Slam",
+        "Smash"
       ]
     },
     "LOUSE_PROGENITOR": {
       "moves": {
         "ACID_DUST": "Acid Dust",
         "CURL_AND_GROW": "Curl and Grow",
+        "POUNCE": "Pounce",
         "WEB_CANNON": "Web Cannon"
       },
       "name": "Louse Progenitor",
       "move_titles": [
         "Acid Dust",
         "Curl and Grow",
+        "Pounce",
         "Web Cannon"
       ]
     },
     "MAGI_KNIGHT": {
       "moves": {
+        "DAMPEN": "Dampen",
         "MAGIC_BOMB": "Magic Bomb",
         "POWER_SHIELD": "Power Shield",
         "RAM": "Ram"
       },
       "name": "Magi Knight",
       "move_titles": [
+        "Dampen",
         "Magic Bomb",
         "Power Shield",
         "Ram"
@@ -932,7 +969,8 @@
         "OFF_WITH_YOUR_HEAD": "Off with Your Head",
         "SUMMON_1": "Summon",
         "SUMMON_2": "Summon",
-        "YOURE_MINE": "You're Mine"
+        "YOURE_MINE": "You're Mine",
+        "YOU_ARE_MINE": "You Are Mine"
       },
       "name": "Queen",
       "move_titles": [
@@ -943,7 +981,8 @@
         "Off with Your Head",
         "Summon",
         "Summon",
-        "You're Mine"
+        "You're Mine",
+        "You Are Mine"
       ]
     },
     "ROCKET": {
@@ -1027,7 +1066,17 @@
       ]
     },
     "SLIMED_BERSERKER": {
-      "name": "Slimed Berserker"
+      "moves": {
+        "FURIOUS_PUMMELING": "Furious Pummeling",
+        "LEECHING_HUG": "Leeching Hug",
+        "VOMIT_ICHOR": "Vomit Ichor"
+      },
+      "name": "Slimed Berserker",
+      "move_titles": [
+        "Furious Pummeling",
+        "Leeching Hug",
+        "Vomit Ichor"
+      ]
     },
     "SLITHERING_STRANGLER": {
       "moves": {
@@ -1058,16 +1107,16 @@
     "SLUMBERING_BEETLE": {
       "moves": {
         "CRASH": "Crash",
-        "RESOLVE": "Resolve",
         "ROLL_OUT": "Roll Out",
-        "SNORE": "Snore"
+        "SNORE": "Snore",
+        "WAKE_UP": "Wake Up"
       },
       "name": "Slumbering Beetle",
       "move_titles": [
         "Crash",
-        "Resolve",
         "Roll Out",
-        "Snore"
+        "Snore",
+        "Wake Up"
       ]
     },
     "SNAPPING_JAXFRUIT": {
@@ -1083,23 +1132,29 @@
     },
     "SNEAKY_GREMLIN": {
       "moves": {
+        "SPAWNED": "Wake Up",
         "TACKLE": "Tackle"
       },
       "name": "Sneaky Gremlin",
       "move_titles": [
+        "Wake Up",
         "Tackle"
       ]
     },
     "SOUL_FYSH": {
       "moves": {
-        "BURP": "Burp",
+        "BECKON": "Beckon",
         "DE_GAS": "De-Gas",
+        "FADE": "Fade",
+        "GAZE": "Gaze",
         "SCREAM": "Scream"
       },
       "name": "Soul Fysh",
       "move_titles": [
-        "Burp",
+        "Beckon",
         "De-Gas",
+        "Fade",
+        "Gaze",
         "Scream"
       ]
     },
@@ -1152,18 +1207,28 @@
       ]
     },
     "TERROR_EEL": {
-      "name": "Terror Eel"
+      "moves": {
+        "CRASH": "Crash",
+        "TERROR": "Terrorize",
+        "THRASH": "Thrash"
+      },
+      "name": "Terror Eel",
+      "move_titles": [
+        "Crash",
+        "Terrorize",
+        "Thrash"
+      ]
     },
     "TEST_SUBJECT": {
       "moves": {
-        "BIG_POUNCE_MOVE": "Big Pounce",
-        "BITE_MOVE": "Bite",
-        "BURNING_GROWL_MOVE": "Burning Growl",
-        "MULTI_CLAW_MOVE": "Multi-Claw",
-        "PHASE3_LACERATE_MOVE": "Lacerate",
-        "POUNCE_MOVE": "Pounce",
-        "RESPAWN_MOVE": "Respawn",
-        "SKULL_BASH_MOVE": "Skull Bash"
+        "BIG_POUNCE": "Big Pounce",
+        "BITE": "Bite",
+        "BURNING_GROWL": "Burning Growl",
+        "MULTI_CLAW": "Multi-Claw",
+        "PHASE3_LACERATE": "Lacerate",
+        "POUNCE": "Pounce",
+        "RESPAWN": "Respawn",
+        "SKULL_BASH": "Skull Bash"
       },
       "name": "Test Subject #C{Count}",
       "move_titles": [
@@ -1270,6 +1335,7 @@
     },
     "THE_INSATIABLE": {
       "moves": {
+        "DEVOUR": "Devour",
         "LIQUIFY_GROUND": "Liquify Ground",
         "LUNGING_BITE": "Lunging Bite",
         "SALIVATE": "Salivate",
@@ -1277,6 +1343,7 @@
       },
       "name": "The Insatiable",
       "move_titles": [
+        "Devour",
         "Liquify Ground",
         "Lunging Bite",
         "Salivate",
@@ -1299,6 +1366,7 @@
         "HARDENING_STRIKE": "Hardening Strike",
         "ILLUSION": "Illusion",
         "PIERCING_GAZE": "Piercing Gaze",
+        "SAIL": "Sail",
         "WAIL": "Wail"
       },
       "name": "The Obscura",
@@ -1306,6 +1374,7 @@
         "Hardening Strike",
         "Illusion",
         "Piercing Gaze",
+        "Sail",
         "Wail"
       ]
     },
@@ -1341,20 +1410,24 @@
     },
     "TORCH_HEAD_AMALGAM": {
       "moves": {
+        "BEAM": "Beam",
         "TACKLE": "Tackle"
       },
       "name": "Torch Head Amalgam",
       "move_titles": [
+        "Beam",
         "Tackle"
       ]
     },
     "TOUGH_EGG": {
       "moves": {
-        "HATCH": "HATCH"
+        "HATCH": "Hatch",
+        "NIBBLE": "Nibble"
       },
       "name": "Tough Egg",
       "move_titles": [
-        "HATCH"
+        "Hatch",
+        "Nibble"
       ]
     },
     "TRACKER_RUBY_RAIDER": {
@@ -1373,24 +1446,26 @@
         "BELOW": "Attack from Below",
         "BITE": "Bite",
         "BURROW": "Burrow",
-        "STRIKE": "Emerging Strike"
+        "STRIKE": "Emerging Strike",
+        "UNBURROW": "Unburrow"
       },
       "name": "Tunneler",
       "move_titles": [
         "Attack from Below",
         "Bite",
         "Burrow",
-        "Emerging Strike"
+        "Emerging Strike",
+        "Unburrow"
       ]
     },
     "TURRET_OPERATOR": {
       "moves": {
-        "LOADING": "Loading",
+        "RELOAD": "Reload",
         "UNLOAD": "Unload!"
       },
       "name": "Turret Operator",
       "move_titles": [
-        "Loading",
+        "Reload",
         "Unload!"
       ]
     },
@@ -1463,7 +1538,10 @@
     },
     "WATERFALL_GIANT": {
       "moves": {
+        "ABOUT_TO_BLOW": "About to Blow",
+        "EXPLODE": "Explode",
         "PRESSURE_GUN": "Pressure Gun",
+        "PRESSURE_UP": "Pressure Up",
         "PRESSURIZE": "Pressurize",
         "RAM": "Ram",
         "SIPHON": "Siphon",
@@ -1471,7 +1549,10 @@
       },
       "name": "Waterfall Giant",
       "move_titles": [
+        "About to Blow",
+        "Explode",
         "Pressure Gun",
+        "Pressure Up",
         "Pressurize",
         "Ram",
         "Siphon",
@@ -1480,13 +1561,15 @@
     },
     "WRIGGLER": {
       "moves": {
-        "PARASITIZE_PLAYER": "Parasitize Player",
-        "WRIGGLE_STRIKE": "Wriggle Strike"
+        "NASTY_BITE": "Nasty Bite",
+        "SPAWNED": "Spawned",
+        "WRIGGLE": "Wriggle"
       },
       "name": "Wriggler",
       "move_titles": [
-        "Parasitize Player",
-        "Wriggle Strike"
+        "Nasty Bite",
+        "Spawned",
+        "Wriggle"
       ]
     },
     "ZAPBOT": {

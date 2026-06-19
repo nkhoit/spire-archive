@@ -859,14 +859,26 @@
       },
       {
         "name": "Booming Conch",
-        "description": "At the start of Elite combats, draw {Cards} additional {Cards:plural:card|cards}.",
+        "description": "At the start of Elite combats, draw {Cards} additional {Cards:plural:card|cards} and gain {Energy:energyIcons()}.",
         "relic_id": "BOOMING_CONCH",
+        "pool": "positive"
+      },
+      {
+        "name": "Fishing Rod",
+        "description": "Every {Combats:plural:normal combat|{} normal combats}, Upgrade a random card in your Deck.",
+        "relic_id": "FISHING_ROD",
         "pool": "positive"
       },
       {
         "name": "Golden Pearl",
         "description": "Upon pickup, gain {Gold} Gold.",
         "relic_id": "GOLDEN_PEARL",
+        "pool": "positive"
+      },
+      {
+        "name": "Kaleidoscope",
+        "description": "Upon pickup, obtain {Cards} {Cards:plural:card reward|card rewards} from other characters.",
+        "relic_id": "KALEIDOSCOPE",
         "pool": "positive"
       },
       {
@@ -882,6 +894,12 @@
         "pool": "positive"
       },
       {
+        "name": "Massive Scroll",
+        "description": "Upon pickup, choose 1 of 3 Multiplayer Cards to add to your Deck.",
+        "relic_id": "MASSIVE_SCROLL",
+        "pool": "positive"
+      },
+      {
         "name": "Neow's Torment",
         "description": "Upon pickup, add 1 Neow's Fury to your Deck.",
         "relic_id": "NEOWS_TORMENT",
@@ -894,27 +912,27 @@
         "pool": "positive"
       },
       {
-        "name": "Precise Scissors",
-        "description": "Upon pickup, remove {Cards} {Cards:plural:card|cards} from your Deck.",
-        "relic_id": "PRECISE_SCISSORS",
-        "pool": "positive"
-      },
-      {
         "name": "Phial Holster",
         "description": "Upon pickup, gain {PotionSlots} potion {PotionSlots:plural:slot|slots} and procure {Potions} random {Potions:plural:potion|potions}.",
         "relic_id": "PHIAL_HOLSTER",
         "pool": "positive"
       },
       {
-        "name": "Winged Boots",
-        "description": "You may ignore paths when choosing the next rooms to travel to {Rooms} times.",
-        "relic_id": "WINGED_BOOTS",
+        "name": "Precise Scissors",
+        "description": "Upon pickup, remove {Cards} {Cards:plural:card|cards} from your Deck.",
+        "relic_id": "PRECISE_SCISSORS",
         "pool": "positive"
       },
       {
-        "name": "Massive Scroll",
-        "description": "Upon pickup, choose 1 of 3 Multiplayer Cards to add to your Deck.",
-        "relic_id": "MASSIVE_SCROLL",
+        "name": "Scroll Boxes",
+        "description": "Upon pickup, choose 1 of 2 packs of cards to add to your Deck.",
+        "relic_id": "SCROLL_BOXES",
+        "pool": "positive"
+      },
+      {
+        "name": "Winged Boots",
+        "description": "You may ignore paths when choosing the next rooms to travel to {Rooms} times.",
+        "relic_id": "WINGED_BOOTS",
         "pool": "positive"
       },
       {
@@ -942,21 +960,27 @@
         "pool": "cursed"
       },
       {
+        "name": "Neow's Bones",
+        "description": "Upon pickup, gain {Relics} random Neow {Relics:plural:Relic|Relics}. Add {Curses} random {Curses:plural:Curse|Curses} to your Deck.",
+        "relic_id": "NEOWS_BONES",
+        "pool": "cursed"
+      },
+      {
         "name": "Precarious Shears",
         "description": "Upon pickup, remove {Cards} {Cards:plural:card|cards} from your Deck and lose {Damage} HP.",
         "relic_id": "PRECARIOUS_SHEARS",
         "pool": "cursed"
       },
       {
-        "name": "Silver Crucible",
-        "description": "The first {Cards} card rewards you see are Upgraded. The first Treasure Chest you open is empty.",
-        "relic_id": "SILVER_CRUCIBLE",
+        "name": "Silken Tress",
+        "description": "Upon pickup, lose all Gold. Enchant all cards in the first card reward with Glam.",
+        "relic_id": "SILKEN_TRESS",
         "pool": "cursed"
       },
       {
-        "name": "Neow's Bones",
-        "description": "Upon pickup, gain {Relics} random Neow {Relics:plural:Relic|Relics}. Add {Curses} random {Curses:plural:Curse|Curses} to your Deck.",
-        "relic_id": "NEOWS_BONES",
+        "name": "Silver Crucible",
+        "description": "The first {Cards} card rewards you see are Upgraded. The first Treasure Chest you open is empty.",
+        "relic_id": "SILVER_CRUCIBLE",
         "pool": "cursed"
       },
       {
@@ -994,12 +1018,6 @@
         "description": "Whenever you Rest at a Rest Site, raise your Max HP by {MaxHp}.",
         "relic_id": "STONE_HUMIDIFIER",
         "pool": "positive"
-      },
-      {
-        "name": "Scroll Boxes",
-        "description": "Upon pickup, lose all Gold and choose 1 of 2 packs of cards to add to your Deck.",
-        "relic_id": "SCROLL_BOXES",
-        "pool": "cursed"
       }
     ],
     "type": "ancient"

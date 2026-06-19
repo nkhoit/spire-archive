@@ -57,18 +57,27 @@ Start the dev server, then run validation:
 
 ```bash
 npx astro dev --port 4321 &
-python3 parsers/validate.py --game sts2 --all-langs
+python3 parsers/validate.py --game sts2 --all
 ```
 
 This compares API output against parsed JSON across all 13 locales. All checks should pass (✅).
+
+> **Note:** `effects` validates as ❌ ("API returned no items") for both STS1 and STS2 — there is no published `effects` API route, so this is expected, not a regression. All other entities (cards, relics, monsters, events, enchantments) across all 13 locales should pass.
 
 ## Step 4: Build and test
 
 ```bash
 npx astro check     # TypeScript type checking
 npm run build        # Full production build
-npx playwright test  # Smoke tests
+
+# Smoke tests hit the built SSR server (node adapter) on port 4323,
+# NOT the dev server. Start the production build first, then point
+# Playwright at it via BASE_URL:
+HOST=127.0.0.1 PORT=4323 node ./dist/server/entry.mjs &
+BASE_URL=http://localhost:4323 npx playwright test --reporter=list
 ```
+
+> Playwright's default `baseURL` is `http://localhost:4323` and there is no `webServer` block in `playwright.config.ts`, so the SSR server must already be running on 4323 or every test hangs on connection timeout.
 
 ## Step 5: Review and commit
 

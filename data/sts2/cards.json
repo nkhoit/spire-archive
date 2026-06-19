@@ -472,14 +472,14 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "damage": 14
+      "damage": 6
     },
     "upgrade": {
-      "damage": 4
+      "damage": 2
     },
-    "description": "Deal 14 damage to ALL enemies.",
+    "description": "Deal 6 damage to ALL enemies twice.",
     "image_url": "/images/sts2/cards/astral_pulse.png",
-    "description_template": "Deal {damage} damage to ALL enemies.",
+    "description_template": "Deal {damage} damage to ALL enemies twice.",
     "star_cost": 3
   },
   {
@@ -1426,14 +1426,14 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "block": 13,
+      "block": 12,
       "forge": 10
     },
     "upgrade": {
       "block": 3,
       "forge": 3
     },
-    "description": "Gain 13 Block.\nForge 10.",
+    "description": "Gain 12 Block.\nForge 10.",
     "image_url": "/images/sts2/cards/bulwark.png",
     "description_template": "Gain {block} Block.\nForge {forge}."
   },
@@ -2154,14 +2154,14 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "extra_damage": 2,
-      "calculation_base": 8
+      "damage": 2,
+      "repeat": 4
     },
     "upgrade": {
-      "calculation_base": 1,
-      "extra_damage": 1
+      "repeat": 1,
+      "description": "Deal 2 damage to ALL enemies 5 times."
     },
-    "description": "Deal 8 damage to ALL enemies.\nDeals 2 additional damage for each other Attack you've played this turn.",
+    "description": "Deal 2 damage to ALL enemies 4 times.",
     "image_url": "/images/sts2/cards/conflagration.png"
   },
   {
@@ -2415,12 +2415,12 @@
     "tags": [],
     "vars": {
       "extra_damage": 2,
-      "calculation_base": 6
+      "calculation_base": 8
     },
     "upgrade": {
       "extra_damage": 1
     },
-    "description": "Deal 6 damage.\nDeals 2 additional damage for ALL your cards that have a [S] cost.",
+    "description": "Deal 8 damage.\nDeals 2 additional damage for ALL your cards that have a [S] cost.",
     "image_url": "/images/sts2/cards/crescent_spear.png",
     "star_cost": 1
   },
@@ -2691,14 +2691,14 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "extra_damage": 3,
+      "extra_damage": 4,
       "calculation_base": 8
     },
     "upgrade": {
       "calculation_base": 1,
-      "extra_damage": 1
+      "extra_damage": 2
     },
-    "description": "Deal 8 damage.\nDeals 3 additional damage for each card drawn during your turn.",
+    "description": "Deal 8 damage.\nDeals 4 additional damage for each card drawn during your turn.",
     "image_url": "/images/sts2/cards/death_march.png"
   },
   {
@@ -2755,14 +2755,14 @@
     "tags": [],
     "vars": {
       "damage": 10,
-      "power_debilitate": 3
+      "power_debilitate": 2
     },
     "upgrade": {
       "damage": 2,
       "debilitate": 1,
-      "description": "Deal 12 damage.\nVulnerable and Weak are twice as effective against the enemy for the next 4 turns."
+      "description": "Deal 12 damage.\nVulnerable and Weak are twice as effective against the enemy for the next 3 turns."
     },
-    "description": "Deal 10 damage.\nVulnerable and Weak are twice as effective against the enemy for the next 3 turns.",
+    "description": "Deal 10 damage.\nVulnerable and Weak are twice as effective against the enemy for the next 2 turns.",
     "image_url": "/images/sts2/cards/debilitate.png"
   },
   {
@@ -3423,8 +3423,8 @@
   {
     "id": "DRUM_OF_BATTLE",
     "name": "Drum of Battle",
-    "cost": 0,
-    "type": "Power",
+    "cost": 1,
+    "type": "Skill",
     "rarity": "Uncommon",
     "target": "Self",
     "color": "ironclad",
@@ -3432,14 +3432,14 @@
     "tags": [],
     "vars": {
       "cards": 2,
-      "power_drum_of_battle": 1
+      "energy": 2
     },
     "upgrade": {
-      "cards": 1
+      "energy": 1,
+      "description": "Draw 2 cards.\nWhen this card is Exhausted, gain [E][E][E]."
     },
-    "description": "Draw 2 cards.\nAt the start of your turn, Exhaust the top card of your Draw Pile.",
-    "image_url": "/images/sts2/cards/drum_of_battle.png",
-    "description_template": "Draw {cards} cards.\nAt the start of your turn, Exhaust the top card of your Draw Pile."
+    "description": "Draw 2 cards.\nWhen this card is Exhausted, gain [E][E].",
+    "image_url": "/images/sts2/cards/drum_of_battle.png"
   },
   {
     "id": "DUAL_WIELD",
@@ -3903,9 +3903,9 @@
     "upgrade": {
       "damage": 1
     },
-    "description": "Deal 3 damage 4 times to ALL enemies.",
+    "description": "Deal 3 damage to ALL enemies 4 times.",
     "image_url": "/images/sts2/cards/exterminate.png",
-    "description_template": "Deal {damage} damage {repeat} times to ALL enemies."
+    "description_template": "Deal {damage} damage to ALL enemies {repeat} times."
   },
   {
     "id": "FALLING_STAR",
@@ -3963,12 +3963,12 @@
       "Defend"
     ],
     "vars": {
-      "extra_block": 5
+      "extra_block": 4
     },
     "upgrade": {
       "extra_block": 2
     },
-    "description": "Gain an additional 5 Block from Defend cards.",
+    "description": "Gain an additional 4 Block from Defend cards.",
     "image_url": "/images/sts2/cards/fasten.png",
     "description_template": "Gain an additional {extra_block} Block from Defend cards."
   },
@@ -4404,27 +4404,6 @@
     "description_template": "Deal {damage} damage.\nGain {power_focus} Focus this turn."
   },
   {
-    "id": "FOLLOW_THROUGH",
-    "name": "Follow Through",
-    "cost": 1,
-    "type": "Attack",
-    "rarity": "Common",
-    "target": "AnyEnemy",
-    "color": "silent",
-    "keywords": [],
-    "tags": [],
-    "vars": {
-      "damage": 7,
-      "card_count": 5
-    },
-    "upgrade": {
-      "damage": 2,
-      "description": "Deal 9 damage.\nIf you have 5 or more other cards in your Hand, hits an additional time."
-    },
-    "description": "Deal 7 damage.\nIf you have 5 or more other cards in your Hand, hits an additional time.",
-    "image_url": "/images/sts2/cards/follow_through.png"
-  },
-  {
     "id": "FOLLY",
     "name": "Folly",
     "cost": null,
@@ -4616,28 +4595,32 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "forge": 4
+      "forge": 5
     },
     "upgrade": {
       "forge": 2
     },
-    "description": "At the start of your turn, Forge 4.",
+    "description": "At the start of your turn, Forge 5.",
     "image_url": "/images/sts2/cards/furnace.png",
     "description_template": "At the start of your turn, Forge {forge}."
   },
   {
     "id": "FUSION",
     "name": "Fusion",
-    "cost": 2,
+    "cost": 1,
     "type": "Skill",
     "rarity": "Uncommon",
     "target": "Self",
     "color": "defect",
-    "keywords": [],
+    "keywords": [
+      "Exhaust"
+    ],
     "tags": [],
     "vars": {},
     "upgrade": {
-      "cost": 1
+      "remove_keywords": [
+        "Exhaust"
+      ]
     },
     "description": "Channel 1 Plasma.",
     "image_url": "/images/sts2/cards/fusion.png"
@@ -5572,9 +5555,9 @@
     "upgrade": {
       "damage": 5
     },
-    "description": "Deal 16 damage to ALL enemies.\nAt the start of your turn, if this is in your Exhaust Pile, play it.",
+    "description": "Deal 16 damage to ALL enemies.\nAt the end of your turn, if this is in your Exhaust Pile, play it.",
     "image_url": "/images/sts2/cards/howl_from_beyond.png",
-    "description_template": "Deal {damage} damage to ALL enemies.\nAt the start of your turn, if this is in your Exhaust Pile, play it."
+    "description_template": "Deal {damage} damage to ALL enemies.\nAt the end of your turn, if this is in your Exhaust Pile, play it."
   },
   {
     "id": "HUDDLE_UP",
@@ -5609,13 +5592,13 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "damage": 26,
+      "damage": 28,
       "power_focus": 3
     },
     "upgrade": {
       "damage": 8
     },
-    "description": "Deal 26 damage to ALL enemies.\nLose 3 Focus.",
+    "description": "Deal 28 damage to ALL enemies.\nLose 3 Focus.",
     "image_url": "/images/sts2/cards/hyperbeam.png",
     "description_template": "Deal {damage} damage to ALL enemies.\nLose {power_focus} Focus."
   },
@@ -5975,12 +5958,12 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "power_juggernaut": 5
+      "power_juggernaut": 6
     },
     "upgrade": {
       "juggernaut": 2
     },
-    "description": "Whenever you gain Block, deal 5 damage to a random enemy.",
+    "description": "Whenever you gain Block, deal 6 damage to a random enemy.",
     "image_url": "/images/sts2/cards/juggernaut.png",
     "description_template": "Whenever you gain Block, deal {power_juggernaut} damage to a random enemy."
   },
@@ -6857,12 +6840,12 @@
       "Minion"
     ],
     "vars": {
-      "block": 9
+      "block": 8
     },
     "upgrade": {
       "block": 3
     },
-    "description": "Gain 9 Block.",
+    "description": "Gain 8 Block.",
     "image_url": "/images/sts2/cards/minion_sacrifice.png",
     "description_template": "Gain {block} Block."
   },
@@ -7005,7 +6988,7 @@
   {
     "id": "MONARCHS_GAZE",
     "name": "Monarch's Gaze",
-    "cost": 3,
+    "cost": 2,
     "type": "Power",
     "rarity": "Rare",
     "target": "Self",
@@ -7016,7 +6999,7 @@
       "strength_loss": 1
     },
     "upgrade": {
-      "cost": 2
+      "cost": 1
     },
     "description": "Whenever you attack an enemy, it loses 1 Strength this turn.",
     "image_url": "/images/sts2/cards/monarchs_gaze.png",
@@ -7142,9 +7125,9 @@
     "upgrade": {
       "damage": 4,
       "cards": 1,
-      "description": "Deal 14 damage.\nPut 3 random cards from your Discard Pile into your Hand."
+      "description": "Deal 14 damage.\nPut up to 3 cards from your Discard Pile into your Hand."
     },
-    "description": "Deal 10 damage.\nPut 2 random cards from your Discard Pile into your Hand.",
+    "description": "Deal 10 damage.\nPut up to 2 cards from your Discard Pile into your Hand.",
     "image_url": "/images/sts2/cards/neows_fury.png"
   },
   {
@@ -7531,9 +7514,9 @@
     },
     "upgrade": {
       "damage": 6,
-      "description": "Can only be played if you have 3 or more cards in your Exhaust Pile.\nDeal 23 damage to ALL enemies."
+      "description": "If you have 3 or more cards in your Exhaust Pile,\ndeal 23 damage to ALL enemies."
     },
-    "description": "Can only be played if you have 3 or more cards in your Exhaust Pile.\nDeal 17 damage to ALL enemies.",
+    "description": "If you have 3 or more cards in your Exhaust Pile,\ndeal 17 damage to ALL enemies.",
     "image_url": "/images/sts2/cards/pacts_end.png"
   },
   {
@@ -7635,9 +7618,9 @@
     "upgrade": {
       "parry": 4
     },
-    "description": "Whenever you play Sovereign Blade, gain 10 Block.",
+    "description": "Sovereign Blade now gains 10 Block.",
     "image_url": "/images/sts2/cards/parry.png",
-    "description_template": "Whenever you play Sovereign Blade, gain {power_parry} Block."
+    "description_template": "Sovereign Blade now gains {power_parry} Block."
   },
   {
     "id": "PARSE",
@@ -7693,14 +7676,14 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "block": 9,
+      "block": 8,
       "power_vigor": 2
     },
     "upgrade": {
       "block": 2,
       "vigor": 1
     },
-    "description": "Gain 9 Block.\nGain 2 Vigor.",
+    "description": "Gain 8 Block.\nGain 2 Vigor.",
     "image_url": "/images/sts2/cards/patter.png",
     "description_template": "Gain {block} Block.\nGain {power_vigor} Vigor."
   },
@@ -7969,12 +7952,12 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "damage": 12
+      "damage": 14
     },
     "upgrade": {
       "damage": 6
     },
-    "description": "Deal 12 damage.\nThe next Skill you play costs 0 [E].",
+    "description": "Deal 14 damage.\nThe next Skill you play costs 0 [E].",
     "image_url": "/images/sts2/cards/pounce.png",
     "description_template": "Deal {damage} damage.\nThe next Skill you play costs 0 {energyPrefix:energyIcons(1)}."
   },
@@ -8003,7 +7986,7 @@
     "name": "Predator",
     "cost": 2,
     "type": "Attack",
-    "rarity": "Uncommon",
+    "rarity": "Common",
     "target": "AnyEnemy",
     "color": "silent",
     "keywords": [],
@@ -8516,7 +8499,7 @@
         "Retain"
       ]
     },
-    "description": "Whenever Attacks deal damage, they also apply that much Doom.",
+    "description": "Whenever Attacks deal damage, apply that much Doom.",
     "image_url": "/images/sts2/cards/reaper_form.png"
   },
   {
@@ -8613,12 +8596,12 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "block": 17
+      "block": 15
     },
     "upgrade": {
-      "block": 4
+      "block": 5
     },
-    "description": "Gain 17 Block.\nBlocked attack damage is reflected to your attacker this turn.",
+    "description": "Gain 15 Block.\nBlocked attack damage is reflected to your attacker this turn.",
     "image_url": "/images/sts2/cards/reflect.png",
     "description_template": "Gain {block} Block.\nBlocked attack damage is reflected to your attacker this turn.",
     "star_cost": 3
@@ -8921,7 +8904,7 @@
       "gold": 30
     },
     "upgrade": {
-      "gold": 5
+      "gold": 10
     },
     "description": "At the end of combat, gain 30 Gold.",
     "image_url": "/images/sts2/cards/royalties.png",
@@ -8959,7 +8942,10 @@
       "Retain"
     ],
     "tags": [],
-    "vars": {},
+    "vars": {
+      "calculation_base": 0,
+      "calculation_extra": 1
+    },
     "upgrade": {
       "cost": 0
     },
@@ -8985,6 +8971,27 @@
     "description": "Deal 12 damage.\nRetain your Hand this turn.",
     "image_url": "/images/sts2/cards/salvo.png",
     "description_template": "Deal {damage} damage.\nRetain your Hand this turn."
+  },
+  {
+    "id": "SCARE",
+    "name": "Scare",
+    "cost": 0,
+    "type": "Skill",
+    "rarity": "Uncommon",
+    "target": "AllEnemies",
+    "color": "silent",
+    "keywords": [
+      "Exhaust"
+    ],
+    "tags": [],
+    "vars": {},
+    "upgrade": {
+      "remove_keywords": [
+        "Exhaust"
+      ]
+    },
+    "description": "Apply 1 Weak to ALL enemies.",
+    "image_url": "/images/sts2/cards/scare.png"
   },
   {
     "id": "SCAVENGE",
@@ -9435,14 +9442,14 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "damage": 11
+      "damage": 7
     },
     "upgrade": {
       "damage": 4
     },
-    "description": "Deal 11 damage to ALL enemies.\nEvoke all of your Orbs.",
+    "description": "Deal 7 damage to ALL enemies.\nEvoke all of your Orbs twice.",
     "image_url": "/images/sts2/cards/shatter.png",
-    "description_template": "Deal {damage} damage to ALL enemies.\nEvoke all of your Orbs."
+    "description_template": "Deal {damage} damage to ALL enemies.\nEvoke all of your Orbs twice."
   },
   {
     "id": "SHINING_STRIKE",
@@ -9567,13 +9574,13 @@
     ],
     "vars": {
       "osty_damage": 5,
-      "power_sic_em": 2
+      "power_sic_em": 3
     },
     "upgrade": {
       "osty_damage": 1,
       "sic_em": 1
     },
-    "description": "Osty deals 5 damage.\nWhenever Osty hits this enemy this turn, Summon 2.",
+    "description": "Osty deals 5 damage.\nWhenever Osty hits this enemy this turn, Summon 3.",
     "image_url": "/images/sts2/cards/sic_em.png",
     "description_template": "Osty deals {osty_damage} damage.\nWhenever Osty hits this enemy this turn, Summon {power_sic_em}."
   },
@@ -10532,9 +10539,9 @@
     "upgrade": {
       "forge": 3
     },
-    "description": "Forge 8.\nPut Sovereign Blade into your Hand from anywhere.",
+    "description": "Put Sovereign Blade into your Hand from anywhere.\nForge 8.",
     "image_url": "/images/sts2/cards/summon_forth.png",
-    "description_template": "Forge {forge}.\nPut Sovereign Blade into your Hand from anywhere."
+    "description_template": "Put Sovereign Blade into your Hand from anywhere.\nForge {forge}."
   },
   {
     "id": "SUNDER",
@@ -10724,8 +10731,9 @@
     "upgrade": {
       "cost": 1
     },
-    "description": "Sovereign Blade now hits an additional time.",
-    "image_url": "/images/sts2/cards/sword_sage.png"
+    "description": "Sovereign Blade gains Replay 1.",
+    "image_url": "/images/sts2/cards/sword_sage.png",
+    "description_template": "Sovereign Blade gains Replay {power_sword_sage}."
   },
   {
     "id": "SYNCHRONIZE",
@@ -10762,12 +10770,12 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "damage": 12
+      "damage": 14
     },
     "upgrade": {
       "damage": 6
     },
-    "description": "Deal 12 damage.\nThe next Power you play costs 0 [E].",
+    "description": "Deal 14 damage.\nThe next Power you play costs 0 [E].",
     "image_url": "/images/sts2/cards/synthesis.png",
     "description_template": "Deal {damage} damage.\nThe next Power you play costs 0 {energyPrefix:energyIcons(1)}."
   },
@@ -10925,11 +10933,11 @@
       "damage": 3
     },
     "upgrade": {
-      "damage": 3
+      "damage": 1,
+      "description": "Deal 4 damage.\nTrigger all Lightning against the enemy twice."
     },
     "description": "Deal 3 damage.\nTrigger all Lightning against the enemy.",
-    "image_url": "/images/sts2/cards/tesla_coil.png",
-    "description_template": "Deal {damage} damage.\nTrigger all Lightning against the enemy."
+    "image_url": "/images/sts2/cards/tesla_coil.png"
   },
   {
     "id": "THE_BOMB",
@@ -11007,12 +11015,12 @@
     ],
     "tags": [],
     "vars": {
-      "increase": 3
+      "increase": 4
     },
     "upgrade": {
       "increase": 1
     },
-    "description": "Deal 13 damage.\nPermanently increase this card's damage by 3.",
+    "description": "Deal 13 damage.\nPermanently increase this card's damage by 4.",
     "image_url": "/images/sts2/cards/the_scythe.png"
   },
   {
@@ -11027,9 +11035,7 @@
     "tags": [],
     "vars": {},
     "upgrade": {
-      "add_keywords": [
-        "Innate"
-      ]
+      "cost": 0
     },
     "description": "Whenever you play a card, gain [S].",
     "image_url": "/images/sts2/cards/the_sealed_throne.png",
@@ -11517,12 +11523,12 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "damage": 12
+      "damage": 14
     },
     "upgrade": {
       "damage": 6
     },
-    "description": "Deal 12 damage.\nThe next Attack you play costs 0 [E].",
+    "description": "Deal 14 damage.\nThe next Attack you play costs 0 [E].",
     "image_url": "/images/sts2/cards/unrelenting.png",
     "description_template": "Deal {damage} damage.\nThe next Attack you play costs 0 {energyPrefix:energyIcons(1)}."
   },
@@ -11542,7 +11548,7 @@
       "block": 6
     },
     "upgrade": {
-      "block": 2
+      "block": 3
     },
     "description": "Gain 6 Block.",
     "image_url": "/images/sts2/cards/untouchable.png",
@@ -11600,12 +11606,12 @@
     "keywords": [],
     "tags": [],
     "vars": {
-      "damage": 5
+      "damage": 6
     },
     "upgrade": {
       "damage": 2
     },
-    "description": "Deal 5 damage twice.\nPlay a random Attack from your Draw Pile.",
+    "description": "Deal 6 damage twice.\nPlay a random Attack from your Draw Pile.",
     "image_url": "/images/sts2/cards/uproar.png",
     "description_template": "Deal {damage} damage twice.\nPlay a random Attack from your Draw Pile."
   },
@@ -11898,6 +11904,28 @@
     },
     "description": "Gain [E].",
     "image_url": "/images/sts2/cards/wisp.png"
+  },
+  {
+    "id": "WITHER",
+    "name": "Wither",
+    "cost": null,
+    "type": "Status",
+    "rarity": "Status",
+    "target": "None",
+    "color": "status",
+    "keywords": [
+      "Unplayable"
+    ],
+    "tags": [],
+    "vars": {
+      "damage": 3
+    },
+    "upgrade": {
+      "damage": 3
+    },
+    "description": "At the end of your turn, if this is in your Hand, take 3 damage.",
+    "image_url": "/images/sts2/cards/wither.png",
+    "description_template": "At the end of your turn, if this is in your Hand, take {damage} damage."
   },
   {
     "id": "WOUND",

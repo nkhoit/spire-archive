@@ -413,13 +413,6 @@
     "stackable": true
   },
   {
-    "id": "DRUM_OF_BATTLE_POWER",
-    "name": "Drum of Battle",
-    "description": "At the start of your turn, Exhaust the top card of your Draw Pile.",
-    "type": "Buff",
-    "stackable": true
-  },
-  {
     "id": "DUPLICATION_POWER",
     "name": "Duplication",
     "description": "Your next card is played an extra time.",
@@ -506,7 +499,7 @@
   {
     "id": "FLANKING_POWER",
     "name": "Flanking",
-    "description": "Other allies deal 2x more attack damage to this enemy this turn.",
+    "description": "Other allies deal 2x the attack damage to this enemy this turn.",
     "type": "Debuff",
     "stackable": true
   },
@@ -602,13 +595,6 @@
     "stackable": true
   },
   {
-    "id": "GRASP_POWER",
-    "name": "Grasp",
-    "description": "Whenever you play a card, lose 1 Energy.",
-    "type": "Buff",
-    "stackable": false
-  },
-  {
     "id": "GRAVITY_POWER",
     "name": "Gravity",
     "description": "Whenever you play a card this turn, deal 2 damage to ALL enemies.",
@@ -702,16 +688,9 @@
   {
     "id": "HIGH_VOLTAGE_POWER",
     "name": "High Voltage",
-    "description": "At the start of this creature's turn, it gains 2 Strength.",
+    "description": "At the end of this creature's turn, it gains 2 Strength.",
     "type": "Buff",
     "stackable": true
-  },
-  {
-    "id": "HUNGER_POWER",
-    "name": "Hunger",
-    "description": "Whenever you play an Attack or Skill, it is Exhausted.",
-    "type": "Buff",
-    "stackable": false
   },
   {
     "id": "ILLUSION_POWER",
@@ -779,7 +758,7 @@
   {
     "id": "JUGGERNAUT_POWER",
     "name": "Juggernaut",
-    "description": "Whenever you gain Block, deal 5 damage to a random enemy.",
+    "description": "Whenever you gain Block, deal 6 damage to a random enemy.",
     "type": "Buff",
     "stackable": true
   },
@@ -1010,7 +989,7 @@
   {
     "id": "PARRY_POWER",
     "name": "Parry",
-    "description": "Whenever you play Sovereign Blade, gain 8 Block.",
+    "description": "Sovereign Blade now gains Block.",
     "type": "Buff",
     "stackable": true
   },
@@ -1115,7 +1094,7 @@
   {
     "id": "REAPER_FORM_POWER",
     "name": "Reaper Form",
-    "description": "Whenever Attacks deal damage, they also apply that much Doom.",
+    "description": "Whenever Attacks deal damage, apply that much Doom.",
     "type": "Buff",
     "stackable": true
   },
@@ -1195,13 +1174,6 @@
     "description": "A power used by The Insatiable.",
     "type": "Buff",
     "stackable": true
-  },
-  {
-    "id": "SCRUTINY_POWER",
-    "name": "Scrutiny",
-    "description": "You cannot draw additional cards during your turn.",
-    "type": "Buff",
-    "stackable": false
   },
   {
     "id": "SEEKING_EDGE_POWER",
@@ -1479,7 +1451,7 @@
   {
     "id": "SWORD_SAGE_POWER",
     "name": "Sword Sage",
-    "description": "Sovereign Blade now hits 1 additional time.",
+    "description": "Sovereign Blade gains Replay 1.",
     "type": "Buff",
     "stackable": true
   },
@@ -1487,6 +1459,13 @@
     "id": "TAG_TEAM_POWER",
     "name": "Tag Team",
     "description": "The next Attack another player plays on the enemy is played an extra time.",
+    "type": "Debuff",
+    "stackable": true
+  },
+  {
+    "id": "TAINTED_POWER",
+    "name": "Tainted",
+    "description": "Take additional damage from Attacks this turn.",
     "type": "Debuff",
     "stackable": true
   },
@@ -1535,7 +1514,7 @@
   {
     "id": "TERRITORIAL_POWER",
     "name": "Territorial",
-    "description": "At the end of its turn, gains 1 Strength.",
+    "description": "At the end of this creature's turn, it gains 1 Strength.",
     "type": "Buff",
     "stackable": true
   },
@@ -1654,7 +1633,7 @@
   {
     "id": "VITAL_SPARK_POWER",
     "name": "Vital Spark",
-    "description": "The first time this enemy takes Attack damage each turn, the attacker gains 1 Energy.",
+    "description": "ALL Skills are Tainted 2.",
     "type": "Buff",
     "stackable": true
   },
@@ -1690,6 +1669,13 @@
     "id": "WELL_LAID_PLANS_POWER",
     "name": "Well-Laid Plans",
     "description": "At the end of your turn, Retain up to 1 card.",
+    "type": "Buff",
+    "stackable": true
+  },
+  {
+    "id": "WITHERING_PRESENCE_POWER",
+    "name": "Withering Presence",
+    "description": "Every 6 cards you play, add a Wither to your Hand.",
     "type": "Buff",
     "stackable": true
   },

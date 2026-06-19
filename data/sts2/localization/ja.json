@@ -2,7 +2,7 @@
   "cards": {
     "ABRASIVE": {
       "description": "敏捷1を得る。\nトゲ4を得る。",
-      "name": "刺々しい"
+      "name": "棘纏い"
     },
     "ACCELERANT": {
       "description": "毒が追加で1回発動する。",
@@ -88,7 +88,7 @@
       "name": "暗殺"
     },
     "ASTRAL_PULSE": {
-      "description": "すべての敵に14ダメージを与える。",
+      "description": "すべての敵に6ダメージを2回与える。",
       "name": "星霊の波動"
     },
     "AUTOMATION": {
@@ -149,14 +149,14 @@
     },
     "BECKON": {
       "description": "ターン終了時、これが手札にある場合、\nHPを6失う。",
-      "name": "手招き"
+      "name": "誘い"
     },
     "BEGONE": {
       "description": "手札のカードを1枚選び、ミニオンストライクに変化させる。",
       "name": "失せよ！"
     },
     "BELIEVE_IN_YOU": {
-      "description": "他のプレイヤーは[E]を得る。",
+      "description": "他のプレイヤー1人は[E]を得る。",
       "name": "お前を信じる"
     },
     "BIASED_COGNITION": {
@@ -176,7 +176,7 @@
       "name": "剣の舞"
     },
     "BLADE_OF_INK": {
-      "description": "墨塗りのナイフを2枚、手札に加える。",
+      "description": "墨塗りのナイフを2枚手札に加える。",
       "name": "墨の刃"
     },
     "BLIGHT_STRIKE": {
@@ -272,7 +272,7 @@
       "name": "ごろつき"
     },
     "BULWARK": {
-      "description": "13ブロックを得る。\n鍛造10。",
+      "description": "12ブロックを得る。\n鍛造10。",
       "name": "城壁"
     },
     "BUNDLE_OF_JOY": {
@@ -348,7 +348,7 @@
       "name": "混沌"
     },
     "CHARGE": {
-      "description": "山札のランダムなカード2枚から1枚選び、\nミニオンの特攻に変化させる。",
+      "description": "山札のカード2枚を選び、\nミニオンの特攻に変化させる。",
       "name": "突撃せよ！"
     },
     "CHARGE_BATTERY": {
@@ -415,7 +415,7 @@
       "name": "コンパイル・ドライバ"
     },
     "CONFLAGRATION": {
-      "description": "すべての敵に8ダメージを与える。このターンにプレイしたアタック1枚につき、追加で2ダメージを与える。",
+      "description": "すべての敵に2ダメージを4回与える。",
       "name": "猛火"
     },
     "CONQUEROR": {
@@ -467,7 +467,7 @@
       "name": "クリエイティブAI"
     },
     "CRESCENT_SPEAR": {
-      "description": "6ダメージを与える。\n⭐をコストに持つすべてのカード1枚につき、追加で2ダメージを与える。",
+      "description": "8ダメージを与える。\n⭐をコストに持つすべてのカード1枚につき、追加で2ダメージを与える。",
       "name": "三日月の槍"
     },
     "CRIMSON_MANTLE": {
@@ -529,11 +529,11 @@
       "name": "死への扉"
     },
     "DEATH_MARCH": {
-      "description": "8ダメージを与える。\n自分のターン中に引いたカード1枚につき、追加で3ダメージを与える。",
+      "description": "8ダメージを与える。\n自分のターン中に引いたカード1枚につき、追加で4ダメージを与える。",
       "name": "死の行進"
     },
     "DEBILITATE": {
-      "description": "10ダメージを与える。\n次の3ターンの間、この敵に対する弱体と脱力の効果が2倍になる。",
+      "description": "10ダメージを与える。\n次の2ターンの間、この敵に対する弱体と脱力の効果が2倍になる。",
       "name": "衰弱"
     },
     "DEBRIS": {
@@ -660,7 +660,7 @@
       "name": "採取"
     },
     "DRUM_OF_BATTLE": {
-      "description": "カードを2枚引く。\nターン開始時、山札の一番上のカードを廃棄する。",
+      "description": "カードを2枚引く。\nこのカードを廃棄した時、[E]を得る。",
       "name": "戦いのドラム"
     },
     "DUALCAST": {
@@ -716,7 +716,7 @@
       "name": "エントロピー"
     },
     "ENVENOM": {
-      "description": "アタックでブロックされなかったダメージを与えるたび、毒1を付与する。",
+      "description": "アタックによりブロックされずにダメージを与えるたび、毒1を付与する。",
       "name": "毒の仕込み"
     },
     "EQUILIBRIUM": {
@@ -764,7 +764,7 @@
       "name": "ナイフの雨"
     },
     "FASTEN": {
-      "description": "防御カードから追加で5ブロックを得る。",
+      "description": "防御カードから追加で4ブロックを得る。",
       "name": "締め直し"
     },
     "FEAR": {
@@ -824,7 +824,7 @@
       "name": "炎の障壁"
     },
     "FLANKING": {
-      "description": "このターン、対象の敵は他のプレイヤーから受けるアタックダメージが2倍になる。",
+      "description": "このターン、対象の敵は他の全プレイヤーから受けるアタックダメージが2倍になる。",
       "name": "挟撃"
     },
     "FLASH_OF_STEEL": {
@@ -846,10 +846,6 @@
     "FOCUSED_STRIKE": {
       "description": "9ダメージを与える。\nターン終了時まで集中力1を得る。",
       "name": "フォーカスストライク"
-    },
-    "FOLLOW_THROUGH": {
-      "description": "7ダメージを与える。\n手札に5以上のカードがある場合、攻撃回数が1回増える。",
-      "name": "追打ち"
     },
     "FOLLY": {
       "name": "愚行"
@@ -887,7 +883,7 @@
       "name": "燃料"
     },
     "FURNACE": {
-      "description": "ターン開始時、鍛造4。",
+      "description": "ターン開始時、鍛造5。",
       "name": "溶鉱炉"
     },
     "FUSION": {
@@ -1058,7 +1054,7 @@
       "name": "隠された宝石"
     },
     "HIGH_FIVE": {
-      "description": "オスティが11ダメージを与え、\nすべての敵に弱体2を\n付与する。",
+      "description": "オスティがすべての敵に11ダメージを与え、\n弱体2を付与する。",
       "name": "ハイタッチ"
     },
     "HOLOGRAM": {
@@ -1070,15 +1066,15 @@
       "name": "ホットフィックス"
     },
     "HOWL_FROM_BEYOND": {
-      "description": "すべての敵に16ダメージを与える。\nターン開始時、これが廃棄札にある場合、それをプレイする。",
+      "description": "すべての敵に16ダメージを与える。\nターン終了時、これが廃棄札にある場合、それをプレイする。",
       "name": "彼方からの遠吠え"
     },
     "HUDDLE_UP": {
-      "description": "全プレイヤーはカードを2枚引く。",
+      "description": "すべてのプレイヤーはカードを2枚引く。",
       "name": "作戦会議"
     },
     "HYPERBEAM": {
-      "description": "すべての敵に26ダメージを与える。\n集中力3を失う。",
+      "description": "すべての敵に28ダメージを与える。\n集中力3を失う。",
       "name": "ハイパービーム"
     },
     "ICE_LANCE": {
@@ -1149,7 +1145,7 @@
       "name": "何でも屋"
     },
     "JUGGERNAUT": {
-      "description": "ブロックを得るたび、ランダムな敵に5ダメージを与える。",
+      "description": "ブロックを得るたび、ランダムな敵に6ダメージを与える。",
       "name": "ジャガーノート"
     },
     "JUGGLING": {
@@ -1169,7 +1165,7 @@
       "name": "ナイフの罠"
     },
     "KNOCKDOWN": {
-      "description": "10ダメージを与える。\nこのターン、敵は他のプレイヤーから2倍のダメージを受ける。",
+      "description": "10ダメージを与える。\nこのターン、敵は他の全プレイヤーから2倍のダメージを受ける。",
       "name": "ノックダウン"
     },
     "KNOCKOUT_BLOW": {
@@ -1190,7 +1186,7 @@
     },
     "LEADING_STRIKE": {
       "description": "3ダメージを与える。\nナイフを2枚手札に加える。",
-      "name": "リーディングストライク"
+      "name": "リードストライク"
     },
     "LEAP": {
       "description": "9ブロックを得る。",
@@ -1305,7 +1301,7 @@
       "name": "ミニオンの特攻"
     },
     "MINION_SACRIFICE": {
-      "description": "9ブロックを得る。",
+      "description": "8ブロックを得る。",
       "name": "ミニオンの盾"
     },
     "MINION_STRIKE": {
@@ -1357,7 +1353,7 @@
       "name": "負の波動"
     },
     "NEOWS_FURY": {
-      "description": "10ダメージを与える。\n捨て札からランダムなカードを2枚手札に加える。",
+      "description": "10ダメージを与える。\n捨て札から最大2枚のカードを手札に加える。",
       "name": "ネオーの怒り"
     },
     "NEUROSURGE": {
@@ -1433,7 +1429,7 @@
       "name": "オーバークロック"
     },
     "PACTS_END": {
-      "description": "廃棄札にカードが3枚以上ある場合のみプレイ可能\nすべての敵に17ダメージを与える。",
+      "description": "廃棄札にカードが3枚以上ある場合、\nすべての敵に17ダメージを与える。",
       "name": "契約の終わり"
     },
     "PAGESTORM": {
@@ -1453,7 +1449,7 @@
       "name": "非常ボタン"
     },
     "PARRY": {
-      "description": "ソヴリン・ブレードをプレイするたび、10ブロックを得る。",
+      "description": "ソヴリン・ブレードが10ブロックを得るようになる。",
       "name": "パリィ"
     },
     "PARSE": {
@@ -1465,7 +1461,7 @@
       "name": "粒子障壁"
     },
     "PATTER": {
-      "description": "9ブロックを得る。\n活力2を得る。",
+      "description": "8ブロックを得る。\n活力2を得る。",
       "name": "小盾の展開"
     },
     "PECK": {
@@ -1516,12 +1512,12 @@
       "name": "寝不足"
     },
     "POUNCE": {
-      "description": "12ダメージを与える。\n次にプレイするスキルのコストを0[E]にする。",
+      "description": "14ダメージを与える。\n次にプレイするスキルのコストを0[E]にする。",
       "name": "急襲"
     },
     "PRECISE_CUT": {
       "description": "13ダメージを与える。\n手札にある他のカード1枚につき、ダメージが2減少する。",
-      "name": "研ぎ澄まされた刃"
+      "name": "研ぎ澄ました刃"
     },
     "PREDATOR": {
       "description": "15ダメージを与える。\n次のターン、カードを2枚引く。",
@@ -1640,7 +1636,7 @@
       "name": "剣の研磨"
     },
     "REFLECT": {
-      "description": "17ブロックを得る。\nこのターン、ブロックしたアタックによるダメージを、攻撃してきた敵に跳ね返す。",
+      "description": "15ブロックを得る。\nこのターン、ブロックしたアタックによるダメージを、攻撃してきた敵に跳ね返す。",
       "name": "反射"
     },
     "REFLEX": {
@@ -1704,12 +1700,16 @@
       "name": "血の沸騰"
     },
     "SACRIFICE": {
-      "description": "オスティが生存中の場合に死亡させ、その最大HPの2倍のブロックを得る。",
+      "description": "オスティが生存中の場合、彼を死亡させ、その最大HPの2倍のブロックを得る。\n(0ブロックを得る)",
       "name": "生贄"
     },
     "SALVO": {
       "description": "12ダメージを与える。\nこのターン、手札をすべて保留する。",
       "name": "一斉射撃"
+    },
+    "SCARE": {
+      "description": "すべての敵に脱力1を付与する。",
+      "name": "戦慄"
     },
     "SCAVENGE": {
       "description": "カードを1枚廃棄する。\n次のターン、[E]を得る。",
@@ -1796,7 +1796,7 @@
       "name": "運命共同体"
     },
     "SHATTER": {
-      "description": "すべての敵に11ダメージを与える。\nすべてのオーブを解放する。",
+      "description": "すべての敵に7ダメージを与える。\nすべてのオーブを2回解放する。",
       "name": "粉砕"
     },
     "SHINING_STRIKE": {
@@ -1820,7 +1820,7 @@
       "name": "受け流し"
     },
     "SIC_EM": {
-      "description": "オスティが5ダメージを与える。このターン、オスティがこの敵を攻撃するたび、召喚2。",
+      "description": "オスティが5ダメージを与える。このターン、オスティがこの敵を攻撃するたび、召喚3。",
       "name": "やっちゃえ"
     },
     "SIGNAL_BOOST": {
@@ -2006,7 +2006,7 @@
       "name": "不意打ち"
     },
     "SUMMON_FORTH": {
-      "description": "鍛造8。\nあらゆる場所からソヴリン・ブレードを手札に加える。",
+      "description": "あらゆる場所からソヴリン・ブレードを手札に加える。\n鍛造8。",
       "name": "顕現"
     },
     "SUNDER": {
@@ -2042,7 +2042,7 @@
       "name": "ソードブーメラン"
     },
     "SWORD_SAGE": {
-      "description": "ソヴリン・ブレードの攻撃回数が1回増える。",
+      "description": "ソヴリン・ブレードがReplay1を得る。",
       "name": "剣聖"
     },
     "SYNCHRONIZE": {
@@ -2050,7 +2050,7 @@
       "name": "同期"
     },
     "SYNTHESIS": {
-      "description": "12ダメージを与える。\n次にプレイするパワーのコストが0[E]。",
+      "description": "14ダメージを与える。\n次にプレイするパワーのコストが0[E]。",
       "name": "シンセシス"
     },
     "TACTICIAN": {
@@ -2058,7 +2058,7 @@
       "name": "策士"
     },
     "TAG_TEAM": {
-      "description": "11ダメージを与える。\n他のプレイヤーが対象の敵にプレイする次のアタックは、もう1回プレイされる。",
+      "description": "11ダメージを与える。\n他のプレイヤー1人が対象の敵にプレイする次のアタックは、もう1回プレイされる。",
       "name": "タッグチーム"
     },
     "TANK": {
@@ -2098,7 +2098,7 @@
       "name": "狩猟"
     },
     "THE_SCYTHE": {
-      "description": "13ダメージを与える。\nこのカードのダメージが永続的に3増加する。",
+      "description": "13ダメージを与える。\nこのカードのダメージが永続的に4増加する。",
       "name": "大鎌"
     },
     "THE_SEALED_THRONE": {
@@ -2198,7 +2198,7 @@
       "name": "盤石"
     },
     "UNRELENTING": {
-      "description": "12ダメージを与える。\n次にプレイするアタックのコストは0[E]。",
+      "description": "14ダメージを与える。\n次にプレイするアタックのコストは0[E]。",
       "name": "冷酷"
     },
     "UNTOUCHABLE": {
@@ -2210,7 +2210,7 @@
       "name": "アッパーカット"
     },
     "UPROAR": {
-      "description": "5ダメージを2回与える。\n山札からランダムなアタックを1枚プレイする。",
+      "description": "6ダメージを2回与える。\n山札からランダムなアタックを1枚プレイする。",
       "name": "大騒ぎ"
     },
     "UP_MY_SLEEVE": {
@@ -2272,6 +2272,10 @@
     "WISP": {
       "description": "[E]を得る。",
       "name": "ウィスプ"
+    },
+    "WITHER": {
+      "description": "ターン終了時、これが 手札にある場合、3ダメージを受ける。",
+      "name": "衰微"
     },
     "WOUND": {
       "name": "負傷"
@@ -2381,7 +2385,7 @@
     "BING_BONG": {
       "description": "デッキにカードを追加するたび、そのコピーを1枚追加する。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
-      "name": "ビン・ボン"
+      "name": "ビンボン"
     },
     "BLACK_BLOOD": {
       "description": "戦闘終了時、HPを12回復する。",
@@ -2434,7 +2438,7 @@
       "name": "製本用ナイフ"
     },
     "BOOMING_CONCH": {
-      "description": "エリートとの戦闘開始時、追加でカードを2枚引く。",
+      "description": "エリートとの戦闘開始時、追加でカードを2枚引き、[E]を得る。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "轟音のほら貝"
     },
@@ -2454,7 +2458,7 @@
       "name": "パン"
     },
     "BRILLIANT_SCARF": {
-      "description": "毎ターンにプレイする5枚目のカードは、コストを支払わずにプレイできる。",
+      "description": "各ターンに手札からプレイする5枚目のカードは、コストを支払わずにプレイできる。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "鮮やかなスカーフ"
     },
@@ -2733,6 +2737,11 @@
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "フィドル"
     },
+    "FISHING_ROD": {
+      "description": "通常戦闘3回ごとに、デッキのランダムなカードを1枚アップグレードする。",
+      "flavor": "このレリックの詳細は今後明かされるはずだ……",
+      "name": "釣り竿"
+    },
     "FORGOTTEN_SOUL": {
       "description": "カードを廃棄するたび、ランダムな敵に1ダメージを与える。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
@@ -2864,7 +2873,7 @@
       "name": "アイスクリーム"
     },
     "INFUSED_CORE": {
-      "description": "戦闘開始時、ライトニング3を生成する。",
+      "description": "戦闘開始時、ライトニング3を生成する。ライトニングの与えるダメージが1増加する。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "インフューズドコア"
     },
@@ -2884,7 +2893,7 @@
       "name": "象牙の牌"
     },
     "JEWELED_MASK": {
-      "description": "戦闘開始時、山札からランダムなパワーを1枚手札に加える。それはコストを支払わずにプレイできる。",
+      "description": "戦闘開始時、山札からランダムなパワーを1枚手札に加える。この戦闘中、それはコストを支払わずにプレイできる。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "宝飾の仮面"
     },
@@ -2902,6 +2911,11 @@
       "description": "?の部屋で通常の敵と遭遇しなくなる。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "数珠"
+    },
+    "KALEIDOSCOPE": {
+      "description": "取得時、他のキャラクターのカード報酬を2回獲得する。",
+      "flavor": "このレリックの詳細は今後明かされるはずだ……",
+      "name": "万華鏡"
     },
     "KIFUDA": {
       "description": "取得時、最大3枚までのカードに、巧妙をエンチャントする。",
@@ -2979,7 +2993,7 @@
       "name": "王のパラソル"
     },
     "LOST_COFFER": {
-      "description": "取得時、カード報酬を1枚と、ランダムなポーションを11個獲得する。",
+      "description": "取得時、カード報酬を1枚と、ランダムなポーションを1個獲得する。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "失われし金庫"
     },
@@ -3184,7 +3198,7 @@
       "name": "パエルの角"
     },
     "PAELS_LEGION": {
-      "description": "カードから得るブロックを2倍にし、その後2ターンの間眠りにつく。",
+      "description": "カードから得るブロックを2倍にする。その後、肉兵は2ターンの間眠りにつく。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "パエルの肉兵"
     },
@@ -3324,7 +3338,7 @@
       "name": "プリズムジェム"
     },
     "PUMPKIN_CANDLE": {
-      "description": "ターン開始時、[E]を得る。第3層の開始時に火は消える。",
+      "description": "ターン開始時、[E]を得る。5回の戦闘後に火は消える。休憩所で火を灯すことができる。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "カボチャのキャンドル"
     },
@@ -3434,7 +3448,7 @@
       "name": "絶叫のフラゴン"
     },
     "SCROLL_BOXES": {
-      "description": "取得時、すべてのゴールドを失い、2つのカードパックから1枚を選び、デッキに追加する。",
+      "description": "取得時、2つのカードパックから1つを選び、デッキに追加する。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "巻物箱"
     },
@@ -3472,6 +3486,11 @@
       "description": "取得時、999ゴールドを獲得する。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "シグネットリング"
+    },
+    "SILKEN_TRESS": {
+      "description": "取得時、すべてのゴールドを失う。最初のカード報酬のすべてのカードに魅惑をエンチャントする。",
+      "flavor": "このレリックの詳細は今後明かされるはずだ……",
+      "name": "絹の髪束"
     },
     "SILVER_CRUCIBLE": {
       "description": "最初の3回分のカード報酬は、アップグレードされた状態になる。最初に開ける宝箱はからっぽになる。",
@@ -3761,7 +3780,7 @@
   },
   "powers": {
     "ACCELERANT_POWER": {
-      "description": "毒が追加で発動する。",
+      "description": "毒が追加で1回発動する。",
       "smartDescription": "毒が追加で{Amount}回発動する。",
       "name": "促進剤"
     },
@@ -3772,7 +3791,7 @@
     },
     "ADAPTABLE_POWER": {
       "description": "このモンスターが倒される時、代わりにより強くなって復活する。",
-      "smartDescription": "{OwnerName}が倒される時、代わりにより強くなって復活する。",
+      "smartDescription": "{OwnerName}が倒れる際、より強くなって復活する。",
       "name": "適応"
     },
     "AFTERIMAGE_POWER": {
@@ -3978,7 +3997,7 @@
       "name": "まるくなる"
     },
     "DAMPEN_POWER": {
-      "description": "マギ・ナイトが生存中、あなたのすべてのカードはダウングレードされる。",
+      "description": "マギナイトが生存中、あなたのすべてのカードはダウングレードされる。",
       "name": "減衰"
     },
     "DANSE_MACABRE_POWER": {
@@ -4049,11 +4068,6 @@
       "description": "次のターン開始時、追加でカードを1枚引く。",
       "smartDescription": "次のターン開始時、追加でカードを{Amount}枚引く。",
       "name": "次ターンドロー"
-    },
-    "DRUM_OF_BATTLE_POWER": {
-      "description": "ターン開始時、山札の一番上から1枚のカードを廃棄する。",
-      "smartDescription": "ターン開始時、山札の上から{Amount}枚のカードを廃棄する。",
-      "name": "戦いのドラム"
     },
     "DUPLICATION_POWER": {
       "description": "次にプレイするカードをもう1回プレイする。",
@@ -4184,11 +4198,6 @@
       "smartDescription": "次にプレイする{Amount}枚のアタックは3倍のダメージを与える。",
       "name": "巨大化"
     },
-    "GRASP_POWER": {
-      "description": "カードをプレイするたび、エナジーを1失う。",
-      "smartDescription": "カードをプレイするたび、{Amount:energyIcons()}を失う。",
-      "name": "掌握"
-    },
     "GRAVITY_POWER": {
       "description": "このターン、カードをプレイするたび、すべての敵に2ダメージを与える。",
       "smartDescription": "このターン、カードをプレイするたび、すべての敵に{Amount}ダメージを与える。",
@@ -4215,13 +4224,13 @@
       "name": "絞首"
     },
     "HARDENED_SHELL_POWER": {
-      "description": "このモンスターは1ターンに20以上のHPを失わない。",
-      "smartDescription": "{OwnerName}は1ターンに{Amount}以上のHPを失わない。",
+      "description": "このモンスターが失うHPは、1ターンにつき20まで。",
+      "smartDescription": "{OwnerName}が失うHPは、1ターンにつき{Amount}まで。",
       "name": "硬い殻"
     },
     "HARD_TO_KILL_POWER": {
       "description": "外骨格蟲が受けるすべてのダメージとHP喪失を9に減らす。",
-      "smartDescription": "{OwnerName}が受けるすべてのダメージとHP喪失を9に減らす。",
+      "smartDescription": "{OwnerName}が受けるすべてのダメージとHP喪失を{Amount}に減らす。",
       "name": "不死身"
     },
     "HATCH_POWER": {
@@ -4254,14 +4263,9 @@
       "name": "呪術"
     },
     "HIGH_VOLTAGE_POWER": {
-      "description": "このモンスターはターン開始時、筋力2を得る。",
-      "smartDescription": "{OwnerName}のターン開始時、筋力{Amount}を得る。",
+      "description": "このモンスターはターン終了時、筋力2を得る。",
+      "smartDescription": "{OwnerName}のターン終了時、筋力{Amount}を得る。",
       "name": "高電圧"
-    },
-    "HUNGER_POWER": {
-      "description": "アタックかスキルをプレイするたび、それを廃棄する。",
-      "smartDescription": "アタックかスキルをプレイするたび、それを廃棄する。",
-      "name": "飢餓"
     },
     "ILLUSION_POWER": {
       "description": "これが倒された時、次のターンにHP全快で復活する。",
@@ -4309,7 +4313,7 @@
       "name": "反復"
     },
     "JUGGERNAUT_POWER": {
-      "description": "ブロックを得るたび、ランダムな敵に5ダメージを与える。",
+      "description": "ブロックを得るたび、ランダムな敵に6ダメージを与える。",
       "smartDescription": "ブロックを得るたび、ランダムな敵に{Amount}ダメージを与える。",
       "name": "ジャガーノート"
     },
@@ -4319,7 +4323,7 @@
       "name": "ジャグリング"
     },
     "KNOCKDOWN_POWER": {
-      "description": "このターン、このモンスターは他のプレイヤーから受けるダメージがX倍になる。",
+      "description": "このターン、このモンスターは他の全プレイヤーから受けるダメージがX倍になる。",
       "smartDescription": "このターン、他の味方はこの敵に{Amount}倍のダメージを与える。",
       "name": "ノックダウン"
     },
@@ -4473,13 +4477,13 @@
       "name": "紙傷"
     },
     "PARRY_POWER": {
-      "description": "ソヴリン・ブレードをプレイするたび、8ブロックを得る。",
-      "smartDescription": "ソヴリン・ブレードをプレイするたび、{Amount}ブロックを得る。",
+      "description": "ソヴリン・ブレードがブロックを得るようになる。",
+      "smartDescription": "ソヴリン・ブレードが{Amount}ブロックを得るようになる。",
       "name": "パリィ"
     },
     "PERSONAL_HIVE_POWER": {
       "description": "この敵が攻撃された時、めまいを山札に加える。",
-      "smartDescription": "この敵がアタックによって攻撃された時、めまいを{Amount}枚山札に加える。",
+      "smartDescription": "この敵がアタックにより攻撃された時、めまいを{Amount}枚山札に加える。",
       "name": "パーソナルハイヴ"
     },
     "PHANTOM_BLADES_POWER": {
@@ -4548,7 +4552,7 @@
       "name": "貪欲"
     },
     "REAPER_FORM_POWER": {
-      "description": "アタックでダメージを与えるたび、そのダメージと同じ値の破滅を付与する。",
+      "description": "アタックでダメージを与えるたび、そのダメージに等しい破滅を付与する。",
       "smartDescription": "アタックでダメージを与えるたび、そのダメージの{Amount}倍の破滅を付与する。",
       "name": "死神化"
     },
@@ -4606,11 +4610,6 @@
       "description": "貪りの獣が使用するパワー。",
       "smartDescription": "{Amount:plural:貪りの獣がターンを迎えた時|{Amount}ターン後}、あなたは食われて死ぬ。",
       "name": "蟻地獄"
-    },
-    "SCRUTINY_POWER": {
-      "description": "このターン、追加でカードを引くことができない。",
-      "smartDescription": "このターン、追加でカードを引くことができない。",
-      "name": "監視"
     },
     "SEEKING_EDGE_POWER": {
       "description": "ソヴリン・ブレードがすべての敵を攻撃するようになる。",
@@ -4763,7 +4762,7 @@
     },
     "STRANGLE_POWER": {
       "description": "このターン、カードをプレイするたび、この敵はHPを2失う。",
-      "smartDescription": "このターン、カードをプレイするたび、{OnPlayer:自身は|この敵は}HPを{Amount}失う。",
+      "smartDescription": "このターン、カードをプレイするたび、この敵はHPを{Amount}失う。",
       "name": "絞殺"
     },
     "STRATAGEM_POWER": {
@@ -4805,14 +4804,19 @@
       "name": "盗む"
     },
     "SWORD_SAGE_POWER": {
-      "description": "ソヴリン・ブレードの攻撃回数が1回増える。",
-      "smartDescription": "ソヴリン・ブレードの攻撃回数が追加で{Amount}回増える。",
+      "description": "ソヴリン・ブレードがリプレイ1を得る。",
+      "smartDescription": "ソヴリン・ブレードがリプレイ{Amount}を得る。",
       "name": "剣聖"
     },
     "TAG_TEAM_POWER": {
-      "description": "他の味方がこの敵に対して次にプレイするアタックは、追加で1回プレイされる。",
-      "smartDescription": "他の味方がこの敵に対して次にプレイするアタックは、追加で1回プレイされる。",
+      "description": "他のプレイヤー1人がこの敵に対して次にプレイするアタックは、追加で1回プレイされる。",
+      "smartDescription": "他のプレイヤー1人がこの敵に対して次にプレイするアタックは、追加で1回プレイされる。",
       "name": "タッグチーム"
+    },
+    "TAINTED_POWER": {
+      "description": "このターン、アタックから追加ダメージを受ける。",
+      "smartDescription": "このターン、アタックから{Amount}の追加ダメージを受ける。",
+      "name": "汚染"
     },
     "TANGLED_POWER": {
       "description": "このターン、アタックのコストが追加で1エナジー増加する。",
@@ -4842,8 +4846,8 @@
       "name": "軟化"
     },
     "TERRITORIAL_POWER": {
-      "description": "敵のターン終了時、筋力1を得る。",
-      "smartDescription": "敵のターン終了時、筋力{Amount}を得る。",
+      "description": "この敵のターン終了時、それは筋力1を得る。",
+      "smartDescription": "{OwnerName}のターン終了時、それは筋力{Amount}を得る。",
       "name": "縄張り意識"
     },
     "THE_BOMB_POWER": {
@@ -4927,8 +4931,8 @@
       "name": "活力"
     },
     "VITAL_SPARK_POWER": {
-      "description": "毎ターン、この敵が初めて攻撃ダメージを受けた時、攻撃者はエナジー1を得る。",
-      "smartDescription": "毎ターン、{OwnerName}が初めて攻撃ダメージを受けた時、攻撃者は{Energy:energyIcons()}を得る。",
+      "description": "すべてのスキルは汚染2を受ける。",
+      "smartDescription": "すべてのスキルは汚染{Amount}を受ける。",
       "name": "生命の火花"
     },
     "VOID_FORM_POWER": {
@@ -4955,6 +4959,11 @@
       "description": "ターン終了時、1枚までカードを保留する。",
       "smartDescription": "ターン終了時、{Amount}枚までカードを保留する。",
       "name": "用意周到"
+    },
+    "WITHERING_PRESENCE_POWER": {
+      "description": "カードを6枚プレイするたび、衰微を1枚手札に加える。",
+      "smartDescription": "カードを6枚プレイするたび、衰微を1枚手札に加える。",
+      "name": "衰微の予兆"
     },
     "WRAITH_FORM_POWER": {
       "description": "ターン開始時、敏捷1を失う。",
@@ -6159,12 +6168,12 @@
         {
           "name": "檻を開ける",
           "description": "ランタンの鍵を失う。 歴史学教程を獲得。",
-          "outcome": "檻を開けてやると、レピーは感謝してお辞儀する。 そして、分厚い革張りの本をあなたに差し出した。\n\n「『歴史を覚えていない人は、歴史を繰り返す運命にある』。 しかし、君は“繰り返す”というものをよく理解しているようだな？」"
+          "outcome": "檻を開けてやると、レピーは感謝してお辞儀する。 そして、分厚い革張りの本をあなたに差し出した。\n\n「『歴史を覚えていない人は、歴史を繰り返す運命にある』。 しかし、君は“繰り返す”ということをよく理解しているようだな」"
         },
         {
           "name": "宝箱を開ける",
           "description": "ランタンの鍵を失う。 ランダムなポーションを2個入手する。 ランダムなレリックを2個入手する。",
-          "outcome": "「この学者たるレピーを解放しないというのか？ 古典哲学に照らし合わせれば、君は道徳的な落伍者と見なされるだろうな。 そう、次は閉じ込められている生きた人間のことも考慮に入れるべきだ！ まるで、社会にとって有益な人材が絶体絶命の窮地に陥っていることなど、どうでもいいかのような振る舞いだな！」\n\n「ほら、見てみたまえ、この檻の狭さを！！…… なぜ私がこんなに文句を言っているかって？ 君が実に非学術的な決断を下してしまったからだ…… おやおや、中には何が入っていた？ いくつかのポーションにレリックか？ そいつは重畳。 実に素晴らしい。 本当に良かったな…… 君にとっては」\n\n立ち去るあなたの背中を、レピーは軽蔑の眼差しでいつまでも睨みつけていた。"
+          "outcome": "「この学者たるレピーを解放しないというのか？ 古典哲学に照らし合わせれば、君は道徳的な落伍者と見なされるだろうな。 そう、次は閉じ込められている生きた人間のことも考慮に入れるべきだ！ まるで、社会にとって有益な人材が絶体絶命の窮地に陥っていることなど、どうでもいいかのような振る舞いではないか！」\n\n「ほら、見たまえ。この檻の狭さを！！…… なぜ私がこうも文句を言っているか、分かるか？ 君が実に非学術的な判断を下してしまったからだ…… おやおや、中には何が入っていた？ いくつかのポーションにレリックか？ そいつは重畳。 実に素晴らしい。 本当に良いことだ…… 君にとっては」\n\n立ち去るあなたの背中を、レピーは軽蔑の眼差しでいつまでも睨みつけていた。"
         }
       ]
     },
@@ -6518,14 +6527,26 @@
         },
         {
           "name": "轟音のほら貝",
-          "description": "エリートとの戦闘開始時、追加でカードを2枚引く。",
+          "description": "エリートとの戦闘開始時、追加でカードを2枚引き、[E]を得る。",
           "relic_id": "BOOMING_CONCH",
+          "pool": "positive"
+        },
+        {
+          "name": "釣り竿",
+          "description": "通常戦闘3回ごとに、デッキのランダムなカードを1枚アップグレードする。",
+          "relic_id": "FISHING_ROD",
           "pool": "positive"
         },
         {
           "name": "黄金の真珠",
           "description": "取得時、150ゴールドを獲得する。",
           "relic_id": "GOLDEN_PEARL",
+          "pool": "positive"
+        },
+        {
+          "name": "万華鏡",
+          "description": "取得時、他のキャラクターのカード報酬を2回獲得する。",
+          "relic_id": "KALEIDOSCOPE",
           "pool": "positive"
         },
         {
@@ -6536,8 +6557,14 @@
         },
         {
           "name": "失われし金庫",
-          "description": "取得時、カード報酬を1枚と、ランダムなポーションを11個獲得する。",
+          "description": "取得時、カード報酬を1枚と、ランダムなポーションを1個獲得する。",
           "relic_id": "LOST_COFFER",
+          "pool": "positive"
+        },
+        {
+          "name": "巨大な巻物",
+          "description": "取得時、3枚のマルチプレイ用カードから1つを選び、デッキに追加する。",
+          "relic_id": "MASSIVE_SCROLL",
           "pool": "positive"
         },
         {
@@ -6553,27 +6580,27 @@
           "pool": "positive"
         },
         {
-          "name": "精密なハサミ",
-          "description": "取得時、デッキからカードを1枚削除する。",
-          "relic_id": "PRECISE_SCISSORS",
-          "pool": "positive"
-        },
-        {
           "name": "薬瓶のホルスター",
           "description": "取得時、ポーションのスロットを1枠追加し、ランダムなポーションを2個獲得する。",
           "relic_id": "PHIAL_HOLSTER",
           "pool": "positive"
         },
         {
-          "name": "空飛ぶ靴",
-          "description": "マップの道を無視して次の部屋を選択できる（残り3回）。",
-          "relic_id": "WINGED_BOOTS",
+          "name": "精密なハサミ",
+          "description": "取得時、デッキからカードを1枚削除する。",
+          "relic_id": "PRECISE_SCISSORS",
           "pool": "positive"
         },
         {
-          "name": "巨大な巻物",
-          "description": "取得時、3枚のマルチプレイ用カードから1つを選び、デッキに追加する。",
-          "relic_id": "MASSIVE_SCROLL",
+          "name": "巻物箱",
+          "description": "取得時、2つのカードパックから1つを選び、デッキに追加する。",
+          "relic_id": "SCROLL_BOXES",
+          "pool": "positive"
+        },
+        {
+          "name": "空飛ぶ靴",
+          "description": "マップの道を無視して次の部屋を選択できる（残り3回）。",
+          "relic_id": "WINGED_BOOTS",
           "pool": "positive"
         },
         {
@@ -6601,21 +6628,27 @@
           "pool": "cursed"
         },
         {
+          "name": "ネオーの骨",
+          "description": "取得時、ランダムなネオーのレリックを2個獲得する。デッキにランダムな呪いを1枚加える。",
+          "relic_id": "NEOWS_BONES",
+          "pool": "cursed"
+        },
+        {
           "name": "危険な大鋏",
           "description": "取得時、デッキからカードを2枚削除する。HP16を失う。",
           "relic_id": "PRECARIOUS_SHEARS",
           "pool": "cursed"
         },
         {
-          "name": "銀のるつぼ",
-          "description": "最初の3回分のカード報酬は、アップグレードされた状態になる。最初に開ける宝箱はからっぽになる。",
-          "relic_id": "SILVER_CRUCIBLE",
+          "name": "絹の髪束",
+          "description": "取得時、すべてのゴールドを失う。最初のカード報酬のすべてのカードに魅惑をエンチャントする。",
+          "relic_id": "SILKEN_TRESS",
           "pool": "cursed"
         },
         {
-          "name": "ネオーの骨",
-          "description": "取得時、ランダムなネオーのレリックを2個獲得する。デッキにランダムな呪いを1枚加える。",
-          "relic_id": "NEOWS_BONES",
+          "name": "銀のるつぼ",
+          "description": "最初の3回分のカード報酬は、アップグレードされた状態になる。最初に開ける宝箱はからっぽになる。",
+          "relic_id": "SILVER_CRUCIBLE",
           "pool": "cursed"
         },
         {
@@ -6653,12 +6686,6 @@
           "description": "休憩所で休憩するたび、最大HPが5増加する。",
           "relic_id": "STONE_HUMIDIFIER",
           "pool": "positive"
-        },
-        {
-          "name": "巻物箱",
-          "description": "取得時、すべてのゴールドを失い、2つのカードパックから1枚を選び、デッキに追加する。",
-          "relic_id": "SCROLL_BOXES",
-          "pool": "cursed"
         }
       ]
     },
@@ -7249,7 +7276,7 @@
         },
         {
           "character": "ANY",
-          "text": "143回。 あなたがここへ来るのは143回目です。"
+          "text": "{Visits}回。 あなたがここへ来るのは{Visits}回目です。"
         },
         {
           "character": "ANY",
@@ -7411,7 +7438,7 @@
       "name": "刻印"
     },
     "INKY": {
-      "description": "このカードは追加で2ダメージを与え、脱力1を付与する。",
+      "description": "このカードは追加で1ダメージを与え、脱力1を付与する。",
       "name": "墨塗り"
     },
     "INSTINCT": {
@@ -7467,7 +7494,7 @@
       "name": "迅速"
     },
     "TEZCATARAS_EMBER": {
-      "description": "コストが0になり、永劫を得る。",
+      "description": "コストが0になり、追加ダメージ3と永劫を得る。",
       "name": "テスカタラの残り火"
     },
     "VIGOROUS": {
@@ -7498,6 +7525,24 @@
     }
   },
   "monsters": {
+    "AEONGLASS": {
+      "moves": {
+        "EBB": "衰退",
+        "EYE_LASERS": "アイレーザー",
+        "INCREASING_INTENSITY": "激化"
+      },
+      "name": "永劫の砂時計",
+      "move_names": {
+        "Ebb": "衰退",
+        "Eye Lasers": "アイレーザー",
+        "Increasing Intensity": "激化"
+      },
+      "move_titles": [
+        "衰退",
+        "アイレーザー",
+        "激化"
+      ]
+    },
     "ARCHITECT": {
       "moves": {
         "NOTHING": "何もしない"
@@ -7633,93 +7678,97 @@
     "BOWLBUG_NECTAR": {
       "moves": {
         "BUFF": "強化",
-        "THRASH": "強打",
-        "THRASH2": "強打"
+        "THRASH": "大暴れ"
       },
       "name": "ボウルバグ（みつ）",
       "move_names": {
         "Buff": "強化",
-        "Thrash": "強打"
+        "Thrash": "大暴れ"
       },
       "move_titles": [
         "強化",
-        "強打",
-        "強打"
+        "大暴れ"
       ]
     },
     "BOWLBUG_ROCK": {
       "moves": {
+        "DIZZY": "めまい",
         "HEADBUTT": "頭突き"
       },
       "name": "ボウルバグ（岩）",
       "move_names": {
+        "Dizzy": "めまい",
         "Headbutt": "頭突き"
       },
       "move_titles": [
+        "めまい",
         "頭突き"
       ]
     },
     "BOWLBUG_SILK": {
       "moves": {
-        "SPIN_WEB": "糸を紡ぐ",
-        "THRASH": "強打"
+        "THRASH": "大暴れ",
+        "TOXIC_SPIT": "酸液"
       },
       "name": "ボウルバグ（糸）",
       "move_names": {
-        "Spin Web": "糸を紡ぐ",
-        "Thrash": "強打"
+        "Thrash": "大暴れ",
+        "Toxic Spit": "酸液"
       },
       "move_titles": [
-        "糸を紡ぐ",
-        "強打"
+        "大暴れ",
+        "酸液"
       ]
     },
     "BRUTE_RUBY_RAIDER": {
       "moves": {
         "BEAT": "ビート",
-        "CLAP": "拍手"
+        "ROAR": "咆哮"
       },
       "name": "ブルートレイダー",
       "move_names": {
         "Beat": "ビート",
-        "Clap": "拍手"
+        "Roar": "咆哮"
       },
       "move_titles": [
         "ビート",
-        "拍手"
+        "咆哮"
       ]
     },
     "BYGONE_EFFIGY": {
       "moves": {
         "SLASHES": "切り裂き",
-        "SLEEP": "ねむる"
+        "SLEEP": "ねむる",
+        "WAKE": "目覚め"
       },
       "name": "古の偶像",
       "move_names": {
         "Slashes": "切り裂き",
-        "Sleep": "ねむる"
+        "Sleep": "ねむる",
+        "Wake": "目覚め"
       },
       "move_titles": [
         "切り裂き",
-        "ねむる"
+        "ねむる",
+        "目覚め"
       ]
     },
     "BYRDONIS": {
       "moves": {
         "BITE": "噛みつき",
         "PECK": "つつく",
-        "PROTECT": "守る"
+        "SWOOP": "急降下"
       },
       "name": "ビャードニス",
       "move_names": {
         "Bite": "噛みつき",
         "Peck": "つつく",
-        "Protect": "守る"
+        "Swoop": "急降下"
       },
       "move_titles": [
         "噛みつき",
         "つつく",
-        "守る"
+        "急降下"
       ]
     },
     "BYRDONIS_NEST": {
@@ -7789,18 +7838,18 @@
       "moves": {
         "CLAMP": "はさむ",
         "SCREECH": "金切り声",
-        "THRASH": "強打"
+        "THRASH": "大暴れ"
       },
       "name": "チョンパー",
       "move_names": {
         "Clamp": "はさむ",
         "Screech": "金切り声",
-        "Thrash": "強打"
+        "Thrash": "大暴れ"
       },
       "move_titles": [
         "はさむ",
         "金切り声",
-        "強打"
+        "大暴れ"
       ]
     },
     "COCOON": {
@@ -7817,15 +7866,21 @@
     },
     "CORPSE_SLUG": {
       "moves": {
+        "GLOMP": "飛びつき",
+        "GOOP": "粘液",
         "TACKLE": "体当たり",
         "WHIP_SLAP": "ムチ打ち"
       },
       "name": "屍ナメクジ",
       "move_names": {
+        "Glomp": "飛びつき",
+        "Goop": "粘液",
         "Tackle": "体当たり",
         "Whip Slap": "ムチ打ち"
       },
       "move_titles": [
+        "飛びつき",
+        "粘液",
         "体当たり",
         "ムチ打ち"
       ]
@@ -7851,7 +7906,7 @@
         "BUG_STING": "虫刺し",
         "ENLARGING_STRIKE": "巨大化攻撃",
         "GUARDED_STRIKE": "ガードストライク",
-        "THRASH": "強打"
+        "THRASH": "大暴れ"
       },
       "name": "クラッシャー",
       "move_names": {
@@ -7859,32 +7914,32 @@
         "Bug Sting": "虫刺し",
         "Enlarging Strike": "巨大化攻撃",
         "Guarded Strike": "ガードストライク",
-        "Thrash": "強打"
+        "Thrash": "大暴れ"
       },
       "move_titles": [
         "適応",
         "虫刺し",
         "巨大化攻撃",
         "ガードストライク",
-        "強打"
+        "大暴れ"
       ]
     },
     "CUBEX_CONSTRUCT": {
       "moves": {
         "CHARGE_UP": "チャージアップ",
-        "REPEATER_BLAST": "リピーターブラスト",
-        "SUBMERGE": "潜伏"
+        "EXPEL": "排出",
+        "REPEATER_BLAST": "リピーターブラスト"
       },
       "name": "キューベックス",
       "move_names": {
         "Charge Up": "チャージアップ",
-        "Repeater Blast": "リピーターブラスト",
-        "Submerge": "潜伏"
+        "Expel": "排出",
+        "Repeater Blast": "リピーターブラスト"
       },
       "move_titles": [
         "チャージアップ",
-        "リピーターブラスト",
-        "潜伏"
+        "排出",
+        "リピーターブラスト"
       ]
     },
     "DAMP_CULTIST": {
@@ -7905,27 +7960,24 @@
     "DECIMILLIPEDE_SEGMENT": {
       "moves": {
         "BULK": "バルク",
+        "CONSTRICT": "締め付け",
         "DEAD": "死亡",
-        "OUTGAS": "ガス放出",
         "REATTACH": "再結合",
-        "TACKLE": "体当たり",
         "WRITHE": "のたうち"
       },
       "name": "万足ムカデ",
       "move_names": {
         "Bulk": "バルク",
+        "Constrict": "締め付け",
         "Dead": "死亡",
-        "Outgas": "ガス放出",
         "Reattach": "再結合",
-        "Tackle": "体当たり",
         "Writhe": "のたうち"
       },
       "move_titles": [
         "バルク",
+        "締め付け",
         "死亡",
-        "ガス放出",
         "再結合",
-        "体当たり",
         "のたうち"
       ]
     },
@@ -7933,27 +7985,18 @@
       "name": "削除されたモンスター"
     },
     "DEVOTED_SCULPTOR": {
-      "name": "狂信の彫刻家"
-    },
-    "DOOR": {
-      "name": "ドア"
-    },
-    "DOORMAKER": {
       "moves": {
-        "GRASP_MOVE": "掌握",
-        "HUNGER_MOVE": "飢餓",
-        "SCRUTINY_MOVE": "監視"
+        "FORBIDDEN_INCANTATION": "禁じられた祈り",
+        "SAVAGE": "野蛮な一撃"
       },
-      "name": "ドアメーカー",
+      "name": "狂信の彫刻家",
       "move_names": {
-        "Grasp": "掌握",
-        "Hunger": "飢餓",
-        "Scrutiny": "監視"
+        "Forbidden Incantation": "禁じられた祈り",
+        "Savage": "野蛮な一撃"
       },
       "move_titles": [
-        "掌握",
-        "飢餓",
-        "監視"
+        "禁じられた祈り",
+        "野蛮な一撃"
       ]
     },
     "ENTOMANCER": {
@@ -8000,7 +8043,7 @@
         "DISTRACT": "目くらまし",
         "STARTLE": "驚かす"
       },
-      "name": "牙をむく眼",
+      "name": "牙むく眼",
       "move_names": {
         "Distract": "目くらまし",
         "Startle": "驚かす"
@@ -8013,16 +8056,19 @@
     "FABRICATOR": {
       "moves": {
         "DISINTEGRATE": "崩壊",
-        "FABRICATE": "製造"
+        "FABRICATE": "製造",
+        "FABRICATING_STRIKE": "製造ストライク"
       },
       "name": "ファブリケーター",
       "move_names": {
         "Disintegrate": "崩壊",
-        "Fabricate": "製造"
+        "Fabricate": "製造",
+        "Fabricating Strike": "製造ストライク"
       },
       "move_titles": [
         "崩壊",
-        "製造"
+        "製造",
+        "製造ストライク"
       ]
     },
     "FAKE_MERCHANT_MONSTER": {
@@ -8048,62 +8094,71 @@
     },
     "FAT_GREMLIN": {
       "moves": {
-        "FLEE": "逃走"
+        "FLEE": "逃走",
+        "SPAWNED": "目覚め"
       },
       "name": "ファットグレムリン",
       "move_names": {
-        "Flee": "逃走"
+        "Flee": "逃走",
+        "Wake Up": "目覚め"
       },
       "move_titles": [
-        "逃走"
+        "逃走",
+        "目覚め"
       ]
     },
     "FLAIL_KNIGHT": {
       "moves": {
         "BREAKER": "ブレイカー",
         "FLAIL": "フレイル",
-        "RAM": "打ち込み"
+        "RAM": "打ち込み",
+        "WAR_CHANT": "戦いの歌"
       },
       "name": "フレイルナイト",
       "move_names": {
         "Breaker": "ブレイカー",
         "Flail": "フレイル",
-        "Ram": "打ち込み"
+        "Ram": "打ち込み",
+        "War Chant": "戦いの歌"
       },
       "move_titles": [
         "ブレイカー",
         "フレイル",
-        "打ち込み"
+        "打ち込み",
+        "戦いの歌"
       ]
     },
     "FLYCONID": {
       "moves": {
         "FRAIL_SPORES": "脆弱の胞子",
-        "SMASH": "スマッシュ"
+        "SMASH": "スマッシュ",
+        "VULNERABLE_SPORES": "弱体の胞子"
       },
       "name": "フライコニド",
       "move_names": {
         "Frail Spores": "脆弱の胞子",
-        "Smash": "スマッシュ"
+        "Smash": "スマッシュ",
+        "Vulnerable Spores": "弱体の胞子"
       },
       "move_titles": [
         "脆弱の胞子",
-        "スマッシュ"
+        "スマッシュ",
+        "弱体の胞子"
       ]
     },
     "FOGMOG": {
       "moves": {
-        "ILLUSORY_SPORES": "幻影の胞子",
-        "THWACK": "強打"
+        "ILLUSION": "幻惑の胞子",
+        "SWIPE": "痛撃"
       },
       "name": "フォグモグ",
       "move_names": {
-        "Illusory Spores": "幻影の胞子",
-        "Thwack": "強打"
+        "Illusory Spores": "幻惑の胞子",
+        "Thwack": "痛撃"
       },
       "move_titles": [
-        "幻影の胞子",
-        "強打"
+        "幻惑の胞子",
+        "痛撃"
       ]
     },
     "FOSSIL_STALKER": {
@@ -8147,14 +8202,17 @@
     },
     "FUZZY_WURM_CRAWLER": {
       "moves": {
-        "ACID_GOOP": "酸の粘液"
+        "ACID_GOOP": "酸の粘液",
+        "INHALE": "吸い込み"
       },
       "name": "剛毛のワーム",
       "move_names": {
-        "Acid Goop": "酸の粘液"
+        "Acid Goop": "酸の粘液",
+        "Inhale": "吸い込み"
       },
       "move_titles": [
-        "酸の粘液"
+        "酸の粘液",
+        "吸い込み"
       ]
     },
     "GAS_BOMB": {
@@ -8199,22 +8257,30 @@
         "ジェムレーザー"
       ]
     },
+    "GENERIC": {
+      "moves": {
+        "STUNNED": "スタン"
+      },
+      "move_names": {
+        "Stunned": "スタン"
+      },
+      "move_titles": [
+        "スタン"
+      ]
+    },
     "GLOBE_HEAD": {
       "moves": {
-        "CHANNEL_LIGHTNING": "ライトニング生成",
-        "DUAL_CAST": "デュアルキャスト",
-        "SHOCKING_SLAP": "ショッキングスラップ"
+        "SHOCKING_SLAP": "ショッキングスラップ",
+        "THUNDER_STRIKE": "ライトニング生成"
       },
       "name": "グローブヘッド",
       "move_names": {
-        "Channel Lightning": "ライトニング生成",
-        "Dual Cast": "デュアルキャスト",
-        "Shocking Slap": "ショッキングスラップ"
+        "Shocking Slap": "ショッキングスラップ",
+        "Channel Lightning": "ライトニング生成"
       },
       "move_titles": [
-        "ライトニング生成",
-        "デュアルキャスト",
-        "ショッキングスラップ"
+        "ショッキングスラップ",
+        "ライトニング生成"
       ]
     },
     "GREMLIN_MERC": {
@@ -8253,20 +8319,17 @@
     "HAUNTED_SHIP": {
       "moves": {
         "HAUNT": "取り憑く",
-        "RAMMING_SPEED": "衝突",
         "STOMP": "踏みつけ",
         "SWIPE": "なぎ払い"
       },
       "name": "幽霊船",
       "move_names": {
         "Haunt": "取り憑く",
-        "Ramming Speed": "衝突",
         "Stomp": "踏みつけ",
         "Swipe": "なぎ払い"
       },
       "move_titles": [
         "取り憑く",
-        "衝突",
         "踏みつけ",
         "なぎ払い"
       ]
@@ -8314,57 +8377,57 @@
       "moves": {
         "JAB": "ジャブ",
         "PIERCING_GAZE": "鋭い視線",
-        "WINDUP_PUNCH": "大振り"
+        "WHIRLWIND": "旋風"
       },
       "name": "インクレット",
       "move_names": {
         "Jab": "ジャブ",
         "Piercing Gaze": "鋭い視線",
-        "Windup Punch": "大振り"
+        "Whirlwind": "旋風"
       },
       "move_titles": [
         "ジャブ",
         "鋭い視線",
-        "大振り"
+        "旋風"
       ]
     },
     "KIN_FOLLOWER": {
       "moves": {
-        "BOOMERANG_MOVE": "ブーメラン",
-        "POWER_DANCE_MOVE": "パワーダンス",
-        "QUICK_SLASH_MOVE": "クイックスラッシュ"
+        "BOOMERANG": "ブーメラン",
+        "POWER_DANCE": "力のダンス",
+        "QUICK_SLASH": "はやぶさ斬り"
       },
       "name": "血族の信者",
       "move_names": {
         "Boomerang": "ブーメラン",
-        "Power Dance": "パワーダンス",
-        "Quick Slash": "クイックスラッシュ"
+        "Power Dance": "力のダンス",
+        "Quick Slash": "はやぶさ斬り"
       },
       "move_titles": [
         "ブーメラン",
-        "パワーダンス",
-        "クイックスラッシュ"
+        "力のダンス",
+        "はやぶさ斬り"
       ]
     },
     "KIN_PRIEST": {
       "moves": {
-        "BEAM_MOVE": "ソウルビーム",
-        "OR_OF_FRAILTY_MOVE": "脆弱のオーブ",
-        "OR_OF_WEAKNESS_MOVE": "脱力のオーブ",
-        "RITUAL_MOVE": "闇の儀式"
+        "BEAM": "ソウルビーム",
+        "ORB_OF_FRAILTY": "脆弱のオーブ",
+        "ORB_OF_WEAKNESS": "脱力のオーブ",
+        "RITUAL": "暗黒の儀式"
       },
       "name": "血族の司祭",
       "move_names": {
         "Soul Beam": "ソウルビーム",
         "Orb of Frailty": "脆弱のオーブ",
         "Orb of Weakness": "脱力のオーブ",
-        "Dark Ritual": "闇の儀式"
+        "Dark Ritual": "暗黒の儀式"
       },
       "move_titles": [
         "ソウルビーム",
         "脆弱のオーブ",
         "脱力のオーブ",
-        "闇の儀式"
+        "暗黒の儀式"
       ]
     },
     "KNOWLEDGE_DEMON": {
@@ -8373,7 +8436,8 @@
         "CURSE_OF_KNOWLEDGE": "知識の呪い",
         "HAVE_A_TASTE": "味見",
         "KNOWLEDGE_OVERWHELMING": "知識の本流",
-        "PONDER": "熟考"
+        "PONDER": "熟考",
+        "SLAP": "はたく"
       },
       "name": "知識の悪魔",
       "move_names": {
@@ -8381,14 +8445,16 @@
         "Curse of Knowledge": "知識の呪い",
         "Have a Taste": "味見",
         "Knowledge Overwhelming": "知識の本流",
-        "Ponder": "熟考"
+        "Ponder": "熟考",
+        "Slap": "はたく"
       },
       "move_titles": [
         "青い炎",
         "知識の呪い",
         "味見",
         "知識の本流",
-        "熟考"
+        "熟考",
+        "はたく"
       ]
     },
     "LAGAVULIN_MATRIARCH": {
@@ -8396,20 +8462,23 @@
         "DISEMBOWEL": "はらわた裂き",
         "SLASH": "切り裂き",
         "SLEEP": "睡眠",
-        "SOUL_SIPHON": "魂吸収"
+        "SOUL_SIPHON": "魂吸収",
+        "WAKE_UP": "目覚め"
       },
       "name": "ラガヴーリン・メイトリアーク",
       "move_names": {
         "Disembowel": "はらわた裂き",
         "Slash": "切り裂き",
         "Sleep": "睡眠",
-        "Soul Siphon": "魂吸収"
+        "Soul Siphon": "魂吸収",
+        "Wake Up": "目覚め"
       },
       "move_titles": [
         "はらわた裂き",
         "切り裂き",
         "睡眠",
-        "魂吸収"
+        "魂吸収",
+        "目覚め"
       ]
     },
     "LEAF_SLIME_M": {
@@ -8444,59 +8513,74 @@
     },
     "LIVING_FOG": {
       "moves": {
-        "BLOAT": "膨張"
+        "ADVANCED_GAS": "濃縮ガス",
+        "BLOAT": "膨張",
+        "SUPER_GAS_BLAST": "ガス大爆発"
       },
       "name": "生きた霧",
       "move_names": {
-        "Bloat": "膨張"
+        "Advanced Gas": "濃縮ガス",
+        "Bloat": "膨張",
+        "Super Gas Blast": "ガス大爆発"
       },
       "move_titles": [
-        "膨張"
+        "濃縮ガス",
+        "膨張",
+        "ガス大爆発"
       ]
     },
     "LIVING_SHIELD": {
       "moves": {
-        "SHIELD_SLAM": "シールドスラム"
+        "SHIELD_SLAM": "シールドスラム",
+        "SMASH": "スマッシュ"
       },
       "name": "リビングシールド",
       "move_names": {
-        "Shield Slam": "シールドスラム"
+        "Shield Slam": "シールドスラム",
+        "Smash": "スマッシュ"
       },
       "move_titles": [
-        "シールドスラム"
+        "シールドスラム",
+        "スマッシュ"
       ]
     },
     "LOUSE_PROGENITOR": {
       "moves": {
         "ACID_DUST": "酸の塵",
         "CURL_AND_GROW": "まるくなり成長",
+        "POUNCE": "飛び掛かり",
         "WEB_CANNON": "ウェブ・キャノン"
       },
       "name": "始祖虫",
       "move_names": {
         "Acid Dust": "酸の塵",
         "Curl and Grow": "まるくなり成長",
+        "Pounce": "飛び掛かり",
         "Web Cannon": "ウェブ・キャノン"
       },
       "move_titles": [
         "酸の塵",
         "まるくなり成長",
+        "飛び掛かり",
         "ウェブ・キャノン"
       ]
     },
     "MAGI_KNIGHT": {
       "moves": {
+        "DAMPEN": "減衰",
         "MAGIC_BOMB": "マジックボム",
         "POWER_SHIELD": "パワーシールド",
         "RAM": "打ち込み"
       },
-      "name": "マギ・ナイト",
+      "name": "マギナイト",
       "move_names": {
+        "Dampen": "減衰",
         "Magic Bomb": "マジックボム",
         "Power Shield": "パワーシールド",
         "Ram": "打ち込み"
       },
       "move_titles": [
+        "減衰",
         "マジックボム",
         "パワーシールド",
         "打ち込み"
@@ -8730,7 +8814,7 @@
         "LASH": "ムチ打ち",
         "LEAP_SLAM": "リープスラム"
       },
-      "name": "寄生カエル",
+      "name": "寄生キャエル",
       "move_names": {
         "Infect": "感染",
         "Lash": "ムチ打ち",
@@ -8766,10 +8850,11 @@
         "BURN_BRIGHT_FOR_ME": "燃え上がれ",
         "EXECUTION": "処刑",
         "IMPOSSIBLE": "あり得ぬ！",
-        "OFF_WITH_YOUR_HEAD": "首を刎ねよ",
+        "OFF_WITH_YOUR_HEAD": "首をはねよ",
         "SUMMON_1": "召喚",
         "SUMMON_2": "召喚",
-        "YOURE_MINE": "逃がさぬ"
+        "YOURE_MINE": "お前は私のものだ",
+        "YOU_ARE_MINE": "お前は私のものだ"
       },
       "name": "クイーン",
       "move_names": {
@@ -8777,19 +8862,21 @@
         "Burn Bright for Me": "燃え上がれ",
         "Execution": "処刑",
         "Impossible": "あり得ぬ！",
-        "Off with Your Head": "首を刎ねよ",
+        "Off with Your Head": "首をはねよ",
         "Summon": "召喚",
-        "You're Mine": "逃がさぬ"
+        "You're Mine": "お前は私のものだ",
+        "You Are Mine": "お前は私のものだ"
       },
       "move_titles": [
         "バリア",
         "燃え上がれ",
         "処刑",
         "あり得ぬ！",
-        "首を刎ねよ",
+        "首をはねよ",
         "召喚",
         "召喚",
-        "逃がさぬ"
+        "お前は私のものだ",
+        "お前は私のものだ"
       ]
     },
     "ROCKET": {
@@ -8904,24 +8991,39 @@
       ]
     },
     "SLIMED_BERSERKER": {
-      "name": "スライムバーサーカー"
+      "moves": {
+        "FURIOUS_PUMMELING": "猛烈な殴打",
+        "LEECHING_HUG": "吸血ハグ",
+        "VOMIT_ICHOR": "霊液噴出"
+      },
+      "name": "スライムバーサーカー",
+      "move_names": {
+        "Furious Pummeling": "猛烈な殴打",
+        "Leeching Hug": "吸血ハグ",
+        "Vomit Ichor": "霊液噴出"
+      },
+      "move_titles": [
+        "猛烈な殴打",
+        "吸血ハグ",
+        "霊液噴出"
+      ]
     },
     "SLITHERING_STRANGLER": {
       "moves": {
         "CONSTRICT": "締め付け",
         "LASH": "ムチ打ち",
-        "THWACK": "強打"
+        "THWACK": "痛撃"
       },
       "name": "絞蛇",
       "move_names": {
         "Constrict": "締め付け",
         "Lash": "ムチ打ち",
-        "Thwack": "強打"
+        "Thwack": "痛撃"
       },
       "move_titles": [
         "締め付け",
         "ムチ打ち",
-        "強打"
+        "痛撃"
       ]
     },
     "SLUDGE_SPINNER": {
@@ -8945,22 +9047,22 @@
     "SLUMBERING_BEETLE": {
       "moves": {
         "CRASH": "クラッシュ",
-        "RESOLVE": "リゾルヴ",
         "ROLL_OUT": "ロールアウト",
-        "SNORE": "いびき"
+        "SNORE": "いびき",
+        "WAKE_UP": "目覚め"
       },
       "name": "眠れるビートル",
       "move_names": {
         "Crash": "クラッシュ",
-        "Resolve": "リゾルヴ",
         "Roll Out": "ロールアウト",
-        "Snore": "いびき"
+        "Snore": "いびき",
+        "Wake Up": "目覚め"
       },
       "move_titles": [
         "クラッシュ",
-        "リゾルヴ",
         "ロールアウト",
-        "いびき"
+        "いびき",
+        "目覚め"
       ]
     },
     "SNAPPING_JAXFRUIT": {
@@ -8980,31 +9082,40 @@
     },
     "SNEAKY_GREMLIN": {
       "moves": {
+        "SPAWNED": "目覚め",
         "TACKLE": "体当たり"
       },
       "name": "スニーキーグレムリン",
       "move_names": {
+        "Wake Up": "目覚め",
         "Tackle": "体当たり"
       },
       "move_titles": [
+        "目覚め",
         "体当たり"
       ]
     },
     "SOUL_FYSH": {
       "moves": {
-        "BURP": "ゲップ",
+        "BECKON": "誘い",
         "DE_GAS": "ガス抜き",
+        "FADE": "幽体化",
+        "GAZE": "凝視",
         "SCREAM": "スクリーム"
       },
       "name": "ソウルフィッシュ",
       "move_names": {
-        "Burp": "ゲップ",
+        "Beckon": "誘い",
         "De-Gas": "ガス抜き",
+        "Fade": "幽体化",
+        "Gaze": "凝視",
         "Scream": "スクリーム"
       },
       "move_titles": [
-        "ゲップ",
+        "誘い",
         "ガス抜き",
+        "幽体化",
+        "凝視",
         "スクリーム"
       ]
     },
@@ -9075,37 +9186,52 @@
       ]
     },
     "TERROR_EEL": {
-      "name": "テラーウツボ"
+      "moves": {
+        "CRASH": "クラッシュ",
+        "TERROR": "恐怖",
+        "THRASH": "大暴れ"
+      },
+      "name": "テラーウツボ",
+      "move_names": {
+        "Crash": "クラッシュ",
+        "Terrorize": "恐怖",
+        "Thrash": "大暴れ"
+      },
+      "move_titles": [
+        "クラッシュ",
+        "恐怖",
+        "大暴れ"
+      ]
     },
     "TEST_SUBJECT": {
       "moves": {
-        "BIG_POUNCE_MOVE": "致命の強襲",
-        "BITE_MOVE": "噛みつき",
-        "BURNING_GROWL_MOVE": "バーニンググロウル",
-        "MULTI_CLAW_MOVE": "マルチクロウ",
-        "PHASE3_LACERATE_MOVE": "引き裂き",
-        "POUNCE_MOVE": "強襲",
-        "RESPAWN_MOVE": "復活",
-        "SKULL_BASH_MOVE": "スカルバッシュ"
+        "BIG_POUNCE": "強襲",
+        "BITE": "噛みつき",
+        "BURNING_GROWL": "焦熱の咆哮",
+        "MULTI_CLAW": "連続引っかき",
+        "PHASE3_LACERATE": "惨撃",
+        "POUNCE": "飛び掛かり",
+        "RESPAWN": "復活",
+        "SKULL_BASH": "スカルバッシュ"
       },
       "name": "実験体 #C{Count}",
       "move_names": {
-        "Big Pounce": "致命の強襲",
+        "Big Pounce": "強襲",
         "Bite": "噛みつき",
-        "Burning Growl": "バーニンググロウル",
-        "Multi-Claw": "マルチクロウ",
-        "Lacerate": "引き裂き",
-        "Pounce": "強襲",
+        "Burning Growl": "焦熱の咆哮",
+        "Multi-Claw": "連続引っかき",
+        "Lacerate": "惨撃",
+        "Pounce": "飛び掛かり",
         "Respawn": "復活",
         "Skull Bash": "スカルバッシュ"
       },
       "move_titles": [
-        "致命の強襲",
-        "噛みつき",
-        "バーニンググロウル",
-        "マルチクロウ",
-        "引き裂き",
         "強襲",
+        "噛みつき",
+        "焦熱の咆哮",
+        "連続引っかき",
+        "惨撃",
+        "飛び掛かり",
         "復活",
         "スカルバッシュ"
       ]
@@ -9241,20 +9367,20 @@
         "LIQUIFY_GROUND": "大地の溶解",
         "LUNGING_BITE": "突進噛みつき",
         "SALIVATE": "よだれ",
-        "THRASH": "強打"
+        "THRASH": "大暴れ"
       },
       "name": "貪りの獣",
       "move_names": {
         "Liquify Ground": "大地の溶解",
         "Lunging Bite": "突進噛みつき",
         "Salivate": "よだれ",
-        "Thrash": "強打"
+        "Thrash": "大暴れ"
       },
       "move_titles": [
         "大地の溶解",
         "突進噛みつき",
         "よだれ",
-        "強打"
+        "大暴れ"
       ]
     },
     "THE_LOST": {
@@ -9276,20 +9402,23 @@
       "moves": {
         "HARDENING_STRIKE": "硬化ストライク",
         "ILLUSION": "イリュージョン",
-        "PIERCING_GAZE": "貫く視線",
+        "PIERCING_GAZE": "鋭い視線",
+        "SAIL": "セイル",
         "WAIL": "泣き叫ぶ"
       },
       "name": "オブスキュラ",
       "move_names": {
         "Hardening Strike": "硬化ストライク",
         "Illusion": "イリュージョン",
-        "Piercing Gaze": "貫く視線",
+        "Piercing Gaze": "鋭い視線",
+        "Sail": "セイル",
         "Wail": "泣き叫ぶ"
       },
       "move_titles": [
         "硬化ストライク",
         "イリュージョン",
-        "貫く視線",
+        "鋭い視線",
+        "セイル",
         "泣き叫ぶ"
       ]
     },
@@ -9337,26 +9466,32 @@
     },
     "TORCH_HEAD_AMALGAM": {
       "moves": {
+        "BEAM": "ビーム",
         "TACKLE": "体当たり"
       },
       "name": "トーチヘッド・アマルガム",
       "move_names": {
+        "Beam": "ビーム",
         "Tackle": "体当たり"
       },
       "move_titles": [
+        "ビーム",
         "体当たり"
       ]
     },
     "TOUGH_EGG": {
       "moves": {
-        "HATCH": "ふ化"
+        "HATCH": "ふ化",
+        "NIBBLE": "かじりつき"
       },
       "name": "固い卵",
       "move_names": {
-        "HATCH": "ふ化"
+        "Hatch": "ふ化",
+        "Nibble": "かじりつき"
       },
       "move_titles": [
-        "ふ化"
+        "ふ化",
+        "かじりつき"
       ]
     },
     "TRACKER_RUBY_RAIDER": {
@@ -9379,52 +9514,55 @@
         "BELOW": "下からの攻撃",
         "BITE": "噛みつき",
         "BURROW": "潜伏",
-        "STRIKE": "出現攻撃"
+        "STRIKE": "出現攻撃",
+        "UNBURROW": "出現"
       },
       "name": "トンネラー",
       "move_names": {
         "Attack from Below": "下からの攻撃",
         "Bite": "噛みつき",
         "Burrow": "潜伏",
-        "Emerging Strike": "出現攻撃"
+        "Emerging Strike": "出現攻撃",
+        "Unburrow": "出現"
       },
       "move_titles": [
         "下からの攻撃",
         "噛みつき",
         "潜伏",
-        "出現攻撃"
+        "出現攻撃",
+        "出現"
       ]
     },
     "TURRET_OPERATOR": {
       "moves": {
-        "LOADING": "ロード中",
+        "RELOAD": "リロード",
         "UNLOAD": "アンロード！"
       },
       "name": "タレットオペレーター",
       "move_names": {
-        "Loading": "ロード中",
+        "Reload": "リロード",
         "Unload!": "アンロード！"
       },
       "move_titles": [
-        "ロード中",
+        "リロード",
         "アンロード！"
       ]
     },
     "TWIG_SLIME_M": {
       "moves": {
         "CHOMP": "噛み砕く",
-        "POKEY_POUNCE": "ポッキーパウンス",
+        "POKEY_POUNCE": "小枝の飛び掛かり",
         "STICKY_SHOT": "粘着ショット"
       },
       "name": "細枝スライム (中)",
       "move_names": {
         "Chomp": "噛み砕く",
-        "Pokey Pounce": "ポッキーパウンス",
+        "Pokey Pounce": "小枝の飛び掛かり",
         "Sticky Shot": "粘着ショット"
       },
       "move_titles": [
         "噛み砕く",
-        "ポッキーパウンス",
+        "小枝の飛び掛かり",
         "粘着ショット"
       ]
     },
@@ -9505,7 +9643,10 @@
     },
     "WATERFALL_GIANT": {
       "moves": {
+        "ABOUT_TO_BLOW": "爆発寸前",
+        "EXPLODE": "大爆発",
         "PRESSURE_GUN": "プレッシャーガン",
+        "PRESSURE_UP": "水圧上昇",
         "PRESSURIZE": "加圧",
         "RAM": "打ち込み",
         "SIPHON": "サイフォン",
@@ -9513,14 +9654,20 @@
       },
       "name": "滝の巨人",
       "move_names": {
+        "About to Blow": "爆発寸前",
+        "Explode": "大爆発",
         "Pressure Gun": "プレッシャーガン",
+        "Pressure Up": "水圧上昇",
         "Pressurize": "加圧",
         "Ram": "打ち込み",
         "Siphon": "サイフォン",
         "Stomp": "踏みつけ"
       },
       "move_titles": [
+        "爆発寸前",
+        "大爆発",
         "プレッシャーガン",
+        "水圧上昇",
         "加圧",
         "打ち込み",
         "サイフォン",
@@ -9529,17 +9676,20 @@
     },
     "WRIGGLER": {
       "moves": {
-        "PARASITIZE_PLAYER": "プレイヤーに寄生する",
-        "WRIGGLE_STRIKE": "蠢く一撃"
+        "NASTY_BITE": "厄介な噛みつき",
+        "SPAWNED": "出現",
+        "WRIGGLE": "うごめき"
       },
       "name": "リグラー",
       "move_names": {
-        "Parasitize Player": "プレイヤーに寄生する",
-        "Wriggle Strike": "蠢く一撃"
+        "Nasty Bite": "厄介な噛みつき",
+        "Spawned": "出現",
+        "Wriggle": "うごめき"
       },
       "move_titles": [
-        "プレイヤーに寄生する",
-        "蠢く一撃"
+        "厄介な噛みつき",
+        "出現",
+        "うごめき"
       ]
     },
     "ZAPBOT": {

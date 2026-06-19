@@ -189,7 +189,17 @@ function resolveTokens(desc, vars, fullStr) {
       continue;
     }
     const tag = inner.slice(0, colon1);
-    const rest = inner.slice(colon1 + 1);
+    let rest = inner.slice(colon1 + 1);
+
+    // Chained modifier: {Var:diff():plural...} / {Var:diff():plural(xx)...}.
+    // The leading diff() just substitutes the var's numeric value; the
+    // trailing plural(...) selects the correct noun form for that value.
+    // Localized strings (it/ru/...) use this chain where EN uses a bare
+    // {Var:diff()} + separate static noun, so normalize by dropping the
+    // redundant diff() prefix and letting the plural handlers below run.
+    if (rest.startsWith('diff():plural') || rest.startsWith('inverseDiff():plural')) {
+      rest = rest.slice(rest.indexOf(':') + 1);
+    }
 
     if (tag === 'IfUpgraded' && rest.startsWith('show:')) {
       const content = rest.slice(5);
@@ -202,6 +212,15 @@ function resolveTokens(desc, vars, fullStr) {
       i = end; continue;
     }
     if (tag === 'HasRider') {
+      const idx = rest.lastIndexOf('|');
+      result.push(resolveTokens(idx !== -1 ? rest.slice(0, idx) : rest, vars, fullStr));
+      i = end; continue;
+    }
+    // {IsOstyAlive:<alive-branch>|<dead-branch>} — runtime conditional on the
+    // Osty summon. Mirror the InCombat/CalculatedBlock convention used by
+    // BODY_SLAM/MIRAGE: resolve the alive branch so the inner
+    // {CalculatedBlock:diff()} collapses to its 0 default (e.g. "(Gain 0 Block)").
+    if (tag === 'IsOstyAlive') {
       const idx = rest.lastIndexOf('|');
       result.push(resolveTokens(idx !== -1 ? rest.slice(0, idx) : rest, vars, fullStr));
       i = end; continue;
