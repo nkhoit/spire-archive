@@ -87,3 +87,49 @@ for name in files:
         count = 0
     print(f'  {name}: {count}')
 PY
+
+# --- snapshot / version-history drift guard ---------------------------------
+# The version-history engine (patch history UI + STS2 update watcher) depends on
+# data/sts2/history/<version>/ snapshots recorded via snapshot.cjs. That step is
+# NOT part of this pipeline, so it's easy to ship new live data without recording
+# the version (this happened for 0.107.1). Warn loudly if live data is ahead of
+# the newest recorded snapshot.
+python3 - <<'PY'
+import json, re, os
+from pathlib import Path
+
+hist = Path.cwd() / 'data' / 'sts2' / 'history'
+versions_file = hist / 'versions.json'
+if not versions_file.exists():
+    print('\n⚠️  history/versions.json missing — run snapshot.cjs to record a version.')
+    raise SystemExit(0)
+
+versions = json.loads(versions_file.read_text())
+def key(v): return [int(x) for x in re.findall(r'\d+', v.get('version',''))]
+newest = max(versions, key=key)['version'] if versions else None
+
+candidates = [
+    Path.cwd() / 'release_info.json',
+    Path(os.environ.get('STS2_EXTRACTED_DIR', Path.home()/'code/sts2-research/extracted')) / 'release_info.json',
+]
+game_ver = None
+for c in candidates:
+    if c.exists():
+        try:
+            game_ver = json.loads(c.read_text()).get('version','').lstrip('v') or None
+            if game_ver: break
+        except Exception:
+            pass
+
+print(f'\nVersion history: newest recorded snapshot = {newest}')
+if game_ver:
+    print(f'                 installed game version    = {game_ver}')
+    def k(s): return [int(x) for x in re.findall(r'\d+', s)]
+    if newest and k(game_ver) > k(newest):
+        print(f'\n⚠️  DRIFT: game is {game_ver} but newest snapshot is {newest}.')
+        print(f'    Record it (before overwriting live data next time) with:')
+        print(f'      node parsers/sts2/snapshot.cjs --version {game_ver}')
+        print(f'    then: node parsers/sts2/build_changelog.cjs')
+else:
+    print('                 (could not detect installed game version — verify snapshot manually)')
+PY
