@@ -75,11 +75,12 @@ const navLinks = game ? [
 
     <!-- favicon intentionally omitted (optional) -->
   </head>
-  <body data-game={game} class="min-h-dvh bg-[var(--bg-base)] text-slate-100">
-    <header class="sticky top-0 z-10 border-b border-white/[0.06] bg-[rgb(var(--bg-base-rgb)/0.72)] backdrop-blur-xl">
-      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3">
-        <div class="flex items-center gap-2 min-w-0">
-          <a href={langPrefix + '/'} class="font-['KreonGame','Kreon',serif] text-base font-bold tracking-wide text-amber-200/90 hover:text-amber-100 transition-colors shrink-0">Spire Archive</a>
+  <body data-game={game}>
+    <a href="#main-content" class="skip-link">{t('Skip to content', locale)}</a>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="flex items-center gap-3 min-w-0">
+          <a href={langPrefix + '/'} class="site-brand"><svg aria-hidden="true" width="18" height="25" viewBox="0 0 18 25" fill="none"><path d="M1 24V18H5V12H9V6H13V1M1 24H17M6 24V19H10V13H14V7H17" stroke="currentColor" stroke-width="1.5"/></svg>Spire Archive</a>
           {game && (
             <>
               <span class="text-white/15 hidden sm:inline">|</span>
@@ -91,11 +92,11 @@ const navLinks = game ? [
           <GlobalSearch client:load game={game} locale={locale} langPrefix={langPrefix} />
           {navLinks.length > 0 && (
             <div class="relative">
-              <button id="nav-toggle" class="p-1.5 rounded-md text-[var(--accent-300)] hover:text-[var(--accent-200)] hover:bg-white/10 transition-colors" aria-label="Toggle menu">
+              <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-dropdown">
                 <svg id="nav-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
                 <svg id="nav-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
               </button>
-              <nav id="nav-dropdown" class="hidden absolute right-0 top-full mt-2 z-50 min-w-[180px] rounded-lg border border-white/[0.1] bg-[rgb(var(--bg-base-rgb)/0.96)] shadow-2xl shadow-black/80 py-1.5">
+              <nav id="nav-dropdown" aria-label={t('Browse', locale)} class="nav-dropdown hidden absolute right-0 top-full mt-2 z-50 min-w-[220px] border border-[var(--border-subtle)] bg-[var(--bg-elevated)] py-1.5">
                 {navLinks.map((link) => (
                   <a class="block px-4 py-2 text-sm font-game theme-link hover:bg-white/[0.06] transition-colors" href={link.href}>{link.label}</a>
                 ))}
@@ -115,33 +116,61 @@ const navLinks = game ? [
       </div>
     </header>
 
+    {game && (
+      <div class="game-navigation">
+        <div class="game-navigation-inner">
+          <nav class="game-tabs" aria-label={t('Switch to', locale)}>
+            <a href={`${langPrefix}/sts1`} aria-current={game === 'sts1' ? 'true' : undefined}>Spire I</a>
+            <a href={`${langPrefix}/sts2`} aria-current={game === 'sts2' ? 'true' : undefined}>Spire II</a>
+          </nav>
+          <nav class="section-navigation" aria-label={t('Browse', locale)}>
+            {navLinks.map((link) => (
+              <a href={link.href} aria-current={Astro.url.pathname.replace(/\/$/, '') === link.href || Astro.url.pathname.startsWith(link.href + '/') ? 'page' : undefined}>{link.label}</a>
+            ))}
+          </nav>
+        </div>
+      </div>
+    )}
+
     <script is:inline>
       const toggle = document.getElementById('nav-toggle');
       const dropdown = document.getElementById('nav-dropdown');
       const iconOpen = document.getElementById('nav-icon-open');
       const iconClose = document.getElementById('nav-icon-close');
       if (toggle && dropdown) {
+        const closeMenu = (returnFocus = false) => {
+          dropdown.classList.add('hidden');
+          toggle.setAttribute('aria-expanded', 'false');
+          iconOpen?.classList.remove('hidden');
+          iconClose?.classList.add('hidden');
+          if (returnFocus) toggle.focus();
+        };
         toggle.addEventListener('click', (e) => {
           e.stopPropagation();
           const isHidden = dropdown.classList.toggle('hidden');
+          toggle.setAttribute('aria-expanded', String(!isHidden));
           iconOpen?.classList.toggle('hidden', !isHidden);
           iconClose?.classList.toggle('hidden', isHidden);
         });
-        document.addEventListener('click', () => {
-          dropdown.classList.add('hidden');
-          iconOpen?.classList.remove('hidden');
-          iconClose?.classList.add('hidden');
+        document.addEventListener('click', (e) => {
+          if (!dropdown.contains(e.target)) closeMenu();
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && !dropdown.classList.contains('hidden')) closeMenu(true);
+        });
+        document.addEventListener('focusin', (e) => {
+          if (!dropdown.contains(e.target) && e.target !== toggle) closeMenu();
         });
       }
     </script>
 
-    <main class="mx-auto max-w-7xl px-4 py-6">
+    <main id="main-content" tabindex="-1" class="site-main">
       <slot />
     </main>
 
-    <footer class="border-t border-white/[0.06]">
-      <div class="mx-auto max-w-7xl px-4 py-6 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500">
-        <span><span class="font-['KreonGame','Kreon',serif] text-amber-200/40">Spire Archive</span> — {t('a Slay the Spire companion', locale)}</span>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span><span class="font-game">Spire Archive</span> — {t('a Slay the Spire companion', locale)}</span>
         <div class="flex items-center gap-4">
           <a href="/api-docs" class="theme-link-subtle transition-colors">API</a>
           <a href="https://github.com/nkhoit/spire-archive" class="theme-link-subtle transition-colors">GitHub</a>

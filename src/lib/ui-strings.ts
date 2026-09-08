@@ -19,6 +19,8 @@ const strings: Record<string, Partial<Record<Locale, string>>> = {
   'First Visit': { ja: '初訪問', ko: '첫 방문', zh: '首次访问', de: 'Erstbesuch', fr: 'Première visite', es: 'Primera visita', pt: 'Primeira visita', it: 'Prima visita', pl: 'Pierwsza wizyta', ru: 'Первый визит', tr: 'İlk Ziyaret', th: 'เยี่ยมชมครั้งแรก' },
 
   // Nav
+  'Filters': { ja: 'フィルター', ko: '필터', zh: '筛选', de: 'Filter', fr: 'Filtres', es: 'Filtros', pt: 'Filtros', it: 'Filtri', pl: 'Filtry', ru: 'Фильтры', tr: 'Filtreler', th: 'ตัวกรอง' },
+  'Skip to content': { ja: '本文へ移動', ko: '본문으로 건너뛰기', zh: '跳至正文', de: 'Zum Inhalt springen', fr: 'Aller au contenu', es: 'Saltar al contenido', pt: 'Ir para o conteúdo', it: 'Vai al contenuto', pl: 'Przejdź do treści', ru: 'Перейти к содержимому', tr: 'İçeriğe geç', th: 'ข้ามไปยังเนื้อหา' },
   'Switch to': { ja: '切り替え:', ko: '전환:', zh: '切换到', de: 'Wechsel zu', fr: 'Passer à', es: 'Cambiar a', pt: 'Mudar para', it: 'Passa a', pl: 'Przejdź do', ru: 'Перейти к', tr: 'Geçiş:', th: 'สลับไป' },
   'Characters': { ja: 'キャラクター', ko: '캐릭터', zh: '角色', de: 'Charaktere', fr: 'Personnages', es: 'Personajes', pt: 'Personagens', it: 'Personaggi', pl: 'Postacie', ru: 'Персонажи', tr: 'Karakterler', th: 'ตัวละคร' },
   'Cards': { ja: 'カード', ko: '카드', zh: '卡牌', de: 'Karten', fr: 'Cartes', es: 'Cartas', pt: 'Cartas', it: 'Carte', pl: 'Karty', ru: 'Карты', tr: 'Kartlar', th: 'การ์ด' },

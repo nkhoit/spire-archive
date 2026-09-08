@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useId, useMemo, useState } from 'react';
 import { Pager, type ApiResp, useApiList, useUrlOffset } from './SimpleExplorer';
 import { t } from '../../lib/ui-strings';
 
@@ -76,7 +76,7 @@ export default function ListExplorer<T>(props: {
     clientFilter,
     renderItem,
     getItemKey,
-    itemClassName = 'rounded-lg border border-white/[0.06] bg-white/[0.03] hover:bg-white/[0.06] hover:border-white/[0.12] transition-all',
+    itemClassName = 'explorer-row',
     listClassName = 'mt-3 space-y-2',
     anchorClassName = 'flex items-center gap-3 p-3',
   } = props;
@@ -86,6 +86,7 @@ export default function ListExplorer<T>(props: {
     Object.fromEntries(filters.map((filter) => [filter.key, '']))
   );
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const filterId = useId();
 
   const queryParams = useMemo(() => {
     const params: Record<string, string | number | null> = {
@@ -122,29 +123,33 @@ export default function ListExplorer<T>(props: {
 
   return (
     <div className="mt-4">
-      <div className="sticky top-[53px] z-[5] -mx-4 border-b border-white/[0.06] bg-[rgb(var(--bg-base-rgb)/0.8)] px-4 py-3 backdrop-blur-xl">
+      <div className="explorer-toolbar">
         <div className="flex gap-2">
           <input
             className="flex-1 rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm transition-colors focus:border-[rgb(var(--accent-rgb)/0.45)] focus:outline-none"
             placeholder={t('Search', locale) + ' ' + t(title, locale).toLowerCase() + '…'}
+            aria-label={t('Search', locale) + ' ' + t(title, locale)}
             value={filterValues.q ?? ''}
             onChange={(e) => updateFilter('q', e.target.value)}
           />
           {extraFilters.length > 0 && (
             <button
-              className={`md:hidden rounded-md border px-3 py-2 text-xs font-medium transition-colors ${hasActiveFilters ? 'border-[rgb(var(--accent-rgb)/0.45)] bg-[rgb(var(--accent-rgb)/0.12)] text-[var(--accent-300)]' : 'border-white/[0.08] bg-white/[0.04] text-slate-400'}`}
+              className="md:hidden explorer-filter-toggle"
+              aria-expanded={filtersOpen}
+              aria-controls={filterId}
               onClick={() => setFiltersOpen(!filtersOpen)}
             >
-              ⚙ {hasActiveFilters ? '✦' : ''}
+              {t('Filters', locale)}{hasActiveFilters ? ' •' : ''}
             </button>
           )}
         </div>
 
         {extraFilters.length > 0 && (
-          <div className={`${filtersOpen ? 'grid' : 'hidden'} mt-2 grid-cols-1 gap-2 md:grid ${filterGridClass}`}>
+          <div id={filterId} className={`${filtersOpen ? 'grid' : 'hidden'} mt-2 grid-cols-1 gap-2 md:grid ${filterGridClass}`}>
             {extraFilters.map((filter) => (
               <select
                 key={filter.key}
+                aria-label={filter.allLabel ? t(filter.allLabel, locale) : t(cap(filter.key), locale)}
                 className="rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm transition-colors focus:border-[rgb(var(--accent-rgb)/0.45)] focus:outline-none"
                 value={filterValues[filter.key] ?? ''}
                 onChange={(e) => updateFilter(filter.key, e.target.value)}

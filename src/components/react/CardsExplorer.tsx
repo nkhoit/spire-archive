@@ -61,11 +61,11 @@ function CardTile({ c, game, isMobile, upgraded, locale }: { c: Card; game: stri
   const showUpgraded = upgraded && hasUpgrade;
 
   return (
-    <div className="card-tilt group flex flex-col items-center rounded-lg border border-white/[0.06] bg-white/[0.03] p-2 sm:p-3 hover:bg-white/[0.06] hover:border-white/[0.12] transition-all">
+    <div className="card-catalogue-item group flex flex-col items-center p-2 sm:p-3">
       <a href={(locale !== 'en' ? '/' + locale : '') + '/' + game + '/cards/' + c.id} className="card-render-wrap w-full flex justify-center overflow-visible">
         <CssCardRenderer card={c} upgraded={!!showUpgraded} size={isMobile ? 'xs' : 'sm'} game={game as 'sts1' | 'sts2'} locale={locale} />
       </a>
-      <div className="mt-2 flex flex-wrap items-center justify-center gap-1">
+      <div className="card-metadata mt-2 flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
         <BadgeSpan label={c.color} tone={c.color} locale={locale} />
         <BadgeSpan label={c.type} locale={locale} />
         <BadgeSpan label={c.rarity} locale={locale} />
@@ -84,6 +84,7 @@ function UpgradeToggle({ checked, onChange, game, locale }: { checked: boolean; 
   return (
     <button
       onClick={() => onChange(!checked)}
+      aria-pressed={checked}
       className="fixed bottom-6 left-6 z-50 flex items-center gap-2 rounded-lg border border-[rgb(var(--accent-rgb)/0.35)] bg-[rgb(var(--bg-base-rgb)/0.9)] backdrop-blur-sm px-4 py-2.5 shadow-lg shadow-black/50 transition-all hover:border-[rgb(var(--accent-rgb)/0.5)] hover:bg-[rgb(var(--bg-base-rgb)/0.96)] active:scale-95"
       style={{ fontFamily: "'KreonGame', 'Kreon', serif" }}
     >
@@ -178,25 +179,29 @@ export default function CardsExplorer(props: {
 
   return (
     <div className="mt-4">
-      <div className="sticky top-[53px] z-[5] -mx-4 px-4 py-3 bg-[rgb(var(--bg-base-rgb)/0.8)] backdrop-blur-xl border-b border-white/[0.06]">
+      <div className="explorer-toolbar">
         <div className="flex gap-2">
           <input
             className="flex-1 rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm focus:border-[rgb(var(--accent-rgb)/0.45)] focus:outline-none transition-colors"
             placeholder={t('Search', locale) + ' ' + t('Cards', locale).toLowerCase() + '…'}
+            aria-label={t('Search', locale) + ' ' + t('Cards', locale)}
             value={q}
             onChange={(e) => { setOffset(0); setQ(e.target.value); }}
           />
           <button
-            className={`md:hidden rounded-md border px-3 py-2 text-xs font-medium transition-colors ${hasActiveFilters ? 'border-[rgb(var(--accent-rgb)/0.45)] bg-[rgb(var(--accent-rgb)/0.12)] text-[var(--accent-300)]' : 'border-white/[0.08] bg-white/[0.04] text-slate-400'}`}
+            className="md:hidden explorer-filter-toggle"
+            aria-expanded={filtersOpen}
+            aria-controls="card-filters"
             onClick={() => setFiltersOpen(!filtersOpen)}
           >
-            ⚙ {hasActiveFilters ? '✦' : ''}
+            {t('Filters', locale)}{hasActiveFilters ? ' •' : ''}
           </button>
         </div>
-        <div className={`${filtersOpen ? 'grid' : 'hidden'} md:grid grid-cols-1 gap-2 md:grid-cols-4 mt-2`}>
+        <div id="card-filters" className={`${filtersOpen ? 'grid' : 'hidden'} md:grid grid-cols-1 gap-2 md:grid-cols-4 mt-2`}>
         <select
           className="rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm focus:border-[rgb(var(--accent-rgb)/0.45)] focus:outline-none transition-colors"
           value={color}
+          aria-label={t('Color', locale)}
           onChange={(e) => { setOffset(0); setColor(e.target.value); }}
         >
           <option value="">{t('All colors', locale)}</option>
@@ -207,6 +212,7 @@ export default function CardsExplorer(props: {
         <select
           className="rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm focus:border-[rgb(var(--accent-rgb)/0.45)] focus:outline-none transition-colors"
           value={type}
+          aria-label={t('Type', locale)}
           onChange={(e) => { setOffset(0); setType(e.target.value); }}
         >
           <option value="">{t('All Types', locale)}</option>
@@ -217,6 +223,7 @@ export default function CardsExplorer(props: {
         <select
           className="rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm focus:border-[rgb(var(--accent-rgb)/0.45)] focus:outline-none transition-colors"
           value={rarity}
+          aria-label={t('Rarity', locale)}
           onChange={(e) => { setOffset(0); setRarity(e.target.value); }}
         >
           <option value="">{t('All Rarities', locale)}</option>
@@ -227,6 +234,7 @@ export default function CardsExplorer(props: {
         <input
           className="rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm focus:border-[rgb(var(--accent-rgb)/0.45)] focus:outline-none transition-colors"
           placeholder={t('Cost (exact)', locale)}
+          aria-label={t('Cost (exact)', locale)}
           value={cost}
           onChange={(e) => { setOffset(0); setCost(e.target.value.replace(/[^0-9\-]/g, '')); }}
         />

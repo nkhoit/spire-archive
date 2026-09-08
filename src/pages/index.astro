@@ -1,41 +1,56 @@
 ---
 import Layout from '../components/Layout.astro';
+import { getData } from '../lib/data';
 import { getLocale } from '../lib/i18n';
 import { t } from '../lib/ui-strings';
 
 const { locale, langPrefix } = getLocale(Astro);
+const volumes = await Promise.all((['sts1', 'sts2'] as const).map(async (game, index) => {
+  const data = await getData(game, locale);
+  return {
+    game,
+    number: String(index + 1).padStart(2, '0'),
+    title: game === 'sts1' ? 'Slay the Spire' : 'Slay the Spire 2',
+    image: game === 'sts1' ? '/images/sts1/banner_sm.jpg' : '/images/sts2/landing.jpg',
+    sections: [
+      { path: 'cards', label: 'Cards', count: data.cards.length },
+      { path: 'relics', label: 'Relics', count: data.relics.length },
+      { path: 'potions', label: 'Potions', count: data.potions.length },
+      { path: 'characters', label: 'Characters', count: data.characters.length },
+    ],
+  };
+}));
 ---
 <Layout title="Spire Archive" description="Slay the Spire companion — browse cards, relics, and more for STS1 and STS2.">
-  <div class="flex flex-col items-center text-center mt-8">
-    <h1 class="font-game text-3xl font-bold text-amber-200/90">Spire Archive</h1>
-    <p class="mt-2 max-w-md text-sm text-slate-500">
-      {t('Choose a game to get started.', locale)}
-    </p>
+  <div class="archive-masthead">
+    <div>
+      <p class="editorial-label">{t('Reference', locale)} / I & II</p>
+      <h1>Spire Archive<span aria-hidden="true">.</span></h1>
+    </div>
+    <p class="archive-intro">{t('a Slay the Spire companion', locale)}</p>
   </div>
 
-  <div class="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 max-w-3xl mx-auto">
-    <a href={`${langPrefix}/sts1/`} class="group rounded-xl border border-white/[0.06] bg-white/[0.02] overflow-hidden hover:bg-white/[0.05] hover:border-white/[0.12] transition-all">
-      <div class="relative">
-        <img src="/images/sts1/banner_sm.jpg" alt="Slay the Spire" class="w-full h-44 object-cover opacity-70 group-hover:opacity-90 transition-opacity" />
-        <div class="absolute inset-0 bg-gradient-to-t from-[var(--bg-base)] via-transparent to-transparent"></div>
-      </div>
-      <div class="p-5 pt-3 relative">
-        <div class="font-game text-lg font-bold">Slay the Spire</div>
-        <div class="mt-1.5 text-sm text-slate-500">{t('361 cards, 181 relics, 4 characters — the complete original game database.', locale)}</div>
-        <div class="mt-3 text-xs text-amber-400/80 font-medium group-hover:text-amber-300">{t('Browse', locale)} →</div>
-      </div>
-    </a>
-
-    <a href={`${langPrefix}/sts2/`} class="group rounded-xl border border-white/[0.06] bg-white/[0.02] overflow-hidden hover:bg-white/[0.05] hover:border-white/[0.12] transition-all">
-      <div class="relative">
-        <img src="/images/sts2/landing.jpg" alt="Slay the Spire 2" class="w-full h-44 object-cover opacity-70 group-hover:opacity-90 transition-opacity" />
-        <div class="absolute inset-0 bg-gradient-to-t from-[var(--bg-base)] via-transparent to-transparent"></div>
-      </div>
-      <div class="p-5 pt-3 relative">
-        <div class="font-game text-lg font-bold">Slay the Spire 2</div>
-        <div class="mt-1.5 text-sm text-slate-500">{t('577 cards, 289 relics, 5 characters — early access data from game files.', locale)}</div>
-        <div class="mt-3 text-xs text-amber-400/80 font-medium group-hover:text-amber-300">{t('Browse', locale)} →</div>
-      </div>
-    </a>
+  <div class="volume-index">
+    {volumes.map((volume) => (
+      <section class="volume-entry" aria-labelledby={`title-${volume.game}`}>
+        <span class="volume-number" aria-hidden="true">{volume.number}</span>
+        <a class="volume-image" href={`${langPrefix}/${volume.game}/`} tabindex="-1" aria-hidden="true">
+          <img src={volume.image} alt="" width="800" height="450" />
+        </a>
+        <div class="volume-heading">
+          <p class="editorial-label">{volume.game.toUpperCase()}</p>
+          <h2 id={`title-${volume.game}`}><a href={`${langPrefix}/${volume.game}/`}>{volume.title}<span class="link-arrow" aria-hidden="true">→</span></a></h2>
+        </div>
+        <nav class="volume-quicklinks" aria-label={`${volume.title} — ${t('Browse', locale)}`}>
+          {volume.sections.map((section) => (
+            <a href={`${langPrefix}/${volume.game}/${section.path}`}>
+              <span>{t(section.label, locale)}</span>
+              <span class="index-count">{section.count.toLocaleString(locale)}</span>
+            </a>
+          ))}
+        </nav>
+        <a class="volume-browse" href={`${langPrefix}/${volume.game}/`}>{t('Browse', locale)} <span aria-hidden="true">→</span></a>
+      </section>
+    ))}
   </div>
 </Layout>
