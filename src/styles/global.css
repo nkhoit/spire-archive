@@ -114,7 +114,7 @@ h1, h2, .font-game { font-family: 'KreonGame', 'Kreon', Georgia, serif; }
 .catalogue-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 26px; }
 .catalogue-link { display: flex; align-items: center; gap: 12px; min-height: 91px; border-bottom: 1px solid var(--border-subtle); padding-block: 12px; }
 .catalogue-link:hover { border-color: var(--accent-300); background: var(--bg-surface); }
-.catalogue-number { font-size: 10px; color: var(--muted); font-variant-numeric: tabular-nums; }
+
 .catalogue-link img { width: 38px; height: 38px; object-fit: contain; flex: none; }
 .catalogue-label { font-family: 'KreonGame', Georgia, serif; font-size: 20px; line-height: 1.2; }
 .catalogue-count { display: block; margin-top: 6px; color: var(--muted); font-family: system-ui, sans-serif; font-size: 12px; font-variant-numeric: tabular-nums; }
@@ -161,7 +161,7 @@ h1, h2, .font-game { font-family: 'KreonGame', 'Kreon', Georgia, serif; }
 
 @media (max-width: 1023px) {
   .field-guide { gap: 28px; grid-template-columns: minmax(0, 1.5fr) minmax(250px, 1fr); }
-  .catalogue-number { display: none; }
+
   .catalogue-grid { column-gap: 18px; }
   .catalogue-label { font-size: 18px; }
   .catalogue-link .link-arrow { display: none; }
@@ -174,7 +174,7 @@ h1, h2, .font-game { font-family: 'KreonGame', 'Kreon', Georgia, serif; }
   .field-guide { grid-template-columns: 1fr; gap: 28px; }
   .game-frontispiece { width: 25%; height: 112px; }
   .game-masthead h1 { font-size: 40px; }
-  .catalogue-number { display: inline; }
+
   .catalogue-link .link-arrow { display: inline; }
   .character-index { display: grid; grid-template-columns: 1fr 1fr; column-gap: 20px; }
   .character-entry { align-items: flex-start; flex-direction: column; gap: 10px; }
@@ -205,7 +205,7 @@ h1, h2, .font-game { font-family: 'KreonGame', 'Kreon', Georgia, serif; }
   .game-masthead h1 { font-size: 36px; }
   .game-frontispiece { width: 88px; height: 112px; flex: none; }
   .game-intro { font-size: 12px; line-height: 1.7; }
-  .catalogue-number, .catalogue-link .link-arrow { display: none; }
+  .catalogue-link .link-arrow { display: none; }
   .catalogue-link { gap: 10px; min-height: 83px; }
   .catalogue-link img { width: 32px; height: 32px; }
   .catalogue-label { font-size: 18px; overflow-wrap: anywhere; }

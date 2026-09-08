@@ -56,11 +56,11 @@ const browseLinks = [
     <section class="guide-contents" aria-labelledby="browse-heading">
       <div class="section-heading"><h2 id="browse-heading">{t('Browse', locale)}</h2><span aria-hidden="true">{isSts2 ? 'II' : 'I'}</span></div>
       <div class="catalogue-grid">
-        {browseLinks.map((item, index) => (
+        {browseLinks.map((item) => (
           <a href={`${langPrefix}/${game}/${item.path}`} class="catalogue-link">
-            <span class="catalogue-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+
             <img src={`/images/${game}/nav/${item.path}.png`} alt="" width="40" height="40" />
-            <span class="catalogue-label">{t(item.label, locale)}<span class="catalogue-count">{item.count.toLocaleString(locale)}</span></span>
+            <span class="catalogue-label">{t(item.label, locale)}<span class="catalogue-count">{item.count.toLocaleString(locale)} {locale === 'en' ? item.label.toLowerCase() : t(item.label, locale)}</span></span>
             <span class="link-arrow" aria-hidden="true">→</span>
           </a>
         ))}
