@@ -59,7 +59,7 @@ const browseLinks = [
         {browseLinks.map((item) => (
           <a href={`${langPrefix}/${game}/${item.path}`} class="catalogue-link">
 
-            <img src={`/images/${game}/nav/${item.path}.png`} alt="" width="40" height="40" />
+            <img src={`/images/${game}/nav-normalized/${item.path}.png`} alt="" width="40" height="40" />
             <span class="catalogue-label">{t(item.label, locale)}<span class="catalogue-count">{item.count.toLocaleString(locale)} {locale === 'en' ? item.label.toLowerCase() : t(item.label, locale)}</span></span>
             <span class="link-arrow" aria-hidden="true">→</span>
           </a>
