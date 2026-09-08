@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 
 for (const width of [390, 1280]) {
   for (const path of ['/', '/sts1', '/sts2']) {

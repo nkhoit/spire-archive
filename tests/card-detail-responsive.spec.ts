@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 for (const game of ['sts1', 'sts2']) {
   for (const width of [320, 390, 768]) {
     test(`${game} card detail fits ${width}px`, async ({ page }) => {

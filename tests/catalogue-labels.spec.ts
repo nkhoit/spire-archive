@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 
 for (const game of ['sts1', 'sts2']) {
   for (const locale of ['en', 'ja', 'de']) {
