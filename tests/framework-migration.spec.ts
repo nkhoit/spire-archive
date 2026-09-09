@@ -37,6 +37,19 @@ for (const game of ['sts1', 'sts2']) {
     expect(data.items[0]).toMatchObject({ id: 'BASH', name: '強打' });
   });
 
+  test(`${game}: character card hover hydrates its lazy React portal`, async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 1000 });
+    const errors: string[] = [];
+    page.on('pageerror', error => errors.push(error.message));
+    expect((await page.goto(`/${game}/characters/IRONCLAD`))?.status()).toBe(200);
+    await page.waitForFunction(() => typeof (window as any).__cardHoverShow === 'function');
+    await page.locator(`main a[href="/${game}/cards/BASH"]`).first().hover();
+    await expect(page.locator('#card-hover-portal').locator(game === 'sts1' ? '.cr1' : '.cr')).toBeVisible();
+    await page.mouse.move(0, 0);
+    await expect(page.locator('#card-hover-portal')).toBeEmpty();
+    expect(errors).toEqual([]);
+  });
+
   test(`${game}: unknown API entity remains a 404`, async ({ request }) => {
     const response = await request.get(`/api/${game}/cards/FRAMEWORK_MIGRATION_MISSING`);
     expect(response.status()).toBe(404);
