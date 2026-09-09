@@ -56,7 +56,8 @@ const navLinks = game ? [
       // Strip locale prefix to get the canonical path
       const localePrefix = locales.find(l => path.startsWith('/' + l + '/') || path === '/' + l);
       const canonicalPath = localePrefix ? path.slice(localePrefix.length + 1) : path;
-      const currentLocale = localePrefix || 'en';
+      // Rewrites strip the URL prefix; getLocale retains the requested language.
+      const currentLocale = locale;
       const canonicalHref = 'https://spire-archive.com' + (currentLocale === 'en' ? '' : '/' + currentLocale) + canonicalPath;
       return [
         <link rel="canonical" href={canonicalHref} />,

@@ -5,6 +5,8 @@ import tailwind from '@tailwindcss/vite';
 
 export default defineConfig({
   output: 'server',
+  // Preserve HTML-aware whitespace across the Astro 7 compiler migration.
+  compressHTML: true,
   adapter: node({ mode: 'standalone' }),
   integrations: [react()],
   server: {
