@@ -228,3 +228,17 @@ jobs:
             -d text="[CI/CD] 🚨 *Production* smoke tests failed — rolled back to previous image.
           Commit: \`${GITHUB_SHA::8}\`
           [View run](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})" || true
+
+  cleanup-registry:
+    needs: [build, smoke-test-prod]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Keep the current and previous image, delete the rest
+        run: |
+          az acr run --registry "${{ needs.build.outputs.acr_name }}" \
+            --cmd "acr purge --filter '${APP_NAME}:^[0-9a-f]{8}$' --ago 0d --keep 2 --untagged" /dev/null
