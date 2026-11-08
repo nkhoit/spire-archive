@@ -821,11 +821,23 @@ paths:
 
   # ── STS1 Endpoints ──
 
+  /api/sts1/mods:
+    get:
+      summary: List installed mods
+      tags: [STS1 — Cards]
+      responses:
+        '200':
+          description: Installed mods
   /api/sts1/cards:
     get:
       summary: List cards
       tags: [STS1 — Cards]
       parameters:
+        - name: mods
+          in: query
+          description: Comma-separated mod IDs to include alongside base content. Omit for base content only.
+          schema:
+            type: string
         - $ref: '#/components/parameters/lang'
         - $ref: '#/components/parameters/q'
         - $ref: '#/components/parameters/offset'
@@ -891,6 +903,11 @@ paths:
       summary: List relics
       tags: [STS1 — Relics]
       parameters:
+        - name: mods
+          in: query
+          description: Comma-separated mod IDs to include alongside base content. Omit for base content only.
+          schema:
+            type: string
         - $ref: '#/components/parameters/lang'
         - $ref: '#/components/parameters/q'
         - $ref: '#/components/parameters/offset'
@@ -946,6 +963,11 @@ paths:
       summary: List potions
       tags: [STS1 — Potions]
       parameters:
+        - name: mods
+          in: query
+          description: Comma-separated mod IDs to include alongside base content. Omit for base content only.
+          schema:
+            type: string
         - $ref: '#/components/parameters/lang'
         - $ref: '#/components/parameters/q'
         - $ref: '#/components/parameters/offset'
@@ -997,6 +1019,11 @@ paths:
       summary: List monsters
       tags: [STS1 — Monsters]
       parameters:
+        - name: mods
+          in: query
+          description: Comma-separated mod IDs to include alongside base content. Omit for base content only.
+          schema:
+            type: string
         - $ref: '#/components/parameters/lang'
         - $ref: '#/components/parameters/q'
         - $ref: '#/components/parameters/offset'
@@ -1052,6 +1079,11 @@ paths:
       summary: List events
       tags: [STS1 — Events]
       parameters:
+        - name: mods
+          in: query
+          description: Comma-separated mod IDs to include alongside base content. Omit for base content only.
+          schema:
+            type: string
         - $ref: '#/components/parameters/lang'
         - $ref: '#/components/parameters/q'
         - $ref: '#/components/parameters/offset'

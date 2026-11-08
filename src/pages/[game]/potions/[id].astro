@@ -2,7 +2,7 @@
 import Layout from '../../../components/Layout.astro';
 import Badge from '../../../components/Badge.astro';
 import ChangeHistory from '../../../components/ChangeHistory.astro';
-import { getData } from '../../../lib/data';
+import { getModdedData } from '../../../lib/data';
 import { getLocale } from '../../../lib/i18n';
 import { t } from '../../../lib/ui-strings';
 import { replaceGameTokens } from '../../../lib/energy-icons';
@@ -13,7 +13,7 @@ if (!game) return new Response('Not found', { status: 404 });
 
 const { id } = Astro.params;
 const { locale } = getLocale(Astro);
-const data = await getData(game, locale);
+const data = await getModdedData(game, locale);
 const potion = data.potionById.get(String(id));
 if (!potion) return new Response('Not found', { status: 404 });
 const imgSrc = game === 'sts2' ? `/images/sts2/potions/${potion.id.toLowerCase()}.png` : (potion.icon ? `/images/sts1/potions/${potion.icon}` : null);
@@ -26,7 +26,8 @@ const imgSrc = game === 'sts2' ? `/images/sts2/potions/${potion.id.toLowerCase()
         <h1 class="text-2xl font-semibold">{potion.name}</h1>
         <div class="mt-2 flex flex-wrap gap-2">
           <Badge label={potion.rarity} locale={locale} />
-          {potion.color ? <Badge label={String(potion.color)} tone={String(potion.color)} locale={locale} /> : null}
+          {potion.color ? <Badge label={potion.color_label ?? String(potion.color)} tone={String(potion.color)} hex={potion.color_hex} locale={locale} /> : null}
+          {potion.mod && <Badge label={`Modded · ${potion.mod.name}`} tone="new" locale={locale} />}
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import ListExplorer, { type FilterConfig } from './ListExplorer';
 import type { ApiResp } from './SimpleExplorer';
+import type { ModInfo } from './ModControls';
 import { t } from '../../lib/ui-strings';
 
 type EventChoice = {
@@ -15,7 +16,7 @@ type Event = {
   choices: EventChoice[];
 };
 
-export default function EventsExplorer(props: { game?: 'sts1' | 'sts2'; initial?: ApiResp<Event>; locale?: string }) {
+export default function EventsExplorer(props: { game?: 'sts1' | 'sts2'; initial?: ApiResp<Event>; locale?: string; mods?: ModInfo[] }) {
   const game = props.game ?? 'sts1';
   const locale = props.locale ?? 'en';
   const filters: FilterConfig[] = [{ key: 'q', type: 'text' }];
@@ -28,6 +29,7 @@ export default function EventsExplorer(props: { game?: 'sts1' | 'sts2'; initial?
     filters={filters}
     anchorClassName="flex items-start gap-3 p-3"
     initial={props.initial}
+    mods={props.mods}
     getItemKey={(event) => event.id}
     listClassName="mt-3 space-y-2"
     itemClassName="rounded-lg border border-white/[0.06] bg-white/[0.03] hover:bg-white/[0.06] hover:border-white/[0.12] transition-all"

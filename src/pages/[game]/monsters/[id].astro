@@ -1,7 +1,7 @@
 ---
 import Layout from '../../../components/Layout.astro';
 import Badge from '../../../components/Badge.astro';
-import { getData } from '../../../lib/data';
+import { getData, getModdedData } from '../../../lib/data';
 import { getLocale } from '../../../lib/i18n';
 import { t } from '../../../lib/ui-strings';
 import { getPageGame } from '../../../lib/page-game';
@@ -11,7 +11,7 @@ if (!game) return new Response('Not found', { status: 404 });
 
 const { id } = Astro.params;
 const { locale, langPrefix } = getLocale(Astro);
-const data = await getData(game, locale);
+const data = await getModdedData(game, locale);
 const monster = data.monsterById.get(String(id));
 if (!monster) return new Response('Not found', { status: 404 });
 
@@ -151,6 +151,7 @@ for (const bp of baseData.powers ?? []) {
       <div class="mt-2 flex flex-wrap gap-2">
         <Badge label={actLabels[(monster as any).act] ?? (monster as any).act} tone={actColors[(monster as any).act] ?? 'slate'} locale={locale} />
         <Badge label={monster.type} tone={typeColors[monster.type] ?? 'slate'} locale={locale} />
+        {monster.mod && <Badge label={`Modded · ${monster.mod.name}`} tone="new" locale={locale} />}
       </div>
 
       {(monster as any).min_hp != null && (

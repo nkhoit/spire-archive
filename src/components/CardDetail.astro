@@ -105,6 +105,7 @@ function highlightDescription(desc: string, game: string, data: any, color?: str
     '[G]': `${carduiBase}/card_green_orb.png`,
     '[B]': `${carduiBase}/card_blue_orb.png`,
     '[W]': `${carduiBase}/card_purple_orb.png`,
+    ...(game === 'sts1' && { '[E]': `${carduiBase}/card_${card.asset_color ?? 'colorless'}_orb.png` }),
   };
   for (const [token, imgPath] of Object.entries(energyMap)) {
     const escaped = token.replace('[', '\\[').replace(']', '\\]');
@@ -314,7 +315,8 @@ if (game === 'sts2' && upg) {
       <div>
         <h1 id="card-name" class="font-game text-2xl font-semibold">{card.name}</h1>
         <div class="mt-2 flex flex-wrap gap-2">
-          <Badge label={String(card.color)} tone={String(card.color)} locale={locale} />
+          <Badge label={card.color_label ?? String(card.color)} tone={String(card.color)} hex={card.color_hex} locale={locale} />
+          {card.mod && <Badge label={`Modded · ${card.mod.name}`} tone="new" locale={locale} />}
           <Badge label={t(String(card.type), locale)} />
           <Badge label={t(String(card.rarity), locale)} />
           {card.cost != null && <span id="cost-badge"><Badge label={t('Cost', locale) + ' ' + card.cost} /></span>}

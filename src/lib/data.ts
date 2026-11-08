@@ -4,6 +4,29 @@ import path from 'node:path';
 
 export type CardColor = 'ironclad' | 'silent' | 'defect' | 'watcher' | 'colorless' | 'curse' | string;
 
+/** Stamped onto every entry that comes from a mod (see getModdedData). */
+export interface ModFields {
+  mod?: { id: string; name: string };
+  color_label?: string;
+  color_hex?: string;
+  asset_color?: string;
+}
+
+export interface ModColor {
+  id: string;
+  label: string;
+  hex: string;
+  asset_color?: string;
+}
+
+export interface ModManifest {
+  id: string;
+  name: string;
+  author?: string;
+  url?: string;
+  colors: ModColor[];
+}
+
 export interface Sts2Card {
   id: string;
   name: string;
@@ -35,7 +58,7 @@ export interface CardUpgrade {
   description: string | null;
 }
 
-export interface Card {
+export interface Card extends ModFields {
   id: string;
   name: string;
   description: string;
@@ -59,7 +82,7 @@ export interface Card {
   upgrade: CardUpgrade;
 }
 
-export interface Relic {
+export interface Relic extends ModFields {
   id: string;
   name: string;
   description: string;
@@ -71,7 +94,7 @@ export interface Relic {
   image_url?: string | null;
 }
 
-export interface Potion {
+export interface Potion extends ModFields {
   id: string;
   name: string;
   description: string;
@@ -92,7 +115,7 @@ export interface MonsterMove {
   intent: string;
 }
 
-export interface Monster {
+export interface Monster extends ModFields {
   id: string;
   name: string;
   type: string;
@@ -135,7 +158,7 @@ export interface EventRelicPool {
   relics: string[];
 }
 
-export interface Event {
+export interface Event extends ModFields {
   id: string;
   name: string;
   act: string;
@@ -148,7 +171,7 @@ export interface Event {
   image_url?: string | null;
 }
 
-export interface Power {
+export interface Power extends ModFields {
   id: string;
   name: string;
   description: string;
@@ -158,7 +181,7 @@ export interface Power {
   icon?: string;
 }
 
-export interface Keyword {
+export interface Keyword extends ModFields {
   id: string;
   names: string[];
   description: string;
@@ -183,9 +206,10 @@ export interface Blight {
   description: string;
 }
 
-export interface Character {
+export interface Character extends ModFields {
   id: string;
   name: string;
+  color?: string;
   description?: string | null;
   hp?: number;
   energy_per_turn?: number;
@@ -409,6 +433,96 @@ async function loadBaseData(game: string): Promise<Dataset> {
     enchantmentById: toMap(enchantments),
   };
 
+  return dataset;
+}
+
+// ponytail: mods load once per process and are English-only; add a localization overlay when a mod ships translations.
+const MOD_ENTITIES = ['cards', 'relics', 'potions', 'monsters', 'events', 'powers', 'keywords', 'characters'] as const;
+
+interface LoadedMod {
+  manifest: ModManifest;
+  files: Partial<Record<(typeof MOD_ENTITIES)[number], any[]>>;
+  cardPowers: Dataset['cardPowers'];
+}
+
+let modsCache: Promise<LoadedMod[]> | null = null;
+const moddedCache = new Map<string, Dataset>();
+
+function modsDir() {
+  return process.env.MODS_DIR ? path.resolve(process.env.MODS_DIR) : path.join(rootDir(), 'data', 'mods');
+}
+
+async function readOptional<T>(file: string, fallback: T): Promise<T> {
+  return existsSync(file) ? JSON.parse(await fs.readFile(file, 'utf-8')) as T : fallback;
+}
+
+function loadMods(): Promise<LoadedMod[]> {
+  modsCache ??= (async () => {
+    const dir = modsDir();
+    if (!existsSync(dir)) return [];
+    const entries = (await fs.readdir(dir, { withFileTypes: true })).filter((e) => e.isDirectory());
+    const mods = await Promise.all(entries.map(async (entry) => {
+      const modDir = path.join(dir, entry.name);
+      const manifest = JSON.parse(await fs.readFile(path.join(modDir, 'mod.json'), 'utf-8')) as ModManifest;
+      const loaded = await Promise.all(MOD_ENTITIES.map(async (k) => [k, await readOptional<any[]>(path.join(modDir, `${k}.json`), [])] as const));
+      return { manifest, files: Object.fromEntries(loaded), cardPowers: await readOptional<Dataset['cardPowers']>(path.join(modDir, 'card_powers.json'), {}) };
+    }));
+    return mods.sort((a, b) => a.manifest.name.localeCompare(b.manifest.name));
+  })();
+  return modsCache;
+}
+
+/** Installed mods. Only STS1 supports mods. */
+export async function getMods(game: 'sts1' | 'sts2'): Promise<ModManifest[]> {
+  return game === 'sts1' ? (await loadMods()).map((m) => m.manifest) : [];
+}
+
+function stampMod(item: any, manifest: ModManifest) {
+  const color = manifest.colors.find((c) => c.id === item.color);
+  return {
+    ...item,
+    mod: { id: manifest.id, name: manifest.name },
+    ...(color && { color_label: color.label, color_hex: color.hex, asset_color: color.asset_color ?? 'colorless' }),
+  };
+}
+
+/** Base data plus every installed mod. Use getData() for anything that must stay base-game only. */
+export async function getModdedData(game: 'sts1' | 'sts2' = 'sts1', locale: Locale = 'en'): Promise<Dataset> {
+  const base = await getData(game, locale);
+  if (game !== 'sts1') return base;
+  const cached = moddedCache.get(locale);
+  if (cached) return cached;
+
+  const mods = await loadMods();
+  const fromMods = <T,>(key: (typeof MOD_ENTITIES)[number]): T[] =>
+    mods.flatMap((m) => (m.files[key] ?? []).map((item) => stampMod(item, m.manifest)));
+  // Sorted so modded entries interleave instead of all landing on the last page.
+  const merge = <T extends { name?: string; id: string }>(key: (typeof MOD_ENTITIES)[number], items: T[]): T[] =>
+    [...items, ...fromMods<T>(key)].sort((a, b) => (a.name ?? a.id).localeCompare(b.name ?? b.id));
+
+  const cards = merge('cards', base.cards);
+  const relics = merge('relics', base.relics);
+  const potions = merge('potions', base.potions);
+  const monsters = merge('monsters', base.monsters);
+  const events = merge('events', base.events);
+  const powers = merge('powers', base.powers);
+  const keywords = [...base.keywords, ...fromMods<Keyword>('keywords')];
+  const characters = [...base.characters, ...fromMods<Character>('characters')];
+
+  const dataset: Dataset = {
+    ...base,
+    cards, relics, potions, monsters, events, powers, keywords, characters,
+    cardPowers: Object.assign({}, base.cardPowers, ...mods.map((m) => m.cardPowers)),
+    cardById: toMap(cards),
+    relicById: toMap(relics),
+    potionById: toMap(potions),
+    monsterById: toMap(monsters),
+    eventById: toMap(events),
+    powerById: toMap(powers),
+    keywordById: toMap(keywords),
+    characterById: toMap(characters),
+  };
+  moddedCache.set(locale, dataset);
   return dataset;
 }
 
