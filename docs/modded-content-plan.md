@@ -73,6 +73,10 @@ BASE_URL=http://localhost:4323 npx playwright test tests/mods.spec.ts
 
 The browser tests skip themselves when the server is not running with the fixture mods. The format checks always run.
 
+## Downfall
+
+`py -3 parsers/mods/extract_downfall.py` reads an installed `Downfall.jar` and writes the 10 characters, their starter cards and starter relics, with portraits, card frames and art. It needs Pillow and a JDK. Other Downfall cards, relics, potions, monsters and events are not extracted yet.
+
 ## Open before deploying Downfall
 
 Confirm permission to host Downfall's art and text on the public site.
