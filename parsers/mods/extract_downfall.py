@@ -11,7 +11,6 @@ import argparse
 import io
 import json
 import re
-import shutil
 import subprocess
 import sys
 import tempfile
@@ -152,9 +151,10 @@ def find_image(names, res, folder, simple, strings_name='', art_names=()):
 
 
 def copy(jar, entry, target):
+    data = jar.read(entry)
+    Image.open(io.BytesIO(data)).verify()  # Mod jars are third-party; only real images reach public/.
     target.parent.mkdir(parents=True, exist_ok=True)
-    with jar.open(entry) as source, target.open('wb') as out:
-        shutil.copyfileobj(source, out)
+    target.write_bytes(data)
 
 
 def extract_portrait(jar, names, char, target):
@@ -164,13 +164,17 @@ def extract_portrait(jar, names, char, target):
         problems.append(f'{char["color"]}: no portrait')
         return
     entry = max(art, key=lambda n: jar.getinfo(n).file_size)
+    save_portrait(jar, entry, target)
+    print(f'  portrait {char["color"]}: {entry}')
+
+
+def save_portrait(jar, entry, target):
     image = Image.open(io.BytesIO(jar.read(entry))).convert('RGBA')
     backdrop = Image.new('RGBA', image.size, (20, 22, 24, 255))
     image = Image.alpha_composite(backdrop, image).convert('RGB')
     image = image.resize((PORTRAIT_WIDTH, round(image.height * PORTRAIT_WIDTH / image.width)), Image.LANCZOS)
     target.parent.mkdir(parents=True, exist_ok=True)
     image.save(target, quality=82, optimize=True)
-    print(f'  portrait {char["color"]}: {entry}')
 
 
 def extract_frames(jar, names, char, cardui):

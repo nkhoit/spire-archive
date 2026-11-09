@@ -11,7 +11,6 @@ import os
 import pickle
 import re
 import sys
-import tempfile
 from collections import Counter
 from datetime import datetime, timezone
 from multiprocessing import Pool
@@ -464,7 +463,7 @@ def main(argv=None):
     parser.add_argument('--min-floor', type=int, default=4)
     parser.add_argument('--min-build', help='drop runs from builds older than this, e.g. 2020-01-27')
     parser.add_argument('--limit-files', type=int)
-    parser.add_argument('--cache-dir', default=str(Path(tempfile.gettempdir()) / 'spire-stats-cache'))
+    parser.add_argument('--cache-dir', default=str(Path.home() / '.cache' / 'spire-stats'))
     parser.add_argument('--inspect', action='store_true', help='print the fields of the first file and exit')
     args = parser.parse_args(argv)
 
@@ -477,7 +476,7 @@ def main(argv=None):
         inspect(files)
         return None
 
-    Path(args.cache_dir).mkdir(parents=True, exist_ok=True)
+    Path(args.cache_dir).mkdir(mode=0o700, parents=True, exist_ok=True)  # Cache files are pickles, so keep them private.
     jobs = [(path, args.min_floor, args.min_build, args.cache_dir) for path in files]
     total = {'read': 0, 'used': 0, 'rejected': {}, 'bad_files': 0, 'segments': {}}
     with Pool(args.workers) as pool:
@@ -491,10 +490,12 @@ def main(argv=None):
 
     unmatched = {}
     raw_periods = rollup(total['segments'])
-    segments = {key: finalize_segment(raw, args.min_sample, unmatched) for key, raw in raw_periods.pop('all').items()}
+    segments = {key: finalize_segment(raw, args.min_sample, unmatched) for key, raw in raw_periods.pop('all').items() if raw['runs'] >= args.min_sample}
+    # Below min_sample a segment's tiles and charts would describe individual runs.
     periods = {
-        period: {key: finalize_segment(raw, args.min_sample, {}) for key, raw in raw_periods[period].items()}
+        period: {key: finalize_segment(raw, args.min_sample, {}) for key, raw in raw_periods[period].items() if raw['runs'] >= args.min_sample}
         for period in sorted(raw_periods, key=period_order)
+        if raw_periods[period]['all|all']['runs'] >= args.min_sample
     }
     output = {
         'meta': {

@@ -8,6 +8,6 @@ export const GET: APIRoute = async ({ params, url }) => {
   if (!segments) return notFoundResponse();
 
   const key = `${getString(url, 'character') ?? 'all'}|${getString(url, 'ascension') ?? 'all'}`;
-  // Thin combinations (no runs at all) simply have no segment.
-  return jsonResponse(segments[key] ?? null);
+  // Combinations under the minimum sample simply have no segment.
+  return segments[key] ? jsonResponse(segments[key]) : notFoundResponse();
 };

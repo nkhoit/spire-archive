@@ -11,8 +11,13 @@ if (!game) return new Response('Not found', { status: 404 });
 
 const { id } = Astro.params;
 const { locale, langPrefix } = getLocale(Astro);
-const data = await getModdedData(game, locale);
-const monster = data.monsterById.get(String(id));
+// Base pages keep base data so they never depend on installed mods.
+let data = await getData(game, locale);
+let monster = data.monsterById.get(String(id));
+if (!monster) {
+  data = await getModdedData(game, locale);
+  monster = data.monsterById.get(String(id));
+}
 if (!monster) return new Response('Not found', { status: 404 });
 
 const isSts2 = game === 'sts2';

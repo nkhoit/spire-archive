@@ -176,10 +176,10 @@ export default function StatsExplorer({ initial, periods, langPrefix }: { initia
   const [ascension, setAscension] = useState('all');
   const [period, setPeriod] = useState('all');
   const params = useMemo(() => ({ character, ascension, period }), [character, ascension, period]);
-  const { data, loading, error } = useApiList<never>('/api/sts1/stats', params) as unknown as { data: StatsSegment | null; loading: boolean; error: string | null };
+  const { data, loading, error } = useApiList<never>('/api/sts1/stats', params) as unknown as { data: StatsSegment | { error: string } | null; loading: boolean; error: string | null };
 
   // useApiList starts empty; the first fetch is the same segment the server rendered.
-  const segment = loading && !data ? initial : data;
+  const segment = loading && !data ? initial : data && 'runs' in data ? data : null;
   const selectClass = 'rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm';
   const deckMedian = segment?.metrics.deck_size?.win?.median;
 

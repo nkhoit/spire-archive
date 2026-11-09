@@ -1,7 +1,7 @@
 ---
 import Layout from '../../../components/Layout.astro';
 import Badge from '../../../components/Badge.astro';
-import { getModdedData } from '../../../lib/data';
+import { getData, getModdedData } from '../../../lib/data';
 import { getLocale } from '../../../lib/i18n';
 import { t } from '../../../lib/ui-strings';
 import { replaceGameTokens } from '../../../lib/energy-icons';
@@ -12,8 +12,13 @@ if (!game) return new Response('Not found', { status: 404 });
 
 const { id } = Astro.params;
 const { locale, langPrefix } = getLocale(Astro);
-const data = await getModdedData(game, locale);
-const event = data.eventById.get(String(id));
+// Base pages keep base data so they never depend on installed mods.
+let data = await getData(game, locale);
+let event = data.eventById.get(String(id));
+if (!event) {
+  data = await getModdedData(game, locale);
+  event = data.eventById.get(String(id));
+}
 if (!event) return new Response('Not found', { status: 404 });
 
 const isSts2 = game === 'sts2';

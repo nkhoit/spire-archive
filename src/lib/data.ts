@@ -436,7 +436,7 @@ async function loadBaseData(game: string): Promise<Dataset> {
   return dataset;
 }
 
-// ponytail: mods load once per process and are English-only; add a localization overlay when a mod ships translations.
+// Mods load once per process and are English-only.
 const MOD_ENTITIES = ['cards', 'relics', 'potions', 'monsters', 'events', 'powers', 'keywords', 'characters'] as const;
 
 interface LoadedMod {
@@ -452,6 +452,32 @@ function modsDir() {
   return process.env.MODS_DIR ? path.resolve(process.env.MODS_DIR) : path.join(rootDir(), 'data', 'mods');
 }
 
+const MOD_ID = /^[a-z0-9]+$/; // No underscores, so one mod's ID prefix can't overlap another's.
+const MOD_ASSET = /^[a-z0-9_]+$/;
+const MOD_HEX = /^#[0-9a-f]{6}$/i;
+const MOD_ATTR = /^[\w .-]*$/;
+
+/**
+ * Mod text is third-party and reaches the same raw-HTML sinks as game text, so markup is refused here,
+ * the one point every page and API response passes through. Returns why a mod is unsafe, or null.
+ */
+export function modProblem(folder: string, manifest: ModManifest, files: Record<string, any[]>, cardPowers: unknown = {}): string | null {
+  if (manifest.id !== folder || !MOD_ID.test(manifest.id)) return `bad mod id "${manifest.id}"`;
+  const color = manifest.colors.find((c) => !MOD_HEX.test(c.hex) || !MOD_ASSET.test(c.asset_color ?? 'colorless'));
+  if (color) return `bad color "${color.id}"`;
+  // The event page splices reference ids and types into attributes, and its hover preview decodes entities.
+  const unsafe: string[] = [];
+  const text = JSON.stringify([manifest, files, cardPowers], (key, value) => {
+    if ((key === 'id' || key === 'type') && typeof value === 'string' && !MOD_ATTR.test(value)) unsafe.push(value);
+    return value;
+  });
+  if (/[<>]|&#?\w+;/.test(text)) return 'markup in text';
+  if (unsafe.length > 0) return `unsafe id or type "${unsafe[0]}"`;
+  const prefix = `${manifest.id.toUpperCase()}_`;
+  const entity = Object.values(files).flat().find((item) => typeof item?.id !== 'string' || !item.id.startsWith(prefix));
+  return entity ? `id "${entity?.id}" lacks prefix ${prefix}` : null;
+}
+
 async function readOptional<T>(file: string, fallback: T): Promise<T> {
   return existsSync(file) ? JSON.parse(await fs.readFile(file, 'utf-8')) as T : fallback;
 }
@@ -463,11 +489,21 @@ function loadMods(): Promise<LoadedMod[]> {
     const entries = (await fs.readdir(dir, { withFileTypes: true })).filter((e) => e.isDirectory());
     const mods = await Promise.all(entries.map(async (entry) => {
       const modDir = path.join(dir, entry.name);
-      const manifest = JSON.parse(await fs.readFile(path.join(modDir, 'mod.json'), 'utf-8')) as ModManifest;
-      const loaded = await Promise.all(MOD_ENTITIES.map(async (k) => [k, await readOptional<any[]>(path.join(modDir, `${k}.json`), [])] as const));
-      return { manifest, files: Object.fromEntries(loaded), cardPowers: await readOptional<Dataset['cardPowers']>(path.join(modDir, 'card_powers.json'), {}) };
+      try {
+        const manifest = JSON.parse(await fs.readFile(path.join(modDir, 'mod.json'), 'utf-8')) as ModManifest;
+        const loaded = await Promise.all(MOD_ENTITIES.map(async (k) => [k, await readOptional<any[]>(path.join(modDir, `${k}.json`), [])] as const));
+        const files = Object.fromEntries(loaded);
+        const cardPowers = await readOptional<Dataset['cardPowers']>(path.join(modDir, 'card_powers.json'), {});
+        const problem = modProblem(entry.name, manifest, files, cardPowers);
+        if (problem) throw new Error(problem);
+        return [{ manifest, files, cardPowers }];
+      } catch (error) {
+        // Mods are optional: a bad one must never take base-game pages down with it.
+        console.error(`Skipping mod ${entry.name}: ${error}`);
+        return [];
+      }
     }));
-    return mods.sort((a, b) => a.manifest.name.localeCompare(b.manifest.name));
+    return mods.flat().sort((a, b) => a.manifest.name.localeCompare(b.manifest.name));
   })();
   return modsCache;
 }
@@ -494,11 +530,13 @@ export async function getModdedData(game: 'sts1' | 'sts2' = 'sts1', locale: Loca
   if (cached) return cached;
 
   const mods = await loadMods();
-  const fromMods = <T,>(key: (typeof MOD_ENTITIES)[number]): T[] =>
-    mods.flatMap((m) => (m.files[key] ?? []).map((item) => stampMod(item, m.manifest)));
+  const fromMods = <T extends { id: string }>(key: (typeof MOD_ENTITIES)[number], baseItems: T[]): T[] => {
+    const baseIds = new Set(baseItems.map((item) => item.id));
+    return mods.flatMap((m) => (m.files[key] ?? []).filter((item) => !baseIds.has(item.id)).map((item) => stampMod(item, m.manifest)));
+  };
   // Sorted so modded entries interleave instead of all landing on the last page.
   const merge = <T extends { name?: string; id: string }>(key: (typeof MOD_ENTITIES)[number], items: T[]): T[] =>
-    [...items, ...fromMods<T>(key)].sort((a, b) => (a.name ?? a.id).localeCompare(b.name ?? b.id));
+    [...items, ...fromMods<T>(key, items)].sort((a, b) => (a.name ?? a.id).localeCompare(b.name ?? b.id));
 
   const cards = merge('cards', base.cards);
   const relics = merge('relics', base.relics);
@@ -506,13 +544,13 @@ export async function getModdedData(game: 'sts1' | 'sts2' = 'sts1', locale: Loca
   const monsters = merge('monsters', base.monsters);
   const events = merge('events', base.events);
   const powers = merge('powers', base.powers);
-  const keywords = [...base.keywords, ...fromMods<Keyword>('keywords')];
-  const characters = [...base.characters, ...fromMods<Character>('characters')];
+  const keywords = [...base.keywords, ...fromMods<Keyword>('keywords', base.keywords)];
+  const characters = [...base.characters, ...fromMods<Character>('characters', base.characters)];
 
   const dataset: Dataset = {
     ...base,
     cards, relics, potions, monsters, events, powers, keywords, characters,
-    cardPowers: Object.assign({}, base.cardPowers, ...mods.map((m) => m.cardPowers)),
+    cardPowers: Object.assign({}, ...mods.map((m) => m.cardPowers), base.cardPowers),
     cardById: toMap(cards),
     relicById: toMap(relics),
     potionById: toMap(potions),

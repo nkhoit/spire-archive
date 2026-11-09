@@ -2,7 +2,7 @@
 import Layout from '../../../components/Layout.astro';
 import Badge from '../../../components/Badge.astro';
 import ChangeHistory from '../../../components/ChangeHistory.astro';
-import { getModdedData } from '../../../lib/data';
+import { getData, getModdedData } from '../../../lib/data';
 import { getLocale } from '../../../lib/i18n';
 import { t } from '../../../lib/ui-strings';
 import { replaceGameTokens } from '../../../lib/energy-icons';
@@ -13,8 +13,13 @@ if (!game) return new Response('Not found', { status: 404 });
 
 const { id } = Astro.params;
 const { locale } = getLocale(Astro);
-const data = await getModdedData(game, locale);
-const potion = data.potionById.get(String(id));
+// Base pages keep base data so they never depend on installed mods.
+let data = await getData(game, locale);
+let potion = data.potionById.get(String(id));
+if (!potion) {
+  data = await getModdedData(game, locale);
+  potion = data.potionById.get(String(id));
+}
 if (!potion) return new Response('Not found', { status: 404 });
 const imgSrc = game === 'sts2' ? `/images/sts2/potions/${potion.id.toLowerCase()}.png` : (potion.icon ? `/images/sts1/potions/${potion.icon}` : null);
 ---

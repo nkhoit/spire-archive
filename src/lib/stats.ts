@@ -37,7 +37,7 @@ export function hasStats(): boolean {
   return existsSync(statsFile());
 }
 
-// ponytail: cached until restart; the files only change when the aggregate script is re-run.
+// Cached until restart; the files only change when the aggregate script is re-run.
 let cache: Promise<RunStats | null> | null = null;
 const periodCache = new Map<string, Promise<Segments>>();
 

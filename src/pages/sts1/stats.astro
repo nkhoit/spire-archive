@@ -12,7 +12,7 @@ const stats = await getStats();
   <h1 class="text-xl font-semibold">{t('Run Stats', locale)}</h1>
   {stats ? (
     <>
-      <p class="mt-1 text-sm text-slate-300">{stats.meta.runs_used.toLocaleString(locale)} runs from Mega Crit's public metrics dump, after removing daily, endless, seeded and abandoned runs.</p>
+      <p class="mt-1 text-sm text-slate-300">{stats.meta.runs_used.toLocaleString(locale)} runs from a sample of Mega Crit's public metrics dump, after removing daily, endless, seeded and abandoned runs.</p>
       <StatsExplorer client:load initial={stats.segments['all|all']} periods={stats.meta.periods} langPrefix={langPrefix} />
     </>
   ) : (

@@ -1,4 +1,5 @@
 import { test, expect } from './fixtures';
+import { modProblem } from '../src/lib/data';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -17,6 +18,8 @@ function modProblems(dir: string, checkImages: boolean): string[] {
   const problems: string[] = [];
   const folder = path.basename(dir);
   const manifest = JSON.parse(fs.readFileSync(path.join(dir, 'mod.json'), 'utf8'));
+  const unsafe = modProblem(folder, manifest, Object.fromEntries(ENTITY_FILES.map((name) => [name, readList(dir, name)])));
+  if (unsafe) problems.push(unsafe);
   if (manifest.id !== folder) problems.push(`mod.json id "${manifest.id}" does not match folder`);
 
   const colors = new Set([...BASE_COLORS, ...manifest.colors.map((c: any) => c.id)]);
@@ -60,6 +63,7 @@ function modProblems(dir: string, checkImages: boolean): string[] {
 
 function modFolders(parent: string): string[] {
   const dir = path.join(ROOT, parent);
+  if (!fs.existsSync(dir)) return [];
   return fs.readdirSync(dir, { withFileTypes: true }).filter((e) => e.isDirectory()).map((e) => path.join(dir, e.name));
 }
 
@@ -70,6 +74,19 @@ test.describe('Mod data format', () => {
   for (const dir of modFolders('tests/mod-fixtures')) {
     test(`fixture ${path.basename(dir)} is valid`, () => expect(modProblems(dir, false)).toEqual([]));
   }
+});
+
+test('unsafe mods are refused', () => {
+  const manifest = { id: 'evil', name: 'Evil', colors: [{ id: 'evil', label: 'Evil', hex: '#ff0000', asset_color: 'evil' }] };
+  const card = { id: 'EVIL_CARD', description: 'ok' };
+  expect(modProblem('evil', manifest, { cards: [card] })).toBeNull();
+  expect(modProblem('evil', manifest, { cards: [{ ...card, description: '<img src=x onerror=alert(1)>' }] })).toContain('markup');
+  expect(modProblem('evil', manifest, { cards: [{ ...card, description: '&lt;img src=x onerror=alert(1)&gt;' }] })).toContain('markup');
+  expect(modProblem('evil', manifest, { events: [{ id: 'EVIL_EVENT', references: [{ type: 'card" onmouseover="alert(1)', id: 'EVIL_CARD', name: 'Gold' }] }] })).toContain('unsafe');
+  expect(modProblem('evil', manifest, { cards: [{ id: 'STRIKE_R' }] })).toContain('prefix');
+  expect(modProblem('other', manifest, {})).toContain('mod id');
+  expect(modProblem('evil', { ...manifest, colors: [{ ...manifest.colors[0], hex: 'red;background:url(//x)' }] }, {})).toContain('color');
+  expect(modProblem('evil', { ...manifest, colors: [{ ...manifest.colors[0], asset_color: '../../x' }] }, {})).toContain('color');
 });
 
 test.describe('Modded content UI', () => {

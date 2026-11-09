@@ -1,6 +1,6 @@
 # Run statistics (STS1)
 
-A Stats tab built from Mega Crit's public dump of about 77 million runs (27 GB compressed), aimed at people balancing modded characters.
+A Stats tab built from Mega Crit's public dump of about 77 million runs (27 GB compressed), aimed at people balancing modded characters. The shipped `data/sts1/stats.json` is built from a one-file sample of that dump (99,944 usable runs); `meta` records the counts.
 
 ## What the data can and cannot answer
 
@@ -28,7 +28,7 @@ py -3 parsers/stats/aggregate_runs.py "D:/sts-runs-clean"
 
 This writes `data/sts1/stats.json`. Restart the server and the Stats tab appears. It stays out of the navigation until that file exists.
 
-Options: `--out FILE`, `--workers N`, `--min-sample N` (default 100; rows with fewer runs are dropped), `--min-floor N` (default 4).
+Options: `--out FILE`, `--workers N`, `--min-sample N` (default 100; rows and whole segments with fewer runs are dropped), `--min-floor N` (default 4).
 
 ## Which runs count
 

@@ -77,6 +77,13 @@ The browser tests skip themselves when the server is not running with the fixtur
 
 `py -3 parsers/mods/extract_downfall.py` reads an installed `Downfall.jar` and writes the 10 characters, their starter cards and starter relics, with portraits, card frames and art. It needs Pillow and a JDK. Other Downfall cards, relics, potions, monsters and events are not extracted yet.
 
-## Open before deploying Downfall
+## Single-character mods
 
-Confirm permission to host Downfall's art and text on the public site.
+`py -3 parsers/mods/extract_characters.py [mod id ...]` does the same for the mods listed in its `MODS` table, one folder per mod. Add a table entry to import another. Each `data/mods/<id>/` holds one character, its starter cards and starter relics only.
+
+- The site shows one `starting_relic`. The Elementalist starts with two, so Graduation Letter is in its `relics.json` but not on the character page.
+- Poker cards use a custom card type the site has no frame for, so they are stored as Skills with the generic Poker Card art.
+
+## Open before deploying mods
+
+Confirm permission to host each mod's art and text on the public site.
