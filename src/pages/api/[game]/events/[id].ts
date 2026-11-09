@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { getData } from '../../../../lib/data';
+import { getModdedData } from '../../../../lib/data';
 import { getGame, getLocale, jsonResponse, notFoundResponse } from '../../_util';
 
 export const GET: APIRoute = async ({ params, url }) => {
@@ -8,7 +8,7 @@ export const GET: APIRoute = async ({ params, url }) => {
 
   const id = String(params.id ?? '');
   const locale = getLocale(url);
-  const { eventById } = await getData(game, locale);
+  const { eventById } = await getModdedData(game, locale);
   const event = eventById.get(id);
   if (!event) return jsonResponse({ error: 'not found' }, { status: 404 });
   return jsonResponse(event);

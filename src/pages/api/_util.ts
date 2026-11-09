@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
-import type { Locale } from '../../lib/data';
-import { SUPPORTED_LOCALES } from '../../lib/data';
+import type { Dataset, Locale, ModFields } from '../../lib/data';
+import { SUPPORTED_LOCALES, getData, getModdedData } from '../../lib/data';
 
 export function jsonResponse(data: unknown, init?: ResponseInit): Response {
   const headers = new Headers(init?.headers);
@@ -41,6 +41,15 @@ export function getLocale(url: URL): Locale {
   return localeParam && SUPPORTED_LOCALES.includes(localeParam as Locale)
     ? localeParam as Locale
     : 'en';
+}
+
+/** Base data plus the mods named in ?mods=a,b. With no param this is exactly getData(). */
+export async function getCatalog(game: 'sts1' | 'sts2', locale: Locale, url: URL): Promise<Dataset> {
+  const selected = new Set(getString(url, 'mods')?.split(',') ?? []);
+  if (game !== 'sts1' || selected.size === 0) return getData(game, locale);
+  const data = await getModdedData(game, locale);
+  const keep = <T extends ModFields>(items: T[]) => items.filter((item) => !item.mod || selected.has(item.mod.id));
+  return { ...data, cards: keep(data.cards), relics: keep(data.relics), potions: keep(data.potions), monsters: keep(data.monsters), events: keep(data.events) };
 }
 
 export function notFoundResponse(): Response {

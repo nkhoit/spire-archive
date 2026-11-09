@@ -1,7 +1,8 @@
 ---
 import Layout from '../../../components/Layout.astro';
 import Badge from '../../../components/Badge.astro';
-import { getData } from '../../../lib/data';
+import { CharacterModControls } from '../../../components/react/ModControls';
+import { getMods, getModdedData } from '../../../lib/data';
 import { getLocale } from '../../../lib/i18n';
 import { t } from '../../../lib/ui-strings';
 import { getPageGame } from '../../../lib/page-game';
@@ -10,7 +11,8 @@ const game = getPageGame(Astro.params);
 if (!game) return new Response('Not found', { status: 404 });
 
 const { locale, langPrefix } = getLocale(Astro);
-const data = await getData(game, locale);
+const data = await getModdedData(game, locale);
+const mods = await getMods(game);
 const isSts2 = game === 'sts2';
 const colorMap: Record<string, string> = { IRONCLAD: 'ironclad', THE_SILENT: 'silent', SILENT: 'silent', DEFECT: 'defect', WATCHER: 'watcher', NECROBINDER: 'necrobinder', REGENT: 'regent' };
 const charBorders: Record<string, string> = { IRONCLAD: 'border-red-500/20 hover:border-red-500/40', THE_SILENT: 'border-green-500/20 hover:border-green-500/40', SILENT: 'border-green-500/20 hover:border-green-500/40', DEFECT: 'border-blue-500/20 hover:border-blue-500/40', WATCHER: 'border-purple-500/20 hover:border-purple-500/40', NECROBINDER: 'border-purple-500/20 hover:border-purple-500/40', REGENT: 'border-amber-500/20 hover:border-amber-500/40' };
@@ -19,19 +21,22 @@ const positionMap: Record<string, string> = { IRONCLAD: isSts2 ? 'right center' 
 ---
 <Layout game={game} title="Characters — Spire Archive" description={isSts2 ? 'Browse the five playable characters of Slay the Spire 2.' : 'Browse the four playable characters of Slay the Spire.'}>
   <h1 class="font-game text-xl font-semibold">{t('Characters', locale)}</h1>
-  <p class="mt-1 text-sm text-slate-300">{t(isSts2 ? 'The five playable characters of Slay the Spire 2.' : 'The four playable characters of Slay the Spire.', locale)}</p>
+  <p data-base-only class="mt-1 text-sm text-slate-300">{t(isSts2 ? 'The five playable characters of Slay the Spire 2.' : 'The four playable characters of Slay the Spire.', locale)}</p>
 
-  <div class:list={['mt-6 grid grid-cols-1 gap-4 md:grid-cols-2', isSts2 ? 'lg:grid-cols-3' : '']}>
+  <CharacterModControls client:load mods={mods} locale={locale} />
+
+  <div class:list={['mt-6 grid grid-cols-1 gap-4 md:grid-cols-2', isSts2 ? 'lg:grid-cols-3' : 'lg:has-[[data-mod]:not([hidden])]:grid-cols-3']}>
     {data.characters.map((ch) => {
-      const color = colorMap[ch.id] ?? '';
+      const color = ch.color ?? colorMap[ch.id] ?? '';
       const desc = ch.description ?? '';
       return (
-        <a href={`${langPrefix}/${game}/characters/${ch.id}`} class={'block rounded-lg border bg-white/5 overflow-hidden hover:bg-white/10 transition-all ' + (charBorders[ch.id] ?? 'border-white/10')}>
-          <img src={portraitMap[ch.id]} alt={ch.name} class="w-full h-40 object-cover" style={`object-position: ${positionMap[ch.id] ?? 'center 30%'}`} />
+        <a data-mod={ch.mod?.id} hidden={!!ch.mod} href={`${langPrefix}/${game}/characters/${ch.id}`} class={'block rounded-lg border bg-white/5 overflow-hidden hover:bg-white/10 transition-all ' + (charBorders[ch.id] ?? 'border-white/10')}>
+          <img src={portraitMap[ch.id] ?? `/images/${game}/characters/${color}.jpg`} alt={ch.name} class="w-full h-40 object-cover" style={`object-position: ${positionMap[ch.id] ?? 'center 30%'}`} />
           <div class="p-4">
             <h2 class="font-game text-lg font-semibold">{ch.name}</h2>
             <div class="mt-2 flex flex-wrap gap-2">
-              <Badge label={color} tone={color} locale={locale} />
+              <Badge label={ch.color_label ?? color} tone={color} hex={ch.color_hex} locale={locale} />
+              {ch.mod && <Badge label={`Modded · ${ch.mod.name}`} tone="new" locale={locale} />}
               <Badge label={`${(ch as any).hp} ${t('HP', locale)}`} />
               <Badge label={`${(ch as any).energy_per_turn} ${t('Energy', locale)}`} />
             </div>

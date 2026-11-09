@@ -15,6 +15,12 @@ parsers/
 │   ├── build_localization.cjs
 │   ├── build_mechanics_data.py
 │   └── ... (14 files total)
+├── mods/               # third-party STS1 mods (read from Steam Workshop jars)
+│   ├── extract_downfall.py
+│   └── extract_characters.py
+├── stats/              # STS1 run statistics from Mega Crit's run dump
+│   ├── aggregate_runs.py
+│   └── cull_runs.py
 └── sts2/               # STS2 parsers (read from PCK extraction + decompiled C#)
     ├── README.md       # full pipeline docs
     ├── update.sh       # runs the 12-step pipeline

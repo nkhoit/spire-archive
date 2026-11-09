@@ -1,0 +1,21 @@
+---
+import Layout from '../../components/Layout.astro';
+import StatsExplorer from '../../components/react/StatsExplorer';
+import { getLocale } from '../../lib/i18n';
+import { getStats } from '../../lib/stats';
+import { t } from '../../lib/ui-strings';
+
+const { locale, langPrefix } = getLocale(Astro);
+const stats = await getStats();
+---
+<Layout game="sts1" title="Run Stats — Spire Archive" description="Statistics from Mega Crit's public Slay the Spire run data, for balancing cards and modded characters.">
+  <h1 class="text-xl font-semibold">{t('Run Stats', locale)}</h1>
+  {stats ? (
+    <>
+      <p class="mt-1 text-sm text-slate-300">{stats.meta.runs_used.toLocaleString(locale)} runs from a sample of Mega Crit's public metrics dump, after removing daily, endless, seeded and abandoned runs.</p>
+      <StatsExplorer client:load initial={stats.segments['all|all']} periods={stats.meta.periods} langPrefix={langPrefix} />
+    </>
+  ) : (
+    <p class="mt-4 text-sm text-slate-300">Run statistics haven't been generated yet.</p>
+  )}
+</Layout>

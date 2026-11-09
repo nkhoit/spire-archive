@@ -4,6 +4,7 @@ import GlobalSearch from './react/GlobalSearch';
 import LanguagePicker from './react/LanguagePicker';
 import { getLocale } from '../lib/i18n';
 import { t } from '../lib/ui-strings';
+import { hasStats } from '../lib/stats';
 
 export interface Props {
   title: string;
@@ -35,6 +36,7 @@ const navLinks = game ? [
     { label: t('Buffs & Debuffs', locale), href: langPrefix + '/' + game + '/effects' },
   ]),
   { label: t('Game Mechanics', locale), href: langPrefix + '/' + game + '/keywords' },
+  ...(game === 'sts1' && hasStats() ? [{ label: t('Stats', locale), href: langPrefix + '/sts1/stats' }] : []),
 ] : [];
 ---
 <!doctype html>

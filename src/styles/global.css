@@ -132,6 +132,7 @@ h1, h2, .font-game { font-family: 'KreonGame', 'Kreon', Georgia, serif; }
 /* Shared explorer controls; intentionally do not target card art or badges. */
 .explorer-toolbar { position: sticky; top: var(--header-height); z-index: 5; padding: 12px 0; border-block: 1px solid var(--border-subtle); background: var(--bg-base); }
 .explorer-toolbar input, .explorer-toolbar select { min-width: 0; min-height: 42px; border: 1px solid var(--border-subtle); border-radius: 2px; background: var(--bg-elevated); }
+.explorer-toolbar input[type='checkbox'] { min-height: auto; }
 .explorer-toolbar input::placeholder { color: var(--muted); opacity: 1; }
 .explorer-toolbar :is(input, select):focus-visible { outline: 2px solid var(--accent-200); outline-offset: 2px; }
 .explorer-filter-toggle { flex: none; min-height: 42px; border: 1px solid var(--border-subtle); border-radius: 2px; padding: 8px 12px; font-size: 12px; color: var(--paper); }
