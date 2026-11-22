@@ -487,6 +487,8 @@ def resolve_entity_file(json_path: Path, cs_dir: Path, label: str, entity_names:
             new_desc = re.sub(r"\n\([^)]*\bcard\b[^)]*\)", "", new_desc)
             # Replace unresolvable {Amount...} with "X" (enchantment level placeholder)
             new_desc = re.sub(r"\{Amount(?::[^}]*)?\}", "X", new_desc)
+            # {ApplierName} is the applying player's platform name at runtime
+            new_desc = new_desc.replace("{ApplierName}", "X")
             entity[field] = new_desc
 
             if "{" in new_desc:

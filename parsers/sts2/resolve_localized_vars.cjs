@@ -401,6 +401,7 @@ const RUNTIME_VAR_FALLBACKS = {
   'powers:DRUM_OF_BATTLE_POWER': { Amount: '1' },  // "the top card" in EN
   'powers:TAG_TEAM_POWER': { Amount: '1' },  // DisplayAmount => 1 in CS
   'powers:OUTBREAK_POWER': { OutbreakPower: '11' },  // PowerVar<OutbreakPower>(11m) in Outbreak.cs
+  'powers:SOULBOUND_POWER': { ApplierName: 'X' },  // applying player's platform name at runtime
   // Relics: Combats is a runtime counter, default 1
   'relics:BONE_TEA': { Combats: '1' },
   'relics:EMBER_TEA': { Combats: '1' },
