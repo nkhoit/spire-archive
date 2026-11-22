@@ -90,7 +90,7 @@ jobs:
 
   smoke-test-staging:
     needs: [build, staging]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # Playwright 1.58 has no Chromium build for ubuntu-26.04
     steps:
       - uses: actions/checkout@v4
 
@@ -173,7 +173,7 @@ jobs:
 
   smoke-test-prod:
     needs: production
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # Playwright 1.58 has no Chromium build for ubuntu-26.04
     steps:
       - uses: actions/checkout@v4
 
