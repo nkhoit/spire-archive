@@ -1,11 +1,19 @@
 [
   {
+    "id": "AMBERGRIS",
+    "name": "Ambergris",
+    "description": "Heal for 50% of your Max HP. If used in combat, take an extra turn.",
+    "rarity": "Event",
+    "color": "event",
+    "target": "AnyPlayer"
+  },
+  {
     "id": "ASHWATER",
     "name": "Ashwater",
     "description": "Exhaust any number of cards in your Hand.",
     "rarity": "Uncommon",
     "color": "shared",
-    "target": "Self"
+    "target": "AnyPlayer"
   },
   {
     "id": "ATTACK_POTION",
@@ -13,7 +21,7 @@
     "description": "Choose 1 of 3 random Attack cards to add into your Hand. It's free to play this turn.",
     "rarity": "Common",
     "color": "shared",
-    "target": "Self"
+    "target": "AnyPlayer"
   },
   {
     "id": "BEETLE_JUICE",
@@ -29,7 +37,7 @@
     "description": "Upgrade all cards in your Hand for the rest of combat.",
     "rarity": "Uncommon",
     "color": "shared",
-    "target": "Self"
+    "target": "AnyPlayer"
   },
   {
     "id": "BLOCK_POTION",
@@ -53,7 +61,7 @@
     "description": "Summon 15.",
     "rarity": "Uncommon",
     "color": "shared",
-    "target": "Self"
+    "target": "AnyPlayer"
   },
   {
     "id": "BOTTLED_POTENTIAL",
@@ -77,7 +85,7 @@
     "description": "Choose 1 of 3 random Colorless cards to add into your Hand. It's free to play this turn.",
     "rarity": "Common",
     "color": "shared",
-    "target": "Self"
+    "target": "AnyPlayer"
   },
   {
     "id": "COSMIC_CONCOCTION",
@@ -85,7 +93,7 @@
     "description": "Add 3 Upgraded Colorless cards into your Hand.",
     "rarity": "Rare",
     "color": "shared",
-    "target": "Self"
+    "target": "AnyPlayer"
   },
   {
     "id": "CUNNING_POTION",
@@ -93,7 +101,7 @@
     "description": "Add 3 Upgraded Shivs into your Hand.",
     "rarity": "Uncommon",
     "color": "shared",
-    "target": "Self"
+    "target": "AnyPlayer"
   },
   {
     "id": "CURE_ALL",
@@ -117,7 +125,7 @@
     "description": "Play the top 3 cards of your Draw Pile.",
     "rarity": "Rare",
     "color": "shared",
-    "target": "Self"
+    "target": "AnyPlayer"
   },
   {
     "id": "DROPLET_OF_PRECOGNITION",
@@ -125,7 +133,7 @@
     "description": "Choose a card in your Draw Pile and add it into your Hand.",
     "rarity": "Rare",
     "color": "shared",
-    "target": "Self"
+    "target": "AnyPlayer"
   },
   {
     "id": "DUPLICATOR",
@@ -133,7 +141,7 @@
     "description": "This turn, your next card is played an extra time.",
     "rarity": "Uncommon",
     "color": "shared",
-    "target": "Self"
+    "target": "AnyPlayer"
   },
   {
     "id": "ENERGY_POTION",
@@ -149,7 +157,7 @@
     "description": "Fill all your empty potion slots with random potions.",
     "rarity": "Rare",
     "color": "shared",
-    "target": "Self"
+    "target": "AnyPlayer"
   },
   {
     "id": "ESSENCE_OF_DARKNESS",
@@ -157,7 +165,7 @@
     "description": "Channel a Dark for each of your Orb Slots.",
     "rarity": "Rare",
     "color": "shared",
-    "target": "Self"
+    "target": "AnyPlayer"
   },
   {
     "id": "EXPLOSIVE_AMPOULE",
@@ -197,7 +205,7 @@
     "description": "Gain 2 Focus.",
     "rarity": "Common",
     "color": "shared",
-    "target": "Self"
+    "target": "AnyPlayer"
   },
   {
     "id": "FORTIFIER",
@@ -237,7 +245,7 @@
     "description": "Discard any number of cards, then draw that many.",
     "rarity": "Uncommon",
     "color": "shared",
-    "target": "Self"
+    "target": "AnyPlayer"
   },
   {
     "id": "GHOST_IN_A_JAR",
@@ -261,7 +269,7 @@
     "description": "Exhaust your Hand. Draw 10 cards.",
     "rarity": "Event",
     "color": "event",
-    "target": "Self"
+    "target": "AnyPlayer"
   },
   {
     "id": "HEART_OF_IRON",
@@ -293,7 +301,7 @@
     "description": "Put a card from your Discard Pile into your Hand. It's free to play this turn.",
     "rarity": "Rare",
     "color": "shared",
-    "target": "Self"
+    "target": "AnyPlayer"
   },
   {
     "id": "LUCKY_TONIC",
@@ -317,7 +325,7 @@
     "description": "Add a random Attack, Skill, and Power into your Hand. They're free to play this turn.",
     "rarity": "Rare",
     "color": "shared",
-    "target": "Self"
+    "target": "AnyPlayer"
   },
   {
     "id": "POISON_POTION",
@@ -333,7 +341,7 @@
     "description": "Add 2 Souls into your Hand.",
     "rarity": "Rare",
     "color": "shared",
-    "target": "Self"
+    "target": "AnyPlayer"
   },
   {
     "id": "POTION_OF_BINDING",
@@ -349,7 +357,7 @@
     "description": "Gain 2 Orb Slots.",
     "rarity": "Uncommon",
     "color": "shared",
-    "target": "Self"
+    "target": "AnyPlayer"
   },
   {
     "id": "POTION_OF_DOOM",
@@ -381,7 +389,7 @@
     "description": "Choose 1 of 3 random Power cards to add into your Hand. It's free to play this turn.",
     "rarity": "Common",
     "color": "shared",
-    "target": "Self"
+    "target": "AnyPlayer"
   },
   {
     "id": "RADIANT_TINCTURE",
@@ -421,7 +429,7 @@
     "description": "Choose 1 of 3 random Skill cards to add into your Hand. It's free to play this turn.",
     "rarity": "Common",
     "color": "shared",
-    "target": "Self"
+    "target": "AnyPlayer"
   },
   {
     "id": "SNECKO_OIL",
@@ -461,7 +469,7 @@
     "description": "Gain [S][S][S].",
     "rarity": "Common",
     "color": "shared",
-    "target": "Self"
+    "target": "AnyPlayer"
   },
   {
     "id": "STRENGTH_POTION",
@@ -485,7 +493,7 @@
     "description": "Choose a card in your Hand. It is free to play this combat.",
     "rarity": "Uncommon",
     "color": "shared",
-    "target": "Self"
+    "target": "AnyPlayer"
   },
   {
     "id": "VULNERABLE_POTION",

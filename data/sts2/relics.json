@@ -9,7 +9,7 @@
   {
     "id": "ALCHEMICAL_COFFER",
     "name": "Alchemical Coffer",
-    "description": "Upon pickup, gain 4 potion slots filled with random potions.",
+    "description": "Upon pickup, gain 4 potion slots filled with random Potions.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -79,7 +79,7 @@
   {
     "id": "BEAUTIFUL_BRACELET",
     "name": "Beautiful Bracelet",
-    "description": "Upon pickup, choose 3 cards in your Deck. Enchant them with Swift 3.",
+    "description": "Upon pickup, Enchant 4 random cards in your Deck with Swift 2.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -93,7 +93,7 @@
   {
     "id": "BELT_BUCKLE",
     "name": "Belt Buckle",
-    "description": "While you have no potions, you have 2 additional Dexterity.",
+    "description": "While you have no Potions, you have 2 additional Dexterity.",
     "tier": "Shop",
     "color": "shared"
   },
@@ -289,7 +289,7 @@
   {
     "id": "CAULDRON",
     "name": "Cauldron",
-    "description": "Upon pickup, brews 5 random potions.",
+    "description": "Upon pickup, brews 5 random Potions.",
     "tier": "Shop",
     "color": "shared"
   },
@@ -401,7 +401,7 @@
   {
     "id": "DELICATE_FROND",
     "name": "Delicate Frond",
-    "description": "At the start of each combat, fill all empty potion slots with random potions.",
+    "description": "At the start of each combat, fill all empty potion slots with random Potions.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -415,7 +415,7 @@
   {
     "id": "DIAMOND_DIADEM",
     "name": "Diamond Diadem",
-    "description": "Whenever you play 2 or fewer cards in a turn, take half damage from enemies.",
+    "description": "Start combat with 20 Block. Your Block is not removed at the start of your 2nd turn.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -429,14 +429,14 @@
   {
     "id": "DISTINGUISHED_CAPE",
     "name": "Distinguished Cape",
-    "description": "Upon pickup, lose 9 Max HP. Add 3 Apparitions to your Deck.",
+    "description": "Upon pickup, add 2 random Curses and 3 Apparitions to your Deck.",
     "tier": "Ancient",
     "color": "event"
   },
   {
     "id": "DIVINE_DESTINY",
     "name": "Divine Destiny",
-    "description": "At the start of each combat, gain [S][S][S][S][S][S].",
+    "description": "At the start of each combat, gain [S][S][S][S][S][S][S].",
     "tier": "Starter",
     "color": "event"
   },
@@ -453,6 +453,13 @@
     "description": "Upon pickup, obtain an additional copy of a card in your Deck.",
     "tier": "Shop",
     "color": "shared"
+  },
+  {
+    "id": "DOWSING_ROD",
+    "name": "Dowsing Rod",
+    "description": "Upon pickup, add 1 Dowsing to your Deck.",
+    "tier": "Ancient",
+    "color": "event"
   },
   {
     "id": "DRAGON_FRUIT",
@@ -660,7 +667,7 @@
   {
     "id": "FUR_COAT",
     "name": "Fur Coat",
-    "description": "Upon pickup, mark 7 random combats. Enemies in those rooms have 1 HP.",
+    "description": "Upon pickup, mark 8 random combats. Enemies in those rooms have 1 HP.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -786,7 +793,7 @@
   {
     "id": "HISTORY_COURSE",
     "name": "History Course",
-    "description": "At the start of your turn, play a copy of your last played Attack or Skill.",
+    "description": "At the start of your turn, play a copy of your last played Attack.",
     "tier": "Event",
     "color": "event"
   },
@@ -1127,6 +1134,13 @@
     "color": "event"
   },
   {
+    "id": "NEOWS_SACRIFICE",
+    "name": "Neow's Sacrifice",
+    "description": "Upon pickup, procure 1 Ambergris and add 1 Guilty to your Deck.",
+    "tier": "Ancient",
+    "color": "event"
+  },
+  {
     "id": "NEOWS_TALISMAN",
     "name": "Neow's Talisman",
     "description": "Upon pickup, Upgrade 1 of your Strikes and 1 of your Defends.",
@@ -1360,7 +1374,7 @@
   {
     "id": "PHIAL_HOLSTER",
     "name": "Phial Holster",
-    "description": "Upon pickup, gain 1 potion slot and procure 2 random potions.",
+    "description": "Upon pickup, gain 1 potion slot and procure 2 random Potions.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -1514,7 +1528,7 @@
   {
     "id": "REGALITE",
     "name": "Regalite",
-    "description": "Whenever you create a card, gain 2 Block.",
+    "description": "The first time you create a card each turn, gain 4 Block.",
     "tier": "Uncommon",
     "color": "regent"
   },
@@ -1626,7 +1640,7 @@
   {
     "id": "SEAL_OF_GOLD",
     "name": "Seal of Gold",
-    "description": "At the start of your turn, spend 5 Gold to gain [E].",
+    "description": "At the start of your turn, spend 3 Gold to gain [E].",
     "tier": "Ancient",
     "color": "event"
   },
@@ -1640,7 +1654,7 @@
   {
     "id": "SERE_TALON",
     "name": "Sere Talon",
-    "description": "Upon pickup, add 2 random Curses and 3 Wishes to your Deck.",
+    "description": "Upon pickup, lose 9 Max HP. Add 3 Wishes to your Deck.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -1661,14 +1675,14 @@
   {
     "id": "SIGNET_RING",
     "name": "Signet Ring",
-    "description": "Upon pickup, gain 999 Gold.",
+    "description": "Upon pickup, gain 888 Gold.",
     "tier": "Ancient",
     "color": "event"
   },
   {
     "id": "SILKEN_TRESS",
     "name": "Silken Tress",
-    "description": "Upon pickup, lose all Gold. Enchant all cards in the first card reward with Glam.",
+    "description": "Upon pickup, lose all Gold. Enchant all cards in your first card reward with Glam.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -1710,7 +1724,7 @@
   {
     "id": "SOZU",
     "name": "Sozu",
-    "description": "Gain [E] at the start of each turn. You can no longer obtain potions.",
+    "description": "Gain [E] at the start of each turn. You can no longer obtain Potions.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -1850,14 +1864,14 @@
   {
     "id": "TINY_MAILBOX",
     "name": "Tiny Mailbox",
-    "description": "Whenever you Rest, procure 2 random potions.",
+    "description": "Whenever you Rest, procure 2 random Potions.",
     "tier": "Uncommon",
     "color": "shared"
   },
   {
     "id": "TOASTY_MITTENS",
     "name": "Toasty Mittens",
-    "description": "At the start of your turn, Exhaust the top card of your Draw Pile and gain 1 Strength.",
+    "description": "At the start of your turn, Exhaust 1 card from your Hand and gain 1 Strength.",
     "tier": "Ancient",
     "color": "event"
   },
@@ -1892,7 +1906,7 @@
   {
     "id": "TOY_BOX",
     "name": "Toy Box",
-    "description": "Upon pickup, obtain 4 Wax Relics. Every 3 combats, your left-most Wax Relic will melt away.",
+    "description": "Upon pickup, obtain 5 Wax Relics. Every 3 combats, your left-most Wax Relic will melt away.",
     "tier": "Ancient",
     "color": "event"
   },

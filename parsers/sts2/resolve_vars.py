@@ -415,12 +415,13 @@ def resolve_tokens(desc: str, vars_map: dict[str, str]) -> str:
             continue
 
         # {VarName:percentMore()} → (value - 1) * 100 as integer percent (e.g. 1.25 → 25)
-        if rest == "percentMore()":
+        # {VarName:percentLess()} → (1 - value) * 100 as integer percent (e.g. 0.5 → 50)
+        if rest in ("percentMore()", "percentLess()"):
             val = vars_map.get(tag)
             if val is not None:
                 try:
                     f = float(val)
-                    pct = int(round((f - 1.0) * 100))
+                    pct = int(round((f - 1.0) * 100 if rest == "percentMore()" else (1.0 - f) * 100))
                     result.append(str(pct))
                 except (ValueError, TypeError):
                     result.append("{" + inner + "}")

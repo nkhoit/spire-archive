@@ -35,6 +35,13 @@
     "stackable": true
   },
   {
+    "id": "AMBERGRIS_POWER",
+    "name": "Ambergris",
+    "description": "Take an extra turn after this one.",
+    "type": "Buff",
+    "stackable": true
+  },
+  {
     "id": "ARSENAL_POWER",
     "name": "Arsenal",
     "description": "Whenever you create a card, gain 1 Strength.",
@@ -154,6 +161,13 @@
     "stackable": true
   },
   {
+    "id": "CACOPHONY_POWER",
+    "name": "Cacophony",
+    "description": "Every 33 cards drawn by ALL players, deal damage to a random enemy.",
+    "type": "Buff",
+    "stackable": true
+  },
+  {
     "id": "CALAMITY_POWER",
     "name": "Calamity",
     "description": "Whenever you play an Attack, add a random Attack into your Hand.",
@@ -184,7 +198,7 @@
   {
     "id": "CHILD_OF_THE_STARS_POWER",
     "name": "Child of the Stars",
-    "description": "Gain 1 Block for each [S] spent.",
+    "description": "Gain 2 Block for each [S] spent.",
     "type": "Buff",
     "stackable": true
   },
@@ -199,6 +213,13 @@
     "id": "COLOSSUS_POWER",
     "name": "Colossus",
     "description": "You receive 50% less damage from Vulnerable enemies this turn.",
+    "type": "Buff",
+    "stackable": true
+  },
+  {
+    "id": "CONCOCT_POWER",
+    "name": "Concoct",
+    "description": "Whenever you deal unblocked attack damage this turn, apply 3 Poison.",
     "type": "Buff",
     "stackable": true
   },
@@ -352,7 +373,7 @@
   {
     "id": "DEMON_FORM_POWER",
     "name": "Demon Form",
-    "description": "At the start of your turn, gain 2 Strength.",
+    "description": "At the start of your turn, gain 3 Strength.",
     "type": "Buff",
     "stackable": true
   },
@@ -369,13 +390,6 @@
     "description": "Dexterity improves Block gained from cards.",
     "type": "Buff",
     "stackable": true
-  },
-  {
-    "id": "DIAMOND_DIADEM_POWER",
-    "name": "Diamond Diadem",
-    "description": "Enemies deal 50% less damage this turn.",
-    "type": "Buff",
-    "stackable": false
   },
   {
     "id": "DIE_FOR_YOU_POWER",
@@ -604,7 +618,7 @@
   {
     "id": "GUARDED_POWER",
     "name": "Guarded",
-    "description": "Take half damage from enemies.",
+    "description": "Take 50% less damage from enemies.",
     "type": "Buff",
     "stackable": false
   },
@@ -686,6 +700,13 @@
     "stackable": false
   },
   {
+    "id": "HIBERNATE_POWER",
+    "name": "Hibernate",
+    "description": "This turn, your Frost grants ALL allies Block.",
+    "type": "Buff",
+    "stackable": true
+  },
+  {
     "id": "HIGH_VOLTAGE_POWER",
     "name": "High Voltage",
     "description": "At the end of this creature's turn, it gains 2 Strength.",
@@ -705,6 +726,13 @@
     "description": "If this creature's attacks are fully blocked by any player, it becomes Stunned.",
     "type": "Debuff",
     "stackable": false
+  },
+  {
+    "id": "IMITATION_LEARNING_POWER",
+    "name": "Imitation Learning",
+    "description": "When another player plays a Power, you play a copy of it.",
+    "type": "Buff",
+    "stackable": true
   },
   {
     "id": "IMPROVEMENT_POWER",
@@ -931,6 +959,13 @@
     "stackable": true
   },
   {
+    "id": "ONE_FOR_ALL_POWER",
+    "name": "One for All",
+    "description": "Your 0 [E] Attacks deal more damage.",
+    "type": "Buff",
+    "stackable": true
+  },
+  {
     "id": "ONE_TWO_PUNCH_POWER",
     "name": "One-Two Punch",
     "description": "Your next Attack is played an extra time this turn.",
@@ -941,13 +976,6 @@
     "id": "ORBIT_POWER",
     "name": "Orbit",
     "description": "Every 4 Energy you spend, gain an Energy.",
-    "type": "Buff",
-    "stackable": true
-  },
-  {
-    "id": "OUTBREAK_POWER",
-    "name": "Outbreak",
-    "description": "Every 10 times you apply Poison, deal damage to ALL enemies.",
     "type": "Buff",
     "stackable": true
   },
@@ -1010,7 +1038,7 @@
   {
     "id": "PILLAR_OF_CREATION_POWER",
     "name": "Pillar of Creation",
-    "description": "Whenever you create a card, gain 5 Block.",
+    "description": "Whenever you create a card, gain X Block.",
     "type": "Buff",
     "stackable": true
   },
@@ -1323,6 +1351,13 @@
     "stackable": false
   },
   {
+    "id": "SOULBOUND_POWER",
+    "name": "Soulbound",
+    "description": "Whenever {ApplierName} creates a Soul, add a Soul to your Draw Pile.",
+    "type": "Buff",
+    "stackable": true
+  },
+  {
     "id": "SPECTRUM_SHIFT_POWER",
     "name": "Spectrum Shift",
     "description": "At the start of your turn, add 1 random Colorless card into your Hand.",
@@ -1409,7 +1444,7 @@
   {
     "id": "SUBROUTINE_POWER",
     "name": "Subroutine",
-    "description": "Whenever you play a Power, gain 1 [E].",
+    "description": "Whenever you play a Power, gain [E].",
     "type": "Buff",
     "stackable": true
   },
@@ -1479,7 +1514,7 @@
   {
     "id": "TANK_POWER",
     "name": "Tank",
-    "description": "Take double damage from enemies. Allies take half damage from enemies.",
+    "description": "Take 50% more damage from enemies. Allies take 50% less damage from enemies.",
     "type": "Buff",
     "stackable": false
   },
@@ -1584,7 +1619,7 @@
   {
     "id": "TRACKING_POWER",
     "name": "Tracking",
-    "description": "Weak enemies take 2 times more damage from Attacks.",
+    "description": "Weak enemies take 50% more damage from Attacks.",
     "type": "Buff",
     "stackable": true
   },
@@ -1599,6 +1634,13 @@
     "id": "TYRANNY_POWER",
     "name": "Tyranny",
     "description": "At the start of your turn, draw a card and Exhaust a card from your Hand.",
+    "type": "Buff",
+    "stackable": true
+  },
+  {
+    "id": "UNDERWORLD_POWER",
+    "name": "Underworld",
+    "description": "Whenever other players deal attack damage this turn, apply that much Doom.",
     "type": "Buff",
     "stackable": true
   },
@@ -1668,9 +1710,9 @@
   {
     "id": "WELL_LAID_PLANS_POWER",
     "name": "Well-Laid Plans",
-    "description": "At the end of your turn, Retain up to 1 card.",
+    "description": "At the end of your turn, you no longer discard your Hand.",
     "type": "Buff",
-    "stackable": true
+    "stackable": false
   },
   {
     "id": "WITHERING_PRESENCE_POWER",

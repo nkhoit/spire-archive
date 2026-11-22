@@ -345,12 +345,13 @@ function resolveTokens(desc, vars, fullStr) {
       i = end; continue;
     }
     // {VarName:percentMore()} → (value - 1) * 100 as integer percent
-    if (rest === 'percentMore()') {
+    // {VarName:percentLess()} → (1 - value) * 100 as integer percent
+    if (rest === 'percentMore()' || rest === 'percentLess()') {
       const val = tag in vars ? vars[tag] : undefined;
       if (val !== undefined && val !== null) {
         const f = parseFloat(val);
         if (!isNaN(f)) {
-          result.push(String(Math.round((f - 1) * 100)));
+          result.push(String(Math.round(rest === 'percentMore()' ? (f - 1) * 100 : (1 - f) * 100)));
         } else {
           result.push('{' + inner + '}');
         }

@@ -913,7 +913,7 @@
       },
       {
         "name": "Phial Holster",
-        "description": "Upon pickup, gain {PotionSlots} potion {PotionSlots:plural:slot|slots} and procure {Potions} random {Potions:plural:potion|potions}.",
+        "description": "Upon pickup, gain {PotionSlots} potion {PotionSlots:plural:slot|slots} and procure {Potions} random {Potions:plural:Potion|Potions}.",
         "relic_id": "PHIAL_HOLSTER",
         "pool": "positive"
       },
@@ -942,6 +942,12 @@
         "pool": "cursed"
       },
       {
+        "name": "Dowsing Rod",
+        "description": "Upon pickup, add 1 Dowsing to your Deck.",
+        "relic_id": "DOWSING_ROD",
+        "pool": "cursed"
+      },
+      {
         "name": "Hefty Tablet",
         "description": "Upon pickup, choose 1 of {Cards} Rare cards to add to your Deck, and add 1 Injury to your Deck.",
         "relic_id": "HEFTY_TABLET",
@@ -966,6 +972,12 @@
         "pool": "cursed"
       },
       {
+        "name": "Neow's Sacrifice",
+        "description": "Upon pickup, procure 1 Ambergris and add 1 Guilty to your Deck.",
+        "relic_id": "NEOWS_SACRIFICE",
+        "pool": "cursed"
+      },
+      {
         "name": "Precarious Shears",
         "description": "Upon pickup, remove {Cards} {Cards:plural:card|cards} from your Deck and lose {Damage} HP.",
         "relic_id": "PRECARIOUS_SHEARS",
@@ -973,7 +985,7 @@
       },
       {
         "name": "Silken Tress",
-        "description": "Upon pickup, lose all Gold. Enchant all cards in the first card reward with Glam.",
+        "description": "Upon pickup, lose all Gold. Enchant all cards in your first card reward with Glam.",
         "relic_id": "SILKEN_TRESS",
         "pool": "cursed"
       },
@@ -1340,7 +1352,14 @@
       },
       {
         "name": "Read the Entire Book",
-        "description": "Choose a Power to Enchant with {Enchantment3} 2.",
+        "description": "Choose a Power to Enchant with Swift 2.",
+        "references": [
+          {
+            "type": "enchantment",
+            "id": "SWIFT",
+            "name": "Swift"
+          }
+        ],
         "outcome": "What an engrossing read! Some choice quotes remain fresh in your mind:\n“Avoid big monsters.”\n“Take every card.”\n“Blocking is for cowards.”\n\nYour hands are covered in blood.",
         "locked": "You don't have any Powers that can be Enchanted."
       },

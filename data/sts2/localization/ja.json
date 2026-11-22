@@ -4,6 +4,10 @@
       "description": "敏捷1を得る。\nトゲ4を得る。",
       "name": "棘纏い"
     },
+    "ABUNDANCE": {
+      "description": "3枚のアップグレード済みのパワーから1枚を選び、手札に加える。このターン、それはコストを支払わずにプレイできる",
+      "name": "豊穣"
+    },
     "ACCELERANT": {
       "description": "毒が追加で1回発動する。",
       "name": "促進剤"
@@ -160,7 +164,7 @@
       "name": "お前を信じる"
     },
     "BIASED_COGNITION": {
-      "description": "集中力4を得る。\nターン開始時、集中力1を失う。",
+      "description": "集中力5を得る。\nターン開始時、集中力1を失う。",
       "name": "認知偏向"
     },
     "BIG_BANG": {
@@ -178,6 +182,14 @@
     "BLADE_OF_INK": {
       "description": "墨塗りのナイフを2枚手札に加える。",
       "name": "墨の刃"
+    },
+    "BLADE_SYMPHONY": {
+      "description": "すべてのプレイヤーの手札にナイフを2枚加える。",
+      "name": "ブレイド・シンフォニー"
+    },
+    "BLAZE": {
+      "description": "他のプレイヤー1人に筋力5を与える。",
+      "name": "ブレイズ"
     },
     "BLIGHT_STRIKE": {
       "description": "8ダメージを与える。\n与えたダメージに等しい破滅を付与する。",
@@ -248,7 +260,7 @@
       "name": "血路を開く"
     },
     "BRIGHTEST_FLAME": {
-      "description": "[E]を得る。\nカードを2枚引く。\n最大HPを1失う。",
+      "description": "[E]を得る。\nカードを2枚引く。\n最大HPを2失う。",
       "name": "極光の炎"
     },
     "BUBBLE_BUBBLE": {
@@ -302,6 +314,10 @@
     "BYRD_SWOOP": {
       "description": "14ダメージを与える。",
       "name": "ビャードの急襲"
+    },
+    "CACOPHONY": {
+      "description": "すべてのプレイヤーによってカードが33枚引かれるたび、ランダムな敵に66ダメージを与える",
+      "name": "不協和音"
     },
     "CALAMITY": {
       "description": "アタックをプレイするたび、ランダムなアタックを1枚手札に加える。",
@@ -395,11 +411,11 @@
       "name": "寒波"
     },
     "COLLISION_COURSE": {
-      "description": "11ダメージを与える。\nデブリを1枚手札に加える。",
+      "description": "10ダメージを与える。\nデブリを1枚手札に加える。",
       "name": "衝突軌道"
     },
     "COLOSSUS": {
-      "description": "5ブロックを得る。\nこのターン、弱体中の敵から受けるダメージが50%減少する。",
+      "description": "4ブロックを得る。\nこのターン、弱体中の敵から受けるダメージが50%減少する。",
       "name": "巨人"
     },
     "COMET": {
@@ -414,6 +430,10 @@
       "description": "7ダメージを与える。\n生成中のオーブ1種類につきカードを1枚引く。\n(カードを0枚引く)",
       "name": "コンパイル・ドライバ"
     },
+    "CONCOCT": {
+      "description": "他のプレイヤー1人を選ぶ。このターン、そのプレイヤーのアタックがブロックされずにダメージを与えるたび、毒3を付与する。",
+      "name": "調合"
+    },
     "CONFLAGRATION": {
       "description": "すべての敵に2ダメージを4回与える。",
       "name": "猛火"
@@ -421,6 +441,10 @@
     "CONQUEROR": {
       "description": "鍛造3。\nこのターン、ソヴリン・ブレードは対象の敵に2倍のダメージを与える。",
       "name": "征服者"
+    },
+    "CONSTELLATION": {
+      "description": "他のプレイヤー1人はカードを1枚引き、[E]と9ブロックを得る。",
+      "name": "星座"
     },
     "CONSUMING_SHADOW": {
       "description": "ダーク2を生成する。\nターン終了時、左端のオーブを解放する。",
@@ -471,7 +495,7 @@
       "name": "三日月の槍"
     },
     "CRIMSON_MANTLE": {
-      "description": "ターン開始時、HPを1失い、8ブロックを得る。",
+      "description": "ターン開始時、HPを1失い、7ブロックを得る。",
       "name": "深紅の衣"
     },
     "CRUELTY": {
@@ -479,7 +503,7 @@
       "name": "無慈悲"
     },
     "CRUSH_UNDER": {
-      "description": "すべての敵に7ダメージを与える。ターン終了時まですべての敵は筋力1を失う。",
+      "description": "すべての敵に8ダメージを与える。ターン終了時まですべての敵は筋力1を失う。",
       "name": "重圧"
     },
     "CURSE_OF_THE_BELL": {
@@ -600,11 +624,11 @@
       "name": "悪魔の盾"
     },
     "DEMON_FORM": {
-      "description": "ターン開始時、筋力2を得る。",
+      "description": "ターン開始時、筋力3を得る。",
       "name": "悪魔化"
     },
     "DEVASTATE": {
-      "description": "30ダメージを与える。",
+      "description": "35ダメージを与える。",
       "name": "撃滅"
     },
     "DEVOUR_LIFE": {
@@ -647,6 +671,10 @@
       "description": "ターン終了時、これが手札にある場合、脱力1を得る。",
       "name": "疑念"
     },
+    "DOWSING": {
+      "description": "入手後に5回？部屋に入ると、豊穣に変化する。",
+      "name": "ダウジング"
+    },
     "DRAIN_POWER": {
       "description": "10ダメージを与える。\n捨て札にあるランダムなカードを2枚アップグレードする。",
       "name": "力の吸収"
@@ -684,7 +712,7 @@
       "name": "反響化"
     },
     "EIDOLON": {
-      "description": "手札をすべて廃棄する。\nこの方法で9枚のカードを廃棄した場合、霊体1を得る。",
+      "description": "廃棄札にあるすべてのエセリアルをプレイする。",
       "name": "亡霊の儀"
     },
     "END_OF_DAYS": {
@@ -716,7 +744,7 @@
       "name": "エントロピー"
     },
     "ENVENOM": {
-      "description": "アタックによりブロックされずにダメージを与えるたび、毒1を付与する。",
+      "description": "アタックでブロックされずにダメージを与えるたび、毒1を付与する。",
       "name": "毒の仕込み"
     },
     "EQUILIBRIUM": {
@@ -740,11 +768,11 @@
       "name": "イービルアイ"
     },
     "EXPECT_A_FIGHT": {
-      "description": "手札のアタック1枚につき、[E]を得る。\nこのターン、追加の[E]を得ることができない。\n([E]を得る。)",
+      "description": "15Blockを得る。\n自身が持つStrength1につき、追加で5ブロックを得る。",
       "name": "戦いの予感"
     },
     "EXPERTISE": {
-      "description": "手札が6枚になるまでカードを引く。",
+      "description": "カードを2枚引く。\nこのターン、それらは保留を得る。",
       "name": "職人技"
     },
     "EXPOSE": {
@@ -754,6 +782,10 @@
     "EXTERMINATE": {
       "description": "すべての敵に3ダメージを4回与える。",
       "name": "駆除"
+    },
+    "FADE": {
+      "description": "このターン、他のプレイヤー1人は敏捷6を得る。",
+      "name": "影隠し"
     },
     "FALLING_STAR": {
       "description": "8ダメージを与える。\n脱力1を付与する。\n弱体1を付与する。",
@@ -840,7 +872,7 @@
       "name": "フレシェット"
     },
     "FLICK_FLACK": {
-      "description": "すべての敵に6ダメージを与える。",
+      "description": "すべての敵に7ダメージを与える。",
       "name": "フリック・フラック"
     },
     "FOCUSED_STRIKE": {
@@ -863,7 +895,7 @@
       "name": "確定事項"
     },
     "FORGOTTEN_RITUAL": {
-      "description": "このターン、カードを廃棄していた場合、[E]を得る。",
+      "description": "[E]を得る。",
       "name": "忘れられし儀式"
     },
     "FRANTIC_ESCAPE": {
@@ -879,7 +911,7 @@
       "name": "FTL"
     },
     "FUEL": {
-      "description": "[E]を得る。\nカードを1枚引く。",
+      "description": "[E]を得る。",
       "name": "燃料"
     },
     "FURNACE": {
@@ -911,7 +943,7 @@
       "name": "遺伝的アルゴリズム"
     },
     "GIANT_ROCK": {
-      "description": "16ダメージを与える。",
+      "description": "20ダメージを与える。",
       "name": "巨大な岩"
     },
     "GLACIER": {
@@ -966,7 +998,7 @@
       "name": "盾となれ！！"
     },
     "GUIDING_STAR": {
-      "description": "12ダメージを与える。\nカードを2枚引く。",
+      "description": "12ダメージを与える。\n次のターン、カードを2枚引く。",
       "name": "導きの星"
     },
     "GUILTY": {
@@ -998,7 +1030,7 @@
       "name": "絞首"
     },
     "HAUNT": {
-      "description": "ソウルをプレイするたび、ランダムな敵がHPを6失う。",
+      "description": "ソウルをプレイするたび、ランダムな敵がHPを7失う。",
       "name": "憑依"
     },
     "HAVOC": {
@@ -1006,7 +1038,7 @@
       "name": "荒廃"
     },
     "HAZE": {
-      "description": "すべての敵に毒4を付与する。",
+      "description": "すべての敵に毒4と脱力1を付与する。",
       "name": "毒の薄霧"
     },
     "HEADBUTT": {
@@ -1026,7 +1058,7 @@
       "name": "家宝のハンマー"
     },
     "HELIX_DRILL": {
-      "description": "このターン中に支払った[E]1つにつき、3ダメージを与える。\n(攻撃回数は0回)",
+      "description": "このターン中、他のカードに支払った[E]1つにつき、3ダメージを与える。\n(攻撃回数は0回)",
       "name": "螺旋ドリル"
     },
     "HELLO_WORLD": {
@@ -1040,6 +1072,10 @@
     "HEMOKINESIS": {
       "description": "HPを2失う。\n15ダメージを与える。",
       "name": "ヘモキネシス"
+    },
+    "HIBERNATE": {
+      "description": "このターン、自身のフロストはすべての味方にブロックを与える。\nフロスト2を生成する。",
+      "name": "冬眠"
     },
     "HIDDEN_CACHE": {
       "description": "[S]を得る。\n次のターン、3[S]を得る。",
@@ -1066,7 +1102,7 @@
       "name": "ホットフィックス"
     },
     "HOWL_FROM_BEYOND": {
-      "description": "すべての敵に16ダメージを与える。\nターン終了時、これが廃棄札にある場合、それをプレイする。",
+      "description": "すべての敵に18ダメージを与える。\nターン終了時、これが廃棄札にある場合、それをプレイする。",
       "name": "彼方からの遠吠え"
     },
     "HUDDLE_UP": {
@@ -1074,7 +1110,7 @@
       "name": "作戦会議"
     },
     "HYPERBEAM": {
-      "description": "すべての敵に28ダメージを与える。\n集中力3を失う。",
+      "description": "すべての敵に24ダメージを与える。\nこのターン、集中力3を失う。",
       "name": "ハイパービーム"
     },
     "ICE_LANCE": {
@@ -1084,6 +1120,10 @@
     "IGNITION": {
       "description": "他のプレイヤー1人がプラズマを生成する。",
       "name": "イグニッション"
+    },
+    "IMITATION_LEARNING": {
+      "description": "他のプレイヤー1人を選ぶ。\n次にそのプレイヤーがパワーをプレイする時、自身はそのコピーをプレイする（2回まで）。",
+      "name": "模倣学習"
     },
     "IMPATIENCE": {
       "description": "手札にアタックがない場合、カードを2枚引く。",
@@ -1241,7 +1281,7 @@
       "name": "不快感"
     },
     "MANGLE": {
-      "description": "15ダメージを与える。\nターン終了時まで敵は筋力10を失う。",
+      "description": "20ダメージを与える。\nターン終了時まで敵は筋力10を失う。",
       "name": "切り刻み"
     },
     "MANIFEST_AUTHORITY": {
@@ -1257,7 +1297,7 @@
       "name": "完璧な段取り"
     },
     "MAUL": {
-      "description": "5ダメージを2回与える。\nこの戦闘中、すべての引き裂きのダメージが1増加する。",
+      "description": "5ダメージを2回与える。\nこの戦闘中、すべての引き裂きのダメージが2増加する。",
       "name": "引き裂き"
     },
     "MAYHEM": {
@@ -1284,6 +1324,10 @@
       "description": "24ダメージを与える。\nプラズマ3を生成する。",
       "name": "メテオストライク"
     },
+    "MIDNIGHT": {
+      "description": "60ダメージを与える。\nこの戦闘でいずれかのプレイヤーが廃棄したカード1枚につき、コストが1[E]減少する。",
+      "name": "ミッドナイト"
+    },
     "MIMIC": {
       "description": "他のプレイヤーのブロックに等しい値のブロックを得る。",
       "name": "ものまね"
@@ -1301,7 +1345,7 @@
       "name": "ミニオンの特攻"
     },
     "MINION_SACRIFICE": {
-      "description": "8ブロックを得る。",
+      "description": "7ブロックを得る。",
       "name": "ミニオンの盾"
     },
     "MINION_STRIKE": {
@@ -1309,7 +1353,7 @@
       "name": "ミニオンストライク"
     },
     "MIRAGE": {
-      "description": "すべての敵に付与している毒の合計値に等しいブロックを得る。\n(0ブロックを得る。)",
+      "description": "すべての敵に付与されている毒に等しいブロックを得る。\n(0Blockを得る。)",
       "name": "蜃気楼"
     },
     "MISERY": {
@@ -1325,7 +1369,7 @@
       "name": "溶岩の拳"
     },
     "MOMENTUM_STRIKE": {
-      "description": "10ダメージを与える。\nこのカードのコストを0[E]にする。",
+      "description": "11ダメージを与える。\nこのカードのコストが0[E]に減少する。",
       "name": "モメンタムストライク"
     },
     "MONARCHS_GAZE": {
@@ -1393,7 +1437,7 @@
       "name": "逃げ場なし"
     },
     "NULL": {
-      "description": "10ダメージを与える。\n脱力2を付与する。\nダーク1を生成する。",
+      "description": "10ダメージを与える。\n脱力1を付与する。\nダーク1を生成する。",
       "name": "ヌル"
     },
     "OBLIVION": {
@@ -1408,6 +1452,10 @@
       "description": "8ダメージを与える。\n与えたダメージと同じダメージを、他のすべての敵に与える。",
       "name": "四方斬り"
     },
+    "ONE_FOR_ALL": {
+      "description": "すべてのプレイヤーの0[E]のアタックは、追加で3ダメージを与える。",
+      "name": "ワン・フォー・オール"
+    },
     "ONE_TWO_PUNCH": {
       "description": "このターン、次にプレイするアタックをもう1回プレイする。",
       "name": "ワン・ツーパンチ"
@@ -1417,23 +1465,27 @@
       "name": "オービット"
     },
     "OUTBREAK": {
-      "description": "毒を3回付与するたび、すべての敵に11ダメージを与える。",
+      "description": "すべての敵に毒9を付与する。\n毒の効果を即座に発動する。",
       "name": "感染爆発"
     },
     "OUTMANEUVER": {
       "description": "次のターン、[E]を得る。",
       "name": "先読み"
     },
+    "OUTRAGE": {
+      "description": "9ダメージを与える。\nすべてのプレイヤーの捨て札にこのカードのコピーを加える。",
+      "name": "アウトレイジ"
+    },
     "OVERCLOCK": {
       "description": "カードを2枚引く。\n火傷を1枚捨て札に加える。",
       "name": "オーバークロック"
     },
     "PACTS_END": {
-      "description": "廃棄札にカードが3枚以上ある場合、\nすべての敵に17ダメージを与える。",
+      "description": "廃棄札にカードが3枚以上ある場合、\nすべての敵に18ダメージを与える。",
       "name": "契約の終わり"
     },
     "PAGESTORM": {
-      "description": "エセリアルを引くたび、カードを1枚引く。",
+      "description": "エセリアルを1枚引くたび、カードを1枚引く。",
       "name": "紙の嵐"
     },
     "PALE_BLUE_DOT": {
@@ -1489,12 +1541,16 @@
       "name": "ぶんどる"
     },
     "PILLAR_OF_CREATION": {
-      "description": "カードを1枚作成するたび、3ブロックを得る。",
+      "description": "カードを1枚作成するたび、2ブロックを得る。",
       "name": "創造の柱"
     },
     "PINPOINT": {
       "description": "15ダメージを与える。\nこのターンにプレイしたスキル1枚につき、コストが1[E]減る。",
       "name": "ピンポイント"
+    },
+    "PLOT": {
+      "description": "次のターン、すべてのプレイヤーはカードを2枚引く。",
+      "name": "策謀"
     },
     "POISONED_STAB": {
       "description": "6ダメージを与える。\n毒3を付与する。",
@@ -1549,7 +1605,7 @@
     },
     "PROTECTOR": {
       "description": "オスティが10ダメージを与える。\n追加でオスティの最大HPに等しいダメージを与える。",
-      "name": "プロテクター"
+      "name": "守護者"
     },
     "PROWESS": {
       "description": "筋力1を得る。\n敏捷1を得る。",
@@ -1600,7 +1656,7 @@
       "name": "結集"
     },
     "RAMPAGE": {
-      "description": "9ダメージを与える。\nこの戦闘中、このカードのダメージが5増加する。",
+      "description": "10ダメージを与える。\nこの戦闘中、このカードのダメージが5増加する。",
       "name": "ランページ"
     },
     "RATTLE": {
@@ -1620,7 +1676,7 @@
       "name": "死神化"
     },
     "REAVE": {
-      "description": "9ダメージを与える。\nソウルを1枚山札に加える。",
+      "description": "10ダメージを与える。\nソウルを1枚山札に加える。",
       "name": "魂剥ぎ"
     },
     "REBOOT": {
@@ -1632,7 +1688,7 @@
       "name": "リバウンド"
     },
     "REFINE_BLADE": {
-      "description": "鍛造9。\n次のターン、[E]を得る。",
+      "description": "鍛造8。\n次のターン、[E]を得る。",
       "name": "剣の研磨"
     },
     "REFLECT": {
@@ -1644,7 +1700,7 @@
       "name": "反射神経"
     },
     "REFRACT": {
-      "description": "9ダメージを2回与える。\nグラス2を生成する。",
+      "description": "10ダメージを2回与える。\nグラス2を生成する。",
       "name": "屈折"
     },
     "REGRET": {
@@ -1652,11 +1708,11 @@
       "name": "後悔"
     },
     "RELAX": {
-      "description": "15ブロックを得る。\n次のターン、カードを2枚引き、[E]を得る。",
+      "description": "16ブロックを得る。\n次のターン、カードを2枚引き、[E]を得る。",
       "name": "リラックス"
     },
     "REND": {
-      "description": "15ダメージを与える。\n対象の敵に付与しているデバフ1種類につき、追加で5ダメージを与える。",
+      "description": "10ダメージを与える。\n対象の敵に付与しているデバフ1種類につき、追加で5ダメージを与える。",
       "name": "裂傷"
     },
     "RESONANCE": {
@@ -1680,7 +1736,7 @@
       "name": "狂奔"
     },
     "ROCKET_PUNCH": {
-      "description": "13ダメージを与える。\nカードを1枚引く。\n状態異常を作成するたび、プレイするまでこのカードのコストは0[E]。",
+      "description": "13ダメージを与える。\nカードを1枚引く。\n状態異常を作成するたび、プレイするまでこのカードのコストが1[E]減少する。",
       "name": "ロケットパンチ"
     },
     "ROLLING_BOULDER": {
@@ -1700,16 +1756,12 @@
       "name": "血の沸騰"
     },
     "SACRIFICE": {
-      "description": "オスティが生存中の場合、彼を死亡させ、その最大HPの2倍のブロックを得る。\n(0ブロックを得る)",
+      "description": "オスティが生存中の場合、彼を死亡させ、その最大HPの3倍のブロックを得る。\n(0ブロックを得る)",
       "name": "生贄"
     },
     "SALVO": {
       "description": "12ダメージを与える。\nこのターン、手札をすべて保留する。",
       "name": "一斉射撃"
-    },
-    "SCARE": {
-      "description": "すべての敵に脱力1を付与する。",
-      "name": "戦慄"
     },
     "SCAVENGE": {
       "description": "カードを1枚廃棄する。\n次のターン、[E]を得る。",
@@ -1764,7 +1816,7 @@
       "name": "大蛇化"
     },
     "SETUP_STRIKE": {
-      "description": "7ダメージを与える。\nターン終了時まで筋力2を得る。",
+      "description": "7ダメージを与える。\nターン終了時まで筋力3を得る。",
       "name": "セットアップストライク"
     },
     "SEVEN_STARS": {
@@ -1812,7 +1864,7 @@
       "name": "衝撃波"
     },
     "SHROUD": {
-      "description": "破滅を付与するたび、2ブロックを得る。",
+      "description": "破滅を付与するたび、3ブロックを得る。",
       "name": "影の衣"
     },
     "SHRUG_IT_OFF": {
@@ -1822,6 +1874,10 @@
     "SIC_EM": {
       "description": "オスティが5ダメージを与える。このターン、オスティがこの敵を攻撃するたび、召喚3。",
       "name": "やっちゃえ"
+    },
+    "SIDESTEP": {
+      "description": "次のターン、[E]を得る。",
+      "name": "サイドステップ"
     },
     "SIGNAL_BOOST": {
       "description": "次にプレイするパワーをもう1回プレイする。",
@@ -1878,8 +1934,12 @@
       "description": "カードを2枚引く。",
       "name": "ソウル"
     },
+    "SOULBOUND": {
+      "description": "味方を1人選ぶ。\nあなたがソウルを1枚生成するたび、その味方の山札にソウルを1枚加える。",
+      "name": "ソウルバウンド"
+    },
     "SOUL_STORM": {
-      "description": "9ダメージを与える。\n廃棄札にあるソウル1枚につき、追加で2ダメージを与える。",
+      "description": "9ダメージを与える。\n廃棄札にあるソウル1枚につき、追加で4ダメージを与える。",
       "name": "ソウルストーム"
     },
     "SOVEREIGN_BLADE": {
@@ -1919,7 +1979,7 @@
       "name": "戦利品の地図"
     },
     "SPOILS_OF_BATTLE": {
-      "description": "鍛造5。\nカードを2枚引く。",
+      "description": "鍛造6。\nカードを2枚引く。",
       "name": "戦利品"
     },
     "SPORE_MIND": {
@@ -2010,7 +2070,7 @@
       "name": "顕現"
     },
     "SUNDER": {
-      "description": "24ダメージを与える。\nこれで敵を倒した時、[E]を得る。",
+      "description": "26ダメージを与える。\nこれで敵を倒した時、[E]を得る。",
       "name": "切断"
     },
     "SUPERCRITICAL": {
@@ -2046,7 +2106,7 @@
       "name": "剣聖"
     },
     "SYNCHRONIZE": {
-      "description": "ターン終了時まで生成中のオーブ1種類につき、集中力2を得る。\n(集中力0を得る。)",
+      "description": "ターン終了時まで生成中のオーブ1種類につき、集中力1を得る。\n(集中力0を得る。)",
       "name": "同期"
     },
     "SYNTHESIS": {
@@ -2062,11 +2122,11 @@
       "name": "タッグチーム"
     },
     "TANK": {
-      "description": "敵から受けるダメージが2倍になる。他のプレイヤーが敵から受けるダメージが半分になる。",
+      "description": "自身が敵から受けるダメージが50%増加する。\n味方が敵から受けるダメージが 50%減少する。",
       "name": "タンク"
     },
     "TAUNT": {
-      "description": "7ブロックを得る。\n弱体1を付与する。",
+      "description": "6ブロックを得る。\n弱体1を付与する。",
       "name": "挑発"
     },
     "TEAR_ASUNDER": {
@@ -2078,12 +2138,16 @@
       "name": "テンペスト"
     },
     "TERRAFORMING": {
-      "description": "活力6を得る。",
+      "description": "活力7を得る。",
       "name": "テラフォーミング"
     },
     "TESLA_COIL": {
       "description": "3ダメージを与える。\n敵に対し、すべてのライトニングの自動効果を発動する。",
       "name": "テスラコイル"
+    },
+    "THE_BALL": {
+      "description": "10ダメージを与える。\nこの戦闘中、このカードのダメージを10増加させ、ランダムな味方にパスする。",
+      "name": "ボール"
     },
     "THE_BOMB": {
       "description": "カウントが0になると、すべての敵に40ダメージを与える。（爆発まであと3ターン）",
@@ -2098,7 +2162,7 @@
       "name": "狩猟"
     },
     "THE_SCYTHE": {
-      "description": "13ダメージを与える。\nこのカードのダメージが永続的に4増加する。",
+      "description": "13ダメージを与える。\nこのカードのダメージが永続的に5増加する。",
       "name": "大鎌"
     },
     "THE_SEALED_THRONE": {
@@ -2122,7 +2186,7 @@
       "name": "共鳴の手斧"
     },
     "THUNDER": {
-      "description": "ライトニングを解放するたび、命中した各敵に6ダメージを与える。",
+      "description": "ライトニングを解放するたび、命中した各敵に8ダメージを与える。",
       "name": "サンダー"
     },
     "THUNDERCLAP": {
@@ -2146,7 +2210,7 @@
       "name": "毒素"
     },
     "TRACKING": {
-      "description": "脱力を付与された敵は、アタックから受けるダメージが2倍になる。",
+      "description": "脱力を付与された敵は、アタックから受けるダメージが50%増加する。",
       "name": "追跡"
     },
     "TRANSFIGURE": {
@@ -2169,6 +2233,10 @@
       "description": "[E]を得る。\n虚無を1枚捨て札に加える。",
       "name": "加速！"
     },
+    "TUTOR": {
+      "description": "他のプレイヤー1人は、自分の山札からカードを1枚選び、自身の手札に加える。",
+      "name": "教示"
+    },
     "TWIN_STRIKE": {
       "description": "5ダメージを2回与える。",
       "name": "ツインストライク"
@@ -2188,6 +2256,10 @@
     "UNDEATH": {
       "description": "7ブロックを得る。\nこのカードのコピーを1枚捨て札に加える。",
       "name": "不死"
+    },
+    "UNDERWORLD": {
+      "description": "このターン、他のプレイヤーがアタックでダメージを与えるたび、そのダメージに等しい破滅を付与する。",
+      "name": "冥界"
     },
     "UNLEASH": {
       "description": "オスティが6ダメージを与える。\nオスティの現在HPに等しい追加ダメージを与える。",
@@ -2250,7 +2322,7 @@
       "name": "虚脱"
     },
     "WELL_LAID_PLANS": {
-      "description": "ターン終了時、カードを1枚まで保留する。",
+      "description": "ターン終了時、手札を捨てなくなる。",
       "name": "用意周到"
     },
     "WHIRLWIND": {
@@ -2353,7 +2425,7 @@
       "name": "脈打つ亡骸"
     },
     "BEAUTIFUL_BRACELET": {
-      "description": "取得時、デッキのカードを3枚選ぶ。それらにスイフト3をエンチャントする。",
+      "description": "取得時、デッキのランダムなカード4枚にスイフト2をエンチャントする。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "麗しの腕輪"
     },
@@ -2483,7 +2555,7 @@
       "name": "護摩木"
     },
     "BYRDPIP": {
-      "description": "取得時、ビャードの急襲を得る。戦闘中、ビャードのヒナが同行してくれる。",
+      "description": "取得時、ビャードの急襲を得る。戦闘にビャードのヒナがついてきてくれる。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "ビャードのヒナ"
     },
@@ -2593,7 +2665,7 @@
       "name": "悪魔の舌"
     },
     "DIAMOND_DIADEM": {
-      "description": "1ターンの間にプレイしたカードが2枚以下の場合、敵から受けるダメージが半分になる。",
+      "description": "20ブロックを得た状態で戦闘を開始する。2ターン目の開始時にブロックを失わない。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "ダイヤのティアラ"
     },
@@ -2603,12 +2675,12 @@
       "name": "薄汚れた敷物"
     },
     "DISTINGUISHED_CAPE": {
-      "description": "取得時、最大HPを9失う。幻姿を3枚デッキに追加する。",
+      "description": "取得時、ランダムな呪いを2枚と、幻姿を3枚デッキに追加する。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "気高いケープ"
     },
     "DIVINE_DESTINY": {
-      "description": "戦闘開始時、6[S]を得る。",
+      "description": "戦闘開始時、7[S]を得る。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "神授天命"
     },
@@ -2621,6 +2693,11 @@
       "description": "取得時、デッキにあるカードを1枚コピーする。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "ドリーの鏡"
+    },
+    "DOWSING_ROD": {
+      "description": "取得時、ダウジングを1枚デッキに追加する。",
+      "flavor": "このレリックの詳細は今後明かされるはずだ……",
+      "name": "ダウジングロッド"
     },
     "DRAGON_FRUIT": {
       "description": "ゴールドを獲得するたび、最大HPが1増加する。",
@@ -2768,7 +2845,7 @@
       "name": "デスマスク"
     },
     "FUR_COAT": {
-      "description": "取得時、ランダムな戦闘を7箇所マークする。それらの部屋の敵のHPは1になる。",
+      "description": "取得時、ランダムな戦闘を8箇所マークする。それらの部屋の敵のHPは1になる。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "毛皮のコート"
     },
@@ -2858,7 +2935,7 @@
       "name": "螺旋のダーツ"
     },
     "HISTORY_COURSE": {
-      "description": "ターン開始時、最後にプレイしたアタックかスキルのコピーを1枚プレイする。",
+      "description": "ターン開始時、最後にプレイしたアタックのコピーを1枚プレイする。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "歴史学教程"
     },
@@ -3102,6 +3179,11 @@
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "ネオーの骨"
     },
+    "NEOWS_SACRIFICE": {
+      "description": "取得時、竜涎香を1個入手し、罪悪感を1枚デッキに追加する。",
+      "flavor": "このレリックの詳細は今後明かされるはずだ……",
+      "name": "ネオーの供物"
+    },
     "NEOWS_TALISMAN": {
       "description": "取得時、ストライク1枚と防御1枚をアップグレードする。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
@@ -3268,7 +3350,7 @@
       "name": "石化したカエル"
     },
     "PHIAL_HOLSTER": {
-      "description": "取得時、ポーションのスロットを1枠追加し、ランダムなポーションを2個獲得する。",
+      "description": "取得時、ポーションスロットを1枠追加し、ランダムなポーションを2個獲得する。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "薬瓶のホルスター"
     },
@@ -3373,7 +3455,7 @@
       "name": "赤い頭蓋骨"
     },
     "REGALITE": {
-      "description": "カードを作成するたび、2ブロックを得る。",
+      "description": "毎ターン、初めてカードを作成したとき、4ブロックを得る。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "レガライト"
     },
@@ -3453,7 +3535,7 @@
       "name": "巻物箱"
     },
     "SEAL_OF_GOLD": {
-      "description": "ターン開始時、5ゴールドを支払い、[E]を得る。",
+      "description": "ターン開始時、3ゴールドを支払い、[E]を得る。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "黄金の印章"
     },
@@ -3468,7 +3550,7 @@
       "name": "自己形成粘土"
     },
     "SERE_TALON": {
-      "description": "取得時、ランダムな呪いを2枚と、願いを3枚デッキに追加する。",
+      "description": "取得時、最大HPを9失う。願いを3枚デッキに追加する。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "干からびた爪"
     },
@@ -3483,12 +3565,12 @@
       "name": "手裏剣"
     },
     "SIGNET_RING": {
-      "description": "取得時、999ゴールドを獲得する。",
+      "description": "取得時、888ゴールドを獲得する。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "シグネットリング"
     },
     "SILKEN_TRESS": {
-      "description": "取得時、すべてのゴールドを失う。最初のカード報酬のすべてのカードに魅惑をエンチャントする。",
+      "description": "取得時、すべてのゴールドを失う。あなたの最初のカード報酬のすべてのカードに魅惑をエンチャントする。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "絹の髪束"
     },
@@ -3623,7 +3705,7 @@
       "name": "小さなポスト"
     },
     "TOASTY_MITTENS": {
-      "description": "ターン開始時、山札の一番上のカードを廃棄し、筋力1を得る。",
+      "description": "ターン開始時、手札のカードを1枚廃棄し、筋力1を得る。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "あったか手袋"
     },
@@ -3648,7 +3730,7 @@
       "name": "毒の卵"
     },
     "TOY_BOX": {
-      "description": "取得時、おもちゃのレリックを4個入手する。3回の戦闘ごとに、最も左にあるおもちゃのレリックが溶けて消える。",
+      "description": "取得時、おもちゃのレリックを5個入手する。3回の戦闘ごとに、最も左にあるおもちゃのレリックが溶けて消える。",
       "flavor": "このレリックの詳細は今後明かされるはずだ……",
       "name": "おもちゃ箱"
     },
@@ -3804,6 +3886,10 @@
       "smartDescription": "ターン開始時、捨て札からランダムなアタックを{Amount}枚手札に加え、この戦闘中{Amount:choose(1):それ|それら}をアップグレードする。",
       "name": "闘争心"
     },
+    "AMBERGRIS_POWER": {
+      "description": "このターンの後、追加のターンを得る。",
+      "name": "龍涎香"
+    },
     "ARSENAL_POWER": {
       "description": "カードを作成するたび、筋力1を得る。",
       "smartDescription": "カードを作成するたび、筋力{Amount}を得る。",
@@ -3887,6 +3973,11 @@
       "smartDescription": "このターン、次にプレイする{Amount}枚のスキルをもう1回プレイする。",
       "name": "バースト"
     },
+    "CACOPHONY_POWER": {
+      "description": "すべてのプレイヤーによってカードが33枚引かれるたび、ランダムな敵にダメージを与える",
+      "smartDescription": "すべてのプレイヤーがあと{Cards}枚カードを引くと、ランダムな敵に{Amount}ダメージを与える。",
+      "name": "不協和音"
+    },
     "CALAMITY_POWER": {
       "description": "アタックをプレイするたび、ランダムなアタックを1枚手札に加える。",
       "smartDescription": "アタックをプレイするたび、ランダムなアタックを{Amount}枚手札に加える。",
@@ -3908,7 +3999,7 @@
       "name": "拘束の鎖"
     },
     "CHILD_OF_THE_STARS_POWER": {
-      "description": "⭐を消費するたび、1ブロックを得る。",
+      "description": "⭐を消費するたび、2ブロックを得る。",
       "smartDescription": "{singleStarIcon}を消費するたび、{Amount}ブロックを得る。",
       "name": "星の子"
     },
@@ -3921,6 +4012,11 @@
       "description": "このターン、弱体中の敵から受けるダメージが50%減少する。",
       "smartDescription": "{Amount:choose(1):このターン|{Amount}ターンの間}、弱体中の敵から受けるダメージが{DamageDecrease:percentLess()}%減少する。",
       "name": "巨人"
+    },
+    "CONCOCT_POWER": {
+      "description": "アタックでブロックされずにダメージを与えるたび、毒 3を付与する。",
+      "smartDescription": "アタックでブロックされずにダメージを与えるたび、毒 {Amount}を付与する。",
+      "name": "調合"
     },
     "CONFUSED_POWER": {
       "description": "カードを引いた時、コストが0から3の間でランダムに変化する。",
@@ -4026,7 +4122,7 @@
       "name": "崩御"
     },
     "DEMON_FORM_POWER": {
-      "description": "ターン開始時、筋力2を得る。",
+      "description": "ターン開始時、筋力3を得る。",
       "smartDescription": "ターン開始時、筋力{Amount}を得る。",
       "name": "悪魔化"
     },
@@ -4039,11 +4135,6 @@
       "description": "敏捷はカードから得るブロックを増加させる。",
       "smartDescription": "カードから得るブロックが{Amount:abs()}{Amount:cond:<0?減少|増加}する。",
       "name": "敏捷"
-    },
-    "DIAMOND_DIADEM_POWER": {
-      "description": "このターン、敵から受けるダメージが50%減少する。",
-      "smartDescription": "このターン、敵から受けるダメージが50%減少する。",
-      "name": "ダイヤのティアラ"
     },
     "DIE_FOR_YOU_POWER": {
       "description": "オスティはブロックされなかった攻撃ダメージをすべて吸収する。",
@@ -4204,8 +4295,8 @@
       "name": "重力"
     },
     "GUARDED_POWER": {
-      "description": "敵から受けるダメージが半分になる。",
-      "smartDescription": "敵から受けるダメージが半分になる。{Applier.StringValue}が死ぬと効果が消滅する。",
+      "description": "敵から受けるダメージが 50%減少する。",
+      "smartDescription": "敵から受けるダメージが {DamageDecrease:percentLess()}%減少する。{Applier.StringValue}が死亡すると効果が消滅する。",
       "name": "護衛"
     },
     "HAILSTORM_POWER": {
@@ -4262,6 +4353,11 @@
       "description": "スペクトルナイトが生存中、あなたのすべてのカードはエセリアルを得る。",
       "name": "呪術"
     },
+    "HIBERNATE_POWER": {
+      "description": "このターン、あなたのフロストはすべての味方にブロックを与える。",
+      "smartDescription": "{Amount}ターンの間、あなたのフロストはすべての味方にブロックを与える。",
+      "name": "冬眠"
+    },
     "HIGH_VOLTAGE_POWER": {
       "description": "このモンスターはターン終了時、筋力2を得る。",
       "smartDescription": "{OwnerName}のターン終了時、筋力{Amount}を得る。",
@@ -4276,6 +4372,11 @@
       "description": "このモンスターは攻撃がいずれかのプレイヤーに完全にブロックされた場合、スタンする。",
       "smartDescription": "{OwnerName}の攻撃が{IsMultiplayer:いずれかのプレイヤーに|}完全にブロックされた場合、スタンする。",
       "name": "アンバランス"
+    },
+    "IMITATION_LEARNING_POWER": {
+      "description": "他のプレイヤーがパワーをプレイした時、そのコピーをプレイする。",
+      "smartDescription": "{TargetPlayer}がパワーをプレイした時、そのコピーをプレイする（{Amount}回まで）。",
+      "name": "模倣学習"
     },
     "IMPROVEMENT_POWER": {
       "description": "戦闘終了時、ランダムなカードを1枚アップグレードする。",
@@ -4436,6 +4537,11 @@
       "smartDescription": "カードをプレイするたび、この敵は破滅{Amount}を得る。",
       "name": "オブリビオン"
     },
+    "ONE_FOR_ALL_POWER": {
+      "description": "0[E]のアタックが追加ダメージを与える。",
+      "smartDescription": "0{energyPrefix:energyIcons(1)}のアタックは、追加で{Amount} ダメージを与える。",
+      "name": "ワン・フォー・オール"
+    },
     "ONE_TWO_PUNCH_POWER": {
       "description": "このターン、次にプレイするアタックをもう1回プレイする。",
       "smartDescription": "このターン、次にプレイする{Amount}枚のアタックをもう1回プレイする。",
@@ -4446,14 +4552,9 @@
       "smartDescription": "{Energy:energyIcons()}を消費するたび、{Amount:energyIcons()}を得る。",
       "name": "オービット"
     },
-    "OUTBREAK_POWER": {
-      "description": "毒を10回付与するたび、すべての敵にダメージを与える。",
-      "smartDescription": "毒を{Repeat}回付与するたび、すべての敵に{Amount}ダメージを与える。",
-      "name": "感染爆発"
-    },
     "PAGESTORM_POWER": {
-      "description": "エセリアルを引くたび、カードを1枚引く。",
-      "smartDescription": "エセリアルを引くたび、カードを{Amount}枚引く。",
+      "description": "エセリアルを1枚引くたび、カードを1枚引く。",
+      "smartDescription": "エセリアルを1枚引くたび、カードを{Amount}枚引く。",
       "name": "紙の嵐"
     },
     "PAINFUL_STABS_POWER": {
@@ -4492,7 +4593,7 @@
       "name": "ファントムブレード"
     },
     "PILLAR_OF_CREATION_POWER": {
-      "description": "カードを作成するたび、5ブロックを得る。",
+      "description": "カードを作成するたび、{Amount}ブロックを得る。",
       "smartDescription": "カードを作成するたび、{Amount}ブロックを得る。",
       "name": "創造の柱"
     },
@@ -4553,7 +4654,7 @@
     },
     "REAPER_FORM_POWER": {
       "description": "アタックでダメージを与えるたび、そのダメージに等しい破滅を付与する。",
-      "smartDescription": "アタックでダメージを与えるたび、そのダメージの{Amount}倍の破滅を付与する。",
+      "smartDescription": "アタックでダメージを与えるたび、そのダメージの{Amount}倍に等しい破滅を付与する。",
       "name": "死神化"
     },
     "REATTACH_POWER": {
@@ -4608,7 +4709,7 @@
     },
     "SANDPIT_POWER": {
       "description": "貪りの獣が使用するパワー。",
-      "smartDescription": "{Amount:plural:貪りの獣がターンを迎えた時|{Amount}ターン後}、あなたは食われて死ぬ。",
+      "smartDescription": "{Amount:choose(1):貪りの獣がターンを迎えた時|{Amount}ターン後}、あなたは食われて死ぬ。",
       "name": "蟻地獄"
     },
     "SEEKING_EDGE_POWER": {
@@ -4688,7 +4789,7 @@
     },
     "SLOW_POWER": {
       "description": "このターン、カードをプレイするたび、この敵がアタックから受けるダメージが10%増加する。",
-      "smartDescription": "このターン、カードをプレイするたび、{OnPlayer:自身が|この敵が}アタックから受けるダメージが10%増加する。{Amount:plural:|}",
+      "smartDescription": "このターン、カードをプレイするたび、{OnPlayer:自身が|この敵が}アタックから受けるダメージが10%増加する。{SlowAmount:cond:>0? (Receives {DisplayAmount}%のダメージ増加)|}",
       "name": "スロウ"
     },
     "SLUMBER_POWER": {
@@ -4715,6 +4816,11 @@
       "description": "着地するまで、アタックから受けるダメージが50%減少する。",
       "smartDescription": "着地するまで、アタックから受けるダメージが{DamageDecrease}%減少する。",
       "name": "飛翔"
+    },
+    "SOULBOUND_POWER": {
+      "description": "{ApplierName}がソウルを1枚生成するたび、自身の山札にソウルを1枚加える。",
+      "smartDescription": "{ApplierName}がソウルを1枚生成するたび、自身の山札にソウルを{Amount}枚加える。",
+      "name": "ソウルバウンド"
     },
     "SPECTRUM_SHIFT_POWER": {
       "description": "ターン開始時、ランダムな無色カードを1枚手札に加える。",
@@ -4752,7 +4858,7 @@
       "name": "蒸気噴出"
     },
     "STOCK_POWER": {
-      "description": "倒された時、代わりに新しいアックスマシンが召喚される。",
+      "description": "倒された時、代わりに新しいアックスボットが召喚される。",
       "name": "ストック"
     },
     "STORM_POWER": {
@@ -4776,8 +4882,8 @@
       "name": "筋力"
     },
     "SUBROUTINE_POWER": {
-      "description": "パワーをプレイするたび、1[E]を得る。",
-      "smartDescription": "パワーをプレイするたび、{Amount}{Amount:energyIcons()}を得る。",
+      "description": "パワーをプレイするたび、[E]を得る。",
+      "smartDescription": "パワーをプレイするたび、{Amount:energyIcons()}を得る。",
       "name": "サブルーチン"
     },
     "SUCK_POWER": {
@@ -4786,8 +4892,8 @@
       "name": "吸血"
     },
     "SUMMON_NEXT_TURN_POWER": {
-      "description": "次のターンの開始時、召喚2。",
-      "smartDescription": "次のターンの開始時、召喚{Amount}。",
+      "description": "次のターン開始時、召喚2。",
+      "smartDescription": "次のターン開始時、召喚{Amount}。",
       "name": "次ターン召喚"
     },
     "SURPRISE_POWER": {
@@ -4824,8 +4930,8 @@
       "name": "もつれ"
     },
     "TANK_POWER": {
-      "description": "敵から受けるダメージが2倍になる。味方が敵から受けるダメージが半分になる。",
-      "smartDescription": "敵から受けるダメージが2倍になる。味方が敵から受けるダメージが半分になる。",
+      "description": "敵から受けるダメージが50%増加する。味方が敵から受けるダメージが50%減少する。",
+      "smartDescription": "敵から受けるダメージが{DamageIncrease:percentMore()}%増加する。味方が敵から受けるダメージが{DamageDecrease:percentLess()}%減少する。",
       "name": "タンク"
     },
     "TEMPORARY_DEXTERITY_POWER": {
@@ -4896,8 +5002,8 @@
       "name": "円環の障壁"
     },
     "TRACKING_POWER": {
-      "description": "脱力状態の敵は、アタックから受けるダメージが2倍になる。",
-      "smartDescription": "脱力状態の敵は、アタックから受けるダメージが{Amount}倍になる。",
+      "description": "脱力状態の敵は、アタックから受けるダメージが50%増加する。",
+      "smartDescription": "脱力状態の敵は、アタックから受けるダメージが{Amount}%増加する。",
       "name": "追跡"
     },
     "TRASH_TO_TREASURE_POWER": {
@@ -4909,6 +5015,11 @@
       "description": "ターン開始時、カードを1枚引き、手札からカードを1枚廃棄する。",
       "smartDescription": "ターン開始時、カードを{Amount}枚引き、手札からカードを{Amount}枚廃棄する。",
       "name": "専制"
+    },
+    "UNDERWORLD_POWER": {
+      "description": "このターン、他のプレイヤーがアタックでダメージを与えるたび、そのダメージに等しい破滅を付与する。",
+      "smartDescription": "このターン、他のプレイヤーがアタックでダメージを与えるたび、そのダメージの{Amount}倍に等しい破滅を付与する。",
+      "name": "冥界"
     },
     "UNMOVABLE_POWER": {
       "description": "毎ターン、最初にカードからブロックを得た時、その値を2倍にする。",
@@ -4956,8 +5067,8 @@
       "name": "脱力"
     },
     "WELL_LAID_PLANS_POWER": {
-      "description": "ターン終了時、1枚までカードを保留する。",
-      "smartDescription": "ターン終了時、{Amount}枚までカードを保留する。",
+      "description": "ターン終了時、手札を捨てなくなる。",
+      "smartDescription": "ターン終了時、手札を捨てなくなる。",
       "name": "用意周到"
     },
     "WITHERING_PRESENCE_POWER": {
@@ -4972,6 +5083,10 @@
     }
   },
   "potions": {
+    "AMBERGRIS": {
+      "description": "最大HPの50%を回復する。戦闘中に使用した場合、追加のターンを得る。",
+      "name": "龍涎香"
+    },
     "ASHWATER": {
       "description": "手札から任意の枚数のカードを廃棄する。",
       "name": "アッシュウォーター"
@@ -5654,7 +5769,7 @@
     },
     "MORPHIC_GROVE": {
       "name": "モーフィックの木立",
-      "description": "水晶の木々が生い茂る木立ちに入ると、木々が興奮したように震え始めた！\n木々の中からモーフィックの群れが飛び出し、挨拶と歓迎の言葉の声であなたを迎える。\n\nその中の一体のモーフィックだけが隅でそわそわしており、明らかに他の者たちほど社交的ではないようだ。\n\n群れの方に向かうか、それとも独りぼっちの方に近づこうか？",
+      "description": "水晶の木々が生い茂る木立ちに入ると、木々が興奮したように震え始めた！\n木々の中からモーフィックの群れが飛び出し、挨拶と歓迎の声であなたを迎える。\n\nその中の一体のモーフィックだけ、隅の方でそわそわしている。他のに比べると、明らかに社交的ではないようだ。\n\n群れか、ひとりぼっちか。どちらに近づこうか？",
       "choices": [
         {
           "name": "群れ",
@@ -5662,7 +5777,7 @@
           "outcome": "ピーピーと鳴くモーフィックたちに挨拶すると、彼らは水晶の腕であなたを抱きしめた。\n\n彼らは共有する知識を分け与え、モーフィックの魔法を注入して、あなたの性質を造り変えていく…… このモーフィックたちは、なんて愛らしい生き物なんだろう。\n\nその中の一匹がゴールドをスリ取っていった。 "
         },
         {
-          "name": "独りぼっち",
+          "name": "ひとりぼっち",
           "description": "最大HPが5増加。",
           "outcome": "その性格に共感をおぼえ、独りぼっちのモーフィックに手を差し伸べた。\nそいつは小さな水晶の果実をプレゼントしてくれた。 あなたは彼らの習慣に倣い、それを口にする。\n\n果実は思考と目的をクリアにしてくれた。 あなたは感謝の意を伝え、先へと進む。"
         }
@@ -5686,7 +5801,7 @@
     },
     "PUNCH_OFF": {
       "name": "パンチ対決",
-      "description": "2体のパンチ・コンストラクトが殴り合っており、その間にいくつかのお宝が落ちているのが見える……\n\n盗み取ってみるか？",
+      "description": "2体のボクシングロボが殴り合っている。その間には、いくつかのお宝が落ちているようだ……\n\n盗み取ってみるか？",
       "choices": [
         {
           "name": "あいつらなら倒せそうだ",
@@ -5814,7 +5929,7 @@
         },
         {
           "name": "読破する",
-          "description": "パワーを1枚選び、{Enchantment3}2をエンチャントする。",
+          "description": "パワーを1枚選び、迅速2をエンチャントする。",
           "locked": "エンチャントできるパワーがない。",
           "outcome": "なんて魅力的な本なんだ！ いくつかの金言が頭に深く刻み込まれた。\n「デカい敵からは逃げろ」\n「カードは全部ピックしろ」\n「ブロックは臆病者のすること」\n\n気づけば、あなたの両手は血まみれになっていた。"
         },
@@ -5989,7 +6104,7 @@
     },
     "THE_FUTURE_OF_POTIONS": {
       "name": "未来のポーション？",
-      "description": "角を曲がると、かすかな地響きを感じる。 そこには、巨大な回転する装置があった！\nいくつかの投入口を備えており、液体を高度に圧縮し、服用可能な錠剤に変換するようだ。\n\nポーションを、ほんの小さな一口サイズに変えてしまうというアイデアには不安を覚える。 だが、何事もまずは試してみるべきか？",
+      "description": "角を曲がると、かすかな地響きを感じる。 そこにあったのは、巨大な回転する装置だった！\nいくつかの投入口が備えたそれは、液体を高度に圧縮し、服用可能な錠剤に変換するようだ。\n\nポーションを、ほんの小さな一口サイズに変えてしまうというアイデアには不安を覚える。 だが、何事もまずは試してみるべきか？",
       "choices": [
         {
           "name": "ポーション（コモン）を投入",
@@ -6339,7 +6454,7 @@
         },
         {
           "character": "IRONCLAD",
-          "text": "お前さんのあの重い剣、まだオレが預かってるぜ…… だが、修復できるヤツが誰一人見つからねぇんだ。"
+          "text": "お前さんのあの重たい剣、まだオレが預かってるぜ…… だが、修復できるヤツが誰一人見つからねぇんだ。"
         },
         {
           "character": "IRONCLAD",
@@ -6399,7 +6514,7 @@
         },
         {
           "character": "SILENT",
-          "text": "最後の決戦か何からしいな。よし、お前さんの装備を整えてやろう！"
+          "text": "“最後の決戦”だか何からしいな。よし、お前さんの装備を整えてやろう！"
         },
         {
           "character": "firstVisitEver",
@@ -6581,7 +6696,7 @@
         },
         {
           "name": "薬瓶のホルスター",
-          "description": "取得時、ポーションのスロットを1枠追加し、ランダムなポーションを2個獲得する。",
+          "description": "取得時、ポーションスロットを1枠追加し、ランダムなポーションを2個獲得する。",
           "relic_id": "PHIAL_HOLSTER",
           "pool": "positive"
         },
@@ -6610,6 +6725,12 @@
           "pool": "cursed"
         },
         {
+          "name": "ダウジングロッド",
+          "description": "取得時、ダウジングを1枚デッキに追加する。",
+          "relic_id": "DOWSING_ROD",
+          "pool": "cursed"
+        },
+        {
           "name": "重い石板",
           "description": "取得時、 3枚のレアカードから1枚を選び、デッキに追加する。怪我を1枚デッキに追加する。",
           "relic_id": "HEFTY_TABLET",
@@ -6634,6 +6755,12 @@
           "pool": "cursed"
         },
         {
+          "name": "ネオーの供物",
+          "description": "取得時、竜涎香を1個入手し、罪悪感を1枚デッキに追加する。",
+          "relic_id": "NEOWS_SACRIFICE",
+          "pool": "cursed"
+        },
+        {
           "name": "危険な大鋏",
           "description": "取得時、デッキからカードを2枚削除する。HP16を失う。",
           "relic_id": "PRECARIOUS_SHEARS",
@@ -6641,7 +6768,7 @@
         },
         {
           "name": "絹の髪束",
-          "description": "取得時、すべてのゴールドを失う。最初のカード報酬のすべてのカードに魅惑をエンチャントする。",
+          "description": "取得時、すべてのゴールドを失う。あなたの最初のカード報酬のすべてのカードに魅惑をエンチャントする。",
           "relic_id": "SILKEN_TRESS",
           "pool": "cursed"
         },
@@ -7352,7 +7479,7 @@
         },
         {
           "character": "REGENT",
-          "text": "取引の義務を果たさないおつもりで？\nならば、別の契約はいかがでしょう？ そちらもオススメですよ。"
+          "text": "取引の義務を果たさないおつもりで？\nならば、更なる契約を結ばれるのはいかがでしょう？ こちらもオススメですよ。"
         },
         {
           "character": "SILENT",
@@ -7438,7 +7565,7 @@
       "name": "刻印"
     },
     "INKY": {
-      "description": "このカードは追加で1ダメージを与え、脱力1を付与する。",
+      "description": "このカードは脱力1を付与する。",
       "name": "墨塗り"
     },
     "INSTINCT": {
@@ -7586,7 +7713,7 @@
         "ONE_TWO": "ワンツー",
         "SHARPEN": "研ぎすまし"
       },
-      "name": "アックスマシン",
+      "name": "アックスボット",
       "move_names": {
         "Boot Up": "起動",
         "Hammer Uppercut": "ハンマーアッパー",
@@ -7800,7 +7927,7 @@
         "DARK_STRIKE": "ダークストライク",
         "INCANTATION": "祈祷"
       },
-      "name": "石を纏った狂信者",
+      "name": "石纏いの狂信者",
       "move_names": {
         "Dark Strike": "ダークストライク",
         "Incantation": "祈祷"
@@ -7927,18 +8054,18 @@
     "CUBEX_CONSTRUCT": {
       "moves": {
         "CHARGE_UP": "チャージアップ",
-        "EXPEL": "排出",
+        "EXPEL": "排除",
         "REPEATER_BLAST": "リピーターブラスト"
       },
       "name": "キューベックス",
       "move_names": {
         "Charge Up": "チャージアップ",
-        "Expel": "排出",
+        "Expel": "排除",
         "Repeater Blast": "リピーターブラスト"
       },
       "move_titles": [
         "チャージアップ",
-        "排出",
+        "排除",
         "リピーターブラスト"
       ]
     },
@@ -8097,7 +8224,7 @@
         "FLEE": "逃走",
         "SPAWNED": "目覚め"
       },
-      "name": "ファットグレムリン",
+      "name": "太っちょグレムリン",
       "move_names": {
         "Flee": "逃走",
         "Wake Up": "目覚め"
@@ -8305,7 +8432,7 @@
       "moves": {
         "GUARD": "ガード"
       },
-      "name": "ガードマシン",
+      "name": "ガードボット",
       "move_names": {
         "Guard": "ガード"
       },
@@ -8377,18 +8504,18 @@
       "moves": {
         "JAB": "ジャブ",
         "PIERCING_GAZE": "鋭い視線",
-        "WHIRLWIND": "旋風"
+        "WHIRLWIND": "振り回し"
       },
       "name": "インクレット",
       "move_names": {
         "Jab": "ジャブ",
         "Piercing Gaze": "鋭い視線",
-        "Whirlwind": "旋風"
+        "Whirlwind": "振り回し"
       },
       "move_titles": [
         "ジャブ",
         "鋭い視線",
-        "旋風"
+        "振り回し"
       ]
     },
     "KIN_FOLLOWER": {
@@ -8653,18 +8780,21 @@
       "moves": {
         "BREAKER": "ブレイカー",
         "FLAIL": "フレイル",
-        "RAM": "打ち込み"
+        "RAM": "打ち込み",
+        "WAR_CHANT": "戦いの歌"
       },
       "name": "謎の騎士",
       "move_names": {
         "Breaker": "ブレイカー",
         "Flail": "フレイル",
-        "Ram": "打ち込み"
+        "Ram": "打ち込み",
+        "War Chant": "戦いの歌"
       },
       "move_titles": [
         "ブレイカー",
         "フレイル",
-        "打ち込み"
+        "打ち込み",
+        "戦いの歌"
       ]
     },
     "MYTE": {
@@ -8710,7 +8840,7 @@
       "moves": {
         "NOISE": "ノイズ"
       },
-      "name": "ノイズマシン",
+      "name": "ノイズボット",
       "move_names": {
         "Noise": "ノイズ"
       },
@@ -8832,7 +8962,7 @@
         "READY": "準備完了",
         "STRONG_PUNCH": "ストロングパンチ"
       },
-      "name": "パンチマシン",
+      "name": "ボクシングロボ",
       "move_names": {
         "Fast Punch": "ファストパンチ",
         "READY": "準備完了",
@@ -8957,18 +9087,18 @@
     "SHRINKER_BEETLE": {
       "moves": {
         "CHOMP": "噛み砕く",
-        "SHRINKER": "シュリンカー",
+        "SHRINKER": "縮小",
         "STOMP": "踏みつけ"
       },
       "name": "シュリンカービートル",
       "move_names": {
         "Chomp": "噛み砕く",
-        "Shrinker": "シュリンカー",
+        "Shrinker": "縮小",
         "Stomp": "踏みつけ"
       },
       "move_titles": [
         "噛み砕く",
-        "シュリンカー",
+        "縮小",
         "踏みつけ"
       ]
     },
@@ -9177,7 +9307,7 @@
       "moves": {
         "STAB": "突き"
       },
-      "name": "スタブマシン",
+      "name": "スタブボット",
       "move_names": {
         "Stab": "突き"
       },
@@ -9352,7 +9482,7 @@
         "DREAD": "恐怖",
         "MIASMA": "瘴気"
       },
-      "name": "忘れられし者",
+      "name": "忘れられしもの",
       "move_names": {
         "Dread": "恐怖",
         "Miasma": "瘴気"
@@ -9364,6 +9494,7 @@
     },
     "THE_INSATIABLE": {
       "moves": {
+        "DEVOUR": "貪り",
         "LIQUIFY_GROUND": "大地の溶解",
         "LUNGING_BITE": "突進噛みつき",
         "SALIVATE": "よだれ",
@@ -9371,12 +9502,14 @@
       },
       "name": "貪りの獣",
       "move_names": {
+        "Devour": "貪り",
         "Liquify Ground": "大地の溶解",
         "Lunging Bite": "突進噛みつき",
         "Salivate": "よだれ",
         "Thrash": "大暴れ"
       },
       "move_titles": [
+        "貪り",
         "大地の溶解",
         "突進噛みつき",
         "よだれ",
@@ -9388,7 +9521,7 @@
         "DEBILITATING_SMOG": "衰弱スモッグ",
         "EYE_LASERS": "アイレーザー"
       },
-      "name": "迷える者",
+      "name": "迷えるもの",
       "move_names": {
         "Debilitating Smog": "衰弱スモッグ",
         "Eye Lasers": "アイレーザー"
@@ -9428,7 +9561,7 @@
         "FLUTTER": "羽ばたき",
         "HAT_TRICK": "ハットトリック",
         "NAB": "ひったくり",
-        "THIEVERY": "泥棒"
+        "THIEVERY": "ぬすむ"
       },
       "name": "泥棒バッタ",
       "move_names": {
@@ -9436,14 +9569,14 @@
         "Flutter": "羽ばたき",
         "Hat Trick": "ハットトリック",
         "Nab": "ひったくり",
-        "Thievery": "泥棒"
+        "Thievery": "ぬすむ"
       },
       "move_titles": [
         "逃走",
         "羽ばたき",
         "ハットトリック",
         "ひったくり",
-        "泥棒"
+        "ぬすむ"
       ]
     },
     "TOADPOLE": {
@@ -9467,16 +9600,16 @@
     "TORCH_HEAD_AMALGAM": {
       "moves": {
         "BEAM": "ビーム",
-        "TACKLE": "体当たり"
+        "STRONG_TACKLE": "強力タックル"
       },
       "name": "トーチヘッド・アマルガム",
       "move_names": {
         "Beam": "ビーム",
-        "Tackle": "体当たり"
+        "Strong Tackle": "強力タックル"
       },
       "move_titles": [
         "ビーム",
-        "体当たり"
+        "強力タックル"
       ]
     },
     "TOUGH_EGG": {
@@ -9514,6 +9647,7 @@
         "BELOW": "下からの攻撃",
         "BITE": "噛みつき",
         "BURROW": "潜伏",
+        "DIZZY": "めまい",
         "STRIKE": "出現攻撃",
         "UNBURROW": "出現"
       },
@@ -9522,6 +9656,7 @@
         "Attack from Below": "下からの攻撃",
         "Bite": "噛みつき",
         "Burrow": "潜伏",
+        "Dizzy": "めまい",
         "Emerging Strike": "出現攻撃",
         "Unburrow": "出現"
       },
@@ -9529,6 +9664,7 @@
         "下からの攻撃",
         "噛みつき",
         "潜伏",
+        "めまい",
         "出現攻撃",
         "出現"
       ]
@@ -9536,16 +9672,16 @@
     "TURRET_OPERATOR": {
       "moves": {
         "RELOAD": "リロード",
-        "UNLOAD": "アンロード！"
+        "UNLOAD": "ぶっ放せ！"
       },
       "name": "タレットオペレーター",
       "move_names": {
         "Reload": "リロード",
-        "Unload!": "アンロード！"
+        "Unload!": "ぶっ放せ！"
       },
       "move_titles": [
         "リロード",
-        "アンロード！"
+        "ぶっ放せ！"
       ]
     },
     "TWIG_SLIME_M": {
@@ -9696,7 +9832,7 @@
       "moves": {
         "ZAP": "ザップ"
       },
-      "name": "ザップマシン",
+      "name": "ザップボット",
       "move_names": {
         "Zap": "ザップ"
       },

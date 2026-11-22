@@ -1,5 +1,769 @@
 [
   {
+    "version": "0.111.1",
+    "previousVersion": "0.107.1",
+    "date": "2026-11-17",
+    "label": "Major Update #3",
+    "changes": {
+      "cards": {
+        "modified": {
+          "ACCELERANT": {
+            "rarity": {
+              "old": "Rare",
+              "new": "Uncommon"
+            }
+          },
+          "ALIGNMENT": {
+            "star_cost": {
+              "old": 3,
+              "new": 2
+            }
+          },
+          "ANTICIPATE": {
+            "upgrade.dexterity": {
+              "old": 1,
+              "new": 2
+            }
+          },
+          "BEACON_OF_HOPE": {
+            "cost": {
+              "old": 1,
+              "new": 2
+            }
+          },
+          "BIASED_COGNITION": {
+            "description": {
+              "old": "Gain 4 Focus.\nAt the start of your turn, lose 1 Focus.",
+              "new": "Gain 5 Focus.\nAt the start of your turn, lose 1 Focus."
+            }
+          },
+          "BLOODLETTING": {
+            "rarity": {
+              "old": "Common",
+              "new": "Uncommon"
+            }
+          },
+          "BRIGHTEST_FLAME": {
+            "description": {
+              "old": "Gain [E][E].\nDraw 2 cards.\nLose 1 Max HP.",
+              "new": "Gain [E][E].\nDraw 2 cards.\nLose 2 Max HP."
+            },
+            "upgrade.description": {
+              "old": "Gain [E][E][E].\nDraw 3 cards.\nLose 1 Max HP.",
+              "new": "Gain [E][E][E].\nDraw 3 cards.\nLose 2 Max HP."
+            }
+          },
+          "COLLISION_COURSE": {
+            "description": {
+              "old": "Deal 11 damage.\nAdd a Debris into your Hand.",
+              "new": "Deal 10 damage.\nAdd a Debris into your Hand."
+            }
+          },
+          "COLOSSUS": {
+            "description": {
+              "old": "Gain 5 Block.\nYou receive 50% less damage from Vulnerable enemies this turn.",
+              "new": "Gain 4 Block.\nYou receive 50% less damage from Vulnerable enemies this turn."
+            }
+          },
+          "CRIMSON_MANTLE": {
+            "description": {
+              "old": "At the start of your turn, lose 1 HP and gain 8 Block.",
+              "new": "At the start of your turn, lose 1 HP and gain 7 Block."
+            }
+          },
+          "CRUELTY": {
+            "rarity": {
+              "old": "Rare",
+              "new": "Uncommon"
+            }
+          },
+          "CRUSH_UNDER": {
+            "description": {
+              "old": "Deal 7 damage to ALL enemies. All enemies lose 1 Strength this turn.",
+              "new": "Deal 8 damage to ALL enemies. All enemies lose 1 Strength this turn."
+            }
+          },
+          "DEMON_FORM": {
+            "description": {
+              "old": "At the start of your turn, gain 2 Strength.",
+              "new": "At the start of your turn, gain 3 Strength."
+            }
+          },
+          "DEVASTATE": {
+            "description": {
+              "old": "Deal 30 damage.",
+              "new": "Deal 35 damage."
+            }
+          },
+          "DOMINATE": {
+            "rarity": {
+              "old": "Uncommon",
+              "new": "Rare"
+            }
+          },
+          "ECHOING_SLASH": {
+            "rarity": {
+              "old": "Rare",
+              "new": "Uncommon"
+            }
+          },
+          "EIDOLON": {
+            "keywords": {
+              "old": [],
+              "new": [
+                "Exhaust"
+              ]
+            },
+            "description": {
+              "old": "Exhaust your Hand.\nIf 9 cards were Exhausted this way, gain 1 Intangible.",
+              "new": "Play ALL Ethereal cards in your Exhaust Pile."
+            }
+          },
+          "EXPECT_A_FIGHT": {
+            "cost": {
+              "old": 2,
+              "new": 3
+            },
+            "description": {
+              "old": "Gain [E] for each Attack in your Hand.\nYou cannot gain\nadditional [E] this turn.",
+              "new": "Gain 15 Block.\nGains 5 additional Block for each Strength you have."
+            },
+            "upgrade.cost": {
+              "old": 1,
+              "new": null
+            }
+          },
+          "EXPERTISE": {
+            "description": {
+              "old": "Draw cards until you have 6 in your Hand.",
+              "new": "Draw 2 cards.\nThey gain Retain this turn."
+            }
+          },
+          "FLANKING": {
+            "rarity": {
+              "old": "Uncommon",
+              "new": "Rare"
+            }
+          },
+          "FLICK_FLACK": {
+            "description": {
+              "old": "Deal 6 damage to ALL enemies.",
+              "new": "Deal 7 damage to ALL enemies."
+            }
+          },
+          "FORGOTTEN_RITUAL": {
+            "description": {
+              "old": "If you Exhausted a card this turn, gain [E][E][E].",
+              "new": "Gain [E][E][E]."
+            }
+          },
+          "FUEL": {
+            "description": {
+              "old": "Gain [E].\nDraw 1 card.",
+              "new": "Gain [E]."
+            },
+            "upgrade.cards": {
+              "old": 1,
+              "new": null
+            },
+            "upgrade.description": {
+              "old": "Gain [E].\nDraw 2 cards.",
+              "new": null
+            },
+            "upgrade.energy": {
+              "old": null,
+              "new": 1
+            }
+          },
+          "GIANT_ROCK": {
+            "description": {
+              "old": "Deal 16 damage.",
+              "new": "Deal 20 damage."
+            }
+          },
+          "GUIDING_STAR": {
+            "description": {
+              "old": "Deal 12 damage.\nDraw 2 cards.",
+              "new": "Deal 12 damage.\nNext turn, draw 2 cards."
+            },
+            "star_cost": {
+              "old": 2,
+              "new": 1
+            },
+            "upgrade.description": {
+              "old": "Deal 13 damage.\nDraw 3 cards.",
+              "new": "Deal 13 damage.\nNext turn, draw 3 cards."
+            }
+          },
+          "HAUNT": {
+            "description": {
+              "old": "Whenever you play a Soul, a random enemy loses 6 HP.",
+              "new": "Whenever you play a Soul, a random enemy loses 7 HP."
+            }
+          },
+          "HAZE": {
+            "cost": {
+              "old": 3,
+              "new": 2
+            },
+            "keywords": {
+              "old": [
+                "Sly"
+              ],
+              "new": []
+            },
+            "description": {
+              "old": "Apply 4 Poison to ALL enemies.",
+              "new": "Apply 4 Poison and 1 Weak to ALL enemies."
+            },
+            "upgrade.weak": {
+              "old": null,
+              "new": 1
+            }
+          },
+          "HELIX_DRILL": {
+            "description": {
+              "old": "Deal 3 damage for each [E] previously spent this turn.",
+              "new": "Deal 3 damage for each [E] spent on other cards this turn."
+            },
+            "upgrade.description": {
+              "old": "Deal 5 damage for each [E] previously spent this turn.",
+              "new": "Deal 5 damage for each [E] spent on other cards this turn."
+            }
+          },
+          "HOWL_FROM_BEYOND": {
+            "description": {
+              "old": "Deal 16 damage to ALL enemies.\nAt the end of your turn, if this is in your Exhaust Pile, play it.",
+              "new": "Deal 18 damage to ALL enemies.\nAt the end of your turn, if this is in your Exhaust Pile, play it."
+            },
+            "upgrade.damage": {
+              "old": 5,
+              "new": 6
+            }
+          },
+          "HYPERBEAM": {
+            "description": {
+              "old": "Deal 28 damage to ALL enemies.\nLose 3 Focus.",
+              "new": "Deal 24 damage to ALL enemies.\nLose 3 Focus this turn."
+            },
+            "upgrade.damage": {
+              "old": 8,
+              "new": 6
+            }
+          },
+          "IGNITION": {
+            "rarity": {
+              "old": "Rare",
+              "new": "Uncommon"
+            }
+          },
+          "LEGION_OF_BONE": {
+            "keywords": {
+              "old": [
+                "Exhaust"
+              ],
+              "new": []
+            }
+          },
+          "MANGLE": {
+            "description": {
+              "old": "Deal 15 damage.\nEnemy loses 10 Strength this turn.",
+              "new": "Deal 20 damage.\nEnemy loses 10 Strength this turn."
+            },
+            "upgrade.damage": {
+              "old": 5,
+              "new": 6
+            }
+          },
+          "MAUL": {
+            "description": {
+              "old": "Deal 5 damage twice.\nIncrease the damage of ALL Maul cards by 1 this combat.",
+              "new": "Deal 5 damage twice.\nIncrease the damage of ALL Maul cards by 2 this combat."
+            }
+          },
+          "MINION_SACRIFICE": {
+            "description": {
+              "old": "Gain 8 Block.",
+              "new": "Gain 7 Block."
+            }
+          },
+          "MIRAGE": {
+            "upgrade.cost": {
+              "old": 0,
+              "new": null
+            },
+            "upgrade.remove_keywords": {
+              "old": null,
+              "new": [
+                "Exhaust"
+              ]
+            }
+          },
+          "MOMENTUM_STRIKE": {
+            "description": {
+              "old": "Deal 10 damage.\nReduce this card's cost to 0 [E].",
+              "new": "Deal 11 damage.\nReduce this card's cost to 0 [E]."
+            },
+            "upgrade.damage": {
+              "old": 3,
+              "new": 4
+            }
+          },
+          "NULL": {
+            "description": {
+              "old": "Deal 10 damage.\nApply 2 Weak.\nChannel 1 Dark.",
+              "new": "Deal 10 damage.\nApply 1 Weak.\nChannel 1 Dark."
+            }
+          },
+          "OUTBREAK": {
+            "cost": {
+              "old": 1,
+              "new": 3
+            },
+            "type": {
+              "old": "Power",
+              "new": "Skill"
+            },
+            "rarity": {
+              "old": "Uncommon",
+              "new": "Rare"
+            },
+            "description": {
+              "old": "Every 3 times you apply Poison, deal 11 damage to ALL enemies.",
+              "new": "Apply 9 Poison to ALL enemies.\nPoison triggers immediately."
+            },
+            "upgrade.description": {
+              "old": "Every 3 times you apply Poison, deal 15 damage to ALL enemies.",
+              "new": null
+            }
+          },
+          "PACTS_END": {
+            "description": {
+              "old": "If you have 3 or more cards in your Exhaust Pile,\ndeal 17 damage to ALL enemies.",
+              "new": "If you have 3 or more cards in your Exhaust Pile,\ndeal 18 damage to ALL enemies."
+            },
+            "upgrade.description": {
+              "old": "If you have 3 or more cards in your Exhaust Pile,\ndeal 23 damage to ALL enemies.",
+              "new": "If you have 3 or more cards in your Exhaust Pile,\ndeal 24 damage to ALL enemies."
+            }
+          },
+          "PILLAR_OF_CREATION": {
+            "description": {
+              "old": "Whenever you create a card, gain 3 Block.",
+              "new": "Whenever you create a card, gain 2 Block."
+            }
+          },
+          "RAMPAGE": {
+            "description": {
+              "old": "Deal 9 damage.\nIncrease this card's damage by 5 this combat.",
+              "new": "Deal 10 damage.\nIncrease this card's damage by 5 this combat."
+            }
+          },
+          "REAVE": {
+            "description": {
+              "old": "Deal 9 damage.\nAdd a Soul into your Draw Pile.",
+              "new": "Deal 10 damage.\nAdd a Soul into your Draw Pile."
+            },
+            "upgrade.damage": {
+              "old": 2,
+              "new": 3
+            },
+            "upgrade.description": {
+              "old": "Deal 11 damage.\nAdd a Soul+ into your Draw Pile.",
+              "new": "Deal 13 damage.\nAdd a Soul+ into your Draw Pile."
+            }
+          },
+          "REFINE_BLADE": {
+            "description": {
+              "old": "Forge 9.\nNext turn, gain [E].",
+              "new": "Forge 8.\nNext turn, gain [E]."
+            }
+          },
+          "REFRACT": {
+            "description": {
+              "old": "Deal 9 damage twice.\nChannel 2 Glass.",
+              "new": "Deal 10 damage twice.\nChannel 2 Glass."
+            }
+          },
+          "RELAX": {
+            "description": {
+              "old": "Gain 15 Block.\nNext turn, draw 2 cards and gain [E][E].",
+              "new": "Gain 16 Block.\nNext turn, draw 2 cards and gain [E][E]."
+            },
+            "upgrade.description": {
+              "old": "Gain 17 Block.\nNext turn, draw 3 cards and gain [E][E][E].",
+              "new": "Gain 18 Block.\nNext turn, draw 3 cards and gain [E][E][E]."
+            }
+          },
+          "REND": {
+            "cost": {
+              "old": 2,
+              "new": 1
+            },
+            "description": {
+              "old": "Deal 15 damage.\nDeals 5 additional damage for each unique debuff on the enemy.",
+              "new": "Deal 10 damage.\nDeals 5 additional damage for each unique debuff on the enemy."
+            }
+          },
+          "RESONANCE": {
+            "star_cost": {
+              "old": 3,
+              "new": 2
+            }
+          },
+          "ROCKET_PUNCH": {
+            "description": {
+              "old": "Deal 13 damage.\nDraw 1 card.\nWhenever you create a Status, reduce this card's cost to 0 [E] until played.",
+              "new": "Deal 13 damage.\nDraw 1 card.\nWhenever you create a Status, reduce this card's cost by 1 [E] until played."
+            },
+            "upgrade.description": {
+              "old": "Deal 14 damage.\nDraw 2 cards.\nWhenever you create a Status, reduce this card's cost to 0 [E] until played.",
+              "new": "Deal 14 damage.\nDraw 2 cards.\nWhenever you create a Status, reduce this card's cost by 1 [E] until played."
+            }
+          },
+          "SACRIFICE": {
+            "description": {
+              "old": "If Osty is alive, he dies and you gain Block equal to double his Max HP.",
+              "new": "If Osty is alive, he dies and you gain Block equal to triple his Max HP."
+            }
+          },
+          "SALVO": {
+            "rarity": {
+              "old": "Rare",
+              "new": "Uncommon"
+            }
+          },
+          "SETUP_STRIKE": {
+            "description": {
+              "old": "Deal 7 damage.\nGain 2 Strength this turn.",
+              "new": "Deal 7 damage.\nGain 3 Strength this turn."
+            }
+          },
+          "SHATTER": {
+            "keywords": {
+              "old": [],
+              "new": [
+                "Exhaust"
+              ]
+            }
+          },
+          "SHROUD": {
+            "description": {
+              "old": "Whenever you apply Doom, gain 2 Block.",
+              "new": "Whenever you apply Doom, gain 3 Block."
+            }
+          },
+          "SOUL_STORM": {
+            "description": {
+              "old": "Deal 9 damage.\nDeals 2 additional damage for each Soul in your Exhaust Pile.",
+              "new": "Deal 9 damage.\nDeals 4 additional damage for each Soul in your Exhaust Pile."
+            }
+          },
+          "SPLASH": {
+            "rarity": {
+              "old": "Uncommon",
+              "new": "Rare"
+            }
+          },
+          "SPOILS_OF_BATTLE": {
+            "description": {
+              "old": "Forge 5.\nDraw 2 cards.",
+              "new": "Forge 6.\nDraw 2 cards."
+            },
+            "upgrade.description": {
+              "old": "Forge 8.\nDraw 2 cards.",
+              "new": "Forge 9.\nDraw 2 cards."
+            }
+          },
+          "SUNDER": {
+            "description": {
+              "old": "Deal 24 damage.\nIf this kills an enemy, gain [E][E][E].",
+              "new": "Deal 26 damage.\nIf this kills an enemy, gain [E][E][E]."
+            }
+          },
+          "SYNCHRONIZE": {
+            "keywords": {
+              "old": [
+                "Exhaust"
+              ],
+              "new": []
+            },
+            "description": {
+              "old": "Gain 2 Focus this turn for each unique Orb you have.",
+              "new": "Gain 1 Focus this turn for each unique Orb you have."
+            },
+            "upgrade.remove_keywords": {
+              "old": [
+                "Exhaust"
+              ],
+              "new": null
+            }
+          },
+          "TANK": {
+            "description": {
+              "old": "Take double damage from enemies.\nAllies take half damage from enemies.",
+              "new": "Take 50% more damage from enemies.\nAllies take 50% less damage from enemies."
+            }
+          },
+          "TAUNT": {
+            "rarity": {
+              "old": "Uncommon",
+              "new": "Common"
+            },
+            "description": {
+              "old": "Gain 7 Block.\nApply 1 Vulnerable.",
+              "new": "Gain 6 Block.\nApply 1 Vulnerable."
+            }
+          },
+          "TERRAFORMING": {
+            "description": {
+              "old": "Gain 6 Vigor.",
+              "new": "Gain 7 Vigor."
+            }
+          },
+          "THE_SCYTHE": {
+            "description": {
+              "old": "Deal 13 damage.\nPermanently increase this card's damage by 4.",
+              "new": "Deal 13 damage.\nPermanently increase this card's damage by 5."
+            }
+          },
+          "THUNDER": {
+            "description": {
+              "old": "Whenever you Evoke Lightning, deal 6 damage to each enemy hit.",
+              "new": "Whenever you Evoke Lightning, deal 8 damage to each enemy hit."
+            }
+          },
+          "TIMES_UP": {
+            "keywords": {
+              "old": [
+                "Exhaust"
+              ],
+              "new": []
+            }
+          },
+          "TRACKING": {
+            "description": {
+              "old": "Weak enemies take double damage from Attacks.",
+              "new": "Weak enemies take 50% more damage from Attacks."
+            }
+          },
+          "TRASH_TO_TREASURE": {
+            "upgrade.add_keywords": {
+              "old": [
+                "Innate"
+              ],
+              "new": null
+            },
+            "upgrade.cost": {
+              "old": null,
+              "new": 0
+            }
+          },
+          "WELL_LAID_PLANS": {
+            "cost": {
+              "old": 1,
+              "new": 2
+            },
+            "rarity": {
+              "old": "Uncommon",
+              "new": "Rare"
+            },
+            "description": {
+              "old": "At the end of your turn, Retain up to 1 card.",
+              "new": "At the end of your turn, you no longer discard your Hand."
+            },
+            "upgrade.cost": {
+              "old": null,
+              "new": 1
+            },
+            "upgrade.description": {
+              "old": "At the end of your turn, Retain up to 2 cards.",
+              "new": null
+            }
+          },
+          "WHISTLE": {
+            "cost": {
+              "old": 3,
+              "new": 2
+            }
+          }
+        },
+        "added": [
+          "ABUNDANCE",
+          "BLADE_SYMPHONY",
+          "BLAZE",
+          "CACOPHONY",
+          "CONCOCT",
+          "CONSTELLATION",
+          "DOWSING",
+          "FADE",
+          "HIBERNATE",
+          "IMITATION_LEARNING",
+          "MIDNIGHT",
+          "ONE_FOR_ALL",
+          "OUTRAGE",
+          "PLOT",
+          "SIDESTEP",
+          "SOULBOUND",
+          "THE_BALL",
+          "TUTOR",
+          "UNDERWORLD"
+        ],
+        "removed": [
+          "SCARE"
+        ]
+      },
+      "relics": {
+        "modified": {
+          "ALCHEMICAL_COFFER": {
+            "description": {
+              "old": "Upon pickup, gain 4 potion slots filled with random potions.",
+              "new": "Upon pickup, gain 4 potion slots filled with random Potions."
+            }
+          },
+          "BEAUTIFUL_BRACELET": {
+            "description": {
+              "old": "Upon pickup, choose 3 cards in your Deck. Enchant them with Swift 3.",
+              "new": "Upon pickup, Enchant 4 random cards in your Deck with Swift 2."
+            }
+          },
+          "BELT_BUCKLE": {
+            "description": {
+              "old": "While you have no potions, you have 2 additional Dexterity.",
+              "new": "While you have no Potions, you have 2 additional Dexterity."
+            }
+          },
+          "CAULDRON": {
+            "description": {
+              "old": "Upon pickup, brews 5 random potions.",
+              "new": "Upon pickup, brews 5 random Potions."
+            }
+          },
+          "DELICATE_FROND": {
+            "description": {
+              "old": "At the start of each combat, fill all empty potion slots with random potions.",
+              "new": "At the start of each combat, fill all empty potion slots with random Potions."
+            }
+          },
+          "DIAMOND_DIADEM": {
+            "description": {
+              "old": "Whenever you play 2 or fewer cards in a turn, take half damage from enemies.",
+              "new": "Start combat with 20 Block. Your Block is not removed at the start of your 2nd turn."
+            }
+          },
+          "DISTINGUISHED_CAPE": {
+            "description": {
+              "old": "Upon pickup, lose 9 Max HP. Add 3 Apparitions to your Deck.",
+              "new": "Upon pickup, add 2 random Curses and 3 Apparitions to your Deck."
+            }
+          },
+          "DIVINE_DESTINY": {
+            "description": {
+              "old": "At the start of each combat, gain [S][S][S][S][S][S].",
+              "new": "At the start of each combat, gain [S][S][S][S][S][S][S]."
+            }
+          },
+          "FUR_COAT": {
+            "description": {
+              "old": "Upon pickup, mark 7 random combats. Enemies in those rooms have 1 HP.",
+              "new": "Upon pickup, mark 8 random combats. Enemies in those rooms have 1 HP."
+            }
+          },
+          "HISTORY_COURSE": {
+            "description": {
+              "old": "At the start of your turn, play a copy of your last played Attack or Skill.",
+              "new": "At the start of your turn, play a copy of your last played Attack."
+            }
+          },
+          "PHIAL_HOLSTER": {
+            "description": {
+              "old": "Upon pickup, gain 1 potion slot and procure 2 random potions.",
+              "new": "Upon pickup, gain 1 potion slot and procure 2 random Potions."
+            }
+          },
+          "REGALITE": {
+            "description": {
+              "old": "Whenever you create a card, gain 2 Block.",
+              "new": "The first time you create a card each turn, gain 4 Block."
+            }
+          },
+          "SEAL_OF_GOLD": {
+            "description": {
+              "old": "At the start of your turn, spend 5 Gold to gain [E].",
+              "new": "At the start of your turn, spend 3 Gold to gain [E]."
+            }
+          },
+          "SERE_TALON": {
+            "description": {
+              "old": "Upon pickup, add 2 random Curses and 3 Wishes to your Deck.",
+              "new": "Upon pickup, lose 9 Max HP. Add 3 Wishes to your Deck."
+            }
+          },
+          "SIGNET_RING": {
+            "description": {
+              "old": "Upon pickup, gain 999 Gold.",
+              "new": "Upon pickup, gain 888 Gold."
+            }
+          },
+          "SILKEN_TRESS": {
+            "description": {
+              "old": "Upon pickup, lose all Gold. Enchant all cards in the first card reward with Glam.",
+              "new": "Upon pickup, lose all Gold. Enchant all cards in your first card reward with Glam."
+            }
+          },
+          "SOZU": {
+            "description": {
+              "old": "Gain [E] at the start of each turn. You can no longer obtain potions.",
+              "new": "Gain [E] at the start of each turn. You can no longer obtain Potions."
+            }
+          },
+          "TINY_MAILBOX": {
+            "description": {
+              "old": "Whenever you Rest, procure 2 random potions.",
+              "new": "Whenever you Rest, procure 2 random Potions."
+            }
+          },
+          "TOASTY_MITTENS": {
+            "description": {
+              "old": "At the start of your turn, Exhaust the top card of your Draw Pile and gain 1 Strength.",
+              "new": "At the start of your turn, Exhaust 1 card from your Hand and gain 1 Strength."
+            }
+          },
+          "TOY_BOX": {
+            "description": {
+              "old": "Upon pickup, obtain 4 Wax Relics. Every 3 combats, your left-most Wax Relic will melt away.",
+              "new": "Upon pickup, obtain 5 Wax Relics. Every 3 combats, your left-most Wax Relic will melt away."
+            }
+          }
+        },
+        "added": [
+          "DOWSING_ROD",
+          "NEOWS_SACRIFICE"
+        ],
+        "removed": []
+      },
+      "potions": {
+        "modified": {},
+        "added": [
+          "AMBERGRIS"
+        ],
+        "removed": []
+      },
+      "enchantments": {
+        "modified": {
+          "INKY": {
+            "description": {
+              "old": "This card deals 1 additional damage and applies 1 Weak.",
+              "new": "This card applies 1 Weak."
+            }
+          }
+        },
+        "added": [],
+        "removed": []
+      }
+    }
+  },
+  {
     "version": "0.107.1",
     "previousVersion": "0.103.2",
     "date": "2026-06-18",
