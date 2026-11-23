@@ -4,7 +4,7 @@ import path from 'node:path';
 
 export type StatRow = Record<string, string | number | null>;
 export type MetricSummary = { n: number; mean: number; median: number; p10: number; p90: number } | null;
-export type StatsPeriod = { id: string; runs: number };
+export type StatsPeriod = { id: string; runs: number; same_as?: string };
 
 export interface StatsSegment {
   runs: number;
@@ -50,6 +50,9 @@ export function getStats(): Promise<RunStats | null> {
 export async function getPeriodSegments(period: string): Promise<Segments | null> {
   if (period === 'all') return (await getStats())?.segments ?? null;
   if (!/^\d{4}(-Q[1-4])?$/.test(period)) return null;
+  // A period with the same runs as its parent is not written separately.
+  const sameAs = (await getStats())?.meta.periods.find((p) => p.id === period)?.same_as;
+  if (sameAs) return getPeriodSegments(sameAs);
 
   const file = statsFile();
   const periodFile = path.join(path.dirname(file), `${path.basename(file, '.json')}-periods`, `${period}.json`);
