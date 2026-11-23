@@ -48,6 +48,7 @@ CHARACTERS = [
 ]
 
 problems = []
+SOURCE_TO_SITE_LOCALE = {'deu': 'de', 'fra': 'fr', 'spa': 'es', 'ptb': 'pt', 'rus': 'ru', 'jpn': 'ja', 'kor': 'ko', 'zhs': 'zh'}
 
 
 def site_id(raw):
@@ -59,10 +60,10 @@ def clean_text(text):
     text = re.sub(r'\s*\bNL\b\s*', '\n', str(text or ''))
     text = re.sub(r'<[^>]*>', '', text)
     text = re.sub(r'&(?:#\d+|#x[0-9a-f]+|[a-z][a-z0-9]+);', ' ', text, flags=re.I)
-    text = re.sub(r'\[#[0-9a-fA-F]+\]|\[\]', '', text)
+    text = re.sub(r'\[#[0-9a-fA-F]+\]|\[/(?:[A-Za-z]+)?\]|\[\]', '', text)
     text = re.sub(r'(?<![\w])#[a-z]', '', text, flags=re.I)
     text = re.sub(r'\[[RGBWE]\]|\[[a-zA-Z]*:?[a-zA-Z]*[Ee]nergy[a-zA-Z]*\]', '[E]', text)
-    text = re.sub(r'\b[A-Za-z]+:(?=[A-Z])', '', text)
+    text = re.sub(r'\b[A-Za-z][A-Za-z0-9_]*:(?=\w)', '', text)
     text = re.sub(r'(?<!\w)\*(?=\w)', '', text)
     text = re.sub(r'\s*\[REMOVE_SPACE\]', '', text)
     text = re.sub(r'(?<=[A-Za-z])_(?=[A-Z])', ' ', text)
@@ -338,20 +339,21 @@ def _simple_title(value):
     return value.replace('_', ' ').title() if value else None
 
 
-def _substitute(text, values, custom_values, color, label):
+def _substitute(text, values, custom_values, color, label, problem_sink=None):
+    problem_sink = problems if problem_sink is None else problem_sink
     text = clean_text(text)
     numeric = {'!D!': values.get('damage'), '!B!': values.get('block'), '!M!': values.get('magic')}
     for token, value in numeric.items():
         if token in text:
             if value is None:
-                problems.append(f'{color}/{label}: no source value for {token}')
+                problem_sink.append(f'{color}/{label}: no source value for {token}')
                 text = text.replace(token, '')
             else:
                 text = text.replace(token, str(value))
     remaining = set(re.findall(r'!([A-Za-z0-9_:]+)!', text))
     for token in sorted(remaining):
         normalized = re.sub(r'[^a-z0-9]', '', token.lower())
-        aliases = {'awakenedm2': 'secondmagic', 'slime': 'slimed', 'burny': 'burn', 'clm2': 'secondmagic', 'bauto': 'auto', 'dm': 'downfallmagic', 'qqq': 'silly', 'guardiansecondm': 'secondarym', 'secondmagic': 'secondmagicnumber'}
+        aliases = {'awakenedm2': 'secondmagic', 'm2': 'secondmagic', 'slime': 'slimed', 'burny': 'burn', 'clm2': 'secondmagic', 'bauto': 'auto', 'dm': 'downfallmagic', 'qqq': 'silly', 'guardiansecondm': 'secondarym', 'secondmagic': 'secondmagicnumber'}
         wanted = aliases.get(normalized, normalized)
         match_key = next((k for k in custom_values
                           if re.sub(r'[^a-z0-9]', '', k.lower()) == wanted
@@ -361,11 +363,43 @@ def _substitute(text, values, custom_values, color, label):
             match_key = next((k for k in custom_values if 'selfdamage' in k.lower()), None)
         value = custom_values.get(match_key) if match_key else None
         if value is None:
-            problems.append(f'{color}/{label}: unresolved placeholder !{token}!')
+            problem_sink.append(f'{color}/{label}: unresolved placeholder !{token}!')
             text = text.replace(f'!{token}!', '')
         else:
             text = text.replace(f'!{token}!', str(value))
     return text
+
+
+def _localized_card_text(entry, stats, color, label, problem_sink=None):
+    """Render one card's localized fields with the English source-derived numeric values."""
+    sink = [] if problem_sink is None else problem_sink
+    base_values = {'damage': stats['damage'], 'block': stats['block'], 'magic': stats['magic']}
+    custom = stats['custom']
+    base_description = entry.get('DESCRIPTION')
+    description = _substitute(base_description, base_values, custom, color, label, sink) if base_description else None
+    upgrade_entry = entry.get('UPGRADE_DESCRIPTION') or base_description
+    upgrade_description = None
+    if upgrade_entry:
+        upgrade_values = dict(base_values)
+        for source_name, out_name in (('damage', 'damage'), ('block', 'block'), ('magic_number', 'magic')):
+            delta = stats['upgrade'].get(source_name)
+            if upgrade_values[out_name] is not None and delta is not None:
+                upgrade_values[out_name] += delta
+        custom_upgraded = {name: _custom_upgrade_value(custom, stats['custom_upgrade'], name) for name in custom}
+        rendered = _substitute(upgrade_entry, upgrade_values, custom_upgraded, color, label, sink)
+        if rendered and rendered != description:
+            upgrade_description = rendered
+    rendered_fields = {}
+    if entry.get('NAME'):
+        rendered_fields['name'] = _clean_json_text(entry['NAME'])
+    if description:
+        rendered_fields['description'] = _clean_json_text(description)
+    if upgrade_description:
+        rendered_fields['upgrade_description'] = _clean_json_text(upgrade_description)
+    for key, text in rendered_fields.items():
+        if re.search(r'![A-Za-z0-9_:]+!|&#?\w+;|[<>]|(?<!\w)#[a-z]', text, re.I):
+            sink.append(f'{color}/{label}: invalid localized {key} markup or placeholder')
+    return rendered_fields
 
 
 def _custom_upgrade_value(custom, custom_delta, key):
@@ -458,21 +492,11 @@ def _extract_card(path, strings, res_dir, color, pkg, source_resources, java_roo
     if not include: return None, why
     raw_id = key if ':' in key else f'{pkg}_{key}'
     card_id = site_id(raw_id)
-    custom = stats['custom']
-    base_values = {'damage': stats['damage'], 'block': stats['block'], 'magic': stats['magic']}
-    description = _substitute(entry.get('DESCRIPTION', ''), base_values, custom, color, class_name)
-    upgrade_entry = entry.get('UPGRADE_DESCRIPTION') or ''
-    upgrade_values = dict(base_values)
-    for source_name, out_name in (('damage', 'damage'), ('block', 'block'), ('magic_number', 'magic')):
-        delta = stats['upgrade'].get(source_name)
-        if upgrade_values[out_name] is not None and delta is not None:
-            upgrade_values[out_name] += delta
-    custom_upgraded = {name: _custom_upgrade_value(custom, stats['custom_upgrade'], name) for name in custom}
-    upgraded_text = _substitute(upgrade_entry or entry.get('DESCRIPTION', ''), upgrade_values, custom_upgraded, color, class_name)
-    upgrade_description = upgraded_text if upgraded_text and upgraded_text != description else None
-    upgraded_flags = {**stats['booleans'], **stats['upgrade_booleans']}
-    keyword_changes = _upgrade_keyword_changes(entry.get('DESCRIPTION', ''), upgrade_entry or entry.get('DESCRIPTION', ''),
-                                              stats['booleans'], upgraded_flags)
+    rendered = _localized_card_text(entry, stats, color, class_name, problems)
+    description = rendered.get('description', '')
+    upgrade_description = rendered.get('upgrade_description')
+    keyword_changes = _upgrade_keyword_changes(entry.get('DESCRIPTION', ''), entry.get('UPGRADE_DESCRIPTION') or entry.get('DESCRIPTION', ''),
+                                              stats['booleans'], {**stats['booleans'], **stats['upgrade_booleans']})
     if re.search(r'![A-Za-z0-9_:]+!|&#?\w+;|[<>]', description + (upgrade_description or '')):
         problems.append(f'{color}/{class_name}: invalid placeholder or markup in rendered text')
         return None, 'unresolved placeholder or markup'
@@ -514,7 +538,7 @@ def _extract_card(path, strings, res_dir, color, pkg, source_resources, java_roo
                     break
     if not art:
         return None, 'no card art'
-    return (card, art), ''
+    return (card, art, {'class_name': class_name, 'id_suffix': id_suffix, 'key': key, 'entry': entry, 'stats': stats}), ''
 
 
 def _relic_tier(source):
@@ -556,6 +580,21 @@ def _relic_description(source, entry, all_strings):
     return description
 
 
+def _localized_relic_text(source, entry, all_strings, color, label, problem_sink=None):
+    sink = [] if problem_sink is None else problem_sink
+    fields = {}
+    if entry.get('NAME'):
+        fields['name'] = _clean_json_text(entry['NAME'])
+    if entry.get('DESCRIPTIONS'):
+        fields['description'] = _clean_json_text(_relic_description(source, entry, all_strings))
+    if entry.get('FLAVOR'):
+        fields['flavor'] = _clean_json_text(entry['FLAVOR'])
+    for key, text in fields.items():
+        if re.search(r'![A-Za-z0-9_:]+!|&#?\w+;|[<>]|(?<!\w)#[a-z]', text, re.I):
+            sink.append(f'{color}/{label}: invalid localized relic {key} markup or placeholder')
+    return fields
+
+
 def _extract_relic(path, strings, res_dir, color, pkg, starter_id):
     source = _strip_comments(path.read_text(encoding='utf-8', errors='replace'))
     if not re.search(r'\bclass\s+\w+\s+extends\s+\w+', source) or re.search(r'\babstract\s+class\b|\binterface\b', source):
@@ -588,10 +627,11 @@ def _extract_relic(path, strings, res_dir, color, pkg, starter_id):
         tier = 'Starter'
     relic = {'id': relic_id, 'name': _clean_json_text(entry.get('NAME', '')), 'description': description,
              'flavor': _clean_json_text(entry.get('FLAVOR', '')) or None, 'tier': tier, 'color': color, 'icon': icon}
-    return (relic, art), ''
+    return (relic, art, {'source': source, 'name': name, 'suffix': suffix, 'key': key, 'entry': entry}), ''
 
 
 def _write_json(path, value):
+    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(value, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
 
 
@@ -611,6 +651,9 @@ def main(argv=None):
     cards, relics = {}, {}
     generated_images = {}
     skipped = []
+    localized = {site: {'cards': {}, 'relics': {}} for site in SOURCE_TO_SITE_LOCALE.values()}
+    localized_dropped = {site: 0 for site in SOURCE_TO_SITE_LOCALE.values()}
+    localized_drop_details = {site: [] for site in SOURCE_TO_SITE_LOCALE.values()}
 
     for char in CHARACTERS:
         pkg, color, res = char['pkg'], char['color'], char['res']
@@ -621,6 +664,19 @@ def main(argv=None):
             continue
         card_strings = _read_json(res_dir / 'localization/eng/CardStrings.json')
         relic_strings = _read_json(res_dir / 'localization/eng/RelicStrings.json')
+        language_strings = {}
+        for source_lang, site_lang in SOURCE_TO_SITE_LOCALE.items():
+            language_dir = res_dir / f'localization/{source_lang}'
+            card_file, relic_file = language_dir / 'CardStrings.json', language_dir / 'RelicStrings.json'
+            try:
+                language_strings[site_lang] = {
+                    'cards': _read_json(card_file) if card_file.is_file() else {},
+                    'relics': _read_json(relic_file) if relic_file.is_file() else {},
+                }
+            except (OSError, ValueError) as error:
+                localized_dropped[site_lang] += 1
+                localized_drop_details[site_lang].append(f'{res}/{source_lang}: invalid localization files ({error})')
+                language_strings[site_lang] = {'cards': {}, 'relics': {}}
         starter_relic_key = next((k for k in relic_strings if k.rsplit(':', 1)[-1].lower() == char['relic'].lower()), None)
         starter_relic_id = site_id(starter_relic_key if starter_relic_key and ':' in starter_relic_key else f'{pkg}_{starter_relic_key}') if starter_relic_key else ''
 
@@ -630,7 +686,7 @@ def main(argv=None):
                 if reason not in ('no localization', 'not a card class'):
                     skipped.append(f'{color}/{path.stem}: {reason}')
                 continue
-            card, art = result
+            card, art, metadata = result
             starter_names = {name.lower() for name, _ in char['deck']}
             if path.stem.lower() in starter_names:
                 starter_key = _localized_key(card_strings, path.stem, path.stem)
@@ -639,6 +695,21 @@ def main(argv=None):
             if card['id'] in cards:
                 problems.append(f'{color}/{path.stem}: duplicate card id {card["id"]}')
                 continue
+            for site_lang, strings in language_strings.items():
+                loc_key = _localized_key(strings['cards'], metadata['id_suffix'], metadata['class_name'])
+                if not loc_key:
+                    continue
+                issues = []
+                fields = _localized_card_text(strings['cards'][loc_key], metadata['stats'], color, metadata['class_name'], issues)
+                if issues:
+                    localized_dropped[site_lang] += 1
+                    localized_drop_details[site_lang].extend(sorted(set(issues)))
+                    continue
+                english_fields = {'name': card['name'], 'description': card['description'],
+                                  'upgrade_description': card['upgrade'].get('description')}
+                fields = {key: value for key, value in fields.items() if value != english_fields.get(key)}
+                if fields:
+                    localized[site_lang]['cards'][card['id']] = fields
             target = image_root / 'cards' / f'{card["id"].lower()}.png'
             _save_card_image(art, target)
             cards[card['id']] = card
@@ -650,10 +721,24 @@ def main(argv=None):
                 if reason not in ('no localization', 'not an instantiable relic class'):
                     skipped.append(f'{color}/{path.stem}: {reason}')
                 continue
-            relic, art = result
+            relic, art, metadata = result
             if relic['id'] in relics:
                 problems.append(f'{color}/{path.stem}: duplicate relic id {relic["id"]}')
                 continue
+            for site_lang, strings in language_strings.items():
+                loc_key = _localized_key(strings['relics'], metadata['suffix'], metadata['name'])
+                if not loc_key:
+                    continue
+                issues = []
+                fields = _localized_relic_text(metadata['source'], strings['relics'][loc_key], strings['relics'], color, metadata['name'], issues)
+                if issues:
+                    localized_dropped[site_lang] += 1
+                    localized_drop_details[site_lang].extend(sorted(set(issues)))
+                    continue
+                english_fields = {'name': relic['name'], 'description': relic['description'], 'flavor': relic.get('flavor')}
+                fields = {key: value for key, value in fields.items() if value != english_fields.get(key)}
+                if fields:
+                    localized[site_lang]['relics'][relic['id']] = fields
             for folder in ('relics', 'relics-list'):
                 target = image_root / folder / relic['icon']
                 target.parent.mkdir(parents=True, exist_ok=True)
@@ -672,6 +757,14 @@ def main(argv=None):
                 stale.unlink()
     _write_json(data_dir / 'cards.json', sorted(cards.values(), key=lambda item: item['id']))
     _write_json(data_dir / 'relics.json', sorted(relics.values(), key=lambda item: item['id']))
+    localization_dir = data_dir / 'localization'
+    for site_lang, content in localized.items():
+        content['cards'] = dict(sorted(content['cards'].items()))
+        content['relics'] = dict(sorted(content['relics'].items()))
+        _write_json(localization_dir / f'{site_lang}.json', content)
+        print(f'LOCALIZATION {site_lang}: {len(content["cards"])} cards, {len(content["relics"])} relics; {localized_dropped[site_lang]} dropped for problems')
+        for item in localized_drop_details[site_lang]:
+            print(f'DROPPED {site_lang}: {item}')
     total_bytes = sum(generated_images.values())
     print(f'{len(cards)} cards, {len(relics)} relics; {len(generated_images)} images, {total_bytes} bytes')
     print(f'{len(skipped)} skipped source entries; {len(problems)} extraction problems')
