@@ -227,7 +227,7 @@ def _upgrade_info(source, constants):
 
 def _upgrade_keyword_changes(description, upgraded_description, base_flags, upgraded_flags):
     names = {'exhaust': 'Exhaust', 'ethereal': 'Ethereal', 'innate': 'Innate', 'retain': 'Retain',
-             'self_retain': 'Self Retain', 'purge_on_use': 'Purge on use'}
+             'self_retain': 'Retain', 'purge_on_use': 'Purge on use'}  # the game shows selfRetain as Retain
     add, remove = set(), set()
     for flag, keyword in names.items():
         before = base_flags.get(flag, False)
