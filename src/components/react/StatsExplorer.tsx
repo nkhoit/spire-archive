@@ -180,6 +180,9 @@ const FIGHT_COLUMNS: Column[] = [
   { key: 'damage_per_turn', label: 'Damage taken / turn', format: 'num' },
 ];
 
+// Cards buffed by Patch V2.2 (30 Nov 2020), after the run dump ends; their stats predate the buff.
+const BUFFED_AFTER_DUMP = new Set(['ACCURACY', 'AGGREGATE', 'BLADE_DANCE', 'BLOODLETTING', 'DRAMATIC_ENTRANCE', 'EVISCERATE', 'GOOD_INSTINCTS', 'HEMOKINESIS', 'PHANTASMAL_KILLER', 'REFLEX', 'REPROGRAM', 'RUPTURE', 'SADISTIC_NATURE', 'SCRAPE', 'SLICE', 'UNDERHANDED_STRIKE', 'STORM_OF_STEEL', 'SWIFT_STRIKE']);
+
 // Literal keys so translators can find them.
 const FIGHT_TYPE: Record<string, string> = { normal: 'Normal', elite: 'Elite', boss: 'Boss' };
 
@@ -275,11 +278,11 @@ function Explorer({ initial, periods, langPrefix }: { initial: StatsSegment; per
             />
           </Section>
 
-          <Section title="Cards" note="Win rates are correlations. Final decks over-represent runs that lasted long enough to collect them, so pick rate is the cleaner signal.">
+          <Section title="Cards" note="Win rates are correlations. Final decks over-represent runs that lasted long enough to collect them, so pick rate is the cleaner signal. † Changed by Patch V2.2 (November 2020), after this data was collected.">
             <StatTable
               title="Cards"
               columns={[{ key: 'name', label: 'Card' }, { key: 'offered', label: 'Offered', format: 'int' }, { key: 'pick_rate', label: 'Pick rate', format: 'pct' }, { key: 'decks', label: 'In decks', format: 'int' }, { key: 'win_rate', label: 'Win rate', format: 'pct' }, { key: 'win_delta', label: 'vs average', format: 'delta' }, { key: 'avg_copies', label: 'Avg copies', format: 'num' }, { key: 'upgrade_rate', label: 'Upgraded', format: 'pct' }]}
-              rows={segment.cards}
+              rows={segment.cards.map((row) => (BUFFED_AFTER_DUMP.has(String(row.id)) ? { ...row, name: `${row.name} †` } : row))}
               linkBase="cards"
               langPrefix={langPrefix}
               defaultSort="decks"

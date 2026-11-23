@@ -24,6 +24,8 @@ FIGHT_TYPES = {'M': 'normal', 'E': 'elite', 'B': 'boss', 'BOSS': 'boss'}
 FLAG_REJECTIONS = ['is_daily', 'is_endless', 'chose_seed', 'is_trial', 'is_beta']
 DAMAGE_SENTINEL = 9999  # Real dumps contain fights recording ~100000 damage.
 MAX_DECK = 100
+# Run IDs the site has no entry for but that are real base-game content, shown unlinked.
+KNOWN_NAMES = {'relics': {'DODECAHEDRON': 'Runic Dodecahedron'}}
 
 # Encounters whose name differs from the monster, or that always have the same members.
 # Groups with random members (Small Slimes, Gremlin Gang, Shapes) are left out on purpose.
@@ -321,21 +323,29 @@ def finalize_segment(raw, min_sample, unmatched):
         return None
 
     def named(kind, key, row, count):
+        """Site entry for a run ID, an unlinked name for a known gap, or None (mod or beta content) to drop the row."""
         match = lookup(kind, key)
-        if not match:
-            unmatched.setdefault(kind, Counter())[key] += count
-        return match or {'id': None, 'name': key.replace('_', ' ').title()}
+        if match:
+            return match
+        unmatched.setdefault(kind, Counter())[key] += count
+        if key in KNOWN_NAMES.get(kind, {}):
+            return {'id': None, 'name': KNOWN_NAMES[kind][key]}
+        return None
 
     cards = []
     for key, row in raw['cards'].items():
         decks, offered = row.get('decks', 0), row.get('offered', 0)
         if max(decks, offered) < min_sample:
             continue
+        entry = named('cards', key, row, max(decks, offered))
+        if not entry:
+            continue
         with_rate = rate(row.get('wins', 0), decks)
         cards.append({
-            **named('cards', key, row, max(decks, offered)),
+            **entry,
             'offered': offered,
-            'pick_rate': rate(row.get('picked', 0), offered),
+            # Curses and starters are rarely or never offered; a rate from a handful of offers means nothing.
+            'pick_rate': rate(row.get('picked', 0), offered) if offered >= min_sample else None,
             'decks': decks,
             'deck_rate': rate(decks, runs),
             'win_rate': with_rate,
@@ -349,9 +359,12 @@ def finalize_segment(raw, min_sample, unmatched):
         for key, row in raw[kind].items():
             if row['runs'] < min_sample:
                 continue
+            entry = named(kind, key, row, row['runs'])
+            if not entry:
+                continue
             with_rate = rate(row.get('wins', 0), row['runs'])
             rows.append({
-                **named(kind, key, row, row['runs']),
+                **entry,
                 'runs': row['runs'],
                 'run_rate': rate(row['runs'], runs),
                 'win_rate': with_rate,
@@ -419,12 +432,12 @@ def finalize_segment(raw, min_sample, unmatched):
     }
 
 
-def rollup(raw_segments):
+def rollup(raw_segments, quarters=True):
     """Quarterly counts into {'all': ..., '2020': ..., '2020-Q3': ...}. Unknown builds only count toward 'all'."""
     periods = {}
     for key, raw in raw_segments.items():
         period, segment = key.split('|', 1)
-        for target in ['all'] + ([] if period == 'unknown' else [period, period[:4]]):
+        for target in ['all'] + ([] if period == 'unknown' else ([period] if quarters else []) + [period[:4]]):
             merge(periods.setdefault(target, {}).setdefault(segment, {}), raw)
     return periods
 
@@ -462,6 +475,7 @@ def main(argv=None):
     parser.add_argument('--min-sample', type=int, default=100)
     parser.add_argument('--min-floor', type=int, default=4)
     parser.add_argument('--min-build', help='drop runs from builds older than this, e.g. 2020-01-27')
+    parser.add_argument('--periods', choices=['quarter', 'year'], default='quarter', help='finest game-version period to write')
     parser.add_argument('--limit-files', type=int)
     parser.add_argument('--cache-dir', default=str(Path.home() / '.cache' / 'spire-stats'))
     parser.add_argument('--inspect', action='store_true', help='print the fields of the first file and exit')
@@ -489,7 +503,7 @@ def main(argv=None):
         sys.exit('No usable runs. Check the output of --inspect.')
 
     unmatched = {}
-    raw_periods = rollup(total['segments'])
+    raw_periods = rollup(total['segments'], quarters=args.periods == 'quarter')
     all_runs = raw_periods['all']['all|all']['runs']
     segments = {key: finalize_segment(raw, args.min_sample, unmatched) for key, raw in raw_periods.pop('all').items() if raw['runs'] >= args.min_sample}
     # Below min_sample a segment's tiles and charts would describe individual runs.

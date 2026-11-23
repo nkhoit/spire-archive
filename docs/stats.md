@@ -1,6 +1,6 @@
 # Run statistics (STS1)
 
-A Stats tab built from Mega Crit's public dump of about 77 million runs (27 GB compressed), aimed at people balancing modded characters. `data/sts1/stats.json` is not committed; build it with the steps below. Source: [77 Million Runs - An STS Metrics Dump](https://www.reddit.com/r/slaythespire/comments/jt5y1w/77_million_runs_an_sts_metrics_dump/).
+A Stats tab built from Mega Crit's public dump of about 77 million runs (27 GB compressed), aimed at people balancing modded characters. `data/sts1/stats.json` and `data/sts1/stats-periods/` are built from the whole dump (52,471 files, 77.8 million runs read) with `--periods year`. Source: [77 Million Runs - An STS Metrics Dump](https://www.reddit.com/r/slaythespire/comments/jt5y1w/77_million_runs_an_sts_metrics_dump/).
 
 ## What the data can and cannot answer
 
@@ -28,7 +28,7 @@ py -3 parsers/stats/aggregate_runs.py "D:/sts-runs-clean"
 
 This writes `data/sts1/stats.json`. Restart the server and the Stats tab appears. It stays out of the navigation until that file exists.
 
-Options: `--out FILE`, `--workers N`, `--min-sample N` (default 100; rows and whole segments with fewer runs are dropped), `--min-floor N` (default 4).
+Options: `--out FILE`, `--workers N`, `--periods quarter|year`, `--min-sample N` (default 100; rows and whole segments with fewer runs are dropped), `--min-floor N` (default 4).
 
 ## Which runs count
 
@@ -44,7 +44,7 @@ Rename-affected IDs are not rejected. They appear in `meta.unmatched` so the nam
 
 ## Output
 
-`data/sts1/stats.json` holds all patches, and `data/sts1/stats-periods/<period>.json` holds each year and quarter. The main file has `meta` and `segments`, one per `<character>|<ascension>` for characters `all`, `ironclad`, `silent`, `defect`, `watcher` and bands `all`, `a0`, `a1_10`, `a11_19`, `a20`.
+`data/sts1/stats.json` holds all patches, and `data/sts1/stats-periods/<period>.json` holds each year (or each quarter too, with the default `--periods quarter`). The main file has `meta` and `segments`, one per `<character>|<ascension>` for characters `all`, `ironclad`, `silent`, `defect`, `watcher` and bands `all`, `a0`, `a1_10`, `a11_19`, `a20`.
 
 Each segment has:
 
