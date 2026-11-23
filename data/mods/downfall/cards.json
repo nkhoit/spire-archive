@@ -118,7 +118,7 @@
   {
     "id": "DOWNFALL_AWAKENED_AWAKENEDFORM",
     "name": "Awakened Form",
-    "description": "Gain 1 Curiosity.\nGain !awakened:m2! Ritual.",
+    "description": "Gain 1 Curiosity.\nGain 1 Ritual.",
     "cost": 3,
     "type": "Power",
     "rarity": "Rare",
@@ -141,7 +141,7 @@
       "damage": null,
       "block": null,
       "magic_number": null,
-      "description": "Awaken immediately.\nGain 1 Curiosity.\nGain !awakened:m2! Ritual."
+      "description": "Awaken immediately.\nGain 1 Curiosity.\nGain 2 Ritual."
     }
   },
   {
@@ -435,64 +435,6 @@
     }
   },
   {
-    "id": "DOWNFALL_AWAKENED_CRUSHER",
-    "name": "Crusher",
-    "description": "Retain.\nDeal 25 damage.\nWhen a card is created, reduce this card's cost by 1 until played.",
-    "cost": 5,
-    "type": "Attack",
-    "rarity": "Special",
-    "target": "Enemy",
-    "color": "awakened",
-    "damage": 25,
-    "block": null,
-    "magic_number": null,
-    "hit_count": null,
-    "exhaust": false,
-    "ethereal": false,
-    "innate": false,
-    "retain": false,
-    "self_retain": true,
-    "purge_on_use": false,
-    "tags": [],
-    "keywords": [],
-    "upgrade": {
-      "cost": null,
-      "damage": 5,
-      "block": null,
-      "magic_number": null,
-      "description": "Retain.\nDeal 30 damage.\nWhen a card is created, reduce this card's cost by 1 until played."
-    }
-  },
-  {
-    "id": "DOWNFALL_AWAKENED_DAGGERSTORM",
-    "name": "Daggerstorm",
-    "description": "Whenever you create a card, deal 4 damage to a random enemy.",
-    "cost": 2,
-    "type": "Power",
-    "rarity": "Special",
-    "target": "Self",
-    "color": "awakened",
-    "damage": null,
-    "block": null,
-    "magic_number": 4,
-    "hit_count": null,
-    "exhaust": false,
-    "ethereal": false,
-    "innate": false,
-    "retain": false,
-    "self_retain": false,
-    "purge_on_use": false,
-    "tags": [],
-    "keywords": [],
-    "upgrade": {
-      "cost": null,
-      "damage": null,
-      "block": null,
-      "magic_number": 2,
-      "description": "Whenever you create a card, deal 6 damage to a random enemy."
-    }
-  },
-  {
     "id": "DOWNFALL_AWAKENED_DARKECHO",
     "name": "Dark Echo",
     "description": "At the end of your turn, deal 4 damage to ALL enemies, increased by Strength.",
@@ -524,7 +466,7 @@
   {
     "id": "DOWNFALL_AWAKENED_DARKNESSFALLS",
     "name": "Darkness Falls",
-    "description": "Whenever you are Drained, gain 4 Block and !awakened:m2! Strength.",
+    "description": "Whenever you are Drained, gain 4 Block and 1 Strength.",
     "cost": 1,
     "type": "Power",
     "rarity": "Uncommon",
@@ -547,7 +489,7 @@
       "damage": null,
       "block": null,
       "magic_number": null,
-      "description": "Innate.\nWhenever you are Drained, gain 4 Block and !awakened:m2! Strength."
+      "description": "Innate.\nWhenever you are Drained, gain 4 Block and 1 Strength."
     }
   },
   {
@@ -640,7 +582,7 @@
   {
     "id": "DOWNFALL_AWAKENED_DEMONGLYPH",
     "name": "Demon Glyph",
-    "description": "Gain 1 Strength and Dexterity.\nWhen you Awaken, gain !awakened:m2! more.",
+    "description": "Gain 1 Strength and Dexterity.\nWhen you Awaken, gain 2 more.",
     "cost": 1,
     "type": "Power",
     "rarity": "Rare",
@@ -663,7 +605,7 @@
       "damage": null,
       "block": null,
       "magic_number": null,
-      "description": null
+      "description": "Gain 1 Strength and Dexterity.\nWhen you Awaken, gain 3 more."
     }
   },
   {
@@ -1133,7 +1075,7 @@
   {
     "id": "DOWNFALL_AWAKENED_KNIFESEDGE",
     "name": "Knife's Edge",
-    "description": "Gain !awakened:m2! Strength.\nAdd 2 Voids into your discard pile.",
+    "description": "Gain 2 Strength.\nAdd 2 Voids into your discard pile.",
     "cost": 0,
     "type": "Skill",
     "rarity": "Uncommon",
@@ -1156,36 +1098,7 @@
       "damage": null,
       "block": null,
       "magic_number": null,
-      "description": null
-    }
-  },
-  {
-    "id": "DOWNFALL_AWAKENED_MANASHIELD",
-    "name": "Mana Shield",
-    "description": "Gain 14 Block.\nConjure.\nReduce the cost of a random Spell in hand by 1.",
-    "cost": 2,
-    "type": "Skill",
-    "rarity": "Special",
-    "target": "Self",
-    "color": "awakened",
-    "damage": null,
-    "block": 14,
-    "magic_number": null,
-    "hit_count": null,
-    "exhaust": false,
-    "ethereal": false,
-    "innate": false,
-    "retain": false,
-    "self_retain": false,
-    "purge_on_use": false,
-    "tags": [],
-    "keywords": [],
-    "upgrade": {
-      "cost": null,
-      "damage": null,
-      "block": 4,
-      "magic_number": null,
-      "description": "Gain 18 Block.\nConjure.\nReduce the cost of a random Spell in hand by 1."
+      "description": "Gain 3 Strength.\nAdd 2 Voids into your discard pile."
     }
   },
   {
@@ -1218,35 +1131,6 @@
     }
   },
   {
-    "id": "DOWNFALL_AWAKENED_MANTIS",
-    "name": "Mantis",
-    "description": "Gain 2 Strength.\nAdd a Plume Jab into your hand.",
-    "cost": 1,
-    "type": "Skill",
-    "rarity": "Special",
-    "target": "Self",
-    "color": "awakened",
-    "damage": null,
-    "block": null,
-    "magic_number": 2,
-    "hit_count": null,
-    "exhaust": false,
-    "ethereal": false,
-    "innate": false,
-    "retain": false,
-    "self_retain": false,
-    "purge_on_use": false,
-    "tags": [],
-    "keywords": [],
-    "upgrade": {
-      "cost": null,
-      "damage": null,
-      "block": null,
-      "magic_number": 1,
-      "description": "Gain 3 Strength.\nAdd a Plume Jab into your hand."
-    }
-  },
-  {
     "id": "DOWNFALL_AWAKENED_MIDDENHEAP",
     "name": "Midden Heap",
     "description": "Gain 3 Block.\nPut 1 Status or Curse card from your draw or discard pile into your hand.",
@@ -1273,35 +1157,6 @@
       "block": 1,
       "magic_number": 1,
       "description": "Gain 4 Block.\nPut 2 Status or Curse cards from your draw or discard pile into your hand."
-    }
-  },
-  {
-    "id": "DOWNFALL_AWAKENED_MINNIEGUN",
-    "name": "Minniegun",
-    "description": "Deal 2 damage 5 times.\nShuffle a Void into your draw pile.",
-    "cost": 2,
-    "type": "Attack",
-    "rarity": "Special",
-    "target": "Enemy",
-    "color": "awakened",
-    "damage": 2,
-    "block": null,
-    "magic_number": 5,
-    "hit_count": null,
-    "exhaust": false,
-    "ethereal": false,
-    "innate": false,
-    "retain": false,
-    "self_retain": false,
-    "purge_on_use": false,
-    "tags": [],
-    "keywords": [],
-    "upgrade": {
-      "cost": null,
-      "damage": null,
-      "block": null,
-      "magic_number": 1,
-      "description": "Deal 2 damage 6 times.\nShuffle a Void into your draw pile."
     }
   },
   {
@@ -1711,35 +1566,6 @@
     }
   },
   {
-    "id": "DOWNFALL_AWAKENED_REALITYRIFT",
-    "name": "Reality Rift",
-    "description": "Choose !awakened:m2! of 3 powerful cards from ANOTHER DIMENSION to gain.\nAdd 2 Voids to your discard pile. Exhaust.",
-    "cost": 0,
-    "type": "Skill",
-    "rarity": "Special",
-    "target": "Self",
-    "color": "awakened",
-    "damage": null,
-    "block": null,
-    "magic_number": 3,
-    "hit_count": null,
-    "exhaust": true,
-    "ethereal": false,
-    "innate": false,
-    "retain": false,
-    "self_retain": false,
-    "purge_on_use": false,
-    "tags": [],
-    "keywords": [],
-    "upgrade": {
-      "cost": null,
-      "damage": null,
-      "block": null,
-      "magic_number": 2,
-      "description": "Choose !awakened:m2! of 5 powerful cards from ANOTHER DIMENSION to gain.\nAdd 2 Voids to your discard pile. Exhaust."
-    }
-  },
-  {
     "id": "DOWNFALL_AWAKENED_REBIRTH",
     "name": "Rebirth",
     "description": "When you would die or at the end of combat, remove all debuffs, Awaken, and heal 8 HP instead.",
@@ -1827,35 +1653,6 @@
     }
   },
   {
-    "id": "DOWNFALL_AWAKENED_SCHEME",
-    "name": "Scheme",
-    "description": "The next card you play this turn that cost 1 or less is played twice.",
-    "cost": 1,
-    "type": "Skill",
-    "rarity": "Special",
-    "target": "Self",
-    "color": "awakened",
-    "damage": null,
-    "block": null,
-    "magic_number": 1,
-    "hit_count": null,
-    "exhaust": false,
-    "ethereal": false,
-    "innate": false,
-    "retain": false,
-    "self_retain": false,
-    "purge_on_use": false,
-    "tags": [],
-    "keywords": [],
-    "upgrade": {
-      "cost": null,
-      "damage": null,
-      "block": null,
-      "magic_number": 1,
-      "description": "The next 2 cards you play this turn that cost 1 or less are played twice."
-    }
-  },
-  {
     "id": "DOWNFALL_AWAKENED_SCOUR",
     "name": "Scour",
     "description": "Deal 7 damage.\nApply 3 Manaburn.",
@@ -1882,35 +1679,6 @@
       "block": null,
       "magic_number": 1,
       "description": "Deal 9 damage.\nApply 4 Manaburn."
-    }
-  },
-  {
-    "id": "DOWNFALL_AWAKENED_SIGNINBLOOD",
-    "name": "Sign in Blood",
-    "description": "Take !awakened:m2! damage.\nDraw 3 cards.\nGain !awakened:m2! Strength.\nExhaust.",
-    "cost": 0,
-    "type": "Skill",
-    "rarity": "Special",
-    "target": "Self",
-    "color": "awakened",
-    "damage": null,
-    "block": null,
-    "magic_number": 3,
-    "hit_count": null,
-    "exhaust": true,
-    "ethereal": false,
-    "innate": false,
-    "retain": false,
-    "self_retain": false,
-    "purge_on_use": false,
-    "tags": [],
-    "keywords": [],
-    "upgrade": {
-      "cost": null,
-      "damage": null,
-      "block": null,
-      "magic_number": 1,
-      "description": "Take !awakened:m2! damage.\nDraw 4 cards.\nGain !awakened:m2! Strength.\nExhaust."
     }
   },
   {
@@ -2204,35 +1972,6 @@
     }
   },
   {
-    "id": "DOWNFALL_AWAKENED_SPREADINGSPORES",
-    "name": "Spreading Spores",
-    "description": "Ethereal.\nGain 2 Thorns.\nShuffle a copy of this into your draw pile.",
-    "cost": 0,
-    "type": "Power",
-    "rarity": "Special",
-    "target": "Self",
-    "color": "awakened",
-    "damage": null,
-    "block": null,
-    "magic_number": 2,
-    "hit_count": null,
-    "exhaust": false,
-    "ethereal": true,
-    "innate": false,
-    "retain": false,
-    "self_retain": false,
-    "purge_on_use": false,
-    "tags": [],
-    "keywords": [],
-    "upgrade": {
-      "cost": null,
-      "damage": null,
-      "block": null,
-      "magic_number": 2,
-      "description": "Ethereal.\nGain 4 Thorns.\nShuffle a copy of this into your draw pile."
-    }
-  },
-  {
     "id": "DOWNFALL_AWAKENED_STORMRULER",
     "name": "Storm Ruler",
     "description": "Conjure.\nThunderbolts deal 6 additional damage.",
@@ -2351,7 +2090,7 @@
   {
     "id": "DOWNFALL_AWAKENED_THAUMATURGY",
     "name": "Thaumaturgy",
-    "description": "Gain !awakened:m2! Dexterity.\nAt the start of your next 2 turns, add a Ceremony into your hand.",
+    "description": "Gain 1 Dexterity.\nAt the start of your next 2 turns, add a Ceremony into your hand.",
     "cost": 1,
     "type": "Power",
     "rarity": "Uncommon",
@@ -2374,36 +2113,7 @@
       "damage": null,
       "block": null,
       "magic_number": null,
-      "description": null
-    }
-  },
-  {
-    "id": "DOWNFALL_AWAKENED_THEENCYCLOPEDIA",
-    "name": "The Encyclopedia",
-    "description": "Choose 2 of 4 random cards to add into your hand. They cost 2 less.\nExhaust.",
-    "cost": 2,
-    "type": "Skill",
-    "rarity": "Special",
-    "target": "Self",
-    "color": "awakened",
-    "damage": null,
-    "block": null,
-    "magic_number": 4,
-    "hit_count": null,
-    "exhaust": true,
-    "ethereal": false,
-    "innate": false,
-    "retain": false,
-    "self_retain": false,
-    "purge_on_use": false,
-    "tags": [],
-    "keywords": [],
-    "upgrade": {
-      "cost": null,
-      "damage": null,
-      "block": null,
-      "magic_number": 2,
-      "description": "Choose 2 of 6 random cards to add into your hand. They cost 2 less.\nExhaust."
+      "description": "Gain 2 Dexterity.\nAt the start of your next 2 turns, add a Ceremony into your hand."
     }
   },
   {
@@ -2496,7 +2206,7 @@
   {
     "id": "DOWNFALL_AWAKENED_WAVEOFMIASMA",
     "name": "Wave of Miasma",
-    "description": "Gain 12 Block.\nApply !awakened:m2! Manaburn to ALL enemies.\nExhaust.",
+    "description": "Gain 12 Block.\nApply 4 Manaburn to ALL enemies.\nExhaust.",
     "cost": 2,
     "type": "Skill",
     "rarity": "Uncommon",
@@ -2519,7 +2229,7 @@
       "damage": null,
       "block": 3,
       "magic_number": null,
-      "description": "Gain 15 Block.\nApply !awakened:m2! Manaburn to ALL enemies.\nExhaust."
+      "description": "Gain 15 Block.\nApply 6 Manaburn to ALL enemies.\nExhaust."
     }
   },
   {
@@ -8407,35 +8117,6 @@
       "block": null,
       "magic_number": null,
       "description": "Unplayable.\nRetain.\nWhen Exhausted, gain 2 Reserve next turn."
-    }
-  },
-  {
-    "id": "DOWNFALL_COLLECTOR_DEFAULTCOLLECTIBLECARD",
-    "name": "Soulless Husk",
-    "description": "This foe doesn't have a unique Collectible yet!\nGain 1 Strength and Dexterity.",
-    "cost": 1,
-    "type": "Power",
-    "rarity": "Special",
-    "target": "Self",
-    "color": "collector",
-    "damage": null,
-    "block": null,
-    "magic_number": 1,
-    "hit_count": null,
-    "exhaust": false,
-    "ethereal": false,
-    "innate": false,
-    "retain": false,
-    "self_retain": false,
-    "purge_on_use": false,
-    "tags": [],
-    "keywords": [],
-    "upgrade": {
-      "cost": null,
-      "damage": null,
-      "block": null,
-      "magic_number": 1,
-      "description": "This foe doesn't have a unique Collectible yet!\nGain 2 Strength and Dexterity."
     }
   },
   {

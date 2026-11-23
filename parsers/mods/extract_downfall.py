@@ -298,10 +298,10 @@ def _substitute(text, values, custom_values, color, label):
                 text = text.replace(token, '')
             else:
                 text = text.replace(token, str(value))
-    remaining = set(re.findall(r'!([A-Za-z0-9_]+)!', text))
+    remaining = set(re.findall(r'!([A-Za-z0-9_:]+)!', text))
     for token in sorted(remaining):
         normalized = re.sub(r'[^a-z0-9]', '', token.lower())
-        aliases = {'slime': 'slimed', 'burny': 'burn', 'clm2': 'secondmagic', 'bauto': 'auto', 'dm': 'downfallmagic', 'qqq': 'silly', 'guardiansecondm': 'secondarym', 'secondmagic': 'secondmagicnumber'}
+        aliases = {'awakenedm2': 'secondmagic', 'slime': 'slimed', 'burny': 'burn', 'clm2': 'secondmagic', 'bauto': 'auto', 'dm': 'downfallmagic', 'qqq': 'silly', 'guardiansecondm': 'secondarym', 'secondmagic': 'secondmagicnumber'}
         wanted = aliases.get(normalized, normalized)
         match_key = next((k for k in custom_values
                           if re.sub(r'[^a-z0-9]', '', k.lower()) == wanted
@@ -385,6 +385,8 @@ def _card_is_in_scope(source, stats, path):
     if '@CardIgnore' in source and stats['type'] not in {'STATUS', 'CURSE'}: return False, 'ignored card'
     if re.search(r'(^|[/\\])(test|tests|joke|deprecated|unused|beta)([/\\]|$)', path.as_posix(), re.I): return False, 'test/joke/deprecated path'
     if re.match(r'^(?:Abstract|Base)', path.stem) or path.stem.lower().startswith(('zzz', 'test')): return False, 'abstract/test card'
+    # @NoPools cards never appear in a run; meme/altDimension hold joke and event-only cards; DefaultCollectibleCard is a fallback stub.
+    if '@NoPools' in source or re.search(r'[/\\](meme|altDimension)[/\\]', path.as_posix()) or path.stem == 'DefaultCollectibleCard': return False, 'not obtainable in a run'
     rarity = stats['rarity']
     if rarity not in {'BASIC', 'COMMON', 'UNCOMMON', 'RARE', 'SPECIAL', 'CURSE'}: return False, f'out-of-pool rarity {rarity}'
     if not stats['type'] or stats['cost'] is None: return False, 'missing type or cost'
@@ -419,7 +421,7 @@ def _extract_card(path, strings, res_dir, color, pkg, source_resources):
     # Some classes use a shorter, separately localized upgraded description. Retain the
     # source's complete localization string and only omit it when text is unchanged.
     upgrade_description = upgraded_text if upgraded_text and upgraded_text != description else None
-    if re.search(r'![A-Za-z0-9_]+!|&#?\w+;|[<>]', description + (upgrade_description or '')):
+    if re.search(r'![A-Za-z0-9_:]+!|&#?\w+;|[<>]', description + (upgrade_description or '')):
         problems.append(f'{color}/{class_name}: invalid placeholder or markup in rendered text')
         return None, 'unresolved placeholder or markup'
     target = _simple_title(stats['target'])
