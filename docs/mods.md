@@ -75,7 +75,7 @@ The browser tests skip themselves when the server is not running with the fixtur
 
 ## Downfall
 
-`py -3 parsers/mods/extract_downfall.py` reads an installed `Downfall.jar` and writes the 10 characters, their starter cards and starter relics, with portraits, card frames and art. It needs Pillow and a JDK. Other Downfall cards, relics, potions, monsters and events are not extracted yet.
+`python3 parsers/mods/extract_downfall.py --source /path/to/DownfallSTS` reads Downfall's Java source and English localization, then generates localized cards and relics for the existing 10 characters. It includes character-pool cards (Basic/Common/Uncommon/Rare) and localized character relics with source-backed tiers and art. Genuine localized Special/status/curse cards are included when they have usable source values and art. It excludes shared `downfall/` and `expansioncontent/` code, `charbosses/`, abstract/deprecated/test/joke/ignored cards, non-player tokens without reliable stats or art, and relics with no supported tier. It needs Python 3 and Pillow. The MIT-licensed source is at [DownfallSTS](https://github.com/mikemayhemdev/DownfallSTS); keep `data/mods/downfall/LICENSE`.
 
 ## Single-character mods
 
