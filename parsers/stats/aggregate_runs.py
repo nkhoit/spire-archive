@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Aggregate Mega Crit's public STS1 run dump into data/sts1/stats.json.
 
-Standard library only. See docs/stats-plan.md.
+Standard library only. See docs/stats.md.
 """
 import argparse
 import gzip

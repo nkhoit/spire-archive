@@ -1,6 +1,6 @@
 # Run statistics (STS1)
 
-A Stats tab built from Mega Crit's public dump of about 77 million runs (27 GB compressed), aimed at people balancing modded characters. The shipped `data/sts1/stats.json` is built from a one-file sample of that dump (99,944 usable runs); `meta` records the counts.
+A Stats tab built from Mega Crit's public dump of about 77 million runs (27 GB compressed), aimed at people balancing modded characters. `data/sts1/stats.json` is not committed; build it with the steps below. Source: [77 Million Runs - An STS Metrics Dump](https://www.reddit.com/r/slaythespire/comments/jt5y1w/77_million_runs_an_sts_metrics_dump/).
 
 ## What the data can and cannot answer
 

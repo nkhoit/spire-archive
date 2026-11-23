@@ -2,7 +2,7 @@
 """Remove junk runs from the raw STS1 dump and write a clean copy.
 
 Uses the same rules as aggregate_runs.py. The input is never modified, and an
-interrupted cull resumes where it stopped. See docs/stats-plan.md.
+interrupted cull resumes where it stopped. See docs/stats.md.
 """
 import argparse
 import gzip

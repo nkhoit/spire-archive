@@ -84,6 +84,7 @@ The browser tests skip themselves when the server is not running with the fixtur
 - The site shows one `starting_relic`. The Elementalist starts with two, so Graduation Letter is in its `relics.json` but not on the character page.
 - Poker cards use a custom card type the site has no frame for, so they are stored as Skills with the generic Poker Card art.
 
-## Open before deploying mods
+## Licensing
 
-Confirm permission to host each mod's art and text on the public site.
+Only host a mod whose license allows it, and keep its license file in `data/mods/<id>/`.
+Downfall's art and text come from [DownfallSTS](https://github.com/mikemayhemdev/DownfallSTS) (MIT, © 2019 The Evil Gang); see `data/mods/downfall/LICENSE`.
