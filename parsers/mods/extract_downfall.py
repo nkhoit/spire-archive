@@ -67,6 +67,9 @@ def clean_text(text):
     text = re.sub(r'\s*\[REMOVE_SPACE\]', '', text)
     text = re.sub(r'(?<=[A-Za-z])_(?=[A-Z])', ' ', text)
     text = re.sub(r'\[E\] +(?=[.,])', '[E]', text)
+    text = re.sub(r'\s+([.,;:?，．、。；：！？])', r'\1', text)
+    text = re.sub(r'\s+!(?![A-Za-z0-9_:]+!)', '!', text)
+    text = re.sub(r'[ \t]+(?=\n|$)', '', text)
     text = re.sub(r'[ \t]+', ' ', text).strip()
     return text.replace('<', '').replace('>', '')
 
@@ -215,11 +218,40 @@ def _upgrade_info(source, constants):
             custom_name = suffix[0].lower() + suffix[1:]
             custom_name = {'downfall': 'downfallMagic', 'defaultSecondMagicNumber': 'secondMagicNumber', 'slime': 'slimed'}.get(custom_name, custom_name)
             custom[custom_name] = value
-    return changes, custom
+    flags = {}
+    for source_name, output_name in (('exhaust', 'exhaust'), ('isEthereal', 'ethereal'), ('ethereal', 'ethereal'), ('isInnate', 'innate'), ('innate', 'innate'), ('retain', 'retain'), ('selfRetain', 'self_retain'), ('purgeOnUse', 'purge_on_use')):
+        match = re.search(rf'\b(?:this\.)?{source_name}\s*=\s*(true|false)\s*;', body)
+        if match: flags[output_name] = match[1] == 'true'
+    return changes, custom, flags
 
 
-def parse_card_source(source):
+def _upgrade_keyword_changes(description, upgraded_description, base_flags, upgraded_flags):
+    names = {'exhaust': 'Exhaust', 'ethereal': 'Ethereal', 'innate': 'Innate', 'retain': 'Retain',
+             'self_retain': 'Retain', 'purge_on_use': 'Purge on use'}  # the game shows selfRetain as Retain
+    add, remove = set(), set()
+    for flag, keyword in names.items():
+        before = base_flags.get(flag, False)
+        after = upgraded_flags.get(flag, before)
+        if before != after:
+            (add if after else remove).add(keyword)
+    base_text, upgraded_text = clean_text(description), clean_text(upgraded_description)
+    for keyword in names.values():
+        pattern = rf'(?<!\w){re.escape(keyword)}(?!\w)'
+        before = bool(re.search(pattern, base_text, re.I))
+        after = bool(re.search(pattern, upgraded_text, re.I))
+        if before != after:
+            (add if after else remove).add(keyword)
+    return {'add_keywords': sorted(add), 'remove_keywords': sorted(remove)}
+
+
+def parse_card_source(source, source_root=None, _seen=None):
     """Return source-derived card statistics, constructor flags and upgrade deltas."""
+    _seen = set() if _seen is None else _seen
+    class_match = re.search(r'\bclass\s+(\w+)', source)
+    class_name = class_match[1] if class_match else ''
+    if class_name in _seen:
+        source_root = None
+    _seen.add(class_name)
     source = _strip_comments(source)
     constants = _constants(source)
     class_match = re.search(r'\bclass\s+(\w+)', source)
@@ -255,20 +287,38 @@ def parse_card_source(source):
         prefix = 'defaultBase' if field.startswith('defaultBase') else 'base' if field.startswith('base') else ''
         name = field[len(prefix):] if prefix else field
         custom[name[0].lower() + name[1:]] = value
-    upgrades, custom_upgrade = _upgrade_info(source, constants)
+    upgrades, custom_upgrade, upgrade_booleans = _upgrade_info(source, constants)
     for field in custom_upgrade:
         custom.setdefault(field, 0)
     booleans = {}
     for source_name, output_name in (('exhaust', 'exhaust'), ('isEthereal', 'ethereal'), ('ethereal', 'ethereal'), ('isInnate', 'innate'), ('innate', 'innate'), ('retain', 'retain'), ('selfRetain', 'self_retain'), ('purgeOnUse', 'purge_on_use')):
         match = re.search(rf'\b(?:this\.)?{source_name}\s*=\s*(true|false)\s*;', constructor)
         if match: booleans[output_name] = match[1] == 'true'
-    hit_count = next((fields[k] for k in ('baseHitCount', 'baseHits', 'baseMulti', 'baseCool', 'baseAuto') if k in fields), None)
-    if hit_count is None:
-        hit_count = custom.get('cool', custom.get('auto'))
-    return {'cost': cost, 'type': card_type, 'rarity': rarity, 'target': target,
-            'damage': damage, 'block': block, 'magic': magic, 'custom': custom,
-            'upgrade': upgrades, 'custom_upgrade': custom_upgrade,
-            'booleans': booleans, 'hit_count': hit_count}
+    hit_count = next((fields[k] for k in ('baseHitCount', 'baseHits', 'baseMulti') if k in fields), None)
+    parsed = {'cost': cost, 'type': card_type, 'rarity': rarity, 'target': target,
+              'damage': damage, 'block': block, 'magic': magic, 'custom': custom,
+              'upgrade': upgrades, 'custom_upgrade': custom_upgrade,
+              'booleans': booleans, 'upgrade_booleans': upgrade_booleans, 'hit_count': hit_count}
+    parent_match = re.search(r'\bclass\s+\w+\s+extends\s+(\w+)', source)
+    parent_name = parent_match[1] if parent_match else None
+    if source_root and parent_name and parent_name not in _seen:
+        package = re.search(r'(?m)^\s*package\s+([\w.]+)\s*;', source)
+        imported = re.search(rf'(?m)^\s*import\s+([\w.]+\.{re.escape(parent_name)})\s*;', source)
+        candidates = []
+        if imported:
+            candidates.append(Path(source_root) / (imported[1].replace('.', '/') + '.java'))
+        if package:
+            candidates.append(Path(source_root) / package[1].replace('.', '/') / f'{parent_name}.java')
+        candidates.extend(sorted(Path(source_root).rglob(f'{parent_name}.java')))
+        parent_path = next((p for p in candidates if p.is_file()), None)
+        if parent_path:
+            inherited = parse_card_source(parent_path.read_text(encoding='utf-8', errors='replace'), source_root, _seen)
+            for field in ('cost', 'type', 'rarity', 'target', 'damage', 'block', 'magic'):
+                if parsed[field] is None:
+                    parsed[field] = inherited[field]
+            for field, value in inherited['booleans'].items():
+                parsed['booleans'].setdefault(field, value)
+    return parsed
 
 
 def _id_suffix(source, class_name):
@@ -382,6 +432,7 @@ def _source_for(pkg_dir, folder):
 
 def _card_is_in_scope(source, stats, path):
     if re.search(r'@Deprecated|\babstract\s+class\b|\binterface\s+', source): return False, 'deprecated or non-instantiable'
+    if 'sneckomod' in path.parts and 'unknowns' in path.parts: return False, 'snecko unknown template'
     if '@CardIgnore' in source and stats['type'] not in {'STATUS', 'CURSE'}: return False, 'ignored card'
     if re.search(r'(^|[/\\])(test|tests|joke|deprecated|unused|beta)([/\\]|$)', path.as_posix(), re.I): return False, 'test/joke/deprecated path'
     if re.match(r'^(?:Abstract|Base)', path.stem) or path.stem.lower().startswith(('zzz', 'test')): return False, 'abstract/test card'
@@ -393,7 +444,7 @@ def _card_is_in_scope(source, stats, path):
     return True, ''
 
 
-def _extract_card(path, strings, res_dir, color, pkg, source_resources):
+def _extract_card(path, strings, res_dir, color, pkg, source_resources, java_root=None):
     source = _strip_comments(path.read_text(encoding='utf-8', errors='replace'))
     class_match = re.search(r'\bclass\s+(\w+)', source)
     if not class_match: return None, 'not a card class'
@@ -402,7 +453,7 @@ def _extract_card(path, strings, res_dir, color, pkg, source_resources):
     key = _localized_key(strings, id_suffix, class_name)
     if not key: return None, 'no localization'
     entry = strings[key]
-    stats = parse_card_source(source)
+    stats = parse_card_source(source, source_root=java_root)
     include, why = _card_is_in_scope(source, stats, path)
     if not include: return None, why
     raw_id = key if ':' in key else f'{pkg}_{key}'
@@ -418,9 +469,10 @@ def _extract_card(path, strings, res_dir, color, pkg, source_resources):
             upgrade_values[out_name] += delta
     custom_upgraded = {name: _custom_upgrade_value(custom, stats['custom_upgrade'], name) for name in custom}
     upgraded_text = _substitute(upgrade_entry or entry.get('DESCRIPTION', ''), upgrade_values, custom_upgraded, color, class_name)
-    # Some classes use a shorter, separately localized upgraded description. Retain the
-    # source's complete localization string and only omit it when text is unchanged.
     upgrade_description = upgraded_text if upgraded_text and upgraded_text != description else None
+    upgraded_flags = {**stats['booleans'], **stats['upgrade_booleans']}
+    keyword_changes = _upgrade_keyword_changes(entry.get('DESCRIPTION', ''), upgrade_entry or entry.get('DESCRIPTION', ''),
+                                              stats['booleans'], upgraded_flags)
     if re.search(r'![A-Za-z0-9_:]+!|&#?\w+;|[<>]', description + (upgrade_description or '')):
         problems.append(f'{color}/{class_name}: invalid placeholder or markup in rendered text')
         return None, 'unresolved placeholder or markup'
@@ -437,6 +489,7 @@ def _extract_card(path, strings, res_dir, color, pkg, source_resources):
         'purge_on_use': stats['booleans'].get('purge_on_use', False), 'tags': [], 'keywords': [],
         'upgrade': {'cost': stats['upgrade']['cost'], 'damage': stats['upgrade']['damage'],
                     'block': stats['upgrade']['block'], 'magic_number': stats['upgrade']['magic_number'],
+                    'add_keywords': keyword_changes['add_keywords'], 'remove_keywords': keyword_changes['remove_keywords'],
                     'description': _clean_json_text(upgrade_description) if upgrade_description else None},
     }
     art_stems = [class_name, id_suffix, key.rsplit(':', 1)[-1]]
@@ -572,7 +625,7 @@ def main(argv=None):
         starter_relic_id = site_id(starter_relic_key if starter_relic_key and ':' in starter_relic_key else f'{pkg}_{starter_relic_key}') if starter_relic_key else ''
 
         for path in _source_for(pkg_dir, 'cards'):
-            result, reason = _extract_card(path, card_strings, res_dir, color, pkg, resources_root)
+            result, reason = _extract_card(path, card_strings, res_dir, color, pkg, resources_root, java_root)
             if not result:
                 if reason not in ('no localization', 'not a card class'):
                     skipped.append(f'{color}/{path.stem}: {reason}')

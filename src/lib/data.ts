@@ -55,6 +55,8 @@ export interface CardUpgrade {
   damage: string | null;
   block: string | null;
   magic_number: string | null;
+  add_keywords?: string[];
+  remove_keywords?: string[];
   description: string | null;
 }
 
