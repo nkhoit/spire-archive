@@ -438,7 +438,7 @@ async function loadBaseData(game: string): Promise<Dataset> {
   return dataset;
 }
 
-// Mods load once per process and are English-only.
+// Mods load once per process; text is English unless a mod ships localization/<locale>.json.
 const MOD_ENTITIES = ['cards', 'relics', 'potions', 'monsters', 'events', 'powers', 'keywords', 'characters'] as const;
 
 interface LoadedMod {
@@ -484,6 +484,29 @@ async function readOptional<T>(file: string, fallback: T): Promise<T> {
   return existsSync(file) ? JSON.parse(await fs.readFile(file, 'utf-8')) as T : fallback;
 }
 
+interface ModLocalization {
+  cards?: Record<string, { name?: string; description?: string; upgrade_description?: string }>;
+  relics?: Record<string, { name?: string; description?: string; flavor?: string }>;
+}
+
+async function loadModLocalization(mod: LoadedMod, locale: Locale): Promise<ModLocalization> {
+  const file = path.join(modsDir(), mod.manifest.id, 'localization', `${locale}.json`);
+  if (!existsSync(file)) return {};
+  try {
+    const localization = JSON.parse(await fs.readFile(file, 'utf-8')) as ModLocalization;
+    const files = Object.fromEntries((['cards', 'relics'] as const).map((key) => [
+      key,
+      Object.entries(localization[key] ?? {}).map(([id, fields]) => ({ id, ...fields })),
+    ]));
+    const problem = modProblem(mod.manifest.id, mod.manifest, files);
+    if (problem) throw new Error(problem);
+    return localization;
+  } catch (error) {
+    console.error(`Skipping localization for mod ${mod.manifest.id} (${locale}): ${error}`);
+    return {};
+  }
+}
+
 function loadMods(): Promise<LoadedMod[]> {
   modsCache ??= (async () => {
     const dir = modsDir();
@@ -524,7 +547,31 @@ function stampMod(item: any, manifest: ModManifest) {
   };
 }
 
-/** Base data plus every installed mod. Use getData() for anything that must stay base-game only. */
+function localizedModItem(item: any, entity: 'cards' | 'relics', localization?: ModLocalization) {
+  const localized = localization?.[entity]?.[item.id];
+  if (!localized) return item;
+  const text = (field: 'name' | 'description') =>
+    typeof localized[field] === 'string' && localized[field] ? { [field]: localized[field] } : {};
+  if (entity === 'cards') {
+    const upgradeDescription = (localized as NonNullable<ModLocalization['cards']>[string]).upgrade_description;
+    return {
+      ...item,
+      ...text('name'),
+      ...text('description'),
+      ...(typeof upgradeDescription === 'string' && upgradeDescription
+        ? { upgrade: { ...item.upgrade, description: upgradeDescription } }
+        : {}),
+    };
+  }
+  const flavor = (localized as NonNullable<ModLocalization['relics']>[string]).flavor;
+  return {
+    ...item,
+    ...text('name'),
+    ...text('description'),
+    ...(typeof flavor === 'string' && flavor ? { flavor } : {}),
+  };
+}
+
 export async function getModdedData(game: 'sts1' | 'sts2' = 'sts1', locale: Locale = 'en'): Promise<Dataset> {
   const base = await getData(game, locale);
   if (game !== 'sts1') return base;
@@ -532,9 +579,16 @@ export async function getModdedData(game: 'sts1' | 'sts2' = 'sts1', locale: Loca
   if (cached) return cached;
 
   const mods = await loadMods();
+  const modLocalizations = new Map<string, ModLocalization>();
+  if (locale !== 'en') {
+    await Promise.all(mods.map(async (mod) => modLocalizations.set(mod.manifest.id, await loadModLocalization(mod, locale))));
+  }
   const fromMods = <T extends { id: string }>(key: (typeof MOD_ENTITIES)[number], baseItems: T[]): T[] => {
     const baseIds = new Set(baseItems.map((item) => item.id));
-    return mods.flatMap((m) => (m.files[key] ?? []).filter((item) => !baseIds.has(item.id)).map((item) => stampMod(item, m.manifest)));
+    return mods.flatMap((m) => (m.files[key] ?? []).filter((item) => !baseIds.has(item.id)).map((item) => {
+      const entity = key === 'cards' || key === 'relics' ? localizedModItem(item, key, modLocalizations.get(m.manifest.id)) : item;
+      return stampMod(entity, m.manifest);
+    }));
   };
   // Sorted so modded entries interleave instead of all landing on the last page.
   const merge = <T extends { name?: string; id: string }>(key: (typeof MOD_ENTITIES)[number], items: T[]): T[] =>

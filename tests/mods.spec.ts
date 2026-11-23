@@ -87,6 +87,18 @@ test('unsafe mods are refused', () => {
   expect(modProblem('other', manifest, {})).toContain('mod id');
   expect(modProblem('evil', { ...manifest, colors: [{ ...manifest.colors[0], hex: 'red;background:url(//x)' }] }, {})).toContain('color');
   expect(modProblem('evil', { ...manifest, colors: [{ ...manifest.colors[0], asset_color: '../../x' }] }, {})).toContain('color');
+  expect(modProblem('evil', manifest, { cards: [{ id: 'EVIL_CARD', description: 'safe &lt;script&gt;' }] })).toContain('markup');
+});
+
+test('Downfall card details use translated text with English fallback', async ({ page }) => {
+  const german = await page.goto('/de/sts1/cards/DOWNFALL_AWAKENED_THUNDERBOLT');
+  test.skip(german?.status() === 404, 'Downfall data is not installed for this test server');
+  expect(german?.status()).toBe(200);
+  await expect(page.locator('#card-name')).toHaveText('Blitzstrahl');
+
+  const italian = await page.goto('/it/sts1/cards/DOWNFALL_AWAKENED_THUNDERBOLT');
+  expect(italian?.status()).toBe(200);
+  await expect(page.locator('#card-name')).toHaveText('Thunderbolt');
 });
 
 test.describe('Modded content UI', () => {
