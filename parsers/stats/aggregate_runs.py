@@ -490,6 +490,7 @@ def main(argv=None):
 
     unmatched = {}
     raw_periods = rollup(total['segments'])
+    all_runs = raw_periods['all']['all|all']['runs']
     segments = {key: finalize_segment(raw, args.min_sample, unmatched) for key, raw in raw_periods.pop('all').items() if raw['runs'] >= args.min_sample}
     # Below min_sample a segment's tiles and charts would describe individual runs.
     periods = {
@@ -498,7 +499,7 @@ def main(argv=None):
         if raw_periods[period]['all|all']['runs'] >= args.min_sample
     }
     # A year with one quarter of runs, or 'all' with one year, would be written twice.
-    runs = {'all': total['used'], **{p: s['all|all']['runs'] for p, s in periods.items()}}
+    runs = {'all': all_runs, **{p: s['all|all']['runs'] for p, s in periods.items()}}
     same_as = {}
     for period in periods:
         parent = 'all' if len(period) == 4 else period[:4]

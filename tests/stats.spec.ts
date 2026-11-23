@@ -41,7 +41,7 @@ test.describe('Run stats tab', () => {
     await expect(tile('Win rate')).toContainText('100.0%');
     // 2019-Q1 has the same runs as 2019, so it is served from the 2019 file.
     await version.selectOption('2019-Q1');
-    await expect(tile('Runs')).toContainText('1');
+    await expect(tile('Runs').locator('div').last()).toHaveText('1');
     await expect(tile('Win rate')).toContainText('0.0%');
   });
 
