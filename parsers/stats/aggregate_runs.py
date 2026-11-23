@@ -24,8 +24,11 @@ FIGHT_TYPES = {'M': 'normal', 'E': 'elite', 'B': 'boss', 'BOSS': 'boss'}
 FLAG_REJECTIONS = ['is_daily', 'is_endless', 'chose_seed', 'is_trial', 'is_beta']
 DAMAGE_SENTINEL = 9999  # Real dumps contain fights recording ~100000 damage.
 MAX_DECK = 100
-# Run IDs the site has no entry for but that are real base-game content, shown unlinked.
-KNOWN_NAMES = {'relics': {'DODECAHEDRON': 'Runic Dodecahedron'}}
+# Run IDs the site has no entry for but that were real base-game content, shown unlinked.
+# Runic Dodecahedron was removed from the game in 2019 (DEPRECATEDDodecahedron in the current build).
+KNOWN_NAMES = {'relics': {'DODECAHEDRON': 'Runic Dodecahedron (removed)'}}
+# Some 2018 builds recorded the floor before Shield and Spear as the room ('$'), so classify it by name.
+ELITE_ENCOUNTERS = {'Shield and Spear'}
 
 # Encounters whose name differs from the monster, or that always have the same members.
 # Groups with random members (Small Slimes, Gremlin Gang, Shapes) are left out on purpose.
@@ -188,7 +191,9 @@ def run_delta(run):
             continue
         floor, turns, damage = int(fight.get('floor') or 0), fight['turns'], fight.get('damage') or 0
         step = path[floor - 1] if 0 < floor <= len(path) else None
-        kind = 'boss' if floor in BOSS_FLOORS else FIGHT_TYPES.get(step, 'normal')
+        kind = 'boss' if floor in BOSS_FLOORS else 'elite' if fight.get('enemies') in ELITE_ENCOUNTERS else FIGHT_TYPES.get(step, 'normal')
+        if act_of(floor) == 4 and kind == 'normal':
+            continue  # Act 4 has no normal fights; these are mis-floored records (~500 in 62M runs).
         for table, key in ((delta['acts'], f'{act_of(floor)}|{kind}'), (delta['encounters'], str(fight.get('enemies')))):
             bump(table, key, 'fights')
             bump(table, key, 'turns', turns)
