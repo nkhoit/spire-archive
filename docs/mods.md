@@ -30,6 +30,7 @@ data/mods/<modId>/
   characters.json   cards.json   relics.json   potions.json
   monsters.json     events.json  powers.json   keywords.json
   card_powers.json
+  localization/<site-locale>.json
 ```
 
 Entity files use the same fields as `data/sts1/<file>.json`. Card upgrades may include `upgrade.add_keywords` and `upgrade.remove_keywords` arrays; the card renderer applies them when showing upgraded cards.
@@ -47,6 +48,12 @@ Entity files use the same fields as `data/sts1/<file>.json`. Card upgrades may i
 ```
 
 `asset_color` is optional and picks the card frame and energy orb. Without it, cards use the colorless frame. Setting it to `red`, `green`, `blue` or `purple` borrows base art. A custom value needs `bg_<attack|skill|power>_<value>.png` and `card_<value>_orb.png` in `public/images/sts1/cardui/`.
+
+## Localization
+
+A mod may provide `localization/<site-locale>.json` with top-level `cards` and `relics` maps keyed by entity ID. Card fields are `name`, `description` and `upgrade_description`; relic fields are `name`, `description` and `flavor`. Only supplied text fields override English, so absent entries and fields fall back to the English entity data. Each locale file is checked with the same `modProblem()` markup/entity safety validation as entity data; an unsafe or malformed file is skipped without disabling the mod or other locales.
+
+Downfall maps source locales `deu`, `fra`, `spa`, `ptb`, `rus`, `jpn`, `kor` and `zhs` to site locales `de`, `fr`, `es`, `pt`, `ru`, `ja`, `ko` and `zh`. Other site locales (including `it`, `pl`, `th` and `tr`) use English. Extracted translations reuse source-derived card numbers and the same markup/placeholder cleanup as English.
 
 ## Parser checklist
 
