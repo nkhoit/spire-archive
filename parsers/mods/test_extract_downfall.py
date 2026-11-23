@@ -4,6 +4,7 @@ from pathlib import Path
 from extract_downfall import _card_is_in_scope, clean_text, parse_card_source, site_id
 
 
+
 class SourceParsingTests(unittest.TestCase):
     def test_extracts_card_constructor_stats_and_upgrade_deltas(self):
         source = '''
@@ -82,9 +83,49 @@ class SourceParsingTests(unittest.TestCase):
         }, Path('goodstatus/Daze.java'))
         self.assertTrue(status_allowed)
 
+    def test_excludes_snecko_unknown_templates_with_explicit_reason(self):
+        allowed, reason = _card_is_in_scope('class Unknown {}', {
+            'rarity': 'SPECIAL', 'type': 'SKILL', 'cost': -2
+        }, Path('sneckomod/cards/unknowns/Unknown.java'))
+        self.assertFalse(allowed)
+        self.assertEqual(reason, 'snecko unknown template')
+
     def test_clean_text_removes_markup_and_preserves_energy_marker(self):
         self.assertEqual(clean_text('#yDeal !D! damage NL Gain [R] [REMOVE_SPACE]Block'), 'Deal !D! damage\nGain [E]Block')
         self.assertEqual(site_id('hermit:Black_Wind'), 'DOWNFALL_HERMIT_BLACK_WIND')
+
+    def test_auto_and_cool_values_are_not_guessed_as_hit_counts(self):
+        source = '''class Example extends AbstractCard {
+          Example() { super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+            baseCool = cool = 2; baseAuto = auto = 7; }
+        }'''
+        self.assertIsNone(parse_card_source(source)['hit_count'])
+
+    def test_resolves_inherited_rarity_cost_and_flags(self):
+        from tempfile import TemporaryDirectory
+        with TemporaryDirectory() as temp:
+            root = Path(temp)
+            (root / 'AbstractSpellCard.java').write_text('''
+              abstract class AbstractSpellCard extends AbstractAwakenedCard {
+                AbstractSpellCard(String id, int cost, CardType type, CardTarget target) {
+                  super(id, cost, type, CardRarity.SPECIAL, target, CardColor.COLORLESS);
+                  this.selfRetain = true; exhaust = true;
+                }
+              }''')
+            child = '''class Thunderbolt extends AbstractSpellCard {
+              Thunderbolt() { super(ID, 1, CardType.ATTACK, CardTarget.ENEMY); baseDamage = 12; }
+            }'''
+            stats = parse_card_source(child, source_root=root)
+            self.assertEqual((stats['cost'], stats['type'], stats['rarity'], stats['target']), (1, 'ATTACK', 'SPECIAL', 'ENEMY'))
+            self.assertEqual(stats['booleans']['self_retain'], True)
+            self.assertEqual(stats['booleans']['exhaust'], True)
+
+    def test_upgrade_keyword_changes_compare_descriptions_and_flags(self):
+        from extract_downfall import _upgrade_keyword_changes
+        self.assertEqual(_upgrade_keyword_changes('At end of turn, gain Block.', 'Innate. NL At end of turn, gain Block.', {}, {}),
+                         {'add_keywords': ['Innate'], 'remove_keywords': []})
+        self.assertEqual(_upgrade_keyword_changes('Gain Block. Exhaust.', 'Gain Block.', {'exhaust': True}, {'exhaust': False}),
+                         {'add_keywords': [], 'remove_keywords': ['Exhaust']})
 
 
 if __name__ == '__main__':

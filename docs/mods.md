@@ -11,7 +11,7 @@ Mods are opt-in additions to the Slay the Spire 1 catalogue. STS2 has no modded 
 - Deselecting a mod clears a color filter that belonged to it.
 - Direct links to modded pages always work, whatever is ticked.
 - Global search, the sitemap and home page counts stay base-game only.
-- Mod text is English in every locale.
+- Mod text is English in every locale for mods without localization overlays.
 
 ## How it works
 
@@ -32,7 +32,7 @@ data/mods/<modId>/
   card_powers.json
 ```
 
-All files except `mod.json` are optional. Entity files use the same fields as `data/sts1/<file>.json`.
+Entity files use the same fields as `data/sts1/<file>.json`. Card upgrades may include `upgrade.add_keywords` and `upgrade.remove_keywords` arrays; the card renderer applies them when showing upgraded cards.
 
 ```json
 {
@@ -75,7 +75,7 @@ The browser tests skip themselves when the server is not running with the fixtur
 
 ## Downfall
 
-`python3 parsers/mods/extract_downfall.py --source /path/to/DownfallSTS` reads Downfall's Java source and English localization, then generates localized cards and relics for the existing 10 characters. It includes character-pool cards (Basic/Common/Uncommon/Rare) and localized character relics with source-backed tiers and art. Genuine localized Special/status/curse cards are included when they have usable source values and art. It excludes shared `downfall/` and `expansioncontent/` code, `charbosses/`, abstract/deprecated/test/joke/ignored cards, non-player tokens without reliable stats or art, and relics with no supported tier. It needs Python 3 and Pillow. The MIT-licensed source is at [DownfallSTS](https://github.com/mikemayhemdev/DownfallSTS); keep `data/mods/downfall/LICENSE`.
+`python3 parsers/mods/extract_downfall.py --source /path/to/DownfallSTS` reads Downfall's Java source and English localization, then generates localized cards and relics for the existing 10 characters. It includes character-pool cards (Basic/Common/Uncommon/Rare) and localized character relics with source-backed tiers and art. Genuine localized Special/status/curse cards are included when they have usable source values and art. It excludes shared `downfall/` and `expansioncontent/` code, `charbosses/`, abstract/deprecated/test/joke/ignored cards, non-player tokens without reliable stats or art, and relics with no supported tier. Snecko's `sneckomod/cards/unknowns/` entries are skipped as `snecko unknown template`: these describe bug-only placeholders, not sensibly renderable cards. A few status cards may use base-game art when Downfall supplies no corresponding art; this fallback is intentionally limited to explicit status-image references. It needs Python 3 and Pillow. The MIT-licensed source is at [DownfallSTS](https://github.com/mikemayhemdev/DownfallSTS); keep `data/mods/downfall/LICENSE`.
 
 ## Single-character mods
 
