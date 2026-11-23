@@ -438,7 +438,7 @@ async function loadBaseData(game: string): Promise<Dataset> {
   return dataset;
 }
 
-// Mods load once per process and are English-only.
+// Mods load once per process; text is English unless a mod ships localization/<locale>.json.
 const MOD_ENTITIES = ['cards', 'relics', 'potions', 'monsters', 'events', 'powers', 'keywords', 'characters'] as const;
 
 interface LoadedMod {
