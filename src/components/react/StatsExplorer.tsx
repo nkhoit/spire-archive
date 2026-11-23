@@ -11,14 +11,14 @@ const PAGE = 50;
 const LocaleContext = createContext('en');
 const useT = () => { const locale = useContext(LocaleContext); return { locale, tr: (key: string) => t(key, locale) }; };
 
-const METRICS: [string, string, (n: number) => string][] = [
+const METRICS: [string, string, (n: number, locale: string) => string][] = [
   ['deck_size', 'Deck size', String],
   ['cards_picked', 'Card rewards taken', String],
   ['upgraded_cards', 'Upgraded cards', String],
   ['attack_pct', 'Attacks in deck', (n) => `${n}%`],
   ['skill_pct', 'Skills in deck', (n) => `${n}%`],
   ['power_pct', 'Powers in deck', (n) => `${n}%`],
-  ['avg_cost_x10', 'Average card cost', (n) => (n / 10).toFixed(1)],
+  ['avg_cost_x10', 'Average card cost', (n, locale) => fixed(n / 10, 1, locale)],
   ['relics', 'Relics', String],
   ['potions_used', 'Potions used', String],
   ['purges', 'Cards removed', String],
@@ -32,12 +32,16 @@ const METRICS: [string, string, (n: number) => string][] = [
 type Format = 'int' | 'num' | 'pct' | 'delta';
 type Column = { key: string; label: string; format?: Format };
 
+// Decimals follow the page locale too (45,3 % on /de), matching toLocaleString for integers.
+const fixed = (n: number, digits: number, locale: string) => n.toLocaleString(locale, { minimumFractionDigits: digits, maximumFractionDigits: digits });
+const pct = (n: number, locale: string) => `${fixed(n * 100, 1, locale)}%`;
+
 function formatValue(value: string | number | null, format: Format | undefined, locale: string): string {
   if (value === null) return '—';
   if (typeof value === 'string') return value;
-  if (format === 'pct') return `${(value * 100).toFixed(1)}%`;
-  if (format === 'delta') return `${value > 0 ? '+' : ''}${(value * 100).toFixed(1)} pts`;
-  if (format === 'num') return value.toFixed(2);
+  if (format === 'pct') return pct(value, locale);
+  if (format === 'delta') return `${value > 0 ? '+' : ''}${fixed(value * 100, 1, locale)} ${t('pts', locale)}`;
+  if (format === 'num') return fixed(value, 2, locale);
   return value.toLocaleString(locale);
 }
 
@@ -133,9 +137,9 @@ function BarChart({ title, data, unit, xLabel }: { title: string; data: [number,
   const peak = data.find(([, y]) => y === top)!;
   return (
     <figure>
-      <div role="img" aria-label={`${tr(title)}. ${data.length} bars from ${xLabel} ${data[0][0]} to ${data[data.length - 1][0]}, peaking at ${xLabel} ${peak[0]} with ${unit(peak[1])}.`} className="flex h-36 items-end gap-[2px]">
+      <div role="img" aria-label={`${tr(title)}: ${tr(xLabel)} ${data[0][0]}–${data[data.length - 1][0]}, ${tr('peak')} ${tr(xLabel)} ${peak[0]} (${unit(peak[1])}).`} className="flex h-36 items-end gap-[2px]">
         {data.map(([x, y]) => (
-          <div key={x} title={`${xLabel} ${x}: ${unit(y)}`} className="flex h-full min-w-0 flex-1 items-end hover:bg-white/[0.05]">
+          <div key={x} title={`${tr(xLabel)} ${x}: ${unit(y)}`} className="flex h-full min-w-0 flex-1 items-end hover:bg-white/[0.05]">
             <div className="w-full rounded-t bg-[var(--accent-300)]" style={{ height: `${Math.max(1, (y / top) * 100)}%` }} />
           </div>
         ))}
@@ -157,9 +161,9 @@ function Tile({ label, value }: { label: string; value: string }) {
   );
 }
 
-function summaryCell(summary: MetricSummary, format: (n: number) => string) {
+function summaryCell(summary: MetricSummary, format: (n: number, locale: string) => string, locale: string) {
   if (!summary) return '—';
-  return `${format(summary.median)} (${format(summary.p10)}–${format(summary.p90)})`;
+  return `${format(summary.median, locale)} (${format(summary.p10, locale)}–${format(summary.p90, locale)})`;
 }
 
 const ENTITY_COLUMNS: Column[] = [
@@ -175,6 +179,9 @@ const FIGHT_COLUMNS: Column[] = [
   { key: 'avg_damage', label: 'Damage taken / fight', format: 'num' },
   { key: 'damage_per_turn', label: 'Damage taken / turn', format: 'num' },
 ];
+
+// Literal keys so translators can find them.
+const FIGHT_TYPE: Record<string, string> = { normal: 'Normal', elite: 'Elite', boss: 'Boss' };
 
 function periodLabel({ id, runs }: StatsPeriod, tr: (key: string) => string, locale: string) {
   return `${id === 'all' ? tr('All patches') : `${tr('Patches from')} ${id.replace('-', ' ')}`} (${runs.toLocaleString(locale)} ${tr('runs')})`;
@@ -197,7 +204,7 @@ function Explorer({ initial, periods, langPrefix }: { initial: StatsSegment; per
   const selectClass = 'rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm';
   const deckMedian = segment?.metrics.deck_size?.win?.median;
 
-  const acts = (segment?.acts ?? []).map((row) => ({ ...row, name: `${tr('Act')} ${row.act} ${tr(String(row.type))}` }));
+  const acts = (segment?.acts ?? []).map((row) => ({ ...row, name: `${tr('Act')} ${row.act} ${tr(FIGHT_TYPE[String(row.type)] ?? String(row.type))}` }));
 
   return (
     <div className="mt-4">
@@ -213,14 +220,14 @@ function Explorer({ initial, periods, langPrefix }: { initial: StatsSegment; per
         </select>
       </div>
 
-      {error && <p className="mt-4 text-sm text-red-300">{error}</p>}
+      {error && <p className="mt-4 text-sm text-red-300">{tr('Could not load statistics.')}</p>}
       {!segment ? (
         <p className="mt-4 text-sm text-slate-300">{loading ? tr('Loading…') : tr('No runs match this selection.')}</p>
       ) : (
         <>
           <div className="mt-4 grid grid-cols-2 gap-3 md:grid-cols-4">
             <Tile label="Runs" value={segment.runs.toLocaleString(locale)} />
-            <Tile label="Win rate" value={`${(segment.win_rate * 100).toFixed(1)}%`} />
+            <Tile label="Win rate" value={pct(segment.win_rate, locale)} />
             <Tile label="Median winning deck" value={deckMedian === undefined ? '—' : `${deckMedian} ${tr('cards')}`} />
             <Tile label="Wins" value={segment.wins.toLocaleString(locale)} />
           </div>
@@ -236,8 +243,8 @@ function Explorer({ initial, periods, langPrefix }: { initial: StatsSegment; per
                   {METRICS.filter(([key]) => segment.metrics[key]).map(([key, label, format]) => (
                     <tr key={key} className="border-t border-white/[0.06]">
                       <td className="whitespace-nowrap px-3 py-1.5">{tr(label)}</td>
-                      <td className="whitespace-nowrap px-3 py-1.5 text-right tabular-nums">{summaryCell(segment.metrics[key].win, format)}</td>
-                      <td className="whitespace-nowrap px-3 py-1.5 text-right tabular-nums">{summaryCell(segment.metrics[key].loss, format)}</td>
+                      <td className="whitespace-nowrap px-3 py-1.5 text-right tabular-nums">{summaryCell(segment.metrics[key].win, format, locale)}</td>
+                      <td className="whitespace-nowrap px-3 py-1.5 text-right tabular-nums">{summaryCell(segment.metrics[key].loss, format, locale)}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -250,7 +257,7 @@ function Explorer({ initial, periods, langPrefix }: { initial: StatsSegment; per
               <BarChart title="Deck size in winning runs" data={segment.deck_size_wins} xLabel="Cards" unit={(y) => `${y.toLocaleString(locale)} ${tr('wins')}`} />
             </Section>
             <Section title="Share of runs reaching each floor">
-              <BarChart title="Share of runs reaching each floor" data={segment.survival} xLabel="Floor" unit={(y) => `${(y * 100).toFixed(1)}% ${tr('of runs')}`} />
+              <BarChart title="Share of runs reaching each floor" data={segment.survival} xLabel="Floor" unit={(y) => `${pct(y, locale)} ${tr('of runs')}`} />
             </Section>
           </div>
 
