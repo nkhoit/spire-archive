@@ -68,6 +68,8 @@ On STS1, `cards`, `relics`, `potions`, `monsters` and `events` take `mods=a,b` t
 
 Detail: `GET /api/{game}/{resource}/:id?lang=ja`
 
+Modded content (`data/mods/`) keeps each mod's own license: Downfall is from [DownfallSTS](https://github.com/mikemayhemdev/DownfallSTS), MIT, © 2019 The Evil Gang. See `docs/mods.md` and `docs/stats.md`.
+
 ## Deployment
 
 Pushes to `main` auto-deploy via GitHub Actions → Docker → Azure Container Apps, behind Cloudflare.
