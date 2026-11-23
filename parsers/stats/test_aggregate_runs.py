@@ -32,6 +32,13 @@ def main():
         assert meta['runs_used'] == 3, meta
         assert meta['rejected'] == {'is_daily': 1, 'is_endless': 1, 'chose_seed': 1, 'other_character': 1, 'abandoned_early': 1, 'impossible_victory': 1, 'is_beta': 1, 'quit_run': 1, 'path_mismatch': 1, 'damage_sentinel': 1, 'modded_content': 1}, meta
         assert 'MYSTERY_CARD' in meta['unmatched']['cards'], meta
+        # Unknown IDs (mod or beta content) are counted in meta but left out of the tables.
+        assert all(r['name'] != 'Mystery Card' for seg in out['segments'].values() for r in seg['cards'])
+        # Starters are never offered, so they get no pick rate.
+        assert all(r['pick_rate'] is None for r in out['segments']['all|all']['cards'] if r['offered'] < 1)
+
+        years = ar.main([str(FIXTURES), '--out', str(tmp / 'years' / 'stats.json'), '--min-sample', '1', '--workers', '1', '--cache-dir', str(tmp / 'cache'), '--periods', 'year'])
+        assert [p['id'] for p in years['meta']['periods']] == ['all', '2020', '2019'], years['meta']['periods']
 
         everyone = out['segments']['all|all']
         assert (everyone['runs'], everyone['wins']) == (3, 1)
