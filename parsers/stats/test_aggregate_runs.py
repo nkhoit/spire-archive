@@ -69,6 +69,9 @@ def main():
         assert out['periods']['2020']['all|all']['runs'] == 2
         assert out['periods']['2020-Q3']['ironclad|a20']['wins'] == 1
         assert (tmp / 'stats-periods' / '2020-Q1.json').exists()
+        # 2019 holds only 2019-Q1's runs, so the quarter points at the year instead of being written twice.
+        assert not (tmp / 'stats-periods' / '2019-Q1.json').exists()
+        assert {p['id']: p.get('same_as') for p in meta['periods']}['2019-Q1'] == '2019', meta['periods']
         assert ar.build_period({'build_version': '2019-01-03v3'}) == '2019-Q1'
         assert ar.build_period({'build_version': 'nope'}) == 'unknown'
 

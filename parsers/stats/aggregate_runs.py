@@ -490,6 +490,7 @@ def main(argv=None):
 
     unmatched = {}
     raw_periods = rollup(total['segments'])
+    all_runs = raw_periods['all']['all|all']['runs']
     segments = {key: finalize_segment(raw, args.min_sample, unmatched) for key, raw in raw_periods.pop('all').items() if raw['runs'] >= args.min_sample}
     # Below min_sample a segment's tiles and charts would describe individual runs.
     periods = {
@@ -497,6 +498,13 @@ def main(argv=None):
         for period in sorted(raw_periods, key=period_order)
         if raw_periods[period]['all|all']['runs'] >= args.min_sample
     }
+    # A year with one quarter of runs, or 'all' with one year, would be written twice.
+    runs = {'all': all_runs, **{p: s['all|all']['runs'] for p, s in periods.items()}}
+    same_as = {}
+    for period in periods:
+        parent = 'all' if len(period) == 4 else period[:4]
+        if runs[period] == runs.get(parent):
+            same_as[period] = same_as.get(parent, parent)
     output = {
         'meta': {
             'generated_at': datetime.now(timezone.utc).isoformat(timespec='seconds'),
@@ -506,7 +514,7 @@ def main(argv=None):
             'runs_used': total['used'],
             'rejected': total['rejected'],
             'min_sample': args.min_sample,
-            'periods': [{'id': 'all', 'runs': total['used']}, *({'id': p, 'runs': s['all|all']['runs']} for p, s in periods.items())],
+            'periods': [{'id': 'all', 'runs': total['used']}, *({'id': p, 'runs': s['all|all']['runs'], **({'same_as': same_as[p]} if p in same_as else {})} for p, s in periods.items())],
             'unmatched': {kind: dict(counter.most_common(100)) for kind, counter in unmatched.items()},
         },
         'segments': segments,
@@ -518,6 +526,8 @@ def main(argv=None):
     for stale in period_dir.glob('*.json'):
         stale.unlink()
     for period, data in periods.items():
+        if period in same_as:
+            continue  # Same runs as its parent; the site reads the parent instead.
         (period_dir / f'{period}.json').write_text(json.dumps(data, separators=(',', ':')), encoding='utf-8')
     temp = out.with_suffix('.tmp')
     temp.write_text(json.dumps(output, separators=(',', ':')), encoding='utf-8')
