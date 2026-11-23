@@ -1,13 +1,12 @@
 import type { APIRoute } from 'astro';
-import { getData } from '../../../lib/data';
-import { getGame, getLocale, getNumber, getPaging, getString, jsonResponse, notFoundResponse } from '../_util';
+import { getCatalog, getGame, getLocale, getNumber, getPaging, getString, jsonResponse, notFoundResponse } from '../_util';
 
 export const GET: APIRoute = async ({ params, url }) => {
   const game = getGame(params);
   if (!game) return notFoundResponse();
 
   const locale = getLocale(url);
-  const { cards } = await getData(game, locale);
+  const { cards } = await getCatalog(game, locale, url);
 
   const q = getString(url, 'q')?.toLowerCase() ?? null;
   const color = getString(url, 'color');

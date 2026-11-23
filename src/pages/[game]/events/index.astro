@@ -1,7 +1,7 @@
 ---
 import Layout from '../../../components/Layout.astro';
 import EventsExplorer from '../../../components/react/EventsExplorer';
-import { getData } from '../../../lib/data';
+import { getData, getMods } from '../../../lib/data';
 import { getLocale } from '../../../lib/i18n';
 import { t } from '../../../lib/ui-strings';
 import { getPageGame } from '../../../lib/page-game';
@@ -11,9 +11,10 @@ if (!game) return new Response('Not found', { status: 404 });
 
 const { locale } = getLocale(Astro);
 const { events } = await getData(game, locale);
+const mods = await getMods(game);
 ---
 <Layout game={game} title={game === 'sts2' ? 'Events — Spire Archive — STS2' : 'Events — Spire Archive'} description={game === 'sts2' ? 'Browse Slay the Spire 2 events.' : 'Browse Slay the Spire events.'}>
   <h1 class="text-xl font-semibold">{t('Events', locale)}</h1>
   <p class="mt-1 text-sm text-slate-400">{events.length} {t(game === 'sts2' ? 'events from Slay the Spire 2' : 'events from Slay the Spire', locale)}</p>
-  <EventsExplorer game={game} client:load locale={locale} />
+  <EventsExplorer game={game} client:load mods={mods} locale={locale} />
 </Layout>

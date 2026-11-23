@@ -48,7 +48,8 @@ const getRelicImgSrc = (r: any) => {
     <h1 class="font-game text-3xl font-bold">{character.name}</h1>
     <p class="mt-1 text-sm text-slate-300 max-w-lg">{description}</p>
     <div class="mt-3 flex flex-wrap gap-2">
-      <Badge label={color} tone={color} locale={locale} />
+      <Badge label={character.color_label ?? color} tone={color} hex={character.color_hex} locale={locale} />
+      {character.mod && <Badge label={`Modded · ${character.mod.name}`} tone="new" locale={locale} />}
       <Badge label={`${character.hp} ${t('HP', locale)}`} />
       <Badge label={`${character.energy_per_turn} ${t('Energy / turn', locale)}`} />
     </div>

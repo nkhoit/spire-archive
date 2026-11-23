@@ -1,7 +1,7 @@
 ---
 import Layout from '../../../components/Layout.astro';
 import Badge from '../../../components/Badge.astro';
-import { getData } from '../../../lib/data';
+import { getData, getModdedData } from '../../../lib/data';
 import { getLocale } from '../../../lib/i18n';
 import { t } from '../../../lib/ui-strings';
 import { replaceGameTokens } from '../../../lib/energy-icons';
@@ -12,8 +12,13 @@ if (!game) return new Response('Not found', { status: 404 });
 
 const { id } = Astro.params;
 const { locale, langPrefix } = getLocale(Astro);
-const data = await getData(game, locale);
-const event = data.eventById.get(String(id));
+// Base pages keep base data so they never depend on installed mods.
+let data = await getData(game, locale);
+let event = data.eventById.get(String(id));
+if (!event) {
+  data = await getModdedData(game, locale);
+  event = data.eventById.get(String(id));
+}
 if (!event) return new Response('Not found', { status: 404 });
 
 const isSts2 = game === 'sts2';
@@ -104,6 +109,7 @@ function getPoolLabel(name: string, locale: string) {
       <h1 class="font-game mt-2 text-2xl font-semibold">{event.name}</h1>
       <div class="mt-2 flex flex-wrap gap-2">
         <Badge label={({ exordium: 'Act 1 — Exordium', city: 'Act 2 — The City', beyond: 'Act 3 — Beyond', shrines: 'Any Act — Shrine' } as Record<string, string>)[(event as any).act] ?? (event as any).act} tone={({ exordium: 'green', city: 'amber', beyond: 'red', shrines: 'purple' } as Record<string, string>)[(event as any).act] ?? 'slate'} locale={locale} />
+        {event.mod && <Badge label={`Modded · ${event.mod.name}`} tone="new" locale={locale} />}
       </div>
 
       {event.description && (

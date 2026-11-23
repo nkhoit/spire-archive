@@ -2,7 +2,7 @@
 import Layout from '../../../components/Layout.astro';
 import Badge from '../../../components/Badge.astro';
 import ChangeHistory from '../../../components/ChangeHistory.astro';
-import { getData } from '../../../lib/data';
+import { getData, getModdedData } from '../../../lib/data';
 import { getLocale } from '../../../lib/i18n';
 import { t } from '../../../lib/ui-strings';
 import { replaceGameTokens } from '../../../lib/energy-icons';
@@ -13,8 +13,13 @@ if (!game) return new Response('Not found', { status: 404 });
 
 const { id } = Astro.params;
 const { locale } = getLocale(Astro);
-const data = await getData(game, locale);
-const relic = data.relicById.get(String(id));
+// Base pages keep base data so they never depend on installed mods.
+let data = await getData(game, locale);
+let relic = data.relicById.get(String(id));
+if (!relic) {
+  data = await getModdedData(game, locale);
+  relic = data.relicById.get(String(id));
+}
 if (!relic) return new Response('Not found', { status: 404 });
 const imgSrc = game === 'sts2' ? `/images/sts2/relics/${relic.id.toLowerCase()}.png` : (relic.icon ? `/images/sts1/relics/${relic.icon}` : null);
 ---
@@ -26,7 +31,8 @@ const imgSrc = game === 'sts2' ? `/images/sts2/relics/${relic.id.toLowerCase()}.
         <h1 class="text-2xl font-semibold">{relic.name}</h1>
         <div class="mt-2 flex flex-wrap gap-2">
           <Badge label={relic.tier} locale={locale} />
-          {relic.color ? <Badge label={String(relic.color)} tone={String(relic.color)} locale={locale} /> : null}
+          {relic.color ? <Badge label={relic.color_label ?? String(relic.color)} tone={String(relic.color)} hex={relic.color_hex} locale={locale} /> : null}
+          {relic.mod && <Badge label={`Modded · ${relic.mod.name}`} tone="new" locale={locale} />}
         </div>
       </div>
     </div>

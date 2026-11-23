@@ -1,6 +1,7 @@
 import DescriptionText from './DescriptionText';
 import ListExplorer, { type FilterConfig } from './ListExplorer';
 import type { ApiResp } from './SimpleExplorer';
+import type { ModInfo } from './ModControls';
 import { t } from '../../lib/ui-strings';
 
 type Potion = {
@@ -17,7 +18,7 @@ const rarityCls: Record<string, string> = {
   rare: 'tier-rare',
 };
 
-export default function PotionsExplorer(props: { game?: 'sts1' | 'sts2'; rarities: string[]; initial?: ApiResp<Potion>; locale?: string }) {
+export default function PotionsExplorer(props: { game?: 'sts1' | 'sts2'; rarities: string[]; initial?: ApiResp<Potion>; locale?: string; mods?: ModInfo[] }) {
   const game = props.game ?? 'sts1';
   const locale = props.locale ?? 'en';
   const filters: FilterConfig[] = [
@@ -32,6 +33,7 @@ export default function PotionsExplorer(props: { game?: 'sts1' | 'sts2'; raritie
     title="Potions"
     filters={filters}
     initial={props.initial}
+    mods={props.mods}
     getItemKey={(potion) => potion.id}
     itemClassName={(potion) => `rounded-lg border border-white/[0.06] bg-white/[0.03] hover:bg-white/[0.06] hover:border-white/[0.12] transition-all ${rarityCls[potion.rarity.toLowerCase()] ?? ''}`}
     renderItem={(potion, itemLocale) => (

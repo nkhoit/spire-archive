@@ -1,5 +1,6 @@
 import ListExplorer, { Badge, type ExplorerFilters, type FilterConfig } from './ListExplorer';
 import type { ApiResp } from './SimpleExplorer';
+import type { ModInfo } from './ModControls';
 import { t } from '../../lib/ui-strings';
 
 type Monster = {
@@ -31,7 +32,7 @@ function matchesAct(monster: Monster, filters: ExplorerFilters) {
   return !filters.act || (monster.acts ?? []).includes(filters.act);
 }
 
-export default function MonstersExplorer(props: { game?: 'sts1' | 'sts2'; acts: string[]; types: string[]; initial?: ApiResp<Monster>; locale?: string }) {
+export default function MonstersExplorer(props: { game?: 'sts1' | 'sts2'; acts: string[]; types: string[]; initial?: ApiResp<Monster>; locale?: string; mods?: ModInfo[] }) {
   const game = props.game ?? 'sts1';
   const locale = props.locale ?? 'en';
   const filters: FilterConfig[] = [
@@ -48,6 +49,7 @@ export default function MonstersExplorer(props: { game?: 'sts1' | 'sts2'; acts: 
     filters={filters}
     anchorClassName="flex items-start gap-3 p-3"
     initial={props.initial}
+    mods={props.mods}
     clientFilter={matchesAct}
     getItemKey={(monster) => monster.id}
     renderItem={(monster, itemLocale) => {

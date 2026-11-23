@@ -1,7 +1,7 @@
 ---
 import Layout from '../../../components/Layout.astro';
 import CharacterDetail from '../../../components/CharacterDetail.astro';
-import { getData } from '../../../lib/data';
+import { getData, getModdedData } from '../../../lib/data';
 import { getLocale } from '../../../lib/i18n';
 import { getPageGame } from '../../../lib/page-game';
 
@@ -10,12 +10,17 @@ if (!game) return new Response('Not found', { status: 404 });
 
 const { id } = Astro.params;
 const { locale } = getLocale(Astro);
-const data = await getData(game, locale);
-const ch = data.characterById.get(String(id));
+// Base pages keep base data so modded cards never list under base characters.
+let data = await getData(game, locale);
+let ch = data.characterById.get(String(id));
+if (!ch) {
+  data = await getModdedData(game, locale);
+  ch = data.characterById.get(String(id));
+}
 if (!ch) return new Response('Not found', { status: 404 });
 
 const colorMap: Record<string, string> = { IRONCLAD: 'ironclad', THE_SILENT: 'silent', SILENT: 'silent', DEFECT: 'defect', WATCHER: 'watcher', NECROBINDER: 'necrobinder', REGENT: 'regent' };
-const color = colorMap[ch.id] ?? '';
+const color = ch.color ?? colorMap[ch.id] ?? '';
 const description = ch.description ?? '';
 const chAny = ch as any;
 const startingDeckIds: string[] = chAny.starting_deck ?? [];

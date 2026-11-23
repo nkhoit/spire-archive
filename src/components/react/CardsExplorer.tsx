@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import CssCardRenderer from './CssCardRenderer';
+import ModControls, { modBadgeStyle, useModSelection, type ModInfo } from './ModControls';
 import { t } from '../../lib/ui-strings';
 import { useUrlOffset, type ApiResp } from './SimpleExplorer';
 
@@ -17,6 +18,10 @@ type Card = {
   upgrade?: Record<string, any> | null;
   image_url?: string | null;
   star_cost?: number | null;
+  mod?: { id: string; name: string };
+  color_label?: string;
+  color_hex?: string;
+  asset_color?: string;
 };
 
 const colorClasses: Record<string, string> = {
@@ -51,9 +56,9 @@ export function renderEnergy(text: string): string {
 
 function cap(s: string) { return s.charAt(0).toUpperCase() + s.slice(1); }
 
-function BadgeSpan({ label, tone, locale }: { label: string; tone?: string; locale?: string }) {
+function BadgeSpan({ label, tone, hex, locale }: { label: string; tone?: string; hex?: string; locale?: string }) {
   const cls = tone && colorClasses[tone] ? colorClasses[tone] : 'bg-white/10 text-slate-200 ring-white/10';
-  return <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs ring-1 ${cls}`}>{t(cap(label), locale ?? 'en')}</span>;
+  return <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs ring-1 ${hex ? '' : cls}`} style={modBadgeStyle(hex)}>{t(cap(label), locale ?? 'en')}</span>;
 }
 
 function CardTile({ c, game, isMobile, upgraded, locale }: { c: Card; game: string; isMobile: boolean; upgraded: boolean; locale: string }) {
@@ -66,10 +71,11 @@ function CardTile({ c, game, isMobile, upgraded, locale }: { c: Card; game: stri
         <CssCardRenderer card={c} upgraded={!!showUpgraded} size={isMobile ? 'xs' : 'sm'} game={game as 'sts1' | 'sts2'} locale={locale} />
       </a>
       <div className="card-metadata mt-2 flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
-        <BadgeSpan label={c.color} tone={c.color} locale={locale} />
+        <BadgeSpan label={c.color_label ?? c.color} tone={c.color} hex={c.color_hex} locale={locale} />
         <BadgeSpan label={c.type} locale={locale} />
         <BadgeSpan label={c.rarity} locale={locale} />
         <span className="inline-flex items-center rounded-full px-2 py-0.5 text-xs ring-1 bg-white/10 text-slate-200 ring-white/10">{t('Cost', locale)} {c.cost ?? 'X'}</span>
+        {c.mod && <BadgeSpan label={`${t('Modded', locale)} · ${c.mod.name}`} locale={locale} />}
       </div>
     </div>
   );
@@ -102,6 +108,8 @@ function UpgradeToggle({ checked, onChange, game, locale }: { checked: boolean; 
   );
 }
 
+const NO_MODS: ModInfo[] = [];
+
 function buildUrl(base: string, params: Record<string, string | number | null>) {
   const u = new URL(base, window.location.origin);
   for (const [k, v] of Object.entries(params)) {
@@ -118,6 +126,7 @@ export default function CardsExplorer(props: {
   colors: string[];
   types: string[];
   rarities: string[];
+  mods?: ModInfo[];
 }) {
   const game = props.game ?? 'sts1';
   const locale = props.locale ?? 'en';
@@ -129,6 +138,16 @@ export default function CardsExplorer(props: {
   const limit = 100;
   const [offset, setOffset] = useUrlOffset(limit);
   const [upgraded, setUpgraded] = useState(false);
+  const mods = props.mods ?? NO_MODS;
+  const modSelection = useModSelection(mods);
+  const modsParam = modSelection.active.join(',');
+  const modColors = mods.filter((mod) => modSelection.active.includes(mod.id)).flatMap((mod) => mod.colors);
+
+  // A color belonging to a mod that was just deselected no longer matches anything.
+  useEffect(() => {
+    if (color && !props.colors.includes(color) && !modColors.some((c) => c.id === color)) setColor('');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [modsParam]);
 
   const [data, setData] = useState<ApiResp<Card> | null>(props.initial ?? null);
   const [loading, setLoading] = useState(false);
@@ -142,8 +161,8 @@ export default function CardsExplorer(props: {
   const [error, setError] = useState<string | null>(null);
 
   const queryKey = useMemo(
-    () => JSON.stringify({ q, color, type, rarity, cost, offset, limit, locale }),
-    [q, color, type, rarity, cost, offset, limit, locale]
+    () => JSON.stringify({ q, color, type, rarity, cost, offset, limit, locale, modsParam }),
+    [q, color, type, rarity, cost, offset, limit, locale, modsParam]
   );
 
   useEffect(() => {
@@ -158,6 +177,7 @@ export default function CardsExplorer(props: {
         rarity: rarity || null,
         cost: cost ? Number(cost) : null,
         lang: locale !== 'en' ? locale : null,
+        mods: modsParam || null,
         offset,
         limit,
       })
@@ -208,6 +228,9 @@ export default function CardsExplorer(props: {
           {props.colors.map((c) => (
             <option key={c} value={c}>{t(cap(c), locale)}</option>
           ))}
+          {modColors.map((c) => (
+            <option key={c.id} value={c.id}>{c.label}</option>
+          ))}
         </select>
         <select
           className="rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm focus:border-[rgb(var(--accent-rgb)/0.45)] focus:outline-none transition-colors"
@@ -239,6 +262,7 @@ export default function CardsExplorer(props: {
           onChange={(e) => { setOffset(0); setCost(e.target.value.replace(/[^0-9\-]/g, '')); }}
         />
         </div>
+        <ModControls mods={mods} selection={modSelection} locale={locale} onChange={() => setOffset(0)} />
       </div>
 
       <div className="mt-3 flex items-center justify-between text-xs text-slate-300">

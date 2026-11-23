@@ -59,10 +59,16 @@ All endpoints support `lang` for localization (default: `en`). Namespaced by gam
 | `GET /api/{game}/events` | `q`, `act`, `lang`, `offset`, `limit` |
 | `GET /api/{game}/effects` | `q`, `type`, `lang`, `offset`, `limit` |
 | `GET /api/{game}/search` | `q`, `lang`, `limit` |
+| `GET /api/sts1/stats` | `character`, `ascension`, `period` |
+| `GET /api/sts1/mods` | |
 
 STS2 also has: `/api/sts2/enchantments`
 
+On STS1, `cards`, `relics`, `potions`, `monsters` and `events` take `mods=a,b` to include those mods. Without it they return base-game content only.
+
 Detail: `GET /api/{game}/{resource}/:id?lang=ja`
+
+Modded content (`data/mods/`) keeps each mod's own license: Downfall is from [DownfallSTS](https://github.com/mikemayhemdev/DownfallSTS), MIT, © 2019 The Evil Gang. See `docs/mods.md` and `docs/stats.md`.
 
 ## Deployment
 

@@ -2,7 +2,7 @@
 import Layout from '../../../components/Layout.astro';
 import CardDetail from '../../../components/CardDetail.astro';
 import ChangeHistory from '../../../components/ChangeHistory.astro';
-import { getData } from '../../../lib/data';
+import { getData, getModdedData } from '../../../lib/data';
 import { getLocale } from '../../../lib/i18n';
 import { getPageGame } from '../../../lib/page-game';
 
@@ -11,8 +11,13 @@ if (!game) return new Response('Not found', { status: 404 });
 
 const { id } = Astro.params;
 const { locale } = getLocale(Astro);
-const data = await getData(game, locale);
-const card = data.cardById.get(String(id));
+// Base pages keep base data so modded keywords never highlight in base card text.
+let data = await getData(game, locale);
+let card = data.cardById.get(String(id));
+if (!card) {
+  data = await getModdedData(game, locale);
+  card = data.cardById.get(String(id));
+}
 if (!card) return new Response('Not found', { status: 404 });
 const title = `${card.name} — Card — Spire Archive${game === 'sts2' ? ' — STS2' : ''}`;
 const desc = `${card.type} · ${card.rarity} · cost ${game === 'sts2' ? (card.cost === -1 ? 'X' : card.cost ?? '—') : (card.cost ?? '—')}`;

@@ -6,10 +6,12 @@ export interface Props {
   label: string;
   tone?: string;
   locale?: string;
+  hex?: string;
 }
 
-const { label, tone, locale = 'en' } = Astro.props;
-const cls = tone ? COLOR_CLASS[tone] : 'bg-white/10 text-slate-200 ring-white/10';
+const { label, tone, locale = 'en', hex } = Astro.props;
+const cls = hex ? '' : tone ? COLOR_CLASS[tone] : 'bg-white/10 text-slate-200 ring-white/10';
+const style = hex ? `color:${hex};background-color:${hex}26;--tw-ring-color:${hex}4d` : undefined;
 const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 ---
-<span class={`inline-flex items-center rounded-full px-2 py-0.5 text-xs ring-1 capitalize ${cls}`}>{t(cap(label), locale)}</span>
+<span class={`inline-flex items-center rounded-full px-2 py-0.5 text-xs ring-1 capitalize ${cls}`} style={style}>{t(cap(label), locale)}</span>

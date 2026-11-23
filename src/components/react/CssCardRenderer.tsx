@@ -77,7 +77,7 @@ function Sts1Renderer({ card, upgraded, size }: { card: any; upgraded: boolean; 
   const cardType = (card.type ?? 'Skill').toLowerCase();
   const cardColor = (card.color ?? 'colorless').toLowerCase();
 
-  const assetColor = COLOR_MAP[cardColor] ?? 'colorless';
+  const assetColor = card.asset_color ?? COLOR_MAP[cardColor] ?? 'colorless';
   const frameType = ['curse', 'status'].includes(cardType) ? 'skill' : cardType;
   const rarity = (card.rarity ?? 'Common').toLowerCase();
   const assetRarity = ['common', 'uncommon', 'rare'].includes(rarity) ? rarity : 'common';
@@ -89,7 +89,7 @@ function Sts1Renderer({ card, upgraded, size }: { card: any; upgraded: boolean; 
   const trimCenter = `/images/sts1/cardui/${assetRarity}_center.png`;
   const trimRight = `/images/sts1/cardui/${assetRarity}_right.png`;
 
-  const orbColor = ORB_COLOR_MAP[assetColor] ?? 'colorless';
+  const orbColor = card.asset_color ?? ORB_COLOR_MAP[assetColor] ?? 'colorless';
   const orbAsset = `/images/sts1/cardui/card_${orbColor}_orb.png`;
 
   const portrait = `/images/sts1/cards/${card.id.toLowerCase()}.png`;
@@ -110,7 +110,7 @@ function Sts1Renderer({ card, upgraded, size }: { card: any; upgraded: boolean; 
     R: `/images/sts1/cardui/card_red_orb.png`,
     G: `/images/sts1/cardui/card_green_orb.png`,
     B: `/images/sts1/cardui/card_blue_orb.png`,
-    E: `/images/sts1/cardui/card_colorless_orb.png`,
+    E: card.asset_color ? orbAsset : `/images/sts1/cardui/card_colorless_orb.png`,
     W: `/images/sts1/cardui/card_purple_orb.png`,
   };
 

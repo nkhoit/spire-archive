@@ -821,11 +821,48 @@ paths:
 
   # ── STS1 Endpoints ──
 
+  /api/sts1/stats:
+    get:
+      summary: Aggregated run statistics for one character and ascension band
+      tags: [STS1 — Cards]
+      parameters:
+        - name: character
+          in: query
+          schema:
+            type: string
+            enum: [all, ironclad, silent, defect, watcher]
+        - name: ascension
+          in: query
+          schema:
+            type: string
+            enum: [all, a0, a1_10, a11_19, a20]
+        - name: period
+          in: query
+          description: Game build period, as all, a year (2020) or a quarter (2020-Q3)
+          schema:
+            type: string
+      responses:
+        '200':
+          description: The segment, or null if no runs match
+        '404':
+          description: Statistics have not been generated
+  /api/sts1/mods:
+    get:
+      summary: List installed mods
+      tags: [STS1 — Cards]
+      responses:
+        '200':
+          description: Installed mods
   /api/sts1/cards:
     get:
       summary: List cards
       tags: [STS1 — Cards]
       parameters:
+        - name: mods
+          in: query
+          description: Comma-separated mod IDs to include alongside base content. Omit for base content only.
+          schema:
+            type: string
         - $ref: '#/components/parameters/lang'
         - $ref: '#/components/parameters/q'
         - $ref: '#/components/parameters/offset'
@@ -891,6 +928,11 @@ paths:
       summary: List relics
       tags: [STS1 — Relics]
       parameters:
+        - name: mods
+          in: query
+          description: Comma-separated mod IDs to include alongside base content. Omit for base content only.
+          schema:
+            type: string
         - $ref: '#/components/parameters/lang'
         - $ref: '#/components/parameters/q'
         - $ref: '#/components/parameters/offset'
@@ -946,6 +988,11 @@ paths:
       summary: List potions
       tags: [STS1 — Potions]
       parameters:
+        - name: mods
+          in: query
+          description: Comma-separated mod IDs to include alongside base content. Omit for base content only.
+          schema:
+            type: string
         - $ref: '#/components/parameters/lang'
         - $ref: '#/components/parameters/q'
         - $ref: '#/components/parameters/offset'
@@ -997,6 +1044,11 @@ paths:
       summary: List monsters
       tags: [STS1 — Monsters]
       parameters:
+        - name: mods
+          in: query
+          description: Comma-separated mod IDs to include alongside base content. Omit for base content only.
+          schema:
+            type: string
         - $ref: '#/components/parameters/lang'
         - $ref: '#/components/parameters/q'
         - $ref: '#/components/parameters/offset'
@@ -1052,6 +1104,11 @@ paths:
       summary: List events
       tags: [STS1 — Events]
       parameters:
+        - name: mods
+          in: query
+          description: Comma-separated mod IDs to include alongside base content. Omit for base content only.
+          schema:
+            type: string
         - $ref: '#/components/parameters/lang'
         - $ref: '#/components/parameters/q'
         - $ref: '#/components/parameters/offset'

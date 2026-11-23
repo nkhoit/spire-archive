@@ -1,6 +1,6 @@
 ---
 import Layout from '../../../components/Layout.astro';
-import { getData } from '../../../lib/data';
+import { getData, getModdedData } from '../../../lib/data';
 import { getLocale } from '../../../lib/i18n';
 import { t } from '../../../lib/ui-strings';
 import { replaceGameTokens } from '../../../lib/energy-icons';
@@ -12,9 +12,14 @@ if (!game) return new Response('Not found', { status: 404 });
 
 const { id } = Astro.params;
 const { locale, langPrefix } = getLocale(Astro);
-const data = await getData(game, locale);
-const power = data.powers.find((p: any) => p.id === id);
-const baseData = game === 'sts2' ? await getData('sts2') : (locale === 'en' ? data : await getData('sts1'));
+// Base pages keep base data so modded cards never list under base effects.
+let data = await getData(game, locale);
+let power = data.powers.find((p: any) => p.id === id);
+if (!power) {
+  data = await getModdedData(game, locale);
+  power = data.powers.find((p: any) => p.id === id);
+}
+const baseData = game === 'sts2' ? await getData('sts2') : (locale === 'en' ? data : await getModdedData('sts1'));
 const basePower = game === 'sts1' ? baseData.powers.find((p: any) => p.id === id) : null;
 if (!power || (game === 'sts1' && !basePower)) return new Response(null, { status: 404, statusText: 'Not Found' });
 

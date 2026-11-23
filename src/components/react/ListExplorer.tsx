@@ -1,5 +1,6 @@
-import React, { useId, useMemo, useState } from 'react';
+import React, { useEffect, useId, useMemo, useState } from 'react';
 import { Pager, type ApiResp, useApiList, useUrlOffset } from './SimpleExplorer';
+import ModControls, { useModSelection, type ModInfo } from './ModControls';
 import { t } from '../../lib/ui-strings';
 
 export type ExplorerFilters = Record<string, string>;
@@ -9,8 +10,10 @@ export type FilterConfig = {
   type: 'text' | 'select';
   placeholder?: string;
   allLabel?: string;
-  options?: { value: string; label: string }[];
+  options?: { value: string; label: string; mod?: string }[];
 };
+
+const NO_MODS: ModInfo[] = [];
 
 export function cap(s: string) {
   return s.charAt(0).toUpperCase() + s.slice(1);
@@ -63,6 +66,7 @@ export default function ListExplorer<T>(props: {
   itemClassName?: string | ((item: T) => string);
   listClassName?: string;
   anchorClassName?: string;
+  mods?: ModInfo[];
 }) {
   const {
     endpoint,
@@ -79,6 +83,7 @@ export default function ListExplorer<T>(props: {
     itemClassName = 'explorer-row',
     listClassName = 'mt-3 space-y-2',
     anchorClassName = 'flex items-center gap-3 p-3',
+    mods = NO_MODS,
   } = props;
 
   const [offset, setOffset] = useUrlOffset(limit);
@@ -87,10 +92,20 @@ export default function ListExplorer<T>(props: {
   );
   const [filtersOpen, setFiltersOpen] = useState(false);
   const filterId = useId();
+  const modSelection = useModSelection(mods);
+  const modsParam = modSelection.active.join(',');
+
+  // A color belonging to a mod that was just deselected no longer matches anything.
+  useEffect(() => {
+    const stale = filters.filter((filter) => filter.options?.some((option) => option.mod && !modSelection.active.includes(option.mod) && option.value === filterValues[filter.key]));
+    if (stale.length > 0) setFilterValues((current) => ({ ...current, ...Object.fromEntries(stale.map((filter) => [filter.key, ''])) }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [modsParam]);
 
   const queryParams = useMemo(() => {
     const params: Record<string, string | number | null> = {
       lang: locale !== 'en' ? locale : null,
+      mods: modsParam || null,
       offset,
       limit,
     };
@@ -100,7 +115,7 @@ export default function ListExplorer<T>(props: {
     }
 
     return params;
-  }, [filters, filterValues, limit, locale, offset]);
+  }, [filters, filterValues, limit, locale, modsParam, offset]);
 
   const { data, loading, error } = useApiList<T>(endpoint, queryParams, initial);
   const resp = data ?? { total: 0, offset, limit, items: [] };
@@ -155,7 +170,7 @@ export default function ListExplorer<T>(props: {
                 onChange={(e) => updateFilter(filter.key, e.target.value)}
               >
                 <option value="">{filter.allLabel ? t(filter.allLabel, locale) : t('All', locale)}</option>
-                {(filter.options ?? []).map((option) => (
+                {(filter.options ?? []).filter((option) => !option.mod || modSelection.active.includes(option.mod)).map((option) => (
                   <option key={option.value} value={option.value}>
                     {option.label}
                   </option>
@@ -164,6 +179,7 @@ export default function ListExplorer<T>(props: {
             ))}
           </div>
         )}
+        <ModControls mods={mods} selection={modSelection} locale={locale} onChange={() => setOffset(0)} />
       </div>
 
       <div className="mt-3 flex items-center justify-between text-xs text-slate-300">
@@ -181,6 +197,9 @@ export default function ListExplorer<T>(props: {
             <li key={getItemKey(item)} className={className}>
               <a className={anchorClassName} href={`${langPrefix}/${game}/${pathSegment}/${getItemKey(item)}`}>
                 {renderItem(item, locale, langPrefix)}
+                {(item as { mod?: { name: string } }).mod && (
+                  <span className="ml-auto rounded-md bg-emerald-500/15 px-2 py-0.5 text-xs text-emerald-200 ring-1 ring-emerald-500/30">{t('Modded', locale)} · {(item as { mod?: { name: string } }).mod!.name}</span>
+                )}
               </a>
             </li>
           );

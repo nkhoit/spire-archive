@@ -1,6 +1,5 @@
 import type { APIRoute } from 'astro';
-import { getData } from '../../../lib/data';
-import { getGame, getLocale, getPaging, getString, jsonResponse, notFoundResponse } from '../_util';
+import { getCatalog, getGame, getLocale, getPaging, getString, jsonResponse, notFoundResponse } from '../_util';
 
 const ACT_ORDER_BY_GAME: Record<'sts1' | 'sts2', Record<string, number>> = {
   sts1: { exordium: 1, city: 2, beyond: 3, ending: 4 },
@@ -12,7 +11,7 @@ export const GET: APIRoute = async ({ params, url }) => {
   if (!game) return notFoundResponse();
 
   const locale = getLocale(url);
-  const { monsters } = await getData(game, locale);
+  const { monsters } = await getCatalog(game, locale, url);
 
   const q = getString(url, 'q')?.toLowerCase() ?? null;
   const act = getString(url, 'act');
